@@ -1,0 +1,110 @@
+{
+ "description": "Manifeste des pieces de defense XLSX (public/documents/pieces-defense).",
+ "pieces": [
+  {
+   "id": "D1",
+   "fichier": "pieces-defense/Defense-Suppressions-de-caisse-DEL.xlsx",
+   "titre": "Defense - Suppressions de caisse (synthese)",
+   "description": "Synthese complete des suppressions DEL (6 onglets).",
+   "categorie": "methode"
+  },
+  {
+   "id": "D2",
+   "fichier": "pieces-defense/Defense-Boissons-disparues.xlsx",
+   "titre": "Defense - Boissons disparues (synthese)",
+   "description": "Recalcul Monte Carlo + reconciliation (4 onglets).",
+   "categorie": "boisson"
+  },
+  {
+   "id": "D3",
+   "fichier": "pieces-defense/Consommation-personnel-et-offerts.xlsx",
+   "titre": "Conso personnel & offerts + perte reelle",
+   "description": "Conso personnel/offerts + cascade de la perte reelle (4 onglets).",
+   "categorie": "boisson"
+  },
+  {
+   "id": "D4",
+   "fichier": "pieces-defense/Boissons-detail-complet.xlsx",
+   "titre": "Boissons - detail complet (toutes les tables)",
+   "description": "Toutes les tables de la page boissons (6 onglets).",
+   "categorie": "boisson"
+  },
+  {
+   "id": "DB1",
+   "fichier": "pieces-defense/Boissons-1-manquant-par-boisson.xlsx",
+   "titre": "Manquant par boisson",
+   "description": "Liste exacte : achat, conso, manquant, coUt et CA perdu par boisson.",
+   "categorie": "boisson"
+  },
+  {
+   "id": "DB2",
+   "fichier": "pieces-defense/Boissons-2-cocktails.xlsx",
+   "titre": "Cocktails (composition)",
+   "description": "Composition complete de chaque cocktail et alcool consomme.",
+   "categorie": "boisson"
+  },
+  {
+   "id": "DB3",
+   "fichier": "pieces-defense/Boissons-3-cuisine.xlsx",
+   "titre": "Cuisine (alcool des plats)",
+   "description": "Alcool de chaque plat/entree/dessert/sauce + total par alcool.",
+   "categorie": "boisson"
+  },
+  {
+   "id": "DB4",
+   "fichier": "pieces-defense/Boissons-4-menus-par-periode.xlsx",
+   "titre": "Menus par periode",
+   "description": "Composition alcool des menus par periode et probabilite de choix.",
+   "categorie": "boisson"
+  },
+  {
+   "id": "DB5",
+   "fichier": "pieces-defense/Boissons-5-conso-par-periode.xlsx",
+   "titre": "Consommation par exercice",
+   "description": "Caisse + cuisine + menus + personnel par exercice : litres, cout, CA.",
+   "categorie": "boisson"
+  },
+  {
+   "id": "DM1",
+   "fichier": "pieces-defense/Methode-1-modele-Monte-Carlo.xlsx",
+   "titre": "Modele d'incertitude (Monte Carlo)",
+   "description": "Parametres, resultats, sensibilite et signature du disparu.",
+   "categorie": "methode"
+  },
+  {
+   "id": "DM2",
+   "fichier": "pieces-defense/Methode-2-correction-mapping-Cubis.xlsx",
+   "titre": "Correction d'attribution (Cubis)",
+   "description": "Bug d'attribution du vin generique corrige, gain chiffre.",
+   "categorie": "methode"
+  },
+  {
+   "id": "DM3",
+   "fichier": "pieces-defense/Methode-3-bilan-softs.xlsx",
+   "titre": "Bilan des softs",
+   "description": "Softs reconcilies (ventes ticket + staff + stock) : disparu ~ 0.",
+   "categorie": "methode"
+  },
+  {
+   "id": "DM4",
+   "fichier": "pieces-defense/Methode-4-conso-personnel-detail.xlsx",
+   "titre": "Conso personnel detaillee",
+   "description": "Detail borne et justifie de la consommation du personnel/owner.",
+   "categorie": "methode"
+  },
+  {
+   "id": "DM5",
+   "fichier": "pieces-defense/Methode-5-reconciliation-suppressions.xlsx",
+   "titre": "Reconciliation des suppressions",
+   "description": "CA=encaissements, triangulation, sessions impossibles, disparu vs DEL.",
+   "categorie": "methode"
+  },
+  {
+   "id": "DM6",
+   "fichier": "pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx",
+   "titre": "Erreurs de quantite (DEL)",
+   "description": "Decomposition des grosses suppressions + distribution des prix.",
+   "categorie": "methode"
+  }
+ ]
+}

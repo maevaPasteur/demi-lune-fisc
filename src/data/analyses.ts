@@ -1386,6 +1386,11 @@ const boissonsV2: Analyse = {
       texte: `Total du manquant valorisé : ${formatEuro(BPD.synthese.disparu_brut_cout)} au coût d’achat, ${formatEuro(BPD.synthese.disparu_brut_ca)} au prix de revente. C’est le maximum théorique - avant de déduire la cuisine, les menus, le personnel et les offerts (tableaux suivants).`,
     },
     {
+      kind: 'piecejointe',
+      intro: 'Télécharger ce tableau :',
+      fichiers: [{ fichier: 'pieces-defense/Boissons-1-manquant-par-boisson.xlsx', label: 'Manquant par boisson (XLSX)' }],
+    },
+    {
       kind: 'tableau',
       titre: '2. Les cocktails : composition exacte et alcool consommé',
       minWidth: 720,
@@ -1410,6 +1415,11 @@ const boissonsV2: Analyse = {
         'La colonne « alcool consommé » ne compte que les alcools forts/vins du cocktail. Les cocktails sans alcool (Mambo, Luna) affichent 0. Pour le Panaché et le Monaco, la bière figure dans la recette mais est comptée une seule fois, dans la ligne « bière pression (fût) », pour éviter tout double comptage. Les mixers (jus, limonade, sirop) relèvent du bilan des softs.',
     },
     {
+      kind: 'piecejointe',
+      intro: 'Télécharger ce tableau :',
+      fichiers: [{ fichier: 'pieces-defense/Boissons-2-cocktails.xlsx', label: 'Cocktails - composition (XLSX)' }],
+    },
+    {
       kind: 'tableau',
       titre: '3. La cuisine : alcool de chaque plat, entrée, dessert et sauce',
       minWidth: 620,
@@ -1429,11 +1439,21 @@ const boissonsV2: Analyse = {
       lignes: BPD.cuisineParAlcool.map((r) => [cg(r.alcool), cd(litresB(r.litres_3ans)), cd(eurB(r.cout))]),
     },
     {
+      kind: 'piecejointe',
+      intro: 'Télécharger ces tableaux :',
+      fichiers: [{ fichier: 'pieces-defense/Boissons-3-cuisine.xlsx', label: 'Cuisine - alcool des plats (XLSX)' }],
+    },
+    {
       kind: 'paragraphe',
       texte:
         '**4. Les menus.** La caisse n’enregistre qu’un prix de menu, pas son contenu. On reconstitue l’alcool en croisant la **composition de chaque menu par période** avec la **probabilité** que le client choisisse l’option alcoolisée (1 entrée, 1 plat, 1 dessert max, jamais cumulés). « Choisi par » = part des clients prenant l’option ; « Alcool / menu » = dose × probabilité.',
     },
     ...menusSections,
+    {
+      kind: 'piecejointe',
+      intro: 'Télécharger les menus par période :',
+      fichiers: [{ fichier: 'pieces-defense/Boissons-4-menus-par-periode.xlsx', label: 'Menus par période (XLSX)' }],
+    },
     {
       kind: 'tableau',
       titre: '5. La consommation du personnel et du chef (litres, coût, CA équivalent)',
@@ -1470,6 +1490,11 @@ const boissonsV2: Analyse = {
       ],
     },
     { kind: 'note', texte: BPD.offerts.avertissement },
+    {
+      kind: 'piecejointe',
+      intro: 'Télécharger ces tableaux :',
+      fichiers: [{ fichier: 'pieces-defense/Consommation-personnel-et-offerts.xlsx', label: 'Personnel & offerts (XLSX)' }],
+    },
     // ---------------- SYNTHÈSE ----------------
     {
       kind: 'chapitre',
@@ -1482,6 +1507,11 @@ const boissonsV2: Analyse = {
       kind: 'note',
       texte:
         'Ce tableau porte sur l’alcool (cohérent avec le reste de la page). La consommation du personnel n’y figure que pour sa part alcool (Macvin et Picon du chef, 143 L) ; les softs du personnel (Coca, jus, sirop) relèvent du bilan des softs, entièrement bouclé par ailleurs. Les sodas et eaux ne sont donc pas un manquant.',
+    },
+    {
+      kind: 'piecejointe',
+      intro: 'Télécharger ce tableau :',
+      fichiers: [{ fichier: 'pieces-defense/Boissons-5-conso-par-periode.xlsx', label: 'Consommation par exercice (XLSX)' }],
     },
     {
       kind: 'tableau',
@@ -1498,11 +1528,29 @@ const boissonsV2: Analyse = {
       `Après avoir mesuré **tout** ce qui est consommé sans vente - cuisine, alcool des menus, consommation du chef et du personnel (${formatInt(BPD.personnel.total_litres)} L), offerts, sur-versement - il reste **${formatInt(BPD.synthese.perte_reelle_l)} L**, soit **${BPD.synthese.perte_reelle_pct} % des achats** : la **perte normale d’un bar** (casse, évaporation, mousse), admise par la jurisprudence jusqu’à 22-25 %. Ce n’est ni une vente, ni une disparition. Le CA est bancarisé, les espèces ne pèsent que 1,3 %. La reconstitution du fisc (× ${BPD.synthese.fisc_coef}) transforme une perte de gestion normale en une dissimulation qui n’existe pas.`,
     ),
     {
+      kind: 'chapitre',
+      source: 'neutre',
+      titre: 'Annexes : toutes les données et la méthode',
+      sousTitre: 'Classeurs téléchargeables - chaque chiffre est sourcé et reproductible',
+    },
+    {
       kind: 'piecejointe',
-      intro: 'Toutes les données de cette page, exactes et reproductibles (un onglet par tableau) :',
+      intro: 'Données complètes de la page :',
       fichiers: [
         { fichier: 'pieces-defense/Boissons-detail-complet.xlsx', label: 'Boissons - détail complet (toutes les tables)' },
         { fichier: 'pieces-defense/Consommation-personnel-et-offerts.xlsx', label: 'Conso personnel & offerts + perte réelle' },
+      ],
+    },
+    {
+      kind: 'piecejointe',
+      intro: 'Méthode et preuve de process (modèle, corrections, réconciliations) :',
+      fichiers: [
+        { fichier: 'pieces-defense/Methode-1-modele-Monte-Carlo.xlsx', label: 'Modèle d’incertitude (Monte Carlo)' },
+        { fichier: 'pieces-defense/Methode-2-correction-mapping-Cubis.xlsx', label: 'Correction d’attribution (Cubis)' },
+        { fichier: 'pieces-defense/Methode-3-bilan-softs.xlsx', label: 'Bilan des softs' },
+        { fichier: 'pieces-defense/Methode-4-conso-personnel-detail.xlsx', label: 'Conso personnel détaillée' },
+        { fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Réconciliation des suppressions' },
+        { fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Erreurs de quantité (DEL)' },
       ],
     },
     {

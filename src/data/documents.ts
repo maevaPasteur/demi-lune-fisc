@@ -4,6 +4,7 @@
 // rester la source unique : pour ajouter une période ou une annexe, on touche
 // uniquement les tableaux ci-dessous.
 // =============================================================================
+import piecesManifest from './piecesDefenseManifest.json'
 
 export interface Document {
   id: string // ex. "A1"
@@ -228,65 +229,31 @@ export const rapports: Document[] = [
  * Classeurs XLSX data-lourds, chaque chiffre sourcé et reproductible (scripts
  * src/data/incertitudeDisparu, à partir des annexes certifiées A/B/E/H).
  */
-const dossierPieces = 'pieces-defense'
-export const piecesDefense: Document[] = [
-  {
-    id: 'D1',
+interface PieceManifest {
+  id: string
+  fichier: string
+  titre: string
+  description: string
+  categorie: string
+}
+
+// Source unique : src/data/piecesDefenseManifest.json, généré par
+// src/data/incertitudeDisparu/16_generer_xlsx_juridiques.py. Pour ajouter une
+// pièce, on régénère le manifeste (aucune édition manuelle ici).
+export const piecesDefense: Document[] = (piecesManifest.pieces as PieceManifest[])
+  .slice()
+  .sort((a, b) => (a.categorie === b.categorie ? 0 : a.categorie === 'boisson' ? -1 : 1))
+  .map((p, i) => ({
+    id: p.id,
     annexe: 'DEFENSE',
-    numero: 1,
-    titre: 'Défense - Suppressions de caisse (DEL)',
-    description:
-      'Démonstration chiffrée que les 430 763 € de lignes supprimées ne sont pas du CA dissimulé : ' +
-      'erreurs de quantité, sessions où les suppressions dépassent le CA du jour, distribution des prix, ' +
-      'triangulation de 3 exports certifiés, double verrou paiement/approvisionnement. 6 onglets.',
-    niveau: 'Analyse chiffrée · 6 onglets',
+    numero: i + 1,
+    titre: p.titre,
+    description: p.description,
+    niveau: p.categorie === 'methode' ? 'Méthode / preuve de process' : 'Données boissons',
     periode: '2022-2025',
-    fichier: `${dossierPieces}/Defense-Suppressions-de-caisse-DEL.xlsx`,
-    format: 'XLS',
-  },
-  {
-    id: 'D2',
-    annexe: 'DEFENSE',
-    numero: 2,
-    titre: 'Défense - Boissons prétendument disparues',
-    description:
-      'Recalcul indépendant du « disparu » boissons (modèle d’incertitude Monte Carlo) : ~76 k€ au prix de ' +
-      'revente = perte normale d’un bar (15-25 %), causes de consommation documentées, et réconciliation avec ' +
-      'les suppressions de caisse. 4 onglets.',
-    niveau: 'Analyse chiffrée · 4 onglets',
-    periode: '2022-2025',
-    fichier: `${dossierPieces}/Defense-Boissons-disparues.xlsx`,
-    format: 'XLS',
-  },
-  {
-    id: 'D3',
-    annexe: 'DEFENSE',
-    numero: 3,
-    titre: 'Consommation personnel & offerts + perte réelle',
-    description:
-      'Détail chiffré de la consommation du personnel et de l’owner (litres, coût d’achat, CA équivalent), ' +
-      'des offerts aux clients, et la cascade complète « où va l’alcool acheté » jusqu’à la perte réelle ' +
-      'résiduelle (23 % = perte normale d’un bar). 4 onglets.',
-    niveau: 'Analyse chiffrée · 4 onglets',
-    periode: '2022-2025',
-    fichier: `${dossierPieces}/Consommation-personnel-et-offerts.xlsx`,
-    format: 'XLS',
-  },
-  {
-    id: 'D4',
-    annexe: 'DEFENSE',
-    numero: 4,
-    titre: 'Boissons - détail complet (toutes les tables)',
-    description:
-      'Toutes les données exactes de la page « boissons disparues » : manquant boisson par boisson (coût + CA), ' +
-      'cocktails, alcool de chaque plat, composition des menus par période avec probabilités, consommation du ' +
-      'personnel, et consommation totale par exercice. 6 onglets.',
-    niveau: 'Analyse chiffrée · 6 onglets',
-    periode: '2022-2025',
-    fichier: `${dossierPieces}/Boissons-detail-complet.xlsx`,
-    format: 'XLS',
-  },
-]
+    fichier: p.fichier,
+    format: 'XLS' as const,
+  }))
 
 /**
  * Slug d'URL stable dérivé d'un titre (sans accents ni caractères spéciaux).
