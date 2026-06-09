@@ -1,0 +1,2236 @@
+{
+  "description": "Boissons hors cocktail (vins, bières, cidres, alcools secs...), noms unifiés (canonique = inventaire si présent, sinon facture ; + nom_inventaire/nom_facture). Une ligne par (boisson, format de service), taille préservée. volume_l = volume servi (= alcool pour ces boissons). Ventes par exercice fiscal.",
+  "exercices": [
+    "2022-2023",
+    "2023-2024",
+    "2024-2025"
+  ],
+  "nb_boissons": 89,
+  "boissons": [
+    {
+      "nom_canonique": "Fût Affligem",
+      "format_service": "Pression 25cl",
+      "volume_unitaire_cl": 25,
+      "categorie": "biere",
+      "nom_inventaire": "Fût Affligem 8L",
+      "nom_facture": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "flag": "Pression/pinte/panaché/picon/monaco",
+      "total_quantite": 2233.5,
+      "total_volume_l": 558.38,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 901.5,
+          "volume_l": 225.38
+        },
+        "2023-2024": {
+          "quantite": 670.0,
+          "volume_l": 167.5
+        },
+        "2024-2025": {
+          "quantite": 662.0,
+          "volume_l": 165.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Fût Affligem",
+      "format_service": "Pinte 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "biere",
+      "nom_inventaire": "Fût Affligem 8L",
+      "nom_facture": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "flag": "Pression/pinte/panaché/picon/monaco",
+      "total_quantite": 877.0,
+      "total_volume_l": 438.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 282.5,
+          "volume_l": 141.25
+        },
+        "2023-2024": {
+          "quantite": 286.5,
+          "volume_l": 143.25
+        },
+        "2024-2025": {
+          "quantite": 308.0,
+          "volume_l": 154.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Cubis de vin (couleur non précisée)",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin",
+      "nom_inventaire": null,
+      "nom_facture": null,
+      "flag": "Couleur non récupérable en caisse - rapprochement manuel inventaire/factures",
+      "total_quantite": 559.3,
+      "total_volume_l": 279.67,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 511.5,
+          "volume_l": 255.75
+        },
+        "2023-2024": {
+          "quantite": 47.8,
+          "volume_l": 23.91
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Savagnin",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Arbois Savagnin 75cl",
+      "nom_facture": "ARBOIS SAVAGNIN 75 CL",
+      "flag": "Servi aussi en pichet 50cl (depuis bouteille 75cl)",
+      "total_quantite": 1544.0,
+      "total_volume_l": 231.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 571.5,
+          "volume_l": 85.72
+        },
+        "2023-2024": {
+          "quantite": 469.5,
+          "volume_l": 70.42
+        },
+        "2024-2025": {
+          "quantite": 503.0,
+          "volume_l": 75.45
+        }
+      }
+    },
+    {
+      "nom_canonique": "Côtes de Provence rosé maison (Cap des Pins)",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_rose",
+      "nom_inventaire": "Côtes de Provence Rosé BIB 10L",
+      "nom_facture": "BIB COTES DE PROV ROSE 10 L (Cap des Pins)",
+      "flag": "Vin maison rosé au verre/pichet",
+      "total_quantite": 448.5,
+      "total_volume_l": 224.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 256.0,
+          "volume_l": 128.0
+        },
+        "2024-2025": {
+          "quantite": 192.5,
+          "volume_l": 96.25
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Béthanie",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Arbois Béthanie 75cl",
+      "nom_facture": "ARBOIS BETHANIE 75 CL / 37,5 CL",
+      "flag": "",
+      "total_quantite": 238.0,
+      "total_volume_l": 178.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 85.0,
+          "volume_l": 63.75
+        },
+        "2023-2024": {
+          "quantite": 77.0,
+          "volume_l": 57.75
+        },
+        "2024-2025": {
+          "quantite": 76.0,
+          "volume_l": 57.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Bourgogne Aligoté maison",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Bourgogne Aligoté BIB 10L",
+      "nom_facture": "BIB BOURGOGNE ALIGOTE 10 L",
+      "flag": "Vin maison blanc au verre/pichet",
+      "total_quantite": 315.0,
+      "total_volume_l": 157.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 150.0,
+          "volume_l": 75.0
+        },
+        "2024-2025": {
+          "quantite": 165.0,
+          "volume_l": 82.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Côtes du Rhône rouge maison (Chusclan)",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Côtes du Rhône Rouge BIB 10L",
+      "nom_facture": "BIB COTES DU RHONE ROUGE 10 L (Chusclan)",
+      "flag": "Vin maison rouge au verre/pichet",
+      "total_quantite": 314.5,
+      "total_volume_l": 157.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 167.0,
+          "volume_l": 83.5
+        },
+        "2024-2025": {
+          "quantite": 147.5,
+          "volume_l": 73.75
+        }
+      }
+    },
+    {
+      "nom_canonique": "Rouget de Lisle Blanche 33cl",
+      "format_service": "Bouteille 33cl",
+      "volume_unitaire_cl": 33,
+      "categorie": "biere",
+      "nom_inventaire": "Rouget de Lisle Blanche 33cl",
+      "nom_facture": "LA ROUGET BLANCHE 33 CL VP",
+      "flag": "",
+      "total_quantite": 413.5,
+      "total_volume_l": 136.46,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 157.0,
+          "volume_l": 51.81
+        },
+        "2023-2024": {
+          "quantite": 123.0,
+          "volume_l": 40.59
+        },
+        "2024-2025": {
+          "quantite": 133.5,
+          "volume_l": 44.05
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Béthanie",
+      "format_service": "Demi-bouteille",
+      "volume_unitaire_cl": 37.5,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Arbois Béthanie 75cl",
+      "nom_facture": "ARBOIS BETHANIE 75 CL / 37,5 CL",
+      "flag": "",
+      "total_quantite": 350.5,
+      "total_volume_l": 131.44,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 159.5,
+          "volume_l": 59.81
+        },
+        "2023-2024": {
+          "quantite": 107.0,
+          "volume_l": 40.12
+        },
+        "2024-2025": {
+          "quantite": 84.0,
+          "volume_l": 31.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Trousseau",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Arbois Trousseau 75cl",
+      "nom_facture": "ARBOIS TROUSSEAU 75 CL (J-L Tissot)",
+      "flag": "",
+      "total_quantite": 868.0,
+      "total_volume_l": 130.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 302.0,
+          "volume_l": 45.3
+        },
+        "2023-2024": {
+          "quantite": 304.0,
+          "volume_l": 45.6
+        },
+        "2024-2025": {
+          "quantite": 262.0,
+          "volume_l": 39.3
+        }
+      }
+    },
+    {
+      "nom_canonique": "Rouget de Lisle Ambrée 33cl",
+      "format_service": "Bouteille 33cl",
+      "volume_unitaire_cl": 33,
+      "categorie": "biere",
+      "nom_inventaire": "Rouget de Lisle Ambrée 33cl",
+      "nom_facture": "LA ROUGET AMBREE 33 CL VP",
+      "flag": "",
+      "total_quantite": 387.0,
+      "total_volume_l": 127.71,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 131.0,
+          "volume_l": 43.23
+        },
+        "2023-2024": {
+          "quantite": 126.0,
+          "volume_l": 41.58
+        },
+        "2024-2025": {
+          "quantite": 130.0,
+          "volume_l": 42.9
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Savagnin",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Arbois Savagnin 75cl",
+      "nom_facture": "ARBOIS SAVAGNIN 75 CL",
+      "flag": "Servi aussi en pichet 50cl (depuis bouteille 75cl)",
+      "total_quantite": 254.0,
+      "total_volume_l": 127.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 73.0,
+          "volume_l": 36.5
+        },
+        "2023-2024": {
+          "quantite": 86.0,
+          "volume_l": 43.0
+        },
+        "2024-2025": {
+          "quantite": 95.0,
+          "volume_l": 47.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Trousseau",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Arbois Trousseau 75cl",
+      "nom_facture": "ARBOIS TROUSSEAU 75 CL (J-L Tissot)",
+      "flag": "",
+      "total_quantite": 251.0,
+      "total_volume_l": 125.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 95.0,
+          "volume_l": 47.5
+        },
+        "2023-2024": {
+          "quantite": 81.0,
+          "volume_l": 40.5
+        },
+        "2024-2025": {
+          "quantite": 75.0,
+          "volume_l": 37.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Cidre Brut",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "cidre",
+      "nom_inventaire": "Cidre Brut 75cl",
+      "nom_facture": "CIDRE BRUT 75 CL",
+      "flag": "",
+      "total_quantite": 167.0,
+      "total_volume_l": 125.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 65.0,
+          "volume_l": 48.75
+        },
+        "2023-2024": {
+          "quantite": 53.0,
+          "volume_l": 39.75
+        },
+        "2024-2025": {
+          "quantite": 49.0,
+          "volume_l": 36.75
+        }
+      }
+    },
+    {
+      "nom_canonique": "Saint Véran",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Saint Véran 75cl",
+      "nom_facture": "SAINT VERAN 75 CL (Lupé Cholet)",
+      "flag": "",
+      "total_quantite": 819.5,
+      "total_volume_l": 122.92,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 276.5,
+          "volume_l": 41.48
+        },
+        "2023-2024": {
+          "quantite": 265.5,
+          "volume_l": 39.83
+        },
+        "2024-2025": {
+          "quantite": 277.5,
+          "volume_l": 41.62
+        }
+      }
+    },
+    {
+      "nom_canonique": "Cidre Doux",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "cidre",
+      "nom_inventaire": "Cidre Doux 75cl",
+      "nom_facture": "CIDRE DOUX 75 CL",
+      "flag": "",
+      "total_quantite": 143.5,
+      "total_volume_l": 107.62,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 54.5,
+          "volume_l": 40.88
+        },
+        "2023-2024": {
+          "quantite": 48.0,
+          "volume_l": 36.0
+        },
+        "2024-2025": {
+          "quantite": 41.0,
+          "volume_l": 30.75
+        }
+      }
+    },
+    {
+      "nom_canonique": "Cubis de vin (couleur non précisée)",
+      "format_service": "Pichet 75cl",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin",
+      "nom_inventaire": null,
+      "nom_facture": null,
+      "flag": "Couleur non récupérable en caisse - rapprochement manuel inventaire/factures",
+      "total_quantite": 131.5,
+      "total_volume_l": 98.62,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 118.5,
+          "volume_l": 88.88
+        },
+        "2023-2024": {
+          "quantite": 13.0,
+          "volume_l": 9.75
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Rosé Les Jamelles (Clair de Rosé)",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rose",
+      "nom_inventaire": "Rosé Les Jamelles 75cl",
+      "nom_facture": "ROSE GRENACHE JAMELLES 75 CL (Clair de Rosé)",
+      "flag": "",
+      "total_quantite": 130.5,
+      "total_volume_l": 97.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 39.0,
+          "volume_l": 29.25
+        },
+        "2023-2024": {
+          "quantite": 46.5,
+          "volume_l": 34.88
+        },
+        "2024-2025": {
+          "quantite": 45.0,
+          "volume_l": 33.75
+        }
+      }
+    },
+    {
+      "nom_canonique": "Fût Affligem",
+      "format_service": "Demi+Picon 25cl",
+      "volume_unitaire_cl": 25,
+      "categorie": "biere",
+      "nom_inventaire": "Fût Affligem 8L",
+      "nom_facture": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "flag": "Pression/pinte/panaché/picon/monaco",
+      "total_quantite": 382.5,
+      "total_volume_l": 95.62,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 129.0,
+          "volume_l": 32.25
+        },
+        "2023-2024": {
+          "quantite": 130.0,
+          "volume_l": 32.5
+        },
+        "2024-2025": {
+          "quantite": 123.5,
+          "volume_l": 30.88
+        }
+      }
+    },
+    {
+      "nom_canonique": "Cidre La Mordue",
+      "format_service": "Bouteille 27cl",
+      "volume_unitaire_cl": 27,
+      "categorie": "cidre",
+      "nom_inventaire": "Cidre La Mordue 27cl",
+      "nom_facture": "CIDRE LA MORDUE 27 CL",
+      "flag": "",
+      "total_quantite": 342.5,
+      "total_volume_l": 92.47,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 70.0,
+          "volume_l": 18.9
+        },
+        "2023-2024": {
+          "quantite": 130.0,
+          "volume_l": 35.1
+        },
+        "2024-2025": {
+          "quantite": 142.5,
+          "volume_l": 38.48
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Trousseau",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Arbois Trousseau 75cl",
+      "nom_facture": "ARBOIS TROUSSEAU 75 CL (J-L Tissot)",
+      "flag": "",
+      "total_quantite": 120.5,
+      "total_volume_l": 90.38,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 67.5,
+          "volume_l": 50.62
+        },
+        "2023-2024": {
+          "quantite": 15.0,
+          "volume_l": 11.25
+        },
+        "2024-2025": {
+          "quantite": 38.0,
+          "volume_l": 28.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Fût Affligem",
+      "format_service": "Panaché 25cl",
+      "volume_unitaire_cl": 25,
+      "categorie": "biere",
+      "nom_inventaire": "Fût Affligem 8L",
+      "nom_facture": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "flag": "Pression/pinte/panaché/picon/monaco",
+      "total_quantite": 346.5,
+      "total_volume_l": 86.62,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 147.0,
+          "volume_l": 36.75
+        },
+        "2023-2024": {
+          "quantite": 102.5,
+          "volume_l": 25.62
+        },
+        "2024-2025": {
+          "quantite": 97.0,
+          "volume_l": 24.25
+        }
+      }
+    },
+    {
+      "nom_canonique": "Crémant du Jura",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 10,
+      "categorie": "petillant",
+      "nom_inventaire": "Crémant du Jura 75cl",
+      "nom_facture": "CREMANT DU JURA 75 CL (Arbois)",
+      "flag": "",
+      "total_quantite": 814.0,
+      "total_volume_l": 81.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 242.0,
+          "volume_l": 24.2
+        },
+        "2023-2024": {
+          "quantite": 305.0,
+          "volume_l": 30.5
+        },
+        "2024-2025": {
+          "quantite": 267.0,
+          "volume_l": 26.7
+        }
+      }
+    },
+    {
+      "nom_canonique": "Fût Affligem",
+      "format_service": "Pinte+Picon 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "biere",
+      "nom_inventaire": "Fût Affligem 8L",
+      "nom_facture": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "flag": "Pression/pinte/panaché/picon/monaco",
+      "total_quantite": 162.5,
+      "total_volume_l": 81.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 37.0,
+          "volume_l": 18.5
+        },
+        "2023-2024": {
+          "quantite": 66.5,
+          "volume_l": 33.25
+        },
+        "2024-2025": {
+          "quantite": 59.0,
+          "volume_l": 29.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Saint Joseph Rouge",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Saint Joseph Rouge 75cl",
+      "nom_facture": "SAINT JOSEPH ROUGE 75 CL (Ogier)",
+      "flag": "",
+      "total_quantite": 94.5,
+      "total_volume_l": 70.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 41.0,
+          "volume_l": 30.75
+        },
+        "2023-2024": {
+          "quantite": 22.5,
+          "volume_l": 16.88
+        },
+        "2024-2025": {
+          "quantite": 31.0,
+          "volume_l": 23.25
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Savagnin",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Arbois Savagnin 75cl",
+      "nom_facture": "ARBOIS SAVAGNIN 75 CL",
+      "flag": "Servi aussi en pichet 50cl (depuis bouteille 75cl)",
+      "total_quantite": 94.5,
+      "total_volume_l": 70.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 30.0,
+          "volume_l": 22.5
+        },
+        "2023-2024": {
+          "quantite": 35.5,
+          "volume_l": 26.62
+        },
+        "2024-2025": {
+          "quantite": 29.0,
+          "volume_l": 21.75
+        }
+      }
+    },
+    {
+      "nom_canonique": "Hautes Côtes de Beaune rouge",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Hautes Côtes de Beaune 75cl",
+      "nom_facture": "HTES COTES DE BEAUNE RGE 75 CL (Domaine Germain)",
+      "flag": "",
+      "total_quantite": 91.0,
+      "total_volume_l": 68.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 42.5,
+          "volume_l": 31.88
+        },
+        "2023-2024": {
+          "quantite": 26.0,
+          "volume_l": 19.5
+        },
+        "2024-2025": {
+          "quantite": 22.5,
+          "volume_l": 16.88
+        }
+      }
+    },
+    {
+      "nom_canonique": "Saint Véran",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Saint Véran 75cl",
+      "nom_facture": "SAINT VERAN 75 CL (Lupé Cholet)",
+      "flag": "",
+      "total_quantite": 90.0,
+      "total_volume_l": 67.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 22.0,
+          "volume_l": 16.5
+        },
+        "2023-2024": {
+          "quantite": 37.0,
+          "volume_l": 27.75
+        },
+        "2024-2025": {
+          "quantite": 31.0,
+          "volume_l": 23.25
+        }
+      }
+    },
+    {
+      "nom_canonique": "Macvin",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 6,
+      "categorie": "vin_de_liqueur",
+      "nom_inventaire": "Macvin 75cl",
+      "nom_facture": "MACVIN BLANC 75 CL (Domaine Rolet)",
+      "flag": "",
+      "total_quantite": 1091.5,
+      "total_volume_l": 65.49,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 355.0,
+          "volume_l": 21.3
+        },
+        "2023-2024": {
+          "quantite": 376.0,
+          "volume_l": 22.56
+        },
+        "2024-2025": {
+          "quantite": 360.5,
+          "volume_l": 21.63
+        }
+      }
+    },
+    {
+      "nom_canonique": "Hautes Côtes de Beaune rouge",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Hautes Côtes de Beaune 75cl",
+      "nom_facture": "HTES COTES DE BEAUNE RGE 75 CL (Domaine Germain)",
+      "flag": "",
+      "total_quantite": 409.0,
+      "total_volume_l": 61.35,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 182.0,
+          "volume_l": 27.3
+        },
+        "2023-2024": {
+          "quantite": 124.0,
+          "volume_l": 18.6
+        },
+        "2024-2025": {
+          "quantite": 103.0,
+          "volume_l": 15.45
+        }
+      }
+    },
+    {
+      "nom_canonique": "Moulin à Vent",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Moulin à Vent 75cl",
+      "nom_facture": "MOULIN A VENT 75 CL",
+      "flag": "",
+      "total_quantite": 375.0,
+      "total_volume_l": 56.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 116.0,
+          "volume_l": 17.4
+        },
+        "2023-2024": {
+          "quantite": 113.0,
+          "volume_l": 16.95
+        },
+        "2024-2025": {
+          "quantite": 146.0,
+          "volume_l": 21.9
+        }
+      }
+    },
+    {
+      "nom_canonique": "Côtes de Provence rosé maison (Cap des Pins)",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_rose",
+      "nom_inventaire": "Côtes de Provence Rosé BIB 10L",
+      "nom_facture": "BIB COTES DE PROV ROSE 10 L (Cap des Pins)",
+      "flag": "Vin maison rosé au verre/pichet",
+      "total_quantite": 374.0,
+      "total_volume_l": 56.1,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 177.0,
+          "volume_l": 26.55
+        },
+        "2024-2025": {
+          "quantite": 197.0,
+          "volume_l": 29.55
+        }
+      }
+    },
+    {
+      "nom_canonique": "Saint Véran",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Saint Véran 75cl",
+      "nom_facture": "SAINT VERAN 75 CL (Lupé Cholet)",
+      "flag": "",
+      "total_quantite": 110.0,
+      "total_volume_l": 55.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 28.0,
+          "volume_l": 14.0
+        },
+        "2023-2024": {
+          "quantite": 33.0,
+          "volume_l": 16.5
+        },
+        "2024-2025": {
+          "quantite": 49.0,
+          "volume_l": 24.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Saint Joseph Rouge",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Saint Joseph Rouge 75cl",
+      "nom_facture": "SAINT JOSEPH ROUGE 75 CL (Ogier)",
+      "flag": "",
+      "total_quantite": 358.5,
+      "total_volume_l": 53.77,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 149.5,
+          "volume_l": 22.43
+        },
+        "2023-2024": {
+          "quantite": 100.0,
+          "volume_l": 15.0
+        },
+        "2024-2025": {
+          "quantite": 109.0,
+          "volume_l": 16.35
+        }
+      }
+    },
+    {
+      "nom_canonique": "Bourgogne Aligoté maison",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Bourgogne Aligoté BIB 10L",
+      "nom_facture": "BIB BOURGOGNE ALIGOTE 10 L",
+      "flag": "Vin maison blanc au verre/pichet",
+      "total_quantite": 345.0,
+      "total_volume_l": 51.75,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 163.0,
+          "volume_l": 24.45
+        },
+        "2024-2025": {
+          "quantite": 182.0,
+          "volume_l": 27.3
+        }
+      }
+    },
+    {
+      "nom_canonique": "Cubis de vin (couleur non précisée)",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin",
+      "nom_inventaire": null,
+      "nom_facture": null,
+      "flag": "Couleur non récupérable en caisse - rapprochement manuel inventaire/factures",
+      "total_quantite": 324.0,
+      "total_volume_l": 48.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 311.0,
+          "volume_l": 46.65
+        },
+        "2023-2024": {
+          "quantite": 13.0,
+          "volume_l": 1.95
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Macon",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Macon 75cl",
+      "nom_facture": "MACON 75 CL",
+      "flag": "",
+      "total_quantite": 320.5,
+      "total_volume_l": 48.08,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 161.5,
+          "volume_l": 24.23
+        },
+        "2024-2025": {
+          "quantite": 159.0,
+          "volume_l": 23.85
+        }
+      }
+    },
+    {
+      "nom_canonique": "Moulin à Vent",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Moulin à Vent 75cl",
+      "nom_facture": "MOULIN A VENT 75 CL",
+      "flag": "",
+      "total_quantite": 95.0,
+      "total_volume_l": 47.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 31.0,
+          "volume_l": 15.5
+        },
+        "2023-2024": {
+          "quantite": 35.0,
+          "volume_l": 17.5
+        },
+        "2024-2025": {
+          "quantite": 29.0,
+          "volume_l": 14.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Macon",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Macon 75cl",
+      "nom_facture": "MACON 75 CL",
+      "flag": "",
+      "total_quantite": 62.0,
+      "total_volume_l": 46.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 26.0,
+          "volume_l": 19.5
+        },
+        "2024-2025": {
+          "quantite": 36.0,
+          "volume_l": 27.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Macon",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Macon 75cl",
+      "nom_facture": "MACON 75 CL",
+      "flag": "",
+      "total_quantite": 90.5,
+      "total_volume_l": 45.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 46.5,
+          "volume_l": 23.25
+        },
+        "2024-2025": {
+          "quantite": 44.0,
+          "volume_l": 22.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Gewurztraminer",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Gewurztraminer 75cl",
+      "nom_facture": "GEWURZTRAMINER 75 CL (Les Sorcières)",
+      "flag": "",
+      "total_quantite": 287.5,
+      "total_volume_l": 43.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 110.0,
+          "volume_l": 16.5
+        },
+        "2023-2024": {
+          "quantite": 77.5,
+          "volume_l": 11.62
+        },
+        "2024-2025": {
+          "quantite": 100.0,
+          "volume_l": 15.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Hautes Côtes de Beaune rouge",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Hautes Côtes de Beaune 75cl",
+      "nom_facture": "HTES COTES DE BEAUNE RGE 75 CL (Domaine Germain)",
+      "flag": "",
+      "total_quantite": 85.0,
+      "total_volume_l": 42.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 26.0,
+          "volume_l": 13.0
+        },
+        "2023-2024": {
+          "quantite": 30.0,
+          "volume_l": 15.0
+        },
+        "2024-2025": {
+          "quantite": 29.0,
+          "volume_l": 14.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Saint Joseph Rouge",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Saint Joseph Rouge 75cl",
+      "nom_facture": "SAINT JOSEPH ROUGE 75 CL (Ogier)",
+      "flag": "",
+      "total_quantite": 81.0,
+      "total_volume_l": 40.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "volume_l": 12.0
+        },
+        "2023-2024": {
+          "quantite": 28.0,
+          "volume_l": 14.0
+        },
+        "2024-2025": {
+          "quantite": 29.0,
+          "volume_l": 14.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Chablis",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Chablis 75cl",
+      "nom_facture": "CHABLIS 75 CL",
+      "flag": "",
+      "total_quantite": 50.0,
+      "total_volume_l": 37.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 22.0,
+          "volume_l": 16.5
+        },
+        "2023-2024": {
+          "quantite": 15.0,
+          "volume_l": 11.25
+        },
+        "2024-2025": {
+          "quantite": 13.0,
+          "volume_l": 9.75
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Vin Jaune",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 12,
+      "categorie": "vin",
+      "nom_inventaire": "Arbois Vin Jaune 62cl",
+      "nom_facture": "ARBOIS VIN JAUNE 62 CL (J-L Tissot)",
+      "flag": "",
+      "total_quantite": 312.0,
+      "total_volume_l": 37.44,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 87.0,
+          "volume_l": 10.44
+        },
+        "2023-2024": {
+          "quantite": 102.0,
+          "volume_l": 12.24
+        },
+        "2024-2025": {
+          "quantite": 123.0,
+          "volume_l": 14.76
+        }
+      }
+    },
+    {
+      "nom_canonique": "Côtes du Rhône rouge maison (Chusclan)",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Côtes du Rhône Rouge BIB 10L",
+      "nom_facture": "BIB COTES DU RHONE ROUGE 10 L (Chusclan)",
+      "flag": "Vin maison rouge au verre/pichet",
+      "total_quantite": 223.5,
+      "total_volume_l": 33.52,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 120.0,
+          "volume_l": 18.0
+        },
+        "2024-2025": {
+          "quantite": 103.5,
+          "volume_l": 15.53
+        }
+      }
+    },
+    {
+      "nom_canonique": "Arbois Chardonnay",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Arbois Chardonnay 75cl",
+      "nom_facture": "ARBOIS CHARDONNAY 75 CL (J-L Tissot)",
+      "flag": "",
+      "total_quantite": 217.5,
+      "total_volume_l": 32.62,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 63.5,
+          "volume_l": 9.53
+        },
+        "2023-2024": {
+          "quantite": 68.5,
+          "volume_l": 10.28
+        },
+        "2024-2025": {
+          "quantite": 85.5,
+          "volume_l": 12.82
+        }
+      }
+    },
+    {
+      "nom_canonique": "Fût Affligem",
+      "format_service": "Monaco 25cl",
+      "volume_unitaire_cl": 25,
+      "categorie": "biere",
+      "nom_inventaire": "Fût Affligem 8L",
+      "nom_facture": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "flag": "Pression/pinte/panaché/picon/monaco",
+      "total_quantite": 130.0,
+      "total_volume_l": 32.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 56.0,
+          "volume_l": 14.0
+        },
+        "2024-2025": {
+          "quantite": 74.0,
+          "volume_l": 18.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Rosé Le Pive",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rose",
+      "nom_inventaire": "Rosé Le Pive 75cl",
+      "nom_facture": "ROSE DOM LE PIVE 75 CL",
+      "flag": "",
+      "total_quantite": 35.0,
+      "total_volume_l": 26.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 13.0,
+          "volume_l": 9.75
+        },
+        "2024-2025": {
+          "quantite": 22.0,
+          "volume_l": 16.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Crémant du Jura",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "petillant",
+      "nom_inventaire": "Crémant du Jura 75cl",
+      "nom_facture": "CREMANT DU JURA 75 CL (Arbois)",
+      "flag": "",
+      "total_quantite": 34.0,
+      "total_volume_l": 25.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 11.0,
+          "volume_l": 8.25
+        },
+        "2023-2024": {
+          "quantite": 10.0,
+          "volume_l": 7.5
+        },
+        "2024-2025": {
+          "quantite": 13.0,
+          "volume_l": 9.75
+        }
+      }
+    },
+    {
+      "nom_canonique": "Vin de Paille",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 6,
+      "categorie": "vin",
+      "nom_inventaire": "Vin de Paille 37,5cl",
+      "nom_facture": "VIN DE PAILLE 37,5 CL",
+      "flag": "",
+      "total_quantite": 414.5,
+      "total_volume_l": 24.87,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 127.0,
+          "volume_l": 7.62
+        },
+        "2023-2024": {
+          "quantite": 134.5,
+          "volume_l": 8.07
+        },
+        "2024-2025": {
+          "quantite": 153.0,
+          "volume_l": 9.18
+        }
+      }
+    },
+    {
+      "nom_canonique": "Gewurztraminer",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Gewurztraminer 75cl",
+      "nom_facture": "GEWURZTRAMINER 75 CL (Les Sorcières)",
+      "flag": "",
+      "total_quantite": 31.0,
+      "total_volume_l": 23.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 7.0,
+          "volume_l": 5.25
+        },
+        "2023-2024": {
+          "quantite": 13.0,
+          "volume_l": 9.75
+        },
+        "2024-2025": {
+          "quantite": 11.0,
+          "volume_l": 8.25
+        }
+      }
+    },
+    {
+      "nom_canonique": "Chablis",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 15,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Chablis 75cl",
+      "nom_facture": "CHABLIS 75 CL",
+      "flag": "",
+      "total_quantite": 148.0,
+      "total_volume_l": 22.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 134.0,
+          "volume_l": 20.1
+        },
+        "2023-2024": {
+          "quantite": 14.0,
+          "volume_l": 2.1
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Bohème Rosé (Le Pive)",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rose",
+      "nom_inventaire": "Bohème Rosé (Le Pive) 75cl",
+      "nom_facture": "ROSE DOM LE PIVE 75 CL",
+      "flag": "",
+      "total_quantite": 20.0,
+      "total_volume_l": 15.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 20.0,
+          "volume_l": 15.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Chablis",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Chablis 75cl",
+      "nom_facture": "CHABLIS 75 CL",
+      "flag": "",
+      "total_quantite": 28.0,
+      "total_volume_l": 14.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 25.0,
+          "volume_l": 12.5
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "volume_l": 1.5
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Martini Blanc",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 6,
+      "categorie": "aperitif",
+      "nom_inventaire": "Martini Blanc 100cl",
+      "nom_facture": "MARTINI BIANCO 100 CL",
+      "flag": "",
+      "total_quantite": 209.5,
+      "total_volume_l": 12.57,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 83.5,
+          "volume_l": 5.01
+        },
+        "2023-2024": {
+          "quantite": 65.5,
+          "volume_l": 3.93
+        },
+        "2024-2025": {
+          "quantite": 60.5,
+          "volume_l": 3.63
+        }
+      }
+    },
+    {
+      "nom_canonique": "Gewurztraminer",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Gewurztraminer 75cl",
+      "nom_facture": "GEWURZTRAMINER 75 CL (Les Sorcières)",
+      "flag": "",
+      "total_quantite": 25.0,
+      "total_volume_l": 12.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 11.0,
+          "volume_l": 5.5
+        },
+        "2023-2024": {
+          "quantite": 7.0,
+          "volume_l": 3.5
+        },
+        "2024-2025": {
+          "quantite": 7.0,
+          "volume_l": 3.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Côtes de Provence Rosé Minuty",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rose",
+      "nom_inventaire": "Côtes de Provence Rosé Minuty 75cl",
+      "nom_facture": "COTES DE PROVENCE ROSE 75 CL (M de Minuty)",
+      "flag": "",
+      "total_quantite": 15.0,
+      "total_volume_l": 11.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "volume_l": 9.0
+        },
+        "2024-2025": {
+          "quantite": 3.0,
+          "volume_l": 2.25
+        }
+      }
+    },
+    {
+      "nom_canonique": "Grand Pavois",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Grand Pavois 75cl",
+      "nom_facture": "GRAND PAVOIS N°8 BLANC 75 CL",
+      "flag": "",
+      "total_quantite": 13.0,
+      "total_volume_l": 9.75,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 7.0,
+          "volume_l": 5.25
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "volume_l": 4.5
+        }
+      }
+    },
+    {
+      "nom_canonique": "Porto",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 6,
+      "categorie": "aperitif",
+      "nom_inventaire": "Porto 75cl",
+      "nom_facture": "PORTO SANDEMAN ROUGE 75 CL",
+      "flag": "",
+      "total_quantite": 129.5,
+      "total_volume_l": 7.77,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 35.5,
+          "volume_l": 2.13
+        },
+        "2023-2024": {
+          "quantite": 47.0,
+          "volume_l": 2.82
+        },
+        "2024-2025": {
+          "quantite": 47.0,
+          "volume_l": 2.82
+        }
+      }
+    },
+    {
+      "nom_canonique": "Bordeaux Supérieur",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rouge",
+      "nom_inventaire": "Bordeaux Supérieur 75cl",
+      "nom_facture": "BORDEAUX SUPERIEUR 75 CL (Château Grand Renom)",
+      "flag": "Libellé caisse 'Mouton Cadet' = Bordeaux Supérieur (confirmé)",
+      "total_quantite": 9.0,
+      "total_volume_l": 6.75,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 9.0,
+          "volume_l": 6.75
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Miraval Rosé",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_rose",
+      "nom_inventaire": null,
+      "nom_facture": "MIRAVAL ROSE 75 CL CÔTES DE PROVENCE AOP",
+      "flag": "ABSENT de l'inventaire (présent en facture)",
+      "total_quantite": 8.0,
+      "total_volume_l": 6.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 8.0,
+          "volume_l": 6.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Pontarlier Anis",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 2,
+      "categorie": "aperitif",
+      "nom_inventaire": "Pontarlier Anis 100cl",
+      "nom_facture": "PONTARLIER ANIS 100 CL",
+      "flag": "",
+      "total_quantite": 297.5,
+      "total_volume_l": 5.95,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 102.0,
+          "volume_l": 2.04
+        },
+        "2023-2024": {
+          "quantite": 105.5,
+          "volume_l": 2.11
+        },
+        "2024-2025": {
+          "quantite": 90.0,
+          "volume_l": 1.8
+        }
+      }
+    },
+    {
+      "nom_canonique": "Ricard",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 2,
+      "categorie": "aperitif",
+      "nom_inventaire": "Ricard 100cl",
+      "nom_facture": "RICARD 100 CL",
+      "flag": "",
+      "total_quantite": 260.0,
+      "total_volume_l": 5.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 105.0,
+          "volume_l": 2.1
+        },
+        "2023-2024": {
+          "quantite": 83.0,
+          "volume_l": 1.66
+        },
+        "2024-2025": {
+          "quantite": 72.0,
+          "volume_l": 1.44
+        }
+      }
+    },
+    {
+      "nom_canonique": "Hautes Côtes de Beaune blanc",
+      "format_service": "Pichet 50cl",
+      "volume_unitaire_cl": 50,
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Haute Côte de Beaune 75cl",
+      "nom_facture": "HTES COTES DE BEAUNE BLC 75 CL (Domaine Germain)",
+      "flag": "",
+      "total_quantite": 9.0,
+      "total_volume_l": 4.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "volume_l": 3.0
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "volume_l": 1.5
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Pastis 51",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 2,
+      "categorie": "aperitif",
+      "nom_inventaire": "Pastis 51 100cl",
+      "nom_facture": "PASTIS 51 100 CL",
+      "flag": "",
+      "total_quantite": 216.0,
+      "total_volume_l": 4.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 79.0,
+          "volume_l": 1.58
+        },
+        "2023-2024": {
+          "quantite": 77.0,
+          "volume_l": 1.54
+        },
+        "2024-2025": {
+          "quantite": 60.0,
+          "volume_l": 1.2
+        }
+      }
+    },
+    {
+      "nom_canonique": "Get 27",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Get 27 70cl",
+      "nom_facture": "GET 27 70 CL",
+      "flag": "",
+      "total_quantite": 83.0,
+      "total_volume_l": 3.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 35.0,
+          "volume_l": 1.4
+        },
+        "2023-2024": {
+          "quantite": 30.0,
+          "volume_l": 1.2
+        },
+        "2024-2025": {
+          "quantite": 18.0,
+          "volume_l": 0.72
+        }
+      }
+    },
+    {
+      "nom_canonique": "Champagne",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "petillant",
+      "nom_inventaire": "Champagne Jean Sandrin 75cl",
+      "nom_facture": "CHAMPAGNE JEAN SANDRIN 75 CL / CHAMPAGNE LANSON 75 CL",
+      "flag": "Jean Sandrin OU Lanson selon stock",
+      "total_quantite": 4.0,
+      "total_volume_l": 3.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "volume_l": 3.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Jack Daniel's",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "spiritueux",
+      "nom_inventaire": "Jack Daniel's 70cl",
+      "nom_facture": "JACK DANIEL'S 70 CL",
+      "flag": "",
+      "total_quantite": 74.5,
+      "total_volume_l": 2.98,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 40.0,
+          "volume_l": 1.6
+        },
+        "2023-2024": {
+          "quantite": 24.5,
+          "volume_l": 0.98
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "volume_l": 0.4
+        }
+      }
+    },
+    {
+      "nom_canonique": "Clan Campbell",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "spiritueux",
+      "nom_inventaire": "Clan Campbell 70cl",
+      "nom_facture": "CLAN CAMPBELL 70 CL 40°",
+      "flag": "Libellé caisse 'Whisky L.J / Long John' ; SEUL whisky acheté = Clan Campbell",
+      "total_quantite": 73.5,
+      "total_volume_l": 2.94,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 30.0,
+          "volume_l": 1.2
+        },
+        "2023-2024": {
+          "quantite": 21.0,
+          "volume_l": 0.84
+        },
+        "2024-2025": {
+          "quantite": 22.5,
+          "volume_l": 0.9
+        }
+      }
+    },
+    {
+      "nom_canonique": "Marc du Jura",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "eau_de_vie",
+      "nom_inventaire": "Marc du Jura 70cl",
+      "nom_facture": "MARC DU JURA 70 CL (Tissot)",
+      "flag": "",
+      "total_quantite": 60.0,
+      "total_volume_l": 2.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 25.0,
+          "volume_l": 1.0
+        },
+        "2023-2024": {
+          "quantite": 17.0,
+          "volume_l": 0.68
+        },
+        "2024-2025": {
+          "quantite": 18.0,
+          "volume_l": 0.72
+        }
+      }
+    },
+    {
+      "nom_canonique": "Génépi",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Génépi 70cl",
+      "nom_facture": "GENEPI 70 CL",
+      "flag": "",
+      "total_quantite": 58.0,
+      "total_volume_l": 2.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 15.0,
+          "volume_l": 0.6
+        },
+        "2023-2024": {
+          "quantite": 22.0,
+          "volume_l": 0.88
+        },
+        "2024-2025": {
+          "quantite": 21.0,
+          "volume_l": 0.84
+        }
+      }
+    },
+    {
+      "nom_canonique": "Hautes Côtes de Nuits blanc",
+      "format_service": "Bouteille",
+      "volume_unitaire_cl": 75,
+      "categorie": "vin_blanc",
+      "nom_inventaire": null,
+      "nom_facture": "HTES CTES DE NUITS BLANC 75 CL (Lupé Cholet)",
+      "flag": "ABSENT de l'inventaire (présent en facture) - distinct de Beaune",
+      "total_quantite": 3.0,
+      "total_volume_l": 2.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 3.0,
+          "volume_l": 2.25
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Liqueur de Sapin",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Liqueur de Sapin 70cl",
+      "nom_facture": "LIQUEUR DE SAPIN 70 CL",
+      "flag": "",
+      "total_quantite": 55.0,
+      "total_volume_l": 2.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 15.0,
+          "volume_l": 0.6
+        },
+        "2023-2024": {
+          "quantite": 22.0,
+          "volume_l": 0.88
+        },
+        "2024-2025": {
+          "quantite": 18.0,
+          "volume_l": 0.72
+        }
+      }
+    },
+    {
+      "nom_canonique": "Champagne",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 12,
+      "categorie": "petillant",
+      "nom_inventaire": "Champagne Jean Sandrin 75cl",
+      "nom_facture": "CHAMPAGNE JEAN SANDRIN 75 CL / CHAMPAGNE LANSON 75 CL",
+      "flag": "Jean Sandrin OU Lanson selon stock",
+      "total_quantite": 18.0,
+      "total_volume_l": 2.16,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 9.0,
+          "volume_l": 1.08
+        },
+        "2023-2024": {
+          "quantite": 7.0,
+          "volume_l": 0.84
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "volume_l": 0.24
+        }
+      }
+    },
+    {
+      "nom_canonique": "Eau de Vie de Poire",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "eau_de_vie",
+      "nom_inventaire": "Eau de Vie de Poire 70cl",
+      "nom_facture": "EAU DE VIE DE POIRE 70 CL",
+      "flag": "",
+      "total_quantite": 43.0,
+      "total_volume_l": 1.72,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "volume_l": 0.48
+        },
+        "2023-2024": {
+          "quantite": 11.0,
+          "volume_l": 0.44
+        },
+        "2024-2025": {
+          "quantite": 20.0,
+          "volume_l": 0.8
+        }
+      }
+    },
+    {
+      "nom_canonique": "Calvados",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "eau_de_vie",
+      "nom_inventaire": "Calvados 100cl",
+      "nom_facture": "CALVADOS BEAUJOUR 100 CL 40°",
+      "flag": "",
+      "total_quantite": 36.0,
+      "total_volume_l": 1.44,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "volume_l": 0.48
+        },
+        "2023-2024": {
+          "quantite": 9.0,
+          "volume_l": 0.36
+        },
+        "2024-2025": {
+          "quantite": 15.0,
+          "volume_l": 0.6
+        }
+      }
+    },
+    {
+      "nom_canonique": "Liqueur de Poire",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Liqueur de Poire 70cl",
+      "nom_facture": "LIQUEUR DE POIRE WILLIAM 70 CL",
+      "flag": "",
+      "total_quantite": 34.0,
+      "total_volume_l": 1.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 14.0,
+          "volume_l": 0.56
+        },
+        "2023-2024": {
+          "quantite": 9.0,
+          "volume_l": 0.36
+        },
+        "2024-2025": {
+          "quantite": 11.0,
+          "volume_l": 0.44
+        }
+      }
+    },
+    {
+      "nom_canonique": "Bailey's",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Bailey's 70cl",
+      "nom_facture": "BAILEY'S 70 CL",
+      "flag": "",
+      "total_quantite": 33.0,
+      "total_volume_l": 1.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "volume_l": 0.2
+        },
+        "2023-2024": {
+          "quantite": 20.0,
+          "volume_l": 0.8
+        },
+        "2024-2025": {
+          "quantite": 8.0,
+          "volume_l": 0.32
+        }
+      }
+    },
+    {
+      "nom_canonique": "Eau de Vie Mirabelle",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "eau_de_vie",
+      "nom_inventaire": "Eau de Vie Mirabelle 70cl",
+      "nom_facture": "EAU DE VIE MIRABELLE 70 CL",
+      "flag": "",
+      "total_quantite": 28.0,
+      "total_volume_l": 1.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "volume_l": 0.2
+        },
+        "2023-2024": {
+          "quantite": 13.0,
+          "volume_l": 0.52
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "volume_l": 0.4
+        }
+      }
+    },
+    {
+      "nom_canonique": "Cognac",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "eau_de_vie",
+      "nom_inventaire": "Cognac 70cl",
+      "nom_facture": "COGNAC PARK 70 CL",
+      "flag": "",
+      "total_quantite": 23.0,
+      "total_volume_l": 0.92,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 8.5,
+          "volume_l": 0.34
+        },
+        "2023-2024": {
+          "quantite": 10.0,
+          "volume_l": 0.4
+        },
+        "2024-2025": {
+          "quantite": 4.5,
+          "volume_l": 0.18
+        }
+      }
+    },
+    {
+      "nom_canonique": "Get 31",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Get 31 70cl",
+      "nom_facture": "GET 31 70 CL",
+      "flag": "",
+      "total_quantite": 23.0,
+      "total_volume_l": 0.92,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "volume_l": 0.48
+        },
+        "2023-2024": {
+          "quantite": 9.0,
+          "volume_l": 0.36
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "volume_l": 0.08
+        }
+      }
+    },
+    {
+      "nom_canonique": "Eau de Vie Framboise",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "eau_de_vie",
+      "nom_inventaire": "Eau de Vie Framboise 70cl",
+      "nom_facture": "EAU DE VIE FRAMBOISE 70 CL",
+      "flag": "",
+      "total_quantite": 21.0,
+      "total_volume_l": 0.84,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 11.0,
+          "volume_l": 0.44
+        },
+        "2023-2024": {
+          "quantite": 7.0,
+          "volume_l": 0.28
+        },
+        "2024-2025": {
+          "quantite": 3.0,
+          "volume_l": 0.12
+        }
+      }
+    },
+    {
+      "nom_canonique": "Grand Marnier",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Grand Marnier 70cl",
+      "nom_facture": "GRAND MARNIER CORDON ROUGE 70 CL 40°",
+      "flag": "",
+      "total_quantite": 17.0,
+      "total_volume_l": 0.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 13.0,
+          "volume_l": 0.52
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "volume_l": 0.16
+        }
+      }
+    },
+    {
+      "nom_canonique": "Marc de Bourgogne",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "eau_de_vie",
+      "nom_inventaire": "Marc de Bourgogne 70cl",
+      "nom_facture": "MARC DE BOURGOGNE 70 CL",
+      "flag": "",
+      "total_quantite": 5.0,
+      "total_volume_l": 0.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "volume_l": 0.08
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "volume_l": 0.04
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "volume_l": 0.08
+        }
+      }
+    },
+    {
+      "nom_canonique": "Clan Campbell",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 2,
+      "categorie": "spiritueux",
+      "nom_inventaire": "Clan Campbell 70cl",
+      "nom_facture": "CLAN CAMPBELL 70 CL 40°",
+      "flag": "Libellé caisse 'Whisky L.J / Long John' ; SEUL whisky acheté = Clan Campbell",
+      "total_quantite": 6.0,
+      "total_volume_l": 0.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 3.0,
+          "volume_l": 0.06
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "volume_l": 0.04
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "volume_l": 0.02
+        }
+      }
+    },
+    {
+      "nom_canonique": "Tequila Camino Real",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "spiritueux",
+      "nom_inventaire": null,
+      "nom_facture": "TEQUILA CAMINO REAL 70 CL 35°",
+      "flag": "ABSENT de l'inventaire (présent en facture)",
+      "total_quantite": 1.0,
+      "total_volume_l": 0.04,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "volume_l": 0.04
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    },
+    {
+      "nom_canonique": "Guignolet",
+      "format_service": "Verre",
+      "volume_unitaire_cl": 4,
+      "categorie": "liqueur",
+      "nom_inventaire": "Liqueur de Cerise 70cl",
+      "nom_facture": "LIQUEUR DE CERISE 70 CL",
+      "flag": "Guignolet (cerise) rattaché à Liqueur de Cerise - 1 unité",
+      "total_quantite": 1.0,
+      "total_volume_l": 0.04,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "volume_l": 0.04
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "volume_l": 0.0
+        }
+      }
+    }
+  ]
+}

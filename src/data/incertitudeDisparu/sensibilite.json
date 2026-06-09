@@ -1,0 +1,55 @@
+{
+ "description": "Tornado : balancement du disparu (€ revente) quand chaque parametre va de min a max, autres au mode.",
+ "disparu_au_point_de_base_eur": 96019.0,
+ "tornado": [
+  {
+   "parametre": "surversement_vin",
+   "label": "Sur-versement vin/cidre",
+   "disparu_a_min_param_eur": 105458.0,
+   "disparu_a_max_param_eur": 78491.0,
+   "balancement_eur": 26967.0
+  },
+  {
+   "parametre": "personnel_offerts_alcool",
+   "label": "Conso personnel/offerts",
+   "disparu_a_min_param_eur": 101850.0,
+   "disparu_a_max_param_eur": 86301.0,
+   "balancement_eur": 15550.0
+  },
+  {
+   "parametre": "menu",
+   "label": "Alcool des menus (bas->haut)",
+   "disparu_a_min_param_eur": 92442.0,
+   "disparu_a_max_param_eur": 99600.0,
+   "balancement_eur": 7158.0
+  },
+  {
+   "parametre": "dose_cuisine",
+   "label": "Dose cuisine",
+   "disparu_a_min_param_eur": 99593.0,
+   "disparu_a_max_param_eur": 92446.0,
+   "balancement_eur": 7148.0
+  },
+  {
+   "parametre": "dose_cocktail",
+   "label": "Dose cocktails",
+   "disparu_a_min_param_eur": 98483.0,
+   "disparu_a_max_param_eur": 93556.0,
+   "balancement_eur": 4927.0
+  },
+  {
+   "parametre": "perte_biere_fut",
+   "label": "Perte biere pression",
+   "disparu_a_min_param_eur": 97654.0,
+   "disparu_a_max_param_eur": 93404.0,
+   "balancement_eur": 4251.0
+  },
+  {
+   "parametre": "surversement_spiritueux",
+   "label": "Sur-versement spiritueux",
+   "disparu_a_min_param_eur": 97385.0,
+   "disparu_a_max_param_eur": 93288.0,
+   "balancement_eur": 4097.0
+  }
+ ]
+}

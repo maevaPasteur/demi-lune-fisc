@@ -1,0 +1,19 @@
+{
+  "cle": "nonLivre",
+  "methode": "Les 231 lignes des factures FCBS dont le montant HT est vide/0 correspondent à de la marchandise portée sur la facture mais manquante ou refusée à la livraison (puNet vide). Elles sont valorisées au puBrut présent (47 lignes) sinon à la médiane du puNet du même code ailleurs, et converties en litres via le libellé. Le carnet manuscrit de la gérante corrobore ce flux : 125/125 dates « non reçu » tombent à ±7 j d'une facture HT-vide.",
+  "colonnes": ["Cause (statut)", "Nb lignes", "Volume estimé", "Coût HT"],
+  "lignes": [
+    ["Marchandise manquante / refusée (factures HT = 0)", "231 lignes", "≈ 684 L", "≈ 2 500 €"],
+    ["dont carnet manuscrit « Facturé non livré »", "8", "≈ 25 u.", "-"],
+    ["dont carnet « En manque »", "114", "≈ 703 u.", "-"],
+    ["dont carnet « Refusé »", "1", "≈ 2 u.", "-"],
+    ["dont carnet « Retour »", "2", "≈ 44 u.", "-"],
+    ["Sous-total carnet « non reçu »", "125", "≈ 774 u.", "-"],
+    ["Carnet « Avoir » (sur-facturation déjà annulée par avoir)", "48", "≈ 454 u.", "-"],
+    ["Carnet « Reprise » (consigne reprise)", "6", "≈ 33 u.", "-"]
+  ],
+  "totalLabel": "Total facturé non livré (plancher)",
+  "totalValeur": "≈ 2 500 € HT",
+  "sources": [{"label": "Factures FCBS (lignes à 0 €)"}, {"label": "Carnet manuscrit - anomalies fournisseur"}],
+  "note": "Plancher : 136 lignes sans quantité non chiffrées. Carnet corrobore 125/125 dates."
+}

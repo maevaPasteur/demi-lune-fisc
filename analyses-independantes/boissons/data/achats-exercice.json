@@ -1,0 +1,8251 @@
+{
+ "genereDepuis": "factures-fournisseur.json + achats-par-produit.json",
+ "exercices": [
+  "2022-2023",
+  "2023-2024",
+  "2024-2025"
+ ],
+ "nbProduits": 280,
+ "lignesIgnorees": 231,
+ "produits": [
+  {
+   "code": "212122",
+   "libelle": "FUT AFFLIGEM BLADE 8 L 6,7°",
+   "categorie": "biere",
+   "contenanceCl": 800,
+   "type": "boisson",
+   "estFut": true,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 792.0,
+     "volCl": 79200.0,
+     "ht": 2866.32,
+     "nbLignes": 34,
+     "puMoyen": 3.6191
+    },
+    "2023-2024": {
+     "qte": 632.0,
+     "volCl": 63200.0,
+     "ht": 2579.92,
+     "nbLignes": 33,
+     "puMoyen": 4.0822
+    },
+    "2024-2025": {
+     "qte": 672.0,
+     "volCl": 67200.0,
+     "ht": 2856.16,
+     "nbLignes": 36,
+     "puMoyen": 4.2502
+    }
+   },
+   "total": {
+    "qte": 2096.0,
+    "volCl": 209600.0,
+    "ht": 8302.4,
+    "nbLignes": 103,
+    "puMoyen": 3.9611
+   }
+  },
+  {
+   "code": "600716",
+   "libelle": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 264.0,
+     "volCl": 19800.0,
+     "ht": 1949.88,
+     "nbLignes": 32,
+     "puMoyen": 7.3859
+    },
+    "2023-2024": {
+     "qte": 324.0,
+     "volCl": 24300.0,
+     "ht": 2663.46,
+     "nbLignes": 37,
+     "puMoyen": 8.2206
+    },
+    "2024-2025": {
+     "qte": 312.0,
+     "volCl": 23400.0,
+     "ht": 2814.04,
+     "nbLignes": 36,
+     "puMoyen": 9.0194
+    }
+   },
+   "total": {
+    "qte": 900.0,
+    "volCl": 67500.0,
+    "ht": 7427.38,
+    "nbLignes": 105,
+    "puMoyen": 8.2526
+   }
+  },
+  {
+   "code": "510221",
+   "libelle": "MACVIN BLANC 75 CL 18° DOMAINE ROLET PERE & FILS",
+   "categorie": "macvin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 286.0,
+     "volCl": 21450.0,
+     "ht": 4249.12,
+     "nbLignes": 31,
+     "puMoyen": 14.8571
+    },
+    "2024-2025": {
+     "qte": 66.0,
+     "volCl": 4950.0,
+     "ht": 1039.14,
+     "nbLignes": 8,
+     "puMoyen": 15.7445
+    }
+   },
+   "total": {
+    "qte": 352.0,
+    "volCl": 26400.0,
+    "ht": 5288.26,
+    "nbLignes": 39,
+    "puMoyen": 15.0235
+   }
+  },
+  {
+   "code": "600707",
+   "libelle": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "macvin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 58.0,
+     "volCl": 4350.0,
+     "ht": 682.08,
+     "nbLignes": 8,
+     "puMoyen": 11.76
+    },
+    "2023-2024": {
+     "qte": 88.0,
+     "volCl": 6600.0,
+     "ht": 1058.16,
+     "nbLignes": 11,
+     "puMoyen": 12.0245
+    },
+    "2024-2025": {
+     "qte": 263.0,
+     "volCl": 19725.0,
+     "ht": 3468.97,
+     "nbLignes": 27,
+     "puMoyen": 13.19
+    }
+   },
+   "total": {
+    "qte": 409.0,
+    "volCl": 30675.0,
+    "ht": 5209.21,
+    "nbLignes": 46,
+    "puMoyen": 12.7365
+   }
+  },
+  {
+   "code": "601164",
+   "libelle": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 164.0,
+     "volCl": 12300.0,
+     "ht": 1871.72,
+     "nbLignes": 21,
+     "puMoyen": 11.4129
+    },
+    "2023-2024": {
+     "qte": 194.0,
+     "volCl": 14550.0,
+     "ht": 2298.9,
+     "nbLignes": 27,
+     "puMoyen": 11.85
+    }
+   },
+   "total": {
+    "qte": 358.0,
+    "volCl": 26850.0,
+    "ht": 4170.62,
+    "nbLignes": 48,
+    "puMoyen": 11.6498
+   }
+  },
+  {
+   "code": "402005",
+   "libelle": "BOITE COCA COLA 33 CL",
+   "categorie": "soft",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2712.0,
+     "volCl": 89496.0,
+     "ht": 1735.68,
+     "nbLignes": 43,
+     "puMoyen": 0.64
+    },
+    "2023-2024": {
+     "qte": 1488.0,
+     "volCl": 49104.0,
+     "ht": 959.04,
+     "nbLignes": 36,
+     "puMoyen": 0.6445
+    },
+    "2024-2025": {
+     "qte": 1752.0,
+     "volCl": 57816.0,
+     "ht": 1165.92,
+     "nbLignes": 36,
+     "puMoyen": 0.6655
+    }
+   },
+   "total": {
+    "qte": 5952.0,
+    "volCl": 196416.0,
+    "ht": 3860.64,
+    "nbLignes": 115,
+    "puMoyen": 0.6486
+   }
+  },
+  {
+   "code": "603040",
+   "libelle": "BIB BOURGOGNE ALIGOTE BUXY 10L LA COMPAGNIE DE BURGONDIE",
+   "categorie": "vin",
+   "contenanceCl": 1000,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 22.0,
+     "volCl": 22000.0,
+     "ht": 1116.43,
+     "nbLignes": 21,
+     "puMoyen": 50.7468
+    },
+    "2023-2024": {
+     "qte": 22.0,
+     "volCl": 22000.0,
+     "ht": 1188.28,
+     "nbLignes": 21,
+     "puMoyen": 54.0127
+    },
+    "2024-2025": {
+     "qte": 20.0,
+     "volCl": 20000.0,
+     "ht": 1085.8,
+     "nbLignes": 17,
+     "puMoyen": 54.29
+    }
+   },
+   "total": {
+    "qte": 64.0,
+    "volCl": 64000.0,
+    "ht": 3390.51,
+    "nbLignes": 59,
+    "puMoyen": 52.9767
+   }
+  },
+  {
+   "code": "601152",
+   "libelle": "MACVIN BLANC JACOBIN 75 CL FRUITIERE VINICOLE ARBOIS",
+   "categorie": "macvin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 256.0,
+     "volCl": 19200.0,
+     "ht": 3301.12,
+     "nbLignes": 32,
+     "puMoyen": 12.895
+    }
+   },
+   "total": {
+    "qte": 256.0,
+    "volCl": 19200.0,
+    "ht": 3301.12,
+    "nbLignes": 32,
+    "puMoyen": 12.895
+   }
+  },
+  {
+   "code": "601489",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2016 FRUITIERE VINICOLE ARBOIS AOC",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 95.0,
+     "volCl": 5890.0,
+     "ht": 2046.26,
+     "nbLignes": 34,
+     "puMoyen": 21.5396
+    },
+    "2024-2025": {
+     "qte": 37.0,
+     "volCl": 2294.0,
+     "ht": 887.26,
+     "nbLignes": 13,
+     "puMoyen": 23.98
+    }
+   },
+   "total": {
+    "qte": 132.0,
+    "volCl": 8184.0,
+    "ht": 2933.52,
+    "nbLignes": 47,
+    "puMoyen": 22.2236
+   }
+  },
+  {
+   "code": "603042",
+   "libelle": "BIB COTES DE PROV ROSE 10 L CAP DES PINS MTRES VIGN DE ST TROPEZ",
+   "categorie": "vin",
+   "contenanceCl": 1000,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 27.0,
+     "volCl": 27000.0,
+     "ht": 1424.25,
+     "nbLignes": 23,
+     "puMoyen": 52.75
+    },
+    "2023-2024": {
+     "qte": 23.0,
+     "volCl": 23000.0,
+     "ht": 1213.25,
+     "nbLignes": 21,
+     "puMoyen": 52.75
+    }
+   },
+   "total": {
+    "qte": 50.0,
+    "volCl": 50000.0,
+    "ht": 2637.5,
+    "nbLignes": 44,
+    "puMoyen": 52.75
+   }
+  },
+  {
+   "code": "601538",
+   "libelle": "MOULIN A VENT 75 CL 2018 DOMAINE DE BRIANTE",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 82.0,
+     "volCl": 6150.0,
+     "ht": 969.24,
+     "nbLignes": 14,
+     "puMoyen": 11.82
+    },
+    "2024-2025": {
+     "qte": 94.0,
+     "volCl": 7050.0,
+     "ht": 1111.08,
+     "nbLignes": 15,
+     "puMoyen": 11.82
+    }
+   },
+   "total": {
+    "qte": 176.0,
+    "volCl": 13200.0,
+    "ht": 2080.32,
+    "nbLignes": 29,
+    "puMoyen": 11.82
+   }
+  },
+  {
+   "code": "661576",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2015 FRUITIERE VINICOLE ARBOIS AOC",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 99.0,
+     "volCl": 6138.0,
+     "ht": 1893.87,
+     "nbLignes": 29,
+     "puMoyen": 19.13
+    },
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 372.0,
+     "ht": 114.78,
+     "nbLignes": 3,
+     "puMoyen": 19.13
+    }
+   },
+   "total": {
+    "qte": 105.0,
+    "volCl": 6510.0,
+    "ht": 2008.65,
+    "nbLignes": 32,
+    "puMoyen": 19.13
+   }
+  },
+  {
+   "code": "600963",
+   "libelle": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2018",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 114.0,
+     "volCl": 8550.0,
+     "ht": 1120.62,
+     "nbLignes": 16,
+     "puMoyen": 9.83
+    },
+    "2023-2024": {
+     "qte": 84.0,
+     "volCl": 6300.0,
+     "ht": 866.04,
+     "nbLignes": 13,
+     "puMoyen": 10.31
+    }
+   },
+   "total": {
+    "qte": 198.0,
+    "volCl": 14850.0,
+    "ht": 1986.66,
+    "nbLignes": 29,
+    "puMoyen": 10.0336
+   }
+  },
+  {
+   "code": "110207",
+   "libelle": "CAFE MALONGO GRAIN KILO SELECT",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 38.0,
+     "volCl": 0.0,
+     "ht": 997.34,
+     "nbLignes": 25,
+     "puMoyen": 26.2458
+    },
+    "2023-2024": {
+     "qte": 29.0,
+     "volCl": 0.0,
+     "ht": 845.48,
+     "nbLignes": 24,
+     "puMoyen": 29.1545
+    },
+    "2024-2025": {
+     "qte": 4.0,
+     "volCl": 0.0,
+     "ht": 126.72,
+     "nbLignes": 4,
+     "puMoyen": 31.68
+    }
+   },
+   "total": {
+    "qte": 71.0,
+    "volCl": 0.0,
+    "ht": 1969.54,
+    "nbLignes": 53,
+    "puMoyen": 27.74
+   }
+  },
+  {
+   "code": "601616",
+   "libelle": "ARBOIS TROUSSEAU 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 168.0,
+     "volCl": 12600.0,
+     "ht": 1791.97,
+     "nbLignes": 25,
+     "puMoyen": 10.6665
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 66.06,
+     "nbLignes": 1,
+     "puMoyen": 11.01
+    }
+   },
+   "total": {
+    "qte": 174.0,
+    "volCl": 13050.0,
+    "ht": 1858.03,
+    "nbLignes": 26,
+    "puMoyen": 10.6783
+   }
+  },
+  {
+   "code": "601166",
+   "libelle": "ARBOIS TROUSSEAU 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 188.0,
+     "volCl": 14100.0,
+     "ht": 1836.76,
+     "nbLignes": 24,
+     "puMoyen": 9.77
+    }
+   },
+   "total": {
+    "qte": 188.0,
+    "volCl": 14100.0,
+    "ht": 1836.76,
+    "nbLignes": 24,
+    "puMoyen": 9.77
+   }
+  },
+  {
+   "code": "661457",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2017 FRUITIERE VINICOLE ARBOIS",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 74.0,
+     "volCl": 4588.0,
+     "ht": 1779.74,
+     "nbLignes": 22,
+     "puMoyen": 24.0505
+    }
+   },
+   "total": {
+    "qte": 74.0,
+    "volCl": 4588.0,
+    "ht": 1779.74,
+    "nbLignes": 22,
+    "puMoyen": 24.0505
+   }
+  },
+  {
+   "code": "601934",
+   "libelle": "ARBOIS TROUSSEAU 75 CL 2023 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 160.0,
+     "volCl": 12000.0,
+     "ht": 1761.6,
+     "nbLignes": 24,
+     "puMoyen": 11.01
+    }
+   },
+   "total": {
+    "qte": 160.0,
+    "volCl": 12000.0,
+    "ht": 1761.6,
+    "nbLignes": 24,
+    "puMoyen": 11.01
+   }
+  },
+  {
+   "code": "601342",
+   "libelle": "ARBOIS SAVAGNIN 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 1800.0,
+     "ht": 287.34,
+     "nbLignes": 4,
+     "puMoyen": 11.9725
+    },
+    "2023-2024": {
+     "qte": 30.0,
+     "volCl": 2250.0,
+     "ht": 411.0,
+     "nbLignes": 4,
+     "puMoyen": 13.7
+    },
+    "2024-2025": {
+     "qte": 72.0,
+     "volCl": 5400.0,
+     "ht": 1036.08,
+     "nbLignes": 9,
+     "puMoyen": 14.39
+    }
+   },
+   "total": {
+    "qte": 126.0,
+    "volCl": 9450.0,
+    "ht": 1734.42,
+    "nbLignes": 17,
+    "puMoyen": 13.7652
+   }
+  },
+  {
+   "code": "600705",
+   "libelle": "ARBOIS SAVAGNIN 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 111.0,
+     "volCl": 8325.0,
+     "ht": 1588.89,
+     "nbLignes": 17,
+     "puMoyen": 14.3143
+    }
+   },
+   "total": {
+    "qte": 111.0,
+    "volCl": 8325.0,
+    "ht": 1588.89,
+    "nbLignes": 17,
+    "puMoyen": 14.3143
+   }
+  },
+  {
+   "code": "101157",
+   "libelle": "MIX CRACKERS ET BRETZEL CROCO SACHET DE 750 GRAMMES",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 119.0,
+     "volCl": 0.0,
+     "ht": 513.61,
+     "nbLignes": 30,
+     "puMoyen": 4.3161
+    },
+    "2023-2024": {
+     "qte": 119.0,
+     "volCl": 0.0,
+     "ht": 535.39,
+     "nbLignes": 40,
+     "puMoyen": 4.4991
+    },
+    "2024-2025": {
+     "qte": 115.0,
+     "volCl": 0.0,
+     "ht": 530.37,
+     "nbLignes": 33,
+     "puMoyen": 4.6119
+    }
+   },
+   "total": {
+    "qte": 353.0,
+    "volCl": 0.0,
+    "ht": 1579.37,
+    "nbLignes": 103,
+    "puMoyen": 4.4741
+   }
+  },
+  {
+   "code": "661715",
+   "libelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2022",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 78.0,
+     "volCl": 5850.0,
+     "ht": 648.18,
+     "nbLignes": 12,
+     "puMoyen": 8.31
+    },
+    "2024-2025": {
+     "qte": 104.0,
+     "volCl": 7800.0,
+     "ht": 864.24,
+     "nbLignes": 17,
+     "puMoyen": 8.31
+    }
+   },
+   "total": {
+    "qte": 182.0,
+    "volCl": 13650.0,
+    "ht": 1512.42,
+    "nbLignes": 29,
+    "puMoyen": 8.31
+   }
+  },
+  {
+   "code": "601304",
+   "libelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2018",
+   "categorie": "vin",
+   "contenanceCl": 37.5,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 96.0,
+     "volCl": 3600.0,
+     "ht": 641.28,
+     "nbLignes": 9,
+     "puMoyen": 6.68
+    },
+    "2023-2024": {
+     "qte": 130.0,
+     "volCl": 4875.0,
+     "ht": 868.88,
+     "nbLignes": 18,
+     "puMoyen": 6.6837
+    }
+   },
+   "total": {
+    "qte": 226.0,
+    "volCl": 8475.0,
+    "ht": 1510.16,
+    "nbLignes": 27,
+    "puMoyen": 6.6821
+   }
+  },
+  {
+   "code": "601680",
+   "libelle": "SAINT JOSEPH ROUGE 75 CL 2022 LES MARCHES DE GRANIT OGIER",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 24.0,
+     "volCl": 1800.0,
+     "ht": 331.2,
+     "nbLignes": 4,
+     "puMoyen": 13.8
+    },
+    "2024-2025": {
+     "qte": 78.0,
+     "volCl": 5850.0,
+     "ht": 1075.74,
+     "nbLignes": 13,
+     "puMoyen": 13.7915
+    }
+   },
+   "total": {
+    "qte": 102.0,
+    "volCl": 7650.0,
+    "ht": 1406.94,
+    "nbLignes": 17,
+    "puMoyen": 13.7935
+   }
+  },
+  {
+   "code": "580018",
+   "libelle": "PORTO SANDEMAN ROUGE 75CL 19°5",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 40.0,
+     "volCl": 3000.0,
+     "ht": 306.38,
+     "nbLignes": 22,
+     "puMoyen": 7.6595
+    },
+    "2023-2024": {
+     "qte": 69.0,
+     "volCl": 5175.0,
+     "ht": 554.07,
+     "nbLignes": 35,
+     "puMoyen": 8.03
+    },
+    "2024-2025": {
+     "qte": 62.0,
+     "volCl": 4650.0,
+     "ht": 517.7,
+     "nbLignes": 29,
+     "puMoyen": 8.35
+    }
+   },
+   "total": {
+    "qte": 171.0,
+    "volCl": 12825.0,
+    "ht": 1378.15,
+    "nbLignes": 86,
+    "puMoyen": 8.0594
+   }
+  },
+  {
+   "code": "300020",
+   "libelle": "PERRIER 33 CL CONSIGNE",
+   "categorie": "eau",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 384.0,
+     "volCl": 12672.0,
+     "ht": 383.04,
+     "nbLignes": 15,
+     "puMoyen": 0.9975
+    },
+    "2023-2024": {
+     "qte": 456.0,
+     "volCl": 15048.0,
+     "ht": 488.88,
+     "nbLignes": 19,
+     "puMoyen": 1.0721
+    },
+    "2024-2025": {
+     "qte": 408.0,
+     "volCl": 13464.0,
+     "ht": 452.88,
+     "nbLignes": 17,
+     "puMoyen": 1.11
+    }
+   },
+   "total": {
+    "qte": 1248.0,
+    "volCl": 41184.0,
+    "ht": 1324.8,
+    "nbLignes": 51,
+    "puMoyen": 1.0615
+   }
+  },
+  {
+   "code": "601667",
+   "libelle": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 40.0,
+     "volCl": 3000.0,
+     "ht": 499.6,
+     "nbLignes": 7,
+     "puMoyen": 12.49
+    },
+    "2024-2025": {
+     "qte": 66.0,
+     "volCl": 4950.0,
+     "ht": 824.34,
+     "nbLignes": 11,
+     "puMoyen": 12.49
+    }
+   },
+   "total": {
+    "qte": 106.0,
+    "volCl": 7950.0,
+    "ht": 1323.94,
+    "nbLignes": 18,
+    "puMoyen": 12.49
+   }
+  },
+  {
+   "code": "601018",
+   "libelle": "GEWURZTRAMINER 75 CL SORCIERES DOMAINE LES SORCIERES 2018 DOPFF & IRION",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 42.0,
+     "volCl": 3150.0,
+     "ht": 418.5,
+     "nbLignes": 7,
+     "puMoyen": 9.9643
+    },
+    "2023-2024": {
+     "qte": 45.0,
+     "volCl": 3375.0,
+     "ht": 448.65,
+     "nbLignes": 8,
+     "puMoyen": 9.97
+    },
+    "2024-2025": {
+     "qte": 40.0,
+     "volCl": 3000.0,
+     "ht": 398.8,
+     "nbLignes": 7,
+     "puMoyen": 9.97
+    }
+   },
+   "total": {
+    "qte": 127.0,
+    "volCl": 9525.0,
+    "ht": 1265.95,
+    "nbLignes": 22,
+    "puMoyen": 9.9681
+   }
+  },
+  {
+   "code": "601477",
+   "libelle": "SAINT VERAN 75 CL 2022 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 54.36,
+     "nbLignes": 1,
+     "puMoyen": 9.06
+    },
+    "2023-2024": {
+     "qte": 130.0,
+     "volCl": 9750.0,
+     "ht": 1177.8,
+     "nbLignes": 21,
+     "puMoyen": 9.06
+    }
+   },
+   "total": {
+    "qte": 136.0,
+    "volCl": 10200.0,
+    "ht": 1232.16,
+    "nbLignes": 22,
+    "puMoyen": 9.06
+   }
+  },
+  {
+   "code": "520055",
+   "libelle": "CALVADOS BEAUJOUR 100 CL 40°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 32.0,
+     "volCl": 3200.0,
+     "ht": 528.96,
+     "nbLignes": 26,
+     "puMoyen": 16.53
+    },
+    "2023-2024": {
+     "qte": 22.0,
+     "volCl": 2200.0,
+     "ht": 368.94,
+     "nbLignes": 20,
+     "puMoyen": 16.77
+    },
+    "2024-2025": {
+     "qte": 19.0,
+     "volCl": 1900.0,
+     "ht": 329.84,
+     "nbLignes": 14,
+     "puMoyen": 17.36
+    }
+   },
+   "total": {
+    "qte": 73.0,
+    "volCl": 7300.0,
+    "ht": 1227.74,
+    "nbLignes": 60,
+    "puMoyen": 16.8184
+   }
+  },
+  {
+   "code": "600729",
+   "libelle": "CHAMPAGNE R DE RUINART 75 CL",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 8.0,
+     "volCl": 600.0,
+     "ht": 312.0,
+     "nbLignes": 2,
+     "puMoyen": 39.0
+    },
+    "2023-2024": {
+     "qte": 9.0,
+     "volCl": 675.0,
+     "ht": 401.67,
+     "nbLignes": 2,
+     "puMoyen": 44.63
+    },
+    "2024-2025": {
+     "qte": 11.0,
+     "volCl": 825.0,
+     "ht": 499.4,
+     "nbLignes": 2,
+     "puMoyen": 45.4
+    }
+   },
+   "total": {
+    "qte": 28.0,
+    "volCl": 2100.0,
+    "ht": 1213.07,
+    "nbLignes": 6,
+    "puMoyen": 43.3239
+   }
+  },
+  {
+   "code": "601460",
+   "libelle": "SAINT JOSEPH ROUGE 75 CL 2021 LES MARCHES DE GRANIT OGIER",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 22.0,
+     "volCl": 1650.0,
+     "ht": 303.6,
+     "nbLignes": 4,
+     "puMoyen": 13.8
+    },
+    "2023-2024": {
+     "qte": 64.0,
+     "volCl": 4800.0,
+     "ht": 883.2,
+     "nbLignes": 12,
+     "puMoyen": 13.8
+    }
+   },
+   "total": {
+    "qte": 86.0,
+    "volCl": 6450.0,
+    "ht": 1186.8,
+    "nbLignes": 16,
+    "puMoyen": 13.8
+   }
+  },
+  {
+   "code": "661679",
+   "libelle": "SAINT JOSEPH ROUGE 75 CL 2019 LES MARCHES DE GRANIT OGIER",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 90.0,
+     "volCl": 6750.0,
+     "ht": 1159.92,
+     "nbLignes": 13,
+     "puMoyen": 12.888
+    }
+   },
+   "total": {
+    "qte": 90.0,
+    "volCl": 6750.0,
+    "ht": 1159.92,
+    "nbLignes": 13,
+    "puMoyen": 12.888
+   }
+  },
+  {
+   "code": "601862",
+   "libelle": "SAINT VERAN BLANC 75 CL 2022 CAVE DE LUGNY",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 112.0,
+     "volCl": 8400.0,
+     "ht": 1111.18,
+     "nbLignes": 16,
+     "puMoyen": 9.9213
+    }
+   },
+   "total": {
+    "qte": 112.0,
+    "volCl": 8400.0,
+    "ht": 1111.18,
+    "nbLignes": 16,
+    "puMoyen": 9.9213
+   }
+  },
+  {
+   "code": "603512",
+   "libelle": "BIB COTES DU RHONE ROUGE 10 L ELEMENTS TERRA LAUDUN CHUSCLAN VIGNERON",
+   "categorie": "vin",
+   "contenanceCl": 1000,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 12.0,
+     "volCl": 12000.0,
+     "ht": 357.25,
+     "nbLignes": 12,
+     "puMoyen": 29.7708
+    },
+    "2023-2024": {
+     "qte": 14.0,
+     "volCl": 14000.0,
+     "ht": 440.14,
+     "nbLignes": 12,
+     "puMoyen": 31.4386
+    },
+    "2024-2025": {
+     "qte": 10.0,
+     "volCl": 10000.0,
+     "ht": 303.8,
+     "nbLignes": 7,
+     "puMoyen": 30.38
+    }
+   },
+   "total": {
+    "qte": 36.0,
+    "volCl": 36000.0,
+    "ht": 1101.19,
+    "nbLignes": 31,
+    "puMoyen": 30.5886
+   }
+  },
+  {
+   "code": "601773",
+   "libelle": "ARBOIS SAVAGNIN 75 CL 2019 FRUITIERE VINICOLE ARBOIS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 168.48,
+     "nbLignes": 2,
+     "puMoyen": 14.04
+    },
+    "2024-2025": {
+     "qte": 64.0,
+     "volCl": 4800.0,
+     "ht": 898.56,
+     "nbLignes": 9,
+     "puMoyen": 14.04
+    }
+   },
+   "total": {
+    "qte": 76.0,
+    "volCl": 5700.0,
+    "ht": 1067.04,
+    "nbLignes": 11,
+    "puMoyen": 14.04
+   }
+  },
+  {
+   "code": "101040",
+   "libelle": "CAFE MOKADOR 1936 KILO",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 25.5,
+     "nbLignes": 1,
+     "puMoyen": 25.5
+    },
+    "2024-2025": {
+     "qte": 40.0,
+     "volCl": 0.0,
+     "ht": 1023.6,
+     "nbLignes": 28,
+     "puMoyen": 25.59
+    }
+   },
+   "total": {
+    "qte": 41.0,
+    "volCl": 0.0,
+    "ht": 1049.1,
+    "nbLignes": 31,
+    "puMoyen": 25.5878
+   }
+  },
+  {
+   "code": "403136",
+   "libelle": "CIDRE LA MORDUE ORIGINAL 27 CL",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 27,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 215.0,
+     "volCl": 5805.0,
+     "ht": 234.72,
+     "nbLignes": 11,
+     "puMoyen": 1.0917
+    },
+    "2023-2024": {
+     "qte": 378.0,
+     "volCl": 10206.0,
+     "ht": 442.26,
+     "nbLignes": 20,
+     "puMoyen": 1.17
+    },
+    "2024-2025": {
+     "qte": 288.0,
+     "volCl": 7776.0,
+     "ht": 349.56,
+     "nbLignes": 15,
+     "puMoyen": 1.2137
+    }
+   },
+   "total": {
+    "qte": 881.0,
+    "volCl": 23787.0,
+    "ht": 1026.54,
+    "nbLignes": 46,
+    "puMoyen": 1.1652
+   }
+  },
+  {
+   "code": "105034",
+   "libelle": "PETITES GALET ST MICHEL 3,5 GR NATURE X 400",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 16.0,
+     "volCl": 0.0,
+     "ht": 505.44,
+     "nbLignes": 12,
+     "puMoyen": 31.59
+    },
+    "2023-2024": {
+     "qte": 13.0,
+     "volCl": 0.0,
+     "ht": 455.78,
+     "nbLignes": 13,
+     "puMoyen": 35.06
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 62.74,
+     "nbLignes": 2,
+     "puMoyen": 31.37
+    }
+   },
+   "total": {
+    "qte": 31.0,
+    "volCl": 0.0,
+    "ht": 1023.96,
+    "nbLignes": 27,
+    "puMoyen": 33.031
+   }
+  },
+  {
+   "code": "661675",
+   "libelle": "MOULIN A VENT 75 CL 2017 DOMAINE DE BRIANTE",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 81.0,
+     "volCl": 6075.0,
+     "ht": 878.04,
+     "nbLignes": 13,
+     "puMoyen": 10.84
+    },
+    "2023-2024": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 130.56,
+     "nbLignes": 2,
+     "puMoyen": 10.88
+    }
+   },
+   "total": {
+    "qte": 93.0,
+    "volCl": 6975.0,
+    "ht": 1008.6,
+    "nbLignes": 15,
+    "puMoyen": 10.8452
+   }
+  },
+  {
+   "code": "200359",
+   "libelle": "LA ROUGET AMBREE 33 CL VP",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 216.0,
+     "volCl": 7128.0,
+     "ht": 373.44,
+     "nbLignes": 9,
+     "puMoyen": 1.7289
+    },
+    "2023-2024": {
+     "qte": 144.0,
+     "volCl": 4752.0,
+     "ht": 260.88,
+     "nbLignes": 6,
+     "puMoyen": 1.8117
+    },
+    "2024-2025": {
+     "qte": 192.0,
+     "volCl": 6336.0,
+     "ht": 359.04,
+     "nbLignes": 8,
+     "puMoyen": 1.87
+    }
+   },
+   "total": {
+    "qte": 552.0,
+    "volCl": 18216.0,
+    "ht": 993.36,
+    "nbLignes": 23,
+    "puMoyen": 1.7996
+   }
+  },
+  {
+   "code": "601346",
+   "libelle": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 1800.0,
+     "ht": 341.76,
+     "nbLignes": 3,
+     "puMoyen": 14.24
+    },
+    "2023-2024": {
+     "qte": 45.0,
+     "volCl": 3375.0,
+     "ht": 640.8,
+     "nbLignes": 9,
+     "puMoyen": 14.24
+    }
+   },
+   "total": {
+    "qte": 69.0,
+    "volCl": 5175.0,
+    "ht": 982.56,
+    "nbLignes": 12,
+    "puMoyen": 14.24
+   }
+  },
+  {
+   "code": "200357",
+   "libelle": "LA ROUGET BLANCHE 33 CL VP",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 168.0,
+     "volCl": 5544.0,
+     "ht": 290.88,
+     "nbLignes": 7,
+     "puMoyen": 1.7314
+    },
+    "2023-2024": {
+     "qte": 168.0,
+     "volCl": 5544.0,
+     "ht": 302.4,
+     "nbLignes": 7,
+     "puMoyen": 1.8
+    },
+    "2024-2025": {
+     "qte": 216.0,
+     "volCl": 7128.0,
+     "ht": 388.8,
+     "nbLignes": 9,
+     "puMoyen": 1.8
+    }
+   },
+   "total": {
+    "qte": 552.0,
+    "volCl": 18216.0,
+    "ht": 982.08,
+    "nbLignes": 23,
+    "puMoyen": 1.7791
+   }
+  },
+  {
+   "code": "401510",
+   "libelle": "BOITE FUZETEA PECHE 33 CL",
+   "categorie": "soft",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 624.0,
+     "volCl": 20592.0,
+     "ht": 405.6,
+     "nbLignes": 23,
+     "puMoyen": 0.65
+    },
+    "2023-2024": {
+     "qte": 456.0,
+     "volCl": 15048.0,
+     "ht": 319.92,
+     "nbLignes": 19,
+     "puMoyen": 0.7016
+    },
+    "2024-2025": {
+     "qte": 288.0,
+     "volCl": 9504.0,
+     "ht": 210.96,
+     "nbLignes": 12,
+     "puMoyen": 0.7325
+    }
+   },
+   "total": {
+    "qte": 1368.0,
+    "volCl": 45144.0,
+    "ht": 936.48,
+    "nbLignes": 54,
+    "puMoyen": 0.6846
+   }
+  },
+  {
+   "code": "600964",
+   "libelle": "VIN DE PAILLE 37,5 CL 2017 FRUITIERE VINICOLE ARBOIS",
+   "categorie": "materiel",
+   "contenanceCl": 37.5,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 25.0,
+     "volCl": 937.5,
+     "ht": 415.25,
+     "nbLignes": 17,
+     "puMoyen": 16.61
+    },
+    "2023-2024": {
+     "qte": 25.0,
+     "volCl": 937.5,
+     "ht": 415.25,
+     "nbLignes": 15,
+     "puMoyen": 16.61
+    },
+    "2024-2025": {
+     "qte": 4.0,
+     "volCl": 150.0,
+     "ht": 66.44,
+     "nbLignes": 1,
+     "puMoyen": 16.61
+    }
+   },
+   "total": {
+    "qte": 54.0,
+    "volCl": 2025.0,
+    "ht": 896.94,
+    "nbLignes": 33,
+    "puMoyen": 16.61
+   }
+  },
+  {
+   "code": "400640",
+   "libelle": "GRANINI FRAISE 25 CL VP",
+   "categorie": "jus",
+   "contenanceCl": 25,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 156.0,
+     "volCl": 3900.0,
+     "ht": 166.92,
+     "nbLignes": 13,
+     "puMoyen": 1.07
+    },
+    "2023-2024": {
+     "qte": 264.0,
+     "volCl": 6600.0,
+     "ht": 314.88,
+     "nbLignes": 20,
+     "puMoyen": 1.1927
+    },
+    "2024-2025": {
+     "qte": 288.0,
+     "volCl": 7200.0,
+     "ht": 351.84,
+     "nbLignes": 18,
+     "puMoyen": 1.2217
+    }
+   },
+   "total": {
+    "qte": 708.0,
+    "volCl": 17700.0,
+    "ht": 833.64,
+    "nbLignes": 51,
+    "puMoyen": 1.1775
+   }
+  },
+  {
+   "code": "591008",
+   "libelle": "CREME CASSIS 15° 100 CL M.BRIZ",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 47.0,
+     "volCl": 4700.0,
+     "ht": 391.03,
+     "nbLignes": 23,
+     "puMoyen": 8.3198
+    },
+    "2023-2024": {
+     "qte": 24.0,
+     "volCl": 2400.0,
+     "ht": 216.0,
+     "nbLignes": 21,
+     "puMoyen": 9.0
+    },
+    "2024-2025": {
+     "qte": 19.0,
+     "volCl": 1900.0,
+     "ht": 173.09,
+     "nbLignes": 14,
+     "puMoyen": 9.11
+    }
+   },
+   "total": {
+    "qte": 90.0,
+    "volCl": 9000.0,
+    "ht": 780.12,
+    "nbLignes": 58,
+    "puMoyen": 8.668
+   }
+  },
+  {
+   "code": "540064",
+   "libelle": "SOHO LITCHI 70 CL 15°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 23.0,
+     "volCl": 1610.0,
+     "ht": 225.0,
+     "nbLignes": 19,
+     "puMoyen": 9.7826
+    },
+    "2023-2024": {
+     "qte": 24.0,
+     "volCl": 1680.0,
+     "ht": 250.56,
+     "nbLignes": 18,
+     "puMoyen": 10.44
+    },
+    "2024-2025": {
+     "qte": 28.0,
+     "volCl": 1960.0,
+     "ht": 282.24,
+     "nbLignes": 18,
+     "puMoyen": 10.08
+    }
+   },
+   "total": {
+    "qte": 75.0,
+    "volCl": 5250.0,
+    "ht": 757.8,
+    "nbLignes": 55,
+    "puMoyen": 10.104
+   }
+  },
+  {
+   "code": "300026",
+   "libelle": "SAN PELLEGRINO 100 CL CONSIGNE",
+   "categorie": "eau",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 252.0,
+     "volCl": 25200.0,
+     "ht": 270.0,
+     "nbLignes": 18,
+     "puMoyen": 1.0714
+    },
+    "2023-2024": {
+     "qte": 204.0,
+     "volCl": 20400.0,
+     "ht": 235.56,
+     "nbLignes": 17,
+     "puMoyen": 1.1547
+    },
+    "2024-2025": {
+     "qte": 204.0,
+     "volCl": 20400.0,
+     "ht": 243.0,
+     "nbLignes": 14,
+     "puMoyen": 1.1912
+    }
+   },
+   "total": {
+    "qte": 660.0,
+    "volCl": 66000.0,
+    "ht": 748.56,
+    "nbLignes": 49,
+    "puMoyen": 1.1342
+   }
+  },
+  {
+   "code": "510141",
+   "libelle": "PICON BIERE 100 CL 18°",
+   "categorie": "biere",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 43.0,
+     "volCl": 4300.0,
+     "ht": 439.19,
+     "nbLignes": 26,
+     "puMoyen": 10.2137
+    },
+    "2023-2024": {
+     "qte": 19.0,
+     "volCl": 1900.0,
+     "ht": 201.02,
+     "nbLignes": 12,
+     "puMoyen": 10.58
+    },
+    "2024-2025": {
+     "qte": 10.0,
+     "volCl": 1000.0,
+     "ht": 107.46,
+     "nbLignes": 9,
+     "puMoyen": 10.746
+    }
+   },
+   "total": {
+    "qte": 72.0,
+    "volCl": 7200.0,
+    "ht": 747.67,
+    "nbLignes": 47,
+    "puMoyen": 10.3843
+   }
+  },
+  {
+   "code": "601454",
+   "libelle": "ARBOIS CHARDONNAY 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 43.62,
+     "nbLignes": 1,
+     "puMoyen": 7.27
+    },
+    "2023-2024": {
+     "qte": 88.0,
+     "volCl": 6600.0,
+     "ht": 689.44,
+     "nbLignes": 15,
+     "puMoyen": 7.8345
+    }
+   },
+   "total": {
+    "qte": 94.0,
+    "volCl": 7050.0,
+    "ht": 733.06,
+    "nbLignes": 16,
+    "puMoyen": 7.7985
+   }
+  },
+  {
+   "code": "665175",
+   "libelle": "MACVIN JURA BLANC 75 CL MAISON FREDERIC LORNET",
+   "categorie": "macvin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 96.9,
+     "nbLignes": 1,
+     "puMoyen": 16.15
+    },
+    "2024-2025": {
+     "qte": 43.0,
+     "volCl": 3225.0,
+     "ht": 615.76,
+     "nbLignes": 6,
+     "puMoyen": 14.32
+    }
+   },
+   "total": {
+    "qte": 49.0,
+    "volCl": 3675.0,
+    "ht": 712.66,
+    "nbLignes": 7,
+    "puMoyen": 14.5441
+   }
+  },
+  {
+   "code": "601401",
+   "libelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2022",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 160.44,
+     "nbLignes": 1,
+     "puMoyen": 13.37
+    },
+    "2023-2024": {
+     "qte": 36.0,
+     "volCl": 2700.0,
+     "ht": 471.72,
+     "nbLignes": 5,
+     "puMoyen": 13.1033
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 79.38,
+     "nbLignes": 1,
+     "puMoyen": 13.23
+    }
+   },
+   "total": {
+    "qte": 54.0,
+    "volCl": 4050.0,
+    "ht": 711.54,
+    "nbLignes": 7,
+    "puMoyen": 13.1767
+   }
+  },
+  {
+   "code": "601956",
+   "libelle": "BIB COTES DE PROVENCE 10 L ROSE HT MASTEREL GRANDE RESERV",
+   "categorie": "vin",
+   "contenanceCl": 1000,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 16.0,
+     "volCl": 16000.0,
+     "ht": 705.6,
+     "nbLignes": 12,
+     "puMoyen": 44.1
+    }
+   },
+   "total": {
+    "qte": 16.0,
+    "volCl": 16000.0,
+    "ht": 705.6,
+    "nbLignes": 12,
+    "puMoyen": 44.1
+   }
+  },
+  {
+   "code": "630253",
+   "libelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 62.0,
+     "volCl": 4650.0,
+     "ht": 691.3,
+     "nbLignes": 10,
+     "puMoyen": 11.15
+    }
+   },
+   "total": {
+    "qte": 62.0,
+    "volCl": 4650.0,
+    "ht": 691.3,
+    "nbLignes": 10,
+    "puMoyen": 11.15
+   }
+  },
+  {
+   "code": "403200",
+   "libelle": "CIDRE BRUT BOLEE ARMORIQ 75 CL",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 84.0,
+     "volCl": 6300.0,
+     "ht": 201.54,
+     "nbLignes": 14,
+     "puMoyen": 2.3993
+    },
+    "2023-2024": {
+     "qte": 60.0,
+     "volCl": 4500.0,
+     "ht": 165.18,
+     "nbLignes": 11,
+     "puMoyen": 2.753
+    },
+    "2024-2025": {
+     "qte": 108.0,
+     "volCl": 8100.0,
+     "ht": 300.24,
+     "nbLignes": 9,
+     "puMoyen": 2.78
+    }
+   },
+   "total": {
+    "qte": 252.0,
+    "volCl": 18900.0,
+    "ht": 666.96,
+    "nbLignes": 34,
+    "puMoyen": 2.6467
+   }
+  },
+  {
+   "code": "600725",
+   "libelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2020",
+   "categorie": "vin",
+   "contenanceCl": 37.5,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 98.0,
+     "volCl": 3675.0,
+     "ht": 658.56,
+     "nbLignes": 12,
+     "puMoyen": 6.72
+    }
+   },
+   "total": {
+    "qte": 98.0,
+    "volCl": 3675.0,
+    "ht": 658.56,
+    "nbLignes": 12,
+    "puMoyen": 6.72
+   }
+  },
+  {
+   "code": "601726",
+   "libelle": "VIN DE PAILLE 37,5 CL 2018 FRUITIERE VINICOLE ARBOIS",
+   "categorie": "materiel",
+   "contenanceCl": 37.5,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 5.0,
+     "volCl": 187.5,
+     "ht": 93.95,
+     "nbLignes": 2,
+     "puMoyen": 18.79
+    },
+    "2024-2025": {
+     "qte": 29.0,
+     "volCl": 1087.5,
+     "ht": 545.75,
+     "nbLignes": 13,
+     "puMoyen": 18.819
+    }
+   },
+   "total": {
+    "qte": 34.0,
+    "volCl": 1275.0,
+    "ht": 639.7,
+    "nbLignes": 15,
+    "puMoyen": 18.8147
+   }
+  },
+  {
+   "code": "601253",
+   "libelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2021",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 48.0,
+     "volCl": 3600.0,
+     "ht": 639.48,
+     "nbLignes": 5,
+     "puMoyen": 13.3225
+    }
+   },
+   "total": {
+    "qte": 48.0,
+    "volCl": 3600.0,
+    "ht": 639.48,
+    "nbLignes": 5,
+    "puMoyen": 13.3225
+   }
+  },
+  {
+   "code": "403707",
+   "libelle": "LIMONADE MORTUACIENNE BM 1 L",
+   "categorie": "soft",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 192.0,
+     "volCl": 19200.0,
+     "ht": 171.84,
+     "nbLignes": 15,
+     "puMoyen": 0.895
+    },
+    "2023-2024": {
+     "qte": 228.0,
+     "volCl": 22800.0,
+     "ht": 218.88,
+     "nbLignes": 20,
+     "puMoyen": 0.96
+    },
+    "2024-2025": {
+     "qte": 216.0,
+     "volCl": 21600.0,
+     "ht": 207.36,
+     "nbLignes": 17,
+     "puMoyen": 0.96
+    }
+   },
+   "total": {
+    "qte": 636.0,
+    "volCl": 63600.0,
+    "ht": 598.08,
+    "nbLignes": 52,
+    "puMoyen": 0.9404
+   }
+  },
+  {
+   "code": "601297",
+   "libelle": "ROSE LES JAMELLES 75 CL 2021 PAYS D'OC CLAIR DE ROSE",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 66.0,
+     "volCl": 4950.0,
+     "ht": 330.0,
+     "nbLignes": 9,
+     "puMoyen": 5.0
+    },
+    "2023-2024": {
+     "qte": 52.0,
+     "volCl": 3900.0,
+     "ht": 259.48,
+     "nbLignes": 7,
+     "puMoyen": 4.99
+    }
+   },
+   "total": {
+    "qte": 118.0,
+    "volCl": 8850.0,
+    "ht": 589.48,
+    "nbLignes": 16,
+    "puMoyen": 4.9956
+   }
+  },
+  {
+   "code": "601878",
+   "libelle": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2019",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 65.28,
+     "nbLignes": 1,
+     "puMoyen": 10.88
+    },
+    "2024-2025": {
+     "qte": 48.0,
+     "volCl": 3600.0,
+     "ht": 522.24,
+     "nbLignes": 8,
+     "puMoyen": 10.88
+    }
+   },
+   "total": {
+    "qte": 54.0,
+    "volCl": 4050.0,
+    "ht": 587.52,
+    "nbLignes": 9,
+    "puMoyen": 10.88
+   }
+  },
+  {
+   "code": "510060",
+   "libelle": "PONTARLIER ANIS SEC 100 CL 45°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 11.0,
+     "volCl": 1100.0,
+     "ht": 197.45,
+     "nbLignes": 13,
+     "puMoyen": 17.95
+    },
+    "2023-2024": {
+     "qte": 18.0,
+     "volCl": 1800.0,
+     "ht": 332.46,
+     "nbLignes": 13,
+     "puMoyen": 18.47
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 37.71,
+     "nbLignes": 2,
+     "puMoyen": 18.855
+    }
+   },
+   "total": {
+    "qte": 31.0,
+    "volCl": 3100.0,
+    "ht": 567.62,
+    "nbLignes": 28,
+    "puMoyen": 18.3103
+   }
+  },
+  {
+   "code": "707695",
+   "libelle": "BAC RECYCLAGE VERRE PERDU",
+   "categorie": "materiel",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 95.0,
+     "volCl": 0.0,
+     "ht": 180.5,
+     "nbLignes": 37,
+     "puMoyen": 1.9
+    },
+    "2023-2024": {
+     "qte": 97.0,
+     "volCl": 0.0,
+     "ht": 184.3,
+     "nbLignes": 42,
+     "puMoyen": 1.9
+    },
+    "2024-2025": {
+     "qte": 102.0,
+     "volCl": 0.0,
+     "ht": 193.8,
+     "nbLignes": 39,
+     "puMoyen": 1.9
+    }
+   },
+   "total": {
+    "qte": 294.0,
+    "volCl": 0.0,
+    "ht": 558.6,
+    "nbLignes": 118,
+    "puMoyen": 1.9
+   }
+  },
+  {
+   "code": "601043",
+   "libelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2017",
+   "categorie": "vin",
+   "contenanceCl": 37.5,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 90.0,
+     "volCl": 3375.0,
+     "ht": 556.2,
+     "nbLignes": 10,
+     "puMoyen": 6.18
+    }
+   },
+   "total": {
+    "qte": 90.0,
+    "volCl": 3375.0,
+    "ht": 556.2,
+    "nbLignes": 10,
+    "puMoyen": 6.18
+   }
+  },
+  {
+   "code": "600731",
+   "libelle": "BIB BLANC 10 L RAVELIN 13° VINS ANDRE BONNOT",
+   "categorie": "vin",
+   "contenanceCl": 1000,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 10.0,
+     "volCl": 10000.0,
+     "ht": 273.2,
+     "nbLignes": 10,
+     "puMoyen": 27.32
+    },
+    "2024-2025": {
+     "qte": 9.0,
+     "volCl": 9000.0,
+     "ht": 262.74,
+     "nbLignes": 9,
+     "puMoyen": 29.1933
+    }
+   },
+   "total": {
+    "qte": 19.0,
+    "volCl": 19000.0,
+    "ht": 535.94,
+    "nbLignes": 19,
+    "puMoyen": 28.2074
+   }
+  },
+  {
+   "code": "200169",
+   "libelle": "MORT SUBITE WITTE 33 CL VP",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 108.0,
+     "volCl": 3564.0,
+     "ht": 174.24,
+     "nbLignes": 4,
+     "puMoyen": 1.6133
+    },
+    "2023-2024": {
+     "qte": 12.0,
+     "volCl": 396.0,
+     "ht": 25.92,
+     "nbLignes": 1,
+     "puMoyen": 2.16
+    },
+    "2024-2025": {
+     "qte": 156.0,
+     "volCl": 5148.0,
+     "ht": 328.56,
+     "nbLignes": 12,
+     "puMoyen": 2.1062
+    }
+   },
+   "total": {
+    "qte": 276.0,
+    "volCl": 9108.0,
+    "ht": 528.72,
+    "nbLignes": 17,
+    "puMoyen": 1.9157
+   }
+  },
+  {
+   "code": "661580",
+   "libelle": "SAINT VERAN 75 CL 2021 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 60.0,
+     "volCl": 4500.0,
+     "ht": 525.0,
+     "nbLignes": 5,
+     "puMoyen": 8.75
+    }
+   },
+   "total": {
+    "qte": 60.0,
+    "volCl": 4500.0,
+    "ht": 525.0,
+    "nbLignes": 5,
+    "puMoyen": 8.75
+   }
+  },
+  {
+   "code": "600562",
+   "libelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2021",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 60.0,
+     "volCl": 4500.0,
+     "ht": 523.8,
+     "nbLignes": 7,
+     "puMoyen": 8.73
+    }
+   },
+   "total": {
+    "qte": 60.0,
+    "volCl": 4500.0,
+    "ht": 523.8,
+    "nbLignes": 7,
+    "puMoyen": 8.73
+   }
+  },
+  {
+   "code": "510051",
+   "libelle": "ABSINTHE FRANCOIS GUY 45° 1 L",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 40.43,
+     "nbLignes": 1,
+     "puMoyen": 40.43
+    },
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 1200.0,
+     "ht": 482.98,
+     "nbLignes": 11,
+     "puMoyen": 40.2483
+    }
+   },
+   "total": {
+    "qte": 13.0,
+    "volCl": 1300.0,
+    "ht": 523.41,
+    "nbLignes": 12,
+    "puMoyen": 40.2623
+   }
+  },
+  {
+   "code": "400321",
+   "libelle": "GRANINI JUS ANANAS 1 L PET",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 60.0,
+     "volCl": 6000.0,
+     "ht": 161.94,
+     "nbLignes": 10,
+     "puMoyen": 2.699
+    },
+    "2023-2024": {
+     "qte": 54.0,
+     "volCl": 5400.0,
+     "ht": 172.56,
+     "nbLignes": 9,
+     "puMoyen": 3.1956
+    },
+    "2024-2025": {
+     "qte": 54.0,
+     "volCl": 5400.0,
+     "ht": 183.24,
+     "nbLignes": 9,
+     "puMoyen": 3.3933
+    }
+   },
+   "total": {
+    "qte": 168.0,
+    "volCl": 16800.0,
+    "ht": 517.74,
+    "nbLignes": 28,
+    "puMoyen": 3.0818
+   }
+  },
+  {
+   "code": "600711",
+   "libelle": "ARBOIS CHARDONNAY 75 CL 2018 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 70.0,
+     "volCl": 5250.0,
+     "ht": 508.9,
+     "nbLignes": 11,
+     "puMoyen": 7.27
+    }
+   },
+   "total": {
+    "qte": 70.0,
+    "volCl": 5250.0,
+    "ht": 508.9,
+    "nbLignes": 11,
+    "puMoyen": 7.27
+   }
+  },
+  {
+   "code": "105057",
+   "libelle": "PETITES MADELEINES ST MICHEL CARTON DE 160 UNITES DE 5 GR",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 26.0,
+     "volCl": 0.0,
+     "ht": 417.26,
+     "nbLignes": 14,
+     "puMoyen": 16.0485
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 0.0,
+     "ht": 55.14,
+     "nbLignes": 3,
+     "puMoyen": 18.38
+    }
+   },
+   "total": {
+    "qte": 29.0,
+    "volCl": 0.0,
+    "ht": 472.4,
+    "nbLignes": 17,
+    "puMoyen": 16.2897
+   }
+  },
+  {
+   "code": "300025",
+   "libelle": "SAN PELLEGRINO 50 CL CONSIGNE",
+   "categorie": "eau",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 220.0,
+     "volCl": 11000.0,
+     "ht": 180.4,
+     "nbLignes": 13,
+     "puMoyen": 0.82
+    },
+    "2023-2024": {
+     "qte": 160.0,
+     "volCl": 8000.0,
+     "ht": 141.2,
+     "nbLignes": 8,
+     "puMoyen": 0.8825
+    },
+    "2024-2025": {
+     "qte": 160.0,
+     "volCl": 8000.0,
+     "ht": 144.0,
+     "nbLignes": 8,
+     "puMoyen": 0.9
+    }
+   },
+   "total": {
+    "qte": 540.0,
+    "volCl": 27000.0,
+    "ht": 465.6,
+    "nbLignes": 29,
+    "puMoyen": 0.8622
+   }
+  },
+  {
+   "code": "601970",
+   "libelle": "ARBOIS CHARDONNAY 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 54.0,
+     "volCl": 4050.0,
+     "ht": 444.96,
+     "nbLignes": 9,
+     "puMoyen": 8.24
+    }
+   },
+   "total": {
+    "qte": 54.0,
+    "volCl": 4050.0,
+    "ht": 444.96,
+    "nbLignes": 9,
+    "puMoyen": 8.24
+   }
+  },
+  {
+   "code": "510133",
+   "libelle": "BAILEY'S 70 CL 17°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 280.0,
+     "ht": 51.96,
+     "nbLignes": 6,
+     "puMoyen": 12.99
+    },
+    "2023-2024": {
+     "qte": 16.0,
+     "volCl": 1120.0,
+     "ht": 215.36,
+     "nbLignes": 14,
+     "puMoyen": 13.46
+    },
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 840.0,
+     "ht": 164.52,
+     "nbLignes": 9,
+     "puMoyen": 13.71
+    }
+   },
+   "total": {
+    "qte": 32.0,
+    "volCl": 2240.0,
+    "ht": 431.84,
+    "nbLignes": 29,
+    "puMoyen": 13.495
+   }
+  },
+  {
+   "code": "105062",
+   "libelle": "PETITES MADELEINES ST MICHEL CARTON DE 350 UNITES DE 5 GR",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 10.0,
+     "volCl": 0.0,
+     "ht": 427.2,
+     "nbLignes": 9,
+     "puMoyen": 42.72
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 0.0,
+    "ht": 427.2,
+    "nbLignes": 9,
+    "puMoyen": 42.72
+   }
+  },
+  {
+   "code": "591050",
+   "libelle": "LIQUEUR GOLDEN EIGHT 70 CL 25° LIQUEUR DE POIRE WILLIAM",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 32.86,
+     "nbLignes": 2,
+     "puMoyen": 16.43
+    },
+    "2023-2024": {
+     "qte": 12.0,
+     "volCl": 840.0,
+     "ht": 205.32,
+     "nbLignes": 11,
+     "puMoyen": 17.11
+    },
+    "2024-2025": {
+     "qte": 11.0,
+     "volCl": 770.0,
+     "ht": 188.21,
+     "nbLignes": 11,
+     "puMoyen": 17.11
+    }
+   },
+   "total": {
+    "qte": 25.0,
+    "volCl": 1750.0,
+    "ht": 426.39,
+    "nbLignes": 24,
+    "puMoyen": 17.0556
+   }
+  },
+  {
+   "code": "601453",
+   "libelle": "ARBOIS TROUSSEAU 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 58.56,
+     "nbLignes": 1,
+     "puMoyen": 9.76
+    },
+    "2023-2024": {
+     "qte": 35.0,
+     "volCl": 2625.0,
+     "ht": 341.6,
+     "nbLignes": 7,
+     "puMoyen": 9.76
+    }
+   },
+   "total": {
+    "qte": 41.0,
+    "volCl": 3075.0,
+    "ht": 400.16,
+    "nbLignes": 8,
+    "puMoyen": 9.76
+   }
+  },
+  {
+   "code": "200859",
+   "libelle": "BLEUE DU MONT BLANC 33 CL 5,8°",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 168.0,
+     "volCl": 5544.0,
+     "ht": 391.56,
+     "nbLignes": 12,
+     "puMoyen": 2.3307
+    }
+   },
+   "total": {
+    "qte": 168.0,
+    "volCl": 5544.0,
+    "ht": 391.56,
+    "nbLignes": 12,
+    "puMoyen": 2.3307
+   }
+  },
+  {
+   "code": "609206",
+   "libelle": "CHAMPAGNE JEAN SANDRIN 75 CL BRUT TRADITION",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 1800.0,
+     "ht": 387.9,
+     "nbLignes": 3,
+     "puMoyen": 16.1625
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 1800.0,
+    "ht": 387.9,
+    "nbLignes": 3,
+    "puMoyen": 16.1625
+   }
+  },
+  {
+   "code": "400301",
+   "libelle": "GRANINI JUS POMME 1 L PET",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 2400.0,
+     "ht": 54.3,
+     "nbLignes": 4,
+     "puMoyen": 2.2625
+    },
+    "2023-2024": {
+     "qte": 48.0,
+     "volCl": 4800.0,
+     "ht": 126.0,
+     "nbLignes": 8,
+     "puMoyen": 2.625
+    },
+    "2024-2025": {
+     "qte": 72.0,
+     "volCl": 7200.0,
+     "ht": 201.12,
+     "nbLignes": 7,
+     "puMoyen": 2.7933
+    }
+   },
+   "total": {
+    "qte": 144.0,
+    "volCl": 14400.0,
+    "ht": 381.42,
+    "nbLignes": 19,
+    "puMoyen": 2.6488
+   }
+  },
+  {
+   "code": "601153",
+   "libelle": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2020",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 34.0,
+     "volCl": 2550.0,
+     "ht": 369.92,
+     "nbLignes": 5,
+     "puMoyen": 10.88
+    }
+   },
+   "total": {
+    "qte": 34.0,
+    "volCl": 2550.0,
+    "ht": 369.92,
+    "nbLignes": 5,
+    "puMoyen": 10.88
+   }
+  },
+  {
+   "code": "661546",
+   "libelle": "SAINT VERAN 75 CL 2020 LUPE CHOLET",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 1800.0,
+     "ht": 260.64,
+     "nbLignes": 6,
+     "puMoyen": 10.86
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 102.18,
+     "nbLignes": 1,
+     "puMoyen": 17.03
+    }
+   },
+   "total": {
+    "qte": 30.0,
+    "volCl": 2250.0,
+    "ht": 362.82,
+    "nbLignes": 7,
+    "puMoyen": 12.094
+   }
+  },
+  {
+   "code": "401045",
+   "libelle": "BOITE ORANGINA 33 CL",
+   "categorie": "soft",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 264.0,
+     "volCl": 8712.0,
+     "ht": 179.76,
+     "nbLignes": 10,
+     "puMoyen": 0.6809
+    },
+    "2023-2024": {
+     "qte": 144.0,
+     "volCl": 4752.0,
+     "ht": 84.96,
+     "nbLignes": 6,
+     "puMoyen": 0.59
+    },
+    "2024-2025": {
+     "qte": 144.0,
+     "volCl": 4752.0,
+     "ht": 92.64,
+     "nbLignes": 6,
+     "puMoyen": 0.6433
+    }
+   },
+   "total": {
+    "qte": 552.0,
+    "volCl": 18216.0,
+    "ht": 357.36,
+    "nbLignes": 22,
+    "puMoyen": 0.6474
+   }
+  },
+  {
+   "code": "601199",
+   "libelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 1800.0,
+     "ht": 251.52,
+     "nbLignes": 4,
+     "puMoyen": 10.48
+    },
+    "2024-2025": {
+     "qte": 8.0,
+     "volCl": 600.0,
+     "ht": 99.92,
+     "nbLignes": 2,
+     "puMoyen": 12.49
+    }
+   },
+   "total": {
+    "qte": 32.0,
+    "volCl": 2400.0,
+    "ht": 351.44,
+    "nbLignes": 6,
+    "puMoyen": 10.9825
+   }
+  },
+  {
+   "code": "403201",
+   "libelle": "CIDRE DOUX CONTEMPORAINE 75 CL CIDRERIE FAMILIALE SORRE",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 48.0,
+     "volCl": 3600.0,
+     "ht": 138.72,
+     "nbLignes": 4,
+     "puMoyen": 2.89
+    },
+    "2023-2024": {
+     "qte": 60.0,
+     "volCl": 4500.0,
+     "ht": 173.4,
+     "nbLignes": 5,
+     "puMoyen": 2.89
+    },
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 34.68,
+     "nbLignes": 1,
+     "puMoyen": 2.89
+    }
+   },
+   "total": {
+    "qte": 120.0,
+    "volCl": 9000.0,
+    "ht": 346.8,
+    "nbLignes": 10,
+    "puMoyen": 2.89
+   }
+  },
+  {
+   "code": "600876",
+   "libelle": "ROSE GRENACHE JAMELLES 75 CL JAMELLES 2020 CLAIR DE ROSE BADET CLEMENT ET COMPAGN",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 84.0,
+     "volCl": 6300.0,
+     "ht": 344.4,
+     "nbLignes": 12,
+     "puMoyen": 4.1
+    }
+   },
+   "total": {
+    "qte": 84.0,
+    "volCl": 6300.0,
+    "ht": 344.4,
+    "nbLignes": 12,
+    "puMoyen": 4.1
+   }
+  },
+  {
+   "code": "510013",
+   "libelle": "VODKA SOBIESKI 70 CL 37°5",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 280.0,
+     "ht": 36.44,
+     "nbLignes": 4,
+     "puMoyen": 9.11
+    },
+    "2023-2024": {
+     "qte": 16.0,
+     "volCl": 1120.0,
+     "ht": 154.72,
+     "nbLignes": 12,
+     "puMoyen": 9.67
+    },
+    "2024-2025": {
+     "qte": 14.0,
+     "volCl": 980.0,
+     "ht": 141.12,
+     "nbLignes": 10,
+     "puMoyen": 10.08
+    }
+   },
+   "total": {
+    "qte": 34.0,
+    "volCl": 2380.0,
+    "ht": 332.28,
+    "nbLignes": 26,
+    "puMoyen": 9.7729
+   }
+  },
+  {
+   "code": "105059",
+   "libelle": "PETITES GALETTES X 700 UNIT SAINT MICHEL BISCUIT",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 7.0,
+     "volCl": 0.0,
+     "ht": 329.31,
+     "nbLignes": 7,
+     "puMoyen": 47.0443
+    }
+   },
+   "total": {
+    "qte": 7.0,
+    "volCl": 0.0,
+    "ht": 329.31,
+    "nbLignes": 7,
+    "puMoyen": 47.0443
+   }
+  },
+  {
+   "code": "600933",
+   "libelle": "RAVELIN BLANC MVPCE 13° 99 CL VINS ANDRE BONNOT",
+   "categorie": "vin",
+   "contenanceCl": 99,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 84.0,
+     "volCl": 8316.0,
+     "ht": 250.32,
+     "nbLignes": 8,
+     "puMoyen": 2.98
+    },
+    "2023-2024": {
+     "qte": 24.0,
+     "volCl": 2376.0,
+     "ht": 78.96,
+     "nbLignes": 2,
+     "puMoyen": 3.29
+    }
+   },
+   "total": {
+    "qte": 108.0,
+    "volCl": 10692.0,
+    "ht": 329.28,
+    "nbLignes": 10,
+    "puMoyen": 3.0489
+   }
+  },
+  {
+   "code": "510090",
+   "libelle": "GD MARNIER CORD RGE 70 CL 40° GRAND MARNIER CORDON ROUGE",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 280.0,
+     "ht": 84.32,
+     "nbLignes": 4,
+     "puMoyen": 21.08
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 43.58,
+     "nbLignes": 2,
+     "puMoyen": 21.79
+    },
+    "2024-2025": {
+     "qte": 9.0,
+     "volCl": 630.0,
+     "ht": 198.24,
+     "nbLignes": 7,
+     "puMoyen": 22.0267
+    }
+   },
+   "total": {
+    "qte": 15.0,
+    "volCl": 1050.0,
+    "ht": 326.14,
+    "nbLignes": 13,
+    "puMoyen": 21.7427
+   }
+  },
+  {
+   "code": "400312",
+   "libelle": "GRANINI JUS ORANGE 1 L PET",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 66.0,
+     "volCl": 6600.0,
+     "ht": 174.24,
+     "nbLignes": 11,
+     "puMoyen": 2.64
+    },
+    "2023-2024": {
+     "qte": 48.0,
+     "volCl": 4800.0,
+     "ht": 150.24,
+     "nbLignes": 9,
+     "puMoyen": 3.13
+    }
+   },
+   "total": {
+    "qte": 114.0,
+    "volCl": 11400.0,
+    "ht": 324.48,
+    "nbLignes": 20,
+    "puMoyen": 2.8463
+   }
+  },
+  {
+   "code": "601641",
+   "libelle": "ROSE LES JAMELLES 75 CL 2022 PAYS D'OC CLAIR DE ROSE",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 54.0,
+     "volCl": 4050.0,
+     "ht": 281.34,
+     "nbLignes": 8,
+     "puMoyen": 5.21
+    },
+    "2024-2025": {
+     "qte": 8.0,
+     "volCl": 600.0,
+     "ht": 41.68,
+     "nbLignes": 2,
+     "puMoyen": 5.21
+    }
+   },
+   "total": {
+    "qte": 62.0,
+    "volCl": 4650.0,
+    "ht": 323.02,
+    "nbLignes": 10,
+    "puMoyen": 5.21
+   }
+  },
+  {
+   "code": "591097",
+   "libelle": "GENEPI 40° 70 CL PERES CHARTREUX",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 7.0,
+     "volCl": 490.0,
+     "ht": 154.07,
+     "nbLignes": 7,
+     "puMoyen": 22.01
+    },
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 280.0,
+     "ht": 91.49,
+     "nbLignes": 4,
+     "puMoyen": 22.8725
+    },
+    "2024-2025": {
+     "qte": 3.0,
+     "volCl": 210.0,
+     "ht": 70.65,
+     "nbLignes": 3,
+     "puMoyen": 23.55
+    }
+   },
+   "total": {
+    "qte": 14.0,
+    "volCl": 980.0,
+    "ht": 316.21,
+    "nbLignes": 14,
+    "puMoyen": 22.5864
+   }
+  },
+  {
+   "code": "505034",
+   "libelle": "APEROL 100 CL 12,5°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 11.0,
+     "volCl": 1100.0,
+     "ht": 161.32,
+     "nbLignes": 8,
+     "puMoyen": 14.6655
+    },
+    "2024-2025": {
+     "qte": 10.0,
+     "volCl": 1000.0,
+     "ht": 147.28,
+     "nbLignes": 8,
+     "puMoyen": 14.728
+    }
+   },
+   "total": {
+    "qte": 21.0,
+    "volCl": 2100.0,
+    "ht": 308.6,
+    "nbLignes": 16,
+    "puMoyen": 14.6952
+   }
+  },
+  {
+   "code": "601892",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2017 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 248.0,
+     "ht": 118.8,
+     "nbLignes": 1,
+     "puMoyen": 29.7
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 372.0,
+     "ht": 186.9,
+     "nbLignes": 2,
+     "puMoyen": 31.15
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 620.0,
+    "ht": 305.7,
+    "nbLignes": 3,
+    "puMoyen": 30.57
+   }
+  },
+  {
+   "code": "602080",
+   "libelle": "SAINT JOSEPH ROUGE 75 CL 2023 LES MARCHES DE GRANIT OGIER",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 22.0,
+     "volCl": 1650.0,
+     "ht": 304.94,
+     "nbLignes": 4,
+     "puMoyen": 13.8609
+    }
+   },
+   "total": {
+    "qte": 22.0,
+    "volCl": 1650.0,
+    "ht": 304.94,
+    "nbLignes": 4,
+    "puMoyen": 13.8609
+   }
+  },
+  {
+   "code": "400308",
+   "libelle": "GRANINI NEC POIRE LITRE PET",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 132.0,
+     "volCl": 13200.0,
+     "ht": 303.6,
+     "nbLignes": 23,
+     "puMoyen": 2.3
+    }
+   },
+   "total": {
+    "qte": 132.0,
+    "volCl": 13200.0,
+    "ht": 303.6,
+    "nbLignes": 23,
+    "puMoyen": 2.3
+   }
+  },
+  {
+   "code": "400300",
+   "libelle": "GRANINI NECTAR ORANGE 1 L PET",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 90.0,
+     "volCl": 9000.0,
+     "ht": 298.2,
+     "nbLignes": 15,
+     "puMoyen": 3.3133
+    }
+   },
+   "total": {
+    "qte": 90.0,
+    "volCl": 9000.0,
+    "ht": 298.2,
+    "nbLignes": 15,
+    "puMoyen": 3.3133
+   }
+  },
+  {
+   "code": "601416",
+   "libelle": "HTES CTES DE NUITS BLANC 75 CL LUPE CHOLET 2017",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 1800.0,
+     "ht": 293.28,
+     "nbLignes": 3,
+     "puMoyen": 12.22
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 1800.0,
+    "ht": 293.28,
+    "nbLignes": 3,
+    "puMoyen": 12.22
+   }
+  },
+  {
+   "code": "630081",
+   "libelle": "COTES DE PROVENCE ROSE 75 CL M DE MINUTY 2022",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 22.0,
+     "volCl": 1650.0,
+     "ht": 290.62,
+     "nbLignes": 4,
+     "puMoyen": 13.21
+    }
+   },
+   "total": {
+    "qte": 22.0,
+    "volCl": 1650.0,
+    "ht": 290.62,
+    "nbLignes": 4,
+    "puMoyen": 13.21
+   }
+  },
+  {
+   "code": "601348",
+   "libelle": "LA COTE ROUGE 75 CL 2021 AOP LA CLAPE CHATEAU DE LA NEGLY",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 36.0,
+     "volCl": 2700.0,
+     "ht": 290.16,
+     "nbLignes": 5,
+     "puMoyen": 8.06
+    }
+   },
+   "total": {
+    "qte": 36.0,
+    "volCl": 2700.0,
+    "ht": 290.16,
+    "nbLignes": 5,
+    "puMoyen": 8.06
+   }
+  },
+  {
+   "code": "704775",
+   "libelle": "PAILLES BIO NATURELLES X 1000",
+   "categorie": "materiel",
+   "contenanceCl": null,
+   "type": "materiel",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 0.0,
+     "ht": 135.4,
+     "nbLignes": 3,
+     "puMoyen": 33.85
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 36.93,
+     "nbLignes": 1,
+     "puMoyen": 36.93
+    },
+    "2024-2025": {
+     "qte": 3.0,
+     "volCl": 0.0,
+     "ht": 110.79,
+     "nbLignes": 3,
+     "puMoyen": 36.93
+    }
+   },
+   "total": {
+    "qte": 8.0,
+    "volCl": 0.0,
+    "ht": 283.12,
+    "nbLignes": 7,
+    "puMoyen": 35.39
+   }
+  },
+  {
+   "code": "661508",
+   "libelle": "SAINT VERAN 75 CL 2023 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 30.0,
+     "volCl": 2250.0,
+     "ht": 281.76,
+     "nbLignes": 5,
+     "puMoyen": 9.392
+    }
+   },
+   "total": {
+    "qte": 30.0,
+    "volCl": 2250.0,
+    "ht": 281.76,
+    "nbLignes": 5,
+    "puMoyen": 9.392
+   }
+  },
+  {
+   "code": "601882",
+   "libelle": "ROSE DOM LE PIVE 2023 75 CL AOP SABLE DE CAMARGUE VIN BIO",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 43.0,
+     "volCl": 3225.0,
+     "ht": 279.07,
+     "nbLignes": 8,
+     "puMoyen": 6.49
+    }
+   },
+   "total": {
+    "qte": 43.0,
+    "volCl": 3225.0,
+    "ht": 279.07,
+    "nbLignes": 8,
+    "puMoyen": 6.49
+   }
+  },
+  {
+   "code": "600700",
+   "libelle": "ARBOIS CHARDONNAY 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 33.0,
+     "volCl": 2475.0,
+     "ht": 271.92,
+     "nbLignes": 6,
+     "puMoyen": 8.24
+    }
+   },
+   "total": {
+    "qte": 33.0,
+    "volCl": 2475.0,
+    "ht": 271.92,
+    "nbLignes": 6,
+    "puMoyen": 8.24
+   }
+  },
+  {
+   "code": "601249",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2015 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 10.0,
+     "volCl": 620.0,
+     "ht": 270.0,
+     "nbLignes": 3,
+     "puMoyen": 27.0
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 620.0,
+    "ht": 270.0,
+    "nbLignes": 3,
+    "puMoyen": 27.0
+   }
+  },
+  {
+   "code": "609199",
+   "libelle": "CHAMPAGNE LANSON 75 CL BLACK LABEL C10 C10 C10 C10 C10 C10 C10",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 11.0,
+     "volCl": 825.0,
+     "ht": 267.85,
+     "nbLignes": 1,
+     "puMoyen": 24.35
+    }
+   },
+   "total": {
+    "qte": 11.0,
+    "volCl": 825.0,
+    "ht": 267.85,
+    "nbLignes": 1,
+    "puMoyen": 24.35
+   }
+  },
+  {
+   "code": "591081",
+   "libelle": "CREME CERISE 70CL 18° BRIOTTET",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 11.0,
+     "volCl": 770.0,
+     "ht": 84.43,
+     "nbLignes": 9,
+     "puMoyen": 7.6755
+    },
+    "2023-2024": {
+     "qte": 11.0,
+     "volCl": 770.0,
+     "ht": 89.65,
+     "nbLignes": 11,
+     "puMoyen": 8.15
+    },
+    "2024-2025": {
+     "qte": 11.0,
+     "volCl": 770.0,
+     "ht": 93.28,
+     "nbLignes": 10,
+     "puMoyen": 8.48
+    }
+   },
+   "total": {
+    "qte": 33.0,
+    "volCl": 2310.0,
+    "ht": 267.36,
+    "nbLignes": 30,
+    "puMoyen": 8.1018
+   }
+  },
+  {
+   "code": "600722",
+   "libelle": "ARBOIS TROUSSEAU 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 30.0,
+     "volCl": 2250.0,
+     "ht": 214.2,
+     "nbLignes": 3,
+     "puMoyen": 7.14
+    },
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 42.84,
+     "nbLignes": 1,
+     "puMoyen": 7.14
+    }
+   },
+   "total": {
+    "qte": 36.0,
+    "volCl": 2700.0,
+    "ht": 257.04,
+    "nbLignes": 4,
+    "puMoyen": 7.14
+   }
+  },
+  {
+   "code": "403033",
+   "libelle": "BOITE SCHWEPPES AGRUM 33 CL",
+   "categorie": "soft",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 192.0,
+     "volCl": 6336.0,
+     "ht": 120.48,
+     "nbLignes": 8,
+     "puMoyen": 0.6275
+    },
+    "2023-2024": {
+     "qte": 120.0,
+     "volCl": 3960.0,
+     "ht": 73.2,
+     "nbLignes": 5,
+     "puMoyen": 0.61
+    },
+    "2024-2025": {
+     "qte": 96.0,
+     "volCl": 3168.0,
+     "ht": 61.44,
+     "nbLignes": 4,
+     "puMoyen": 0.64
+    }
+   },
+   "total": {
+    "qte": 408.0,
+    "volCl": 13464.0,
+    "ht": 255.12,
+    "nbLignes": 17,
+    "puMoyen": 0.6253
+   }
+  },
+  {
+   "code": "400653",
+   "libelle": "GRANINI JUS DE TOMATE 25 CL VP",
+   "categorie": "jus",
+   "contenanceCl": 25,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 84.0,
+     "volCl": 2100.0,
+     "ht": 77.4,
+     "nbLignes": 7,
+     "puMoyen": 0.9214
+    },
+    "2023-2024": {
+     "qte": 84.0,
+     "volCl": 2100.0,
+     "ht": 83.88,
+     "nbLignes": 7,
+     "puMoyen": 0.9986
+    },
+    "2024-2025": {
+     "qte": 84.0,
+     "volCl": 2100.0,
+     "ht": 90.0,
+     "nbLignes": 7,
+     "puMoyen": 1.0714
+    }
+   },
+   "total": {
+    "qte": 252.0,
+    "volCl": 6300.0,
+    "ht": 251.28,
+    "nbLignes": 21,
+    "puMoyen": 0.9971
+   }
+  },
+  {
+   "code": "601877",
+   "libelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2019",
+   "categorie": "vin",
+   "contenanceCl": 37.5,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 36.0,
+     "volCl": 1350.0,
+     "ht": 241.92,
+     "nbLignes": 6,
+     "puMoyen": 6.72
+    }
+   },
+   "total": {
+    "qte": 36.0,
+    "volCl": 1350.0,
+    "ht": 241.92,
+    "nbLignes": 6,
+    "puMoyen": 6.72
+   }
+  },
+  {
+   "code": "601733",
+   "libelle": "LA COTE ROUGE 75 CL 2022 AOP LA CLAPE CHATEAU DE LA NEGLY",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 30.0,
+     "volCl": 2250.0,
+     "ht": 241.8,
+     "nbLignes": 6,
+     "puMoyen": 8.06
+    }
+   },
+   "total": {
+    "qte": 30.0,
+    "volCl": 2250.0,
+    "ht": 241.8,
+    "nbLignes": 6,
+    "puMoyen": 8.06
+   }
+  },
+  {
+   "code": "465207",
+   "libelle": "VOLVIC JUICY EXOTIC 50 CL PET",
+   "categorie": "soft",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 228.0,
+     "volCl": 11400.0,
+     "ht": 241.68,
+     "nbLignes": 17,
+     "puMoyen": 1.06
+    }
+   },
+   "total": {
+    "qte": 228.0,
+    "volCl": 11400.0,
+    "ht": 241.68,
+    "nbLignes": 17,
+    "puMoyen": 1.06
+   }
+  },
+  {
+   "code": "661567",
+   "libelle": "SAINT VERAN 75 CL 2020 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 29.0,
+     "volCl": 2175.0,
+     "ht": 237.55,
+     "nbLignes": 5,
+     "puMoyen": 8.1914
+    }
+   },
+   "total": {
+    "qte": 29.0,
+    "volCl": 2175.0,
+    "ht": 237.55,
+    "nbLignes": 5,
+    "puMoyen": 8.1914
+   }
+  },
+  {
+   "code": "402009",
+   "libelle": "BOITE FANTA CITRON FRAP 33 CL",
+   "categorie": "soft",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 120.0,
+     "volCl": 3960.0,
+     "ht": 78.0,
+     "nbLignes": 4,
+     "puMoyen": 0.65
+    },
+    "2023-2024": {
+     "qte": 72.0,
+     "volCl": 2376.0,
+     "ht": 50.4,
+     "nbLignes": 3,
+     "puMoyen": 0.7
+    },
+    "2024-2025": {
+     "qte": 144.0,
+     "volCl": 4752.0,
+     "ht": 105.6,
+     "nbLignes": 6,
+     "puMoyen": 0.7333
+    }
+   },
+   "total": {
+    "qte": 336.0,
+    "volCl": 11088.0,
+    "ht": 234.0,
+    "nbLignes": 13,
+    "puMoyen": 0.6964
+   }
+  },
+  {
+   "code": "700623",
+   "libelle": "CARTOUCHE CLARIS WHITE MACHINE JURA",
+   "categorie": "materiel",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 12.0,
+     "volCl": 0.0,
+     "ht": 186.36,
+     "nbLignes": 5,
+     "puMoyen": 15.53
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 0.0,
+     "ht": 46.59,
+     "nbLignes": 1,
+     "puMoyen": 15.53
+    }
+   },
+   "total": {
+    "qte": 15.0,
+    "volCl": 0.0,
+    "ht": 232.95,
+    "nbLignes": 6,
+    "puMoyen": 15.53
+   }
+  },
+  {
+   "code": "401256",
+   "libelle": "MONIN FRAMBOISE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 14.0,
+     "volCl": 1400.0,
+     "ht": 88.0,
+     "nbLignes": 12,
+     "puMoyen": 6.2857
+    },
+    "2023-2024": {
+     "qte": 13.0,
+     "volCl": 1300.0,
+     "ht": 81.12,
+     "nbLignes": 11,
+     "puMoyen": 6.24
+    },
+    "2024-2025": {
+     "qte": 10.0,
+     "volCl": 1000.0,
+     "ht": 63.6,
+     "nbLignes": 10,
+     "puMoyen": 6.36
+    }
+   },
+   "total": {
+    "qte": 37.0,
+    "volCl": 3700.0,
+    "ht": 232.72,
+    "nbLignes": 33,
+    "puMoyen": 6.2897
+   }
+  },
+  {
+   "code": "661583",
+   "libelle": "CHABLIS 75 CL L.MOREAU 2021 DOMAINE LOUIS MOREAU Articles Manquants : Livré le",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 18.0,
+     "volCl": 1350.0,
+     "ht": 222.84,
+     "nbLignes": 2,
+     "puMoyen": 12.38
+    }
+   },
+   "total": {
+    "qte": 18.0,
+    "volCl": 1350.0,
+    "ht": 222.84,
+    "nbLignes": 2,
+    "puMoyen": 12.38
+   }
+  },
+  {
+   "code": "665173",
+   "libelle": "VIN de PAILLE 37,50 CL MAISON FREDERIC LORNET",
+   "categorie": "materiel",
+   "contenanceCl": 37.5,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 9.0,
+     "volCl": 337.5,
+     "ht": 217.71,
+     "nbLignes": 3,
+     "puMoyen": 24.19
+    }
+   },
+   "total": {
+    "qte": 9.0,
+    "volCl": 337.5,
+    "ht": 217.71,
+    "nbLignes": 3,
+    "puMoyen": 24.19
+   }
+  },
+  {
+   "code": "505042",
+   "libelle": "ABSINTHE UN EMILE 45° 70 CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 48.02,
+     "nbLignes": 2,
+     "puMoyen": 24.01
+    },
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 420.0,
+     "ht": 144.06,
+     "nbLignes": 6,
+     "puMoyen": 24.01
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 24.01,
+     "nbLignes": 1,
+     "puMoyen": 24.01
+    }
+   },
+   "total": {
+    "qte": 9.0,
+    "volCl": 630.0,
+    "ht": 216.09,
+    "nbLignes": 9,
+    "puMoyen": 24.01
+   }
+  },
+  {
+   "code": "601853",
+   "libelle": "SAINT VERAN 75 CL 2022 LES PRELUDES",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 18.0,
+     "volCl": 1350.0,
+     "ht": 157.32,
+     "nbLignes": 2,
+     "puMoyen": 8.74
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 54.54,
+     "nbLignes": 1,
+     "puMoyen": 9.09
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 1800.0,
+    "ht": 211.86,
+    "nbLignes": 3,
+    "puMoyen": 8.8275
+   }
+  },
+  {
+   "code": "510132",
+   "libelle": "PASSOA 70 CL 15° PASSION FRUIT JUICE",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 8.0,
+     "volCl": 560.0,
+     "ht": 73.45,
+     "nbLignes": 8,
+     "puMoyen": 9.1812
+    },
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 420.0,
+     "ht": 59.34,
+     "nbLignes": 5,
+     "puMoyen": 9.89
+    },
+    "2024-2025": {
+     "qte": 8.0,
+     "volCl": 560.0,
+     "ht": 77.59,
+     "nbLignes": 6,
+     "puMoyen": 9.6988
+    }
+   },
+   "total": {
+    "qte": 22.0,
+    "volCl": 1540.0,
+    "ht": 210.38,
+    "nbLignes": 19,
+    "puMoyen": 9.5627
+   }
+  },
+  {
+   "code": "400639",
+   "libelle": "GRANINI FRAMBOISE 25 CL VP",
+   "categorie": "jus",
+   "contenanceCl": 25,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 144.0,
+     "volCl": 3600.0,
+     "ht": 188.64,
+     "nbLignes": 12,
+     "puMoyen": 1.31
+    },
+    "2023-2024": {
+     "qte": 12.0,
+     "volCl": 300.0,
+     "ht": 15.72,
+     "nbLignes": 1,
+     "puMoyen": 1.31
+    }
+   },
+   "total": {
+    "qte": 156.0,
+    "volCl": 3900.0,
+    "ht": 204.36,
+    "nbLignes": 13,
+    "puMoyen": 1.31
+   }
+  },
+  {
+   "code": "101104",
+   "libelle": "SUCRE NEUTRE MORCEAUX x 4 KG CARTON DE 1000 RATIONS DE 4 GR",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 0.0,
+     "ht": 43.89,
+     "nbLignes": 4,
+     "puMoyen": 10.9725
+    },
+    "2023-2024": {
+     "qte": 5.0,
+     "volCl": 0.0,
+     "ht": 78.15,
+     "nbLignes": 5,
+     "puMoyen": 15.63
+    },
+    "2024-2025": {
+     "qte": 5.0,
+     "volCl": 0.0,
+     "ht": 78.15,
+     "nbLignes": 5,
+     "puMoyen": 15.63
+    }
+   },
+   "total": {
+    "qte": 14.0,
+    "volCl": 0.0,
+    "ht": 200.19,
+    "nbLignes": 14,
+    "puMoyen": 14.2993
+   }
+  },
+  {
+   "code": "401254",
+   "libelle": "MONIN CHATAIGNE 70 CL",
+   "categorie": "sirop",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 10.0,
+     "volCl": 700.0,
+     "ht": 55.94,
+     "nbLignes": 10,
+     "puMoyen": 5.594
+    },
+    "2023-2024": {
+     "qte": 17.0,
+     "volCl": 1190.0,
+     "ht": 93.61,
+     "nbLignes": 16,
+     "puMoyen": 5.5065
+    },
+    "2024-2025": {
+     "qte": 8.0,
+     "volCl": 560.0,
+     "ht": 44.88,
+     "nbLignes": 7,
+     "puMoyen": 5.61
+    }
+   },
+   "total": {
+    "qte": 35.0,
+    "volCl": 2450.0,
+    "ht": 194.43,
+    "nbLignes": 33,
+    "puMoyen": 5.5551
+   }
+  },
+  {
+   "code": "661509",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2014 FRUITIERE VINICOLE ARBOIS AOC",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 10.0,
+     "volCl": 620.0,
+     "ht": 191.3,
+     "nbLignes": 2,
+     "puMoyen": 19.13
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 620.0,
+    "ht": 191.3,
+    "nbLignes": 2,
+    "puMoyen": 19.13
+   }
+  },
+  {
+   "code": "520096",
+   "libelle": "MARC DU JURA TISSOT 70CL MICHEL TISSOT",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 8.0,
+     "volCl": 560.0,
+     "ht": 148.88,
+     "nbLignes": 7,
+     "puMoyen": 18.61
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 38.96,
+     "nbLignes": 2,
+     "puMoyen": 19.48
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 700.0,
+    "ht": 187.84,
+    "nbLignes": 9,
+    "puMoyen": 18.784
+   }
+  },
+  {
+   "code": "520018",
+   "libelle": "CLAN CAMPBELL 70 CL 40°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 280.0,
+     "ht": 50.24,
+     "nbLignes": 4,
+     "puMoyen": 12.56
+    },
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 280.0,
+     "ht": 51.2,
+     "nbLignes": 3,
+     "puMoyen": 12.8
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 420.0,
+     "ht": 79.08,
+     "nbLignes": 6,
+     "puMoyen": 13.18
+    }
+   },
+   "total": {
+    "qte": 14.0,
+    "volCl": 980.0,
+    "ht": 180.52,
+    "nbLignes": 13,
+    "puMoyen": 12.8943
+   }
+  },
+  {
+   "code": "510062",
+   "libelle": "VERT SAPIN 40° 100 CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 84.92,
+     "nbLignes": 3,
+     "puMoyen": 21.23
+    },
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 85.04,
+     "nbLignes": 4,
+     "puMoyen": 21.26
+    }
+   },
+   "total": {
+    "qte": 8.0,
+    "volCl": 800.0,
+    "ht": 169.96,
+    "nbLignes": 7,
+    "puMoyen": 21.245
+   }
+  },
+  {
+   "code": "520001",
+   "libelle": "RICARD 100 CL 45°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 3.0,
+     "volCl": 300.0,
+     "ht": 52.89,
+     "nbLignes": 3,
+     "puMoyen": 17.63
+    },
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 71.8,
+     "nbLignes": 4,
+     "puMoyen": 17.95
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 36.8,
+     "nbLignes": 2,
+     "puMoyen": 18.4
+    }
+   },
+   "total": {
+    "qte": 9.0,
+    "volCl": 900.0,
+    "ht": 161.49,
+    "nbLignes": 9,
+    "puMoyen": 17.9433
+   }
+  },
+  {
+   "code": "601281",
+   "libelle": "GOURMANDISE ROSE 75 CL 2021 IGP MEDITERRANEE VIGNERON DE SAINT TROPEZ",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 30.0,
+     "volCl": 2250.0,
+     "ht": 124.8,
+     "nbLignes": 3,
+     "puMoyen": 4.16
+    },
+    "2023-2024": {
+     "qte": -1.0,
+     "volCl": -75.0,
+     "ht": -4.16,
+     "nbLignes": 1,
+     "puMoyen": 4.16
+    },
+    "2024-2025": {
+     "qte": 8.0,
+     "volCl": 600.0,
+     "ht": 37.52,
+     "nbLignes": 1,
+     "puMoyen": 4.69
+    }
+   },
+   "total": {
+    "qte": 37.0,
+    "volCl": 2775.0,
+    "ht": 158.16,
+    "nbLignes": 5,
+    "puMoyen": 4.2746
+   }
+  },
+  {
+   "code": "601379",
+   "libelle": "SAINT VERAN 75 CL 2021 LES PRELUDES",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 18.0,
+     "volCl": 1350.0,
+     "ht": 157.5,
+     "nbLignes": 3,
+     "puMoyen": 8.75
+    }
+   },
+   "total": {
+    "qte": 18.0,
+    "volCl": 1350.0,
+    "ht": 157.5,
+    "nbLignes": 3,
+    "puMoyen": 8.75
+   }
+  },
+  {
+   "code": "601239",
+   "libelle": "BOHEME GRIS 75 CL 2021 IGP SABLE DE CAMARGUE",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 33.0,
+     "volCl": 2475.0,
+     "ht": 272.52,
+     "nbLignes": 5,
+     "puMoyen": 8.2582
+    },
+    "2023-2024": {
+     "qte": -14.0,
+     "volCl": -1050.0,
+     "ht": -115.92,
+     "nbLignes": 1,
+     "puMoyen": 8.28
+    }
+   },
+   "total": {
+    "qte": 19.0,
+    "volCl": 1425.0,
+    "ht": 156.6,
+    "nbLignes": 6,
+    "puMoyen": 8.2421
+   }
+  },
+  {
+   "code": "401532",
+   "libelle": "TROPICO TROPICAL 50 CL PET",
+   "categorie": "soft",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 144.0,
+     "volCl": 7200.0,
+     "ht": 155.52,
+     "nbLignes": 10,
+     "puMoyen": 1.08
+    }
+   },
+   "total": {
+    "qte": 144.0,
+    "volCl": 7200.0,
+    "ht": 155.52,
+    "nbLignes": 10,
+    "puMoyen": 1.08
+   }
+  },
+  {
+   "code": "505033",
+   "libelle": "ABSINTHE EMILE VERTE 68° 70 CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 5.0,
+     "volCl": 350.0,
+     "ht": 154.45,
+     "nbLignes": 5,
+     "puMoyen": 30.89
+    }
+   },
+   "total": {
+    "qte": 5.0,
+    "volCl": 350.0,
+    "ht": 154.45,
+    "nbLignes": 5,
+    "puMoyen": 30.89
+   }
+  },
+  {
+   "code": "530012",
+   "libelle": "JACK DANIEL'S OLD N7 70 CL 40°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 3.0,
+     "volCl": 210.0,
+     "ht": 55.8,
+     "nbLignes": 3,
+     "puMoyen": 18.6
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 210.0,
+     "ht": 57.78,
+     "nbLignes": 3,
+     "puMoyen": 19.26
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 39.66,
+     "nbLignes": 2,
+     "puMoyen": 19.83
+    }
+   },
+   "total": {
+    "qte": 8.0,
+    "volCl": 560.0,
+    "ht": 153.24,
+    "nbLignes": 8,
+    "puMoyen": 19.155
+   }
+  },
+  {
+   "code": "601439",
+   "libelle": "ROSE DOM LE PIVE 2022 75 CL IGP SABLE DE CAMARGUE VIN BIO",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 23.0,
+     "volCl": 1725.0,
+     "ht": 146.05,
+     "nbLignes": 3,
+     "puMoyen": 6.35
+    }
+   },
+   "total": {
+    "qte": 23.0,
+    "volCl": 1725.0,
+    "ht": 146.05,
+    "nbLignes": 3,
+    "puMoyen": 6.35
+   }
+  },
+  {
+   "code": "661621",
+   "libelle": "VIN JAUNE 62 CL 2016 MAISON FREDERIC LORNET Ci-dessous",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 5.0,
+     "volCl": 310.0,
+     "ht": 144.95,
+     "nbLignes": 2,
+     "puMoyen": 28.99
+    }
+   },
+   "total": {
+    "qte": 5.0,
+    "volCl": 310.0,
+    "ht": 144.95,
+    "nbLignes": 2,
+    "puMoyen": 28.99
+   }
+  },
+  {
+   "code": "510273",
+   "libelle": "ABSINTHE TRILOGIE 50° 50 CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 5.0,
+     "volCl": 250.0,
+     "ht": 119.9,
+     "nbLignes": 5,
+     "puMoyen": 23.98
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 50.0,
+     "ht": 23.98,
+     "nbLignes": 1,
+     "puMoyen": 23.98
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 300.0,
+    "ht": 143.88,
+    "nbLignes": 6,
+    "puMoyen": 23.98
+   }
+  },
+  {
+   "code": "530126",
+   "libelle": "COGNAC PARK VS 70 CL 40°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 3.0,
+     "volCl": 210.0,
+     "ht": 58.86,
+     "nbLignes": 3,
+     "puMoyen": 19.62
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 20.82,
+     "nbLignes": 1,
+     "puMoyen": 20.82
+    },
+    "2024-2025": {
+     "qte": 3.0,
+     "volCl": 210.0,
+     "ht": 62.46,
+     "nbLignes": 3,
+     "puMoyen": 20.82
+    }
+   },
+   "total": {
+    "qte": 7.0,
+    "volCl": 490.0,
+    "ht": 142.14,
+    "nbLignes": 7,
+    "puMoyen": 20.3057
+   }
+  },
+  {
+   "code": "600755",
+   "libelle": "GOURMANDISE ROSE 75 CL 2023 IGP MEDITERRANEE VIGNERON DE SAINT TROPEZ",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 30.0,
+     "volCl": 2250.0,
+     "ht": 140.7,
+     "nbLignes": 4,
+     "puMoyen": 4.69
+    }
+   },
+   "total": {
+    "qte": 30.0,
+    "volCl": 2250.0,
+    "ht": 140.7,
+    "nbLignes": 4,
+    "puMoyen": 4.69
+   }
+  },
+  {
+   "code": "400645",
+   "libelle": "GRANINI RAISIN ROUGE 25 CL VP",
+   "categorie": "jus",
+   "contenanceCl": 25,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 120.0,
+     "volCl": 3000.0,
+     "ht": 135.6,
+     "nbLignes": 10,
+     "puMoyen": 1.13
+    }
+   },
+   "total": {
+    "qte": 120.0,
+    "volCl": 3000.0,
+    "ht": 135.6,
+    "nbLignes": 10,
+    "puMoyen": 1.13
+   }
+  },
+  {
+   "code": "601261",
+   "libelle": "ARBOIS SAVAGNIN 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 135.48,
+     "nbLignes": 4,
+     "puMoyen": 11.29
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 900.0,
+    "ht": 135.48,
+    "nbLignes": 4,
+    "puMoyen": 11.29
+   }
+  },
+  {
+   "code": "300001",
+   "libelle": "VITTEL 100 CL VC",
+   "categorie": "eau",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 36.0,
+     "volCl": 3600.0,
+     "ht": 28.44,
+     "nbLignes": 3,
+     "puMoyen": 0.79
+    },
+    "2023-2024": {
+     "qte": 60.0,
+     "volCl": 6000.0,
+     "ht": 49.8,
+     "nbLignes": 5,
+     "puMoyen": 0.83
+    },
+    "2024-2025": {
+     "qte": 60.0,
+     "volCl": 6000.0,
+     "ht": 51.72,
+     "nbLignes": 5,
+     "puMoyen": 0.862
+    }
+   },
+   "total": {
+    "qte": 156.0,
+    "volCl": 15600.0,
+    "ht": 129.96,
+    "nbLignes": 13,
+    "puMoyen": 0.8331
+   }
+  },
+  {
+   "code": "661441",
+   "libelle": "MIRAVAL ROSE 75 CL 2020 CÔTES DE PROVENCE AOP",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 10.0,
+     "volCl": 750.0,
+     "ht": 129.68,
+     "nbLignes": 5,
+     "puMoyen": 12.968
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 750.0,
+    "ht": 129.68,
+    "nbLignes": 5,
+    "puMoyen": 12.968
+   }
+  },
+  {
+   "code": "600487",
+   "libelle": "GRAND PAVOIS N°8 BLANC 75 CL PETIT ET GROS MANSENG COTES DE GASCOGNE",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 18.0,
+     "volCl": 1350.0,
+     "ht": 94.14,
+     "nbLignes": 2,
+     "puMoyen": 5.23
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 32.22,
+     "nbLignes": 1,
+     "puMoyen": 5.37
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 1800.0,
+    "ht": 126.36,
+    "nbLignes": 3,
+    "puMoyen": 5.265
+   }
+  },
+  {
+   "code": "165241",
+   "libelle": "MINI CARAMBAR CARAMEL 1 KG 270 UNITES / 1 KG",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 9.0,
+     "volCl": 0.0,
+     "ht": 126.14,
+     "nbLignes": 7,
+     "puMoyen": 14.0156
+    }
+   },
+   "total": {
+    "qte": 9.0,
+    "volCl": 0.0,
+    "ht": 126.14,
+    "nbLignes": 7,
+    "puMoyen": 14.0156
+   }
+  },
+  {
+   "code": "530030",
+   "libelle": "GET 27 VERT 100 CL 17,9°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 3.0,
+     "volCl": 300.0,
+     "ht": 44.52,
+     "nbLignes": 3,
+     "puMoyen": 14.84
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 300.0,
+     "ht": 46.18,
+     "nbLignes": 3,
+     "puMoyen": 15.3933
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 31.52,
+     "nbLignes": 2,
+     "puMoyen": 15.76
+    }
+   },
+   "total": {
+    "qte": 8.0,
+    "volCl": 800.0,
+    "ht": 122.22,
+    "nbLignes": 8,
+    "puMoyen": 15.2775
+   }
+  },
+  {
+   "code": "520128",
+   "libelle": "MIRABELLE 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 5.0,
+     "volCl": 350.0,
+     "ht": 100.2,
+     "nbLignes": 5,
+     "puMoyen": 20.04
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 20.69,
+     "nbLignes": 1,
+     "puMoyen": 20.69
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 420.0,
+    "ht": 120.89,
+    "nbLignes": 6,
+    "puMoyen": 20.1483
+   }
+  },
+  {
+   "code": "125013",
+   "libelle": "BISCOFF L'UNIQUE LOTUS X 300 6,25 G",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 8.0,
+     "volCl": 0.0,
+     "ht": 119.45,
+     "nbLignes": 6,
+     "puMoyen": 14.9313
+    }
+   },
+   "total": {
+    "qte": 8.0,
+    "volCl": 0.0,
+    "ht": 119.45,
+    "nbLignes": 6,
+    "puMoyen": 14.9313
+   }
+  },
+  {
+   "code": "602118",
+   "libelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2023",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 13.0,
+     "volCl": 975.0,
+     "ht": 118.69,
+     "nbLignes": 3,
+     "puMoyen": 9.13
+    }
+   },
+   "total": {
+    "qte": 13.0,
+    "volCl": 975.0,
+    "ht": 118.69,
+    "nbLignes": 3,
+    "puMoyen": 9.13
+   }
+  },
+  {
+   "code": "600764",
+   "libelle": "MACVIN DU JURA ROSE 75 CL FRUITIERE VINICOLE ARBOIS",
+   "categorie": "macvin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 82.56,
+     "nbLignes": 1,
+     "puMoyen": 13.76
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 225.0,
+     "ht": 36.0,
+     "nbLignes": 2,
+     "puMoyen": 12.0
+    }
+   },
+   "total": {
+    "qte": 9.0,
+    "volCl": 675.0,
+    "ht": 118.56,
+    "nbLignes": 3,
+    "puMoyen": 13.1733
+   }
+  },
+  {
+   "code": "401833",
+   "libelle": "PULCO ORANGE CITRON 70CL VP",
+   "categorie": "soft",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 14.0,
+     "volCl": 980.0,
+     "ht": 60.06,
+     "nbLignes": 11,
+     "puMoyen": 4.29
+    },
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 840.0,
+     "ht": 58.2,
+     "nbLignes": 12,
+     "puMoyen": 4.85
+    }
+   },
+   "total": {
+    "qte": 26.0,
+    "volCl": 1820.0,
+    "ht": 118.26,
+    "nbLignes": 23,
+    "puMoyen": 4.5485
+   }
+  },
+  {
+   "code": "165839",
+   "libelle": "BONNE MAMAN FINANCIER 5G X 200 GATEAU BONNE MAMAN",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 0.0,
+     "ht": 117.24,
+     "nbLignes": 3,
+     "puMoyen": 19.54
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 0.0,
+    "ht": 117.24,
+    "nbLignes": 3,
+    "puMoyen": 19.54
+   }
+  },
+  {
+   "code": "605168",
+   "libelle": "BIB GARDILLES ROSE 10 L IGP GARD SCA CELLIER DS CHARTREUX",
+   "categorie": "vin",
+   "contenanceCl": 1000,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 5.0,
+     "volCl": 5000.0,
+     "ht": 95.25,
+     "nbLignes": 2,
+     "puMoyen": 19.05
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 1000.0,
+     "ht": 20.58,
+     "nbLignes": 1,
+     "puMoyen": 20.58
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 6000.0,
+    "ht": 115.83,
+    "nbLignes": 3,
+    "puMoyen": 19.305
+   }
+  },
+  {
+   "code": "200633",
+   "libelle": "SZIGET HEFEWEIZEN 33 CL 6,5°",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 48.0,
+     "volCl": 1584.0,
+     "ht": 111.36,
+     "nbLignes": 2,
+     "puMoyen": 2.32
+    }
+   },
+   "total": {
+    "qte": 48.0,
+    "volCl": 1584.0,
+    "ht": 111.36,
+    "nbLignes": 2,
+    "puMoyen": 2.32
+   }
+  },
+  {
+   "code": "530078",
+   "libelle": "VODKA POLIAKOV 70 CL 37,5° SILVER BEC",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 11.0,
+     "volCl": 770.0,
+     "ht": 98.37,
+     "nbLignes": 9,
+     "puMoyen": 8.9427
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 9.28,
+     "nbLignes": 1,
+     "puMoyen": 9.28
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 840.0,
+    "ht": 107.65,
+    "nbLignes": 10,
+    "puMoyen": 8.9708
+   }
+  },
+  {
+   "code": "125005",
+   "libelle": "NAPOLITAINS MILKA 4,6 GR x 355",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 0.0,
+     "ht": 106.88,
+     "nbLignes": 4,
+     "puMoyen": 26.72
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 0.0,
+    "ht": 106.88,
+    "nbLignes": 4,
+    "puMoyen": 26.72
+   }
+  },
+  {
+   "code": "530051",
+   "libelle": "MARTINI BIANCO 100 CL 14,4°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 5.0,
+     "volCl": 500.0,
+     "ht": 39.67,
+     "nbLignes": 5,
+     "puMoyen": 7.934
+    },
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 600.0,
+     "ht": 49.02,
+     "nbLignes": 6,
+     "puMoyen": 8.17
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 16.66,
+     "nbLignes": 2,
+     "puMoyen": 8.33
+    }
+   },
+   "total": {
+    "qte": 13.0,
+    "volCl": 1300.0,
+    "ht": 105.35,
+    "nbLignes": 13,
+    "puMoyen": 8.1038
+   }
+  },
+  {
+   "code": "510061",
+   "libelle": "LIQUEUR VERT SAPIN 40° 70 CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 17.19,
+     "nbLignes": 1,
+     "puMoyen": 17.19
+    },
+    "2024-2025": {
+     "qte": 5.0,
+     "volCl": 350.0,
+     "ht": 85.53,
+     "nbLignes": 5,
+     "puMoyen": 17.106
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 420.0,
+    "ht": 102.72,
+    "nbLignes": 6,
+    "puMoyen": 17.12
+   }
+  },
+  {
+   "code": "550252",
+   "libelle": "MARC DE BOURGOGNE 70 CL 45° EXTRA EGRAPPE MAISON JACOULOT",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 22.1,
+     "nbLignes": 1,
+     "puMoyen": 22.1
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 51.8,
+     "nbLignes": 2,
+     "puMoyen": 25.9
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 25.9,
+     "nbLignes": 1,
+     "puMoyen": 25.9
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 280.0,
+    "ht": 99.8,
+    "nbLignes": 4,
+    "puMoyen": 24.95
+   }
+  },
+  {
+   "code": "540001",
+   "libelle": "PASTIS 51 100 CL 45°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 32.38,
+     "nbLignes": 2,
+     "puMoyen": 16.19
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 32.88,
+     "nbLignes": 2,
+     "puMoyen": 16.44
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 34.1,
+     "nbLignes": 2,
+     "puMoyen": 17.05
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 600.0,
+    "ht": 99.36,
+    "nbLignes": 6,
+    "puMoyen": 16.56
+   }
+  },
+  {
+   "code": "401211",
+   "libelle": "PULCO CITRON FORM PROF 70 CL",
+   "categorie": "soft",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 18.0,
+     "volCl": 1260.0,
+     "ht": 87.12,
+     "nbLignes": 16,
+     "puMoyen": 4.84
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 10.02,
+     "nbLignes": 2,
+     "puMoyen": 5.01
+    }
+   },
+   "total": {
+    "qte": 20.0,
+    "volCl": 1400.0,
+    "ht": 97.14,
+    "nbLignes": 18,
+    "puMoyen": 4.857
+   }
+  },
+  {
+   "code": "110275",
+   "libelle": "CAFE MALONGO DECA MOULU AQUA BIO BTE 250G",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 5.0,
+     "volCl": 0.0,
+     "ht": 46.4,
+     "nbLignes": 4,
+     "puMoyen": 9.28
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 0.0,
+     "ht": 29.34,
+     "nbLignes": 3,
+     "puMoyen": 9.78
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 20.94,
+     "nbLignes": 2,
+     "puMoyen": 10.47
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 0.0,
+    "ht": 96.68,
+    "nbLignes": 9,
+    "puMoyen": 9.668
+   }
+  },
+  {
+   "code": "510255",
+   "libelle": "LIQUEUR DE SAPIN 100 CL 40°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 75.64,
+     "nbLignes": 4,
+     "puMoyen": 18.91
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 18.91,
+     "nbLignes": 1,
+     "puMoyen": 18.91
+    }
+   },
+   "total": {
+    "qte": 5.0,
+    "volCl": 500.0,
+    "ht": 94.55,
+    "nbLignes": 5,
+    "puMoyen": 18.91
+   }
+  },
+  {
+   "code": "601658",
+   "libelle": "ARBOIS TROUSSEAU 75 CL 2019 FRUITIERE VINICOLE ARBOIS Articles Manquants : Livré le",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 45.66,
+     "nbLignes": 1,
+     "puMoyen": 7.61
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 45.66,
+     "nbLignes": 1,
+     "puMoyen": 7.61
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 900.0,
+    "ht": 91.32,
+    "nbLignes": 2,
+    "puMoyen": 7.61
+   }
+  },
+  {
+   "code": "520133",
+   "libelle": "FRAMBOISE SAUVAGE 70 CL 40° MASSENEZ DISTILLERIE PEUREUX",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 21.71,
+     "nbLignes": 1,
+     "puMoyen": 21.71
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 45.76,
+     "nbLignes": 2,
+     "puMoyen": 22.88
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 22.88,
+     "nbLignes": 1,
+     "puMoyen": 22.88
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 280.0,
+    "ht": 90.35,
+    "nbLignes": 4,
+    "puMoyen": 22.5875
+   }
+  },
+  {
+   "code": "601322",
+   "libelle": "ARBOIS CHARDONNAY 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 87.24,
+     "nbLignes": 2,
+     "puMoyen": 7.27
+    },
+    "2023-2024": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 900.0,
+    "ht": 87.24,
+    "nbLignes": 4,
+    "puMoyen": 7.27
+   }
+  },
+  {
+   "code": "601088",
+   "libelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES PIERRES SECHES MAISON YVES CUILLERON",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 81.6,
+     "nbLignes": 3,
+     "puMoyen": 13.6
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 81.6,
+    "nbLignes": 3,
+    "puMoyen": 13.6
+   }
+  },
+  {
+   "code": "601158",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2014",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 3.0,
+     "volCl": 186.0,
+     "ht": 81.0,
+     "nbLignes": 1,
+     "puMoyen": 27.0
+    }
+   },
+   "total": {
+    "qte": 3.0,
+    "volCl": 186.0,
+    "ht": 81.0,
+    "nbLignes": 1,
+    "puMoyen": 27.0
+   }
+  },
+  {
+   "code": "616624",
+   "libelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2023",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 80.76,
+     "nbLignes": 1,
+     "puMoyen": 13.46
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 80.76,
+    "nbLignes": 1,
+    "puMoyen": 13.46
+   }
+  },
+  {
+   "code": "600867",
+   "libelle": "RAVELIN BLANC MVPCE 75 CL 13° VINS ANDRE BONNOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 30.0,
+     "volCl": 2250.0,
+     "ht": 78.9,
+     "nbLignes": 4,
+     "puMoyen": 2.63
+    }
+   },
+   "total": {
+    "qte": 30.0,
+    "volCl": 2250.0,
+    "ht": 78.9,
+    "nbLignes": 4,
+    "puMoyen": 2.63
+   }
+  },
+  {
+   "code": "401234",
+   "libelle": "MONIN PECHE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 7.0,
+     "volCl": 700.0,
+     "ht": 41.91,
+     "nbLignes": 7,
+     "puMoyen": 5.9871
+    },
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 23.96,
+     "nbLignes": 4,
+     "puMoyen": 5.99
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 12.22,
+     "nbLignes": 2,
+     "puMoyen": 6.11
+    }
+   },
+   "total": {
+    "qte": 13.0,
+    "volCl": 1300.0,
+    "ht": 78.09,
+    "nbLignes": 13,
+    "puMoyen": 6.0069
+   }
+  },
+  {
+   "code": "601354",
+   "libelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES MARCHES DE GRANIT OGIER",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 77.76,
+     "nbLignes": 1,
+     "puMoyen": 12.96
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 77.76,
+    "nbLignes": 1,
+    "puMoyen": 12.96
+   }
+  },
+  {
+   "code": "401258",
+   "libelle": "MONIN ORANGE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 600.0,
+     "ht": 26.26,
+     "nbLignes": 5,
+     "puMoyen": 4.3767
+    },
+    "2023-2024": {
+     "qte": 5.0,
+     "volCl": 500.0,
+     "ht": 22.84,
+     "nbLignes": 5,
+     "puMoyen": 4.568
+    },
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 600.0,
+     "ht": 27.84,
+     "nbLignes": 6,
+     "puMoyen": 4.64
+    }
+   },
+   "total": {
+    "qte": 17.0,
+    "volCl": 1700.0,
+    "ht": 76.94,
+    "nbLignes": 16,
+    "puMoyen": 4.5259
+   }
+  },
+  {
+   "code": "401241",
+   "libelle": "MONIN CERISE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 8.0,
+     "volCl": 800.0,
+     "ht": 50.23,
+     "nbLignes": 7,
+     "puMoyen": 6.2788
+    },
+    "2024-2025": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 25.44,
+     "nbLignes": 4,
+     "puMoyen": 6.36
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 1200.0,
+    "ht": 75.67,
+    "nbLignes": 11,
+    "puMoyen": 6.3058
+   }
+  },
+  {
+   "code": "700624",
+   "libelle": "TABLETTE DE NETTOYAGE POUR MACHINE A CAFE NIVONA",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 0.0,
+     "ht": 59.96,
+     "nbLignes": 4,
+     "puMoyen": 14.99
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 14.99,
+     "nbLignes": 1,
+     "puMoyen": 14.99
+    }
+   },
+   "total": {
+    "qte": 5.0,
+    "volCl": 0.0,
+    "ht": 74.95,
+    "nbLignes": 5,
+    "puMoyen": 14.99
+   }
+  },
+  {
+   "code": "401257",
+   "libelle": "MONIN GLASCO CITRON 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 8.68,
+     "nbLignes": 2,
+     "puMoyen": 4.34
+    },
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 18.2,
+     "nbLignes": 4,
+     "puMoyen": 4.55
+    },
+    "2024-2025": {
+     "qte": 10.0,
+     "volCl": 1000.0,
+     "ht": 46.4,
+     "nbLignes": 10,
+     "puMoyen": 4.64
+    }
+   },
+   "total": {
+    "qte": 16.0,
+    "volCl": 1600.0,
+    "ht": 73.28,
+    "nbLignes": 16,
+    "puMoyen": 4.58
+   }
+  },
+  {
+   "code": "630079",
+   "libelle": "COTES DE PROVENCE ROSE 75 CL M DE MINUTY 2021",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 72.9,
+     "nbLignes": 1,
+     "puMoyen": 12.15
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 72.9,
+    "nbLignes": 1,
+    "puMoyen": 12.15
+   }
+  },
+  {
+   "code": "403120",
+   "libelle": "CIDRE DOUX BOLEE ARMORIQ 75 CL",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 36.0,
+     "volCl": 2700.0,
+     "ht": 72.0,
+     "nbLignes": 3,
+     "puMoyen": 2.0
+    }
+   },
+   "total": {
+    "qte": 36.0,
+    "volCl": 2700.0,
+    "ht": 72.0,
+    "nbLignes": 3,
+    "puMoyen": 2.0
+   }
+  },
+  {
+   "code": "601674",
+   "libelle": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 71.04,
+     "nbLignes": 2,
+     "puMoyen": 5.92
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 900.0,
+    "ht": 71.04,
+    "nbLignes": 2,
+    "puMoyen": 5.92
+   }
+  },
+  {
+   "code": "661661",
+   "libelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2020",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 70.74,
+     "nbLignes": 1,
+     "puMoyen": 11.79
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 70.74,
+    "nbLignes": 1,
+    "puMoyen": 11.79
+   }
+  },
+  {
+   "code": "401267",
+   "libelle": "MONIN GRENADINE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 7.0,
+     "volCl": 700.0,
+     "ht": 27.67,
+     "nbLignes": 6,
+     "puMoyen": 3.9529
+    },
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 600.0,
+     "ht": 25.47,
+     "nbLignes": 6,
+     "puMoyen": 4.245
+    },
+    "2024-2025": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 17.28,
+     "nbLignes": 4,
+     "puMoyen": 4.32
+    }
+   },
+   "total": {
+    "qte": 17.0,
+    "volCl": 1700.0,
+    "ht": 70.42,
+    "nbLignes": 16,
+    "puMoyen": 4.1424
+   }
+  },
+  {
+   "code": "661236",
+   "libelle": "BORDEAUX SUPERIEUR 75 CL CHATEAU GRAND RENOM ANTOINE MOUEIX",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 11.0,
+     "volCl": 825.0,
+     "ht": 69.08,
+     "nbLignes": 4,
+     "puMoyen": 6.28
+    }
+   },
+   "total": {
+    "qte": 11.0,
+    "volCl": 825.0,
+    "ht": 69.08,
+    "nbLignes": 4,
+    "puMoyen": 6.28
+   }
+  },
+  {
+   "code": "530031",
+   "libelle": "GET 31 100 CL 24°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 33.76,
+     "nbLignes": 2,
+     "puMoyen": 16.88
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 16.93,
+     "nbLignes": 1,
+     "puMoyen": 16.93
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 17.71,
+     "nbLignes": 1,
+     "puMoyen": 17.71
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 400.0,
+    "ht": 68.4,
+    "nbLignes": 4,
+    "puMoyen": 17.1
+   }
+  },
+  {
+   "code": "591074",
+   "libelle": "CREME CASSIS BRIOTTET 20° 70CL CASSIS DE DIJON",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 420.0,
+     "ht": 50.3,
+     "nbLignes": 3,
+     "puMoyen": 8.3833
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 18.06,
+     "nbLignes": 2,
+     "puMoyen": 9.03
+    }
+   },
+   "total": {
+    "qte": 8.0,
+    "volCl": 560.0,
+    "ht": 68.36,
+    "nbLignes": 5,
+    "puMoyen": 8.545
+   }
+  },
+  {
+   "code": "165838",
+   "libelle": "MINI CARAMBAR ASSORT X 270 X 270 / 1 KG",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 5.0,
+     "volCl": 0.0,
+     "ht": 68.1,
+     "nbLignes": 2,
+     "puMoyen": 13.62
+    }
+   },
+   "total": {
+    "qte": 5.0,
+    "volCl": 0.0,
+    "ht": 68.1,
+    "nbLignes": 2,
+    "puMoyen": 13.62
+   }
+  },
+  {
+   "code": "300002",
+   "libelle": "VITTEL 50 CL VC",
+   "categorie": "eau",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 20.0,
+     "volCl": 1000.0,
+     "ht": 12.4,
+     "nbLignes": 1,
+     "puMoyen": 0.62
+    },
+    "2023-2024": {
+     "qte": 40.0,
+     "volCl": 2000.0,
+     "ht": 27.6,
+     "nbLignes": 2,
+     "puMoyen": 0.69
+    },
+    "2024-2025": {
+     "qte": 40.0,
+     "volCl": 2000.0,
+     "ht": 28.0,
+     "nbLignes": 2,
+     "puMoyen": 0.7
+    }
+   },
+   "total": {
+    "qte": 100.0,
+    "volCl": 5000.0,
+    "ht": 68.0,
+    "nbLignes": 5,
+    "puMoyen": 0.68
+   }
+  },
+  {
+   "code": "661497",
+   "libelle": "SAINT JOSEPH ROUGE 75 CL 2018 LES MARCHES DE GRANIT OGIER",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 66.36,
+     "nbLignes": 1,
+     "puMoyen": 11.06
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 66.36,
+    "nbLignes": 1,
+    "puMoyen": 11.06
+   }
+  },
+  {
+   "code": "665048",
+   "libelle": "BIB COTES DE PROVENCE 3 L ROSE HAUT MASTEREL Articles Manquants : Livré le",
+   "categorie": "vin",
+   "contenanceCl": 300,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 4.0,
+     "volCl": 1200.0,
+     "ht": 65.72,
+     "nbLignes": 2,
+     "puMoyen": 16.43
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 1200.0,
+    "ht": 65.72,
+    "nbLignes": 2,
+    "puMoyen": 16.43
+   }
+  },
+  {
+   "code": "401242",
+   "libelle": "MONIN FRAISE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 5.0,
+     "volCl": 500.0,
+     "ht": 25.94,
+     "nbLignes": 5,
+     "puMoyen": 5.188
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 300.0,
+     "ht": 15.93,
+     "nbLignes": 3,
+     "puMoyen": 5.31
+    },
+    "2024-2025": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 21.68,
+     "nbLignes": 4,
+     "puMoyen": 5.42
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 1200.0,
+    "ht": 63.55,
+    "nbLignes": 12,
+    "puMoyen": 5.2958
+   }
+  },
+  {
+   "code": "601610",
+   "libelle": "CHABLIS 75 CL LE FINAGE 2022 LA CHABLISIENNE",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 62.22,
+     "nbLignes": 1,
+     "puMoyen": 10.37
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 62.22,
+    "nbLignes": 1,
+    "puMoyen": 10.37
+   }
+  },
+  {
+   "code": "125011",
+   "libelle": "MINI CARAMBAR CARAMEL 1 KG SACHET DE 1KG",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 30.34,
+     "nbLignes": 1,
+     "puMoyen": 15.17
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 30.34,
+     "nbLignes": 1,
+     "puMoyen": 15.17
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 0.0,
+    "ht": 60.68,
+    "nbLignes": 2,
+    "puMoyen": 15.17
+   }
+  },
+  {
+   "code": "600921",
+   "libelle": "ARBOIS TROUSSEAU 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 58.56,
+     "nbLignes": 1,
+     "puMoyen": 9.76
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 58.56,
+    "nbLignes": 1,
+    "puMoyen": 9.76
+   }
+  },
+  {
+   "code": "600911",
+   "libelle": "GEWURZTRAMINER 75 CL SORCIERES",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 57.66,
+     "nbLignes": 1,
+     "puMoyen": 9.61
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 57.66,
+    "nbLignes": 1,
+    "puMoyen": 9.61
+   }
+  },
+  {
+   "code": "601159",
+   "libelle": "ARBOIS SAVAGNIN 75 CL 2017 FRUITIERE VINICOLE ARBOIS",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 5.0,
+     "volCl": 375.0,
+     "ht": 56.45,
+     "nbLignes": 1,
+     "puMoyen": 11.29
+    }
+   },
+   "total": {
+    "qte": 5.0,
+    "volCl": 375.0,
+    "ht": 56.45,
+    "nbLignes": 1,
+    "puMoyen": 11.29
+   }
+  },
+  {
+   "code": "601462",
+   "libelle": "ARBOIS VIN JAUNE 62 CL 2016 DOMAINE JEAN-LOUIS TISSOT",
+   "categorie": "vin",
+   "contenanceCl": 62,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 124.0,
+     "ht": 54.0,
+     "nbLignes": 1,
+     "puMoyen": 27.0
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 124.0,
+    "ht": 54.0,
+    "nbLignes": 1,
+    "puMoyen": 27.0
+   }
+  },
+  {
+   "code": "601732",
+   "libelle": "GEWURZTRAMINER VEND TARD 75CL Ci-dessous Déconsigne du jour sur facture suivante :",
+   "categorie": "autre",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 150.0,
+     "ht": 51.38,
+     "nbLignes": 1,
+     "puMoyen": 25.69
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 150.0,
+    "ht": 51.38,
+    "nbLignes": 1,
+    "puMoyen": 25.69
+   }
+  },
+  {
+   "code": "600702",
+   "libelle": "ARBOIS ROUGE TRADITION 75 CL DOM. JEAN-LOUIS TISSOT 2023",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 51.12,
+     "nbLignes": 1,
+     "puMoyen": 8.52
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 51.12,
+    "nbLignes": 1,
+    "puMoyen": 8.52
+   }
+  },
+  {
+   "code": "520093",
+   "libelle": "CAPUCINE CREME CASSIS 16° 1 L",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 27.62,
+     "nbLignes": 3,
+     "puMoyen": 6.905
+    },
+    "2023-2024": {
+     "qte": 3.0,
+     "volCl": 300.0,
+     "ht": 23.31,
+     "nbLignes": 3,
+     "puMoyen": 7.77
+    }
+   },
+   "total": {
+    "qte": 7.0,
+    "volCl": 700.0,
+    "ht": 50.93,
+    "nbLignes": 6,
+    "puMoyen": 7.2757
+   }
+  },
+  {
+   "code": "530042",
+   "libelle": "TEQUILA CAMINO REAL 70 CL 35°",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 15.71,
+     "nbLignes": 1,
+     "puMoyen": 15.71
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 16.25,
+     "nbLignes": 1,
+     "puMoyen": 16.25
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 16.93,
+     "nbLignes": 1,
+     "puMoyen": 16.93
+    }
+   },
+   "total": {
+    "qte": 3.0,
+    "volCl": 210.0,
+    "ht": 48.89,
+    "nbLignes": 3,
+    "puMoyen": 16.2967
+   }
+  },
+  {
+   "code": "601305",
+   "libelle": "ARBOIS CHARDONNAY 75 CL FRUITIERE VINICOLE ARBOIS Articles Manquants : Livré le",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 46.32,
+     "nbLignes": 1,
+     "puMoyen": 7.72
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 46.32,
+    "nbLignes": 1,
+    "puMoyen": 7.72
+   }
+  },
+  {
+   "code": "200598",
+   "libelle": "WHITE RABBIT 5° 33 CL VP SAINTE CRU",
+   "categorie": "autre",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 792.0,
+     "ht": 44.4,
+     "nbLignes": 1,
+     "puMoyen": 1.85
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 792.0,
+    "ht": 44.4,
+    "nbLignes": 1,
+    "puMoyen": 1.85
+   }
+  },
+  {
+   "code": "661492",
+   "libelle": "BOHEME GRIS 2020 75 CL IGP SABLE DE CAMARGUE 2020",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 43.56,
+     "nbLignes": 1,
+     "puMoyen": 7.26
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 43.56,
+    "nbLignes": 1,
+    "puMoyen": 7.26
+   }
+  },
+  {
+   "code": "520130",
+   "libelle": "FRAMBOISE 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 43.3,
+     "nbLignes": 2,
+     "puMoyen": 21.65
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 140.0,
+    "ht": 43.3,
+    "nbLignes": 2,
+    "puMoyen": 21.65
+   }
+  },
+  {
+   "code": "401244",
+   "libelle": "MONIN MENTHE VERTE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 15.4,
+     "nbLignes": 4,
+     "puMoyen": 3.85
+    },
+    "2023-2024": {
+     "qte": 4.0,
+     "volCl": 400.0,
+     "ht": 17.01,
+     "nbLignes": 4,
+     "puMoyen": 4.2525
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 8.64,
+     "nbLignes": 2,
+     "puMoyen": 4.32
+    }
+   },
+   "total": {
+    "qte": 10.0,
+    "volCl": 1000.0,
+    "ht": 41.05,
+    "nbLignes": 10,
+    "puMoyen": 4.105
+   }
+  },
+  {
+   "code": "520132",
+   "libelle": "MIRABELLE 70 CL 40° MASSENEZ DISTILLERIE PEUREUX",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 40.74,
+     "nbLignes": 2,
+     "puMoyen": 20.37
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 140.0,
+    "ht": 40.74,
+    "nbLignes": 2,
+    "puMoyen": 20.37
+   }
+  },
+  {
+   "code": "101159",
+   "libelle": "PETITS COOKIES 5 GR X 280 BONNE MAMAN",
+   "categorie": "autre",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 38.4,
+     "nbLignes": 1,
+     "puMoyen": 19.2
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 0.0,
+    "ht": 38.4,
+    "nbLignes": 1,
+    "puMoyen": 19.2
+   }
+  },
+  {
+   "code": "401299",
+   "libelle": "ROUTIN 1883 CHATAIGNE 1 L",
+   "categorie": "autre",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 10.14,
+     "nbLignes": 2,
+     "puMoyen": 5.07
+    },
+    "2024-2025": {
+     "qte": 5.0,
+     "volCl": 500.0,
+     "ht": 25.35,
+     "nbLignes": 3,
+     "puMoyen": 5.07
+    }
+   },
+   "total": {
+    "qte": 7.0,
+    "volCl": 700.0,
+    "ht": 35.49,
+    "nbLignes": 5,
+    "puMoyen": 5.07
+   }
+  },
+  {
+   "code": "591009",
+   "libelle": "CREME MURE 15° 100 CL M.BRIZ",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 16.16,
+     "nbLignes": 2,
+     "puMoyen": 8.08
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 18.54,
+     "nbLignes": 2,
+     "puMoyen": 9.27
+    },
+    "2024-2025": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 400.0,
+    "ht": 34.7,
+    "nbLignes": 6,
+    "puMoyen": 8.675
+   }
+  },
+  {
+   "code": "601861",
+   "libelle": "TERRASSES ROSE 75 CL 2023 IGP PAYS D'OC CHATEAU DE LA NEGLY",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 32.4,
+     "nbLignes": 1,
+     "puMoyen": 5.4
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 450.0,
+    "ht": 32.4,
+    "nbLignes": 1,
+    "puMoyen": 5.4
+   }
+  },
+  {
+   "code": "105032",
+   "libelle": "PETITES GALET ST MICHEL 3,5 GR PEPITE DE CHOCOLAT X 400",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 31.37,
+     "nbLignes": 1,
+     "puMoyen": 31.37
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 31.37,
+    "nbLignes": 1,
+    "puMoyen": 31.37
+   }
+  },
+  {
+   "code": "220049",
+   "libelle": "BOITE HEINEKEN 50 CL 5°",
+   "categorie": "biere",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    },
+    "2023-2024": {
+     "qte": 24.0,
+     "volCl": 1200.0,
+     "ht": 30.96,
+     "nbLignes": 1,
+     "puMoyen": 1.29
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 1200.0,
+    "ht": 30.96,
+    "nbLignes": 3,
+    "puMoyen": 1.29
+   }
+  },
+  {
+   "code": "465163",
+   "libelle": "CIDRE VAL DE RANCE DOUX 75 CL Ci-dessous Déconsigne du jour sur facture suivante :",
+   "categorie": "cremant_petillant",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 900.0,
+     "ht": 30.96,
+     "nbLignes": 1,
+     "puMoyen": 2.58
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 900.0,
+    "ht": 30.96,
+    "nbLignes": 1,
+    "puMoyen": 2.58
+   }
+  },
+  {
+   "code": "200031",
+   "libelle": "GRIMBERGEN BLANCHE 33 CL VP 6° Articles Manquants : Livré le",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 792.0,
+     "ht": 30.24,
+     "nbLignes": 1,
+     "puMoyen": 1.26
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 792.0,
+    "ht": 30.24,
+    "nbLignes": 1,
+    "puMoyen": 1.26
+   }
+  },
+  {
+   "code": "402007",
+   "libelle": "BOITE SPRITE 33 CL",
+   "categorie": "soft",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 24.0,
+     "volCl": 792.0,
+     "ht": 15.12,
+     "nbLignes": 1,
+     "puMoyen": 0.63
+    },
+    "2024-2025": {
+     "qte": 24.0,
+     "volCl": 792.0,
+     "ht": 15.12,
+     "nbLignes": 1,
+     "puMoyen": 0.63
+    }
+   },
+   "total": {
+    "qte": 48.0,
+    "volCl": 1584.0,
+    "ht": 30.24,
+    "nbLignes": 2,
+    "puMoyen": 0.63
+   }
+  },
+  {
+   "code": "101109",
+   "libelle": "SUCRE FCBS BUCHETTE x 4 KG",
+   "categorie": "alimentaire",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 29.78,
+     "nbLignes": 2,
+     "puMoyen": 14.89
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 0.0,
+    "ht": 29.78,
+    "nbLignes": 2,
+    "puMoyen": 14.89
+   }
+  },
+  {
+   "code": "105028",
+   "libelle": "NAPOLITAINS 3 G MONBANA x 500",
+   "categorie": "autre",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 29.65,
+     "nbLignes": 1,
+     "puMoyen": 29.65
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 29.65,
+    "nbLignes": 1,
+    "puMoyen": 29.65
+   }
+  },
+  {
+   "code": "601289",
+   "libelle": "MIRAVAL ROSE 75 CL 2021 CÔTES DE PROVENCE AOP",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 150.0,
+     "ht": 29.12,
+     "nbLignes": 1,
+     "puMoyen": 14.56
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 150.0,
+    "ht": 29.12,
+    "nbLignes": 1,
+    "puMoyen": 14.56
+   }
+  },
+  {
+   "code": "400317",
+   "libelle": "GRANINI MARACUJA-PASSION L PET Articles Manquants : Livré le",
+   "categorie": "jus",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 0.0,
+     "ht": 27.96,
+     "nbLignes": 1,
+     "puMoyen": 4.66
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 0.0,
+    "ht": 27.96,
+    "nbLignes": 1,
+    "puMoyen": 4.66
+   }
+  },
+  {
+   "code": "401349",
+   "libelle": "MONIN SIROP PAMPLEM. ROSE 70CL",
+   "categorie": "vin",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 3.0,
+     "volCl": 210.0,
+     "ht": 16.57,
+     "nbLignes": 3,
+     "puMoyen": 5.5233
+    },
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 11.0,
+     "nbLignes": 2,
+     "puMoyen": 5.5
+    }
+   },
+   "total": {
+    "qte": 5.0,
+    "volCl": 350.0,
+    "ht": 27.57,
+    "nbLignes": 5,
+    "puMoyen": 5.514
+   }
+  },
+  {
+   "code": "400352",
+   "libelle": "NORBERT JUS POMME 1L PET",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 18.0,
+     "volCl": 1800.0,
+     "ht": 27.0,
+     "nbLignes": 3,
+     "puMoyen": 1.5
+    }
+   },
+   "total": {
+    "qte": 18.0,
+    "volCl": 1800.0,
+    "ht": 27.0,
+    "nbLignes": 3,
+    "puMoyen": 1.5
+   }
+  },
+  {
+   "code": "401531",
+   "libelle": "TROPICO EXOTIQUE 50 CL PET (ORIGINAL) C10 Articles Manquants : Livré le",
+   "categorie": "soft",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 12.0,
+     "volCl": 600.0,
+     "ht": 12.96,
+     "nbLignes": 1,
+     "puMoyen": 1.08
+    },
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 600.0,
+     "ht": 13.44,
+     "nbLignes": 1,
+     "puMoyen": 1.12
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 1200.0,
+    "ht": 26.4,
+    "nbLignes": 2,
+    "puMoyen": 1.1
+   }
+  },
+  {
+   "code": "580026",
+   "libelle": "TEQUILA SAN JOSE 35° 70 CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 25.9,
+     "nbLignes": 2,
+     "puMoyen": 12.95
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 140.0,
+    "ht": 25.9,
+    "nbLignes": 2,
+    "puMoyen": 12.95
+   }
+  },
+  {
+   "code": "401271",
+   "libelle": "MONIN MENTHE GLACIALE 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 600.0,
+     "ht": 25.61,
+     "nbLignes": 4,
+     "puMoyen": 4.2683
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 600.0,
+    "ht": 25.61,
+    "nbLignes": 4,
+    "puMoyen": 4.2683
+   }
+  },
+  {
+   "code": "662010",
+   "libelle": "AUXEY DURESSES RGE 75CL 2022 AGNES PAQUET DOMAINE AGENS PAQUET",
+   "categorie": "autre",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 75.0,
+     "ht": 23.11,
+     "nbLignes": 1,
+     "puMoyen": 23.11
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 75.0,
+    "ht": 23.11,
+    "nbLignes": 1,
+    "puMoyen": 23.11
+   }
+  },
+  {
+   "code": "110266",
+   "libelle": "PARTY TROOPERS FUNKY MIX 1KG VAN CROMBRUGGEN SA",
+   "categorie": "autre",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 0.0,
+     "ht": 21.78,
+     "nbLignes": 2,
+     "puMoyen": 3.63
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 0.0,
+    "ht": 21.78,
+    "nbLignes": 2,
+    "puMoyen": 3.63
+   }
+  },
+  {
+   "code": "110285",
+   "libelle": "THE KUSMI VERT A LA MENTHE X25",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 20.96,
+     "nbLignes": 2,
+     "puMoyen": 10.48
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 0.0,
+    "ht": 20.96,
+    "nbLignes": 2,
+    "puMoyen": 10.48
+   }
+  },
+  {
+   "code": "201442",
+   "libelle": "BIERE BLANCHE 33 CL 6° ABBAYE DE BAUME LES MESSIEURS CERVOISE BOISSONS FERMEN",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 12.0,
+     "volCl": 396.0,
+     "ht": 20.64,
+     "nbLignes": 1,
+     "puMoyen": 1.72
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 396.0,
+    "ht": 20.64,
+    "nbLignes": 1,
+    "puMoyen": 1.72
+   }
+  },
+  {
+   "code": "220003",
+   "libelle": "BOITE 1664 33 CL 5,5°",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 792.0,
+     "ht": 19.68,
+     "nbLignes": 1,
+     "puMoyen": 0.82
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 792.0,
+    "ht": 19.68,
+    "nbLignes": 1,
+    "puMoyen": 0.82
+   }
+  },
+  {
+   "code": "110271",
+   "libelle": "THE JARDIN IMPATIENT VERT MENT THE X20 ETS GEORGES CANNON",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 13.18,
+     "nbLignes": 2,
+     "puMoyen": 6.59
+    },
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.42,
+     "nbLignes": 1,
+     "puMoyen": 6.42
+    }
+   },
+   "total": {
+    "qte": 3.0,
+    "volCl": 0.0,
+    "ht": 19.6,
+    "nbLignes": 3,
+    "puMoyen": 6.5333
+   }
+  },
+  {
+   "code": "520127",
+   "libelle": "POIRE WILLIAM 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER Ci-dessous Déconsigne du jour sur facture suivante :",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 19.11,
+     "nbLignes": 1,
+     "puMoyen": 19.11
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 70.0,
+    "ht": 19.11,
+    "nbLignes": 1,
+    "puMoyen": 19.11
+   }
+  },
+  {
+   "code": "520131",
+   "libelle": "POIRE WILLIAM 70 CL 40° MASSENEZ DISTILLERIE PEUREUX",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 18.9,
+     "nbLignes": 1,
+     "puMoyen": 18.9
+    },
+    "2023-2024": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 70.0,
+    "ht": 18.9,
+    "nbLignes": 3,
+    "puMoyen": 18.9
+   }
+  },
+  {
+   "code": "220020",
+   "libelle": "BOITE HEINEKEN 33 CL",
+   "categorie": "biere",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 24.0,
+     "volCl": 792.0,
+     "ht": 18.48,
+     "nbLignes": 1,
+     "puMoyen": 0.77
+    }
+   },
+   "total": {
+    "qte": 24.0,
+    "volCl": 792.0,
+    "ht": 18.48,
+    "nbLignes": 1,
+    "puMoyen": 0.77
+   }
+  },
+  {
+   "code": "401388",
+   "libelle": "RIEME CASSIS 100 CL",
+   "categorie": "autre",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 6.12,
+     "nbLignes": 1,
+     "puMoyen": 6.12
+    },
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 12.24,
+     "nbLignes": 2,
+     "puMoyen": 6.12
+    }
+   },
+   "total": {
+    "qte": 3.0,
+    "volCl": 300.0,
+    "ht": 18.36,
+    "nbLignes": 3,
+    "puMoyen": 6.12
+   }
+  },
+  {
+   "code": "401342",
+   "libelle": "ROUTIN MOJITO MINT 70 CL",
+   "categorie": "autre",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 3.0,
+     "volCl": 210.0,
+     "ht": 18.18,
+     "nbLignes": 2,
+     "puMoyen": 6.06
+    }
+   },
+   "total": {
+    "qte": 3.0,
+    "volCl": 210.0,
+    "ht": 18.18,
+    "nbLignes": 2,
+    "puMoyen": 6.06
+   }
+  },
+  {
+   "code": "401665",
+   "libelle": "GRANINI ABRICOT RAISIN 25 CL NECT BIO",
+   "categorie": "jus",
+   "contenanceCl": 25,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 12.0,
+     "volCl": 300.0,
+     "ht": 17.88,
+     "nbLignes": 1,
+     "puMoyen": 1.49
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 300.0,
+    "ht": 17.88,
+    "nbLignes": 1,
+    "puMoyen": 1.49
+   }
+  },
+  {
+   "code": "300101",
+   "libelle": "CAROLA BLEUE 50 CL CONSIGNE Articles Manquants : Livré le",
+   "categorie": "autre",
+   "contenanceCl": 50,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 20.0,
+     "volCl": 1000.0,
+     "ht": 8.4,
+     "nbLignes": 1,
+     "puMoyen": 0.42
+    },
+    "2023-2024": {
+     "qte": 20.0,
+     "volCl": 1000.0,
+     "ht": 9.0,
+     "nbLignes": 1,
+     "puMoyen": 0.45
+    }
+   },
+   "total": {
+    "qte": 40.0,
+    "volCl": 2000.0,
+    "ht": 17.4,
+    "nbLignes": 2,
+    "puMoyen": 0.435
+   }
+  },
+  {
+   "code": "300056",
+   "libelle": "BADOIT ROUGE 100 CL PET",
+   "categorie": "eau",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 12.0,
+     "volCl": 1200.0,
+     "ht": 16.68,
+     "nbLignes": 1,
+     "puMoyen": 1.39
+    }
+   },
+   "total": {
+    "qte": 12.0,
+    "volCl": 1200.0,
+    "ht": 16.68,
+    "nbLignes": 1,
+    "puMoyen": 1.39
+   }
+  },
+  {
+   "code": "400306",
+   "libelle": "GRANINI NEC ANANAS LITRE PET",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 600.0,
+     "ht": 16.38,
+     "nbLignes": 1,
+     "puMoyen": 2.73
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 600.0,
+    "ht": 16.38,
+    "nbLignes": 1,
+    "puMoyen": 2.73
+   }
+  },
+  {
+   "code": "401438",
+   "libelle": "MONIN SIROP CURACAO BLEU 70CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 140.0,
+     "ht": 10.68,
+     "nbLignes": 2,
+     "puMoyen": 5.34
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 5.36,
+     "nbLignes": 1,
+     "puMoyen": 5.36
+    }
+   },
+   "total": {
+    "qte": 3.0,
+    "volCl": 210.0,
+    "ht": 16.04,
+    "nbLignes": 3,
+    "puMoyen": 5.3467
+   }
+  },
+  {
+   "code": "400350",
+   "libelle": "NORBERT JUS ORANGE SS PULPE 1L",
+   "categorie": "jus",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 6.0,
+     "volCl": 600.0,
+     "ht": 15.18,
+     "nbLignes": 1,
+     "puMoyen": 2.53
+    }
+   },
+   "total": {
+    "qte": 6.0,
+    "volCl": 600.0,
+    "ht": 15.18,
+    "nbLignes": 1,
+    "puMoyen": 2.53
+   }
+  },
+  {
+   "code": "700627",
+   "libelle": "DETARTRANT LIQUIDE POUR MAC NIVONA",
+   "categorie": "autre",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 14.99,
+     "nbLignes": 1,
+     "puMoyen": 14.99
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 14.99,
+    "nbLignes": 1,
+    "puMoyen": 14.99
+   }
+  },
+  {
+   "code": "665102",
+   "libelle": "SAUTERNES 75 CL 2015 CASTELNAU DE SUDUIRAUT",
+   "categorie": "autre",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 75.0,
+     "ht": 14.23,
+     "nbLignes": 1,
+     "puMoyen": 14.23
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 75.0,
+    "ht": 14.23,
+    "nbLignes": 1,
+    "puMoyen": 14.23
+   }
+  },
+  {
+   "code": "110276",
+   "libelle": "THE EARL GREY x 25 SACHETS LES JARDINS IMPATIENTS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 12.84,
+     "nbLignes": 2,
+     "puMoyen": 6.42
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 0.0,
+    "ht": 12.84,
+    "nbLignes": 2,
+    "puMoyen": 6.42
+   }
+  },
+  {
+   "code": "401284",
+   "libelle": "ROUTIN 1883 FRAMBOISE 1 L",
+   "categorie": "autre",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 11.77,
+     "nbLignes": 2,
+     "puMoyen": 5.885
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 200.0,
+    "ht": 11.77,
+    "nbLignes": 2,
+    "puMoyen": 5.885
+   }
+  },
+  {
+   "code": "115121",
+   "libelle": "THE VERT MENTHE BARONNYS BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 2.0,
+     "volCl": 0.0,
+     "ht": 11.32,
+     "nbLignes": 2,
+     "puMoyen": 5.66
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 0.0,
+    "ht": 11.32,
+    "nbLignes": 2,
+    "puMoyen": 5.66
+   }
+  },
+  {
+   "code": "530021",
+   "libelle": "VODKA ERISTOFF 70 CL",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 10.57,
+     "nbLignes": 1,
+     "puMoyen": 10.57
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 70.0,
+    "ht": 10.57,
+    "nbLignes": 1,
+    "puMoyen": 10.57
+   }
+  },
+  {
+   "code": "600425",
+   "libelle": "HTES COTES DE BEAUNE BLC 75 CL DOMAINE GERMAIN 2019",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 75.0,
+     "ht": 9.95,
+     "nbLignes": 1,
+     "puMoyen": 9.95
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 75.0,
+    "ht": 9.95,
+    "nbLignes": 1,
+    "puMoyen": 9.95
+   }
+  },
+  {
+   "code": "401246",
+   "libelle": "MONIN ORGEAT 100 CL",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 4.29,
+     "nbLignes": 1,
+     "puMoyen": 4.29
+    },
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 4.64,
+     "nbLignes": 1,
+     "puMoyen": 4.64
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 200.0,
+    "ht": 8.93,
+    "nbLignes": 2,
+    "puMoyen": 4.465
+   }
+  },
+  {
+   "code": "520077",
+   "libelle": "PORTO OFFLEY RUBY 75 CL 19,5° Articles Manquants : Livré le",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 75.0,
+     "ht": 8.84,
+     "nbLignes": 1,
+     "puMoyen": 8.84
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 75.0,
+    "ht": 8.84,
+    "nbLignes": 1,
+    "puMoyen": 8.84
+   }
+  },
+  {
+   "code": "115109",
+   "libelle": "INFUSION TILLEUL x 20 PREMIUM COLLECTION",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 8.8,
+     "nbLignes": 1,
+     "puMoyen": 8.8
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 8.8,
+    "nbLignes": 1,
+    "puMoyen": 8.8
+   }
+  },
+  {
+   "code": "115106",
+   "libelle": "THE VERT JASMIN PREMIUM COLLECTION",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 8.8,
+     "nbLignes": 1,
+     "puMoyen": 8.8
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 8.8,
+    "nbLignes": 1,
+    "puMoyen": 8.8
+   }
+  },
+  {
+   "code": "115108",
+   "libelle": "INFUSION CAMOMILLE x 20 PREMIUM COLLECTION",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 8.8,
+     "nbLignes": 1,
+     "puMoyen": 8.8
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 8.8,
+    "nbLignes": 1,
+    "puMoyen": 8.8
+   }
+  },
+  {
+   "code": "401255",
+   "libelle": "MONIN CITRON 100 CL Articles Manquants : Livré le",
+   "categorie": "sirop",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 2.0,
+     "volCl": 200.0,
+     "ht": 7.82,
+     "nbLignes": 2,
+     "puMoyen": 3.91
+    }
+   },
+   "total": {
+    "qte": 2.0,
+    "volCl": 200.0,
+    "ht": 7.82,
+    "nbLignes": 2,
+    "puMoyen": 3.91
+   }
+  },
+  {
+   "code": "580019",
+   "libelle": "PORTO SANDEMAN BLANC 75 CL19°5",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 75.0,
+     "ht": 7.43,
+     "nbLignes": 1,
+     "puMoyen": 7.43
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 75.0,
+    "ht": 7.43,
+    "nbLignes": 1,
+    "puMoyen": 7.43
+   }
+  },
+  {
+   "code": "110274",
+   "libelle": "INF VERVEINE MENTHE x 25 SACH LES JARDINS IMPATIENTS",
+   "categorie": "autre",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 7.22,
+     "nbLignes": 1,
+     "puMoyen": 7.22
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 7.22,
+    "nbLignes": 1,
+    "puMoyen": 7.22
+   }
+  },
+  {
+   "code": "165352",
+   "libelle": "INFUSION TILLEUL BARONNY'S BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 7.15,
+     "nbLignes": 1,
+     "puMoyen": 7.15
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 7.15,
+    "nbLignes": 1,
+    "puMoyen": 7.15
+   }
+  },
+  {
+   "code": "110278",
+   "libelle": "INF MALONGO BIO VERVEINE X25",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.88,
+     "nbLignes": 1,
+     "puMoyen": 6.88
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 6.88,
+    "nbLignes": 1,
+    "puMoyen": 6.88
+   }
+  },
+  {
+   "code": "165226",
+   "libelle": "INFUSION VERVEINE BARONNY'S BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.68,
+     "nbLignes": 1,
+     "puMoyen": 6.68
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 6.68,
+    "nbLignes": 1,
+    "puMoyen": 6.68
+   }
+  },
+  {
+   "code": "165229",
+   "libelle": "THE NOIR FRUITS ROUGE BARONNYS BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.48,
+     "nbLignes": 1,
+     "puMoyen": 6.48
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 6.48,
+    "nbLignes": 1,
+    "puMoyen": 6.48
+   }
+  },
+  {
+   "code": "165231",
+   "libelle": "THE JASMIN BARONNY'S BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.43,
+     "nbLignes": 1,
+     "puMoyen": 6.43
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 6.43,
+    "nbLignes": 1,
+    "puMoyen": 6.43
+   }
+  },
+  {
+   "code": "110282",
+   "libelle": "THE FRUITS ROUGES X 25 SACHETS LES JARDINS IMPATIENTS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.42,
+     "nbLignes": 1,
+     "puMoyen": 6.42
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 6.42,
+    "nbLignes": 1,
+    "puMoyen": 6.42
+   }
+  },
+  {
+   "code": "165225",
+   "libelle": "INFUSION CAMOMILLE BARONNY'S BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.33,
+     "nbLignes": 1,
+     "puMoyen": 6.33
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 6.33,
+    "nbLignes": 1,
+    "puMoyen": 6.33
+   }
+  },
+  {
+   "code": "165227",
+   "libelle": "THE NOIR CARAMEL BARONNY'S BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 6.31,
+     "nbLignes": 1,
+     "puMoyen": 6.31
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 6.31,
+    "nbLignes": 1,
+    "puMoyen": 6.31
+   }
+  },
+  {
+   "code": "401454",
+   "libelle": "ROUTIN 1883 RHUM 1 L",
+   "categorie": "spiritueux_digestif",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 6.13,
+     "nbLignes": 1,
+     "puMoyen": 6.13
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 100.0,
+    "ht": 6.13,
+    "nbLignes": 1,
+    "puMoyen": 6.13
+   }
+  },
+  {
+   "code": "165235",
+   "libelle": "THE NOIR CEYLAN BARONNY'S BOITE DE 25 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 5.84,
+     "nbLignes": 1,
+     "puMoyen": 5.84
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 5.84,
+    "nbLignes": 1,
+    "puMoyen": 5.84
+   }
+  },
+  {
+   "code": "401231",
+   "libelle": "MONIN VIOLETTE 70 CL",
+   "categorie": "sirop",
+   "contenanceCl": 70,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 70.0,
+     "ht": 5.25,
+     "nbLignes": 1,
+     "puMoyen": 5.25
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 70.0,
+    "ht": 5.25,
+    "nbLignes": 1,
+    "puMoyen": 5.25
+   }
+  },
+  {
+   "code": "201414",
+   "libelle": "BLANCHE DES NEIGES 33CL VC 4,9",
+   "categorie": "autre",
+   "contenanceCl": 33,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 4.0,
+     "volCl": 132.0,
+     "ht": 4.12,
+     "nbLignes": 2,
+     "puMoyen": 1.03
+    }
+   },
+   "total": {
+    "qte": 4.0,
+    "volCl": 132.0,
+    "ht": 4.12,
+    "nbLignes": 2,
+    "puMoyen": 1.03
+   }
+  },
+  {
+   "code": "401292",
+   "libelle": "ROUTIN 1883 CITRON JAUNE 1 L",
+   "categorie": "autre",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 1.0,
+     "volCl": 100.0,
+     "ht": 3.82,
+     "nbLignes": 1,
+     "puMoyen": 3.82
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 100.0,
+    "ht": 3.82,
+    "nbLignes": 1,
+    "puMoyen": 3.82
+   }
+  },
+  {
+   "code": "115102",
+   "libelle": "PEPPERMINT INFUSION SEGAFREDO BOITE DE 20 SACHETS",
+   "categorie": "cafe_the",
+   "contenanceCl": null,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 1.0,
+     "volCl": 0.0,
+     "ht": 3.44,
+     "nbLignes": 1,
+     "puMoyen": 3.44
+    }
+   },
+   "total": {
+    "qte": 1.0,
+    "volCl": 0.0,
+    "ht": 3.44,
+    "nbLignes": 1,
+    "puMoyen": 3.44
+   }
+  },
+  {
+   "code": "300042",
+   "libelle": "EVIAN 100 CL VC Articles Manquants : Livré le",
+   "categorie": "eau",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 0.0,
+    "volCl": 0.0,
+    "ht": 0.0,
+    "nbLignes": 2,
+    "puMoyen": null
+   }
+  },
+  {
+   "code": "401277",
+   "libelle": "ROUTIN 1883 CITRON ACIDE 1 L",
+   "categorie": "autre",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 0.0,
+    "volCl": 0.0,
+    "ht": 0.0,
+    "nbLignes": 2,
+    "puMoyen": null
+   }
+  },
+  {
+   "code": "300082",
+   "libelle": "BADOIT VERTE 100 CL VC",
+   "categorie": "eau",
+   "contenanceCl": 100,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": 0.0,
+     "nbLignes": 2,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 0.0,
+    "volCl": 0.0,
+    "ht": 0.0,
+    "nbLignes": 2,
+    "puMoyen": null
+   }
+  },
+  {
+   "code": "630657",
+   "libelle": "PETIT CHABLIS 75 CL 2021 DOMAINE LOUIS MOREAU",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2022-2023": {
+     "qte": 6.0,
+     "volCl": 450.0,
+     "ht": 60.0,
+     "nbLignes": 1,
+     "puMoyen": 10.0
+    },
+    "2023-2024": {
+     "qte": -6.0,
+     "volCl": -450.0,
+     "ht": -60.0,
+     "nbLignes": 1,
+     "puMoyen": 10.0
+    }
+   },
+   "total": {
+    "qte": 0.0,
+    "volCl": 0.0,
+    "ht": 0.0,
+    "nbLignes": 2,
+    "puMoyen": null
+   }
+  },
+  {
+   "code": "601823",
+   "libelle": "L'ESPRIT GASSIER ROSE 75 CL CÔTES DE PROVENCE AOP 2023 CHATEAU GASSIER Articles Manquants : Livré le",
+   "categorie": "vin",
+   "contenanceCl": 75,
+   "type": "boisson",
+   "estFut": false,
+   "parExercice": {
+    "2024-2025": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": -1.68,
+     "nbLignes": 2,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 0.0,
+    "volCl": 0.0,
+    "ht": -1.68,
+    "nbLignes": 2,
+    "puMoyen": null
+   }
+  },
+  {
+   "code": "212120",
+   "libelle": "FUT HEINEKEN BLADE 8 L 5°",
+   "categorie": "biere",
+   "contenanceCl": 800,
+   "type": "boisson",
+   "estFut": true,
+   "parExercice": {
+    "2023-2024": {
+     "qte": 0.0,
+     "volCl": 0.0,
+     "ht": -13.6,
+     "nbLignes": 4,
+     "puMoyen": null
+    }
+   },
+   "total": {
+    "qte": 0.0,
+    "volCl": 0.0,
+    "ht": -13.6,
+    "nbLignes": 4,
+    "puMoyen": null
+   }
+  }
+ ]
+}

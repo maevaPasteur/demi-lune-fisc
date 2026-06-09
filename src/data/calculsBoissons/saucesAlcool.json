@@ -1,0 +1,31 @@
+{
+  "description": "Alcool contenu dans les sauces.",
+  "unite_dose": "cl",
+  "convention": "10 cl d'alcool / litre = 1 cl / portion",
+  "sauces": [
+    {
+      "nom": "sauce jurassienne",
+      "alcool": "vin jaune",
+      "dose_cl_par_portion": 1,
+      "dose_cl_par_litre": 10
+    },
+    {
+      "nom": "sauce forestière",
+      "alcool": "porto",
+      "dose_cl_par_portion": 1,
+      "dose_cl_par_litre": 10
+    },
+    {
+      "nom": "sauce morille",
+      "alcool": "porto",
+      "dose_cl_par_portion": 1,
+      "dose_cl_par_litre": 10
+    },
+    {
+      "nom": "sauce girolles",
+      "alcool": "porto",
+      "dose_cl_par_portion": 1,
+      "dose_cl_par_litre": 10
+    }
+  ]
+}

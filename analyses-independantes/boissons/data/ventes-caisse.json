@@ -1,0 +1,5588 @@
+{
+ "genereDepuis": "ANNEXE-D{1,2,3}",
+ "exercices": [
+  "2022-2023",
+  "2023-2024",
+  "2024-2025"
+ ],
+ "parExercice": {
+  "2022-2023": {
+   "nbProduits": 127,
+   "caLiquide10": 20514.18,
+   "caLiquide20": 81911.2,
+   "totauxFichier": {
+    "TOTAL TTC  CA LIQUIDES 10 %": 20514.1799999999,
+    "TOTAL TTC CA LIQUIDES 20 %": 81911.2000000001,
+    "TOTALTTC  CA SOLIIDES 10 %": 300747.04,
+    "TOTAL GENERAL TTC": 403370.42,
+    "TOTAL TVA THEORIQUE SUR DONNEES ARTICLES 10 %": 29205.5654545455,
+    "TOTAL TVA THEORIQUE SUR DONNEES ARTICLES 20 %": 13651.8666666667
+   },
+   "produits": [
+    {
+     "ref": "0111",
+     "libelle": "Expresso",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 3102.5,
+     "caTtc": 6777.12,
+     "prixMoyen": 2.18,
+     "prixDistincts": [
+      2.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2121",
+     "libelle": "Pichet 50cl vin",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 511.5,
+     "caTtc": 4990.39,
+     "prixMoyen": 9.76,
+     "prixDistincts": [
+      8.55,
+      9.5,
+      9.8,
+      9.9
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "1734",
+     "libelle": "Savagnin verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 571.5,
+     "caTtc": 4109.6,
+     "prixMoyen": 7.19,
+     "prixDistincts": [
+      2.0,
+      7.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2005",
+     "libelle": "pression",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 901.5,
+     "caTtc": 3476.87,
+     "prixMoyen": 3.86,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0357",
+     "libelle": "La Vouivre",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 621.5,
+     "caTtc": 3211.0,
+     "prixMoyen": 5.17,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0229",
+     "libelle": "1/2 Arbois Béthanie",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 159.5,
+     "caTtc": 3030.5,
+     "prixMoyen": 19.0,
+     "prixDistincts": [
+      19.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0306",
+     "libelle": "Arbois Béthanie",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 85.0,
+     "caTtc": 2541.5,
+     "prixMoyen": 29.9,
+     "prixDistincts": [
+      29.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1995",
+     "libelle": "Chat perché",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 494.5,
+     "caTtc": 2504.9,
+     "prixMoyen": 5.07,
+     "prixDistincts": [
+      5.1,
+      5.2,
+      6.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0333",
+     "libelle": "Père Gregoire",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 503.0,
+     "caTtc": 2396.1,
+     "prixMoyen": 4.76,
+     "prixDistincts": [
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2086",
+     "libelle": "PiCHET TROUSSEAU",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 95.0,
+     "caTtc": 2280.0,
+     "prixMoyen": 24.0,
+     "prixDistincts": [
+      24.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1737",
+     "libelle": "Saint Véran Verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 276.5,
+     "caTtc": 2184.35,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1989",
+     "libelle": "Pinte",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 282.5,
+     "caTtc": 2172.29,
+     "prixMoyen": 7.69,
+     "prixDistincts": [
+      7.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1827",
+     "libelle": "Arbois Trousseau Bou",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 67.5,
+     "caTtc": 2160.0,
+     "prixMoyen": 32.0,
+     "prixDistincts": [
+      32.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2089",
+     "libelle": "PICHET SAVAGNIN",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 73.0,
+     "caTtc": 2044.0,
+     "prixMoyen": 28.0,
+     "prixDistincts": [
+      28.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0013",
+     "libelle": "Kir Bourgogne",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 490.9,
+     "caTtc": 2039.99,
+     "prixMoyen": 4.16,
+     "prixDistincts": [
+      3.8,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1828",
+     "libelle": "Arbois Trousseau Le",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 302.0,
+     "caTtc": 1932.8,
+     "prixMoyen": 6.4,
+     "prixDistincts": [
+      6.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1996",
+     "libelle": "Mambo",
+     "tva": "10",
+     "sousCategorie": "Apéritifs Sans Alcool",
+     "qte": 289.5,
+     "caTtc": 1868.77,
+     "prixMoyen": 6.46,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0106",
+     "libelle": "Coca (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 453.17,
+     "caTtc": 1739.18,
+     "prixMoyen": 3.8378,
+     "prixDistincts": [
+      3.0,
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "0003",
+     "libelle": "Macvin du Jura",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 355.0,
+     "caTtc": 1710.11,
+     "prixMoyen": 4.82,
+     "prixDistincts": [
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0368",
+     "libelle": "Jus de Fruit",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 416.5,
+     "caTtc": 1620.47,
+     "prixMoyen": 3.89,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2019",
+     "libelle": "Arbois Chardonnay Le",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 63.5,
+     "caTtc": 1581.15,
+     "prixMoyen": 24.9,
+     "prixDistincts": [
+      24.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0307",
+     "libelle": "Pichet 75cl vin",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 118.5,
+     "caTtc": 1577.3,
+     "prixMoyen": 13.31,
+     "prixDistincts": [
+      8.2,
+      10.0,
+      11.4,
+      13.4
+     ],
+     "contenanceCl": 75.0
+    },
+    {
+     "ref": "1829",
+     "libelle": "C du Rhone St  Josep",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 41.0,
+     "caTtc": 1476.0,
+     "prixMoyen": 36.0,
+     "prixDistincts": [
+      36.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2025",
+     "libelle": "H.C.B BEAUNE BTL",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 34.5,
+     "caTtc": 1323.25,
+     "prixMoyen": 38.36,
+     "prixDistincts": [
+      39.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0001",
+     "libelle": "KITTYKIR",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 233.8,
+     "caTtc": 1205.36,
+     "prixMoyen": 5.16,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2026",
+     "libelle": "H.C.DE BEAUNE  VERRE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 149.0,
+     "caTtc": 1177.1,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0309",
+     "libelle": "Verre de vin",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 311.0,
+     "caTtc": 1119.6,
+     "prixMoyen": 3.6,
+     "prixDistincts": [
+      2.8,
+      3.5,
+      3.6,
+      4.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0228",
+     "libelle": "Arbois Savagnin",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 30.0,
+     "caTtc": 1080.0,
+     "prixMoyen": 36.0,
+     "prixDistincts": [
+      36.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1830",
+     "libelle": "C du  Rhone St Josep",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 149.5,
+     "caTtc": 1079.33,
+     "prixMoyen": 7.22,
+     "prixDistincts": [
+      7.2,
+      8.67
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2021",
+     "libelle": "Chablis Le Verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 134.0,
+     "caTtc": 1058.6,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0094",
+     "libelle": "San Pelegrino",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 177.0,
+     "caTtc": 1044.3,
+     "prixMoyen": 5.9,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0367",
+     "libelle": "Vin jaune",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 87.0,
+     "caTtc": 1044.0,
+     "prixMoyen": 12.0,
+     "prixDistincts": [
+      12.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1997",
+     "libelle": "Luna",
+     "tva": "10",
+     "sousCategorie": "Apéritifs Sans Alcool",
+     "qte": 163.5,
+     "caTtc": 963.0,
+     "prixMoyen": 5.89,
+     "prixDistincts": [
+      6.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0348",
+     "libelle": "Crémant",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 242.0,
+     "caTtc": 932.1,
+     "prixMoyen": 3.85,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1993",
+     "libelle": "Blanche des plateaux",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 157.0,
+     "caTtc": 926.3,
+     "prixMoyen": 5.9,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0225",
+     "libelle": "Cidre Bouché Brut",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 65.0,
+     "caTtc": 909.98,
+     "prixMoyen": 14.0,
+     "prixDistincts": [
+      14.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1736",
+     "libelle": "Saint Véran",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 22.0,
+     "caTtc": 869.0,
+     "prixMoyen": 39.5,
+     "prixDistincts": [
+      39.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2020",
+     "libelle": "Chablis",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 22.0,
+     "caTtc": 869.0,
+     "prixMoyen": 39.5,
+     "prixDistincts": [
+      39.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2090",
+     "libelle": "PICHET SAINT VERAN",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 28.0,
+     "caTtc": 840.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0108",
+     "libelle": "Limonade (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 203.0,
+     "caTtc": 780.0,
+     "prixMoyen": 3.84,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "2088",
+     "libelle": "PICHET C.DE BEAUNE R",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 26.0,
+     "caTtc": 780.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1825",
+     "libelle": "Gewurztraminer Le ve",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 110.0,
+     "caTtc": 770.0,
+     "prixMoyen": 7.0,
+     "prixDistincts": [
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0226",
+     "libelle": "Cidre Bouché Doux",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 54.5,
+     "caTtc": 763.0,
+     "prixMoyen": 14.0,
+     "prixDistincts": [
+      14.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0004",
+     "libelle": "Vin de Paille",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 127.0,
+     "caTtc": 762.0,
+     "prixMoyen": 6.0,
+     "prixDistincts": [
+      6.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2009",
+     "libelle": "Ambrée",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 131.0,
+     "caTtc": 761.1,
+     "prixMoyen": 5.81,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0342",
+     "libelle": "Fuze Tea",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 195.0,
+     "caTtc": 752.7,
+     "prixMoyen": 3.86,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2098",
+     "libelle": "Pichet Chablis",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 25.0,
+     "caTtc": 750.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1826",
+     "libelle": "Clair de Rosé",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 39.0,
+     "caTtc": 702.0,
+     "prixMoyen": 18.0,
+     "prixDistincts": [
+      18.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2085",
+     "libelle": "pichet Saint Joseph",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 24.0,
+     "caTtc": 672.0,
+     "prixMoyen": 28.0,
+     "prixDistincts": [
+      28.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1831",
+     "libelle": "Beaujolais Moulin à",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 23.0,
+     "caTtc": 667.0,
+     "prixMoyen": 29.0,
+     "prixDistincts": [
+      29.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2087",
+     "libelle": "PICHET MOULIN A VENT",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 31.0,
+     "caTtc": 651.0,
+     "prixMoyen": 21.0,
+     "prixDistincts": [
+      21.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0002",
+     "libelle": "BALIDOU",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 67.0,
+     "caTtc": 585.0,
+     "prixMoyen": 8.73,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0099",
+     "libelle": "Panaché",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 147.0,
+     "caTtc": 585.0,
+     "prixMoyen": 3.98,
+     "prixDistincts": [
+      3.9,
+      7.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2097",
+     "libelle": "Bohème",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 20.0,
+     "caTtc": 580.0,
+     "prixMoyen": 29.0,
+     "prixDistincts": [
+      29.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0353",
+     "libelle": "Picon bière",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 129.0,
+     "caTtc": 576.0,
+     "prixMoyen": 4.47,
+     "prixDistincts": [
+      4.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0096",
+     "libelle": "Perrier 33cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 144.0,
+     "caTtc": 568.0,
+     "prixMoyen": 3.9444,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 33.0
+    },
+    {
+     "ref": "0095",
+     "libelle": "San Pelegrino 50cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 136.0,
+     "caTtc": 543.0,
+     "prixMoyen": 3.9926,
+     "prixDistincts": [
+      3.0,
+      4.0
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "1832",
+     "libelle": "Beaujolais Moulin à",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 93.0,
+     "caTtc": 539.4,
+     "prixMoyen": 5.8,
+     "prixDistincts": [
+      5.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0352",
+     "libelle": "Sirop à l'eau",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 240.5,
+     "caTtc": 524.76,
+     "prixMoyen": 2.18,
+     "prixDistincts": [
+      1.6,
+      2.2,
+      2.85
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0110",
+     "libelle": "Diabolo (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 133.0,
+     "caTtc": 518.7,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "2011",
+     "libelle": "MAEVA",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 52.0,
+     "caTtc": 468.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2054",
+     "libelle": "Mi",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 54.0,
+     "caTtc": 459.01,
+     "prixMoyen": 8.5,
+     "prixDistincts": [
+      8.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0006",
+     "libelle": "Ricard",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 105.0,
+     "caTtc": 391.4,
+     "prixMoyen": 3.73,
+     "prixDistincts": [
+      3.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0007",
+     "libelle": "Pontarlier",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 102.0,
+     "caTtc": 384.9,
+     "prixMoyen": 3.77,
+     "prixDistincts": [
+      3.8,
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2057",
+     "libelle": "La",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 43.0,
+     "caTtc": 365.5,
+     "prixMoyen": 8.5,
+     "prixDistincts": [
+      8.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2081",
+     "libelle": "MIRAVAL",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 8.0,
+     "caTtc": 360.0,
+     "prixMoyen": 45.0,
+     "prixDistincts": [
+      45.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2053",
+     "libelle": "Ré",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 49.8,
+     "caTtc": 348.6,
+     "prixMoyen": 7.0,
+     "prixDistincts": [
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0011",
+     "libelle": "Martini Blanc",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 83.5,
+     "caTtc": 338.1,
+     "prixMoyen": 4.05,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0119",
+     "libelle": "Thé",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 99.0,
+     "caTtc": 333.2,
+     "prixMoyen": 3.37,
+     "prixDistincts": [
+      3.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1991",
+     "libelle": "Pinte Picon",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 37.0,
+     "caTtc": 329.3,
+     "prixMoyen": 8.9,
+     "prixDistincts": [
+      8.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2093",
+     "libelle": "H.C.BEAUNE BOUTEILLE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 8.0,
+     "caTtc": 316.0,
+     "prixMoyen": 39.5,
+     "prixDistincts": [
+      39.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0107",
+     "libelle": "Orangina (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 81.0,
+     "caTtc": 315.9,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "2103",
+     "libelle": "Champagne",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 9.0,
+     "caTtc": 306.8,
+     "prixMoyen": 34.09,
+     "prixDistincts": [
+      9.2,
+      50.0,
+      55.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1859",
+     "libelle": "BORD.  MOUTON CADET",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 9.0,
+     "caTtc": 304.4,
+     "prixMoyen": 33.82,
+     "prixDistincts": [
+      16.4,
+      36.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0327",
+     "libelle": "Rêve Bleu",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 33.67,
+     "caTtc": 303.03,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0016",
+     "libelle": "Jack Daniel's",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 40.0,
+     "caTtc": 300.0,
+     "prixMoyen": 7.5,
+     "prixDistincts": [
+      7.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0343",
+     "libelle": "Schweppes",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 77.8,
+     "caTtc": 299.52,
+     "prixMoyen": 3.8499,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2092",
+     "libelle": "PICHET GEWURZTRAMINE",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 11.0,
+     "caTtc": 297.0,
+     "prixMoyen": 27.0,
+     "prixDistincts": [
+      27.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0347",
+     "libelle": "Pastis",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 79.0,
+     "caTtc": 296.4,
+     "prixMoyen": 3.75,
+     "prixDistincts": [
+      3.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1813",
+     "libelle": "Déca",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 131.5,
+     "caTtc": 289.3,
+     "prixMoyen": 2.2,
+     "prixDistincts": [
+      2.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2008",
+     "libelle": "cidre la Mordue",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 70.0,
+     "caTtc": 272.0,
+     "prixMoyen": 3.89,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0354",
+     "libelle": "Monaco",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 66.5,
+     "caTtc": 263.25,
+     "prixMoyen": 3.96,
+     "prixDistincts": [
+      3.9,
+      7.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1822",
+     "libelle": "VERRE H.C.DE BEAUNE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 33.0,
+     "caTtc": 260.7,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1998",
+     "libelle": "TEQUILA SUNRISE",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 28.67,
+     "caTtc": 251.63,
+     "prixMoyen": 8.78,
+     "prixDistincts": [
+      9.0,
+      11.6
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1999",
+     "libelle": "Rosé Pamplemousse",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 59.0,
+     "caTtc": 247.8,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1823",
+     "libelle": "Alsace Gewurztramine",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 7.0,
+     "caTtc": 244.99,
+     "prixMoyen": 35.0,
+     "prixDistincts": [
+      35.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0351",
+     "libelle": "Whisky-Coca",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 32.0,
+     "caTtc": 238.85,
+     "prixMoyen": 7.46,
+     "prixDistincts": [
+      6.35,
+      7.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0112",
+     "libelle": "Double Expresso",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 64.0,
+     "caTtc": 228.0,
+     "prixMoyen": 3.56,
+     "prixDistincts": [
+      3.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0113",
+     "libelle": "Expresso Crème",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 87.0,
+     "caTtc": 208.8,
+     "prixMoyen": 2.4,
+     "prixDistincts": [
+      2.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0109",
+     "libelle": "FANTA",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 53.0,
+     "caTtc": 206.7,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0092",
+     "libelle": "Vittel litre",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 34.0,
+     "caTtc": 200.62,
+     "prixMoyen": 5.9,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": 100.0
+    },
+    {
+     "ref": "1664",
+     "libelle": "Get 27 (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 35.0,
+     "caTtc": 182.0,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "2091",
+     "libelle": "PICHET C.DE BEAUNE B",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 6.0,
+     "caTtc": 180.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0014",
+     "libelle": "Whisky L.J (4cl)",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 30.0,
+     "caTtc": 174.0,
+     "prixMoyen": 5.8,
+     "prixDistincts": [
+      5.8
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "0362",
+     "libelle": "Crémant du Jura",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 6.0,
+     "caTtc": 167.6,
+     "prixMoyen": 27.93,
+     "prixDistincts": [
+      24.0,
+      29.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0120",
+     "libelle": "Infusion",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 49.0,
+     "caTtc": 166.6,
+     "prixMoyen": 3.4,
+     "prixDistincts": [
+      3.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2052",
+     "libelle": "Do",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 24.0,
+     "caTtc": 165.61,
+     "prixMoyen": 6.9,
+     "prixDistincts": [
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2094",
+     "libelle": "Café  Irlandais",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 18.0,
+     "caTtc": 162.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0332",
+     "libelle": "Kir Princier",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 37.0,
+     "caTtc": 158.2,
+     "prixMoyen": 4.28,
+     "prixDistincts": [
+      4.2,
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2056",
+     "libelle": "Sol",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 17.67,
+     "caTtc": 150.2,
+     "prixMoyen": 8.5,
+     "prixDistincts": [
+      8.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0129",
+     "libelle": "Marc du Jura (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 25.0,
+     "caTtc": 150.0,
+     "prixMoyen": 6.0,
+     "prixDistincts": [
+      6.0
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "0009",
+     "libelle": "Porto",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 35.5,
+     "caTtc": 149.1,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2055",
+     "libelle": "Fa",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 20.0,
+     "caTtc": 140.0,
+     "prixMoyen": 7.0,
+     "prixDistincts": [
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2022",
+     "libelle": "H.COTES DE NUITS",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 3.0,
+     "caTtc": 118.5,
+     "prixMoyen": 39.5,
+     "prixDistincts": [
+      39.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2067",
+     "libelle": "Rabasse",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 13.0,
+     "caTtc": 117.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2010",
+     "libelle": "Café Lait",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 26.0,
+     "caTtc": 109.2,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2041",
+     "libelle": "Génépi",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 15.0,
+     "caTtc": 97.51,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1897",
+     "libelle": "Crément du Jura",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 4.0,
+     "caTtc": 96.0,
+     "prixMoyen": 24.0,
+     "prixDistincts": [
+      24.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1994",
+     "libelle": "Café Viennois",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 20.0,
+     "caTtc": 93.1,
+     "prixMoyen": 4.66,
+     "prixDistincts": [
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0093",
+     "libelle": "Vittel 50cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 21.0,
+     "caTtc": 83.99,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "2042",
+     "libelle": "Liqueur de Sapin",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 15.0,
+     "caTtc": 78.0,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0128",
+     "libelle": "Eau de Vie de Poire",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 12.0,
+     "caTtc": 78.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2043",
+     "libelle": "Liqueur de Poire",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 14.0,
+     "caTtc": 72.8,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2039",
+     "libelle": "Eau de vie Framboise",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 11.0,
+     "caTtc": 72.0,
+     "prixMoyen": 6.55,
+     "prixDistincts": [
+      6.5,
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1671",
+     "libelle": "Get 31",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 12.0,
+     "caTtc": 62.4,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0122",
+     "libelle": "Calvados (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 10.0,
+     "caTtc": 52.0,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "0123",
+     "libelle": "Cognac (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 8.5,
+     "caTtc": 44.2,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "0373",
+     "libelle": "Eau de vie Mirabelle",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 5.0,
+     "caTtc": 32.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2058",
+     "libelle": "Si",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 4.0,
+     "caTtc": 28.0,
+     "prixMoyen": 7.0,
+     "prixDistincts": [
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2018",
+     "libelle": "Crémant Rosé",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 1.0,
+     "caTtc": 26.0,
+     "prixMoyen": 26.0,
+     "prixDistincts": [
+      26.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2096",
+     "libelle": "Baileys",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 5.0,
+     "caTtc": 26.0,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1810",
+     "libelle": "Kir Pamplemousse",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 4.0,
+     "caTtc": 16.8,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0114",
+     "libelle": "Double Expresso Crèm",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 4.0,
+     "caTtc": 16.0,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2040",
+     "libelle": "Vieux Marc Bourgogne",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 2.0,
+     "caTtc": 13.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0015",
+     "libelle": "Whisky L.J (2cl) Bab",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 3.0,
+     "caTtc": 11.4,
+     "prixMoyen": 3.8,
+     "prixDistincts": [
+      3.8
+     ],
+     "contenanceCl": 2.0
+    },
+    {
+     "ref": "0298",
+     "libelle": "Calvados",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 2.0,
+     "caTtc": 10.0,
+     "prixMoyen": 5.1667,
+     "prixDistincts": [
+      5.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "???",
+     "libelle": "LA COTE ROUGE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      6.5,
+      7.9,
+      29.0,
+      45.0
+     ],
+     "contenanceCl": null
+    }
+   ]
+  },
+  "2023-2024": {
+   "nbProduits": 143,
+   "caLiquide10": 20010.27,
+   "caLiquide20": 88909.01,
+   "totauxFichier": {
+    "TOTAL TTC  CA LIQUIDES 10 %": 20010.2699999999,
+    "TOTAL TTC CA LIQUIDES 20 %": 88909.0100000001,
+    "TOTALTTC  CA SOLIIDES 10 %": 329361.84,
+    "TOTAL GENERAL TTC": 438281.12,
+    "TOTAL TVA THEORIQUE SUR DONNEES ARTICLES 10 %": 31761.1009090909,
+    "TOTAL TVA THEORIQUE SUR DONNEES ARTICLES 20 %": 14818.1683333333
+   },
+   "produits": [
+    {
+     "ref": "0111",
+     "libelle": "Expresso",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 3202.0,
+     "caTtc": 6987.49,
+     "prixMoyen": 2.1822,
+     "prixDistincts": [
+      1.9,
+      2.2,
+      2.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0357",
+     "libelle": "La Vouivre",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 794.0,
+     "caTtc": 4611.39,
+     "prixMoyen": 5.8078,
+     "prixDistincts": [
+      5.2,
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1734",
+     "libelle": "Savagnin verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 469.5,
+     "caTtc": 3834.05,
+     "prixMoyen": 8.1662,
+     "prixDistincts": [
+      7.2,
+      8.3
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1995",
+     "libelle": "Chat perché",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 613.0,
+     "caTtc": 3512.3,
+     "prixMoyen": 5.7297,
+     "prixDistincts": [
+      2.9,
+      5.1,
+      5.2,
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0333",
+     "libelle": "Père Gregoire",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 559.0,
+     "caTtc": 3200.7,
+     "prixMoyen": 5.7258,
+     "prixDistincts": [
+      4.9,
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2005",
+     "libelle": "pression",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 670.0,
+     "caTtc": 2790.6,
+     "prixMoyen": 4.1651,
+     "prixDistincts": [
+      2.1,
+      3.9,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2091",
+     "libelle": "PICHET C.DE BEAUNE B",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 259.0,
+     "caTtc": 2776.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      8.5,
+      10.5,
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0306",
+     "libelle": "Arbois Béthanie",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 77.0,
+     "caTtc": 2741.5,
+     "prixMoyen": 35.6039,
+     "prixDistincts": [
+      29.9,
+      36.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0229",
+     "libelle": "1/2 Arbois Béthanie",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 107.0,
+     "caTtc": 2527.9,
+     "prixMoyen": 23.6252,
+     "prixDistincts": [
+      19.0,
+      23.9,
+      24.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2089",
+     "libelle": "PICHET SAVAGNIN",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 86.0,
+     "caTtc": 2408.0,
+     "prixMoyen": 28.0,
+     "prixDistincts": [
+      28.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1827",
+     "libelle": "Arbois Trousseau Bou",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 66.0,
+     "caTtc": 2290.98,
+     "prixMoyen": 34.7118,
+     "prixDistincts": [
+      7.0,
+      32.0,
+      36.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1989",
+     "libelle": "Pinte",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 286.5,
+     "caTtc": 2254.9,
+     "prixMoyen": 7.8705,
+     "prixDistincts": [
+      7.8,
+      8.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0003",
+     "libelle": "Macvin du Jura",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 376.0,
+     "caTtc": 2239.99,
+     "prixMoyen": 5.9574,
+     "prixDistincts": [
+      4.9,
+      5.9,
+      45.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2086",
+     "libelle": "PiCHET TROUSSEAU",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 81.0,
+     "caTtc": 2232.0,
+     "prixMoyen": 27.5556,
+     "prixDistincts": [
+      24.0,
+      28.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1996",
+     "libelle": "Mambo",
+     "tva": "10",
+     "sousCategorie": "Apéritifs Sans Alcool",
+     "qte": 342.5,
+     "caTtc": 2219.38,
+     "prixMoyen": 6.4799,
+     "prixDistincts": [
+      6.1,
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1828",
+     "libelle": "Arbois Trousseau Le",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 304.0,
+     "caTtc": 2124.8,
+     "prixMoyen": 6.9895,
+     "prixDistincts": [
+      6.4,
+      7.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1737",
+     "libelle": "Saint Véran Verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 265.5,
+     "caTtc": 2089.55,
+     "prixMoyen": 7.8702,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2019",
+     "libelle": "Arbois Chardonnay Le",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 68.5,
+     "caTtc": 1970.1,
+     "prixMoyen": 28.7606,
+     "prixDistincts": [
+      24.9,
+      29.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0013",
+     "libelle": "Kir Bourgogne",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 431.0,
+     "caTtc": 1797.59,
+     "prixMoyen": 4.1707,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2113",
+     "libelle": "PICHET ALIGOTE 50cL",
+     "tva": "20",
+     "sousCategorie": "0307",
+     "qte": 150.0,
+     "caTtc": 1559.25,
+     "prixMoyen": 10.395,
+     "prixDistincts": [
+      5.25,
+      10.5
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "0106",
+     "libelle": "Coca (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 399.0,
+     "caTtc": 1520.1,
+     "prixMoyen": 3.8098,
+     "prixDistincts": [
+      3.9,
+      6.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "0228",
+     "libelle": "Arbois Savagnin",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 35.5,
+     "caTtc": 1490.25,
+     "prixMoyen": 41.9789,
+     "prixDistincts": [
+      36.0,
+      41.5,
+      75.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0001",
+     "libelle": "KITTYKIR",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 288.5,
+     "caTtc": 1489.79,
+     "prixMoyen": 5.1639,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0368",
+     "libelle": "Jus de Fruit",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 360.0,
+     "caTtc": 1486.5,
+     "prixMoyen": 4.1292,
+     "prixDistincts": [
+      3.9,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0348",
+     "libelle": "Crémant",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 305.0,
+     "caTtc": 1462.3,
+     "prixMoyen": 4.7944,
+     "prixDistincts": [
+      3.9,
+      4.0,
+      5.0,
+      5.35
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1736",
+     "libelle": "Saint Véran",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 37.0,
+     "caTtc": 1430.57,
+     "prixMoyen": 38.6641,
+     "prixDistincts": [
+      19.75,
+      28.3,
+      39.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2121",
+     "libelle": "Pichet 50cl vin",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 140.83,
+     "caTtc": 1354.73,
+     "prixMoyen": 9.8,
+     "prixDistincts": [
+      9.5,
+      9.8,
+      12.0
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "0367",
+     "libelle": "Vin jaune",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 102.0,
+     "caTtc": 1284.0,
+     "prixMoyen": 12.5882,
+     "prixDistincts": [
+      12.0,
+      72.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1997",
+     "libelle": "Luna",
+     "tva": "10",
+     "sousCategorie": "Apéritifs Sans Alcool",
+     "qte": 192.5,
+     "caTtc": 1143.0,
+     "prixMoyen": 5.9377,
+     "prixDistincts": [
+      6.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2025",
+     "libelle": "H.C.B BEAUNE BTL",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 26.0,
+     "caTtc": 1137.5,
+     "prixMoyen": 43.75,
+     "prixDistincts": [
+      36.0,
+      39.5,
+      49.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2026",
+     "libelle": "H.C.DE BEAUNE  VERRE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 119.0,
+     "caTtc": 1060.1,
+     "prixMoyen": 8.9084,
+     "prixDistincts": [
+      7.9,
+      9.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1831",
+     "libelle": "Beaujolais Moulin à",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 29.0,
+     "caTtc": 1039.0,
+     "prixMoyen": 35.8276,
+     "prixDistincts": [
+      29.0,
+      38.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2110",
+     "libelle": "MACON VERRE",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 161.5,
+     "caTtc": 1017.45,
+     "prixMoyen": 6.3,
+     "prixDistincts": [
+      6.3
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2090",
+     "libelle": "PICHET SAINT VERAN",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 33.0,
+     "caTtc": 990.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1829",
+     "libelle": "C du Rhone St  Josep",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 22.5,
+     "caTtc": 985.0,
+     "prixMoyen": 43.7778,
+     "prixDistincts": [
+      36.0,
+      48.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2125",
+     "libelle": "PICHET MACON",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 46.5,
+     "caTtc": 976.5,
+     "prixMoyen": 21.0,
+     "prixDistincts": [
+      21.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0094",
+     "libelle": "San Pelegrino",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 159.5,
+     "caTtc": 929.25,
+     "prixMoyen": 5.826,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2087",
+     "libelle": "PICHET MOULIN A VENT",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 35.0,
+     "caTtc": 885.0,
+     "prixMoyen": 25.2857,
+     "prixDistincts": [
+      21.0,
+      26.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1830",
+     "libelle": "C du  Rhone St Josep",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 100.0,
+     "caTtc": 877.8,
+     "prixMoyen": 8.778,
+     "prixDistincts": [
+      7.2,
+      9.7
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2085",
+     "libelle": "pichet Saint Joseph",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 28.0,
+     "caTtc": 876.39,
+     "prixMoyen": 31.2996,
+     "prixDistincts": [
+      28.0,
+      32.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2124",
+     "libelle": "VIN PAILLE",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 126.5,
+     "caTtc": 871.45,
+     "prixMoyen": 6.8889,
+     "prixDistincts": [
+      5.5,
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2126",
+     "libelle": "PICHET HCB",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 27.0,
+     "caTtc": 864.0,
+     "prixMoyen": 32.0,
+     "prixDistincts": [
+      32.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0225",
+     "libelle": "Cidre Bouché Brut",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 53.0,
+     "caTtc": 844.0,
+     "prixMoyen": 15.9245,
+     "prixDistincts": [
+      14.0,
+      16.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2009",
+     "libelle": "Ambrée",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 126.0,
+     "caTtc": 841.7,
+     "prixMoyen": 6.6802,
+     "prixDistincts": [
+      5.9,
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1826",
+     "libelle": "Clair de Rosé",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 46.5,
+     "caTtc": 837.0,
+     "prixMoyen": 18.0,
+     "prixDistincts": [
+      18.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0002",
+     "libelle": "BALIDOU",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 95.0,
+     "caTtc": 837.0,
+     "prixMoyen": 8.8105,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1993",
+     "libelle": "Blanche des plateaux",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 123.0,
+     "caTtc": 809.2,
+     "prixMoyen": 6.5789,
+     "prixDistincts": [
+      5.9,
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2109",
+     "libelle": "MACON bouteille",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 26.0,
+     "caTtc": 806.0,
+     "prixMoyen": 31.0,
+     "prixDistincts": [
+      31.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0342",
+     "libelle": "Fuze Tea",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 203.5,
+     "caTtc": 789.75,
+     "prixMoyen": 3.8808,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0108",
+     "libelle": "Limonade (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 200.5,
+     "caTtc": 775.45,
+     "prixMoyen": 3.8676,
+     "prixDistincts": [
+      3.9,
+      5.2
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "0226",
+     "libelle": "Cidre Bouché Doux",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 48.0,
+     "caTtc": 738.0,
+     "prixMoyen": 15.375,
+     "prixDistincts": [
+      14.0,
+      16.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2114",
+     "libelle": "Pichet CdR CHUSCLAN",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 74.0,
+     "caTtc": 703.0,
+     "prixMoyen": 9.5,
+     "prixDistincts": [
+      9.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2020",
+     "libelle": "Chablis",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 15.0,
+     "caTtc": 690.0,
+     "prixMoyen": 46.0,
+     "prixDistincts": [
+      39.5,
+      47.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2112",
+     "libelle": "Verre ALIGOTE",
+     "tva": "20",
+     "sousCategorie": "0307",
+     "qte": 163.0,
+     "caTtc": 635.71,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0353",
+     "libelle": "Picon bière",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 130.0,
+     "caTtc": 612.91,
+     "prixMoyen": 4.7147,
+     "prixDistincts": [
+      4.5,
+      4.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2008",
+     "libelle": "cidre la Mordue",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 130.0,
+     "caTtc": 610.4,
+     "prixMoyen": 4.6954,
+     "prixDistincts": [
+      4.0,
+      4.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1991",
+     "libelle": "Pinte Picon",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 66.5,
+     "caTtc": 598.2,
+     "prixMoyen": 8.92,
+     "prixDistincts": [
+      8.9,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1832",
+     "libelle": "Beaujolais Moulin à",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 84.0,
+     "caTtc": 591.6,
+     "prixMoyen": 7.0429,
+     "prixDistincts": [
+      5.8,
+      7.6
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1825",
+     "libelle": "Gewurztraminer Le ve",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 77.5,
+     "caTtc": 542.5,
+     "prixMoyen": 7.0,
+     "prixDistincts": [
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2107",
+     "libelle": "Chateau Minuty",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 12.0,
+     "caTtc": 540.0,
+     "prixMoyen": 45.0,
+     "prixDistincts": [
+      45.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2011",
+     "libelle": "MAEVA",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 60.0,
+     "caTtc": 540.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0352",
+     "libelle": "Sirop à l'eau",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 245.0,
+     "caTtc": 534.6,
+     "prixMoyen": 2.182,
+     "prixDistincts": [
+      2.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2116",
+     "libelle": "Verre Rosé",
+     "tva": "20",
+     "sousCategorie": "0307",
+     "qte": 136.0,
+     "caTtc": 530.4,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2053",
+     "libelle": "Ré",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 59.0,
+     "caTtc": 519.0,
+     "prixMoyen": 8.7966,
+     "prixDistincts": [
+      7.0,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0096",
+     "libelle": "Perrier 33cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 125.5,
+     "caTtc": 498.0,
+     "prixMoyen": 3.9681,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 33.0
+    },
+    {
+     "ref": "0095",
+     "libelle": "San Pelegrino 50cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 115.5,
+     "caTtc": 462.0,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "0110",
+     "libelle": "Diabolo (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 120.0,
+     "caTtc": 456.3,
+     "prixMoyen": 3.8025,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "1823",
+     "libelle": "Alsace Gewurztramine",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 13.0,
+     "caTtc": 455.0,
+     "prixMoyen": 35.0,
+     "prixDistincts": [
+      35.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0007",
+     "libelle": "Pontarlier",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 105.5,
+     "caTtc": 433.7,
+     "prixMoyen": 4.1109,
+     "prixDistincts": [
+      3.8,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0099",
+     "libelle": "Panaché",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 102.5,
+     "caTtc": 431.1,
+     "prixMoyen": 4.2059,
+     "prixDistincts": [
+      3.9,
+      4.2,
+      8.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2115",
+     "libelle": "VERRE CHUSCLAN",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 100.5,
+     "caTtc": 390.6,
+     "prixMoyen": 3.8866,
+     "prixDistincts": [
+      2.55,
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2108",
+     "libelle": "DOMAINE LE PIVE",
+     "tva": "20",
+     "sousCategorie": "2081",
+     "qte": 13.0,
+     "caTtc": 377.0,
+     "prixMoyen": 29.0,
+     "prixDistincts": [
+      29.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0327",
+     "libelle": "Rêve Bleu",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 42.5,
+     "caTtc": 373.5,
+     "prixMoyen": 8.7882,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0119",
+     "libelle": "Thé",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 107.5,
+     "caTtc": 362.1,
+     "prixMoyen": 3.3684,
+     "prixDistincts": [
+      3.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0006",
+     "libelle": "Ricard",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 83.0,
+     "caTtc": 356.6,
+     "prixMoyen": 4.2964,
+     "prixDistincts": [
+      3.8,
+      4.2,
+      8.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0347",
+     "libelle": "Pastis",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 77.0,
+     "caTtc": 321.8,
+     "prixMoyen": 4.1792,
+     "prixDistincts": [
+      3.8,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0011",
+     "libelle": "Martini Blanc",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 65.5,
+     "caTtc": 310.47,
+     "prixMoyen": 4.74,
+     "prixDistincts": [
+      4.2,
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0343",
+     "libelle": "Schweppes",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 72.0,
+     "caTtc": 280.8,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0107",
+     "libelle": "Orangina (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 71.0,
+     "caTtc": 274.34,
+     "prixMoyen": 3.8639,
+     "prixDistincts": [
+      3.9,
+      4.04,
+      5.1
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "2088",
+     "libelle": "PICHET C.DE BEAUNE R",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 44.0,
+     "caTtc": 249.9,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      3.9,
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0354",
+     "libelle": "Monaco",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 56.0,
+     "caTtc": 232.8,
+     "prixMoyen": 4.1571,
+     "prixDistincts": [
+      3.9,
+      4.2,
+      8.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0009",
+     "libelle": "Porto",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 47.0,
+     "caTtc": 226.8,
+     "prixMoyen": 4.8255,
+     "prixDistincts": [
+      4.2,
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2055",
+     "libelle": "Fa",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 26.0,
+     "caTtc": 224.0,
+     "prixMoyen": 8.6154,
+     "prixDistincts": [
+      7.0,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0092",
+     "libelle": "Vittel litre",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 38.0,
+     "caTtc": 218.31,
+     "prixMoyen": 5.745,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": 100.0
+    },
+    {
+     "ref": "2103",
+     "libelle": "Champagne",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 7.0,
+     "caTtc": 207.0,
+     "prixMoyen": 29.5714,
+     "prixDistincts": [
+      10.0,
+      48.0,
+      59.0,
+      60.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0351",
+     "libelle": "Whisky-Coca",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 23.0,
+     "caTtc": 201.4,
+     "prixMoyen": 8.7565,
+     "prixDistincts": [
+      7.5,
+      7.9,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2052",
+     "libelle": "Do",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 22.0,
+     "caTtc": 195.9,
+     "prixMoyen": 8.9045,
+     "prixDistincts": [
+      6.9,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2067",
+     "libelle": "Rabasse",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 22.0,
+     "caTtc": 195.0,
+     "prixMoyen": 8.8636,
+     "prixDistincts": [
+      8.0,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2092",
+     "libelle": "PICHET GEWURZTRAMINE",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 7.0,
+     "caTtc": 189.0,
+     "prixMoyen": 27.0,
+     "prixDistincts": [
+      27.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0016",
+     "libelle": "Jack Daniel's",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 24.5,
+     "caTtc": 187.65,
+     "prixMoyen": 7.6592,
+     "prixDistincts": [
+      7.5,
+      9.0,
+      9.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2057",
+     "libelle": "La",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 21.0,
+     "caTtc": 187.5,
+     "prixMoyen": 8.9286,
+     "prixDistincts": [
+      8.5,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0112",
+     "libelle": "Double Expresso",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 49.0,
+     "caTtc": 186.2,
+     "prixMoyen": 3.8,
+     "prixDistincts": [
+      3.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2056",
+     "libelle": "Sol",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 20.0,
+     "caTtc": 179.5,
+     "prixMoyen": 8.975,
+     "prixDistincts": [
+      8.5,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2054",
+     "libelle": "Mi",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 21.0,
+     "caTtc": 178.99,
+     "prixMoyen": 8.5233,
+     "prixDistincts": [
+      8.5,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1664",
+     "libelle": "Get 27 (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 30.0,
+     "caTtc": 175.5,
+     "prixMoyen": 5.85,
+     "prixDistincts": [
+      5.2,
+      6.5
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "0307",
+     "libelle": "Pichet 75cl vin",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 13.0,
+     "caTtc": 174.2,
+     "prixMoyen": 13.4,
+     "prixDistincts": [
+      13.4
+     ],
+     "contenanceCl": 75.0
+    },
+    {
+     "ref": "1813",
+     "libelle": "Déca",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 74.0,
+     "caTtc": 158.4,
+     "prixMoyen": 2.1405,
+     "prixDistincts": [
+      2.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0332",
+     "libelle": "Kir Princier",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 30.0,
+     "caTtc": 156.4,
+     "prixMoyen": 5.2133,
+     "prixDistincts": [
+      5.2,
+      5.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2111",
+     "libelle": "GASCOGNE Gd PAVOIS",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 7.0,
+     "caTtc": 154.0,
+     "prixMoyen": 22.0,
+     "prixDistincts": [
+      22.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0362",
+     "libelle": "Crémant du Jura",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 5.0,
+     "caTtc": 148.6,
+     "prixMoyen": 29.72,
+     "prixDistincts": [
+      29.0,
+      29.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0231",
+     "libelle": "\"Champagne Brut \"",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 4.0,
+     "caTtc": 148.0,
+     "prixMoyen": 37.0,
+     "prixDistincts": [
+      10.0,
+      46.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0120",
+     "libelle": "Infusion",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 43.0,
+     "caTtc": 146.2,
+     "prixMoyen": 3.4,
+     "prixDistincts": [
+      3.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1897",
+     "libelle": "Crément du Jura",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 5.0,
+     "caTtc": 145.8,
+     "prixMoyen": 29.16,
+     "prixDistincts": [
+      29.0,
+      29.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2041",
+     "libelle": "Génépi",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 22.0,
+     "caTtc": 143.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0014",
+     "libelle": "Whisky L.J (4cl)",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 21.0,
+     "caTtc": 142.7,
+     "prixMoyen": 6.7952,
+     "prixDistincts": [
+      5.8,
+      6.9
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "0109",
+     "libelle": "FANTA",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 36.0,
+     "caTtc": 141.4,
+     "prixMoyen": 3.9278,
+     "prixDistincts": [
+      3.9,
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0113",
+     "libelle": "Expresso Crème",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 59.5,
+     "caTtc": 140.4,
+     "prixMoyen": 2.3597,
+     "prixDistincts": [
+      2.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2042",
+     "libelle": "Liqueur de Sapin",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 22.0,
+     "caTtc": 140.4,
+     "prixMoyen": 6.3818,
+     "prixDistincts": [
+      5.2,
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0309",
+     "libelle": "VERRE CHUSCLAN",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 32.5,
+     "caTtc": 120.95,
+     "prixMoyen": 3.8026,
+     "prixDistincts": [
+      2.0,
+      3.6,
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2094",
+     "libelle": "Café  Irlandais",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 12.5,
+     "caTtc": 112.5,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2096",
+     "libelle": "Baileys",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 20.0,
+     "caTtc": 111.8,
+     "prixMoyen": 5.59,
+     "prixDistincts": [
+      5.2,
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2010",
+     "libelle": "Café Lait",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 26.5,
+     "caTtc": 111.3,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2021",
+     "libelle": "Chablis Le Verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 14.0,
+     "caTtc": 110.6,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0129",
+     "libelle": "Marc du Jura (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 17.0,
+     "caTtc": 103.0,
+     "prixMoyen": 6.0588,
+     "prixDistincts": [
+      6.0,
+      6.5
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "2098",
+     "libelle": "Pichet Chablis",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 3.0,
+     "caTtc": 90.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0093",
+     "libelle": "Vittel 50cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 22.0,
+     "caTtc": 88.0,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "0373",
+     "libelle": "Eau de vie Mirabelle",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 13.0,
+     "caTtc": 84.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2038",
+     "libelle": "Grand Marnier",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 13.0,
+     "caTtc": 84.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2058",
+     "libelle": "Si",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 8.0,
+     "caTtc": 72.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0128",
+     "libelle": "Eau de Vie de Poire",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 11.0,
+     "caTtc": 71.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0123",
+     "libelle": "Cognac (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 10.0,
+     "caTtc": 68.2,
+     "prixMoyen": 6.82,
+     "prixDistincts": [
+      5.2,
+      6.5,
+      11.0
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "1994",
+     "libelle": "Café Viennois",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 12.5,
+     "caTtc": 66.4,
+     "prixMoyen": 5.312,
+     "prixDistincts": [
+      5.5,
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1671",
+     "libelle": "Get 31",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 9.0,
+     "caTtc": 55.9,
+     "prixMoyen": 6.2111,
+     "prixDistincts": [
+      5.2,
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0122",
+     "libelle": "Calvados (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 8.0,
+     "caTtc": 52.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "2043",
+     "libelle": "Liqueur de Poire",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 9.0,
+     "caTtc": 50.7,
+     "prixMoyen": 5.6333,
+     "prixDistincts": [
+      5.2,
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0004",
+     "libelle": "Vin de Paille",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 8.0,
+     "caTtc": 50.7,
+     "prixMoyen": 6.3375,
+     "prixDistincts": [
+      6.0,
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2039",
+     "libelle": "Eau de vie Framboise",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 7.0,
+     "caTtc": 45.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1822",
+     "libelle": "VERRE H.C.DE BEAUNE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 5.0,
+     "caTtc": 39.5,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0114",
+     "libelle": "Double Expresso Crèm",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 7.0,
+     "caTtc": 34.6,
+     "prixMoyen": 4.9429,
+     "prixDistincts": [
+      4.2,
+      9.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1999",
+     "libelle": "Rosé Pamplemousse",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 5.0,
+     "caTtc": 21.0,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1998",
+     "libelle": "TEQUILA SUNRISE",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 2.0,
+     "caTtc": 18.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1810",
+     "libelle": "Kir Pamplemousse",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 3.0,
+     "caTtc": 12.6,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0015",
+     "libelle": "Whisky L.J (2cl) Bab",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 2.0,
+     "caTtc": 6.4,
+     "prixMoyen": 3.2,
+     "prixDistincts": [
+      3.2
+     ],
+     "contenanceCl": 2.0
+    },
+    {
+     "ref": "0298",
+     "libelle": "Calvados",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 1.0,
+     "caTtc": 5.0,
+     "prixMoyen": 5.0,
+     "prixDistincts": [
+      5.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0010",
+     "libelle": "Guignolet",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 1.0,
+     "caTtc": 4.3,
+     "prixMoyen": 4.3,
+     "prixDistincts": [
+      4.3
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2084",
+     "libelle": "TEQUILA",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 1.0,
+     "caTtc": 4.0,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2093",
+     "libelle": "H.C.BEAUNE BOUTEILLE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1859",
+     "libelle": "BORD.  MOUTON CADET",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "???",
+     "libelle": "LA COTE ROUGE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2022",
+     "libelle": "H.COTES DE NUITS",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2097",
+     "libelle": "Bohème",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2018",
+     "libelle": "Crémant Rosé",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [
+      26.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2040",
+     "libelle": "Vieux Marc Bourgogne",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 1.0,
+     "caTtc": 0.0,
+     "prixMoyen": 0.0,
+     "prixDistincts": [],
+     "contenanceCl": null
+    }
+   ]
+  },
+  "2024-2025": {
+   "nbProduits": 145,
+   "caLiquide10": 19723.21,
+   "caLiquide20": 86389.75,
+   "totauxFichier": {
+    "TOTAL TTC  CA LIQUIDES 10 %": 19723.2099999999,
+    "TOTAL TTC CA LIQUIDES 20 %": 86389.7500000001,
+    "TOTALTTC  CA SOLIIDES 10 %": 329452.0,
+    "TOTAL GENERAL TTC": 435564.96,
+    "TOTAL TVA THEORIQUE SUR DONNEES ARTICLES 10 %": 31743.2009090909,
+    "TOTAL TVA THEORIQUE SUR DONNEES ARTICLES 20 %": 14398.2916666667
+   },
+   "produits": [
+    {
+     "ref": "0111",
+     "libelle": "Expresso",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 3194.5,
+     "caTtc": 7020.9,
+     "prixMoyen": 2.1978,
+     "prixDistincts": [
+      1.6,
+      2.2,
+      2.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1734",
+     "libelle": "Savagnin verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 503.0,
+     "caTtc": 4149.0,
+     "prixMoyen": 8.2485,
+     "prixDistincts": [
+      7.3,
+      8.3
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0357",
+     "libelle": "La Vouivre",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 704.5,
+     "caTtc": 4132.57,
+     "prixMoyen": 5.866,
+     "prixDistincts": [
+      5.5,
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1995",
+     "libelle": "Chat perché",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 557.0,
+     "caTtc": 3274.75,
+     "prixMoyen": 5.8793,
+     "prixDistincts": [
+      1.1,
+      5.55,
+      5.9,
+      6.1,
+      7.7,
+      9.3
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0333",
+     "libelle": "Père Gregoire",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 545.5,
+     "caTtc": 3220.76,
+     "prixMoyen": 5.9042,
+     "prixDistincts": [
+      5.9,
+      8.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2005",
+     "libelle": "pression",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 662.0,
+     "caTtc": 2772.79,
+     "prixMoyen": 4.1885,
+     "prixDistincts": [
+      3.0,
+      4.2,
+      6.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0306",
+     "libelle": "Arbois Béthanie",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 76.0,
+     "caTtc": 2736.0,
+     "prixMoyen": 36.0,
+     "prixDistincts": [
+      36.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2089",
+     "libelle": "PICHET SAVAGNIN",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 95.0,
+     "caTtc": 2664.7,
+     "prixMoyen": 28.0495,
+     "prixDistincts": [
+      28.0,
+      32.7
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2019",
+     "libelle": "Arbois Chardonnay Le",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 85.5,
+     "caTtc": 2475.6,
+     "prixMoyen": 28.9544,
+     "prixDistincts": [
+      25.1,
+      29.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1989",
+     "libelle": "Pinte",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 308.0,
+     "caTtc": 2464.0,
+     "prixMoyen": 8.0,
+     "prixDistincts": [
+      8.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1737",
+     "libelle": "Saint Véran Verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 277.5,
+     "caTtc": 2176.45,
+     "prixMoyen": 7.8431,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0003",
+     "libelle": "Macvin du Jura",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 360.5,
+     "caTtc": 2117.25,
+     "prixMoyen": 5.8731,
+     "prixDistincts": [
+      5.9,
+      6.5,
+      7.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2086",
+     "libelle": "PiCHET TROUSSEAU",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 75.0,
+     "caTtc": 2100.0,
+     "prixMoyen": 28.0,
+     "prixDistincts": [
+      28.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1996",
+     "libelle": "Mambo",
+     "tva": "10",
+     "sousCategorie": "Apéritifs Sans Alcool",
+     "qte": 315.0,
+     "caTtc": 2041.11,
+     "prixMoyen": 6.4797,
+     "prixDistincts": [
+      6.5,
+      6.55
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2091",
+     "libelle": "PICHET ROSE",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 192.5,
+     "caTtc": 2017.95,
+     "prixMoyen": 10.4829,
+     "prixDistincts": [
+      7.2,
+      10.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0229",
+     "libelle": "1/2 Arbois Béthanie",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 84.0,
+     "caTtc": 1992.0,
+     "prixMoyen": 23.7143,
+     "prixDistincts": [
+      24.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1828",
+     "libelle": "Arbois Trousseau Le",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 262.0,
+     "caTtc": 1884.19,
+     "prixMoyen": 7.1916,
+     "prixDistincts": [
+      5.0,
+      7.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0013",
+     "libelle": "Kir Bourgogne",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 447.0,
+     "caTtc": 1877.2,
+     "prixMoyen": 4.1996,
+     "prixDistincts": [
+      4.0,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0001",
+     "libelle": "KITTYKIR",
+     "tva": "20",
+     "sousCategorie": "Apéritifs MAISON",
+     "qte": 345.0,
+     "caTtc": 1793.99,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2113",
+     "libelle": "PICHET ALIGOTE 50cL",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 165.0,
+     "caTtc": 1730.6,
+     "prixMoyen": 10.4885,
+     "prixDistincts": [
+      8.6,
+      10.5
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "0106",
+     "libelle": "Coca (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 403.0,
+     "caTtc": 1571.7,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "1829",
+     "libelle": "C du Rhone St  Josep",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 31.0,
+     "caTtc": 1503.5,
+     "prixMoyen": 48.5,
+     "prixDistincts": [
+      48.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2090",
+     "libelle": "PICHET SAINT VERAN",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 49.0,
+     "caTtc": 1470.0,
+     "prixMoyen": 30.0,
+     "prixDistincts": [
+      30.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0367",
+     "libelle": "Vin jaune",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 123.0,
+     "caTtc": 1452.0,
+     "prixMoyen": 11.8049,
+     "prixDistincts": [
+      6.0,
+      12.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1831",
+     "libelle": "Beaujolais Moulin à",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 38.0,
+     "caTtc": 1444.0,
+     "prixMoyen": 38.0,
+     "prixDistincts": [
+      38.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0368",
+     "libelle": "Jus de Fruit",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 341.5,
+     "caTtc": 1425.7,
+     "prixMoyen": 4.1748,
+     "prixDistincts": [
+      4.0,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1827",
+     "libelle": "Arbois Trousseau Bou",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 38.0,
+     "caTtc": 1368.0,
+     "prixMoyen": 36.0,
+     "prixDistincts": [
+      36.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0348",
+     "libelle": "Crémant",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 263.0,
+     "caTtc": 1312.8,
+     "prixMoyen": 4.9916,
+     "prixDistincts": [
+      3.8,
+      5.0,
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1997",
+     "libelle": "Luna",
+     "tva": "10",
+     "sousCategorie": "Apéritifs Sans Alcool",
+     "qte": 211.0,
+     "caTtc": 1259.9,
+     "prixMoyen": 5.9711,
+     "prixDistincts": [
+      3.2,
+      6.0,
+      6.6,
+      7.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1736",
+     "libelle": "Saint Véran",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 31.0,
+     "caTtc": 1224.5,
+     "prixMoyen": 39.5,
+     "prixDistincts": [
+      39.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0228",
+     "libelle": "Arbois Savagnin",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 29.0,
+     "caTtc": 1203.5,
+     "prixMoyen": 41.5,
+     "prixDistincts": [
+      41.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2109",
+     "libelle": "MACON bouteille",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 36.0,
+     "caTtc": 1116.0,
+     "prixMoyen": 31.0,
+     "prixDistincts": [
+      31.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2025",
+     "libelle": "H.C.B BEAUNE BTL",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 22.5,
+     "caTtc": 1102.5,
+     "prixMoyen": 49.0,
+     "prixDistincts": [
+      49.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2124",
+     "libelle": "VIN PAILLE",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 153.0,
+     "caTtc": 1055.7,
+     "prixMoyen": 6.9,
+     "prixDistincts": [
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1830",
+     "libelle": "C du  Rhone St Josep",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 109.0,
+     "caTtc": 1047.6,
+     "prixMoyen": 9.611,
+     "prixDistincts": [
+      9.7
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2110",
+     "libelle": "MACON VERRE",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 159.0,
+     "caTtc": 1001.7,
+     "prixMoyen": 6.3,
+     "prixDistincts": [
+      6.3
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2026",
+     "libelle": "H.C.DE BEAUNE  VERRE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 100.0,
+     "caTtc": 950.0,
+     "prixMoyen": 9.5,
+     "prixDistincts": [
+      9.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0094",
+     "libelle": "San Pelegrino",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 158.0,
+     "caTtc": 932.21,
+     "prixMoyen": 5.9,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2126",
+     "libelle": "PICHET HCB",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 29.0,
+     "caTtc": 928.0,
+     "prixMoyen": 32.0,
+     "prixDistincts": [
+      32.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2125",
+     "libelle": "PICHET MACON",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 44.0,
+     "caTtc": 924.4,
+     "prixMoyen": 21.0091,
+     "prixDistincts": [
+      21.0,
+      21.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2085",
+     "libelle": "pichet Saint Joseph",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 29.0,
+     "caTtc": 911.7,
+     "prixMoyen": 31.4379,
+     "prixDistincts": [
+      10.1,
+      32.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1993",
+     "libelle": "Blanche des plateaux",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 133.5,
+     "caTtc": 909.06,
+     "prixMoyen": 6.8094,
+     "prixDistincts": [
+      3.6,
+      5.0,
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2009",
+     "libelle": "Ambrée",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 130.0,
+     "caTtc": 890.1,
+     "prixMoyen": 6.8469,
+     "prixDistincts": [
+      6.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0108",
+     "libelle": "Limonade (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 217.0,
+     "caTtc": 846.3,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "1832",
+     "libelle": "Beaujolais Moulin à",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 108.0,
+     "caTtc": 820.8,
+     "prixMoyen": 7.6,
+     "prixDistincts": [
+      7.6
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1826",
+     "libelle": "Clair de Rosé",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 45.0,
+     "caTtc": 812.2,
+     "prixMoyen": 18.0489,
+     "prixDistincts": [
+      18.0,
+      20.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0002",
+     "libelle": "BALIDOU",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 91.0,
+     "caTtc": 801.0,
+     "prixMoyen": 8.8022,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0225",
+     "libelle": "Cidre Bouché Brut",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 49.0,
+     "caTtc": 784.0,
+     "prixMoyen": 16.0,
+     "prixDistincts": [
+      16.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0342",
+     "libelle": "Fuze Tea",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 197.5,
+     "caTtc": 766.35,
+     "prixMoyen": 3.8803,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2087",
+     "libelle": "PICHET MOULIN A VENT",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 29.0,
+     "caTtc": 755.4,
+     "prixMoyen": 26.0483,
+     "prixDistincts": [
+      26.0,
+      27.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2121",
+     "libelle": "Pichet 50cl vin",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 79.0,
+     "caTtc": 750.5,
+     "prixMoyen": 0.0,
+     "prixDistincts": [
+      9.5
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "2112",
+     "libelle": "Verre ALIGOTE",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 182.0,
+     "caTtc": 709.8,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1825",
+     "libelle": "Gewurztraminer Le ve",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 100.0,
+     "caTtc": 700.0,
+     "prixMoyen": 7.0,
+     "prixDistincts": [
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2008",
+     "libelle": "cidre la Mordue",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 142.5,
+     "caTtc": 686.8,
+     "prixMoyen": 4.8196,
+     "prixDistincts": [
+      4.8,
+      7.6
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0226",
+     "libelle": "Cidre Bouché Doux",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 41.0,
+     "caTtc": 656.0,
+     "prixMoyen": 16.0,
+     "prixDistincts": [
+      16.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2114",
+     "libelle": "Pichet CdR CHUSCLAN",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 68.5,
+     "caTtc": 650.75,
+     "prixMoyen": 9.5,
+     "prixDistincts": [
+      9.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2108",
+     "libelle": "DOMAINE LE PIVE",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 22.0,
+     "caTtc": 637.99,
+     "prixMoyen": 29.0,
+     "prixDistincts": [
+      29.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2020",
+     "libelle": "Chablis",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 13.0,
+     "caTtc": 610.99,
+     "prixMoyen": 47.0,
+     "prixDistincts": [
+      47.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2116",
+     "libelle": "Verre Rosé",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 155.0,
+     "caTtc": 604.86,
+     "prixMoyen": 3.9023,
+     "prixDistincts": [
+      3.9,
+      4.25
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0353",
+     "libelle": "Picon bière",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 123.5,
+     "caTtc": 588.0,
+     "prixMoyen": 4.7611,
+     "prixDistincts": [
+      4.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0352",
+     "libelle": "Sirop à l'eau",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 263.0,
+     "caTtc": 578.6,
+     "prixMoyen": 2.2,
+     "prixDistincts": [
+      2.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1991",
+     "libelle": "Pinte Picon",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 59.0,
+     "caTtc": 531.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0096",
+     "libelle": "Perrier 33cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 129.0,
+     "caTtc": 516.0,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 33.0
+    },
+    {
+     "ref": "0095",
+     "libelle": "San Pelegrino 50cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 118.0,
+     "caTtc": 472.0,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "0099",
+     "libelle": "Panaché",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 97.0,
+     "caTtc": 407.0,
+     "prixMoyen": 4.1959,
+     "prixDistincts": [
+      4.2,
+      8.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2053",
+     "libelle": "Ré",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 43.0,
+     "caTtc": 387.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1823",
+     "libelle": "Alsace Gewurztramine",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 11.0,
+     "caTtc": 385.0,
+     "prixMoyen": 35.0,
+     "prixDistincts": [
+      35.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0110",
+     "libelle": "Diabolo (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 97.0,
+     "caTtc": 378.3,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "0327",
+     "libelle": "Rêve Bleu",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 41.0,
+     "caTtc": 369.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0007",
+     "libelle": "Pontarlier",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 90.0,
+     "caTtc": 368.8,
+     "prixMoyen": 4.0978,
+     "prixDistincts": [
+      3.4,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2011",
+     "libelle": "MAEVA",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 37.0,
+     "caTtc": 332.7,
+     "prixMoyen": 8.9919,
+     "prixDistincts": [
+      7.2,
+      9.0,
+      10.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2115",
+     "libelle": "Verre CHUSCLAN",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 84.5,
+     "caTtc": 329.55,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0119",
+     "libelle": "Thé",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 92.0,
+     "caTtc": 312.79,
+     "prixMoyen": 3.4,
+     "prixDistincts": [
+      3.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0354",
+     "libelle": "Monaco",
+     "tva": "20",
+     "sousCategorie": "Bières",
+     "qte": 74.0,
+     "caTtc": 310.8,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0006",
+     "libelle": "Ricard",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 72.0,
+     "caTtc": 297.9,
+     "prixMoyen": 4.1375,
+     "prixDistincts": [
+      3.9,
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0011",
+     "libelle": "Martini Blanc",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 60.5,
+     "caTtc": 286.65,
+     "prixMoyen": 4.738,
+     "prixDistincts": [
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0107",
+     "libelle": "Orangina (25cl)",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 72.5,
+     "caTtc": 282.75,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": 25.0
+    },
+    {
+     "ref": "0343",
+     "libelle": "Schweppes",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 71.0,
+     "caTtc": 276.9,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0347",
+     "libelle": "Pastis",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 60.0,
+     "caTtc": 252.0,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0009",
+     "libelle": "Porto",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 47.0,
+     "caTtc": 230.3,
+     "prixMoyen": 4.9,
+     "prixDistincts": [
+      4.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0362",
+     "libelle": "Crémant du Jura",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 8.0,
+     "caTtc": 220.7,
+     "prixMoyen": 27.5875,
+     "prixDistincts": [
+      12.3,
+      29.0,
+      29.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2094",
+     "libelle": "Café  Irlandais",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 24.0,
+     "caTtc": 216.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0120",
+     "libelle": "Infusion",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 62.0,
+     "caTtc": 210.8,
+     "prixMoyen": 3.4,
+     "prixDistincts": [
+      3.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2055",
+     "libelle": "Fa",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 23.0,
+     "caTtc": 207.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0092",
+     "libelle": "Vittel litre",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 33.0,
+     "caTtc": 194.7,
+     "prixMoyen": 5.9,
+     "prixDistincts": [
+      5.9
+     ],
+     "contenanceCl": 100.0
+    },
+    {
+     "ref": "2092",
+     "libelle": "PICHET GEWURZTRAMINE",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 7.0,
+     "caTtc": 189.0,
+     "prixMoyen": 27.0,
+     "prixDistincts": [
+      27.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2088",
+     "libelle": "VERRE ROSE/PICHET C.DE BEAUNE R",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 42.0,
+     "caTtc": 163.8,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0112",
+     "libelle": "Double Expresso",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 43.0,
+     "caTtc": 163.4,
+     "prixMoyen": 3.8,
+     "prixDistincts": [
+      3.8
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2057",
+     "libelle": "La",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 18.0,
+     "caTtc": 162.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0109",
+     "libelle": "FANTA",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 40.0,
+     "caTtc": 156.0,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0014",
+     "libelle": "Whisky L.J (4cl)",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 22.5,
+     "caTtc": 154.65,
+     "prixMoyen": 6.8733,
+     "prixDistincts": [
+      6.3,
+      6.9
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "2052",
+     "libelle": "Do",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 17.0,
+     "caTtc": 153.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2067",
+     "libelle": "Rabasse",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 17.0,
+     "caTtc": 151.6,
+     "prixMoyen": 8.9176,
+     "prixDistincts": [
+      7.6,
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1897",
+     "libelle": "Crément du Jura",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 5.0,
+     "caTtc": 145.0,
+     "prixMoyen": 29.0,
+     "prixDistincts": [
+      29.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0351",
+     "libelle": "Whisky-Coca",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 15.0,
+     "caTtc": 139.0,
+     "prixMoyen": 9.2667,
+     "prixDistincts": [
+      9.0,
+      13.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2041",
+     "libelle": "Génépi",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 21.0,
+     "caTtc": 136.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2107",
+     "libelle": "Chateau Minuty",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 3.0,
+     "caTtc": 135.0,
+     "prixMoyen": 45.0,
+     "prixDistincts": [
+      45.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2056",
+     "libelle": "Sol",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 15.0,
+     "caTtc": 135.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2111",
+     "libelle": "GASCOGNE Gd PAVOIS",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 6.0,
+     "caTtc": 132.0,
+     "prixMoyen": 22.0,
+     "prixDistincts": [
+      22.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0128",
+     "libelle": "Eau de Vie de Poire",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 20.0,
+     "caTtc": 130.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0332",
+     "libelle": "Kir Princier",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 23.0,
+     "caTtc": 119.6,
+     "prixMoyen": 5.2,
+     "prixDistincts": [
+      5.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2103",
+     "libelle": "Champagne",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 2.0,
+     "caTtc": 118.0,
+     "prixMoyen": 59.0,
+     "prixDistincts": [
+      59.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2042",
+     "libelle": "Liqueur de Sapin",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 18.0,
+     "caTtc": 117.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0129",
+     "libelle": "Marc du Jura (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 18.0,
+     "caTtc": 117.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "1664",
+     "libelle": "Get 27 (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 18.0,
+     "caTtc": 117.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "2054",
+     "libelle": "Mi",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 11.0,
+     "caTtc": 99.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2058",
+     "libelle": "Si",
+     "tva": "20",
+     "sousCategorie": "AUTRES",
+     "qte": 11.0,
+     "caTtc": 99.0,
+     "prixMoyen": 9.0,
+     "prixDistincts": [
+      9.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0122",
+     "libelle": "Calvados (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 14.0,
+     "caTtc": 91.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "0113",
+     "libelle": "Expresso Crème",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 36.0,
+     "caTtc": 86.4,
+     "prixMoyen": 2.4,
+     "prixDistincts": [
+      2.4
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0093",
+     "libelle": "Vittel 50cl",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 19.0,
+     "caTtc": 76.0,
+     "prixMoyen": 4.0,
+     "prixDistincts": [
+      4.0
+     ],
+     "contenanceCl": 50.0
+    },
+    {
+     "ref": "0016",
+     "libelle": "Jack Daniel's",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 10.0,
+     "caTtc": 75.0,
+     "prixMoyen": 7.5,
+     "prixDistincts": [
+      7.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0309",
+     "libelle": "Verre CHUSCLAN",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 19.0,
+     "caTtc": 74.1,
+     "prixMoyen": 3.9,
+     "prixDistincts": [
+      3.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2043",
+     "libelle": "Liqueur de Poire",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 11.0,
+     "caTtc": 71.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0373",
+     "libelle": "Eau de vie Mirabelle",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 10.0,
+     "caTtc": 65.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1994",
+     "libelle": "Café Viennois",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 12.0,
+     "caTtc": 64.8,
+     "prixMoyen": 5.4,
+     "prixDistincts": [
+      5.5,
+      7.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2010",
+     "libelle": "Café Lait",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 13.0,
+     "caTtc": 54.6,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2096",
+     "libelle": "BAILEYS",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 7.0,
+     "caTtc": 45.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1813",
+     "libelle": "Déca",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 14.0,
+     "caTtc": 30.8,
+     "prixMoyen": 2.2,
+     "prixDistincts": [
+      2.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0123",
+     "libelle": "Cognac (4cl)",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 4.5,
+     "caTtc": 29.25,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": 4.0
+    },
+    {
+     "ref": "2038",
+     "libelle": "Grand Marnier",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 4.0,
+     "caTtc": 26.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1822",
+     "libelle": "VERRE H.C.DE BEAUNE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 3.0,
+     "caTtc": 23.7,
+     "prixMoyen": 7.9,
+     "prixDistincts": [
+      7.9
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1898",
+     "libelle": "Crément / Jura VERRE",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 4.0,
+     "caTtc": 20.0,
+     "prixMoyen": 5.0,
+     "prixDistincts": [
+      5.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2039",
+     "libelle": "Eau de vie Framboise",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 3.0,
+     "caTtc": 19.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2040",
+     "libelle": "Vieux Marc Bourgogne",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 2.0,
+     "caTtc": 13.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1671",
+     "libelle": "Get 31",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 2.0,
+     "caTtc": 13.0,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2083",
+     "libelle": "BAILEYS",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 1.0,
+     "caTtc": 6.5,
+     "prixMoyen": 6.5,
+     "prixDistincts": [
+      6.5
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0298",
+     "libelle": "Calvados",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 1.0,
+     "caTtc": 5.0,
+     "prixMoyen": 5.0,
+     "prixDistincts": [
+      5.0
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0114",
+     "libelle": "Double Expresso Crèm",
+     "tva": "10",
+     "sousCategorie": null,
+     "qte": 1.0,
+     "caTtc": 4.2,
+     "prixMoyen": 4.2,
+     "prixDistincts": [
+      4.2
+     ],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0015",
+     "libelle": "Whisky L.J (2cl) Bab",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 1.0,
+     "caTtc": 3.2,
+     "prixMoyen": 3.2,
+     "prixDistincts": [
+      3.2
+     ],
+     "contenanceCl": 2.0
+    },
+    {
+     "ref": "2093",
+     "libelle": "H.C.BEAUNE BOUTEILLE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1859",
+     "libelle": "BORD.  MOUTON CADET",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "???",
+     "libelle": "LA COTE ROUGE",
+     "tva": "20",
+     "sousCategorie": "Vins Rouges",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2021",
+     "libelle": "Chablis Le Verre",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2098",
+     "libelle": "Pichet Chablis",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2022",
+     "libelle": "H.COTES DE NUITS",
+     "tva": "20",
+     "sousCategorie": "Vins Blancs",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2097",
+     "libelle": "Bohème",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2081",
+     "libelle": "MIRAVAL",
+     "tva": "20",
+     "sousCategorie": "Vins Rosés",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0307",
+     "libelle": "Pichet 75cl vin",
+     "tva": "20",
+     "sousCategorie": "PICHETS",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": 0.0,
+     "prixDistincts": [],
+     "contenanceCl": 75.0
+    },
+    {
+     "ref": "2018",
+     "libelle": "Crémant Rosé",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0231",
+     "libelle": "\"Champagne Brut \"",
+     "tva": "20",
+     "sousCategorie": "Pétillants",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "2084",
+     "libelle": "TEQUILA",
+     "tva": "20",
+     "sousCategorie": "Digestifs",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "0004",
+     "libelle": "Vin de Paille",
+     "tva": "20",
+     "sousCategorie": "Spécialités Régionales",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1810",
+     "libelle": "Kir Pamplemousse",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1999",
+     "libelle": "Rosé Pamplemousse",
+     "tva": "20",
+     "sousCategorie": "Autres Apéritifs",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    },
+    {
+     "ref": "1998",
+     "libelle": "TEQUILA SUNRISE",
+     "tva": "20",
+     "sousCategorie": "COCKTAÏLS",
+     "qte": 0.0,
+     "caTtc": 0.0,
+     "prixMoyen": null,
+     "prixDistincts": [],
+     "contenanceCl": null
+    }
+   ]
+  }
+ }
+}

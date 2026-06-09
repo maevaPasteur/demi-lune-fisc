@@ -1,0 +1,628 @@
+{
+  "family": "vins-petillants",
+  "doses_hypotheses": { "verre_cl": 12, "pichet50_cl": 50, "pichet75_cl": 75, "demi_bouteille_cl": 37.5, "bouteille_cl": 75 },
+  "notes_conventions": "Verre de vin tranquille = 15 cl (indication explicite des cartes 08/02/21 et 20/07/21, doseRaw 'Verre 15 cl') ; verre de Crémant et de Vin Jaune = 12 cl (carte). Pichet 50 cl = 50 cl, pichet 75 cl = 75 cl, '1/2' = 37,5 cl, bouteille = 75 cl (62 cl pour le vin jaune). Boutons génériques 'Verre de vin' / 'Pichet 50/75 cl vin' = vin de base au pichet (BIB Aligoté blanc / BIB Côtes du Rhône rouge / BIB rosé Provence selon couleur ; rattachés ici au vin de base, couleur indéterminée). Plusieurs millésimes d'achat partagent un même bouton : tous listés (même clParUnite).",
+  "ventes": [
+    { "ref": "1734", "libelleCaisse": "Savagnin verre", "carteTitre": "Arbois Savagnin (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601164", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 15 },
+        { "achatCode": "601342", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 },
+        { "achatCode": "600705", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 },
+        { "achatCode": "601773", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2019 FRUITIERE VINICOLE ARBOIS", "clParUnite": 15 },
+        { "achatCode": "601261", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 },
+        { "achatCode": "601159", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2017 FRUITIERE VINICOLE ARBOIS", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte). Savagnin Arbois, plusieurs millésimes/domaines au verre." },
+
+    { "ref": "0228", "libelleCaisse": "Arbois Savagnin", "carteTitre": "Arbois Savagnin (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601164", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 },
+        { "achatCode": "601342", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "600705", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601773", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2019 FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 },
+        { "achatCode": "601261", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601159", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2017 FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl. Savagnin Arbois (mêmes achats que le verre)." },
+
+    { "ref": "2089", "libelleCaisse": "PICHET SAVAGNIN", "carteTitre": "Arbois Savagnin (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601164", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 50 },
+        { "achatCode": "601342", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 },
+        { "achatCode": "600705", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 },
+        { "achatCode": "601773", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2019 FRUITIERE VINICOLE ARBOIS", "clParUnite": 50 },
+        { "achatCode": "601261", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 },
+        { "achatCode": "601159", "achatLibelle": "ARBOIS SAVAGNIN 75 CL 2017 FRUITIERE VINICOLE ARBOIS", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 28). Savagnin Arbois." },
+
+    { "ref": "0306", "libelleCaisse": "Arbois Béthanie", "carteTitre": "Arbois Cuvée Béthanie (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "600963", "achatLibelle": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2018", "clParUnite": 75 },
+        { "achatCode": "601878", "achatLibelle": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2019", "clParUnite": 75 },
+        { "achatCode": "601153", "achatLibelle": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2020", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl. Cuvée Béthanie blanc Arbois (3 millésimes)." },
+
+    { "ref": "0229", "libelleCaisse": "1/2 Arbois Béthanie", "carteTitre": "Arbois Cuvée Béthanie (Bouteille 37,5 cl)",
+      "methode": "direct", "doseTotaleCl": 37.5,
+      "ingredients": [
+        { "achatCode": "601304", "achatLibelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2018", "clParUnite": 37.5 },
+        { "achatCode": "600725", "achatLibelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2020", "clParUnite": 37.5 },
+        { "achatCode": "601043", "achatLibelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2017", "clParUnite": 37.5 },
+        { "achatCode": "601877", "achatLibelle": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2019", "clParUnite": 37.5 }
+      ],
+      "confiance": "haute", "note": "demi-bouteille 37,5 cl. Béthanie achetée en demi-bouteilles (4 millésimes)." },
+
+    { "ref": "1737", "libelleCaisse": "Saint Véran Verre", "carteTitre": "Saint Véran (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601477", "achatLibelle": "SAINT VERAN 75 CL 2022 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 15 },
+        { "achatCode": "601862", "achatLibelle": "SAINT VERAN BLANC 75 CL 2022 CAVE DE LUGNY", "clParUnite": 15 },
+        { "achatCode": "661580", "achatLibelle": "SAINT VERAN 75 CL 2021 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 15 },
+        { "achatCode": "661546", "achatLibelle": "SAINT VERAN 75 CL 2020 LUPE CHOLET", "clParUnite": 15 },
+        { "achatCode": "661508", "achatLibelle": "SAINT VERAN 75 CL 2023 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 15 },
+        { "achatCode": "661567", "achatLibelle": "SAINT VERAN 75 CL 2020 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 15 },
+        { "achatCode": "601853", "achatLibelle": "SAINT VERAN 75 CL 2022 LES PRELUDES", "clParUnite": 15 },
+        { "achatCode": "601379", "achatLibelle": "SAINT VERAN 75 CL 2021 LES PRELUDES", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte). Saint Véran (Mâconnais), plusieurs caves/millésimes." },
+
+    { "ref": "1736", "libelleCaisse": "Saint Véran", "carteTitre": "Saint Véran (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601477", "achatLibelle": "SAINT VERAN 75 CL 2022 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 75 },
+        { "achatCode": "601862", "achatLibelle": "SAINT VERAN BLANC 75 CL 2022 CAVE DE LUGNY", "clParUnite": 75 },
+        { "achatCode": "661580", "achatLibelle": "SAINT VERAN 75 CL 2021 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 75 },
+        { "achatCode": "661546", "achatLibelle": "SAINT VERAN 75 CL 2020 LUPE CHOLET", "clParUnite": 75 },
+        { "achatCode": "661508", "achatLibelle": "SAINT VERAN 75 CL 2023 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 75 },
+        { "achatCode": "661567", "achatLibelle": "SAINT VERAN 75 CL 2020 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 75 },
+        { "achatCode": "601853", "achatLibelle": "SAINT VERAN 75 CL 2022 LES PRELUDES", "clParUnite": 75 },
+        { "achatCode": "601379", "achatLibelle": "SAINT VERAN 75 CL 2021 LES PRELUDES", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl. Saint Véran (mêmes achats que le verre)." },
+
+    { "ref": "2090", "libelleCaisse": "PICHET SAINT VERAN", "carteTitre": "Saint Véran (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601477", "achatLibelle": "SAINT VERAN 75 CL 2022 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 50 },
+        { "achatCode": "601862", "achatLibelle": "SAINT VERAN BLANC 75 CL 2022 CAVE DE LUGNY", "clParUnite": 50 },
+        { "achatCode": "661580", "achatLibelle": "SAINT VERAN 75 CL 2021 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 50 },
+        { "achatCode": "661546", "achatLibelle": "SAINT VERAN 75 CL 2020 LUPE CHOLET", "clParUnite": 50 },
+        { "achatCode": "661508", "achatLibelle": "SAINT VERAN 75 CL 2023 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 50 },
+        { "achatCode": "661567", "achatLibelle": "SAINT VERAN 75 CL 2020 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS", "clParUnite": 50 },
+        { "achatCode": "601853", "achatLibelle": "SAINT VERAN 75 CL 2022 LES PRELUDES", "clParUnite": 50 },
+        { "achatCode": "601379", "achatLibelle": "SAINT VERAN 75 CL 2021 LES PRELUDES", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 30). Saint Véran." },
+
+    { "ref": "2019", "libelleCaisse": "Arbois Chardonnay Le", "carteTitre": "Arbois Chardonnay (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601454", "achatLibelle": "ARBOIS CHARDONNAY 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "600711", "achatLibelle": "ARBOIS CHARDONNAY 75 CL 2018 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601970", "achatLibelle": "ARBOIS CHARDONNAY 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "600700", "achatLibelle": "ARBOIS CHARDONNAY 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601322", "achatLibelle": "ARBOIS CHARDONNAY 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601305", "achatLibelle": "ARBOIS CHARDONNAY 75 CL FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "Caisse 'Le' tronqué pour 'Le verre'? Non: prix 24,9-29 = bouteille 75 cl (carte). Arbois Chardonnay (plusieurs millésimes)." },
+
+    { "ref": "2020", "libelleCaisse": "Chablis", "carteTitre": "Chablis St Martin (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601401", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2022", "clParUnite": 75 },
+        { "achatCode": "601253", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2021", "clParUnite": 75 },
+        { "achatCode": "616624", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2023", "clParUnite": 75 },
+        { "achatCode": "661661", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2020", "clParUnite": 75 },
+        { "achatCode": "661583", "achatLibelle": "CHABLIS 75 CL L.MOREAU 2021 DOMAINE LOUIS MOREAU", "clParUnite": 75 },
+        { "achatCode": "601610", "achatLibelle": "CHABLIS 75 CL LE FINAGE 2022 LA CHABLISIENNE", "clParUnite": 75 },
+        { "achatCode": "630657", "achatLibelle": "PETIT CHABLIS 75 CL 2021 DOMAINE LOUIS MOREAU", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 39,5). Chablis, plusieurs maisons/millésimes." },
+
+    { "ref": "2021", "libelleCaisse": "Chablis Le Verre", "carteTitre": "Chablis (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601401", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2022", "clParUnite": 15 },
+        { "achatCode": "601253", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2021", "clParUnite": 15 },
+        { "achatCode": "616624", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2023", "clParUnite": 15 },
+        { "achatCode": "661661", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2020", "clParUnite": 15 },
+        { "achatCode": "661583", "achatLibelle": "CHABLIS 75 CL L.MOREAU 2021 DOMAINE LOUIS MOREAU", "clParUnite": 15 },
+        { "achatCode": "601610", "achatLibelle": "CHABLIS 75 CL LE FINAGE 2022 LA CHABLISIENNE", "clParUnite": 15 },
+        { "achatCode": "630657", "achatLibelle": "PETIT CHABLIS 75 CL 2021 DOMAINE LOUIS MOREAU", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (prix 7,9 = tarif verre maison). Chablis." },
+
+    { "ref": "2098", "libelleCaisse": "Pichet Chablis", "carteTitre": null,
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601401", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2022", "clParUnite": 50 },
+        { "achatCode": "601253", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2021", "clParUnite": 50 },
+        { "achatCode": "616624", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2023", "clParUnite": 50 },
+        { "achatCode": "661661", "achatLibelle": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2020", "clParUnite": 50 },
+        { "achatCode": "661583", "achatLibelle": "CHABLIS 75 CL L.MOREAU 2021 DOMAINE LOUIS MOREAU", "clParUnite": 50 },
+        { "achatCode": "601610", "achatLibelle": "CHABLIS 75 CL LE FINAGE 2022 LA CHABLISIENNE", "clParUnite": 50 }
+      ],
+      "confiance": "basse", "note": "pichet (prix 30) non listé carte ; convention pichet 50 cl. Chablis." },
+
+    { "ref": "1825", "libelleCaisse": "Gewurztraminer Le ve", "carteTitre": "Gewurztraminer (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601018", "achatLibelle": "GEWURZTRAMINER 75 CL SORCIERES DOMAINE LES SORCIERES 2018 DOPFF & IRION", "clParUnite": 15 },
+        { "achatCode": "600911", "achatLibelle": "GEWURZTRAMINER 75 CL SORCIERES", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte). Gewurztraminer Les Sorcières." },
+
+    { "ref": "1823", "libelleCaisse": "Alsace Gewurztramine", "carteTitre": "Gewurztraminer (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601018", "achatLibelle": "GEWURZTRAMINER 75 CL SORCIERES DOMAINE LES SORCIERES 2018 DOPFF & IRION", "clParUnite": 75 },
+        { "achatCode": "600911", "achatLibelle": "GEWURZTRAMINER 75 CL SORCIERES", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 35). Gewurztraminer." },
+
+    { "ref": "2092", "libelleCaisse": "PICHET GEWURZTRAMINE", "carteTitre": "Gewurztraminer (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601018", "achatLibelle": "GEWURZTRAMINER 75 CL SORCIERES DOMAINE LES SORCIERES 2018 DOPFF & IRION", "clParUnite": 50 },
+        { "achatCode": "600911", "achatLibelle": "GEWURZTRAMINER 75 CL SORCIERES", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 27). Gewurztraminer." },
+
+    { "ref": "2022", "libelleCaisse": "H.COTES DE NUITS", "carteTitre": "Hautes Côtes de Nuits blanc (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601416", "achatLibelle": "HTES CTES DE NUITS BLANC 75 CL LUPE CHOLET 2017", "clParUnite": 75 },
+        { "achatCode": "661533", "achatLibelle": "HAUTES COTES DE NUITS 75 CL LUPE CHOLET 2022", "clParUnite": 75 }
+      ],
+      "confiance": "moyenne", "note": "Classé Vins Blancs (prix 39,5). HC de Nuits blanc Lupé-Cholet. Le code 661533 (sans couleur) est probablement le même blanc." },
+
+    { "ref": "2109", "libelleCaisse": "MACON bouteille", "carteTitre": "Mâcon Roche blanche (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "661715", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2022", "clParUnite": 75 },
+        { "achatCode": "600562", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2021", "clParUnite": 75 },
+        { "achatCode": "602118", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2023", "clParUnite": 75 },
+        { "achatCode": "601855", "achatLibelle": "MACON LUGNY ST PIERRE BLC 2022 CAVE DE LUGNY CAVE DE LUGNY", "clParUnite": 75 },
+        { "achatCode": "661552", "achatLibelle": "MACON LUGNY 75 CL 2020 LES CHARMES DE LUPE CHOLET", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 31). Mâcon blanc (Roche Blanche principal ; Lugny possibles)." },
+
+    { "ref": "2110", "libelleCaisse": "MACON VERRE", "carteTitre": "Mâcon Roche blanche (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "661715", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2022", "clParUnite": 15 },
+        { "achatCode": "600562", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2021", "clParUnite": 15 },
+        { "achatCode": "602118", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2023", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte prix 6,3). Mâcon Roche Blanche." },
+
+    { "ref": "2125", "libelleCaisse": "PICHET MACON", "carteTitre": "Mâcon Roche blanche (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "661715", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2022", "clParUnite": 50 },
+        { "achatCode": "600562", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2021", "clParUnite": 50 },
+        { "achatCode": "602118", "achatLibelle": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2023", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 21). Mâcon Roche Blanche." },
+
+    { "ref": "2111", "libelleCaisse": "GASCOGNE Gd PAVOIS", "carteTitre": "Côtes de Gascogne (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "600487", "achatLibelle": "GRAND PAVOIS N°8 BLANC 75 CL PETIT ET GROS MANSENG COTES DE GASCOGNE", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 22). Côtes de Gascogne Grand Pavois n°8 blanc." },
+
+    { "ref": "1828", "libelleCaisse": "Arbois Trousseau Le", "carteTitre": "Arbois Trousseau (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601616", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 },
+        { "achatCode": "601166", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 },
+        { "achatCode": "601934", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2023 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 },
+        { "achatCode": "601453", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 },
+        { "achatCode": "600722", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 15 },
+        { "achatCode": "601658", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2019 FRUITIERE VINICOLE ARBOIS", "clParUnite": 15 },
+        { "achatCode": "600921", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "'Le' = 'Le verre' tronqué, 15 cl (carte). Arbois Trousseau rouge, plusieurs millésimes." },
+
+    { "ref": "1827", "libelleCaisse": "Arbois Trousseau Bou", "carteTitre": "Arbois Trousseau (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601616", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601166", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601934", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2023 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "601453", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 },
+        { "achatCode": "600722", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 },
+        { "achatCode": "601658", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2019 FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 },
+        { "achatCode": "600921", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "'Bou' = bouteille 75 cl. Arbois Trousseau (mêmes achats que le verre/pichet)." },
+
+    { "ref": "2086", "libelleCaisse": "PiCHET TROUSSEAU", "carteTitre": "Arbois Trousseau (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601616", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 },
+        { "achatCode": "601166", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 },
+        { "achatCode": "601934", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2023 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 },
+        { "achatCode": "601453", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 },
+        { "achatCode": "600722", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 50 },
+        { "achatCode": "601658", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2019 FRUITIERE VINICOLE ARBOIS", "clParUnite": 50 },
+        { "achatCode": "600921", "achatLibelle": "ARBOIS TROUSSEAU 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 28). Arbois Trousseau." },
+
+    { "ref": "1829", "libelleCaisse": "C du Rhone St  Josep", "carteTitre": "Saint Joseph (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601680", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2022 LES MARCHES DE GRANIT OGIER", "clParUnite": 75 },
+        { "achatCode": "601460", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2021 LES MARCHES DE GRANIT OGIER", "clParUnite": 75 },
+        { "achatCode": "661679", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2019 LES MARCHES DE GRANIT OGIER", "clParUnite": 75 },
+        { "achatCode": "602080", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2023 LES MARCHES DE GRANIT OGIER", "clParUnite": 75 },
+        { "achatCode": "601354", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES MARCHES DE GRANIT OGIER", "clParUnite": 75 },
+        { "achatCode": "661497", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2018 LES MARCHES DE GRANIT OGIER", "clParUnite": 75 },
+        { "achatCode": "601088", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES PIERRES SECHES MAISON YVES CUILLERON", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "'St Josep' = Saint Joseph, bouteille 75 cl (prix 36). Libellé caisse 'C du Rhone' approximatif (Saint Joseph = vallée du Rhône). Plusieurs millésimes Ogier + Cuilleron." },
+
+    { "ref": "1830", "libelleCaisse": "C du  Rhone St Josep", "carteTitre": "Saint Joseph (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601680", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2022 LES MARCHES DE GRANIT OGIER", "clParUnite": 15 },
+        { "achatCode": "601460", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2021 LES MARCHES DE GRANIT OGIER", "clParUnite": 15 },
+        { "achatCode": "661679", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2019 LES MARCHES DE GRANIT OGIER", "clParUnite": 15 },
+        { "achatCode": "602080", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2023 LES MARCHES DE GRANIT OGIER", "clParUnite": 15 },
+        { "achatCode": "601354", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES MARCHES DE GRANIT OGIER", "clParUnite": 15 },
+        { "achatCode": "661497", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2018 LES MARCHES DE GRANIT OGIER", "clParUnite": 15 },
+        { "achatCode": "601088", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES PIERRES SECHES MAISON YVES CUILLERON", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte ; prix 7,2). Saint Joseph rouge." },
+
+    { "ref": "2085", "libelleCaisse": "pichet Saint Joseph", "carteTitre": "Saint Joseph (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601680", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2022 LES MARCHES DE GRANIT OGIER", "clParUnite": 50 },
+        { "achatCode": "601460", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2021 LES MARCHES DE GRANIT OGIER", "clParUnite": 50 },
+        { "achatCode": "661679", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2019 LES MARCHES DE GRANIT OGIER", "clParUnite": 50 },
+        { "achatCode": "602080", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2023 LES MARCHES DE GRANIT OGIER", "clParUnite": 50 },
+        { "achatCode": "601354", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES MARCHES DE GRANIT OGIER", "clParUnite": 50 },
+        { "achatCode": "661497", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2018 LES MARCHES DE GRANIT OGIER", "clParUnite": 50 },
+        { "achatCode": "601088", "achatLibelle": "SAINT JOSEPH ROUGE 75 CL 2020 LES PIERRES SECHES MAISON YVES CUILLERON", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 28-32). Saint Joseph rouge." },
+
+    { "ref": "1831", "libelleCaisse": "Beaujolais Moulin à (bouteille)", "carteTitre": "Moulin à Vent (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601538", "achatLibelle": "MOULIN A VENT 75 CL 2018 DOMAINE DE BRIANTE", "clParUnite": 75 },
+        { "achatCode": "661675", "achatLibelle": "MOULIN A VENT 75 CL 2017 DOMAINE DE BRIANTE", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "Beaujolais Moulin à Vent, prix 29 = bouteille 75 cl (carte). Domaine de Briante." },
+
+    { "ref": "1832", "libelleCaisse": "Beaujolais Moulin à (verre)", "carteTitre": "Moulin à Vent (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601538", "achatLibelle": "MOULIN A VENT 75 CL 2018 DOMAINE DE BRIANTE", "clParUnite": 15 },
+        { "achatCode": "661675", "achatLibelle": "MOULIN A VENT 75 CL 2017 DOMAINE DE BRIANTE", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "Moulin à Vent, prix 5,8 = verre 15 cl (carte). Même millésimes que la bouteille." },
+
+    { "ref": "2087", "libelleCaisse": "PICHET MOULIN A VENT", "carteTitre": "Moulin à Vent (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601538", "achatLibelle": "MOULIN A VENT 75 CL 2018 DOMAINE DE BRIANTE", "clParUnite": 50 },
+        { "achatCode": "661675", "achatLibelle": "MOULIN A VENT 75 CL 2017 DOMAINE DE BRIANTE", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 26). Moulin à Vent." },
+
+    { "ref": "2025", "libelleCaisse": "H.C.B BEAUNE BTL", "carteTitre": "Hautes Côtes de Beaune (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601667", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN", "clParUnite": 75 },
+        { "achatCode": "601346", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN", "clParUnite": 75 },
+        { "achatCode": "630253", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021", "clParUnite": 75 },
+        { "achatCode": "601199", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "Hautes Côtes de Beaune rouge, BTL = bouteille 75 cl (prix 39,5). Domaine Germain (rouge)." },
+
+    { "ref": "2093", "libelleCaisse": "H.C.BEAUNE BOUTEILLE", "carteTitre": "Hautes Côtes de Beaune (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601667", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN", "clParUnite": 75 },
+        { "achatCode": "601346", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN", "clParUnite": 75 },
+        { "achatCode": "630253", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021", "clParUnite": 75 },
+        { "achatCode": "601199", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018", "clParUnite": 75 }
+      ],
+      "confiance": "moyenne", "note": "Doublon caisse de 2025 (H.C.Beaune bouteille, prix 39,5). Même rattachement HC Beaune rouge ; à dédoublonner au stade des totaux ventes." },
+
+    { "ref": "2026", "libelleCaisse": "H.C.DE BEAUNE  VERRE", "carteTitre": "Hautes Côtes de Beaune (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601667", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN", "clParUnite": 15 },
+        { "achatCode": "601346", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN", "clParUnite": 15 },
+        { "achatCode": "630253", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021", "clParUnite": 15 },
+        { "achatCode": "601199", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte prix 9,5 ; caisse 7,9). HC Beaune rouge." },
+
+    { "ref": "1822", "libelleCaisse": "VERRE H.C.DE BEAUNE", "carteTitre": "Hautes Côtes de Beaune (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "601667", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN", "clParUnite": 15 },
+        { "achatCode": "601346", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN", "clParUnite": 15 },
+        { "achatCode": "630253", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021", "clParUnite": 15 },
+        { "achatCode": "601199", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "Doublon ancien bouton du verre HC Beaune (prix 7,9). Même rattachement ; à dédoublonner avec 2026 au stade des totaux." },
+
+    { "ref": "2088", "libelleCaisse": "PICHET C.DE BEAUNE R", "carteTitre": "Hautes Côtes de Beaune (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601667", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN", "clParUnite": 50 },
+        { "achatCode": "601346", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN", "clParUnite": 50 },
+        { "achatCode": "630253", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021", "clParUnite": 50 },
+        { "achatCode": "601199", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl rouge (R) HC Beaune (carte prix 32)." },
+
+    { "ref": "2126", "libelleCaisse": "PICHET HCB", "carteTitre": "Hautes Côtes de Beaune (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "601667", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN", "clParUnite": 50 },
+        { "achatCode": "601346", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN", "clParUnite": 50 },
+        { "achatCode": "630253", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021", "clParUnite": 50 },
+        { "achatCode": "601199", "achatLibelle": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018", "clParUnite": 50 }
+      ],
+      "confiance": "moyenne", "note": "Nouveau bouton (2024-2025) du pichet HC Beaune rouge (prix 32). Classé Vins Rouges. Doublon fonctionnel de 2088." },
+
+    { "ref": "2091", "libelleCaisse": "PICHET C.DE BEAUNE B", "carteTitre": "Hautes Côtes de Beaune blanc (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "600425", "achatLibelle": "HTES COTES DE BEAUNE BLC 75 CL DOMAINE GERMAIN 2019", "clParUnite": 50 }
+      ],
+      "confiance": "basse", "note": "Pichet C.de Beaune BLANC (B), prix 30. Seul achat HC Beaune blanc disponible (600425, exercice 2022-2023 uniquement) ; le bouton est surtout vendu en 2023-2024 (259 u) sans achat blanc correspondant cet exercice -> probable report d'étiquette/contenant. Rattachement nominal au HC Beaune blanc." },
+
+    { "ref": "1859", "libelleCaisse": "BORD.  MOUTON CADET", "carteTitre": "Mouton Cadet (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "661236", "achatLibelle": "BORDEAUX SUPERIEUR 75 CL CHATEAU GRAND RENOM ANTOINE MOUEIX", "clParUnite": 75 }
+      ],
+      "confiance": "basse", "note": "Bordeaux Mouton Cadet à la carte 08/02/21, mais AUCUN achat 'Mouton Cadet' au périmètre. Seul Bordeaux acheté = Ch. Grand Renom (661236). Rattachement Bordeaux par défaut, faible (cépage/marque non identiques)." },
+
+    { "ref": "1826", "libelleCaisse": "Clair de Rosé", "carteTitre": "Clair de Rosé (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601297", "achatLibelle": "ROSE LES JAMELLES 75 CL 2021 PAYS D'OC CLAIR DE ROSE", "clParUnite": 75 },
+        { "achatCode": "601641", "achatLibelle": "ROSE LES JAMELLES 75 CL 2022 PAYS D'OC CLAIR DE ROSE", "clParUnite": 75 },
+        { "achatCode": "600876", "achatLibelle": "ROSE GRENACHE JAMELLES 75 CL JAMELLES 2020 CLAIR DE ROSE BADET CLEMENT ET COMPAGN", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 18). Rosé Les Jamelles 'Clair de Rosé', plusieurs millésimes." },
+
+    { "ref": "2097", "libelleCaisse": "Bohème", "carteTitre": null,
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601239", "achatLibelle": "BOHEME GRIS 75 CL 2021 IGP SABLE DE CAMARGUE", "clParUnite": 75 },
+        { "achatCode": "661492", "achatLibelle": "BOHEME GRIS 2020 75 CL IGP SABLE DE CAMARGUE 2020", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 29). Bohème Gris rosé (Sable de Camargue), 2 millésimes." },
+
+    { "ref": "2081", "libelleCaisse": "MIRAVAL", "carteTitre": "Miraval (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "661441", "achatLibelle": "MIRAVAL ROSE 75 CL 2020 CÔTES DE PROVENCE AOP", "clParUnite": 75 },
+        { "achatCode": "601289", "achatLibelle": "MIRAVAL ROSE 75 CL 2021 CÔTES DE PROVENCE AOP", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 45). Miraval rosé Côtes de Provence, 2 millésimes." },
+
+    { "ref": "2107", "libelleCaisse": "Chateau Minuty", "carteTitre": "Côtes-de-Provence Minuty (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "630081", "achatLibelle": "COTES DE PROVENCE ROSE 75 CL M DE MINUTY 2022", "clParUnite": 75 },
+        { "achatCode": "630079", "achatLibelle": "COTES DE PROVENCE ROSE 75 CL M DE MINUTY 2021", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 45). M de Minuty rosé, 2 millésimes." },
+
+    { "ref": "2108", "libelleCaisse": "DOMAINE LE PIVE", "carteTitre": "Domaine Le Pive Bio (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601882", "achatLibelle": "ROSE DOM LE PIVE 2023 75 CL AOP SABLE DE CAMARGUE VIN BIO", "clParUnite": 75 },
+        { "achatCode": "601439", "achatLibelle": "ROSE DOM LE PIVE 2022 75 CL IGP SABLE DE CAMARGUE VIN BIO", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 29). Domaine Le Pive rosé bio, 2 millésimes." },
+
+    { "ref": "0367", "libelleCaisse": "Vin jaune", "carteTitre": "Vin Jaune (12 cl)",
+      "methode": "dose", "doseTotaleCl": 12,
+      "ingredients": [
+        { "achatCode": "601489", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2016 FRUITIERE VINICOLE ARBOIS AOC", "clParUnite": 12 },
+        { "achatCode": "661576", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2015 FRUITIERE VINICOLE ARBOIS AOC", "clParUnite": 12 },
+        { "achatCode": "661457", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2017 FRUITIERE VINICOLE ARBOIS", "clParUnite": 12 },
+        { "achatCode": "601892", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2017 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 12 },
+        { "achatCode": "601249", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2015 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 12 },
+        { "achatCode": "661509", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2014 FRUITIERE VINICOLE ARBOIS AOC", "clParUnite": 12 },
+        { "achatCode": "601462", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2016 DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 12 },
+        { "achatCode": "601158", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2014", "clParUnite": 12 },
+        { "achatCode": "661621", "achatLibelle": "VIN JAUNE 62 CL 2016 MAISON FREDERIC LORNET", "clParUnite": 12 }
+      ],
+      "confiance": "moyenne", "note": "verre de vin jaune 12 cl (carte). Bouteille clavelin 62 cl. Plusieurs millésimes/domaines." },
+
+    { "ref": "0348", "libelleCaisse": "Crémant", "carteTitre": "Crémant du Jura (Verre 12 cl)",
+      "methode": "dose", "doseTotaleCl": 12,
+      "ingredients": [
+        { "achatCode": "600716", "achatLibelle": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS", "clParUnite": 12 }
+      ],
+      "confiance": "moyenne", "note": "verre de crémant 12 cl (carte). Crémant du Jura blanc (75 cl)." },
+
+    { "ref": "1898", "libelleCaisse": "Crément / Jura VERRE", "carteTitre": "Crémant du Jura (Verre 12 cl)",
+      "methode": "dose", "doseTotaleCl": 12,
+      "ingredients": [
+        { "achatCode": "600716", "achatLibelle": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS", "clParUnite": 12 }
+      ],
+      "confiance": "moyenne", "note": "Nouveau bouton 2024-2025 du verre de crémant (prix 5). Doublon fonctionnel de 0348." },
+
+    { "ref": "0362", "libelleCaisse": "Crémant du Jura", "carteTitre": "Crémant du Jura (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "600716", "achatLibelle": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl (prix 24-29,9). Crémant du Jura blanc." },
+
+    { "ref": "1897", "libelleCaisse": "Crément du Jura", "carteTitre": "Crémant du Jura (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "600716", "achatLibelle": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS", "clParUnite": 75 }
+      ],
+      "confiance": "moyenne", "note": "bouteille 75 cl crémant (prix 24). Doublon fonctionnel de 0362." },
+
+    { "ref": "2018", "libelleCaisse": "Crémant Rosé", "carteTitre": null,
+      "methode": "inconnu", "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse", "note": "Crémant Rosé (prix 26) : AUCUN crémant rosé acheté au périmètre (seul crémant acheté = 600716 blanc). Non rattachable de façon fiable." },
+
+    { "ref": "2103", "libelleCaisse": "Champagne", "carteTitre": null,
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "600729", "achatLibelle": "CHAMPAGNE R DE RUINART 75 CL", "clParUnite": 75 },
+        { "achatCode": "609206", "achatLibelle": "CHAMPAGNE JEAN SANDRIN 75 CL BRUT TRADITION", "clParUnite": 75 },
+        { "achatCode": "609199", "achatLibelle": "CHAMPAGNE LANSON 75 CL BLACK LABEL", "clParUnite": 75 }
+      ],
+      "confiance": "moyenne", "note": "bouteille champagne 75 cl. Prix caisse mêlés (9,2 = coupe possible / 50-55 = bouteille). Plusieurs marques achetées (Ruinart, Sandrin, Lanson)." },
+
+    { "ref": "0231", "libelleCaisse": "Champagne Brut", "carteTitre": null,
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "600729", "achatLibelle": "CHAMPAGNE R DE RUINART 75 CL", "clParUnite": 75 },
+        { "achatCode": "609206", "achatLibelle": "CHAMPAGNE JEAN SANDRIN 75 CL BRUT TRADITION", "clParUnite": 75 },
+        { "achatCode": "609199", "achatLibelle": "CHAMPAGNE LANSON 75 CL BLACK LABEL", "clParUnite": 75 }
+      ],
+      "confiance": "basse", "note": "Bouton 'Champagne Brut' (2023-2025, faibles qtés, prix 10/46). Doublon fonctionnel de 2103, même rattachement champagne 75 cl." },
+
+    { "ref": "0225", "libelleCaisse": "Cidre Bouché Brut", "carteTitre": "Cidre Breton La Bolée d'Armorique Brut (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "403200", "achatLibelle": "CIDRE BRUT BOLEE ARMORIQ 75 CL", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl brut (prix 14-16). Cidre Bolée d'Armorique brut." },
+
+    { "ref": "0226", "libelleCaisse": "Cidre Bouché Doux", "carteTitre": "Cidre Doux (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "403201", "achatLibelle": "CIDRE DOUX CONTEMPORAINE 75 CL CIDRERIE FAMILIALE SORRE", "clParUnite": 75 },
+        { "achatCode": "403120", "achatLibelle": "CIDRE DOUX BOLEE ARMORIQ 75 CL", "clParUnite": 75 },
+        { "achatCode": "465163", "achatLibelle": "CIDRE VAL DE RANCE DOUX 75 CL", "clParUnite": 75 }
+      ],
+      "confiance": "haute", "note": "bouteille 75 cl doux (prix 14-16). Cidres doux 75 cl (Contemporaine/Bolée/Val de Rance)." },
+
+    { "ref": "2008", "libelleCaisse": "cidre la Mordue", "carteTitre": "Cidre La Mordue Hard Cider (Bouteille 27/27,5 cl)",
+      "methode": "direct", "doseTotaleCl": 27,
+      "ingredients": [
+        { "achatCode": "403136", "achatLibelle": "CIDRE LA MORDUE ORIGINAL 27 CL", "clParUnite": 27 }
+      ],
+      "confiance": "haute", "note": "petite bouteille 27 cl (prix 3,9-4). Cidre La Mordue." },
+
+    { "ref": "0307", "libelleCaisse": "Pichet 75cl vin", "carteTitre": "Pichet 75 cl (vin de base)",
+      "methode": "dose", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "603040", "achatLibelle": "BIB BOURGOGNE ALIGOTE BUXY 10L LA COMPAGNIE DE BURGONDIE", "clParUnite": 75 },
+        { "achatCode": "603512", "achatLibelle": "BIB COTES DU RHONE ROUGE 10 L ELEMENTS TERRA LAUDUN CHUSCLAN VIGNERON", "clParUnite": 75 },
+        { "achatCode": "603042", "achatLibelle": "BIB COTES DE PROV ROSE 10 L CAP DES PINS MTRES VIGN DE ST TROPEZ", "clParUnite": 75 },
+        { "achatCode": "600731", "achatLibelle": "BIB BLANC 10 L RAVELIN 13° VINS ANDRE BONNOT", "clParUnite": 75 },
+        { "achatCode": "601956", "achatLibelle": "BIB COTES DE PROVENCE 10 L ROSE HT MASTEREL GRANDE RESERV", "clParUnite": 75 },
+        { "achatCode": "605168", "achatLibelle": "BIB GARDILLES ROSE 10 L IGP GARD SCA CELLIER DS CHARTREUX", "clParUnite": 75 },
+        { "achatCode": "600933", "achatLibelle": "RAVELIN BLANC MVPCE 13° 99 CL VINS ANDRE BONNOT", "clParUnite": 75 },
+        { "achatCode": "600867", "achatLibelle": "RAVELIN BLANC MVPCE 75 CL 13° VINS ANDRE BONNOT", "clParUnite": 75 }
+      ],
+      "confiance": "basse", "note": "Pichet générique 75 cl = vin de base au BIB (Aligoté blanc / CdR rouge / rosé Provence) ou Ravelin. Couleur indéterminée -> tous les vins de base listés." },
+
+    { "ref": "2121", "libelleCaisse": "Pichet 50cl vin", "carteTitre": "Pichet 50 cl (vin de base)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "603040", "achatLibelle": "BIB BOURGOGNE ALIGOTE BUXY 10L LA COMPAGNIE DE BURGONDIE", "clParUnite": 50 },
+        { "achatCode": "603512", "achatLibelle": "BIB COTES DU RHONE ROUGE 10 L ELEMENTS TERRA LAUDUN CHUSCLAN VIGNERON", "clParUnite": 50 },
+        { "achatCode": "603042", "achatLibelle": "BIB COTES DE PROV ROSE 10 L CAP DES PINS MTRES VIGN DE ST TROPEZ", "clParUnite": 50 },
+        { "achatCode": "600731", "achatLibelle": "BIB BLANC 10 L RAVELIN 13° VINS ANDRE BONNOT", "clParUnite": 50 },
+        { "achatCode": "601956", "achatLibelle": "BIB COTES DE PROVENCE 10 L ROSE HT MASTEREL GRANDE RESERV", "clParUnite": 50 },
+        { "achatCode": "605168", "achatLibelle": "BIB GARDILLES ROSE 10 L IGP GARD SCA CELLIER DS CHARTREUX", "clParUnite": 50 },
+        { "achatCode": "600933", "achatLibelle": "RAVELIN BLANC MVPCE 13° 99 CL VINS ANDRE BONNOT", "clParUnite": 50 },
+        { "achatCode": "600867", "achatLibelle": "RAVELIN BLANC MVPCE 75 CL 13° VINS ANDRE BONNOT", "clParUnite": 50 }
+      ],
+      "confiance": "basse", "note": "Pichet générique 50 cl = vin de base au BIB (couleur indéterminée)." },
+
+    { "ref": "0309", "libelleCaisse": "Verre de vin", "carteTitre": "Verre vin de base 15 cl",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "603040", "achatLibelle": "BIB BOURGOGNE ALIGOTE BUXY 10L LA COMPAGNIE DE BURGONDIE", "clParUnite": 15 },
+        { "achatCode": "603512", "achatLibelle": "BIB COTES DU RHONE ROUGE 10 L ELEMENTS TERRA LAUDUN CHUSCLAN VIGNERON", "clParUnite": 15 },
+        { "achatCode": "603042", "achatLibelle": "BIB COTES DE PROV ROSE 10 L CAP DES PINS MTRES VIGN DE ST TROPEZ", "clParUnite": 15 },
+        { "achatCode": "600731", "achatLibelle": "BIB BLANC 10 L RAVELIN 13° VINS ANDRE BONNOT", "clParUnite": 15 }
+      ],
+      "confiance": "basse", "note": "Verre de vin générique = vin de base au verre 15 cl (carte). Couleur indéterminée (BIB Aligoté/CdR/rosé)." },
+
+    { "ref": "2112", "libelleCaisse": "Verre ALIGOTE", "carteTitre": "Bourgogne Aligoté (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "603040", "achatLibelle": "BIB BOURGOGNE ALIGOTE BUXY 10L LA COMPAGNIE DE BURGONDIE", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte prix 3,9). Bourgogne Aligoté = BIB Buxy 10 L." },
+
+    { "ref": "2113", "libelleCaisse": "PICHET ALIGOTE 50cL", "carteTitre": "Bourgogne Aligoté (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "603040", "achatLibelle": "BIB BOURGOGNE ALIGOTE BUXY 10L LA COMPAGNIE DE BURGONDIE", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (libellé + carte prix 10,5). Bourgogne Aligoté BIB." },
+
+    { "ref": "2114", "libelleCaisse": "Pichet CdR CHUSCLAN", "carteTitre": "Côtes-du-Rhône rouge (Pichet 50 cl)",
+      "methode": "dose", "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "603512", "achatLibelle": "BIB COTES DU RHONE ROUGE 10 L ELEMENTS TERRA LAUDUN CHUSCLAN VIGNERON", "clParUnite": 50 }
+      ],
+      "confiance": "haute", "note": "pichet 50 cl (carte prix 9,5). Côtes du Rhône rouge Chusclan = BIB CdR 10 L." },
+
+    { "ref": "2115", "libelleCaisse": "VERRE CHUSCLAN", "carteTitre": "Côtes-du-Rhône rouge (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "603512", "achatLibelle": "BIB COTES DU RHONE ROUGE 10 L ELEMENTS TERRA LAUDUN CHUSCLAN VIGNERON", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl (carte prix 3,9). Côtes du Rhône rouge Chusclan BIB." },
+
+    { "ref": "2116", "libelleCaisse": "Verre Rosé", "carteTitre": "Côtes de Provence rosé (Verre 15 cl)",
+      "methode": "dose", "doseTotaleCl": 15,
+      "ingredients": [
+        { "achatCode": "603042", "achatLibelle": "BIB COTES DE PROV ROSE 10 L CAP DES PINS MTRES VIGN DE ST TROPEZ", "clParUnite": 15 },
+        { "achatCode": "601956", "achatLibelle": "BIB COTES DE PROVENCE 10 L ROSE HT MASTEREL GRANDE RESERV", "clParUnite": 15 },
+        { "achatCode": "605168", "achatLibelle": "BIB GARDILLES ROSE 10 L IGP GARD SCA CELLIER DS CHARTREUX", "clParUnite": 15 },
+        { "achatCode": "665048", "achatLibelle": "BIB COTES DE PROVENCE 3 L ROSE HAUT MASTEREL", "clParUnite": 15 }
+      ],
+      "confiance": "moyenne", "note": "verre 15 cl rosé de base (carte prix 3,9). BIB rosé Provence/Gard." },
+
+    { "ref": "???", "libelleCaisse": "LA COTE ROUGE", "carteTitre": "La Côte rouge (Bouteille 75 cl)",
+      "methode": "direct", "doseTotaleCl": 75,
+      "ingredients": [
+        { "achatCode": "601348", "achatLibelle": "LA COTE ROUGE 75 CL 2021 AOP LA CLAPE CHATEAU DE LA NEGLY", "clParUnite": 75 },
+        { "achatCode": "601733", "achatLibelle": "LA COTE ROUGE 75 CL 2022 AOP LA CLAPE CHATEAU DE LA NEGLY", "clParUnite": 75 }
+      ],
+      "confiance": "basse", "note": "Bouton sans ref/qte exploitable (ref '???', qte 0). Achats existants (La Clape Négly 2021/2022, 2 millésimes) ; rattachement nominal, ventes non quantifiées en caisse." }
+  ],
+  "achatsDuPerimetreNonVendus": [
+    { "code": "601348", "libelle": "LA COTE ROUGE 75 CL 2021 AOP LA CLAPE CHATEAU DE LA NEGLY", "note": "Acheté (La Clape) mais bouton caisse 'LA COTE ROUGE' à 0 vente exploitable -> pas de ventes valorisables." },
+    { "code": "601733", "libelle": "LA COTE ROUGE 75 CL 2022 AOP LA CLAPE CHATEAU DE LA NEGLY", "note": "Idem 601348." },
+    { "code": "600702", "libelle": "ARBOIS ROUGE TRADITION 75 CL DOM. JEAN-LOUIS TISSOT 2023", "note": "Arbois rouge tradition : aucun bouton caisse dédié (différent du Trousseau). Possiblement écoulé via 'Verre de vin'/pichet rouge ou non vendu." },
+    { "code": "600425", "libelle": "HTES COTES DE BEAUNE BLC 75 CL DOMAINE GERMAIN 2019", "note": "HC Beaune BLANC : achat 2022-2023 seulement. Sert nominalement au pichet 'C.de Beaune B' (2091) mais ventes surtout postérieures sans achat -> quasi non vendu en propre." },
+    { "code": "601674", "libelle": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022", "note": "Chardonnay Les Jamelles : aucun bouton caisse correspondant. Probable vin de base blanc non identifié ou non vendu." },
+    { "code": "601235", "libelle": "CHARDONNAY RESERVE 75 CL 2021 MAISON LAROCHE", "note": "Chardonnay Réserve Laroche : aucun bouton caisse dédié." },
+    { "code": "662000", "libelle": "VIOGNIER 75 CL 2023 IGP D'OC VIN BIO DOMAINE LA MAURINE", "note": "Viognier : aucun bouton caisse dédié." },
+    { "code": "601281", "libelle": "GOURMANDISE ROSE 75 CL 2021 IGP MEDITERRANEE VIGNERON DE SAINT TROPEZ", "note": "Rosé Gourmandise : pas de bouton dédié ; probable rosé de base/pichet rosé non identifié." },
+    { "code": "600755", "libelle": "GOURMANDISE ROSE 75 CL 2023 IGP MEDITERRANEE VIGNERON DE SAINT TROPEZ", "note": "Idem 601281." },
+    { "code": "601095", "libelle": "L'ESPRIT GASSIER ROSE 75 CL CÔTES DE PROVENCE AOP 2021 CHATEAU GASSIER", "note": "Rosé Esprit Gassier : pas de bouton dédié." },
+    { "code": "601823", "libelle": "L'ESPRIT GASSIER ROSE 75 CL CÔTES DE PROVENCE AOP 2023 CHATEAU GASSIER", "note": "Idem 601095." },
+    { "code": "601861", "libelle": "TERRASSES ROSE 75 CL 2023 IGP PAYS D'OC CHATEAU DE LA NEGLY", "note": "Rosé Terrasses Négly : pas de bouton dédié." },
+    { "code": "601615", "libelle": "ASTERIDES ROSE 75 CL 2022 IGP PAYS D'OC CHATEAU DE LA NEGLY", "note": "Rosé Astérides Négly : pas de bouton dédié." },
+    { "code": "601923", "libelle": "ROLLIER ROSE 75 CL 2023 AOP CÔTES DE PROVENCE CHATEAU LA MARTINETTE", "note": "Rosé Rollier : pas de bouton dédié." },
+    { "code": "403137", "libelle": "CIDRE SASSY L'ANGELIQUE 33 CL CIDRE BIO", "note": "Cidre Sassy 33 cl bio : pas de bouton caisse dédié (différent de La Mordue 27 cl et des cidres 75 cl)." }
+  ]
+}

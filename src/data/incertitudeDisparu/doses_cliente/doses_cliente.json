@@ -1,0 +1,108 @@
+{
+  "meta": {
+    "source": "Maeva Pasteur (gérante Demi Lune)",
+    "date": "2026-06-09",
+    "fiabilite": "Doses indicatives, ajustables, non sûres à 100% (mention cliente). Valeur centrale + fourchette étroite.",
+    "unite": "cl d'alcool",
+    "convention_sauce": "10 cl alcool / litre de sauce = 1 cl / portion",
+    "trace_lisible": "TRACE-doses-cliente.md",
+    "constat_diff_modele": "Vérifié : ces doses cuisine/cocktails CORRESPONDENT déjà aux doses du modèle (alcool-plats-cocktails-menus.json). La cliente les valide => conso cuisine/cocktail confirmée, pas une source d'erreur."
+  },
+  "cuisine": {
+    "sauce_jurassienne": {"alcool": "vin jaune", "cl_portion": 1},
+    "poulet_jurassienne": {"alcool": "vin jaune", "cl": 1},
+    "truite_jurassienne": {"alcool": "vin jaune", "cl": 1},
+    "galette_peute": {"alcool": "vin jaune", "cl": 1, "via": "sauce jurassienne"},
+    "fondue_jurassienne": {"alcool": "ravelin", "cl": 10, "substitution": "aligoté si rupture ravelin"},
+    "fondue_vin_jaune": {"alcool": "vin jaune", "cl": 10},
+    "fondue_gourmet": {"alcool": "vin jaune", "cl": 10},
+    "sauce_forestiere": {"alcool": "porto", "cl_portion": 1},
+    "sauce_morille": {"alcool": "porto", "cl_portion": 1},
+    "sauce_girolles": {"alcool": "porto", "cl_portion": 1},
+    "petit_machon_gourmets": {"alcool": "porto", "cl": 1},
+    "entrecote_forestiere": {"alcool": "porto", "cl": 1},
+    "salade_paysanne": {"alcool": "porto", "cl": 1},
+    "truite_morille": {"alcool": "porto", "cl": 1},
+    "croutes_morilles": {"alcool": "porto", "cl": 1},
+    "feuillete_forestier": {"alcool": "porto", "cl": 1},
+    "poulet_morilles": {"alcool": "porto", "cl": 1},
+    "galette_cancoine": {"alcool": "porto", "cl": 1, "via": "sauce morille"},
+    "galette_frele": {"alcools": [{"porto": 1}, {"calvados": 4}], "note": "sauce girolles + flambage calvados"},
+    "camembert_roti": {"alcool": "calvados", "cl": 4},
+    "assiette_pere_gregoire": {"alcool": "calvados", "cl": 4},
+    "assiette_franc_comtoise": {"alcool": "macvin", "cl": 4},
+    "crepe_grappins": {"alcool": "calvados", "cl": 4},
+    "crepe_vougeotte": {"alcool": "grand marnier", "cl": 4},
+    "crepe_basilic_cusance": {"alcool": "calvados", "cl": 4},
+    "baba_macvin": {"alcool": "macvin", "cl": 4},
+    "baba_soho": {"alcool": "liqueur litchi (Soho)", "cl": 4},
+    "baba_liqueur_poire": {"alcool": "liqueur de poire", "cl": 4},
+    "baba_marc_bourgogne": {"alcool": "marc de bourgogne", "cl": 4},
+    "baba_baileys": {"alcool": "baileys", "cl": 4},
+    "coupe_ivresse": {"alcool": "baileys", "cl": 4},
+    "coupe_dijonnaise": {"alcool": "crème de cassis", "cl": 4},
+    "coupe_folie": {"alcool": "crème de cassis", "cl": 4},
+    "coupe_coquette": {"alcool": "baileys", "cl": 4},
+    "regle_crepes_flambees": "4 cl d'alcool"
+  },
+  "cocktails_boissons": {
+    "la_vouivre": {"total_cl": 12, "ingredients": ["crémant", "macvin", "crème de cassis"], "split_derive": {"crémant": 8, "macvin": 3, "cassis": 1}},
+    "aperitif_pere_gregoire": {"total_cl": 6, "ingredients": ["macvin", "liqueur de cerise"], "split_derive": {"macvin": 4, "cerise": 2}},
+    "chat_perche": {"total_cl": 12, "ingredients": ["macvin", "jus de poire", "sirop châtaigne"], "alcool_derive": {"macvin": 4}},
+    "kittykir": {"total_cl": 12, "ingredients": ["Soho", "crémant", "sirop framboise"], "split_derive": {"crémant": 9, "Soho": 2}},
+    "kir": {"total_cl": 12, "ingredients": ["aligoté", "crème de cassis"], "split_derive": {"aligoté": 11, "cassis": 1}},
+    "rose_pamp": {"total_cl": 12, "ingredients": ["Côtes de Provence", "sirop pamplemousse"], "alcool_derive": {"rosé": 10}},
+    "mambo": {"total_cl": 25, "alcool_cl": 0, "sans_alcool": true},
+    "luna": {"total_cl": 25, "alcool_cl": 0, "sans_alcool": true},
+    "tequila_sunrise": {"total_cl": 25, "alcool": {"tequila": 4}},
+    "reve_bleu": {"total_cl": 25, "alcool": {"vodka": 4}},
+    "fantasia": {"total_cl": 25, "alcool": {"passoa": 4}},
+    "maeva": {"total_cl": 25, "alcool": {"soho": 4, "vodka": 4}},
+    "rabasse": {"total_cl": 25, "alcool": {"pontarlier": 2, "liqueur sapin": 2}},
+    "macvin_sec": {"alcool_cl": 6},
+    "vin_de_paille": {"alcool_cl": 6},
+    "pontarlier": {"alcool_cl": 2},
+    "pastis": {"alcool_cl": 2},
+    "ricard": {"alcool_cl": 2},
+    "porto_sec": {"alcool_cl": 6},
+    "martini": {"alcool_cl": 6},
+    "vin_jaune_verre": {"alcool_cl": 12},
+    "whisky_long_john_baby": {"alcool_cl": 2},
+    "whisky_long_john_verre": {"alcool_cl": 4},
+    "whisky_jack_daniel": {"alcool_cl": 4}
+  },
+  "menus": {
+    "regle_choix": "1 entrée max + 1 plat max + 1 dessert max, jamais cumulés. Alcool menu = option choisie x probabilité de choix. Composition change par période.",
+    "periode_A_2023-04-17_2025-07-17": {
+      "Dahu": {"prix": 29.90, "obligatoire": {"fondue jurassienne": {"ravelin": 10}}},
+      "Demi Lune": {"prix": 45, "entree": {"Feuilleté forestier (le + populaire, 1/3)": {"porto": 1}}, "plat": {"morille poulet/truite": {"porto": 1}}, "dessert_options": [{"Coupe Ivresse": {"baileys": 4}}, {"Baba liqueur poire": {"liqueur poire": 4}}], "dessert_nb": 4, "dessert_alcoolises": 2},
+      "Vegetarien": {"prix": 26.50, "plat_options": [{"Assiette Père Grégoire": {"calvados": 4}}, {"Galette sauce forestière": {"porto": 1}}]},
+      "Bourguignon": {"prix": 34, "dessert_options": [{"Coupe dijonnaise": {"cassis": 4}}, {"Baba baileys": {"baileys": 4}}]},
+      "Franc-Comtois": {"prix": 34, "plat_options": [{"Poulet jurassien": {"vin jaune": 1}}, {"Assiette franc-comtoise": {"macvin": 4}}]}
+    },
+    "periode_B_2022-07-23_2023-04-16": {
+      "Dahu": {"prix": 29.90, "obligatoire": {"fondue jurassienne": {"ravelin": 10}}},
+      "Demi Lune": {"prix": 45, "entree": {"Feuilleté forestier (le + populaire, 1/3)": {"porto": 1}}, "plat": {"morille poulet/truite": {"porto": 1}}},
+      "Vegetarien": {"prix": 25, "plat_options": [{"Assiette Père Grégoire": {"calvados": 4}}, {"Galette sauce forestière": {"porto": 1}}]},
+      "Bourguignon": {"prix": 34, "dessert_options": [{"Coupe dijonnaise": {"cassis": 4}}, {"Baba marc de bourgogne": {"marc": 4}}]},
+      "Franc-Comtois": {"prix": 34, "plat_options": [{"Poulet jurassien": {"vin jaune": 1}}, {"Assiette franc-comtoise": {"macvin": 4}}], "dessert_options": [{"Baba macvin": {"macvin": 4}}], "dessert_nb": 3, "dessert_alcoolises": 1}
+    },
+    "periode_C_2021-03-29_2022-07-22": {
+      "Dahu": {"prix": 29.90, "obligatoire": {"fondue jurassienne": {"ravelin": 10}}},
+      "Demi Lune": {"prix": 45, "entree": {"Feuilleté forestier (1/2)": {"porto": 1}}, "plat": {"poulet morille": {"porto": 1}}},
+      "Vegetarien": {"prix": 23, "plat_options": [{"Assiette Père Grégoire": {"calvados": 4}}, {"Galette sauce forestière": {"porto": 1}}]},
+      "Bourguignon": {"prix": 34, "dessert_options": [{"Coupe dijonnaise": {"cassis": 4}}, {"Baba marc de bourgogne": {"marc": 4}}]},
+      "Franc-Comtois": {"prix": 32, "plat_options": [{"Poulet jurassien": {"vin jaune": 1}}, {"Assiette franc-comtoise": {"macvin": 4}}], "dessert_options": [{"Baba macvin": {"macvin": 4}}], "dessert_nb": 3, "dessert_alcoolises": 1}
+    }
+  },
+  "personnel_offerts": {
+    "personnel": "Bières Heineken et White (...) achetées pour le personnel, consommées après le service (achat sans vente caisse).",
+    "digestifs_offerts": "Certains offerts aux clients, mais peu.",
+    "aperitifs_offerts": "Certains offerts aux clients, mais peu."
+  },
+  "points_a_trancher": [
+    "Dahu : 20,90 € (ici) vs 29,90 € (menusPrix.json, 503/522 ventes).",
+    "Sur-versement au verre : non confirmé (15 cl ras ou ~17 cl ?). Seul levier empirique restant.",
+    "Splits d'alcool dérivés des cocktails à total donné (Vouivre, Père Grégoire, Chat Perché, Kittykir, Kir, Rosé Pamp)."
+  ]
+}

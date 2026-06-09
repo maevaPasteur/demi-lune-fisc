@@ -1,0 +1,1570 @@
+{
+ "description": "Base d'entree du modele d'incertitude (Monte Carlo). Litres cumules 3 exercices. conso_complete=False => ventes directes non enregistrees dans la source caisse (softs/eaux) : leur 'disparu' est un trou de donnees, pas une disparition.",
+ "n_boissons": 78,
+ "apparies_xlsx": 77,
+ "non_apparies_xlsx": [
+  "TOTAL ALCOOL (conso fiable)",
+  "TOTAL toutes boissons (dont mixers non fiables)"
+ ],
+ "sans_prix": [
+  "Cubis de vin (couleur non précisée)"
+ ],
+ "boissons": [
+  {
+   "nom": "Fût Affligem",
+   "categorie": "biere",
+   "taille_achat_cl": 800.0,
+   "unite_achat": "fût 8L",
+   "achats_l": 2096.0,
+   "stock_final_l": 40.0,
+   "conso": {
+    "seches_l": 1292.86,
+    "cocktails_l": 208.14,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 3.95,
+   "prix_revente_l": 15.6,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Macvin",
+   "categorie": "vin_de_liqueur",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 806.2,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 65.49,
+    "cocktails_l": 227.78,
+    "plats_l": 123.16,
+    "menu_bas_l": 37.19,
+    "menu_moyen_l": 54.35,
+    "menu_haut_l": 71.51
+   },
+   "prix_achat_l": 18.15,
+   "prix_revente_l": 81.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Arbois Savagnin",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 516.0,
+   "stock_final_l": 9.75,
+   "conso": {
+    "seches_l": 429.47,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 16.96,
+   "prix_revente_l": 48.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Cubis de vin (couleur non précisée)",
+   "categorie": "vin",
+   "taille_achat_cl": null,
+   "unite_achat": "n/d",
+   "achats_l": 0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 426.89,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   }
+  },
+  {
+   "nom": "Crémant du Jura",
+   "categorie": "petillant",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 675.0,
+   "stock_final_l": 6.75,
+   "conso": {
+    "seches_l": 106.9,
+    "cocktails_l": 272.74,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 11.0,
+   "prix_revente_l": 32.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Bourgogne Aligoté maison",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 1000.0,
+   "unite_achat": "BIB 10L",
+   "achats_l": 640.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 209.25,
+    "cocktails_l": 137.59,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 5.3,
+   "prix_revente_l": 26.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Arbois Trousseau",
+   "categorie": "vin_rouge",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 462.7,
+   "stock_final_l": 6.0,
+   "conso": {
+    "seches_l": 346.08,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 13.54,
+   "prix_revente_l": 42.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Arbois Béthanie",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 214.5,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 309.94,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 13.73,
+   "prix_revente_l": 39.87,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Côtes de Provence rosé maison (Cap des Pins)",
+   "categorie": "vin_rose",
+   "taille_achat_cl": 1000.0,
+   "unite_achat": "BIB 10L",
+   "achats_l": 681.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 280.35,
+    "cocktails_l": 6.4,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 5.24,
+   "prix_revente_l": 26.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Ravelin",
+   "categorie": "vin",
+   "taille_achat_cl": 99.0,
+   "unite_achat": "bouteille 99cl",
+   "achats_l": 319.5,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 0.0,
+    "plats_l": 151.9,
+    "menu_bas_l": 99.9,
+    "menu_moyen_l": 99.9,
+    "menu_haut_l": 99.9
+   },
+   "prix_achat_l": 2.96,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Saint Véran",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 465.0,
+   "stock_final_l": 5.25,
+   "conso": {
+    "seches_l": 245.43,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 12.73,
+   "prix_revente_l": 52.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Limonade",
+   "categorie": "soda",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 636.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 194.49,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 0.94,
+   "prix_revente_l": 15.6,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Côtes du Rhône rouge maison (Chusclan)",
+   "categorie": "vin_rouge",
+   "taille_achat_cl": 1000.0,
+   "unite_achat": "BIB 10L",
+   "achats_l": 360.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 190.78,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 3.06,
+   "prix_revente_l": 26.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Hautes Côtes de Beaune rouge",
+   "categorie": "vin_rouge",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 202.5,
+   "stock_final_l": 6.0,
+   "conso": {
+    "seches_l": 172.1,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 16.59,
+   "prix_revente_l": 52.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Saint Joseph Rouge",
+   "categorie": "vin_rouge",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 238.5,
+   "stock_final_l": 6.75,
+   "conso": {
+    "seches_l": 165.15,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 17.96,
+   "prix_revente_l": 48.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Arbois Vin Jaune",
+   "categorie": "vin",
+   "taille_achat_cl": 62.0,
+   "unite_achat": "bouteille 62cl",
+   "achats_l": 218.5,
+   "stock_final_l": 1.24,
+   "conso": {
+    "seches_l": 37.44,
+    "cocktails_l": 0.0,
+    "plats_l": 113.42,
+    "menu_bas_l": 7.74,
+    "menu_moyen_l": 11.06,
+    "menu_haut_l": 14.38
+   },
+   "prix_achat_l": 35.55,
+   "prix_revente_l": 100.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Macon",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 191.3,
+   "stock_final_l": 4.5,
+   "conso": {
+    "seches_l": 139.82,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 11.27,
+   "prix_revente_l": 42.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Rouget de Lisle Blanche 33cl",
+   "categorie": "biere",
+   "taille_achat_cl": 33.0,
+   "unite_achat": "bouteille 33cl",
+   "achats_l": 195.3,
+   "stock_final_l": 2.97,
+   "conso": {
+    "seches_l": 136.45,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 5.31,
+   "prix_revente_l": 17.88,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Rouget de Lisle Ambrée 33cl",
+   "categorie": "biere",
+   "taille_achat_cl": 33.0,
+   "unite_achat": "bouteille 33cl",
+   "achats_l": 182.2,
+   "stock_final_l": 8.91,
+   "conso": {
+    "seches_l": 127.71,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 5.45,
+   "prix_revente_l": 17.88,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Cidre Brut",
+   "categorie": "cidre",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 207.0,
+   "stock_final_l": 16.5,
+   "conso": {
+    "seches_l": 125.25,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 5.1,
+   "prix_revente_l": 18.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Calvados",
+   "categorie": "eau_de_vie",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 73.0,
+   "stock_final_l": 1.0,
+   "conso": {
+    "seches_l": 1.44,
+    "cocktails_l": 0.0,
+    "plats_l": 106.54,
+    "menu_bas_l": 8.77,
+    "menu_moyen_l": 12.53,
+    "menu_haut_l": 16.29
+   },
+   "prix_achat_l": 16.82,
+   "prix_revente_l": 172.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Cidre Doux",
+   "categorie": "cidre",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 126.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 107.63,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 3.57,
+   "prix_revente_l": 21.33,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Moulin à Vent",
+   "categorie": "vin_rouge",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 201.8,
+   "stock_final_l": 7.5,
+   "conso": {
+    "seches_l": 103.75,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 15.31,
+   "prix_revente_l": 38.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Rosé Les Jamelles (Clair de Rosé)",
+   "categorie": "vin_rose",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 302.2,
+   "stock_final_l": 12.0,
+   "conso": {
+    "seches_l": 97.88,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 8.58,
+   "prix_revente_l": 24.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Sirop Châtaigne",
+   "categorie": "sirop",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 31.5,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 97.56,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 7.3,
+   "prix_revente_l": 110.0,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Jus de poire",
+   "categorie": "jus",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 64.4,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 97.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 4.49,
+   "prix_revente_l": 15.6,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Cidre La Mordue",
+   "categorie": "cidre",
+   "taille_achat_cl": 27.0,
+   "unite_achat": "bouteille 27cl",
+   "achats_l": 237.9,
+   "stock_final_l": 4.86,
+   "conso": {
+    "seches_l": 92.48,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 4.32,
+   "prix_revente_l": 14.55,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Jus d'orange",
+   "categorie": "jus",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 245.2,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 81.82,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 3.4,
+   "prix_revente_l": 15.6,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Gewurztraminer",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 6.0,
+   "stock_final_l": 2.25,
+   "conso": {
+    "seches_l": 78.88,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 18.17,
+   "prix_revente_l": 46.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Jus de fraise",
+   "categorie": "jus",
+   "taille_achat_cl": 25.0,
+   "unite_achat": "bouteille 25cl",
+   "achats_l": 189.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 78.6,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 4.75,
+   "prix_revente_l": 15.6,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Porto",
+   "categorie": "aperitif",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 114.8,
+   "stock_final_l": 1.5,
+   "conso": {
+    "seches_l": 7.77,
+    "cocktails_l": 0.0,
+    "plats_l": 60.15,
+    "menu_bas_l": 8.97,
+    "menu_moyen_l": 10.59,
+    "menu_haut_l": 12.21
+   },
+   "prix_achat_l": 10.83,
+   "prix_revente_l": 63.33,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Chablis",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 18.0,
+   "stock_final_l": 12.0,
+   "conso": {
+    "seches_l": 73.7,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 15.84,
+   "prix_revente_l": 52.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Crème de Cassis",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 132.7,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 50.38,
+    "plats_l": 2.8,
+    "menu_bas_l": 11.11,
+    "menu_moyen_l": 15.87,
+    "menu_haut_l": 20.63
+   },
+   "prix_achat_l": 9.19,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Sirop Framboise",
+   "categorie": "sirop",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 82.2,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 35.24,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 7.09,
+   "prix_revente_l": 110.0,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Arbois Chardonnay",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 201.7,
+   "stock_final_l": 12.0,
+   "conso": {
+    "seches_l": 32.63,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 10.37,
+   "prix_revente_l": 33.2,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Picon",
+   "categorie": "aperitif",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 72.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 28.3,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 10.38,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Jus d'ananas",
+   "categorie": "jus",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 168.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 26.56,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 3.08,
+   "prix_revente_l": 15.6,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Rosé Le Pive",
+   "categorie": "vin_rose",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 49.4,
+   "stock_final_l": 10.5,
+   "conso": {
+    "seches_l": 26.25,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 8.59,
+   "prix_revente_l": 38.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Jus de framboise",
+   "categorie": "jus",
+   "taille_achat_cl": 25.0,
+   "unite_achat": "bouteille 25cl",
+   "achats_l": 0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 25.33,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 15.6,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Vin de Paille",
+   "categorie": "vin",
+   "taille_achat_cl": 37.5,
+   "unite_achat": "bouteille 37.5cl",
+   "achats_l": 36.4,
+   "stock_final_l": 3.0,
+   "conso": {
+    "seches_l": 24.87,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 48.23,
+   "prix_revente_l": 100.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Soho Litchi",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 52.5,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 23.31,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 14.43,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Bailey's",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 22.4,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 1.32,
+    "cocktails_l": 0.0,
+    "plats_l": 0.92,
+    "menu_bas_l": 9.64,
+    "menu_moyen_l": 14.36,
+    "menu_haut_l": 19.07
+   },
+   "prix_achat_l": 19.28,
+   "prix_revente_l": 130.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Liqueur de Cerise",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 12.7,
+   "stock_final_l": 1.4,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 16.08,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 7.31,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Bohème Rosé (Le Pive)",
+   "categorie": "vin_rose",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 18.7,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 15.0,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 10.68,
+   "prix_revente_l": 38.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Coca",
+   "categorie": "soda",
+   "taille_achat_cl": 33.0,
+   "unite_achat": "bouteille 33cl",
+   "achats_l": 1964.2,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 14.7,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 1.97,
+   "prix_revente_l": 11.82,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Martini Blanc",
+   "categorie": "aperitif",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 13.0,
+   "stock_final_l": 1.0,
+   "conso": {
+    "seches_l": 12.57,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 8.1,
+   "prix_revente_l": 63.33,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Jus de pomme",
+   "categorie": "jus",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 162.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 12.3,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 2.52,
+   "prix_revente_l": 15.6,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Sirop Curaçao bleu",
+   "categorie": "sirop",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 2.1,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 12.3,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 7.64,
+   "prix_revente_l": 110.0,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Côtes de Provence Rosé Minuty",
+   "categorie": "vin_rose",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 21.0,
+   "stock_final_l": 3.75,
+   "conso": {
+    "seches_l": 11.25,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 17.31,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Vodka",
+   "categorie": "spiritueux",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 32.9,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 10.65,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 13.69,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Passoa",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 15.4,
+   "stock_final_l": 1.4,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 10.12,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 13.66,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Grand Pavois",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 18.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 9.75,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 7.02,
+   "prix_revente_l": 29.33,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Grand Marnier",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 10.5,
+   "stock_final_l": 1.4,
+   "conso": {
+    "seches_l": 0.68,
+    "cocktails_l": 0.0,
+    "plats_l": 7.42,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 31.06,
+   "prix_revente_l": 130.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Pontarlier Anis",
+   "categorie": "aperitif",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 31.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 5.95,
+    "cocktails_l": 1.04,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 18.31,
+   "prix_revente_l": 190.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Bordeaux Supérieur",
+   "categorie": "vin_rouge",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 8.2,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 6.75,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 8.37,
+   "prix_revente_l": 48.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Miraval Rosé",
+   "categorie": "vin_rose",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 6.0,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 60.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Clan Campbell",
+   "categorie": "spiritueux",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 9.8,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 3.06,
+    "cocktails_l": 2.8,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 18.42,
+   "prix_revente_l": 145.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Sirop Grenadine",
+   "categorie": "sirop",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 17.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 5.82,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 4.14,
+   "prix_revente_l": 110.0,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Marc de Bourgogne",
+   "categorie": "eau_de_vie",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 9.8,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 0.2,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 3.91,
+    "menu_moyen_l": 5.58,
+    "menu_haut_l": 7.25
+   },
+   "prix_achat_l": 29.35,
+   "prix_revente_l": 130.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Liqueur de Poire",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 16.8,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 1.36,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 2.44,
+    "menu_moyen_l": 4.07,
+    "menu_haut_l": 5.69
+   },
+   "prix_achat_l": 24.36,
+   "prix_revente_l": 162.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Ricard",
+   "categorie": "aperitif",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 9.0,
+   "stock_final_l": 1.0,
+   "conso": {
+    "seches_l": 5.2,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 17.94,
+   "prix_revente_l": 190.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Champagne",
+   "categorie": "petillant",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 29.2,
+   "stock_final_l": 9.75,
+   "conso": {
+    "seches_l": 5.16,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 50.63,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Hautes Côtes de Beaune blanc",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 4.5,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 52.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Pastis 51",
+   "categorie": "aperitif",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 6.0,
+   "stock_final_l": 1.0,
+   "conso": {
+    "seches_l": 4.32,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 16.56,
+   "prix_revente_l": 190.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Get 27",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 12.0,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 3.32,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 15.89,
+   "prix_revente_l": 130.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Liqueur de Sapin",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 17.2,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 2.2,
+    "cocktails_l": 1.04,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 21.35,
+   "prix_revente_l": 130.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Jack Daniel's",
+   "categorie": "spiritueux",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 5.6,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 2.98,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 27.36,
+   "prix_revente_l": 187.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Marc du Jura",
+   "categorie": "eau_de_vie",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 2.4,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 162.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Génépi",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 9.8,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 2.32,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 32.27,
+   "prix_revente_l": 162.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Hautes Côtes de Nuits blanc",
+   "categorie": "vin_blanc",
+   "taille_achat_cl": 75.0,
+   "unite_achat": "bouteille 75cl",
+   "achats_l": 18.0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 2.25,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 16.29,
+   "prix_revente_l": 52.67,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Eau de Vie de Poire",
+   "categorie": "eau_de_vie",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 0,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 1.72,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 162.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Sirop Pamplemousse",
+   "categorie": "sirop",
+   "taille_achat_cl": 100.0,
+   "unite_achat": "bouteille 100cl",
+   "achats_l": 0,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.0,
+    "cocktails_l": 1.42,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 110.0,
+   "conso_complete": false,
+   "conso_complete_brut": "Non (vente seule non comptée)"
+  },
+  {
+   "nom": "Tequila Camino Real",
+   "categorie": "spiritueux",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 3.5,
+   "stock_final_l": 0.0,
+   "conso": {
+    "seches_l": 0.04,
+    "cocktails_l": 1.23,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 21.37,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Eau de Vie Mirabelle",
+   "categorie": "eau_de_vie",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 5.6,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 1.12,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 28.86,
+   "prix_revente_l": 162.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Cognac",
+   "categorie": "eau_de_vie",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 4.9,
+   "stock_final_l": 1.4,
+   "conso": {
+    "seches_l": 0.92,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": 29.01,
+   "prix_revente_l": 130.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Get 31",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 0,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 0.92,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 130.0,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Eau de Vie Framboise",
+   "categorie": "eau_de_vie",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 0,
+   "stock_final_l": 0.7,
+   "conso": {
+    "seches_l": 0.84,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": 162.5,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  },
+  {
+   "nom": "Guignolet",
+   "categorie": "liqueur",
+   "taille_achat_cl": 70.0,
+   "unite_achat": "bouteille 70cl",
+   "achats_l": 0,
+   "stock_final_l": 1.4,
+   "conso": {
+    "seches_l": 0.04,
+    "cocktails_l": 0.0,
+    "plats_l": 0.0,
+    "menu_bas_l": 0.0,
+    "menu_moyen_l": 0.0,
+    "menu_haut_l": 0.0
+   },
+   "prix_achat_l": null,
+   "prix_revente_l": null,
+   "conso_complete": true,
+   "conso_complete_brut": "Oui"
+  }
+ ]
+}

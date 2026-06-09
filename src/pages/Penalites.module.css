@@ -1,0 +1,32 @@
+/* Grille du détail des sommes notifiées : Poste | Part | Montant.
+   Sur mobile la colonne "Part" (barre) est masquée pour rester lisible. */
+.row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 20px;
+  align-items: center;
+}
+
+.head {
+  padding-bottom: 12px;
+}
+
+.line {
+  padding: 14px 0;
+  border-top: 1px solid var(--mantine-color-gray-2);
+}
+
+.part {
+  display: none;
+}
+
+@media (min-width: 48em) {
+  .row {
+    grid-template-columns: minmax(0, 1.1fr) minmax(160px, 1.7fr) auto;
+  }
+  .part {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+}

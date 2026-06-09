@@ -1,0 +1,67 @@
+.link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 11px 14px;
+  border-radius: var(--mantine-radius-md);
+  color: var(--mantine-color-gray-7);
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.2;
+  text-decoration: none;
+  position: relative;
+  transition:
+    background-color 120ms ease,
+    color 120ms ease;
+}
+
+.link:hover {
+  background-color: var(--mantine-color-gray-1);
+  color: var(--mantine-color-gray-9);
+}
+
+.link[data-active] {
+  background-color: var(--mantine-color-gold-1);
+  color: var(--mantine-color-gold-8);
+  font-weight: 600;
+}
+
+.link[data-active]:hover {
+  background-color: var(--mantine-color-gold-1);
+}
+
+.link[data-disabled] {
+  color: var(--mantine-color-gray-4);
+  cursor: not-allowed;
+}
+
+.link[data-disabled]:hover {
+  background-color: transparent;
+  color: var(--mantine-color-gray-4);
+}
+
+.icon {
+  display: flex;
+  color: var(--mantine-color-gray-5);
+  flex-shrink: 0;
+}
+
+.link[data-active] .icon {
+  color: var(--mantine-color-gold-7);
+}
+
+.label {
+  flex: 1;
+}
+
+.soon {
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: var(--mantine-color-gray-5);
+  background-color: var(--mantine-color-gray-1);
+  border-radius: 999px;
+  padding: 2px 8px;
+}

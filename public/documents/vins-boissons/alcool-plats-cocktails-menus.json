@@ -1,0 +1,315 @@
+{
+  "meta": {
+    "titre": "Référentiel alcool : plats, cocktails, boissons et menus",
+    "etablissement": "Demi Lune",
+    "objet": "Quantifier l'alcool incorporé/servi par produit vendu, pour croiser avec les achats (défense fiscale).",
+    "version": "1.0",
+    "date_creation": "2026-06-08",
+    "unite_dose": "cl",
+    "convention_sauces": "Pour les sauces : 10 cl d'alcool par litre de sauce = 1 cl par portion = 10 portions par litre.",
+    "legende_champs": {
+      "dose_alcool_totale_cl": "Somme de l'alcool réellement présent dans le produit (cl).",
+      "alcools": "Détail par type d'alcool présent dans le produit.",
+      "dose_cl": "Dose d'un alcool donné dans le produit (cl).",
+      "estimation": "true = dose déduite/estimée car non fournie explicitement ; false = dose donnée par l'établissement.",
+      "volume_total_cl": "Volume total servi du cocktail (alcool + non-alcool), quand connu.",
+      "ingredients_non_alcool": "Mixers sans alcool (jus, sirop, limonade, soda).",
+      "obligatoire": "true = ce produit/cette option contient toujours de l'alcool ; pour un menu, le client a forcément cet alcool.",
+      "options_alcoolisees": "Pour un menu : les choix d'un service (entrée/plat/dessert) qui contiennent de l'alcool.",
+      "nombre_choix_total": "Nombre total d'options proposées au client pour ce service (alcoolisées + non alcoolisées)."
+    },
+    "avertissements": [
+      "Période A : 2023-04-17 → 2025-07-17. Période B : 2022-07-23 → 2023-04-17 (fin de B confirmée au 2023-04-17, jonction nette avec A, sans chevauchement).",
+      "Les doses marquées estimation=true (répartition de cocktails multi-alcools, ou alcool unique non chiffré) sont des hypothèses de bar à valider/ajuster.",
+      "Pour les cocktails 100% alcoolisés, la dose d'alcool TOTALE est certaine (= volume total) même si la répartition par type est estimée.",
+      "Un menu n'autorise jamais le cumul : 1 entrée max, 1 plat max, 1 dessert max."
+    ],
+    "regle_prix_personnalise": {
+      "principe": "Un menu peut être facturé à un prix personnalisé (≠ prix catalogue) pour émettre une facture globale sans détail : il peut alors contenir n'importe quel plat/boisson de la carte.",
+      "consequence": "Ces lignes de menu à prix personnalisé NE DOIVENT PAS servir au calcul de l'alcool consommé (composition inconnue). Elles sont exclues du modèle et tracées à part.",
+      "critere": "Une ligne de menu est 'prix personnalisé' si son prix unitaire TTC ne correspond à AUCUN prix catalogue connu de ce menu (toutes périodes confondues).",
+      "prix_catalogue_acceptes_par_menu": {
+        "Menu Demi Lune": [45.0],
+        "Menu du Dahu": [29.90],
+        "Menu Végétarien": [23.0, 25.0, 26.5],
+        "Menu Bourguignon": [32.0, 34.0],
+        "Menu Franc-comtois": [32.0, 34.0]
+      },
+      "fichier_trace": "menus-prix-personnalises_trace-fisc.csv",
+      "resultat_scan": "267 lignes de menus à prix personnalisé sur 3679 menus composés vendus (7%) ; concentré sur le Menu Demi Lune (~34% de ses ventes).",
+      "corrections_vs_donnees_transmises": [
+        "Menu du Dahu : prix réel 29,90€ (et non 20,90€) — confirmé par 503/522 ventes en caisse.",
+        "Menu Bourguignon : 32€ en période C (et non 34€), puis 34€."
+      ]
+    },
+    "notes_generales": [
+      "Quand il n'y a plus de ravelin, les fondues utilisent parfois de l'aligoté (substitut).",
+      "Certains digestifs sont offerts aux clients (peu) : voir hors_vente.",
+      "Certains apéritifs sont offerts aux clients : voir hors_vente.",
+      "Les menus et les plats peuvent inclure de l'alcool (cuisson, sauce, flambage)."
+    ]
+  },
+
+  "alcools_references": [
+    { "type": "ravelin", "categorie": "vin", "region": "Jura", "usage": "cuisson fondue", "substitut": "aligoté" },
+    { "type": "aligoté", "categorie": "vin blanc", "region": "Bourgogne", "usage": "substitut ravelin / kir" },
+    { "type": "vin jaune", "categorie": "vin", "region": "Jura", "usage": "sauce jurassienne, fondue, verre" },
+    { "type": "macvin", "categorie": "vin de liqueur", "region": "Jura" },
+    { "type": "vin de paille", "categorie": "vin", "region": "Jura" },
+    { "type": "porto", "categorie": "vin muté", "usage": "sauces forestière/morille/girolles" },
+    { "type": "pontarlier", "categorie": "anisé/absinthe" },
+    { "type": "pastis", "categorie": "anisé" },
+    { "type": "ricard", "categorie": "anisé" },
+    { "type": "martini", "categorie": "vermouth" },
+    { "type": "crémant du jura", "categorie": "vin effervescent" },
+    { "type": "côte de provence rosé", "categorie": "vin rosé" },
+    { "type": "bourgogne blanc aligoté", "categorie": "vin blanc" },
+    { "type": "crème de cassis", "categorie": "liqueur" },
+    { "type": "liqueur de cerise", "categorie": "liqueur" },
+    { "type": "liqueur de poire", "categorie": "liqueur" },
+    { "type": "liqueur de litchi (soho)", "categorie": "liqueur" },
+    { "type": "liqueur de sapin", "categorie": "liqueur" },
+    { "type": "passoa", "categorie": "liqueur fruit de la passion" },
+    { "type": "grand marnier", "categorie": "liqueur" },
+    { "type": "baileys", "categorie": "crème de whisky" },
+    { "type": "marc de bourgogne", "categorie": "eau-de-vie" },
+    { "type": "calvados", "categorie": "eau-de-vie", "usage": "flambage / dessert" },
+    { "type": "tequila", "categorie": "spiritueux" },
+    { "type": "vodka", "categorie": "spiritueux" },
+    { "type": "whisky long john", "categorie": "spiritueux" },
+    { "type": "whisky jack daniel", "categorie": "spiritueux" },
+    { "type": "bière heineken", "categorie": "bière", "usage": "hors vente : personnel" },
+    { "type": "bière blanche (white)", "categorie": "bière", "usage": "hors vente : personnel" }
+  ],
+
+  "sauces": {
+    "convention": "10 cl d'alcool / litre de sauce = 1 cl / portion = 10 portions / litre.",
+    "liste": [
+      { "nom": "sauce jurassienne", "alcool": "vin jaune", "dose_cl_par_portion": 1, "dose_cl_par_litre": 10 },
+      { "nom": "sauce forestière", "alcool": "porto", "dose_cl_par_portion": 1, "dose_cl_par_litre": 10 },
+      { "nom": "sauce morille", "alcool": "porto", "dose_cl_par_portion": 1, "dose_cl_par_litre": 10 },
+      { "nom": "sauce girolles", "alcool": "porto", "dose_cl_par_portion": 1, "dose_cl_par_litre": 10 }
+    ]
+  },
+
+  "cartes": {
+    "entrees": [
+      { "nom": "Feuilleté forestier", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce forestière", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Croûtes aux morilles", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce morille", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Salade paysanne", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce girolles", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Petit mâchon des gourmets", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce morille", "estimation": false } ], "dose_alcool_totale_cl": 1 }
+    ],
+
+    "plats": [
+      { "nom": "Fondue jurassienne", "alcools": [ { "type": "ravelin", "dose_cl": 10, "substitut": "aligoté", "estimation": false } ], "dose_alcool_totale_cl": 10, "note": "Aligoté si rupture de ravelin." },
+      { "nom": "Fondue vin jaune", "alcools": [ { "type": "vin jaune", "dose_cl": 10, "estimation": false } ], "dose_alcool_totale_cl": 10 },
+      { "nom": "Fondue gourmet", "alcools": [ { "type": "vin jaune", "dose_cl": 10, "estimation": false } ], "dose_alcool_totale_cl": 10 },
+      { "nom": "Poulet à la jurassienne", "alcools": [ { "type": "vin jaune", "dose_cl": 1, "usage": "sauce jurassienne", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Truite à la jurassienne", "alcools": [ { "type": "vin jaune", "dose_cl": 1, "usage": "sauce jurassienne", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Poulet aux morilles", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce morille", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Truite à la morille", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce morille", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Entrecôte forestière", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce forestière", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Galette Frelé", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce girolles", "estimation": false }, { "type": "calvados", "dose_cl": 4, "usage": "flambage", "estimation": false } ], "dose_alcool_totale_cl": 5 },
+      { "nom": "Galette Cancoine", "alcools": [ { "type": "porto", "dose_cl": 1, "usage": "sauce morille", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Galette Peute", "alcools": [ { "type": "vin jaune", "dose_cl": 1, "usage": "sauce jurassienne", "estimation": false } ], "dose_alcool_totale_cl": 1 },
+      { "nom": "Assiette franc-comtoise", "alcools": [ { "type": "macvin", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Assiette du père Grégoire", "alcools": [ { "type": "calvados", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Camembert rôti", "alcools": [ { "type": "calvados", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 }
+    ],
+
+    "desserts": [
+      { "nom": "Baba au macvin", "alcools": [ { "type": "macvin", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Baba au soho", "alcools": [ { "type": "liqueur de litchi (soho)", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Baba à la liqueur de poire", "alcools": [ { "type": "liqueur de poire", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Baba au marc de bourgogne", "alcools": [ { "type": "marc de bourgogne", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Baba au baileys", "alcools": [ { "type": "baileys", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Coupe glacée Ivresse", "alcools": [ { "type": "baileys", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Coupe glacée Coquette", "alcools": [ { "type": "baileys", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Coupe glacée Dijonnaise", "alcools": [ { "type": "crème de cassis", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Coupe glacée Folie", "alcools": [ { "type": "crème de cassis", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Crêpe Grappins", "alcools": [ { "type": "calvados", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Crêpe Vogeotte", "alcools": [ { "type": "grand marnier", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Crêpe Basilic de Cusance", "alcools": [ { "type": "calvados", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+      { "nom": "Crêpes flambées (générique)", "alcools": [ { "type": "grand marnier ou calvados", "dose_cl": 4, "estimation": true } ], "dose_alcool_totale_cl": 4, "note": "L'alcool de flambage est presque toujours précisé sur la fiche ; à défaut, il s'agit soit de grand marnier soit de calvados." }
+    ]
+  },
+
+  "boissons": [
+    { "nom": "Tequila sunrise", "categorie": "cocktail", "volume_total_cl": 25, "alcools": [ { "type": "tequila", "dose_cl": 4, "estimation": false } ], "ingredients_non_alcool": [ "jus d'orange", "grenadine" ], "dose_alcool_totale_cl": 4, "estimation_dose_totale": false },
+    { "nom": "Rêve bleu", "categorie": "cocktail", "volume_total_cl": 25, "alcools": [ { "type": "vodka", "dose_cl": 4, "estimation": false } ], "ingredients_non_alcool": [ "jus de pomme", "sirop curaçao bleu" ], "dose_alcool_totale_cl": 4, "estimation_dose_totale": false },
+    { "nom": "Fantasia", "categorie": "cocktail", "volume_total_cl": 25, "alcools": [ { "type": "passoa", "dose_cl": 4, "estimation": false } ], "ingredients_non_alcool": [ "jus de fraise", "jus d'ananas" ], "dose_alcool_totale_cl": 4, "estimation_dose_totale": false },
+    { "nom": "Maeva", "categorie": "cocktail", "volume_total_cl": 25, "alcools": [ { "type": "liqueur de litchi (soho)", "dose_cl": 4, "estimation": false }, { "type": "vodka", "dose_cl": 4, "estimation": false } ], "ingredients_non_alcool": [ "jus de framboise" ], "dose_alcool_totale_cl": 8, "estimation_dose_totale": false },
+    { "nom": "Rabasse", "categorie": "cocktail", "volume_total_cl": 25, "alcools": [ { "type": "pontarlier", "dose_cl": 2, "estimation": false }, { "type": "liqueur de sapin", "dose_cl": 2, "estimation": false } ], "ingredients_non_alcool": [ "limonade" ], "dose_alcool_totale_cl": 4, "estimation_dose_totale": false },
+    { "nom": "Mambo", "categorie": "cocktail sans alcool", "volume_total_cl": 25, "alcools": [], "ingredients_non_alcool": [ "jus d'orange", "jus de fraise", "limonade" ], "dose_alcool_totale_cl": 0, "estimation_dose_totale": false },
+    { "nom": "Luna", "categorie": "cocktail sans alcool", "volume_total_cl": 25, "alcools": [], "ingredients_non_alcool": [ "jus de poire", "limonade", "sirop de châtaigne" ], "dose_alcool_totale_cl": 0, "estimation_dose_totale": false },
+
+    { "nom": "La Vouivre", "categorie": "cocktail", "volume_total_cl": 12, "alcools": [ { "type": "crémant du jura", "dose_cl": 10, "estimation": true }, { "type": "macvin", "dose_cl": 1, "estimation": true }, { "type": "crème de cassis", "dose_cl": 1, "estimation": true } ], "ingredients_non_alcool": [], "dose_alcool_totale_cl": 12, "estimation_dose_totale": false, "note": "100% alcoolisé : dose totale certaine (12cl) ; répartition par type estimée." },
+    { "nom": "Apéritif du père Grégoire", "categorie": "cocktail", "volume_total_cl": 6, "alcools": [ { "type": "macvin", "dose_cl": 4, "estimation": true }, { "type": "liqueur de cerise", "dose_cl": 2, "estimation": true } ], "ingredients_non_alcool": [], "dose_alcool_totale_cl": 6, "estimation_dose_totale": false, "note": "100% alcoolisé : dose totale certaine (6cl) ; répartition estimée." },
+    { "nom": "Kir", "categorie": "cocktail", "volume_total_cl": 12, "alcools": [ { "type": "bourgogne blanc aligoté", "dose_cl": 10, "estimation": true }, { "type": "crème de cassis", "dose_cl": 2, "estimation": true } ], "ingredients_non_alcool": [], "dose_alcool_totale_cl": 12, "estimation_dose_totale": false, "note": "100% alcoolisé : dose totale certaine (12cl) ; répartition estimée." },
+    { "nom": "KittyKir", "categorie": "cocktail", "volume_total_cl": 12, "alcools": [ { "type": "crémant du jura", "dose_cl": 9, "estimation": true }, { "type": "liqueur de litchi (soho)", "dose_cl": 2, "estimation": true } ], "ingredients_non_alcool": [ "sirop de framboise" ], "dose_alcool_totale_cl": 11, "estimation_dose_totale": true, "note": "Doses alcool estimées (1 mixer non alcoolisé)." },
+    { "nom": "Chat perché", "categorie": "cocktail", "volume_total_cl": 12, "alcools": [ { "type": "macvin", "dose_cl": 6, "estimation": true } ], "ingredients_non_alcool": [ "jus de poire", "sirop de châtaigne" ], "dose_alcool_totale_cl": 6, "estimation_dose_totale": true, "note": "Dose macvin estimée." },
+    { "nom": "Rosé Pamp", "categorie": "cocktail", "volume_total_cl": 12, "alcools": [ { "type": "côte de provence rosé", "dose_cl": 10, "estimation": true } ], "ingredients_non_alcool": [ "sirop de pamplemousse" ], "dose_alcool_totale_cl": 10, "estimation_dose_totale": true, "note": "Dose vin estimée." },
+
+    { "nom": "Macvin", "categorie": "apéritif/vin de liqueur", "alcools": [ { "type": "macvin", "dose_cl": 6, "estimation": false } ], "dose_alcool_totale_cl": 6 },
+    { "nom": "Vin de paille", "categorie": "apéritif/vin", "alcools": [ { "type": "vin de paille", "dose_cl": 6, "estimation": false } ], "dose_alcool_totale_cl": 6 },
+    { "nom": "Porto", "categorie": "apéritif/vin muté", "alcools": [ { "type": "porto", "dose_cl": 6, "estimation": false } ], "dose_alcool_totale_cl": 6 },
+    { "nom": "Martini", "categorie": "apéritif/vermouth", "alcools": [ { "type": "martini", "dose_cl": 6, "estimation": false } ], "dose_alcool_totale_cl": 6 },
+    { "nom": "Vin jaune (verre)", "categorie": "vin au verre", "alcools": [ { "type": "vin jaune", "dose_cl": 12, "estimation": false } ], "dose_alcool_totale_cl": 12 },
+    { "nom": "Pontarlier", "categorie": "anisé/digestif", "alcools": [ { "type": "pontarlier", "dose_cl": 2, "estimation": false } ], "dose_alcool_totale_cl": 2 },
+    { "nom": "Pastis", "categorie": "anisé", "alcools": [ { "type": "pastis", "dose_cl": 2, "estimation": false } ], "dose_alcool_totale_cl": 2 },
+    { "nom": "Ricard", "categorie": "anisé", "alcools": [ { "type": "ricard", "dose_cl": 2, "estimation": false } ], "dose_alcool_totale_cl": 2 },
+    { "nom": "Whisky Long John (baby)", "categorie": "spiritueux", "alcools": [ { "type": "whisky long john", "dose_cl": 2, "estimation": false } ], "dose_alcool_totale_cl": 2 },
+    { "nom": "Whisky Long John (verre)", "categorie": "spiritueux", "alcools": [ { "type": "whisky long john", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 },
+    { "nom": "Whisky Long John (verre) + coca", "categorie": "spiritueux", "alcools": [ { "type": "whisky long john", "dose_cl": 4, "estimation": false } ], "ingredients_non_alcool": [ "coca" ], "dose_alcool_totale_cl": 4 },
+    { "nom": "Whisky Jack Daniel", "categorie": "spiritueux", "alcools": [ { "type": "whisky jack daniel", "dose_cl": 4, "estimation": false } ], "dose_alcool_totale_cl": 4 }
+  ],
+
+  "menus": {
+    "regle_choix": "1 entrée max, 1 plat max, 1 dessert max ; jamais de cumul d'options du même service.",
+    "periodes": [
+      {
+        "id": "A",
+        "date_debut": "2023-04-17",
+        "date_fin": "2025-07-17",
+        "menus": [
+          {
+            "nom": "Menu du Dahu",
+            "prix_eur": 29.90,
+            "services": {
+              "plat": { "obligatoire": true, "nombre_choix_total": 1, "options_alcoolisees": [ { "nom": "Fondue jurassienne", "alcools": [ { "type": "ravelin", "dose_cl": 10, "estimation": false } ], "dose_alcool_cl": 10 } ] }
+            }
+          },
+          {
+            "nom": "Menu La Demi Lune",
+            "prix_eur": 45,
+            "services": {
+              "entree": { "obligatoire": false, "nombre_choix_total": 3, "note": "Le feuilleté forestier est la plus populaire.", "options_alcoolisees": [ { "nom": "Feuilleté forestier", "popularite": "la plus populaire", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] },
+              "plat": { "obligatoire": true, "nombre_choix_total": 2, "note": "Plat au morille : poulet ou truite, les deux à 1cl porto.", "options_alcoolisees": [ { "nom": "Poulet aux morilles", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 }, { "nom": "Truite à la morille", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] },
+              "dessert": { "obligatoire": false, "nombre_choix_total": 4, "note": "4 desserts dont 2 alcoolisés.", "options_alcoolisees": [ { "nom": "Coupe glacée Ivresse", "alcools": [ { "type": "baileys", "dose_cl": 4 } ], "dose_alcool_cl": 4 }, { "nom": "Baba à la liqueur de poire", "alcools": [ { "type": "liqueur de poire", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] }
+            }
+          },
+          {
+            "nom": "Menu végétarien",
+            "prix_eur": 26.50,
+            "services": {
+              "plat": { "obligatoire": false, "nombre_choix_total": 2, "note": "Les 2 plats listés contiennent de l'alcool (l'un OU l'autre).", "options_alcoolisees": [ { "nom": "Assiette du père Grégoire", "alcools": [ { "type": "calvados", "dose_cl": 4 } ], "dose_alcool_cl": 4 }, { "nom": "Galette de sarrasin sauce forestière", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] }
+            }
+          },
+          {
+            "nom": "Menu bourguignon",
+            "prix_eur": 34,
+            "services": {
+              "dessert": { "obligatoire": false, "nombre_choix_total": 2, "options_alcoolisees": [ { "nom": "Coupe Dijonnaise", "alcools": [ { "type": "crème de cassis", "dose_cl": 4 } ], "dose_alcool_cl": 4 }, { "nom": "Baba au baileys", "alcools": [ { "type": "baileys", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] }
+            }
+          },
+          {
+            "nom": "Menu Franc-comtois",
+            "prix_eur": 34,
+            "services": {
+              "plat": { "obligatoire": false, "nombre_choix_total": 2, "options_alcoolisees": [ { "nom": "Poulet à la jurassienne", "alcools": [ { "type": "vin jaune", "dose_cl": 1 } ], "dose_alcool_cl": 1 }, { "nom": "Assiette franc-comtoise", "alcools": [ { "type": "macvin", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] }
+            }
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "date_debut": "2022-07-23",
+        "date_fin": "2023-04-17",
+        "menus": [
+          {
+            "nom": "Menu du Dahu",
+            "prix_eur": 29.90,
+            "services": {
+              "plat": { "obligatoire": true, "nombre_choix_total": 1, "options_alcoolisees": [ { "nom": "Fondue jurassienne", "alcools": [ { "type": "ravelin", "dose_cl": 10 } ], "dose_alcool_cl": 10 } ] }
+            }
+          },
+          {
+            "nom": "Menu La Demi Lune",
+            "prix_eur": 45,
+            "services": {
+              "entree": { "obligatoire": false, "nombre_choix_total": 3, "note": "Le feuilleté forestier est la plus populaire.", "options_alcoolisees": [ { "nom": "Feuilleté forestier", "popularite": "la plus populaire", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] },
+              "plat": { "obligatoire": true, "nombre_choix_total": 2, "note": "Plat au morille : poulet ou truite, les deux à 1cl porto.", "options_alcoolisees": [ { "nom": "Poulet aux morilles", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 }, { "nom": "Truite à la morille", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] }
+            }
+          },
+          {
+            "nom": "Menu végétarien",
+            "prix_eur": 25,
+            "services": {
+              "plat": { "obligatoire": false, "nombre_choix_total": 2, "note": "Les 2 plats listés contiennent de l'alcool (l'un OU l'autre).", "options_alcoolisees": [ { "nom": "Assiette du père Grégoire", "alcools": [ { "type": "calvados", "dose_cl": 4 } ], "dose_alcool_cl": 4 }, { "nom": "Galette de sarrasin sauce forestière", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] }
+            }
+          },
+          {
+            "nom": "Menu bourguignon",
+            "prix_eur": 34,
+            "services": {
+              "dessert": { "obligatoire": false, "nombre_choix_total": 2, "options_alcoolisees": [ { "nom": "Coupe Dijonnaise", "alcools": [ { "type": "crème de cassis", "dose_cl": 4 } ], "dose_alcool_cl": 4 }, { "nom": "Baba au marc de bourgogne", "alcools": [ { "type": "marc de bourgogne", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] }
+            }
+          },
+          {
+            "nom": "Menu Franc-comtois",
+            "prix_eur": 34,
+            "services": {
+              "plat": { "obligatoire": false, "nombre_choix_total": 2, "options_alcoolisees": [ { "nom": "Poulet à la jurassienne", "alcools": [ { "type": "vin jaune", "dose_cl": 1 } ], "dose_alcool_cl": 1 }, { "nom": "Assiette franc-comtoise", "alcools": [ { "type": "macvin", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] },
+              "dessert": { "obligatoire": false, "nombre_choix_total": 3, "note": "3 desserts dont 1 alcoolisé.", "options_alcoolisees": [ { "nom": "Baba au macvin", "alcools": [ { "type": "macvin", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] }
+            }
+          }
+        ]
+      },
+      {
+        "id": "C",
+        "date_debut": "2021-03-29",
+        "date_fin": "2022-07-23",
+        "menus": [
+          {
+            "nom": "Menu du Dahu",
+            "prix_eur": 29.90,
+            "services": {
+              "plat": { "obligatoire": true, "nombre_choix_total": 1, "options_alcoolisees": [ { "nom": "Fondue jurassienne", "alcools": [ { "type": "ravelin", "dose_cl": 10 } ], "dose_alcool_cl": 10 } ] }
+            }
+          },
+          {
+            "nom": "Menu La Demi Lune",
+            "prix_eur": 45,
+            "services": {
+              "entree": { "obligatoire": false, "nombre_choix_total": 2, "note": "Le feuilleté forestier est l'une des 2 entrées.", "options_alcoolisees": [ { "nom": "Feuilleté forestier", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] },
+              "plat": { "obligatoire": true, "nombre_choix_total": 1, "options_alcoolisees": [ { "nom": "Poulet aux morilles", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] }
+            }
+          },
+          {
+            "nom": "Menu végétarien",
+            "prix_eur": 23,
+            "services": {
+              "plat": { "obligatoire": false, "nombre_choix_total": 2, "note": "Les 2 plats listés contiennent de l'alcool (l'un OU l'autre).", "options_alcoolisees": [ { "nom": "Assiette du père Grégoire", "alcools": [ { "type": "calvados", "dose_cl": 4 } ], "dose_alcool_cl": 4 }, { "nom": "Galette de sarrasin sauce forestière", "alcools": [ { "type": "porto", "dose_cl": 1 } ], "dose_alcool_cl": 1 } ] }
+            }
+          },
+          {
+            "nom": "Menu bourguignon",
+            "prix_eur": 32,
+            "note_prix": "Prix corrigé d'après la caisse : 32€ en période C (vous aviez indiqué 34€). Passage à 34€ ensuite.",
+            "services": {
+              "dessert": { "obligatoire": false, "nombre_choix_total": 2, "options_alcoolisees": [ { "nom": "Coupe Dijonnaise", "alcools": [ { "type": "crème de cassis", "dose_cl": 4 } ], "dose_alcool_cl": 4 }, { "nom": "Baba au marc de bourgogne", "alcools": [ { "type": "marc de bourgogne", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] }
+            }
+          },
+          {
+            "nom": "Menu Franc-comtois",
+            "prix_eur": 32,
+            "services": {
+              "plat": { "obligatoire": false, "nombre_choix_total": 2, "options_alcoolisees": [ { "nom": "Poulet à la jurassienne", "alcools": [ { "type": "vin jaune", "dose_cl": 1 } ], "dose_alcool_cl": 1 }, { "nom": "Assiette franc-comtoise", "alcools": [ { "type": "macvin", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] },
+              "dessert": { "obligatoire": false, "nombre_choix_total": 3, "note": "3 desserts dont 1 alcoolisé.", "options_alcoolisees": [ { "nom": "Baba au macvin", "alcools": [ { "type": "macvin", "dose_cl": 4 } ], "dose_alcool_cl": 4 } ] }
+            }
+          }
+        ]
+      }
+    ]
+  },
+
+  "hors_vente": {
+    "description": "Alcools/bières non vendus au client : à exclure du croisement achats/ventes ou à traiter à part.",
+    "items": [
+      { "type": "bière heineken", "usage": "consommation personnel après le service", "vendu": false },
+      { "type": "bière blanche (white)", "usage": "consommation personnel après le service", "vendu": false },
+      { "categorie": "digestifs offerts", "usage": "offerts aux clients (peu)", "vendu": false, "note": "Volume faible ; types non précisés." },
+      { "categorie": "apéritifs offerts", "usage": "offerts aux clients", "vendu": false, "note": "Types/volumes non précisés." }
+    ]
+  }
+}

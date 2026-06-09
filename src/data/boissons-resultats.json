@@ -1,0 +1,106 @@
+{
+ "_genere": "scripts/boissons/02_disparitions.py - NE PAS éditer à la main",
+ "exercices": [
+  "2022-2023",
+  "2023-2024",
+  "2024-2025"
+ ],
+ "achatsHT": {
+  "2022-2023": 42091.93,
+  "2023-2024": 42209.66,
+  "2024-2025": 42450.9,
+  "total": 126752.49
+ },
+ "caVenduTTC": {
+  "2022-2023": 102425.38,
+  "2023-2024": 108919.28,
+  "2024-2025": 106112.96,
+  "total": 317457.62
+ },
+ "caVenduLiquideParExercice": {
+  "2022-2023": 102425.38,
+  "2023-2024": 108919.28,
+  "2024-2025": 106112.96
+ },
+ "ecartCoutHT": {
+  "2022-2023": 20358.65,
+  "2023-2024": 18988.51,
+  "2024-2025": 18712.36,
+  "total": 58059.52
+ },
+ "reventeCaisseTTC": 218166.89,
+ "reventeCarteTTC": 199490.42,
+ "couvertureCartePctVolume": 79.1,
+ "couvertureCaissePct": {
+  "2022-2023": 87.9,
+  "2023-2024": 89.2,
+  "2024-2025": 89.5
+ },
+ "nbFactures": 199,
+ "nbLignesNonLivrees": 231,
+ "parCategorie": [
+  {
+   "categorie": "vin",
+   "achatL": 5661.0,
+   "venduL": 3653.3,
+   "ecartPct": 35.5,
+   "ecartCoutHT": 22616.82
+  },
+  {
+   "categorie": "macvin",
+   "achatL": 806.2,
+   "venduL": 330.2,
+   "ecartPct": 59.0,
+   "ecartCoutHT": 8638.46
+  },
+  {
+   "categorie": "spiritueux_digestif",
+   "achatL": 676.4,
+   "venduL": 214.8,
+   "ecartPct": 68.2,
+   "ecartCoutHT": 7352.99
+  },
+  {
+   "categorie": "cremant_petillant",
+   "achatL": 1275.1,
+   "venduL": 628.6,
+   "ecartPct": 50.7,
+   "ecartCoutHT": 5800.27
+  },
+  {
+   "categorie": "biere",
+   "achatL": 2734.4,
+   "venduL": 1460.0,
+   "ecartPct": 46.6,
+   "ecartCoutHT": 5668.96
+  },
+  {
+   "categorie": "soft",
+   "achatL": 3725.3,
+   "venduL": 1195.8,
+   "ecartPct": 67.9,
+   "ecartCoutHT": 4692.61
+  },
+  {
+   "categorie": "jus",
+   "achatL": 990.0,
+   "venduL": 502.9,
+   "ecartPct": 49.2,
+   "ecartCoutHT": 1650.73
+  },
+  {
+   "categorie": "eau",
+   "achatL": 1559.8,
+   "venduL": 946.8,
+   "ecartPct": 39.3,
+   "ecartCoutHT": 1082.28
+  },
+  {
+   "categorie": "sirop",
+   "achatL": 169.2,
+   "venduL": 42.9,
+   "ecartPct": 74.6,
+   "ecartCoutHT": 711.88
+  }
+ ]
+}

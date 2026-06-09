@@ -1,0 +1,372 @@
+{
+  "description": "Alcool contenu dans les plats, entrées et desserts à la carte.",
+  "unite_dose": "cl",
+  "entrees": [
+    {
+      "nom": "Feuilleté forestier",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce forestière",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Croûtes aux morilles",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce morille",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Salade paysanne",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce girolles",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Petit mâchon des gourmets",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce morille",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    }
+  ],
+  "plats": [
+    {
+      "nom": "Fondue jurassienne",
+      "alcools": [
+        {
+          "type": "ravelin",
+          "dose_cl": 10,
+          "substitut": "aligoté",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 10,
+      "note": "Aligoté si rupture de ravelin."
+    },
+    {
+      "nom": "Fondue vin jaune",
+      "alcools": [
+        {
+          "type": "vin jaune",
+          "dose_cl": 10,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 10
+    },
+    {
+      "nom": "Fondue gourmet",
+      "alcools": [
+        {
+          "type": "vin jaune",
+          "dose_cl": 10,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 10
+    },
+    {
+      "nom": "Poulet à la jurassienne",
+      "alcools": [
+        {
+          "type": "vin jaune",
+          "dose_cl": 1,
+          "usage": "sauce jurassienne",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Truite à la jurassienne",
+      "alcools": [
+        {
+          "type": "vin jaune",
+          "dose_cl": 1,
+          "usage": "sauce jurassienne",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Poulet aux morilles",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce morille",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Truite à la morille",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce morille",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Entrecôte forestière",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce forestière",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Galette Frelé",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce girolles",
+          "estimation": false
+        },
+        {
+          "type": "calvados",
+          "dose_cl": 4,
+          "usage": "flambage",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 5
+    },
+    {
+      "nom": "Galette Cancoine",
+      "alcools": [
+        {
+          "type": "porto",
+          "dose_cl": 1,
+          "usage": "sauce morille",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Galette Peute",
+      "alcools": [
+        {
+          "type": "vin jaune",
+          "dose_cl": 1,
+          "usage": "sauce jurassienne",
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 1
+    },
+    {
+      "nom": "Assiette franc-comtoise",
+      "alcools": [
+        {
+          "type": "macvin",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Assiette du père Grégoire",
+      "alcools": [
+        {
+          "type": "calvados",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Camembert rôti",
+      "alcools": [
+        {
+          "type": "calvados",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    }
+  ],
+  "desserts": [
+    {
+      "nom": "Baba au macvin",
+      "alcools": [
+        {
+          "type": "macvin",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Baba au soho",
+      "alcools": [
+        {
+          "type": "liqueur de litchi (soho)",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Baba à la liqueur de poire",
+      "alcools": [
+        {
+          "type": "liqueur de poire",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Baba au marc de bourgogne",
+      "alcools": [
+        {
+          "type": "marc de bourgogne",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Baba au baileys",
+      "alcools": [
+        {
+          "type": "baileys",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Coupe glacée Ivresse",
+      "alcools": [
+        {
+          "type": "baileys",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Coupe glacée Coquette",
+      "alcools": [
+        {
+          "type": "baileys",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Coupe glacée Dijonnaise",
+      "alcools": [
+        {
+          "type": "crème de cassis",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Coupe glacée Folie",
+      "alcools": [
+        {
+          "type": "crème de cassis",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Crêpe Grappins",
+      "alcools": [
+        {
+          "type": "calvados",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Crêpe Vogeotte",
+      "alcools": [
+        {
+          "type": "grand marnier",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Crêpe Basilic de Cusance",
+      "alcools": [
+        {
+          "type": "calvados",
+          "dose_cl": 4,
+          "estimation": false
+        }
+      ],
+      "dose_alcool_totale_cl": 4
+    },
+    {
+      "nom": "Crêpes flambées (générique)",
+      "alcools": [
+        {
+          "type": "grand marnier ou calvados",
+          "dose_cl": 4,
+          "estimation": true
+        }
+      ],
+      "dose_alcool_totale_cl": 4,
+      "note": "L'alcool de flambage est presque toujours précisé sur la fiche ; à défaut, il s'agit soit de grand marnier soit de calvados."
+    }
+  ]
+}

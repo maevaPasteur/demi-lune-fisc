@@ -1,0 +1,42 @@
+{
+ "description": "Conso personnel/owner estimee, bornee et justifiee. ALCOOL entre dans le disparu (Picon, Macvin) ; SOFTS documentent le trou de donnees softs.",
+ "jours_ouverture_total": 662,
+ "source": "Cliente 2026-06-09 (doses_cliente/)",
+ "softs_hors_disparu_alcool": {
+  "coca_staff": {
+   "detail": "Chris-Elian 4/j + Ghislaine 2/j = 6 Coca/jour",
+   "litres_3ans": 1311.0,
+   "rappel_disparu_coca_l": 1950,
+   "part_expliquee_pct": 67.0,
+   "commentaire": "Ces 2 personnes a elles seules expliquent la majorite du trou Coca ; le reste = autres staff occasionnels + offerts clients. Cafe/sirop/jus staff expliquent les autres trous softs."
+  }
+ },
+ "alcool_dans_disparu": {
+  "Picon_Thierry": {
+   "litres_3ans": {
+    "bas": 37.1,
+    "moyen": 43.7,
+    "haut": 43.7
+   },
+   "equiv_par_jour": "1.7 Picon Biere/jour",
+   "justification": "Picon achete 72 L, jamais vendu seul (0 prix revente), seul usage caisse = Picon Biere (28 L). Le residu 44 L = conso Thierry, borne par l'achat. 1,7 Picon Biere/jour, coherent avec 'beaucoup de Picon Biere'.",
+   "disparu_picon_l": 43.7,
+   "ferme_le_disparu_picon": true
+  },
+  "Macvin_Thierry": {
+   "litres_3ans": {
+    "bas": 79.4,
+    "moyen": 99.3,
+    "haut": 119.2
+   },
+   "equiv_par_jour": "2 a 3 verres de 6 cl/jour (central 2,5)",
+   "justification": "Disparu macvin 335 L. Tout attribuer a Thierry = 8,5 verres/jour, invraisemblable. Borne owner plausible 2-3 verres/jour => 79-119 L. Le reste du disparu macvin (~220 L) = sur-versement cocktails/verre + apero offert + residu irreductible (enquete macvin).",
+   "disparu_macvin_l": 335.4,
+   "part_disparu_macvin_expliquee_pct": [
+    24,
+    36
+   ]
+  }
+ },
+ "offerts": "Quelques digestifs/aperos offerts (peu) : modelises par le parametre personnel_offerts_alcool residuel."
+}

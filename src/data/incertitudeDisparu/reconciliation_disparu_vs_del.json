@@ -1,0 +1,33 @@
+{
+ "description": "Reconciliation disparu boissons (76k) vs suppressions DEL (430k) : axes differents, non additionnables.",
+ "synthese": "Le disparu boissons est un ecart de VOLUME (achats factures - conso caisse) = perte de conso normale. Les DEL sont un journal d'EVENEMENTS caisse = workflow. Le disparu capture deja toute vente non sonnee, donc on ne peut pas l'additionner aux DEL. Et le seul ancrage par les achats (le disparu, ~76k = 24% du CA boissons = norme CHR) plafonne toute occultation boissons tres en dessous des 430k de DEL.",
+ "arguments": {
+  "1_double_comptage": {
+   "principe": "Le disparu boissons = achats (factures) - conso (sonnee en caisse). Toute vente de boisson faite au noir puis supprimee n'est PAS sonnee -> elle est DEJA comptee dans le disparu. Le fisc ne peut donc pas la recompter dans les suppressions : disparu et DEL ne s'additionnent pas.",
+   "consequence": "Les deux reconstitutions possibles du fisc (disparu ~76k, suppressions ~430k) sont MUTUELLEMENT EXCLUSIVES. Il doit en choisir une, pas les sommer."
+  },
+  "2_plafond_approvisionnement_boissons": {
+   "disparu_alcool_revente_eur": 76113.1,
+   "ic95": [
+    62261.7,
+    87321.0
+   ],
+   "ca_boissons_declare_eur": 318026.0,
+   "disparu_en_pct_du_ca_boissons": 23.9,
+   "principe": "Le maximum de boissons qui pourrait avoir ete vendu au noir = le disparu = ce qui a ete achete mais pas sonne. Ce plafond est ~76k de revente sur 3 ans = ~24% du CA boissons, soit la perte NORMALE d'un bar (15-25%), avec causes de conso documentees (sur-versement, conso Thierry, offerts, cuisine)."
+  },
+  "3_del_ne_peut_etre_des_ventes_boissons": {
+   "del_total_eur": 430763.0,
+   "ca_boissons_declare_eur": 318026.0,
+   "ratio_del_sur_ca_boissons": 1.4,
+   "principe": "Si les 430k de DEL etaient des ventes de boissons dissimulees, le restaurant aurait vendu 1.4x son CA boissons declare en boissons au noir, exigeant autant d'achats caches. Or les achats boissons se reconcilient avec la conso + perte normale (stock stable). Impossible."
+  },
+  "4_distribution_menu_complet": {
+   "principe": "Les prix des lignes supprimees epousent ceux des ventes du MENU COMPLET (nourriture + boissons au prorata), pas une categorie boissons isolee (script 10). Donc les DEL = re-encaissements de commandes normales mixtes, pas la dissimulation d'une categorie.",
+   "ca_nourriture_declare_eur": 957898.0
+  },
+  "5_si_del_etaient_de_la_nourriture": {
+   "principe": "Pour que le solde de DEL 'normales' (~290k) soit des ventes de NOURRITURE cachees, il faudrait des achats de nourriture caches correspondants (~290k x ratio matiere ~30% = ~87k de factures fournisseurs nourriture non comptabilisees). Verifiable sur les comptes d'achats nourriture."
+  }
+ }
+}

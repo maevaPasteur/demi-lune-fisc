@@ -1,0 +1,35 @@
+/* Réglages globaux légers, en complément du thème Mantine. */
+
+:root {
+  /* Fond de l'espace de travail (légèrement crème, chaleureux). */
+  --app-bg: #faf8f3;
+  --app-border: #efe9dc;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--app-bg);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Barre de défilement fine et discrète (WebKit). */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #e1d9c6;
+  border-radius: 999px;
+  border: 3px solid transparent;
+  background-clip: content-box;
+}
+*::-webkit-scrollbar-thumb:hover {
+  background: #d3c8ad;
+  background-clip: content-box;
+}

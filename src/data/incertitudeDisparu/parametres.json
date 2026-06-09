@@ -1,0 +1,67 @@
+{
+  "description": "Parametres d'incertitude du modele Monte Carlo. CHAQUE valeur est une hypothese bornee, EDITABLE. Le pipeline actuel suppose implicitement que tous ces parametres valent leur valeur 'nominale' SANS incertitude (doses exactes, zero perte, zero conso personnel). Le modele remplace ce 'zero incertitude' irrealiste par une fourchette documentee. Loi = triangulaire (min, mode, max).",
+  "avertissement": "Ces fourchettes sont des ordres de grandeur metier (hotellerie/CHR), a VALIDER et ajuster par la cliente. Le but n'est PAS de fixer le bon chiffre, mais de montrer que sous des hypotheses raisonnables le disparu a une barre d'erreur enorme. L'analyse de sensibilite (03) dit lesquels comptent vraiment.",
+  "n_iterations": 20000,
+  "seed": 20260609,
+  "parametres": {
+    "surversement_vin": {
+      "loi": "triangulaire", "min": 1.00, "mode": 1.07, "max": 1.20,
+      "applique_a": "conso 'seches' des categories vin/petillant/cidre (service au verre/pichet)",
+      "justification": "Le service au verre en free-pour depasse en moyenne la dose nominale (15cl). Sur-versement metier couramment 5-15%. Mode prudent +7%.",
+      "sens": "augmente la conso -> reduit le disparu"
+    },
+    "surversement_spiritueux": {
+      "loi": "triangulaire", "min": 1.00, "mode": 1.10, "max": 1.30,
+      "applique_a": "conso 'seches' des categories spiritueux/aperitif/liqueur/digestif/vin_de_liqueur/eau_de_vie",
+      "justification": "Free-pour des alcools forts tres variable, sur-versement frequent 10-30% sans doseur.",
+      "sens": "augmente la conso -> reduit le disparu"
+    },
+    "perte_biere_fut": {
+      "loi": "triangulaire", "min": 0.05, "mode": 0.10, "max": 0.18,
+      "applique_a": "FRACTION des litres de biere PRESSION achetes, en plus du servi",
+      "justification": "Pertes techniques pression : mousse, purge/nettoyage de lignes, fond de fut, reglage tirage. Litterature CHR : 5-20% du volume.",
+      "sens": "consommation reelle non vendue -> reduit le disparu"
+    },
+    "dose_cocktail": {
+      "loi": "triangulaire", "min": 0.93, "mode": 1.00, "max": 1.07,
+      "applique_a": "conso 'cocktails' (ingredients) de tous produits",
+      "justification": "Recettes/doses cocktails CONFIRMEES par la cliente (2026-06-09, doses_cliente/). Fourchette resserree : ne reste que le bruit de mesure (ajustable, pas sur a 100%).",
+      "sens": "ajuste la conso cocktail"
+    },
+    "dose_cuisine": {
+      "loi": "triangulaire", "min": 0.92, "mode": 1.00, "max": 1.08,
+      "applique_a": "conso 'plats' (cuisine) de tous produits",
+      "justification": "Doses cuisine CONFIRMEES plat par plat par la cliente (2026-06-09) et identiques au modele (sauces 1cl, fondues 10cl, flambage/babas 4cl). Fourchette resserree : la cuisine n'est PLUS une source d'incertitude majeure.",
+      "sens": "ajuste la conso cuisine"
+    },
+    "menu": {
+      "loi": "triangulaire_par_produit", "champ_min": "menu_bas_l", "champ_mode": "menu_moyen_l", "champ_max": "menu_haut_l",
+      "applique_a": "alcool des menus (entrees/plats/desserts) que la caisse n'enregistre pas",
+      "justification": "Bornes bas/moyen/haut deja calculees par produit dans consoTotaleParBoisson (proba de choix du plat alcoolise dans le menu).",
+      "sens": "augmente la conso -> reduit le disparu"
+    },
+    "personnel_offerts_alcool": {
+      "loi": "triangulaire", "min": 0.00, "mode": 0.005, "max": 0.015,
+      "applique_a": "FRACTION des litres d'alcool achetes : OFFERTS clients residuels uniquement",
+      "justification": "Conso staff alcool desormais ITEMISEE (Thierry: Picon+Macvin, champ conso_staff_l, cf 06_conso_staff.py) ; le staff ne boit pas d'autre alcool (cafe/sirop/jus = softs). Ne reste ici que les rares digestifs/aperos offerts aux clients.",
+      "sens": "consommation reelle non vendue -> reduit le disparu"
+    },
+    "conso_staff": {
+      "loi": "triangulaire_par_produit", "champ_min": "conso_staff_l.bas", "champ_mode": "conso_staff_l.moyen", "champ_max": "conso_staff_l.haut",
+      "applique_a": "litres consommes par le personnel/owner, par produit (Picon 44 L, Macvin 79-119 L)",
+      "justification": "Estime et borne dans 06_conso_staff.py : Picon = disparu integral (Thierry, 1,7 Picon Biere/j) ; Macvin = 2-3 verres owner/j.",
+      "sens": "consommation reelle non vendue -> reduit le disparu"
+    }
+  },
+  "categorisation": {
+    "surversement_vin": ["vin_blanc", "vin_rouge", "vin_rose", "vin", "petillant", "cidre"],
+    "surversement_spiritueux": ["spiritueux", "aperitif", "liqueur", "digestif", "vin_de_liqueur", "eau_de_vie"],
+    "perte_biere_fut_categorie": "biere",
+    "biere_pression_indices": "seul le fut (pression) subit la perte de ligne ; biere bouteille = mult 1.0, pas de perte ligne"
+  },
+  "benchmark_metier": {
+    "description": "Taux de 'perte/ecart' (shrinkage) admis comme NORMAL en CHR, pour situer le residuel.",
+    "shrinkage_bar_pct_ca": [0.15, 0.25],
+    "source": "ordres de grandeur metier CHR (perte standard bar/restaurant), a sourcer precisement"
+  }
+}

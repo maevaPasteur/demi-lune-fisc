@@ -1,0 +1,170 @@
+{
+  "family": "bieres",
+  "doses_hypotheses": {
+    "demi_cl": 25,
+    "pinte_cl": 50,
+    "part_biere_panache": 0.5,
+    "picon_biere_part_biere_cl": 22,
+    "pinte_picon_part_biere_cl": 44
+  },
+  "ventes": [
+    {
+      "ref": "2005",
+      "libelleCaisse": "pression",
+      "carteTitre": "Pression Affligem",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "212122", "achatLibelle": "FUT AFFLIGEM BLADE 8 L 6,7°", "clParUnite": 25 }
+      ],
+      "confiance": "haute",
+      "note": "Demi/pression = 25 cl. Carte : 'Pression Affligem' 25 cl. Seul fût réellement acheté sur la période (le FUT HEINEKEN 212120 est à 0 qté), donc 100% Affligem."
+    },
+    {
+      "ref": "1989",
+      "libelleCaisse": "Pinte",
+      "carteTitre": "Pression Affligem",
+      "methode": "dose",
+      "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "212122", "achatLibelle": "FUT AFFLIGEM BLADE 8 L 6,7°", "clParUnite": 50 }
+      ],
+      "confiance": "haute",
+      "note": "Pinte = 50 cl. Carte : 'Pression Affligem' 50 cl. Servie au fût Affligem (seul fût acheté)."
+    },
+    {
+      "ref": "0099",
+      "libelleCaisse": "Panaché",
+      "carteTitre": "Panaché",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "212122", "achatLibelle": "FUT AFFLIGEM BLADE 8 L 6,7°", "clParUnite": 12.5 }
+      ],
+      "confiance": "moyenne",
+      "note": "Panaché = ~moitié bière + moitié limonade. Sur un demi 25 cl => 12,5 cl de bière (fût Affligem). La limonade (Mortuacienne) n'est pas dans le périmètre bière. NB : la caisse mélange parfois prix 25 cl et 50 cl (prixDistincts ~3,9-4,2 et 7,8-8,4) : quelques pintes de panaché (=> 25 cl de bière) existent mais minoritaires ; retenu 12,5 cl/unité par défaut."
+    },
+    {
+      "ref": "0354",
+      "libelleCaisse": "Monaco",
+      "carteTitre": "Panaché",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "212122", "achatLibelle": "FUT AFFLIGEM BLADE 8 L 6,7°", "clParUnite": 12.5 }
+      ],
+      "confiance": "moyenne",
+      "note": "Monaco = bière + limonade + grenadine, assimilé au panaché : ~moitié bière => 12,5 cl de bière (fût Affligem) sur un demi 25 cl. Limonade et grenadine hors périmètre. NB : classé sousCategorie 'Bières' en 2023-2024 et 2024-2025 ; en 2022-2023 il figure en TVA 10 / sousCategorie nulle (artefact de paramétrage), donc inclus ici par cohérence produit."
+    },
+    {
+      "ref": "0353",
+      "libelleCaisse": "Picon bière",
+      "carteTitre": "Picon Bière",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "212122", "achatLibelle": "FUT AFFLIGEM BLADE 8 L 6,7°", "clParUnite": 22 }
+      ],
+      "confiance": "moyenne",
+      "note": "Picon bière (format 25 cl) = 22 cl bière (fût Affligem) + 3 cl Picon. Le PICON (achat 510141 PICON BIERE 100 CL) n'est pas dans le périmètre bière à mapper : signalé en note, non décompté ici."
+    },
+    {
+      "ref": "1991",
+      "libelleCaisse": "Pinte Picon",
+      "carteTitre": "Picon Bière",
+      "methode": "dose",
+      "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "212122", "achatLibelle": "FUT AFFLIGEM BLADE 8 L 6,7°", "clParUnite": 44 }
+      ],
+      "confiance": "moyenne",
+      "note": "Pinte Picon (format 50 cl) = 44 cl bière (fût Affligem) + 6 cl Picon. Picon (510141) hors périmètre, signalé en note."
+    },
+    {
+      "ref": "1993",
+      "libelleCaisse": "Blanche des plateaux",
+      "carteTitre": "Rouget de Lisle",
+      "methode": "unite",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "200357", "achatLibelle": "LA ROUGET BLANCHE 33 CL VP", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Bière bouteille 33 cl servie à l'unité (1 vente = 1 bouteille). Carte 'Rouget de Lisle - Blanche des Plateaux'. Correspond à l'achat Rouget Blanche 33 cl."
+    },
+    {
+      "ref": "2009",
+      "libelleCaisse": "Ambrée",
+      "carteTitre": "Rouget de Lisle",
+      "methode": "unite",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "200359", "achatLibelle": "LA ROUGET AMBREE 33 CL VP", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Bière bouteille 33 cl à l'unité (1 vente = 1 bouteille). Carte 'Rouget de Lisle - Ambrée'. Correspond à l'achat Rouget Ambrée 33 cl."
+    }
+  ],
+  "achatsDuPerimetreNonVendus": [
+    {
+      "code": "220049",
+      "libelle": "BOITE HEINEKEN 50 CL 5°",
+      "note": "Boîte Heineken 50 cl achetée (48 u.), aucun bouton caisse dédié dans la sousCategorie Bières. Candidat 'disparu' (artefact de paramétrage probable) ou consommation interne."
+    },
+    {
+      "code": "220020",
+      "libelle": "BOITE HEINEKEN 33 CL",
+      "note": "Boîte Heineken 33 cl achetée (24 u.), aucun bouton caisse dédié. Candidat 'disparu'."
+    },
+    {
+      "code": "220003",
+      "libelle": "BOITE 1664 33 CL 5,5°",
+      "note": "Boîte 1664 33 cl achetée (24 u.), aucun bouton caisse dédié. Candidat 'disparu'."
+    },
+    {
+      "code": "200169",
+      "libelle": "MORT SUBITE WITTE 33 CL VP",
+      "note": "Bière bouteille 33 cl achetée (276 u.), aucun bouton caisse dédié. Possible vente sous un bouton générique (Blanche/Ambrée) ou candidat 'disparu'."
+    },
+    {
+      "code": "200859",
+      "libelle": "BLEUE DU MONT BLANC 33 CL 5,8°",
+      "note": "Bière bouteille 33 cl achetée (168 u.), aucun bouton caisse dédié. Candidat 'disparu'."
+    },
+    {
+      "code": "200633",
+      "libelle": "SZIGET HEFEWEIZEN 33 CL 6,5°",
+      "note": "Bière bouteille 33 cl achetée (48 u.), aucun bouton caisse dédié. Candidat 'disparu'."
+    },
+    {
+      "code": "200031",
+      "libelle": "GRIMBERGEN BLANCHE 33 CL VP 6° Articles Manquants : Livré le",
+      "note": "Bière bouteille 33 cl achetée (24 u.), aucun bouton caisse dédié. Libellé porteur d'une annotation 'Articles Manquants' (cf. carnet manuscrit). Candidat 'disparu'."
+    },
+    {
+      "code": "201442",
+      "libelle": "BIERE BLANCHE 33 CL 6° ABBAYE DE BAUME LES MESSIEURS CERVOISE BOISSONS FERMEN",
+      "note": "Bière bouteille 33 cl achetée (12 u.), aucun bouton caisse dédié. Candidat 'disparu'."
+    },
+    {
+      "code": "212120",
+      "libelle": "FUT HEINEKEN BLADE 8 L 5°",
+      "note": "Fût Heineken référencé mais quantité achetée = 0 sur la période. Aucune vente associée : pas de fût Heineken effectivement consommé (tout le tiré est Affligem)."
+    },
+    {
+      "code": "704553",
+      "libelle": "VERRES AFFLIGEM 50CL *6",
+      "note": "Verrerie (6 u.), non consommable. Hors analyse de disparition, listé pour traçabilité du périmètre 'biere'."
+    },
+    {
+      "code": "758792",
+      "libelle": "SOUS BOCKS ROUGET",
+      "note": "Goodies/PLV (qté 0), non consommable. Hors analyse."
+    },
+    {
+      "code": "704661",
+      "libelle": "KIT PICON",
+      "note": "Kit promotionnel Picon (qté 0), non consommable. Hors analyse."
+    }
+  ]
+}

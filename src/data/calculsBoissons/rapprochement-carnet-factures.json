@@ -1,0 +1,2990 @@
+{
+  "description": "Rapprochement carnet manuscrit (anomalies fournisseur) <-> factures. Artefact de relecture, sans déduction automatique. verdict = traitement déjà appliqué dans achatsBoissonsParPeriode.",
+  "nb_anomalies": 179,
+  "anomalies": [
+    {
+      "date": "2022-04-21",
+      "quantite_texte": "1 carton de 24",
+      "quantite_estimee": 24,
+      "article": "Rosé Blanche 33cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-04-21",
+      "quantite_texte": "1 carton de 24",
+      "quantite_estimee": 24,
+      "article": "boîtes Schweppes 33cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "467442",
+        "date": "2022-04-08",
+        "type": "facture",
+        "designation": "BOITE SCHWEPPES AGRUM 33 CL C10",
+        "qte": 24,
+        "montantHT": 15.12
+      }
+    },
+    {
+      "date": "2022-04-27",
+      "quantite_texte": "2 fûts",
+      "quantite_estimee": 2,
+      "article": "Affligem 8L",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "467442",
+        "date": "2022-04-08",
+        "type": "facture",
+        "designation": "FUT AFFLIGEM BLADE 8 L 6,7°",
+        "qte": 24,
+        "montantHT": 86.16
+      }
+    },
+    {
+      "date": "2022-04-29",
+      "quantite_texte": "1 x 12",
+      "quantite_estimee": 12,
+      "article": "Bière Blanche",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-05-06",
+      "quantite_texte": "1 x 12",
+      "quantite_estimee": 12,
+      "article": "Bière Blonde",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-05-28",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "HC Beaune Blanc",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "469480",
+        "date": "2022-05-13",
+        "type": "facture",
+        "designation": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018",
+        "qte": 6,
+        "montantHT": 62.88
+      }
+    },
+    {
+      "date": "2022-05-28",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Genépi",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "470317",
+        "date": "2022-05-28",
+        "type": "facture",
+        "designation": "GENEPI 40° 70 CL Ci-dessous Déconsigne du jour sur facture s",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-05-28",
+      "quantite_texte": "1 fût",
+      "quantite_estimee": 1,
+      "article": "Affligem",
+      "statut": "Reprise",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "469541",
+        "date": "2022-05-13",
+        "type": "facture",
+        "designation": "FUT AFFLIGEM BLADE 8 L 6,7°",
+        "qte": 8,
+        "montantHT": 28.72
+      }
+    },
+    {
+      "date": "2022-05-30",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Trousseau",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "469480",
+        "date": "2022-05-13",
+        "type": "facture",
+        "designation": "ARBOIS TROUSSEAU 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+        "qte": 12,
+        "montantHT": 117.24
+      }
+    },
+    {
+      "date": "2022-06-03",
+      "quantite_texte": "24 boîtes",
+      "quantite_estimee": 24,
+      "article": "Heineken",
+      "statut": "Retour",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "470659",
+        "date": "2022-06-03",
+        "type": "facture",
+        "designation": "BOITE HEINEKEN 50 CL 5°",
+        "qte": 24,
+        "montantHT": 29.04
+      }
+    },
+    {
+      "date": "2022-06-03",
+      "quantite_texte": "1 caisse de 20 b",
+      "quantite_estimee": 20,
+      "article": "San Pellegrino",
+      "statut": "Retour",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 9,
+      "facture": {
+        "numero": "469895",
+        "date": "2022-05-20",
+        "type": "facture",
+        "designation": "SAN PELLEGRINO 50 CL CONSIGNE C10 C10 C10 C10 C10",
+        "qte": 20,
+        "montantHT": 16.2
+      }
+    },
+    {
+      "date": "2022-06-03",
+      "quantite_texte": "24 boîtes",
+      "quantite_estimee": 24,
+      "article": "Heineken",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "470659",
+        "date": "2022-06-03",
+        "type": "facture",
+        "designation": "BOITE HEINEKEN 50 CL 5°",
+        "qte": 24,
+        "montantHT": 29.04
+      }
+    },
+    {
+      "date": "2022-06-03",
+      "quantite_texte": "20 b",
+      "quantite_estimee": 20,
+      "article": "San Pellegrino",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 9,
+      "facture": {
+        "numero": "469895",
+        "date": "2022-05-20",
+        "type": "facture",
+        "designation": "SAN PELLEGRINO 50 CL CONSIGNE C10 C10 C10 C10 C10",
+        "qte": 20,
+        "montantHT": 16.2
+      }
+    },
+    {
+      "date": "2022-06-08",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "St Joseph",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "469895",
+        "date": "2022-05-20",
+        "type": "facture",
+        "designation": "SAINT JOSEPH ROUGE 75 CL 2019 LES MARCHES DE GRANIT OGIER",
+        "qte": 6,
+        "montantHT": 76.68
+      }
+    },
+    {
+      "date": "2022-06-10",
+      "quantite_texte": "1 carton de 12 b",
+      "quantite_estimee": 12,
+      "article": "Cidre la Mortre",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "470317",
+        "date": "2022-05-28",
+        "type": "facture",
+        "designation": "CIDRE LA MORDUE ORIGINAL 27 CL",
+        "qte": 18,
+        "montantHT": 19.44
+      }
+    },
+    {
+      "date": "2022-06-17",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "St Véran",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "470317",
+        "date": "2022-05-28",
+        "type": "facture",
+        "designation": "SAINT VERAN 75 CL 2020 CAVE DE PRISSE DOMAINE PARADIS UNION ",
+        "qte": 5,
+        "montantHT": 43.75
+      }
+    },
+    {
+      "date": "2022-07-08",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "St Véran 75cl",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "471478",
+        "date": "2022-06-17",
+        "type": "facture",
+        "designation": "SAINT VERAN 75 CL 2021 Ci-dessous Déconsigne du jour sur fac",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-07-08",
+      "quantite_texte": "20 b",
+      "quantite_estimee": 20,
+      "article": "Bière Blanche Neige 33cl",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-07-08",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Miraval",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "472735",
+        "date": "2022-07-08",
+        "type": "facture",
+        "designation": "MIRAVAL ROSE 75 CL 2020 CÔTES DE PROVENCE AOP",
+        "qte": 3,
+        "montantHT": 41.37
+      }
+    },
+    {
+      "date": "2022-07-15",
+      "quantite_texte": "1 carton 24 b",
+      "quantite_estimee": 24,
+      "article": "Bière Ambrée",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "471930",
+        "date": "2022-06-24",
+        "type": "facture",
+        "designation": "LA ROUGET AMBREE 33 CL VP",
+        "qte": 24,
+        "montantHT": 41.28
+      }
+    },
+    {
+      "date": "2022-07-15",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Sirop Châtaigne",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "473086",
+        "date": "2022-07-15",
+        "type": "facture",
+        "designation": "MONIN CHATAIGNE 70 CL",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-07-15",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Crème Cassis",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "471930",
+        "date": "2022-06-24",
+        "type": "facture",
+        "designation": "CAPUCINE CREME CASSIS 16° 1 L",
+        "qte": 2,
+        "montantHT": 13.7
+      }
+    },
+    {
+      "date": "2022-07-15",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Rosé Jamelle 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "471930",
+        "date": "2022-06-24",
+        "type": "facture",
+        "designation": "ROSE GRENACHE JAMELLES 75 CL JAMELLES 2020 CLAIR DE ROSE BAD",
+        "qte": 6,
+        "montantHT": 24.6
+      }
+    },
+    {
+      "date": "2022-07-15",
+      "quantite_texte": "2 b",
+      "quantite_estimee": 2,
+      "article": "Vodka",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "472318",
+        "date": "2022-07-01",
+        "type": "facture",
+        "designation": "VODKA ERISTOFF 70 CL",
+        "qte": 1,
+        "montantHT": 10.57
+      }
+    },
+    {
+      "date": "2022-07-15",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Ricard",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "472735",
+        "date": "2022-07-08",
+        "type": "facture",
+        "designation": "RICARD 100 CL 45°",
+        "qte": 1,
+        "montantHT": 17.63
+      }
+    },
+    {
+      "date": "2022-07-15",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Sirop Curaçao",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "473086",
+        "date": "2022-07-15",
+        "type": "facture",
+        "designation": "MONIN SIROP CURACAO BLEU 70CL",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-07-22",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Crème de Mûre tradition",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "473648",
+        "date": "2022-07-22",
+        "type": "facture",
+        "designation": "VEDRENNE CREME MURE TRADITION",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-07-22",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Crème de Mûre Briard",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "473648",
+        "date": "2022-07-22",
+        "type": "facture",
+        "designation": "VEDRENNE CREME MURE TRADITION",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-07-22",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Bière Blanche",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-07-22",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Crémant Jura",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 10,
+      "facture": {
+        "numero": "472318",
+        "date": "2022-07-01",
+        "type": "facture",
+        "designation": "MARC DU JURA TISSOT 70CL MICHEL TISSOT",
+        "qte": 1,
+        "montantHT": 18.61
+      }
+    },
+    {
+      "date": "2022-07-22",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Crémant Jura",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 10,
+      "facture": {
+        "numero": "472318",
+        "date": "2022-07-01",
+        "type": "facture",
+        "designation": "MARC DU JURA TISSOT 70CL MICHEL TISSOT",
+        "qte": 1,
+        "montantHT": 18.61
+      }
+    },
+    {
+      "date": "2022-07-29",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "St Véran",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "472815",
+        "date": "2022-07-08",
+        "type": "facture",
+        "designation": "SAINT VERAN 75 CL 2020 LUPE CHOLET",
+        "qte": -12,
+        "montantHT": -105
+      }
+    },
+    {
+      "date": "2022-07-29",
+      "quantite_texte": "3 b",
+      "quantite_estimee": 3,
+      "article": "Pinot",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-07-29",
+      "quantite_texte": "2",
+      "quantite_estimee": 2,
+      "article": "Crème Cerise",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "473086",
+        "date": "2022-07-15",
+        "type": "facture",
+        "designation": "CREME CERISE 70CL 18° BRIOTTET",
+        "qte": 1,
+        "montantHT": 7.63
+      }
+    },
+    {
+      "date": "2022-08-04",
+      "quantite_texte": "1 caisse 12 b",
+      "quantite_estimee": 12,
+      "article": "Evian",
+      "statut": "Reprise",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "474045",
+        "date": "2022-07-29",
+        "type": "facture",
+        "designation": "EVIAN 100 CL VC Articles Manquants : Livré le",
+        "qte": 12,
+        "montantHT": 9.84
+      }
+    },
+    {
+      "date": "2022-08-04",
+      "quantite_texte": "1 fût",
+      "quantite_estimee": 1,
+      "article": "Affligem",
+      "statut": "Reprise",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "473086",
+        "date": "2022-07-15",
+        "type": "facture",
+        "designation": "FUT AFFLIGEM BLADE 8 L 6,7°",
+        "qte": 32,
+        "montantHT": 114.88
+      }
+    },
+    {
+      "date": "2022-08-08",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "Evian",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "474045",
+        "date": "2022-07-29",
+        "type": "facture",
+        "designation": "EVIAN 100 CL VC Articles Manquants : Livré le",
+        "qte": 12,
+        "montantHT": 9.84
+      }
+    },
+    {
+      "date": "2022-08-26",
+      "quantite_texte": "1 carton 24 b 33cl",
+      "quantite_estimee": 33,
+      "article": "Bière Blanche",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-08-26",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Pontarlier",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "474405",
+        "date": "2022-08-05",
+        "type": "facture",
+        "designation": "PONTARLIER ANIS SEC 100 CL 45°",
+        "qte": 1,
+        "montantHT": 17.95
+      }
+    },
+    {
+      "date": "2022-08-26",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Bailey's",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "475411",
+        "date": "2022-08-26",
+        "type": "facture",
+        "designation": "BAILEY'S 70 CL 17°",
+        "qte": 1,
+        "montantHT": 12.99
+      }
+    },
+    {
+      "date": "2022-08-29",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Pontarlier",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "475078",
+        "date": "2022-08-19",
+        "type": "facture",
+        "designation": "PONTARLIER ANIS SEC 100 CL 45°",
+        "qte": 1,
+        "montantHT": 17.95
+      }
+    },
+    {
+      "date": "2022-08-29",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Bailey's",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "475411",
+        "date": "2022-08-26",
+        "type": "facture",
+        "designation": "BAILEY'S 70 CL 17°",
+        "qte": 1,
+        "montantHT": 12.99
+      }
+    },
+    {
+      "date": "2022-09-02",
+      "quantite_texte": "1 carton 24 b",
+      "quantite_estimee": 24,
+      "article": "Bière Blanche",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-09-02",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Sirop Citron",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "475078",
+        "date": "2022-08-19",
+        "type": "facture",
+        "designation": "MONIN GLASCO CITRON 100 CL",
+        "qte": 1,
+        "montantHT": 4.29
+      }
+    },
+    {
+      "date": "2022-09-09",
+      "quantite_texte": "1 carton 24 b",
+      "quantite_estimee": 24,
+      "article": "Bière Blonde",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-09-09",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Sirop Citron",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "475078",
+        "date": "2022-08-19",
+        "type": "facture",
+        "designation": "MONIN GLASCO CITRON 100 CL",
+        "qte": 1,
+        "montantHT": 4.29
+      }
+    },
+    {
+      "date": "2022-09-16",
+      "quantite_texte": "12",
+      "quantite_estimee": 12,
+      "article": "1/2 Bethmale",
+      "statut": "En manque",
+      "note": "et facturés",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-09-16",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "Badoit",
+      "statut": "Reprise",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "476165",
+        "date": "2022-09-09",
+        "type": "facture",
+        "designation": "BADOIT VERTE 100 CL VC",
+        "qte": 12,
+        "montantHT": 11.88
+      }
+    },
+    {
+      "date": "2022-09-16",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "Badoit Citron",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "475798",
+        "date": "2022-09-02",
+        "type": "facture",
+        "designation": "ROUTIN 1883 CITRON ACIDE 1 L Articles Manquants : Livré le",
+        "qte": 1,
+        "montantHT": 3.82
+      }
+    },
+    {
+      "date": "2022-09-23",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Savagnin",
+      "statut": "En manque",
+      "note": "date écrite 23/03",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 9,
+      "facture": {
+        "numero": "475798",
+        "date": "2022-09-02",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+        "qte": 12,
+        "montantHT": 135.48
+      }
+    },
+    {
+      "date": "2022-09-23",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Chablis St Martin",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "475798",
+        "date": "2022-09-02",
+        "type": "facture",
+        "designation": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2021",
+        "qte": 6,
+        "montantHT": 80.22
+      }
+    },
+    {
+      "date": "2022-09-23",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "HC Beaune Rouge",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "475798",
+        "date": "2022-09-02",
+        "type": "facture",
+        "designation": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021",
+        "qte": 6,
+        "montantHT": 66.9
+      }
+    },
+    {
+      "date": "2022-10-13",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Savagnin",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 8,
+      "facture": {
+        "numero": "476996",
+        "date": "2022-09-23",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2018",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-10-21",
+      "quantite_texte": "1 Bib",
+      "quantite_estimee": 1,
+      "article": "Rosé",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-10-21",
+      "quantite_texte": "1 Bib",
+      "quantite_estimee": 1,
+      "article": "Rosé",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-11-04",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Bière Blanche",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2022-11-16",
+      "quantite_texte": "5 cartons de 12 b (60 b)",
+      "quantite_estimee": 60,
+      "article": "Ravelin",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "479497",
+        "date": "2022-11-10",
+        "type": "facture",
+        "designation": "RAVELIN BLANC MVPCE 13° 99 CL VINS ANDRE BONNOT",
+        "qte": 72,
+        "montantHT": 214.56
+      }
+    },
+    {
+      "date": "2022-11-18",
+      "quantite_texte": "2 cartons x6",
+      "quantite_estimee": 6,
+      "article": "Jus Poire",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "479198",
+        "date": "2022-11-04",
+        "type": "facture",
+        "designation": "GRANINI NEC POIRE LITRE PET",
+        "qte": 6,
+        "montantHT": 13.8
+      }
+    },
+    {
+      "date": "2022-11-18",
+      "quantite_texte": "1 L",
+      "quantite_estimee": 1,
+      "article": "Jus Poire",
+      "statut": "Facturé non livré",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "479198",
+        "date": "2022-11-04",
+        "type": "facture",
+        "designation": "GRANINI NEC POIRE LITRE PET",
+        "qte": 6,
+        "montantHT": 13.8
+      }
+    },
+    {
+      "date": "2022-11-18",
+      "quantite_texte": "12 L",
+      "quantite_estimee": 12,
+      "article": "Jus Poire",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "479198",
+        "date": "2022-11-04",
+        "type": "facture",
+        "designation": "GRANINI NEC POIRE LITRE PET",
+        "qte": 6,
+        "montantHT": 13.8
+      }
+    },
+    {
+      "date": "2022-11-25",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Porto / Madère",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "480351",
+        "date": "2022-11-25",
+        "type": "facture",
+        "designation": "PORTO SANDEMAN ROUGE 75CL 19°5",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2022-12-08",
+      "quantite_texte": "2 kg",
+      "quantite_estimee": 2,
+      "article": "Café",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "480351",
+        "date": "2022-11-25",
+        "type": "facture",
+        "designation": "CAFE MALONGO DECA MOULU AQUA BIO BTE 250G",
+        "qte": 1,
+        "montantHT": 9.28
+      }
+    },
+    {
+      "date": "2022-12-29",
+      "quantite_texte": "4 b",
+      "quantite_estimee": 4,
+      "article": "Porto",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "481175",
+        "date": "2022-12-09",
+        "type": "facture",
+        "designation": "PORTO SANDEMAN ROUGE 75CL 19°5",
+        "qte": 4,
+        "montantHT": 30.84
+      }
+    },
+    {
+      "date": "2023-02-23",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Absinthe",
+      "statut": "En manque",
+      "note": "livraison jeudi ?",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "485076",
+        "date": "2023-02-23",
+        "type": "facture",
+        "designation": "ABSINTHE UN EMILE 45° 70 CL",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-02-23",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "St Véran",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "485076",
+        "date": "2023-02-23",
+        "type": "facture",
+        "designation": "SAINT VERAN 75 CL 2021",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-02-23",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "St Joseph",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "485076",
+        "date": "2023-02-23",
+        "type": "facture",
+        "designation": "SAINT JOSEPH ROUGE 75 CL 2021",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-02-24",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "St Véran",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "485076",
+        "date": "2023-02-23",
+        "type": "facture",
+        "designation": "SAINT VERAN 75 CL 2021",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-04-14",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Petit Chablis",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "487459",
+        "date": "2023-04-07",
+        "type": "facture",
+        "designation": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2022",
+        "qte": 12,
+        "montantHT": 160.44
+      }
+    },
+    {
+      "date": "2023-04-21",
+      "quantite_texte": "6",
+      "quantite_estimee": 6,
+      "article": "Trousseau",
+      "statut": "En manque",
+      "note": "manquants, inscrits sur facture",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "487761",
+        "date": "2023-04-14",
+        "type": "facture",
+        "designation": "ARBOIS TROUSSEAU 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT",
+        "qte": 6,
+        "montantHT": 58.56
+      }
+    },
+    {
+      "date": "2023-04-24",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Poire William",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "487459",
+        "date": "2023-04-07",
+        "type": "facture",
+        "designation": "LIQUEUR GOLDEN EIGHT 70 CL 25° LIQUEUR DE POIRE WILLIAM",
+        "qte": 1,
+        "montantHT": 17.11
+      }
+    },
+    {
+      "date": "2023-04-24",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Arbois Chardonnay",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 31,
+      "facture": {
+        "numero": "487459",
+        "date": "2023-04-07",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+        "qte": 6,
+        "montantHT": 71.1
+      }
+    },
+    {
+      "date": "2023-04-25",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "St Véran",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "488099",
+        "date": "2023-04-21",
+        "type": "facture",
+        "designation": "SAINT VERAN 75 CL 2022 CAVE DE PRISSE DOMAINE PARADIS UNION ",
+        "qte": 12,
+        "montantHT": 108.72
+      }
+    },
+    {
+      "date": "2023-04-25",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Arbois Trousseau",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 31,
+      "facture": {
+        "numero": "487459",
+        "date": "2023-04-07",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+        "qte": 6,
+        "montantHT": 71.1
+      }
+    },
+    {
+      "date": "2023-05-05",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Vin Jaune",
+      "statut": "En manque",
+      "note": "notée manquant",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 8,
+      "facture": {
+        "numero": "488099",
+        "date": "2023-04-21",
+        "type": "facture",
+        "designation": "ARBOIS VIN JAUNE 62 CL 2015 FRUITIERE VINICOLE ARBOIS AOC",
+        "qte": 3,
+        "montantHT": 57.39
+      }
+    },
+    {
+      "date": "2023-05-12",
+      "quantite_texte": "14 b",
+      "quantite_estimee": 14,
+      "article": "Bohème Gris",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "trouvé (autre)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "490126",
+        "date": "2023-05-12",
+        "type": "facture",
+        "designation": "BOHEME GRIS 75 CL 2021 IGP SABLE DE CAMARGUE",
+        "qte": -14,
+        "montantHT": -115.92
+      }
+    },
+    {
+      "date": "2023-05-12",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Gourmandise Rosé",
+      "statut": "Avoir",
+      "note": "pas trouvé sur facture",
+      "verdict": "trouvé (autre)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "490126",
+        "date": "2023-05-12",
+        "type": "facture",
+        "designation": "GOURMANDISE ROSE 75 CL 2021 IGP MEDITERRANEE VIGNERON DE SAI",
+        "qte": -1,
+        "montantHT": -4.16
+      }
+    },
+    {
+      "date": "2023-05-26",
+      "quantite_texte": "1 à 12",
+      "quantite_estimee": 1,
+      "article": "Jus Raisin 25cl",
+      "statut": "En manque",
+      "note": "manquants, pas facturé",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "490050",
+        "date": "2023-05-26",
+        "type": "facture",
+        "designation": "GRANINI RAISIN ROUGE 25 CL VP Ci-dessous Déconsigne du jour ",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-06-06",
+      "quantite_texte": "1 caisse de 20",
+      "quantite_estimee": 20,
+      "article": "Coca Blanc 50cl",
+      "statut": "En manque",
+      "note": "pas sur la carte",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "489730",
+        "date": "2023-05-20",
+        "type": "facture",
+        "designation": "BOITE COCA COLA 33 CL",
+        "qte": 48,
+        "montantHT": 30.72
+      }
+    },
+    {
+      "date": "2023-06-09",
+      "quantite_texte": "5 b",
+      "quantite_estimee": 5,
+      "article": "Macvin Rosé",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 9,
+      "facture": {
+        "numero": "489730",
+        "date": "2023-05-20",
+        "type": "facture",
+        "designation": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT",
+        "qte": 6,
+        "montantHT": 70.56
+      }
+    },
+    {
+      "date": "2023-06-22",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Macvin",
+      "statut": "En manque",
+      "note": "notés manquants",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 8,
+      "facture": {
+        "numero": "490503",
+        "date": "2023-06-02",
+        "type": "facture",
+        "designation": "MACVIN DU JURA ROSE 75 CL FRUITIERE VINICOLE ARBOIS",
+        "qte": 8,
+        "montantHT": 96
+      }
+    },
+    {
+      "date": "2023-07-07",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "HC de Beaune Rouge",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "492816",
+        "date": "2023-07-07",
+        "type": "facture",
+        "designation": "HTES COTES DE BEAUNE RGE 75 CL",
+        "qte": 6,
+        "montantHT": 85.44
+      }
+    },
+    {
+      "date": "2023-07-15",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Cidre Roux 75cl",
+      "statut": "En manque",
+      "note": "manquant et non facturé",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2023-07-17",
+      "quantite_texte": "2 fût",
+      "quantite_estimee": 2,
+      "article": "Heineken Blonde",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "trouvé (autre)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "494455",
+        "date": "2023-07-17",
+        "type": "facture",
+        "designation": "FUT HEINEKEN BLADE 8 L 5°",
+        "qte": -16,
+        "montantHT": -78.72
+      }
+    },
+    {
+      "date": "2023-07-21",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Cidre Roux 75cl",
+      "statut": "En manque",
+      "note": "manquant et non facturé",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2023-07-25",
+      "quantite_texte": "2 cartons de 24 (48)",
+      "quantite_estimee": 48,
+      "article": "Page Tea",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2023-07-28",
+      "quantite_texte": "6",
+      "quantite_estimee": 6,
+      "article": "Arbois Chardonnay",
+      "statut": "En manque",
+      "note": "manquants, non facturés (facture 434043)",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 40,
+      "facture": {
+        "numero": "492816",
+        "date": "2023-07-07",
+        "type": "facture",
+        "designation": "ARBOIS TROUSSEAU 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT",
+        "qte": 6,
+        "montantHT": 64.38
+      }
+    },
+    {
+      "date": "2023-08-04",
+      "quantite_texte": "1 fût",
+      "quantite_estimee": 1,
+      "article": "Affligem",
+      "statut": "Avoir",
+      "note": "retour",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 9,
+      "facture": {
+        "numero": "493295",
+        "date": "2023-07-15",
+        "type": "facture",
+        "designation": "FUT AFFLIGEM BLADE 8 L 6,7°",
+        "qte": 16,
+        "montantHT": 65.12
+      }
+    },
+    {
+      "date": "2023-08-04",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Absinthe",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "494377",
+        "date": "2023-08-04",
+        "type": "facture",
+        "designation": "ABSINTHE TRILOGIE 50° 50 CL",
+        "qte": 1,
+        "montantHT": 23.98
+      }
+    },
+    {
+      "date": "2023-08-04",
+      "quantite_texte": "4",
+      "quantite_estimee": 4,
+      "article": "Vin Jaune",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "493295",
+        "date": "2023-07-15",
+        "type": "facture",
+        "designation": "ARBOIS VIN JAUNE 62 CL 2016",
+        "qte": 2,
+        "montantHT": 42.44
+      }
+    },
+    {
+      "date": "2023-08-11",
+      "quantite_texte": "2",
+      "quantite_estimee": 2,
+      "article": "Cidre Mortre",
+      "statut": "Refusé",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "494043",
+        "date": "2023-07-28",
+        "type": "facture",
+        "designation": "CIDRE LA MORDUE ORIGINAL 27 CL",
+        "qte": 18,
+        "montantHT": 21.06
+      }
+    },
+    {
+      "date": "2023-08-14",
+      "quantite_texte": "2 cartons (36 b)",
+      "quantite_estimee": 36,
+      "article": "Cidre Mortre 27cl",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "494043",
+        "date": "2023-07-28",
+        "type": "facture",
+        "designation": "CIDRE LA MORDUE ORIGINAL 27 CL",
+        "qte": 18,
+        "montantHT": 21.06
+      }
+    },
+    {
+      "date": "2023-08-21",
+      "quantite_texte": "7 cartons de 6 b (42 b)",
+      "quantite_estimee": 42,
+      "article": "Cidre Brut 75",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2023-08-25",
+      "quantite_texte": "1 sachet",
+      "quantite_estimee": 1,
+      "article": "Bretzel",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 8,
+      "facture": {
+        "numero": "494377",
+        "date": "2023-08-04",
+        "type": "facture",
+        "designation": "MIX CRACKERS ET BRETZEL CROCO SACHET DE 750 GRAMMES",
+        "qte": 4,
+        "montantHT": 18.52
+      }
+    },
+    {
+      "date": "2023-08-25",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Savagnin",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "494377",
+        "date": "2023-08-04",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+        "qte": 6,
+        "montantHT": 71.1
+      }
+    },
+    {
+      "date": "2023-09-08",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Catherine",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2023-09-08",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "Genièvre Poire 65cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "496227",
+        "date": "2023-09-08",
+        "type": "facture",
+        "designation": "LIQUEUR GOLDEN EIGHT 70 CL 25° LIQUEUR DE POIRE WILLIAM",
+        "qte": 1,
+        "montantHT": 17.11
+      }
+    },
+    {
+      "date": "2023-09-29",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Pinot",
+      "statut": "Reprise",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2023-09-29",
+      "quantite_texte": "1 carton 6 b",
+      "quantite_estimee": 6,
+      "article": "Savagnin",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "496227",
+        "date": "2023-09-08",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+        "qte": 6,
+        "montantHT": 71.1
+      }
+    },
+    {
+      "date": "2023-10-13",
+      "quantite_texte": "2 fûts",
+      "quantite_estimee": 2,
+      "article": "Heineken",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "497837",
+        "date": "2023-10-06",
+        "type": "facture",
+        "designation": "FUT HEINEKEN BLADE 8 L 5°",
+        "qte": 16,
+        "montantHT": 78.72
+      }
+    },
+    {
+      "date": "2023-10-23",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "Crémant",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "498668",
+        "date": "2023-10-20",
+        "type": "facture",
+        "designation": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS",
+        "qte": 18,
+        "montantHT": 146.52
+      }
+    },
+    {
+      "date": "2023-10-23",
+      "quantite_texte": "12 b",
+      "quantite_estimee": 12,
+      "article": "Macvin",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "497837",
+        "date": "2023-10-06",
+        "type": "facture",
+        "designation": "MACVIN BLANC 75 CL 18° DOMAINE ROLET PERE & FILS",
+        "qte": 6,
+        "montantHT": 90.06
+      }
+    },
+    {
+      "date": "2023-11-03",
+      "quantite_texte": "6 kg",
+      "quantite_estimee": 6,
+      "article": "Café",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "498271",
+        "date": "2023-10-13",
+        "type": "facture",
+        "designation": "DIVERS 1 machine à café Jura a livrer 1 nivona a reprendre",
+        "qte": 1,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-11-03",
+      "quantite_texte": "1 carton 6 b",
+      "quantite_estimee": 6,
+      "article": "Macvin",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "498271",
+        "date": "2023-10-13",
+        "type": "facture",
+        "designation": "MACVIN BLANC 75 CL 18° DOMAINE ROLET PERE & FILS",
+        "qte": 12,
+        "montantHT": 180.12
+      }
+    },
+    {
+      "date": "2023-11-03",
+      "quantite_texte": "5 kg",
+      "quantite_estimee": 5,
+      "article": "Café",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "498271",
+        "date": "2023-10-13",
+        "type": "facture",
+        "designation": "DIVERS 1 machine à café Jura a livrer 1 nivona a reprendre",
+        "qte": 1,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-11-03",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Macvin",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "498271",
+        "date": "2023-10-13",
+        "type": "facture",
+        "designation": "MACVIN BLANC 75 CL 18° DOMAINE ROLET PERE & FILS",
+        "qte": 12,
+        "montantHT": 180.12
+      }
+    },
+    {
+      "date": "2023-12-01",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Liqueur Golden Eight",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "500921",
+        "date": "2023-12-01",
+        "type": "facture",
+        "designation": "LIQUEUR GOLDEN EIGHT 70 CL 25° Ci-dessous Déconsigne du jour",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2023-12-22",
+      "quantite_texte": "30 Litres",
+      "quantite_estimee": 30,
+      "article": "Jus Orange",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "500921",
+        "date": "2023-12-01",
+        "type": "facture",
+        "designation": "PULCO ORANGE CITRON 70CL VP",
+        "qte": 1,
+        "montantHT": 4.29
+      }
+    },
+    {
+      "date": "2023-12-22",
+      "quantite_texte": "12 Litres",
+      "quantite_estimee": 12,
+      "article": "Limonade Norvégienne",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "500921",
+        "date": "2023-12-01",
+        "type": "facture",
+        "designation": "LIMONADE MORTUACIENNE BM 1 L",
+        "qte": 12,
+        "montantHT": 11.52
+      }
+    },
+    {
+      "date": "2024-03-01",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "St Véran",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "507607",
+        "date": "2024-03-01",
+        "type": "facture",
+        "designation": "SAINT VERAN 75 CL 2022",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-03-01",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Vin Paille",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "507607",
+        "date": "2024-03-01",
+        "type": "facture",
+        "designation": "VIN DE PAILLE 37,5 CL 2017 FRUITIERE VINICOLE ARBOIS",
+        "qte": 2,
+        "montantHT": 33.22
+      }
+    },
+    {
+      "date": "2024-03-07",
+      "quantite_texte": "1 caisse 12 b",
+      "quantite_estimee": 12,
+      "article": "Cidre Roux 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-03-21",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Arbois Chardonnay",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 30,
+      "facture": {
+        "numero": "507607",
+        "date": "2024-03-01",
+        "type": "facture",
+        "designation": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS",
+        "qte": 6,
+        "montantHT": 54.06
+      }
+    },
+    {
+      "date": "2024-03-25",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Crème Cassis 100cl",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "508263",
+        "date": "2024-03-08",
+        "type": "facture",
+        "designation": "CAPUCINE CREME CASSIS 16° 1 L",
+        "qte": 1,
+        "montantHT": 7.77
+      }
+    },
+    {
+      "date": "2024-04-05",
+      "quantite_texte": "",
+      "quantite_estimee": null,
+      "article": "Madeleines",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "510640",
+        "date": "2024-04-05",
+        "type": "facture",
+        "designation": "PETITES MADELEINES ST MICHEL Ci-dessous Déconsigne du jour s",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-04-06",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Provence Esprit Gassier",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "511378",
+        "date": "2024-04-12",
+        "type": "facture",
+        "designation": "L'ESPRIT GASSIER ROSE 75 CL CÔTES DE PROVENCE AOP 2023 CHATE",
+        "qte": 6,
+        "montantHT": 38.1
+      }
+    },
+    {
+      "date": "2024-04-06",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Crème Mûre",
+      "statut": "Avoir",
+      "note": "noté facture",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "511942",
+        "date": "2024-04-19",
+        "type": "facture",
+        "designation": "CREME MURE 15° 100 CL M.BRIZ",
+        "qte": 1,
+        "montantHT": 9.85
+      }
+    },
+    {
+      "date": "2024-04-12",
+      "quantite_texte": "1 carton 18 b",
+      "quantite_estimee": 18,
+      "article": "Cidre la Mortre 27cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "511378",
+        "date": "2024-04-12",
+        "type": "facture",
+        "designation": "CIDRE LA MORDUE ORIGINAL 27 CL",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-04-12",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Rosé La Rive",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-05-17",
+      "quantite_texte": "4 sachets",
+      "quantite_estimee": 4,
+      "article": "Bretzel",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "513723",
+        "date": "2024-05-10",
+        "type": "facture",
+        "designation": "MIX CRACKERS ET BRETZEL CROCO SACHET DE 750 GRAMMES",
+        "qte": 4,
+        "montantHT": 18.52
+      }
+    },
+    {
+      "date": "2024-05-17",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Arbois Chardonnay",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 33,
+      "facture": {
+        "numero": "512569",
+        "date": "2024-04-26",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+        "qte": 12,
+        "montantHT": 172.68
+      }
+    },
+    {
+      "date": "2024-05-29",
+      "quantite_texte": "1 carton 18 b",
+      "quantite_estimee": 18,
+      "article": "Cidre Mortre 27cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "513723",
+        "date": "2024-05-10",
+        "type": "facture",
+        "designation": "CIDRE LA MORDUE ORIGINAL 27 CL",
+        "qte": 18,
+        "montantHT": 21.78
+      }
+    },
+    {
+      "date": "2024-05-31",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Chivas",
+      "statut": "En manque",
+      "note": "jamais commandé",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "515824",
+        "date": "2024-05-31",
+        "type": "facture",
+        "designation": "CHIVAS REGAL EXTRA 13 ANS 40° Ci-dessous Déconsigne du jour ",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-06-07",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Porto",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "514460",
+        "date": "2024-05-17",
+        "type": "facture",
+        "designation": "PORTO SANDEMAN ROUGE 75CL 19°5",
+        "qte": 2,
+        "montantHT": 16.7
+      }
+    },
+    {
+      "date": "2024-06-14",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Mâcon Roche Blanche",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "515030",
+        "date": "2024-05-24",
+        "type": "facture",
+        "designation": "MACON ROCHE BLANCHE 75 CL",
+        "qte": 6,
+        "montantHT": 49.86
+      }
+    },
+    {
+      "date": "2024-06-28",
+      "quantite_texte": "1 à 12",
+      "quantite_estimee": 1,
+      "article": "Coca blanc 50cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "516462",
+        "date": "2024-06-07",
+        "type": "facture",
+        "designation": "BOITE COCA COLA 33 CL",
+        "qte": 24,
+        "montantHT": 15.84
+      }
+    },
+    {
+      "date": "2024-07-05",
+      "quantite_texte": "2 cartons x12",
+      "quantite_estimee": 12,
+      "article": "Coca blanc 50cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "FACTURÉ PLEIN (montant présent) -> à examiner / déduire",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "517185",
+        "date": "2024-06-14",
+        "type": "facture",
+        "designation": "BOITE COCA COLA 33 CL",
+        "qte": 48,
+        "montantHT": 31.68
+      }
+    },
+    {
+      "date": "2024-07-05",
+      "quantite_texte": "4 b",
+      "quantite_estimee": 4,
+      "article": "Rosé Les Jamelles",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "521589",
+        "date": "2024-07-26",
+        "type": "avoir",
+        "designation": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+        "qte": 6,
+        "montantHT": 35.52
+      }
+    },
+    {
+      "date": "2024-07-12",
+      "quantite_texte": "2",
+      "quantite_estimee": 2,
+      "article": "Sirop Châtaigne",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "517789",
+        "date": "2024-06-21",
+        "type": "facture",
+        "designation": "MONIN CHATAIGNE 70 CL",
+        "qte": 1,
+        "montantHT": 5.61
+      }
+    },
+    {
+      "date": "2024-07-12",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Arbois Chardonnay",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "521589",
+        "date": "2024-07-26",
+        "type": "avoir",
+        "designation": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+        "qte": 6,
+        "montantHT": 35.52
+      }
+    },
+    {
+      "date": "2024-07-12",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Rosé Les Jamelles",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "521589",
+        "date": "2024-07-26",
+        "type": "avoir",
+        "designation": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+        "qte": 6,
+        "montantHT": 35.52
+      }
+    },
+    {
+      "date": "2024-07-16",
+      "quantite_texte": "30 b",
+      "quantite_estimee": 30,
+      "article": "Cidre Brut 75cl",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-07-19",
+      "quantite_texte": "1 carton 6 b",
+      "quantite_estimee": 6,
+      "article": "Rosé Jamelle 75cl",
+      "statut": "Reprise",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "521589",
+        "date": "2024-07-26",
+        "type": "avoir",
+        "designation": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+        "qte": 6,
+        "montantHT": 35.52
+      }
+    },
+    {
+      "date": "2024-07-19",
+      "quantite_texte": "4 b",
+      "quantite_estimee": 4,
+      "article": "Vin Jaune",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "518436",
+        "date": "2024-06-28",
+        "type": "facture",
+        "designation": "ARBOIS VIN JAUNE 62 CL 2016 FRUITIERE VINICOLE ARBOIS",
+        "qte": 2,
+        "montantHT": 47.96
+      }
+    },
+    {
+      "date": "2024-07-26",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Sirop Châtaigne",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "519775",
+        "date": "2024-07-12",
+        "type": "facture",
+        "designation": "ROUTIN 1883 CHATAIGNE 1 L Articles Manquants : Livré le",
+        "qte": 2,
+        "montantHT": 10.14
+      }
+    },
+    {
+      "date": "2024-07-26",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Chardonnay Les Jamelles",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "521589",
+        "date": "2024-07-26",
+        "type": "avoir",
+        "designation": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+        "qte": 6,
+        "montantHT": 35.52
+      }
+    },
+    {
+      "date": "2024-08-02",
+      "quantite_texte": "x12",
+      "quantite_estimee": 12,
+      "article": "Bière Blanche 33cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-08-02",
+      "quantite_texte": "1 carton 18 B",
+      "quantite_estimee": 18,
+      "article": "Cidre Mortre 27cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "520619",
+        "date": "2024-07-19",
+        "type": "facture",
+        "designation": "CIDRE LA MORDUE ORIGINAL 27 CL",
+        "qte": 18,
+        "montantHT": 21.78
+      }
+    },
+    {
+      "date": "2024-08-02",
+      "quantite_texte": "1 Bib",
+      "quantite_estimee": 1,
+      "article": "Provence",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "520619",
+        "date": "2024-07-19",
+        "type": "facture",
+        "designation": "BIB COTES DE PROVENCE 10 L ROSE HT MASTEREL GRANDE RESERV",
+        "qte": 1,
+        "montantHT": 44.1
+      }
+    },
+    {
+      "date": "2024-08-02",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Cacolac",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-08-02",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Galettes",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "519775",
+        "date": "2024-07-12",
+        "type": "facture",
+        "designation": "PETITES GALETTES X 700 UNIT SAINT MICHEL BISCUIT",
+        "qte": 1,
+        "montantHT": 35
+      }
+    },
+    {
+      "date": "2024-08-09",
+      "quantite_texte": "2 carton",
+      "quantite_estimee": 2,
+      "article": "Galettes",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "522013",
+        "date": "2024-08-02",
+        "type": "facture",
+        "designation": "PETITES GALETTES X 700 UNIT",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "1 carton 18 b",
+      "quantite_estimee": 18,
+      "article": "Cidre la Mortre 27cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "521259",
+        "date": "2024-07-26",
+        "type": "facture",
+        "designation": "CIDRE LA MORDUE ORIGINAL 27 CL",
+        "qte": 18,
+        "montantHT": 21.78
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "1 carton 6 b",
+      "quantite_estimee": 6,
+      "article": "Cidre Brut 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "St Véran",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "522013",
+        "date": "2024-08-02",
+        "type": "facture",
+        "designation": "SAINT VERAN BLANC 75 CL 2022 CAVE DE LUGNY",
+        "qte": 6,
+        "montantHT": 58.86
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "5 b",
+      "quantite_estimee": 5,
+      "article": "Vin Jaune",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "521259",
+        "date": "2024-07-26",
+        "type": "facture",
+        "designation": "ARBOIS VIN JAUNE 62 CL 2017 FRUITIERE VINICOLE ARBOIS",
+        "qte": 4,
+        "montantHT": 95.92
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "4 b",
+      "quantite_estimee": 4,
+      "article": "Vin Paille",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "523180",
+        "date": "2024-08-16",
+        "type": "facture",
+        "designation": "VIN DE PAILLE 37,5 CL 2018",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "3 b",
+      "quantite_estimee": 3,
+      "article": "Crémant du Jura",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 13,
+      "facture": {
+        "numero": "521259",
+        "date": "2024-07-26",
+        "type": "facture",
+        "designation": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT",
+        "qte": 12,
+        "montantHT": 158.28
+      }
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "6",
+      "quantite_estimee": 6,
+      "article": "1/2 Bethmale",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-08-16",
+      "quantite_texte": "1 boîte",
+      "quantite_estimee": 1,
+      "article": "Calembours",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-08-23",
+      "quantite_texte": "4 b",
+      "quantite_estimee": 4,
+      "article": "St Véran",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 6,
+      "facture": {
+        "numero": "522013",
+        "date": "2024-08-02",
+        "type": "facture",
+        "designation": "SAINT VERAN BLANC 75 CL 2022 CAVE DE LUGNY",
+        "qte": 6,
+        "montantHT": 58.86
+      }
+    },
+    {
+      "date": "2024-08-30",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Arbois Chardonnay",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "521589",
+        "date": "2024-07-26",
+        "type": "avoir",
+        "designation": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+        "qte": 6,
+        "montantHT": 35.52
+      }
+    },
+    {
+      "date": "2024-08-30",
+      "quantite_texte": "6",
+      "quantite_estimee": 6,
+      "article": "1/2 Bethmale",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-09-06",
+      "quantite_texte": "4 sachets",
+      "quantite_estimee": 4,
+      "article": "Bretzel",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 8,
+      "facture": {
+        "numero": "523180",
+        "date": "2024-08-16",
+        "type": "facture",
+        "designation": "MIX CRACKERS ET BRETZEL CROCO SACHET DE 750 GRAMMES",
+        "qte": 3,
+        "montantHT": 13.89
+      }
+    },
+    {
+      "date": "2024-09-06",
+      "quantite_texte": "24",
+      "quantite_estimee": 24,
+      "article": "Bières 33cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-09-06",
+      "quantite_texte": "6 B",
+      "quantite_estimee": 6,
+      "article": "Bethmale 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-09-06",
+      "quantite_texte": "8 B",
+      "quantite_estimee": 8,
+      "article": "Savagnin 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 7,
+      "facture": {
+        "numero": "523597",
+        "date": "2024-08-23",
+        "type": "facture",
+        "designation": "ARBOIS SAVAGNIN 75 CL 2019 FRUITIERE VINICOLE ARBOIS",
+        "qte": 12,
+        "montantHT": 168.48
+      }
+    },
+    {
+      "date": "2024-09-13",
+      "quantite_texte": "5 sachets",
+      "quantite_estimee": 5,
+      "article": "Bretzel",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 8,
+      "facture": {
+        "numero": "523597",
+        "date": "2024-08-23",
+        "type": "facture",
+        "designation": "MIX CRACKERS ET BRETZEL CROCO SACHET DE 750 GRAMMES",
+        "qte": 4,
+        "montantHT": 18.52
+      }
+    },
+    {
+      "date": "2024-09-13",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Sirop Framboise",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "524657",
+        "date": "2024-09-06",
+        "type": "facture",
+        "designation": "MONIN FRAMBOISE 100 CL",
+        "qte": 1,
+        "montantHT": 6.36
+      }
+    },
+    {
+      "date": "2024-09-13",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Passoa",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "525292",
+        "date": "2024-09-13",
+        "type": "facture",
+        "designation": "PASSOA 70 CL 15° Ci-dessous Déconsigne du jour sur facture s",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-09-20",
+      "quantite_texte": "2 b",
+      "quantite_estimee": 2,
+      "article": "Passoa",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 4,
+      "facture": {
+        "numero": "525292",
+        "date": "2024-09-13",
+        "type": "facture",
+        "designation": "PASSOA 70 CL 15° Ci-dessous Déconsigne du jour sur facture s",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-09-25",
+      "quantite_texte": "3 b",
+      "quantite_estimee": 3,
+      "article": "Grand Marnier 70cl",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "526876",
+        "date": "2024-09-25",
+        "type": "avoir",
+        "designation": "GD MARNIER CORD RGE 70 CL 40° GRAND MARNIER CORDON ROUGE",
+        "qte": 3,
+        "montantHT": 66.96
+      }
+    },
+    {
+      "date": "2024-09-27",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Chablis 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "525902",
+        "date": "2024-09-20",
+        "type": "facture",
+        "designation": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2023",
+        "qte": 6,
+        "montantHT": 80.76
+      }
+    },
+    {
+      "date": "2024-09-27",
+      "quantite_texte": "1 caisse",
+      "quantite_estimee": 1,
+      "article": "Cidre Doux",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-10-18",
+      "quantite_texte": "1 caisse de 12 b",
+      "quantite_estimee": 12,
+      "article": "Cidre Doux 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-10-31",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Sucre",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "531198",
+        "date": "2024-11-21",
+        "type": "avoir",
+        "designation": "SUCRE FCBS BUCHETTE x 4 KG CARTON DE 1000 DOSES DE 4 GR",
+        "qte": 1,
+        "montantHT": 14.89
+      }
+    },
+    {
+      "date": "2024-10-31",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Clan Campbell",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 2,
+      "facture": {
+        "numero": "529437",
+        "date": "2024-10-31",
+        "type": "facture",
+        "designation": "CLAN CAMPBELL 70 CL 40° Ci-dessous Déconsigne du jour sur fa",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-11-08",
+      "quantite_texte": "1 b",
+      "quantite_estimee": 1,
+      "article": "Liqueur Sapin 100cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "530116",
+        "date": "2024-11-08",
+        "type": "facture",
+        "designation": "LIQUEUR DE SAPIN 100 CL 40°",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-11-08",
+      "quantite_texte": "6 b",
+      "quantite_estimee": 6,
+      "article": "Moulin à Vent",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "530116",
+        "date": "2024-11-08",
+        "type": "facture",
+        "designation": "MOULIN A VENT 75 CL 2018 Ci-dessous Déconsigne du jour sur f",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-11-15",
+      "quantite_texte": "1 carton 24",
+      "quantite_estimee": 24,
+      "article": "Bières blanches 33cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "aucune facture trouvée (±21j) -> à vérifier",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-11-15",
+      "quantite_texte": "6 B",
+      "quantite_estimee": 6,
+      "article": "Moulin à Vent",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "530116",
+        "date": "2024-11-08",
+        "type": "facture",
+        "designation": "MOULIN A VENT 75 CL 2018 Ci-dessous Déconsigne du jour sur f",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-11-21",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Sucre bûchette",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "531198",
+        "date": "2024-11-21",
+        "type": "avoir",
+        "designation": "SUCRE FCBS BUCHETTE x 4 KG CARTON DE 1000 DOSES DE 4 GR",
+        "qte": 1,
+        "montantHT": 14.89
+      }
+    },
+    {
+      "date": "2024-11-22",
+      "quantite_texte": "1 carton",
+      "quantite_estimee": 1,
+      "article": "Bière",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "sans mot-clé/date -> à vérifier manuellement",
+      "nb_factures_candidates": 0,
+      "facture": null
+    },
+    {
+      "date": "2024-12-06",
+      "quantite_texte": "4 b",
+      "quantite_estimee": 4,
+      "article": "Vin de Paille",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "532449",
+        "date": "2024-12-06",
+        "type": "facture",
+        "designation": "VIN DE PAILLE 37,5 CL 2018",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2024-12-06",
+      "quantite_texte": "2 b",
+      "quantite_estimee": 2,
+      "article": "Vin Jaune",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 8,
+      "facture": {
+        "numero": "530609",
+        "date": "2024-11-15",
+        "type": "facture",
+        "designation": "ARBOIS VIN JAUNE 62 CL 2017 FRUITIERE VINICOLE ARBOIS",
+        "qte": 4,
+        "montantHT": 95.92
+      }
+    },
+    {
+      "date": "2024-12-11",
+      "quantite_texte": "1 Bib",
+      "quantite_estimee": 1,
+      "article": "Aligoté",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "532782",
+        "date": "2024-12-11",
+        "type": "avoir",
+        "designation": "BIB BOURGOGNE ALIGOTE 10 L LA COMPAGNIE DE BURGONDIE",
+        "qte": 1,
+        "montantHT": 54.29
+      }
+    },
+    {
+      "date": "2024-12-13",
+      "quantite_texte": "2 b",
+      "quantite_estimee": 2,
+      "article": "Gewurztraminer 75cl",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "533074",
+        "date": "2024-12-13",
+        "type": "facture",
+        "designation": "GEWURZTRAMINER 75 CL SORCIERES DOMAINE LES SORCIERES 2018 DO",
+        "qte": 4,
+        "montantHT": 39.88
+      }
+    },
+    {
+      "date": "2024-12-20",
+      "quantite_texte": "1",
+      "quantite_estimee": 1,
+      "article": "Sirop Châtaigne",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 3,
+      "facture": {
+        "numero": "531879",
+        "date": "2024-11-29",
+        "type": "facture",
+        "designation": "MONIN CHATAIGNE 70 CL",
+        "qte": 2,
+        "montantHT": 11.22
+      }
+    },
+    {
+      "date": "2024-12-27",
+      "quantite_texte": "1 B",
+      "quantite_estimee": 1,
+      "article": "Vin de Paille",
+      "statut": "En manque",
+      "note": "",
+      "verdict": "DÉJÀ EXCLU (ligne facturée sans montant)",
+      "nb_factures_candidates": 5,
+      "facture": {
+        "numero": "532449",
+        "date": "2024-12-06",
+        "type": "facture",
+        "designation": "VIN DE PAILLE 37,5 CL 2018",
+        "qte": null,
+        "montantHT": null
+      }
+    },
+    {
+      "date": "2025-03-14",
+      "quantite_texte": "2 fûts",
+      "quantite_estimee": 2,
+      "article": "Bière Affligem",
+      "statut": "Avoir",
+      "note": "",
+      "verdict": "AVOIR présent (déjà crédité)",
+      "nb_factures_candidates": 1,
+      "facture": {
+        "numero": "539549",
+        "date": "2025-03-14",
+        "type": "avoir",
+        "designation": "FUT AFFLIGEM BLADE 8 L 6,7°",
+        "qte": 16,
+        "montantHT": 69.6
+      }
+    }
+  ]
+}

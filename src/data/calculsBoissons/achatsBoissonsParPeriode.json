@@ -1,0 +1,7096 @@
+{
+  "description": "Achats de boissons (fournisseur Franche-Comté Boissons Services) par exercice fiscal. Affectation par date de facture à l'exercice (01/04→31/03). Exclus : snacks, verrerie, matériel, kits. Quantité = unités achetées (bouteilles/BIB/fûts selon conditionnement) ; montant HT en €.",
+  "source": "factures-fournisseur.json",
+  "exercices": [
+    "2022-2023",
+    "2023-2024",
+    "2024-2025"
+  ],
+  "nb_produits": 308,
+  "achats": [
+    {
+      "produit": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "categorie": "bière",
+      "accise": true,
+      "conditionnement": "CARTON CONSIGNE FUT HK",
+      "code": "212122",
+      "total_quantite": 2096.0,
+      "total_montant_ht": 8302.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 792.0,
+          "montant_ht": 2866.32
+        },
+        "2023-2024": {
+          "quantite": 632.0,
+          "montant_ht": 2579.92
+        },
+        "2024-2025": {
+          "quantite": 672.0,
+          "montant_ht": 2856.16
+        }
+      }
+    },
+    {
+      "produit": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600716",
+      "total_quantite": 846.0,
+      "total_montant_ht": 6976.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 246.0,
+          "montant_ht": 1822.98
+        },
+        "2023-2024": {
+          "quantite": 324.0,
+          "montant_ht": 2663.46
+        },
+        "2024-2025": {
+          "quantite": 276.0,
+          "montant_ht": 2489.68
+        }
+      }
+    },
+    {
+      "produit": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "600707",
+      "total_quantite": 409.0,
+      "total_montant_ht": 5209.21,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 58.0,
+          "montant_ht": 682.08
+        },
+        "2023-2024": {
+          "quantite": 88.0,
+          "montant_ht": 1058.16
+        },
+        "2024-2025": {
+          "quantite": 263.0,
+          "montant_ht": 3468.97
+        }
+      }
+    },
+    {
+      "produit": "MACVIN BLANC 75 CL 18° DOMAINE ROLET PERE & FILS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510221",
+      "total_quantite": 346.0,
+      "total_montant_ht": 5198.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 280.0,
+          "montant_ht": 4159.06
+        },
+        "2024-2025": {
+          "quantite": 66.0,
+          "montant_ht": 1039.14
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601164",
+      "total_quantite": 352.0,
+      "total_montant_ht": 4102.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 158.0,
+          "montant_ht": 1803.98
+        },
+        "2023-2024": {
+          "quantite": 194.0,
+          "montant_ht": 2298.9
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE COCA COLA 33 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 24",
+      "code": "402005",
+      "total_quantite": 5952.0,
+      "total_montant_ht": 3860.64,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2712.0,
+          "montant_ht": 1735.68
+        },
+        "2023-2024": {
+          "quantite": 1488.0,
+          "montant_ht": 959.04
+        },
+        "2024-2025": {
+          "quantite": 1752.0,
+          "montant_ht": 1165.92
+        }
+      }
+    },
+    {
+      "produit": "MACVIN BLANC JACOBIN 75 CL FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "601152",
+      "total_quantite": 238.0,
+      "total_montant_ht": 3077.38,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 238.0,
+          "montant_ht": 3077.38
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BIB COTES DE PROV ROSE 10 L CAP DES PINS MTRES VIGN DE ST TROPEZ",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BAG IN BOX",
+      "code": "603042",
+      "total_quantite": 50.0,
+      "total_montant_ht": 2637.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 27.0,
+          "montant_ht": 1424.25
+        },
+        "2023-2024": {
+          "quantite": 23.0,
+          "montant_ht": 1213.25
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BIB BOURGOGNE ALIGOTE BUXY 10L LA COMPAGNIE DE BURGONDIE",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BAG IN BOX",
+      "code": "603040",
+      "total_quantite": 41.0,
+      "total_montant_ht": 2144.89,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 21.0,
+          "montant_ht": 1065.19
+        },
+        "2023-2024": {
+          "quantite": 20.0,
+          "montant_ht": 1079.7
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MOULIN A VENT 75 CL 2018 DOMAINE DE BRIANTE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601538",
+      "total_quantite": 176.0,
+      "total_montant_ht": 2080.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 82.0,
+          "montant_ht": 969.24
+        },
+        "2024-2025": {
+          "quantite": 94.0,
+          "montant_ht": 1111.08
+        }
+      }
+    },
+    {
+      "produit": "CAFE MALONGO GRAIN KILO SELECT",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "KILO CAFE",
+      "code": "110207",
+      "total_quantite": 71.0,
+      "total_montant_ht": 1969.54,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 38.0,
+          "montant_ht": 997.34
+        },
+        "2023-2024": {
+          "quantite": 29.0,
+          "montant_ht": 845.48
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 126.72
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2018",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600963",
+      "total_quantite": 192.0,
+      "total_montant_ht": 1929.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 108.0,
+          "montant_ht": 1063.32
+        },
+        "2023-2024": {
+          "quantite": 84.0,
+          "montant_ht": 866.04
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601166",
+      "total_quantite": 188.0,
+      "total_montant_ht": 1836.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 188.0,
+          "montant_ht": 1836.76
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2017 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661457",
+      "total_quantite": 74.0,
+      "total_montant_ht": 1779.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 74.0,
+          "montant_ht": 1779.74
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2023 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601934",
+      "total_quantite": 160.0,
+      "total_montant_ht": 1761.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 160.0,
+          "montant_ht": 1761.6
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2015 FRUITIERE VINICOLE ARBOIS AOC",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661576",
+      "total_quantite": 91.0,
+      "total_montant_ht": 1740.83,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 85.0,
+          "montant_ht": 1626.05
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 114.78
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601342",
+      "total_quantite": 126.0,
+      "total_montant_ht": 1734.42,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 287.34
+        },
+        "2023-2024": {
+          "quantite": 30.0,
+          "montant_ht": 411.0
+        },
+        "2024-2025": {
+          "quantite": 72.0,
+          "montant_ht": 1036.08
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601616",
+      "total_quantite": 162.0,
+      "total_montant_ht": 1727.59,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 162.0,
+          "montant_ht": 1727.59
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2016 FRUITIERE VINICOLE ARBOIS AOC",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601489",
+      "total_quantite": 80.0,
+      "total_montant_ht": 1697.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 80.0,
+          "montant_ht": 1697.6
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600705",
+      "total_quantite": 105.0,
+      "total_montant_ht": 1504.65,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 105.0,
+          "montant_ht": 1504.65
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2018",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601304",
+      "total_quantite": 220.0,
+      "total_montant_ht": 1470.08,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 96.0,
+          "montant_ht": 641.28
+        },
+        "2023-2024": {
+          "quantite": 124.0,
+          "montant_ht": 828.8
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2022 LES MARCHES DE GRANIT OGIER",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601680",
+      "total_quantite": 102.0,
+      "total_montant_ht": 1406.94,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 24.0,
+          "montant_ht": 331.2
+        },
+        "2024-2025": {
+          "quantite": 78.0,
+          "montant_ht": 1075.74
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2022 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601477",
+      "total_quantite": 148.0,
+      "total_montant_ht": 1340.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 54.36
+        },
+        "2023-2024": {
+          "quantite": 142.0,
+          "montant_ht": 1286.52
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "PERRIER 33 CL CONSIGNE",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300020",
+      "total_quantite": 1248.0,
+      "total_montant_ht": 1324.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 384.0,
+          "montant_ht": 383.04
+        },
+        "2023-2024": {
+          "quantite": 456.0,
+          "montant_ht": 488.88
+        },
+        "2024-2025": {
+          "quantite": 408.0,
+          "montant_ht": 452.88
+        }
+      }
+    },
+    {
+      "produit": "GEWURZTRAMINER 75 CL SORCIERES DOMAINE LES SORCIERES 2018 DOPFF & IRION",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601018",
+      "total_quantite": 127.0,
+      "total_montant_ht": 1265.95,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 42.0,
+          "montant_ht": 418.5
+        },
+        "2023-2024": {
+          "quantite": 45.0,
+          "montant_ht": 448.65
+        },
+        "2024-2025": {
+          "quantite": 40.0,
+          "montant_ht": 398.8
+        }
+      }
+    },
+    {
+      "produit": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2022",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661715",
+      "total_quantite": 152.0,
+      "total_montant_ht": 1263.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 72.0,
+          "montant_ht": 598.32
+        },
+        "2024-2025": {
+          "quantite": 80.0,
+          "montant_ht": 664.8
+        }
+      }
+    },
+    {
+      "produit": "PORTO SANDEMAN ROUGE 75CL 19°5",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "580018",
+      "total_quantite": 152.0,
+      "total_montant_ht": 1234.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 21.0,
+          "montant_ht": 162.55
+        },
+        "2023-2024": {
+          "quantite": 69.0,
+          "montant_ht": 554.07
+        },
+        "2024-2025": {
+          "quantite": 62.0,
+          "montant_ht": 517.7
+        }
+      }
+    },
+    {
+      "produit": "CALVADOS BEAUJOUR 100 CL 40°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520055",
+      "total_quantite": 73.0,
+      "total_montant_ht": 1227.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 32.0,
+          "montant_ht": 528.96
+        },
+        "2023-2024": {
+          "quantite": 22.0,
+          "montant_ht": 368.94
+        },
+        "2024-2025": {
+          "quantite": 19.0,
+          "montant_ht": 329.84
+        }
+      }
+    },
+    {
+      "produit": "CHAMPAGNE R DE RUINART 75 CL",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600729",
+      "total_quantite": 28.0,
+      "total_montant_ht": 1213.07,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 8.0,
+          "montant_ht": 312.0
+        },
+        "2023-2024": {
+          "quantite": 9.0,
+          "montant_ht": 401.67
+        },
+        "2024-2025": {
+          "quantite": 11.0,
+          "montant_ht": 499.4
+        }
+      }
+    },
+    {
+      "produit": "BIB BOURGOGNE ALIGOTE 10 L LA COMPAGNIE DE BURGONDIE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BAG IN BOX",
+      "code": "603040",
+      "total_quantite": 21.0,
+      "total_montant_ht": 1140.09,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 108.58
+        },
+        "2024-2025": {
+          "quantite": 19.0,
+          "montant_ht": 1031.51
+        }
+      }
+    },
+    {
+      "produit": "BIB COTES DU RHONE ROUGE 10 L ELEMENTS TERRA LAUDUN CHUSCLAN VIGNERON",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BAG IN BOX",
+      "code": "603512",
+      "total_quantite": 36.0,
+      "total_montant_ht": 1101.19,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "montant_ht": 357.25
+        },
+        "2023-2024": {
+          "quantite": 14.0,
+          "montant_ht": 440.14
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "montant_ht": 303.8
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2019 LES MARCHES DE GRANIT OGIER",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661679",
+      "total_quantite": 84.0,
+      "total_montant_ht": 1082.16,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 84.0,
+          "montant_ht": 1082.16
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2019 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601773",
+      "total_quantite": 76.0,
+      "total_montant_ht": 1067.04,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 168.48
+        },
+        "2024-2025": {
+          "quantite": 64.0,
+          "montant_ht": 898.56
+        }
+      }
+    },
+    {
+      "produit": "CIDRE LA MORDUE ORIGINAL 27 CL",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CARTON X 18",
+      "code": "403136",
+      "total_quantite": 881.0,
+      "total_montant_ht": 1026.54,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 215.0,
+          "montant_ht": 234.72
+        },
+        "2023-2024": {
+          "quantite": 378.0,
+          "montant_ht": 442.26
+        },
+        "2024-2025": {
+          "quantite": 288.0,
+          "montant_ht": 349.56
+        }
+      }
+    },
+    {
+      "produit": "MOULIN A VENT 75 CL 2017 DOMAINE DE BRIANTE",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661675",
+      "total_quantite": 93.0,
+      "total_montant_ht": 1008.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 81.0,
+          "montant_ht": 878.04
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 130.56
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2016 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601489",
+      "total_quantite": 42.0,
+      "total_montant_ht": 1007.16,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 11.0,
+          "montant_ht": 263.78
+        },
+        "2024-2025": {
+          "quantite": 31.0,
+          "montant_ht": 743.38
+        }
+      }
+    },
+    {
+      "produit": "LA ROUGET AMBREE 33 CL VP",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "200359",
+      "total_quantite": 552.0,
+      "total_montant_ht": 993.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 216.0,
+          "montant_ht": 373.44
+        },
+        "2023-2024": {
+          "quantite": 144.0,
+          "montant_ht": 260.88
+        },
+        "2024-2025": {
+          "quantite": 192.0,
+          "montant_ht": 359.04
+        }
+      }
+    },
+    {
+      "produit": "LA ROUGET BLANCHE 33 CL VP",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "200357",
+      "total_quantite": 552.0,
+      "total_montant_ht": 982.08,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 168.0,
+          "montant_ht": 290.88
+        },
+        "2023-2024": {
+          "quantite": 168.0,
+          "montant_ht": 302.4
+        },
+        "2024-2025": {
+          "quantite": 216.0,
+          "montant_ht": 388.8
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2021 LES MARCHES DE GRANIT OGIER",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601460",
+      "total_quantite": 68.0,
+      "total_montant_ht": 938.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 22.0,
+          "montant_ht": 303.6
+        },
+        "2023-2024": {
+          "quantite": 46.0,
+          "montant_ht": 634.8
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE FUZETEA PECHE 33 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 24",
+      "code": "401510",
+      "total_quantite": 1368.0,
+      "total_montant_ht": 936.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 624.0,
+          "montant_ht": 405.6
+        },
+        "2023-2024": {
+          "quantite": 456.0,
+          "montant_ht": 319.92
+        },
+        "2024-2025": {
+          "quantite": 288.0,
+          "montant_ht": 210.96
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN BLANC 75 CL 2022 CAVE DE LUGNY",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601862",
+      "total_quantite": 94.0,
+      "total_montant_ht": 934.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 94.0,
+          "montant_ht": 934.6
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL 2022 PINOT NOIR DOMAINE GERMAIN",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601667",
+      "total_quantite": 72.0,
+      "total_montant_ht": 899.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 74.94
+        },
+        "2024-2025": {
+          "quantite": 66.0,
+          "montant_ht": 824.34
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL VIEILLES VIGNES 2021 DOMAINE GERMAIN",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601346",
+      "total_quantite": 63.0,
+      "total_montant_ht": 897.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 341.76
+        },
+        "2023-2024": {
+          "quantite": 39.0,
+          "montant_ht": 555.36
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VIN DE PAILLE 37,5 CL 2017 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600964",
+      "total_quantite": 53.0,
+      "total_montant_ht": 880.33,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 25.0,
+          "montant_ht": 415.25
+        },
+        "2023-2024": {
+          "quantite": 24.0,
+          "montant_ht": 398.64
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 66.44
+        }
+      }
+    },
+    {
+      "produit": "GRANINI FRAISE 25 CL VP",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "400640",
+      "total_quantite": 708.0,
+      "total_montant_ht": 833.64,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 156.0,
+          "montant_ht": 166.92
+        },
+        "2023-2024": {
+          "quantite": 264.0,
+          "montant_ht": 314.88
+        },
+        "2024-2025": {
+          "quantite": 288.0,
+          "montant_ht": 351.84
+        }
+      }
+    },
+    {
+      "produit": "CREME CASSIS 15° 100 CL M.BRIZ",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591008",
+      "total_quantite": 90.0,
+      "total_montant_ht": 780.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 47.0,
+          "montant_ht": 391.03
+        },
+        "2023-2024": {
+          "quantite": 24.0,
+          "montant_ht": 216.0
+        },
+        "2024-2025": {
+          "quantite": 19.0,
+          "montant_ht": 173.09
+        }
+      }
+    },
+    {
+      "produit": "SOHO LITCHI 70 CL 15°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "540064",
+      "total_quantite": 75.0,
+      "total_montant_ht": 757.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 23.0,
+          "montant_ht": 225.0
+        },
+        "2023-2024": {
+          "quantite": 24.0,
+          "montant_ht": 250.56
+        },
+        "2024-2025": {
+          "quantite": 28.0,
+          "montant_ht": 282.24
+        }
+      }
+    },
+    {
+      "produit": "PICON BIERE 100 CL 18°",
+      "categorie": "bière",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510141",
+      "total_quantite": 72.0,
+      "total_montant_ht": 747.67,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 43.0,
+          "montant_ht": 439.19
+        },
+        "2023-2024": {
+          "quantite": 19.0,
+          "montant_ht": 201.02
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "montant_ht": 107.46
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS CHARDONNAY 75 CL 2020 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601454",
+      "total_quantite": 94.0,
+      "total_montant_ht": 733.06,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 43.62
+        },
+        "2023-2024": {
+          "quantite": 88.0,
+          "montant_ht": 689.44
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MACVIN JURA BLANC 75 CL MAISON FREDERIC LORNET",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "665175",
+      "total_quantite": 49.0,
+      "total_montant_ht": 712.66,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 96.9
+        },
+        "2024-2025": {
+          "quantite": 43.0,
+          "montant_ht": 615.76
+        }
+      }
+    },
+    {
+      "produit": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2022",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601401",
+      "total_quantite": 54.0,
+      "total_montant_ht": 711.54,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "montant_ht": 160.44
+        },
+        "2023-2024": {
+          "quantite": 36.0,
+          "montant_ht": 471.72
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 79.38
+        }
+      }
+    },
+    {
+      "produit": "BIB COTES DE PROVENCE 10 L ROSE HT MASTEREL GRANDE RESERV",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BAG IN BOX",
+      "code": "601956",
+      "total_quantite": 16.0,
+      "total_montant_ht": 705.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 16.0,
+          "montant_ht": 705.6
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2021",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "630253",
+      "total_quantite": 62.0,
+      "total_montant_ht": 691.3,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 62.0,
+          "montant_ht": 691.3
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CIDRE BRUT BOLEE ARMORIQ 75 CL",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "403200",
+      "total_quantite": 252.0,
+      "total_montant_ht": 666.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 84.0,
+          "montant_ht": 201.54
+        },
+        "2023-2024": {
+          "quantite": 60.0,
+          "montant_ht": 165.18
+        },
+        "2024-2025": {
+          "quantite": 108.0,
+          "montant_ht": 300.24
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2020",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600725",
+      "total_quantite": 98.0,
+      "total_montant_ht": 658.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 98.0,
+          "montant_ht": 658.56
+        }
+      }
+    },
+    {
+      "produit": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2021",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601253",
+      "total_quantite": 48.0,
+      "total_montant_ht": 639.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 48.0,
+          "montant_ht": 639.48
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "LIMONADE MORTUACIENNE BM 1 L",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "403707",
+      "total_quantite": 636.0,
+      "total_montant_ht": 598.08,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 192.0,
+          "montant_ht": 171.84
+        },
+        "2023-2024": {
+          "quantite": 228.0,
+          "montant_ht": 218.88
+        },
+        "2024-2025": {
+          "quantite": 216.0,
+          "montant_ht": 207.36
+        }
+      }
+    },
+    {
+      "produit": "VIN DE PAILLE 37,5 CL 2018 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601726",
+      "total_quantite": 31.0,
+      "total_montant_ht": 583.33,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 5.0,
+          "montant_ht": 93.95
+        },
+        "2024-2025": {
+          "quantite": 26.0,
+          "montant_ht": 489.38
+        }
+      }
+    },
+    {
+      "produit": "PONTARLIER ANIS SEC 100 CL 45°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510060",
+      "total_quantite": 31.0,
+      "total_montant_ht": 567.62,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 11.0,
+          "montant_ht": 197.45
+        },
+        "2023-2024": {
+          "quantite": 18.0,
+          "montant_ht": 332.46
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 37.71
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2017",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601043",
+      "total_quantite": 90.0,
+      "total_montant_ht": 556.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 90.0,
+          "montant_ht": 556.2
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BIB BLANC 10 L RAVELIN 13° VINS ANDRE BONNOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BAG IN BOX",
+      "code": "600731",
+      "total_quantite": 19.0,
+      "total_montant_ht": 535.94,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 10.0,
+          "montant_ht": 273.2
+        },
+        "2024-2025": {
+          "quantite": 9.0,
+          "montant_ht": 262.74
+        }
+      }
+    },
+    {
+      "produit": "MORT SUBITE WITTE 33 CL VP",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "200169",
+      "total_quantite": 276.0,
+      "total_montant_ht": 528.72,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 108.0,
+          "montant_ht": 174.24
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 25.92
+        },
+        "2024-2025": {
+          "quantite": 156.0,
+          "montant_ht": 328.56
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2021 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661580",
+      "total_quantite": 60.0,
+      "total_montant_ht": 525.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 60.0,
+          "montant_ht": 525.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ABSINTHE FRANCOIS GUY 45° 1 L",
+      "categorie": "boisson_chaude",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510051",
+      "total_quantite": 13.0,
+      "total_montant_ht": 523.41,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 40.43
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 482.98
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2019",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601878",
+      "total_quantite": 48.0,
+      "total_montant_ht": 522.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 65.28
+        },
+        "2024-2025": {
+          "quantite": 42.0,
+          "montant_ht": 456.96
+        }
+      }
+    },
+    {
+      "produit": "GRANINI JUS ANANAS 1 L PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400321",
+      "total_quantite": 168.0,
+      "total_montant_ht": 517.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 60.0,
+          "montant_ht": 161.94
+        },
+        "2023-2024": {
+          "quantite": 54.0,
+          "montant_ht": 172.56
+        },
+        "2024-2025": {
+          "quantite": 54.0,
+          "montant_ht": 183.24
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS CHARDONNAY 75 CL 2018 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600711",
+      "total_quantite": 70.0,
+      "total_montant_ht": 508.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 70.0,
+          "montant_ht": 508.9
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAN PELLEGRINO 100 CL CONSIGNE",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300026",
+      "total_quantite": 444.0,
+      "total_montant_ht": 491.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 252.0,
+          "montant_ht": 270.0
+        },
+        "2023-2024": {
+          "quantite": 192.0,
+          "montant_ht": 221.28
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2021",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600562",
+      "total_quantite": 54.0,
+      "total_montant_ht": 471.42,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 54.0,
+          "montant_ht": 471.42
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "RAVELIN BLANC MVPCE 13° 99 CL VINS ANDRE BONNOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "600933",
+      "total_quantite": 156.0,
+      "total_montant_ht": 468.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 144.0,
+          "montant_ht": 429.12
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 39.48
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601453",
+      "total_quantite": 47.0,
+      "total_montant_ht": 458.72,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 58.56
+        },
+        "2023-2024": {
+          "quantite": 41.0,
+          "montant_ht": 400.16
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CREMANT JURA BLANC 75 CL",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600716",
+      "total_quantite": 54.0,
+      "total_montant_ht": 451.26,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 18.0,
+          "montant_ht": 126.9
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 36.0,
+          "montant_ht": 324.36
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS CHARDONNAY 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601970",
+      "total_quantite": 54.0,
+      "total_montant_ht": 444.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 54.0,
+          "montant_ht": 444.96
+        }
+      }
+    },
+    {
+      "produit": "BAILEY'S 70 CL 17°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510133",
+      "total_quantite": 32.0,
+      "total_montant_ht": 431.84,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 51.96
+        },
+        "2023-2024": {
+          "quantite": 16.0,
+          "montant_ht": 215.36
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 164.52
+        }
+      }
+    },
+    {
+      "produit": "LIQUEUR GOLDEN EIGHT 70 CL 25° LIQUEUR DE POIRE WILLIAM",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591050",
+      "total_quantite": 24.0,
+      "total_montant_ht": 409.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 32.86
+        },
+        "2023-2024": {
+          "quantite": 11.0,
+          "montant_ht": 188.21
+        },
+        "2024-2025": {
+          "quantite": 11.0,
+          "montant_ht": 188.21
+        }
+      }
+    },
+    {
+      "produit": "BLEUE DU MONT BLANC 33 CL 5,8°",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "200859",
+      "total_quantite": 168.0,
+      "total_montant_ht": 391.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 168.0,
+          "montant_ht": 391.56
+        }
+      }
+    },
+    {
+      "produit": "CHAMPAGNE JEAN SANDRIN 75 CL BRUT TRADITION",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "609206",
+      "total_quantite": 24.0,
+      "total_montant_ht": 387.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 387.9
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GRANINI JUS POMME 1 L PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400301",
+      "total_quantite": 144.0,
+      "total_montant_ht": 381.42,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 54.3
+        },
+        "2023-2024": {
+          "quantite": 48.0,
+          "montant_ht": 126.0
+        },
+        "2024-2025": {
+          "quantite": 72.0,
+          "montant_ht": 201.12
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 75CL FRUITIERE VINICOLE ARBOIS 2020",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601153",
+      "total_quantite": 34.0,
+      "total_montant_ht": 369.92,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 34.0,
+          "montant_ht": 369.92
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2020 LUPE CHOLET",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661546",
+      "total_quantite": 30.0,
+      "total_montant_ht": 362.82,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 260.64
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 102.18
+        }
+      }
+    },
+    {
+      "produit": "CIDRE DOUX CONTEMPORAINE 75 CL CIDRERIE FAMILIALE SORRE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "403201",
+      "total_quantite": 120.0,
+      "total_montant_ht": 346.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 48.0,
+          "montant_ht": 138.72
+        },
+        "2023-2024": {
+          "quantite": 60.0,
+          "montant_ht": 173.4
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 34.68
+        }
+      }
+    },
+    {
+      "produit": "ROSE GRENACHE JAMELLES 75 CL JAMELLES 2020 CLAIR DE ROSE BADET CLEMENT ET COMPAGN",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600876",
+      "total_quantite": 84.0,
+      "total_montant_ht": 344.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 84.0,
+          "montant_ht": 344.4
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VODKA SOBIESKI 70 CL 37°5",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510013",
+      "total_quantite": 34.0,
+      "total_montant_ht": 332.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 36.44
+        },
+        "2023-2024": {
+          "quantite": 16.0,
+          "montant_ht": 154.72
+        },
+        "2024-2025": {
+          "quantite": 14.0,
+          "montant_ht": 141.12
+        }
+      }
+    },
+    {
+      "produit": "GRANINI NEC POIRE LITRE PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400308",
+      "total_quantite": 144.0,
+      "total_montant_ht": 331.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 144.0,
+          "montant_ht": 331.2
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GRANINI JUS ORANGE 1 L PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400312",
+      "total_quantite": 114.0,
+      "total_montant_ht": 324.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 66.0,
+          "montant_ht": 174.24
+        },
+        "2023-2024": {
+          "quantite": 48.0,
+          "montant_ht": 150.24
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "APEROL 100 CL 12,5°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "505034",
+      "total_quantite": 21.0,
+      "total_montant_ht": 308.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 11.0,
+          "montant_ht": 161.32
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "montant_ht": 147.28
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2017 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601892",
+      "total_quantite": 10.0,
+      "total_montant_ht": 305.7,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 118.8
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 186.9
+        }
+      }
+    },
+    {
+      "produit": "SAN PELLEGRINO 50 CL CONSIGNE",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300025",
+      "total_quantite": 360.0,
+      "total_montant_ht": 303.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 220.0,
+          "montant_ht": 180.4
+        },
+        "2023-2024": {
+          "quantite": 140.0,
+          "montant_ht": 123.2
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MACON ROCHE BLANCHE 75 CL",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600562",
+      "total_quantite": 36.0,
+      "total_montant_ht": 301.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 102.24
+        },
+        "2024-2025": {
+          "quantite": 24.0,
+          "montant_ht": 199.44
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL 2022 DOMAINE GERMAIN",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601667",
+      "total_quantite": 24.0,
+      "total_montant_ht": 299.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 24.0,
+          "montant_ht": 299.76
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GRANINI NECTAR ORANGE 1 L PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400300",
+      "total_quantite": 90.0,
+      "total_montant_ht": 298.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 90.0,
+          "montant_ht": 298.2
+        }
+      }
+    },
+    {
+      "produit": "HTES CTES DE NUITS BLANC 75 CL LUPE CHOLET 2017",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601416",
+      "total_quantite": 24.0,
+      "total_montant_ht": 293.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 293.28
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GENEPI 40° 70 CL PERES CHARTREUX",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591097",
+      "total_quantite": 13.0,
+      "total_montant_ht": 292.66,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 7.0,
+          "montant_ht": 154.07
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 91.49
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 47.1
+        }
+      }
+    },
+    {
+      "produit": "ROSE LES JAMELLES 75 CL 2022 PAYS D'OC CLAIR DE ROSE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601641",
+      "total_quantite": 56.0,
+      "total_montant_ht": 291.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 48.0,
+          "montant_ht": 250.08
+        },
+        "2024-2025": {
+          "quantite": 8.0,
+          "montant_ht": 41.68
+        }
+      }
+    },
+    {
+      "produit": "COTES DE PROVENCE ROSE 75 CL M DE MINUTY 2022",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "630081",
+      "total_quantite": 22.0,
+      "total_montant_ht": 290.62,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 22.0,
+          "montant_ht": 290.62
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "LA COTE ROUGE 75 CL 2021 AOP LA CLAPE CHATEAU DE LA NEGLY",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601348",
+      "total_quantite": 36.0,
+      "total_montant_ht": 290.16,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 36.0,
+          "montant_ht": 290.16
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ROSE DOM LE PIVE 2023 75 CL AOP SABLE DE CAMARGUE VIN BIO",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601882",
+      "total_quantite": 43.0,
+      "total_montant_ht": 279.07,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 43.0,
+          "montant_ht": 279.07
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS CHARDONNAY 75 CL 2022 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600700",
+      "total_quantite": 33.0,
+      "total_montant_ht": 271.92,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 33.0,
+          "montant_ht": 271.92
+        }
+      }
+    },
+    {
+      "produit": "ROSE GRENACHE JAMELLES 75 CL JAMELLES 2021 CLAIR DE ROSE BADET CLEMENT ET COMPAGN",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601297",
+      "total_quantite": 54.0,
+      "total_montant_ht": 270.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 54.0,
+          "montant_ht": 270.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2015 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601249",
+      "total_quantite": 10.0,
+      "total_montant_ht": 270.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 10.0,
+          "montant_ht": 270.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CHAMPAGNE LANSON 75 CL BLACK LABEL",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "609199",
+      "total_quantite": 11.0,
+      "total_montant_ht": 267.85,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 11.0,
+          "montant_ht": 267.85
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2015",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661576",
+      "total_quantite": 14.0,
+      "total_montant_ht": 267.82,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 14.0,
+          "montant_ht": 267.82
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ROSE LES JAMELLES 75 CL 2021 PAYS D'OC CLAIR DE ROSE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601297",
+      "total_quantite": 52.0,
+      "total_montant_ht": 259.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "montant_ht": 60.0
+        },
+        "2023-2024": {
+          "quantite": 40.0,
+          "montant_ht": 199.6
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CREME CERISE 70CL 18° BRIOTTET",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591081",
+      "total_quantite": 32.0,
+      "total_montant_ht": 258.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 11.0,
+          "montant_ht": 84.43
+        },
+        "2023-2024": {
+          "quantite": 11.0,
+          "montant_ht": 89.65
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "montant_ht": 84.8
+        }
+      }
+    },
+    {
+      "produit": "SAN PELLEGRINO 100 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300026",
+      "total_quantite": 216.0,
+      "total_montant_ht": 257.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 14.28
+        },
+        "2024-2025": {
+          "quantite": 204.0,
+          "montant_ht": 243.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2018 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600722",
+      "total_quantite": 36.0,
+      "total_montant_ht": 257.04,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 30.0,
+          "montant_ht": 214.2
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 42.84
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE SCHWEPPES AGRUM 33 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 24",
+      "code": "403033",
+      "total_quantite": 408.0,
+      "total_montant_ht": 255.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 192.0,
+          "montant_ht": 120.48
+        },
+        "2023-2024": {
+          "quantite": 120.0,
+          "montant_ht": 73.2
+        },
+        "2024-2025": {
+          "quantite": 96.0,
+          "montant_ht": 61.44
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601199",
+      "total_quantite": 24.0,
+      "total_montant_ht": 251.52,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 251.52
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GRANINI JUS DE TOMATE 25 CL VP",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "400653",
+      "total_quantite": 252.0,
+      "total_montant_ht": 251.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 84.0,
+          "montant_ht": 77.4
+        },
+        "2023-2024": {
+          "quantite": 84.0,
+          "montant_ht": 83.88
+        },
+        "2024-2025": {
+          "quantite": 84.0,
+          "montant_ht": 90.0
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2021",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601460",
+      "total_quantite": 18.0,
+      "total_montant_ht": 248.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 18.0,
+          "montant_ht": 248.4
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VOLVIC JUICY EXOTIC 50 CL PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "465207",
+      "total_quantite": 228.0,
+      "total_montant_ht": 241.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 228.0,
+          "montant_ht": 241.68
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2020 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661567",
+      "total_quantite": 29.0,
+      "total_montant_ht": 237.55,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 29.0,
+          "montant_ht": 237.55
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE FANTA CITRON FRAP 33 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 24",
+      "code": "402009",
+      "total_quantite": 336.0,
+      "total_montant_ht": 234.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 120.0,
+          "montant_ht": 78.0
+        },
+        "2023-2024": {
+          "quantite": 72.0,
+          "montant_ht": 50.4
+        },
+        "2024-2025": {
+          "quantite": 144.0,
+          "montant_ht": 105.6
+        }
+      }
+    },
+    {
+      "produit": "MONIN FRAMBOISE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401256",
+      "total_quantite": 37.0,
+      "total_montant_ht": 232.72,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 14.0,
+          "montant_ht": 88.0
+        },
+        "2023-2024": {
+          "quantite": 13.0,
+          "montant_ht": 81.12
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "montant_ht": 63.6
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2016",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601489",
+      "total_quantite": 10.0,
+      "total_montant_ht": 228.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 84.88
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 143.88
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2023 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661508",
+      "total_quantite": 24.0,
+      "total_montant_ht": 224.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 24.0,
+          "montant_ht": 224.88
+        }
+      }
+    },
+    {
+      "produit": "MACVIN BLANC JACOBIN 75 CL",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "601152",
+      "total_quantite": 18.0,
+      "total_montant_ht": 223.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 18.0,
+          "montant_ht": 223.74
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CHABLIS 75 CL L.MOREAU 2021 DOMAINE LOUIS MOREAU",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661583",
+      "total_quantite": 18.0,
+      "total_montant_ht": 222.84,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 18.0,
+          "montant_ht": 222.84
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2023 LES MARCHES DE GRANIT OGIER",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "602080",
+      "total_quantite": 16.0,
+      "total_montant_ht": 222.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 16.0,
+          "montant_ht": 222.2
+        }
+      }
+    },
+    {
+      "produit": "VIN de PAILLE 37,50 CL MAISON FREDERIC LORNET",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "2018 BOUTEILLE VINS FINS",
+      "code": "665173",
+      "total_quantite": 9.0,
+      "total_montant_ht": 217.71,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 9.0,
+          "montant_ht": 217.71
+        }
+      }
+    },
+    {
+      "produit": "ABSINTHE UN EMILE 45° 70 CL",
+      "categorie": "boisson_chaude",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "505042",
+      "total_quantite": 9.0,
+      "total_montant_ht": 216.09,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 48.02
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 144.06
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 24.01
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2022 LES PRELUDES",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601853",
+      "total_quantite": 24.0,
+      "total_montant_ht": 211.86,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 18.0,
+          "montant_ht": 157.32
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 54.54
+        }
+      }
+    },
+    {
+      "produit": "LA COTE ROUGE 75 CL 2022 AOP LA CLAPE CHATEAU DE LA NEGLY",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601733",
+      "total_quantite": 26.0,
+      "total_montant_ht": 209.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 26.0,
+          "montant_ht": 209.56
+        }
+      }
+    },
+    {
+      "produit": "GRANINI FRAMBOISE 25 CL VP",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "400639",
+      "total_quantite": 156.0,
+      "total_montant_ht": 204.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 144.0,
+          "montant_ht": 188.64
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 15.72
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 37,5 FRUITIERE VINICOLE ARBOIS 2019",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601877",
+      "total_quantite": 30.0,
+      "total_montant_ht": 201.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 30.0,
+          "montant_ht": 201.6
+        }
+      }
+    },
+    {
+      "produit": "PASSOA 70 CL 15° PASSION FRUIT JUICE",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510132",
+      "total_quantite": 21.0,
+      "total_montant_ht": 200.49,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 8.0,
+          "montant_ht": 73.45
+        },
+        "2023-2024": {
+          "quantite": 5.0,
+          "montant_ht": 49.45
+        },
+        "2024-2025": {
+          "quantite": 8.0,
+          "montant_ht": 77.59
+        }
+      }
+    },
+    {
+      "produit": "GD MARNIER CORD RGE 70 CL 40° GRAND MARNIER CORDON ROUGE",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510090",
+      "total_quantite": 9.0,
+      "total_montant_ht": 198.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 9.0,
+          "montant_ht": 198.24
+        }
+      }
+    },
+    {
+      "produit": "MONIN CHATAIGNE 70 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401254",
+      "total_quantite": 35.0,
+      "total_montant_ht": 194.43,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 10.0,
+          "montant_ht": 55.94
+        },
+        "2023-2024": {
+          "quantite": 17.0,
+          "montant_ht": 93.61
+        },
+        "2024-2025": {
+          "quantite": 8.0,
+          "montant_ht": 44.88
+        }
+      }
+    },
+    {
+      "produit": "BOITE ORANGINA 33 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 24",
+      "code": "401045",
+      "total_quantite": 312.0,
+      "total_montant_ht": 191.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 14.16
+        },
+        "2023-2024": {
+          "quantite": 144.0,
+          "montant_ht": 84.96
+        },
+        "2024-2025": {
+          "quantite": 144.0,
+          "montant_ht": 92.64
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2014 FRUITIERE VINICOLE ARBOIS AOC",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661509",
+      "total_quantite": 10.0,
+      "total_montant_ht": 191.3,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 10.0,
+          "montant_ht": 191.3
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CLAN CAMPBELL 70 CL 40°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520018",
+      "total_quantite": 14.0,
+      "total_montant_ht": 180.52,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 50.24
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 51.2
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 79.08
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN BLANC 75 CL CAVE DE LUGNY",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601862",
+      "total_quantite": 18.0,
+      "total_montant_ht": 176.58,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 18.0,
+          "montant_ht": 176.58
+        }
+      }
+    },
+    {
+      "produit": "VERT SAPIN 40° 100 CL",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510062",
+      "total_quantite": 8.0,
+      "total_montant_ht": 169.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 84.92
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 85.04
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE ORANGINA SLIM 33 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "401045",
+      "total_quantite": 240.0,
+      "total_montant_ht": 165.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 240.0,
+          "montant_ht": 165.6
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAN PELLEGRINO 50 CL VC",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300025",
+      "total_quantite": 180.0,
+      "total_montant_ht": 162.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 20.0,
+          "montant_ht": 18.0
+        },
+        "2024-2025": {
+          "quantite": 160.0,
+          "montant_ht": 144.0
+        }
+      }
+    },
+    {
+      "produit": "RICARD 100 CL 45°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520001",
+      "total_quantite": 9.0,
+      "total_montant_ht": 161.49,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 3.0,
+          "montant_ht": 52.89
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 71.8
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 36.8
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2021 LES PRELUDES",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601379",
+      "total_quantite": 18.0,
+      "total_montant_ht": 157.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 18.0,
+          "montant_ht": 157.5
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOHEME GRIS 75 CL 2021 IGP SABLE DE CAMARGUE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601239",
+      "total_quantite": 19.0,
+      "total_montant_ht": 156.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 33.0,
+          "montant_ht": 272.52
+        },
+        "2023-2024": {
+          "quantite": -14.0,
+          "montant_ht": -115.92
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "TROPICO TROPICAL 50 CL PET",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 12",
+      "code": "401532",
+      "total_quantite": 144.0,
+      "total_montant_ht": 155.52,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 144.0,
+          "montant_ht": 155.52
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ABSINTHE EMILE VERTE 68° 70 CL",
+      "categorie": "boisson_chaude",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "505033",
+      "total_quantite": 5.0,
+      "total_montant_ht": 154.45,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "montant_ht": 154.45
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "JACK DANIEL'S OLD N7 70 CL 40°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530012",
+      "total_quantite": 8.0,
+      "total_montant_ht": 153.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 3.0,
+          "montant_ht": 55.8
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "montant_ht": 57.78
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 39.66
+        }
+      }
+    },
+    {
+      "produit": "ROSE DOM LE PIVE 2022 75 CL IGP SABLE DE CAMARGUE VIN BIO",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601439",
+      "total_quantite": 23.0,
+      "total_montant_ht": 146.05,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 23.0,
+          "montant_ht": 146.05
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VIN JAUNE 62 CL 2016 MAISON FREDERIC LORNET",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661621",
+      "total_quantite": 5.0,
+      "total_montant_ht": 144.95,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 5.0,
+          "montant_ht": 144.95
+        }
+      }
+    },
+    {
+      "produit": "ABSINTHE TRILOGIE 50° 50 CL",
+      "categorie": "boisson_chaude",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510273",
+      "total_quantite": 6.0,
+      "total_montant_ht": 143.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 5.0,
+          "montant_ht": 119.9
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 23.98
+        }
+      }
+    },
+    {
+      "produit": "PORTO SANDEMAN ROUGE 75 CL19°5",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "580018",
+      "total_quantite": 19.0,
+      "total_montant_ht": 143.83,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 19.0,
+          "montant_ht": 143.83
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "COGNAC PARK VS 70 CL 40°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530126",
+      "total_quantite": 7.0,
+      "total_montant_ht": 142.14,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 3.0,
+          "montant_ht": 58.86
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 20.82
+        },
+        "2024-2025": {
+          "quantite": 3.0,
+          "montant_ht": 62.46
+        }
+      }
+    },
+    {
+      "produit": "GOURMANDISE ROSE 75 CL 2023 IGP MEDITERRANEE VIGNERON DE SAINT TROPEZ",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600755",
+      "total_quantite": 30.0,
+      "total_montant_ht": 140.7,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 30.0,
+          "montant_ht": 140.7
+        }
+      }
+    },
+    {
+      "produit": "GRANINI RAISIN ROUGE 25 CL VP",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "400645",
+      "total_quantite": 120.0,
+      "total_montant_ht": 135.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 120.0,
+          "montant_ht": 135.6
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601261",
+      "total_quantite": 12.0,
+      "total_montant_ht": 135.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "montant_ht": 135.48
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2022",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601616",
+      "total_quantite": 12.0,
+      "total_montant_ht": 130.44,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 64.38
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 66.06
+        }
+      }
+    },
+    {
+      "produit": "MARC DU JURA TISSOT 70CL MICHEL TISSOT",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520096",
+      "total_quantite": 7.0,
+      "total_montant_ht": 130.27,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 7.0,
+          "montant_ht": 130.27
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VITTEL 100 CL VC",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300001",
+      "total_quantite": 156.0,
+      "total_montant_ht": 129.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 36.0,
+          "montant_ht": 28.44
+        },
+        "2023-2024": {
+          "quantite": 60.0,
+          "montant_ht": 49.8
+        },
+        "2024-2025": {
+          "quantite": 60.0,
+          "montant_ht": 51.72
+        }
+      }
+    },
+    {
+      "produit": "MIRAVAL ROSE 75 CL 2020 CÔTES DE PROVENCE AOP",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661441",
+      "total_quantite": 10.0,
+      "total_montant_ht": 129.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 10.0,
+          "montant_ht": 129.68
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GD MARNIER CORD RGE 70 CL 40°",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510090",
+      "total_quantite": 6.0,
+      "total_montant_ht": 127.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 84.32
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 43.58
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL PINOT NOIR 2022 DOMAINE GERMAIN",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601667",
+      "total_quantite": 10.0,
+      "total_montant_ht": 124.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 10.0,
+          "montant_ht": 124.9
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 75CL",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600963",
+      "total_quantite": 12.0,
+      "total_montant_ht": 122.58,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 57.3
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 65.28
+        }
+      }
+    },
+    {
+      "produit": "MIRABELLE 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520128",
+      "total_quantite": 6.0,
+      "total_montant_ht": 120.89,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "montant_ht": 100.2
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 20.69
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GOURMANDISE ROSE 75 CL 2021 IGP MEDITERRANEE VIGNERON DE SAINT TROPEZ",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601281",
+      "total_quantite": 29.0,
+      "total_montant_ht": 120.64,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 30.0,
+          "montant_ht": 124.8
+        },
+        "2023-2024": {
+          "quantite": -1.0,
+          "montant_ht": -4.16
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MACON ROCHE BLANCHE 75 CL MACON BLANC 2023",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "602118",
+      "total_quantite": 13.0,
+      "total_montant_ht": 118.69,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 13.0,
+          "montant_ht": 118.69
+        }
+      }
+    },
+    {
+      "produit": "MACVIN DU JURA ROSE 75 CL FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE",
+      "code": "600764",
+      "total_quantite": 9.0,
+      "total_montant_ht": 118.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 82.56
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "montant_ht": 36.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "PULCO ORANGE CITRON 70CL VP",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401833",
+      "total_quantite": 26.0,
+      "total_montant_ht": 118.26,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 14.0,
+          "montant_ht": 60.06
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 58.2
+        }
+      }
+    },
+    {
+      "produit": "BIB GARDILLES ROSE 10 L IGP GARD SCA CELLIER DS CHARTREUX",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BAG IN BOX",
+      "code": "605168",
+      "total_quantite": 6.0,
+      "total_montant_ht": 115.83,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "montant_ht": 95.25
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 20.58
+        }
+      }
+    },
+    {
+      "produit": "SZIGET HEFEWEIZEN 33 CL 6,5°",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "200633",
+      "total_quantite": 48.0,
+      "total_montant_ht": 111.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 48.0,
+          "montant_ht": 111.36
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VODKA POLIAKOV 70 CL 37,5° SILVER BEC",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530078",
+      "total_quantite": 12.0,
+      "total_montant_ht": 107.65,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 11.0,
+          "montant_ht": 98.37
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 9.28
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GET 27 VERT 100 CL 17,9°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530030",
+      "total_quantite": 7.0,
+      "total_montant_ht": 107.64,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 29.94
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "montant_ht": 46.18
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 31.52
+        }
+      }
+    },
+    {
+      "produit": "MARTINI BIANCO 100 CL 14,4°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530051",
+      "total_quantite": 13.0,
+      "total_montant_ht": 105.35,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "montant_ht": 39.67
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 49.02
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 16.66
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2023",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601199",
+      "total_quantite": 8.0,
+      "total_montant_ht": 99.92,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 8.0,
+          "montant_ht": 99.92
+        }
+      }
+    },
+    {
+      "produit": "MARC DE BOURGOGNE 70 CL 45° EXTRA EGRAPPE MAISON JACOULOT",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "550252",
+      "total_quantite": 4.0,
+      "total_montant_ht": 99.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 22.1
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 51.8
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 25.9
+        }
+      }
+    },
+    {
+      "produit": "PASTIS 51 100 CL 45°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "540001",
+      "total_quantite": 6.0,
+      "total_montant_ht": 99.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 32.38
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 32.88
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 34.1
+        }
+      }
+    },
+    {
+      "produit": "PULCO CITRON FORM PROF 70 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401211",
+      "total_quantite": 20.0,
+      "total_montant_ht": 97.14,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 18.0,
+          "montant_ht": 87.12
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 10.02
+        }
+      }
+    },
+    {
+      "produit": "LIQUEUR DE SAPIN 100 CL 40°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510255",
+      "total_quantite": 5.0,
+      "total_montant_ht": 94.55,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 75.64
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 18.91
+        }
+      }
+    },
+    {
+      "produit": "GRAND PAVOIS N°8 BLANC 75 CL PETIT ET GROS MANSENG COTES DE GASCOGNE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600487",
+      "total_quantite": 18.0,
+      "total_montant_ht": 94.14,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 18.0,
+          "montant_ht": 94.14
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2019 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601658",
+      "total_quantite": 12.0,
+      "total_montant_ht": 91.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 45.66
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 45.66
+        }
+      }
+    },
+    {
+      "produit": "FRAMBOISE SAUVAGE 70 CL 40° MASSENEZ DISTILLERIE PEUREUX",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520133",
+      "total_quantite": 4.0,
+      "total_montant_ht": 90.35,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 21.71
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 45.76
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 22.88
+        }
+      }
+    },
+    {
+      "produit": "MACVIN BLANC 75 CL 18°",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510221",
+      "total_quantite": 6.0,
+      "total_montant_ht": 90.06,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 90.06
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS CHARDONNAY 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601322",
+      "total_quantite": 12.0,
+      "total_montant_ht": 87.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "montant_ht": 87.24
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "LIQUEUR VERT SAPIN 40° 70 CL",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510061",
+      "total_quantite": 5.0,
+      "total_montant_ht": 85.95,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 17.19
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 68.76
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE RGE 75 CL",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601346",
+      "total_quantite": 6.0,
+      "total_montant_ht": 85.44,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 85.44
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2021",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600705",
+      "total_quantite": 6.0,
+      "total_montant_ht": 84.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 84.24
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2023",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "602080",
+      "total_quantite": 6.0,
+      "total_montant_ht": 82.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 82.74
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2020 LES PIERRES SECHES MAISON YVES CUILLERON",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601088",
+      "total_quantite": 6.0,
+      "total_montant_ht": 81.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 81.6
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2014",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601158",
+      "total_quantite": 3.0,
+      "total_montant_ht": 81.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 3.0,
+          "montant_ht": 81.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2023",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "616624",
+      "total_quantite": 6.0,
+      "total_montant_ht": 80.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 80.76
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS BLANC CUV BETHANIE 37,5",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601304",
+      "total_quantite": 12.0,
+      "total_montant_ht": 80.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 40.08
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 40.32
+        }
+      }
+    },
+    {
+      "produit": "RAVELIN BLANC MVPCE 75 CL 13° VINS ANDRE BONNOT",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE",
+      "code": "600867",
+      "total_quantite": 30.0,
+      "total_montant_ht": 78.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 30.0,
+          "montant_ht": 78.9
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN PECHE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401234",
+      "total_quantite": 13.0,
+      "total_montant_ht": 78.09,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 7.0,
+          "montant_ht": 41.91
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 23.96
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 12.22
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2019",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661679",
+      "total_quantite": 6.0,
+      "total_montant_ht": 77.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 77.76
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2020 LES MARCHES DE GRANIT OGIER",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601354",
+      "total_quantite": 6.0,
+      "total_montant_ht": 77.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 77.76
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN ORANGE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401258",
+      "total_quantite": 17.0,
+      "total_montant_ht": 76.94,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 26.26
+        },
+        "2023-2024": {
+          "quantite": 5.0,
+          "montant_ht": 22.84
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 27.84
+        }
+      }
+    },
+    {
+      "produit": "CAFE MALONGO DECA MOULU AQUA BIO BTE 250G",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110275",
+      "total_quantite": 8.0,
+      "total_montant_ht": 75.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "montant_ht": 46.4
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "montant_ht": 29.34
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN CERISE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401241",
+      "total_quantite": 12.0,
+      "total_montant_ht": 75.67,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 8.0,
+          "montant_ht": 50.23
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 25.44
+        }
+      }
+    },
+    {
+      "produit": "MONIN GLASCO CITRON 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401257",
+      "total_quantite": 16.0,
+      "total_montant_ht": 73.28,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 8.68
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 18.2
+        },
+        "2024-2025": {
+          "quantite": 10.0,
+          "montant_ht": 46.4
+        }
+      }
+    },
+    {
+      "produit": "COTES DE PROVENCE ROSE 75 CL M DE MINUTY 2021",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "630079",
+      "total_quantite": 6.0,
+      "total_montant_ht": 72.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 72.9
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CIDRE DOUX BOLEE ARMORIQ 75 CL",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "403120",
+      "total_quantite": 36.0,
+      "total_montant_ht": 72.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 36.0,
+          "montant_ht": 72.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CHARDONNAY LES JAMELLES 75 CL PAYS D'OC 2022",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601674",
+      "total_quantite": 12.0,
+      "total_montant_ht": 71.04,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 71.04
+        }
+      }
+    },
+    {
+      "produit": "CHABLIS SAINT MARTIN 75 CL MAISON LAROCHE 2020",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661661",
+      "total_quantite": 6.0,
+      "total_montant_ht": 70.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 70.74
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN GRENADINE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "BOUTEILLE",
+      "code": "401267",
+      "total_quantite": 17.0,
+      "total_montant_ht": 70.42,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 7.0,
+          "montant_ht": 27.67
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 25.47
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 17.28
+        }
+      }
+    },
+    {
+      "produit": "GET 31 100 CL 24°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530031",
+      "total_quantite": 4.0,
+      "total_montant_ht": 68.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 33.76
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 16.93
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 17.71
+        }
+      }
+    },
+    {
+      "produit": "CREME CASSIS BRIOTTET 20° 70CL CASSIS DE DIJON",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591074",
+      "total_quantite": 8.0,
+      "total_montant_ht": 68.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 50.3
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 18.06
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VITTEL 50 CL VC",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300002",
+      "total_quantite": 100.0,
+      "total_montant_ht": 68.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 20.0,
+          "montant_ht": 12.4
+        },
+        "2023-2024": {
+          "quantite": 40.0,
+          "montant_ht": 27.6
+        },
+        "2024-2025": {
+          "quantite": 40.0,
+          "montant_ht": 28.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2018",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601164",
+      "total_quantite": 6.0,
+      "total_montant_ht": 67.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 67.74
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAINT JOSEPH ROUGE 75 CL 2018 LES MARCHES DE GRANIT OGIER",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661497",
+      "total_quantite": 6.0,
+      "total_montant_ht": 66.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 66.36
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BIB COTES DE PROVENCE 3 L ROSE HAUT MASTEREL",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BAG IN BOX",
+      "code": "665048",
+      "total_quantite": 4.0,
+      "total_montant_ht": 65.72,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 65.72
+        }
+      }
+    },
+    {
+      "produit": "MONIN FRAISE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401242",
+      "total_quantite": 12.0,
+      "total_montant_ht": 63.55,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "montant_ht": 25.94
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "montant_ht": 15.93
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 21.68
+        }
+      }
+    },
+    {
+      "produit": "CHABLIS 75 CL LE FINAGE 2022 LA CHABLISIENNE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601610",
+      "total_quantite": 6.0,
+      "total_montant_ht": 62.22,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 62.22
+        }
+      }
+    },
+    {
+      "produit": "ROSE LES JAMELLES 75 CL 2021",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601297",
+      "total_quantite": 12.0,
+      "total_montant_ht": 59.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 59.88
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2019 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600921",
+      "total_quantite": 6.0,
+      "total_montant_ht": 58.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 58.56
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GEWURZTRAMINER 75 CL SORCIERES",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600911",
+      "total_quantite": 6.0,
+      "total_montant_ht": 57.66,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 57.66
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2023",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661508",
+      "total_quantite": 6.0,
+      "total_montant_ht": 56.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 56.88
+        }
+      }
+    },
+    {
+      "produit": "BORDEAUX SUPERIEUR 75 CL CHATEAU GRAND RENOM ANTOINE MOUEIX",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "2014 BOUTEILLE VINS FINS",
+      "code": "661236",
+      "total_quantite": 9.0,
+      "total_montant_ht": 56.52,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 9.0,
+          "montant_ht": 56.52
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS SAVAGNIN 75 CL 2017 FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601159",
+      "total_quantite": 5.0,
+      "total_montant_ht": 56.45,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 5.0,
+          "montant_ht": 56.45
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "VIN DE PAILLE 37,5 CL 2018",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601726",
+      "total_quantite": 3.0,
+      "total_montant_ht": 56.37,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 3.0,
+          "montant_ht": 56.37
+        }
+      }
+    },
+    {
+      "produit": "BIB BOURGOGNE ALIGOTE 10 L",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BAG IN BOX",
+      "code": "603040",
+      "total_quantite": 1.0,
+      "total_montant_ht": 54.29,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 54.29
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS VIN JAUNE 62 CL 2016 DOMAINE JEAN-LOUIS TISSOT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601462",
+      "total_quantite": 2.0,
+      "total_montant_ht": 54.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 54.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GEWURZTRAMINER VEND TARD 75CL DOPFF ET IRION 2018",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601732",
+      "total_quantite": 2.0,
+      "total_montant_ht": 51.38,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 51.38
+        }
+      }
+    },
+    {
+      "produit": "BIB BOURGOGNE ALIGOTE BUXY 10L",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BAG IN BOX",
+      "code": "603040",
+      "total_quantite": 1.0,
+      "total_montant_ht": 51.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 51.24
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS ROUGE TRADITION 75 CL DOM. JEAN-LOUIS TISSOT 2023",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600702",
+      "total_quantite": 6.0,
+      "total_montant_ht": 51.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 51.12
+        }
+      }
+    },
+    {
+      "produit": "CAPUCINE CREME CASSIS 16° 1 L",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520093",
+      "total_quantite": 7.0,
+      "total_montant_ht": 50.93,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 27.62
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "montant_ht": 23.31
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "TEQUILA CAMINO REAL 70 CL 35°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530042",
+      "total_quantite": 3.0,
+      "total_montant_ht": 48.89,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 15.71
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 16.25
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 16.93
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS CHARDONNAY 75 CL FRUITIERE VINICOLE ARBOIS",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "2020 BOUTEILLE VINS FINS",
+      "code": "601305",
+      "total_quantite": 6.0,
+      "total_montant_ht": 46.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 46.32
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CREME MURE 15° 100 CL M.BRIZ",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591009",
+      "total_quantite": 5.0,
+      "total_montant_ht": 44.55,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 16.16
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 18.54
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 9.85
+        }
+      }
+    },
+    {
+      "produit": "WHITE RABBIT 5° 33 CL VP SAINTE CRU",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "200598",
+      "total_quantite": 24.0,
+      "total_montant_ht": 44.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 44.4
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOHEME GRIS 2020 75 CL IGP SABLE DE CAMARGUE 2020",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "661492",
+      "total_quantite": 6.0,
+      "total_montant_ht": 43.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 43.56
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "FRAMBOISE 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520130",
+      "total_quantite": 2.0,
+      "total_montant_ht": 43.3,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 43.3
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN MENTHE VERTE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401244",
+      "total_quantite": 10.0,
+      "total_montant_ht": 41.05,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 15.4
+        },
+        "2023-2024": {
+          "quantite": 4.0,
+          "montant_ht": 17.01
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 8.64
+        }
+      }
+    },
+    {
+      "produit": "MIRABELLE 70 CL 40° MASSENEZ DISTILLERIE PEUREUX",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520132",
+      "total_quantite": 2.0,
+      "total_montant_ht": 40.74,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 40.74
+        }
+      }
+    },
+    {
+      "produit": "RAVELIN BLANC MVPCE 13° 99 CL",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "600933",
+      "total_quantite": 12.0,
+      "total_montant_ht": 39.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 39.48
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MARC DU JURA TISSOT 70 CL MICHEL TISSOT",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520096",
+      "total_quantite": 2.0,
+      "total_montant_ht": 38.09,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 18.61
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 19.48
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GOURMANDISE ROSE 75 CL 2024 IGP MEDITERRANEE VIGNERON DE SAINT TROPEZ",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601281",
+      "total_quantite": 8.0,
+      "total_montant_ht": 37.52,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 8.0,
+          "montant_ht": 37.52
+        }
+      }
+    },
+    {
+      "produit": "ROUTIN 1883 CHATAIGNE 1 L",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401299",
+      "total_quantite": 7.0,
+      "total_montant_ht": 35.49,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 10.14
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 5.0,
+          "montant_ht": 25.35
+        }
+      }
+    },
+    {
+      "produit": "TERRASSES ROSE 75 CL 2023 IGP PAYS D'OC CHATEAU DE LA NEGLY",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601861",
+      "total_quantite": 6.0,
+      "total_montant_ht": 32.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 32.4
+        }
+      }
+    },
+    {
+      "produit": "LA COTE ROUGE 75 CL 2022",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601733",
+      "total_quantite": 4.0,
+      "total_montant_ht": 32.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 4.0,
+          "montant_ht": 32.24
+        }
+      }
+    },
+    {
+      "produit": "GRAND PAVOIS N°8 BLANC 75 CL PETIT ET GROS MANSENG 2022 COTES DE GASCOGNE",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600487",
+      "total_quantite": 6.0,
+      "total_montant_ht": 32.22,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 6.0,
+          "montant_ht": 32.22
+        }
+      }
+    },
+    {
+      "produit": "ROSE LES JAMELLES 75 CL 2022",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601641",
+      "total_quantite": 6.0,
+      "total_montant_ht": 31.26,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 31.26
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE HEINEKEN 50 CL 5°",
+      "categorie": "bière",
+      "accise": true,
+      "conditionnement": "CARTON X 24",
+      "code": "220049",
+      "total_quantite": 24.0,
+      "total_montant_ht": 30.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 24.0,
+          "montant_ht": 30.96
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CIDRE VAL DE RANCE DOUX 75 CL IENT",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "465163",
+      "total_quantite": 12.0,
+      "total_montant_ht": 30.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 30.96
+        }
+      }
+    },
+    {
+      "produit": "GRIMBERGEN BLANCHE 33 CL VP 6°",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "200031",
+      "total_quantite": 24.0,
+      "total_montant_ht": 30.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 30.24
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE SPRITE 33 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 24",
+      "code": "402007",
+      "total_quantite": 48.0,
+      "total_montant_ht": 30.24,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 24.0,
+          "montant_ht": 15.12
+        },
+        "2024-2025": {
+          "quantite": 24.0,
+          "montant_ht": 15.12
+        }
+      }
+    },
+    {
+      "produit": "MIRAVAL ROSE 75 CL 2021 CÔTES DE PROVENCE AOP",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601289",
+      "total_quantite": 2.0,
+      "total_montant_ht": 29.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 29.12
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GRANINI MARACUJA-PASSION L PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400317",
+      "total_quantite": 6.0,
+      "total_montant_ht": 27.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 27.96
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN SIROP PAMPLEM. ROSE 70CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401349",
+      "total_quantite": 5.0,
+      "total_montant_ht": 27.57,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 3.0,
+          "montant_ht": 16.57
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 11.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "NORBERT JUS POMME 1L PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400352",
+      "total_quantite": 18.0,
+      "total_montant_ht": 27.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 18.0,
+          "montant_ht": 27.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "TROPICO EXOTIQUE 50 CL PET (ORIGINAL)",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "CARTON X 12",
+      "code": "401531",
+      "total_quantite": 24.0,
+      "total_montant_ht": 26.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 12.96
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 13.44
+        }
+      }
+    },
+    {
+      "produit": "TEQUILA SAN JOSE 35° 70 CL",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "580026",
+      "total_quantite": 2.0,
+      "total_montant_ht": 25.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 25.9
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN MENTHE GLACIALE 100 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "",
+      "code": "401271",
+      "total_quantite": 6.0,
+      "total_montant_ht": 25.61,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 25.61
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GENEPI 40° 70 CL",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591097",
+      "total_quantite": 1.0,
+      "total_montant_ht": 23.55,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 23.55
+        }
+      }
+    },
+    {
+      "produit": "AUXEY DURESSES RGE 75CL 2022 AGNES PAQUET DOMAINE AGENS PAQUET",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "662010",
+      "total_quantite": 1.0,
+      "total_montant_ht": 23.11,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 23.11
+        }
+      }
+    },
+    {
+      "produit": "THE KUSMI VERT A LA MENTHE X25",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110285",
+      "total_quantite": 2.0,
+      "total_montant_ht": 20.96,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 20.96
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CAFE MALONGO DECA MOULU AQUA BIO BTE 250G COMMERCE EQUITABLE",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110275",
+      "total_quantite": 2.0,
+      "total_montant_ht": 20.94,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 20.94
+        }
+      }
+    },
+    {
+      "produit": "BIERE BLANCHE 33 CL 6° ABBAYE DE BAUME LES MESSIEURS CERVOISE BOISSONS FERMEN",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "201442",
+      "total_quantite": 12.0,
+      "total_montant_ht": 20.64,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 12.0,
+          "montant_ht": 20.64
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE 1664 33 CL 5,5°",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "220003",
+      "total_quantite": 24.0,
+      "total_montant_ht": 19.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 19.68
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MARC DU JURA TISSOT 70 CL",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520096",
+      "total_quantite": 1.0,
+      "total_montant_ht": 19.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 19.48
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "POIRE WILLIAM 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520127",
+      "total_quantite": 1.0,
+      "total_montant_ht": 19.11,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 19.11
+        }
+      }
+    },
+    {
+      "produit": "POIRE WILLIAM 70 CL 40° MASSENEZ DISTILLERIE PEUREUX",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520131",
+      "total_quantite": 1.0,
+      "total_montant_ht": 18.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 18.9
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BOITE HEINEKEN 33 CL",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON X 24",
+      "code": "220020",
+      "total_quantite": 24.0,
+      "total_montant_ht": 18.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 24.0,
+          "montant_ht": 18.48
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "RIEME CASSIS 100 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401388",
+      "total_quantite": 3.0,
+      "total_montant_ht": 18.36,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 6.12
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 12.24
+        }
+      }
+    },
+    {
+      "produit": "GRANINI ABRICOT RAISIN 25 CL NECT BIO",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 12",
+      "code": "401665",
+      "total_quantite": 12.0,
+      "total_montant_ht": 17.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 12.0,
+          "montant_ht": 17.88
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CAROLA BLEUE 50 CL CONSIGNE",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "300101",
+      "total_quantite": 40.0,
+      "total_montant_ht": 17.4,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 20.0,
+          "montant_ht": 8.4
+        },
+        "2023-2024": {
+          "quantite": 20.0,
+          "montant_ht": 9.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "LIQUEUR GOLDEN EIGHT 70 CL 25°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591050",
+      "total_quantite": 1.0,
+      "total_montant_ht": 17.11,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 17.11
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "LIQUEUR VERT SAPIN 40° 70 CL BOURGEONS SAPIN DU HAUT DOUBS",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510061",
+      "total_quantite": 1.0,
+      "total_montant_ht": 16.77,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 16.77
+        }
+      }
+    },
+    {
+      "produit": "BADOIT ROUGE 100 CL PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "300056",
+      "total_quantite": 12.0,
+      "total_montant_ht": 16.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 12.0,
+          "montant_ht": 16.68
+        }
+      }
+    },
+    {
+      "produit": "VIN DE PAILLE 37,5 CL 2017",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600964",
+      "total_quantite": 1.0,
+      "total_montant_ht": 16.61,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 16.61
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GRANINI NEC ANANAS LITRE PET",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400306",
+      "total_quantite": 6.0,
+      "total_montant_ht": 16.38,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 6.0,
+          "montant_ht": 16.38
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN SIROP CURACAO BLEU 70CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401438",
+      "total_quantite": 3.0,
+      "total_montant_ht": 16.04,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 10.68
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 5.36
+        }
+      }
+    },
+    {
+      "produit": "NORBERT JUS ORANGE SS PULPE 1L",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400350",
+      "total_quantite": 6.0,
+      "total_montant_ht": 15.18,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 6.0,
+          "montant_ht": 15.18
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GET 27 VERT 100 CL 21°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "530030",
+      "total_quantite": 1.0,
+      "total_montant_ht": 14.58,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 14.58
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAUTERNES 75 CL 2015 CASTELNAU DE SUDUIRAUT",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "665102",
+      "total_quantite": 1.0,
+      "total_montant_ht": 14.23,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 14.23
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE VERT MENTHE X 25 SACHETS LES JARDINS IMPATIENTS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110271",
+      "total_quantite": 2.0,
+      "total_montant_ht": 12.84,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 6.42
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 6.42
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE EARL GREY x 25 SACHETS LES JARDINS IMPATIENTS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110276",
+      "total_quantite": 2.0,
+      "total_montant_ht": 12.84,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "montant_ht": 12.84
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BORDEAUX SUPERIEUR 75 CL",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "2014 BOUTEILLE VINS FINS",
+      "code": "661236",
+      "total_quantite": 2.0,
+      "total_montant_ht": 12.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 12.56
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ROUTIN 1883 MOJITO MINT 70 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401342",
+      "total_quantite": 2.0,
+      "total_montant_ht": 12.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 12.12
+        }
+      }
+    },
+    {
+      "produit": "ROUTIN 1883 FRAMBOISE 1 L",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401284",
+      "total_quantite": 2.0,
+      "total_montant_ht": 11.77,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 11.77
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE VERT MENTHE BARONNYS BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "115121",
+      "total_quantite": 2.0,
+      "total_montant_ht": 11.32,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 2.0,
+          "montant_ht": 11.32
+        }
+      }
+    },
+    {
+      "produit": "VODKA ERISTOFF 70 CL",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "37,5° BOUTEILLE ALCOOL",
+      "code": "530021",
+      "total_quantite": 1.0,
+      "total_montant_ht": 10.57,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 10.57
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "HTES COTES DE BEAUNE BLC 75 CL DOMAINE GERMAIN 2019",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "600425",
+      "total_quantite": 1.0,
+      "total_montant_ht": 9.95,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 9.95
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "PASSOA 70 CL 15°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "510132",
+      "total_quantite": 1.0,
+      "total_montant_ht": 9.89,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 9.89
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN ORGEAT 100 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "",
+      "code": "401246",
+      "total_quantite": 2.0,
+      "total_montant_ht": 8.93,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 4.29
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 4.64
+        }
+      }
+    },
+    {
+      "produit": "PORTO OFFLEY RUBY 75 CL 19,5°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "520077",
+      "total_quantite": 1.0,
+      "total_montant_ht": 8.84,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 8.84
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "INFUSION TILLEUL x 20 PREMIUM COLLECTION",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "115109",
+      "total_quantite": 1.0,
+      "total_montant_ht": 8.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 8.8
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE VERT JASMIN PREMIUM COLLECTION",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "x 20 BOITE(S)",
+      "code": "115106",
+      "total_quantite": 1.0,
+      "total_montant_ht": 8.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 8.8
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "INFUSION CAMOMILLE x 20 PREMIUM COLLECTION",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "115108",
+      "total_quantite": 1.0,
+      "total_montant_ht": 8.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 8.8
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "CREME CERISE 70CL 18°",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591081",
+      "total_quantite": 1.0,
+      "total_montant_ht": 8.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 8.48
+        }
+      }
+    },
+    {
+      "produit": "MONIN CITRON 100 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "",
+      "code": "401255",
+      "total_quantite": 2.0,
+      "total_montant_ht": 7.82,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 2.0,
+          "montant_ht": 7.82
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "PORTO SANDEMAN BLANC 75 CL19°5",
+      "categorie": "vin/cidre",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "580019",
+      "total_quantite": 1.0,
+      "total_montant_ht": 7.43,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 7.43
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "INF VERVEINE MENTHE x 25 SACH LES JARDINS IMPATIENTS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110274",
+      "total_quantite": 1.0,
+      "total_montant_ht": 7.22,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 7.22
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "INFUSION TILLEUL BARONNY'S BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "165352",
+      "total_quantite": 1.0,
+      "total_montant_ht": 7.15,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 7.15
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "INF MALONGO BIO VERVEINE X25",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110278",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.88,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 6.88
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE JARDIN IMPATIENT VERT MENT THE X20 ETS GEORGES CANNON",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110271",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.76,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 6.76
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "INFUSION VERVEINE BARONNY'S BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "165226",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 6.68
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE NOIR FRUITS ROUGE BARONNYS BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "165229",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.48,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 6.48
+        }
+      }
+    },
+    {
+      "produit": "THE JASMIN BARONNY'S BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "",
+      "code": "165231",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.43,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 6.43
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE FRUITS ROUGES X 25 SACHETS LES JARDINS IMPATIENTS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "110282",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.42,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 6.42
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "INFUSION CAMOMILLE BARONNY'S BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "165225",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.33,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 6.33
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "THE NOIR CARAMEL BARONNY'S BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "165227",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.31,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 6.31
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ROUTIN 1883 RHUM 1 L",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401454",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.13,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 6.13
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ROUTIN MOJITO MINT 70 CL",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401342",
+      "total_quantite": 1.0,
+      "total_montant_ht": 6.06,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 1.0,
+          "montant_ht": 6.06
+        }
+      }
+    },
+    {
+      "produit": "THE NOIR CEYLAN BARONNY'S BOITE DE 25 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "165235",
+      "total_quantite": 1.0,
+      "total_montant_ht": 5.84,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 5.84
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "MONIN VIOLETTE 70 CL",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "",
+      "code": "401231",
+      "total_quantite": 1.0,
+      "total_montant_ht": 5.25,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 5.25
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "BLANCHE DES NEIGES 33CL VC 4,9",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "201414",
+      "total_quantite": 4.0,
+      "total_montant_ht": 4.12,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "montant_ht": 4.12
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ROUTIN 1883 CITRON JAUNE 1 L",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "BOUTEILLE SIROPS",
+      "code": "401292",
+      "total_quantite": 1.0,
+      "total_montant_ht": 3.82,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 1.0,
+          "montant_ht": 3.82
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "PEPPERMINT INFUSION SEGAFREDO BOITE DE 20 SACHETS",
+      "categorie": "boisson_chaude",
+      "accise": false,
+      "conditionnement": "BOITE(S)",
+      "code": "115102",
+      "total_quantite": 1.0,
+      "total_montant_ht": 3.44,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 1.0,
+          "montant_ht": 3.44
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "L'ESPRIT GASSIER ROSE 75 CL CÔTES DE PROVENCE AOP 2023 CHATEAU GASSIER",
+      "categorie": "sans_alcool",
+      "accise": true,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601823",
+      "total_quantite": 0.0,
+      "total_montant_ht": -1.68,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": -1.68
+        }
+      }
+    },
+    {
+      "produit": "CREME MURE 15° 100 CL M.BRIZ voulait du cassis",
+      "categorie": "spiritueux/liqueur",
+      "accise": true,
+      "conditionnement": "BOUTEILLE ALCOOL",
+      "code": "591009",
+      "total_quantite": -1.0,
+      "total_montant_ht": -9.85,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": -1.0,
+          "montant_ht": -9.85
+        }
+      }
+    },
+    {
+      "produit": "FUT HEINEKEN BLADE 8 L 5°",
+      "categorie": "bière",
+      "accise": false,
+      "conditionnement": "CARTON CONSIGNE FUT HK",
+      "code": "212120",
+      "total_quantite": 0.0,
+      "total_montant_ht": -13.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": -13.6
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "GRANINI NEC POIRE LITRE PET ******************************************************** * LE BEAUJOLAIS NOUVEAU EST DISPONIBLE A LA LIVRAISON * * NE PAS METTRE A LA CONSOMMATION * * AVANT LE JEUDI 17 NOVEMBRE 2022 * ********************************************************",
+      "categorie": "sans_alcool",
+      "accise": false,
+      "conditionnement": "CARTON X 6",
+      "code": "400308",
+      "total_quantite": -12.0,
+      "total_montant_ht": -27.6,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": -12.0,
+          "montant_ht": -27.6
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "ARBOIS TROUSSEAU 75 CL 2021 DOMAINE JEAN-LOUIS TISSOT erreur saisie jerome",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601453",
+      "total_quantite": -6.0,
+      "total_montant_ht": -58.56,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": -6.0,
+          "montant_ht": -58.56
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "SAINT VERAN 75 CL 2022 CAVE DE PRISSE DOMAINE PARADIS UNION DES VIGNERONS erreur prepa",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "BOUTEILLE VINS FINS",
+      "code": "601477",
+      "total_quantite": -12.0,
+      "total_montant_ht": -108.72,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2023-2024": {
+          "quantite": -12.0,
+          "montant_ht": -108.72
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    },
+    {
+      "produit": "RAVELIN BLANC MVPCE 13° 99 CL VINS ANDRE BONNOT ******************************************************** * LE BEAUJOLAIS NOUVEAU EST DISPONIBLE A LA LIVRAISON * * NE PAS METTRE A LA CONSOMMATION * * AVANT LE JEUDI 17 NOVEMBRE 2022 * ********************************************************",
+      "categorie": "vin/cidre",
+      "accise": false,
+      "conditionnement": "CAISSE",
+      "code": "600933",
+      "total_quantite": -60.0,
+      "total_montant_ht": -178.8,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": -60.0,
+          "montant_ht": -178.8
+        },
+        "2023-2024": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "montant_ht": 0.0
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,296 @@
+{
+  "family": "cocktails-maison",
+  "ventes": [
+    {
+      "ref": "0357",
+      "libelleCaisse": "La Vouivre",
+      "carteTitre": "La Vouivre",
+      "methode": "cocktail",
+      "doseTotaleCl": 12,
+      "ingredients": [
+        {
+          "achatCode": "600716",
+          "achatLibelle": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS",
+          "clParUnite": 5.5
+        },
+        {
+          "achatCode": "600707",
+          "achatLibelle": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT",
+          "clParUnite": 5.5
+        },
+        {
+          "achatCode": "591008",
+          "achatLibelle": "CREME CASSIS 15° 100 CL M.BRIZ",
+          "clParUnite": 1.0
+        }
+      ],
+      "confiance": "basse",
+      "note": "12 cl total (carte). Hypothèse: 2 alcools principaux (crémant 5,5 + macvin 5,5) + ~1 cl crème de cassis. Macvin Tissot retenu (la carte cite la maison Tissot). Cassis = M.BRIZ (achat dominant)."
+    },
+    {
+      "ref": "0333",
+      "libelleCaisse": "Père Gregoire",
+      "carteTitre": "Apéritif du Père Grégoire",
+      "methode": "cocktail",
+      "doseTotaleCl": 6,
+      "ingredients": [
+        {
+          "achatCode": "600707",
+          "achatLibelle": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT",
+          "clParUnite": 3.0
+        },
+        {
+          "achatCode": "591081",
+          "achatLibelle": "CREME CERISE 70CL 18° BRIOTTET",
+          "clParUnite": 3.0
+        }
+      ],
+      "confiance": "moyenne",
+      "note": "6 cl total (carte). 2 alcools -> partage égal 3/3. Liqueur de cerise = CREME CERISE BRIOTTET (seule liqueur de cerise FCBS)."
+    },
+    {
+      "ref": "1995",
+      "libelleCaisse": "Chat perché",
+      "carteTitre": "Chat Perché",
+      "methode": "cocktail",
+      "doseTotaleCl": 12,
+      "ingredients": [
+        {
+          "achatCode": "600707",
+          "achatLibelle": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT",
+          "clParUnite": 6.0
+        }
+      ],
+      "confiance": "basse",
+      "note": "12 cl total (carte). Seul alcool = macvin: hypothèse ~6 cl; le reste = jus de poire (~5 cl, jus FCBS dispo mais non alcoolisé) + sirop de châtaigne (~1 cl, MONIN CHATAIGNE, hors périmètre alcool). Ingrédients non alcoolisés non décomptés ici."
+    },
+    {
+      "ref": "0001",
+      "libelleCaisse": "KITTYKIR",
+      "carteTitre": "Kittykir",
+      "methode": "cocktail",
+      "doseTotaleCl": 12,
+      "ingredients": [
+        {
+          "achatCode": "540064",
+          "achatLibelle": "SOHO LITCHI 70 CL 15°",
+          "clParUnite": 5.5
+        },
+        {
+          "achatCode": "600716",
+          "achatLibelle": "CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS",
+          "clParUnite": 5.5
+        }
+      ],
+      "confiance": "basse",
+      "note": "12 cl total (carte). 2 alcools soho+crémant -> 5,5/5,5 ; ~1 cl sirop de framboise (MONIN FRAMBOISE, hors périmètre alcool, non décompté)."
+    },
+    {
+      "ref": "1998",
+      "libelleCaisse": "TEQUILA SUNRISE",
+      "carteTitre": "Tequila sunrise",
+      "methode": "cocktail",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        {
+          "achatCode": "530042",
+          "achatLibelle": "TEQUILA CAMINO REAL 70 CL 35°",
+          "clParUnite": 4.0
+        }
+      ],
+      "confiance": "moyenne",
+      "note": "25 cl total (carte). Dose alcool EXPLICITE: 4 cl tequila (TEQUILA CAMINO REAL). Reste = jus d'orange (~17 cl) + sirop grenadine (~4 cl), non alcoolisés, non décomptés."
+    },
+    {
+      "ref": "0002",
+      "libelleCaisse": "BALIDOU",
+      "carteTitre": "Balidou",
+      "methode": "cocktail",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        {
+          "achatCode": "510132",
+          "achatLibelle": "PASSOA 70 CL 15° PASSION FRUIT JUICE",
+          "clParUnite": 4.0
+        }
+      ],
+      "confiance": "moyenne",
+      "note": "25 cl total (carte). Dose alcool EXPLICITE: 4 cl Passoä. Reste = jus d'ananas + sirop framboise, non alcoolisés, non décomptés."
+    },
+    {
+      "ref": "0327",
+      "libelleCaisse": "Rêve Bleu",
+      "carteTitre": "Rêve Bleu",
+      "methode": "cocktail",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        {
+          "achatCode": "510013",
+          "achatLibelle": "VODKA SOBIESKI 70 CL 37°5",
+          "clParUnite": 4.0
+        }
+      ],
+      "confiance": "moyenne",
+      "note": "25 cl total (carte). Dose alcool EXPLICITE: 4 cl vodka (VODKA SOBIESKI). 'Sirop de Curaçao Bleu' = MONIN CURACAO BLEU (sirop, non alcoolisé) + jus de pomme; non décomptés."
+    },
+    {
+      "ref": "2011",
+      "libelleCaisse": "MAEVA",
+      "carteTitre": "Maëva",
+      "methode": "cocktail",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        {
+          "achatCode": "540064",
+          "achatLibelle": "SOHO LITCHI 70 CL 15°",
+          "clParUnite": 4.0
+        },
+        {
+          "achatCode": "510013",
+          "achatLibelle": "VODKA SOBIESKI 70 CL 37°5",
+          "clParUnite": 4.0
+        }
+      ],
+      "confiance": "moyenne",
+      "note": "25 cl total (carte). Doses alcool EXPLICITES: 4 cl Soho + 4 cl vodka. Reste = jus de framboise (non alcoolisé), non décompté."
+    },
+    {
+      "ref": "2067",
+      "libelleCaisse": "Rabasse",
+      "carteTitre": "Rabasse",
+      "methode": "cocktail",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        {
+          "achatCode": "510060",
+          "achatLibelle": "PONTARLIER ANIS SEC 100 CL 45°",
+          "clParUnite": 2.0
+        },
+        {
+          "achatCode": "510255",
+          "achatLibelle": "LIQUEUR DE SAPIN 100 CL 40°",
+          "clParUnite": 2.0
+        }
+      ],
+      "confiance": "moyenne",
+      "note": "25 cl total (carte). Doses alcool EXPLICITES: 2 cl Pontarlier + 2 cl liqueur de sapin (LIQUEUR DE SAPIN 100 CL). Reste = limonade artisanale (non FCBS périmètre alcool)."
+    },
+    {
+      "ref": "1996",
+      "libelleCaisse": "Mambo",
+      "carteTitre": "Mambo",
+      "methode": "cocktail",
+      "doseTotaleCl": 25,
+      "ingredients": [],
+      "confiance": "moyenne",
+      "note": "25 cl total (carte). Cocktail SANS ALCOOL (jus d'orange + jus de fraise + limonade). Aucun ingrédient alcoolisé à décompter."
+    },
+    {
+      "ref": "1997",
+      "libelleCaisse": "Luna",
+      "carteTitre": "Luna",
+      "methode": "cocktail",
+      "doseTotaleCl": 25,
+      "ingredients": [],
+      "confiance": "moyenne",
+      "note": "25 cl total (carte). Cocktail SANS ALCOOL (jus de poire + limonade + sirop de châtaigne). Aucun ingrédient alcoolisé à décompter."
+    },
+    {
+      "ref": "2094",
+      "libelleCaisse": "Café  Irlandais",
+      "carteTitre": "Café Irlandais",
+      "methode": "cocktail",
+      "doseTotaleCl": null,
+      "ingredients": [
+        {
+          "achatCode": "520018",
+          "achatLibelle": "CLAN CAMPBELL 70 CL 40°",
+          "clParUnite": 4.0
+        }
+      ],
+      "confiance": "moyenne",
+      "note": "Carte sans volume total (boisson chaude). Dose alcool EXPLICITE: 4 cl whisky (CLAN CAMPBELL retenu; JACK DANIEL'S aussi en FCBS). Café + chantilly hors périmètre."
+    },
+    {
+      "ref": "0010",
+      "libelleCaisse": "Guignolet",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Absent de la carte (pas de recette/dose). Aucun 'Guignolet' identifiable dans les achats FCBS. Liqueur de cerise possible mais non confirmée -> non décompté."
+    },
+    {
+      "ref": "2052",
+      "libelleCaisse": "Do",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Libellé caisse tronqué (note de musique). Cocktail non identifiable sur la carte -> aucune recette/ingrédient attribuable."
+    },
+    {
+      "ref": "2053",
+      "libelleCaisse": "Ré",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Libellé caisse tronqué (note de musique). Cocktail non identifiable sur la carte -> aucune recette/ingrédient attribuable."
+    },
+    {
+      "ref": "2054",
+      "libelleCaisse": "Mi",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Libellé caisse tronqué (note de musique). Cocktail non identifiable sur la carte -> aucune recette/ingrédient attribuable."
+    },
+    {
+      "ref": "2055",
+      "libelleCaisse": "Fa",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Libellé caisse tronqué (note de musique). Cocktail non identifiable sur la carte -> aucune recette/ingrédient attribuable."
+    },
+    {
+      "ref": "2056",
+      "libelleCaisse": "Sol",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Libellé caisse tronqué (note de musique). Cocktail non identifiable sur la carte -> aucune recette/ingrédient attribuable."
+    },
+    {
+      "ref": "2057",
+      "libelleCaisse": "La",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Libellé caisse tronqué (note de musique). Cocktail non identifiable sur la carte -> aucune recette/ingrédient attribuable."
+    },
+    {
+      "ref": "2058",
+      "libelleCaisse": "Si",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": null,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "Libellé caisse tronqué (note de musique). Cocktail non identifiable sur la carte -> aucune recette/ingrédient attribuable."
+    }
+  ],
+  "achatsDuPerimetreNonVendus": []
+}

@@ -1,0 +1,1368 @@
+{
+  "description": "Cocktails enregistrés en caisse, classés par cocktail. Recette avec nom_canonique de chaque ingrédient. 'totaux_par_ingredient' : cumul par ingrédient (nom canonique unifié + nom_inventaire/nom_facture) avec détail par exercice.",
+  "exercices": [
+    "2022-2023",
+    "2023-2024",
+    "2024-2025"
+  ],
+  "cocktails": [
+    {
+      "cocktail": "La Vouivre",
+      "libelle_caisse": "La Vouivre",
+      "volume_cl": 12,
+      "recette": [
+        {
+          "nom": "Crémant",
+          "nom_canonique": "Crémant du Jura",
+          "categorie": "alcool",
+          "cl_unitaire": 8,
+          "estimation": true
+        },
+        {
+          "nom": "Macvin",
+          "nom_canonique": "Macvin",
+          "categorie": "alcool",
+          "cl_unitaire": 3,
+          "estimation": true
+        },
+        {
+          "nom": "Crème de cassis",
+          "nom_canonique": "Crème de Cassis",
+          "categorie": "alcool",
+          "cl_unitaire": 1,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 2120.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 621.5,
+          "ingredients_l": {
+            "Crémant": 49.72,
+            "Macvin": 18.64,
+            "Crème de cassis": 6.21
+          }
+        },
+        "2023-2024": {
+          "quantite": 794.0,
+          "ingredients_l": {
+            "Crémant": 63.52,
+            "Macvin": 23.82,
+            "Crème de cassis": 7.94
+          }
+        },
+        "2024-2025": {
+          "quantite": 704.5,
+          "ingredients_l": {
+            "Crémant": 56.36,
+            "Macvin": 21.14,
+            "Crème de cassis": 7.04
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Chat Perché",
+      "libelle_caisse": "Chat perché",
+      "volume_cl": 12,
+      "recette": [
+        {
+          "nom": "Macvin",
+          "nom_canonique": "Macvin",
+          "categorie": "alcool",
+          "cl_unitaire": 6,
+          "estimation": true
+        },
+        {
+          "nom": "Jus de poire",
+          "nom_canonique": "Jus de poire",
+          "categorie": "jus",
+          "cl_unitaire": 3,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de châtaigne",
+          "nom_canonique": "Sirop Châtaigne",
+          "categorie": "sirop",
+          "cl_unitaire": 3,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 1664.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 494.5,
+          "ingredients_l": {
+            "Macvin": 29.67,
+            "Jus de poire": 14.84,
+            "Sirop de châtaigne": 14.84
+          }
+        },
+        "2023-2024": {
+          "quantite": 613.0,
+          "ingredients_l": {
+            "Macvin": 36.78,
+            "Jus de poire": 18.39,
+            "Sirop de châtaigne": 18.39
+          }
+        },
+        "2024-2025": {
+          "quantite": 557.0,
+          "ingredients_l": {
+            "Macvin": 33.42,
+            "Jus de poire": 16.71,
+            "Sirop de châtaigne": 16.71
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Apéritif du Père Grégoire",
+      "libelle_caisse": "Père Gregoire",
+      "volume_cl": 6,
+      "recette": [
+        {
+          "nom": "Crémant",
+          "nom_canonique": "Crémant du Jura",
+          "categorie": "alcool",
+          "cl_unitaire": 1,
+          "estimation": true
+        },
+        {
+          "nom": "Macvin",
+          "nom_canonique": "Macvin",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": true
+        },
+        {
+          "nom": "Liqueur de cerise",
+          "nom_canonique": "Liqueur de Cerise",
+          "categorie": "alcool",
+          "cl_unitaire": 1,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 1607.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 503.0,
+          "ingredients_l": {
+            "Crémant": 5.03,
+            "Macvin": 20.12,
+            "Liqueur de cerise": 5.03
+          }
+        },
+        "2023-2024": {
+          "quantite": 559.0,
+          "ingredients_l": {
+            "Crémant": 5.59,
+            "Macvin": 22.36,
+            "Liqueur de cerise": 5.59
+          }
+        },
+        "2024-2025": {
+          "quantite": 545.5,
+          "ingredients_l": {
+            "Crémant": 5.46,
+            "Macvin": 21.82,
+            "Liqueur de cerise": 5.46
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Kir",
+      "libelle_caisse": "Kir Bourgogne",
+      "volume_cl": 12,
+      "recette": [
+        {
+          "nom": "Aligoté",
+          "nom_canonique": "Bourgogne Aligoté maison",
+          "categorie": "alcool",
+          "cl_unitaire": 10,
+          "estimation": true
+        },
+        {
+          "nom": "Crème de cassis",
+          "nom_canonique": "Crème de Cassis",
+          "categorie": "alcool",
+          "cl_unitaire": 2,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 1368.9,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 490.9,
+          "ingredients_l": {
+            "Aligoté": 49.09,
+            "Crème de cassis": 9.82
+          }
+        },
+        "2023-2024": {
+          "quantite": 431.0,
+          "ingredients_l": {
+            "Aligoté": 43.1,
+            "Crème de cassis": 8.62
+          }
+        },
+        "2024-2025": {
+          "quantite": 447.0,
+          "ingredients_l": {
+            "Aligoté": 44.7,
+            "Crème de cassis": 8.94
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Mambo",
+      "libelle_caisse": "Mambo",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Jus d'orange",
+          "nom_canonique": "Jus d'orange",
+          "categorie": "jus",
+          "cl_unitaire": 8.3,
+          "estimation": true
+        },
+        {
+          "nom": "Jus de fraise",
+          "nom_canonique": "Jus de fraise",
+          "categorie": "jus",
+          "cl_unitaire": 8.3,
+          "estimation": true
+        },
+        {
+          "nom": "Limonade",
+          "nom_canonique": "Limonade",
+          "categorie": "soda",
+          "cl_unitaire": 8.4,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 947.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 289.5,
+          "ingredients_l": {
+            "Jus d'orange": 24.03,
+            "Jus de fraise": 24.03,
+            "Limonade": 24.32
+          }
+        },
+        "2023-2024": {
+          "quantite": 342.5,
+          "ingredients_l": {
+            "Jus d'orange": 28.43,
+            "Jus de fraise": 28.43,
+            "Limonade": 28.77
+          }
+        },
+        "2024-2025": {
+          "quantite": 315.0,
+          "ingredients_l": {
+            "Jus d'orange": 26.14,
+            "Jus de fraise": 26.14,
+            "Limonade": 26.46
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Kittykir",
+      "libelle_caisse": "KITTYKIR",
+      "volume_cl": 12,
+      "recette": [
+        {
+          "nom": "Soho (liqueur de litchi)",
+          "nom_canonique": "Soho Litchi",
+          "categorie": "alcool",
+          "cl_unitaire": 2,
+          "estimation": true
+        },
+        {
+          "nom": "Crémant",
+          "nom_canonique": "Crémant du Jura",
+          "categorie": "alcool",
+          "cl_unitaire": 9,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de framboise",
+          "nom_canonique": "Sirop Framboise",
+          "categorie": "sirop",
+          "cl_unitaire": 1,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 867.3,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 233.8,
+          "ingredients_l": {
+            "Soho (liqueur de litchi)": 4.68,
+            "Crémant": 21.04,
+            "Sirop de framboise": 2.34
+          }
+        },
+        "2023-2024": {
+          "quantite": 288.5,
+          "ingredients_l": {
+            "Soho (liqueur de litchi)": 5.77,
+            "Crémant": 25.96,
+            "Sirop de framboise": 2.88
+          }
+        },
+        "2024-2025": {
+          "quantite": 345.0,
+          "ingredients_l": {
+            "Soho (liqueur de litchi)": 6.9,
+            "Crémant": 31.05,
+            "Sirop de framboise": 3.45
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Luna",
+      "libelle_caisse": "Luna",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Jus de poire",
+          "nom_canonique": "Jus de poire",
+          "categorie": "jus",
+          "cl_unitaire": 8.3,
+          "estimation": true
+        },
+        {
+          "nom": "Limonade",
+          "nom_canonique": "Limonade",
+          "categorie": "soda",
+          "cl_unitaire": 8.3,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de châtaigne",
+          "nom_canonique": "Sirop Châtaigne",
+          "categorie": "sirop",
+          "cl_unitaire": 8.4,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 567.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 163.5,
+          "ingredients_l": {
+            "Jus de poire": 13.57,
+            "Limonade": 13.57,
+            "Sirop de châtaigne": 13.73
+          }
+        },
+        "2023-2024": {
+          "quantite": 192.5,
+          "ingredients_l": {
+            "Jus de poire": 15.98,
+            "Limonade": 15.98,
+            "Sirop de châtaigne": 16.17
+          }
+        },
+        "2024-2025": {
+          "quantite": 211.0,
+          "ingredients_l": {
+            "Jus de poire": 17.51,
+            "Limonade": 17.51,
+            "Sirop de châtaigne": 17.72
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Picon bière 25cl",
+      "libelle_caisse": "Picon bière",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Picon",
+          "nom_canonique": "Picon",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": false
+        },
+        {
+          "nom": "Bière (fût)",
+          "nom_canonique": "Fût Affligem",
+          "categorie": "biere",
+          "cl_unitaire": 21,
+          "estimation": false
+        }
+      ],
+      "total_quantite": 382.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 129.0,
+          "ingredients_l": {
+            "Picon": 5.16,
+            "Bière (fût)": 27.09
+          }
+        },
+        "2023-2024": {
+          "quantite": 130.0,
+          "ingredients_l": {
+            "Picon": 5.2,
+            "Bière (fût)": 27.3
+          }
+        },
+        "2024-2025": {
+          "quantite": 123.5,
+          "ingredients_l": {
+            "Picon": 4.94,
+            "Bière (fût)": 25.93
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Panaché",
+      "libelle_caisse": "Panaché",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Bière (fût)",
+          "nom_canonique": "Fût Affligem",
+          "categorie": "biere",
+          "cl_unitaire": 12.5,
+          "estimation": false
+        },
+        {
+          "nom": "Limonade",
+          "nom_canonique": "Limonade",
+          "categorie": "soda",
+          "cl_unitaire": 12.5,
+          "estimation": false
+        }
+      ],
+      "total_quantite": 346.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 147.0,
+          "ingredients_l": {
+            "Bière (fût)": 18.38,
+            "Limonade": 18.38
+          }
+        },
+        "2023-2024": {
+          "quantite": 102.5,
+          "ingredients_l": {
+            "Bière (fût)": 12.81,
+            "Limonade": 12.81
+          }
+        },
+        "2024-2025": {
+          "quantite": 97.0,
+          "ingredients_l": {
+            "Bière (fût)": 12.12,
+            "Limonade": 12.12
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Balidou",
+      "libelle_caisse": "BALIDOU",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Passoa",
+          "nom_canonique": "Passoa",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": false
+        },
+        {
+          "nom": "Jus d'ananas",
+          "nom_canonique": "Jus d'ananas",
+          "categorie": "jus",
+          "cl_unitaire": 10.5,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de framboise",
+          "nom_canonique": "Sirop Framboise",
+          "categorie": "sirop",
+          "cl_unitaire": 10.5,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 253.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 67.0,
+          "ingredients_l": {
+            "Passoa": 2.68,
+            "Jus d'ananas": 7.04,
+            "Sirop de framboise": 7.04
+          }
+        },
+        "2023-2024": {
+          "quantite": 95.0,
+          "ingredients_l": {
+            "Passoa": 3.8,
+            "Jus d'ananas": 9.97,
+            "Sirop de framboise": 9.97
+          }
+        },
+        "2024-2025": {
+          "quantite": 91.0,
+          "ingredients_l": {
+            "Passoa": 3.64,
+            "Jus d'ananas": 9.55,
+            "Sirop de framboise": 9.55
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Picon bière 50cl",
+      "libelle_caisse": "Pinte Picon",
+      "volume_cl": 50,
+      "recette": [
+        {
+          "nom": "Picon",
+          "nom_canonique": "Picon",
+          "categorie": "alcool",
+          "cl_unitaire": 8,
+          "estimation": false
+        },
+        {
+          "nom": "Bière (fût)",
+          "nom_canonique": "Fût Affligem",
+          "categorie": "biere",
+          "cl_unitaire": 42,
+          "estimation": false
+        }
+      ],
+      "total_quantite": 162.5,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 37.0,
+          "ingredients_l": {
+            "Picon": 2.96,
+            "Bière (fût)": 15.54
+          }
+        },
+        "2023-2024": {
+          "quantite": 66.5,
+          "ingredients_l": {
+            "Picon": 5.32,
+            "Bière (fût)": 27.93
+          }
+        },
+        "2024-2025": {
+          "quantite": 59.0,
+          "ingredients_l": {
+            "Picon": 4.72,
+            "Bière (fût)": 24.78
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Maëva",
+      "libelle_caisse": "MAEVA",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Soho (liqueur de litchi)",
+          "nom_canonique": "Soho Litchi",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": false
+        },
+        {
+          "nom": "Vodka",
+          "nom_canonique": "Vodka",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": false
+        },
+        {
+          "nom": "Jus de framboise",
+          "nom_canonique": "Jus de framboise",
+          "categorie": "jus",
+          "cl_unitaire": 17,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 149.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 52.0,
+          "ingredients_l": {
+            "Soho (liqueur de litchi)": 2.08,
+            "Vodka": 2.08,
+            "Jus de framboise": 8.84
+          }
+        },
+        "2023-2024": {
+          "quantite": 60.0,
+          "ingredients_l": {
+            "Soho (liqueur de litchi)": 2.4,
+            "Vodka": 2.4,
+            "Jus de framboise": 10.2
+          }
+        },
+        "2024-2025": {
+          "quantite": 37.0,
+          "ingredients_l": {
+            "Soho (liqueur de litchi)": 1.48,
+            "Vodka": 1.48,
+            "Jus de framboise": 6.29
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Monaco",
+      "libelle_caisse": "Monaco",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Bière (fût)",
+          "nom_canonique": "Fût Affligem",
+          "categorie": "biere",
+          "cl_unitaire": 12.5,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de grenadine",
+          "nom_canonique": "Sirop Grenadine",
+          "categorie": "sirop",
+          "cl_unitaire": 2,
+          "estimation": true
+        },
+        {
+          "nom": "Limonade",
+          "nom_canonique": "Limonade",
+          "categorie": "soda",
+          "cl_unitaire": 10.5,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 130.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 0.0,
+          "ingredients_l": {
+            "Bière (fût)": 0.0,
+            "Sirop de grenadine": 0.0,
+            "Limonade": 0.0
+          }
+        },
+        "2023-2024": {
+          "quantite": 56.0,
+          "ingredients_l": {
+            "Bière (fût)": 7.0,
+            "Sirop de grenadine": 1.12,
+            "Limonade": 5.88
+          }
+        },
+        "2024-2025": {
+          "quantite": 74.0,
+          "ingredients_l": {
+            "Bière (fût)": 9.25,
+            "Sirop de grenadine": 1.48,
+            "Limonade": 7.77
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Rêve Bleu",
+      "libelle_caisse": "Rêve Bleu",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Vodka",
+          "nom_canonique": "Vodka",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": false
+        },
+        {
+          "nom": "Jus de pomme",
+          "nom_canonique": "Jus de pomme",
+          "categorie": "jus",
+          "cl_unitaire": 10.5,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop curaçao bleu",
+          "nom_canonique": "Sirop Curaçao bleu",
+          "categorie": "sirop",
+          "cl_unitaire": 10.5,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 117.2,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 33.7,
+          "ingredients_l": {
+            "Vodka": 1.35,
+            "Jus de pomme": 3.54,
+            "Sirop curaçao bleu": 3.54
+          }
+        },
+        "2023-2024": {
+          "quantite": 42.5,
+          "ingredients_l": {
+            "Vodka": 1.7,
+            "Jus de pomme": 4.46,
+            "Sirop curaçao bleu": 4.46
+          }
+        },
+        "2024-2025": {
+          "quantite": 41.0,
+          "ingredients_l": {
+            "Vodka": 1.64,
+            "Jus de pomme": 4.3,
+            "Sirop curaçao bleu": 4.3
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Kir Princier",
+      "libelle_caisse": "Kir Princier",
+      "volume_cl": 12,
+      "recette": [
+        {
+          "nom": "Crémant",
+          "nom_canonique": "Crémant du Jura",
+          "categorie": "alcool",
+          "cl_unitaire": 10,
+          "estimation": true
+        },
+        {
+          "nom": "Crème de cassis",
+          "nom_canonique": "Crème de Cassis",
+          "categorie": "alcool",
+          "cl_unitaire": 2,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 90.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 37.0,
+          "ingredients_l": {
+            "Crémant": 3.7,
+            "Crème de cassis": 0.74
+          }
+        },
+        "2023-2024": {
+          "quantite": 30.0,
+          "ingredients_l": {
+            "Crémant": 3.0,
+            "Crème de cassis": 0.6
+          }
+        },
+        "2024-2025": {
+          "quantite": 23.0,
+          "ingredients_l": {
+            "Crémant": 2.3,
+            "Crème de cassis": 0.46
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Whisky-Coca",
+      "libelle_caisse": "Whisky-Coca",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Whisky",
+          "nom_canonique": "Clan Campbell",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": false
+        },
+        {
+          "nom": "Coca",
+          "nom_canonique": "Coca",
+          "categorie": "soda",
+          "cl_unitaire": 21,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 70.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 32.0,
+          "ingredients_l": {
+            "Whisky": 1.28,
+            "Coca": 6.72
+          }
+        },
+        "2023-2024": {
+          "quantite": 23.0,
+          "ingredients_l": {
+            "Whisky": 0.92,
+            "Coca": 4.83
+          }
+        },
+        "2024-2025": {
+          "quantite": 15.0,
+          "ingredients_l": {
+            "Whisky": 0.6,
+            "Coca": 3.15
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Rosé Pamp",
+      "libelle_caisse": "Rosé Pamplemousse",
+      "volume_cl": 12,
+      "recette": [
+        {
+          "nom": "Côtes de Provence rosé",
+          "nom_canonique": "Côtes de Provence rosé maison (Cap des Pins)",
+          "categorie": "alcool",
+          "cl_unitaire": 10,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de pamplemousse",
+          "nom_canonique": "Sirop Pamplemousse",
+          "categorie": "sirop",
+          "cl_unitaire": 2,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 64.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 59.0,
+          "ingredients_l": {
+            "Côtes de Provence rosé": 5.9,
+            "Sirop de pamplemousse": 1.18
+          }
+        },
+        "2023-2024": {
+          "quantite": 5.0,
+          "ingredients_l": {
+            "Côtes de Provence rosé": 0.5,
+            "Sirop de pamplemousse": 0.1
+          }
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "ingredients_l": {
+            "Côtes de Provence rosé": 0.0,
+            "Sirop de pamplemousse": 0.0
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Rabasse",
+      "libelle_caisse": "Rabasse",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Pontarlier",
+          "nom_canonique": "Pontarlier Anis",
+          "categorie": "alcool",
+          "cl_unitaire": 2,
+          "estimation": false
+        },
+        {
+          "nom": "Liqueur de sapin",
+          "nom_canonique": "Liqueur de Sapin",
+          "categorie": "alcool",
+          "cl_unitaire": 2,
+          "estimation": false
+        },
+        {
+          "nom": "Limonade",
+          "nom_canonique": "Limonade",
+          "categorie": "soda",
+          "cl_unitaire": 21,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 52.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 13.0,
+          "ingredients_l": {
+            "Pontarlier": 0.26,
+            "Liqueur de sapin": 0.26,
+            "Limonade": 2.73
+          }
+        },
+        "2023-2024": {
+          "quantite": 22.0,
+          "ingredients_l": {
+            "Pontarlier": 0.44,
+            "Liqueur de sapin": 0.44,
+            "Limonade": 4.62
+          }
+        },
+        "2024-2025": {
+          "quantite": 17.0,
+          "ingredients_l": {
+            "Pontarlier": 0.34,
+            "Liqueur de sapin": 0.34,
+            "Limonade": 3.57
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Tequila Sunrise",
+      "libelle_caisse": "TEQUILA SUNRISE",
+      "volume_cl": 25,
+      "recette": [
+        {
+          "nom": "Tequila",
+          "nom_canonique": "Tequila Camino Real",
+          "categorie": "alcool",
+          "cl_unitaire": 4,
+          "estimation": false
+        },
+        {
+          "nom": "Jus d'orange",
+          "nom_canonique": "Jus d'orange",
+          "categorie": "jus",
+          "cl_unitaire": 10.5,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de grenadine",
+          "nom_canonique": "Sirop Grenadine",
+          "categorie": "sirop",
+          "cl_unitaire": 10.5,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 30.7,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 28.7,
+          "ingredients_l": {
+            "Tequila": 1.15,
+            "Jus d'orange": 3.01,
+            "Sirop de grenadine": 3.01
+          }
+        },
+        "2023-2024": {
+          "quantite": 2.0,
+          "ingredients_l": {
+            "Tequila": 0.08,
+            "Jus d'orange": 0.21,
+            "Sirop de grenadine": 0.21
+          }
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "ingredients_l": {
+            "Tequila": 0.0,
+            "Jus d'orange": 0.0,
+            "Sirop de grenadine": 0.0
+          }
+        }
+      }
+    },
+    {
+      "cocktail": "Kir Pamplemousse",
+      "libelle_caisse": "Kir Pamplemousse",
+      "volume_cl": 12,
+      "recette": [
+        {
+          "nom": "Aligoté",
+          "nom_canonique": "Bourgogne Aligoté maison",
+          "categorie": "alcool",
+          "cl_unitaire": 10,
+          "estimation": true
+        },
+        {
+          "nom": "Sirop de pamplemousse",
+          "nom_canonique": "Sirop Pamplemousse",
+          "categorie": "sirop",
+          "cl_unitaire": 2,
+          "estimation": true
+        }
+      ],
+      "total_quantite": 7.0,
+      "par_periode": {
+        "2022-2023": {
+          "quantite": 4.0,
+          "ingredients_l": {
+            "Aligoté": 0.4,
+            "Sirop de pamplemousse": 0.08
+          }
+        },
+        "2023-2024": {
+          "quantite": 3.0,
+          "ingredients_l": {
+            "Aligoté": 0.3,
+            "Sirop de pamplemousse": 0.06
+          }
+        },
+        "2024-2025": {
+          "quantite": 0.0,
+          "ingredients_l": {
+            "Aligoté": 0.0,
+            "Sirop de pamplemousse": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "totaux_par_ingredient": [
+    {
+      "ingredient": "Crémant du Jura",
+      "categorie": "petillant",
+      "nom_inventaire": "Crémant du Jura 75cl",
+      "nom_facture": "CREMANT DU JURA 75 CL (Arbois)",
+      "total_l": 272.73,
+      "par_periode": {
+        "2022-2023": 79.49,
+        "2023-2024": 98.08,
+        "2024-2025": 95.17
+      }
+    },
+    {
+      "ingredient": "Macvin",
+      "categorie": "vin_de_liqueur",
+      "nom_inventaire": "Macvin 75cl",
+      "nom_facture": "MACVIN BLANC 75 CL (Domaine Rolet)",
+      "total_l": 227.77,
+      "par_periode": {
+        "2022-2023": 68.44,
+        "2023-2024": 82.96,
+        "2024-2025": 76.38
+      }
+    },
+    {
+      "ingredient": "Fût Affligem",
+      "categorie": "biere",
+      "nom_inventaire": "Fût Affligem 8L",
+      "nom_facture": "FUT AFFLIGEM BLADE 8 L 6,7°",
+      "total_l": 208.14,
+      "par_periode": {
+        "2022-2023": 61.01,
+        "2023-2024": 75.04,
+        "2024-2025": 72.09
+      }
+    },
+    {
+      "ingredient": "Limonade",
+      "categorie": "soda",
+      "nom_inventaire": "Limonade Mortuacienne 1L",
+      "nom_facture": "LIMONADE MORTUACIENNE 1 L",
+      "total_l": 194.49,
+      "par_periode": {
+        "2022-2023": 58.99,
+        "2023-2024": 68.06,
+        "2024-2025": 67.44
+      }
+    },
+    {
+      "ingredient": "Bourgogne Aligoté maison",
+      "categorie": "vin_blanc",
+      "nom_inventaire": "Bourgogne Aligoté BIB 10L",
+      "nom_facture": "BIB BOURGOGNE ALIGOTE 10 L",
+      "total_l": 137.59,
+      "par_periode": {
+        "2022-2023": 49.49,
+        "2023-2024": 43.4,
+        "2024-2025": 44.7
+      }
+    },
+    {
+      "ingredient": "Sirop Châtaigne",
+      "categorie": "sirop",
+      "nom_inventaire": "Monin Châtaigne 100cl",
+      "nom_facture": "MONIN CHATAIGNE 100 CL",
+      "total_l": 97.56,
+      "par_periode": {
+        "2022-2023": 28.57,
+        "2023-2024": 34.56,
+        "2024-2025": 34.43
+      }
+    },
+    {
+      "ingredient": "Jus de poire",
+      "categorie": "jus",
+      "nom_inventaire": "Jus de Poire 1L",
+      "nom_facture": "JUS DE POIRE 100 CL",
+      "total_l": 97.0,
+      "par_periode": {
+        "2022-2023": 28.41,
+        "2023-2024": 34.37,
+        "2024-2025": 34.22
+      }
+    },
+    {
+      "ingredient": "Jus d'orange",
+      "categorie": "jus",
+      "nom_inventaire": "Granini Jus Orange 1L",
+      "nom_facture": "GRANINI JUS ORANGE 1 L",
+      "total_l": 81.82,
+      "par_periode": {
+        "2022-2023": 27.04,
+        "2023-2024": 28.64,
+        "2024-2025": 26.14
+      }
+    },
+    {
+      "ingredient": "Jus de fraise",
+      "categorie": "jus",
+      "nom_inventaire": "Granini Fraise 25cl",
+      "nom_facture": "GRANINI FRAISE 25 CL",
+      "total_l": 78.6,
+      "par_periode": {
+        "2022-2023": 24.03,
+        "2023-2024": 28.43,
+        "2024-2025": 26.14
+      }
+    },
+    {
+      "ingredient": "Crème de Cassis",
+      "categorie": "liqueur",
+      "nom_inventaire": "Crème de Cassis 70cl",
+      "nom_facture": "CREME CASSIS BRIOTTET 20° 70 CL",
+      "total_l": 50.38,
+      "par_periode": {
+        "2022-2023": 16.77,
+        "2023-2024": 17.16,
+        "2024-2025": 16.45
+      }
+    },
+    {
+      "ingredient": "Sirop Framboise",
+      "categorie": "sirop",
+      "nom_inventaire": "Monin Framboise 100cl",
+      "nom_facture": "MONIN FRAMBOISE 100 CL",
+      "total_l": 35.24,
+      "par_periode": {
+        "2022-2023": 9.37,
+        "2023-2024": 12.86,
+        "2024-2025": 13.01
+      }
+    },
+    {
+      "ingredient": "Picon",
+      "categorie": "aperitif",
+      "nom_inventaire": "Picon 100cl",
+      "nom_facture": "PICON BIERE 100 CL 18°",
+      "total_l": 28.3,
+      "par_periode": {
+        "2022-2023": 8.12,
+        "2023-2024": 10.52,
+        "2024-2025": 9.66
+      }
+    },
+    {
+      "ingredient": "Jus d'ananas",
+      "categorie": "jus",
+      "nom_inventaire": "Granini Jus Ananas 1L",
+      "nom_facture": "GRANINI JUS ANANAS 1 L",
+      "total_l": 26.57,
+      "par_periode": {
+        "2022-2023": 7.04,
+        "2023-2024": 9.97,
+        "2024-2025": 9.55
+      }
+    },
+    {
+      "ingredient": "Jus de framboise",
+      "categorie": "jus",
+      "nom_inventaire": "Granini Framboise 25cl",
+      "nom_facture": "GRANINI FRAMBOISE 25 CL",
+      "total_l": 25.33,
+      "par_periode": {
+        "2022-2023": 8.84,
+        "2023-2024": 10.2,
+        "2024-2025": 6.29
+      }
+    },
+    {
+      "ingredient": "Soho Litchi",
+      "categorie": "liqueur",
+      "nom_inventaire": "Soho Litchi 70cl",
+      "nom_facture": "SOHO LITCHI 70 CL 15°",
+      "total_l": 23.31,
+      "par_periode": {
+        "2022-2023": 6.76,
+        "2023-2024": 8.17,
+        "2024-2025": 8.38
+      }
+    },
+    {
+      "ingredient": "Liqueur de Cerise",
+      "categorie": "liqueur",
+      "nom_inventaire": "Liqueur de Cerise 70cl",
+      "nom_facture": "LIQUEUR DE CERISE 70 CL",
+      "total_l": 16.07,
+      "par_periode": {
+        "2022-2023": 5.03,
+        "2023-2024": 5.59,
+        "2024-2025": 5.46
+      }
+    },
+    {
+      "ingredient": "Coca",
+      "categorie": "soda",
+      "nom_inventaire": "Coca-Cola 33cl",
+      "nom_facture": "COCA-COLA 33 CL",
+      "total_l": 14.7,
+      "par_periode": {
+        "2022-2023": 6.72,
+        "2023-2024": 4.83,
+        "2024-2025": 3.15
+      }
+    },
+    {
+      "ingredient": "Jus de pomme",
+      "categorie": "jus",
+      "nom_inventaire": "Granini Jus Pomme 1L",
+      "nom_facture": "GRANINI JUS POMME 1 L",
+      "total_l": 12.3,
+      "par_periode": {
+        "2022-2023": 3.54,
+        "2023-2024": 4.46,
+        "2024-2025": 4.3
+      }
+    },
+    {
+      "ingredient": "Sirop Curaçao bleu",
+      "categorie": "sirop",
+      "nom_inventaire": "Monin Curaçao 100cl",
+      "nom_facture": "MONIN CURACAO 100 CL",
+      "total_l": 12.3,
+      "par_periode": {
+        "2022-2023": 3.54,
+        "2023-2024": 4.46,
+        "2024-2025": 4.3
+      }
+    },
+    {
+      "ingredient": "Vodka",
+      "categorie": "spiritueux",
+      "nom_inventaire": "Vodka 70cl",
+      "nom_facture": "VODKA POLIAKOV 70 CL",
+      "total_l": 10.65,
+      "par_periode": {
+        "2022-2023": 3.43,
+        "2023-2024": 4.1,
+        "2024-2025": 3.12
+      }
+    },
+    {
+      "ingredient": "Passoa",
+      "categorie": "liqueur",
+      "nom_inventaire": "Passoa 70cl",
+      "nom_facture": "PASSOA 70 CL 15°",
+      "total_l": 10.12,
+      "par_periode": {
+        "2022-2023": 2.68,
+        "2023-2024": 3.8,
+        "2024-2025": 3.64
+      }
+    },
+    {
+      "ingredient": "Côtes de Provence rosé maison (Cap des Pins)",
+      "categorie": "vin_rose",
+      "nom_inventaire": "Côtes de Provence Rosé BIB 10L",
+      "nom_facture": "BIB COTES DE PROV ROSE 10 L (Cap des Pins)",
+      "total_l": 6.4,
+      "par_periode": {
+        "2022-2023": 5.9,
+        "2023-2024": 0.5,
+        "2024-2025": 0.0
+      }
+    },
+    {
+      "ingredient": "Sirop Grenadine",
+      "categorie": "sirop",
+      "nom_inventaire": "Monin Grenadine 100cl",
+      "nom_facture": "MONIN GRENADINE 100 CL",
+      "total_l": 5.82,
+      "par_periode": {
+        "2022-2023": 3.01,
+        "2023-2024": 1.33,
+        "2024-2025": 1.48
+      }
+    },
+    {
+      "ingredient": "Clan Campbell",
+      "categorie": "spiritueux",
+      "nom_inventaire": "Clan Campbell 70cl",
+      "nom_facture": "CLAN CAMPBELL 70 CL 40°",
+      "total_l": 2.8,
+      "par_periode": {
+        "2022-2023": 1.28,
+        "2023-2024": 0.92,
+        "2024-2025": 0.6
+      }
+    },
+    {
+      "ingredient": "Sirop Pamplemousse",
+      "categorie": "sirop",
+      "nom_inventaire": "Monin Pamplemousse 100cl",
+      "nom_facture": "MONIN PAMPLEMOUSSE 100 CL",
+      "total_l": 1.42,
+      "par_periode": {
+        "2022-2023": 1.26,
+        "2023-2024": 0.16,
+        "2024-2025": 0.0
+      }
+    },
+    {
+      "ingredient": "Tequila Camino Real",
+      "categorie": "spiritueux",
+      "nom_inventaire": null,
+      "nom_facture": "TEQUILA CAMINO REAL 70 CL 35°",
+      "total_l": 1.23,
+      "par_periode": {
+        "2022-2023": 1.15,
+        "2023-2024": 0.08,
+        "2024-2025": 0.0
+      }
+    },
+    {
+      "ingredient": "Pontarlier Anis",
+      "categorie": "aperitif",
+      "nom_inventaire": "Pontarlier Anis 100cl",
+      "nom_facture": "PONTARLIER ANIS 100 CL",
+      "total_l": 1.04,
+      "par_periode": {
+        "2022-2023": 0.26,
+        "2023-2024": 0.44,
+        "2024-2025": 0.34
+      }
+    },
+    {
+      "ingredient": "Liqueur de Sapin",
+      "categorie": "liqueur",
+      "nom_inventaire": "Liqueur de Sapin 70cl",
+      "nom_facture": "LIQUEUR DE SAPIN 70 CL",
+      "total_l": 1.04,
+      "par_periode": {
+        "2022-2023": 0.26,
+        "2023-2024": 0.44,
+        "2024-2025": 0.34
+      }
+    }
+  ]
+}

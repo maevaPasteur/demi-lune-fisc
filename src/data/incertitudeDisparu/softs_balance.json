@@ -1,0 +1,57 @@
+{
+ "description": "Bilan des softs ferme au niveau ticket (ANNEXE-B), au lieu de l'exclure. achat = vendu_tickets + conso_cocktails + staff + stock + residu(offerts/casse).",
+ "constat": "Les ventes de softs existent ligne par ligne dans ANNEXE-B ; elles manquaient juste dans la synthese ANNEXE-D utilisee au depart. Le 'disparu softs' n'etait pas une disparition mais une source non lue.",
+ "coca_canettes": {
+  "achat_canettes": 5952,
+  "vendu_tickets_canettes": 1380,
+  "staff_canettes": 3972,
+  "staff_detail": "6/jour (Chris 4 + Ghislaine 2) x 662 j",
+  "stock_final_canettes": 118,
+  "compte_nomme": 5470,
+  "residu_offerts_casse_canettes": 482,
+  "pct_ferme": 91.9
+ },
+ "bilan_agrege_litres": {
+  "Coca": {
+   "achat_l": 1964.0,
+   "vendu_direct_l": 455.0,
+   "conso_cocktails_l": 15.0,
+   "stock_l": 39.0,
+   "staff_l": 1311.0,
+   "compte_nomme_l": 1820.0,
+   "residu_l": 144.0,
+   "pct_ferme": 93.0
+  },
+  "Limonade": {
+   "achat_l": 636.0,
+   "vendu_direct_l": 240.0,
+   "conso_cocktails_l": 194.0,
+   "stock_l": 0.0,
+   "staff_l": 166.0,
+   "compte_nomme_l": 600.0,
+   "residu_l": 36.0,
+   "pct_ferme": 94.0
+  },
+  "Jus": {
+   "achat_l": 829.0,
+   "vendu_direct_l": 233.0,
+   "conso_cocktails_l": 322.0,
+   "stock_l": 89.0,
+   "staff_l": 397.0,
+   "compte_nomme_l": 1041.0,
+   "residu_l": -213.0,
+   "pct_ferme": 126.0
+  },
+  "Sirop": {
+   "achat_l": 133.0,
+   "vendu_direct_l": 16.0,
+   "conso_cocktails_l": 152.0,
+   "stock_l": 8.0,
+   "staff_l": 40.0,
+   "compte_nomme_l": 216.0,
+   "residu_l": -83.0,
+   "pct_ferme": 162.0
+  }
+ },
+ "note_eaux": "Eaux (Perrier/San Pellegrino/Vittel) vendues et en stock mais SANS achat dans la base fournisseur boissons (achetees ailleurs) : non bilantables ici, mais bien vendues."
+}

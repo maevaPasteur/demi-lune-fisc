@@ -1,0 +1,150 @@
+{
+ "description": "Reconciliation par session de caisse (Z). Le CA de chaque Z = somme de ses tickets payes ; les suppressions sont un journal separe, jamais incluses dans un total de ticket.",
+ "triangulation_3_exports_certifies": {
+  "ca_synthese_ANNEXE_A": 1275924,
+  "ca_liste_tickets_ANNEXE_H": 1277216.0,
+  "encaissements_ANNEXE_A": 1275980,
+  "convergence": "les 3 donnent ~1,276 M€ (ecart cumule < 0,2%)",
+  "suppressions_ANNEXE_E": 430764.0,
+  "constat": "Les suppressions (430k) ne figurent dans AUCUN des 3 exports de CA. Elles ne sont jamais necessaires pour atteindre le CA declare, qui s'explique entierement par les tickets payes."
+ },
+ "par_exercice": {
+  "2022-2023": {
+   "ca_synthese_A": 409021,
+   "ca_liste_tickets_H": 403370.0,
+   "encaissements_A": 409021,
+   "ecart_H_vs_A": -5651.0,
+   "nb_z": 221,
+   "suppr_total": 193005.0
+  },
+  "2023-2024": {
+   "ca_synthese_A": 429205,
+   "ca_liste_tickets_H": 438281.0,
+   "encaissements_A": 429205,
+   "ecart_H_vs_A": 9076.0,
+   "nb_z": 220,
+   "suppr_total": 140687.0
+  },
+  "2024-2025": {
+   "ca_synthese_A": 437698,
+   "ca_liste_tickets_H": 435565.0,
+   "encaissements_A": 437754,
+   "ecart_H_vs_A": -2133.0,
+   "nb_z": 218,
+   "suppr_total": 97072.0
+  }
+ },
+ "nb_z_total": 659,
+ "z_avec_suppr_superieure_au_ca": {
+  "n": 9,
+  "note": "Sessions ou les suppressions depassent le CA du jour = forcement des re-saisies/erreurs (on ne peut pas avoir supprime plus de ventes qu'on n'en a encaissees ce jour-la).",
+  "exemples": [
+   {
+    "exercice": "2022-2023",
+    "z": "3015.0",
+    "nb_tickets": 41,
+    "ca_tickets": 2563.4,
+    "suppr": 69556.6,
+    "nb_suppr": 37
+   },
+   {
+    "exercice": "2023-2024",
+    "z": "3216.0",
+    "nb_tickets": 29,
+    "ca_tickets": 1686.4,
+    "suppr": 45280.3,
+    "nb_suppr": 24
+   },
+   {
+    "exercice": "2022-2023",
+    "z": "3026.0",
+    "nb_tickets": 39,
+    "ca_tickets": 2209.6,
+    "suppr": 20087.9,
+    "nb_suppr": 41
+   },
+   {
+    "exercice": "2024-2025",
+    "z": "3474.0",
+    "nb_tickets": 31,
+    "ca_tickets": 2302.5,
+    "suppr": 5154.8,
+    "nb_suppr": 44
+   },
+   {
+    "exercice": "2022-2023",
+    "z": "3094.0",
+    "nb_tickets": 26,
+    "ca_tickets": 1111.2,
+    "suppr": 1515.2,
+    "nb_suppr": 97
+   },
+   {
+    "exercice": "2022-2023",
+    "z": "3070.0",
+    "nb_tickets": 34,
+    "ca_tickets": 1277.75,
+    "suppr": 1415.75,
+    "nb_suppr": 71
+   },
+   {
+    "exercice": "2022-2023",
+    "z": "3081.0",
+    "nb_tickets": 24,
+    "ca_tickets": 855.9,
+    "suppr": 941.7,
+    "nb_suppr": 69
+   },
+   {
+    "exercice": "2022-2023",
+    "z": "3117.0",
+    "nb_tickets": 13,
+    "ca_tickets": 502.8,
+    "suppr": 602.85,
+    "nb_suppr": 56
+   }
+  ]
+ },
+ "top_5_z_par_suppression": [
+  {
+   "exercice": "2022-2023",
+   "z": "3015.0",
+   "nb_tickets": 41,
+   "ca_tickets": 2563.4,
+   "suppr": 69556.6,
+   "nb_suppr": 37
+  },
+  {
+   "exercice": "2023-2024",
+   "z": "3216.0",
+   "nb_tickets": 29,
+   "ca_tickets": 1686.4,
+   "suppr": 45280.3,
+   "nb_suppr": 24
+  },
+  {
+   "exercice": "2022-2023",
+   "z": "3026.0",
+   "nb_tickets": 39,
+   "ca_tickets": 2209.6,
+   "suppr": 20087.9,
+   "nb_suppr": 41
+  },
+  {
+   "exercice": "2024-2025",
+   "z": "3474.0",
+   "nb_tickets": 31,
+   "ca_tickets": 2302.5,
+   "suppr": 5154.8,
+   "nb_suppr": 44
+  },
+  {
+   "exercice": "2022-2023",
+   "z": "3094.0",
+   "nb_tickets": 26,
+   "ca_tickets": 1111.2,
+   "suppr": 1515.2,
+   "nb_suppr": 97
+  }
+ ]
+}

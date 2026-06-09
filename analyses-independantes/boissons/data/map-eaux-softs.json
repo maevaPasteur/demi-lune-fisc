@@ -1,0 +1,255 @@
+{
+  "family": "eaux-softs",
+  "doses_hypotheses": {
+    "verre_soft_cl": 25,
+    "boite_soft_service_cl": 33,
+    "perrier_bouteille_cl": 33,
+    "eau_50cl_cl": 50,
+    "eau_100cl_cl": 100,
+    "verre_jus_cl": 25,
+    "sirop_a_l_eau_part_sirop_cl": 2,
+    "diabolo_part_sirop_cl": 2,
+    "mambo_luna_volume_total_cl": 25,
+    "note_doses": "Doses de service issues de la carte (carte_*.xls). Soda/jus servis au verre 25 cl mais la boite/bouteille achetee (33 cl) est ouverte par service => methode 'direct' (1 contenant = 1 service, le surplus n'est pas revendu). Part de sirop pour 'Sirop a l'eau' et 'Diabolo' = hypothese standard 2 cl (non chiffree sur la carte, seule la dose totale 25 cl figure). Volume liquide retenu = part de sirop, car c'est le seul liquide issu du fournisseur boissons (l'eau/limonade etant a part)."
+  },
+  "ventes": [
+    {
+      "ref": "0096",
+      "libelleCaisse": "Perrier 33cl",
+      "carteTitre": "Perrier",
+      "methode": "direct",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "300020", "achatLibelle": "PERRIER 33 CL CONSIGNE", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Perrier - Bouteille 33 cl' a 4.00 EUR. 1 bouteille = 1 service. Prix caisse ~3.94-4.00 EUR coherent."
+    },
+    {
+      "ref": "0094",
+      "libelleCaisse": "San Pelegrino",
+      "carteTitre": "Vittel ou San Pellegrino",
+      "methode": "direct",
+      "doseTotaleCl": 100,
+      "ingredients": [
+        { "achatCode": "300026", "achatLibelle": "SAN PELLEGRINO 100 CL CONSIGNE", "clParUnite": 100 }
+      ],
+      "confiance": "haute",
+      "note": "Sans suffixe de contenance et prix moyen ~5.9 EUR = carte 'Vittel ou San Pellegrino - 1 L' a 5.9 EUR => format 100 cl. 1 bouteille = 1 service."
+    },
+    {
+      "ref": "0095",
+      "libelleCaisse": "San Pelegrino 50cl",
+      "carteTitre": "Vittel ou San Pellegrino",
+      "methode": "direct",
+      "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "300025", "achatLibelle": "SAN PELLEGRINO 50 CL CONSIGNE", "clParUnite": 50 }
+      ],
+      "confiance": "haute",
+      "note": "Prix ~4.00 EUR = carte 'Vittel ou San Pellegrino - 50 cl' a 4.0 EUR. 1 bouteille = 1 service."
+    },
+    {
+      "ref": "0092",
+      "libelleCaisse": "Vittel litre",
+      "carteTitre": "Vittel ou San Pellegrino",
+      "methode": "direct",
+      "doseTotaleCl": 100,
+      "ingredients": [
+        { "achatCode": "300001", "achatLibelle": "VITTEL 100 CL VC", "clParUnite": 100 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Vittel ou San Pellegrino - 1 L' a 5.9 EUR. 1 bouteille = 1 service."
+    },
+    {
+      "ref": "0093",
+      "libelleCaisse": "Vittel 50cl",
+      "carteTitre": "Vittel ou San Pellegrino",
+      "methode": "direct",
+      "doseTotaleCl": 50,
+      "ingredients": [
+        { "achatCode": "300002", "achatLibelle": "VITTEL 50 CL VC", "clParUnite": 50 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Vittel ou San Pellegrino - 50 cl' a 4.0 EUR. 1 bouteille = 1 service."
+    },
+    {
+      "ref": "0106",
+      "libelleCaisse": "Coca (25cl)",
+      "carteTitre": "Soda au choix",
+      "methode": "direct",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "402005", "achatLibelle": "BOITE COCA COLA 33 CL", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Caisse 'Coca (25cl)' = verre annonce a 25 cl mais 1 boite achetee 33 cl = 1 service (carte 'Soda au choix' versions 2021+ a 33 cl). Volume liquide issu du fournisseur = 33 cl par unite vendue."
+    },
+    {
+      "ref": "0107",
+      "libelleCaisse": "Orangina (25cl)",
+      "carteTitre": "Soda au choix",
+      "methode": "direct",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "401045", "achatLibelle": "BOITE ORANGINA 33 CL", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Soda au choix' (Orangina). 1 boite 33 cl = 1 service."
+    },
+    {
+      "ref": "0109",
+      "libelleCaisse": "FANTA",
+      "carteTitre": "Soda au choix",
+      "methode": "direct",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "402009", "achatLibelle": "BOITE FANTA CITRON FRAP 33 CL", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Soda au choix' (Fanta Citron). Seule reference Fanta achetee = Fanta Citron Frappe 33 cl. 1 boite = 1 service."
+    },
+    {
+      "ref": "0343",
+      "libelleCaisse": "Schweppes",
+      "carteTitre": "Soda au choix",
+      "methode": "direct",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "403033", "achatLibelle": "BOITE SCHWEPPES AGRUM 33 CL", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Soda au choix' (Schweppes Agrum'). 1 boite 33 cl = 1 service."
+    },
+    {
+      "ref": "0342",
+      "libelleCaisse": "Fuze Tea",
+      "carteTitre": "Soda au choix",
+      "methode": "direct",
+      "doseTotaleCl": 33,
+      "ingredients": [
+        { "achatCode": "401510", "achatLibelle": "BOITE FUZETEA PECHE 33 CL", "clParUnite": 33 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Soda au choix' (Fuze Tea). 1 boite 33 cl = 1 service. (Distinct des cafes/thes infuses, c'est un soft fournisseur.)"
+    },
+    {
+      "ref": "0108",
+      "libelleCaisse": "Limonade (25cl)",
+      "carteTitre": "Limonade artisanale F-Comtoise “La Mortuacienne”",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "403707", "achatLibelle": "LIMONADE MORTUACIENNE BM 1 L", "clParUnite": 25 }
+      ],
+      "confiance": "haute",
+      "note": "Carte 'Limonade artisanale La Mortuacienne - 25 cl' a 3.9 EUR. Limonade achetee en bouteille 1 L (100 cl) => 1 verre = 25 cl de liquide (4 services / bouteille). Seule limonade artisanale achetee."
+    },
+    {
+      "ref": "0110",
+      "libelleCaisse": "Diabolo (25cl)",
+      "carteTitre": null,
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "403707", "achatLibelle": "LIMONADE MORTUACIENNE BM 1 L", "clParUnite": 23 },
+        { "achatCode": "401267", "achatLibelle": "MONIN GRENADINE 100 CL", "clParUnite": 2 }
+      ],
+      "confiance": "moyenne",
+      "note": "Diabolo = limonade + sirop, servi en verre 25 cl (cf. autres softs au verre). Pas d'entree dediee sur la carte (le diabolo n'y figure pas par parfum) => recette standard: ~23 cl limonade Mortuacienne + ~2 cl sirop. Le parfum (grenadine/menthe/fraise...) n'est pas distingue en caisse: grenadine retenue par defaut comme sirop le plus courant en diabolo. Part de sirop = hypothese (non chiffree sur la carte)."
+    },
+    {
+      "ref": "0352",
+      "libelleCaisse": "Sirop à l'eau",
+      "carteTitre": "Sirop à l’eau",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "401267", "achatLibelle": "MONIN GRENADINE 100 CL", "clParUnite": 2 }
+      ],
+      "confiance": "moyenne",
+      "note": "Carte 'Sirop a l'eau - 25 cl' (parfums: Fraise, Menthe, Orange, Citron, Framboise, Peche, Orgeat, Grenadine...). Le verre = 25 cl total dont eau du robinet (hors fournisseur) + ~2 cl de sirop Monin. Seul le sirop vient du fournisseur boissons => clParUnite = part de sirop (hyp. 2 cl, non chiffree sur la carte). Parfum non distingue en caisse: la conso reelle se repartit sur l'ensemble des sirops Monin achetes (401256/401234/401258/401241/401257/401267/401242/401244/401271/401246/401255/401254/401231); grenadine prise comme proxy. doseTotaleCl=25 = volume servi total, clParUnite=2 = volume sirop fournisseur."
+    },
+    {
+      "ref": "0354",
+      "libelleCaisse": "Monaco",
+      "carteTitre": null,
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "403707", "achatLibelle": "LIMONADE MORTUACIENNE BM 1 L", "clParUnite": 11 },
+        { "achatCode": "401267", "achatLibelle": "MONIN GRENADINE 100 CL", "clParUnite": 2 }
+      ],
+      "confiance": "basse",
+      "note": "Monaco = biere + limonade + grenadine (recette classique). Vendu uniquement en 2022-2023 (66.5 u.). La part biere releve de la famille bieres (hors perimetre). Part fournisseur softs estimee: ~11 cl limonade Mortuacienne + ~2 cl grenadine pour un verre 25 cl. Doses non chiffrees sur la carte (Monaco absent de la carte) => hypothese; confiance basse."
+    },
+    {
+      "ref": "0368",
+      "libelleCaisse": "Jus de Fruit",
+      "carteTitre": "Jus de Fruits au choix",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "400312", "achatLibelle": "GRANINI JUS ORANGE 1 L PET", "clParUnite": 25 }
+      ],
+      "confiance": "moyenne",
+      "note": "Carte 'Jus de Fruits au choix' (Orange, Pomme, Poire, Ananas, Raisin, Fraise, Framboise, Tomate). Dose 25 cl (versions 2021+; 20 cl sur la 1ere carte). Item caisse generique unique regroupant TOUS les parfums => la conso reelle se repartit sur l'ensemble des jus Granini achetes (400312 orange, 400301 pomme, 400308 poire/nectar, 400321 ananas, 400645 raisin, 400640 fraise 25cl, 400639 framboise, 400653 tomate, 400300/400306 nectars, 401665 abricot-raisin, 401615 pina colada, 400352/400350 Norbert). Orange (le plus vendu) pris comme proxy d'ingredient; clParUnite = 25 cl. N.B. les jus 25 cl VP (fraise, framboise, raisin, tomate) sont des bouteilles servies telles quelles (1 VP 25 cl = 1 verre)."
+    },
+    {
+      "ref": "1996",
+      "libelleCaisse": "Mambo",
+      "carteTitre": "Mambo",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "400312", "achatLibelle": "GRANINI JUS ORANGE 1 L PET", "clParUnite": 9 },
+        { "achatCode": "400640", "achatLibelle": "GRANINI FRAISE 25 CL VP", "clParUnite": 8 },
+        { "achatCode": "403707", "achatLibelle": "LIMONADE MORTUACIENNE BM 1 L", "clParUnite": 8 }
+      ],
+      "confiance": "moyenne",
+      "note": "Carte 'Mambo - 25 cl' a 6.5 EUR = Jus d'Orange + Jus de Fraise + Limonade La Mortuacienne. Recette en 3 tiers egaux (~8 cl chacun) pour 25 cl total: hypothese de repartition (la carte donne les ingredients mais pas les proportions). Jus de fraise = Granini Fraise (seule reference fraise)."
+    },
+    {
+      "ref": "1997",
+      "libelleCaisse": "Luna",
+      "carteTitre": "Luna",
+      "methode": "dose",
+      "doseTotaleCl": 25,
+      "ingredients": [
+        { "achatCode": "400308", "achatLibelle": "GRANINI NEC POIRE LITRE PET", "clParUnite": 11 },
+        { "achatCode": "403707", "achatLibelle": "LIMONADE MORTUACIENNE BM 1 L", "clParUnite": 11 },
+        { "achatCode": "401254", "achatLibelle": "MONIN CHATAIGNE 70 CL", "clParUnite": 3 }
+      ],
+      "confiance": "moyenne",
+      "note": "Carte 'Luna - 25 cl' a 6.0 EUR = Jus de Poire + Limonade La Mortuacienne + sirop de Chataigne. Jus de poire = Granini Nectar Poire (seule ref poire). Sirop de chataigne = Monin Chataigne. Proportions estimees (~11/11/3 cl) pour 25 cl: la carte ne chiffre pas les doses par ingredient."
+    }
+  ],
+  "achatsDuPerimetreNonVendus": [
+    { "code": "300056", "libelle": "BADOIT ROUGE 100 CL PET", "note": "Eau gazeuse 1 L achetee (12 u.) mais aucune ligne caisse Badoit. Eaux gazeuses caisse couvertes par San Pellegrino/Perrier. Candidat 'disparu' ou usage non facture (offert/perso)." },
+    { "code": "300082", "libelle": "BADOIT VERTE 100 CL VC", "note": "Aucun achat sur la periode (totQte=0) et aucune vente. Reference inactive." },
+    { "code": "300042", "libelle": "EVIAN 100 CL VC", "note": "totQte=0 sur la periode (ligne 'Articles Manquants : Livre le'). Aucune vente Evian en caisse. Reference non livree/non vendue." },
+    { "code": "402007", "libelle": "BOITE SPRITE 33 CL", "note": "48 boites achetees mais aucun item caisse 'Sprite' (non liste sur 'Soda au choix'). Candidat 'disparu' / consommation interne." },
+    { "code": "465207", "libelle": "VOLVIC JUICY EXOTIC 50 CL PET", "note": "240 bouteilles achetees, aucun item caisse dedie. Pourrait theoriquement passer en 'Jus de Fruit' mais parfum exotique absent des parfums carte; plutot candidat 'disparu'/conso interne." },
+    { "code": "401532", "libelle": "TROPICO TROPICAL 50 CL PET", "note": "144 bouteilles achetees, aucun item caisse Tropico. Candidat 'disparu' / conso interne." },
+    { "code": "401531", "libelle": "TROPICO EXOTIQUE 50 CL PET (ORIGINAL)", "note": "24 bouteilles achetees, aucun item caisse. Candidat 'disparu' / conso interne." },
+    { "code": "401833", "libelle": "PULCO ORANGE CITRON 70CL VP", "note": "26 bouteilles (concentre a diluer). Aucun item caisse Pulco. Probable usage cuisine/cocktail non distingue ou conso interne." },
+    { "code": "401211", "libelle": "PULCO CITRON FORM PROF 70 CL", "note": "20 bouteilles (concentre citron, format pro). Aucun item caisse dedie. Probable usage cuisine/bar (jus de citron) non facture en direct." },
+    { "code": "400317", "libelle": "GRANINI MARACUJA-PASSION L PET", "note": "6 L achetes (ligne 'Articles Manquants'). Pas de parfum maracuja sur la carte jus; folde possible dans 'Jus de Fruit' mais marginal. Candidat conso interne." },
+    { "code": "401615", "libelle": "GRANINI PINA COLADA 1 L PET", "note": "6 L achetes. Pina colada (jus prepare) absent de la carte softs; usage cocktail probable. Non rattachable a un item caisse soft dedie." },
+    { "code": "400316", "libelle": "GRANINI MANGUE 1 L PET", "note": "totQte=0 sur la periode (ligne deconsigne). Aucune vente. Reference inactive." },
+    { "code": "400352", "libelle": "NORBERT JUS POMME 1L PET", "note": "18 L. Jus de pomme bas de gamme, se fond dans l'item generique 'Jus de Fruit' (0368, parfum Pomme) ou usage interne. Pas d'item caisse propre." },
+    { "code": "400350", "libelle": "NORBERT JUS ORANGE SS PULPE 1L", "note": "6 L. Jus d'orange, se fond dans 'Jus de Fruit' (0368) ou usage interne. Pas d'item caisse propre." },
+    { "code": "401256", "libelle": "MONIN FRAMBOISE 100 CL", "note": "Sirop (37 L, le plus achete). Pas d'item caisse par parfum: consomme via 'Sirop a l'eau' (0352), 'Diabolo' (0110) et cocktails (Kittykir, Balidou). Volume rattache globalement aux sirops, parfum non distingue en caisse." },
+    { "code": "401254", "libelle": "MONIN CHATAIGNE 70 CL", "note": "Sirop chataigne (35 L). Ingredient du cocktail Luna (1997) et Chat Perche (hors perimetre, macvin). Pas d'item caisse direct par parfum." },
+    { "code": "401234", "libelle": "MONIN PECHE 100 CL", "note": "Sirop peche. Consomme via 'Sirop a l'eau' / 'Diabolo'. Pas d'item caisse par parfum." },
+    { "code": "401258", "libelle": "MONIN ORANGE 100 CL", "note": "Sirop orange. Consomme via 'Sirop a l'eau' / 'Diabolo'. Pas d'item caisse par parfum." },
+    { "code": "401241", "libelle": "MONIN CERISE 100 CL", "note": "Sirop cerise. Consomme via 'Sirop a l'eau' / 'Diabolo'. Pas d'item caisse par parfum." },
+    { "code": "401257", "libelle": "MONIN GLASCO CITRON 100 CL", "note": "Sirop citron. Consomme via 'Sirop a l'eau' / 'Diabolo'. Pas d'item caisse par parfum." },
+    { "code": "401242", "libelle": "MONIN FRAISE 100 CL", "note": "Sirop fraise. Consomme via 'Sirop a l'eau' / 'Diabolo'. Pas d'item caisse par parfum." },
+    { "code": "401244", "libelle": "MONIN MENTHE VERTE 100 CL", "note": "Sirop menthe (diabolo menthe). Consomme via 'Diabolo' (0110) / 'Sirop a l'eau'. Pas d'item caisse par parfum." },
+    { "code": "401271", "libelle": "MONIN MENTHE GLACIALE 100 CL", "note": "Sirop menthe glaciale. Consomme via 'Diabolo' / 'Sirop a l'eau'. Pas d'item caisse par parfum." },
+    { "code": "401246", "libelle": "MONIN ORGEAT 100 CL", "note": "Sirop orgeat (2 L). Consomme via 'Sirop a l'eau' (parfum orgeat liste). Pas d'item caisse par parfum." },
+    { "code": "401255", "libelle": "MONIN CITRON 100 CL", "note": "Sirop citron (2 L). Consomme via 'Sirop a l'eau'. Pas d'item caisse par parfum." },
+    { "code": "401231", "libelle": "MONIN VIOLETTE 70 CL", "note": "Sirop violette (1 L). Parfum hors liste 'Sirop a l'eau'; usage cocktail/marginal. Pas d'item caisse." }
+  ]
+}

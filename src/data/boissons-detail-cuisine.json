@@ -1,0 +1,23 @@
+{
+  "cle": "cuisine",
+  "methode": "Deux blocs réconciliés au coût d'achat HT. (a) Déductions cuisine/dessert que LE FISC chiffre lui-même dans ses annexes finales (Macvin 7 406 cl avec détail des plats, Calvados 3 310 cl, Porto 398 cl, Absinthe 100 % du volume) - preuve forte car ce sont ses propres cl. (b) Abattements standard que le fisc s'applique à lui-même (pertes 5 % + consommation personnel 5 % = 10 % ; bière 15 %), ici appliqués à nos achats réels par catégorie. Chaque cl cuisine est valorisé à notre prix d'achat moyen HT (€/cl). Total = 16 265 € HT, soit 28,0 % de l'écart boissons (58 060 € HT).",
+  "colonnes": ["Poste", "Base / source", "Volume", "Coût HT"],
+  "lignes": [
+    ["Macvin - cuisine (Baba au Macvin 561 art./2 244 cl, Saucisse flambée 547 art./2 188 cl, Menu Franc-Comtois plat 38,74 %/1 244 cl + dessert 53,84 %/1 729 cl)", "7 406 cl - reconstitution-administration.json, ingredients[Macvin].deductions ; valorisé 0,1815 €/cl (achats Macvin blanc)", "74 L", "1 344 €"],
+    ["Calvados - cuisine (sauces, repère D)", "3 310 cl - volumes-disparus-fisc.json, produits[Calvados].note ; valorisé 0,1682 €/cl (achats Calvados)", "33 L", "557 €"],
+    ["Porto Sandeman - cuisine (sauces forestière / morilles, repère G)", "398 cl - volumes-disparus-fisc.json, produits[Porto].note ; valorisé 0,1075 €/cl (achats Porto)", "4 L", "43 €"],
+    ["Absinthe - dessert (crème brûlée, 46,16 % des desserts, 100 % du volume non valorisé en boisson)", "2 580 cl - reconstitution-administration.json, ingredients[Absinthe] caReconstitue:null ; valorisé 0,4023 €/cl (achats Absinthe)", "26 L", "1 038 €"],
+    ["Vin Jaune - cuisine (Poulet à la Jurassienne, 61,26 % des assiettes, repère E)", "cl non publié par le fisc - non valorisé par prudence (reconstitution-administration.json, notesMethodologiques)", "n.c.", "0 €"],
+    ["Abattement pertes 5 % + personnel 5 % (hors bière)", "10 % appliqué aux achats réels HT 114 589 € (vin, crémant/pétillant, macvin, spiritueux/digestif, soft, jus, eau, sirop) - reconstitution-administration.json, methode.abattements + achats-exercice.json", "1 486 L", "11 459 €"],
+    ["Abattement bière 15 % (conso personnel + pertes)", "15 % appliqué aux achats bière HT 12 164 € - reconstitution-administration.json, ingredients[Bière].deductions consoPersonnelPertesPct 0,15 + achats-exercice.json", "410 L", "1 825 €"]
+  ],
+  "totalLabel": "Total cuisine + abattements",
+  "totalValeur": "16 265 € HT",
+  "sources": [
+    {"label": "Annexes finales du fisc - déductions cuisine (Macvin, Calvados, Porto, Absinthe, Vin Jaune)"},
+    {"label": "reconstitution-administration.json - ingredients[].deductions, methode.abattements, notesMethodologiques"},
+    {"label": "volumes-disparus-fisc.json - produits[].usage_cuisine_deduit_par_verificateur, produits[].note"},
+    {"label": "achats-exercice.json - volumes et coûts d'achat HT réels par produit/catégorie"}
+  ],
+  "note": "Réconciliation exacte : cuisine fisc 2 982 € + abattement 10 % 11 459 € + bière 15 % 1 825 € = 16 265 € HT (28,0 % de l'écart de 58 060 € HT). C'est un PLANCHER : la remise 5 % du fisc (3ᵉ abattement, ~6 340 € côté CA), le Vin Jaune cuisine (61,26 % du Poulet Jurassien, non chiffré en cl par le fisc) et les offerts ne sont PAS comptés. Cohérence interne totale : là où le fisc déduit la cuisine, on reprend ses cl ; là où il dit « aucun usage cuisine » (Picon, Café, Bordeaux), on ne revendique rien."
+}

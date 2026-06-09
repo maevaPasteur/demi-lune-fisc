@@ -1,0 +1,520 @@
+{
+  "meta": {
+    "dossier": "SARL LA DEMI-LUNE - Controle fiscal DDFiP Jura",
+    "objet": "Volumes de boissons reputes disparus selon le verificateur, par exercice",
+    "formule_verificateur": "pct_disparu = (quantites_disponibles - quantites_vendues_caisse) / quantites_disponibles",
+    "convention_signe": {
+      "positif": "disparu - presomption d'occultation (achete non vendu en caisse)",
+      "negatif": "surconsommation - presomption d'achats sans facture (vendu sans achat identifie)"
+    },
+    "exercices": ["2022-2023", "2023-2024", "2024-2025"],
+    "sources": {
+      "p_30_31": "Synthese volumes disparus (lecture visuelle, RISQUE INVERSION COLONNES annee)",
+      "annexe_6": "Tableau disponibles = achats FCBS + Intermarche + stock_initial - stock_final (p.159, 165...)",
+      "annexe_7": "Reconstitution detaillee par produit (p.165-201)"
+    },
+    "fiabilite_valeurs": {
+      "exact": "lu et auto-coherent dans la source",
+      "a_verifier_inversion": "issu de p.30-31, attribution annee a confirmer",
+      "approx": "ordre de grandeur, non chiffre precisement dans la source",
+      "disponible_seul": "seule la quantite disponible est connue (pas de vendu/pct)",
+      "non_chiffre": "source indique 'eleve' sans chiffre exact"
+    },
+    "unites": "disponible/vendu en bouteilles ou unites sauf mention 'cl'; pct_disparu sans unite",
+    "avertissements": [
+      "Les % de p.30-31 demandent une relecture croisee avec annexes 7-1/7-2/7-3 (inversion possible des colonnes annee).",
+      "Un pct_disparu = 100 % signifie ZERO vente enregistree en caisse => artefact de parametrage probable (hypothese H1), pas occultation.",
+      "Un pct negatif ou une vente sans achat (preuve_parametrage=true) est arithmetiquement impossible sans erreur de code caisse.",
+      "Le CA total reconstitue = CA liquides x coefficient (2,94 / 3,02 / 3,10) : toute erreur sur ces volumes est amplifiee ~3,94 a 4,10 fois."
+    ],
+    "verdict_hypotheses": {
+      "H1_parametrage_caisse": "CONFIRMEE (preuve interne : Bordeaux 2024-2025 et HC Nuits 2023-2024 vendus sans achat)",
+      "H2_usage_cuisine": "ECARTEE pour Porto/Calvados/Vin jaune/Macvin (deja deduits) et Picon/Cafe/Bordeaux (aucun usage cuisine)",
+      "H3_doses_sous_evaluees": "ECARTEE (impact marginal 3-6 points)",
+      "H4_vol_casse": "INSUFFISANTE seule (absorbe au plus 10-15 %)"
+    }
+  },
+
+  "produits": [
+    {
+      "nom": "Porto Sandman",
+      "categorie": "apéritif/spiritueux",
+      "usage_cuisine_deduit_par_verificateur": true,
+      "note": "Sauces forestiere/morilles, repere G, 398 cl deduits en 2022-2023. Stock initial 31/03/2022 = 62 bouteilles (p.160), a confirmer (physique vs comptable).",
+      "preuve_parametrage": false,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 90.87, "fiabilite": "a_verifier_inversion"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": 93.25, "fiabilite": "a_verifier_inversion"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": 92.81, "fiabilite": "a_verifier_inversion"}
+      }
+    },
+    {
+      "nom": "Pontarlier (anis)",
+      "categorie": "spiritueux",
+      "usage_cuisine_deduit_par_verificateur": true,
+      "note": "Repere F (Rabasse). Dose retenue 2 cl.",
+      "preuve_parametrage": false,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 80.90, "fiabilite": "a_verifier_inversion"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": 88.44, "fiabilite": "a_verifier_inversion"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": 26.83, "fiabilite": "a_verifier_inversion"}
+      }
+    },
+    {
+      "nom": "Picon",
+      "categorie": "apéritif",
+      "usage_cuisine_deduit_par_verificateur": false,
+      "note": "Mention explicite p.175 : aucun Picon consomme en cuisine.",
+      "preuve_parametrage": false,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 85.84, "fiabilite": "a_verifier_inversion"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": 58.32, "fiabilite": "a_verifier_inversion"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": 34.0, "fiabilite": "approx"}
+      }
+    },
+    {
+      "nom": "Macvin",
+      "categorie": "apéritif (vin de liqueur Jura)",
+      "usage_cuisine_deduit_par_verificateur": true,
+      "note": "Assiette franc-comtoise via repere E. Disponible 2024-2025 (Blanc) = 362 (p.159).",
+      "preuve_parametrage": false,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": -22.0, "fiabilite": "a_verifier_inversion", "type": "surconsommation"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": 20.80, "fiabilite": "a_verifier_inversion"},
+        "2024-2025": {"disponible": 362, "vendu_caisse": null, "pct_disparu": -22.0, "fiabilite": "a_verifier_inversion", "type": "surconsommation"}
+      }
+    },
+    {
+      "nom": "Martini Blanc",
+      "categorie": "apéritif",
+      "usage_cuisine_deduit_par_verificateur": false,
+      "note": "Surconsommation. Annee a preciser.",
+      "preuve_parametrage": false,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": -26.0, "fiabilite": "approx", "type": "surconsommation"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"}
+      }
+    },
+    {
+      "nom": "Calvados",
+      "categorie": "spiritueux",
+      "usage_cuisine_deduit_par_verificateur": true,
+      "note": "Repere D, 3310 cl deduits en 2022-2023. Surconsommation en cl (vendu > disponible).",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"surconsommation_cl": -210, "pct_des_disponibles": -8, "fiabilite": "exact", "type": "surconsommation"},
+        "2023-2024": {"surconsommation_cl": -802, "pct_des_disponibles": -40, "fiabilite": "exact", "type": "surconsommation"},
+        "2024-2025": {"surconsommation_cl": -1005, "pct_des_disponibles": -50, "fiabilite": "exact", "type": "surconsommation"}
+      }
+    },
+    {
+      "nom": "Bordeaux Mouton Cadet",
+      "categorie": "vin_rouge",
+      "reference_caisse": "1859 (33,82 EUR, bouteille uniquement)",
+      "usage_cuisine_deduit_par_verificateur": false,
+      "note": "Aucun usage cuisine confirme. 2024-2025 : 6 bouteilles vendues sans aucun achat identifie = PREUVE PARAMETRAGE.",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 11.11, "fiabilite": "a_verifier_inversion"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": 77.42, "fiabilite": "a_verifier_inversion"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": "6 bouteilles", "pct_disparu": 0, "fiabilite": "exact", "anomalie": "vente sans achat"}
+      }
+    },
+    {
+      "nom": "Hautes Cotes de Nuits",
+      "categorie": "vin_rouge",
+      "usage_cuisine_deduit_par_verificateur": false,
+      "note": "2023-2024 : 172 bouteilles (12 950 cl) vendues sans aucun achat identifie = PREUVE PARAMETRAGE. Confusion probable avec code 'Verre H cote' / 'Pichet C.DE BEAUNE B' (p.168).",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 83.33, "fiabilite": "a_verifier_inversion"},
+        "2023-2024": {"disponible": 0, "vendu_caisse": "172 bouteilles (12950 cl)", "pct_disparu": null, "fiabilite": "exact", "anomalie": "vente sans achat"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": 0, "pct_disparu": null, "fiabilite": "exact"}
+      }
+    },
+    {
+      "nom": "Cafe",
+      "categorie": "boisson_chaude",
+      "usage_cuisine_deduit_par_verificateur": false,
+      "note": "Cafetiere uniquement, aucun usage cuisine (confirme).",
+      "preuve_parametrage": false,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 43.52, "fiabilite": "a_verifier_inversion"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": 76.84, "fiabilite": "a_verifier_inversion"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": 80.96, "fiabilite": "a_verifier_inversion"}
+      }
+    },
+
+    {
+      "nom": "Vittel/Evian 100 cl",
+      "categorie": "eau",
+      "donnees": {
+        "2022-2023": {"disponible": 49, "vendu_caisse": 34, "pct_disparu": 30.61, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"}
+      }
+    },
+    {
+      "nom": "Vittel/Evian 50 cl",
+      "categorie": "eau",
+      "donnees": {
+        "2022-2023": {"disponible": 50, "vendu_caisse": 21, "pct_disparu": 58.00, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": -47.0, "fiabilite": "a_verifier_inversion", "type": "surconsommation"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": 63.0, "fiabilite": "a_verifier_inversion"}
+      }
+    },
+    {
+      "nom": "San Pellegrino 100 cl",
+      "categorie": "eau",
+      "donnees": {
+        "2022-2023": {"disponible": 249, "vendu_caisse": 177, "pct_disparu": 28.92, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"}
+      }
+    },
+    {
+      "nom": "San Pellegrino 50 cl",
+      "categorie": "eau",
+      "donnees": {
+        "2022-2023": {"disponible": 198, "vendu_caisse": 136, "pct_disparu": 31.31, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"}
+      }
+    },
+    {
+      "nom": "Carola Bleue 50 cl",
+      "categorie": "eau",
+      "note": "100 % = zero vente enregistree => artefact parametrage probable.",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 20, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"}
+      }
+    },
+    {
+      "nom": "Perrier 33 cl",
+      "categorie": "eau",
+      "donnees": {
+        "2022-2023": {"disponible": 448, "vendu_caisse": 177, "pct_disparu": 67.86, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"}
+      }
+    },
+
+    {
+      "nom": "La Rouget Ambree 33 cl",
+      "categorie": "biere",
+      "donnees": {
+        "2022-2023": {"disponible": 200, "vendu_caisse": null, "pct_disparu": 34.50, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 187, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Des Neiges Abbaye / Rouget Blanche 33 cl",
+      "categorie": "biere",
+      "donnees": {
+        "2022-2023": {"disponible": 163, "vendu_caisse": null, "pct_disparu": 6.55, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 226, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "1664 33 cl",
+      "categorie": "biere",
+      "note": "100 % en 2022-2023 (234 dispo, 0 vente) => artefact parametrage. Disponible 2024-2025 = 0.",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 234, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Bleue du Mont Blanc 33 cl",
+      "categorie": "biere",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 168, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Grimbergen Blanche 33 cl",
+      "categorie": "biere",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 24, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Hefeweizen 33 cl",
+      "categorie": "biere",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 49, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "White Rabbit 33 cl",
+      "categorie": "biere",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 24, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "White Mort Subite 33 cl",
+      "categorie": "biere",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 108, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 144, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Heineken 33 cl",
+      "categorie": "biere",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 24, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Heineken 50 cl",
+      "categorie": "biere",
+      "donnees": {
+        "2022-2023": {"disponible": 0, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Fut Affligem Blonde 8 L",
+      "categorie": "biere_pression",
+      "donnees": {
+        "2024-2025": {"disponible": 79, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Picon Biere 100 cl",
+      "categorie": "biere",
+      "donnees": {
+        "2024-2025": {"disponible": 11, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+
+    {
+      "nom": "Cidre La Mordue 27 cl",
+      "categorie": "cidre",
+      "donnees": {
+        "2022-2023": {"disponible": 214, "vendu_caisse": null, "pct_disparu": 67.29, "fiabilite": "exact"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": 289, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Cidre Sassy 33 cl",
+      "categorie": "cidre",
+      "preuve_parametrage": true,
+      "donnees": {
+        "2022-2023": {"disponible": 12, "vendu_caisse": 0, "pct_disparu": 100.0, "fiabilite": "exact"},
+        "2024-2025": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Cidre Brut 75 cl",
+      "categorie": "cidre",
+      "donnees": {
+        "2022-2023": {"disponible": 80, "vendu_caisse": null, "pct_disparu": 18.75, "fiabilite": "exact"},
+        "2024-2025": {"disponible": 41, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Cidre Doux 75 cl",
+      "categorie": "cidre",
+      "donnees": {
+        "2022-2023": {"disponible": 80, "vendu_caisse": null, "pct_disparu": 31.88, "fiabilite": "exact"},
+        "2024-2025": {"disponible": 52, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+
+    {
+      "nom": "Arbois Trousseau 75 cl",
+      "categorie": "vin_rouge",
+      "donnees": {
+        "2022-2023": {"disponible": 226, "vendu_caisse": null, "pct_disparu": 15.38, "fiabilite": "exact"},
+        "2024-2025": {"disponible": 171, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Arbois Rouge Tradition 75 cl",
+      "categorie": "vin_rouge",
+      "donnees": {
+        "2022-2023": {"disponible": 0, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"},
+        "2024-2025": {"disponible": 6, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Cotes du Rhone Saint-Joseph (rouge) 75 cl",
+      "categorie": "vin_rouge",
+      "donnees": {
+        "2022-2023": {"disponible": 138, "vendu_caisse": null, "pct_disparu": 36.96, "fiabilite": "exact"},
+        "2024-2025": {"disponible": 94, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Beaujolais Moulin-a-Vent 75 cl",
+      "categorie": "vin_rouge",
+      "donnees": {
+        "2022-2023": {"disponible": 73, "vendu_caisse": null, "pct_disparu": 14.70, "fiabilite": "exact"},
+        "2024-2025": {"disponible": 93, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Haute Cote de Beaune Rouge 75 cl",
+      "categorie": "vin_rouge",
+      "donnees": {
+        "2022-2023": {"disponible": 113, "vendu_caisse": null, "pct_disparu": 14.40, "fiabilite": "exact"},
+        "2024-2025": {"disponible": 72, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "La Cote Rouge 75 cl",
+      "categorie": "vin_rouge",
+      "donnees": {
+        "2024-2025": {"disponible": 35, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+
+    {
+      "nom": "Arbois Blanc Bethanie 75 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 85, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Arbois Blanc Bethanie 37,5 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 134, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Arbois Chardonnay 75 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 91, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Arbois Savagnin 75 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 242, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Chablis 75 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 15, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Gewurztraminer 75 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 50, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Macon Blanc La Roche 75 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 116, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Saint-Veran 75 cl",
+      "categorie": "vin_blanc",
+      "donnees": {
+        "2024-2025": {"disponible": 158, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Vin Jaune 62 cl",
+      "categorie": "vin_blanc_special",
+      "usage_cuisine_deduit_par_verificateur": true,
+      "note": "Sauces/fondues, repere E. Dose verre 12 cl.",
+      "donnees": {
+        "2024-2025": {"disponible": 127, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Vin de Paille 37,5 cl",
+      "categorie": "vin_blanc_special",
+      "donnees": {
+        "2024-2025": {"disponible": 39, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+
+    {
+      "nom": "Cremant du Jura 75 cl",
+      "categorie": "effervescent",
+      "note": "KITTYKIR/cocktails via repere O. Dose verre 12 cl.",
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 47.5, "fiabilite": "approx", "note": "~45-50 %"},
+        "2024-2025": {"disponible": 322, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul"}
+      }
+    },
+    {
+      "nom": "Cremant Rose 75 cl",
+      "categorie": "effervescent",
+      "donnees": {
+        "2022-2023": {"disponible": 0, "vendu_caisse": null, "pct_disparu": 0.0, "fiabilite": "exact"}
+      }
+    },
+    {
+      "nom": "Champagnes (total : Bollinger, Ruinart, Lancon, Sandrin)",
+      "categorie": "champagne",
+      "note": "Total famille 2022-2023 : 30 disponibles, 9 vendus caisse.",
+      "donnees": {
+        "2022-2023": {"disponible": 30, "vendu_caisse": 9, "pct_disparu": 70.0, "fiabilite": "exact", "detail_disponible": {"Bollinger": 3, "Ruinart": 8, "Lancon": 0, "Sandrin": 19}},
+        "2024-2025": {"disponible": 16, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "disponible_seul", "detail_disponible": {"Ruinart": 12, "Lancon": 8, "Sandrin": -4}}
+      }
+    },
+
+    {
+      "nom": "Coca-Cola 33 cl",
+      "categorie": "soda",
+      "note": "Hors focus alcools/vins/eaux. Ajustement whisky-coca (repere RDV) applique par le verificateur.",
+      "donnees": {
+        "2022-2023": {"disponible": null, "vendu_caisse": null, "pct_disparu": 83.0, "fiabilite": "a_verifier_inversion"},
+        "2023-2024": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"},
+        "2024-2025": {"disponible": null, "vendu_caisse": null, "pct_disparu": null, "fiabilite": "non_chiffre"}
+      }
+    },
+    {
+      "nom": "Jus de fruit (Granini)",
+      "categorie": "jus",
+      "note": "Hors focus. Le verificateur a choisi de NE PAS valoriser de CA sur les jus de fruit (p.50) ; il admet meme que la methode n'utilise pas tout le volume disponible (31100 cl) => preuve que la reconstitution n'est pas exageree de son propre aveu.",
+      "donnees": {
+        "2022-2023": {"disponible_cl": 31100, "vendu_cl": 9697, "reconstitue_cl": 17920, "valorise_ca": false, "fiabilite": "exact"}
+      }
+    }
+  ]
+}

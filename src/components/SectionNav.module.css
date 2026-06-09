@@ -1,0 +1,52 @@
+/* Barre de sommaire ancrée, collante sous l'en-tête (72px). */
+.bar {
+  position: sticky;
+  top: 72px;
+  z-index: 5;
+  padding: 10px 0;
+  background: color-mix(in srgb, var(--app-bg) 82%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--app-border);
+}
+
+.scroll {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.pill {
+  flex-shrink: 0;
+  white-space: nowrap;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: var(--mantine-color-gray-7);
+  background: #fff;
+  border: 1px solid var(--mantine-color-gray-2);
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color 120ms ease,
+    border-color 120ms ease,
+    color 120ms ease;
+}
+
+.pill:hover {
+  border-color: var(--mantine-color-gold-3);
+  color: var(--mantine-color-gold-8);
+}
+
+.pill[data-active] {
+  background: var(--mantine-color-gold-1);
+  border-color: var(--mantine-color-gold-4);
+  color: var(--mantine-color-gold-8);
+  font-weight: 600;
+}

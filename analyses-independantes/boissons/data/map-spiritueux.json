@@ -1,0 +1,446 @@
+{
+  "family": "spiritueux-aperitifs",
+  "doses_hypotheses": { "digestif_cl": 4, "anise_cl": 2, "aperitif_cl": 6 },
+  "ventes": [
+    {
+      "ref": "0122",
+      "libelleCaisse": "Calvados (4cl)",
+      "carteTitre": "Calvados Beaujour 40°",
+      "methode": "dose",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520055", "achatLibelle": "CALVADOS BEAUJOUR 100 CL 40°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "dose 4 cl indiquée en caisse ; libellé carte 'Calvados Beaujour' = achat FCBS 520055"
+    },
+    {
+      "ref": "0298",
+      "libelleCaisse": "Calvados",
+      "carteTitre": "Calvados Beaujour 40°",
+      "methode": "convention",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520055", "achatLibelle": "CALVADOS BEAUJOUR 100 CL 40°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "ancien code caisse du Calvados (faibles qtés) ; convention digestif 4 cl ; carte Calvados Beaujour 4 cl"
+    },
+    {
+      "ref": "0123",
+      "libelleCaisse": "Cognac (4cl)",
+      "carteTitre": "Cognac 40°",
+      "methode": "dose",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "530126", "achatLibelle": "COGNAC PARK VS 70 CL 40°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "dose 4 cl en caisse ; seul cognac du périmètre FCBS = 530126"
+    },
+    {
+      "ref": "0129",
+      "libelleCaisse": "Marc du Jura (4cl)",
+      "carteTitre": "Marc du Jura 40° (Domaine Tissot)",
+      "methode": "dose",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520096", "achatLibelle": "MARC DU JURA TISSOT 70CL MICHEL TISSOT", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "dose 4 cl en caisse ; carte 'Marc du Jura Domaine Tissot' = achat FCBS 520096"
+    },
+    {
+      "ref": "2040",
+      "libelleCaisse": "Vieux Marc Bourgogne",
+      "carteTitre": "Vieux Marc de Bourgogne 40°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "550252", "achatLibelle": "MARC DE BOURGOGNE 70 CL 45° EXTRA EGRAPPE MAISON JACOULOT", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "carte 'Vieux Marc de Bourgogne' Verre 4 cl ; achat FCBS 550252"
+    },
+    {
+      "ref": "1664",
+      "libelleCaisse": "Get 27 (4cl)",
+      "carteTitre": "Get 27 21°",
+      "methode": "dose",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "530030", "achatLibelle": "GET 27 VERT 100 CL 17,9°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "dose 4 cl en caisse ; carte Get 27 Verre 4 cl ; achat FCBS 530030"
+    },
+    {
+      "ref": "1671",
+      "libelleCaisse": "Get 31",
+      "carteTitre": "Get 31 24°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "530031", "achatLibelle": "GET 31 100 CL 24°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "carte Get 31 Verre 4 cl ; achat FCBS 530031 présent dans le périmètre"
+    },
+    {
+      "ref": "2041",
+      "libelleCaisse": "Génépi",
+      "carteTitre": "Liqueur de Génépi 42°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "591097", "achatLibelle": "GENEPI 40° 70 CL PERES CHARTREUX", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "carte Génépi Verre 4 cl ; achat FCBS 591097"
+    },
+    {
+      "ref": "2042",
+      "libelleCaisse": "Liqueur de Sapin",
+      "carteTitre": "Liqueur de Bourgeons de Sapin du Haut-Doubs 40°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "510255", "achatLibelle": "LIQUEUR DE SAPIN 100 CL 40°", "clParUnite": 4 }
+      ],
+      "confiance": "moyenne",
+      "note": "carte liqueur de sapin Verre 4 cl ; 2 achats sapin au périmètre (510255 en 100cl, 510061 et 510062 en 'Vert Sapin') ; retenu 510255 (libellé 'LIQUEUR DE SAPIN', dosage carte 40°)"
+    },
+    {
+      "ref": "0128",
+      "libelleCaisse": "Eau de Vie de Poire",
+      "carteTitre": "Eau de Vie de Poire Williams 45°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520127", "achatLibelle": "POIRE WILLIAM 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER", "clParUnite": 4 },
+        { "achatCode": "520131", "achatLibelle": "POIRE WILLIAM 70 CL 40° MASSENEZ DISTILLERIE PEUREUX", "clParUnite": 4 }
+      ],
+      "confiance": "moyenne",
+      "note": "eau-de-vie de poire (≠ liqueur de poire) ; carte Verre 4 cl ; deux références poire william au périmètre FCBS (520127, 520131)"
+    },
+    {
+      "ref": "2043",
+      "libelleCaisse": "Liqueur de Poire",
+      "carteTitre": "Liqueur de Poire Golden Eight 25°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "591050", "achatLibelle": "LIQUEUR GOLDEN EIGHT 70 CL 25° LIQUEUR DE POIRE WILLIAM", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "carte 'Liqueur de Poire Golden Eight' Verre 4 cl ; achat FCBS 591050"
+    },
+    {
+      "ref": "0373",
+      "libelleCaisse": "Eau de vie Mirabelle",
+      "carteTitre": "Eau de Vie de Mirabelle ou Framboise 45°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520128", "achatLibelle": "MIRABELLE 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER", "clParUnite": 4 },
+        { "achatCode": "520132", "achatLibelle": "MIRABELLE 70 CL 40° MASSENEZ DISTILLERIE PEUREUX", "clParUnite": 4 }
+      ],
+      "confiance": "moyenne",
+      "note": "carte mirabelle Verre 4 cl ; deux références mirabelle au périmètre FCBS (520128, 520132)"
+    },
+    {
+      "ref": "2039",
+      "libelleCaisse": "Eau de vie Framboise",
+      "carteTitre": "Eau de Vie de Mirabelle ou Framboise 45°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520133", "achatLibelle": "FRAMBOISE SAUVAGE 70 CL 40° MASSENEZ DISTILLERIE PEUREUX", "clParUnite": 4 },
+        { "achatCode": "520130", "achatLibelle": "FRAMBOISE 70 CL 42° GRANDE RESERVE 1811 DISTILLERIE LEMERCIER", "clParUnite": 4 }
+      ],
+      "confiance": "moyenne",
+      "note": "carte framboise Verre 4 cl ; deux références framboise au périmètre FCBS (520133, 520130)"
+    },
+    {
+      "ref": "2038",
+      "libelleCaisse": "Grand Marnier",
+      "carteTitre": "Grand Marnier 40°",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "510090", "achatLibelle": "GD MARNIER CORD RGE 70 CL 40° GRAND MARNIER CORDON ROUGE", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "carte Grand Marnier Verre 4 cl ; achat FCBS 510090"
+    },
+    {
+      "ref": "2096",
+      "libelleCaisse": "Baileys",
+      "carteTitre": "Baileys",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "510133", "achatLibelle": "BAILEY'S 70 CL 17°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "carte Baileys Verre 4 cl ; achat FCBS 510133 présent (regroupe aussi le doublon caisse ref 2083 'BAILEYS')"
+    },
+    {
+      "ref": "2083",
+      "libelleCaisse": "BAILEYS",
+      "carteTitre": "Baileys",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "510133", "achatLibelle": "BAILEY'S 70 CL 17°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "code caisse alternatif de Baileys (doublon avec 2096) ; carte Verre 4 cl ; achat FCBS 510133"
+    },
+    {
+      "ref": "2084",
+      "libelleCaisse": "TEQUILA",
+      "carteTitre": null,
+      "methode": "convention",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "530042", "achatLibelle": "TEQUILA CAMINO REAL 70 CL 35°", "clParUnite": 4 },
+        { "achatCode": "580026", "achatLibelle": "TEQUILA SAN JOSE 35° 70 CL", "clParUnite": 4 }
+      ],
+      "confiance": "basse",
+      "note": "tequila servie sèche non explicitement à la carte (la téquila figure surtout dans les cocktails) ; convention digestif 4 cl ; deux achats tequila au périmètre (530042, 580026) ; très faibles qtés caisse"
+    },
+    {
+      "ref": "0006",
+      "libelleCaisse": "Ricard",
+      "carteTitre": "Pastis ou Ricard",
+      "methode": "carte",
+      "doseTotaleCl": 2,
+      "ingredients": [
+        { "achatCode": "520001", "achatLibelle": "RICARD 100 CL 45°", "clParUnite": 2 }
+      ],
+      "confiance": "haute",
+      "note": "carte 'Pastis ou Ricard' 2 cl (anisé) ; achat FCBS Ricard 520001"
+    },
+    {
+      "ref": "0347",
+      "libelleCaisse": "Pastis",
+      "carteTitre": "Pastis ou Ricard",
+      "methode": "carte",
+      "doseTotaleCl": 2,
+      "ingredients": [
+        { "achatCode": "540001", "achatLibelle": "PASTIS 51 100 CL 45°", "clParUnite": 2 }
+      ],
+      "confiance": "haute",
+      "note": "carte 'Pastis ou Ricard' 2 cl (anisé) ; achat FCBS Pastis 51 540001"
+    },
+    {
+      "ref": "0007",
+      "libelleCaisse": "Pontarlier",
+      "carteTitre": "Pontarlier",
+      "methode": "carte",
+      "doseTotaleCl": 2,
+      "ingredients": [
+        { "achatCode": "510060", "achatLibelle": "PONTARLIER ANIS SEC 100 CL 45°", "clParUnite": 2 }
+      ],
+      "confiance": "haute",
+      "note": "carte Pontarlier 2 cl (anisé) ; achat FCBS 510060"
+    },
+    {
+      "ref": "0009",
+      "libelleCaisse": "Porto",
+      "carteTitre": "Porto Rouge ou Martini Blanc",
+      "methode": "carte",
+      "doseTotaleCl": 6,
+      "ingredients": [
+        { "achatCode": "580018", "achatLibelle": "PORTO SANDEMAN ROUGE 75CL 19°5", "clParUnite": 6 },
+        { "achatCode": "520077", "achatLibelle": "PORTO OFFLEY RUBY 75 CL 19,5°", "clParUnite": 6 },
+        { "achatCode": "580019", "achatLibelle": "PORTO SANDEMAN BLANC 75 CL19°5", "clParUnite": 6 }
+      ],
+      "confiance": "haute",
+      "note": "carte 'Porto Rouge' 6 cl ; portos au périmètre FCBS (580018 rouge principal, 520077 ruby, 580019 blanc)"
+    },
+    {
+      "ref": "0011",
+      "libelleCaisse": "Martini Blanc",
+      "carteTitre": "Porto Rouge ou Martini Blanc",
+      "methode": "carte",
+      "doseTotaleCl": 6,
+      "ingredients": [
+        { "achatCode": "530051", "achatLibelle": "MARTINI BIANCO 100 CL 14,4°", "clParUnite": 6 }
+      ],
+      "confiance": "haute",
+      "note": "carte 'Martini Blanc' 6 cl ; achat FCBS Martini Bianco 530051"
+    },
+    {
+      "ref": "0014",
+      "libelleCaisse": "Whisky L.J (4cl)",
+      "carteTitre": "Whisky Clan Campbell / Whisky Long John",
+      "methode": "dose",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520018", "achatLibelle": "CLAN CAMPBELL 70 CL 40°", "clParUnite": 4 }
+      ],
+      "confiance": "basse",
+      "note": "dose 4 cl en caisse ; 'Whisky L.J' (Long John) = whisky maison ; aucun Long John en FCBS, mais le whisky maison du périmètre FCBS est CLAN CAMPBELL 520018 (carte récente). Rapprochement par défaut sur le whisky maison FCBS"
+    },
+    {
+      "ref": "0015",
+      "libelleCaisse": "Whisky L.J (2cl) Bab",
+      "carteTitre": "Whisky Clan Campbell Baby 2 cl",
+      "methode": "dose",
+      "doseTotaleCl": 2,
+      "ingredients": [
+        { "achatCode": "520018", "achatLibelle": "CLAN CAMPBELL 70 CL 40°", "clParUnite": 2 }
+      ],
+      "confiance": "basse",
+      "note": "dose 2 cl (Baby) en caisse ; même rapprochement whisky maison FCBS 520018 que ref 0014"
+    },
+    {
+      "ref": "0016",
+      "libelleCaisse": "Jack Daniel's",
+      "carteTitre": "Whisky “Jack Daniel’s”",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "530012", "achatLibelle": "JACK DANIEL'S OLD N7 70 CL 40°", "clParUnite": 4 }
+      ],
+      "confiance": "haute",
+      "note": "carte Jack Daniel's 4 cl ; achat FCBS 530012 présent dans le périmètre"
+    },
+    {
+      "ref": "0351",
+      "libelleCaisse": "Whisky-Coca",
+      "carteTitre": "Whisky Clan Campbell Verre 4 cl + Coca-Cola",
+      "methode": "carte",
+      "doseTotaleCl": 4,
+      "ingredients": [
+        { "achatCode": "520018", "achatLibelle": "CLAN CAMPBELL 70 CL 40°", "clParUnite": 4 }
+      ],
+      "confiance": "basse",
+      "note": "long drink whisky+coca ; part spiritueux = 4 cl whisky maison (Clan Campbell FCBS 520018) ; le coca est hors périmètre spiritueux"
+    },
+    {
+      "ref": "0003",
+      "libelleCaisse": "Macvin du Jura",
+      "carteTitre": "Macvin",
+      "methode": "carte",
+      "doseTotaleCl": 6,
+      "ingredients": [
+        { "achatCode": "600707", "achatLibelle": "MACVIN DU JURA BLANC 75 CL DOMAINE JEAN-LOUIS TISSOT", "clParUnite": 6 },
+        { "achatCode": "601152", "achatLibelle": "MACVIN BLANC JACOBIN 75 CL FRUITIERE VINICOLE ARBOIS", "clParUnite": 6 },
+        { "achatCode": "510221", "achatLibelle": "MACVIN BLANC 75 CL 18° DOMAINE ROLET PERE & FILS", "clParUnite": 6 },
+        { "achatCode": "665175", "achatLibelle": "MACVIN JURA BLANC 75 CL MAISON FREDERIC LORNET", "clParUnite": 6 },
+        { "achatCode": "600764", "achatLibelle": "MACVIN DU JURA ROSE 75 CL FRUITIERE VINICOLE ARBOIS", "clParUnite": 6 }
+      ],
+      "confiance": "haute",
+      "note": "carte Macvin 6 cl ; un seul libellé caisse pour plusieurs achats Macvin du périmètre (toutes catégories 'macvin' FCBS listées). Le Macvin entre aussi dans des cocktails maison (Vouivre, Père Grégoire, Chat Perché, Kittykir) traités hors de cette famille"
+    },
+    {
+      "ref": "0367",
+      "libelleCaisse": "Vin jaune",
+      "carteTitre": "Vin Jaune",
+      "methode": "carte",
+      "doseTotaleCl": 12,
+      "ingredients": [
+        { "achatCode": "601489", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2016 FRUITIERE VINICOLE ARBOIS AOC", "clParUnite": 12 },
+        { "achatCode": "661576", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2015 FRUITIERE VINICOLE ARBOIS AOC", "clParUnite": 12 },
+        { "achatCode": "661457", "achatLibelle": "ARBOIS VIN JAUNE 62 CL 2017 FRUITIERE VINICOLE ARBOIS", "clParUnite": 12 }
+      ],
+      "confiance": "haute",
+      "note": "carte Vin Jaune 12 cl ; achats Arbois Vin Jaune 62 cl (millésimes 2015/2016/2017). Vin jaune classé 'vin' dans achats mais explicitement rattaché ici sur consigne. Servi en clavelin partiel/verre 12 cl"
+    },
+    {
+      "ref": "0004",
+      "libelleCaisse": "Vin de Paille",
+      "carteTitre": "Vin de Paille",
+      "methode": "carte",
+      "doseTotaleCl": 6,
+      "ingredients": [
+        { "achatCode": "600964", "achatLibelle": "VIN DE PAILLE 37,5 CL 2017 FRUITIERE VINICOLE ARBOIS", "clParUnite": 6 },
+        { "achatCode": "601726", "achatLibelle": "VIN DE PAILLE 37,5 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 6 }
+      ],
+      "confiance": "moyenne",
+      "note": "carte Vin de Paille 6 cl ; achats vin de paille 37,5 cl (categorie 'materiel' dans achats, hors périmètre spiritueux/macvin strict mais rattaché ici comme spécialité régionale servie à la dose). Doublon caisse ref 2124 'VIN PAILLE'"
+    },
+    {
+      "ref": "2124",
+      "libelleCaisse": "VIN PAILLE",
+      "carteTitre": "Vin de Paille",
+      "methode": "carte",
+      "doseTotaleCl": 6,
+      "ingredients": [
+        { "achatCode": "600964", "achatLibelle": "VIN DE PAILLE 37,5 CL 2017 FRUITIERE VINICOLE ARBOIS", "clParUnite": 6 },
+        { "achatCode": "601726", "achatLibelle": "VIN DE PAILLE 37,5 CL 2018 FRUITIERE VINICOLE ARBOIS", "clParUnite": 6 }
+      ],
+      "confiance": "moyenne",
+      "note": "code caisse récent du Vin de Paille (doublon avec ref 0004) ; carte 6 cl ; mêmes achats vin de paille 37,5 cl"
+    },
+    {
+      "ref": "0013",
+      "libelleCaisse": "Kir Bourgogne",
+      "carteTitre": "Kir (Aligoté + crème de Cassis)",
+      "methode": "inconnu",
+      "doseTotaleCl": 12,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "cocktail (kir = vin blanc aligoté + crème de cassis) → hors périmètre 'servis purs'. La part spiritueux est la crème de cassis (591008 / 591074 / 520093 / 520099) ; à traiter dans la famille cocktails/kirs. Non valorisé ici"
+    },
+    {
+      "ref": "0332",
+      "libelleCaisse": "Kir Princier",
+      "carteTitre": "Kir / variante crémant",
+      "methode": "inconnu",
+      "doseTotaleCl": 12,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "cocktail kir (crémant/aligoté + crème de cassis) → hors périmètre 'servis purs', à traiter en famille cocktails/kirs"
+    },
+    {
+      "ref": "1810",
+      "libelleCaisse": "Kir Pamplemousse",
+      "carteTitre": null,
+      "methode": "inconnu",
+      "doseTotaleCl": 12,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "cocktail (vin + sirop pamplemousse) → hors périmètre 'servis purs', famille cocktails/kirs"
+    },
+    {
+      "ref": "1999",
+      "libelleCaisse": "Rosé Pamplemousse",
+      "carteTitre": "Rosé “Pamp”",
+      "methode": "inconnu",
+      "doseTotaleCl": 12,
+      "ingredients": [],
+      "confiance": "basse",
+      "note": "cocktail (rosé Côtes de Provence + sirop pamplemousse) → hors périmètre spiritueux ; relève des vins rosés/cocktails"
+    }
+  ],
+  "achatsDuPerimetreNonVendus": [
+    { "code": "510051", "libelle": "ABSINTHE FRANCOIS GUY 45° 1 L", "note": "absinthe : aucune ligne caisse absinthe dans le périmètre (pas servie sèche en caisse identifiée)" },
+    { "code": "505042", "libelle": "ABSINTHE UN EMILE 45° 70 CL", "note": "absinthe : aucune vente caisse correspondante" },
+    { "code": "505033", "libelle": "ABSINTHE EMILE VERTE 68° 70 CL", "note": "absinthe : aucune vente caisse correspondante" },
+    { "code": "510273", "libelle": "ABSINTHE TRILOGIE 50° 50 CL", "note": "absinthe : aucune vente caisse correspondante" },
+    { "code": "510013", "libelle": "VODKA SOBIESKI 70 CL 37°5", "note": "vodka : pas de vente vodka sèche en caisse ; vodka utilisée en cocktails (Rêve Bleu, Maëva) hors de cette famille" },
+    { "code": "530078", "libelle": "VODKA POLIAKOV 70 CL 37,5° SILVER BEC", "note": "vodka : cocktails uniquement, pas de vente sèche" },
+    { "code": "530021", "libelle": "VODKA ERISTOFF 70 CL", "note": "vodka : cocktails uniquement, pas de vente sèche" },
+    { "code": "510132", "libelle": "PASSOA 70 CL 15° PASSION FRUIT JUICE", "note": "ingrédient cocktail (Balidou) ; pas de vente sèche en caisse" },
+    { "code": "401438", "libelle": "MONIN SIROP CURACAO BLEU 70CL", "note": "ingrédient cocktail (Rêve Bleu) ; pas un spiritueux servi pur" },
+    { "code": "401454", "libelle": "ROUTIN 1883 RHUM 1 L", "note": "rhum/arôme : pas de vente rhum sec en caisse" },
+    { "code": "505034", "libelle": "APEROL 100 CL 12,5°", "note": "Aperol : ingrédient du Spritz jurassien (cocktail) ; pas de vente Aperol sec en caisse" },
+    { "code": "700149", "libelle": "KIT APEROL 2022", "note": "matériel promotionnel Aperol, non vendable" },
+    { "code": "704918", "libelle": "VERRES APEROL A PIED X 6", "note": "matériel (verres), non vendable" },
+    { "code": "591008", "libelle": "CREME CASSIS 15° 100 CL M.BRIZ", "note": "crème de cassis : ingrédient des kirs/Vouivre (cocktails) ; non vendue pure" },
+    { "code": "591074", "libelle": "CREME CASSIS BRIOTTET 20° 70CL CASSIS DE DIJON", "note": "crème de cassis : ingrédient kirs/cocktails ; non vendue pure" },
+    { "code": "520093", "libelle": "CAPUCINE CREME CASSIS 16° 1 L", "note": "crème de cassis : ingrédient kirs/cocktails ; non vendue pure" },
+    { "code": "591081", "libelle": "CREME CERISE 70CL 18° BRIOTTET", "note": "crème/liqueur de cerise : ingrédient de l'Apéritif du Père Grégoire (cocktail) ; non vendue pure" },
+    { "code": "591009", "libelle": "CREME MURE 15° 100 CL M.BRIZ", "note": "crème de mûre : ingrédient cocktail/kir ; non vendue pure" },
+    { "code": "520099", "libelle": "VEDRENNE CREME MURE TRADITION", "note": "crème de mûre : ingrédient cocktail/kir ; non vendue pure" },
+    { "code": "592144", "libelle": "LIQUEUR FLEUR SUREAU 70 CL 20° M.BRIZARD", "note": "liqueur de sureau : aucune vente sèche en caisse" },
+    { "code": "540064", "libelle": "SOHO LITCHI 70 CL 15°", "note": "liqueur de litchi : ingrédient cocktails (Kittykir, Maëva) ; non vendue sèche" },
+    { "code": "510061", "libelle": "LIQUEUR VERT SAPIN 40° 70 CL", "note": "liqueur de sapin variante (vente regroupée sur 510255) ; alternative possible pour ref 2042" },
+    { "code": "510062", "libelle": "VERT SAPIN 40° 100 CL", "note": "liqueur de sapin variante (vente regroupée sur 510255) ; alternative possible pour ref 2042" },
+    { "code": "565586", "libelle": "CHIVAS REGAL EXTRA 13 ANS 40°", "note": "whisky premium : aucune ligne caisse 'Chivas' identifiée ; achat ponctuel (cadeau/personnel ?)" }
+  ]
+}

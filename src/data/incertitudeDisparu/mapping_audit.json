@@ -1,0 +1,39 @@
+{
+ "description": "Audit mapping 4 sources + correction Cubis. Disparu vins maison avant/apres redistribution.",
+ "scan_orphelins": {
+  "orphelins_conso_significatifs_vin": [
+   "Cubis de vin (couleur non précisée)"
+  ],
+  "cubis_litres_redistribues": 426.89,
+  "conclusion_scan": "Un seul orphelin conso vin (Cubis). Pas d'erreur de mapping generalisee. Macon equilibre par exercice (pas de decalage de carte sur le disparu)."
+ },
+ "redistribution": {
+  "redistribuer_sur": [
+   "Bourgogne Aligoté maison",
+   "Côtes de Provence rosé maison (Cap des Pins)",
+   "Côtes du Rhône rouge maison (Chusclan)"
+  ],
+  "prorata_ventes_seches": {
+   "Bourgogne Aligoté maison": 209.25,
+   "Côtes de Provence rosé maison (Cap des Pins)": 280.35,
+   "Côtes du Rhône rouge maison (Chusclan)": 190.78
+  },
+  "litres_ajoutes": {
+   "Bourgogne Aligoté maison": 131.3,
+   "Côtes de Provence rosé maison (Cap des Pins)": 175.9,
+   "Côtes du Rhône rouge maison (Chusclan)": 119.7
+  }
+ },
+ "disparu_maison_avant_l": {
+  "Bourgogne Aligoté maison": 293.2,
+  "Côtes de Provence rosé maison (Cap des Pins)": 394.2,
+  "Côtes du Rhône rouge maison (Chusclan)": 169.2
+ },
+ "disparu_maison_apres_l": {
+  "Bourgogne Aligoté maison": 161.9,
+  "Côtes de Provence rosé maison (Cap des Pins)": 218.4,
+  "Côtes du Rhône rouge maison (Chusclan)": 49.5
+ },
+ "gain_litres": 426.8,
+ "gain_eur_revente": 11097.0
+}

@@ -1,0 +1,154 @@
+{
+ "description": "Synthese : consommation personnel/offerts chiffree + cascade de la perte reelle de boisson.",
+ "personnel": {
+  "lignes": [
+   {
+    "poste": "Coca (Chris-Elian 4/j + Ghislaine 2/j)",
+    "litres": 1311.0,
+    "cout_achat_eur": 2583,
+    "ca_equivalent_eur": 15496,
+    "base": "6 cannettes/jour x 662 j"
+   },
+   {
+    "poste": "Limonade (tout le staff, 1/j)",
+    "litres": 165.0,
+    "cout_achat_eur": 155,
+    "ca_equivalent_eur": 2574,
+    "base": "1 limonade 25cl/jour"
+   },
+   {
+    "poste": "Jus de fruit (tout le staff, 3/j)",
+    "litres": 397.0,
+    "cout_achat_eur": 1231,
+    "ca_equivalent_eur": 6193,
+    "base": "3 jus 20cl/jour"
+   },
+   {
+    "poste": "Sirop a l'eau (tout le staff, 3/j)",
+    "litres": 40.0,
+    "cout_achat_eur": 284,
+    "ca_equivalent_eur": 480,
+    "base": "3 sirops 2cl/jour"
+   },
+   {
+    "poste": "Macvin (chef Thierry, 2,5 verres/j)",
+    "litres": 99.0,
+    "cout_achat_eur": 1797,
+    "ca_equivalent_eur": 8085,
+    "base": "2,5 verres 6cl/jour"
+   },
+   {
+    "poste": "Picon (chef Thierry, ~1,7 Picon Biere/j)",
+    "litres": 44.0,
+    "cout_achat_eur": 457,
+    "ca_equivalent_eur": 6490,
+    "base": "44 L = disparu Picon entier"
+   }
+  ],
+  "total_litres": 2056,
+  "total_cout_eur": 6506,
+  "total_ca_eur": 39319
+ },
+ "offerts": {
+  "avertissement": "Estimations bornees (offerts non enregistres en caisse, par nature). A confirmer par l'exploitante.",
+  "lignes": [
+   {
+    "poste": "Aperitifs offerts (~1/jour)",
+    "litres": 39.7,
+    "cout_achat_eur": 596,
+    "ca_equivalent_eur": 3641,
+    "base": "1 aperitif 6cl/jour x 662 j"
+   },
+   {
+    "poste": "Cafes offerts (~3/jour)",
+    "litres": null,
+    "cout_achat_eur": 496,
+    "ca_equivalent_eur": 4369,
+    "base": "3 cafes/jour x 662 j (cafe hors achats FCBS)"
+   }
+  ],
+  "total_cout_eur": 1092,
+  "total_ca_eur": 8010
+ },
+ "cascade_alcool": {
+  "achats_alcool_l": 10657,
+  "postes": [
+   {
+    "poste": "Vendu au verre (caisse)",
+    "litres": 5569
+   },
+   {
+    "poste": "Vendu en cocktails (caisse)",
+    "litres": 998
+   },
+   {
+    "poste": "Cuisine (fondues, babas, flambage)",
+    "litres": 566
+   },
+   {
+    "poste": "Alcool des menus (non detaille en caisse)",
+    "litres": 228
+   },
+   {
+    "poste": "Consommation du chef (Picon + Macvin)",
+    "litres": 143
+   },
+   {
+    "poste": "Aperitifs offerts aux clients",
+    "litres": 40
+   },
+   {
+    "poste": "Sur-versement au verre (~8 %)",
+    "litres": 446
+   },
+   {
+    "poste": "Stock final (inventaire)",
+    "litres": 213
+   }
+  ],
+  "perte_reelle_residuelle_l": 2454,
+  "perte_reelle_pct_achats": 23.0,
+  "interpretation": "Perte d'exploitation normale d'un bar (casse, evaporation, mousse, sur-versement non mesure). La jurisprudence CHR admet 22-25 %. AUCUNE vente au noir : CA bancarise, especes 1,3 %."
+ },
+ "softs": {
+  "lignes": [
+   {
+    "categorie": "Coca",
+    "achat_l": 1964.0,
+    "vendu_l": 455.0,
+    "cocktails_l": 15.0,
+    "staff_l": 1311.0,
+    "stock_l": 39.0,
+    "residu_l": 144.0
+   },
+   {
+    "categorie": "Limonade",
+    "achat_l": 636.0,
+    "vendu_l": 240.0,
+    "cocktails_l": 194.0,
+    "staff_l": 166.0,
+    "stock_l": 0.0,
+    "residu_l": 36.0
+   },
+   {
+    "categorie": "Jus",
+    "achat_l": 829.0,
+    "vendu_l": 233.0,
+    "cocktails_l": 322.0,
+    "staff_l": 397.0,
+    "stock_l": 89.0,
+    "residu_l": -213.0
+   },
+   {
+    "categorie": "Sirop",
+    "achat_l": 133.0,
+    "vendu_l": 16.0,
+    "cocktails_l": 152.0,
+    "staff_l": 40.0,
+    "stock_l": 8.0,
+    "residu_l": -83.0
+   }
+  ],
+  "constat": "Bilan softs ferme (ventes recuperees au ticket + staff + stock) : disparu reel ~ 0."
+ }
+}

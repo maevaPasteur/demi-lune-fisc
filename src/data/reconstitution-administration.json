@@ -1,0 +1,171 @@
+{
+  "source": "public/documents/rapports-des-finances-publiques/Proposition_4_Annexes_Finales.pdf",
+  "objet": "Reconstitution du chiffre d'affaires par les achats de boissons (méthode de l'administration fiscale) - « Annexes finales »",
+  "avertissement": "Transcrit depuis un PDF scanné (3 pages) par lecture image bande par bande. Chiffres relus avec une bonne confiance ; quelques sous-valeurs (doses, arrondis) peuvent comporter une marge. L'original PDF fait foi. NB : les ingrédients « Limonade » (paragraphe a/) et « Crémant » (paragraphe b/) servant de base de valorisation des cocktails sont RÉFÉRENCÉS mais situés HORS de cet extrait de 3 pages (pages antérieures).",
+  "methode": {
+    "principe": "Pour chaque ingrédient/boisson : volume disponible (déduit des achats) → déduction des usages cuisine/dessert, conso personnel et pertes → répartition par article/cocktail selon les proportions de la caisse → doses → quantités vendables → CA reconstitué. Puis CA « solides » = CA « liquides » × coefficient liquide/solide. Total reconstitué comparé au CA comptabilisé → discordance.",
+    "rapportLiquideSolidePour1Euro": 3.1,
+    "abattements": { "remise": 0.05, "pertes": 0.05, "consommationPersonnel": 0.05 },
+    "coefficientReventeTTC": { "avantReconstitution": 2.31, "apresReconstitution": 3.051 },
+    "definitionVolumesDisparus": "(Volume disponible − Volume vendu) / Volume disponible"
+  },
+  "ingredients": [
+    {
+      "ref": "Macvin",
+      "designation": "Macvin Blanc 75 cl",
+      "bouteillesDisponibles": 362,
+      "volumeDisponibleCl": 27150,
+      "deductions": {
+        "consommationCuisineDessertCl": 7406,
+        "detail": [
+          { "usage": "Baba au Macvin", "nbArticles": 561, "volumeCl": 2244 },
+          { "usage": "Saucisse flambée au Macvin", "nbArticles": 547, "volumeCl": 2188 },
+          { "usage": "Menu Franc-Comtois - plat (Poulet/Assiette)", "nbArticles": 803, "proportion": 0.3874, "volumeCl": 1244 },
+          { "usage": "Menu Franc-Comtois - dessert (Baba/Crème brûlée)", "nbArticles": 803, "proportion": 0.5384, "volumeCl": 1729 }
+        ],
+        "volumeNetBoissonCl": 19744
+      },
+      "repartitionCocktails": [
+        { "article": "Macvin du Jura (au verre)", "proportion": 0.2305 },
+        { "article": "La Vouivre", "proportion": 0.3001, "valorise": "via Crémant (paragraphe b/)" },
+        { "article": "Père Grégoire", "proportion": 0.2324, "valorise": "via Crémant (paragraphe b/)" },
+        { "article": "Chat perché", "proportion": 0.2371 }
+      ],
+      "volumesDisparusPct": 52.4,
+      "caReconstitue": { "ttc": 11329.06, "ht": 9440.88, "tva": 1888.18 },
+      "notes": "Macvin ROSÉ exclu du calcul. Vin Jaune affecté au « Poulet à la Jurassienne » (61,26 % des assiettes), Macvin aux Assiettes Franc-Comtoises (38,74 %)."
+    },
+    {
+      "ref": "Soho",
+      "designation": "Soho Litchi 70 cl",
+      "bouteillesDisponibles": 28,
+      "volumeDisponibleCl": 1960,
+      "repartitionCocktails": [
+        { "article": "Kittykir", "proportion": 0.9031, "valorise": "via Crémant (paragraphe b/)" },
+        { "article": "Maëva", "proportion": 0.0969 }
+      ],
+      "volumesDisparusPct": 22.04,
+      "caReconstitue": { "ttc": 422.53, "ht": 352.11, "tva": 70.42 }
+    },
+    {
+      "ref": "Vodka",
+      "designation": "Vodka Sobieski / Poliakov / Eristoff 70 cl",
+      "bouteillesDisponibles": 14,
+      "volumeDisponibleCl": 980,
+      "deductions": { "dessertsAlcoolsFortsCl": -172, "volumeNetCl": 808 },
+      "repartitionCocktails": [
+        { "article": "Rêve Bleu", "proportion": 0.5256 },
+        { "article": "Maëva", "proportion": 0.4744, "valorise": "via Soho (paragraphe d/)" }
+      ],
+      "volumesDisparusPct": 61.39,
+      "caReconstitue": { "ttc": 954.0, "ht": 795.0, "tva": 159.0 }
+    },
+    {
+      "ref": "Passoa",
+      "designation": "Passoa 70 cl",
+      "bouteillesDisponibles": 7,
+      "volumeDisponibleCl": 490,
+      "repartitionCocktails": [{ "article": "Balidou", "proportion": 1.0 }],
+      "volumesDisparusPct": 25.71,
+      "caReconstitue": { "ttc": 1073.6, "ht": 894.67, "tva": 178.93 }
+    },
+    {
+      "ref": "Tequila",
+      "designation": "Tequila 70 cl",
+      "bouteillesDisponibles": 0,
+      "volumeDisponibleCl": 0,
+      "repartitionCocktails": [{ "article": "Tequila Sunrise", "proportion": 1.0 }],
+      "volumesDisparusPct": 0.0,
+      "caReconstitue": { "ttc": 0.0, "ht": 0.0, "tva": 0.0 },
+      "notes": "Aucun achat/vente sur la période."
+    },
+    {
+      "ref": "Picon",
+      "designation": "Picon Bière 100 cl",
+      "bouteillesDisponibles": 11,
+      "volumeDisponibleCl": 1100,
+      "repartitionCocktails": [
+        { "article": "Picon bière (3 cl picon + 22 cl bière)", "proportion": 0.5124, "prixMoyen": 4.76, "caHt": 741.77, "tva": 148.35 },
+        { "article": "Pinte Picon (6 cl picon + 44 cl bière)", "proportion": 0.4876, "prixMoyen": 9.0, "caHt": 667.5, "tva": 133.5 }
+      ],
+      "volumesDisparusPct": 34.0,
+      "caReconstitue": { "ttc": 1691.12, "ht": 1409.27, "tva": 281.85 },
+      "notes": "Aucun Picon consommé en cuisine."
+    },
+    {
+      "ref": "Bière",
+      "designation": "Fût Affligem Blade 800 cl",
+      "bouteillesDisponibles": 79,
+      "volumeDisponibleCl": 63200,
+      "deductions": { "consoPersonnelPertesPct": 0.15, "volumeRetireCl": -9480, "volumeNetCl": 53720 },
+      "repartitionCocktails": [
+        { "article": "Pression (25 cl)", "proportion": 0.4227, "prixMoyen": 4.19, "caHt": 3170.43, "tva": 634.09 },
+        { "article": "Pinte (50 cl)", "proportion": 0.3933, "prixMoyen": 8.0, "caHt": 2813.33, "tva": 562.67 },
+        { "article": "Picon bière / Pinte Picon", "proportion": 0.136, "valorise": "via Picon (paragraphe h/)" },
+        { "article": "Panaché / Monaco", "proportion": 0.048, "valorise": "via Limonade (paragraphe a/)" }
+      ],
+      "volumesDisparusPct": 27.12,
+      "caReconstitue": { "ttc": 7180.52, "ht": 5983.77, "tva": 1196.75 }
+    },
+    {
+      "ref": "Jus de fruits",
+      "designation": "Jus / nectars 100 cl",
+      "composition": [
+        { "article": "Granini Nectar Poire 100 cl", "bouteilles": 7, "volumeCl": 700 },
+        { "article": "Jus de Pomme 100 cl", "bouteilles": 63, "volumeCl": 6300 },
+        { "article": "Granini Orange 100 cl", "bouteilles": 142, "volumeCl": 14200 },
+        { "article": "Granini Ananas 100 cl", "bouteilles": 56, "volumeCl": 5600 }
+      ],
+      "volumeDisponibleCl": 26800,
+      "volumesDisparusPct": { "parRapportCaisse": 55.98, "parRapportQuantitesReconstituees": 35.1 },
+      "caReconstitue": null,
+      "notes": "EXCEPTIONNELLEMENT, le service a décidé de NE PAS valoriser le jus de fruit en excès en CA (choix explicitement minorant le CA reconstitué)."
+    },
+    {
+      "ref": "Absinthe",
+      "designation": "Absinthe (100 cl / Un Emile 70 cl / Trilogie 50 cl)",
+      "composition": [
+        { "article": "Absinthe 100 cl", "bouteilles": 10 },
+        { "article": "Absinthe Un Emile 70 cl", "bouteilles": 1 },
+        { "article": "Absinthe Trilogie 50 cl", "bouteilles": 1 }
+      ],
+      "caReconstitue": null,
+      "notes": "Consommation destinée à la confection de dessert (crème brûlée, 46,16 % des desserts) - non valorisée en boisson."
+    }
+  ],
+  "ingredientsReferencesHorsExtrait": [
+    { "ref": "Limonade", "paragraphe": "a/", "role": "Base de valorisation des panachés/monaco et de plusieurs cocktails (Mambo, Luna…)." },
+    { "ref": "Crémant", "paragraphe": "b/", "role": "Base de valorisation des cocktails maison (La Vouivre, Père Grégoire, Chat perché, Kittykir…)." }
+  ],
+  "synthese": {
+    "_note": "Montants en euros, vraisemblablement sur un exercice (à confirmer lequel). Lus sur le bloc de synthèse (haute confiance).",
+    "caLiquidesAvantAbattements": { "ttc": 165065.33, "ht": 140222.51, "tva": 24842.82 },
+    "abattements5pct": {
+      "remise": { "ttc": 8253.27, "ht": 7011.13, "tva": 1242.14 },
+      "pertes": { "ttc": 8253.27, "ht": 7011.13, "tva": 1242.14 },
+      "consommationPersonnel": { "ttc": 8253.27, "ht": 7011.13, "tva": 1242.14 }
+    },
+    "caLiquidesApresAbattements": { "ttc": 140305.53, "ht": 119189.14, "tva": 21116.39 },
+    "caSolides": { "ttc": 434947.14, "ht": 395406.5, "tva": 39540.65 },
+    "caTotalReconstitue": { "ttc": 575252.68, "ht": 514595.63, "tva": 60657.04 },
+    "caInscritEnComptabilite": { "ttc": 435524.92, "ht": 389519.47, "tva": 46005.45 },
+    "discordanceCA": { "ttc": 139727.76, "ht": 125076.16, "tva": 14651.59 }
+  },
+  "comptes": {
+    "achatsDenrees_491100": 142129.11,
+    "achatsBoissons_491200": 47098.84,
+    "variationStockDenrees_310000": -410.25,
+    "variationStockBoissons_310200": -273.41,
+    "coutMatieresRevendues": 188544.29
+  },
+  "notesMethodologiques": [
+    "Volumes disparus = (volume disponible − volume vendu) / volume disponible.",
+    "Le Macvin rosé est exclu du calcul.",
+    "Le jus de fruit en excès n'est pas valorisé en CA (choix minorant explicite du service).",
+    "Absinthe affectée au dessert (crème brûlée), non valorisée en boisson.",
+    "Remise, pertes et consommation du personnel abattues à 5 % chacune ; bière : abattement spécifique de 15 % (conso personnel + pertes).",
+    "Affectations cuisine : Vin Jaune → Poulet à la Jurassienne (61,26 %) ; Macvin → Assiettes Franc-Comtoises (38,74 %), Baba au Macvin, Saucisse flambée ; Absinthe → crème brûlée.",
+    "CA solides estimé par application d'un coefficient liquide/solide de 3,10 au CA liquides.",
+    "Coefficient TTC de revente : 2,310 avant reconstitution → 3,051 après."
+  ]
+}

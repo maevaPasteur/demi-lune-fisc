@@ -1,0 +1,470 @@
+{
+  "description": "Recette exacte des cocktails (cl par ingrédient) + nom_canonique unifié. estimation=1 : répartition déduite (volume total connu, split estimé).",
+  "unite": "cl",
+  "cocktails": {
+    "La Vouivre": {
+      "volume_cl": 12,
+      "ingredients": [
+        {
+          "nom": "Crémant",
+          "categorie": "alcool",
+          "cl": 8,
+          "estimation": 1,
+          "nom_canonique": "Crémant du Jura"
+        },
+        {
+          "nom": "Macvin",
+          "categorie": "alcool",
+          "cl": 3,
+          "estimation": 1,
+          "nom_canonique": "Macvin"
+        },
+        {
+          "nom": "Crème de cassis",
+          "categorie": "alcool",
+          "cl": 1,
+          "estimation": 1,
+          "nom_canonique": "Crème de Cassis"
+        }
+      ]
+    },
+    "Apéritif du Père Grégoire": {
+      "volume_cl": 6,
+      "ingredients": [
+        {
+          "nom": "Crémant",
+          "categorie": "alcool",
+          "cl": 1,
+          "estimation": 1,
+          "nom_canonique": "Crémant du Jura"
+        },
+        {
+          "nom": "Macvin",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 1,
+          "nom_canonique": "Macvin"
+        },
+        {
+          "nom": "Liqueur de cerise",
+          "categorie": "alcool",
+          "cl": 1,
+          "estimation": 1,
+          "nom_canonique": "Liqueur de Cerise"
+        }
+      ]
+    },
+    "Chat Perché": {
+      "volume_cl": 12,
+      "ingredients": [
+        {
+          "nom": "Macvin",
+          "categorie": "alcool",
+          "cl": 6,
+          "estimation": 1,
+          "nom_canonique": "Macvin"
+        },
+        {
+          "nom": "Jus de poire",
+          "categorie": "jus",
+          "cl": 3,
+          "estimation": 1,
+          "nom_canonique": "Jus de poire"
+        },
+        {
+          "nom": "Sirop de châtaigne",
+          "categorie": "sirop",
+          "cl": 3,
+          "estimation": 1,
+          "nom_canonique": "Sirop Châtaigne"
+        }
+      ]
+    },
+    "Kittykir": {
+      "volume_cl": 12,
+      "ingredients": [
+        {
+          "nom": "Soho (liqueur de litchi)",
+          "categorie": "alcool",
+          "cl": 2,
+          "estimation": 1,
+          "nom_canonique": "Soho Litchi"
+        },
+        {
+          "nom": "Crémant",
+          "categorie": "alcool",
+          "cl": 9,
+          "estimation": 1,
+          "nom_canonique": "Crémant du Jura"
+        },
+        {
+          "nom": "Sirop de framboise",
+          "categorie": "sirop",
+          "cl": 1,
+          "estimation": 1,
+          "nom_canonique": "Sirop Framboise"
+        }
+      ]
+    },
+    "Mambo": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Jus d'orange",
+          "categorie": "jus",
+          "cl": 8.3,
+          "estimation": 1,
+          "nom_canonique": "Jus d'orange"
+        },
+        {
+          "nom": "Jus de fraise",
+          "categorie": "jus",
+          "cl": 8.3,
+          "estimation": 1,
+          "nom_canonique": "Jus de fraise"
+        },
+        {
+          "nom": "Limonade",
+          "categorie": "soda",
+          "cl": 8.4,
+          "estimation": 1,
+          "nom_canonique": "Limonade"
+        }
+      ]
+    },
+    "Luna": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Jus de poire",
+          "categorie": "jus",
+          "cl": 8.3,
+          "estimation": 1,
+          "nom_canonique": "Jus de poire"
+        },
+        {
+          "nom": "Limonade",
+          "categorie": "soda",
+          "cl": 8.3,
+          "estimation": 1,
+          "nom_canonique": "Limonade"
+        },
+        {
+          "nom": "Sirop de châtaigne",
+          "categorie": "sirop",
+          "cl": 8.4,
+          "estimation": 1,
+          "nom_canonique": "Sirop Châtaigne"
+        }
+      ]
+    },
+    "Balidou": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Passoa",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 0,
+          "nom_canonique": "Passoa"
+        },
+        {
+          "nom": "Jus d'ananas",
+          "categorie": "jus",
+          "cl": 10.5,
+          "estimation": 1,
+          "nom_canonique": "Jus d'ananas"
+        },
+        {
+          "nom": "Sirop de framboise",
+          "categorie": "sirop",
+          "cl": 10.5,
+          "estimation": 1,
+          "nom_canonique": "Sirop Framboise"
+        }
+      ]
+    },
+    "Rêve Bleu": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Vodka",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 0,
+          "nom_canonique": "Vodka"
+        },
+        {
+          "nom": "Jus de pomme",
+          "categorie": "jus",
+          "cl": 10.5,
+          "estimation": 1,
+          "nom_canonique": "Jus de pomme"
+        },
+        {
+          "nom": "Sirop curaçao bleu",
+          "categorie": "sirop",
+          "cl": 10.5,
+          "estimation": 1,
+          "nom_canonique": "Sirop Curaçao bleu"
+        }
+      ]
+    },
+    "Maëva": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Soho (liqueur de litchi)",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 0,
+          "nom_canonique": "Soho Litchi"
+        },
+        {
+          "nom": "Vodka",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 0,
+          "nom_canonique": "Vodka"
+        },
+        {
+          "nom": "Jus de framboise",
+          "categorie": "jus",
+          "cl": 17,
+          "estimation": 1,
+          "nom_canonique": "Jus de framboise"
+        }
+      ]
+    },
+    "Rabasse": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Pontarlier",
+          "categorie": "alcool",
+          "cl": 2,
+          "estimation": 0,
+          "nom_canonique": "Pontarlier Anis"
+        },
+        {
+          "nom": "Liqueur de sapin",
+          "categorie": "alcool",
+          "cl": 2,
+          "estimation": 0,
+          "nom_canonique": "Liqueur de Sapin"
+        },
+        {
+          "nom": "Limonade",
+          "categorie": "soda",
+          "cl": 21,
+          "estimation": 1,
+          "nom_canonique": "Limonade"
+        }
+      ]
+    },
+    "Tequila Sunrise": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Tequila",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 0,
+          "nom_canonique": "Tequila Camino Real"
+        },
+        {
+          "nom": "Jus d'orange",
+          "categorie": "jus",
+          "cl": 10.5,
+          "estimation": 1,
+          "nom_canonique": "Jus d'orange"
+        },
+        {
+          "nom": "Sirop de grenadine",
+          "categorie": "sirop",
+          "cl": 10.5,
+          "estimation": 1,
+          "nom_canonique": "Sirop Grenadine"
+        }
+      ]
+    },
+    "Kir": {
+      "volume_cl": 12,
+      "ingredients": [
+        {
+          "nom": "Aligoté",
+          "categorie": "alcool",
+          "cl": 10,
+          "estimation": 1,
+          "nom_canonique": "Bourgogne Aligoté maison"
+        },
+        {
+          "nom": "Crème de cassis",
+          "categorie": "alcool",
+          "cl": 2,
+          "estimation": 1,
+          "nom_canonique": "Crème de Cassis"
+        }
+      ]
+    },
+    "Kir Princier": {
+      "volume_cl": 12,
+      "ingredients": [
+        {
+          "nom": "Crémant",
+          "categorie": "alcool",
+          "cl": 10,
+          "estimation": 1,
+          "nom_canonique": "Crémant du Jura"
+        },
+        {
+          "nom": "Crème de cassis",
+          "categorie": "alcool",
+          "cl": 2,
+          "estimation": 1,
+          "nom_canonique": "Crème de Cassis"
+        }
+      ]
+    },
+    "Kir Pamplemousse": {
+      "volume_cl": 12,
+      "ingredients": [
+        {
+          "nom": "Aligoté",
+          "categorie": "alcool",
+          "cl": 10,
+          "estimation": 1,
+          "nom_canonique": "Bourgogne Aligoté maison"
+        },
+        {
+          "nom": "Sirop de pamplemousse",
+          "categorie": "sirop",
+          "cl": 2,
+          "estimation": 1,
+          "nom_canonique": "Sirop Pamplemousse"
+        }
+      ]
+    },
+    "Rosé Pamp": {
+      "volume_cl": 12,
+      "ingredients": [
+        {
+          "nom": "Côtes de Provence rosé",
+          "categorie": "alcool",
+          "cl": 10,
+          "estimation": 1,
+          "nom_canonique": "Côtes de Provence rosé maison (Cap des Pins)"
+        },
+        {
+          "nom": "Sirop de pamplemousse",
+          "categorie": "sirop",
+          "cl": 2,
+          "estimation": 1,
+          "nom_canonique": "Sirop Pamplemousse"
+        }
+      ]
+    },
+    "Whisky-Coca": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Whisky",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 0,
+          "nom_canonique": "Clan Campbell"
+        },
+        {
+          "nom": "Coca",
+          "categorie": "soda",
+          "cl": 21,
+          "estimation": 1,
+          "nom_canonique": "Coca"
+        }
+      ]
+    },
+    "Panaché": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Bière (fût)",
+          "categorie": "biere",
+          "cl": 12.5,
+          "estimation": 0,
+          "nom_canonique": "Fût Affligem"
+        },
+        {
+          "nom": "Limonade",
+          "categorie": "soda",
+          "cl": 12.5,
+          "estimation": 0,
+          "nom_canonique": "Limonade"
+        }
+      ]
+    },
+    "Picon bière 25cl": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Picon",
+          "categorie": "alcool",
+          "cl": 4,
+          "estimation": 0,
+          "nom_canonique": "Picon"
+        },
+        {
+          "nom": "Bière (fût)",
+          "categorie": "biere",
+          "cl": 21,
+          "estimation": 0,
+          "nom_canonique": "Fût Affligem"
+        }
+      ]
+    },
+    "Picon bière 50cl": {
+      "volume_cl": 50,
+      "ingredients": [
+        {
+          "nom": "Picon",
+          "categorie": "alcool",
+          "cl": 8,
+          "estimation": 0,
+          "nom_canonique": "Picon"
+        },
+        {
+          "nom": "Bière (fût)",
+          "categorie": "biere",
+          "cl": 42,
+          "estimation": 0,
+          "nom_canonique": "Fût Affligem"
+        }
+      ]
+    },
+    "Monaco": {
+      "volume_cl": 25,
+      "ingredients": [
+        {
+          "nom": "Bière (fût)",
+          "categorie": "biere",
+          "cl": 12.5,
+          "estimation": 1,
+          "nom_canonique": "Fût Affligem"
+        },
+        {
+          "nom": "Sirop de grenadine",
+          "categorie": "sirop",
+          "cl": 2,
+          "estimation": 1,
+          "nom_canonique": "Sirop Grenadine"
+        },
+        {
+          "nom": "Limonade",
+          "categorie": "soda",
+          "cl": 10.5,
+          "estimation": 1,
+          "nom_canonique": "Limonade"
+        }
+      ]
+    }
+  }
+}

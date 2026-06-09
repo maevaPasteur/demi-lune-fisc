@@ -1,0 +1,2780 @@
+{
+  "objet": "Inventaires physiques de fin d'exercice — boissons & alcools",
+  "source": "public/documents/inventaires (PDF scannés -> CSV)",
+  "avertissement": "Périmètre = boissons sans alcool + alcools/vins (hors alimentation, crèmerie, entretien). Valeurs HT issues des inventaires ; lignes 'fiabilite=a_verifier' à recouper (surtout pages manuscrites 2025). Les lignes 'residuel=true' portent une valeur sans produit identifié.",
+  "unites": "quantite en bouteilles/unités ; prix et valeurs en € HT",
+  "inventaires": [
+    {
+      "date": "2023-03-31",
+      "exercice": "2022-2023",
+      "pdf": "inventaires/Inventaire_Demi_Lune_2023-03-31.pdf",
+      "csv": "inventaires/inventaire_2023-03-31.csv",
+      "nbLignes": 101,
+      "totaux": {
+        "sansAlcoolHT": 617.91,
+        "alcoolHT": 3056.26,
+        "totalHT": 3674.17
+      },
+      "lignes": [
+        {
+          "produit": "Café Malongo Grain 1kg",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 27.7,
+          "valeurHT": 55.4,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Café Malongo Déca",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 9.78,
+          "valeurHT": 9.78,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Thé Vert Menthe",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 6.42,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Peppermint Infusion",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 6.42,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Thé Baies Rouges",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 8.8,
+          "valeurHT": 8.8,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Thé Vert Jasmin",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 8.8,
+          "valeurHT": 8.8,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Infusion Camomille",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 8.8,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Infusion Verveine",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 8.8,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Vittel 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 13,
+          "prixUnitaireHT": 0.83,
+          "valeurHT": 10.79,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Perrier 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 19,
+          "prixUnitaireHT": 1.07,
+          "valeurHT": 20.33,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Vittel 50cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 33,
+          "prixUnitaireHT": 0.88,
+          "valeurHT": 29.04,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "San Pellegrino 50cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 33,
+          "prixUnitaireHT": 0.88,
+          "valeurHT": 29.04,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "San Pellegrino 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 25,
+          "prixUnitaireHT": 1.15,
+          "valeurHT": 28.75,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Orangina 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 13,
+          "prixUnitaireHT": 1.59,
+          "valeurHT": 19.47,
+          "fiabilite": "a_verifier",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Fanta 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 23,
+          "prixUnitaireHT": 0.65,
+          "valeurHT": 14.95,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Schweppes 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 34,
+          "prixUnitaireHT": 0.61,
+          "valeurHT": 20.74,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Limonade Mortuacienne 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 14,
+          "prixUnitaireHT": 0.96,
+          "valeurHT": 13.44,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Nectar Ananas",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 3.22,
+          "valeurHT": 28.98,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Nectar Poire",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 11,
+          "prixUnitaireHT": 2.48,
+          "valeurHT": 27.28,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Jus Orange",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 6,
+          "prixUnitaireHT": 3.13,
+          "valeurHT": 18.78,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Jus Ananas",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 3.14,
+          "valeurHT": 9.42,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Framboise 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 25,
+          "prixUnitaireHT": 1.31,
+          "valeurHT": 32.75,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Fraise 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 32,
+          "prixUnitaireHT": 1.19,
+          "valeurHT": 38.08,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Raisin 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 19,
+          "prixUnitaireHT": 1.07,
+          "valeurHT": 20.33,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Tomate 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 17,
+          "prixUnitaireHT": 0.99,
+          "valeurHT": 16.83,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Coca-Cola 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 92,
+          "prixUnitaireHT": 0.64,
+          "valeurHT": 58.88,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Fuze Tea 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 26,
+          "prixUnitaireHT": 0.65,
+          "valeurHT": 16.9,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Pêche 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 5.99,
+          "valeurHT": 5.99,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Fraise 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 5.31,
+          "valeurHT": 5.31,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Châtaigne 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 5.5,
+          "valeurHT": 16.5,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Framboise 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 6.23,
+          "valeurHT": 6.23,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Citron 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 4.55,
+          "valeurHT": 4.55,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Orange 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 4.55,
+          "valeurHT": 9.1,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Grenadine 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 4.23,
+          "valeurHT": 4.23,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Menthe 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 4.55,
+          "valeurHT": 4.55,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Routin Citron Acide",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 3.82,
+          "valeurHT": 7.64,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Pamplemousse 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 5.5,
+          "valeurHT": 11,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Curaçao 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 5.25,
+          "valeurHT": 5.25,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Rouget de Lisle Blanche 33cl",
+          "categorie": "alcool",
+          "quantite": 41,
+          "prixUnitaireHT": 1.8,
+          "valeurHT": 73.8,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Rouget de Lisle Ambrée 33cl",
+          "categorie": "alcool",
+          "quantite": 36,
+          "prixUnitaireHT": 1.8,
+          "valeurHT": 64.8,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Fût Affligem 8L",
+          "categorie": "alcool",
+          "quantite": 4,
+          "prixUnitaireHT": 4.07,
+          "valeurHT": 16.28,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre La Mordue 27cl",
+          "categorie": "alcool",
+          "quantite": 32,
+          "prixUnitaireHT": 1.13,
+          "valeurHT": 36.16,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre Brut 75cl",
+          "categorie": "alcool",
+          "quantite": 15,
+          "prixUnitaireHT": 2.54,
+          "valeurHT": 38.1,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre Doux 75cl",
+          "categorie": "alcool",
+          "quantite": 14,
+          "prixUnitaireHT": 2.89,
+          "valeurHT": 40.46,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Pontarlier Anis 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.95,
+          "valeurHT": 17.95,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Ricard 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.56,
+          "valeurHT": 17.56,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Clan Campbell 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.56,
+          "valeurHT": 17.56,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Jack Daniel's 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 19.26,
+          "valeurHT": 19.26,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Marc du Jura 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 18.61,
+          "valeurHT": 18.61,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Martini 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 8.15,
+          "valeurHT": 8.15,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Marc de Bourgogne 70cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 25.9,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Porto 75cl",
+          "categorie": "alcool",
+          "quantite": 4,
+          "prixUnitaireHT": 7.71,
+          "valeurHT": 30.84,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Liqueur de Sapin 100cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 21.16,
+          "valeurHT": 42.32,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Crème de Mûre 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 8.22,
+          "valeurHT": 8.22,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Crème de Cassis 100cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 8.39,
+          "valeurHT": 16.78,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Crème de Cerise 100cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 8.39,
+          "valeurHT": 16.78,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Vodka Poliakov 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 9.03,
+          "valeurHT": 9.03,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Cognac Park 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 19.62,
+          "valeurHT": 19.62,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Absinthe 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 30.89,
+          "valeurHT": 61.78,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Calvados 100cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 16.53,
+          "valeurHT": 33.06,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Mirabelle 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 20.04,
+          "valeurHT": 20.04,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Eau de Vie Framboise 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 21.65,
+          "valeurHT": 21.65,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Soho Litchi 70cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 9.72,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Passoa 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 9.08,
+          "valeurHT": 18.16,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Bailey's 70cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 12.99,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Picon 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 10.43,
+          "valeurHT": 10.43,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Get 27 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 15.36,
+          "valeurHT": 15.36,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Get 31 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.26,
+          "valeurHT": 17.26,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Génépi 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 22.66,
+          "valeurHT": 22.66,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Ravelin Blanc 99cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 3.25,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Chardonnay Tradition 75cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 6.48,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Bourgogne Aligoté BIB 10L",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 51.24,
+          "valeurHT": 51.24,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "BIB Côtes de Provence Rosé 10L",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 52.75,
+          "valeurHT": 105.5,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "BIB Côtes du Rhône Rouge 10L",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 31.3,
+          "valeurHT": 31.3,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Ravelin 75cl",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 2.97,
+          "valeurHT": 26.73,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Gewurztraminer 75cl",
+          "categorie": "alcool",
+          "quantite": 10,
+          "prixUnitaireHT": 9.97,
+          "valeurHT": 99.7,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Saint Joseph Rouge 75cl",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 12.96,
+          "valeurHT": 116.64,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Moulin à Vent 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 10.88,
+          "valeurHT": 87.04,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Haute Côte de Beaune 75cl",
+          "categorie": "alcool",
+          "quantite": 6,
+          "prixUnitaireHT": 14.24,
+          "valeurHT": 85.44,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Chablis 75cl",
+          "categorie": "alcool",
+          "quantite": 7,
+          "prixUnitaireHT": 13.37,
+          "valeurHT": 93.59,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Saint Véran 75cl",
+          "categorie": "alcool",
+          "quantite": 25,
+          "prixUnitaireHT": 17.46,
+          "valeurHT": 436.5,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Bordeaux Supérieur 75cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 6.28,
+          "valeurHT": 6.28,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Grand Pavois 75cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 5.23,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Trousseau 75cl",
+          "categorie": "alcool",
+          "quantite": 10,
+          "prixUnitaireHT": 9.77,
+          "valeurHT": 97.7,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Béthanie 75cl",
+          "categorie": "alcool",
+          "quantite": 14,
+          "prixUnitaireHT": 10.31,
+          "valeurHT": 144.34,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Vin de Paille 37,5cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 16.61,
+          "valeurHT": 33.22,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Savagnin 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 11.85,
+          "valeurHT": 94.8,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Béthanie 37,5cl",
+          "categorie": "alcool",
+          "quantite": 16,
+          "prixUnitaireHT": 6.68,
+          "valeurHT": 106.88,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Chardonnay 75cl",
+          "categorie": "alcool",
+          "quantite": 18,
+          "prixUnitaireHT": 7.27,
+          "valeurHT": 130.86,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Vin Jaune 62cl",
+          "categorie": "alcool",
+          "quantite": 4,
+          "prixUnitaireHT": 19.13,
+          "valeurHT": 76.52,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "L'Esprit Grassier Rosé 75cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 8.46,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Bohème Rosé (Le Pive) 75cl",
+          "categorie": "alcool",
+          "quantite": 10,
+          "prixUnitaireHT": 8.28,
+          "valeurHT": 82.8,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Rosé Les Jamelles 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 4.99,
+          "valeurHT": 39.92,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Champagne Ruinart 75cl",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 44.63,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Champagne Jean Sandrin 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 16.55,
+          "valeurHT": 132.4,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Crémant du Jura 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 7.75,
+          "valeurHT": 62,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Macvin 75cl",
+          "categorie": "alcool",
+          "quantite": 5,
+          "prixUnitaireHT": 13.67,
+          "valeurHT": 68.35,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Grand Marnier 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 21.08,
+          "valeurHT": 42.16,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Crème de Cassis 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 8.71,
+          "valeurHT": 17.42,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Liqueur de Poire 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 16.43,
+          "valeurHT": 16.43,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Liqueur de Sapin 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 18.91,
+          "valeurHT": 37.82,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        }
+      ]
+    },
+    {
+      "date": "2024-03-31",
+      "exercice": "2023-2024",
+      "pdf": "inventaires/Inventaire_Demi_Lune_2024-03-31.pdf",
+      "csv": "inventaires/inventaire_2024-03-31.csv",
+      "nbLignes": 90,
+      "totaux": {
+        "sansAlcoolHT": 603.61,
+        "alcoolHT": 3932.8,
+        "totalHT": 4536.41
+      },
+      "lignes": [
+        {
+          "produit": "Malongo Grain Kilo Select",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 29.92,
+          "valeurHT": 29.92,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Malongo Déca Moulu Aqua 250g",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 9.78,
+          "valeurHT": 9.78,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Thé Vert Menthe x25 sachets",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 6.42,
+          "valeurHT": 6.42,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Verveine Menthe x25 sachets",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 7.22,
+          "valeurHT": 7.22,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Earl Grey x25 sachets",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 6.42,
+          "valeurHT": 6.42,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Thé Fruits Rouges x25 sachets",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 6.42,
+          "valeurHT": 6.42,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Infusion Segafredo 20 sachets",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 3.44,
+          "valeurHT": 3.44,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Vittel 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 25,
+          "prixUnitaireHT": 0.86,
+          "valeurHT": 21.5,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Vittel 50cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 25,
+          "prixUnitaireHT": 0.7,
+          "valeurHT": 17.5,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "La Bleue (eau) 50cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 24,
+          "prixUnitaireHT": 0.47,
+          "valeurHT": 11.28,
+          "fiabilite": "a_verifier",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Rouget de Lisle Blanche 33cl",
+          "categorie": "alcool",
+          "quantite": 19,
+          "prixUnitaireHT": 1.8,
+          "valeurHT": 34.8,
+          "fiabilite": "a_verifier",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Rouget de Lisle Ambrée 33cl",
+          "categorie": "alcool",
+          "quantite": 22,
+          "prixUnitaireHT": 1.87,
+          "valeurHT": 41.14,
+          "fiabilite": "exact",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Fût Affligem Blade 8L 6,7°",
+          "categorie": "alcool",
+          "quantite": 32,
+          "prixUnitaireHT": 4.23,
+          "valeurHT": 135.36,
+          "fiabilite": "a_verifier",
+          "page": 2,
+          "residuel": false
+        },
+        {
+          "produit": "Orangina 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 50,
+          "prixUnitaireHT": 0.61,
+          "valeurHT": 30.5,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Fanta Citron Frappé 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 26,
+          "prixUnitaireHT": 0.73,
+          "valeurHT": 18.98,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Schweppes Agrum 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 52,
+          "prixUnitaireHT": 0.64,
+          "valeurHT": 33.28,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Limonade Mortuacienne 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 15,
+          "prixUnitaireHT": 0.96,
+          "valeurHT": 14.4,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Jus Pomme 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 6,
+          "prixUnitaireHT": 2.8,
+          "valeurHT": 16.8,
+          "fiabilite": "a_verifier",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Jus Orange 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 5,
+          "prixUnitaireHT": 3.38,
+          "valeurHT": 16.9,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Jus Ananas 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 10,
+          "prixUnitaireHT": 3.39,
+          "valeurHT": 33.9,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Norbert Jus Orange sans pulpe 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 2.53,
+          "valeurHT": 5.06,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Fraise 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 48,
+          "prixUnitaireHT": 1.22,
+          "valeurHT": 58.56,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Granini Jus de Tomate 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 23,
+          "prixUnitaireHT": 1.22,
+          "valeurHT": 28.06,
+          "fiabilite": "a_verifier",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Coca-Cola 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 116,
+          "prixUnitaireHT": 0.62,
+          "valeurHT": 71.92,
+          "fiabilite": "a_verifier",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Fuzetea Pêche 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 39,
+          "prixUnitaireHT": 0.73,
+          "valeurHT": 28.47,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Pulco Citron 70cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 4.84,
+          "valeurHT": 4.84,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Pêche 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 6.11,
+          "valeurHT": 12.22,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Cerise 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 6.36,
+          "valeurHT": 6.36,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Menthe Verte 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 4.32,
+          "valeurHT": 8.64,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Châtaigne 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 5.61,
+          "valeurHT": 5.61,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Framboise 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 6.36,
+          "valeurHT": 19.08,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Jus de Poire 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 13,
+          "prixUnitaireHT": 4.1,
+          "valeurHT": 53.3,
+          "fiabilite": "exact",
+          "page": 3,
+          "residuel": false
+        },
+        {
+          "produit": "Monin Pamplemousse Rose 70cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 5.61,
+          "valeurHT": 16.83,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre La Mordue Original 27cl",
+          "categorie": "alcool",
+          "quantite": 19,
+          "prixUnitaireHT": 1.17,
+          "valeurHT": 22.23,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre Brut Bolée d'Armorique 75cl",
+          "categorie": "alcool",
+          "quantite": 15,
+          "prixUnitaireHT": 2.75,
+          "valeurHT": 41.25,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre Doux Contemporaine 75cl",
+          "categorie": "alcool",
+          "quantite": 16,
+          "prixUnitaireHT": 2.89,
+          "valeurHT": 46.24,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Pontarlier Anis Sec 100cl 45°",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 18.85,
+          "valeurHT": 37.7,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Ricard 100cl 45°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.95,
+          "valeurHT": 17.95,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Pastis 51 100cl 45°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 16.44,
+          "valeurHT": 16.44,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Macvin Blanc 75cl 18° (Rolet)",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 15.63,
+          "valeurHT": 140.67,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Macvin du Jura Rosé 75cl (Arbois)",
+          "categorie": "alcool",
+          "quantite": 0,
+          "prixUnitaireHT": 15.38,
+          "valeurHT": 0,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Marc du Jura Tissot 70cl",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 19.48,
+          "valeurHT": 58.44,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Martini Bianco 100cl 14,4°",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 8.17,
+          "valeurHT": 16.34,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Porto Sandeman Rouge 75cl 19,5°",
+          "categorie": "alcool",
+          "quantite": 4,
+          "prixUnitaireHT": 8.03,
+          "valeurHT": 32.12,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Vert Sapin 40° 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 21.36,
+          "valeurHT": 21.36,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Grand Marnier Cordon Rouge 70cl 40°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 21.79,
+          "valeurHT": 21.79,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Crème Cassis 15° 100cl Massenez",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 9,
+          "valeurHT": 27,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Crème Mûre 15° 100cl Massenez",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 9.27,
+          "valeurHT": 18.54,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Liqueur Golden Eight Poire William 70cl 25°",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 17.11,
+          "valeurHT": 34.22,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Crème Cassis Briottet 20° 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 9.03,
+          "valeurHT": 9.03,
+          "fiabilite": "exact",
+          "page": 4,
+          "residuel": false
+        },
+        {
+          "produit": "Calvados Beaujour 100cl 40°",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 16.77,
+          "valeurHT": 33.54,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Mirabelle Grande Réserve 1811 70cl 42°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 20.65,
+          "valeurHT": 20.65,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Framboise Sauvage 70cl 40° (Massenez)",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 22.88,
+          "valeurHT": 45.76,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Aperol 100cl 12,5°",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 14.66,
+          "valeurHT": 29.32,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Soho Litchi 70cl 15°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 10.44,
+          "valeurHT": 10.44,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Passoa 70cl 15°",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 9.89,
+          "valeurHT": 19.78,
+          "fiabilite": "a_verifier",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Bailey's 70cl 17°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 13.46,
+          "valeurHT": 13.46,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Get 27 Vert 100cl 17,9°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 15.36,
+          "valeurHT": 15.36,
+          "fiabilite": "a_verifier",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Get 31 100cl 24°",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.26,
+          "valeurHT": 17.26,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Génépi 40° 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 23.51,
+          "valeurHT": 23.51,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Ravelin Blanc MVPCE 13° 99cl (A.Bonnot)",
+          "categorie": "alcool",
+          "quantite": 12,
+          "prixUnitaireHT": 3.29,
+          "valeurHT": 39.48,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Ravelin Blanc BIB 10L 13° (A.Bonnot)",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 27.4,
+          "valeurHT": 27.4,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Bourgogne Aligoté BIB 10L",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 54.29,
+          "valeurHT": 162.87,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Côtes de Provence Rosé BIB 10L",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 52.75,
+          "valeurHT": 158.25,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Côtes du Rhône Rouge BIB 10L",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 30.38,
+          "valeurHT": 30.38,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Gewurztraminer Les Sorcières 75cl 2018",
+          "categorie": "alcool",
+          "quantite": 11,
+          "prixUnitaireHT": 9.97,
+          "valeurHT": 109.67,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Saint Joseph Rouge 75cl 2022 (Ogier)",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 13.8,
+          "valeurHT": 41.4,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Moulin à Vent 75cl 2017 (Briante)",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 10.88,
+          "valeurHT": 97.92,
+          "fiabilite": "exact",
+          "page": 5,
+          "residuel": false
+        },
+        {
+          "produit": "Macon Roche Blanche 75cl 2021",
+          "categorie": "alcool",
+          "quantite": 16,
+          "prixUnitaireHT": 8.73,
+          "valeurHT": 139.68,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Chablis Saint Martin 75cl 2022 (Laroche)",
+          "categorie": "alcool",
+          "quantite": 13,
+          "prixUnitaireHT": 12.97,
+          "valeurHT": 168.61,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Petit Chablis 75cl 2021 (Louis Moreau)",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 11.01,
+          "valeurHT": 11.01,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Saint Véran 75cl 2020 (Lupé Cholet)",
+          "categorie": "alcool",
+          "quantite": 11,
+          "prixUnitaireHT": 17.03,
+          "valeurHT": 187.33,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Sauternes 75cl 2015 (Suduiraut)",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 12.81,
+          "valeurHT": 12.81,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Grand Pavois N°8 Blanc 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 5.23,
+          "valeurHT": 41.84,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Trousseau 75cl 2022 (J-L Tissot)",
+          "categorie": "alcool",
+          "quantite": 7,
+          "prixUnitaireHT": 10.73,
+          "valeurHT": 75.11,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Blanc Cuvée Béthanie 75cl 2018",
+          "categorie": "alcool",
+          "quantite": 15,
+          "prixUnitaireHT": 10.88,
+          "valeurHT": 163.2,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Vin de Paille 37,5cl 2017",
+          "categorie": "alcool",
+          "quantite": 4,
+          "prixUnitaireHT": 16.61,
+          "valeurHT": 66.44,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Savagnin 75cl 2018",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 11.85,
+          "valeurHT": 94.8,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Blanc Cuvée Béthanie 37,5cl",
+          "categorie": "alcool",
+          "quantite": 20,
+          "prixUnitaireHT": 6.72,
+          "valeurHT": 134.4,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Chardonnay 75cl 2020 (J-L Tissot)",
+          "categorie": "alcool",
+          "quantite": 20,
+          "prixUnitaireHT": 7.96,
+          "valeurHT": 159.2,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Vin Jaune 62cl 2016 (J-L Tissot)",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 29.7,
+          "valeurHT": 59.4,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Vin Jaune 62cl 2017 (J-L Tissot)",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 29.7,
+          "valeurHT": 89.1,
+          "fiabilite": "a_verifier",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Rosé Le Pive 2022 75cl",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 6.35,
+          "valeurHT": 19.05,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Rosé Les Jamelles 75cl 2022",
+          "categorie": "alcool",
+          "quantite": 16,
+          "prixUnitaireHT": 5.21,
+          "valeurHT": 83.36,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Côtes de Provence Rosé Minuty 75cl 2022",
+          "categorie": "alcool",
+          "quantite": 12,
+          "prixUnitaireHT": 13.21,
+          "valeurHT": 158.52,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "La Côte Rouge 75cl 2021 (La Clape)",
+          "categorie": "alcool",
+          "quantite": 5,
+          "prixUnitaireHT": 8.06,
+          "valeurHT": 40.3,
+          "fiabilite": "exact",
+          "page": 6,
+          "residuel": false
+        },
+        {
+          "produit": "Champagne Ruinart 75cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 44.63,
+          "valeurHT": 44.63,
+          "fiabilite": "exact",
+          "page": 7,
+          "residuel": false
+        },
+        {
+          "produit": "Champagne Lanson Black Label 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 24.35,
+          "valeurHT": 194.8,
+          "fiabilite": "exact",
+          "page": 7,
+          "residuel": false
+        },
+        {
+          "produit": "Champagne Jean Sandrin Brut 75cl",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 16.55,
+          "valeurHT": 148.95,
+          "fiabilite": "exact",
+          "page": 7,
+          "residuel": false
+        },
+        {
+          "produit": "Crémant du Jura Blanc 75cl (Arbois)",
+          "categorie": "alcool",
+          "quantite": 19,
+          "prixUnitaireHT": 9.01,
+          "valeurHT": 171.19,
+          "fiabilite": "a_verifier",
+          "page": 7,
+          "residuel": false
+        }
+      ]
+    },
+    {
+      "date": "2025-03-31",
+      "exercice": "2024-2025",
+      "pdf": "inventaires/Inventaire_Demi_Lune_2025-03-31.pdf",
+      "csv": "inventaires/inventaire_2025-03-31.csv",
+      "nbLignes": 82,
+      "totaux": {
+        "sansAlcoolHT": 760.74,
+        "alcoolHT": 3772.48,
+        "totalHT": 4533.22
+      },
+      "lignes": [
+        {
+          "produit": "Rosé Le Pive 75cl",
+          "categorie": "alcool",
+          "quantite": 14,
+          "prixUnitaireHT": 6.35,
+          "valeurHT": 88.9,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Génépi 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 23.53,
+          "valeurHT": 23.53,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Get 27 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 15.36,
+          "valeurHT": 15.36,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Get 31 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.26,
+          "valeurHT": 17.26,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Crème de Cassis 100cl",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 9,
+          "valeurHT": 27,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Cognac 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 20.82,
+          "valeurHT": 41.64,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Calvados 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 16.77,
+          "valeurHT": 16.77,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Jack Daniel's 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 19.26,
+          "valeurHT": 19.26,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Clan Campbell 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 12.8,
+          "valeurHT": 12.8,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Vodka 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 9.67,
+          "valeurHT": 9.67,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Liqueur de Sapin 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 21.36,
+          "valeurHT": 21.36,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Eau de Vie de Poire 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 22.88,
+          "valeurHT": 22.88,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Marc de Bourgogne 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 25.9,
+          "valeurHT": 25.9,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Liqueur de Cerise 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 9.03,
+          "valeurHT": 18.06,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Grand Marnier 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 21.79,
+          "valeurHT": 21.79,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Ricard 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 17.95,
+          "valeurHT": 17.95,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Pastis 51 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 16.44,
+          "valeurHT": 16.44,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Absinthe 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 24.01,
+          "valeurHT": 48.02,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Vin de Paille 37,5cl",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 16.61,
+          "valeurHT": 49.83,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Eau de Vie Framboise 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 22.88,
+          "valeurHT": 22.88,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Eau de Vie Mirabelle 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 20.69,
+          "valeurHT": 20.69,
+          "fiabilite": "exact",
+          "page": 8,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Blanc Cuvée Béthanie 75cl",
+          "categorie": "alcool",
+          "quantite": 17,
+          "prixUnitaireHT": 10.88,
+          "valeurHT": 184.96,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Chardonnay 75cl",
+          "categorie": "alcool",
+          "quantite": 16,
+          "prixUnitaireHT": 7.96,
+          "valeurHT": 129.36,
+          "fiabilite": "a_verifier",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Saint Véran 75cl",
+          "categorie": "alcool",
+          "quantite": 7,
+          "prixUnitaireHT": 17.03,
+          "valeurHT": 119.21,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Macon 75cl",
+          "categorie": "alcool",
+          "quantite": 6,
+          "prixUnitaireHT": 8.73,
+          "valeurHT": 48.41,
+          "fiabilite": "a_verifier",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Chablis 75cl",
+          "categorie": "alcool",
+          "quantite": 16,
+          "prixUnitaireHT": 12.97,
+          "valeurHT": 207.52,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Crémant du Jura 75cl",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 9.01,
+          "valeurHT": 81.09,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre Brut 75cl",
+          "categorie": "alcool",
+          "quantite": 22,
+          "prixUnitaireHT": 2.75,
+          "valeurHT": 60.5,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Rouget de Lisle Blanche 33cl",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 1.8,
+          "valeurHT": 16.2,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Rouget de Lisle Ambrée 33cl",
+          "categorie": "alcool",
+          "quantite": 27,
+          "prixUnitaireHT": 1.87,
+          "valeurHT": 50.49,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Cidre La Mordue 27cl",
+          "categorie": "alcool",
+          "quantite": 18,
+          "prixUnitaireHT": 1.17,
+          "valeurHT": 21.06,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Gewurztraminer 75cl",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 9.97,
+          "valeurHT": 29.91,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Côtes de Gascogne 75cl",
+          "categorie": "alcool",
+          "quantite": 4,
+          "prixUnitaireHT": 5.23,
+          "valeurHT": 20.92,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "BIB Rosé 10L",
+          "categorie": "alcool",
+          "quantite": 3,
+          "prixUnitaireHT": 52.75,
+          "valeurHT": 158.25,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "BIB Rouge 10L",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 30.38,
+          "valeurHT": 30.38,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "BIB Blanc 10L",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 54.29,
+          "valeurHT": 108.58,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "Fût Affligem 8L",
+          "categorie": "alcool",
+          "quantite": 5,
+          "prixUnitaireHT": 33.84,
+          "valeurHT": 169.2,
+          "fiabilite": "exact",
+          "page": 9,
+          "residuel": false
+        },
+        {
+          "produit": "[Page 9 - écart ~92 € : 1 ligne vin non identifiée]",
+          "categorie": "alcool",
+          "quantite": null,
+          "prixUnitaireHT": null,
+          "valeurHT": 91.97,
+          "fiabilite": "a_verifier",
+          "page": 9,
+          "residuel": true
+        },
+        {
+          "produit": "Passoa 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 9.89,
+          "valeurHT": 19.67,
+          "fiabilite": "a_verifier",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Soho Litchi 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 10.44,
+          "valeurHT": 10.44,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Grand Marnier 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 21.79,
+          "valeurHT": 21.79,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Martini Blanc 100cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 8.17,
+          "valeurHT": 8.17,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Vin de Paille 37,5cl",
+          "categorie": "alcool",
+          "quantite": 5,
+          "prixUnitaireHT": 16.61,
+          "valeurHT": 83.05,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Bailey's 70cl",
+          "categorie": "alcool",
+          "quantite": 1,
+          "prixUnitaireHT": 13.46,
+          "valeurHT": 13.46,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Aperol 100cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 14.66,
+          "valeurHT": 29.32,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Liqueur de Poire William 70cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 17.11,
+          "valeurHT": 34.22,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Champagne Jean Sandrin 75cl",
+          "categorie": "alcool",
+          "quantite": 13,
+          "prixUnitaireHT": 24.35,
+          "valeurHT": 316.55,
+          "fiabilite": "a_verifier",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Porto 75cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 8.03,
+          "valeurHT": 16.06,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Vin Jaune 62cl",
+          "categorie": "alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 29.7,
+          "valeurHT": 59.4,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Trousseau 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 10.73,
+          "valeurHT": 85.84,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Hautes Côtes de Beaune 75cl",
+          "categorie": "alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 14.4,
+          "valeurHT": 115.41,
+          "fiabilite": "a_verifier",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Saint Joseph Rouge 75cl",
+          "categorie": "alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 13.8,
+          "valeurHT": 124.2,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Savagnin 75cl",
+          "categorie": "alcool",
+          "quantite": 13,
+          "prixUnitaireHT": 11.85,
+          "valeurHT": 154.05,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Moulin à Vent 75cl",
+          "categorie": "alcool",
+          "quantite": 10,
+          "prixUnitaireHT": 11.82,
+          "valeurHT": 118.2,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Côtes de Provence Rosé Minuty 75cl",
+          "categorie": "alcool",
+          "quantite": 5,
+          "prixUnitaireHT": 13.21,
+          "valeurHT": 66.05,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Rosé Les Jamelles 75cl",
+          "categorie": "alcool",
+          "quantite": 16,
+          "prixUnitaireHT": 5.21,
+          "valeurHT": 83.36,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "Arbois Blanc Cuvée Béthanie 37,5cl",
+          "categorie": "alcool",
+          "quantite": 15,
+          "prixUnitaireHT": 6.72,
+          "valeurHT": 100.8,
+          "fiabilite": "exact",
+          "page": 10,
+          "residuel": false
+        },
+        {
+          "produit": "[Page 10 - écart a fiabiliser]",
+          "categorie": "alcool",
+          "quantite": null,
+          "prixUnitaireHT": null,
+          "valeurHT": 226.44,
+          "fiabilite": "a_verifier",
+          "page": 10,
+          "residuel": true
+        },
+        {
+          "produit": "Jus de Poire 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 6,
+          "prixUnitaireHT": 5.13,
+          "valeurHT": 30.7,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Jus Ananas 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 8,
+          "prixUnitaireHT": 3.39,
+          "valeurHT": 27.12,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Jus Pomme 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 18,
+          "prixUnitaireHT": 2.8,
+          "valeurHT": 50.4,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Jus Orange 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 9,
+          "prixUnitaireHT": 3.38,
+          "valeurHT": 30.42,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Sirop Pulco/divers 70cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 4.84,
+          "valeurHT": 9.68,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Sirop Châtaigne 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 5.61,
+          "valeurHT": 11.22,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Sirop Orange 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 4.64,
+          "valeurHT": 9.28,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Sirop Cerise 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 6.36,
+          "valeurHT": 12.72,
+          "fiabilite": "exact",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Coca-Cola 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 118,
+          "prixUnitaireHT": 0.66,
+          "valeurHT": 77.88,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Fuzetea 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 57,
+          "prixUnitaireHT": 0.73,
+          "valeurHT": 41.61,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Schweppes Agrum 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 27,
+          "prixUnitaireHT": 0.73,
+          "valeurHT": 19.8,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Fanta 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 41,
+          "prixUnitaireHT": 0.73,
+          "valeurHT": 29.93,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "Orangina 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 46,
+          "prixUnitaireHT": 0.61,
+          "valeurHT": 28.06,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": false
+        },
+        {
+          "produit": "[Page 11 - sirops Pêche/Grenadine/Citron + écart a fiabiliser]",
+          "categorie": "boisson_sans_alcool",
+          "quantite": null,
+          "prixUnitaireHT": null,
+          "valeurHT": 94.59,
+          "fiabilite": "a_verifier",
+          "page": 11,
+          "residuel": true
+        },
+        {
+          "produit": "Jus de Tomate 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 19,
+          "prixUnitaireHT": 1.02,
+          "valeurHT": 19.38,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Jus Frais 25cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 29,
+          "prixUnitaireHT": 1.22,
+          "valeurHT": 35.38,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Perrier 33cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 39,
+          "prixUnitaireHT": 1.11,
+          "valeurHT": 43.29,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "San Pellegrino 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 28,
+          "prixUnitaireHT": 1.19,
+          "valeurHT": 33.32,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "San Pellegrino 50cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 48,
+          "prixUnitaireHT": 0.9,
+          "valeurHT": 43.2,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Vittel 100cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 12,
+          "prixUnitaireHT": 0.86,
+          "valeurHT": 10.32,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Vittel 50cl",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 14,
+          "prixUnitaireHT": 0.7,
+          "valeurHT": 9.8,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Limonade Mortuacienne 1L",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 23,
+          "prixUnitaireHT": 0.96,
+          "valeurHT": 22.08,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Café grains 1kg",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 25.5,
+          "valeurHT": 51,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        },
+        {
+          "produit": "Café déca",
+          "categorie": "boisson_sans_alcool",
+          "quantite": 2,
+          "prixUnitaireHT": 9.78,
+          "valeurHT": 19.56,
+          "fiabilite": "exact",
+          "page": 12,
+          "residuel": false
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+ "description": "Grosses suppressions (> 1000 €) = erreurs de saisie de QUANTITE, supprimees aussitot. montant = prix_carte x quantite absurde (99/999/9999...). Jamais servies ni encaissees.",
+ "avertissement_honnete": "ANNEXE-E n'a PAS de colonne produit/quantite : la decomposition prix x quantite est INFEREE, et plusieurs lectures exactes existent (ex 68 993,10 = 6,90 x 9999 = 9,90 x 6969). Le produit exact est inconnaissable ; seule la QUANTITE absurde (centaines a milliers) est certaine. La preuve VRAIMENT irrefutable n'est pas la factorisation mais le niveau SESSION (script 11) : on ne peut pas supprimer 69 557 € un jour ou on n'a encaisse que 2 563 €.",
+ "seuil_eur": 1000.0,
+ "n_aberrations": 4,
+ "somme_aberrations_eur": 138003.1,
+ "aberrations": [
+  {
+   "exercice": "2022-2023",
+   "date": "2022-07-26",
+   "heure": "18:51",
+   "caissier": "LUNA",
+   "montant": 68993.1,
+   "explication": {
+    "quantite": 9999,
+    "prix_unitaire": 6.9,
+    "produit": "Menu Bambin",
+    "exact": true
+   }
+  },
+  {
+   "exercice": "2023-2024",
+   "date": "2023-06-21",
+   "heure": "17:06",
+   "caissier": "LUNA",
+   "montant": 44955.0,
+   "explication": {
+    "quantite": 999,
+    "prix_unitaire": 45.0,
+    "produit": "Menu Demi Lune",
+    "exact": true
+   }
+  },
+  {
+   "exercice": "2022-2023",
+   "date": "2022-08-07",
+   "heure": "18:29",
+   "caissier": "LUNA",
+   "montant": 19600.0,
+   "explication": {
+    "quantite": 1000,
+    "prix_unitaire": 19.6,
+    "produit": "ligne ~19,60 €",
+    "exact": true
+   }
+  },
+  {
+   "exercice": "2024-2025",
+   "date": "2024-08-15",
+   "heure": "11:16",
+   "caissier": "LUNA",
+   "montant": 4455.0,
+   "explication": {
+    "quantite": 99,
+    "prix_unitaire": 45.0,
+    "produit": "Menu Demi Lune",
+    "exact": true
+   }
+  }
+ ]
+}

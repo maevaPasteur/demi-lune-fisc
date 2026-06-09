@@ -1,0 +1,40 @@
+{
+  "cle": "substitution",
+  "methode": "La caisse comporte des boutons mutualisés : un même bouton encaisse plusieurs millésimes / domaines d'une même appellation (vérifié sur la map caisse↔achats, champ ventes[].ingredients[].achatCode). Un millésime non sélectionné en caisse ressort donc à « 0 vendu » alors qu'il a bien été servi sous le bouton de son frère sur-vendu. Les deux cas reconnus par le fisc (vente sans achat) confirment le phénomène miroir : si des ventes apparaissent sans achat sur certains boutons, des achats apparaissent sans vente ailleurs - c'est le même paramétrage de caisse.",
+  "colonnes": ["Produit acheté (« disparu »)", "Vendu sous le bouton", "Volume rattaché", "Coût HT"],
+  "lignes": [
+    ["Arbois Savagnin 2018 Fruitière Vinicole Arbois (601164)", "« Savagnin verre » / « Arbois Savagnin » / « PICHET SAVAGNIN » (verre/pichet/bouteille mutualisés, 6 millésimes)", "145,0 L", "2 252 €"],
+    ["Arbois Trousseau 2020 JL Tissot (601166)", "« Arbois Trousseau Le » (verre) / « Arbois Trousseau Bou » / « PiCHET TROUSSEAU » (7 millésimes)", "86,1 L", "1 122 €"],
+    ["Saint Joseph rouge 2022 Ogier (601680)", "« C du Rhone St Joseph » (verre/pichet/bouteille mutualisés, 7 millésimes)", "52,9 L", "973 €"],
+    ["Saint Joseph rouge 2019 Ogier (661679)", "« C du Rhone St Joseph » (verre/pichet/bouteille mutualisés)", "43,9 L", "754 €"],
+    ["Saint Joseph rouge 2021 Ogier (601460)", "« C du Rhone St Joseph » (verre/pichet/bouteille mutualisés)", "40,9 L", "753 €"],
+    ["Saint Véran blanc 2022 Cave de Lugny (601862)", "« Saint Véran » / « Saint Véran Verre » / « PICHET SAINT VERAN » (8 caves/millésimes)", "53,3 L", "705 €"],
+    ["Saint Véran 2022 Cave de Prissé (601477)", "« Saint Véran » / « Saint Véran Verre » / « PICHET SAINT VERAN »", "55,1 L", "666 €"],
+    ["Chablis St Martin 2022 Maison Laroche (601401)", "« Chablis » / « Chablis Le Verre » / « Pichet Chablis » (7 maisons/millésimes)", "27,6 L", "485 €"],
+    ["Arbois Chardonnay 2020 JL Tissot (601454)", "« Arbois Chardonnay Le » (verre/bouteille mutualisés, 6 millésimes)", "43,3 L", "450 €"],
+    ["Chablis St Martin 2021 Maison Laroche (601253)", "« Chablis » / « Chablis Le Verre » / « Pichet Chablis »", "25,1 L", "447 €"],
+    ["Arbois Cuvée Béthanie blanc 37,5 cl (601304)", "« 1/2 Arbois Béthanie » (demi-bouteille mutualisée, 4 millésimes)", "19,4 L", "345 €"],
+    ["Mâcon Roche Blanche 2022 (661715)", "« MACON VERRE » / « MACON bouteille » / « PICHET MACON » (5 caves/millésimes)", "30,7 L", "340 €"],
+    ["Arbois Vin Jaune 2017 (661457)", "« Vin jaune » (verre 12 cl mutualisé, 9 millésimes/domaines)", "6,3 L", "244 €"],
+    ["BIB Côtes de Provence rosé 10 L (603042)", "« Verre Rosé » / « Pichet 50/75 » / « Verre de vin » (boutons rosé génériques)", "44,5 L", "235 €"],
+    ["Arbois Vin Jaune 2016 (601489)", "« Vin jaune » (verre 12 cl mutualisé)", "6,3 L", "225 €"],
+    ["Arbois Vin Jaune 2015 (661576)", "« Vin jaune » (verre 12 cl mutualisé)", "6,3 L", "194 €"],
+    ["Cidre doux La Contemporaine 75 cl (403201)", "« Cidre Bouché Doux » (bouton mutualisé)", "35,8 L", "138 €"],
+    ["Macvin blanc Domaine Rolet (510221)", "« Macvin du Jura » (un seul bouton pour 5 achats Macvin)", "6,4 L", "127 €"],
+    ["BIB blanc Ravelin 10 L (600731)", "« Pichet 50/75 » / « Verre de vin » (boutons blanc génériques)", "44,5 L", "125 €"],
+    ["Macvin Jura blanc F. Lornet (665175)", "« Macvin du Jura » (un seul bouton pour 5 achats Macvin)", "6,4 L", "123 €"],
+    ["Macvin blanc Jacobin (601152)", "« Macvin du Jura » (un seul bouton pour 5 achats Macvin)", "6,4 L", "109 €"],
+    ["Porto Sandeman rouge (580018)", "« Porto » (un seul bouton pour rouge/ruby/blanc)", "3,7 L", "40 €"],
+    ["Côtes de Provence rosé M de Minuty 2022 (630081)", "« Chateau Minuty » (verre/bouteille, 2 millésimes)", "1,1 L", "20 €"],
+    ["Bordeaux Mouton Cadet (bouton réf. 1859)", "vendu en caisse (« BORD. MOUTON CADET ») - 0 achat « Mouton Cadet » vérifié sur la période (0 occurrence dans achats-exercice.json) - admis par le fisc", "-", "-"],
+    ["Hautes Côtes de Nuits (bouton réf. 2022 « H.COTES DE NUITS »)", "vendu en caisse (report probable sur « H.C.DE BEAUNE VERRE » / « PICHET C.DE BEAUNE ») - 172 bouteilles 2023-2024 sans achat correspondant (seul achat = HC de Nuits BLANC Lupé-Cholet 2017, exercice 2022-2023) - admis par le fisc", "-", "-"]
+  ],
+  "totalLabel": "Total rattaché à un autre bouton",
+  "totalValeur": "10 871 € HT  (≈ 791 L)",
+  "sources": [
+    {"label": "Annexe D - synthèse par produit (caisse)"},
+    {"label": "map caisse↔achats"},
+    {"label": "volumes-disparus-fisc.json (cas admis par le fisc)"}
+  ],
+  "note": "Réconciliation 791 L / 10 871 €. Recoupement possible avec les boutons génériques → fourchette prudente."
+}

@@ -1,0 +1,73 @@
+{
+  "genereDepuis": [
+    "volumes-disparus-fisc.json",
+    "achats-par-produit.json"
+  ],
+  "compte": {
+    "produits": 52,
+    "preuveParametrage": 12,
+    "occurrences100pct": 10,
+    "surconsommation": 9
+  },
+  "produits100pctAchetes": [
+    {
+      "nom": "1664 33 cl",
+      "fiscDispo2223": 234,
+      "achatsReelsTotal": 24
+    },
+    {
+      "nom": "Heineken 33 cl",
+      "fiscDispo2223": 24,
+      "achatsReelsTotal": 73
+    },
+    {
+      "nom": "Grimbergen Blanche 33 cl",
+      "fiscDispo2223": 24,
+      "achatsReelsTotal": 24
+    },
+    {
+      "nom": "Hefeweizen 33 cl",
+      "fiscDispo2223": 49,
+      "achatsReelsTotal": 48
+    },
+    {
+      "nom": "White Rabbit 33 cl",
+      "fiscDispo2223": 24,
+      "achatsReelsTotal": 24
+    },
+    {
+      "nom": "White Mort Subite 33 cl",
+      "fiscDispo2223": 108,
+      "achatsReelsTotal": 240
+    },
+    {
+      "nom": "Bleue du Mont Blanc 33 cl",
+      "fiscDispo2223": null,
+      "achatsReelsTotal": 156
+    },
+    {
+      "nom": "Carola Bleue 50 cl",
+      "fiscDispo2223": 20,
+      "achatsReelsTotal": 40
+    },
+    {
+      "nom": "Cidre Sassy 33 cl",
+      "fiscDispo2223": 12,
+      "achatsReelsTotal": 12
+    }
+  ],
+  "ventesSansAchat": {
+    "bordeauxMoutonCadet": {
+      "fisc": "6 bt vendues 2024-2025, 0 dispo",
+      "achatsReels": {}
+    },
+    "hautesCotesDeNuits": {
+      "fisc": "172 bt vendues 2023-2024, 0 dispo",
+      "achatsReels": {
+        "2022": 24,
+        "2023": 0,
+        "2024": 0
+      }
+    }
+  }
+}

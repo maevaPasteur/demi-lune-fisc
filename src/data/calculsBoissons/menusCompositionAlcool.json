@@ -1,0 +1,526 @@
+{
+  "description": "Alcool des menus par carte (C/B/A). Pour chaque option alcoolisée : dose + probabilité de choix (basse/moyenne/haute) et cl correspondants. obligatoire=true -> alcool certain (100%).",
+  "regle": "proba_moyenne=(basse+haute)/2 ; cl = dose x proba",
+  "cartes": {
+    "C": {
+      "dates": "29/03/2021-22/07/2022",
+      "menus": {
+        "Demi Lune": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Poulet aux morilles",
+                "nb_options_service": 1,
+                "obligatoire": true,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 1.0,
+                "proba_moyenne": 1.0,
+                "proba_haute": 1.0,
+                "cl_bas": 1.0,
+                "cl_moyen": 1.0,
+                "cl_haut": 1.0
+              }
+            ],
+            "Entrée": [
+              {
+                "option": "Feuilleté forestier",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 0.4,
+                "proba_moyenne": 0.525,
+                "proba_haute": 0.65,
+                "cl_bas": 0.4,
+                "cl_moyen": 0.525,
+                "cl_haut": 0.65
+              }
+            ]
+          }
+        },
+        "Dahu": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Fondue jurassienne",
+                "nb_options_service": 1,
+                "obligatoire": true,
+                "alcool": "Ravelin",
+                "dose_cl": 10,
+                "proba_basse": 1.0,
+                "proba_moyenne": 1.0,
+                "proba_haute": 1.0,
+                "cl_bas": 10.0,
+                "cl_moyen": 10.0,
+                "cl_haut": 10.0
+              }
+            ]
+          }
+        },
+        "Vegetarien": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Assiette du père Grégoire",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Calvados",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              },
+              {
+                "option": "Galette sarrasin forestière",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 0.35,
+                "cl_moyen": 0.5,
+                "cl_haut": 0.65
+              }
+            ]
+          }
+        },
+        "Bourguignon": {
+          "services": {
+            "Dessert": [
+              {
+                "option": "Coupe Dijonnaise",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Crème de cassis",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              },
+              {
+                "option": "Baba au marc de bourgogne",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Marc de bourgogne",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              }
+            ]
+          }
+        },
+        "Franc-Comtois": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Poulet à la jurassienne",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Vin jaune",
+                "dose_cl": 1,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 0.35,
+                "cl_moyen": 0.5,
+                "cl_haut": 0.65
+              },
+              {
+                "option": "Assiette franc-comtoise",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Macvin",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              }
+            ],
+            "Dessert": [
+              {
+                "option": "Baba au macvin",
+                "nb_options_service": 3,
+                "obligatoire": false,
+                "alcool": "Macvin",
+                "dose_cl": 4,
+                "proba_basse": 0.2,
+                "proba_moyenne": 0.325,
+                "proba_haute": 0.45,
+                "cl_bas": 0.8,
+                "cl_moyen": 1.3,
+                "cl_haut": 1.8
+              }
+            ]
+          }
+        }
+      }
+    },
+    "B": {
+      "dates": "23/07/2022-16/04/2023",
+      "menus": {
+        "Demi Lune": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Poulet ou truite aux morilles",
+                "nb_options_service": 2,
+                "obligatoire": true,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 1.0,
+                "proba_moyenne": 1.0,
+                "proba_haute": 1.0,
+                "cl_bas": 1.0,
+                "cl_moyen": 1.0,
+                "cl_haut": 1.0
+              }
+            ],
+            "Entrée": [
+              {
+                "option": "Feuilleté forestier",
+                "nb_options_service": 3,
+                "obligatoire": false,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 0.33,
+                "proba_moyenne": 0.465,
+                "proba_haute": 0.6,
+                "cl_bas": 0.33,
+                "cl_moyen": 0.465,
+                "cl_haut": 0.6
+              }
+            ]
+          }
+        },
+        "Dahu": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Fondue jurassienne",
+                "nb_options_service": 1,
+                "obligatoire": true,
+                "alcool": "Ravelin",
+                "dose_cl": 10,
+                "proba_basse": 1.0,
+                "proba_moyenne": 1.0,
+                "proba_haute": 1.0,
+                "cl_bas": 10.0,
+                "cl_moyen": 10.0,
+                "cl_haut": 10.0
+              }
+            ]
+          }
+        },
+        "Vegetarien": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Assiette du père Grégoire",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Calvados",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              },
+              {
+                "option": "Galette sarrasin forestière",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 0.35,
+                "cl_moyen": 0.5,
+                "cl_haut": 0.65
+              }
+            ]
+          }
+        },
+        "Bourguignon": {
+          "services": {
+            "Dessert": [
+              {
+                "option": "Coupe Dijonnaise",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Crème de cassis",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              },
+              {
+                "option": "Baba au marc de bourgogne",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Marc de bourgogne",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              }
+            ]
+          }
+        },
+        "Franc-Comtois": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Poulet à la jurassienne",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Vin jaune",
+                "dose_cl": 1,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 0.35,
+                "cl_moyen": 0.5,
+                "cl_haut": 0.65
+              },
+              {
+                "option": "Assiette franc-comtoise",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Macvin",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              }
+            ],
+            "Dessert": [
+              {
+                "option": "Baba au macvin",
+                "nb_options_service": 3,
+                "obligatoire": false,
+                "alcool": "Macvin",
+                "dose_cl": 4,
+                "proba_basse": 0.2,
+                "proba_moyenne": 0.325,
+                "proba_haute": 0.45,
+                "cl_bas": 0.8,
+                "cl_moyen": 1.3,
+                "cl_haut": 1.8
+              }
+            ]
+          }
+        }
+      }
+    },
+    "A": {
+      "dates": "17/04/2023-17/07/2025",
+      "menus": {
+        "Demi Lune": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Poulet ou truite aux morilles",
+                "nb_options_service": 2,
+                "obligatoire": true,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 1.0,
+                "proba_moyenne": 1.0,
+                "proba_haute": 1.0,
+                "cl_bas": 1.0,
+                "cl_moyen": 1.0,
+                "cl_haut": 1.0
+              }
+            ],
+            "Entrée": [
+              {
+                "option": "Feuilleté forestier",
+                "nb_options_service": 3,
+                "obligatoire": false,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 0.33,
+                "proba_moyenne": 0.465,
+                "proba_haute": 0.6,
+                "cl_bas": 0.33,
+                "cl_moyen": 0.465,
+                "cl_haut": 0.6
+              }
+            ],
+            "Dessert": [
+              {
+                "option": "Coupe glacée Ivresse",
+                "nb_options_service": 4,
+                "obligatoire": false,
+                "alcool": "Baileys",
+                "dose_cl": 4,
+                "proba_basse": 0.15,
+                "proba_moyenne": 0.25,
+                "proba_haute": 0.35,
+                "cl_bas": 0.6,
+                "cl_moyen": 1.0,
+                "cl_haut": 1.4
+              },
+              {
+                "option": "Baba liqueur de poire",
+                "nb_options_service": 4,
+                "obligatoire": false,
+                "alcool": "Liqueur de poire",
+                "dose_cl": 4,
+                "proba_basse": 0.15,
+                "proba_moyenne": 0.25,
+                "proba_haute": 0.35,
+                "cl_bas": 0.6,
+                "cl_moyen": 1.0,
+                "cl_haut": 1.4
+              }
+            ]
+          }
+        },
+        "Dahu": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Fondue jurassienne",
+                "nb_options_service": 1,
+                "obligatoire": true,
+                "alcool": "Ravelin",
+                "dose_cl": 10,
+                "proba_basse": 1.0,
+                "proba_moyenne": 1.0,
+                "proba_haute": 1.0,
+                "cl_bas": 10.0,
+                "cl_moyen": 10.0,
+                "cl_haut": 10.0
+              }
+            ]
+          }
+        },
+        "Vegetarien": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Assiette du père Grégoire",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Calvados",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              },
+              {
+                "option": "Galette sarrasin forestière",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Porto",
+                "dose_cl": 1,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 0.35,
+                "cl_moyen": 0.5,
+                "cl_haut": 0.65
+              }
+            ]
+          }
+        },
+        "Bourguignon": {
+          "services": {
+            "Dessert": [
+              {
+                "option": "Coupe Dijonnaise",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Crème de cassis",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              },
+              {
+                "option": "Baba au Baileys",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Baileys",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              }
+            ]
+          }
+        },
+        "Franc-Comtois": {
+          "services": {
+            "Plat": [
+              {
+                "option": "Poulet à la jurassienne",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Vin jaune",
+                "dose_cl": 1,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 0.35,
+                "cl_moyen": 0.5,
+                "cl_haut": 0.65
+              },
+              {
+                "option": "Assiette franc-comtoise",
+                "nb_options_service": 2,
+                "obligatoire": false,
+                "alcool": "Macvin",
+                "dose_cl": 4,
+                "proba_basse": 0.35,
+                "proba_moyenne": 0.5,
+                "proba_haute": 0.65,
+                "cl_bas": 1.4,
+                "cl_moyen": 2.0,
+                "cl_haut": 2.6
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

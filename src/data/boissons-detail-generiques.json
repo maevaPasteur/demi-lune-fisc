@@ -1,0 +1,21 @@
+{
+  "cle": "generiques",
+  "methode": "Chaque bouton générique de la caisse encaisse un volume réel mais ne l'impute qu'à une dose partielle d'un SKU « principal », laissant le reste du liquide servi (sirop, jus, soda) sans rattachement fournisseur. On valorise au coût d'achat HT la dose non créditée de chaque bouton (bornée à la carte et plafonnée à l'écart de catégorie), en croisant ventes-caisse × prix-carte × factures FCBS. Total réconcilié : 3 134 € HT.",
+  "colonnes": ["Bouton générique (caisse)", "Ventes 3 ans", "Produits achetés mutualisés", "Coût HT"],
+  "lignes": [
+    ["Sirop à l'eau", "748 ventes (1 638 € TTC)", "13 sirops Monin (parfums non ventilés : grenadine, menthe, fraise, pêche…)", "inclus ci-dessous"],
+    ["Diabolo (25 cl)", "350 ventes (1 353 € TTC)", "Limonade Mortuacienne + 13 sirops Monin (23 cl soda non crédités)", "149 €"],
+    ["Monaco", "196 ventes (807 € TTC)", "Limonade + bière + sirop grenadine (sirop 2 cl + soda 23 cl non crédités)", "106 €"],
+    ["Jus de Fruit", "1 118 ventes (4 533 € TTC)", "14 jus Granini (orange, pomme, ananas, fraise… non ventilés)", "inclus ci-dessous"],
+    ["Mambo (apéritif sans alcool 25 cl)", "947 ventes (6 129 € TTC)", "Jus Granini + soda + sirop Monin (sirop 6 cl + soda 19 cl + jus 10 cl non crédités)", "975 €"],
+    ["Luna (apéritif sans alcool 25 cl)", "567 ventes (3 366 € TTC)", "Jus Granini + soda + sirop Monin (sirop 6 cl + soda 19 cl + jus 10 cl non crédités)", "584 €"],
+    ["La Vouivre (apéritif MAISON)", "2 120 ventes (11 955 € TTC)", "Crème de cassis / liqueur + crémant (2 cl liqueur non crédités)", "675 €"],
+    ["KittyKir (apéritif MAISON)", "867 ventes (4 489 € TTC)", "Crème / liqueur + base pétillante (2 cl liqueur non crédités)", "276 €"],
+    ["Chat perché (apéritif MAISON)", "1 664 ventes (9 292 € TTC)", "Crème / liqueur + base (1 cl liqueur non crédité)", "265 €"],
+    ["Balidou (cocktail MAISON)", "253 ventes (2 223 € TTC)", "Jus Granini + base (12 cl jus non crédités)", "103 €"]
+  ],
+  "totalLabel": "Total vendu via boutons génériques",
+  "totalValeur": "3 134 € HT",
+  "sources": [{"label": "Annexe D - synthèse par produit (caisse)"}, {"label": "Factures FCBS (sirops/jus)"}],
+  "note": "Réconciliation. Ces ventes SONT dans le CA déclaré, seulement non ventilées par SKU."
+}
