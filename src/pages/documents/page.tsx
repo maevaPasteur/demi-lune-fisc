@@ -412,10 +412,13 @@ function SectionPiecesDefense() {
                 <Stack gap={6}>
                   <Group justify="space-between" align="flex-start" wrap="nowrap">
                     <Text fw={700}>{d.titre}</Text>
-                    <Badge variant="light" color="teal" radius="sm" size="sm">
-                      {d.niveau}
+                    <Badge variant="outline" color="gray" radius="sm" size="sm" style={{ flexShrink: 0 }}>
+                      {d.format}
                     </Badge>
                   </Group>
+                  <Text size="xs" c="teal.7" fw={600} tt="uppercase" style={{ letterSpacing: '0.04em' }}>
+                    {d.niveau}
+                  </Text>
                   <Text size="sm" c="dimmed">
                     {d.description}
                   </Text>
