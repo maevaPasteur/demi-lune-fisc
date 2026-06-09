@@ -536,6 +536,11 @@ const del: Analyse = {
       ]),
     },
     {
+      kind: 'piecejointe',
+      intro: 'Télécharger ce tableau :',
+      fichiers: [{ fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Sessions, réconciliation, triangulation (XLSX)' }],
+    },
+    {
       kind: 'tableau',
       titre: `Les grosses suppressions = fautes de frappe sur la quantité (${formatEuro(DC.erreursQuantiteSomme)}, ${formatPct(DC.erreursQuantitePctDel)})`,
       minWidth: 560,
@@ -556,6 +561,11 @@ const del: Analyse = {
         'Le journal n’a pas de colonne quantité : la décomposition prix × quantité est inférée (plusieurs lectures exactes existent), mais la quantité absurde - jusqu’à 9999, valeur maximale du champ - est certaine. La preuve réellement irréfutable reste la session : on ne supprime pas plus qu’on n’encaisse.',
     },
     {
+      kind: 'piecejointe',
+      intro: 'Télécharger ce tableau :',
+      fichiers: [{ fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Erreurs de quantité + distribution des prix (XLSX)' }],
+    },
+    {
       kind: 'tableau',
       titre: 'Triangulation : trois exports certifiés donnent le même CA',
       minWidth: 460,
@@ -567,14 +577,27 @@ const del: Analyse = {
         [cg('Suppressions (annexe E) - hors des trois'), cd(formatEuro(DC.triangulation.suppressionsE))],
       ],
     },
+    {
+      kind: 'piecejointe',
+      intro: 'Télécharger ce tableau :',
+      fichiers: [{ fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Triangulation + réconciliation (XLSX)' }],
+    },
     enClair(
       'Les encaissements par carte bancaire correspondent aux relevés bancaires : le chiffre d’affaires déclaré est justifié par trois exports indépendants, et les espèces ne pèsent que 1,3 %. Il n’existe aucun canal pour encaisser au noir des ventes supprimées, ni aucun achat caché pour les alimenter.',
     ),
     {
+      kind: 'chapitre',
+      source: 'neutre',
+      titre: 'Annexes : la démonstration chiffrée complète',
+      sousTitre: 'Classeurs téléchargeables - reproductibles à partir des annexes certifiées E, A, H',
+    },
+    {
       kind: 'piecejointe',
-      intro: 'Démonstration chiffrée complète, reproductible à partir des annexes certifiées :',
+      intro: 'Données et méthode :',
       fichiers: [
-        { fichier: 'pieces-defense/Defense-Suppressions-de-caisse-DEL.xlsx', label: 'Défense - Suppressions de caisse (DEL)' },
+        { fichier: 'pieces-defense/Defense-Suppressions-de-caisse-DEL.xlsx', label: 'Défense - Suppressions de caisse (synthèse, 6 onglets)' },
+        { fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Réconciliation des suppressions' },
+        { fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Erreurs de quantité (DEL)' },
       ],
     },
     sources('E', 'A', 'B'),
