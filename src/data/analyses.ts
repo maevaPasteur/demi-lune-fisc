@@ -279,13 +279,12 @@ const del: Analyse = {
   force: 'forte',
   controleurDit:
     '21 302 suppressions « DEL » de la caisse = 430 763 € de recettes occultées.',
-  demonstration:
-    'Des corrections d’exploitation (médiane 8,70 €) : 32 % du total tient à 4 fautes de frappe ; le reste, ce sont des plats re-saisis, transférés sur un autre ticket ou re-facturés au menu, autant de recettes déjà dans le CA déclaré. Pas du chiffre d’affaires caché.',
+  demonstration: `Trois preuves l’excluent : sur ${DC.sessionsImpossiblesNb} journées, les suppressions dépassent le CA encaissé du jour (le 26/07/2022 : 69 557 € supprimés pour 2 563 € encaissés) ; les plus grosses sont des fautes de frappe sur la quantité (menu Bambin 6,90 € × 9999) ; et trois exports certifiés reconstituent le même CA. Les espèces ne pèsent que 1,3 % : aucun canal pour encaisser au noir.`,
   faitTomber: 'Le motif central du rejet - 430 763 €',
   pieces: piecesLiees('E', 'A', 'B'),
   apercu: [
-    { label: 'Volume DEL (thèse du fisc)', valeur: formatEuro(A.delSomme) },
-    { label: 'dont 4 lignes aberrantes', valeur: formatPct(A.aberrPctTotal) },
+    { label: 'Suppressions (thèse du fisc)', valeur: formatEuro(A.delSomme) },
+    { label: 'Sessions où suppr. > CA du jour', valeur: String(DC.sessionsImpossiblesNb) },
   ],
   sections: [
     enClair(
@@ -1521,8 +1520,12 @@ const boissonsV2: Analyse = {
   ],
 }
 
-export const analyses: Analyse[] = [reconstitution, del, continuite, bancarisation, boissonsV2, boissons]
+// Analyses affichées dans la liste /analyses.
+export const analyses: Analyse[] = [reconstitution, del, continuite, bancarisation, boissonsV2]
+
+// Versions archivées : routables par URL mais masquées de la liste (ex. ancienne page boissons).
+const analysesArchivees: Analyse[] = [boissons]
 
 export function analyseParSlug(slug: string): Analyse | undefined {
-  return analyses.find((a) => a.slug === slug)
+  return [...analyses, ...analysesArchivees].find((a) => a.slug === slug)
 }
