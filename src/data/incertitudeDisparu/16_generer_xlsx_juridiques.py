@@ -48,13 +48,14 @@ def text_block(ws, txt, n=4):
 # ============================ TABLES BOISSONS (granulaires) ==================
 def b1_manquant(wb):
     ws = wb.active; ws.title = "Manquant par boisson"
-    widths(ws, {"A": 32, "B": 11, "C": 11, "D": 11, "E": 14, "F": 16})
-    ws_title(ws, "Manquant par boisson : cout d'achat et CA pretendument perdu", 6)
-    head(ws, ["Boisson", "Achat L", "Conso L", "Manquant L", "Cout achat EUR", "CA perdu EUR"])
+    widths(ws, {"A": 32, "B": 11, "C": 11, "D": 11, "E": 11, "F": 14, "G": 16})
+    ws_title(ws, "Manquant = Achat - Conso - Stock fin (cout + CA pretendument perdu)", 7)
+    head(ws, ["Boisson", "Achat L", "Conso L", "Stock fin L", "Manquant L", "Cout achat EUR", "CA perdu EUR"])
     for r in BPD["disparuParBoisson"]:
-        row(ws, [r["nom"], r["achat_l"], r["conso_l"], r["disparu_l"], r["cout_disparu"], r["ca_disparu"]])
+        row(ws, [r["nom"], r["achat_l"], r["conso_l"], r.get("stock_l", 0), r["disparu_l"], r["cout_disparu"], r["ca_disparu"]])
     s = BPD["synthese"]
-    row(ws, ["TOTAL", "", "", s["disparu_brut_l"], s["disparu_brut_cout"], s["disparu_brut_ca"]], b=True)
+    row(ws, ["TOTAL (manquant positif)", "", "", "", s["disparu_brut_l"], s["disparu_brut_cout"], s["disparu_brut_ca"]], b=True)
+    row(ws, ["TOTAL NET (lignes negatives incluses)", "", "", "", s.get("disparu_net_l", ""), "", ""], b=True)
 
 def b2_cocktails(wb):
     ws = wb.active; ws.title = "Cocktails"

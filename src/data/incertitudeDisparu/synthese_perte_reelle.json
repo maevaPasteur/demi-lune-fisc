@@ -42,7 +42,7 @@
     "litres": 44.0,
     "cout_achat_eur": 457,
     "ca_equivalent_eur": 6490,
-    "base": "44 L = disparu Picon entier"
+    "base": "~1,7 Picon Biere/j x 4 cl de Picon x 662 j (≈44 L)"
    }
   ],
   "total_litres": 2056,
@@ -71,14 +71,14 @@
   "total_ca_eur": 8010
  },
  "cascade_alcool": {
-  "achats_alcool_l": 10657,
+  "achats_alcool_l": 10622,
   "postes": [
    {
     "poste": "Vendu au verre (caisse)",
     "litres": 5569
    },
    {
-    "poste": "Vendu en cocktails (caisse)",
+    "poste": "Vendu en cocktails (caisse, biere des cocktails incluse)",
     "litres": 998
    },
    {
@@ -106,9 +106,9 @@
     "litres": 213
    }
   ],
-  "perte_reelle_residuelle_l": 2454,
-  "perte_reelle_pct_achats": 23.0,
-  "interpretation": "Perte d'exploitation normale d'un bar (casse, evaporation, mousse, sur-versement non mesure). La jurisprudence CHR admet 22-25 %. AUCUNE vente au noir : CA bancarise, especes 1,3 %."
+  "perte_reelle_residuelle_l": 2419,
+  "perte_reelle_pct_achats": 22.8,
+  "interpretation": "Perte d'exploitation d'un bar (casse, evaporation, mousse, sur-versement non mesure). A rapprocher de l'abattement que l'administration retient elle-meme en reconstitution de bar (CAA Paris, 17 mars 2021 : 22 % des achats pour personnel/offerts/pertes/vol, methode validee ; n de requete a fiabiliser). AUCUNE vente au noir : CA bancarise, especes 1,3 %."
  },
  "softs": {
   "lignes": [

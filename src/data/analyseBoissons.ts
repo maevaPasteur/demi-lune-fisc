@@ -326,7 +326,7 @@ export const decomposition: Composante[] = [
     montantHT: Math.round(resultatsIndep.ecartCoutHT.total - sommeVerifiee),
     source: 'attente',
     preuve:
-      'Ce n’est PAS du stock : l’inventaire physique des 3 fins d’exercice montre un stock boissons stable (3 674 → 4 536 → 4 533 € HT, jamais en baisse). Ce volume a donc été consommé, pas stocké. Le fisc ne déduit que 10 % (pertes + personnel) ; la consommation réelle non-vente (offerts, casse, sur-versement au verre, personnel) est plus élevée - la jurisprudence admet 22 à 25 %.',
+      'Ce n’est PAS du stock : l’inventaire physique des 3 fins d’exercice montre un stock boissons stable (3 674 → 4 536 → 4 533 € HT, jamais en baisse). Ce volume a donc été consommé, pas stocké. Le fisc ne déduit que 10 % (pertes + personnel) ; la consommation réelle non-vente (offerts, casse, sur-versement au verre, personnel) est plus élevée - taux admis en CHR à rapprocher (cf. CAA Paris 17/03/2021, 22 à 25 %).',
   },
 ]
 export const partVerifieePct = Math.round((100 * sommeVerifiee) / resultatsIndep.ecartCoutHT.total)

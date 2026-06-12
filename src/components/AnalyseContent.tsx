@@ -363,6 +363,53 @@ function SectionView({ section }: { section: Section }) {
         </Text>
       )
 
+    case 'interne': {
+      const AUD = {
+        restaurant: { label: 'Restaurant / exploitant', color: 'grape' },
+        comptable: { label: 'Expert-comptable', color: 'indigo' },
+        avocat: { label: 'Avocat', color: 'violet' },
+      } as const
+      const a = AUD[section.audience]
+      return (
+        <Alert
+          color={a.color}
+          variant="light"
+          radius="lg"
+          icon={<IconInfoCircle size={18} />}
+          title={
+            <Group gap={8} wrap="wrap">
+              <Badge color={a.color} variant="filled" radius="sm" size="sm">
+                Note interne · {a.label}
+              </Badge>
+              <Text span fw={700} c="dark.6">
+                {section.titre}
+              </Text>
+            </Group>
+          }
+          p="lg"
+          styles={{
+            root: {
+              backgroundColor: `var(--mantine-color-${a.color}-0)`,
+              border: `1px dashed var(--mantine-color-${a.color}-4)`,
+            },
+            message: {
+              fontSize: 'var(--mantine-font-size-md)',
+              lineHeight: 1.55,
+              color: 'var(--mantine-color-dark-6)',
+            },
+            body: { gap: 8 },
+          }}
+        >
+          <Stack gap={6}>
+            <div>{richText(section.texte)}</div>
+            <Text size="xs" c="dimmed" fs="italic">
+              Note de travail interne, à retirer avant toute transmission à l’administration fiscale.
+            </Text>
+          </Stack>
+        </Alert>
+      )
+    }
+
     case 'chapitre': {
       const MAP = {
         fisc: { color: 'red', label: 'Le fisc' },
@@ -545,6 +592,105 @@ function SectionView({ section }: { section: Section }) {
           />
         </Paper>
       )
+
+    case 'graphiqueEmpile':
+      return (
+        <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
+          <Stack gap="sm">
+            {section.titre && (
+              <Title order={3} fz={{ base: 18, sm: 22 }}>
+                {section.titre}
+              </Title>
+            )}
+            <BarChart
+              h={section.hauteur}
+              data={section.data}
+              dataKey={section.dataKey}
+              type={section.type ?? 'stacked'}
+              series={section.series.map((s) => ({ name: s.name, color: s.couleur }))}
+              valueFormatter={(v) => (section.format === 'euro' ? formatEuro(v) : formatInt(v))}
+              withLegend
+              gridAxis="y"
+            />
+          </Stack>
+        </Paper>
+      )
+
+    case 'barreComposition': {
+      const CAT: Record<string, { color: string; label: string }> = {
+        mesure: { color: 'teal', label: 'Mesuré (caisse, inventaire)' },
+        calcul: { color: 'blue', label: 'Calculé (cuisine, menus)' },
+        estime: { color: 'orange', label: 'Estimé (chef, offerts, sur-versement)' },
+        residuel: { color: 'gray', label: 'Perte résiduelle' },
+        neutre: { color: 'indigo', label: 'Autre' },
+        alerte: { color: 'red', label: 'Espèces' },
+      }
+      const total = section.total ?? section.segments.reduce((a, s) => a + s.valeur, 0)
+      const fmt = (v: number) =>
+        section.unite === '%' ? `${v.toLocaleString('fr-FR')} %` : `${formatInt(Math.round(v))} ${section.unite}`
+      const usedCats = Array.from(new Set(section.segments.map((s) => s.categorie)))
+      return (
+        <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
+          <Stack gap="md">
+            {section.titre && (
+              <div>
+                <Title order={3} fz={{ base: 18, sm: 22 }}>
+                  {section.titre}
+                </Title>
+                {section.sousTitre && (
+                  <Text size="sm" c="dimmed" mt={2}>
+                    {section.sousTitre}
+                  </Text>
+                )}
+              </div>
+            )}
+            {/* Barre proportionnelle : largeur = valeur / total (part de 0, somme = 100 %) */}
+            <div style={{ display: 'flex', height: 34, borderRadius: 8, overflow: 'hidden', gap: 2 }}>
+              {section.segments.map((s, i) => (
+                <Box
+                  key={i}
+                  title={`${s.label} - ${fmt(s.valeur)}`}
+                  style={{
+                    width: `${(100 * s.valeur) / total}%`,
+                    background: `var(--mantine-color-${CAT[s.categorie].color}-${s.categorie === 'residuel' ? 4 : 6})`,
+                  }}
+                />
+              ))}
+            </div>
+            {/* Légende chiffrée : un poste par ligne, valeur + part % */}
+            <Stack gap={6}>
+              {section.segments.map((s, i) => (
+                <Group key={i} justify="space-between" wrap="nowrap" gap="sm">
+                  <Group gap={8} wrap="nowrap">
+                    <Box
+                      w={11}
+                      h={11}
+                      style={{ borderRadius: 3, background: `var(--mantine-color-${CAT[s.categorie].color}-${s.categorie === 'residuel' ? 4 : 6})`, flexShrink: 0 }}
+                    />
+                    <Text size="sm">{s.label}</Text>
+                  </Group>
+                  <Text size="sm" fw={600} style={{ flexShrink: 0 }}>
+                    {fmt(s.valeur)} <Text span c="dimmed" size="xs">({Math.round((100 * s.valeur) / total)} %)</Text>
+                  </Text>
+                </Group>
+              ))}
+            </Stack>
+            {section.legende && (
+              <Group gap="md" mt={2}>
+                {usedCats.map((c) => (
+                  <Group key={c} gap={6} wrap="nowrap">
+                    <Box w={11} h={11} style={{ borderRadius: 3, background: `var(--mantine-color-${CAT[c].color}-${c === 'residuel' ? 4 : 6})` }} />
+                    <Text size="xs" c="dimmed">
+                      {CAT[c].label}
+                    </Text>
+                  </Group>
+                ))}
+              </Group>
+            )}
+          </Stack>
+        </Paper>
+      )
+    }
 
     default:
       return null

@@ -10,6 +10,7 @@ export interface DisparuBoisson {
   categorie: string
   achat_l: number
   conso_l: number
+  stock_l: number
   disparu_l: number
   prix_achat: number | null
   prix_revente: number | null
@@ -88,6 +89,7 @@ export interface BoissonsPageData {
     achat_alcool_cout: number
     conso_totale_l: number
     disparu_brut_l: number
+    disparu_net_l: number
     disparu_brut_cout: number
     disparu_brut_ca: number
     perte_reelle_l: number

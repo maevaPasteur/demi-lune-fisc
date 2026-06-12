@@ -1,9 +1,20 @@
-import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
+import { Outlet, useLocation } from 'react-router-dom'
 import { AppShell, Box, Container, Text } from '@mantine/core'
 import { useDisclosure } from '@mantine/hooks'
 import Header from './Header.tsx'
 import SideMenu from './SideMenu.tsx'
 import MobileMenu from './MobileMenu.tsx'
+
+// Remonte en haut de page à chaque changement de route (sinon on conserve la
+// position de défilement de la page précédente).
+function ScrollToTop() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+  return null
+}
 
 // Coque commune (layout "alt") : colonne de navigation pleine hauteur à gauche
 // (marque + liens + état), en-tête au-dessus du contenu (fil d'Ariane +
@@ -12,7 +23,9 @@ export default function Layout() {
   const [opened, { toggle, close }] = useDisclosure(false)
 
   return (
-    <AppShell
+    <>
+      <ScrollToTop />
+      <AppShell
       layout="alt"
       header={{ height: 72 }}
       navbar={{
@@ -58,6 +71,7 @@ export default function Layout() {
           </Text>
         </Container>
       </AppShell.Main>
-    </AppShell>
+      </AppShell>
+    </>
   )
 }

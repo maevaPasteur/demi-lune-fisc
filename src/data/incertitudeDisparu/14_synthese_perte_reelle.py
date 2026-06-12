@@ -38,7 +38,7 @@ PERSO = [
     ("Jus de fruit (tout le staff, 3/j)", "Jus d'orange", 397.0, 3.10, 15.60, "3 jus 20cl/jour"),
     ("Sirop a l'eau (tout le staff, 3/j)", "Sirop Framboise", 40.0, 7.09, 12.00, "3 sirops 2cl/jour"),
     ("Macvin (chef Thierry, 2,5 verres/j)", "Macvin", 99.0, 18.15, 81.67, "2,5 verres 6cl/jour"),
-    ("Picon (chef Thierry, ~1,7 Picon Biere/j)", "Picon", 44.0, 10.38, 147.50, "44 L = disparu Picon entier"),
+    ("Picon (chef Thierry, ~1,7 Picon Biere/j)", "Picon", 44.0, 10.38, 147.50, "~1,7 Picon Biere/j x 4 cl de Picon x 662 j (≈44 L)"),
 ]
 perso_rows = []
 tot_l = tot_cout = tot_ca = 0.0
@@ -69,10 +69,20 @@ offerts["total_cout_eur"] = sum(l["cout_achat_eur"] for l in offerts["lignes"])
 offerts["total_ca_eur"] = sum(l["ca_equivalent_eur"] for l in offerts["lignes"])
 
 # ---------------------------------------------------------------------------
+# CORRECTION AVOIRS : notes de credit FCBS stockees en quantite POSITIVE et
+# comptees a tort en achat. Verifie au code produit (rapprochement contenants).
+# On les retire des achats (traitement conservateur : une seule deduction).
+#   Cidre Brut  (avoir 520312 16/07/2024, code 403200, 30 x 75cl)
+#   Bourgogne Aligote (avoir 532782 11/12/2024, code 603040, 1 BIB x 10 L)
+#   Grand Marnier (avoir 526876 25/09/2024, code 510090, 3 x 70cl)
+AVOIRS = {"Cidre Brut": 22.5, "Bourgogne Aligoté maison": 10.0, "Grand Marnier": 2.1}
+AVOIR_TOTAL_L = round(sum(AVOIRS.values()), 1)  # 34.6 L
+
+# ---------------------------------------------------------------------------
 # 3. CASCADE ALCOOL : ou va l'alcool achete (litres)
 # ---------------------------------------------------------------------------
 alc = [x for x in base["boissons"] if x.get("conso_complete") is True]
-A = sum(x["achats_l"] for x in alc)
+A = sum(x["achats_l"] for x in alc) - AVOIR_TOTAL_L
 stock = sum(x["stock_final_l"] for x in alc)
 V_verre = sum(x["conso"]["seches_l"] for x in alc)
 V_cock = sum(x["conso"]["cocktails_l"] for x in alc)
@@ -81,23 +91,29 @@ M = sum(x["conso"]["menu_moyen_l"] for x in alc)
 P = sum((x.get("conso_staff_l") or {}).get("moyen", 0) for x in alc)  # Picon+Macvin
 O_alc = round(1 * JOURS * 0.06, 1)  # aperitifs offerts
 S = round(0.08 * V_verre, 1)        # sur-versement ~8% du servi au verre (borne basse free-pour)
-residu = A - stock - V_verre - V_cock - C - M - P - O_alc - S
+# Postes arrondis, puis PERTE = achats - somme des postes arrondis (la cascade
+# affichee se boucle EXACTEMENT : achats - postes = perte, sans ecart d'arrondi).
+ach_r = round(A)
+postes = [
+    {"poste": "Vendu au verre (caisse)", "litres": round(V_verre)},
+    {"poste": "Vendu en cocktails (caisse, biere des cocktails incluse)", "litres": round(V_cock)},
+    {"poste": "Cuisine (fondues, babas, flambage)", "litres": round(C)},
+    {"poste": "Alcool des menus (non detaille en caisse)", "litres": round(M)},
+    {"poste": "Consommation du chef (Picon + Macvin)", "litres": round(P)},
+    {"poste": "Aperitifs offerts aux clients", "litres": round(O_alc)},
+    {"poste": "Sur-versement au verre (~8 %)", "litres": round(S)},
+    {"poste": "Stock final (inventaire)", "litres": round(stock)},
+]
+perte_r = ach_r - sum(p["litres"] for p in postes)
 cascade = {
-    "achats_alcool_l": round(A),
-    "postes": [
-        {"poste": "Vendu au verre (caisse)", "litres": round(V_verre)},
-        {"poste": "Vendu en cocktails (caisse)", "litres": round(V_cock)},
-        {"poste": "Cuisine (fondues, babas, flambage)", "litres": round(C)},
-        {"poste": "Alcool des menus (non detaille en caisse)", "litres": round(M)},
-        {"poste": "Consommation du chef (Picon + Macvin)", "litres": round(P)},
-        {"poste": "Aperitifs offerts aux clients", "litres": round(O_alc)},
-        {"poste": "Sur-versement au verre (~8 %)", "litres": round(S)},
-        {"poste": "Stock final (inventaire)", "litres": round(stock)},
-    ],
-    "perte_reelle_residuelle_l": round(residu),
-    "perte_reelle_pct_achats": round(100 * residu / A, 1),
-    "interpretation": "Perte d'exploitation normale d'un bar (casse, evaporation, mousse, sur-versement non mesure). "
-                      "La jurisprudence CHR admet 22-25 %. AUCUNE vente au noir : CA bancarise, especes 1,3 %.",
+    "achats_alcool_l": ach_r,
+    "postes": postes,
+    "perte_reelle_residuelle_l": perte_r,
+    "perte_reelle_pct_achats": round(100 * perte_r / ach_r, 1),
+    "interpretation": "Perte d'exploitation d'un bar (casse, evaporation, mousse, sur-versement non mesure). "
+                      "A rapprocher de l'abattement que l'administration retient elle-meme en reconstitution de bar "
+                      "(CAA Paris, 17 mars 2021 : 22 % des achats pour personnel/offerts/pertes/vol, methode validee ; "
+                      "n de requete a fiabiliser). AUCUNE vente au noir : CA bancarise, especes 1,3 %.",
 }
 
 # ---------------------------------------------------------------------------

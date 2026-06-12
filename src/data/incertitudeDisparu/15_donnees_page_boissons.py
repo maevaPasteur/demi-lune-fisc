@@ -21,6 +21,11 @@ base = {x["nom"]: x for x in Ji("base_disparu.json")["boissons"]}
 EXOS = ["2022-2023", "2023-2024", "2024-2025"]
 JOURS = {"2022-2023": 222, "2023-2024": 221, "2024-2025": 219}
 
+# CORRECTION AVOIRS (cf. script 14) : notes de credit FCBS comptees a tort en
+# achat, retirees ici des achats du produit concerne. Verifie au code produit.
+# Total 34,6 L (identique a 14_synthese_perte_reelle.py -> coherence cascade).
+AVOIRS = {"Cidre Brut": 22.5, "Bourgogne Aligoté maison": 10.0, "Grand Marnier": 2.1}
+
 def prix(nom, sens):
     return base.get(nom, {}).get(f"prix_{sens}_l")
 
@@ -38,12 +43,17 @@ for b in conso["boissons"]:
     if b["categorie"] in ("soda", "jus", "sirop"):
         continue  # softs : bilan ferme a part
     ach = sum(x for x in (b.get("achats_litres_par_periode") or {}).values() if x)
+    ach -= AVOIRS.get(nom, 0)  # retire la note de credit comptee a tort en achat
     cons = b["total_3_exercices"]["total_l"]["moyen"]
-    disp = ach - cons - stock_l(b)
+    st = stock_l(b)
+    disp = ach - cons - st
     pa, pr = prix(nom, "achat"), prix(nom, "revente")
     disparu_rows.append({
         "nom": nom, "categorie": b["categorie"],
-        "achat_l": round(ach, 1), "conso_l": round(cons, 1), "disparu_l": round(disp, 1),
+        # stock_l = stock physique restant en fin d'exercice 2024-2025 (encore en cave,
+        # donc NON manquant). Affiche en colonne pour que le tableau soit reproductible :
+        # Manquant = Achat - Conso - Stock fin (a l'arrondi pres).
+        "achat_l": round(ach, 1), "conso_l": round(cons, 1), "stock_l": round(st, 1), "disparu_l": round(disp, 1),
         "prix_achat": pa, "prix_revente": pr,
         "cout_disparu": round(disp * pa) if (pa and disp > 0) else 0,
         "ca_disparu": round(disp * pr) if (pr and disp > 0) else 0,
@@ -166,12 +176,16 @@ conso_par_periode["total"] = {k: round(v) for k, v in tot.items()}
 achat_alcool_l = sum(r["achat_l"] for r in disparu_rows)
 achat_alcool_cout = sum((r["achat_l"] * (r["prix_achat"] or 0)) for r in disparu_rows)
 disparu_total_l = sum(r["disparu_l"] for r in disparu_rows if r["disparu_l"] > 0)
+# disparu NET : on rend aussi les lignes a manquant negatif (conso > achat, artefacts
+# d'etiquetage caisse type Cubis=Ravelin). Le net est la mesure honnete de l'ecart global.
+disparu_net_l = sum(r["disparu_l"] for r in disparu_rows)
 disparu_total_cout = sum(r["cout_disparu"] for r in disparu_rows)
 disparu_total_ca = sum(r["ca_disparu"] for r in disparu_rows)
 synthese = {
     "achat_alcool_l": round(achat_alcool_l), "achat_alcool_cout": round(achat_alcool_cout),
     "conso_totale_l": conso_par_periode["total"]["total_l"],
-    "disparu_brut_l": round(disparu_total_l), "disparu_brut_cout": round(disparu_total_cout),
+    "disparu_brut_l": round(disparu_total_l), "disparu_net_l": round(disparu_net_l),
+    "disparu_brut_cout": round(disparu_total_cout),
     "disparu_brut_ca": round(disparu_total_ca),
     "perte_reelle_l": spr["cascade_alcool"]["perte_reelle_residuelle_l"],
     "perte_reelle_pct": spr["cascade_alcool"]["perte_reelle_pct_achats"],
@@ -218,11 +232,12 @@ def _l(ws, vals, b=False):
         if isinstance(c.value, (int, float)): c.alignment = R
 wb = openpyxl.Workbook()
 ws = wb.active; ws.title = "1-Manquant par boisson"
-for w, c in zip([32, 10, 10, 10, 14, 18], "ABCDEF"): ws.column_dimensions[c].width = w
-_t(ws, "Manquant par boisson : cout d'achat et CA pretendument perdu", 6)
-_h(ws, ["Boisson", "Achat L", "Conso L", "Manquant L", "Cout achat EUR", "CA perdu EUR"])
-for r in disparu_rows: _l(ws, [r["nom"], r["achat_l"], r["conso_l"], r["disparu_l"], r["cout_disparu"], r["ca_disparu"]])
-_l(ws, ["TOTAL", "", "", synthese["disparu_brut_l"], synthese["disparu_brut_cout"], synthese["disparu_brut_ca"]], b=True)
+for w, c in zip([32, 10, 10, 10, 10, 14, 18], "ABCDEFG"): ws.column_dimensions[c].width = w
+_t(ws, "Manquant par boisson : Manquant = Achat - Conso - Stock fin (cout + CA pretendument perdu)", 7)
+_h(ws, ["Boisson", "Achat L", "Conso L", "Stock fin L", "Manquant L", "Cout achat EUR", "CA perdu EUR"])
+for r in disparu_rows: _l(ws, [r["nom"], r["achat_l"], r["conso_l"], r["stock_l"], r["disparu_l"], r["cout_disparu"], r["ca_disparu"]])
+_l(ws, ["TOTAL (manquant positif uniquement)", "", "", "", synthese["disparu_brut_l"], synthese["disparu_brut_cout"], synthese["disparu_brut_ca"]], b=True)
+_l(ws, ["TOTAL NET (lignes negatives incluses)", "", "", "", synthese["disparu_net_l"], "", ""], b=True)
 
 ws = wb.create_sheet("2-Cocktails")
 for w, c in zip([22, 40, 8, 12, 14], "ABCDE"): ws.column_dimensions[c].width = w
