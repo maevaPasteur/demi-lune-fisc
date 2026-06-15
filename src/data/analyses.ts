@@ -1525,6 +1525,36 @@ const boissonsV2: Analyse = {
       texte: `**Lecture du tableau.** Pour chaque boisson, **Manquant = Acheté − Consommé − Stock fin** (le « Stock fin » est le stock physique encore en cave à l’inventaire 2024-2025 : il n’a pas disparu). Chaque ligne est donc reproductible à partir des colonnes affichées (à 0,1 L près, du fait des arrondis).`,
     },
     {
+      kind: 'alerte',
+      couleur: 'teal',
+      titre: 'À lire avant le tableau : pourquoi une boisson peut sembler « disparue » alors qu’elle a bien été vendue',
+      texte: `La caisse et les factures ne parlent pas le même langage. **Sur les factures, chaque vin porte son nom exact** (domaine, millésime). **En caisse, un seul bouton sert pour des dizaines de vins** : le serveur tape « Verre de vin », « Savagnin verre » ou « Macvin », sans préciser quelle bouteille précise. Le contrôleur, lui, compare facture par facture : il cherche « Arbois Savagnin 2018 » dans les ventes, ne le trouve pas sous ce nom (il a été sonné sous le bouton commun) et le déclare « disparu ». **Mais la vente est bien là, et sa recette est déjà dans le chiffre d’affaires déclaré.** Ce n’est pas une bouteille qui s’évapore : c’est un **problème d’étiquetage de la caisse**, sans le moindre euro caché. L’exemple ci-dessous le montre, et la liste complète est téléchargeable juste après.`,
+    },
+    {
+      kind: 'tableau',
+      titre: 'Exemple : ce qui est écrit sur la facture vs le bouton tapé en caisse',
+      minWidth: 560,
+      colonnes: [
+        { label: 'Sur la facture (le vin précis acheté)' },
+        { label: 'Sonné en caisse sous le bouton…' },
+      ],
+      lignes: [
+        [cg('Arbois Savagnin 2018 (Fruitière Vinicole d’Arbois)'), cg('« Savagnin verre / pichet » (un seul bouton pour 6 millésimes)')],
+        [cg('Saint Joseph rouge 2019, 2021 et 2022 (Ogier)'), cg('« C du Rhône St Joseph » (un seul bouton pour 7 millésimes)')],
+        [cg('5 Macvin du Jura différents (Rolet, Lornet, Jacobin…)'), cg('« Macvin du Jura » (un seul bouton pour les 5)')],
+        [cg('« Mouton Cadet » : 0 acheté sur la période'), cg('Bouton mal nommé : le vrai bordeaux acheté et en cave est le Château Grand Renom')],
+      ],
+    },
+    {
+      kind: 'note',
+      texte: `**Comment lire cet exemple.** À gauche, le vin tel qu’il apparaît sur la facture du fournisseur. À droite, le bouton réellement utilisé en caisse pour le vendre. Comme plusieurs vins partagent un même bouton, le vin précis paraît « jamais vendu » dans les statistiques de caisse, alors qu’il a bien été servi et encaissé. **La preuve par l’inventaire** : les bouteilles soi-disant « disparues » sont soit bien en cave, soit n’ont jamais existé (codes de caisse créés mais jamais utilisés, comme certaines bières).`,
+    },
+    {
+      kind: 'piecejointe',
+      intro: 'Liste complète des correspondances libellés factures ↔ boutons de caisse (boutons mutualisés, boutons génériques et codes jamais paramétrés) :',
+      fichiers: [{ fichier: 'pieces-defense/Boissons-6-correspondance-libelles.xlsx', label: 'Correspondance libellés factures ↔ caisse (XLSX)' }],
+    },
+    {
       kind: 'note',
       texte: `**Les manquants négatifs ne sont pas des disparitions** : une consommation supérieure aux achats sur une ligne (ex. « Cubis de vin » : 0 acheté, ~427 L consommés sous ce libellé caisse générique, alors que le vin correspondant est acheté sous son appellation précise) traduit un **décalage d’affectation**, pas une bouteille apparue de nulle part. Le total réel ne dépend pas de cet étiquetage : **Manquant net = total acheté − total consommé − stock** (bilan matière global), soit **${formatInt(BPD.synthese.disparu_net_l)} L**. Valorisé en **ne retenant que les lignes positives** (majorant théorique), le manquant ressort à ${formatEuro(BPD.synthese.disparu_brut_cout)} au coût d’achat et ${formatEuro(BPD.synthese.disparu_brut_ca)} au prix de revente, soit l’équivalent de ${formatInt(BPD.synthese.disparu_brut_l)} L (et non ${formatInt(BPD.synthese.disparu_net_l)} L) : ces montants sont donc un plafond. C’est le maximum avant de déduire la cuisine, les menus, le personnel et les offerts (tableaux suivants).`,
     },
@@ -1543,7 +1573,7 @@ const boissonsV2: Analyse = {
       kind: 'interne',
       audience: 'comptable',
       titre: 'Pour mémoire : origine des lignes à manquant négatif (deux cas distincts)',
-      texte: `Vérifié de notre côté : les lignes à manquant négatif ne viennent **pas** des avoirs (contrôlés ci-dessus) et recouvrent **deux cas**. **(1) Côté caisse** (ex. « Cubis de vin » : 427 L consommés, 0 acheté sous ce nom) : libellé caisse générique sans achat homonyme ; le vin existe sous son appellation précise et le **bilan matière global** (total acheté − total consommé − stock = ${formatInt(BPD.synthese.disparu_net_l)} L) les neutralise par construction. **(2) Côté achats** (ex. « Arbois Béthanie » : achat 214,5 L < conso 309,9 L) : il s’agit d’**achats réels non encore rattachés** faute de correspondance de format, ici 169 L de Béthanie 37,5 cl alors que seuls les 75 cl ont été mappés (achat réel complet 383,3 L ⇒ manquant +73 L, normal). Au total **~253 L de vin** restent dans les achats non rattachés et doivent être réintégrés : une **table de correspondance libellés caisse ↔ factures** lèvera les deux cas et alignera les litres et les valeurs (le coût/CA affichés portent encore sur les seules lignes positives, soit ${formatInt(BPD.synthese.disparu_brut_l)} L). Le chiffre de référence (perte réelle) repose sur le bilan matière global et reste robuste, sous réserve de compléter la base d’achats.`,
+      texte: `Vérifié de notre côté : les lignes à manquant négatif ne viennent **pas** des avoirs (contrôlés ci-dessus) et recouvrent **deux cas**. **(1) Côté caisse** (ex. « Cubis de vin » : 427 L consommés, 0 acheté sous ce nom) : libellé caisse générique sans achat homonyme ; le vin existe sous son appellation précise et le **bilan matière global** (total acheté − total consommé − stock = ${formatInt(BPD.synthese.disparu_net_l)} L) les neutralise par construction. **(2) Côté achats** (ex. « Arbois Béthanie » : achat 214,5 L < conso 309,9 L) : il s’agit d’**achats réels non encore rattachés** faute de correspondance de format, ici 169 L de Béthanie 37,5 cl alors que seuls les 75 cl ont été mappés (achat réel complet 383,3 L ⇒ manquant +73 L, normal). La **table de correspondance libellés caisse ↔ factures** est déjà jointe au dossier (pièce « Correspondance libellés factures ↔ caisse ») et documente ces deux cas, dont le rattachement Béthanie 37,5 cl ⇒ 75 cl. Reste, côté pipeline, à y réintégrer les **~253 L de vin** encore en achats non rattachés, ce qui lèvera les négatifs et alignera litres et valeurs (le coût/CA affichés portent encore sur les seules lignes positives, soit ${formatInt(BPD.synthese.disparu_brut_l)} L). Le chiffre de référence (perte réelle) repose sur le bilan matière global et reste robuste.`,
     },
     {
       kind: 'tableau',
