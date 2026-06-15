@@ -16,6 +16,7 @@ OUT = os.path.normpath(os.path.join(ICI, "..", "..", "..", "public", "documents"
 os.makedirs(OUT, exist_ok=True)
 
 def Ji(n): return json.load(open(os.path.join(ICI, n), encoding="utf-8"))
+def Js(n): return json.load(open(os.path.join(SRCDATA, n), encoding="utf-8"))
 BPD = json.load(open(os.path.join(SRCDATA, "boissonsPageData.json"), encoding="utf-8"))
 
 H1 = Font(bold=True, size=13, color="FFFFFF"); FILL1 = PatternFill("solid", fgColor="1F3A5F")
@@ -231,6 +232,61 @@ def m6_quantite(wb):
     for d in dj["B_distribution_prix"]["top_prix"]:
         row(ws2, [d["prix"], d["part_ventes_pct"], d["part_suppr_pct"]])
 
+# ============================ CORRESPONDANCE LIBELLES =======================
+def c1_libelles(wb):
+    """Lien libelle facture fournisseur <-> libelle bouton caisse.
+    Prouve que le 'disparu par produit' du fisc est un artefact d'etiquetage :
+    boutons mutualises, boutons generiques et codes jamais parametres."""
+    sub = Js("boissons-detail-substitution.json")
+    gen = Js("boissons-detail-generiques.json")
+    dis = Js("analyse-disparus.json")
+
+    # --- Onglet 1 : boutons mutualises (achat 'disparu' -> bouton du frere sur-vendu)
+    ws = wb.active; ws.title = "Boutons mutualises"
+    widths(ws, {"A": 46, "B": 52, "C": 14, "D": 12})
+    ws_title(ws, "Boutons mutualises : libelle facture <-> bouton caisse", 4)
+    text_block(ws, sub["methode"], 4)
+    head(ws, sub["colonnes"])
+    for r in sub["lignes"]:
+        row(ws, r)
+    row(ws, [sub["totalLabel"], "", "", sub["totalValeur"]], b=True)
+    text_block(ws, sub["note"], 4)
+
+    # --- Onglet 2 : boutons generiques (un bouton encaisse plusieurs SKU)
+    ws2 = wb.create_sheet("Boutons generiques")
+    widths(ws2, {"A": 26, "B": 24, "C": 56, "D": 12})
+    ws_title(ws2, "Boutons generiques : un bouton caisse = plusieurs references achat", 4)
+    text_block(ws2, gen["methode"], 4)
+    head(ws2, gen["colonnes"])
+    for r in gen["lignes"]:
+        row(ws2, r)
+    row(ws2, [gen["totalLabel"], "", "", gen["totalValeur"]], b=True)
+    text_block(ws2, gen["note"], 4)
+
+    # --- Onglet 3 : codes fantomes (achats sans vente + ventes sans achat)
+    ws3 = wb.create_sheet("Codes fantomes")
+    widths(ws3, {"A": 34, "B": 22, "C": 18})
+    ws_title(ws3, "Codes jamais (ou mal) parametres : ni achat ni vente coherents", 3)
+    text_block(ws3,
+        "Le fisc dit ces produits '100 % achetes non vendus' : le volume qu'il declare "
+        "'disponible' ne correspond a aucun achat reel. Ce sont des codes crees mais jamais "
+        "utilises, pas des bouteilles evaporees.", 3)
+    head(ws3, ["Produit (libelle fisc)", "Fisc 'dispo' 22-23", "Achats reels (total)"])
+    for p in dis["produits100pctAchetes"]:
+        row(ws3, [p["nom"], p.get("fiscDispo2223") if p.get("fiscDispo2223") is not None else "aucun",
+                  p["achatsReelsTotal"]])
+    ws3.append([])
+    row(ws3, ["Ventes sans achat (cas miroir admis par le fisc)", "", ""], b=True)
+    head(ws3, ["Bouton caisse", "Constat fisc", "Achat reel correspondant"])
+    vsa = dis["ventesSansAchat"]
+    mc = vsa["bordeauxMoutonCadet"]
+    row(ws3, ["BORD. MOUTON CADET (ref. 1859)", mc["fisc"],
+              "0 achat (vrai bordeaux = Chateau Grand Renom, en stock)"])
+    hcn = vsa["hautesCotesDeNuits"]
+    ar = hcn["achatsReels"]
+    row(ws3, ["H.COTES DE NUITS (ref. 2022)", hcn["fisc"],
+              f"HC de Nuits BLANC 2022 : {ar.get('2022', 0)} bt (report sur H.C. de Beaune)"])
+
 # ============================ GENERATION + MANIFESTE ========================
 DOSSIER = "pieces-defense"
 PIECES = [
@@ -240,6 +296,7 @@ PIECES = [
     ("DB3", "Boissons-3-cuisine.xlsx", "Cuisine (alcool des plats)", "Alcool de chaque plat/entree/dessert/sauce + total par alcool.", "boisson", b3_cuisine),
     ("DB4", "Boissons-4-menus-par-periode.xlsx", "Menus par periode", "Composition alcool des menus par periode et probabilite de choix.", "boisson", b4_menus),
     ("DB5", "Boissons-5-conso-par-periode.xlsx", "Consommation par exercice", "Caisse + cuisine + menus + personnel par exercice : litres, cout, CA.", "boisson", b5_conso_periode),
+    ("DB6", "Boissons-6-correspondance-libelles.xlsx", "Correspondance libelles factures <-> caisse", "Lien libelle facture fournisseur <-> bouton caisse : boutons mutualises, generiques et codes fantomes (preuve que le 'disparu par produit' est un artefact d'etiquetage).", "boisson", c1_libelles),
     # methode / preuve de process
     ("DM1", "Methode-1-modele-Monte-Carlo.xlsx", "Modele d'incertitude (Monte Carlo)", "Parametres, resultats, sensibilite et signature du disparu.", "methode", m1_montecarlo),
     ("DM2", "Methode-2-correction-mapping-Cubis.xlsx", "Correction d'attribution (Cubis)", "Bug d'attribution du vin generique corrige, gain chiffre.", "methode", m2_cubis),
