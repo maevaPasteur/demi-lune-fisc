@@ -3,7 +3,7 @@
   "slug": "sur-versement-au-verre",
   "source": "scripts/rendu-final-reconstitution-bloc2.py",
   "grief": "Proposition p. 37-44 (methode 1/2) - doses au verre",
-  "litres_retenu": 1056
+  "litres_retenu": 1058
  },
  "sections": [
   {
@@ -52,10 +52,10 @@
    "lignes": [
     [
      {
-      "v": "Vins tranquilles au verre et au pichet"
+      "v": "Vins au verre et au pichet (y c. vin jaune, paille, macvin)"
      },
      {
-      "v": "3 446 L",
+      "v": "3 512 L",
       "align": "right"
      },
      {
@@ -63,7 +63,7 @@
       "align": "right"
      },
      {
-      "v": "813 L",
+      "v": "829 L",
       "align": "right"
      }
     ],
@@ -72,7 +72,7 @@
       "v": "Spiritueux, apéritifs et digestifs au verre"
      },
      {
-      "v": "128 L",
+      "v": "63 L",
       "align": "right"
      },
      {
@@ -80,7 +80,7 @@
       "align": "right"
      },
      {
-      "v": "26 L",
+      "v": "13 L",
       "align": "right"
      }
     ],
@@ -112,12 +112,12 @@
       "fw": 700
      },
      {
-      "v": "25,8 %",
+      "v": "25,9 %",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "1 056 L",
+      "v": "1 058 L",
       "align": "right",
       "fw": 700
      }
@@ -135,13 +135,13 @@
     },
     {
      "label": "Taux moyen",
-     "valeur": "25,8 %",
+     "valeur": "25,9 %",
      "sub": "moyenne pondérée des taux sources",
      "couleur": "teal"
     },
     {
      "label": "Sur-versement",
-     "valeur": "1 056 L",
+     "valeur": "1 058 L",
      "sub": "consommés, jamais vendus",
      "highlight": true,
      "couleur": "teal"
@@ -150,13 +150,13 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Le calcul, régime par régime, aux taux des sources.** Les **3 446 L** de vins tranquilles servis au verre et au pichet, au taux **+23,6 %** mesuré par [Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/), font **813 L**. Les **128 L** de spiritueux, apéritifs et digestifs servis au verre, au taux **+20,0 %** mesuré par [Wansink & van Ittersum, BMJ 2005](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/), font **26 L**. Enfin les **517 L** d’alcool des cocktails, au taux **+42,0 %** mesuré par [Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/) sur les mixed drinks, font **217 L**. **Total : 1 056 L** d’alcool consommé et **jamais vendu** sur trois ans."
+   "texte": "**Le calcul, régime par régime, aux taux des sources.** Les **3 512 L** de vins tranquilles servis au verre et au pichet, au taux **+23,6 %** mesuré par [Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/), font **829 L**. Les **63 L** de spiritueux, apéritifs et digestifs servis au verre, au taux **+20,0 %** mesuré par [Wansink & van Ittersum, BMJ 2005](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/), font **13 L**. Enfin les **517 L** d’alcool des cocktails, au taux **+42,0 %** mesuré par [Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/) sur les mixed drinks, font **217 L**. **Total : 1 058 L** d’alcool consommé et **jamais vendu** sur trois ans."
   },
   {
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "Aux taux **exacts mesurés par la littérature**, le service à la main sans doseur fait disparaître **1 056 L** d’alcool sur trois exercices. Ce volume est un **poste explicite de la cascade** de l’analyse « Boissons disparues » : ce n’est ni une vente, ni une disparition, c’est de l’alcool bu en plus de la dose facturée."
+   "texte": "Aux taux **exacts mesurés par la littérature**, le service à la main sans doseur fait disparaître **1 058 L** d’alcool sur trois exercices. Ce volume est un **poste explicite de la cascade** de l’analyse « Boissons disparues » : ce n’est ni une vente, ni une disparition, c’est de l’alcool bu en plus de la dose facturée."
   },
   {
    "kind": "piecejointe",

@@ -471,7 +471,7 @@ const autresGriefs: Grief[] = [
     titre: 'Sur-versement au verre',
     griefFisc: 'La méthode retient des doses théoriques exactes, sans tenir compte du sur-versement réel.',
     reponseCourte:
-      'Sans doseur, le service à la main dépasse la dose, aux taux mesurés par la littérature : vin +23,6 % et cocktails +42 % (Kerr 2008), spiritueux +20 % (Wansink, BMJ 2005). Sur 4 091 L servis à la main (hors bière et crémant), cela fait 1 056 L d’alcool consommé et jamais vendu sur 3 ans.',
+      'Sans doseur, le service à la main dépasse la dose, aux taux mesurés par la littérature : vin +23,6 % et cocktails +42 % (Kerr 2008), spiritueux +20 % (Wansink, BMJ 2005). Sur 4 091 L servis à la main (hors bière et crémant), cela fait 1 058 L d’alcool consommé et jamais vendu sur 3 ans.',
     statut: 'partiel',
     sections: RFSurversement.sections as unknown as Section[],
   },

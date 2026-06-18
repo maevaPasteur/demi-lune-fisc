@@ -96,8 +96,8 @@ O_alc = round(1 * JOURS * 0.06, 1)  # aperitifs offerts
 # EXPLICITES de la cascade pour que /analyses/boissons-disparues et le rendu
 # final affichent strictement les memes chiffres. Le residuel devient alors la
 # seule perte IRREDUCTIBLE (casse, evaporation, fonds de verre, rincage).
-SURVERSEMENT_L = 1056   # free-pour aux taux SOURCES (hors biere et hors cremant) :
-#                         vins +23,6% (Kerr 2008) + spiritueux +20% (Wansink BMJ 2005) + cocktails +42% (Kerr)
+SURVERSEMENT_L = 1058   # free-pour aux taux SOURCES (hors biere et hors cremant) :
+#                         vins +23,6% (Kerr 2008, macvin inclus) + spiritueux +20% (Wansink BMJ 2005) + cocktails +42% (Kerr)
 CREMANT_JETE_L = 260    # bouteille de cremant eventee jetee en fin de jour (niveau journalier, annexe C, +23,6%)
 CREMANT_SURVERSE_L = 87  # sur-versement propre au cremant (+23,6%), distinct du jete, sorti du poste surversement general
 DEGUSTATION_L = 126     # 2 cl offerts, comptes NOTE PAR NOTE (annexe C) : 6 292 degustations (1/vin/note)

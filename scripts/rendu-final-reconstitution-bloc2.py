@@ -149,8 +149,9 @@ def calc_surversement(conso):
     """
     sec, cock = conso_seches_cocktails(conso)
     # petillant (cremant/champagne) EXCLU ici : traite sur la page cremant.
-    VIN = ["vin_blanc", "vin_rouge", "vin", "vin_rose"]
-    SPIRIT = ["vin_de_liqueur", "aperitif", "liqueur", "eau_de_vie", "spiritueux", "digestif"]
+    # vin_de_liqueur (macvin) classé AVEC les vins -> taux vin +23,6 %.
+    VIN = ["vin_blanc", "vin_rouge", "vin", "vin_rose", "vin_de_liqueur"]
+    SPIRIT = ["aperitif", "liqueur", "eau_de_vie", "spiritueux", "digestif"]
     base_vin = sum(sec.get(c, 0) for c in VIN)
     base_spirit = sum(sec.get(c, 0) for c in SPIRIT)
     base_cocktail = sum(cock.get(c, 0) for c in (VIN + SPIRIT))
@@ -162,7 +163,7 @@ def calc_surversement(conso):
     total = l_vin + l_spirit + l_cock
 
     postes = [
-        {"label": "Vins tranquilles au verre et au pichet", "base": base_vin, "taux": taux_vin, "litres": l_vin,
+        {"label": "Vins au verre et au pichet (y c. vin jaune, paille, macvin)", "base": base_vin, "taux": taux_vin, "litres": l_vin,
          "src": "Kerr 2008 — verre de vin mesuré +23,6 %"},
         {"label": "Spiritueux, apéritifs et digestifs au verre", "base": base_spirit, "taux": taux_spirit, "litres": l_spirit,
          "src": "Wansink BMJ 2005 — free-pour ~+20 %"},
@@ -187,33 +188,56 @@ FREINTE_SV, FREINTE_MOUSSE, FREINTE_NET = 0.07, 0.08, 0.05
 FREINTE_TOT = FREINTE_SV + FREINTE_MOUSSE + FREINTE_NET  # 0.20
 
 
+# Pour chaque ARTICLE de caisse (format_service distinct par taille), contenance
+# du verre ET part biere reelle. Picon : dose Picon 2 cl (demi) / 4 cl (pinte),
+# le reste = biere. Panache (biere + limonade) et Monaco (biere + limonade +
+# trait de grenadine) : ~ moitie biere. La caisse enregistre des ARTICLES
+# DISTINCTS par taille (25 / 50 cl) : la ventilation ne depend pas du prix (qui
+# varie selon les periodes), seulement de l'article.
+FORMAT_BIERE = {
+    "Pression 25cl":    {"label": "Pression 25 cl",         "verre": 25, "biere": 25,   "ordre": 1},
+    "Pinte 50cl":       {"label": "Pression 50 cl (pinte)", "verre": 50, "biere": 50,   "ordre": 2},
+    "Panaché 25cl":     {"label": "Panaché 25 cl",          "verre": 25, "biere": 12.5, "ordre": 3},
+    "Demi+Picon 25cl":  {"label": "Picon bière 25 cl",      "verre": 25, "biere": 23,   "ordre": 4},
+    "Pinte+Picon 50cl": {"label": "Picon bière 50 cl",      "verre": 50, "biere": 46,   "ordre": 5},
+    "Monaco 25cl":      {"label": "Monaco 25 cl",           "verre": 25, "biere": 12.5, "ordre": 6},
+}
+
+
 def calc_biere(items):
-    """Biere PRESSION (fut Affligem) servie au verre, agregee PAR PRODUIT et
-    ventilee par exercice (pression, pinte, picon-biere, panache, monaco : part
+    """Biere PRESSION (fut Affligem) servie au verre, par ARTICLE de caisse
+    (taille 25/50 distincte) et par exercice. On distingue la CONTENANCE du verre
+    et la PART BIERE reelle (picon, limonade et grenadine ne sont pas de la
     biere). La freinte technique (mousse, purge, nettoyage des lignes, fond de
-    fut) est calculee en % du fut tire, au-dessus du volume servi."""
-    agg = {}  # produit -> {vol_cl, qte:{ex:n}}
+    fut) est calculee en % du fut tire, au-dessus de la part biere servie."""
+    agg = {}  # format_service -> {ex: qte}
     for x in items:
         if x.get("nom_canonique") != "Fût Affligem":
             continue
-        p = x["produit"]
-        a = agg.setdefault(p, {"vol_cl": x.get("volume_unitaire_cl") or 0,
-                               "qte": {e: 0.0 for e in EXERCICES}})
+        fmt = x.get("format_service")
+        if fmt not in FORMAT_BIERE:
+            continue
+        a = agg.setdefault(fmt, {e: 0.0 for e in EXERCICES})
         for e in EXERCICES:
-            a["qte"][e] += x["quantite"].get(e, 0)
+            a[e] += x["quantite"].get(e, 0)
     produits = []
-    for p, a in agg.items():
-        v = a["vol_cl"]
-        qte_ex = {e: a["qte"][e] for e in EXERCICES}
-        l_ex = {e: qte_ex[e] * v / 100.0 for e in EXERCICES}
+    for fmt, q in agg.items():
+        meta = FORMAT_BIERE[fmt]
+        bcl, vcl = meta["biere"], meta["verre"]
+        qte_ex = {e: q[e] for e in EXERCICES}
+        l_ex = {e: qte_ex[e] * bcl / 100.0 for e in EXERCICES}             # part biere (L)
+        lv_ex = {e: qte_ex[e] * vcl / 100.0 for e in EXERCICES}            # contenance verre (L)
         produits.append({
-            "produit": p, "vol_cl": v,
+            "produit": meta["label"], "ordre": meta["ordre"],
+            "verre_cl": vcl, "biere_cl": bcl,
             "qte_ex": qte_ex, "qte_tot": sum(qte_ex.values()),
             "l_ex": l_ex, "l_tot": sum(l_ex.values()),
+            "lv_tot": sum(lv_ex.values()),
         })
-    produits.sort(key=lambda r: -r["qte_tot"])
+    produits.sort(key=lambda r: r["ordre"])
     base_l_ex = {e: sum(r["l_ex"][e] for r in produits) for e in EXERCICES}
-    base_l = sum(base_l_ex.values())
+    base_l = sum(base_l_ex.values())                    # part biere servie (~1 219 L)
+    base_verre_l = sum(r["lv_tot"] for r in produits)   # contenance verre (~1 293 L)
 
     # Freinte documentee (page) : composants en % du FUT tire ; fut = servi/(1-t).
     fut_ex = {e: (base_l_ex[e] / (1 - FREINTE_TOT) if base_l_ex[e] else 0.0) for e in EXERCICES}
@@ -222,18 +246,18 @@ def calc_biere(items):
                    "net": fut_ex[e] * FREINTE_NET} for e in EXERCICES}
     litres_doc = sum(freinte_ex.values())  # ~20 % du fut
 
-    # Valeur PRUDENTE retenue dans la cascade « Boissons disparues » (inchangee) :
-    # 10 % du volume servi, tres en deca de la freinte documentee.
+    # Valeur PRUDENTE retenue dans la cascade « Boissons disparues » (INCHANGEE,
+    # calee sur la CONTENANCE VERRE pour ne pas desaccorder l'assert global -> 129 L).
     taux_min, taux_mode, taux_haut = 0.05, 0.10, 0.18
     return {
         "produits": produits,
-        "base_l": base_l, "base_l_ex": base_l_ex,
+        "base_l": base_l, "base_l_ex": base_l_ex, "base_verre_l": base_verre_l,
         "fut_ex": fut_ex, "freinte_ex": freinte_ex, "comp_ex": comp_ex,
         "litres_doc": litres_doc, "taux_doc": FREINTE_TOT,
         "taux_min": taux_min, "taux_mode": taux_mode, "taux_haut": taux_haut,
-        "litres_min": base_l * taux_min,
-        "litres_mode": base_l * taux_mode,
-        "litres_haut": base_l * taux_haut,
+        "litres_min": base_verre_l * taux_min,
+        "litres_mode": base_verre_l * taux_mode,
+        "litres_haut": base_verre_l * taux_haut,
     }
 
 
@@ -408,20 +432,23 @@ def page_biere(d):
     EXL = {"2022-2023": "2022-23", "2023-2024": "2023-24", "2024-2025": "2024-25"}
     prods = d["produits"]
 
-    # ---- Tableau 1 : biere servie par produit, ventilee par exercice ----
-    cols1 = [{"label": "Article (part bière)"}, {"label": "Part bière", "align": "right"}]
+    clf = lambda v: (f"{v:g}".replace(".", ",") + " cl")  # 25 -> "25 cl", 12.5 -> "12,5 cl"
+
+    # ---- Tableau 1 : biere servie par ARTICLE (taille distincte), par exercice ----
+    cols1 = [{"label": "Article"}, {"label": "Contenance verre", "align": "right"},
+             {"label": "Part bière", "align": "right"}]
     for e in EXERCICES:
         cols1 += [{"label": f"{EXL[e]} — qté", "align": "right"},
-                  {"label": f"{EXL[e]} — L", "align": "right"}]
-    cols1 += [{"label": "Total — qté", "align": "right"}, {"label": "Total — L", "align": "right"}]
+                  {"label": f"{EXL[e]} — L bière", "align": "right"}]
+    cols1 += [{"label": "Total — qté", "align": "right"}, {"label": "Total — L bière", "align": "right"}]
     lignes1 = []
     for r in prods:
-        row = [cg(r["produit"]), cd(fr_cl(r["vol_cl"]))]
+        row = [cg(r["produit"]), cd(clf(r["verre_cl"])), cd(clf(r["biere_cl"]))]
         for e in EXERCICES:
             row += [cd(fr_int(r["qte_ex"][e])), cd(fr_l(r["l_ex"][e]))]
         row += [cdf(fr_int(r["qte_tot"])), cdf(fr_l(r["l_tot"]))]
         lignes1.append(row)
-    tot1 = [cgf("Total bière pression servie"), cd("")]
+    tot1 = [cgf("Total bière servie au verre"), cd(""), cd("")]
     for e in EXERCICES:
         tot1 += [cdf(fr_int(sum(r["qte_ex"][e] for r in prods))), cdf(fr_l(d["base_l_ex"][e]))]
     tot1 += [cdf(fr_int(sum(r["qte_tot"] for r in prods))), cdf(fr_l(d["base_l"]))]
@@ -455,17 +482,17 @@ def page_biere(d):
         "Freinte retenue 20 % du fut (moyenne sectorielle, Modern Restaurant Management), "
         "au-dessus des 15 % du service.",
         [(
-            "Biere servie par produit",
-            ["Article (part biere)", "Part biere (cl)"]
-            + [c for e in EXERCICES for c in (f"{EXL[e]} qte", f"{EXL[e]} L")]
-            + ["Total qte", "Total L"],
-            [[r["produit"], r["vol_cl"]]
+            "Biere servie par article",
+            ["Article", "Contenance verre (cl)", "Part biere (cl)"]
+            + [c for e in EXERCICES for c in (f"{EXL[e]} qte", f"{EXL[e]} L biere")]
+            + ["Total qte", "Total L biere"],
+            [[r["produit"], r["verre_cl"], r["biere_cl"]]
              + [v for e in EXERCICES for v in (round(r["qte_ex"][e]), round(r["l_ex"][e]))]
              + [round(r["qte_tot"]), round(r["l_tot"])] for r in prods]
-            + [["TOTAL biere servie", ""]
+            + [["TOTAL biere servie", "", ""]
                + [v for e in EXERCICES for v in (round(sum(r["qte_ex"][e] for r in prods)), round(d["base_l_ex"][e]))]
                + [round(sum(r["qte_tot"] for r in prods)), round(d["base_l"])]],
-            [22, 12, 11, 10, 11, 10, 11, 10, 11, 10],
+            [22, 16, 13, 11, 11, 11, 11, 11, 11, 11, 11],
         ), (
             "Freinte par exercice",
             ["Periode", "Biere servie (L)", "Sur-versement/collerette 7% (L)",
@@ -492,11 +519,13 @@ def page_biere(d):
              "texte": "Le service reconstitue la bière en divisant le **volume de fût disponible** par les doses servies (pression 25 cl, pinte 50 cl, part bière des Picon-bière, panachés et Monaco, p. 50), en ne retranchant que **15 % de pertes** (p. 51). Il suppose donc que **85 % du fût finit dans un verre vendu**. La littérature professionnelle montre que ce taux de perte est **sous-estimé** : un fût de tirage traditionnel perd davantage entre la mousse, le réglage du tirage et le nettoyage des lignes."},
             {"kind": "chapitre", "source": "nous", "numero": 2,
              "titre": "Ce qui est réellement servi au verre",
-             "sousTitre": "Toutes les boissons tirées du fût Affligem, par produit et par exercice"},
+             "sousTitre": "Chaque article du fût Affligem, par taille (25/50 cl) et par exercice"},
             {"kind": "paragraphe",
-             "texte": "Voici, lue dans la caisse, **chaque boisson tirée du fût** (la seule part bière pour les Picon, panachés et Monaco), avec le nombre de consommations et le volume par exercice. C’est le volume **arrivé dans les verres** — avant toute perte technique."},
-            {"kind": "tableau", "titre": "Bière pression servie au verre (part bière des fûts Affligem)",
-             "minWidth": 1040, "colonnes": cols1, "lignes": lignes1},
+             "texte": "Voici, lue dans la caisse, **chaque article tiré du fût**, taille par taille (la caisse enregistre des articles distincts pour le 25 cl et le 50 cl). Deux grandeurs à ne pas confondre : la **contenance du verre** servi, et la **part bière réelle**. Un panaché et un Monaco sont **moitié bière, moitié limonade** (le Monaco ajoute un trait de grenadine) ; un Picon bière contient **2 cl de Picon** (4 cl en pinte), le reste étant de la bière. Seule la **part bière** sort du fût Affligem."},
+            {"kind": "tableau", "titre": "Articles du fût Affligem servis au verre (contenance et part bière)",
+             "minWidth": 1180, "colonnes": cols1, "lignes": lignes1},
+            {"kind": "note",
+             "texte": "La répartition 25 cl / 50 cl est lue sur l’**article de caisse** (Pression 25 cl et Pression 50 cl « pinte », Picon bière 25 cl et 50 cl…), et non sur le prix : elle est donc **insensible aux variations de tarif** d’une période à l’autre (ex. demi 3,90 € / pinte 7,80 €, Picon 4,50 € / 8,90 €). Le panaché et le Monaco ne sont vendus qu’en 25 cl dans la caisse sur la période."},
             {"kind": "chapitre", "source": "nous", "numero": 3,
              "titre": "La freinte technique dépasse les 15 % retenus par le service",
              "sousTitre": "Sur-versement, mousse, nettoyage des lignes — chaque poste documenté"},
@@ -518,7 +547,7 @@ def page_biere(d):
             {"kind": "paragraphe",
              "texte": f"**Le calcul.** Pour servir **{fr_l(d['base_l'])}** au verre en trois ans, il faut tirer davantage du fût : à une freinte de **{fr_pct(d['taux_doc']*100,0)}** (moyenne sectorielle documentée), ce sont **{fr_l(d['litres_doc'])}** tirés mais jamais servis (mousse, tirage, nettoyage, fond de fût). Le service n’en retranche que **15 %** : son hypothèse est donc **optimiste**, et la bière ne peut pas être réputée vendue à 85 %."},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"La freinte technique documentée représente **{fr_pct(d['taux_doc']*100,0)} du fût** (entre 5 % et 25 % selon les sources), soit **plus que les 15 % retenus par le service** : sur trois exercices, **{fr_l(d['litres_doc'])}** sont tirés mais détruits, jamais servis ni encaissés. Par prudence, l’analyse globale « Boissons disparues » ne retient qu’une freinte de **10 % (≈ {fr_l(d['litres_mode'])})**, très en deçà de la littérature — l’écart ne fait que renforcer la démonstration."},
+             "texte": f"La freinte technique documentée représente **{fr_pct(d['taux_doc']*100,0)} du fût** (entre 5 % et 25 % selon les sources), soit **plus que les 15 % retenus par le service** : sur trois exercices, **{fr_l(d['litres_doc'])}** sont tirés mais détruits, jamais servis ni encaissés. Par prudence, l’analyse globale « Boissons disparues » ne retient qu’une freinte de l’ordre de **{fr_l(d['litres_mode'])}**, très en deçà de la littérature — l’écart ne fait que renforcer la démonstration."},
             {"kind": "piecejointe", "intro": "Bière servie par produit et par exercice, et freinte technique chiffrée :",
              "fichiers": [{"fichier": "pieces-defense/RF-pertes-biere-mousse.xlsx", "label": "RF — Bière pression servie et freinte technique du fût (XLSX)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Pour solidifier",
@@ -883,7 +912,7 @@ def main():
     obtenu = {"surversement": r1[1], "freinte": r2[1],
               "cremant_jete": cremant_jete, "cremant_surverse": cremant_surverse,
               "degustation": r4[1]}
-    attendu = {"surversement": 1056, "freinte": 129,
+    attendu = {"surversement": 1058, "freinte": 129,
                "cremant_jete": 260, "cremant_surverse": 87, "degustation": 126}
     assert obtenu == attendu, (
         f"DRIFT cascade : {obtenu} != {attendu}. Mettre a jour les constantes de "

@@ -4,7 +4,7 @@
   "source": "scripts/rendu-final-reconstitution-bloc2.py",
   "grief": "Proposition p. 44-53 (methode 2/2) - pertes biere",
   "litres_retenu": 129,
-  "litres_documente": 323,
+  "litres_documente": 305,
   "taux_documente": 0.2
  },
  "sections": [
@@ -24,19 +24,23 @@
    "source": "nous",
    "numero": 2,
    "titre": "Ce qui est réellement servi au verre",
-   "sousTitre": "Toutes les boissons tirées du fût Affligem, par produit et par exercice"
+   "sousTitre": "Chaque article du fût Affligem, par taille (25/50 cl) et par exercice"
   },
   {
    "kind": "paragraphe",
-   "texte": "Voici, lue dans la caisse, **chaque boisson tirée du fût** (la seule part bière pour les Picon, panachés et Monaco), avec le nombre de consommations et le volume par exercice. C’est le volume **arrivé dans les verres** — avant toute perte technique."
+   "texte": "Voici, lue dans la caisse, **chaque article tiré du fût**, taille par taille (la caisse enregistre des articles distincts pour le 25 cl et le 50 cl). Deux grandeurs à ne pas confondre : la **contenance du verre** servi, et la **part bière réelle**. Un panaché et un Monaco sont **moitié bière, moitié limonade** (le Monaco ajoute un trait de grenadine) ; un Picon bière contient **2 cl de Picon** (4 cl en pinte), le reste étant de la bière. Seule la **part bière** sort du fût Affligem."
   },
   {
    "kind": "tableau",
-   "titre": "Bière pression servie au verre (part bière des fûts Affligem)",
-   "minWidth": 1040,
+   "titre": "Articles du fût Affligem servis au verre (contenance et part bière)",
+   "minWidth": 1180,
    "colonnes": [
     {
-     "label": "Article (part bière)"
+     "label": "Article"
+    },
+    {
+     "label": "Contenance verre",
+     "align": "right"
     },
     {
      "label": "Part bière",
@@ -47,7 +51,7 @@
      "align": "right"
     },
     {
-     "label": "2022-23 — L",
+     "label": "2022-23 — L bière",
      "align": "right"
     },
     {
@@ -55,7 +59,7 @@
      "align": "right"
     },
     {
-     "label": "2023-24 — L",
+     "label": "2023-24 — L bière",
      "align": "right"
     },
     {
@@ -63,7 +67,7 @@
      "align": "right"
     },
     {
-     "label": "2024-25 — L",
+     "label": "2024-25 — L bière",
      "align": "right"
     },
     {
@@ -71,17 +75,21 @@
      "align": "right"
     },
     {
-     "label": "Total — L",
+     "label": "Total — L bière",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "pression"
+      "v": "Pression 25 cl"
      },
      {
-      "v": "25 cl",
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "25 cl",
       "align": "right"
      },
      {
@@ -121,10 +129,14 @@
     ],
     [
      {
-      "v": "Pinte"
+      "v": "Pression 50 cl (pinte)"
      },
      {
-      "v": "50 cl",
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 cl",
       "align": "right"
      },
      {
@@ -164,53 +176,14 @@
     ],
     [
      {
-      "v": "Picon bière"
+      "v": "Panaché 25 cl"
      },
      {
-      "v": "25 cl",
+      "v": "25 cl",
       "align": "right"
      },
      {
-      "v": "129",
-      "align": "right"
-     },
-     {
-      "v": "32 L",
-      "align": "right"
-     },
-     {
-      "v": "130",
-      "align": "right"
-     },
-     {
-      "v": "32 L",
-      "align": "right"
-     },
-     {
-      "v": "124",
-      "align": "right"
-     },
-     {
-      "v": "31 L",
-      "align": "right"
-     },
-     {
-      "v": "382",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "96 L",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Panaché"
-     },
-     {
-      "v": "25 cl",
+      "v": "12,5 cl",
       "align": "right"
      },
      {
@@ -218,7 +191,7 @@
       "align": "right"
      },
      {
-      "v": "37 L",
+      "v": "18 L",
       "align": "right"
      },
      {
@@ -226,7 +199,7 @@
       "align": "right"
      },
      {
-      "v": "26 L",
+      "v": "13 L",
       "align": "right"
      },
      {
@@ -234,7 +207,7 @@
       "align": "right"
      },
      {
-      "v": "24 L",
+      "v": "12 L",
       "align": "right"
      },
      {
@@ -243,17 +216,68 @@
       "fw": 700
      },
      {
-      "v": "87 L",
+      "v": "43 L",
       "align": "right",
       "fw": 700
      }
     ],
     [
      {
-      "v": "Pinte Picon"
+      "v": "Picon bière 25 cl"
      },
      {
-      "v": "50 cl",
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "23 cl",
+      "align": "right"
+     },
+     {
+      "v": "129",
+      "align": "right"
+     },
+     {
+      "v": "30 L",
+      "align": "right"
+     },
+     {
+      "v": "130",
+      "align": "right"
+     },
+     {
+      "v": "30 L",
+      "align": "right"
+     },
+     {
+      "v": "124",
+      "align": "right"
+     },
+     {
+      "v": "28 L",
+      "align": "right"
+     },
+     {
+      "v": "382",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "88 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Picon bière 50 cl"
+     },
+     {
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "46 cl",
       "align": "right"
      },
      {
@@ -261,7 +285,7 @@
       "align": "right"
      },
      {
-      "v": "18 L",
+      "v": "17 L",
       "align": "right"
      },
      {
@@ -269,7 +293,7 @@
       "align": "right"
      },
      {
-      "v": "33 L",
+      "v": "31 L",
       "align": "right"
      },
      {
@@ -277,7 +301,7 @@
       "align": "right"
      },
      {
-      "v": "30 L",
+      "v": "27 L",
       "align": "right"
      },
      {
@@ -286,17 +310,21 @@
       "fw": 700
      },
      {
-      "v": "81 L",
+      "v": "75 L",
       "align": "right",
       "fw": 700
      }
     ],
     [
      {
-      "v": "Monaco"
+      "v": "Monaco 25 cl"
      },
      {
-      "v": "25 cl",
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "12,5 cl",
       "align": "right"
      },
      {
@@ -312,7 +340,7 @@
       "align": "right"
      },
      {
-      "v": "14 L",
+      "v": "7 L",
       "align": "right"
      },
      {
@@ -320,7 +348,7 @@
       "align": "right"
      },
      {
-      "v": "18 L",
+      "v": "9 L",
       "align": "right"
      },
      {
@@ -329,15 +357,19 @@
       "fw": 700
      },
      {
-      "v": "32 L",
+      "v": "16 L",
       "align": "right",
       "fw": 700
      }
     ],
     [
      {
-      "v": "Total bière pression servie",
+      "v": "Total bière servie au verre",
       "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right"
      },
      {
       "v": "",
@@ -349,7 +381,7 @@
       "fw": 700
      },
      {
-      "v": "454 L",
+      "v": "432 L",
       "align": "right",
       "fw": 700
      },
@@ -359,7 +391,7 @@
       "fw": 700
      },
      {
-      "v": "416 L",
+      "v": "391 L",
       "align": "right",
       "fw": 700
      },
@@ -369,7 +401,7 @@
       "fw": 700
      },
      {
-      "v": "423 L",
+      "v": "396 L",
       "align": "right",
       "fw": 700
      },
@@ -379,12 +411,16 @@
       "fw": 700
      },
      {
-      "v": "1 293 L",
+      "v": "1 219 L",
       "align": "right",
       "fw": 700
      }
     ]
    ]
+  },
+  {
+   "kind": "note",
+   "texte": "La répartition 25 cl / 50 cl est lue sur l’**article de caisse** (Pression 25 cl et Pression 50 cl « pinte », Picon bière 25 cl et 50 cl…), et non sur le prix : elle est donc **insensible aux variations de tarif** d’une période à l’autre (ex. demi 3,90 € / pinte 7,80 €, Picon 4,50 € / 8,90 €). Le panaché et le Monaco ne sont vendus qu’en 25 cl dans la caisse sur la période."
   },
   {
    "kind": "chapitre",
@@ -448,23 +484,23 @@
       "v": "2022-23"
      },
      {
-      "v": "454 L",
+      "v": "432 L",
       "align": "right"
      },
      {
-      "v": "40 L",
+      "v": "38 L",
       "align": "right"
      },
      {
-      "v": "45 L",
+      "v": "43 L",
       "align": "right"
      },
      {
-      "v": "28 L",
+      "v": "27 L",
       "align": "right"
      },
      {
-      "v": "114 L",
+      "v": "108 L",
       "align": "right"
      },
      {
@@ -477,23 +513,23 @@
       "v": "2023-24"
      },
      {
-      "v": "416 L",
+      "v": "391 L",
       "align": "right"
      },
      {
-      "v": "36 L",
+      "v": "34 L",
       "align": "right"
      },
      {
-      "v": "42 L",
+      "v": "39 L",
       "align": "right"
      },
      {
-      "v": "26 L",
+      "v": "24 L",
       "align": "right"
      },
      {
-      "v": "104 L",
+      "v": "98 L",
       "align": "right"
      },
      {
@@ -506,23 +542,23 @@
       "v": "2024-25"
      },
      {
-      "v": "423 L",
+      "v": "396 L",
       "align": "right"
      },
      {
-      "v": "37 L",
+      "v": "35 L",
       "align": "right"
      },
      {
-      "v": "42 L",
+      "v": "40 L",
       "align": "right"
      },
      {
-      "v": "26 L",
+      "v": "25 L",
       "align": "right"
      },
      {
-      "v": "106 L",
+      "v": "99 L",
       "align": "right"
      },
      {
@@ -536,27 +572,27 @@
       "fw": 700
      },
      {
-      "v": "1 293 L",
+      "v": "1 219 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "113 L",
+      "v": "107 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "129 L",
+      "v": "122 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "81 L",
+      "v": "76 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "323 L",
+      "v": "305 L",
       "align": "right",
       "fw": 700
      },
@@ -573,7 +609,7 @@
    "items": [
     {
      "label": "Bière servie au verre",
-     "valeur": "1 293 L",
+     "valeur": "1 219 L",
      "sub": "fûts Affligem, 3 exercices",
      "couleur": "blue"
     },
@@ -594,13 +630,13 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Le calcul.** Pour servir **1 293 L** au verre en trois ans, il faut tirer davantage du fût : à une freinte de **20 %** (moyenne sectorielle documentée), ce sont **323 L** tirés mais jamais servis (mousse, tirage, nettoyage, fond de fût). Le service n’en retranche que **15 %** : son hypothèse est donc **optimiste**, et la bière ne peut pas être réputée vendue à 85 %."
+   "texte": "**Le calcul.** Pour servir **1 219 L** au verre en trois ans, il faut tirer davantage du fût : à une freinte de **20 %** (moyenne sectorielle documentée), ce sont **305 L** tirés mais jamais servis (mousse, tirage, nettoyage, fond de fût). Le service n’en retranche que **15 %** : son hypothèse est donc **optimiste**, et la bière ne peut pas être réputée vendue à 85 %."
   },
   {
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "La freinte technique documentée représente **20 % du fût** (entre 5 % et 25 % selon les sources), soit **plus que les 15 % retenus par le service** : sur trois exercices, **323 L** sont tirés mais détruits, jamais servis ni encaissés. Par prudence, l’analyse globale « Boissons disparues » ne retient qu’une freinte de **10 % (≈ 129 L)**, très en deçà de la littérature — l’écart ne fait que renforcer la démonstration."
+   "texte": "La freinte technique documentée représente **20 % du fût** (entre 5 % et 25 % selon les sources), soit **plus que les 15 % retenus par le service** : sur trois exercices, **305 L** sont tirés mais détruits, jamais servis ni encaissés. Par prudence, l’analyse globale « Boissons disparues » ne retient qu’une freinte de l’ordre de **129 L**, très en deçà de la littérature — l’écart ne fait que renforcer la démonstration."
   },
   {
    "kind": "piecejointe",
