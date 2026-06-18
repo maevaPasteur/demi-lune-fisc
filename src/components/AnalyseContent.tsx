@@ -990,29 +990,43 @@ function SectionView({ section }: { section: Section }) {
               <Table verticalSpacing="sm" highlightOnHover withRowBorders>
               <Table.Thead>
                 <Table.Tr>
-                  {section.colonnes.map((col) => (
-                    <Table.Th key={col.label} ta={col.align ?? 'left'}>
-                      <Text size="xs" tt="uppercase" c="dimmed" fw={600}>
-                        {col.label}
-                      </Text>
-                    </Table.Th>
-                  ))}
+                  {section.colonnes.map((col, ci) => {
+                    const c = (typeof col === 'string' ? { label: col } : col) as {
+                      label: string
+                      align?: 'left' | 'right' | 'center'
+                    }
+                    return (
+                      <Table.Th key={ci} ta={c.align ?? 'left'}>
+                        <Text size="xs" tt="uppercase" c="dimmed" fw={600}>
+                          {c.label}
+                        </Text>
+                      </Table.Th>
+                    )
+                  })}
                 </Table.Tr>
               </Table.Thead>
               <Table.Tbody>
                 {section.lignes.map((ligne, ri) => (
                   <Table.Tr key={ri}>
-                    {ligne.map((cell, ci) => (
-                      <Table.Td key={ci} ta={cell.align ?? 'left'} fw={cell.fw}>
-                        {cell.badge ? (
-                          <Badge color={cell.badge === 'ok' ? 'teal' : 'red'} variant="light" radius="sm">
-                            {cell.v}
-                          </Badge>
-                        ) : (
-                          cell.v
-                        )}
-                      </Table.Td>
-                    ))}
+                    {ligne.map((rawCell, ci) => {
+                      const cell = (typeof rawCell === 'string' ? { v: rawCell } : rawCell) as {
+                        v: string
+                        align?: 'left' | 'right' | 'center'
+                        fw?: number
+                        badge?: 'ok' | 'ko'
+                      }
+                      return (
+                        <Table.Td key={ci} ta={cell.align ?? 'left'} fw={cell.fw}>
+                          {cell.badge ? (
+                            <Badge color={cell.badge === 'ok' ? 'teal' : 'red'} variant="light" radius="sm">
+                              {cell.v}
+                            </Badge>
+                          ) : (
+                            cell.v
+                          )}
+                        </Table.Td>
+                      )
+                    })}
                   </Table.Tr>
                 ))}
               </Table.Tbody>

@@ -46,55 +46,170 @@
       "kind": "tableau",
       "titre": "Ventilation de la TVA collectee par taux et par exercice (annexe G)",
       "colonnes": [
-        "Exercice",
-        "Base HT 10 %",
-        "TVA 10 %",
-        "Base HT 20 %",
-        "TVA 20 %",
-        "TVA totale",
-        "Part 10 %",
-        "Part 20 %"
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Base HT 10 %",
+          "align": "right"
+        },
+        {
+          "label": "TVA 10 %",
+          "align": "right"
+        },
+        {
+          "label": "Base HT 20 %",
+          "align": "right"
+        },
+        {
+          "label": "TVA 20 %",
+          "align": "right"
+        },
+        {
+          "label": "TVA totale",
+          "align": "right"
+        },
+        {
+          "label": "Part 10 %",
+          "align": "right"
+        },
+        {
+          "label": "Part 20 %",
+          "align": "right"
+        }
       ],
       "lignes": [
         [
-          "Ex. clos 31/03/2023",
-          "296 111,00 €",
-          "29 611,10 €",
-          "64 708,30 €",
-          "12 941,66 €",
-          "42 552,76 €",
-          "69,6 %",
-          "30,4 %"
+          {
+            "v": "Ex. clos 31/03/2023"
+          },
+          {
+            "v": "296 111,00 €",
+            "align": "right"
+          },
+          {
+            "v": "29 611,10 €",
+            "align": "right"
+          },
+          {
+            "v": "64 708,30 €",
+            "align": "right"
+          },
+          {
+            "v": "12 941,66 €",
+            "align": "right"
+          },
+          {
+            "v": "42 552,76 €",
+            "align": "right"
+          },
+          {
+            "v": "69,6 %",
+            "align": "right"
+          },
+          {
+            "v": "30,4 %",
+            "align": "right"
+          }
         ],
         [
-          "Ex. clos 31/03/2024",
-          "319 174,40 €",
-          "31 917,44 €",
-          "72 413,20 €",
-          "14 482,64 €",
-          "46 400,08 €",
-          "68,8 %",
-          "31,2 %"
+          {
+            "v": "Ex. clos 31/03/2024"
+          },
+          {
+            "v": "319 174,40 €",
+            "align": "right"
+          },
+          {
+            "v": "31 917,44 €",
+            "align": "right"
+          },
+          {
+            "v": "72 413,20 €",
+            "align": "right"
+          },
+          {
+            "v": "14 482,64 €",
+            "align": "right"
+          },
+          {
+            "v": "46 400,08 €",
+            "align": "right"
+          },
+          {
+            "v": "68,8 %",
+            "align": "right"
+          },
+          {
+            "v": "31,2 %",
+            "align": "right"
+          }
         ],
         [
-          "Ex. clos 31/03/2025",
-          "318 522,00 €",
-          "31 852,20 €",
-          "70 372,15 €",
-          "14 074,43 €",
-          "45 926,63 €",
-          "69,3 %",
-          "30,6 %"
+          {
+            "v": "Ex. clos 31/03/2025"
+          },
+          {
+            "v": "318 522,00 €",
+            "align": "right"
+          },
+          {
+            "v": "31 852,20 €",
+            "align": "right"
+          },
+          {
+            "v": "70 372,15 €",
+            "align": "right"
+          },
+          {
+            "v": "14 074,43 €",
+            "align": "right"
+          },
+          {
+            "v": "45 926,63 €",
+            "align": "right"
+          },
+          {
+            "v": "69,3 %",
+            "align": "right"
+          },
+          {
+            "v": "30,6 %",
+            "align": "right"
+          }
         ],
         [
-          "Total 3 exercices",
-          "933 807,40 €",
-          "93 380,74 €",
-          "207 493,65 €",
-          "41 498,73 €",
-          "134 879,47 €",
-          "69,2 %",
-          "30,8 %"
+          {
+            "v": "Total 3 exercices"
+          },
+          {
+            "v": "933 807,40 €",
+            "align": "right"
+          },
+          {
+            "v": "93 380,74 €",
+            "align": "right"
+          },
+          {
+            "v": "207 493,65 €",
+            "align": "right"
+          },
+          {
+            "v": "41 498,73 €",
+            "align": "right"
+          },
+          {
+            "v": "134 879,47 €",
+            "align": "right"
+          },
+          {
+            "v": "69,2 %",
+            "align": "right"
+          },
+          {
+            "v": "30,8 %",
+            "align": "right"
+          }
         ]
       ],
       "note": "Base HT par taux reconstituee par base = TVA / taux (methode neutre). La TVA par taux est la somme du champ tax_amount du journal, toujours positif et reconcilie."
@@ -141,33 +256,81 @@
       "kind": "tableau",
       "titre": "Coherence par famille : taux attendu (droit) vs taux applique (caisse)",
       "colonnes": [
-        "Famille (par nature)",
-        "Taux attendu",
-        "Taux applique",
-        "CA TTC Ex. clos 31/03/2025",
-        "Coherent ?"
+        {
+          "label": "Famille (par nature)"
+        },
+        {
+          "label": "Taux attendu"
+        },
+        {
+          "label": "Taux applique",
+          "align": "right"
+        },
+        {
+          "label": "CA TTC Ex. clos 31/03/2025",
+          "align": "right"
+        },
+        {
+          "label": "Coherent ?"
+        }
       ],
       "lignes": [
         [
-          "Liquides sur place (eaux, sodas, cafe)",
-          "10 % (CGI 279 m)",
-          "10 %",
-          "19 723,21 €",
-          "Oui"
+          {
+            "v": "Liquides sur place (eaux, sodas, cafe)"
+          },
+          {
+            "v": "10 % (CGI 279 m)"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "19 723,21 €",
+            "align": "right"
+          },
+          {
+            "v": "Oui"
+          }
         ],
         [
-          "Boissons alcoolisees",
-          "20 % (CGI 278)",
-          "20 %",
-          "86 389,75 €",
-          "Oui"
+          {
+            "v": "Boissons alcoolisees"
+          },
+          {
+            "v": "20 % (CGI 278)"
+          },
+          {
+            "v": "20 %",
+            "align": "right"
+          },
+          {
+            "v": "86 389,75 €",
+            "align": "right"
+          },
+          {
+            "v": "Oui"
+          }
         ],
         [
-          "Cuisine / restauration sur place",
-          "10 % (CGI 279 m)",
-          "10 %",
-          "329 452,00 €",
-          "Oui"
+          {
+            "v": "Cuisine / restauration sur place"
+          },
+          {
+            "v": "10 % (CGI 279 m)"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "329 452,00 €",
+            "align": "right"
+          },
+          {
+            "v": "Oui"
+          }
         ]
       ],
       "note": "Verification automatique sur les trois exercices : aucun produit alcoolise n'est classe au taux de 10 %, aucun plat n'est classe au taux de 20 %."
@@ -190,35 +353,85 @@
       "kind": "tableau",
       "titre": "Chiffrage des « incoherences » (cumul 3 exercices)",
       "colonnes": [
-        "Constat",
-        "Ampleur",
-        "Poids",
-        "Explication"
+        {
+          "label": "Constat"
+        },
+        {
+          "label": "Ampleur",
+          "align": "right"
+        },
+        {
+          "label": "Poids",
+          "align": "right"
+        },
+        {
+          "label": "Explication"
+        }
       ],
       "lignes": [
         [
-          "Alcool classe au taux de 10 % (annexe D)",
-          "0",
-          "0 %",
-          "Aucun. Le classement par nature est respecte."
+          {
+            "v": "Alcool classe au taux de 10 % (annexe D)"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "0 %",
+            "align": "right"
+          },
+          {
+            "v": "Aucun. Le classement par nature est respecte."
+          }
         ],
         [
-          "TVA de ligne de signe anormal (tax_amount < 0)",
-          "0",
-          "0 %",
-          "Aucune. La TVA par ligne est toujours positive et reconciliee."
+          {
+            "v": "TVA de ligne de signe anormal (tax_amount < 0)"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "0 %",
+            "align": "right"
+          },
+          {
+            "v": "Aucune. La TVA par ligne est toujours positive et reconciliee."
+          }
         ],
         [
-          "Champ « base HT » 20 % negatif a l'export",
-          "8526 lignes",
-          "28,8 %",
-          "Artefact d'export, sans effet sur la TVA collectee ni le CA."
+          {
+            "v": "Champ « base HT » 20 % negatif a l'export"
+          },
+          {
+            "v": "8526 lignes",
+            "align": "right"
+          },
+          {
+            "v": "28,8 %",
+            "align": "right"
+          },
+          {
+            "v": "Artefact d'export, sans effet sur la TVA collectee ni le CA."
+          }
         ],
         [
-          "Ecart de reconciliation TVA (lignes vs tickets)",
-          "0,00 €",
-          "0,0000 %",
-          "Reconciliation a l'euro pres."
+          {
+            "v": "Ecart de reconciliation TVA (lignes vs tickets)"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right"
+          },
+          {
+            "v": "0,0000 %",
+            "align": "right"
+          },
+          {
+            "v": "Reconciliation a l'euro pres."
+          }
         ]
       ]
     },

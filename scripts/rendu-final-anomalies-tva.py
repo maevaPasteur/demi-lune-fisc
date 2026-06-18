@@ -545,6 +545,44 @@ S.append({"kind": "interne", "audience": "avocat", "texte":
           "base HT se reconstitue par base = TVA / taux. Tous les chiffres "
           "sont reproductibles via le script."})
 
+# --- Normalisation des tableaux au format objet attendu par le rendu ---------
+# Le rendu (AnalyseContent) attend des colonnes {label, align?} et des cellules
+# {v, align?, fw?}. On convertit les tableaux ecrits a plat (chaines), en
+# alignant a droite les colonnes dont le contenu est un montant ou un pourcentage.
+def _is_num(t):
+    # vrai uniquement pour un montant / pourcentage / nombre pur (pas une phrase)
+    if not isinstance(t, str):
+        return False
+    s = t.strip()
+    if not s:
+        return False
+    return any(c.isdigit() for c in s) and not any(c.isalpha() for c in s)
+
+
+for _sec in S:
+    if _sec.get("kind") != "tableau":
+        continue
+    _cols, _ligs = _sec.get("colonnes"), _sec.get("lignes")
+    _flat_cols = bool(_cols) and isinstance(_cols[0], str)
+    _flat_cells = bool(_ligs) and bool(_ligs[0]) and isinstance(_ligs[0][0], str)
+    if not (_flat_cols or _flat_cells):
+        continue
+    _ncol = len(_cols)
+    _numeric = [
+        any(_is_num(r[j]) for r in (_ligs or []) if len(r) > j and isinstance(r[j], str))
+        for j in range(_ncol)
+    ]
+    if _flat_cols:
+        _sec["colonnes"] = [
+            ({"label": c, "align": "right"} if _numeric[i] else {"label": c})
+            for i, c in enumerate(_cols)
+        ]
+    if _flat_cells:
+        _sec["lignes"] = [
+            [({"v": v, "align": "right"} if _numeric[j] else {"v": v}) for j, v in enumerate(r)]
+            for r in _ligs
+        ]
+
 os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
 with open(OUT_JSON, "w", encoding="utf-8") as f:
     json.dump(doc, f, ensure_ascii=False, indent=2)
