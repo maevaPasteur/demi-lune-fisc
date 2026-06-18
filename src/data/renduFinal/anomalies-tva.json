@@ -156,7 +156,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les bases ainsi reconstituees **coincident avec la comptabilite** (compte 706300 pour le 10 %, 706000 pour le 20 %) a quelques euros pres, tandis que la base brute pointee par le service (jusqu'a -11 645,01 €) en est totalement eloignee. Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est une colonne d'affichage de l'export."
+      "texte": "Les bases ainsi reconstituees **coincident avec la comptabilite** (compte 706300 pour le 10 %, 706000 pour le 20 %) a **moins de 0,06 % pres**, tandis que la base brute pointee par le service (jusqu'a -11 645,01 €) en est totalement eloignee. Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est une colonne d'affichage de l'export."
     },
     {
       "kind": "tableau",
@@ -286,7 +286,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Lecture (exercice clos le 31/03/2023) : la base 10 % reconstituee (296 111,00 €) egale le compte 706300 de la comptabilite (296 105,87 €), a 5,13 € pres. Surtout, la base brute du fisc ne **boucle pas** : 269 445,43 € + (-11 645,01 €) + TVA ne donne pas le CA TTC, alors que les bases reconstituees, elles, y bouclent (296 111,00 € + 64 708,30 € + 42 552,76 € = 403 372,06 €, soit le CA TTC de la caisse)."
+      "texte": "Lecture (exercice clos le 31/03/2023) : la base 10 % reconstituee (296 111,00 €) egale le compte 706300 de la comptabilite (296 105,87 €), a 5,13 € pres ; la base 20 % reconstituee egale le compte 706000 (ecart -4,21 €). Sur les trois exercices, cet ecart reste inferieur a 0,06 % (au plus 176,57 € en 2025). Surtout, les bases reconstituees **bouclent avec le CA TTC** : 296 111,00 € + 64 708,30 € + 42 552,76 € = 403 372,06 €, soit le CA TTC de la caisse (403 370,42 €), a 1,64 € pres (arrondi de la reconstitution base = TVA / taux). La base brute du fisc, elle, ne boucle pas du tout : 269 445,43 € + (-11 645,01 €) + TVA = 300 348,63 €, tres loin du CA TTC."
+    },
+    {
+      "kind": "note",
+      "texte": "Le champ brut **sous-estime aussi la base 10 %** : le fichier l'affiche a 269 445,43 € en 2023, or 269 445,43 € x 10 % = 26 944,54 € ne redonne meme pas la TVA 10 % reellement collectee (29 611,10 €). La colonne « base HT » brute est donc un residu d'affichage non fiable **aux deux taux**. Nous n'« ajoutons » pas de chiffre d'affaires : c'est la **comptabilite elle-meme** (706300 = 296 105,87 €) qui confirme la base reconstituee (296 111,00 €), et non le champ brut (269 445,43 €)."
     },
     {
       "kind": "note",
@@ -471,20 +475,16 @@
     {
       "kind": "tableau",
       "titre": "Coherence par famille : taux attendu (droit) contre taux applique (caisse)",
-      "minWidth": 780,
+      "minWidth": 620,
       "colonnes": [
         {
           "label": "Famille (par nature)"
         },
         {
-          "label": "Taux attendu"
+          "label": "Taux attendu (droit)"
         },
         {
-          "label": "Taux applique"
-        },
-        {
-          "label": "CA TTC Ex. clos 31/03/2025",
-          "align": "right"
+          "label": "Taux applique (caisse)"
         },
         {
           "label": "Coherent ?"
@@ -502,10 +502,6 @@
             "v": "10 %"
           },
           {
-            "v": "19 723,21 €",
-            "align": "right"
-          },
-          {
             "v": "Oui",
             "badge": "ok"
           }
@@ -521,10 +517,6 @@
             "v": "20 %"
           },
           {
-            "v": "86 389,75 €",
-            "align": "right"
-          },
-          {
             "v": "Oui",
             "badge": "ok"
           }
@@ -538,10 +530,6 @@
           },
           {
             "v": "10 %"
-          },
-          {
-            "v": "329 452,00 €",
-            "align": "right"
           },
           {
             "v": "Oui",
@@ -621,11 +609,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La base brute affiche -14,80 € sur la ligne 20 %, mais la TVA reellement collectee est de 0,87 € (base reelle 4,35 €). C'est exactement le phenomene que le service qualifie d'« invraisemblable » : il porte sur **8526 lignes sur 29588** (28,8 % des lignes a deux taux), mais la TVA par ligne reste **toujours positive** et sa somme donne la TVA collectee. Effet sur la TVA et sur le CA : **nul**."
+      "texte": "La base brute affiche -14,80 € sur la ligne 20 %, mais la TVA reellement collectee est de 0,87 € (base reelle 4,35 €). C'est exactement le phenomene que le service qualifie d'« invraisemblable » : il porte sur **8526 lignes sur 29588** (28,8 % des lignes du journal), mais la TVA par ligne reste **toujours positive** et sa somme donne la TVA collectee. Effet sur la TVA et sur le CA : **nul**."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le meme arrondi d'affichage explique le **point 2** du service : la TVA collectee par taux somme a 42 552,76 € sur l'exercice 2023, contre une ligne « Total TVA » du fichier a 42 548,21 €, soit un ecart d'arrondi de 4,55 € (0,01 %), sans la moindre incidence sur le resultat."
+      "texte": "Le meme arrondi d'affichage explique le **point 2** du service : la somme des TVA par taux differe legerement de la ligne « Total TVA » du fichier, de 4,55 € en 2023, 12,32 € en 2024 et 12,35 € en 2025, soit **au plus 0,03 %**. Un simple arrondi d'affichage, sans la moindre incidence sur le resultat."
     },
     {
       "kind": "chapitre",
@@ -907,12 +895,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les trois reproches tombent. (1) Les bases negatives sont un defaut d'affichage d'une colonne d'export ; la base reconstituee a partir de la TVA reellement collectee **egale la comptabilite** (706300 / 706000) a quelques euros pres. (2) L'ecart somme / total est un arrondi de 0,01 %. (3) La non-correspondance se reduit au pourboire (706800) et aux arrondis de retranscription manuelle, pour moins de 0,2 %. La TVA reellement collectee, elle, se reconcilie avec la comptabilite. Le grief n'est pas fonde."
-    },
-    {
-      "kind": "interne",
-      "audience": "avocat",
-      "texte": "Point a tenir : ne jamais raisonner sur la colonne brute « base HT » de l'annexe G (negative sur les tickets multi-taux). La preuve repose sur le champ tax_amount (TVA de ligne, toujours positif), dont la somme par taux redonne, via base = TVA / taux, les comptes HT de la comptabilite (706300 / 706000). Tenir prets : le rapprochement caisse/compta (pourboire 706800 + arrondis) et le renvoi au grief suppressions (CA = encaissements). Tous les chiffres sont reproductibles via le script."
+      "texte": "Les trois reproches tombent. (1) Les bases negatives (et la base 10 % sous-estimee) sont un defaut d'affichage d'une colonne d'export ; la base reconstituee a partir de la TVA reellement collectee **egale la comptabilite** (706300 / 706000) a moins de 0,06 % pres. (2) L'ecart somme / total est un arrondi d'affichage (au plus 0,03 %). (3) La non-correspondance se reduit au pourboire (706800) et aux arrondis de retranscription manuelle, pour moins de 0,2 %. La TVA reellement collectee, elle, se reconcilie avec la comptabilite. Le grief n'est pas fonde."
     }
   ]
 }

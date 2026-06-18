@@ -489,8 +489,8 @@ S.append({"kind": "note", "texte":
           "taux**."})
 S.append({"kind": "paragraphe", "texte":
           "Les bases ainsi reconstituees **coincident avec la comptabilite** "
-          "(compte 706300 pour le 10 %, 706000 pour le 20 %) a quelques euros pres, "
-          "tandis que la base brute pointee par le service (jusqu'a "
+          "(compte 706300 pour le 10 %, 706000 pour le 20 %) a **moins de 0,06 % "
+          "pres**, tandis que la base brute pointee par le service (jusqu'a "
           + euro(FISCG["2022-2023"]["b20"]) + ") en est totalement eloignee. "
           "Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est "
           "une colonne d'affichage de l'export."})
@@ -509,15 +509,34 @@ S.append({"kind": "paragraphe", "texte":
           "Lecture (exercice clos le 31/03/2023) : la base 10 % reconstituee "
           "(" + euro(JG["2022-2023"]["base10"]) + ") egale le compte 706300 de la "
           "comptabilite (" + euro(COMPTA["2022-2023"]["ht10"]) + "), a "
-          + euro(abs(JG["2022-2023"]["base10"] - COMPTA["2022-2023"]["ht10"])) + " pres. "
-          "Surtout, la base brute du fisc ne **boucle pas** : "
-          + euro(FISCG["2022-2023"]["b10"]) + " + (" + euro(FISCG["2022-2023"]["b20"]) + ") "
-          "+ TVA ne donne pas le CA TTC, alors que les bases reconstituees, elles, y "
-          "bouclent (" + euro(JG["2022-2023"]["base10"]) + " + "
-          + euro(JG["2022-2023"]["base20"]) + " + "
+          + euro(abs(JG["2022-2023"]["base10"] - COMPTA["2022-2023"]["ht10"])) + " pres ; "
+          "la base 20 % reconstituee egale le compte 706000 (ecart "
+          + _eus(JG["2022-2023"]["base20"] - COMPTA["2022-2023"]["ht20"]) + "). Sur les "
+          "trois exercices, cet ecart reste inferieur a 0,06 % (au plus "
+          + euro(abs(JG["2024-2025"]["base10"] - COMPTA["2024-2025"]["ht10"])) + " en 2025). "
+          "Surtout, les bases reconstituees **bouclent avec le CA TTC** : "
+          + euro(JG["2022-2023"]["base10"]) + " + " + euro(JG["2022-2023"]["base20"]) + " + "
           + euro(JG["2022-2023"]["tva_tot"]) + " = "
           + euro(JG["2022-2023"]["base10"] + JG["2022-2023"]["base20"] + JG["2022-2023"]["tva_tot"])
-          + ", soit le CA TTC de la caisse)."})
+          + ", soit le CA TTC de la caisse (" + euro(JG["2022-2023"]["ca_ttc"]) + "), a "
+          + euro(abs(JG["2022-2023"]["base10"] + JG["2022-2023"]["base20"]
+                     + JG["2022-2023"]["tva_tot"] - JG["2022-2023"]["ca_ttc"]))
+          + " pres (arrondi de la reconstitution base = TVA / taux). La base brute du "
+          "fisc, elle, ne boucle pas du tout : " + euro(FISCG["2022-2023"]["b10"]) + " + ("
+          + euro(FISCG["2022-2023"]["b20"]) + ") + TVA = "
+          + euro(FISCG["2022-2023"]["b10"] + FISCG["2022-2023"]["b20"] + FISCG["2022-2023"]["tva"])
+          + ", tres loin du CA TTC."})
+S.append({"kind": "note", "texte":
+          "Le champ brut **sous-estime aussi la base 10 %** : le fichier l'affiche a "
+          + euro(FISCG["2022-2023"]["b10"]) + " en 2023, or "
+          + euro(FISCG["2022-2023"]["b10"]) + " x 10 % = "
+          + euro(round(FISCG["2022-2023"]["b10"] * 0.10, 2)) + " ne redonne meme pas la "
+          "TVA 10 % reellement collectee (" + euro(JG["2022-2023"]["tva10"]) + "). La "
+          "colonne « base HT » brute est donc un residu d'affichage non fiable **aux "
+          "deux taux**. Nous n'« ajoutons » pas de chiffre d'affaires : c'est la "
+          "**comptabilite elle-meme** (706300 = " + euro(COMPTA["2022-2023"]["ht10"]) + ") "
+          "qui confirme la base reconstituee (" + euro(JG["2022-2023"]["base10"]) + "), "
+          "et non le champ brut (" + euro(FISCG["2022-2023"]["b10"]) + ")."})
 
 S.append({"kind": "note", "texte":
           "**Regle applicable.** Restauration sur place : taux reduit de 10 % "
@@ -550,17 +569,16 @@ S.append({"kind": "paragraphe", "texte":
           "taux de 20 %."})
 S.append({"kind": "tableau",
           "titre": "Coherence par famille : taux attendu (droit) contre taux applique (caisse)",
-          "minWidth": 780,
-          "colonnes": [_colg("Famille (par nature)"), _colg("Taux attendu"),
-                       _colg("Taux applique"), _cold("CA TTC " + LABEL["2024-2025"]),
-                       _colg("Coherent ?")],
+          "minWidth": 620,
+          "colonnes": [_colg("Famille (par nature)"), _colg("Taux attendu (droit)"),
+                       _colg("Taux applique (caisse)"), _colg("Coherent ?")],
           "lignes": [
               [_cg("Liquides sur place (eaux, sodas, cafe)"), _cg("10 % (CGI 279 m)"),
-               _cg("10 %"), _cd(euro(DF["2024-2025"]["tot"]["liq10"])), {"v": "Oui", "badge": "ok"}],
+               _cg("10 %"), {"v": "Oui", "badge": "ok"}],
               [_cg("Boissons alcoolisees"), _cg("20 % (CGI 278)"), _cg("20 %"),
-               _cd(euro(DF["2024-2025"]["tot"]["liq20"])), {"v": "Oui", "badge": "ok"}],
+               {"v": "Oui", "badge": "ok"}],
               [_cg("Cuisine / restauration sur place"), _cg("10 % (CGI 279 m)"),
-               _cg("10 %"), _cd(euro(DF["2024-2025"]["tot"]["sol10"])), {"v": "Oui", "badge": "ok"}],
+               _cg("10 %"), {"v": "Oui", "badge": "ok"}],
           ]})
 
 # ============== 3) LE CHAMP BASE NEGATIF : MECANISME ET INOCUITE ============
@@ -586,16 +604,17 @@ S.append({"kind": "paragraphe", "texte":
           "reellement collectee est de 0,87 € (base reelle 4,35 €). C'est exactement "
           "le phenomene que le service qualifie d'« invraisemblable » : il porte sur "
           "**" + str(total_base20neg) + " lignes sur " + str(total_lignes) + "** "
-          "(" + pct(total_base20neg / total_lignes * 100) + " des lignes a deux "
-          "taux), mais la TVA par ligne reste **toujours positive** et sa somme "
+          "(" + pct(total_base20neg / total_lignes * 100) + " des lignes du journal), "
+          "mais la TVA par ligne reste **toujours positive** et sa somme "
           "donne la TVA collectee. Effet sur la TVA et sur le CA : **nul**."})
 S.append({"kind": "paragraphe", "texte":
-          "Le meme arrondi d'affichage explique le **point 2** du service : la TVA "
-          "collectee par taux somme a " + euro(JG["2022-2023"]["tva_tot"]) + " sur "
-          "l'exercice 2023, contre une ligne « Total TVA » du fichier a "
-          + euro(FISCG["2022-2023"]["tva"]) + ", soit un ecart d'arrondi de "
-          + euro(abs(JG["2022-2023"]["tva_tot"] - FISCG["2022-2023"]["tva"]))
-          + " (0,01 %), sans la moindre incidence sur le resultat."})
+          "Le meme arrondi d'affichage explique le **point 2** du service : la somme "
+          "des TVA par taux differe legerement de la ligne « Total TVA » du fichier, "
+          "de " + euro(abs(JG["2022-2023"]["tva_tot"] - FISCG["2022-2023"]["tva"]))
+          + " en 2023, " + euro(abs(JG["2023-2024"]["tva_tot"] - FISCG["2023-2024"]["tva"]))
+          + " en 2024 et " + euro(abs(JG["2024-2025"]["tva_tot"] - FISCG["2024-2025"]["tva"]))
+          + " en 2025, soit **au plus 0,03 %**. Un simple arrondi d'affichage, sans "
+          "la moindre incidence sur le resultat."})
 
 # =========== 4) ECARTS CAISSE / COMPTABILITE : INFIMES ET EXPLIQUES ========
 S.append({"kind": "chapitre", "source": "nous", "numero": 4,
@@ -659,22 +678,14 @@ S.append({"kind": "piecejointe",
 # 5) VERDICT
 S.append({"kind": "chapitre", "source": "nous", "numero": 6, "titre": "Conclusion"})
 S.append({"kind": "paragraphe", "texte":
-          "Les trois reproches tombent. (1) Les bases negatives sont un defaut "
-          "d'affichage d'une colonne d'export ; la base reconstituee a partir de la "
-          "TVA reellement collectee **egale la comptabilite** (706300 / 706000) a "
-          "quelques euros pres. (2) L'ecart somme / total est un arrondi de 0,01 %. "
-          "(3) La non-correspondance se reduit au pourboire (706800) et aux arrondis "
-          "de retranscription manuelle, pour moins de 0,2 %. La TVA reellement "
-          "collectee, elle, se reconcilie avec la comptabilite. Le grief n'est pas "
-          "fonde."})
-S.append({"kind": "interne", "audience": "avocat", "texte":
-          "Point a tenir : ne jamais raisonner sur la colonne brute « base HT » de "
-          "l'annexe G (negative sur les tickets multi-taux). La preuve repose sur le "
-          "champ tax_amount (TVA de ligne, toujours positif), dont la somme par taux "
-          "redonne, via base = TVA / taux, les comptes HT de la comptabilite "
-          "(706300 / 706000). Tenir prets : le rapprochement caisse/compta (pourboire "
-          "706800 + arrondis) et le renvoi au grief suppressions (CA = encaissements). "
-          "Tous les chiffres sont reproductibles via le script."})
+          "Les trois reproches tombent. (1) Les bases negatives (et la base 10 % "
+          "sous-estimee) sont un defaut d'affichage d'une colonne d'export ; la base "
+          "reconstituee a partir de la TVA reellement collectee **egale la "
+          "comptabilite** (706300 / 706000) a moins de 0,06 % pres. (2) L'ecart somme "
+          "/ total est un arrondi d'affichage (au plus 0,03 %). (3) La "
+          "non-correspondance se reduit au pourboire (706800) et aux arrondis de "
+          "retranscription manuelle, pour moins de 0,2 %. La TVA reellement collectee, "
+          "elle, se reconcilie avec la comptabilite. Le grief n'est pas fonde."})
 
 
 # --- Normalisation des tableaux au format objet attendu par le rendu ---------
