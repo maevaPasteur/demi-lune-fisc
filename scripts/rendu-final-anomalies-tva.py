@@ -350,6 +350,32 @@ for r in range(2, ws3.max_row + 1):
     ws3.cell(row=r, column=4).alignment = Alignment(wrap_text=True, vertical="top")
     ws3.cell(row=r, column=1).alignment = Alignment(wrap_text=True, vertical="top")
 
+# --- Onglet 4 : Reconciliation caisse / comptabilite -----------------------
+_COMPTA = {
+    "2022-2023": dict(ht10=296105.87, ht20=64712.51, tva=42614.45, pb=598.04, ttc=404030.87),
+    "2023-2024": dict(ht10=319179.31, ht20=72416.55, tva=46464.79, pb=597.75, ttc=438658.43),
+    "2024-2025": dict(ht10=318345.43, ht20=70517.47, tva=46005.45, pb=656.57, ttc=435524.92),
+}
+_FISCB20 = {"2022-2023": -11645.01, "2023-2024": -1680.08, "2024-2025": 572.55}
+ws4 = wb.create_sheet("Reconciliation caisse-compta")
+ws4.append(["Exercice", "Base 10 % reconstituee (caisse)", "Compta 706300",
+            "Ecart 10 %", "Base 20 % reconstituee (caisse)", "Compta 706000",
+            "Base 20 % brute (fisc)", "TVA caisse", "TVA compta 445710", "Ecart TVA",
+            "CA TTC caisse", "CA TTC compta", "Ecart CA", "dont pourboire 706800"])
+for e in EXOS:
+    g, c = JG[e], _COMPTA[e]
+    ws4.append([LABEL[e], g["base10"], c["ht10"], g["base10"] - c["ht10"],
+                g["base20"], c["ht20"], _FISCB20[e],
+                g["tva_tot"], c["tva"], g["tva_tot"] - c["tva"],
+                g["ca_ttc"], c["ttc"], g["ca_ttc"] - c["ttc"], c["pb"]])
+for r in range(2, ws4.max_row + 1):
+    for col in (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14):
+        fmt_eur(ws4.cell(row=r, column=col))
+style_header(ws4, 14)
+ws4.freeze_panes = "B2"
+for i, w in enumerate([22, 24, 14, 12, 24, 14, 18, 14, 16, 12, 14, 14, 12, 18], 1):
+    ws4.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
+
 os.makedirs(os.path.dirname(OUT_XLSX), exist_ok=True)
 wb.save(OUT_XLSX)
 print("XLSX ecrit :", OUT_XLSX)
@@ -389,161 +415,267 @@ doc = {
 }
 S = doc["sections"]
 
-# 1) GRIEF DU FISC
+# 1) Helpers de cellules (format objet attendu par le rendu) + chiffres compta
+def _cg(t): return {"v": t}
+def _cd(t): return {"v": t, "align": "right"}
+def _cgb(t): return {"v": t, "fw": 700}
+def _cdb(t): return {"v": t, "align": "right", "fw": 700}
+def _colg(l): return {"label": l}
+def _cold(l): return {"label": l, "align": "right"}
+def _eus(x): return ("+" if x >= 0 else "") + euro(x)
+def _ko(x): return {"v": euro(x), "align": "right", "badge": ("ko" if x < 0 else None)}
+
+# Comptabilite presentee (rapport p. 26) : 706300 = HT 10 %, 706000 = HT 20 %,
+# 445710 = TVA collectee, 706800 = pourboire, total = CA TTC.
+COMPTA = {
+    "2022-2023": dict(ht10=296105.87, ht20=64712.51, tva=42614.45, pb=598.04, ttc=404030.87),
+    "2023-2024": dict(ht10=319179.31, ht20=72416.55, tva=46464.79, pb=597.75, ttc=438658.43),
+    "2024-2025": dict(ht10=318345.43, ht20=70517.47, tva=46005.45, pb=656.57, ttc=435524.92),
+}
+# Annexe G telle que lue par le service (rapport p. 26) : bases brutes negatives.
+FISCG = {
+    "2022-2023": dict(ca=403324.72, tva=42548.21, b10=269445.43, b20=-11645.01),
+    "2023-2024": dict(ca=437881.12, tva=46387.76, b10=296113.00, b20=-1680.08),
+    "2024-2025": dict(ca=434709.26, tva=45914.28, b10=296625.31, b20=572.55),
+}
+COMPTA_TVA = sum(COMPTA[e]["tva"] for e in EXOS)
+COMPTA_TTC = sum(COMPTA[e]["ttc"] for e in EXOS)
+COMPTA_PB = sum(COMPTA[e]["pb"] for e in EXOS)
+CAISSE_TTC = sum(JG[e]["ca_ttc"] for e in EXOS)
+
+# ============================ 1) GRIEF DU FISC =============================
 S.append({"kind": "chapitre", "source": "fisc", "numero": 1, "titre": "Le grief de l'administration"})
-S.append({"kind": "note", "ton": "fisc", "texte":
-          "Proposition de rectification, p. 22-28 (rejet 1/3 et 2/3), annexe G "
-          "(journal de TVA) : selon le service, des incoherences de ventilation "
-          "de TVA entacheraient la comptabilite."})
+S.append({"kind": "note", "texte":
+          "Proposition de rectification, section XI (la TVA, 2e partie), **p. 25-27**, "
+          "annexes G et H. Le service formule **trois reproches** distincts sur le "
+          "journal de TVA issu de la caisse."})
 S.append({"kind": "paragraphe", "texte":
-          "Le reproche vise la repartition des recettes entre le taux de 10 % "
-          "et le taux de 20 %. Il faut donc verifier, exercice par exercice, "
-          "que cette ventilation suit la nature reelle des produits et que la TVA "
-          "collectee se reconcilie avec la comptabilite."})
-
-# 2) NOTRE DEMONSTRATION
-S.append({"kind": "chapitre", "source": "nous", "numero": 2, "titre": "La ventilation suit la nature des produits"})
-S.append({"kind": "note", "ton": "droit", "texte":
-          "Regle applicable. La restauration consommee sur place releve du taux "
-          "reduit de 10 % (CGI art. 279, m ; BOI-TVA-LIQ-30-10-10). Les "
-          "boissons alcoolisees sont exclues du taux reduit et relevent du taux "
-          "normal de 20 % (CGI art. 278 ; BOI-TVA-LIQ-30-10-10). Le journal "
-          "de la caisse ne comporte que ces deux taux : aucun taux errone n'y "
-          "figure."})
-
+          "**1. Bases HT par taux negatives.** « *Les bases TVA suivant les taux "
+          "sont totalement incoherentes (chiffres negatifs)* » ; le service conclut "
+          "que « *les montants des bases TVA du fichier sont totalement "
+          "invraisemblables* ». La base HT 20 % de l'annexe G est en effet affichee "
+          "a " + euro(FISCG["2022-2023"]["b20"]) + " (exercice 2023) puis "
+          + euro(FISCG["2023-2024"]["b20"]) + " (exercice 2024)."})
 S.append({"kind": "paragraphe", "texte":
-          "La caisse classe elle-meme chaque produit dans l'une de trois familles "
-          "par nature (annexe D) : liquides sur place a 10 % (eaux, sodas, "
-          "cafe), boissons alcoolisees a 20 %, et cuisine a 10 %. La "
-          "ventilation de TVA decoule mecaniquement de ce classement par nature, "
-          "pas d'un arbitrage comptable."})
-
-# Tableau ventilation par taux et par exercice
+          "**2. Somme des TVA par taux differente du « Total TVA ».** « *La somme "
+          "des montants de TVA par taux ne correspond pas a la ligne total de "
+          "TVA.* »"})
+S.append({"kind": "paragraphe", "texte":
+          "**3. Non-correspondance avec la comptabilite.** « *Aucun des chiffres ne "
+          "correspond aux montants figurant dans la comptabilite presentee* » "
+          "(CA TTC, TVA collectee, et meme les modes de reglement). Le service en "
+          "deduit une comptabilite non probante. Nous repondons aux trois points, "
+          "chiffres de la caisse ET de la comptabilite a l'appui."})
 S.append({"kind": "tableau",
-          "titre": "Ventilation de la TVA collectee par taux et par exercice (annexe G)",
-          "colonnes": ["Exercice", "Base HT 10 %", "TVA 10 %",
-                       "Base HT 20 %", "TVA 20 %", "TVA totale",
-                       "Part 10 %", "Part 20 %"],
-          "lignes": [
-              [LABEL[e], euro(JG[e]["base10"]), euro(JG[e]["tva10"]),
-               euro(JG[e]["base20"]), euro(JG[e]["tva20"]), euro(JG[e]["tva_tot"]),
-               pct(JG[e]["part_tva10"]), pct(JG[e]["part_tva20"])]
-              for e in EXOS
-          ] + [[
-              "Total 3 exercices", euro(tb10), euro(tt10), euro(tb20), euro(tt20),
-              euro(tttot), pct(tt10 / tttot * 100), pct(tt20 / tttot * 100)]],
-          "note": "Base HT par taux reconstituee par base = TVA / taux "
-                  "(methode neutre). La TVA par taux est la somme du champ "
-                  "tax_amount du journal, toujours positif et reconcilie."})
+          "titre": "Ce que lit le service dans l'annexe G (champ « base » brut)",
+          "minWidth": 760,
+          "colonnes": [_colg("Exercice"), _cold("Base HT 10 % (brut)"),
+                       _cold("Base HT 20 % (brut)"), _cold("TVA 10 %"),
+                       _cold("TVA 20 %"), _cold("Total TVA")],
+          "lignes": [[_cg(LABEL[e]), _cd(euro(FISCG[e]["b10"])), _ko(FISCG[e]["b20"]),
+                      _cd(euro(JG[e]["tva10"])), _cd(euro(JG[e]["tva20"])),
+                      _cd(euro(FISCG[e]["tva"]))] for e in EXOS]})
 
-# Graphique empile : base 10 vs base 20
+# ===================== 2) NOTRE DEMONSTRATION (reconciliation) ==============
+S.append({"kind": "chapitre", "source": "nous", "numero": 2,
+          "titre": "La TVA reellement collectee se reconcilie avec la comptabilite"})
+S.append({"kind": "note", "texte":
+          "**Point technique decisif.** L'annexe G contient deux choses a ne pas "
+          "confondre : (a) la **TVA reellement collectee** ligne par ligne (champ "
+          "tax_amount), toujours positive et exacte ; (b) un **champ d'affichage "
+          "« base HT »** calcule en residu, qui peut devenir negatif sur les tickets "
+          "a deux taux. Le grief porte sur (b) ; la realite comptable est dans (a). "
+          "La base HT par taux se reconstitue sans ambiguite par **base = TVA / "
+          "taux**."})
+S.append({"kind": "paragraphe", "texte":
+          "Les bases ainsi reconstituees **coincident avec la comptabilite** "
+          "(compte 706300 pour le 10 %, 706000 pour le 20 %) a quelques euros pres, "
+          "tandis que la base brute pointee par le service (jusqu'a "
+          + euro(FISCG["2022-2023"]["b20"]) + ") en est totalement eloignee. "
+          "Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est "
+          "une colonne d'affichage de l'export."})
+S.append({"kind": "tableau",
+          "titre": "Bases HT : reconstituees (caisse) contre comptabilite contre champ brut du fisc",
+          "minWidth": 940,
+          "colonnes": [_colg("Exercice"), _cold("Base 10 % reconstituee"),
+                       _cold("Compta 706300"), _cold("Ecart"),
+                       _cold("Base 20 % reconstituee"), _cold("Compta 706000"),
+                       _cold("Base 20 % brute (fisc)")],
+          "lignes": [[_cg(LABEL[e]), _cd(euro(JG[e]["base10"])), _cd(euro(COMPTA[e]["ht10"])),
+                      _cd(_eus(JG[e]["base10"] - COMPTA[e]["ht10"])),
+                      _cd(euro(JG[e]["base20"])), _cd(euro(COMPTA[e]["ht20"])),
+                      _ko(FISCG[e]["b20"])] for e in EXOS]})
+S.append({"kind": "paragraphe", "texte":
+          "Lecture (exercice clos le 31/03/2023) : la base 10 % reconstituee "
+          "(" + euro(JG["2022-2023"]["base10"]) + ") egale le compte 706300 de la "
+          "comptabilite (" + euro(COMPTA["2022-2023"]["ht10"]) + "), a "
+          + euro(abs(JG["2022-2023"]["base10"] - COMPTA["2022-2023"]["ht10"])) + " pres. "
+          "Surtout, la base brute du fisc ne **boucle pas** : "
+          + euro(FISCG["2022-2023"]["b10"]) + " + (" + euro(FISCG["2022-2023"]["b20"]) + ") "
+          "+ TVA ne donne pas le CA TTC, alors que les bases reconstituees, elles, y "
+          "bouclent (" + euro(JG["2022-2023"]["base10"]) + " + "
+          + euro(JG["2022-2023"]["base20"]) + " + "
+          + euro(JG["2022-2023"]["tva_tot"]) + " = "
+          + euro(JG["2022-2023"]["base10"] + JG["2022-2023"]["base20"] + JG["2022-2023"]["tva_tot"])
+          + ", soit le CA TTC de la caisse)."})
+
+S.append({"kind": "note", "texte":
+          "**Regle applicable.** Restauration sur place : taux reduit de 10 % "
+          "(CGI art. 279, m). Boissons alcoolisees : taux normal de 20 % (CGI "
+          "art. 278). Le journal ne comporte que ces deux taux."})
+S.append({"kind": "tableau",
+          "titre": "TVA reellement collectee par taux (champ tax_amount, fiable)",
+          "minWidth": 760,
+          "colonnes": [_colg("Exercice"), _cold("TVA 10 %"), _cold("TVA 20 %"),
+                       _cold("TVA totale"), _cold("Part 10 %"), _cold("Part 20 %")],
+          "lignes": [[_cg(LABEL[e]), _cd(euro(JG[e]["tva10"])), _cd(euro(JG[e]["tva20"])),
+                      _cd(euro(JG[e]["tva_tot"])), _cd(pct(JG[e]["part_tva10"])),
+                      _cd(pct(JG[e]["part_tva20"]))] for e in EXOS]
+                     + [[_cgb("Total 3 exercices"), _cdb(euro(tt10)), _cdb(euro(tt20)),
+                         _cdb(euro(tttot)), _cdb(pct(tt10 / tttot * 100)),
+                         _cdb(pct(tt20 / tttot * 100))]]})
 S.append({"kind": "graphiqueEmpile",
-          "titre": "Repartition de la base HT entre 10 % et 20 % par exercice",
-          "hauteur": 300,
-          "dataKey": "nom",
-          "series": [
-              {"name": "Base 10 %", "couleur": "#0f766e"},
-              {"name": "Base 20 %", "couleur": "#b45309"},
-          ],
-          "data": [
-              {"nom": LABEL[e],
-               "Base 10 %": JG[e]["base10"],
-               "Base 20 %": JG[e]["base20"]}
-              for e in EXOS
-          ],
+          "titre": "Repartition de la base HT entre 10 % et 20 % par exercice",
+          "hauteur": 300, "dataKey": "nom",
+          "series": [{"name": "Base 10 %", "couleur": "#0f766e"},
+                     {"name": "Base 20 %", "couleur": "#b45309"}],
+          "data": [{"nom": LABEL[e], "Base 10 %": JG[e]["base10"],
+                    "Base 20 %": JG[e]["base20"]} for e in EXOS],
           "format": "euro"})
-
 S.append({"kind": "paragraphe", "texte":
-          "La structure est stable et typique d'un restaurant : la TVA est "
-          "collectee a environ 69 % au taux de 10 % (cuisine et liquides "
-          "sur place) et 31 % au taux de 20 % (alcools), sur les trois "
-          "exercices. Une telle constance exclut une ventilation erratique."})
-
-# Tableau coherence par famille
+          "La ventilation est stable : environ **69 % de la TVA au taux de 10 %** "
+          "(cuisine et liquides sur place) et **31 % au taux de 20 %** (alcools), "
+          "sur les trois exercices. La caisse classe d'ailleurs chaque produit par "
+          "nature (annexe D), et aucun alcool n'y est au taux de 10 %, aucun plat au "
+          "taux de 20 %."})
 S.append({"kind": "tableau",
-          "titre": "Coherence par famille : taux attendu (droit) vs taux applique (caisse)",
-          "colonnes": ["Famille (par nature)", "Taux attendu", "Taux applique",
-                       "CA TTC " + LABEL["2024-2025"], "Coherent ?"],
+          "titre": "Coherence par famille : taux attendu (droit) contre taux applique (caisse)",
+          "minWidth": 780,
+          "colonnes": [_colg("Famille (par nature)"), _colg("Taux attendu"),
+                       _colg("Taux applique"), _cold("CA TTC " + LABEL["2024-2025"]),
+                       _colg("Coherent ?")],
           "lignes": [
-              ["Liquides sur place (eaux, sodas, cafe)", "10 % (CGI 279 m)",
-               "10 %", euro(DF["2024-2025"]["tot"]["liq10"]), "Oui"],
-              ["Boissons alcoolisees", "20 % (CGI 278)", "20 %",
-               euro(DF["2024-2025"]["tot"]["liq20"]), "Oui"],
-              ["Cuisine / restauration sur place", "10 % (CGI 279 m)",
-               "10 %", euro(DF["2024-2025"]["tot"]["sol10"]), "Oui"],
-          ],
-          "note": "Verification automatique sur les trois exercices : aucun "
-                  "produit alcoolise n'est classe au taux de 10 %, aucun plat "
-                  "n'est classe au taux de 20 %."})
+              [_cg("Liquides sur place (eaux, sodas, cafe)"), _cg("10 % (CGI 279 m)"),
+               _cg("10 %"), _cd(euro(DF["2024-2025"]["tot"]["liq10"])), {"v": "Oui", "badge": "ok"}],
+              [_cg("Boissons alcoolisees"), _cg("20 % (CGI 278)"), _cg("20 %"),
+               _cd(euro(DF["2024-2025"]["tot"]["liq20"])), {"v": "Oui", "badge": "ok"}],
+              [_cg("Cuisine / restauration sur place"), _cg("10 % (CGI 279 m)"),
+               _cg("10 %"), _cd(euro(DF["2024-2025"]["tot"]["sol10"])), {"v": "Oui", "badge": "ok"}],
+          ]})
 
-# Exemple concret
+# ============== 3) LE CHAMP BASE NEGATIF : MECANISME ET INOCUITE ============
+S.append({"kind": "chapitre", "source": "nous", "numero": 3,
+          "titre": "Le champ « base HT » negatif : mecanisme et inocuite"})
 S.append({"kind": "paragraphe", "texte":
-          "Exemple concret (annexe D, " + LABEL["2022-2023"] + ") : "
-          "un alcool, « " + ex_alc["lib"] + " », est vendu "
-          + euro(ex_alc["pu"]) + " et taxe a 20 % ; un plat, "
-          "« " + ex_plat["lib"] + " », est vendu "
-          + euro(ex_plat["pu"]) + " et taxe a 10 % ; un soft, "
-          "« " + ex_soft["lib"] + " », est taxe a 10 %. "
-          "Chaque produit porte le taux que la loi lui assigne."})
-
-# Ecarts marginaux
-S.append({"kind": "chapitre", "source": "nous", "numero": 3, "titre": "Les ecarts releves sont marginaux et expliques"})
-S.append({"kind": "paragraphe", "texte":
-          "La seule particularite formelle du journal est l'affichage, sur les "
-          "tickets a deux taux, d'un champ « base HT » de la ligne "
-          "20 % parfois negatif (" + str(total_base20neg) + " lignes sur "
-          + str(total_lignes) + ", soit "
-          + pct(total_base20neg / total_lignes * 100) + " des lignes). C'est un "
-          "artefact de la colonne brute d'export : ce champ n'est pas additif "
-          "au TTC. Il n'affecte ni la TVA collectee ni le chiffre d'affaires."})
-
+          "Sur un ticket a deux taux, l'export calcule la « base HT 20 % » en "
+          "**residu** (a partir du TTC et de la base 10 %). Quand la part au taux de "
+          "10 % domine la note, ce residu devient **negatif**, alors meme que la TVA "
+          "reellement percue au taux de 20 % est positive. C'est un defaut "
+          "d'affichage de la colonne d'export, pas une anomalie de recette."})
 S.append({"kind": "tableau",
-          "titre": "Chiffrage des « incoherences » (cumul 3 exercices)",
-          "colonnes": ["Constat", "Ampleur", "Poids", "Explication"],
+          "titre": "Exemple : ticket n° 2 du 14/04/2022 (TTC 20,90 €, TVA 2,30 €)",
+          "minWidth": 680,
+          "colonnes": [_colg("Ligne de taux"), _cold("Champ « base HT » du fichier (brut)"),
+                       _cold("TVA reellement collectee"), _cold("Base reconstituee (TVA / taux)")],
           "lignes": [
-              ["Alcool classe au taux de 10 % (annexe D)",
-               str(total_mauvais), "0 %",
-               "Aucun. Le classement par nature est respecte."],
-              ["TVA de ligne de signe anormal (tax_amount < 0)",
-               str(total_taneg), "0 %",
-               "Aucune. La TVA par ligne est toujours positive et reconciliee."],
-              ["Champ « base HT » 20 % negatif a l'export",
-               str(total_base20neg) + " lignes",
-               pct(total_base20neg / total_lignes * 100),
-               "Artefact d'export, sans effet sur la TVA collectee ni le CA."],
-              ["Ecart de reconciliation TVA (lignes vs tickets)",
-               euro(total_recon),
-               f"{total_recon/tttot*100:.4f}".replace(".", ",") + " %",
-               "Reconciliation a l'euro pres."],
+              [_cg("Ligne 10 %"), _cd("14,30 €"), _cd("1,43 €"), _cd("14,30 €")],
+              [_cg("Ligne 20 %"), _ko(-14.80), _cd("0,87 €"), _cd("4,35 €")],
+          ]})
+S.append({"kind": "paragraphe", "texte":
+          "La base brute affiche " + euro(-14.80) + " sur la ligne 20 %, mais la TVA "
+          "reellement collectee est de 0,87 € (base reelle 4,35 €). C'est exactement "
+          "le phenomene que le service qualifie d'« invraisemblable » : il porte sur "
+          "**" + str(total_base20neg) + " lignes sur " + str(total_lignes) + "** "
+          "(" + pct(total_base20neg / total_lignes * 100) + " des lignes a deux "
+          "taux), mais la TVA par ligne reste **toujours positive** et sa somme "
+          "donne la TVA collectee. Effet sur la TVA et sur le CA : **nul**."})
+S.append({"kind": "paragraphe", "texte":
+          "Le meme arrondi d'affichage explique le **point 2** du service : la TVA "
+          "collectee par taux somme a " + euro(JG["2022-2023"]["tva_tot"]) + " sur "
+          "l'exercice 2023, contre une ligne « Total TVA » du fichier a "
+          + euro(FISCG["2022-2023"]["tva"]) + ", soit un ecart d'arrondi de "
+          + euro(abs(JG["2022-2023"]["tva_tot"] - FISCG["2022-2023"]["tva"]))
+          + " (0,01 %), sans la moindre incidence sur le resultat."})
+
+# =========== 4) ECARTS CAISSE / COMPTABILITE : INFIMES ET EXPLIQUES ========
+S.append({"kind": "chapitre", "source": "nous", "numero": 4,
+          "titre": "Les ecarts caisse / comptabilite sont infimes et expliques"})
+S.append({"kind": "paragraphe", "texte":
+          "Le service souligne que les totaux de la caisse ne « correspondent » pas "
+          "au centime a la comptabilite. C'est attendu : la comptabilite est tenue "
+          "par **retranscription manuelle des tickets Z journaliers sur un agenda** "
+          "(le service le decrit lui-meme). Les ecarts qui en resultent sont infimes "
+          "(moins de 0,2 %) et s'expliquent."})
+S.append({"kind": "tableau",
+          "titre": "TVA collectee et CA TTC : caisse contre comptabilite",
+          "minWidth": 1000,
+          "colonnes": [_colg("Exercice"), _cold("TVA caisse"), _cold("TVA compta (445710)"),
+                       _cold("Ecart"), _cold("CA TTC caisse"), _cold("CA TTC compta"),
+                       _cold("Ecart"), _cold("dont pourboire (706800)")],
+          "lignes": [[_cg(LABEL[e]), _cd(euro(JG[e]["tva_tot"])), _cd(euro(COMPTA[e]["tva"])),
+                      _cd(_eus(JG[e]["tva_tot"] - COMPTA[e]["tva"])),
+                      _cd(euro(JG[e]["ca_ttc"])), _cd(euro(COMPTA[e]["ttc"])),
+                      _cd(_eus(JG[e]["ca_ttc"] - COMPTA[e]["ttc"])),
+                      _cd(euro(COMPTA[e]["pb"]))] for e in EXOS]})
+S.append({"kind": "paragraphe", "texte":
+          "L'ecart de CA TTC (de l'ordre de " + euro(abs(CAISSE_TTC - COMPTA_TTC) / 3)
+          + " par an) correspond pour l'essentiel au **pourboire (compte 706800, "
+          "environ " + euro(COMPTA_PB / 3) + " par an)**, integre au CA en "
+          "comptabilite mais hors tickets de caisse ; le solde (quelques dizaines "
+          "d'euros) tient aux arrondis de retranscription. Aucun de ces ecarts ne "
+          "traduit une recette dissimulee : le CA declare egale les encaissements "
+          "(voir le grief « suppressions de caisse »)."})
+
+# =============================== CHIFFRAGE ================================
+S.append({"kind": "tableau",
+          "titre": "Chiffrage des « incoherences » invoquees (cumul 3 exercices)",
+          "minWidth": 720,
+          "colonnes": [_colg("Constat du service"), _cold("Ampleur"), _cold("Poids"),
+                       _colg("Realite")],
+          "lignes": [
+              [_cg("Base HT par taux negative / invraisemblable"),
+               _cd(str(total_base20neg) + " lignes"),
+               _cd(pct(total_base20neg / total_lignes * 100)),
+               _cg("Artefact d'affichage de l'export ; la base reconstituee egale la comptabilite.")],
+              [_cg("Somme des TVA par taux <> Total TVA"), _cd(euro(4.55)), _cd("0,01 %"),
+               _cg("Arrondi d'affichage, sans incidence.")],
+              [_cg("Non-correspondance caisse / comptabilite (TVA)"),
+               _cd(_eus(tttot - COMPTA_TVA)), _cd(pct(abs(tttot - COMPTA_TVA) / COMPTA_TVA * 100)),
+               _cg("Pourboire (706800) et arrondis de retranscription manuelle.")],
+              [_cg("TVA de ligne de signe anormal (tax_amount < 0)"), _cd(str(total_taneg)),
+               _cd("0 %"), _cg("Aucune : la TVA par ligne est toujours positive.")],
+              [_cg("Alcool classe au taux de 10 % (annexe D)"), _cd(str(total_mauvais)),
+               _cd("0 %"), _cg("Aucun : le classement par nature est respecte.")],
           ]})
 
 # 4) PIECE JOINTE
-S.append({"kind": "chapitre", "source": "nous", "numero": 4, "titre": "Piece justificative"})
+S.append({"kind": "chapitre", "source": "nous", "numero": 5, "titre": "Piece justificative"})
 S.append({"kind": "piecejointe",
-          "intro": "Ventilation de la TVA par exercice, coherence par famille et chiffrage des ecarts.",
+          "intro": "Ventilation de la TVA par exercice, reconciliation avec la comptabilite, "
+                   "coherence par famille et chiffrage des ecarts.",
           "fichiers": [{"fichier": "pieces-defense/RF-anomalies-tva.xlsx",
-                        "label": "RF - Incoherences de TVA : ventilation par exercice, coherence par famille, ecarts (XLSX)"}]})
+                        "label": "RF - Incoherences de TVA : ventilation, reconciliation caisse/compta, ecarts (XLSX)"}]})
 
 # 5) VERDICT
-S.append({"kind": "chapitre", "source": "nous", "numero": 5, "titre": "Conclusion"})
+S.append({"kind": "chapitre", "source": "nous", "numero": 6, "titre": "Conclusion"})
 S.append({"kind": "paragraphe", "texte":
-          "La ventilation de TVA 10 % / 20 % suit la nature des produits "
-          "(restauration et liquides sur place a 10 %, alcools a 20 %), "
-          "elle est stable sur les trois exercices (environ 69 % / 31 % "
-          "de la TVA collectee) et la TVA se reconcilie a l'euro pres avec la "
-          "comptabilite. Les « incoherences » invoquees se "
-          "reduisent a un artefact de la colonne « base HT » de "
-          "l'export caisse, sans effet sur la TVA collectee ni sur le chiffre "
-          "d'affaires. Le grief n'est pas fonde."})
-
+          "Les trois reproches tombent. (1) Les bases negatives sont un defaut "
+          "d'affichage d'une colonne d'export ; la base reconstituee a partir de la "
+          "TVA reellement collectee **egale la comptabilite** (706300 / 706000) a "
+          "quelques euros pres. (2) L'ecart somme / total est un arrondi de 0,01 %. "
+          "(3) La non-correspondance se reduit au pourboire (706800) et aux arrondis "
+          "de retranscription manuelle, pour moins de 0,2 %. La TVA reellement "
+          "collectee, elle, se reconcilie avec la comptabilite. Le grief n'est pas "
+          "fonde."})
 S.append({"kind": "interne", "audience": "avocat", "texte":
-          "Point a tenir en cas de contestation : ne jamais raisonner sur la "
-          "colonne brute VAT_base / « Base TVA 20 % » de "
-          "l'annexe G (valeurs negatives trompeuses sur tickets multi-taux). La "
-          "preuve repose sur le champ tax_amount (TVA de ligne, toujours positif), "
-          "qui somme exactement a la TVA des tickets et a la TVA comptabilisee. La "
-          "base HT se reconstitue par base = TVA / taux. Tous les chiffres "
-          "sont reproductibles via le script."})
+          "Point a tenir : ne jamais raisonner sur la colonne brute « base HT » de "
+          "l'annexe G (negative sur les tickets multi-taux). La preuve repose sur le "
+          "champ tax_amount (TVA de ligne, toujours positif), dont la somme par taux "
+          "redonne, via base = TVA / taux, les comptes HT de la comptabilite "
+          "(706300 / 706000). Tenir prets : le rapprochement caisse/compta (pourboire "
+          "706800 + arrondis) et le renvoi au grief suppressions (CA = encaissements). "
+          "Tous les chiffres sont reproductibles via le script."})
+
 
 # --- Normalisation des tableaux au format objet attendu par le rendu ---------
 # Le rendu (AnalyseContent) attend des colonnes {label, align?} et des cellules

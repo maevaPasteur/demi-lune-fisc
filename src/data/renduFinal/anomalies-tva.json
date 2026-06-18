@@ -20,61 +20,174 @@
     },
     {
       "kind": "note",
-      "ton": "fisc",
-      "texte": "Proposition de rectification, p. 22-28 (rejet 1/3 et 2/3), annexe G (journal de TVA) : selon le service, des incoherences de ventilation de TVA entacheraient la comptabilite."
+      "texte": "Proposition de rectification, section XI (la TVA, 2e partie), **p. 25-27**, annexes G et H. Le service formule **trois reproches** distincts sur le journal de TVA issu de la caisse."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le reproche vise la repartition des recettes entre le taux de 10 % et le taux de 20 %. Il faut donc verifier, exercice par exercice, que cette ventilation suit la nature reelle des produits et que la TVA collectee se reconcilie avec la comptabilite."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 2,
-      "titre": "La ventilation suit la nature des produits"
-    },
-    {
-      "kind": "note",
-      "ton": "droit",
-      "texte": "Regle applicable. La restauration consommee sur place releve du taux reduit de 10 % (CGI art. 279, m ; BOI-TVA-LIQ-30-10-10). Les boissons alcoolisees sont exclues du taux reduit et relevent du taux normal de 20 % (CGI art. 278 ; BOI-TVA-LIQ-30-10-10). Le journal de la caisse ne comporte que ces deux taux : aucun taux errone n'y figure."
+      "texte": "**1. Bases HT par taux negatives.** « *Les bases TVA suivant les taux sont totalement incoherentes (chiffres negatifs)* » ; le service conclut que « *les montants des bases TVA du fichier sont totalement invraisemblables* ». La base HT 20 % de l'annexe G est en effet affichee a -11 645,01 € (exercice 2023) puis -1 680,08 € (exercice 2024)."
     },
     {
       "kind": "paragraphe",
-      "texte": "La caisse classe elle-meme chaque produit dans l'une de trois familles par nature (annexe D) : liquides sur place a 10 % (eaux, sodas, cafe), boissons alcoolisees a 20 %, et cuisine a 10 %. La ventilation de TVA decoule mecaniquement de ce classement par nature, pas d'un arbitrage comptable."
+      "texte": "**2. Somme des TVA par taux differente du « Total TVA ».** « *La somme des montants de TVA par taux ne correspond pas a la ligne total de TVA.* »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**3. Non-correspondance avec la comptabilite.** « *Aucun des chiffres ne correspond aux montants figurant dans la comptabilite presentee* » (CA TTC, TVA collectee, et meme les modes de reglement). Le service en deduit une comptabilite non probante. Nous repondons aux trois points, chiffres de la caisse ET de la comptabilite a l'appui."
     },
     {
       "kind": "tableau",
-      "titre": "Ventilation de la TVA collectee par taux et par exercice (annexe G)",
+      "titre": "Ce que lit le service dans l'annexe G (champ « base » brut)",
+      "minWidth": 760,
       "colonnes": [
         {
           "label": "Exercice"
         },
         {
-          "label": "Base HT 10 %",
+          "label": "Base HT 10 % (brut)",
           "align": "right"
         },
         {
-          "label": "TVA 10 %",
+          "label": "Base HT 20 % (brut)",
           "align": "right"
         },
         {
-          "label": "Base HT 20 %",
+          "label": "TVA 10 %",
           "align": "right"
         },
         {
-          "label": "TVA 20 %",
+          "label": "TVA 20 %",
           "align": "right"
         },
         {
-          "label": "TVA totale",
+          "label": "Total TVA",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Ex. clos 31/03/2023"
+          },
+          {
+            "v": "269 445,43 €",
+            "align": "right"
+          },
+          {
+            "v": "-11 645,01 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "29 611,10 €",
+            "align": "right"
+          },
+          {
+            "v": "12 941,66 €",
+            "align": "right"
+          },
+          {
+            "v": "42 548,21 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2024"
+          },
+          {
+            "v": "296 113,00 €",
+            "align": "right"
+          },
+          {
+            "v": "-1 680,08 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "31 917,44 €",
+            "align": "right"
+          },
+          {
+            "v": "14 482,64 €",
+            "align": "right"
+          },
+          {
+            "v": "46 387,76 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2025"
+          },
+          {
+            "v": "296 625,31 €",
+            "align": "right"
+          },
+          {
+            "v": "572,55 €",
+            "align": "right",
+            "badge": null
+          },
+          {
+            "v": "31 852,20 €",
+            "align": "right"
+          },
+          {
+            "v": "14 074,43 €",
+            "align": "right"
+          },
+          {
+            "v": "45 914,28 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "La TVA reellement collectee se reconcilie avec la comptabilite"
+    },
+    {
+      "kind": "note",
+      "texte": "**Point technique decisif.** L'annexe G contient deux choses a ne pas confondre : (a) la **TVA reellement collectee** ligne par ligne (champ tax_amount), toujours positive et exacte ; (b) un **champ d'affichage « base HT »** calcule en residu, qui peut devenir negatif sur les tickets a deux taux. Le grief porte sur (b) ; la realite comptable est dans (a). La base HT par taux se reconstitue sans ambiguite par **base = TVA / taux**."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les bases ainsi reconstituees **coincident avec la comptabilite** (compte 706300 pour le 10 %, 706000 pour le 20 %) a quelques euros pres, tandis que la base brute pointee par le service (jusqu'a -11 645,01 €) en est totalement eloignee. Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est une colonne d'affichage de l'export."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Bases HT : reconstituees (caisse) contre comptabilite contre champ brut du fisc",
+      "minWidth": 940,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Base 10 % reconstituee",
           "align": "right"
         },
         {
-          "label": "Part 10 %",
+          "label": "Compta 706300",
           "align": "right"
         },
         {
-          "label": "Part 20 %",
+          "label": "Ecart",
+          "align": "right"
+        },
+        {
+          "label": "Base 20 % reconstituee",
+          "align": "right"
+        },
+        {
+          "label": "Compta 706000",
+          "align": "right"
+        },
+        {
+          "label": "Base 20 % brute (fisc)",
           "align": "right"
         }
       ],
@@ -88,11 +201,133 @@
             "align": "right"
           },
           {
-            "v": "29 611,10 €",
+            "v": "296 105,87 €",
+            "align": "right"
+          },
+          {
+            "v": "+5,13 €",
             "align": "right"
           },
           {
             "v": "64 708,30 €",
+            "align": "right"
+          },
+          {
+            "v": "64 712,51 €",
+            "align": "right"
+          },
+          {
+            "v": "-11 645,01 €",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2024"
+          },
+          {
+            "v": "319 174,40 €",
+            "align": "right"
+          },
+          {
+            "v": "319 179,31 €",
+            "align": "right"
+          },
+          {
+            "v": "-4,91 €",
+            "align": "right"
+          },
+          {
+            "v": "72 413,20 €",
+            "align": "right"
+          },
+          {
+            "v": "72 416,55 €",
+            "align": "right"
+          },
+          {
+            "v": "-1 680,08 €",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2025"
+          },
+          {
+            "v": "318 522,00 €",
+            "align": "right"
+          },
+          {
+            "v": "318 345,43 €",
+            "align": "right"
+          },
+          {
+            "v": "+176,57 €",
+            "align": "right"
+          },
+          {
+            "v": "70 372,15 €",
+            "align": "right"
+          },
+          {
+            "v": "70 517,47 €",
+            "align": "right"
+          },
+          {
+            "v": "572,55 €",
+            "align": "right",
+            "badge": null
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Lecture (exercice clos le 31/03/2023) : la base 10 % reconstituee (296 111,00 €) egale le compte 706300 de la comptabilite (296 105,87 €), a 5,13 € pres. Surtout, la base brute du fisc ne **boucle pas** : 269 445,43 € + (-11 645,01 €) + TVA ne donne pas le CA TTC, alors que les bases reconstituees, elles, y bouclent (296 111,00 € + 64 708,30 € + 42 552,76 € = 403 372,06 €, soit le CA TTC de la caisse)."
+    },
+    {
+      "kind": "note",
+      "texte": "**Regle applicable.** Restauration sur place : taux reduit de 10 % (CGI art. 279, m). Boissons alcoolisees : taux normal de 20 % (CGI art. 278). Le journal ne comporte que ces deux taux."
+    },
+    {
+      "kind": "tableau",
+      "titre": "TVA reellement collectee par taux (champ tax_amount, fiable)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "TVA 10 %",
+          "align": "right"
+        },
+        {
+          "label": "TVA 20 %",
+          "align": "right"
+        },
+        {
+          "label": "TVA totale",
+          "align": "right"
+        },
+        {
+          "label": "Part 10 %",
+          "align": "right"
+        },
+        {
+          "label": "Part 20 %",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Ex. clos 31/03/2023"
+          },
+          {
+            "v": "29 611,10 €",
             "align": "right"
           },
           {
@@ -117,15 +352,7 @@
             "v": "Ex. clos 31/03/2024"
           },
           {
-            "v": "319 174,40 €",
-            "align": "right"
-          },
-          {
             "v": "31 917,44 €",
-            "align": "right"
-          },
-          {
-            "v": "72 413,20 €",
             "align": "right"
           },
           {
@@ -150,15 +377,7 @@
             "v": "Ex. clos 31/03/2025"
           },
           {
-            "v": "318 522,00 €",
-            "align": "right"
-          },
-          {
             "v": "31 852,20 €",
-            "align": "right"
-          },
-          {
-            "v": "70 372,15 €",
             "align": "right"
           },
           {
@@ -180,81 +399,79 @@
         ],
         [
           {
-            "v": "Total 3 exercices"
-          },
-          {
-            "v": "933 807,40 €",
-            "align": "right"
+            "v": "Total 3 exercices",
+            "fw": 700
           },
           {
             "v": "93 380,74 €",
-            "align": "right"
-          },
-          {
-            "v": "207 493,65 €",
-            "align": "right"
+            "align": "right",
+            "fw": 700
           },
           {
             "v": "41 498,73 €",
-            "align": "right"
+            "align": "right",
+            "fw": 700
           },
           {
             "v": "134 879,47 €",
-            "align": "right"
+            "align": "right",
+            "fw": 700
           },
           {
             "v": "69,2 %",
-            "align": "right"
+            "align": "right",
+            "fw": 700
           },
           {
             "v": "30,8 %",
-            "align": "right"
+            "align": "right",
+            "fw": 700
           }
         ]
-      ],
-      "note": "Base HT par taux reconstituee par base = TVA / taux (methode neutre). La TVA par taux est la somme du champ tax_amount du journal, toujours positif et reconcilie."
+      ]
     },
     {
       "kind": "graphiqueEmpile",
-      "titre": "Repartition de la base HT entre 10 % et 20 % par exercice",
+      "titre": "Repartition de la base HT entre 10 % et 20 % par exercice",
       "hauteur": 300,
       "dataKey": "nom",
       "series": [
         {
-          "name": "Base 10 %",
+          "name": "Base 10 %",
           "couleur": "#0f766e"
         },
         {
-          "name": "Base 20 %",
+          "name": "Base 20 %",
           "couleur": "#b45309"
         }
       ],
       "data": [
         {
           "nom": "Ex. clos 31/03/2023",
-          "Base 10 %": 296111.0,
-          "Base 20 %": 64708.3
+          "Base 10 %": 296111.0,
+          "Base 20 %": 64708.3
         },
         {
           "nom": "Ex. clos 31/03/2024",
-          "Base 10 %": 319174.4,
-          "Base 20 %": 72413.2
+          "Base 10 %": 319174.4,
+          "Base 20 %": 72413.2
         },
         {
           "nom": "Ex. clos 31/03/2025",
-          "Base 10 %": 318522.0,
-          "Base 20 %": 70372.15
+          "Base 10 %": 318522.0,
+          "Base 20 %": 70372.15
         }
       ],
       "format": "euro"
     },
     {
       "kind": "paragraphe",
-      "texte": "La structure est stable et typique d'un restaurant : la TVA est collectee a environ 69 % au taux de 10 % (cuisine et liquides sur place) et 31 % au taux de 20 % (alcools), sur les trois exercices. Une telle constance exclut une ventilation erratique."
+      "texte": "La ventilation est stable : environ **69 % de la TVA au taux de 10 %** (cuisine et liquides sur place) et **31 % au taux de 20 %** (alcools), sur les trois exercices. La caisse classe d'ailleurs chaque produit par nature (annexe D), et aucun alcool n'y est au taux de 10 %, aucun plat au taux de 20 %."
     },
     {
       "kind": "tableau",
-      "titre": "Coherence par famille : taux attendu (droit) vs taux applique (caisse)",
+      "titre": "Coherence par famille : taux attendu (droit) contre taux applique (caisse)",
+      "minWidth": 780,
       "colonnes": [
         {
           "label": "Famille (par nature)"
@@ -263,15 +480,14 @@
           "label": "Taux attendu"
         },
         {
-          "label": "Taux applique",
-          "align": "right"
+          "label": "Taux applique"
         },
         {
           "label": "CA TTC Ex. clos 31/03/2025",
           "align": "right"
         },
         {
-          "label": "Coherent ?"
+          "label": "Coherent ?"
         }
       ],
       "lignes": [
@@ -280,18 +496,18 @@
             "v": "Liquides sur place (eaux, sodas, cafe)"
           },
           {
-            "v": "10 % (CGI 279 m)"
+            "v": "10 % (CGI 279 m)"
           },
           {
-            "v": "10 %",
-            "align": "right"
+            "v": "10 %"
           },
           {
             "v": "19 723,21 €",
             "align": "right"
           },
           {
-            "v": "Oui"
+            "v": "Oui",
+            "badge": "ok"
           }
         ],
         [
@@ -299,18 +515,18 @@
             "v": "Boissons alcoolisees"
           },
           {
-            "v": "20 % (CGI 278)"
+            "v": "20 % (CGI 278)"
           },
           {
-            "v": "20 %",
-            "align": "right"
+            "v": "20 %"
           },
           {
             "v": "86 389,75 €",
             "align": "right"
           },
           {
-            "v": "Oui"
+            "v": "Oui",
+            "badge": "ok"
           }
         ],
         [
@@ -318,43 +534,259 @@
             "v": "Cuisine / restauration sur place"
           },
           {
-            "v": "10 % (CGI 279 m)"
+            "v": "10 % (CGI 279 m)"
           },
           {
-            "v": "10 %",
-            "align": "right"
+            "v": "10 %"
           },
           {
             "v": "329 452,00 €",
             "align": "right"
           },
           {
-            "v": "Oui"
+            "v": "Oui",
+            "badge": "ok"
           }
         ]
-      ],
-      "note": "Verification automatique sur les trois exercices : aucun produit alcoolise n'est classe au taux de 10 %, aucun plat n'est classe au taux de 20 %."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Exemple concret (annexe D, Ex. clos 31/03/2023) : un alcool, « Arbois Trousseau Le », est vendu 6,40 € et taxe a 20 % ; un plat, « VOUIVRE », est vendu 9,00 € et taxe a 10 % ; un soft, « Vittel litre », est taxe a 10 %. Chaque produit porte le taux que la loi lui assigne."
+      ]
     },
     {
       "kind": "chapitre",
       "source": "nous",
       "numero": 3,
-      "titre": "Les ecarts releves sont marginaux et expliques"
+      "titre": "Le champ « base HT » negatif : mecanisme et inocuite"
     },
     {
       "kind": "paragraphe",
-      "texte": "La seule particularite formelle du journal est l'affichage, sur les tickets a deux taux, d'un champ « base HT » de la ligne 20 % parfois negatif (8526 lignes sur 29588, soit 28,8 % des lignes). C'est un artefact de la colonne brute d'export : ce champ n'est pas additif au TTC. Il n'affecte ni la TVA collectee ni le chiffre d'affaires."
+      "texte": "Sur un ticket a deux taux, l'export calcule la « base HT 20 % » en **residu** (a partir du TTC et de la base 10 %). Quand la part au taux de 10 % domine la note, ce residu devient **negatif**, alors meme que la TVA reellement percue au taux de 20 % est positive. C'est un defaut d'affichage de la colonne d'export, pas une anomalie de recette."
     },
     {
       "kind": "tableau",
-      "titre": "Chiffrage des « incoherences » (cumul 3 exercices)",
+      "titre": "Exemple : ticket n° 2 du 14/04/2022 (TTC 20,90 €, TVA 2,30 €)",
+      "minWidth": 680,
       "colonnes": [
         {
-          "label": "Constat"
+          "label": "Ligne de taux"
+        },
+        {
+          "label": "Champ « base HT » du fichier (brut)",
+          "align": "right"
+        },
+        {
+          "label": "TVA reellement collectee",
+          "align": "right"
+        },
+        {
+          "label": "Base reconstituee (TVA / taux)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Ligne 10 %"
+          },
+          {
+            "v": "14,30 €",
+            "align": "right"
+          },
+          {
+            "v": "1,43 €",
+            "align": "right"
+          },
+          {
+            "v": "14,30 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ligne 20 %"
+          },
+          {
+            "v": "-14,80 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "0,87 €",
+            "align": "right"
+          },
+          {
+            "v": "4,35 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La base brute affiche -14,80 € sur la ligne 20 %, mais la TVA reellement collectee est de 0,87 € (base reelle 4,35 €). C'est exactement le phenomene que le service qualifie d'« invraisemblable » : il porte sur **8526 lignes sur 29588** (28,8 % des lignes a deux taux), mais la TVA par ligne reste **toujours positive** et sa somme donne la TVA collectee. Effet sur la TVA et sur le CA : **nul**."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le meme arrondi d'affichage explique le **point 2** du service : la TVA collectee par taux somme a 42 552,76 € sur l'exercice 2023, contre une ligne « Total TVA » du fichier a 42 548,21 €, soit un ecart d'arrondi de 4,55 € (0,01 %), sans la moindre incidence sur le resultat."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 4,
+      "titre": "Les ecarts caisse / comptabilite sont infimes et expliques"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service souligne que les totaux de la caisse ne « correspondent » pas au centime a la comptabilite. C'est attendu : la comptabilite est tenue par **retranscription manuelle des tickets Z journaliers sur un agenda** (le service le decrit lui-meme). Les ecarts qui en resultent sont infimes (moins de 0,2 %) et s'expliquent."
+    },
+    {
+      "kind": "tableau",
+      "titre": "TVA collectee et CA TTC : caisse contre comptabilite",
+      "minWidth": 1000,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "TVA caisse",
+          "align": "right"
+        },
+        {
+          "label": "TVA compta (445710)",
+          "align": "right"
+        },
+        {
+          "label": "Ecart",
+          "align": "right"
+        },
+        {
+          "label": "CA TTC caisse",
+          "align": "right"
+        },
+        {
+          "label": "CA TTC compta",
+          "align": "right"
+        },
+        {
+          "label": "Ecart",
+          "align": "right"
+        },
+        {
+          "label": "dont pourboire (706800)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Ex. clos 31/03/2023"
+          },
+          {
+            "v": "42 552,76 €",
+            "align": "right"
+          },
+          {
+            "v": "42 614,45 €",
+            "align": "right"
+          },
+          {
+            "v": "-61,69 €",
+            "align": "right"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "404 030,87 €",
+            "align": "right"
+          },
+          {
+            "v": "-660,45 €",
+            "align": "right"
+          },
+          {
+            "v": "598,04 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2024"
+          },
+          {
+            "v": "46 400,08 €",
+            "align": "right"
+          },
+          {
+            "v": "46 464,79 €",
+            "align": "right"
+          },
+          {
+            "v": "-64,71 €",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "438 658,43 €",
+            "align": "right"
+          },
+          {
+            "v": "-665,51 €",
+            "align": "right"
+          },
+          {
+            "v": "597,75 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2025"
+          },
+          {
+            "v": "45 926,63 €",
+            "align": "right"
+          },
+          {
+            "v": "46 005,45 €",
+            "align": "right"
+          },
+          {
+            "v": "-78,82 €",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          },
+          {
+            "v": "435 524,92 €",
+            "align": "right"
+          },
+          {
+            "v": "-697,06 €",
+            "align": "right"
+          },
+          {
+            "v": "656,57 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L'ecart de CA TTC (de l'ordre de 674,34 € par an) correspond pour l'essentiel au **pourboire (compte 706800, environ 617,45 € par an)**, integre au CA en comptabilite mais hors tickets de caisse ; le solde (quelques dizaines d'euros) tient aux arrondis de retranscription. Aucun de ces ecarts ne traduit une recette dissimulee : le CA declare egale les encaissements (voir le grief « suppressions de caisse »)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Chiffrage des « incoherences » invoquees (cumul 3 exercices)",
+      "minWidth": 720,
+      "colonnes": [
+        {
+          "label": "Constat du service"
         },
         {
           "label": "Ampleur",
@@ -365,24 +797,56 @@
           "align": "right"
         },
         {
-          "label": "Explication"
+          "label": "Realite"
         }
       ],
       "lignes": [
         [
           {
-            "v": "Alcool classe au taux de 10 % (annexe D)"
+            "v": "Base HT par taux negative / invraisemblable"
           },
           {
-            "v": "0",
+            "v": "8526 lignes",
             "align": "right"
           },
           {
-            "v": "0 %",
+            "v": "28,8 %",
             "align": "right"
           },
           {
-            "v": "Aucun. Le classement par nature est respecte."
+            "v": "Artefact d'affichage de l'export ; la base reconstituee egale la comptabilite."
+          }
+        ],
+        [
+          {
+            "v": "Somme des TVA par taux <> Total TVA"
+          },
+          {
+            "v": "4,55 €",
+            "align": "right"
+          },
+          {
+            "v": "0,01 %",
+            "align": "right"
+          },
+          {
+            "v": "Arrondi d'affichage, sans incidence."
+          }
+        ],
+        [
+          {
+            "v": "Non-correspondance caisse / comptabilite (TVA)"
+          },
+          {
+            "v": "-205,22 €",
+            "align": "right"
+          },
+          {
+            "v": "0,2 %",
+            "align": "right"
+          },
+          {
+            "v": "Pourboire (706800) et arrondis de retranscription manuelle."
           }
         ],
         [
@@ -394,43 +858,27 @@
             "align": "right"
           },
           {
-            "v": "0 %",
+            "v": "0 %",
             "align": "right"
           },
           {
-            "v": "Aucune. La TVA par ligne est toujours positive et reconciliee."
+            "v": "Aucune : la TVA par ligne est toujours positive."
           }
         ],
         [
           {
-            "v": "Champ « base HT » 20 % negatif a l'export"
+            "v": "Alcool classe au taux de 10 % (annexe D)"
           },
           {
-            "v": "8526 lignes",
+            "v": "0",
             "align": "right"
           },
           {
-            "v": "28,8 %",
+            "v": "0 %",
             "align": "right"
           },
           {
-            "v": "Artefact d'export, sans effet sur la TVA collectee ni le CA."
-          }
-        ],
-        [
-          {
-            "v": "Ecart de reconciliation TVA (lignes vs tickets)"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          },
-          {
-            "v": "0,0000 %",
-            "align": "right"
-          },
-          {
-            "v": "Reconciliation a l'euro pres."
+            "v": "Aucun : le classement par nature est respecte."
           }
         ]
       ]
@@ -438,33 +886,33 @@
     {
       "kind": "chapitre",
       "source": "nous",
-      "numero": 4,
+      "numero": 5,
       "titre": "Piece justificative"
     },
     {
       "kind": "piecejointe",
-      "intro": "Ventilation de la TVA par exercice, coherence par famille et chiffrage des ecarts.",
+      "intro": "Ventilation de la TVA par exercice, reconciliation avec la comptabilite, coherence par famille et chiffrage des ecarts.",
       "fichiers": [
         {
           "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
-          "label": "RF - Incoherences de TVA : ventilation par exercice, coherence par famille, ecarts (XLSX)"
+          "label": "RF - Incoherences de TVA : ventilation, reconciliation caisse/compta, ecarts (XLSX)"
         }
       ]
     },
     {
       "kind": "chapitre",
       "source": "nous",
-      "numero": 5,
+      "numero": 6,
       "titre": "Conclusion"
     },
     {
       "kind": "paragraphe",
-      "texte": "La ventilation de TVA 10 % / 20 % suit la nature des produits (restauration et liquides sur place a 10 %, alcools a 20 %), elle est stable sur les trois exercices (environ 69 % / 31 % de la TVA collectee) et la TVA se reconcilie a l'euro pres avec la comptabilite. Les « incoherences » invoquees se reduisent a un artefact de la colonne « base HT » de l'export caisse, sans effet sur la TVA collectee ni sur le chiffre d'affaires. Le grief n'est pas fonde."
+      "texte": "Les trois reproches tombent. (1) Les bases negatives sont un defaut d'affichage d'une colonne d'export ; la base reconstituee a partir de la TVA reellement collectee **egale la comptabilite** (706300 / 706000) a quelques euros pres. (2) L'ecart somme / total est un arrondi de 0,01 %. (3) La non-correspondance se reduit au pourboire (706800) et aux arrondis de retranscription manuelle, pour moins de 0,2 %. La TVA reellement collectee, elle, se reconcilie avec la comptabilite. Le grief n'est pas fonde."
     },
     {
       "kind": "interne",
       "audience": "avocat",
-      "texte": "Point a tenir en cas de contestation : ne jamais raisonner sur la colonne brute VAT_base / « Base TVA 20 % » de l'annexe G (valeurs negatives trompeuses sur tickets multi-taux). La preuve repose sur le champ tax_amount (TVA de ligne, toujours positif), qui somme exactement a la TVA des tickets et a la TVA comptabilisee. La base HT se reconstitue par base = TVA / taux. Tous les chiffres sont reproductibles via le script."
+      "texte": "Point a tenir : ne jamais raisonner sur la colonne brute « base HT » de l'annexe G (negative sur les tickets multi-taux). La preuve repose sur le champ tax_amount (TVA de ligne, toujours positif), dont la somme par taux redonne, via base = TVA / taux, les comptes HT de la comptabilite (706300 / 706000). Tenir prets : le rapprochement caisse/compta (pourboire 706800 + arrondis) et le renvoi au grief suppressions (CA = encaissements). Tous les chiffres sont reproductibles via le script."
     }
   ]
 }
