@@ -692,8 +692,9 @@ S.append({"kind": "paragraphe", "texte":
           "Les trois reproches tombent. (1) Les bases negatives (et la base 10 % "
           "sous-estimee) sont un defaut d'affichage d'une colonne d'export ; la base "
           "reconstituee a partir de la TVA reellement collectee **egale la "
-          "comptabilite** (706300 / 706000) a moins de 0,06 % pres. (2) L'ecart somme "
-          "/ total est un arrondi d'affichage (au plus 0,03 %). (3) La "
+          "comptabilite** (706300 / 706000) : HT total a moins de 0,01 %, chaque taux "
+          "a mieux que 0,25 %. (2) L'ecart somme / total est un arrondi d'affichage "
+          "(au plus 0,03 %). (3) La "
           "non-correspondance se reduit au pourboire (706800) et aux arrondis de "
           "retranscription manuelle, pour moins de 0,2 %. La TVA reellement collectee, "
           "elle, se reconcilie avec la comptabilite. Le grief n'est pas fonde."})

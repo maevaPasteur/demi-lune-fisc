@@ -471,7 +471,7 @@ const autresGriefs: Grief[] = [
     titre: 'Sur-versement au verre',
     griefFisc: 'La méthode retient des doses théoriques exactes, sans tenir compte du sur-versement réel.',
     reponseCourte:
-      'Sans doseur, le service au verre dépasse la dose de la carte (verre de vin mesuré +23,6 % — Kerr 2008). Sur la base sur-versable, un taux prudent de +18 % représente 462 L de vin consommé et jamais vendu sur 3 ans.',
+      'Sans doseur, tout le service à la main dépasse la dose (verre de vin mesuré +23,6 %, mélanges +42 % — Kerr 2008). Sur 4 476 L servis à la main (vins, spiritueux, cocktails, hors bière), à des taux prudents, 807 L d’alcool consommé et jamais vendu sur 3 ans.',
     statut: 'partiel',
     sections: RFSurversement.sections as unknown as Section[],
   },

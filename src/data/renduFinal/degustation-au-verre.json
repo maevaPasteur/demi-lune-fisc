@@ -10,34 +10,42 @@
    "kind": "chapitre",
    "source": "fisc",
    "numero": 1,
-   "titre": "Ce que retient l’administration",
+   "titre": "Le grief de l’administration",
    "sousTitre": "Proposition p. 37-44 — tout le vin disponible est réputé vendable"
   },
   {
    "kind": "paragraphe",
-   "texte": "La reconstitution **convertit en verres vendus la totalité du vin disponible**, sans rien réserver au **geste commercial de dégustation** qui précède le service. Or ce geste est systématique et ne laisse **aucune trace en caisse** : il n’est ni un article, ni une remise."
+   "texte": "La reconstitution **convertit en verres vendus la totalité du vin disponible**, sans rien réserver au **geste de dégustation** qui précède le service. Or ce geste est systématique et ne laisse **aucune trace en caisse** : il n’est ni un article, ni une remise."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Deux gestes de dégustation, 2 cl chacun, jamais enregistrés",
-   "sousTitre": "Le pichet qu’on fait approuver, et la bouteille montée pour faire goûter"
+   "titre": "La quantité offerte en dégustation, vin par vin",
+   "sousTitre": "On part de nos ventes réelles au verre et on chiffre la larme de dégustation"
   },
   {
    "kind": "paragraphe",
-   "texte": "**(a) Le pichet.** Quand une table commande un pichet, le serveur **verse d’abord une larme (≈ 2 cl)** pour faire approuver le vin avant de servir la table. **(b) Le vin nommé au verre.** Pour un vin de la carte des vins (Savagnin, Saint-Véran, Trousseau, vin jaune…), le serveur **monte la bouteille en salle et fait goûter une personne (≈ 2 cl)** avant de remplir le verre. Si plusieurs convives commandent **le même** vin, **une seule** dégustation ; s’ils commandent des vins **différents**, chacun goûte. À l’inverse, les **vins génériques** (« verre de vin », rosé maison, aligoté maison, tirés d’un cubis) **ne donnent pas lieu à dégustation** : on ne monte pas de bouteille, ils sont donc **exclus** du calcul."
+   "texte": "Pour un vin de la **carte des vins** (Savagnin, Saint-Véran, Trousseau, vin jaune…), le serveur **monte la bouteille en salle et fait goûter une personne (≈ 2 cl)** avant de remplir le verre. Si plusieurs convives commandent **le même** vin à une table, **une seule** dégustation (on retient prudemment **1 dégustation pour 2 verres**) ; s’ils commandent des vins **différents**, chacun goûte. Les **vins génériques** (« verre de vin », rosé/aligoté maison, tirés d’un cubis) **n’en donnent pas lieu** (pas de bouteille montée) : ils sont **exclus**. Le tableau ci-dessous part de **nos ventes réelles au verre** et donne, vin par vin, la quantité offerte."
   },
   {
    "kind": "tableau",
-   "titre": "Vins nommés servis au verre (carte des vins) — base de la dégustation",
-   "minWidth": 460,
+   "titre": "Quantité offerte en dégustation, vin par vin (3 exercices)",
+   "minWidth": 560,
    "colonnes": [
     {
      "label": "Vin nommé"
     },
     {
-     "label": "Verres (3 ans)",
+     "label": "Verres",
+     "align": "right"
+    },
+    {
+     "label": "Dégustations",
+     "align": "right"
+    },
+    {
+     "label": "Volume offert",
      "align": "right"
     }
    ],
@@ -49,6 +57,14 @@
      {
       "v": "1 544",
       "align": "right"
+     },
+     {
+      "v": "772",
+      "align": "right"
+     },
+     {
+      "v": "15,4 L",
+      "align": "right"
      }
     ],
     [
@@ -57,6 +73,14 @@
      },
      {
       "v": "868",
+      "align": "right"
+     },
+     {
+      "v": "434",
+      "align": "right"
+     },
+     {
+      "v": "8,7 L",
       "align": "right"
      }
     ],
@@ -67,6 +91,14 @@
      {
       "v": "820",
       "align": "right"
+     },
+     {
+      "v": "410",
+      "align": "right"
+     },
+     {
+      "v": "8,2 L",
+      "align": "right"
      }
     ],
     [
@@ -75,6 +107,14 @@
      },
      {
       "v": "409",
+      "align": "right"
+     },
+     {
+      "v": "204",
+      "align": "right"
+     },
+     {
+      "v": "4,1 L",
       "align": "right"
      }
     ],
@@ -85,6 +125,14 @@
      {
       "v": "375",
       "align": "right"
+     },
+     {
+      "v": "188",
+      "align": "right"
+     },
+     {
+      "v": "3,8 L",
+      "align": "right"
      }
     ],
     [
@@ -93,6 +141,14 @@
      },
      {
       "v": "358",
+      "align": "right"
+     },
+     {
+      "v": "179",
+      "align": "right"
+     },
+     {
+      "v": "3,6 L",
       "align": "right"
      }
     ],
@@ -103,6 +159,14 @@
      {
       "v": "320",
       "align": "right"
+     },
+     {
+      "v": "160",
+      "align": "right"
+     },
+     {
+      "v": "3,2 L",
+      "align": "right"
      }
     ],
     [
@@ -111,6 +175,14 @@
      },
      {
       "v": "312",
+      "align": "right"
+     },
+     {
+      "v": "156",
+      "align": "right"
+     },
+     {
+      "v": "3,1 L",
       "align": "right"
      }
     ],
@@ -121,6 +193,14 @@
      {
       "v": "288",
       "align": "right"
+     },
+     {
+      "v": "144",
+      "align": "right"
+     },
+     {
+      "v": "2,9 L",
+      "align": "right"
      }
     ],
     [
@@ -129,6 +209,14 @@
      },
      {
       "v": "218",
+      "align": "right"
+     },
+     {
+      "v": "109",
+      "align": "right"
+     },
+     {
+      "v": "2,2 L",
       "align": "right"
      }
     ],
@@ -139,15 +227,69 @@
      {
       "v": "148",
       "align": "right"
+     },
+     {
+      "v": "74",
+      "align": "right"
+     },
+     {
+      "v": "1,5 L",
+      "align": "right"
      }
     ],
     [
      {
-      "v": "Total verres de vin nommé (hors maison / cubis)",
+      "v": "Sous-total vins nommés",
       "fw": 700
      },
      {
       "v": "5 660",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "2 830",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "56,6 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Pichets (1 larme par pichet)"
+     },
+     {
+      "v": "2 797",
+      "align": "right"
+     },
+     {
+      "v": "2 797",
+      "align": "right"
+     },
+     {
+      "v": "55,9 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "TOTAL dégustation",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "112,5 L",
       "align": "right",
       "fw": 700
      }
@@ -155,22 +297,18 @@
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "**Le calcul.** Les **2 797 pichets** servis sur trois ans donnent autant de dégustations de 2 cl, soit **55,9 L**. Les **5 660 verres de vin nommé** correspondent, à raison d’**une dégustation pour 2 verres** (hypothèse prudente : on suppose que les verres vont souvent par deux à une même table, donc **une seule** dégustation), à **2 830 dégustations**, soit **56,6 L**. Au total : **112,5 L** de vin offert en dégustation et non vendu."
-  },
-  {
    "kind": "kpis",
    "items": [
     {
-     "label": "Dégustations au pichet",
-     "valeur": "55,9 L",
-     "sub": "2 797 pichets × 2 cl",
+     "label": "Vins nommés",
+     "valeur": "56,6 L",
+     "sub": "5 660 verres → 2 830 dégustations",
      "couleur": "blue"
     },
     {
-     "label": "Dégustations vin nommé",
-     "valeur": "56,6 L",
-     "sub": "2 830 × 2 cl (1 pour 2 verres)",
+     "label": "Pichets",
+     "valeur": "55,9 L",
+     "sub": "2 797 × 2 cl",
      "couleur": "blue"
     },
     {
@@ -186,15 +324,15 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "Le geste de dégustation — une larme au pichet, une bouteille montée pour le vin nommé — soustrait **112,5 L** de vin au volume vendable sur trois ans, sur une hypothèse **délibérément basse** (une seule dégustation pour 2 verres du même vin). La reconstitution du fisc compte pourtant ce volume comme des verres vendus."
+   "texte": "Vin par vin, la dégustation offerte — bouteille montée pour le vin nommé, larme au pichet — soustrait **112,5 L** de vin au volume vendable sur trois ans, sur une hypothèse **basse** (1 dégustation pour 2 verres du même vin). Ce volume explique une part du résiduel de l’analyse « Boissons disparues » ; la reconstitution du fisc le compte pourtant comme des verres vendus."
   },
   {
    "kind": "piecejointe",
-   "intro": "Vins nommés servis au verre et calcul des deux gestes de dégustation :",
+   "intro": "Quantité offerte en dégustation, vin par vin (+ pichets) :",
    "fichiers": [
     {
      "fichier": "pieces-defense/RF-degustation-au-verre.xlsx",
-     "label": "RF — Dégustation offerte (pichet + vin nommé)"
+     "label": "RF — Dégustation offerte (détail par vin)"
     }
    ]
   },
@@ -202,7 +340,7 @@
    "kind": "interne",
    "audience": "avocat",
    "titre": "Hypothèse et fiabilisation",
-   "texte": "Le seul paramètre non mesuré est le **nombre moyen de verres du même vin par table** (retenu à 2, ce qui minore la dégustation). Le distinguer du sur-versement (page dédiée) : ce sont deux pertes **différentes** (l’une offerte avant service, l’autre versée en trop pendant le service), à ne pas additionner sur les mêmes centilitres. Faire confirmer la pratique par la gérante (attestation 202 CPC) et, si possible, par le personnel de salle. Retirer cet encart de toute version remise."
+   "texte": "Seul paramètre non mesuré : le **nombre moyen de verres du même vin par table** (retenu à 2, ce qui **minore** la dégustation ; à 1,5 le volume monte). Bien le **distinguer du sur-versement** (geste différent : la dégustation est versée AVANT le service, le sur-versement PENDANT) — ne jamais additionner les deux sur les mêmes centilitres. Faire confirmer la pratique par la gérante et le personnel de salle (attestations 202 CPC). Retirer cet encart de toute version remise."
   }
  ]
 }
