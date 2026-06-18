@@ -10,8 +10,8 @@
    "ca_declare": 435525,
    "achat_alcool_l": 10622,
    "achat_alcool_cout": 107924,
-   "non_revendu_au_verre_l": 2365,
-   "part_non_revendu_pct": 22.3,
+   "non_revendu_au_verre_l": 2378,
+   "part_non_revendu_pct": 22.4,
    "cuisine_l": 566,
    "menus_l": 228,
    "chef_l": 143,
@@ -19,7 +19,7 @@
    "surversement_l": 807,
    "stock_l": 213,
    "coef_brut_global": 3.82,
-   "coef_effectif_global": 2.97
+   "coef_effectif_global": 2.96
   }
  },
  "sections": [
@@ -45,7 +45,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Coefficient théorique au prix carte (brut) face au coefficient **effectif**, par famille, après neutralisation des litres non revendus au verre (**22,3 %** des achats). Le prix d'achat et le prix de vente de chaque boisson proviennent des factures fournisseur et de la carte."
+   "texte": "Coefficient théorique au prix carte (brut) face au coefficient **effectif**, par famille, après neutralisation des litres non revendus au verre (**22,4 %** des achats). Le prix d'achat et le prix de vente de chaque boisson proviennent des factures fournisseur et de la carte."
   },
   {
    "kind": "tableau",
@@ -90,7 +90,7 @@
       "align": "right"
      },
      {
-      "v": "× 2,75",
+      "v": "× 2,74",
       "align": "right",
       "badge": "ok"
      }
@@ -134,7 +134,7 @@
       "align": "right"
      },
      {
-      "v": "× 5,77",
+      "v": "× 5,76",
       "align": "right",
       "badge": "ok"
      }
@@ -178,7 +178,7 @@
       "align": "right"
      },
      {
-      "v": "× 2,97",
+      "v": "× 2,96",
       "align": "right",
       "badge": "ok"
      }
@@ -193,7 +193,7 @@
    "kind": "barreComposition",
    "titre": "Cascade des volumes : où part l'alcool acheté",
    "unite": "L",
-   "total": 8932,
+   "total": 8945,
    "segments": [
     {
      "label": "Vendu au verre",
@@ -232,7 +232,7 @@
     },
     {
      "label": "Degustation offerte",
-     "valeur": 113,
+     "valeur": 126,
      "categorie": "calcul"
     },
     {
@@ -255,7 +255,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Exemple chiffré sur la famille « Spiritueux, liqueurs et apéritifs » : ses achats représentent **6 306 €** pour un chiffre d'affaires théorique au prix carte de **46 841 €** (coefficient brut **× 7,43**). Mais une fraction de ces spiritueux part en cuisine (babas, flambages), en consommation du chef (Picon, Macvin) et en sur-versement. Après neutralisation de cette part non revendue au verre, le chiffre d'affaires réellement encaissable tombe à **36 411 €**, soit un coefficient effectif de **× 5,77**."
+   "texte": "Exemple chiffré sur la famille « Spiritueux, liqueurs et apéritifs » : ses achats représentent **6 306 €** pour un chiffre d'affaires théorique au prix carte de **46 841 €** (coefficient brut **× 7,43**). Mais une fraction de ces spiritueux part en cuisine (babas, flambages), en consommation du chef (Picon, Macvin) et en sur-versement. Après neutralisation de cette part non revendue au verre, le chiffre d'affaires réellement encaissable tombe à **36 354 €**, soit un coefficient effectif de **× 5,76**."
   },
   {
    "kind": "graphique",
@@ -288,7 +288,7 @@
   },
   {
    "kind": "note",
-   "texte": "Globalement, le coefficient **brut** ressort à **× 3,82** (proche du coefficient retenu par le service), mais le coefficient **effectif**, après déduction des **2 365 L** non revendus au verre (**22,3 %** des achats : cuisine **566 L**, menus **228 L**, chef **143 L**, offerts **40 L**, sur-versement **807 L**, dégustation **113 L**, crémant jeté **126 L**, freinte bière **129 L**, stock **213 L**), tombe à **× 2,97**. Un coefficient de cet ordre est **conforme au secteur CHR** : la jurisprudence admet d'ailleurs un abattement de **22 à 25 %** sur les reconstitutions de liquides (CAA Paris, 17/03/2021), exactement pour tenir compte de ces postes. Le coefficient « faible » reproché n'est donc pas l'indice d'une fraude : c'est l'effet **arithmétique** de l'alcool qui n'est pas revendu au verre."
+   "texte": "Globalement, le coefficient **brut** ressort à **× 3,82** (proche du coefficient retenu par le service), mais le coefficient **effectif**, après déduction des **2 378 L** non revendus au verre (**22,4 %** des achats : cuisine **566 L**, menus **228 L**, chef **143 L**, offerts **40 L**, sur-versement **807 L**, dégustation **126 L**, crémant jeté **126 L**, freinte bière **129 L**, stock **213 L**), tombe à **× 2,96**. Un coefficient de cet ordre est **conforme au secteur CHR** : la jurisprudence admet d'ailleurs un abattement de **22 à 25 %** sur les reconstitutions de liquides (CAA Paris, 17/03/2021), exactement pour tenir compte de ces postes. Le coefficient « faible » reproché n'est donc pas l'indice d'une fraude : c'est l'effet **arithmétique** de l'alcool qui n'est pas revendu au verre."
   },
   {
    "kind": "piecejointe",
@@ -304,13 +304,13 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Ce qu'il faut retenir",
-   "texte": "Un coefficient brut suppose que tout l'alcool acheté est revendu au verre au prix carte. C'est faux : **2 365 L** (22,3 % des achats) partent en cuisine, menus, consommation du chef, offerts, sur-versement et stock, sans aucune recette. Recalculé correctement, le coefficient effectif (**× 2,97**) est conforme au secteur CHR. Le coefficient « faible » est un artefact de calcul, pas une minoration de recettes."
+   "texte": "Un coefficient brut suppose que tout l'alcool acheté est revendu au verre au prix carte. C'est faux : **2 378 L** (22,4 % des achats) partent en cuisine, menus, consommation du chef, offerts, sur-versement et stock, sans aucune recette. Recalculé correctement, le coefficient effectif (**× 2,96**) est conforme au secteur CHR. Le coefficient « faible » est un artefact de calcul, pas une minoration de recettes."
   },
   {
    "kind": "interne",
    "audience": "avocat",
    "titre": "Note pour l'avocat",
-   "texte": "Articuler ce bloc avec le grief « reconstitution par coefficient » : le service ne peut pas rejeter la caisse comme non probante **et** en extraire le coefficient × 3,10 qui sert à reconstituer. Surtout, son abattement de 15 % est insuffisant : nos mesures, poste par poste, situent la part non revendue au verre à 22,3 % des achats, en plein dans la fourchette 22 à 25 % admise par la CAA Paris (17/03/2021). Le coefficient effectif par famille est reproductible via scripts/rendu-final-coefficients-de-revente.py (source : boissonsPageData.json, prix d'achat factures + prix de vente carte)."
+   "texte": "Articuler ce bloc avec le grief « reconstitution par coefficient » : le service ne peut pas rejeter la caisse comme non probante **et** en extraire le coefficient × 3,10 qui sert à reconstituer. Surtout, son abattement de 15 % est insuffisant : nos mesures, poste par poste, situent la part non revendue au verre à 22,4 % des achats, en plein dans la fourchette 22 à 25 % admise par la CAA Paris (17/03/2021). Le coefficient effectif par famille est reproductible via scripts/rendu-final-coefficients-de-revente.py (source : boissonsPageData.json, prix d'achat factures + prix de vente carte)."
   }
  ]
 }

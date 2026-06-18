@@ -96,9 +96,11 @@ O_alc = round(1 * JOURS * 0.06, 1)  # aperitifs offerts
 # EXPLICITES de la cascade pour que /analyses/boissons-disparues et le rendu
 # final affichent strictement les memes chiffres. Le residuel devient alors la
 # seule perte IRREDUCTIBLE (casse, evaporation, fonds de verre, rincage).
-SURVERSEMENT_L = 807    # free-pour : vins (+20%) + spiritueux au verre (+25%) + cocktails (+8%), hors biere (Kerr 2008)
-CREMANT_JETE_L = 126    # bouteille de cremant eventee, jetee en fin de service (effervescent plat < 24 h)
-DEGUSTATION_L = 113     # 2 cl offerts : larme au pichet + bouteille montee pour le vin nomme au verre
+SURVERSEMENT_L = 1056   # free-pour aux taux SOURCES (hors biere et hors cremant) :
+#                         vins +23,6% (Kerr 2008) + spiritueux +20% (Wansink BMJ 2005) + cocktails +42% (Kerr)
+CREMANT_JETE_L = 260    # bouteille de cremant eventee jetee en fin de jour (niveau journalier, annexe C, +23,6%)
+CREMANT_SURVERSE_L = 87  # sur-versement propre au cremant (+23,6%), distinct du jete, sorti du poste surversement general
+DEGUSTATION_L = 126     # 2 cl offerts, comptes NOTE PAR NOTE (annexe C) : 6 292 degustations (1/vin/note)
 FREINTE_BIERE_L = 129   # freinte technique du fut (mousse, purge, lignes, fond de fut), ~10% des 1 293 L pression
 # Postes arrondis, puis PERTE = achats - somme des postes arrondis (la cascade
 # affichee se boucle EXACTEMENT : achats - postes = perte, sans ecart d'arrondi).
@@ -110,19 +112,20 @@ postes = [
     {"poste": "Alcool des menus (non detaille en caisse)", "litres": round(M)},
     {"poste": "Consommation du chef (Picon + Macvin)", "litres": round(P)},
     {"poste": "Aperitifs offerts aux clients", "litres": round(O_alc)},
-    {"poste": "Sur-versement au verre et cocktails (free-pour, Kerr 2008)", "litres": SURVERSEMENT_L},
-    {"poste": "Degustation offerte (pichet + vin nomme au verre)", "litres": DEGUSTATION_L},
+    {"poste": "Sur-versement vins/spiritueux/cocktails (free-pour : Kerr 2008, Wansink 2005)", "litres": SURVERSEMENT_L},
+    {"poste": "Degustation offerte (note par note, annexe C)", "litres": DEGUSTATION_L},
     {"poste": "Cremant jete en fin de journee (eventé)", "litres": CREMANT_JETE_L},
+    {"poste": "Cremant sur-versé (free-pour +23,6 %)", "litres": CREMANT_SURVERSE_L},
     {"poste": "Freinte technique de la biere pression (mousse, lignes)", "litres": FREINTE_BIERE_L},
     {"poste": "Stock final (inventaire)", "litres": round(stock)},
 ]
 perte_r = ach_r - sum(p["litres"] for p in postes)
 # Perte d'exploitation TOTALE (= ce qui n'est pas vendu comme boisson, hors
 # cuisine/menus/stock) : conso chef + offerts + sur-versement + degustation +
-# cremant + freinte + casse irreductible. C'est le chiffre comparable a
-# l'abattement de 22 % valide par la jurisprudence (CAA Paris).
+# cremant (jete + sur-verse) + freinte + casse irreductible. C'est le chiffre
+# comparable a l'abattement de 22 % valide par la jurisprudence (CAA Paris).
 perte_exploitation_l = round(P) + round(O_alc) + SURVERSEMENT_L + DEGUSTATION_L \
-    + CREMANT_JETE_L + FREINTE_BIERE_L + perte_r
+    + CREMANT_JETE_L + CREMANT_SURVERSE_L + FREINTE_BIERE_L + perte_r
 cascade = {
     "achats_alcool_l": ach_r,
     "postes": postes,

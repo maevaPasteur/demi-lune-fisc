@@ -471,7 +471,7 @@ const autresGriefs: Grief[] = [
     titre: 'Sur-versement au verre',
     griefFisc: 'La méthode retient des doses théoriques exactes, sans tenir compte du sur-versement réel.',
     reponseCourte:
-      'Sans doseur, tout le service à la main dépasse la dose (verre de vin mesuré +23,6 %, mélanges +42 % — Kerr 2008). Sur 4 476 L servis à la main (vins, spiritueux, cocktails, hors bière), à des taux prudents, 807 L d’alcool consommé et jamais vendu sur 3 ans.',
+      'Sans doseur, le service à la main dépasse la dose, aux taux mesurés par la littérature : vin +23,6 % et cocktails +42 % (Kerr 2008), spiritueux +20 % (Wansink, BMJ 2005). Sur 4 091 L servis à la main (hors bière et crémant), cela fait 1 056 L d’alcool consommé et jamais vendu sur 3 ans.',
     statut: 'partiel',
     sections: RFSurversement.sections as unknown as Section[],
   },
@@ -493,7 +493,7 @@ const autresGriefs: Grief[] = [
     titre: 'Pertes de crémant (bouteilles ouvertes non terminées)',
     griefFisc: 'Le crémant acheté est supposé intégralement vendu au verre.',
     reponseCourte:
-      'Un crémant ouvert est plat le lendemain : on ouvre une bouteille par jour de service et on jette le solde. Sur 662 jours, ≈ 126 L de crémant détruit (≈ 168 bouteilles) — que la reconstitution compte pourtant comme vendu.',
+      'Deux pertes distinctes, calculées jour par jour sur les tickets (annexe C, verre + cocktails) : le crémant sur-versé (+23,6 %) = 87 L, et la bouteille éventée jetée chaque soir = 260 L. Au total 347 L de crémant qui ne produit aucune vente — que la reconstitution compte pourtant comme vendu.',
     statut: 'partiel',
     sections: RFCremant.sections as unknown as Section[],
   },
@@ -504,7 +504,7 @@ const autresGriefs: Grief[] = [
     titre: 'Dégustation offerte (goûter du vin)',
     griefFisc: 'Tout le vin acheté est supposé vendu.',
     reponseCourte:
-      'Deux gestes de 2 cl jamais enregistrés : une larme pour approuver chaque pichet, et une dégustation quand on monte la bouteille d’un vin nommé au verre. Sur des hypothèses basses, ≈ 113 L de vin offert et non vendu sur 3 ans.',
+      'Compté note par note dans le détail des tickets (annexe C) : 2 cl offerts une fois par vin nommé et par note, soit 6 292 dégustations = 126 L de vin offert et jamais vendu sur 3 ans (cubis et bouteilles exclus). Chiffre lu dans la caisse, non estimé.',
     statut: 'partiel',
     sections: RFDegustation.sections as unknown as Section[],
   },

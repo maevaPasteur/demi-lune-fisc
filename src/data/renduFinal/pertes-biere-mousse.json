@@ -3,7 +3,9 @@
   "slug": "pertes-biere-mousse",
   "source": "scripts/rendu-final-reconstitution-bloc2.py",
   "grief": "Proposition p. 44-53 (methode 2/2) - pertes biere",
-  "litres_retenu": 129
+  "litres_retenu": 129,
+  "litres_documente": 323,
+  "taux_documente": 0.2
  },
  "sections": [
   {
@@ -15,128 +17,67 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reconstitue la bière en divisant le **volume de fût disponible** par les doses servies (pression 25 cl, pinte 50 cl, part bière des Picon-bière, panachés et Monaco, p. 50). Il suppose donc que **presque tout le fût acheté finit dans un verre vendu**. C’est impossible : un fût ne se vide jamais à 100 % dans les verres — une partie part en mousse, en purge et en nettoyage des lignes."
+   "texte": "Le service reconstitue la bière en divisant le **volume de fût disponible** par les doses servies (pression 25 cl, pinte 50 cl, part bière des Picon-bière, panachés et Monaco, p. 50), en ne retranchant que **15 % de pertes** (p. 51). Il suppose donc que **85 % du fût finit dans un verre vendu**. La littérature professionnelle montre que ce taux de perte est **sous-estimé** : un fût de tirage traditionnel perd davantage entre la mousse, le réglage du tirage et le nettoyage des lignes."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Notre mesure : la bière pression perd un volume technique avant le verre",
-   "sousTitre": "Mousse, purge, fond de fût, nettoyage des lignes — documenté et chiffré"
+   "titre": "Ce qui est réellement servi au verre",
+   "sousTitre": "Toutes les boissons tirées du fût Affligem, par produit et par exercice"
   },
   {
    "kind": "paragraphe",
-   "texte": "Tout fût tiré laisse un volume qui n’atteint jamais le verre du client : **collerette de mousse** à chaque service, **fond de fût** non tirable, **purge** au changement de fût, et surtout **vidange des lignes à chaque nettoyage**. La **Brewers Association** recommande un nettoyage des lignes **toutes les deux semaines** (standard repris par la profession) : à chaque cycle, la bière contenue dans les lignes est jetée. Le **rendement-fût** considéré comme normal dans la profession est d’environ **95 %** (soit **≈ 5 % de freinte technique minimale**), et la littérature CHR situe les pertes pression entre **5 % et 20 %** selon l’installation et le réglage du tirage."
+   "texte": "Voici, lue dans la caisse, **chaque boisson tirée du fût** (la seule part bière pour les Picon, panachés et Monaco), avec le nombre de consommations et le volume par exercice. C’est le volume **arrivé dans les verres** — avant toute perte technique."
   },
   {
    "kind": "tableau",
-   "titre": "Bière pression réellement tirée (part bière des fûts Affligem, 3 exercices)",
-   "minWidth": 560,
+   "titre": "Bière pression servie au verre (part bière des fûts Affligem)",
+   "minWidth": 1040,
    "colonnes": [
     {
      "label": "Article (part bière)"
     },
     {
-     "label": "Dose bière",
+     "label": "Part bière",
      "align": "right"
     },
     {
-     "label": "Quantité",
+     "label": "2022-23 — qté",
      "align": "right"
     },
     {
-     "label": "Volume",
+     "label": "2022-23 — L",
+     "align": "right"
+    },
+    {
+     "label": "2023-24 — qté",
+     "align": "right"
+    },
+    {
+     "label": "2023-24 — L",
+     "align": "right"
+    },
+    {
+     "label": "2024-25 — qté",
+     "align": "right"
+    },
+    {
+     "label": "2024-25 — L",
+     "align": "right"
+    },
+    {
+     "label": "Total — qté",
+     "align": "right"
+    },
+    {
+     "label": "Total — L",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Monaco"
-     },
-     {
-      "v": "25 cl",
-      "align": "right"
-     },
-     {
-      "v": "74",
-      "align": "right"
-     },
-     {
-      "v": "18 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Panaché"
-     },
-     {
-      "v": "25 cl",
-      "align": "right"
-     },
-     {
-      "v": "244",
-      "align": "right"
-     },
-     {
-      "v": "61 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Picon bière"
-     },
-     {
-      "v": "25 cl",
-      "align": "right"
-     },
-     {
-      "v": "252",
-      "align": "right"
-     },
-     {
-      "v": "63 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Pinte"
-     },
-     {
-      "v": "50 cl",
-      "align": "right"
-     },
-     {
-      "v": "590",
-      "align": "right"
-     },
-     {
-      "v": "295 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Pinte Picon"
-     },
-     {
-      "v": "50 cl",
-      "align": "right"
-     },
-     {
-      "v": "96",
-      "align": "right"
-     },
-     {
-      "v": "48 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
       "v": "pression"
      },
      {
@@ -144,105 +85,11 @@
       "align": "right"
      },
      {
-      "v": "1 564",
+      "v": "902",
       "align": "right"
      },
      {
-      "v": "391 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Monaco"
-     },
-     {
-      "v": "25 cl",
-      "align": "right"
-     },
-     {
-      "v": "56",
-      "align": "right"
-     },
-     {
-      "v": "14 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Panaché"
-     },
-     {
-      "v": "25 cl",
-      "align": "right"
-     },
-     {
-      "v": "102",
-      "align": "right"
-     },
-     {
-      "v": "26 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Picon bière"
-     },
-     {
-      "v": "25 cl",
-      "align": "right"
-     },
-     {
-      "v": "130",
-      "align": "right"
-     },
-     {
-      "v": "32 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Pinte"
-     },
-     {
-      "v": "50 cl",
-      "align": "right"
-     },
-     {
-      "v": "286",
-      "align": "right"
-     },
-     {
-      "v": "143 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Pinte Picon"
-     },
-     {
-      "v": "50 cl",
-      "align": "right"
-     },
-     {
-      "v": "66",
-      "align": "right"
-     },
-     {
-      "v": "33 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "pression"
-     },
-     {
-      "v": "25 cl",
+      "v": "225 L",
       "align": "right"
      },
      {
@@ -252,11 +99,244 @@
      {
       "v": "168 L",
       "align": "right"
+     },
+     {
+      "v": "662",
+      "align": "right"
+     },
+     {
+      "v": "166 L",
+      "align": "right"
+     },
+     {
+      "v": "2 234",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "558 L",
+      "align": "right",
+      "fw": 700
      }
     ],
     [
      {
-      "v": "Total bière pression tirée",
+      "v": "Pinte"
+     },
+     {
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "282",
+      "align": "right"
+     },
+     {
+      "v": "141 L",
+      "align": "right"
+     },
+     {
+      "v": "286",
+      "align": "right"
+     },
+     {
+      "v": "143 L",
+      "align": "right"
+     },
+     {
+      "v": "308",
+      "align": "right"
+     },
+     {
+      "v": "154 L",
+      "align": "right"
+     },
+     {
+      "v": "877",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "438 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Picon bière"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "129",
+      "align": "right"
+     },
+     {
+      "v": "32 L",
+      "align": "right"
+     },
+     {
+      "v": "130",
+      "align": "right"
+     },
+     {
+      "v": "32 L",
+      "align": "right"
+     },
+     {
+      "v": "124",
+      "align": "right"
+     },
+     {
+      "v": "31 L",
+      "align": "right"
+     },
+     {
+      "v": "382",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "96 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Panaché"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "147",
+      "align": "right"
+     },
+     {
+      "v": "37 L",
+      "align": "right"
+     },
+     {
+      "v": "102",
+      "align": "right"
+     },
+     {
+      "v": "26 L",
+      "align": "right"
+     },
+     {
+      "v": "97",
+      "align": "right"
+     },
+     {
+      "v": "24 L",
+      "align": "right"
+     },
+     {
+      "v": "346",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "87 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Pinte Picon"
+     },
+     {
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "37",
+      "align": "right"
+     },
+     {
+      "v": "18 L",
+      "align": "right"
+     },
+     {
+      "v": "66",
+      "align": "right"
+     },
+     {
+      "v": "33 L",
+      "align": "right"
+     },
+     {
+      "v": "59",
+      "align": "right"
+     },
+     {
+      "v": "30 L",
+      "align": "right"
+     },
+     {
+      "v": "162",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "81 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Monaco"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0 L",
+      "align": "right"
+     },
+     {
+      "v": "56",
+      "align": "right"
+     },
+     {
+      "v": "14 L",
+      "align": "right"
+     },
+     {
+      "v": "74",
+      "align": "right"
+     },
+     {
+      "v": "18 L",
+      "align": "right"
+     },
+     {
+      "v": "130",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "32 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Total bière pression servie",
       "fw": 700
      },
      {
@@ -264,7 +344,37 @@
       "align": "right"
      },
      {
-      "v": "4 130",
+      "v": "1 497",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "454 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "1 312",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "416 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "1 324",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "423 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "4 132",
       "align": "right",
       "fw": 700
      },
@@ -277,46 +387,228 @@
    ]
   },
   {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "La freinte technique dépasse les 15 % retenus par le service",
+   "sousTitre": "Sur-versement, mousse, nettoyage des lignes — chaque poste documenté"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La littérature professionnelle situe le gaspillage d’un fût entre **5 %** (système parfaitement réglé) et **25 %** (installation courante), avec une **moyenne de l’ordre de 20 %** ([Modern Restaurant Management — gaspillage moyen 20 % par fût](https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/)) — donc **au-dessus des 15 % retenus par le service**. En France, les distributeurs CHR estiment la perte d’un fût en tirage traditionnel autour de **10 %** ([Le Bihan Boissons — perte d’un fût en tirage traditionnel ~10 %](https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/)) à **15 %** ([JDC — perte de bière au bar](https://www.jdc.fr/blog/reduire-gaspillage-de-biere-bar)). Trois postes, tous documentés, composent cette freinte :"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**1. Sur-versement et collerette de mousse au service (≈ 7 % du fût).** À chaque demi ou pinte, la mousse débordante et la collerette servie au-dessus du trait partent en perte. La mousse est elle-même composée à **~25 % de bière** ([Modern Restaurant Management — gaspillage moyen 20 % par fût](https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/)), et le seul moussage dépasse fréquemment **10 % du fût** lorsque l’installation n’est pas parfaitement équilibrée ([Bar-i — niveau de perte normal d’un fût](https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer))."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**2. Mousse et pertes au tirage (≈ 8 % du fût).** Température de conservation (idéalement 3-5 °C) et pression de CO₂ mal réglées, premiers verres de chaque service, début et fond de fût peu tirables : autant de bière qui mousse et finit à l’évier ([Le Bihan Boissons — perte d’un fût en tirage traditionnel ~10 %](https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/))."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**3. Nettoyage des lignes, purge et fond de fût (≈ 5 % du fût).** La **Brewers Association** recommande un nettoyage des lignes **tous les 14 jours** : à chaque cycle, toute la bière contenue dans les lignes est jetée. S’y ajoutent la **purge au changement de fût** et le **fond de fût** non tirable ([Brewers Association — Draught Beer Quality Manual (nettoyage des lignes tous les 14 jours)](https://www.brewersassociation.org/educational-publications/draught-beer-quality-manual/))."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Freinte technique par exercice (composants en % du fût tiré)",
+   "minWidth": 920,
+   "colonnes": [
+    {
+     "label": "Période"
+    },
+    {
+     "label": "Bière servie (L)",
+     "align": "right"
+    },
+    {
+     "label": "Sur-versement / collerette (7 %)",
+     "align": "right"
+    },
+    {
+     "label": "Mousse & tirage (8 %)",
+     "align": "right"
+    },
+    {
+     "label": "Nettoyage + purge + fond (5 %)",
+     "align": "right"
+    },
+    {
+     "label": "Freinte totale (L)",
+     "align": "right"
+    },
+    {
+     "label": "Taux (% du fût)",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-23"
+     },
+     {
+      "v": "454 L",
+      "align": "right"
+     },
+     {
+      "v": "40 L",
+      "align": "right"
+     },
+     {
+      "v": "45 L",
+      "align": "right"
+     },
+     {
+      "v": "28 L",
+      "align": "right"
+     },
+     {
+      "v": "114 L",
+      "align": "right"
+     },
+     {
+      "v": "20 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-24"
+     },
+     {
+      "v": "416 L",
+      "align": "right"
+     },
+     {
+      "v": "36 L",
+      "align": "right"
+     },
+     {
+      "v": "42 L",
+      "align": "right"
+     },
+     {
+      "v": "26 L",
+      "align": "right"
+     },
+     {
+      "v": "104 L",
+      "align": "right"
+     },
+     {
+      "v": "20 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-25"
+     },
+     {
+      "v": "423 L",
+      "align": "right"
+     },
+     {
+      "v": "37 L",
+      "align": "right"
+     },
+     {
+      "v": "42 L",
+      "align": "right"
+     },
+     {
+      "v": "26 L",
+      "align": "right"
+     },
+     {
+      "v": "106 L",
+      "align": "right"
+     },
+     {
+      "v": "20 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 exercices",
+      "fw": 700
+     },
+     {
+      "v": "1 293 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "113 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "129 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "81 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "323 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "20 %",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
    "kind": "kpis",
    "items": [
     {
-     "label": "Bière pression tirée",
+     "label": "Bière servie au verre",
      "valeur": "1 293 L",
      "sub": "fûts Affligem, 3 exercices",
      "couleur": "blue"
     },
     {
-     "label": "Freinte retenue",
-     "valeur": "10 %",
-     "sub": "mode CHR (entre 5 % et 18 %)",
+     "label": "Freinte documentée",
+     "valeur": "20 %",
+     "sub": "du fût (moyenne sectorielle)",
      "highlight": true,
      "couleur": "teal"
     },
     {
-     "label": "Volume perdu",
-     "valeur": "129 L",
-     "sub": "mousse, purge, lignes, fond de fût",
+     "label": "Au-dessus du fisc",
+     "valeur": "+5 %",
+     "sub": "vs 15 % retenus (p. 51)",
      "couleur": "teal"
     }
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "**Le calcul.** Sur **1 293 L** de bière pression tirée en trois ans, une freinte technique **de 10 %** (mode de la fourchette CHR) représente **129 L** jamais servis. À la borne basse incontestable du rendement-fût (5 %), c’est déjà **65 L** ; à la borne haute (18 %), **233 L**. Cette perte est **purement technique** : elle est tirée du fût, mais détruite, jamais encaissée."
+   "texte": "**Le calcul.** Pour servir **1 293 L** au verre en trois ans, il faut tirer davantage du fût : à une freinte de **20 %** (moyenne sectorielle documentée), ce sont **323 L** tirés mais jamais servis (mousse, tirage, nettoyage, fond de fût). Le service n’en retranche que **15 %** : son hypothèse est donc **optimiste**, et la bière ne peut pas être réputée vendue à 85 %."
   },
   {
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "La freinte technique du fût détruit **129 L** de bière sur trois ans (mode CHR), jamais servie ni encaissée. Ce volume explique une part du résiduel de l’analyse « Boissons disparues » et montre qu’un fût ne peut pas, physiquement, être vendu à 100 % comme le suppose la reconstitution."
+   "texte": "La freinte technique documentée représente **20 % du fût** (entre 5 % et 25 % selon les sources), soit **plus que les 15 % retenus par le service** : sur trois exercices, **323 L** sont tirés mais détruits, jamais servis ni encaissés. Par prudence, l’analyse globale « Boissons disparues » ne retient qu’une freinte de **10 % (≈ 129 L)**, très en deçà de la littérature — l’écart ne fait que renforcer la démonstration."
   },
   {
    "kind": "piecejointe",
-   "intro": "Détail du volume tiré et sensibilité au taux de freinte :",
+   "intro": "Bière servie par produit et par exercice, et freinte technique chiffrée :",
    "fichiers": [
     {
      "fichier": "pieces-defense/RF-pertes-biere-mousse.xlsx",
-     "label": "RF — Pertes de bière pression (freinte du fût)"
+     "label": "RF — Bière pression servie et freinte technique du fût (XLSX)"
     }
    ]
   },
@@ -324,7 +616,7 @@
    "kind": "interne",
    "audience": "avocat",
    "titre": "Pour solidifier",
-   "texte": "Obtenir une **attestation du distributeur/brasseur (Affligem)** sur le taux de freinte réel d’un fût (mousse, fond de fût, purge) et la fréquence de nettoyage des lignes ; conserver les bons de nettoyage. Noter que le fisc a lui-même retranché 15 % sur la bière (p. 51) : notre freinte technique en occupe déjà une bonne part, ce qui interdit de réduire cet abattement. Ne pas additionner avec le sur-versement (la bière en est exclue). Retirer cet encart de toute version remise."
+   "texte": "Obtenir une **attestation du distributeur/brasseur (Affligem)** sur le taux de freinte réel d’un fût (mousse, fond de fût, purge) et conserver les **bons de nettoyage des lignes** (preuve de la fréquence). Le service a lui-même retranché 15 % (p. 51) : nos sources (moyenne 20 %, fourchette 5-25 %) montrent que ce taux est un **plancher**, pas un plafond. La bière est **exclue de la base du sur-versement** (pas de double compte). Retirer cet encart de toute version remise."
   }
  ]
 }

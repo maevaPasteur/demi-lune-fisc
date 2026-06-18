@@ -3,7 +3,7 @@
   "slug": "sur-versement-au-verre",
   "source": "scripts/rendu-final-reconstitution-bloc2.py",
   "grief": "Proposition p. 37-44 (methode 1/2) - doses au verre",
-  "litres_retenu": 807
+  "litres_retenu": 1056
  },
  "sections": [
   {
@@ -26,7 +26,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous ne partons pas des doses du fisc mais de **notre mesure de ce qui a réellement été servi** (analyse « Boissons disparues », poste par poste). Sur **tout ce qui est versé à la main** — vins au verre et au pichet, spiritueux, apéritifs et digestifs au verre, et l’alcool des cocktails — le service libre dépasse la dose. C’est **mesuré et publié** : **Kerr, Patterson, Koenen & Greenfield (*Alcoholism: Clinical and Experimental Research*, 2008)**, qui ont mesuré **480 boissons dans 80 établissements**, trouvent un **verre de vin à +23,6 %** de la dose standard, des **cocktails à +42 %** et la **bière à +22 %**. La bière est traitée à part (page « pertes de bière ») et les **boissons en bouteille scellée** sont exclues (pas de service à la main)."
+   "texte": "Nous ne partons pas des doses du fisc mais de **notre mesure de ce qui a réellement été servi** (analyse « Boissons disparues », poste par poste). Sur **tout ce qui est versé à la main** — vins au verre et au pichet, spiritueux, apéritifs et digestifs au verre, et l’alcool des cocktails — le service libre dépasse la dose. C’est **mesuré et publié**. [Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/), qui ont mesuré **480 boissons dans 80 établissements**, trouvent un **verre de vin à +23,6 %** de la dose standard et des **cocktails (mixed drinks) à +42 %**. Pour les spiritueux servis au verre, [Wansink & van Ittersum, BMJ 2005](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/) (étude BMJ sur 86 barmen) mesure un sur-versement moyen de **~+20 %** au service libre. La bière est traitée à part (page « pertes de bière »), le crémant aussi (page « crémant »), et les **boissons en bouteille scellée** sont exclues."
   },
   {
    "kind": "tableau",
@@ -41,7 +41,7 @@
      "align": "right"
     },
     {
-     "label": "Taux retenu",
+     "label": "Taux (source)",
      "align": "right"
     },
     {
@@ -52,18 +52,18 @@
    "lignes": [
     [
      {
-      "v": "Vins au verre et au pichet"
+      "v": "Vins tranquilles au verre et au pichet"
      },
      {
-      "v": "3 558 L",
+      "v": "3 446 L",
       "align": "right"
      },
      {
-      "v": "20 %",
+      "v": "23,6 %",
       "align": "right"
      },
      {
-      "v": "712 L",
+      "v": "813 L",
       "align": "right"
      }
     ],
@@ -76,28 +76,28 @@
       "align": "right"
      },
      {
-      "v": "25 %",
+      "v": "20,0 %",
       "align": "right"
      },
      {
-      "v": "32 L",
+      "v": "26 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Alcool des cocktails"
+      "v": "Alcool des cocktails (hors crémant)"
      },
      {
-      "v": "789 L",
+      "v": "517 L",
       "align": "right"
      },
      {
-      "v": "8 %",
+      "v": "42,0 %",
       "align": "right"
      },
      {
-      "v": "63 L",
+      "v": "217 L",
       "align": "right"
      }
     ],
@@ -107,17 +107,17 @@
       "fw": 700
      },
      {
-      "v": "4 476 L",
+      "v": "4 091 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "18,0 %",
+      "v": "25,8 %",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "807 L",
+      "v": "1 056 L",
       "align": "right",
       "fw": 700
      }
@@ -129,19 +129,19 @@
    "items": [
     {
      "label": "Base servie à la main",
-     "valeur": "4 476 L",
-     "sub": "vins + spiritueux au verre + cocktails (hors bière)",
+     "valeur": "4 091 L",
+     "sub": "vins + spiritueux au verre + cocktails (hors bière et crémant)",
      "couleur": "blue"
     },
     {
-     "label": "Taux moyen retenu",
-     "valeur": "18,0 %",
-     "sub": "sous les mesures Kerr 2008",
+     "label": "Taux moyen",
+     "valeur": "25,8 %",
+     "sub": "moyenne pondérée des taux sources",
      "couleur": "teal"
     },
     {
      "label": "Sur-versement",
-     "valeur": "807 L",
+     "valeur": "1 056 L",
      "sub": "consommés, jamais vendus",
      "highlight": true,
      "couleur": "teal"
@@ -150,17 +150,13 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Le calcul, régime par régime.** Les **3 558 L** de vin servis au verre et au pichet, à **+20 %** (sous la mesure Kerr de +23,6 %), font **712 L**. Les **128 L** de spiritueux, apéritifs et digestifs servis au verre, plus difficiles à doser à l’œil, à **+25 %** (sous les +42 % mesurés sur les mélanges), font **32 L**. Enfin les **789 L** d’alcool des cocktails, à **+8 %**, font **63 L**. **Total : 807 L** d’alcool consommé et **jamais vendu** sur trois ans. À la mesure académique haute, ce serait **973 L**."
+   "texte": "**Le calcul, régime par régime, aux taux des sources.** Les **3 446 L** de vins tranquilles servis au verre et au pichet, au taux **+23,6 %** mesuré par [Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/), font **813 L**. Les **128 L** de spiritueux, apéritifs et digestifs servis au verre, au taux **+20,0 %** mesuré par [Wansink & van Ittersum, BMJ 2005](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/), font **26 L**. Enfin les **517 L** d’alcool des cocktails, au taux **+42,0 %** mesuré par [Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/) sur les mixed drinks, font **217 L**. **Total : 1 056 L** d’alcool consommé et **jamais vendu** sur trois ans."
   },
   {
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "Le service à la main sans doseur fait disparaître **807 L** d’alcool sur trois exercices (taux moyen 18,0 %, **sous** les valeurs mesurées par [Kerr 2008]). Ce volume explique directement une part du résiduel de l’analyse « Boissons disparues » : ce n’est ni une vente, ni une disparition, c’est de l’alcool bu en plus de la dose facturée."
-  },
-  {
-   "kind": "note",
-   "texte": "**Cohérence avec l’analyse « Boissons disparues ».** Ce **807 L** est désormais un **poste explicite de la cascade** des deux pages (il remplace l’ancien forfait prudent de 446 L à 8 %). Il s’ajoute à la dégustation, au crémant jeté et à la freinte de bière pour décomposer ce qui n’était auparavant qu’une « perte résiduelle » globale : le résiduel ne contient plus que la casse et l’évaporation irréductibles."
+   "texte": "Aux taux **exacts mesurés par la littérature**, le service à la main sans doseur fait disparaître **1 056 L** d’alcool sur trois exercices. Ce volume est un **poste explicite de la cascade** de l’analyse « Boissons disparues » : ce n’est ni une vente, ni une disparition, c’est de l’alcool bu en plus de la dose facturée."
   },
   {
    "kind": "piecejointe",
@@ -176,7 +172,7 @@
    "kind": "interne",
    "audience": "avocat",
    "titre": "Pour solidifier",
-   "texte": "Faire établir un **constat d’huissier** : servir plusieurs « verres de vin », « pressions » et alcools forts dans les conditions réelles du bar (sans doseur), mesurer au millilitre, établir le ratio dose servie / dose carte. Photographier le bar sans verre doseur. Le constat objective le taux ; Kerr 2008 le corrobore (citer comme ordre de grandeur sectoriel, pas comme norme française). Ne pas additionner ce poste avec la dégustation (geste distinct) ni avec la bière (page dédiée). Retirer cet encart de toute version remise."
+   "texte": "Les taux retenus sont ceux **mesurés et publiés** (Kerr 2008 pour le vin et les cocktails, Wansink BMJ 2005 pour les spiritueux) : études anglo-saxonnes, à présenter comme **ordre de grandeur sectoriel**. Pour les ancrer en droit interne, faire établir un **constat d’huissier** d’un test de versement dans les conditions réelles du bar (sans doseur), mesuré au millilitre. **Le sur-versement et la dégustation s’AJOUTENT** (postes distincts, centilitres différents). Crémant et bière traités sur leurs pages dédiées (pas de double compte ici). Retirer cet encart de toute version remise."
   }
  ]
 }

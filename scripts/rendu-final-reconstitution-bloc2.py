@@ -127,73 +127,110 @@ def cdf(v):
 # =============================================================================
 # 1. SUR-VERSEMENT AU VERRE (free-pour)
 # =============================================================================
+# Sources externes (liens consultables, rendus cliquables par AnalyseContent).
+SRC_KERR = "[Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/)"
+SRC_WANSINK = "[Wansink & van Ittersum, BMJ 2005](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/)"
+SRC_SPARKLING = "[Coravin — conservation du champagne/effervescent](https://www.coravin.com/blogs/community/does-champagne-expire)"
+SRC_BIERE = "[Bar-i — niveau de perte normal d’un fût](https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer)"
+SRC_MRM = "[Modern Restaurant Management — gaspillage moyen 20 % par fût](https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/)"
+SRC_BA = "[Brewers Association — Draught Beer Quality Manual (nettoyage des lignes tous les 14 jours)](https://www.brewersassociation.org/educational-publications/draught-beer-quality-manual/)"
+SRC_LB = "[Le Bihan Boissons — perte d’un fût en tirage traditionnel ~10 %](https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/)"
+SRC_JDC = "[JDC — perte de bière au bar](https://www.jdc.fr/blog/reduire-gaspillage-de-biere-bar)"
+
+
 def calc_surversement(conso):
     """Sur-versement (free-pour) sur TOUT ce qui est servi a la main, hors biere
-    (freinte a part) et hors boissons en bouteille scellee. Base = volume
-    REELLEMENT consomme (notre mesure consoTotaleParBoisson), reparti en :
-      - vin au verre/pichet  -> +20 % (sous la mesure Kerr 2008 : +23,6 %)
-      - spiritueux/aperitifs/digestifs au verre -> +25 % (Kerr cocktails +42 %)
-      - alcool des cocktails  -> +8 % (free-pour des spiritueux du cocktail)
+    (freinte dediee), hors bouteille scellee, et HORS CREMANT (pris a part :
+    page cremant = jete + sur-versement propre). Taux = ceux des sources :
+      - vin au verre/pichet -> +23,6 % (Kerr 2008, mesure du verre de vin)
+      - spiritueux/aperitifs/digestifs au verre -> +20 % (Wansink BMJ 2005)
+      - alcool des cocktails -> +42 % (Kerr 2008, mixed drinks)
+    Base = volume REELLEMENT consomme (notre mesure consoTotaleParBoisson).
     """
     sec, cock = conso_seches_cocktails(conso)
-    # Categories (notre nomenclature) regroupees par regime de sur-versement.
-    VIN = ["vin_blanc", "vin_rouge", "vin", "vin_rose", "petillant"]
+    # petillant (cremant/champagne) EXCLU ici : traite sur la page cremant.
+    VIN = ["vin_blanc", "vin_rouge", "vin", "vin_rose"]
     SPIRIT = ["vin_de_liqueur", "aperitif", "liqueur", "eau_de_vie", "spiritueux", "digestif"]
-    # (cidre = souvent bouteille -> exclu ; biere = freinte dediee -> exclu ; softs = exclus)
     base_vin = sum(sec.get(c, 0) for c in VIN)
     base_spirit = sum(sec.get(c, 0) for c in SPIRIT)
     base_cocktail = sum(cock.get(c, 0) for c in (VIN + SPIRIT))
 
-    taux_vin, taux_spirit, taux_cock = 0.20, 0.25, 0.08
+    taux_vin, taux_spirit, taux_cock = 0.236, 0.20, 0.42
     l_vin = base_vin * taux_vin
     l_spirit = base_spirit * taux_spirit
     l_cock = base_cocktail * taux_cock
     total = l_vin + l_spirit + l_cock
 
     postes = [
-        {"label": "Vins au verre et au pichet", "base": base_vin, "taux": taux_vin, "litres": l_vin,
-         "detail": "blanc, rouge, rosé, vin maison, pétillant — service libre"},
+        {"label": "Vins tranquilles au verre et au pichet", "base": base_vin, "taux": taux_vin, "litres": l_vin,
+         "src": "Kerr 2008 — verre de vin mesuré +23,6 %"},
         {"label": "Spiritueux, apéritifs et digestifs au verre", "base": base_spirit, "taux": taux_spirit, "litres": l_spirit,
-         "detail": "macvin, vin jaune, pastis, whisky, marc, génépi… au verre"},
-        {"label": "Alcool des cocktails", "base": base_cocktail, "taux": taux_cock, "litres": l_cock,
-         "detail": "part alcool des cocktails maison (free-pour)"},
+         "src": "Wansink BMJ 2005 — free-pour ~+20 %"},
+        {"label": "Alcool des cocktails (hors crémant)", "base": base_cocktail, "taux": taux_cock, "litres": l_cock,
+         "src": "Kerr 2008 — mixed drinks +42 %"},
     ]
     return {
         "postes": postes,
         "base_totale": base_vin + base_spirit + base_cocktail,
         "litres_retenu": total,
         "taux_blende": total / (base_vin + base_spirit + base_cocktail),
-        "taux_kerr_vin": 0.236,
-        "litres_kerr": base_vin * 0.236 + base_spirit * 0.42 + base_cocktail * 0.10,
     }
 
 
 # =============================================================================
 # 2. PERTES BIERE PRESSION (freinte fut)
 # =============================================================================
+# Composants de freinte (% DU FUT TIRE), sources ci-dessous. Total 20 % =
+# moyenne sectorielle documentee (Modern Restaurant Management), au-dessus des
+# 15 % retenus par le service.
+FREINTE_SV, FREINTE_MOUSSE, FREINTE_NET = 0.07, 0.08, 0.05
+FREINTE_TOT = FREINTE_SV + FREINTE_MOUSSE + FREINTE_NET  # 0.20
+
+
 def calc_biere(items):
-    """Volume de biere PRESSION (fut Affligem) reellement tire, toutes
-    declinaisons (pression, pinte, panache, monaco, picon-biere : seule la part
-    biere). Freinte technique = mousse + purge + nettoyage des lignes + fond de
-    fut, en SUS du volume servi."""
-    lignes = []
-    base_cl = 0.0
+    """Biere PRESSION (fut Affligem) servie au verre, agregee PAR PRODUIT et
+    ventilee par exercice (pression, pinte, picon-biere, panache, monaco : part
+    biere). La freinte technique (mousse, purge, nettoyage des lignes, fond de
+    fut) est calculee en % du fut tire, au-dessus du volume servi."""
+    agg = {}  # produit -> {vol_cl, qte:{ex:n}}
     for x in items:
-        if x.get("nom_canonique") == "Fût Affligem":
-            v = x.get("volume_unitaire_cl") or 0
-            n = q3(x)
-            base_cl += n * v
-            lignes.append({"produit": x["produit"], "format": x.get("format_service"),
-                           "vol_cl": v, "qte": round(n), "litres": n * v / 100.0})
-    base_l = base_cl / 100.0
-    # Taux : 5 % = rendement-fut courant (mini) ; 10 % = mode CHR ; 18 % = haut.
+        if x.get("nom_canonique") != "Fût Affligem":
+            continue
+        p = x["produit"]
+        a = agg.setdefault(p, {"vol_cl": x.get("volume_unitaire_cl") or 0,
+                               "qte": {e: 0.0 for e in EXERCICES}})
+        for e in EXERCICES:
+            a["qte"][e] += x["quantite"].get(e, 0)
+    produits = []
+    for p, a in agg.items():
+        v = a["vol_cl"]
+        qte_ex = {e: a["qte"][e] for e in EXERCICES}
+        l_ex = {e: qte_ex[e] * v / 100.0 for e in EXERCICES}
+        produits.append({
+            "produit": p, "vol_cl": v,
+            "qte_ex": qte_ex, "qte_tot": sum(qte_ex.values()),
+            "l_ex": l_ex, "l_tot": sum(l_ex.values()),
+        })
+    produits.sort(key=lambda r: -r["qte_tot"])
+    base_l_ex = {e: sum(r["l_ex"][e] for r in produits) for e in EXERCICES}
+    base_l = sum(base_l_ex.values())
+
+    # Freinte documentee (page) : composants en % du FUT tire ; fut = servi/(1-t).
+    fut_ex = {e: (base_l_ex[e] / (1 - FREINTE_TOT) if base_l_ex[e] else 0.0) for e in EXERCICES}
+    freinte_ex = {e: fut_ex[e] - base_l_ex[e] for e in EXERCICES}
+    comp_ex = {e: {"sv": fut_ex[e] * FREINTE_SV, "mousse": fut_ex[e] * FREINTE_MOUSSE,
+                   "net": fut_ex[e] * FREINTE_NET} for e in EXERCICES}
+    litres_doc = sum(freinte_ex.values())  # ~20 % du fut
+
+    # Valeur PRUDENTE retenue dans la cascade « Boissons disparues » (inchangee) :
+    # 10 % du volume servi, tres en deca de la freinte documentee.
     taux_min, taux_mode, taux_haut = 0.05, 0.10, 0.18
     return {
-        "lignes": lignes,
-        "base_l": base_l,
-        "taux_min": taux_min,
-        "taux_mode": taux_mode,
-        "taux_haut": taux_haut,
+        "produits": produits,
+        "base_l": base_l, "base_l_ex": base_l_ex,
+        "fut_ex": fut_ex, "freinte_ex": freinte_ex, "comp_ex": comp_ex,
+        "litres_doc": litres_doc, "taux_doc": FREINTE_TOT,
+        "taux_min": taux_min, "taux_mode": taux_mode, "taux_haut": taux_haut,
         "litres_min": base_l * taux_min,
         "litres_mode": base_l * taux_mode,
         "litres_haut": base_l * taux_haut,
@@ -203,51 +240,13 @@ def calc_biere(items):
 # =============================================================================
 # 3. CREMANT JETE EN FIN DE JOURNEE
 # =============================================================================
-def calc_cremant(items, bpd):
-    """Le cremant est servi au verre ET dans des cocktails (Vouivre, Kittykir,
-    Pere Gregoire, Kir Princier). Une bouteille ouverte est plate le lendemain
-    (effervescent) : on l'ouvre a la journee et on jette le solde non servi."""
-    DOSE_VERRE = 12  # cl (dose carte/fisc)
-    verre_q = sum(q3(x) for x in items
-                  if "rémant" in str(x.get("nom_canonique", "")) and x.get("format_service") == "Verre")
-    cocktails = []
-    for c in bpd["cocktails"]:
-        for r in c["recette"]:
-            if r["nom"] == "Crémant":
-                cocktails.append({"cocktail": c["cocktail"], "dose_cl": r["cl"],
-                                  "qte": c["qte_3ans"], "litres": r["cl"] * c["qte_3ans"] / 100.0})
-    liq_verre = verre_q * DOSE_VERRE / 100.0
-    liq_cock = sum(c["litres"] for c in cocktails)
-    liq_total = liq_verre + liq_cock          # cremant reellement servi (hors bouteilles entieres)
-    servings = verre_q + sum(c["qte"] for c in cocktails)
-
-    BOUTEILLE_L = 0.75
-    # Hypothese explicite et PRUDENTE : le cremant est servi chaque jour de
-    # service (servings ≈ 8/jour) ; on ouvre donc, chaque jour, le nombre entier
-    # de bouteilles juste suffisant, et le solde de la derniere bouteille est
-    # jete. Avec une demande quasi constante ~liq_total/JOURS par jour, on ouvre
-    # 1 bouteille/jour et on jette (0,75 - demande_jour) L. Modele conservateur.
-    demande_jour = liq_total / JOURS_SERVICE          # L/jour servi
-    import math
-    bouteilles_jour = max(1, math.ceil(demande_jour / BOUTEILLE_L))
-    waste_jour = bouteilles_jour * BOUTEILLE_L - demande_jour
-    waste_3ans = waste_jour * JOURS_SERVICE
-    bouteilles_3ans = bouteilles_jour * JOURS_SERVICE
-    return {
-        "verre_q": round(verre_q),
-        "dose_verre": DOSE_VERRE,
-        "cocktails": cocktails,
-        "liq_verre": liq_verre,
-        "liq_cock": liq_cock,
-        "liq_total": liq_total,
-        "servings": round(servings),
-        "servings_jour": servings / JOURS_SERVICE,
-        "demande_jour": demande_jour,
-        "bouteilles_jour": bouteilles_jour,
-        "waste_jour": waste_jour,
-        "waste_3ans": waste_3ans,
-        "bouteilles_3ans": round(bouteilles_3ans),
-    }
+def calc_cremant():
+    """Crémant jeté + sur-versement, calculés AU NIVEAU JOURNALIER depuis le
+    détail des tickets (annexe C) par scripts/rendu-final-cremant-jete.py.
+    Source unique : src/data/renduFinal/cremant-jete.json. Verre + cocktails
+    (Vouivre, Kittykir, Père Grégoire, Kir Princier), sur-versement +23,6 %."""
+    with open(os.path.join(RENDU_DIR, "cremant-jete.json"), encoding="utf-8") as f:
+        return json.load(f)
 
 
 # =============================================================================
@@ -261,46 +260,15 @@ GENERIQUES = {
 }
 
 
-def calc_degustation(items):
-    """Quantite, VIN PAR VIN, offerte en degustation (2 cl), non enregistree :
-    (a) chaque PICHET : une larme pour approuver avant de servir la table ;
-    (b) chaque commande d'un VIN NOMME au verre : le serveur monte la bouteille
-        et fait gouter une personne (2 cl). Plusieurs verres du MEME vin a une
-        table = une seule degustation -> degustations = verres / ratio (=2).
-    Les vins GENERIQUES (cubis/maison) : pas de bouteille montee -> exclus."""
-    DOSE_DEG = 2  # cl
-    RATIO = 2.0   # verres du meme vin par commande (hypothese prudente)
-
-    # --- (b) vins nommes au verre, agreges par vin ---
-    par_vin = {}
-    for x in items:
-        nc = x.get("nom_canonique")
-        is_verre15 = x.get("format_service") == "Verre" and x.get("volume_unitaire_cl") == 15
-        is_vj = nc == "Arbois Vin Jaune" and x.get("format_service") == "Verre"
-        if (is_verre15 or is_vj) and nc not in GENERIQUES:
-            par_vin[nc] = par_vin.get(nc, 0) + q3(x)
-    vins = []
-    for nc, qte in sorted(par_vin.items(), key=lambda kv: -kv[1]):
-        deg = qte / RATIO
-        vins.append({"vin": nc, "verres": round(qte), "degustations": round(deg),
-                     "litres": deg * DOSE_DEG / 100.0})
-    nommes_q = sum(v["verres"] for v in vins)
-    deg_nommes_l = sum(v["litres"] for v in vins)
-
-    # --- (a) pichets (tous, 1 larme chacun) ---
-    pichets_q = sum(q3(x) for x in items if str(x.get("format_service", "")).startswith("Pichet"))
-    deg_pichets_l = pichets_q * DOSE_DEG / 100.0
-
-    return {
-        "dose_deg": DOSE_DEG,
-        "ratio": RATIO,
-        "vins": vins,
-        "nommes_q": round(nommes_q),
-        "deg_nommes_l": deg_nommes_l,
-        "pichets_q": round(pichets_q),
-        "deg_pichets_l": deg_pichets_l,
-        "total_l": deg_nommes_l + deg_pichets_l,
-    }
+def calc_degustation():
+    """Dégustation chiffrée AU NIVEAU NOTE (ticket), source unique :
+    src/data/renduFinal/degustation-notes.json (généré par
+    scripts/rendu-final-degustation-notes.py depuis ANNEXE-C). Règle exacte :
+    2 cl offerts UNE SEULE FOIS par vin nommé et par note (date + n° ticket),
+    quelle que soit la quantité ; cubis (« Verre de vin », « Pichet vin ») et
+    bouteilles exclus. AUCUNE approximation par ratio."""
+    with open(os.path.join(RENDU_DIR, "degustation-notes.json"), encoding="utf-8") as f:
+        return json.load(f)
 
 
 # =============================================================================
@@ -390,8 +358,9 @@ def page_surversement(d):
             [40, 18, 10, 16],
         )],
     )
-    rows = [[cg(p["label"]), cd(fr_l(p["base"])), cd(fr_pct(p["taux"] * 100, 0)), cd(fr_l(p["litres"]))] for p in d["postes"]]
+    rows = [[cg(p["label"]), cd(fr_l(p["base"])), cd(fr_pct(p["taux"] * 100, 1)), cd(fr_l(p["litres"]))] for p in d["postes"]]
     rows.append([cgf("Total sur-versement"), cdf(fr_l(d["base_totale"])), cdf(fr_pct(d["taux_blende"] * 100, 1)), cdf(fr_l(d["litres_retenu"]))])
+    p0, p1, p2 = d["postes"]
     doc = {
         "meta": {"slug": slug, "source": "scripts/rendu-final-reconstitution-bloc2.py",
                  "grief": "Proposition p. 37-44 (methode 1/2) - doses au verre",
@@ -406,26 +375,24 @@ def page_surversement(d):
              "titre": "Notre mesure : tout le service à la main dépasse la dose",
              "sousTitre": "On part de notre consommation réelle, pas de la reconstitution — et on chiffre le dépassement"},
             {"kind": "paragraphe",
-             "texte": "Nous ne partons pas des doses du fisc mais de **notre mesure de ce qui a réellement été servi** (analyse « Boissons disparues », poste par poste). Sur **tout ce qui est versé à la main** — vins au verre et au pichet, spiritueux, apéritifs et digestifs au verre, et l’alcool des cocktails — le service libre dépasse la dose. C’est **mesuré et publié** : **Kerr, Patterson, Koenen & Greenfield (*Alcoholism: Clinical and Experimental Research*, 2008)**, qui ont mesuré **480 boissons dans 80 établissements**, trouvent un **verre de vin à +23,6 %** de la dose standard, des **cocktails à +42 %** et la **bière à +22 %**. La bière est traitée à part (page « pertes de bière ») et les **boissons en bouteille scellée** sont exclues (pas de service à la main)."},
+             "texte": f"Nous ne partons pas des doses du fisc mais de **notre mesure de ce qui a réellement été servi** (analyse « Boissons disparues », poste par poste). Sur **tout ce qui est versé à la main** — vins au verre et au pichet, spiritueux, apéritifs et digestifs au verre, et l’alcool des cocktails — le service libre dépasse la dose. C’est **mesuré et publié**. {SRC_KERR}, qui ont mesuré **480 boissons dans 80 établissements**, trouvent un **verre de vin à +23,6 %** de la dose standard et des **cocktails (mixed drinks) à +42 %**. Pour les spiritueux servis au verre, {SRC_WANSINK} (étude BMJ sur 86 barmen) mesure un sur-versement moyen de **~+20 %** au service libre. La bière est traitée à part (page « pertes de bière »), le crémant aussi (page « crémant »), et les **boissons en bouteille scellée** sont exclues."},
             {"kind": "tableau", "titre": "Sur-versement par régime de service (volumes réellement consommés, 3 exercices)",
              "minWidth": 560,
-             "colonnes": [{"label": "Poste servi à la main"}, {"label": "Volume consommé", "align": "right"}, {"label": "Taux retenu", "align": "right"}, {"label": "Sur-versement", "align": "right"}],
+             "colonnes": [{"label": "Poste servi à la main"}, {"label": "Volume consommé", "align": "right"}, {"label": "Taux (source)", "align": "right"}, {"label": "Sur-versement", "align": "right"}],
              "lignes": rows},
             {"kind": "kpis", "items": [
-                {"label": "Base servie à la main", "valeur": fr_l(d["base_totale"]), "sub": "vins + spiritueux au verre + cocktails (hors bière)", "couleur": "blue"},
-                {"label": "Taux moyen retenu", "valeur": fr_pct(d["taux_blende"] * 100, 1), "sub": "sous les mesures Kerr 2008", "couleur": "teal"},
+                {"label": "Base servie à la main", "valeur": fr_l(d["base_totale"]), "sub": "vins + spiritueux au verre + cocktails (hors bière et crémant)", "couleur": "blue"},
+                {"label": "Taux moyen", "valeur": fr_pct(d["taux_blende"] * 100, 1), "sub": "moyenne pondérée des taux sources", "couleur": "teal"},
                 {"label": "Sur-versement", "valeur": fr_l(d["litres_retenu"]), "sub": "consommés, jamais vendus", "highlight": True, "couleur": "teal"},
             ]},
             {"kind": "paragraphe",
-             "texte": f"**Le calcul, régime par régime.** Les **{fr_l(d['postes'][0]['base'])}** de vin servis au verre et au pichet, à **+{fr_pct(d['postes'][0]['taux']*100,0)}** (sous la mesure Kerr de +23,6 %), font **{fr_l(d['postes'][0]['litres'])}**. Les **{fr_l(d['postes'][1]['base'])}** de spiritueux, apéritifs et digestifs servis au verre, plus difficiles à doser à l’œil, à **+{fr_pct(d['postes'][1]['taux']*100,0)}** (sous les +42 % mesurés sur les mélanges), font **{fr_l(d['postes'][1]['litres'])}**. Enfin les **{fr_l(d['postes'][2]['base'])}** d’alcool des cocktails, à **+{fr_pct(d['postes'][2]['taux']*100,0)}**, font **{fr_l(d['postes'][2]['litres'])}**. **Total : {fr_l(d['litres_retenu'])}** d’alcool consommé et **jamais vendu** sur trois ans. À la mesure académique haute, ce serait **{fr_l(d['litres_kerr'])}**."},
+             "texte": f"**Le calcul, régime par régime, aux taux des sources.** Les **{fr_l(p0['base'])}** de vins tranquilles servis au verre et au pichet, au taux **+{fr_pct(p0['taux']*100,1)}** mesuré par {SRC_KERR}, font **{fr_l(p0['litres'])}**. Les **{fr_l(p1['base'])}** de spiritueux, apéritifs et digestifs servis au verre, au taux **+{fr_pct(p1['taux']*100,1)}** mesuré par {SRC_WANSINK}, font **{fr_l(p1['litres'])}**. Enfin les **{fr_l(p2['base'])}** d’alcool des cocktails, au taux **+{fr_pct(p2['taux']*100,1)}** mesuré par {SRC_KERR} sur les mixed drinks, font **{fr_l(p2['litres'])}**. **Total : {fr_l(d['litres_retenu'])}** d’alcool consommé et **jamais vendu** sur trois ans."},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"Le service à la main sans doseur fait disparaître **{fr_l(d['litres_retenu'])}** d’alcool sur trois exercices (taux moyen {fr_pct(d['taux_blende']*100,1)}, **sous** les valeurs mesurées par [Kerr 2008]). Ce volume explique directement une part du résiduel de l’analyse « Boissons disparues » : ce n’est ni une vente, ni une disparition, c’est de l’alcool bu en plus de la dose facturée."},
-            {"kind": "note",
-             "texte": f"**Cohérence avec l’analyse « Boissons disparues ».** Ce **{fr_l(d['litres_retenu'])}** est désormais un **poste explicite de la cascade** des deux pages (il remplace l’ancien forfait prudent de 446 L à 8 %). Il s’ajoute à la dégustation, au crémant jeté et à la freinte de bière pour décomposer ce qui n’était auparavant qu’une « perte résiduelle » globale : le résiduel ne contient plus que la casse et l’évaporation irréductibles."},
+             "texte": f"Aux taux **exacts mesurés par la littérature**, le service à la main sans doseur fait disparaître **{fr_l(d['litres_retenu'])}** d’alcool sur trois exercices. Ce volume est un **poste explicite de la cascade** de l’analyse « Boissons disparues » : ce n’est ni une vente, ni une disparition, c’est de l’alcool bu en plus de la dose facturée."},
             {"kind": "piecejointe", "intro": "Détail du calcul par régime de service :",
              "fichiers": [{"fichier": "pieces-defense/RF-sur-versement-au-verre.xlsx", "label": "RF — Sur-versement au verre (vins, spiritueux, cocktails)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Pour solidifier",
-             "texte": "Faire établir un **constat d’huissier** : servir plusieurs « verres de vin », « pressions » et alcools forts dans les conditions réelles du bar (sans doseur), mesurer au millilitre, établir le ratio dose servie / dose carte. Photographier le bar sans verre doseur. Le constat objective le taux ; Kerr 2008 le corrobore (citer comme ordre de grandeur sectoriel, pas comme norme française). Ne pas additionner ce poste avec la dégustation (geste distinct) ni avec la bière (page dédiée). Retirer cet encart de toute version remise."},
+             "texte": "Les taux retenus sont ceux **mesurés et publiés** (Kerr 2008 pour le vin et les cocktails, Wansink BMJ 2005 pour les spiritueux) : études anglo-saxonnes, à présenter comme **ordre de grandeur sectoriel**. Pour les ancrer en droit interne, faire établir un **constat d’huissier** d’un test de versement dans les conditions réelles du bar (sans doseur), mesuré au millilitre. **Le sur-versement et la dégustation s’AJOUTENT** (postes distincts, centilitres différents). Crémant et bière traités sur leurs pages dédiées (pas de double compte ici). Retirer cet encart de toute version remise."},
         ],
     }
     ecrire_json(slug, doc)
@@ -438,60 +405,124 @@ def page_surversement(d):
 def page_biere(d):
     slug = "pertes-biere-mousse"
     xlsx = os.path.join(PIECES, "RF-pertes-biere-mousse.xlsx")
+    EXL = {"2022-2023": "2022-23", "2023-2024": "2023-24", "2024-2025": "2024-25"}
+    prods = d["produits"]
+
+    # ---- Tableau 1 : biere servie par produit, ventilee par exercice ----
+    cols1 = [{"label": "Article (part bière)"}, {"label": "Part bière", "align": "right"}]
+    for e in EXERCICES:
+        cols1 += [{"label": f"{EXL[e]} — qté", "align": "right"},
+                  {"label": f"{EXL[e]} — L", "align": "right"}]
+    cols1 += [{"label": "Total — qté", "align": "right"}, {"label": "Total — L", "align": "right"}]
+    lignes1 = []
+    for r in prods:
+        row = [cg(r["produit"]), cd(fr_cl(r["vol_cl"]))]
+        for e in EXERCICES:
+            row += [cd(fr_int(r["qte_ex"][e])), cd(fr_l(r["l_ex"][e]))]
+        row += [cdf(fr_int(r["qte_tot"])), cdf(fr_l(r["l_tot"]))]
+        lignes1.append(row)
+    tot1 = [cgf("Total bière pression servie"), cd("")]
+    for e in EXERCICES:
+        tot1 += [cdf(fr_int(sum(r["qte_ex"][e] for r in prods))), cdf(fr_l(d["base_l_ex"][e]))]
+    tot1 += [cdf(fr_int(sum(r["qte_tot"] for r in prods))), cdf(fr_l(d["base_l"]))]
+    lignes1.append(tot1)
+
+    # ---- Tableau 2 : freinte technique par exercice (composants % du fut) ----
+    cols2 = [{"label": "Période"}, {"label": "Bière servie (L)", "align": "right"},
+             {"label": "Sur-versement / collerette (7 %)", "align": "right"},
+             {"label": "Mousse & tirage (8 %)", "align": "right"},
+             {"label": "Nettoyage + purge + fond (5 %)", "align": "right"},
+             {"label": "Freinte totale (L)", "align": "right"},
+             {"label": "Taux (% du fût)", "align": "right"}]
+    lignes2 = []
+    for e in EXERCICES:
+        c = d["comp_ex"][e]
+        lignes2.append([cg(EXL[e]), cd(fr_l(d["base_l_ex"][e])),
+                        cd(fr_l(c["sv"])), cd(fr_l(c["mousse"])), cd(fr_l(c["net"])),
+                        cd(fr_l(d["freinte_ex"][e])), cd(fr_pct(d["taux_doc"] * 100, 0))])
+    cs = sum(d["comp_ex"][e]["sv"] for e in EXERCICES)
+    cm = sum(d["comp_ex"][e]["mousse"] for e in EXERCICES)
+    cn = sum(d["comp_ex"][e]["net"] for e in EXERCICES)
+    lignes2.append([cgf("Total 3 exercices"), cdf(fr_l(d["base_l"])), cdf(fr_l(cs)),
+                    cdf(fr_l(cm)), cdf(fr_l(cn)), cdf(fr_l(d["litres_doc"])),
+                    cdf(fr_pct(d["taux_doc"] * 100, 0))])
+
+    # ---- XLSX ----
     ecrire_xlsx(
         xlsx, "Pertes de biere pression - freinte technique du fut",
-        "Mousse, purge, fond de fut et nettoyage des lignes : volume tire mais jamais servi. Rendement-fut courant ~95 % (≈5 % mini) ; litterature CHR 5-20 %.",
+        "Biere pression servie par produit et par exercice, puis freinte technique "
+        "(sur-versement/collerette, mousse & tirage, nettoyage des lignes + purge + fond). "
+        "Freinte retenue 20 % du fut (moyenne sectorielle, Modern Restaurant Management), "
+        "au-dessus des 15 % du service.",
         [(
-            "Biere pression tiree",
-            ["Article (part biere du fut)", "Quantite (3 ans)", "Volume biere (L)"],
-            [[l["produit"] + f" ({l['vol_cl']} cl)", l["qte"], round(l["litres"])] for l in d["lignes"]]
-            + [["TOTAL biere pression", round(sum(l["qte"] for l in d["lignes"])), round(d["base_l"])]],
-            [34, 18, 22],
+            "Biere servie par produit",
+            ["Article (part biere)", "Part biere (cl)"]
+            + [c for e in EXERCICES for c in (f"{EXL[e]} qte", f"{EXL[e]} L")]
+            + ["Total qte", "Total L"],
+            [[r["produit"], r["vol_cl"]]
+             + [v for e in EXERCICES for v in (round(r["qte_ex"][e]), round(r["l_ex"][e]))]
+             + [round(r["qte_tot"]), round(r["l_tot"])] for r in prods]
+            + [["TOTAL biere servie", ""]
+               + [v for e in EXERCICES for v in (round(sum(r["qte_ex"][e] for r in prods)), round(d["base_l_ex"][e]))]
+               + [round(sum(r["qte_tot"] for r in prods)), round(d["base_l"])]],
+            [22, 12, 11, 10, 11, 10, 11, 10, 11, 10],
         ), (
-            "Freinte chiffree",
-            ["Hypothese de freinte", "Taux", "Litres perdus (3 ans)"],
-            [
-                ["Borne basse (rendement-fut ~95 %)", fr_pct(d["taux_min"] * 100, 0), round(d["litres_min"])],
-                ["RETENU (mode CHR)", fr_pct(d["taux_mode"] * 100, 0), round(d["litres_mode"])],
-                ["Borne haute CHR", fr_pct(d["taux_haut"] * 100, 0), round(d["litres_haut"])],
-            ],
-            [34, 14, 24],
+            "Freinte par exercice",
+            ["Periode", "Biere servie (L)", "Sur-versement/collerette 7% (L)",
+             "Mousse & tirage 8% (L)", "Nettoyage+purge+fond 5% (L)", "Freinte totale (L)", "Taux % du fut"],
+            [[EXL[e], round(d["base_l_ex"][e]), round(d["comp_ex"][e]["sv"]),
+              round(d["comp_ex"][e]["mousse"]), round(d["comp_ex"][e]["net"]),
+              round(d["freinte_ex"][e]), int(d["taux_doc"] * 100)] for e in EXERCICES]
+            + [["TOTAL", round(d["base_l"]), round(cs), round(cm), round(cn),
+                round(d["litres_doc"]), int(d["taux_doc"] * 100)]],
+            [12, 16, 26, 22, 26, 18, 14],
         )],
     )
-    lignes = [[cg(l["produit"]), cd(fr_cl(l["vol_cl"])), cd(fr_int(l["qte"])), cd(fr_l(l["litres"]))] for l in d["lignes"]]
-    lignes.append([cgf("Total bière pression tirée"), cd(""), cdf(fr_int(sum(l['qte'] for l in d['lignes']))), cdf(fr_l(d["base_l"]))])
+
     doc = {
         "meta": {"slug": slug, "source": "scripts/rendu-final-reconstitution-bloc2.py",
                  "grief": "Proposition p. 44-53 (methode 2/2) - pertes biere",
-                 "litres_retenu": round(d["litres_mode"])},
+                 "litres_retenu": round(d["litres_mode"]), "litres_documente": round(d["litres_doc"]),
+                 "taux_documente": d["taux_doc"]},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
              "titre": "Le grief de l’administration",
              "sousTitre": "Proposition p. 50-51 — la bière du fût est réputée presque intégralement vendue"},
             {"kind": "paragraphe",
-             "texte": "Le service reconstitue la bière en divisant le **volume de fût disponible** par les doses servies (pression 25 cl, pinte 50 cl, part bière des Picon-bière, panachés et Monaco, p. 50). Il suppose donc que **presque tout le fût acheté finit dans un verre vendu**. C’est impossible : un fût ne se vide jamais à 100 % dans les verres — une partie part en mousse, en purge et en nettoyage des lignes."},
+             "texte": "Le service reconstitue la bière en divisant le **volume de fût disponible** par les doses servies (pression 25 cl, pinte 50 cl, part bière des Picon-bière, panachés et Monaco, p. 50), en ne retranchant que **15 % de pertes** (p. 51). Il suppose donc que **85 % du fût finit dans un verre vendu**. La littérature professionnelle montre que ce taux de perte est **sous-estimé** : un fût de tirage traditionnel perd davantage entre la mousse, le réglage du tirage et le nettoyage des lignes."},
             {"kind": "chapitre", "source": "nous", "numero": 2,
-             "titre": "Notre mesure : la bière pression perd un volume technique avant le verre",
-             "sousTitre": "Mousse, purge, fond de fût, nettoyage des lignes — documenté et chiffré"},
+             "titre": "Ce qui est réellement servi au verre",
+             "sousTitre": "Toutes les boissons tirées du fût Affligem, par produit et par exercice"},
             {"kind": "paragraphe",
-             "texte": "Tout fût tiré laisse un volume qui n’atteint jamais le verre du client : **collerette de mousse** à chaque service, **fond de fût** non tirable, **purge** au changement de fût, et surtout **vidange des lignes à chaque nettoyage**. La **Brewers Association** recommande un nettoyage des lignes **toutes les deux semaines** (standard repris par la profession) : à chaque cycle, la bière contenue dans les lignes est jetée. Le **rendement-fût** considéré comme normal dans la profession est d’environ **95 %** (soit **≈ 5 % de freinte technique minimale**), et la littérature CHR situe les pertes pression entre **5 % et 20 %** selon l’installation et le réglage du tirage."},
-            {"kind": "tableau", "titre": "Bière pression réellement tirée (part bière des fûts Affligem, 3 exercices)",
-             "minWidth": 560,
-             "colonnes": [{"label": "Article (part bière)"}, {"label": "Dose bière", "align": "right"}, {"label": "Quantité", "align": "right"}, {"label": "Volume", "align": "right"}],
-             "lignes": lignes},
+             "texte": "Voici, lue dans la caisse, **chaque boisson tirée du fût** (la seule part bière pour les Picon, panachés et Monaco), avec le nombre de consommations et le volume par exercice. C’est le volume **arrivé dans les verres** — avant toute perte technique."},
+            {"kind": "tableau", "titre": "Bière pression servie au verre (part bière des fûts Affligem)",
+             "minWidth": 1040, "colonnes": cols1, "lignes": lignes1},
+            {"kind": "chapitre", "source": "nous", "numero": 3,
+             "titre": "La freinte technique dépasse les 15 % retenus par le service",
+             "sousTitre": "Sur-versement, mousse, nettoyage des lignes — chaque poste documenté"},
+            {"kind": "paragraphe",
+             "texte": f"La littérature professionnelle situe le gaspillage d’un fût entre **5 %** (système parfaitement réglé) et **25 %** (installation courante), avec une **moyenne de l’ordre de 20 %** ({SRC_MRM}) — donc **au-dessus des 15 % retenus par le service**. En France, les distributeurs CHR estiment la perte d’un fût en tirage traditionnel autour de **10 %** ({SRC_LB}) à **15 %** ({SRC_JDC}). Trois postes, tous documentés, composent cette freinte :"},
+            {"kind": "paragraphe",
+             "texte": f"**1. Sur-versement et collerette de mousse au service (≈ 7 % du fût).** À chaque demi ou pinte, la mousse débordante et la collerette servie au-dessus du trait partent en perte. La mousse est elle-même composée à **~25 % de bière** ({SRC_MRM}), et le seul moussage dépasse fréquemment **10 % du fût** lorsque l’installation n’est pas parfaitement équilibrée ({SRC_BIERE})."},
+            {"kind": "paragraphe",
+             "texte": f"**2. Mousse et pertes au tirage (≈ 8 % du fût).** Température de conservation (idéalement 3-5 °C) et pression de CO₂ mal réglées, premiers verres de chaque service, début et fond de fût peu tirables : autant de bière qui mousse et finit à l’évier ({SRC_LB})."},
+            {"kind": "paragraphe",
+             "texte": f"**3. Nettoyage des lignes, purge et fond de fût (≈ 5 % du fût).** La **Brewers Association** recommande un nettoyage des lignes **tous les 14 jours** : à chaque cycle, toute la bière contenue dans les lignes est jetée. S’y ajoutent la **purge au changement de fût** et le **fond de fût** non tirable ({SRC_BA})."},
+            {"kind": "tableau", "titre": "Freinte technique par exercice (composants en % du fût tiré)",
+             "minWidth": 920, "colonnes": cols2, "lignes": lignes2},
             {"kind": "kpis", "items": [
-                {"label": "Bière pression tirée", "valeur": fr_l(d["base_l"]), "sub": "fûts Affligem, 3 exercices", "couleur": "blue"},
-                {"label": "Freinte retenue", "valeur": fr_pct(d["taux_mode"] * 100, 0), "sub": "mode CHR (entre 5 % et 18 %)", "highlight": True, "couleur": "teal"},
-                {"label": "Volume perdu", "valeur": fr_l(d["litres_mode"]), "sub": "mousse, purge, lignes, fond de fût", "couleur": "teal"},
+                {"label": "Bière servie au verre", "valeur": fr_l(d["base_l"]), "sub": "fûts Affligem, 3 exercices", "couleur": "blue"},
+                {"label": "Freinte documentée", "valeur": fr_pct(d["taux_doc"] * 100, 0), "sub": "du fût (moyenne sectorielle)", "highlight": True, "couleur": "teal"},
+                {"label": "Au-dessus du fisc", "valeur": f"+{fr_pct((d['taux_doc'] - 0.15) * 100, 0)}", "sub": "vs 15 % retenus (p. 51)", "couleur": "teal"},
             ]},
             {"kind": "paragraphe",
-             "texte": f"**Le calcul.** Sur **{fr_l(d['base_l'])}** de bière pression tirée en trois ans, une freinte technique **de {fr_pct(d['taux_mode']*100,0)}** (mode de la fourchette CHR) représente **{fr_l(d['litres_mode'])}** jamais servis. À la borne basse incontestable du rendement-fût (5 %), c’est déjà **{fr_l(d['litres_min'])}** ; à la borne haute (18 %), **{fr_l(d['litres_haut'])}**. Cette perte est **purement technique** : elle est tirée du fût, mais détruite, jamais encaissée."},
+             "texte": f"**Le calcul.** Pour servir **{fr_l(d['base_l'])}** au verre en trois ans, il faut tirer davantage du fût : à une freinte de **{fr_pct(d['taux_doc']*100,0)}** (moyenne sectorielle documentée), ce sont **{fr_l(d['litres_doc'])}** tirés mais jamais servis (mousse, tirage, nettoyage, fond de fût). Le service n’en retranche que **15 %** : son hypothèse est donc **optimiste**, et la bière ne peut pas être réputée vendue à 85 %."},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"La freinte technique du fût détruit **{fr_l(d['litres_mode'])}** de bière sur trois ans (mode CHR), jamais servie ni encaissée. Ce volume explique une part du résiduel de l’analyse « Boissons disparues » et montre qu’un fût ne peut pas, physiquement, être vendu à 100 % comme le suppose la reconstitution."},
-            {"kind": "piecejointe", "intro": "Détail du volume tiré et sensibilité au taux de freinte :",
-             "fichiers": [{"fichier": "pieces-defense/RF-pertes-biere-mousse.xlsx", "label": "RF — Pertes de bière pression (freinte du fût)"}]},
+             "texte": f"La freinte technique documentée représente **{fr_pct(d['taux_doc']*100,0)} du fût** (entre 5 % et 25 % selon les sources), soit **plus que les 15 % retenus par le service** : sur trois exercices, **{fr_l(d['litres_doc'])}** sont tirés mais détruits, jamais servis ni encaissés. Par prudence, l’analyse globale « Boissons disparues » ne retient qu’une freinte de **10 % (≈ {fr_l(d['litres_mode'])})**, très en deçà de la littérature — l’écart ne fait que renforcer la démonstration."},
+            {"kind": "piecejointe", "intro": "Bière servie par produit et par exercice, et freinte technique chiffrée :",
+             "fichiers": [{"fichier": "pieces-defense/RF-pertes-biere-mousse.xlsx", "label": "RF — Bière pression servie et freinte technique du fût (XLSX)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Pour solidifier",
-             "texte": "Obtenir une **attestation du distributeur/brasseur (Affligem)** sur le taux de freinte réel d’un fût (mousse, fond de fût, purge) et la fréquence de nettoyage des lignes ; conserver les bons de nettoyage. Noter que le fisc a lui-même retranché 15 % sur la bière (p. 51) : notre freinte technique en occupe déjà une bonne part, ce qui interdit de réduire cet abattement. Ne pas additionner avec le sur-versement (la bière en est exclue). Retirer cet encart de toute version remise."},
+             "texte": "Obtenir une **attestation du distributeur/brasseur (Affligem)** sur le taux de freinte réel d’un fût (mousse, fond de fût, purge) et conserver les **bons de nettoyage des lignes** (preuve de la fréquence). Le service a lui-même retranché 15 % (p. 51) : nos sources (moyenne 20 %, fourchette 5-25 %) montrent que ce taux est un **plancher**, pas un plafond. La bière est **exclue de la base du sur-versement** (pas de double compte). Retirer cet encart de toute version remise."},
         ],
     }
     ecrire_json(slug, doc)
@@ -503,70 +534,54 @@ def page_biere(d):
 # =============================================================================
 def page_cremant(d):
     slug = "pertes-cremant"
-    xlsx = os.path.join(PIECES, "RF-pertes-cremant.xlsx")
-    ck_rows = [[c["cocktail"], c["dose_cl"], round(c["qte"]), round(c["litres"], 1)] for c in d["cocktails"]]
-    ecrire_xlsx(
-        xlsx, "Cremant jete en fin de journee - bouteille eventee",
-        "Un effervescent ouvert est plat le lendemain. Le cremant est ouvert a la journee ; le solde non servi est jete chaque soir.",
-        [(
-            "Cremant servi",
-            ["Usage", "Dose (cl)", "Quantite (3 ans)", "Litres servis"],
-            [["Verre de cremant", d["dose_verre"], d["verre_q"], round(d["liq_verre"], 1)]]
-            + ck_rows
-            + [["TOTAL cremant servi", "", d["servings"], round(d["liq_total"], 1)]],
-            [30, 12, 18, 16],
-        ), (
-            "Perte fin de journee",
-            ["Parametre", "Valeur"],
-            [
-                ["Jours de service (3 ans)", JOURS_SERVICE],
-                ["Cremant servi / jour", round(d["demande_jour"], 2)],
-                ["Bouteilles ouvertes / jour", d["bouteilles_jour"]],
-                ["Solde jete / jour (L)", round(d["waste_jour"], 2)],
-                ["RESULTAT - cremant jete (3 ans, L)", round(d["waste_3ans"])],
-            ],
-            [40, 16],
-        )],
-    )
-    ck_json = [[cg(f"Cocktail {c['cocktail']}"), cd(fr_cl(c["dose_cl"])), cd(fr_int(c["qte"])), cd(fr_l(c["litres"], 1))] for c in d["cocktails"]]
-    serv_rows = [[cg("Verre de crémant"), cd(fr_cl(d["dose_verre"])), cd(fr_int(d["verre_q"])), cd(fr_l(d["liq_verre"], 1))]] + ck_json
-    serv_rows.append([cgf("Total crémant servi (hors bouteilles entières)"), cd(""), cdf(fr_int(d["servings"])), cdf(fr_l(d["liq_total"], 1))])
+    jete = d["total_jete_l"]
+    surverse = d["surversement_cremant_l"]
+    servi = d["total_servi_l"]
+    bouteilles = d["total_bouteilles"]
+    jours_tot = sum(v["jours"] for v in d["par_exercice"].values())
+    total = jete + surverse
+    ex_rows = []
+    for ex, v in d["par_exercice"].items():
+        ex_rows.append([cg(ex), cd(fr_int(v["jours"])), cd(fr_l(v["servi_l"], 1)),
+                        cd(fr_int(v["bouteilles"])), cd(fr_l(v["jete_l"], 1))])
+    ex_rows.append([cgf("Total 3 exercices"), cdf(fr_int(jours_tot)),
+                    cdf(fr_l(servi, 1)), cdf(fr_int(bouteilles)), cdf(fr_l(jete, 1))])
     doc = {
-        "meta": {"slug": slug, "source": "scripts/rendu-final-reconstitution-bloc2.py",
+        "meta": {"slug": slug, "source": "scripts/rendu-final-cremant-jete.py (niveau journalier)",
                  "grief": "Proposition p. 46-47 - ingredient Cremant",
-                 "litres_retenu": round(d["waste_3ans"])},
+                 "litres_retenu": round(total)},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Ce que retient l’administration",
-             "sousTitre": "Proposition p. 46-47 — tout le crémant disponible est réputé vendu"},
+             "titre": "Le grief de l’administration",
+             "sousTitre": "Proposition p. 46-47 — tout le crémant disponible est réputé vendu, au centilitre"},
             {"kind": "paragraphe",
-             "texte": "Le service répartit **tout le crémant acheté** entre les articles qui en consomment — verre (12 cl), cocktails La Vouivre, Le Père Grégoire et KITTYKIR, bouteilles (75 cl) — et **divise le volume disponible par les doses** pour en déduire des ventes (Proposition p. 46-47, ingrédient CRÉMANT). La méthode suppose que **chaque centilitre de crémant ouvert finit dans un verre vendu**. Or le crémant est un **vin effervescent** : c’est précisément le produit qu’on ne peut pas conserver d’un jour à l’autre."},
+             "texte": "Le service répartit **tout le crémant acheté** entre les articles qui en consomment (verre, cocktails La Vouivre, Père Grégoire, KITTYKIR…) et **divise le volume disponible par les doses** pour en déduire des ventes (Proposition p. 46-47, ingrédient CRÉMANT). Deux réalités lui échappent, **distinctes et cumulables** : le crémant est **sur-versé** comme tout vin servi à la main, et **il s’évente** — la bouteille ouverte ne se garde pas."},
             {"kind": "chapitre", "source": "nous", "numero": 2,
-             "titre": "Une bouteille de crémant ouverte est jetée le soir même",
-             "sousTitre": "Effervescent éventé en quelques heures — on ouvre à la journée, on jette le solde"},
+             "titre": "Deux pertes distinctes : le sur-versement ET la bouteille jetée",
+             "sousTitre": "Calculé jour par jour sur le détail des tickets (annexe C), verre + cocktails"},
             {"kind": "paragraphe",
-             "texte": "Un **vin effervescent ouvert perd ses bulles en quelques heures** et est **plat dès le lendemain** sans bouchon hermétique (œnologie courante ; Coravin). En service, une bouteille de crémant entamée pour un verre ou un cocktail **ne peut donc pas être resservie le jour suivant** : le solde est **jeté chaque soir**. Le crémant tourne lentement à la bouteille : sur trois ans, **{0}** verres et cocktails de crémant ont été servis, soit **{1}** par jour de service en moyenne — de quoi entamer une bouteille par jour, rarement la finir.".format(fr_int(d["servings"]), fr_l(d["servings_jour"], 1).replace(" L", ""))},
-            {"kind": "tableau", "titre": "Crémant réellement servi au verre et en cocktails (3 exercices)",
-             "minWidth": 560,
-             "colonnes": [{"label": "Usage"}, {"label": "Dose", "align": "right"}, {"label": "Quantité", "align": "right"}, {"label": "Litres servis", "align": "right"}],
-             "lignes": serv_rows},
-            {"kind": "paragraphe",
-             "texte": f"**Le calcul, jour par jour.** Le crémant servi représente **{fr_l(d['liq_total'],1)}** sur trois ans, soit **{fr_l(d['demande_jour'],2)} par jour** de service. Comme une bouteille fait **75 cl** et qu’elle doit être ouverte fraîche, on **ouvre {d['bouteilles_jour']} bouteille par jour** où le crémant est servi et on **jette le solde non écoulé**, soit **{fr_l(d['waste_jour'],2)} par jour**. Sur **{fr_int(JOURS_SERVICE)} jours** de service, cela fait **{fr_l(d['waste_3ans'])}** de crémant détruit — l’équivalent d’environ **{fr_int(d['waste_3ans']/0.75)} bouteilles** jetées."},
+             "texte": f"Nous avons compté, **jour par jour dans le détail des tickets** (annexe C), tout le crémant servi — **au verre et dans les cocktails** (La Vouivre 8 cl, KITTYKIR 9 cl, Père Grégoire 1 cl, Kir Princier 10 cl). Sur chaque journée, on applique d’abord le **sur-versement de +23,6 %** ({SRC_KERR}) pour obtenir le volume **réellement** versé, puis on en déduit le **nombre de bouteilles de 75 cl ouvertes** ce jour-là et le **solde jeté** le soir (un effervescent ouvert est plat le lendemain — {SRC_SPARKLING})."},
+            {"kind": "tableau", "titre": "Crémant jeté en fin de journée, par exercice (sur-versement +23,6 % inclus dans le servi)",
+             "minWidth": 620,
+             "colonnes": [{"label": "Exercice"}, {"label": "Jours servis", "align": "right"}, {"label": "Crémant servi", "align": "right"}, {"label": "Bouteilles ouvertes", "align": "right"}, {"label": "Crémant jeté", "align": "right"}],
+             "lignes": ex_rows},
             {"kind": "kpis", "items": [
-                {"label": "Crémant servi / jour", "valeur": fr_l(d["demande_jour"], 2), "sub": f"{fr_int(d['servings'])} services / {fr_int(JOURS_SERVICE)} j", "couleur": "blue"},
-                {"label": "Solde jeté / jour", "valeur": fr_l(d["waste_jour"], 2), "sub": "bouteille éventée le lendemain", "couleur": "teal"},
-                {"label": "Crémant jeté (3 ans)", "valeur": fr_l(d["waste_3ans"]), "sub": f"≈ {fr_int(d['waste_3ans']/0.75)} bouteilles", "highlight": True, "couleur": "teal"},
+                {"label": "Sur-versement crémant", "valeur": fr_l(surverse, 1), "sub": "+23,6 % versé à la main (Kerr 2008)", "couleur": "blue"},
+                {"label": "Crémant jeté (éventé)", "valeur": fr_l(jete, 1), "sub": f"≈ {fr_int(bouteilles)} bouteilles ouvertes, soldes jetés", "couleur": "blue"},
+                {"label": "Total perte crémant", "valeur": fr_l(total, 1), "sub": "sur-versement + jeté, 3 ans", "highlight": True, "couleur": "teal"},
             ]},
+            {"kind": "paragraphe",
+             "texte": f"**Les deux pertes n’ont rien à voir et s’additionnent.** Le **sur-versement** (**{fr_l(surverse,1)}**) est le crémant **bu en plus** de la dose, pendant le service. Le **jeté** (**{fr_l(jete,1)}**, le solde de ~{fr_int(bouteilles)} bouteilles ouvertes sur {fr_int(jours_tot)} jours) est le crémant **détruit** parce que la bouteille entamée ne se garde pas. Ensemble : **{fr_l(total,1)}** de crémant acheté qui ne produit **aucune vente**."},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"Parce qu’un crémant ouvert s’évente, le restaurant **jette environ {fr_l(d['waste_3ans'])} de crémant** sur trois ans (≈ {fr_int(d['waste_3ans']/0.75)} bouteilles). La reconstitution du fisc, qui répute **tout** le crémant disponible vendu, transforme ce solde **détruit** en ventes fictives."},
-            {"kind": "piecejointe", "intro": "Détail du crémant servi (verre + cocktails) et calcul de la perte journalière :",
-             "fichiers": [{"fichier": "pieces-defense/RF-pertes-cremant.xlsx", "label": "RF — Crémant jeté en fin de journée"}]},
-            {"kind": "interne", "audience": "avocat", "titre": "Hypothèse et fiabilisation",
-             "texte": "Le calcul retient l’hypothèse prudente d’**une bouteille ouverte par jour de service** (le crémant tournant à ~8 services/jour, une bouteille est entamée presque chaque jour). Un **export caisse au ticket daté** (réclamable au titre du journal NF525) donnerait le nombre exact de jours où le crémant a été servi et le rendrait incontestable. Faire confirmer par la gérante la pratique « bouteille jetée le soir » (effervescent) et, idéalement, une attestation 202 CPC. Retirer cet encart de toute version remise."},
+             "texte": f"Le crémant, mesuré jour par jour sur la caisse, fait **{fr_l(total,1)}** de perte sur trois ans (**{fr_l(surverse,1)}** de sur-versement + **{fr_l(jete,1)}** jeté). C’est un poste explicite de la cascade « Boissons disparues » : ni vente, ni disparition — du vin bu en plus de la dose, et des fonds de bouteille éventés."},
+            {"kind": "piecejointe", "intro": "Calcul jour par jour (annexe C) : crémant servi, bouteilles ouvertes et solde jeté par exercice, libellés et doses :",
+             "fichiers": [{"fichier": "pieces-defense/RF-cremant-jete.xlsx", "label": "RF — Crémant jeté en fin de journée (niveau journalier, annexe C)"}]},
+            {"kind": "interne", "audience": "avocat", "titre": "Solidité et périmètre",
+             "texte": "Chiffre **non estimé** : le crémant servi est lu **ligne à ligne** dans le détail des tickets (annexe C), agrégé par jour, bouteilles par arrondi supérieur (une bouteille entamée = ouverte). Doses crémant : verre 10 cl, La Vouivre 8 cl, KITTYKIR 9 cl, Père Grégoire 1 cl, Kir Princier 10 cl ; bouteilles entières et « Kir Bourgogne » (au vin blanc, pas au crémant) **exclus**. Le sur-versement crémant est compté **ici** et **retiré de la base du poste « sur-versement » général** (pas de double compte). Faire confirmer par la gérante la pratique « bouteille jetée le soir ». Retirer cet encart de toute version remise."},
         ],
     }
     ecrire_json(slug, doc)
-    return slug, round(d["waste_3ans"])
+    return slug, round(total)
 
 
 # =============================================================================
@@ -574,28 +589,15 @@ def page_cremant(d):
 # =============================================================================
 def page_degustation(d):
     slug = "degustation-au-verre"
-    xlsx = os.path.join(PIECES, "RF-degustation-au-verre.xlsx")
-    ecrire_xlsx(
-        xlsx, "Degustation offerte - quantite perdue, vin par vin",
-        "Vin nomme au verre : la bouteille est montee, une personne goute 2 cl (1 degustation pour 2 verres du meme vin). Pichet : une larme de 2 cl pour approuver. Vins generiques (cubis/maison) : exclus.",
-        [(
-            "Degustation par vin",
-            ["Vin nomme (carte des vins)", "Verres (3 ans)", "Degustations", "Volume offert (L)"],
-            [[v["vin"], v["verres"], v["degustations"], round(v["litres"], 1)] for v in d["vins"]]
-            + [["Sous-total vins nommes", d["nommes_q"], sum(v["degustations"] for v in d["vins"]), round(d["deg_nommes_l"], 1)],
-               ["Pichets (1 larme / pichet)", d["pichets_q"], d["pichets_q"], round(d["deg_pichets_l"], 1)],
-               ["TOTAL degustation", "", "", round(d["total_l"], 1)]],
-            [34, 14, 14, 16],
-        )],
-    )
-    vin_json = [[cg(v["vin"]), cd(fr_int(v["verres"])), cd(fr_int(v["degustations"])), cd(fr_l(v["litres"], 1))] for v in d["vins"]]
-    vin_json.append([cgf("Sous-total vins nommés"), cdf(fr_int(d["nommes_q"])), cdf(fr_int(sum(v["degustations"] for v in d["vins"]))), cdf(fr_l(d["deg_nommes_l"], 1))])
-    vin_json.append([cg("Pichets (1 larme par pichet)"), cd(fr_int(d["pichets_q"])), cd(fr_int(d["pichets_q"])), cd(fr_l(d["deg_pichets_l"], 1))])
-    vin_json.append([cgf("TOTAL dégustation"), cd(""), cd(""), cdf(fr_l(d["total_l"], 1))])
+    vins = d["par_vin"]
+    total_l = d["total_offert_l"]
+    total_deg = d["total_degustations"]
+    vin_json = [[cg(v["vin"]), cd(fr_int(v["degustations"])), cd(fr_l(v["offert_l"], 1))] for v in vins]
+    vin_json.append([cgf("TOTAL"), cdf(fr_int(total_deg)), cdf(fr_l(total_l, 1))])
     doc = {
-        "meta": {"slug": slug, "source": "scripts/rendu-final-reconstitution-bloc2.py",
+        "meta": {"slug": slug, "source": "scripts/rendu-final-degustation-notes.py (niveau note)",
                  "grief": "Proposition p. 37-44 (methode 1/2)",
-                 "litres_retenu": round(d["total_l"])},
+                 "litres_retenu": round(total_l)},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
              "titre": "Le grief de l’administration",
@@ -603,29 +605,31 @@ def page_degustation(d):
             {"kind": "paragraphe",
              "texte": "La reconstitution **convertit en verres vendus la totalité du vin disponible**, sans rien réserver au **geste de dégustation** qui précède le service. Or ce geste est systématique et ne laisse **aucune trace en caisse** : il n’est ni un article, ni une remise."},
             {"kind": "chapitre", "source": "nous", "numero": 2,
-             "titre": "La quantité offerte en dégustation, vin par vin",
-             "sousTitre": "On part de nos ventes réelles au verre et on chiffre la larme de dégustation"},
+             "titre": "La quantité offerte, comptée note par note",
+             "sousTitre": "Lecture du détail des tickets (annexe C) — aucune estimation, aucun ratio"},
             {"kind": "paragraphe",
-             "texte": "Pour un vin de la **carte des vins** (Savagnin, Saint-Véran, Trousseau, vin jaune…), le serveur **monte la bouteille en salle et fait goûter une personne (≈ 2 cl)** avant de remplir le verre. Si plusieurs convives commandent **le même** vin à une table, **une seule** dégustation (on retient prudemment **1 dégustation pour 2 verres**) ; s’ils commandent des vins **différents**, chacun goûte. Les **vins génériques** (« verre de vin », rosé/aligoté maison, tirés d’un cubis) **n’en donnent pas lieu** (pas de bouteille montée) : ils sont **exclus**. Le tableau ci-dessous part de **nos ventes réelles au verre** et donne, vin par vin, la quantité offerte."},
-            {"kind": "tableau", "titre": "Quantité offerte en dégustation, vin par vin (3 exercices)",
-             "minWidth": 560,
-             "colonnes": [{"label": "Vin nommé"}, {"label": "Verres", "align": "right"}, {"label": "Dégustations", "align": "right"}, {"label": "Volume offert", "align": "right"}],
+             "texte": "Pour un vin de la **carte des vins** (Savagnin, Saint-Véran, Trousseau, Moulin à Vent…), le serveur **monte la bouteille et fait goûter une personne (≈ 2 cl)** avant de servir. La règle est simple : **une dégustation par vin nommé et par note (addition)**, quelle que soit la quantité — 3 verres du même Saint-Véran sur une note = **une** dégustation ; 3 vins différents = **trois**. Nous l’avons appliquée **ligne à ligne sur le détail des tickets** (annexe C, 3 exercices) : pour chaque note, on compte 2 cl une seule fois par vin nommé. Les **génériques « Verre de vin » / « Pichet vin » (cubis, type non précisé)** et les **bouteilles** sont **exclus**. Le décompte n’est donc pas estimé : il est **lu dans la caisse**."},
+            {"kind": "tableau", "titre": "Dégustations comptées note par note, vin par vin (3 exercices)",
+             "minWidth": 460,
+             "colonnes": [{"label": "Vin nommé"}, {"label": "Dégustations (notes distinctes)", "align": "right"}, {"label": "Volume offert", "align": "right"}],
              "lignes": vin_json},
             {"kind": "kpis", "items": [
-                {"label": "Vins nommés", "valeur": fr_l(d["deg_nommes_l"], 1), "sub": f"{fr_int(d['nommes_q'])} verres → {fr_int(sum(v['degustations'] for v in d['vins']))} dégustations", "couleur": "blue"},
-                {"label": "Pichets", "valeur": fr_l(d["deg_pichets_l"], 1), "sub": f"{fr_int(d['pichets_q'])} × 2 cl", "couleur": "blue"},
-                {"label": "Total dégustation", "valeur": fr_l(d["total_l"], 1), "sub": "offert, jamais vendu", "highlight": True, "couleur": "teal"},
+                {"label": "Dégustations", "valeur": fr_int(total_deg), "sub": "1 par vin nommé et par note (annexe C)", "couleur": "blue"},
+                {"label": "Dose", "valeur": "2 cl", "sub": "une larme pour faire goûter", "couleur": "gray"},
+                {"label": "Total offert", "valeur": fr_l(total_l, 1), "sub": "vin offert, jamais vendu", "highlight": True, "couleur": "teal"},
             ]},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"Vin par vin, la dégustation offerte — bouteille montée pour le vin nommé, larme au pichet — soustrait **{fr_l(d['total_l'],1)}** de vin au volume vendable sur trois ans, sur une hypothèse **basse** (1 dégustation pour {d['ratio']:.0f} verres du même vin). Ce volume explique une part du résiduel de l’analyse « Boissons disparues » ; la reconstitution du fisc le compte pourtant comme des verres vendus."},
-            {"kind": "piecejointe", "intro": "Quantité offerte en dégustation, vin par vin (+ pichets) :",
-             "fichiers": [{"fichier": "pieces-defense/RF-degustation-au-verre.xlsx", "label": "RF — Dégustation offerte (détail par vin)"}]},
-            {"kind": "interne", "audience": "avocat", "titre": "Hypothèse et fiabilisation",
-             "texte": f"Seul paramètre non mesuré : le **nombre moyen de verres du même vin par table** (retenu à {d['ratio']:.0f}, ce qui **minore** la dégustation ; à 1,5 le volume monte). Bien le **distinguer du sur-versement** (geste différent : la dégustation est versée AVANT le service, le sur-versement PENDANT) — ne jamais additionner les deux sur les mêmes centilitres. Faire confirmer la pratique par la gérante et le personnel de salle (attestations 202 CPC). Retirer cet encart de toute version remise."},
+             "texte": f"En comptant **note par note** dans le détail des tickets, **{fr_int(total_deg)} dégustations** de 2 cl ont été offertes sur trois ans, soit **{fr_l(total_l,1)}** de vin nommé jamais vendu. Ce volume **s’ajoute** au sur-versement (geste distinct, versé pendant le service du verre) et explique une part du résiduel de l’analyse « Boissons disparues »."},
+            {"kind": "paragraphe",
+             "texte": "**Cette dégustation s’ajoute au sur-versement.** Une fois la larme offerte (avant le service), le verre est ensuite rempli — et ce service-là est lui-même au-dessus de la dose carte (poste « sur-versement », sur des **centilitres différents**). Les deux pertes ne se recouvrent pas : elles se cumulent."},
+            {"kind": "piecejointe", "intro": "Preuve note par note : chaque addition contenant un vin nommé au verre/pichet, avec quantité, prix et la dégustation de 2 cl (comptée une fois par vin et par note) :",
+             "fichiers": [{"fichier": "pieces-defense/RF-degustation-par-note.xlsx", "label": "RF — Dégustation, preuve note par note (annexe C)"}]},
+            {"kind": "interne", "audience": "avocat", "titre": "Solidité et périmètre",
+             "texte": "Chiffre **non estimé** : compté ligne à ligne sur le détail des tickets (annexe C), donc directement opposable. Périmètre des vins nommés inclus : Savagnin, Trousseau, Saint-Véran, Aligoté, Chusclan, Hautes Côtes de Beaune, Moulin à Vent, Mâcon, Gewurztraminer, Chardonnay, Chablis, Saint-Joseph. **Exclus** (à confirmer si on veut les ajouter) : vin jaune, vin de paille, macvin, rosé maison (genérique), crémant/champagne (traités à part). La dégustation et le sur-versement **s’additionnent** (centilitres différents). Faire confirmer la pratique par la gérante / le personnel de salle (attestation 202 CPC). Retirer cet encart de toute version remise."},
         ],
     }
     ecrire_json(slug, doc)
-    return slug, round(d["total_l"])
+    return slug, round(total_l)
 
 
 # =============================================================================
@@ -775,7 +779,7 @@ def page_offerts(d, postes_itemises):
             {"kind": "piecejointe", "intro": "Postes itemisés et comparaison aux forfaits / à la jurisprudence :",
              "fichiers": [{"fichier": "pieces-defense/RF-offerts-remises-pertes.xlsx", "label": "RF — Offerts, remises et pertes (forfaits vs réel)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Précautions",
-             "texte": "**Fiabiliser le numéro de requête** de l’arrêt CAA Paris du 17 mars 2021 (Légifrance / Doctrine) avant citation formelle ; le principe (abattement ~22 % validé) est solide. Arbitrer le **risque d’avantage en nature** sur la consommation du personnel/dirigeant avant de la chiffrer publiquement. Ne pas additionner deux fois un même centilitre (sur-versement ≠ dégustation ≠ cuisine). Retirer cet encart de toute version remise."},
+             "texte": "**Fiabiliser le numéro de requête** de l’arrêt CAA Paris du 17 mars 2021 (Légifrance / Doctrine) avant citation formelle ; le principe (abattement ~22 % validé) est solide. Arbitrer le **risque d’avantage en nature** sur la consommation du personnel/dirigeant avant de la chiffrer publiquement. Sur-versement, dégustation et cuisine portent sur des **centilitres différents** : ils **s’additionnent** sans double compte. Retirer cet encart de toute version remise."},
         ],
     }
     ecrire_json(slug, doc)
@@ -858,8 +862,8 @@ def main():
     items, bpd, conso = charger()
     sv = calc_surversement(conso)
     bi = calc_biere(items)
-    cr = calc_cremant(items, bpd)
-    de = calc_degustation(items)
+    cr = calc_cremant()
+    de = calc_degustation()
 
     cu = calc_cuisine(bpd)
     of = calc_offerts(bpd)
@@ -871,12 +875,16 @@ def main():
     r4 = page_degustation(de)
     r5 = page_cuisine(cu)
 
-    # Garde-fou : ces valeurs sont remontees en DUR dans la cascade de
-    # src/data/incertitudeDisparu/14_synthese_perte_reelle.py (SURVERSEMENT_L,
-    # FREINTE_BIERE_L, CREMANT_JETE_L, DEGUSTATION_L). Si le calcul derive, il
-    # faut mettre a jour ces constantes puis relancer 14 -> 15.
-    attendu = {"surversement": 807, "freinte": 129, "cremant": 126, "degustation": 113}
-    obtenu = {"surversement": r1[1], "freinte": r2[1], "cremant": r3[1], "degustation": r4[1]}
+    # Valeurs DOCUMENTEES, remontees en DUR dans la cascade de
+    # src/data/incertitudeDisparu/14_synthese_perte_reelle.py et complementsDefense.ts.
+    # Composants crémant (jeté + sur-versement) tracés séparément.
+    cremant_jete = round(cr["total_jete_l"])
+    cremant_surverse = round(cr["surversement_cremant_l"])
+    obtenu = {"surversement": r1[1], "freinte": r2[1],
+              "cremant_jete": cremant_jete, "cremant_surverse": cremant_surverse,
+              "degustation": r4[1]}
+    attendu = {"surversement": 1056, "freinte": 129,
+               "cremant_jete": 260, "cremant_surverse": 87, "degustation": 126}
     assert obtenu == attendu, (
         f"DRIFT cascade : {obtenu} != {attendu}. Mettre a jour les constantes de "
         "14_synthese_perte_reelle.py (et complementsDefense.ts) puis relancer 14 -> 15."
@@ -887,9 +895,9 @@ def main():
     postes_itemises = {
         "Consommation du chef (Picon + Macvin)": casc.get("Consommation du chef (Picon + Macvin)", 143),
         "Apéritifs offerts aux clients": casc.get("Aperitifs offerts aux clients", 40),
-        "Sur-versement au verre (free-pour)": r1[1],
-        "Crémant jeté en fin de journée": r3[1],
-        "Dégustation offerte (pichet + vin nommé)": r4[1],
+        "Sur-versement (vins, spiritueux, cocktails)": r1[1],
+        "Crémant (sur-versement + jeté)": r3[1],
+        "Dégustation offerte (note par note)": r4[1],
         "Freinte technique de la bière pression": r2[1],
     }
     r6 = page_offerts(of, postes_itemises)
@@ -902,8 +910,8 @@ def main():
     print("-" * 58)
     print(f"  sur-versement       : {fr_l(r1[1])}  (base {fr_l(sv['base_totale'])}, ~{fr_pct(sv['taux_blende']*100,0)})")
     print(f"  freinte biere       : {fr_l(r2[1])}  (base {fr_l(bi['base_l'])}, {int(bi['taux_mode']*100)} %)")
-    print(f"  cremant jete        : {fr_l(r3[1])}  ({cr['bouteilles_jour']} bout./j, {fr_int(JOURS_SERVICE)} j)")
-    print(f"  degustation offerte : {fr_l(r4[1])}  (pichets {fr_int(de['pichets_q'])}, verres nommes {fr_int(de['nommes_q'])})")
+    print(f"  cremant total       : {fr_l(r3[1])}  (jete {fr_l(cremant_jete)} + surverse {fr_l(cremant_surverse)})")
+    print(f"  degustation offerte : {fr_l(r4[1])}  ({fr_int(de['total_degustations'])} degustations note x vin, annexe C)")
     print("-" * 58)
     print(f"  TOTAL itemise (4 pertes) du residuel : {fr_l(total)} / {bpd['synthese']['perte_reelle_l']} L residuel")
     print(f"  cuisine             : {fr_l(r5[1])}")

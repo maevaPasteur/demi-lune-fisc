@@ -9,8 +9,8 @@
    "achat_l": 10622,
    "achat_cout": 107924,
    "conso_l": 7504,
-   "perte_reelle_l": 1690,
-   "perte_reelle_pct": 15.9,
+   "perte_reelle_l": 1677,
+   "perte_reelle_pct": 15.8,
    "fisc_ca_reconstitue": 575253,
    "fisc_coef": 3.1,
    "ca_declare": 435525,
@@ -85,7 +85,7 @@
     },
     {
      "label": "Degustation",
-     "valeur": 113,
+     "valeur": 126,
      "categorie": "estime"
     },
     {
@@ -105,7 +105,7 @@
     },
     {
      "label": "Perte reelle",
-     "valeur": 1690,
+     "valeur": 1677,
      "categorie": "residuel"
     }
    ],
@@ -203,11 +203,11 @@
       "v": "Degustation"
      },
      {
-      "v": "113 L",
+      "v": "126 L",
       "align": "right"
      },
      {
-      "v": "8 815 €",
+      "v": "9 829 €",
       "align": "right"
      }
     ],
@@ -242,11 +242,11 @@
       "v": "Perte reelle"
      },
      {
-      "v": "1 690 L",
+      "v": "1 677 L",
       "align": "right"
      },
      {
-      "v": "131 839 €",
+      "v": "130 824 €",
       "align": "right"
      }
     ],
@@ -371,7 +371,7 @@
   },
   {
    "kind": "note",
-   "texte": "**La perte reelle est conforme au secteur.** Apres ventilation de tous les usages, le residu d'alcool est de **1 690 L**, soit **15,9 %** des achats. C'est la fourchette normale d'un bar-restaurant (15 a 25 %, casse, evaporation, fonds de verre, rincage des tireuses) et c'est exactement ce que confirme le modele Monte Carlo independant (src/data/incertitudeDisparu) : il n'y a pas de recette occulte, il y a une perte d'exploitation normale."
+   "texte": "**La perte reelle est conforme au secteur.** Apres ventilation de tous les usages, le residu d'alcool est de **1 677 L**, soit **15,8 %** des achats. C'est la fourchette normale d'un bar-restaurant (15 a 25 %, casse, evaporation, fonds de verre, rincage des tireuses) et c'est exactement ce que confirme le modele Monte Carlo independant (src/data/incertitudeDisparu) : il n'y a pas de recette occulte, il y a une perte d'exploitation normale."
   },
   {
    "kind": "piecejointe",
@@ -387,13 +387,13 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Ce qu'il faut retenir",
-   "texte": "La methode du fisc surestime parce qu'elle suppose des doses exactes, zero perte, zero cuisine, zero consommation du personnel et zero offert. Recalcule sur les achats et la caisse reels, le manquant retombe a une perte normale de **15,9 %** (norme CHR). En reinjectant les litres jamais vendus au verre (**299 718 €**), le CA reconstitue passe de **575 253 €** a **275 535 €** et la discordance avec le CA declare se referme."
+   "texte": "La methode du fisc surestime parce qu'elle suppose des doses exactes, zero perte, zero cuisine, zero consommation du personnel et zero offert. Recalcule sur les achats et la caisse reels, le manquant retombe a une perte normale de **15,8 %** (norme CHR). En reinjectant les litres jamais vendus au verre (**299 718 €**), le CA reconstitue passe de **575 253 €** a **275 535 €** et la discordance avec le CA declare se referme."
   },
   {
    "kind": "interne",
    "audience": "avocat",
    "titre": "Note pour l'avocat",
-   "texte": "La demonstration neutralise le coeur de la reconstitution (penalite 1759, ≈ 471 826 €). Trois angles cumulatifs : (1) la cascade des 10 622 L est integralement tracee, le residu (1 690 L = 15,9 %) est une perte sectorielle normale ; (2) le fisc valorise comme CA verre **3 842 L** jamais vendus au verre, soit **299 718 €** surfactures ; (3) reinjectees, les vraies ventes caisse referment la discordance. L'amplification par le coefficient liquide/solide (3,1) multiplie aussi l'erreur : toute surevaluation des volumes est amplifiee ~3 fois. Reproductible via scripts/rendu-final-reconstitution-volumes-liquides.py et la piece RF-reconstitution-volumes-liquides.xlsx."
+   "texte": "La demonstration neutralise le coeur de la reconstitution (penalite 1759, ≈ 471 826 €). Trois angles cumulatifs : (1) la cascade des 10 622 L est integralement tracee, le residu (1 677 L = 15,8 %) est une perte sectorielle normale ; (2) le fisc valorise comme CA verre **3 842 L** jamais vendus au verre, soit **299 718 €** surfactures ; (3) reinjectees, les vraies ventes caisse referment la discordance. L'amplification par le coefficient liquide/solide (3,1) multiplie aussi l'erreur : toute surevaluation des volumes est amplifiee ~3 fois. Reproductible via scripts/rendu-final-reconstitution-volumes-liquides.py et la piece RF-reconstitution-volumes-liquides.xlsx."
   }
  ]
 }

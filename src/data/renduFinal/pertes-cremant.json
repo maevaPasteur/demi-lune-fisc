@@ -1,156 +1,144 @@
 {
  "meta": {
   "slug": "pertes-cremant",
-  "source": "scripts/rendu-final-reconstitution-bloc2.py",
+  "source": "scripts/rendu-final-cremant-jete.py (niveau journalier)",
   "grief": "Proposition p. 46-47 - ingredient Cremant",
-  "litres_retenu": 126
+  "litres_retenu": 347
  },
  "sections": [
   {
    "kind": "chapitre",
    "source": "fisc",
    "numero": 1,
-   "titre": "Ce que retient l’administration",
-   "sousTitre": "Proposition p. 46-47 — tout le crémant disponible est réputé vendu"
+   "titre": "Le grief de l’administration",
+   "sousTitre": "Proposition p. 46-47 — tout le crémant disponible est réputé vendu, au centilitre"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service répartit **tout le crémant acheté** entre les articles qui en consomment — verre (12 cl), cocktails La Vouivre, Le Père Grégoire et KITTYKIR, bouteilles (75 cl) — et **divise le volume disponible par les doses** pour en déduire des ventes (Proposition p. 46-47, ingrédient CRÉMANT). La méthode suppose que **chaque centilitre de crémant ouvert finit dans un verre vendu**. Or le crémant est un **vin effervescent** : c’est précisément le produit qu’on ne peut pas conserver d’un jour à l’autre."
+   "texte": "Le service répartit **tout le crémant acheté** entre les articles qui en consomment (verre, cocktails La Vouivre, Père Grégoire, KITTYKIR…) et **divise le volume disponible par les doses** pour en déduire des ventes (Proposition p. 46-47, ingrédient CRÉMANT). Deux réalités lui échappent, **distinctes et cumulables** : le crémant est **sur-versé** comme tout vin servi à la main, et **il s’évente** — la bouteille ouverte ne se garde pas."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Une bouteille de crémant ouverte est jetée le soir même",
-   "sousTitre": "Effervescent éventé en quelques heures — on ouvre à la journée, on jette le solde"
+   "titre": "Deux pertes distinctes : le sur-versement ET la bouteille jetée",
+   "sousTitre": "Calculé jour par jour sur le détail des tickets (annexe C), verre + cocktails"
   },
   {
    "kind": "paragraphe",
-   "texte": "Un **vin effervescent ouvert perd ses bulles en quelques heures** et est **plat dès le lendemain** sans bouchon hermétique (œnologie courante ; Coravin). En service, une bouteille de crémant entamée pour un verre ou un cocktail **ne peut donc pas être resservie le jour suivant** : le solde est **jeté chaque soir**. Le crémant tourne lentement à la bouteille : sur trois ans, **5 499** verres et cocktails de crémant ont été servis, soit **8,3** par jour de service en moyenne — de quoi entamer une bouteille par jour, rarement la finir."
+   "texte": "Nous avons compté, **jour par jour dans le détail des tickets** (annexe C), tout le crémant servi — **au verre et dans les cocktails** (La Vouivre 8 cl, KITTYKIR 9 cl, Père Grégoire 1 cl, Kir Princier 10 cl). Sur chaque journée, on applique d’abord le **sur-versement de +23,6 %** ([Kerr et al., 2008](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/)) pour obtenir le volume **réellement** versé, puis on en déduit le **nombre de bouteilles de 75 cl ouvertes** ce jour-là et le **solde jeté** le soir (un effervescent ouvert est plat le lendemain — [Coravin — conservation du champagne/effervescent](https://www.coravin.com/blogs/community/does-champagne-expire))."
   },
   {
    "kind": "tableau",
-   "titre": "Crémant réellement servi au verre et en cocktails (3 exercices)",
-   "minWidth": 560,
+   "titre": "Crémant jeté en fin de journée, par exercice (sur-versement +23,6 % inclus dans le servi)",
+   "minWidth": 620,
    "colonnes": [
     {
-     "label": "Usage"
+     "label": "Exercice"
     },
     {
-     "label": "Dose",
+     "label": "Jours servis",
      "align": "right"
     },
     {
-     "label": "Quantité",
+     "label": "Crémant servi",
      "align": "right"
     },
     {
-     "label": "Litres servis",
+     "label": "Bouteilles ouvertes",
+     "align": "right"
+    },
+    {
+     "label": "Crémant jeté",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Verre de crémant"
+      "v": "2022-2023"
      },
      {
-      "v": "12 cl",
+      "v": "217",
       "align": "right"
      },
      {
-      "v": "814",
+      "v": "130,3 L",
       "align": "right"
      },
      {
-      "v": "97,7 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Cocktail La Vouivre"
-     },
-     {
-      "v": "8 cl",
+      "v": "298",
       "align": "right"
      },
      {
-      "v": "2 120",
-      "align": "right"
-     },
-     {
-      "v": "169,6 L",
+      "v": "93,2 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Cocktail Apéritif du Père Grégoire"
+      "v": "2023-2024"
      },
      {
-      "v": "1 cl",
+      "v": "212",
       "align": "right"
      },
      {
-      "v": "1 608",
+      "v": "165,3 L",
       "align": "right"
      },
      {
-      "v": "16,1 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Cocktail Kittykir"
-     },
-     {
-      "v": "9 cl",
+      "v": "333",
       "align": "right"
      },
      {
-      "v": "867",
-      "align": "right"
-     },
-     {
-      "v": "78,0 L",
+      "v": "84,4 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Cocktail Kir Princier"
+      "v": "2024-2025"
      },
      {
-      "v": "10 cl",
+      "v": "218",
       "align": "right"
      },
      {
-      "v": "90",
+      "v": "158,2 L",
       "align": "right"
      },
      {
-      "v": "9,0 L",
+      "v": "321",
+      "align": "right"
+     },
+     {
+      "v": "82,6 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Total crémant servi (hors bouteilles entières)",
+      "v": "Total 3 exercices",
       "fw": 700
      },
      {
-      "v": "",
-      "align": "right"
-     },
-     {
-      "v": "5 499",
+      "v": "647",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "370,4 L",
+      "v": "453,8 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "952",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "260,2 L",
       "align": "right",
       "fw": 700
      }
@@ -158,54 +146,54 @@
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "**Le calcul, jour par jour.** Le crémant servi représente **370,4 L** sur trois ans, soit **0,56 L par jour** de service. Comme une bouteille fait **75 cl** et qu’elle doit être ouverte fraîche, on **ouvre 1 bouteille par jour** où le crémant est servi et on **jette le solde non écoulé**, soit **0,19 L par jour**. Sur **662 jours** de service, cela fait **126 L** de crémant détruit — l’équivalent d’environ **168 bouteilles** jetées."
-  },
-  {
    "kind": "kpis",
    "items": [
     {
-     "label": "Crémant servi / jour",
-     "valeur": "0,56 L",
-     "sub": "5 499 services / 662 j",
+     "label": "Sur-versement crémant",
+     "valeur": "86,7 L",
+     "sub": "+23,6 % versé à la main (Kerr 2008)",
      "couleur": "blue"
     },
     {
-     "label": "Solde jeté / jour",
-     "valeur": "0,19 L",
-     "sub": "bouteille éventée le lendemain",
-     "couleur": "teal"
+     "label": "Crémant jeté (éventé)",
+     "valeur": "260,2 L",
+     "sub": "≈ 952 bouteilles ouvertes, soldes jetés",
+     "couleur": "blue"
     },
     {
-     "label": "Crémant jeté (3 ans)",
-     "valeur": "126 L",
-     "sub": "≈ 168 bouteilles",
+     "label": "Total perte crémant",
+     "valeur": "346,9 L",
+     "sub": "sur-versement + jeté, 3 ans",
      "highlight": true,
      "couleur": "teal"
     }
    ]
   },
   {
+   "kind": "paragraphe",
+   "texte": "**Les deux pertes n’ont rien à voir et s’additionnent.** Le **sur-versement** (**86,7 L**) est le crémant **bu en plus** de la dose, pendant le service. Le **jeté** (**260,2 L**, le solde de ~952 bouteilles ouvertes sur 647 jours) est le crémant **détruit** parce que la bouteille entamée ne se garde pas. Ensemble : **346,9 L** de crémant acheté qui ne produit **aucune vente**."
+  },
+  {
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "Parce qu’un crémant ouvert s’évente, le restaurant **jette environ 126 L de crémant** sur trois ans (≈ 168 bouteilles). La reconstitution du fisc, qui répute **tout** le crémant disponible vendu, transforme ce solde **détruit** en ventes fictives."
+   "texte": "Le crémant, mesuré jour par jour sur la caisse, fait **346,9 L** de perte sur trois ans (**86,7 L** de sur-versement + **260,2 L** jeté). C’est un poste explicite de la cascade « Boissons disparues » : ni vente, ni disparition — du vin bu en plus de la dose, et des fonds de bouteille éventés."
   },
   {
    "kind": "piecejointe",
-   "intro": "Détail du crémant servi (verre + cocktails) et calcul de la perte journalière :",
+   "intro": "Calcul jour par jour (annexe C) : crémant servi, bouteilles ouvertes et solde jeté par exercice, libellés et doses :",
    "fichiers": [
     {
-     "fichier": "pieces-defense/RF-pertes-cremant.xlsx",
-     "label": "RF — Crémant jeté en fin de journée"
+     "fichier": "pieces-defense/RF-cremant-jete.xlsx",
+     "label": "RF — Crémant jeté en fin de journée (niveau journalier, annexe C)"
     }
    ]
   },
   {
    "kind": "interne",
    "audience": "avocat",
-   "titre": "Hypothèse et fiabilisation",
-   "texte": "Le calcul retient l’hypothèse prudente d’**une bouteille ouverte par jour de service** (le crémant tournant à ~8 services/jour, une bouteille est entamée presque chaque jour). Un **export caisse au ticket daté** (réclamable au titre du journal NF525) donnerait le nombre exact de jours où le crémant a été servi et le rendrait incontestable. Faire confirmer par la gérante la pratique « bouteille jetée le soir » (effervescent) et, idéalement, une attestation 202 CPC. Retirer cet encart de toute version remise."
+   "titre": "Solidité et périmètre",
+   "texte": "Chiffre **non estimé** : le crémant servi est lu **ligne à ligne** dans le détail des tickets (annexe C), agrégé par jour, bouteilles par arrondi supérieur (une bouteille entamée = ouverte). Doses crémant : verre 10 cl, La Vouivre 8 cl, KITTYKIR 9 cl, Père Grégoire 1 cl, Kir Princier 10 cl ; bouteilles entières et « Kir Bourgogne » (au vin blanc, pas au crémant) **exclus**. Le sur-versement crémant est compté **ici** et **retiré de la base du poste « sur-versement » général** (pas de double compte). Faire confirmer par la gérante la pratique « bouteille jetée le soir ». Retirer cet encart de toute version remise."
   }
  ]
 }

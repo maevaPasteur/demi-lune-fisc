@@ -1,9 +1,9 @@
 {
  "meta": {
   "slug": "degustation-au-verre",
-  "source": "scripts/rendu-final-reconstitution-bloc2.py",
+  "source": "scripts/rendu-final-degustation-notes.py (niveau note)",
   "grief": "Proposition p. 37-44 (methode 1/2)",
-  "litres_retenu": 113
+  "litres_retenu": 126
  },
  "sections": [
   {
@@ -21,27 +21,23 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "La quantité offerte en dégustation, vin par vin",
-   "sousTitre": "On part de nos ventes réelles au verre et on chiffre la larme de dégustation"
+   "titre": "La quantité offerte, comptée note par note",
+   "sousTitre": "Lecture du détail des tickets (annexe C) — aucune estimation, aucun ratio"
   },
   {
    "kind": "paragraphe",
-   "texte": "Pour un vin de la **carte des vins** (Savagnin, Saint-Véran, Trousseau, vin jaune…), le serveur **monte la bouteille en salle et fait goûter une personne (≈ 2 cl)** avant de remplir le verre. Si plusieurs convives commandent **le même** vin à une table, **une seule** dégustation (on retient prudemment **1 dégustation pour 2 verres**) ; s’ils commandent des vins **différents**, chacun goûte. Les **vins génériques** (« verre de vin », rosé/aligoté maison, tirés d’un cubis) **n’en donnent pas lieu** (pas de bouteille montée) : ils sont **exclus**. Le tableau ci-dessous part de **nos ventes réelles au verre** et donne, vin par vin, la quantité offerte."
+   "texte": "Pour un vin de la **carte des vins** (Savagnin, Saint-Véran, Trousseau, Moulin à Vent…), le serveur **monte la bouteille et fait goûter une personne (≈ 2 cl)** avant de servir. La règle est simple : **une dégustation par vin nommé et par note (addition)**, quelle que soit la quantité — 3 verres du même Saint-Véran sur une note = **une** dégustation ; 3 vins différents = **trois**. Nous l’avons appliquée **ligne à ligne sur le détail des tickets** (annexe C, 3 exercices) : pour chaque note, on compte 2 cl une seule fois par vin nommé. Les **génériques « Verre de vin » / « Pichet vin » (cubis, type non précisé)** et les **bouteilles** sont **exclus**. Le décompte n’est donc pas estimé : il est **lu dans la caisse**."
   },
   {
    "kind": "tableau",
-   "titre": "Quantité offerte en dégustation, vin par vin (3 exercices)",
-   "minWidth": 560,
+   "titre": "Dégustations comptées note par note, vin par vin (3 exercices)",
+   "minWidth": 460,
    "colonnes": [
     {
      "label": "Vin nommé"
     },
     {
-     "label": "Verres",
-     "align": "right"
-    },
-    {
-     "label": "Dégustations",
+     "label": "Dégustations (notes distinctes)",
      "align": "right"
     },
     {
@@ -52,18 +48,14 @@
    "lignes": [
     [
      {
-      "v": "Arbois Savagnin"
+      "v": "Savagnin"
      },
      {
-      "v": "1 544",
+      "v": "1 490",
       "align": "right"
      },
      {
-      "v": "772",
-      "align": "right"
-     },
-     {
-      "v": "15,4 L",
+      "v": "29,8 L",
       "align": "right"
      }
     ],
@@ -72,15 +64,11 @@
       "v": "Arbois Trousseau"
      },
      {
-      "v": "868",
+      "v": "946",
       "align": "right"
      },
      {
-      "v": "434",
-      "align": "right"
-     },
-     {
-      "v": "8,7 L",
+      "v": "18,9 L",
       "align": "right"
      }
     ],
@@ -89,32 +77,50 @@
       "v": "Saint Véran"
      },
      {
-      "v": "820",
+      "v": "765",
       "align": "right"
      },
      {
-      "v": "410",
-      "align": "right"
-     },
-     {
-      "v": "8,2 L",
+      "v": "15,3 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Hautes Côtes de Beaune rouge"
+      "v": "Aligoté"
      },
      {
-      "v": "409",
+      "v": "588",
       "align": "right"
      },
      {
-      "v": "204",
+      "v": "11,8 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Chusclan"
+     },
+     {
+      "v": "504",
       "align": "right"
      },
      {
-      "v": "4,1 L",
+      "v": "10,1 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "HC de Beaune"
+     },
+     {
+      "v": "454",
+      "align": "right"
+     },
+     {
+      "v": "9,1 L",
       "align": "right"
      }
     ],
@@ -123,66 +129,24 @@
       "v": "Moulin à Vent"
      },
      {
-      "v": "375",
+      "v": "446",
       "align": "right"
      },
      {
-      "v": "188",
-      "align": "right"
-     },
-     {
-      "v": "3,8 L",
+      "v": "8,9 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Saint Joseph Rouge"
+      "v": "Mâcon"
      },
      {
-      "v": "358",
+      "v": "346",
       "align": "right"
      },
      {
-      "v": "179",
-      "align": "right"
-     },
-     {
-      "v": "3,6 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Macon"
-     },
-     {
-      "v": "320",
-      "align": "right"
-     },
-     {
-      "v": "160",
-      "align": "right"
-     },
-     {
-      "v": "3,2 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Vin Jaune"
-     },
-     {
-      "v": "312",
-      "align": "right"
-     },
-     {
-      "v": "156",
-      "align": "right"
-     },
-     {
-      "v": "3,1 L",
+      "v": "6,9 L",
       "align": "right"
      }
     ],
@@ -191,15 +155,11 @@
       "v": "Gewurztraminer"
      },
      {
-      "v": "288",
+      "v": "279",
       "align": "right"
      },
      {
-      "v": "144",
-      "align": "right"
-     },
-     {
-      "v": "2,9 L",
+      "v": "5,6 L",
       "align": "right"
      }
     ],
@@ -208,15 +168,11 @@
       "v": "Arbois Chardonnay"
      },
      {
-      "v": "218",
+      "v": "233",
       "align": "right"
      },
      {
-      "v": "109",
-      "align": "right"
-     },
-     {
-      "v": "2,2 L",
+      "v": "4,7 L",
       "align": "right"
      }
     ],
@@ -225,71 +181,39 @@
       "v": "Chablis"
      },
      {
-      "v": "148",
+      "v": "151",
       "align": "right"
      },
      {
-      "v": "74",
-      "align": "right"
-     },
-     {
-      "v": "1,5 L",
+      "v": "3,0 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Sous-total vins nommés",
-      "fw": 700
+      "v": "Saint Joseph"
      },
      {
-      "v": "5 660",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "2 830",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "56,6 L",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Pichets (1 larme par pichet)"
-     },
-     {
-      "v": "2 797",
+      "v": "90",
       "align": "right"
      },
      {
-      "v": "2 797",
-      "align": "right"
-     },
-     {
-      "v": "55,9 L",
+      "v": "1,8 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "TOTAL dégustation",
+      "v": "TOTAL",
       "fw": 700
      },
      {
-      "v": "",
-      "align": "right"
+      "v": "6 292",
+      "align": "right",
+      "fw": 700
      },
      {
-      "v": "",
-      "align": "right"
-     },
-     {
-      "v": "112,5 L",
+      "v": "125,8 L",
       "align": "right",
       "fw": 700
      }
@@ -300,21 +224,21 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Vins nommés",
-     "valeur": "56,6 L",
-     "sub": "5 660 verres → 2 830 dégustations",
+     "label": "Dégustations",
+     "valeur": "6 292",
+     "sub": "1 par vin nommé et par note (annexe C)",
      "couleur": "blue"
     },
     {
-     "label": "Pichets",
-     "valeur": "55,9 L",
-     "sub": "2 797 × 2 cl",
-     "couleur": "blue"
+     "label": "Dose",
+     "valeur": "2 cl",
+     "sub": "une larme pour faire goûter",
+     "couleur": "gray"
     },
     {
-     "label": "Total dégustation",
-     "valeur": "112,5 L",
-     "sub": "offert, jamais vendu",
+     "label": "Total offert",
+     "valeur": "125,8 L",
+     "sub": "vin offert, jamais vendu",
      "highlight": true,
      "couleur": "teal"
     }
@@ -324,23 +248,27 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "Vin par vin, la dégustation offerte — bouteille montée pour le vin nommé, larme au pichet — soustrait **112,5 L** de vin au volume vendable sur trois ans, sur une hypothèse **basse** (1 dégustation pour 2 verres du même vin). Ce volume explique une part du résiduel de l’analyse « Boissons disparues » ; la reconstitution du fisc le compte pourtant comme des verres vendus."
+   "texte": "En comptant **note par note** dans le détail des tickets, **6 292 dégustations** de 2 cl ont été offertes sur trois ans, soit **125,8 L** de vin nommé jamais vendu. Ce volume **s’ajoute** au sur-versement (geste distinct, versé pendant le service du verre) et explique une part du résiduel de l’analyse « Boissons disparues »."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Cette dégustation s’ajoute au sur-versement.** Une fois la larme offerte (avant le service), le verre est ensuite rempli — et ce service-là est lui-même au-dessus de la dose carte (poste « sur-versement », sur des **centilitres différents**). Les deux pertes ne se recouvrent pas : elles se cumulent."
   },
   {
    "kind": "piecejointe",
-   "intro": "Quantité offerte en dégustation, vin par vin (+ pichets) :",
+   "intro": "Preuve note par note : chaque addition contenant un vin nommé au verre/pichet, avec quantité, prix et la dégustation de 2 cl (comptée une fois par vin et par note) :",
    "fichiers": [
     {
-     "fichier": "pieces-defense/RF-degustation-au-verre.xlsx",
-     "label": "RF — Dégustation offerte (détail par vin)"
+     "fichier": "pieces-defense/RF-degustation-par-note.xlsx",
+     "label": "RF — Dégustation, preuve note par note (annexe C)"
     }
    ]
   },
   {
    "kind": "interne",
    "audience": "avocat",
-   "titre": "Hypothèse et fiabilisation",
-   "texte": "Seul paramètre non mesuré : le **nombre moyen de verres du même vin par table** (retenu à 2, ce qui **minore** la dégustation ; à 1,5 le volume monte). Bien le **distinguer du sur-versement** (geste différent : la dégustation est versée AVANT le service, le sur-versement PENDANT) — ne jamais additionner les deux sur les mêmes centilitres. Faire confirmer la pratique par la gérante et le personnel de salle (attestations 202 CPC). Retirer cet encart de toute version remise."
+   "titre": "Solidité et périmètre",
+   "texte": "Chiffre **non estimé** : compté ligne à ligne sur le détail des tickets (annexe C), donc directement opposable. Périmètre des vins nommés inclus : Savagnin, Trousseau, Saint-Véran, Aligoté, Chusclan, Hautes Côtes de Beaune, Moulin à Vent, Mâcon, Gewurztraminer, Chardonnay, Chablis, Saint-Joseph. **Exclus** (à confirmer si on veut les ajouter) : vin jaune, vin de paille, macvin, rosé maison (genérique), crémant/champagne (traités à part). La dégustation et le sur-versement **s’additionnent** (centilitres différents). Faire confirmer la pratique par la gérante / le personnel de salle (attestation 202 CPC). Retirer cet encart de toute version remise."
   }
  ]
 }

@@ -3,7 +3,7 @@
   "slug": "offerts-remises-pertes",
   "source": "scripts/rendu-final-reconstitution-bloc2.py",
   "grief": "Proposition p. 51 - offerts/remises/pertes (5%+5%+5% +15% biere)",
-  "litres_retenu": 1358
+  "litres_retenu": 1841
  },
  "sections": [
   {
@@ -62,28 +62,28 @@
     ],
     [
      {
-      "v": "Sur-versement au verre (free-pour)"
+      "v": "Sur-versement (vins, spiritueux, cocktails)"
      },
      {
-      "v": "807 L",
+      "v": "1 056 L",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Crémant jeté en fin de journée"
+      "v": "Crémant (sur-versement + jeté)"
+     },
+     {
+      "v": "347 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dégustation offerte (note par note)"
      },
      {
       "v": "126 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Dégustation offerte (pichet + vin nommé)"
-     },
-     {
-      "v": "113 L",
       "align": "right"
      }
     ],
@@ -102,7 +102,7 @@
       "fw": 700
      },
      {
-      "v": "1 358 L",
+      "v": "1 841 L",
       "align": "right",
       "fw": 700
      }
@@ -117,7 +117,7 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Résultat",
-   "texte": "Les forfaits de 5 %+5 %+5 % du fisc **sous-estiment** la consommation sans vente : itemisée, elle atteint déjà **1 358 L** hors cuisine et menus, et la perte d’exploitation totale (**28,7 %**) **dépasse** les **22 %** validés par la jurisprudence. Loin d’être généreux, ces abattements sont des **planchers**."
+   "texte": "Les forfaits de 5 %+5 %+5 % du fisc **sous-estiment** la consommation sans vente : itemisée, elle atteint déjà **1 841 L** hors cuisine et menus, et la perte d’exploitation totale (**28,7 %**) **dépasse** les **22 %** validés par la jurisprudence. Loin d’être généreux, ces abattements sont des **planchers**."
   },
   {
    "kind": "piecejointe",
@@ -133,7 +133,7 @@
    "kind": "interne",
    "audience": "avocat",
    "titre": "Précautions",
-   "texte": "**Fiabiliser le numéro de requête** de l’arrêt CAA Paris du 17 mars 2021 (Légifrance / Doctrine) avant citation formelle ; le principe (abattement ~22 % validé) est solide. Arbitrer le **risque d’avantage en nature** sur la consommation du personnel/dirigeant avant de la chiffrer publiquement. Ne pas additionner deux fois un même centilitre (sur-versement ≠ dégustation ≠ cuisine). Retirer cet encart de toute version remise."
+   "texte": "**Fiabiliser le numéro de requête** de l’arrêt CAA Paris du 17 mars 2021 (Légifrance / Doctrine) avant citation formelle ; le principe (abattement ~22 % validé) est solide. Arbitrer le **risque d’avantage en nature** sur la consommation du personnel/dirigeant avant de la chiffrer publiquement. Sur-versement, dégustation et cuisine portent sur des **centilitres différents** : ils **s’additionnent** sans double compte. Retirer cet encart de toute version remise."
   }
  ]
 }

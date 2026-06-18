@@ -1,0 +1,172 @@
+{
+ "_source": "scripts/rendu-final-cremant-jete.py (ANNEXE-C, niveau journalier)",
+ "methode": "Crémant jeté = reste de la dernière bouteille (75 cl) ouverte chaque jour, perdu à la fermeture (un effervescent ouvert ne se garde pas). Par jour et par libellé : crémant consommé += quantité x dose x sur-versement ; bouteilles ouvertes = arrondi supérieur(consommé/75) ; jeté = bouteilles x 75 - consommé. Servi au verre (10 cl) et en cocktails (Vouivre 8, Kittykir 9, Kir Princier 10, Apéritif du Père Grégoire 1). Bouteilles vendues entières exclues. Sur-versement crémant = consommé(1,236) - consommé(1,0), perte distincte du reste jeté.",
+ "overpour": 1.236,
+ "overpour_source": "Kerr, Patterson, Koenen & Greenfield (2008), Alcohol Content Variation of Bar and Restaurant Drinks in Northern California, Alcoholism: Clinical and Experimental Research (+23,6 %).",
+ "bottle_cl": 75.0,
+ "doses": {
+  "La Vouivre": 8,
+  "Père Gregoire": 1,
+  "KITTYKIR": 9,
+  "Crémant": 10,
+  "VOUIVRE": 8,
+  "Kir Princier": 10,
+  "Crément / Jura VERRE": 10
+ },
+ "libelles_exclus_bouteilles": [
+  "Crémant du Jura",
+  "Crément du Jura",
+  "Crémant Rosé"
+ ],
+ "scan_libelles": [
+  {
+   "libelle": "La Vouivre",
+   "lignes": 1659,
+   "qte": 2120.0,
+   "dose_cl": 8,
+   "retenu": true
+  },
+  {
+   "libelle": "Père Gregoire",
+   "lignes": 1315,
+   "qte": 1607.5,
+   "dose_cl": 1,
+   "retenu": true
+  },
+  {
+   "libelle": "Kir Bourgogne",
+   "lignes": 1077,
+   "qte": 1368.9,
+   "dose_cl": null,
+   "retenu": false
+  },
+  {
+   "libelle": "KITTYKIR",
+   "lignes": 768,
+   "qte": 867.3,
+   "dose_cl": 9,
+   "retenu": true
+  },
+  {
+   "libelle": "Crémant",
+   "lignes": 590,
+   "qte": 810.0,
+   "dose_cl": 10,
+   "retenu": true
+  },
+  {
+   "libelle": "VOUIVRE",
+   "lignes": 160,
+   "qte": 163.5,
+   "dose_cl": 8,
+   "retenu": true
+  },
+  {
+   "libelle": "Kir Princier",
+   "lignes": 57,
+   "qte": 90.0,
+   "dose_cl": 10,
+   "retenu": true
+  },
+  {
+   "libelle": "Crémant du Jura",
+   "lignes": 19,
+   "qte": 19.0,
+   "dose_cl": null,
+   "retenu": false
+  },
+  {
+   "libelle": "Kir Pamplemousse",
+   "lignes": 6,
+   "qte": 7.0,
+   "dose_cl": null,
+   "retenu": false
+  },
+  {
+   "libelle": "Crémant Rosé",
+   "lignes": 1,
+   "qte": 1.0,
+   "dose_cl": null,
+   "retenu": false
+  }
+ ],
+ "par_exercice": {
+  "2022-2023": {
+   "jours": 217,
+   "servi_l": 130.3,
+   "bouteilles": 298,
+   "jete_l": 93.2
+  },
+  "2023-2024": {
+   "jours": 212,
+   "servi_l": 165.3,
+   "bouteilles": 333,
+   "jete_l": 84.4
+  },
+  "2024-2025": {
+   "jours": 218,
+   "servi_l": 158.2,
+   "bouteilles": 321,
+   "jete_l": 82.6
+  }
+ },
+ "total_servi_l": 453.8,
+ "total_jete_l": 260.2,
+ "total_bouteilles": 952,
+ "nominal": {
+  "par_exercice": {
+   "2022-2023": {
+    "jours": 217,
+    "servi_l": 105.5,
+    "bouteilles": 262,
+    "jete_l": 91.0
+   },
+   "2023-2024": {
+    "jours": 212,
+    "servi_l": 133.8,
+    "bouteilles": 288,
+    "jete_l": 82.2
+   },
+   "2024-2025": {
+    "jours": 218,
+    "servi_l": 128.0,
+    "bouteilles": 286,
+    "jete_l": 86.5
+   }
+  },
+  "total_servi_l": 367.3,
+  "total_jete_l": 259.7,
+  "total_bouteilles": 836
+ },
+ "surversement_cremant_l": 86.7,
+ "par_libelle": {
+  "La Vouivre": {
+   "qte_3ans": 2120.0,
+   "dose_cl": 8
+  },
+  "Père Gregoire": {
+   "qte_3ans": 1607.5,
+   "dose_cl": 1
+  },
+  "KITTYKIR": {
+   "qte_3ans": 867.3,
+   "dose_cl": 9
+  },
+  "Crémant": {
+   "qte_3ans": 810.0,
+   "dose_cl": 10
+  },
+  "VOUIVRE": {
+   "qte_3ans": 163.5,
+   "dose_cl": 8
+  },
+  "Kir Princier": {
+   "qte_3ans": 90.0,
+   "dose_cl": 10
+  },
+  "Crément / Jura VERRE": {
+   "qte_3ans": 4.0,
+   "dose_cl": 10
+  }
+ }
+}

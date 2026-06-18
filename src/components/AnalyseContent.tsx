@@ -55,19 +55,48 @@ function alerteIcon(couleur: string) {
   }
 }
 
-// Emphase : transforme "texte **fort** texte" en JSX avec fragments en gras.
+// Emphase + liens : transforme "texte **fort** texte [libellé](https://…)" en JSX,
+// fragments en gras et liens cliquables (ouverts dans un nouvel onglet).
+// NB : ne pas imbriquer d'italique « * » dans un « **gras** ».
 function richText(texte: string): ReactNode[] {
-  return texte.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
-    part.startsWith('**') && part.endsWith('**') ? (
-      <Text key={i} span fw={700} c="gold.8">
-        {part.slice(2, -2)}
-      </Text>
-    ) : (
-      <Text key={i} span>
-        {part}
-      </Text>
-    ),
-  )
+  const nodes: ReactNode[] = []
+  const re = /(\[[^\]]+\]\((?:https?:\/\/|\/)[^)]+\))|(\*\*[^*]+\*\*)/g
+  let last = 0
+  let m: RegExpExecArray | null
+  let i = 0
+  while ((m = re.exec(texte)) !== null) {
+    if (m.index > last) {
+      nodes.push(
+        <Text key={i++} span>
+          {texte.slice(last, m.index)}
+        </Text>,
+      )
+    }
+    const tok = m[0]
+    if (tok.startsWith('[')) {
+      const link = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(tok)!
+      nodes.push(
+        <Anchor key={i++} href={link[2]} target="_blank" rel="noopener noreferrer" fw={600} c="gold.7">
+          {link[1]}
+        </Anchor>,
+      )
+    } else {
+      nodes.push(
+        <Text key={i++} span fw={700} c="gold.8">
+          {tok.slice(2, -2)}
+        </Text>,
+      )
+    }
+    last = m.index + tok.length
+  }
+  if (last < texte.length) {
+    nodes.push(
+      <Text key={i++} span>
+        {texte.slice(last)}
+      </Text>,
+    )
+  }
+  return nodes
 }
 
 // Couleur de la cote d'attaquabilité (forte = favorable à la défense).
