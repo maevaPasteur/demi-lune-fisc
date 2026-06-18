@@ -156,12 +156,12 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les bases ainsi reconstituees **coincident avec la comptabilite** (compte 706300 pour le 10 %, 706000 pour le 20 %) a **moins de 0,06 % pres**, tandis que la base brute pointee par le service (jusqu'a -11 645,01 €) en est totalement eloignee. Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est une colonne d'affichage de l'export."
+      "texte": "Les bases ainsi reconstituees **coincident avec la comptabilite** (compte 706300 pour le 10 %, 706000 pour le 20 %) : le **HT total** concorde a **moins de 0,01 %**, et chaque taux a **mieux que 0,25 %**, tandis que la base brute pointee par le service (jusqu'a -11 645,01 €) en est totalement eloignee. Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est une colonne d'affichage de l'export."
     },
     {
       "kind": "tableau",
       "titre": "Bases HT : reconstituees (caisse) contre comptabilite contre champ brut du fisc",
-      "minWidth": 940,
+      "minWidth": 1080,
       "colonnes": [
         {
           "label": "Exercice"
@@ -175,7 +175,7 @@
           "align": "right"
         },
         {
-          "label": "Ecart",
+          "label": "Ecart 10 %",
           "align": "right"
         },
         {
@@ -184,6 +184,14 @@
         },
         {
           "label": "Compta 706000",
+          "align": "right"
+        },
+        {
+          "label": "Ecart 20 %",
+          "align": "right"
+        },
+        {
+          "label": "HT total : ecart",
           "align": "right"
         },
         {
@@ -217,6 +225,14 @@
             "align": "right"
           },
           {
+            "v": "-4,21 €",
+            "align": "right"
+          },
+          {
+            "v": "+0,92 €",
+            "align": "right"
+          },
+          {
             "v": "-11 645,01 €",
             "align": "right",
             "badge": "ko"
@@ -244,6 +260,14 @@
           },
           {
             "v": "72 416,55 €",
+            "align": "right"
+          },
+          {
+            "v": "-3,35 €",
+            "align": "right"
+          },
+          {
+            "v": "-8,26 €",
             "align": "right"
           },
           {
@@ -277,6 +301,14 @@
             "align": "right"
           },
           {
+            "v": "-145,32 €",
+            "align": "right"
+          },
+          {
+            "v": "+31,25 €",
+            "align": "right"
+          },
+          {
             "v": "572,55 €",
             "align": "right",
             "badge": null
@@ -286,7 +318,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Lecture (exercice clos le 31/03/2023) : la base 10 % reconstituee (296 111,00 €) egale le compte 706300 de la comptabilite (296 105,87 €), a 5,13 € pres ; la base 20 % reconstituee egale le compte 706000 (ecart -4,21 €). Sur les trois exercices, cet ecart reste inferieur a 0,06 % (au plus 176,57 € en 2025). Surtout, les bases reconstituees **bouclent avec le CA TTC** : 296 111,00 € + 64 708,30 € + 42 552,76 € = 403 372,06 €, soit le CA TTC de la caisse (403 370,42 €), a 1,64 € pres (arrondi de la reconstitution base = TVA / taux). La base brute du fisc, elle, ne boucle pas du tout : 269 445,43 € + (-11 645,01 €) + TVA = 300 348,63 €, tres loin du CA TTC."
+      "texte": "Lecture. Le **HT total** (10 % + 20 %) reconstitue concorde avec la comptabilite a **moins de 0,01 %** sur chacun des trois exercices. Sur l'exercice 2025, on observe une **bascule d'environ 150 € entre les deux taux** (10 % a +176,57 €, 20 % a -145,32 €) : un produit classe differemment entre l'export caisse et la comptabilite, **sans effet ni sur le HT total (ecart +31,25 €) ni sur la TVA**. Surtout, les bases reconstituees **bouclent avec le CA TTC** : 296 111,00 € + 64 708,30 € + 42 552,76 € = 403 372,06 €, soit le CA TTC de la caisse (403 370,42 €), a 1,64 € pres (arrondi de la reconstitution base = TVA / taux). La base brute du fisc, elle, ne boucle pas du tout : 269 445,43 € + (-11 645,01 €) + TVA = 300 348,63 €, tres loin du CA TTC."
     },
     {
       "kind": "note",
@@ -436,7 +468,7 @@
     },
     {
       "kind": "graphiqueEmpile",
-      "titre": "Repartition de la base HT entre 10 % et 20 % par exercice",
+      "titre": "Repartition de la base HT (assiette) entre 10 % et 20 % par exercice",
       "hauteur": 300,
       "dataKey": "nom",
       "series": [
@@ -470,7 +502,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La ventilation est stable : environ **69 % de la TVA au taux de 10 %** (cuisine et liquides sur place) et **31 % au taux de 20 %** (alcools), sur les trois exercices. La caisse classe d'ailleurs chaque produit par nature (annexe D), et aucun alcool n'y est au taux de 10 %, aucun plat au taux de 20 %."
+      "texte": "La ventilation est stable sur les trois exercices. En **base HT** (assiette, graphique ci-dessus), le 10 % represente environ **82 %** et le 20 % environ **18 %** ; en **TVA collectee**, la part du 20 % monte a environ **31 %** (le taux etant double, voir le tableau precedent). La caisse classe d'ailleurs chaque produit par nature (annexe D), et aucun alcool n'y est au taux de 10 %, aucun plat au taux de 20 %."
     },
     {
       "kind": "tableau",
@@ -810,11 +842,11 @@
             "v": "Somme des TVA par taux <> Total TVA"
           },
           {
-            "v": "4,55 €",
+            "v": "4,55 a 12,35 €",
             "align": "right"
           },
           {
-            "v": "0,01 %",
+            "v": "au plus 0,03 %",
             "align": "right"
           },
           {
@@ -830,7 +862,7 @@
             "align": "right"
           },
           {
-            "v": "0,2 %",
+            "v": "0,15 %",
             "align": "right"
           },
           {

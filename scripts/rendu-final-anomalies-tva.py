@@ -489,32 +489,39 @@ S.append({"kind": "note", "texte":
           "taux**."})
 S.append({"kind": "paragraphe", "texte":
           "Les bases ainsi reconstituees **coincident avec la comptabilite** "
-          "(compte 706300 pour le 10 %, 706000 pour le 20 %) a **moins de 0,06 % "
-          "pres**, tandis que la base brute pointee par le service (jusqu'a "
+          "(compte 706300 pour le 10 %, 706000 pour le 20 %) : le **HT total** "
+          "concorde a **moins de 0,01 %**, et chaque taux a **mieux que 0,25 %**, "
+          "tandis que la base brute pointee par le service (jusqu'a "
           + euro(FISCG["2022-2023"]["b20"]) + ") en est totalement eloignee. "
           "Autrement dit, ce ne sont pas les recettes qui sont incoherentes, c'est "
           "une colonne d'affichage de l'export."})
 S.append({"kind": "tableau",
           "titre": "Bases HT : reconstituees (caisse) contre comptabilite contre champ brut du fisc",
-          "minWidth": 940,
+          "minWidth": 1080,
           "colonnes": [_colg("Exercice"), _cold("Base 10 % reconstituee"),
-                       _cold("Compta 706300"), _cold("Ecart"),
+                       _cold("Compta 706300"), _cold("Ecart 10 %"),
                        _cold("Base 20 % reconstituee"), _cold("Compta 706000"),
+                       _cold("Ecart 20 %"), _cold("HT total : ecart"),
                        _cold("Base 20 % brute (fisc)")],
           "lignes": [[_cg(LABEL[e]), _cd(euro(JG[e]["base10"])), _cd(euro(COMPTA[e]["ht10"])),
                       _cd(_eus(JG[e]["base10"] - COMPTA[e]["ht10"])),
                       _cd(euro(JG[e]["base20"])), _cd(euro(COMPTA[e]["ht20"])),
+                      _cd(_eus(JG[e]["base20"] - COMPTA[e]["ht20"])),
+                      _cd(_eus(JG[e]["base10"] + JG[e]["base20"]
+                               - COMPTA[e]["ht10"] - COMPTA[e]["ht20"])),
                       _ko(FISCG[e]["b20"])] for e in EXOS]})
 S.append({"kind": "paragraphe", "texte":
-          "Lecture (exercice clos le 31/03/2023) : la base 10 % reconstituee "
-          "(" + euro(JG["2022-2023"]["base10"]) + ") egale le compte 706300 de la "
-          "comptabilite (" + euro(COMPTA["2022-2023"]["ht10"]) + "), a "
-          + euro(abs(JG["2022-2023"]["base10"] - COMPTA["2022-2023"]["ht10"])) + " pres ; "
-          "la base 20 % reconstituee egale le compte 706000 (ecart "
-          + _eus(JG["2022-2023"]["base20"] - COMPTA["2022-2023"]["ht20"]) + "). Sur les "
-          "trois exercices, cet ecart reste inferieur a 0,06 % (au plus "
-          + euro(abs(JG["2024-2025"]["base10"] - COMPTA["2024-2025"]["ht10"])) + " en 2025). "
-          "Surtout, les bases reconstituees **bouclent avec le CA TTC** : "
+          "Lecture. Le **HT total** (10 % + 20 %) reconstitue concorde avec la "
+          "comptabilite a **moins de 0,01 %** sur chacun des trois exercices. Sur "
+          "l'exercice 2025, on observe une **bascule d'environ 150 € entre les deux "
+          "taux** (10 % a " + _eus(JG["2024-2025"]["base10"] - COMPTA["2024-2025"]["ht10"])
+          + ", 20 % a " + _eus(JG["2024-2025"]["base20"] - COMPTA["2024-2025"]["ht20"])
+          + ") : un produit classe differemment entre l'export caisse et la "
+          "comptabilite, **sans effet ni sur le HT total (ecart "
+          + _eus(JG["2024-2025"]["base10"] + JG["2024-2025"]["base20"]
+                 - COMPTA["2024-2025"]["ht10"] - COMPTA["2024-2025"]["ht20"])
+          + ") ni sur la TVA**. Surtout, les bases reconstituees **bouclent avec le "
+          "CA TTC** : "
           + euro(JG["2022-2023"]["base10"]) + " + " + euro(JG["2022-2023"]["base20"]) + " + "
           + euro(JG["2022-2023"]["tva_tot"]) + " = "
           + euro(JG["2022-2023"]["base10"] + JG["2022-2023"]["base20"] + JG["2022-2023"]["tva_tot"])
@@ -554,7 +561,7 @@ S.append({"kind": "tableau",
                          _cdb(euro(tttot)), _cdb(pct(tt10 / tttot * 100)),
                          _cdb(pct(tt20 / tttot * 100))]]})
 S.append({"kind": "graphiqueEmpile",
-          "titre": "Repartition de la base HT entre 10 % et 20 % par exercice",
+          "titre": "Repartition de la base HT (assiette) entre 10 % et 20 % par exercice",
           "hauteur": 300, "dataKey": "nom",
           "series": [{"name": "Base 10 %", "couleur": "#0f766e"},
                      {"name": "Base 20 %", "couleur": "#b45309"}],
@@ -562,9 +569,11 @@ S.append({"kind": "graphiqueEmpile",
                     "Base 20 %": JG[e]["base20"]} for e in EXOS],
           "format": "euro"})
 S.append({"kind": "paragraphe", "texte":
-          "La ventilation est stable : environ **69 % de la TVA au taux de 10 %** "
-          "(cuisine et liquides sur place) et **31 % au taux de 20 %** (alcools), "
-          "sur les trois exercices. La caisse classe d'ailleurs chaque produit par "
+          "La ventilation est stable sur les trois exercices. En **base HT** "
+          "(assiette, graphique ci-dessus), le 10 % represente environ **82 %** et "
+          "le 20 % environ **18 %** ; en **TVA collectee**, la part du 20 % monte a "
+          "environ **31 %** (le taux etant double, voir le tableau precedent). La "
+          "caisse classe d'ailleurs chaque produit par "
           "nature (annexe D), et aucun alcool n'y est au taux de 10 %, aucun plat au "
           "taux de 20 %."})
 S.append({"kind": "tableau",
@@ -656,10 +665,12 @@ S.append({"kind": "tableau",
                _cd(str(total_base20neg) + " lignes"),
                _cd(pct(total_base20neg / total_lignes * 100)),
                _cg("Artefact d'affichage de l'export ; la base reconstituee egale la comptabilite.")],
-              [_cg("Somme des TVA par taux <> Total TVA"), _cd(euro(4.55)), _cd("0,01 %"),
+              [_cg("Somme des TVA par taux <> Total TVA"),
+               _cd("4,55 a 12,35 €"), _cd("au plus 0,03 %"),
                _cg("Arrondi d'affichage, sans incidence.")],
               [_cg("Non-correspondance caisse / comptabilite (TVA)"),
-               _cd(_eus(tttot - COMPTA_TVA)), _cd(pct(abs(tttot - COMPTA_TVA) / COMPTA_TVA * 100)),
+               _cd(_eus(tttot - COMPTA_TVA)),
+               _cd(f"{abs(tttot - COMPTA_TVA) / COMPTA_TVA * 100:.2f}".replace(".", ",") + " %"),
                _cg("Pourboire (706800) et arrondis de retranscription manuelle.")],
               [_cg("TVA de ligne de signe anormal (tax_amount < 0)"), _cd(str(total_taneg)),
                _cd("0 %"), _cg("Aucune : la TVA par ligne est toujours positive.")],

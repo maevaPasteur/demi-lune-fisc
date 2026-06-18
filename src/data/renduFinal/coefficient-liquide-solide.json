@@ -1,0 +1,195 @@
+{
+ "meta": {
+  "slug": "coefficient-liquide-solide",
+  "source": "scripts/rendu-final-reconstitution-bloc2.py",
+  "grief": "Proposition p. 52 - coefficient liquide/solide 2,94 / 3,02 / 3,10",
+  "coef_moyen": 3.02
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que retient l’administration",
+   "sousTitre": "Proposition p. 52 — le CA cuisine est extrapolé, jamais mesuré"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service ne reconstitue **pas** la cuisine : il **multiplie le CA liquides reconstitué par un coefficient** (« rapport liquide/solides pour 1 € ») de **2,94** (2023), **3,02** (2024) et **3,10** (2025) pour obtenir le « CA solides » (Proposition p. 52). Le CA cuisine, qui pèse les trois quarts du total reconstitué, **n’est donc jamais mesuré** : il est entièrement déduit du CA liquides."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Récapitulation du fisc par exercice (Proposition p. 52)",
+   "minWidth": 620,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "CA liquides (après abatt.)",
+     "align": "right"
+    },
+    {
+     "label": "Coef.",
+     "align": "right"
+    },
+    {
+     "label": "CA solides",
+     "align": "right"
+    },
+    {
+     "label": "Total reconstitué",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "151 590 €",
+      "align": "right"
+     },
+     {
+      "v": "2,94",
+      "align": "right"
+     },
+     {
+      "v": "445 675 €",
+      "align": "right"
+     },
+     {
+      "v": "597 265 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "143 662 €",
+      "align": "right"
+     },
+     {
+      "v": "3,02",
+      "align": "right"
+     },
+     {
+      "v": "433 860 €",
+      "align": "right"
+     },
+     {
+      "v": "577 522 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "140 306 €",
+      "align": "right"
+     },
+     {
+      "v": "3,1",
+      "align": "right"
+     },
+     {
+      "v": "434 947 €",
+      "align": "right"
+     },
+     {
+      "v": "575 253 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 ans",
+      "fw": 700
+     },
+     {
+      "v": "435 558 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "≈ 3,02",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "1 314 482 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "1 750 040 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Le coefficient amplifie l’erreur sur les liquides",
+   "sousTitre": "Chaque litre sur-estimé au verre devient ~3 fois plus de CA fictif"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le coefficient est une **loupe** : comme le CA solides = CA liquides × 3,02, **chaque euro de CA liquides sur-estimé engendre environ 3,02 € de CA total fictif** (1 € de liquides + 2,02 € de solides extrapolés). Or les pages précédentes montrent que la reconstitution des liquides est gonflée : elle valorise comme des verres vendus des litres jamais vendus au verre (cuisine, menus, sur-versement, crémant jeté, dégustations, conso du chef, freinte bière). En corrigeant les liquides **puis** en réappliquant le propre coefficient du fisc, le total reconstitué s’effondre bien plus vite que l’erreur de départ."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Coefficient moyen",
+     "valeur": "× 3,02",
+     "sub": "2,94 / 3,02 / 3,10 selon l’exercice",
+     "couleur": "red"
+    },
+    {
+     "label": "Effet d’amplification",
+     "valeur": "≈ × 3",
+     "sub": "1 € de liquides sur-estimé → ~3 € de CA fictif",
+     "highlight": true,
+     "couleur": "red"
+    },
+    {
+     "label": "CA cuisine",
+     "valeur": "jamais mesuré",
+     "sub": "entièrement extrapolé du liquide",
+     "couleur": "gray"
+    }
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Résultat",
+   "texte": "Le coefficient n’ajoute aucune mesure : il **multiplie par ~3,02** l’erreur commise sur les liquides. La défense doit donc se concentrer sur les volumes de liquides (sur-versement, crémant, dégustation, cuisine, menus) : toute correction y est amplifiée ~3 fois sur le total, et fait passer le CA reconstitué **sous** le CA déclaré."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Récapitulation du fisc et mécanique d’amplification :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-coefficient-liquide-solide.xlsx",
+     "label": "RF — Coefficient liquide/solide (amplification)"
+    }
+   ]
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Angle",
+   "texte": "Le coefficient est le **point de levier** : inutile de le contester en lui-même (il vient des ratios de la profession), il faut l’utiliser **contre** le fisc en montrant qu’il amplifie ~3× toute sur-évaluation des liquides — laquelle est démontrée poste par poste dans les autres sous-pages du bloc 2. Relier explicitement à la page « Reconstitution par les volumes » (réconciliation du CA). Retirer cet encart de toute version remise."
+  }
+ ]
+}

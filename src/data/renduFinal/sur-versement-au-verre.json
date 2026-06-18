@@ -1,0 +1,187 @@
+{
+ "meta": {
+  "slug": "sur-versement-au-verre",
+  "source": "scripts/rendu-final-reconstitution-bloc2.py",
+  "grief": "Proposition p. 37-44 (methode 1/2) - doses au verre",
+  "litres_retenu": 462
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que retient l’administration",
+   "sousTitre": "Proposition p. 37 et p. 41-42 — doses au verre figées"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Pour reconstituer le nombre de verres vendus, le service **divise le volume de vin disponible par une dose fixe** : **15 cl** pour un verre de vin tranquille, **50 cl** ou **75 cl** pour un pichet, **12 cl** pour le vin jaune, **6 cl** pour le vin de paille (Proposition p. 37 et p. 41-42, colonne 7 « Dose des verres »). La méthode suppose donc, implicitement, que **chaque verre est servi au centilitre près de la carte**. Tout le raisonnement de reconstitution repose sur cette dose théorique."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "La faille : le service au verre dépasse toujours la dose",
+   "sousTitre": "Sans doseur, le free-pour excède la dose nominale — c’est mesuré et publié"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Dans un bar sans verre doseur ni bec verseur calibré, le service « à l’œil » (free-pour) **dépasse systématiquement la dose de la carte**. Ce n’est pas une opinion : c’est mesuré. L’étude de référence (**Kerr, Patterson, Koenen & Greenfield, *Alcoholism: Clinical and Experimental Research*, 2008**), qui a acheté et **mesuré 480 boissons dans 80 établissements**, trouve un **verre de vin moyen de 6,18 oz (183 ml) pour une dose standard de 5 oz (148 ml), soit +23,6 % de volume** ; la bière pression y est servie **+22 %** au-dessus du standard et les cocktails **+42 %**. Le volume servi en plus de la dose carte est **bu par le client mais jamais facturé comme un verre supplémentaire** : il manque mécaniquement à la reconstitution du fisc."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Assiette concernée : vin et pétillant servis au verre ou au pichet (3 exercices)",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Catégorie servie au verre / pichet"
+    },
+    {
+     "label": "Quantité",
+     "align": "right"
+    },
+    {
+     "label": "Volume aux doses carte",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vin tranquille au verre (15 cl)"
+     },
+     {
+      "v": "6 614",
+      "align": "right"
+     },
+     {
+      "v": "992 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vin au pichet (50 / 75 cl)"
+     },
+     {
+      "v": "2 797",
+      "align": "right"
+     },
+     {
+      "v": "1 432 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vin jaune au verre (12 cl)"
+     },
+     {
+      "v": "312",
+      "align": "right"
+     },
+     {
+      "v": "37 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vin de paille au verre (6 cl)"
+     },
+     {
+      "v": "414",
+      "align": "right"
+     },
+     {
+      "v": "25 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cremant au verre (12 cl)"
+     },
+     {
+      "v": "814",
+      "align": "right"
+     },
+     {
+      "v": "81 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Base sur-versable (vin + pétillant au verre/pichet)",
+      "fw": 700
+     },
+     {
+      "v": "10 951",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "2 567 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Base sur-versable",
+     "valeur": "2 567 L",
+     "sub": "vin + pétillant au verre/pichet, doses carte",
+     "couleur": "blue"
+    },
+    {
+     "label": "Taux retenu (prudent)",
+     "valeur": "18 %",
+     "sub": "sous la mesure Kerr 2008 (+23,6 %)",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Sur-versement",
+     "valeur": "462 L",
+     "sub": "consommés, jamais vendus",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Le calcul.** Sur les **2 567 L** de vin et de pétillant servis au verre et au pichet aux doses de la carte, un sur-versement **prudent de 18 %** (nous restons **sous** la valeur mesurée de +23,6 % pour ne prêter à aucune contestation) représente **462 L** d’alcool consommé et **non vendu** sur trois ans. À la borne basse (+15 %), c’est encore **385 L** ; à la mesure académique (+23,6 %), **606 L**. Ces litres sont, dans la méthode du fisc, comptés comme autant de verres en plus à vendre : c’est une recette **fictive**."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Résultat",
+   "texte": "Le service au verre sans doseur fait disparaître, par sur-versement, au moins **462 L** de vin sur trois exercices — un ordre de grandeur **mesuré et publié** ([Kerr 2008]). Ce volume vient en déduction directe des verres que la reconstitution prétend retrouver."
+  },
+  {
+   "kind": "note",
+   "texte": "La cascade de synthèse de la page « Reconstitution par les volumes » retient un chiffre **encore plus prudent** (≈ 446 L, soit ~8 % de sur-versement) ; la présente page le justifie et le porte à **462 L** (+18 %), la littérature autorisant jusqu’à **606 L** (+23,6 %). Aucune addition avec la dégustation (geste distinct, page dédiée)."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Détail du calcul (assiette servie au verre/pichet et sensibilité au taux) :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-sur-versement-au-verre.xlsx",
+     "label": "RF — Sur-versement au verre (base + sensibilité)"
+    }
+   ]
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Pour solidifier",
+   "texte": "Faire établir un **constat d’huissier** : servir plusieurs « verres de vin » et « pressions » dans les conditions réelles du bar (sans doseur), mesurer le volume au millilitre, et établir le ratio dose servie / dose carte. Photographier le bar servant sans verre doseur. Le constat objective le taux ; l’étude Kerr 2008 le corrobore. Citer Kerr 2008 comme ordre de grandeur sectoriel, pas comme norme française. Retirer cet encart de toute version remise."
+  }
+ ]
+}

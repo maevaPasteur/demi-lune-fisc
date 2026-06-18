@@ -1,0 +1,330 @@
+{
+ "meta": {
+  "slug": "pertes-biere-mousse",
+  "source": "scripts/rendu-final-reconstitution-bloc2.py",
+  "grief": "Proposition p. 44-53 (methode 2/2) - pertes biere",
+  "litres_retenu": 129
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que retient l’administration",
+   "sousTitre": "Proposition p. 50-51 — bière reconstituée puis abattue de 15 %"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service reconstitue la bière à partir du **volume de fût disponible** divisé par les doses servies (pression 25 cl, pinte 50 cl, et la part bière des Picon-bière, panachés et Monaco, p. 50). Il applique ensuite, **spécifiquement à la bière, un abattement de 15 %** du volume acheté « pour tenir compte des pertes sur bière, de la consommation du personnel et des offerts » (p. 51). Le grief sous-jacent est que la freinte technique du fût serait déjà couverte. Nous montrons l’inverse : la **freinte technique seule** consomme déjà une part importante de ces 15 %, qui ne sont donc pas généreux mais **justes, voire insuffisants**."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "La bière pression perd un volume technique avant d’être servie",
+   "sousTitre": "Mousse, purge, fond de fût, nettoyage des lignes — documenté"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Tout fût tiré laisse un volume qui n’atteint jamais le verre du client : **collerette de mousse** à chaque service, **fond de fût** non tirable, **purge** au changement de fût, et surtout **vidange des lignes à chaque nettoyage**. La **Brewers Association** recommande un nettoyage des lignes **toutes les deux semaines** (standard repris par la profession) : à chaque cycle, la bière contenue dans les lignes est jetée. Le **rendement-fût** considéré comme normal dans la profession est d’environ **95 %** (soit **≈ 5 % de freinte technique minimale**), et la littérature CHR situe les pertes pression entre **5 % et 20 %** selon l’installation et le réglage du tirage."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Bière pression réellement tirée (part bière des fûts Affligem, 3 exercices)",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Article (part bière)"
+    },
+    {
+     "label": "Dose bière",
+     "align": "right"
+    },
+    {
+     "label": "Quantité",
+     "align": "right"
+    },
+    {
+     "label": "Volume",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Monaco"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "74",
+      "align": "right"
+     },
+     {
+      "v": "18 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Panaché"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "244",
+      "align": "right"
+     },
+     {
+      "v": "61 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Picon bière"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "252",
+      "align": "right"
+     },
+     {
+      "v": "63 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pinte"
+     },
+     {
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "590",
+      "align": "right"
+     },
+     {
+      "v": "295 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pinte Picon"
+     },
+     {
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "96",
+      "align": "right"
+     },
+     {
+      "v": "48 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "pression"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "1 564",
+      "align": "right"
+     },
+     {
+      "v": "391 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Monaco"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "56",
+      "align": "right"
+     },
+     {
+      "v": "14 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Panaché"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "102",
+      "align": "right"
+     },
+     {
+      "v": "26 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Picon bière"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "130",
+      "align": "right"
+     },
+     {
+      "v": "32 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pinte"
+     },
+     {
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "286",
+      "align": "right"
+     },
+     {
+      "v": "143 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pinte Picon"
+     },
+     {
+      "v": "50 cl",
+      "align": "right"
+     },
+     {
+      "v": "66",
+      "align": "right"
+     },
+     {
+      "v": "33 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "pression"
+     },
+     {
+      "v": "25 cl",
+      "align": "right"
+     },
+     {
+      "v": "670",
+      "align": "right"
+     },
+     {
+      "v": "168 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total bière pression tirée",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "4 130",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "1 293 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Bière pression tirée",
+     "valeur": "1 293 L",
+     "sub": "fûts Affligem, 3 exercices",
+     "couleur": "blue"
+    },
+    {
+     "label": "Freinte retenue",
+     "valeur": "10 %",
+     "sub": "mode CHR (entre 5 % et 18 %)",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Volume perdu",
+     "valeur": "129 L",
+     "sub": "mousse, purge, lignes, fond de fût",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Le calcul.** Sur **1 293 L** de bière pression tirée en trois ans, une freinte technique **de 10 %** (mode de la fourchette CHR) représente **129 L** jamais servis. À la borne basse incontestable du rendement-fût (5 %), c’est déjà **65 L** ; à la borne haute (18 %), **233 L**. Cette perte est **purement technique** : elle est tirée du fût, mais détruite, jamais encaissée."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Résultat",
+   "texte": "La seule freinte technique du fût consomme **129 L** de bière sur trois ans (mode CHR). L’abattement de 15 % que le fisc applique lui-même à la bière n’est donc **pas une faveur** : il couvre tout juste cette freinte une fois ajoutées la consommation du chef (Picon-bière) et les offerts. Il ne peut en aucun cas être réduit."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Détail du volume tiré et sensibilité au taux de freinte :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-pertes-biere-mousse.xlsx",
+     "label": "RF — Pertes de bière pression (freinte du fût)"
+    }
+   ]
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Pour solidifier",
+   "texte": "Obtenir une **attestation du distributeur/brasseur (Affligem)** sur le taux de freinte réel d’un fût (mousse, fond de fût, purge) et sur la fréquence de nettoyage des lignes. Conserver les bons de nettoyage. Attention : ne pas réclamer une déduction SUPPLÉMENTAIRE de bière au fisc (il a déjà retiré 15 %) — l’argument sert à **verrouiller** ce 15 % et à rattacher la freinte au résiduel de notre ventilation indépendante. Retirer cet encart de toute version remise."
+  }
+ ]
+}

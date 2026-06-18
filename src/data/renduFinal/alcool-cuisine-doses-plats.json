@@ -1,0 +1,600 @@
+{
+ "meta": {
+  "slug": "alcool-cuisine-doses-plats",
+  "source": "scripts/rendu-final-reconstitution-bloc2.py",
+  "grief": "Proposition p. 37, p. 44-48 - reperes D/E/G/Q (alcool cuisine)",
+  "litres_retenu": 566
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que retient l’administration",
+   "sousTitre": "Proposition p. 37 et p. 44-48 — repères D, E, G, Q (alcool de cuisine)"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service reconnaît qu’une partie de l’alcool part en cuisine et l’« ampute » du volume vendable via ses **repères D (calvados), E (vin jaune), G (porto) et Q (macvin)** (Proposition p. 44-48). Mais il **n’en déduit qu’une fraction**, calculée à partir de quelques plats du menu et de proportions, en retenant des doses parfois minorées (ex. **1 cl** de porto par sauce, p. 45-46). L’alcool réellement incorporé dans **toute** la carte — fondues, sauces, flambages, babas, coupes glacées — est plus large."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "L’alcool de cuisine, plat par plat",
+   "sousTitre": "Doses confirmées par les dirigeants — celles-là mêmes que le fisc reprend"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Nous reprenons **les doses confirmées par les dirigeants** (entrevue du 30 mars 2026, que le vérificateur retient lui-même : fondues 9-10 cl, babas/flambages 4 cl, sauces 1 cl) et nous les appliquons à **l’intégralité des plats alcoolisés vendus**, pas seulement à ceux des menus. Chaque centilitre ainsi tracé est de l’alcool **acheté puis cuit**, qui ne peut plus être vendu au verre."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Alcool de cuisine par produit (3 exercices)",
+   "minWidth": 480,
+   "colonnes": [
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Litres",
+     "align": "right"
+    },
+    {
+     "label": "Coût d’achat",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "152 L",
+      "align": "right"
+     },
+     {
+      "v": "450 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "123 L",
+      "align": "right"
+     },
+     {
+      "v": "2 235 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Vin Jaune"
+     },
+     {
+      "v": "113 L",
+      "align": "right"
+     },
+     {
+      "v": "4 032 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "106 L",
+      "align": "right"
+     },
+     {
+      "v": "1 792 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "60 L",
+      "align": "right"
+     },
+     {
+      "v": "651 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Grand Marnier"
+     },
+     {
+      "v": "7 L",
+      "align": "right"
+     },
+     {
+      "v": "230 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Crème de Cassis"
+     },
+     {
+      "v": "3 L",
+      "align": "right"
+     },
+     {
+      "v": "26 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bailey's"
+     },
+     {
+      "v": "1 L",
+      "align": "right"
+     },
+     {
+      "v": "18 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total alcool de cuisine",
+      "fw": 700
+     },
+     {
+      "v": "566 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "9 434 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Alcool de cuisine",
+     "valeur": "566 L",
+     "sub": "fondues, sauces, babas, flambages",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Coût d’achat",
+     "valeur": "9 434 €",
+     "sub": "acheté puis cuit, jamais vendu",
+     "couleur": "blue"
+    },
+    {
+     "label": "Doses",
+     "valeur": "celles du fisc",
+     "sub": "confirmées par les dirigeants (30/03/2026)",
+     "couleur": "gray"
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Détail des doses par plat (extrait)",
+   "minWidth": 520,
+   "colonnes": [
+    {
+     "label": "Plat / préparation"
+    },
+    {
+     "label": "Type"
+    },
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Dose",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Feuilleté forestier"
+     },
+     {
+      "v": "Entrée"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Croûtes aux morilles"
+     },
+     {
+      "v": "Entrée"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Salade paysanne"
+     },
+     {
+      "v": "Entrée"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Petit mâchon des gourmets"
+     },
+     {
+      "v": "Entrée"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Fondue jurassienne"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "ravelin"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Fondue vin jaune"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "vin jaune"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Fondue gourmet"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "vin jaune"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Poulet à la jurassienne"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Truite à la jurassienne"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Poulet aux morilles"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Truite à la morille"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Entrecôte forestière"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Galette Frelé"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Galette Frelé"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Galette Cancoine"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Galette Peute"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Assiette franc-comtoise"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Assiette du père Grégoire"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Camembert rôti"
+     },
+     {
+      "v": "Plat"
+     },
+     {
+      "v": "calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Baba au macvin"
+     },
+     {
+      "v": "Dessert"
+     },
+     {
+      "v": "macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Baba au soho"
+     },
+     {
+      "v": "Dessert"
+     },
+     {
+      "v": "liqueur de litchi (soho)"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Baba à la liqueur de poire"
+     },
+     {
+      "v": "Dessert"
+     },
+     {
+      "v": "liqueur de poire"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Baba au marc de bourgogne"
+     },
+     {
+      "v": "Dessert"
+     },
+     {
+      "v": "marc de bourgogne"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Baba au baileys"
+     },
+     {
+      "v": "Dessert"
+     },
+     {
+      "v": "baileys"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Résultat",
+   "texte": "La cuisine consomme **566 L** d’alcool acheté sur trois ans (fondues au vin jaune et Ravelin, sauces au porto, babas et flambages au macvin et calvados, coupes au Bailey’s et cassis). Le fisc n’en déduit qu’une partie : tout le reste est compté à tort comme des verres vendus."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Alcool de cuisine par produit et dose plat par plat :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-alcool-cuisine-doses-plats.xlsx",
+     "label": "RF — Alcool de cuisine (par alcool + par plat)"
+    }
+   ]
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Angle",
+   "texte": "Argument fort car il **retourne les propres doses du fisc** (repères D/E/G/Q) en les appliquant à toute la carte, pas aux seuls menus. Verser le document de composition des plats (doses par recette) confirmé par la gérante. Ne pas sur-jouer l’absinthe de la crème brûlée (chiffre OCR douteux côté fisc) : s’en tenir aux doses confirmées. Retirer cet encart de toute version remise."
+  }
+ ]
+}

@@ -31,6 +31,13 @@ import RFConsoAchats from './renduFinal/consommation-superieure-achats.json'
 import RFPrixMenu from './renduFinal/prix-menu-demi-lune.json'
 import RFCoefficients from './renduFinal/coefficients-de-revente.json'
 import RFReconstitution from './renduFinal/reconstitution-volumes-liquides.json'
+import RFSurversement from './renduFinal/sur-versement-au-verre.json'
+import RFBiereMousse from './renduFinal/pertes-biere-mousse.json'
+import RFCremant from './renduFinal/pertes-cremant.json'
+import RFDegustation from './renduFinal/degustation-au-verre.json'
+import RFCuisine from './renduFinal/alcool-cuisine-doses-plats.json'
+import RFOfferts from './renduFinal/offerts-remises-pertes.json'
+import RFCoefficient from './renduFinal/coefficient-liquide-solide.json'
 
 // --- Cellules de tableau (mêmes helpers que analyses.ts, locaux) -------------
 const cg = (v: string) => ({ v })
@@ -464,11 +471,9 @@ const autresGriefs: Grief[] = [
     titre: 'Sur-versement au verre',
     griefFisc: 'La méthode retient des doses théoriques exactes, sans tenir compte du sur-versement réel.',
     reponseCourte:
-      'Le service au verre génère un sur-versement systématique (à quantifier) qui réduit d’autant le nombre de verres vendus pour un même volume acheté.',
-    statut: 'a-etayer',
-    sections: enChantier(
-      'Quantifier le sur-versement moyen au verre et son effet sur le nombre de verres reconstitués (paramètre à confirmer avec la gérante).',
-    ),
+      'Sans doseur, le service au verre dépasse la dose de la carte (verre de vin mesuré +23,6 % — Kerr 2008). Sur la base sur-versable, un taux prudent de +18 % représente 462 L de vin consommé et jamais vendu sur 3 ans.',
+    statut: 'partiel',
+    sections: RFSurversement.sections as unknown as Section[],
   },
   {
     slug: 'pertes-biere-mousse',
@@ -477,11 +482,9 @@ const autresGriefs: Grief[] = [
     titre: 'Pertes de bière (mousse et tirage)',
     griefFisc: 'La reconstitution ignore les pertes de bière pression (mousse, fonds de fût, rinçage).',
     reponseCourte:
-      'Chaque demi servi entraîne une perte de mousse (ordre de 4 cl pour 25 cl servis) et des pertes de tirage, à déduire du volume vendable.',
-    statut: 'a-etayer',
-    sections: enChantier(
-      'Estimer la perte de mousse (≈ 4 cl par 25 cl) et les pertes de tirage, sourcer, et déduire du volume de bière reconstitué.',
-    ),
+      'La freinte technique du fût (mousse, purge, fond de fût, nettoyage des lignes) est documentée à 5–20 % (rendement-fût ~95 %). Sur 1 293 L tirés, le mode CHR de 10 % fait 129 L : l’abattement de 15 % que le fisc applique lui-même à la bière est juste, pas généreux.',
+    statut: 'partiel',
+    sections: RFBiereMousse.sections as unknown as Section[],
   },
   {
     slug: 'pertes-cremant',
@@ -490,11 +493,9 @@ const autresGriefs: Grief[] = [
     titre: 'Pertes de crémant (bouteilles ouvertes non terminées)',
     griefFisc: 'Le crémant acheté est supposé intégralement vendu au verre.',
     reponseCourte:
-      'Une bouteille de crémant ouverte ne se conserve pas après le service : le solde non vendu est perdu (≈ 9 000 € à justifier).',
-    statut: 'a-etayer',
-    sections: enChantier(
-      'Chiffrer les pertes de crémant (bouteilles entamées non finies, jetées en fin de service) pour justifier le montant de ≈ 9 000 € — base de calcul à confirmer.',
-    ),
+      'Un crémant ouvert est plat le lendemain : on ouvre une bouteille par jour de service et on jette le solde. Sur 662 jours, ≈ 126 L de crémant détruit (≈ 168 bouteilles) — que la reconstitution compte pourtant comme vendu.',
+    statut: 'partiel',
+    sections: RFCremant.sections as unknown as Section[],
   },
   {
     slug: 'degustation-au-verre',
@@ -503,11 +504,9 @@ const autresGriefs: Grief[] = [
     titre: 'Dégustation offerte (goûter du vin)',
     griefFisc: 'Tout le vin acheté est supposé vendu.',
     reponseCourte:
-      'L’usage de faire goûter (≈ 2 cl) avant de servir un vin au verre, et de contrôler les pichets de vins précieux, consomme un volume non vendu.',
-    statut: 'a-etayer',
-    sections: enChantier(
-      'Quantifier la dégustation (≈ 2 cl par bouteille de vin précieux et à chaque commande de vin au verre, une seule personne goûtant) — pratique et périmètre à confirmer.',
-    ),
+      'Deux gestes de 2 cl jamais enregistrés : une larme pour approuver chaque pichet, et une dégustation quand on monte la bouteille d’un vin nommé au verre. Sur des hypothèses basses, ≈ 113 L de vin offert et non vendu sur 3 ans.',
+    statut: 'partiel',
+    sections: RFDegustation.sections as unknown as Section[],
   },
   {
     slug: 'alcool-cuisine-doses-plats',
@@ -516,11 +515,9 @@ const autresGriefs: Grief[] = [
     titre: 'Alcool incorporé en cuisine (doses des plats)',
     griefFisc: 'La part d’alcool partant en cuisine (sauces, flambages, desserts) est sous-évaluée par le service.',
     reponseCourte:
-      'Les recettes (fondues, sauces, babas, crème brûlée à l’absinthe, flambages) consomment un volume d’alcool documenté, déduit des achats avant tout calcul de vente.',
+      'En appliquant les doses confirmées par les dirigeants (celles que le fisc reprend) à toute la carte, la cuisine consomme 566 L d’alcool acheté sur 3 ans (fondues, sauces, babas, flambages) — bien au-delà de ce que le fisc déduit via ses repères.',
     statut: 'partiel',
-    sections: enChantier(
-      'Verser le document de composition des plats/cocktails (doses par recette), totaliser l’alcool de cuisine par produit et le déduire — y compris l’absinthe de la crème brûlée.',
-    ),
+    sections: RFCuisine.sections as unknown as Section[],
   },
   {
     slug: 'offerts-remises-pertes',
@@ -529,11 +526,9 @@ const autresGriefs: Grief[] = [
     titre: 'Offerts, remises et pertes (taux retenus)',
     griefFisc: 'Le service applique des abattements minimaux (pertes 5 %, personnel 5 %, 15 % sur la pression).',
     reponseCourte:
-      'Ces taux sont des planchers ; la consommation hors-vente réelle (offerts, casse, personnel) est plus élevée et admise par la jurisprudence du secteur.',
+      'Les forfaits de 5 %+5 %+5 % sont des planchers : itemisée, la consommation sans vente (chef, offerts, sur-versement, crémant, dégustation, freinte bière) dépasse 1 000 L hors cuisine/menus, et le résiduel total (22,8 %) rejoint les 22 % validés par la CAA Paris (17/03/2021).',
     statut: 'partiel',
-    sections: enChantier(
-      'Comparer les taux d’abattement du fisc aux taux réels et à la jurisprudence CHR (CAA Paris 17/03/2021, 22-25 %).',
-    ),
+    sections: RFOfferts.sections as unknown as Section[],
   },
   {
     slug: 'coefficient-liquide-solide',
@@ -542,11 +537,9 @@ const autresGriefs: Grief[] = [
     titre: 'Extrapolation de la cuisine (coefficient liquide → solide)',
     griefFisc: 'Le CA « solides » (cuisine) est obtenu en multipliant le CA liquides reconstitué par un coefficient.',
     reponseCourte:
-      'Le coefficient amplifie une sur-évaluation des liquides sur une cuisine jamais mesurée : l’erreur sur les boissons est multipliée.',
+      'La cuisine n’est jamais mesurée : le CA solides = CA liquides × 2,94 / 3,02 / 3,10. Le coefficient est une loupe qui multiplie ~3 fois toute sur-évaluation des liquides ; corrigés, les volumes font passer le total reconstitué sous le CA déclaré.',
     statut: 'partiel',
-    sections: enChantier(
-      'Montrer que l’erreur sur le CA liquides est amplifiée par le coefficient, et qu’avec les vraies ventes le total reconstitué passe sous le CA déclaré.',
-    ),
+    sections: RFCoefficient.sections as unknown as Section[],
   },
   // ---- BLOC 3 : RAPPELS ----
   {
