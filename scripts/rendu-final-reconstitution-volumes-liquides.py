@@ -102,9 +102,10 @@ def calculer(bp):
         "Alcool des menus (non detaille en caisse)": "calcul",
         "Consommation du chef (Picon + Macvin)": "estime",
         "Aperitifs offerts aux clients": "estime",
-        "Sur-versement au verre et cocktails (free-pour, Kerr 2008)": "estime",
-        "Degustation offerte (pichet + vin nomme au verre)": "estime",
+        "Sur-versement vins/spiritueux/cocktails (free-pour : Kerr 2008, Wansink 2005)": "estime",
+        "Degustation offerte (note par note, annexe C)": "estime",
         "Cremant jete en fin de journee (eventé)": "estime",
+        "Cremant sur-versé (free-pour +23,6 %)": "estime",
         "Freinte technique de la biere pression (mousse, lignes)": "estime",
         "Stock final (inventaire)": "mesure",
     }
@@ -115,9 +116,10 @@ def calculer(bp):
         "Alcool des menus (non detaille en caisse)": "Menus",
         "Consommation du chef (Picon + Macvin)": "Conso chef",
         "Aperitifs offerts aux clients": "Offerts",
-        "Sur-versement au verre et cocktails (free-pour, Kerr 2008)": "Sur-versement",
-        "Degustation offerte (pichet + vin nomme au verre)": "Degustation",
+        "Sur-versement vins/spiritueux/cocktails (free-pour : Kerr 2008, Wansink 2005)": "Sur-versement",
+        "Degustation offerte (note par note, annexe C)": "Degustation",
         "Cremant jete en fin de journee (eventé)": "Cremant jete",
+        "Cremant sur-versé (free-pour +23,6 %)": "Cremant sur-verse",
         "Freinte technique de la biere pression (mousse, lignes)": "Freinte biere",
         "Stock final (inventaire)": "Stock",
     }
@@ -167,7 +169,7 @@ def calculer(bp):
 
     postes_oublies = []
     for lbl in ["Cuisine", "Menus", "Conso chef", "Offerts", "Sur-versement",
-                "Degustation", "Cremant jete", "Freinte biere", "Perte reelle"]:
+                "Degustation", "Cremant jete", "Cremant sur-verse", "Freinte biere", "Perte reelle"]:
         litres = segments_litres(segments, lbl)
         # Au prix de revente (ce que le fisc valorise indument comme CA "verre")
         ca_indu = litres * prix_litre_liquide

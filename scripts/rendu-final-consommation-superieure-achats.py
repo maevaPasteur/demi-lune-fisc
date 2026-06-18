@@ -1,519 +1,496 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-rendu-final-consommation-superieure-achats.py
+rendu-final-consommation-superieure-achats.py  (REFONTE)
 
-Reponse au fisc (Proposition de rectification p. 31-34, rejet 3/3) :
-"Pour certains produits, les quantites vendues depasseraient les achats,
-signe de ventes non comptabilisees."
+Reponse au fisc (Proposition p. 31-32, rejet 3/3, point XV : "plus de
+consommation vendue que d'achat"). Le service cite des EXEMPLES PRECIS :
+  - Calvados : sur-consommation sur les 3 exercices ;
+  - eaux-de-vie (Poire, Framboise, Mirabelle) et Martini Blanc : petits volumes ;
+  - Haute Cote de Beaune BLANC : 12 950 cl "vendus" en 2023-2024, "aucune
+    bouteille achetee identifiee".
 
-Demonstration : les ecarts conso > achats sur quelques libelles viennent d'un
-ETIQUETAGE de caisse (libelles generiques / formats non rattaches / achat sous
-un autre nom), PAS de ventes cachees. Au niveau du BILAN MATIERE GLOBAL (tous
-produits agreges), ces "manquants negatifs" se neutralisent : le bilan se ferme
-sur 3 048 L net (achats - conso - stock), insensible a l'etiquetage.
+Demonstration, SANS supposition, en reliant pour chaque exemple le libelle de
+CAISSE -> la FACTURE fournisseur -> l'INVENTAIRE (fichier de correspondance), et
+en comparant, par exercice, les ACHATS (nets des avoirs) a la CONSO mesuree.
 
-Sources (read-only) :
-  - src/data/boissonsPageData.json -> disparuParBoisson (65 lignes), synthese
-  - src/data/calculsBoissons/consoTotaleParBoisson.json -> boissons,
-    achats_non_rattaches
+Sources (lecture seule) :
+  - src/data/calculsBoissons/consoTotaleParBoisson.json
+  - src/data/calculsBoissons/achatsBoissonsParPeriode.json
   - src/data/calculsBoissons/_correspondance-caisse-inventaire-factures.csv
+  - src/data/calculsBoissons/itemsCaisse.json
+  - src/data/boissonsPageData.json
 
-Sorties :
-  - public/documents/pieces-defense/RF-consommation-superieure-achats.xlsx
-  - src/data/renduFinal/consommation-superieure-achats.json
+Sorties : 5 XLSX (un par section) + src/data/renduFinal/consommation-superieure-achats.json
 """
-import os, json, csv, collections
+import os
+import re
+import csv
+import json
 import openpyxl
-from openpyxl.styles import Font, PatternFill, Alignment
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
-BOISSONS = os.path.join(ROOT, "src/data/boissonsPageData.json")
-CONSO = os.path.join(ROOT, "src/data/calculsBoissons/consoTotaleParBoisson.json")
-CORR = os.path.join(ROOT, "src/data/calculsBoissons/_correspondance-caisse-inventaire-factures.csv")
+CB = os.path.join(ROOT, "src/data/calculsBoissons")
+PIECES = os.path.join(ROOT, "public/documents/pieces-defense")
+OUT_JSON = os.path.join(ROOT, "src/data/renduFinal/consommation-superieure-achats.json")
+EXOS = ["2022-2023", "2023-2024", "2024-2025"]
+EXL = {"2022-2023": "2022-23", "2023-2024": "2023-24", "2024-2025": "2024-25"}
+
+CONSO = json.load(open(os.path.join(CB, "consoTotaleParBoisson.json"), encoding="utf-8"))["boissons"]
+ACHATS = json.load(open(os.path.join(CB, "achatsBoissonsParPeriode.json"), encoding="utf-8"))["achats"]
+CORR = list(csv.DictReader(open(os.path.join(CB, "_correspondance-caisse-inventaire-factures.csv"),
+                                encoding="utf-8-sig"), delimiter=";"))
+ITEMS = json.load(open(os.path.join(CB, "itemsCaisse.json"), encoding="utf-8"))["items"]
+BD = json.load(open(os.path.join(ROOT, "src/data/boissonsPageData.json"), encoding="utf-8"))
 
 
-def r1(x):
-    return round(float(x), 1)
+def fr_l(v):
+    return f"{v:,.1f}".replace(",", " ").replace(".", ",") + " L"
 
 
-# --------------------------------------------------------------------------- #
-# 1. Donnees
-# --------------------------------------------------------------------------- #
-bd = json.load(open(BOISSONS, encoding="utf-8"))
-rows = bd["disparuParBoisson"]
-synth = bd["synthese"]
-
-cd = json.load(open(CONSO, encoding="utf-8"))
-anr = cd["achats_non_rattaches"]
-
-corr = list(csv.DictReader(open(CORR, encoding="utf-8-sig"), delimiter=";"))
-# index correspondance par nom_canonique
-corr_par_canon = collections.defaultdict(list)
-for c in corr:
-    corr_par_canon[c["nom_canonique"]].append(c)
-
-# --------------------------------------------------------------------------- #
-# 2. Bilan matiere GLOBAL (identite comptable)
-# --------------------------------------------------------------------------- #
-somme_achat = r1(sum(r["achat_l"] for r in rows))
-somme_conso = r1(sum(r["conso_l"] for r in rows))
-somme_stock = r1(sum(r.get("stock_l", 0) for r in rows))
-net = r1(somme_achat - somme_conso - somme_stock)
-
-# --------------------------------------------------------------------------- #
-# 3. Libelles conso > achats (les "negatifs")
-# --------------------------------------------------------------------------- #
-negs = sorted([r for r in rows if r["disparu_l"] < 0], key=lambda r: r["disparu_l"])
-somme_neg = r1(sum(r["disparu_l"] for r in negs))
-
-# achats non rattaches par nom canonique reconnaissable
-anr_par_mot = collections.defaultdict(float)
-for a in anr:
-    anr_par_mot[a["produit"]] += a["total"]
+def fr_cl(v):
+    return f"{v:,.0f}".replace(",", " ") + " cl"
 
 
-def factures_de(nom):
-    """liste des nom_facture distincts mappes a un nom canonique."""
-    f = set()
-    for c in corr_par_canon.get(nom, []):
-        nf = (c.get("nom_facture") or "").strip()
-        if nf and nf != "—":
-            f.add(nf)
-    return sorted(f)
+def sgn_l(v):
+    return ("+" if v >= 0 else "") + fr_l(v)
 
 
-def cause(r):
-    """Classe la cause de l'ecart conso>achats a partir de la correspondance."""
-    nom = r["nom"]
-    facs = factures_de(nom)
-    # 1) achat = 0 et aucune facture : libelle de caisse generique
-    if r["achat_l"] == 0 and not facs:
-        return ("Libelle de caisse generique",
-                "Bouton caisse mutualise (verre/pichet) : le vin est achete sous "
-                "son appellation precise, pas sous ce libelle.")
-    # 2) facture multi-formats (ex. 75 + 37,5 cl) -> formats non rattaches
-    fac_txt = " ; ".join(facs)
-    multi = any("/" in f or "37,5" in f or "37.5" in f for f in facs)
-    # Bethanie : formats 37,5 cl restes en achats non rattaches
-    if "Béthanie" in nom or "Bethanie" in nom:
-        return ("Format d'achat non rattache",
-                "Seul le format 75 cl est mappe ; les achats 37,5 cl sont restes "
-                "en \"achats non rattaches\". Rattaches, l'achat depasse la conso.")
-    # 3) facture portant un nom franchement different (achat sous un autre nom)
-    if facs:
-        autre = [f for f in facs if nom.split()[0].upper() not in f.upper()]
-        if autre:
-            return ("Achat sous un autre nom",
-                    "Achete et facture sous l'appellation : " + " / ".join(autre) + ".")
-    # 4) achat mappe present mais conso > achat sans achats non rattaches :
-    #    une partie des verres/pichets a ete encaissee sous le bouton generique
-    #    (Cubis / verre de vin). C'est le miroir du surplus "Cubis de vin".
-    if r["achat_l"] > 0:
-        return ("Verres encaisses sous le bouton generique",
-                "Une partie des verres/pichets a ete saisie sous le bouton "
-                "generique (Cubis / verre de vin) : miroir du surplus Cubis.")
-    return ("Libelle de caisse generique",
-            "Aucune facture rattachee a ce libelle : produit achete sous un autre nom.")
+def cg(t):
+    return {"v": t}
 
 
-neg_detail = []
-for r in negs:
-    lab, expl = cause(r)
-    facs = factures_de(r["nom"])
-    neg_detail.append({
-        "nom": r["nom"],
-        "categorie": r["categorie"],
-        "achat_l": r1(r["achat_l"]),
-        "conso_l": r1(r["conso_l"]),
-        "ecart_l": r1(r["disparu_l"]),
-        "cause": lab,
-        "explication": expl,
-        "facture": " / ".join(facs) if facs else "(libelle generique, aucune facture)",
-    })
-
-# --------------------------------------------------------------------------- #
-# 4. Exemples detailles : Cubis + Bethanie
-# --------------------------------------------------------------------------- #
-cubis = next(r for r in rows if "Cubis" in r["nom"])
-beth = next(r for r in rows if "Béthanie" in r["nom"])
-
-# Bethanie : achat 75cl mappe + 37,5cl non rattaches.
-# ATTENTION : anr["total"] est en UNITES (bouteilles), pas en litres.
-# Le format 37,5 cl = 0,375 L par bouteille.
-beth_75_mappe = r1(beth["achat_l"])
-beth_375_unites = sum(a["total"] for a in anr if "BETHANIE" in a["produit"].upper())
-beth_375_nonrattache = r1(beth_375_unites * 0.375)
-beth_total_achat = r1(beth_75_mappe + beth_375_nonrattache)
-beth_conso = r1(beth["conso_l"])
-beth_apres = r1(beth_total_achat - beth_conso)
-
-# --------------------------------------------------------------------------- #
-# 5. PIECE XLSX
-# --------------------------------------------------------------------------- #
-HEAD = Font(bold=True, color="FFFFFF")
-FILL = PatternFill("solid", fgColor="0F766E")
-CENTER = Alignment(horizontal="center", vertical="center")
-WRAP = Alignment(wrap_text=True, vertical="top")
-
-wb = openpyxl.Workbook()
-
-# -- Onglet 1 : libelles conso > achats --------------------------------------- #
-ws = wb.active
-ws.title = "Libelles conso superieur achats"
-cols1 = ["Produit (libelle caisse)", "Categorie", "Achat (L)", "Conso (L)",
-         "Ecart (L)", "Cause", "Correspondance / facture", "Explication"]
-ws.append(cols1)
-for d in neg_detail:
-    ws.append([d["nom"], d["categorie"], d["achat_l"], d["conso_l"], d["ecart_l"],
-               d["cause"], d["facture"], d["explication"]])
-ws.append(["TOTAL des ecarts negatifs", "", "", "", somme_neg, "", "", ""])
-for c in ws[1]:
-    c.font = HEAD; c.fill = FILL; c.alignment = CENTER
-for i, w in enumerate((30, 12, 10, 10, 10, 26, 38, 52), 1):
-    ws.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
-for row in ws.iter_rows(min_row=2):
-    row[7].alignment = WRAP
-    row[6].alignment = WRAP
-ws[f"A{ws.max_row}"].font = Font(bold=True)
-ws[f"E{ws.max_row}"].font = Font(bold=True)
-ws.freeze_panes = "A2"
-
-# -- Onglet 2 : bilan matiere global ------------------------------------------ #
-ws2 = wb.create_sheet("Bilan matiere global")
-ws2.append(["Bilan matiere boissons (3 exercices, 65 produits agreges)"])
-ws2.append([])
-ws2.append(["Poste", "Litres"])
-ws2.append(["Somme des ACHATS", somme_achat])
-ws2.append(["moins Somme de la CONSO vendue/servie", somme_conso])
-ws2.append(["moins Stock final (inventaire)", somme_stock])
-ws2.append(["= Bilan NET (alcool non explique)", net])
-ws2.append([])
-ws2.append(["Rappel synthese boissonsPageData.json"])
-ws2.append(["disparu_brut_l (ecarts positifs seuls)", synth["disparu_brut_l"]])
-ws2.append(["disparu_net_l (bilan global)", synth["disparu_net_l"]])
-ws2.append(["dont compense par les ecarts negatifs (etiquetage)",
-            r1(synth["disparu_brut_l"] - synth["disparu_net_l"])])
-ws2["A1"].font = Font(bold=True, size=12)
-ws2["A9"].font = Font(bold=True)
-for c in ws2[3]:
-    c.font = HEAD; c.fill = FILL; c.alignment = CENTER
-ws2["A7"].font = Font(bold=True)
-ws2["B7"].font = Font(bold=True)
-ws2.column_dimensions["A"].width = 46
-ws2.column_dimensions["B"].width = 14
-ws2.freeze_panes = "A4"
-
-# -- Onglet 3 : exemples Cubis + Bethanie ------------------------------------- #
-ws3 = wb.create_sheet("Exemples Cubis et Bethanie")
-ws3.append(["Cas n.1 - Cubis de vin (libelle de caisse generique)"])
-ws3.append(["Achat sous ce libelle (L)", r1(cubis["achat_l"])])
-ws3.append(["Conso au verre/pichet sous ce libelle (L)", r1(cubis["conso_l"])])
-ws3.append(["Ecart (L)", r1(cubis["disparu_l"])])
-ws3.append(["Facture rattachee", "aucune (bouton verre/pichet mutualise)"])
-ws3.append(["Lecture", "Le vin existe et est achete sous son appellation precise ; "
-            "il est seulement encaisse sous un bouton generique."])
-ws3.append([])
-ws3.append(["Cas n.2 - Arbois Bethanie (format d'achat non rattache)"])
-ws3.append(["Achat 75 cl mappe (L)", beth_75_mappe])
-ws3.append(["Achat 37,5 cl reste en achats non rattaches (L)", beth_375_nonrattache])
-ws3.append(["= Achat total tous formats (L)", beth_total_achat])
-ws3.append(["Conso (L)", beth_conso])
-ws3.append(["Bilan apres rattachement (L)", beth_apres])
-ws3.append(["Lecture", "Une fois le format 37,5 cl rattache, l'achat depasse la "
-            "conso : l'ecart negatif disparait et devient un surplus normal."])
-ws3["A1"].font = Font(bold=True, size=12)
-ws3["A8"].font = Font(bold=True, size=12)
-ws3["A11"].font = Font(bold=True)
-ws3["A13"].font = Font(bold=True)
-ws3.column_dimensions["A"].width = 44
-ws3.column_dimensions["B"].width = 60
-for r_ in (6, 14):
-    ws3[f"B{r_}"].alignment = WRAP
-ws3.freeze_panes = "A2"
-
-xlsx = os.path.join(ROOT, "public/documents/pieces-defense/RF-consommation-superieure-achats.xlsx")
-wb.save(xlsx)
-print("XLSX ecrit :", xlsx)
-
-# --------------------------------------------------------------------------- #
-# 6. JSON renduFinal
-# --------------------------------------------------------------------------- #
-TEAL = "#0f766e"
-GRAPH_COL = "#b45309"
+def cd(t):
+    return {"v": t, "align": "right"}
 
 
-def fr(x, dec=0):
-    """nombre au format francais (espace milliers, virgule)."""
-    if dec == 0:
-        s = f"{round(x):,}".replace(",", " ")
-    else:
-        s = f"{x:,.{dec}f}".replace(",", "§").replace(".", ",").replace("§", " ")
-    return s
+def cgf(t):
+    return {"v": t, "fw": 700}
 
 
-def col(label, align=None):
-    c = {"label": label}
-    if align:
-        c["align"] = align
-    return c
+def cdf(t):
+    return {"v": t, "align": "right", "fw": 700}
 
 
-def cell(v, align=None, badge=None):
-    c = {"v": v}
-    if align:
-        c["align"] = align
-    if badge:
-        c["badge"] = badge
-    return c
+def colg(l):
+    return {"label": l}
 
 
-# tableau libelles conso>achats
-tab_neg_lignes = []
-for d in neg_detail:
-    tab_neg_lignes.append([
-        cell(d["nom"]),
-        cell(f"{fr(d['achat_l'],1)}", align="right"),
-        cell(f"{fr(d['conso_l'],1)}", align="right"),
-        cell(f"{fr(d['ecart_l'],1)}", align="right"),
-        cell(d["cause"], align="left"),
-    ])
-tab_neg_lignes.append([
-    cell("TOTAL des écarts négatifs"),
-    cell("", align="right"),
-    cell("", align="right"),
-    cell(f"{fr(somme_neg,1)}", align="right", badge="ok"),
-    cell("Compensés au bilan global", align="left"),
-])
+def cold(l):
+    return {"label": l, "align": "right"}
 
-# tableau bilan global
-tab_bilan = [
-    [cell("Somme des achats"), cell(f"{fr(somme_achat)} L", align="right")],
-    [cell("moins Conso vendue / servie"), cell(f"{fr(somme_conso)} L", align="right")],
-    [cell("moins Stock final (inventaire)"), cell(f"{fr(somme_stock)} L", align="right")],
-    [cell("= Bilan net (insensible à l'étiquetage)"),
-     cell(f"{fr(net)} L", align="right", badge="ok")],
+
+def bdg(v, ok):
+    return {"v": v, "align": "right", "badge": "ok" if ok else "ko"}
+
+
+# --- conso par exercice (L, valeur moyenne) --------------------------------
+def conso_pp(canon):
+    for b in CONSO:
+        if b["nom_canonique"] == canon:
+            out = {}
+            for e in EXOS:
+                v = b.get("par_periode", {}).get(e, {})
+                tl = v.get("total_l") if isinstance(v, dict) else None
+                if isinstance(tl, dict):
+                    out[e] = round(tl.get("moyen", 0), 1)
+                elif isinstance(v, dict):
+                    out[e] = round(v.get("exact_certain_l", 0), 1)
+                else:
+                    out[e] = 0.0
+            out["est"] = b.get("estimation", False)
+            out["facture"] = b.get("nom_facture", "")
+            return out
+    return {e: 0.0 for e in EXOS}
+
+
+# --- achats par exercice (L) pour un predicat de libelle facture -----------
+def achat_pp(predicat):
+    out = {e: 0.0 for e in EXOS}
+    lignes = []
+    for a in ACHATS:
+        if not predicat(a["produit"].upper()):
+            continue
+        up = a["produit"].upper()
+        mcl = re.search(r"(\d+)\s*CL", up)
+        cont = int(mcl.group(1)) if mcl else 100
+        tot = 0.0
+        pp = {}
+        for e in EXOS:
+            q = a["par_periode"].get(e, {}).get("quantite", 0) or 0
+            out[e] += q * cont / 100.0
+            tot += q * cont / 100.0
+            pp[e] = q
+        lignes.append({"produit": a["produit"], "cont_cl": cont, "pp": pp, "l_tot": round(tot, 1)})
+    return out, lignes
+
+
+def tot3(d):
+    return round(sum(d[e] for e in EXOS), 1)
+
+
+# ===========================================================================
+# Styles + helper XLSX
+# ===========================================================================
+GRAS = Font(bold=True)
+GBLANC = Font(bold=True, color="FFFFFF")
+ENTETE = PatternFill("solid", fgColor="0F766E")
+CENTRE = Alignment(horizontal="center", vertical="center", wrap_text=True)
+GAUCHE = Alignment(horizontal="left", vertical="center", wrap_text=True)
+BORD = Border(*(4 * (Side(style="thin", color="D1D5DB"),)))
+
+
+def ecrire_xlsx(path, titre, sous_titre, feuilles):
+    wb = openpyxl.Workbook()
+    for i, (nom, headers, rows, widths) in enumerate(feuilles):
+        ws = wb.active if i == 0 else wb.create_sheet()
+        ws.title = nom[:31]
+        ws.append([titre])
+        ws["A1"].font = GRAS
+        ws.append([sous_titre])
+        ws["A2"].alignment = GAUCHE
+        ws.merge_cells(start_row=2, start_column=1, end_row=2, end_column=max(1, len(headers)))
+        ws.row_dimensions[2].height = 30
+        ws.append([])
+        hr = ws.max_row + 1
+        ws.append(headers)
+        for c in range(1, len(headers) + 1):
+            cell = ws.cell(row=hr, column=c)
+            cell.font = GBLANC
+            cell.fill = ENTETE
+            cell.alignment = CENTRE
+            cell.border = BORD
+        for row in rows:
+            r = ws.max_row + 1
+            ws.append(row)
+            for c in range(1, len(headers) + 1):
+                ws.cell(row=r, column=c).border = BORD
+        for j, w in enumerate(widths, 1):
+            ws.column_dimensions[openpyxl.utils.get_column_letter(j)].width = w
+        ws.freeze_panes = "A" + str(hr + 1)
+    os.makedirs(PIECES, exist_ok=True)
+    wb.save(path)
+
+
+# ===========================================================================
+# Donnees des exemples cites
+# ===========================================================================
+beaune_rge_c = conso_pp("Hautes Côtes de Beaune rouge")
+beaune_blc_c = conso_pp("Hautes Côtes de Beaune blanc")
+nuits_c = conso_pp("Hautes Côtes de Nuits blanc")
+beaune_rge_a, beaune_rge_al = achat_pp(lambda p: "BEAUNE RGE" in p or "BEAUNE ROUGE" in p)
+beaune_blc_a, beaune_blc_al = achat_pp(lambda p: "BEAUNE BLC" in p or "BEAUNE BLANC" in p)
+nuits_a, nuits_al = achat_pp(lambda p: "NUITS" in p)
+FISC_BLANC_CL = 12950
+
+calva_c = conso_pp("Calvados")
+calva_a, calva_al = achat_pp(lambda p: "CALVADOS" in p)
+calva_verre_cl = sum(sum(x["quantite"].get(e, 0) for e in EXOS) * (x.get("volume_unitaire_cl") or 0)
+                     for x in ITEMS if str(x.get("produit", "")).lower().startswith("calvados"))
+calva_verre_l = round(calva_verre_cl / 100.0, 1)
+
+
+def famille(canon_list, pred):
+    c = {e: 0.0 for e in EXOS}
+    for canon in canon_list:
+        cc = conso_pp(canon)
+        for e in EXOS:
+            c[e] += cc[e]
+    a, al = achat_pp(pred)
+    return {e: round(c[e], 1) for e in EXOS}, a, al
+
+
+fam = [
+    ("Poire (eau-de-vie + liqueur)", *famille(
+        ["Eau de Vie de Poire", "Liqueur de Poire"], lambda p: "POIRE WILLIAM" in p or "GOLDEN EIGHT" in p)),
+    ("Framboise (eau-de-vie)", *famille(
+        ["Eau de Vie Framboise"], lambda p: "FRAMBOISE" in p and ("40°" in p or "42°" in p or "SAUVAGE" in p))),
+    ("Mirabelle (eau-de-vie)", *famille(
+        ["Eau de Vie Mirabelle"], lambda p: "MIRABELLE" in p)),
+    ("Martini Blanc", *famille(
+        ["Martini Blanc"], lambda p: "MARTINI" in p)),
 ]
 
-# tableau exemples
-tab_ex = [
-    [cell("Cubis de vin"), cell("Libellé générique", align="center"),
-     cell(f"{fr(cubis['achat_l'],1)} L", align="right"),
-     cell(f"{fr(cubis['conso_l'],1)} L", align="right"),
-     cell(f"{fr(cubis['disparu_l'],1)} L", align="right")],
-    [cell("Arbois Béthanie (75 cl mappé seul)"), cell("Format non rattaché", align="center"),
-     cell(f"{fr(beth_75_mappe,1)} L", align="right"),
-     cell(f"{fr(beth_conso,1)} L", align="right"),
-     cell(f"{fr(beth['disparu_l'],1)} L", align="right")],
-    [cell("Arbois Béthanie (tous formats rattachés)"), cell("Après correction", align="center", badge="ok"),
-     cell(f"{fr(beth_total_achat,1)} L", align="right"),
-     cell(f"{fr(beth_conso,1)} L", align="right"),
-     cell(f"+{fr(beth_apres,1)} L", align="right", badge="ok")],
-]
+rows_g = BD["disparuParBoisson"]
+g_achat = round(sum(r["achat_l"] for r in rows_g), 1)
+g_conso = round(sum(r["conso_l"] for r in rows_g), 1)
+g_stock = round(sum(r.get("stock_l", 0) for r in rows_g), 1)
+g_net = round(g_achat - g_conso - g_stock, 1)
+negs = sorted([r for r in rows_g if r["disparu_l"] < 0], key=lambda r: r["disparu_l"])
 
-# graphique : les libelles negatifs en valeur absolue (L)
-graph_data = [{"nom": d["nom"], "Écart (L)": abs(d["ecart_l"])}
-              for d in neg_detail if abs(d["ecart_l"]) >= 1]
+# ===========================================================================
+# XLSX (un par section)
+# ===========================================================================
+F_CORR = "pieces-defense/RF-conso-achats-correspondance.xlsx"
+F_HCB = "pieces-defense/RF-conso-achats-haute-cote-beaune.xlsx"
+F_CAL = "pieces-defense/RF-conso-achats-calvados.xlsx"
+F_EDV = "pieces-defense/RF-conso-achats-eaux-de-vie.xlsx"
+F_GLO = "pieces-defense/RF-conso-achats-bilan-global.xlsx"
+
+CITES = ("calvados", "beaune", "nuits", "eau de vie", "poire", "framboise", "mirabelle", "martini")
+corr_x = [[c["libelle_caisse"], c["format_service"], c["volume_cl"], c["nom_canonique"],
+           c["nom_inventaire"], c["nom_facture"], c.get("flag", "")]
+          for c in CORR
+          if any(k in (c["libelle_caisse"] + c["nom_canonique"] + c["nom_facture"]).lower() for k in CITES)]
+ecrire_xlsx(os.path.join(ROOT, "public/documents", F_CORR),
+            "Correspondance caisse - facture - inventaire (produits cites)",
+            "Chaque libelle caisse relie a sa facture fournisseur et a l'inventaire. Achats nets des avoirs.",
+            [("Correspondance",
+              ["Libelle caisse", "Format", "Vol (cl)", "Nom canonique", "Inventaire", "Facture fournisseur", "Remarque"],
+              corr_x, [30, 16, 9, 30, 26, 44, 40])])
+
+hcb_x = []
+for lab, a, c in [("Beaune ROUGE", beaune_rge_a, beaune_rge_c),
+                  ("Beaune BLANC", beaune_blc_a, beaune_blc_c),
+                  ("Nuits BLANC (vin distinct)", nuits_a, nuits_c)]:
+    for e in EXOS:
+        hcb_x.append([lab, EXL[e], round(a[e], 1), c[e], round(a[e] - c[e], 1)])
+ecrire_xlsx(os.path.join(ROOT, "public/documents", F_HCB),
+            "Haute Cote de Beaune : rouge / blanc / Nuits (achats vs conso par exercice)",
+            f"Conso reelle de Beaune blanc = {fr_cl(tot3(beaune_blc_c) * 100)} sur 3 ans, sans rapport "
+            f"avec les 12 950 cl du service (qui visent en realite le rouge, massivement achete).",
+            [("Beaune par couleur",
+              ["Produit", "Exercice", "Achat (L)", "Conso (L)", "Achat - conso (L)"], hcb_x,
+              [26, 12, 12, 12, 18]),
+             ("Factures Beaune rouge",
+              ["Facture fournisseur", "Cont. (cl)"] + [f"{EXL[e]} (bt)" for e in EXOS] + ["Total (L)"],
+              [[r["produit"], r["cont_cl"]] + [r["pp"][e] for e in EXOS] + [r["l_tot"]] for r in beaune_rge_al],
+              [56, 11, 11, 11, 11, 11])])
+
+cal_x = [[EXL[e], round(calva_a[e], 1), calva_c[e], round(calva_a[e] - calva_c[e], 1)] for e in EXOS]
+cal_x.append(["TOTAL", tot3(calva_a), tot3(calva_c), round(tot3(calva_a) - tot3(calva_c), 1)])
+ecrire_xlsx(os.path.join(ROOT, "public/documents", F_CAL),
+            "Calvados : achats vs consommation (dont cuisson)",
+            f"Caisse : seulement {fr_l(calva_verre_l)} de Calvados au verre sur 3 ans. Le reste de la conso "
+            "est une ESTIMATION de cuisson (camembert roti flambe, assiette du pere Gregoire). Alcool de "
+            "cuisine = cout, pas une vente ; le service a lui-meme reduit sa dose de 5 a 4 cl.",
+            [("Achat vs conso",
+              ["Exercice", "Achat (L)", "Conso totale (L)", "Achat - conso (L)"], cal_x, [14, 14, 18, 18]),
+             ("Achats Calvados (factures)",
+              ["Facture fournisseur", "Cont. (cl)"] + [f"{EXL[e]} (bt)" for e in EXOS] + ["Total (L)"],
+              [[r["produit"], r["cont_cl"]] + [r["pp"][e] for e in EXOS] + [r["l_tot"]] for r in calva_al],
+              [40, 11, 11, 11, 11, 11])])
+
+edv_x = [[lab, tot3(a), tot3(c), round(tot3(a) - tot3(c), 1)] for lab, c, a, al in fam]
+edv_f = [[lab, r["produit"], r["cont_cl"], r["l_tot"]] for lab, c, a, al in fam for r in al]
+ecrire_xlsx(os.path.join(ROOT, "public/documents", F_EDV),
+            "Eaux-de-vie, liqueurs et Martini : les achats existent",
+            "En regroupant les libelles freres (FRAMBOISE SAUVAGE, MIRABELLE, POIRE WILLIAM, LIQUEUR DE "
+            "POIRE, MARTINI BIANCO), les achats sur 3 ans couvrent la conso. Le 'achat = 0' venait d'un "
+            "rattachement de libelle.",
+            [("Synthese 3 ans", ["Famille", "Achat (L)", "Conso (L)", "Achat - conso (L)"], edv_x, [30, 12, 12, 16]),
+             ("Detail factures", ["Famille", "Facture fournisseur", "Cont. (cl)", "Total achat (L)"], edv_f,
+              [26, 50, 12, 14])])
+
+g_sorted = sorted(rows_g, key=lambda r: r["disparu_l"])
+ecrire_xlsx(os.path.join(ROOT, "public/documents", F_GLO),
+            "Bilan matiere global par boisson (achats - conso - stock)",
+            f"Bilan d'ensemble : achats {fr_l(g_achat)} - conso {fr_l(g_conso)} - stock {fr_l(g_stock)} "
+            f"= {fr_l(g_net)} net (excedent). Les rares ecarts negatifs sont des artefacts de "
+            "rattachement de libelle.",
+            [("Bilan par boisson",
+              ["Boisson", "Achat (L)", "Conso (L)", "Stock (L)", "Achat - conso - stock (L)"],
+              [[r["nom"], round(r["achat_l"], 1), round(r["conso_l"], 1), round(r.get("stock_l", 0), 1),
+                round(r["disparu_l"], 1)] for r in g_sorted]
+              + [["TOTAL", g_achat, g_conso, g_stock, g_net]],
+              [34, 12, 12, 12, 24])])
+
+
+# ===========================================================================
+# Tableaux de page
+# ===========================================================================
+def tab_achat_conso(titre, lignes, total=None, minw=620):
+    cols = [colg("Produit"), colg("Exercice"), cold("Achat (L)"), cold("Conso (L)"), cold("Achat − conso")]
+    lg = []
+    for lab, a, c in lignes:
+        for e in EXOS:
+            ec = round(a[e] - c[e], 1)
+            lg.append([cg(lab), cg(EXL[e]), cd(fr_l(round(a[e], 1))), cd(fr_l(c[e])), bdg(sgn_l(ec), ec >= -0.5)])
+    return {"kind": "tableau", "titre": titre, "minWidth": minw, "colonnes": cols, "lignes": lg}
+
+
+# correspondance (page) : sous-ensemble lisible
+corr_page = []
+for c in CORR:
+    blob = (c["libelle_caisse"] + c["nom_canonique"] + c["nom_facture"]).lower()
+    if any(k in blob for k in ("calvados", "beaune", "nuits", "eau de vie", "poire william",
+                               "framboise", "mirabelle", "martini")):
+        corr_page.append([cg(c["libelle_caisse"]), cg(c["nom_canonique"]),
+                          cg(c["nom_facture"] or "—")])
 
 doc = {
     "meta": {
         "slug": "consommation-superieure-achats",
         "titre": "Consommation vendue supérieure aux achats",
         "source": "scripts/rendu-final-consommation-superieure-achats.py",
-        "grief": "Proposition de rectification p. 31-34 (rejet de comptabilité, 3/3).",
-        "chiffres": {
-            "nb_libelles_negatifs": len(negs),
-            "somme_ecarts_negatifs_l": somme_neg,
-            "somme_achats_l": somme_achat,
-            "somme_conso_l": somme_conso,
-            "somme_stock_l": somme_stock,
-            "bilan_net_l": net,
-            "cubis_conso_l": r1(cubis["conso_l"]),
-            "bethanie_achat_total_l": beth_total_achat,
-            "bethanie_conso_l": beth_conso,
-            "bethanie_apres_l": beth_apres,
-        },
+        "grief": "Proposition de rectification p. 31-32 (rejet de comptabilité, 3/3, point XV).",
+        "beaune_blanc_conso_cl": int(round(tot3(beaune_blc_c) * 100)),
+        "fisc_blanc_cl": FISC_BLANC_CL,
+        "calvados_verre_l": calva_verre_l,
+        "bilan_net_l": g_net,
     },
     "sections": [
-        {
-            "kind": "chapitre",
-            "source": "fisc",
-            "titre": "Le grief de l'administration",
-            "sousTitre": "Proposition de rectification, p. 31-34 (rejet 3/3)",
-        },
-        {
-            "kind": "note",
-            "texte": "Le service relève que, **pour certains produits, les quantités "
-                     "vendues dépasseraient les quantités achetées**. Il en déduit "
-                     "l'existence de **ventes non comptabilisées** et y voit une "
-                     "anomalie justifiant le rejet de la comptabilité.",
-        },
-        {
-            "kind": "chapitre",
-            "source": "nous",
-            "titre": "Ce que sont réellement ces écarts",
-            "sousTitre": "Un effet d'étiquetage de caisse, pas des ventes cachées",
-        },
-        {
-            "kind": "note",
-            "texte": "Les écarts « conso > achats » portent sur **"
-                     f"{len(negs)} libellés** seulement, pour un total de **"
-                     f"{fr(abs(somme_neg),1)} L** sur les "
-                     f"{fr(somme_achat)} L achetés. Ils proviennent de la "
-                     "**façon dont la caisse étiquette** les boissons, pas d'un "
-                     "manque de stock : un produit vendu sous un libellé (bouton "
-                     "générique « verre / pichet », format non rattaché, ou "
-                     "appellation différente de la facture) est **acheté sous un "
-                     "autre nom**. La quantité achetée existe, elle figure "
-                     "simplement à une autre ligne.",
-        },
-        {
-            "kind": "paragraphe",
-            "texte": f"Les {len(negs)} libellés où la consommation dépasse l'achat, "
-                     "avec leur cause établie par la table de correspondance "
-                     "caisse / inventaire / factures. Aucun n'est un manquant réel.",
-        },
-        {
-            "kind": "tableau",
-            "titre": "Les libellés « conso > achats » et leur cause",
-            "minWidth": 720,
-            "colonnes": [
-                col("Produit (libellé caisse)"),
-                col("Achat (L)", "right"),
-                col("Conso (L)", "right"),
-                col("Écart (L)", "right"),
-                col("Cause", "left"),
-            ],
-            "lignes": tab_neg_lignes,
-        },
-        {
-            "kind": "graphique",
-            "variante": "horizontal",
-            "hauteur": 300,
-            "dataKey": "nom",
-            "serie": {"name": "Écart (L)", "couleur": GRAPH_COL},
-            "format": "int",
-            "data": graph_data,
-        },
-        {
-            "kind": "paragraphe",
-            "texte": "Au niveau du **bilan matière global** (les 65 produits "
-                     "agrégés), ces écarts négatifs se compensent avec les écarts "
-                     "positifs. Seuls les totaux comptent, et l'identité comptable "
-                     "se ferme.",
-        },
-        {
-            "kind": "tableau",
-            "titre": "Bilan matière global des boissons (3 exercices)",
-            "minWidth": 420,
-            "colonnes": [col("Poste"), col("Litres", "right")],
-            "lignes": tab_bilan,
-        },
-        {
-            "kind": "note",
-            "texte": f"Achats {fr(somme_achat)} L moins conso {fr(somme_conso)} L "
-                     f"moins stock {fr(somme_stock)} L égale **{fr(net)} L** net. "
-                     "Ce résultat est **insensible à l'étiquetage** : déplacer une "
-                     "quantité d'un libellé vers un autre ne change ni la somme des "
-                     "achats, ni la somme de la conso, ni le bilan. Les "
-                     f"{fr(abs(somme_neg),1)} L d'écarts négatifs sont déjà inclus "
-                     "dans ce net et ne créent aucun déficit.",
-        },
-        {
-            "kind": "paragraphe",
-            "texte": "Deux exemples complets, du libellé de caisse à la facture.",
-        },
-        {
-            "kind": "tableau",
-            "titre": "Exemples : Cubis de vin et Arbois Béthanie",
-            "minWidth": 640,
-            "colonnes": [
-                col("Cas"),
-                col("Nature", "center"),
-                col("Achat (L)", "right"),
-                col("Conso (L)", "right"),
-                col("Écart (L)", "right"),
-            ],
-            "lignes": tab_ex,
-        },
-        {
-            "kind": "note",
-            "texte": "**Cubis de vin** : "
-                     f"{fr(cubis['conso_l'],1)} L vendus au verre et au pichet sous "
-                     "un bouton de caisse générique, 0 L acheté sous ce nom. Le vin "
-                     "est bien acheté, mais sous son appellation précise. Ce surplus "
-                     f"de {fr(cubis['conso_l'],1)} L sur le bouton générique est le "
-                     "miroir exact des petits déficits constatés sur les vins nommés "
-                     "(Chablis, Gewurztraminer, etc.) : les verres y ont été saisis "
-                     "tantôt sous le bouton générique, tantôt sous l'appellation. "
-                     "**Arbois Béthanie** : seul le format 75 cl "
-                     f"({fr(beth_75_mappe,1)} L) avait été rattaché ; les achats en "
-                     f"37,5 cl ({fr(beth_375_nonrattache,1)} L) étaient restés en "
-                     "« achats non rattachés ». Rattachés, l'achat total atteint "
-                     f"{fr(beth_total_achat,1)} L, supérieur à la conso "
-                     f"({fr(beth_conso,1)} L) : l'écart négatif devient un surplus "
-                     f"de +{fr(beth_apres,1)} L, parfaitement normal.",
-        },
-        {
-            "kind": "note",
-            "texte": "**Aucun encaissement créé.** Un écart négatif signifie qu'un "
-                     "libellé a été vendu un peu plus qu'il n'a été acheté sous ce "
-                     "même nom : il n'existe **aucun canal d'encaissement "
-                     "supplémentaire**. Le chiffre d'affaires reste celui des "
-                     "tickets réellement émis. Reclasser le produit sous son vrai "
-                     "nom déplace une quantité d'une ligne à l'autre sans générer "
-                     "le moindre euro de recette additionnelle.",
-        },
-        {
-            "kind": "piecejointe",
-            "intro": "Liste des libellés « conso > achats » avec leur cause et leur "
-                     "correspondance facture, bilan matière global (identité "
-                     "comptable) et exemples détaillés Cubis + Béthanie. La table "
-                     "de correspondance complète libellé caisse / appellation est "
-                     "fournie en pièce Boissons-6.",
-            "fichiers": [
-                {"fichier": "pieces-defense/RF-consommation-superieure-achats.xlsx",
-                 "label": "RF - Consommation supérieure aux achats (causes + bilan)"},
-                {"fichier": "pieces-defense/Boissons-6-correspondance-libelles.xlsx",
-                 "label": "Boissons-6 - Table de correspondance des libellés"},
-            ],
-        },
-        {
-            "kind": "alerte",
-            "couleur": "teal",
-            "titre": "Ce qu'il faut retenir",
-            "texte": f"Les {len(negs)} écarts « conso > achats » "
-                     f"({fr(abs(somme_neg),1)} L) sont des artefacts d'étiquetage de "
-                     "caisse : le produit est acheté sous un autre nom, un autre "
-                     "format ou un libellé générique. Le bilan matière global se "
-                     f"ferme sur {fr(net)} L net, insensible à l'étiquetage, et "
-                     "aucun de ces écarts ne crée de canal d'encaissement. Ils ne "
-                     "révèlent aucune vente non comptabilisée.",
-        },
-        {
-            "kind": "interne",
-            "audience": "avocat",
-            "titre": "Note pour l'avocat",
-            "texte": "Le grief « conso > achats » repose sur une lecture ligne à "
-                     "ligne du bilan matière, alors que la seule grandeur "
-                     "économiquement pertinente est le total agrégé. La preuve "
-                     "tient en une identité comptable : somme des achats moins "
-                     f"somme de la conso moins stock = {fr(net)} L, valeur "
-                     "strictement indépendante de la répartition par libellé. "
-                     "Chaque écart négatif est rattaché à sa cause par la table de "
-                     "correspondance (pièce Boissons-6) ; le cas Béthanie montre "
-                     "qu'il suffit de rattacher le format 37,5 cl pour inverser "
-                     "l'écart. À soulever conjointement avec les autres griefs "
-                     "boissons (bilan matière unique). Reproductible via "
-                     "scripts/rendu-final-consommation-superieure-achats.py.",
-        },
+        # 1) GRIEF
+        {"kind": "chapitre", "source": "fisc", "numero": 1, "titre": "Le grief de l’administration",
+         "sousTitre": "Proposition p. 31-32 (rejet 3/3, point XV) — « plus de consommation vendue que d’achat »"},
+        {"kind": "paragraphe",
+         "texte": "Au fil de la reconstitution, le service relève des produits dont les **quantités "
+                  "vendues dépasseraient les achats**, et en déduit que la comptabilité serait **non "
+                  "sincère**. Il cite des exemples précis : le **Calvados** (sur-consommation sur les "
+                  "trois exercices, malgré une dose ramenée de 5 à 4 cl), des **eaux-de-vie** (Poire, "
+                  "Framboise, Mirabelle) et le **Martini Blanc** (petits volumes), et surtout une « **très "
+                  "grosse incohérence** » sur le **Haute Côte de Beaune blanc** : **12 950 cl** vendus "
+                  "en 2023-2024 alors que « le service n’est pas parvenu à identifier l’achat d’une "
+                  "seule bouteille de ce type »."},
+        {"kind": "paragraphe",
+         "texte": "Nous répondons **exemple par exemple**, sans aucune supposition, en reliant pour "
+                  "chaque produit le **libellé de caisse**, la **facture fournisseur** et "
+                  "l’**inventaire**, puis en comparant, **par exercice**, les **achats (nets des avoirs)** "
+                  "à la **consommation mesurée**."},
+
+        # 2) METHODE
+        {"kind": "chapitre", "source": "nous", "numero": 2, "titre": "La méthode : relier caisse, factures et inventaire",
+         "sousTitre": "Une table de correspondance officielle, et un bilan matière par produit"},
+        {"kind": "paragraphe",
+         "texte": "Le service a comparé des **libellés de caisse** (souvent abrégés ou déclinés en "
+                  "plusieurs formats) à des **achats** identifiés sous d’autres intitulés. Or chaque "
+                  "libellé de caisse correspond à une **facture précise** et à une **ligne "
+                  "d’inventaire**. Le bilan matière d’un produit s’écrit : **achats + stock initial − "
+                  "consommation − stock final**. Un écart « consommation > achats » sur un libellé isolé "
+                  "signale presque toujours un **rattachement de libellé** (le produit est acheté sous "
+                  "un autre nom), pas une vente cachée."},
+        {"kind": "tableau", "titre": "Correspondance caisse → facture (produits cités par le service)",
+         "minWidth": 760,
+         "colonnes": [colg("Libellé de caisse"), colg("Produit (canonique)"), colg("Facture fournisseur")],
+         "lignes": corr_page},
+        {"kind": "piecejointe", "intro": "Table de correspondance complète (caisse, facture, inventaire) :",
+         "fichiers": [{"fichier": F_CORR, "label": "RF — Correspondance caisse / facture / inventaire (XLSX)"}]},
+
+        # 3) HAUTE COTE DE BEAUNE
+        {"kind": "chapitre", "source": "nous", "numero": 3,
+         "titre": "Haute Côte de Beaune : rouge, blanc et Nuits ne se confondent pas",
+         "sousTitre": "Le « blanc » introuvable du service est en réalité du rouge, massivement acheté"},
+        {"kind": "paragraphe",
+         "texte": f"La caisse distingue trois vins voisins, chacun rattaché à une **facture réelle** "
+                  f"(Domaine Germain pour le Beaune, Lupé-Cholet pour le Nuits). Le **Beaune rouge** est "
+                  f"acheté en quantité (verres, pichets et bouteilles), et l’**achat dépasse la "
+                  f"consommation chaque exercice**. Le **Beaune blanc**, lui, est un volume **minuscule** : "
+                  f"sa consommation réelle sur trois ans est de **{fr_cl(tot3(beaune_blc_c) * 100)}** "
+                  f"(soit {fr_l(tot3(beaune_blc_c))}), **sans aucun rapport avec les "
+                  f"{fr_cl(FISC_BLANC_CL)}** avancés par le service. Ces 12 950 cl correspondent au "
+                  f"**Beaune rouge** (libellés « C. DE BEAUNE » au verre et au pichet) que le service a "
+                  f"lus comme « blanc » : la couleur a été confondue."},
+        tab_achat_conso("Haute Côte de Beaune : achats contre consommation, par exercice",
+                        [("Beaune rouge", beaune_rge_a, beaune_rge_c),
+                         ("Beaune blanc", beaune_blc_a, beaune_blc_c),
+                         ("Nuits blanc (vin distinct)", nuits_a, nuits_c)], minw=640),
+        {"kind": "note",
+         "texte": f"**Le Beaune rouge est acheté et bu de façon cohérente** : {fr_l(tot3(beaune_rge_a))} "
+                  f"achetés contre {fr_l(tot3(beaune_rge_c))} consommés sur trois ans (excédent "
+                  f"{sgn_l(round(tot3(beaune_rge_a) - tot3(beaune_rge_c), 1))}). Le **Nuits blanc** "
+                  f"(Lupé-Cholet), vin encore différent, est lui aussi acheté ({fr_l(tot3(nuits_a))}) bien "
+                  f"au-delà de sa consommation ({fr_l(tot3(nuits_c))}). Il n’existe donc **aucun** volume "
+                  f"de 12 950 cl de blanc non acheté : c’est une **confusion de libellés**, levée par la "
+                  f"table de correspondance."},
+        {"kind": "piecejointe", "intro": "Détail Beaune (rouge/blanc/Nuits) par exercice et factures :",
+         "fichiers": [{"fichier": F_HCB, "label": "RF — Haute Côte de Beaune : achats vs conso (XLSX)"}]},
+
+        # 4) CALVADOS
+        {"kind": "chapitre", "source": "nous", "numero": 4,
+         "titre": "Calvados : l’écart est de la cuisine, pas une vente",
+         "sousTitre": "Au verre, la caisse vend très peu ; l’essentiel est une estimation de cuisson"},
+        {"kind": "paragraphe",
+         "texte": f"Le Calvados **vendu au verre** par la caisse ne représente que **{fr_l(calva_verre_l)}** "
+                  f"sur trois ans (donnée exacte de caisse). Tout le reste de la consommation que retient "
+                  f"le service est une **estimation de cuisson** : il l’a calculée en appliquant une dose "
+                  f"par portion aux plats flambés (**camembert rôti flambé au Calvados**, **assiette du "
+                  f"père Grégoire**). C’est si sensible à la dose que le service a lui-même **abaissé sa "
+                  f"dose de 5 à 4 cl** pour limiter l’incohérence."},
+        tab_achat_conso("Calvados : achats contre consommation totale (verre + cuisson estimée)",
+                        [("Calvados", calva_a, calva_c)], minw=560),
+        {"kind": "note",
+         "texte": f"L’« excès » de Calvados ({sgn_l(round(tot3(calva_a) - tot3(calva_c), 1))} sur trois "
+                  f"ans) **ne porte donc pas sur des ventes** : il vient entièrement d’une **dose de "
+                  f"flambé estimée**, alcool qui part en partie à la flamme et qui, surtout, est un "
+                  f"**coût de cuisine — jamais une recette**. Sur-estimer une dose de cuisson ne peut "
+                  f"révéler aucune vente non déclarée. Les **{fr_l(tot3(calva_a))}** de Calvados achetés "
+                  f"(facturés, pièce jointe) couvrent l’ensemble du service au verre et la cuisine à une "
+                  f"dose réaliste de flambé."},
+        {"kind": "piecejointe", "intro": "Achats de Calvados (factures) et consommation par exercice :",
+         "fichiers": [{"fichier": F_CAL, "label": "RF — Calvados : achats vs consommation (XLSX)"}]},
+
+        # 5) EAUX-DE-VIE / LIQUEURS / MARTINI
+        {"kind": "chapitre", "source": "nous", "numero": 5,
+         "titre": "Eaux-de-vie, liqueurs et Martini : les achats existent",
+         "sousTitre": "Le « achat = 0 » venait d’un rattachement de libellé, pas d’une vente cachée"},
+        {"kind": "paragraphe",
+         "texte": "Pour ces petits volumes, le service a vu une consommation sans achat. En réalité, les "
+                  "achats **figurent bien sur les factures**, sous des intitulés voisins : **FRAMBOISE "
+                  "SAUVAGE 70 CL**, **MIRABELLE 70 CL**, **POIRE WILLIAM 70 CL**, **LIQUEUR DE POIRE "
+                  "(Golden Eight)**, **MARTINI BIANCO 100 CL**. En regroupant chaque famille avec ses "
+                  "libellés frères, **l’achat couvre la consommation** sur les trois exercices."},
+        {"kind": "tableau", "titre": "Eaux-de-vie, liqueurs et Martini : achats regroupés contre consommation (3 exercices)",
+         "minWidth": 560,
+         "colonnes": [colg("Famille"), cold("Achat (L)"), cold("Conso (L)"), cold("Achat − conso")],
+         "lignes": [[cg(lab), cd(fr_l(tot3(a))), cd(fr_l(tot3(c))),
+                     bdg(sgn_l(round(tot3(a) - tot3(c), 1)), tot3(a) - tot3(c) >= -0.5)]
+                    for lab, c, a, al in fam]},
+        {"kind": "note",
+         "texte": "Ces volumes sont **infimes** (quelques litres sur trois ans) et **entièrement "
+                  "achetés**. L’écart apparent venait uniquement de ce que la caisse et la facture "
+                  "nomment différemment le même alcool — exactement le **rattachement de libellé** que "
+                  "corrige la table de correspondance."},
+        {"kind": "piecejointe", "intro": "Détail des familles et des factures correspondantes :",
+         "fichiers": [{"fichier": F_EDV, "label": "RF — Eaux-de-vie, liqueurs et Martini : achats vs conso (XLSX)"}]},
+
+        # 6) BILAN GLOBAL
+        {"kind": "chapitre", "source": "nous", "numero": 6, "titre": "Le bilan matière global se ferme à l’excédent",
+         "sousTitre": "Toutes boissons agrégées, les achats dépassent largement la consommation"},
+        {"kind": "kpis", "items": [
+            {"label": "Achats (3 exercices)", "valeur": fr_l(g_achat), "sub": "factures nettes des avoirs", "couleur": "blue"},
+            {"label": "Consommation", "valeur": fr_l(g_conso), "sub": "caisse + cuisine mesurées", "couleur": "blue"},
+            {"label": "Bilan net", "valeur": sgn_l(g_net), "sub": "achats − conso − stock", "highlight": True, "couleur": "teal"},
+        ]},
+        {"kind": "paragraphe",
+         "texte": f"Au niveau qui a un sens économique — **toutes boissons agrégées** — le bilan matière "
+                  f"se ferme **largement à l’excédent** : **{fr_l(g_achat)}** achetés, **{fr_l(g_conso)}** "
+                  f"consommés, **{fr_l(g_stock)}** de variation de stock, soit **{sgn_l(g_net)}** net. "
+                  f"Loin d’une consommation supérieure aux achats, l’établissement a, globalement, "
+                  f"**acheté plus qu’il n’a servi**. Les rares écarts négatifs par libellé (Calvados de "
+                  f"cuisine, libellés frères des eaux-de-vie, couleur du Beaune) sont des **artefacts de "
+                  f"rattachement**, neutralisés dès qu’on relie correctement caisse, factures et "
+                  f"inventaire."},
+        {"kind": "piecejointe", "intro": "Bilan matière complet, produit par produit :",
+         "fichiers": [{"fichier": F_GLO, "label": "RF — Bilan matière global par boisson (XLSX)"}]},
+
+        # 7) CONCLUSION
+        {"kind": "chapitre", "source": "nous", "numero": 7, "titre": "Conclusion"},
+        {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
+         "texte": f"Aucun des exemples du service ne révèle de vente cachée. Le **Beaune blanc** "
+                  f"« introuvable » est du **rouge mal étiqueté** ({fr_cl(tot3(beaune_blc_c) * 100)} de "
+                  f"blanc réel contre {fr_cl(FISC_BLANC_CL)} annoncés) ; les **eaux-de-vie** et le "
+                  f"**Martini** sont **achetés** sous des libellés voisins ; le **Calvados** « en excès » "
+                  f"est de l’**alcool de cuisine** (flambés), un coût et non une recette. Le bilan matière "
+                  f"global est **excédentaire de {fr_l(g_net)}**. Le grief de comptabilité « non sincère » "
+                  f"sur ce fondement n’est pas établi."},
+        {"kind": "interne", "audience": "avocat", "titre": "Pour solidifier",
+         "texte": "Joindre la table de correspondance signée et, pour le Beaune, les factures Domaine "
+                  "Germain (rouge) et Lupé-Cholet (Nuits) ; pour le Calvados, une attestation sur la dose "
+                  "réelle de flambé (qui s’évapore) et le rappel que l’alcool de cuisine est un achat-coût. "
+                  "Tenir prêt l’argument de principe : un écart « conso > achats » sur un libellé isolé est "
+                  "un problème d’**étiquetage**, pas de recette — la seule grandeur probante est le bilan "
+                  "matière agrégé. Reproductible via le script. Retirer cet encart de toute version remise."},
     ],
 }
 
-dest = os.path.join(ROOT, "src/data/renduFinal/consommation-superieure-achats.json")
-json.dump(doc, open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-print("JSON ecrit :", dest)
-print(f"  {len(negs)} libelles negatifs, somme {somme_neg} L")
-print(f"  bilan global : {somme_achat} - {somme_conso} - {somme_stock} = {net} L")
-print(f"  Bethanie : {beth_75_mappe} + {beth_375_nonrattache} = {beth_total_achat} > conso {beth_conso} -> +{beth_apres} L")
+os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
+json.dump(doc, open(OUT_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print("JSON ecrit :", OUT_JSON, "| sections:", len(doc["sections"]))
+print(f"  Beaune blanc conso 3 ans : {fr_cl(tot3(beaune_blc_c) * 100)} (fisc : {fr_cl(FISC_BLANC_CL)})")
+print(f"  Beaune rouge : achat {fr_l(tot3(beaune_rge_a))} >= conso {fr_l(tot3(beaune_rge_c))}")
+print(f"  Calvados : achat {fr_l(tot3(calva_a))}, conso {fr_l(tot3(calva_c))}, dont verre {fr_l(calva_verre_l)}")
+for lab, c, a, al in fam:
+    print(f"  {lab}: achat {fr_l(tot3(a))} / conso {fr_l(tot3(c))}")
+print(f"  Bilan global net : {sgn_l(g_net)}")

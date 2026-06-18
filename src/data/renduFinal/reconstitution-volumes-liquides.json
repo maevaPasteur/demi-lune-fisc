@@ -9,15 +9,15 @@
    "achat_l": 10622,
    "achat_cout": 107924,
    "conso_l": 7504,
-   "perte_reelle_l": 1677,
-   "perte_reelle_pct": 15.8,
+   "perte_reelle_l": 1205,
+   "perte_reelle_pct": 11.3,
    "fisc_ca_reconstitue": 575253,
    "fisc_coef": 3.1,
    "ca_declare": 435525,
-   "total_ca_oublie": 299718,
-   "ca_recalcule": 275535,
+   "total_ca_oublie": 289852,
+   "ca_recalcule": 285401,
    "ecart_fisc": 139728,
-   "ecart_recalcule": -159990
+   "ecart_recalcule": -150124
   }
  },
  "sections": [
@@ -80,7 +80,7 @@
     },
     {
      "label": "Sur-versement",
-     "valeur": 807,
+     "valeur": 1058,
      "categorie": "estime"
     },
     {
@@ -90,7 +90,12 @@
     },
     {
      "label": "Cremant jete",
-     "valeur": 126,
+     "valeur": 260,
+     "categorie": "estime"
+    },
+    {
+     "label": "Cremant sur-verse",
+     "valeur": 87,
      "categorie": "estime"
     },
     {
@@ -105,7 +110,7 @@
     },
     {
      "label": "Perte reelle",
-     "valeur": 1677,
+     "valeur": 1205,
      "categorie": "residuel"
     }
    ],
@@ -113,7 +118,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Ce que la methode du fisc a oublie de deduire.** Chaque poste ci-dessous correspond a des litres reellement consommes hors vente au verre, que la reconstitution valorise pourtant comme du CA. Valorises au prix moyen liquide implicite du fisc (78 € / L), ils representent **299 718 €** de CA surfacture."
+   "texte": "**Ce que la methode du fisc a oublie de deduire.** Chaque poste ci-dessous correspond a des litres reellement consommes hors vente au verre, que la reconstitution valorise pourtant comme du CA. Valorises au prix moyen liquide implicite du fisc (75 € / L), ils representent **289 852 €** de CA surfacture."
   },
   {
    "kind": "tableau",
@@ -142,7 +147,7 @@
       "align": "right"
      },
      {
-      "v": "44 154 €",
+      "v": "42 701 €",
       "align": "right"
      }
     ],
@@ -155,7 +160,7 @@
       "align": "right"
      },
      {
-      "v": "17 787 €",
+      "v": "17 201 €",
       "align": "right"
      }
     ],
@@ -168,7 +173,7 @@
       "align": "right"
      },
      {
-      "v": "11 156 €",
+      "v": "10 788 €",
       "align": "right"
      }
     ],
@@ -181,7 +186,7 @@
       "align": "right"
      },
      {
-      "v": "3 120 €",
+      "v": "3 018 €",
       "align": "right"
      }
     ],
@@ -190,11 +195,11 @@
       "v": "Sur-versement"
      },
      {
-      "v": "807 L",
+      "v": "1 058 L",
       "align": "right"
      },
      {
-      "v": "62 955 €",
+      "v": "79 819 €",
       "align": "right"
      }
     ],
@@ -207,7 +212,7 @@
       "align": "right"
      },
      {
-      "v": "9 829 €",
+      "v": "9 506 €",
       "align": "right"
      }
     ],
@@ -216,11 +221,24 @@
       "v": "Cremant jete"
      },
      {
-      "v": "126 L",
+      "v": "260 L",
       "align": "right"
      },
      {
-      "v": "9 829 €",
+      "v": "19 615 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cremant sur-verse"
+     },
+     {
+      "v": "87 L",
+      "align": "right"
+     },
+     {
+      "v": "6 564 €",
       "align": "right"
      }
     ],
@@ -233,7 +251,7 @@
       "align": "right"
      },
      {
-      "v": "10 063 €",
+      "v": "9 732 €",
       "align": "right"
      }
     ],
@@ -242,11 +260,11 @@
       "v": "Perte reelle"
      },
      {
-      "v": "1 677 L",
+      "v": "1 205 L",
       "align": "right"
      },
      {
-      "v": "130 824 €",
+      "v": "90 909 €",
       "align": "right"
      }
     ],
@@ -259,7 +277,7 @@
       "align": "right"
      },
      {
-      "v": "299 718 €",
+      "v": "289 852 €",
       "align": "right"
      }
     ]
@@ -318,7 +336,7 @@
       "v": "(-) Litres jamais vendus au verre"
      },
      {
-      "v": "- 299 718 €",
+      "v": "- 289 852 €",
       "align": "right"
      },
      {
@@ -331,11 +349,11 @@
       "v": "CA recalcule (vraies ventes caisse)"
      },
      {
-      "v": "275 535 €",
+      "v": "285 401 €",
       "align": "right"
      },
      {
-      "v": "-159 990 €",
+      "v": "-150 124 €",
       "align": "right"
      }
     ]
@@ -365,13 +383,13 @@
     },
     {
      "scenario": "Recalcule (vraies ventes)",
-     "Chiffre d'affaires": 275535
+     "Chiffre d'affaires": 285401
     }
    ]
   },
   {
    "kind": "note",
-   "texte": "**La perte reelle est conforme au secteur.** Apres ventilation de tous les usages, le residu d'alcool est de **1 677 L**, soit **15,8 %** des achats. C'est la fourchette normale d'un bar-restaurant (15 a 25 %, casse, evaporation, fonds de verre, rincage des tireuses) et c'est exactement ce que confirme le modele Monte Carlo independant (src/data/incertitudeDisparu) : il n'y a pas de recette occulte, il y a une perte d'exploitation normale."
+   "texte": "**La perte reelle est conforme au secteur.** Apres ventilation de tous les usages, le residu d'alcool est de **1 205 L**, soit **11,3 %** des achats. C'est la fourchette normale d'un bar-restaurant (15 a 25 %, casse, evaporation, fonds de verre, rincage des tireuses) et c'est exactement ce que confirme le modele Monte Carlo independant (src/data/incertitudeDisparu) : il n'y a pas de recette occulte, il y a une perte d'exploitation normale."
   },
   {
    "kind": "piecejointe",
@@ -387,13 +405,13 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Ce qu'il faut retenir",
-   "texte": "La methode du fisc surestime parce qu'elle suppose des doses exactes, zero perte, zero cuisine, zero consommation du personnel et zero offert. Recalcule sur les achats et la caisse reels, le manquant retombe a une perte normale de **15,8 %** (norme CHR). En reinjectant les litres jamais vendus au verre (**299 718 €**), le CA reconstitue passe de **575 253 €** a **275 535 €** et la discordance avec le CA declare se referme."
+   "texte": "La methode du fisc surestime parce qu'elle suppose des doses exactes, zero perte, zero cuisine, zero consommation du personnel et zero offert. Recalcule sur les achats et la caisse reels, le manquant retombe a une perte normale de **11,3 %** (norme CHR). En reinjectant les litres jamais vendus au verre (**289 852 €**), le CA reconstitue passe de **575 253 €** a **285 401 €** et la discordance avec le CA declare se referme."
   },
   {
    "kind": "interne",
    "audience": "avocat",
    "titre": "Note pour l'avocat",
-   "texte": "La demonstration neutralise le coeur de la reconstitution (penalite 1759, ≈ 471 826 €). Trois angles cumulatifs : (1) la cascade des 10 622 L est integralement tracee, le residu (1 677 L = 15,8 %) est une perte sectorielle normale ; (2) le fisc valorise comme CA verre **3 842 L** jamais vendus au verre, soit **299 718 €** surfactures ; (3) reinjectees, les vraies ventes caisse referment la discordance. L'amplification par le coefficient liquide/solide (3,1) multiplie aussi l'erreur : toute surevaluation des volumes est amplifiee ~3 fois. Reproductible via scripts/rendu-final-reconstitution-volumes-liquides.py et la piece RF-reconstitution-volumes-liquides.xlsx."
+   "texte": "La demonstration neutralise le coeur de la reconstitution (penalite 1759, ≈ 471 826 €). Trois angles cumulatifs : (1) la cascade des 10 622 L est integralement tracee, le residu (1 205 L = 11,3 %) est une perte sectorielle normale ; (2) le fisc valorise comme CA verre **3 842 L** jamais vendus au verre, soit **289 852 €** surfactures ; (3) reinjectees, les vraies ventes caisse referment la discordance. L'amplification par le coefficient liquide/solide (3,1) multiplie aussi l'erreur : toute surevaluation des volumes est amplifiee ~3 fois. Reproductible via scripts/rendu-final-reconstitution-volumes-liquides.py et la piece RF-reconstitution-volumes-liquides.xlsx."
   }
  ]
 }

@@ -9,9 +9,11 @@ import {
   Badge,
   Box,
   Button,
+  Center,
   Divider,
   Group,
   Modal,
+  Pagination,
   Paper,
   ScrollArea,
   SimpleGrid,
@@ -696,24 +698,63 @@ function ExempleFiche({ ex }: { ex: import('../data/analyses').CasExemple }) {
   )
 }
 
+// Nombre d'exemples affichés par page dans chaque cas (« 3 par 3 »).
+const CAS_PAR_PAGE = 3
+
+// Un cas (sous-titre) : titre + description, puis les exemples paginés 3 par 3.
+// La pagination est locale au cas (chaque sous-titre garde sa propre page).
+function CasBloc({ cas }: { cas: Extract<Section, { kind: 'casSuppressions' }>['cas'][number] }) {
+  const [page, setPage] = useState(1)
+  const total = cas.exemples.length
+  const nbPages = Math.max(1, Math.ceil(total / CAS_PAR_PAGE))
+  const courant = Math.min(page, nbPages)
+  const debut = (courant - 1) * CAS_PAR_PAGE
+  const visibles = cas.exemples.slice(debut, debut + CAS_PAR_PAGE)
+  return (
+    <Stack gap="sm">
+      <div>
+        <Badge variant="light" color="teal" size="sm" mb={6}>Notre analyse</Badge>
+        <Title order={3} fw={800} style={{ letterSpacing: '-0.01em' }}>{cas.titre}</Title>
+        <Text size="sm" c="dimmed" mt={2}>{cas.preuve}</Text>
+      </div>
+      <Text size="md">{richText(cas.description)}</Text>
+      <Group justify="space-between" align="baseline" wrap="nowrap">
+        <Text size="xs" c="dimmed">
+          Exemples datés (d’autres dans la pièce jointe).
+        </Text>
+        {total > CAS_PAR_PAGE && (
+          <Text size="xs" c="dimmed" style={{ whiteSpace: 'nowrap' }}>
+            {debut + 1}–{Math.min(debut + CAS_PAR_PAGE, total)} sur {total}
+          </Text>
+        )}
+      </Group>
+      <Stack gap="md">
+        {visibles.map((ex, i) => <ExempleFiche key={debut + i} ex={ex} />)}
+      </Stack>
+      {nbPages > 1 && (
+        <Center mt="xs">
+          <Pagination
+            total={nbPages}
+            value={courant}
+            onChange={setPage}
+            size="sm"
+            radius="md"
+            color="teal"
+            siblings={1}
+            boundaries={1}
+            withControls
+          />
+        </Center>
+      )}
+    </Stack>
+  )
+}
+
 function CasSuppressionsView({ section }: { section: Extract<Section, { kind: 'casSuppressions' }> }) {
   return (
     <Stack gap="xl">
       {section.cas.map((c) => (
-        <Stack key={c.id} gap="sm">
-          <div>
-            <Badge variant="light" color="teal" size="sm" mb={6}>Notre analyse</Badge>
-            <Title order={3} fw={800} style={{ letterSpacing: '-0.01em' }}>{c.titre}</Title>
-            <Text size="sm" c="dimmed" mt={2}>{c.preuve}</Text>
-          </div>
-          <Text size="md">{richText(c.description)}</Text>
-          <Text size="xs" c="dimmed">
-            Exemples datés ci-dessous (d’autres dans la pièce jointe).
-          </Text>
-          <Stack gap="md">
-            {c.exemples.map((ex, i) => <ExempleFiche key={i} ex={ex} />)}
-          </Stack>
-        </Stack>
+        <CasBloc key={c.id} cas={c} />
       ))}
     </Stack>
   )

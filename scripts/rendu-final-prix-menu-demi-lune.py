@@ -10,23 +10,34 @@ de prix observes pour le Menu Demi Lune dans la caisse traduirait une
 comptabilite non sincere.
 
 Demonstration :
-  1) Par periode de carte, le PRIX CATALOGUE du Menu Demi Lune est UNIQUE et
-     STABLE (45,00 EUR sur toutes les periodes du controle).
-  2) La "variation" provient des ventes HORS catalogue (forfaits de groupe,
-     remises, prix negocies), soit 39,5 % des Menus Demi Lune (332 / 840) pour
-     14 118 EUR, chacune TRACEE dans la caisse (date, heure, n de ticket).
-  3) Exemple date : un ticket groupe de 5 couverts Menu Demi Lune au meme prix
-     personnalise, encaisse en totalite.
+  1) La "multitude de prix" est la SIGNATURE D'UN MECANISME DE CAISSE : a la
+     demande d'une tablee, le serveur etablit une FACTURE AU FORFAIT, SANS LE
+     DETAIL des plats. Le logiciel ne sachant pas convertir une addition
+     detaillee en forfait, il faut SUPPRIMER les lignes a la carte puis
+     RE-SAISIR un "Menu Demi Lune" a un prix personnalise EGAL AU TOTAL
+     REELLEMENT CONSOMME. Le prix du menu n'est donc pas un prix de carte :
+     c'est le total de l'addition reconditionne en forfait -> autant de prix
+     differents qu'il y a d'additions.
+  2) Ce grief et celui des "suppressions de notes" designent donc LES MEMES
+     LIGNES de caisse. Preuve arithmetique, verifiable ticket par ticket :
+     somme des lignes supprimees = total du menu re-saisi, au centime, lui-meme
+     integralement encaisse. Deja demontre, exemples dates a l'appui, dans la
+     page suppressions-de-caisse ("Conversion au forfait").
+  3) Le PRIX CATALOGUE, lui, est UNIQUE et STABLE (45,00 EUR sur chacune des
+     periodes du controle). La "variation" ne porte que sur les ventes HORS
+     catalogue (forfaits), soit 39,5 % des Menus Demi Lune (332 / 840) pour
+     14 118 EUR, chacune TRACEE (date, heure, n de ticket) et encaissee.
   4) Ces recettes sont integralement dans le CA declare -> pas d'insincerite.
 
 Sources (read-only) :
   - src/data/renduFinalCalculs.json  -> "menus_par_periode", "menus_custom"
     (calcules par scripts/rendu-final-menus.py a partir des tickets, annexe C).
+  - src/data/renduFinalCasSuppressions.json -> cas "forfait" (suppressions ->
+    note encaissee). On en extrait les exemples dont la note est un Menu Demi
+    Lune, pour reafficher la meme demonstration ciblee sur ce menu.
   - public/documents/caisse-enregistreuse/ANNEXE-B{1,2,3}_*.xls (prix x qte par
     produit) -> distribution des prix observes du Menu Demi Lune, par exercice
     (controle de coherence avec menus_par_periode).
-  - public/documents/caisse-enregistreuse/ANNEXE-C3_*.xls (detail tickets) ->
-    exemple date du ticket groupe.
 
 Sorties (ne touche PAS renduFinal.ts) :
   - public/documents/pieces-defense/RF-prix-menu-demi-lune.xlsx
@@ -42,6 +53,7 @@ ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
 
 CALC = os.path.join(ROOT, "src/data/renduFinalCalculs.json")
+CAS = os.path.join(ROOT, "src/data/renduFinalCasSuppressions.json")
 ANNEXE_DIR = os.path.join(ROOT, "public/documents/caisse-enregistreuse")
 XLSX_OUT = os.path.join(ROOT, "public/documents/pieces-defense/RF-prix-menu-demi-lune.xlsx")
 JSON_OUT = os.path.join(ROOT, "src/data/renduFinal/prix-menu-demi-lune.json")
