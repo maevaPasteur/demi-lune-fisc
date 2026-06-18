@@ -2,6 +2,8 @@ import { useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { BarChart } from '@mantine/charts'
 import {
+  Accordion,
+  ActionIcon,
   Alert,
   Anchor,
   Badge,
@@ -9,7 +11,9 @@ import {
   Button,
   Divider,
   Group,
+  Modal,
   Paper,
+  ScrollArea,
   SimpleGrid,
   Stack,
   Table,
@@ -19,17 +23,19 @@ import {
 import {
   IconAlertTriangle,
   IconArrowRight,
+  IconCalendar,
   IconChartBar,
   IconChevronDown,
   IconCircleCheck,
   IconDownload,
+  IconEye,
   IconFileText,
   IconGavel,
   IconInfoCircle,
 } from '@tabler/icons-react'
-import type { ComposanteDetail, KpiItem, Section } from '../data/analyses'
+import type { ComposanteDetail, JourPartage, KpiItem, Section } from '../data/analyses'
 import { fileUrl } from './PieceCards'
-import { formatEuro, formatInt } from '../utils/format'
+import { formatEuro, formatEuroPrecis, formatInt } from '../utils/format'
 
 // Icône d'encart selon la couleur (info / alerte / validation / juridique).
 function alerteIcon(couleur: string) {
@@ -324,8 +330,373 @@ function ArgumentView({ section }: { section: Extract<Section, { kind: 'argument
   )
 }
 
+// Justification : tableau de journées + œil -> popin reconstituant les tables partagées.
+function quantite(q: number): string {
+  return Number.isInteger(q) ? String(q) : q.toString().replace('.', ',')
+}
+const STATUT_RECON: Record<string, { label: string; color: string; regle: string }> = {
+  faute_frappe: { label: 'Faute de frappe', color: 'orange', regle: 'montant ≥ 1 000 €' },
+  retrait_article: { label: 'Retrait d’un article', color: 'teal', regle: 'montant = prix exact d’un article du catalogue' },
+  partage_forfait: { label: 'Partage / forfait', color: 'blue', regle: 'montant composé, à la même minute qu’une table partagée ou un forfait' },
+  a_expliquer: { label: 'À expliquer', color: 'red', regle: 'montant composé, sans table partagée ni forfait à la même minute' },
+}
+const ORDRE_STATUT = ['a_expliquer', 'partage_forfait', 'retrait_article', 'faute_frappe']
+function JoursPartagesView({ section }: { section: Extract<Section, { kind: 'joursPartages' }> }) {
+  const [jour, setJour] = useState<JourPartage | null>(null)
+  return (
+    <Stack gap="sm">
+      {section.intro && <Text size="sm" c="dimmed">{richText(section.intro)}</Text>}
+      <Paper withBorder radius="lg" p={0} style={{ overflow: 'hidden' }}>
+        <Table.ScrollContainer minWidth={620}>
+          <Table striped highlightOnHover verticalSpacing="sm" horizontalSpacing="md">
+            <Table.Thead>
+              <Table.Tr>
+                <Table.Th>Date</Table.Th>
+                <Table.Th ta="right">Notes du jour</Table.Th>
+                <Table.Th ta="right">Tables partagées</Table.Th>
+                <Table.Th ta="right">Notes issues de partages</Table.Th>
+                <Table.Th ta="right">Suppressions</Table.Th>
+                <Table.Th ta="center">Détail</Table.Th>
+              </Table.Tr>
+            </Table.Thead>
+            <Table.Tbody>
+              {section.jours.map((j) => (
+                <Table.Tr key={j.date}>
+                  <Table.Td>{j.date}</Table.Td>
+                  <Table.Td ta="right">{formatInt(j.nb_notes)}</Table.Td>
+                  <Table.Td ta="right">{formatInt(j.nb_partages)}</Table.Td>
+                  <Table.Td ta="right">{formatInt(j.nb_notes_partagees)}</Table.Td>
+                  <Table.Td ta="right">{formatInt(j.nb_suppressions)}</Table.Td>
+                  <Table.Td ta="center">
+                    <ActionIcon variant="light" color="gold" radius="md" aria-label={`Détail du ${j.date}`} onClick={() => setJour(j)}>
+                      <IconEye size={17} />
+                    </ActionIcon>
+                  </Table.Td>
+                </Table.Tr>
+              ))}
+            </Table.Tbody>
+          </Table>
+        </Table.ScrollContainer>
+      </Paper>
+
+      <Modal
+        opened={jour !== null}
+        onClose={() => setJour(null)}
+        size="xl"
+        radius="lg"
+        title={jour ? `Suppressions du ${jour.date} : ce qu’il s’est passé, ligne par ligne` : ''}
+      >
+        {jour && (
+          <Stack gap="lg">
+            {/* BILAN UNIQUE — rattachement de chaque suppression (somme = total, au centime) */}
+            {(() => {
+              const r = jour.reconciliation
+              const br = r.bilan_rattachement
+              const tot = r.total_somme || 1
+              const pc = (x: number) => Math.round((100 * x) / tot)
+              const rest = br['a_expliquer'] ?? { n: 0, somme: 0 }
+              return (
+                <Paper withBorder radius="md" p="md">
+                  <Group justify="space-between" wrap="nowrap" mb={2}>
+                    <Text fw={700} size="sm">{formatInt(r.suppressions.length)} suppressions = {formatEuroPrecis(r.total_somme)}</Text>
+                    <Badge color={rest.n ? 'red' : 'teal'} variant="light" size="lg">
+                      À expliquer : {formatInt(rest.n)} · {formatEuroPrecis(rest.somme)} ({pc(rest.somme)} %)
+                    </Badge>
+                  </Group>
+                  <Text size="xs" c="dimmed" mb="sm">
+                    Chaque suppression reçoit <b>un seul statut</b> (la somme des statuts égale le total, au centime). « À expliquer » = ce qui reste après rattachement.
+                  </Text>
+                  {ORDRE_STATUT.map((k) => {
+                    const v = br[k] ?? { n: 0, somme: 0 }
+                    const s = STATUT_RECON[k]
+                    return (
+                      <Group key={k} justify="space-between" wrap="nowrap" mb={4} gap="xs">
+                        <Group gap={6} wrap="nowrap" style={{ minWidth: 0 }}>
+                          <Badge color={s.color} variant="light" size="sm" style={{ flexShrink: 0 }}>{s.label}</Badge>
+                          <Text size="xs" c="dimmed" lineClamp={1}>— {s.regle}</Text>
+                        </Group>
+                        <Text fw={600} size="sm" style={{ flexShrink: 0 }}>{formatInt(v.n)} · {formatEuroPrecis(v.somme)}</Text>
+                      </Group>
+                    )
+                  })}
+                  {rest.n > 0 && <Text size="xs" c="red.7" mt={2}>Restantes : {r.restantes.join(', ')}</Text>}
+                </Paper>
+              )
+            })()}
+            {/* OPÉRATIONS JUSTIFICATIVES (chaînes explicites) */}
+            {jour.reconciliation.evenements.length > 0 && (
+              <div>
+                <Text fw={700} size="sm" mb={2}>Opérations justificatives reconstituées ({jour.reconciliation.nb_tables_partagees} notes partagées)</Text>
+                <Text size="xs" c="dimmed" mb={8}>
+                  Chaque partage de table ou passage au forfait, avec les suppressions <b>concomitantes</b> (rapprochement par l’heure — hypothèse, pas un identifiant).
+                </Text>
+                <Stack gap={6}>
+                  {jour.reconciliation.evenements.map((e, i) => (
+                    <Paper key={i} withBorder radius="sm" p="xs" style={{ background: e.type === 'forfait' ? 'var(--mantine-color-blue-0)' : 'var(--mantine-color-teal-0)' }}>
+                      <Text size="xs">{e.explication}</Text>
+                    </Paper>
+                  ))}
+                </Stack>
+              </div>
+            )}
+            {/* 1. JOURNAL DES SUPPRESSIONS (D) */}
+            <div>
+              <Text fw={700} size="sm">Journal des suppressions (D1 → D{jour.reconciliation.suppressions.length})</Text>
+              <Text size="xs" c="dimmed" mb={8}>
+                Statut déterminé par le <b>montant</b> (fait). La colonne « Table » est un rapprochement par l’heure (<b>hypothèse</b> ; « ~ » = ambigu car une autre table clôt à la même minute). Le fichier Événement ne donne ni produit ni table.
+              </Text>
+              {jour.suppr_par_heure.length > 0 && (
+                <>
+                  <Text size="xs" c="dimmed" mb={2}>Nombre de suppressions par heure (les heures sans service n’apparaissent pas) :</Text>
+                  <BarChart h={120} data={jour.suppr_par_heure} dataKey="heure"
+                    series={[{ name: 'n', color: 'gold.5', label: 'suppressions' }]}
+                    withTooltip={false} barProps={{ radius: 4 }} gridAxis="y" mb="sm" />
+                </>
+              )}
+              <ScrollArea.Autosize mah={220}>
+                <Table withTableBorder withColumnBorders verticalSpacing={2} fz="xs" stickyHeader>
+                  <Table.Thead><Table.Tr>
+                    <Table.Th>D</Table.Th><Table.Th>Heure</Table.Th><Table.Th ta="right">Montant</Table.Th><Table.Th>Table (hypothèse)</Table.Th><Table.Th>Statut</Table.Th>
+                  </Table.Tr></Table.Thead>
+                  <Table.Tbody>
+                    {jour.reconciliation.suppressions.map((s) => {
+                      const st = STATUT_RECON[s.statut] ?? STATUT_RECON.a_expliquer
+                      return (
+                        <Table.Tr key={s.nom} style={s.statut === 'a_expliquer' ? { background: 'var(--mantine-color-red-0)' } : undefined}>
+                          <Table.Td fw={600}>{s.nom}</Table.Td>
+                          <Table.Td>{s.heure}</Table.Td>
+                          <Table.Td ta="right">{formatEuroPrecis(s.montant)}</Table.Td>
+                          <Table.Td c="dimmed">{s.table ? `${s.confiance === 'ambigu' ? '~ ' : ''}${s.table}` : '—'}</Table.Td>
+                          <Table.Td><Badge size="xs" color={st.color} variant="light">{st.label}</Badge></Table.Td>
+                        </Table.Tr>
+                      )
+                    })}
+                  </Table.Tbody>
+                </Table>
+              </ScrollArea.Autosize>
+            </div>
+
+            {/* JOURNAL DES MODIFICATIONS DE PRIX (M) */}
+            {jour.reconciliation.modifications.length > 0 && (
+              <div>
+                <Text fw={700} size="sm">Modifications de prix (M1 → M{jour.reconciliation.modifications.length})</Text>
+                <Text size="xs" c="dimmed" mb={8}>
+                  Articles facturés à un prix hors catalogue de la période (forfait, addition ajustée pour être divisée).
+                </Text>
+                <Table withTableBorder withColumnBorders verticalSpacing={2} fz="xs">
+                  <Table.Thead><Table.Tr>
+                    <Table.Th>M</Table.Th><Table.Th>Heure</Table.Th><Table.Th>Article</Table.Th>
+                    <Table.Th ta="right">Prix facturé</Table.Th><Table.Th ta="right">Prix de référence</Table.Th><Table.Th>Table</Table.Th>
+                  </Table.Tr></Table.Thead>
+                  <Table.Tbody>
+                    {jour.reconciliation.modifications.map((m) => (
+                      <Table.Tr key={m.nom}>
+                        <Table.Td fw={600}>{m.nom}</Table.Td>
+                        <Table.Td>{m.heure}</Table.Td>
+                        <Table.Td>{m.article}</Table.Td>
+                        <Table.Td ta="right">{formatEuroPrecis(m.prix)}</Table.Td>
+                        <Table.Td ta="right" c="dimmed">{m.prix_ref.map((p) => formatEuroPrecis(p)).join(' / ')}</Table.Td>
+                        <Table.Td c="dimmed">{m.table}</Table.Td>
+                      </Table.Tr>
+                    ))}
+                  </Table.Tbody>
+                </Table>
+              </div>
+            )}
+
+            {/* VENTES PAR TABLE (T + lignes A) avec croisement */}
+            <div>
+              <Text fw={700} size="sm" mb={2}>Ventes par table (T1 → T{jour.reconciliation.tables.length}) et croisement</Text>
+              <Text size="xs" c="dimmed" mb={8}>
+                Chaque table encaissée (lignes A…, total) avec : ses suppressions rapprochées par l’heure (D…), ses prix modifiés (M…) et si elle a été <b>partagée</b> (notes de même total, articles en 0,5 = divisée pour payer séparément).
+              </Text>
+              <ScrollArea.Autosize mah={360}>
+                <Accordion variant="separated" multiple chevronPosition="left">
+                  {jour.reconciliation.tables.map((t) => (
+                    <Accordion.Item key={t.nom} value={t.nom}>
+                      <Accordion.Control>
+                        <Group gap="xs" wrap="wrap">
+                          <Text fw={700} size="sm">{t.nom}</Text>
+                          <Text size="xs" c="dimmed">{t.heure} · {formatEuroPrecis(t.total)}</Text>
+                          {t.partagee && <Badge size="xs" color="teal" variant="light">partagée{t.jumelles.length ? ` (${t.jumelles.join(', ')})` : ''}</Badge>}
+                          {t.modifications.length > 0 && <Badge size="xs" color="orange" variant="light">prix modifié : {t.modifications.join(', ')}</Badge>}
+                          {t.nb_suppressions > 0 && <Badge size="xs" color="gray" variant="light">{t.nb_suppressions} suppr. (~heure) : {t.suppressions.join(', ')}</Badge>}
+                        </Group>
+                      </Accordion.Control>
+                      <Accordion.Panel>
+                        <Table withTableBorder withColumnBorders verticalSpacing={2} fz="xs">
+                          <Table.Thead><Table.Tr>
+                            <Table.Th>A</Table.Th><Table.Th>Article</Table.Th><Table.Th ta="right">Qté</Table.Th>
+                            <Table.Th ta="right">Prix</Table.Th><Table.Th ta="right">Montant</Table.Th>
+                          </Table.Tr></Table.Thead>
+                          <Table.Tbody>
+                            {t.lignes.map((l) => (
+                              <Table.Tr key={l.nom} style={l.modifie ? { background: 'var(--mantine-color-orange-0)' } : undefined}>
+                                <Table.Td fw={600}>{l.nom}</Table.Td>
+                                <Table.Td>{l.lib}{l.modifie && <Badge ml={4} size="xs" color="orange" variant="light">prix modifié</Badge>}</Table.Td>
+                                <Table.Td ta="right">{quantite(l.qte)}</Table.Td>
+                                <Table.Td ta="right">{formatEuroPrecis(l.pu)}</Table.Td>
+                                <Table.Td ta="right">{formatEuroPrecis(l.montant)}</Table.Td>
+                              </Table.Tr>
+                            ))}
+                          </Table.Tbody>
+                        </Table>
+                      </Accordion.Panel>
+                    </Accordion.Item>
+                  ))}
+                </Accordion>
+              </ScrollArea.Autosize>
+            </div>
+          </Stack>
+        )}
+      </Modal>
+    </Stack>
+  )
+}
+
+// Quantité « jolie » : 2 → "2", 0,5 → "0,5".
+function qteFr(q: number): string {
+  return Number.isInteger(q) ? String(q) : q.toLocaleString('fr-FR', { maximumFractionDigits: 2 })
+}
+
+// Une note encaissée (la « table ») : en-tête + contenu détaillé, article mis en
+// évidence si c'est lui qui justifie la suppression (cas « article déplacé »).
+function NoteCard({ note }: { note: import('../data/analyses').CasNote }) {
+  return (
+    <Paper withBorder radius="md" p="sm" bg="var(--mantine-color-gray-0)">
+      <Group justify="space-between" wrap="nowrap" mb={6}>
+        <Text fw={700} size="sm">{note.label}</Text>
+        <Text size="xs" c="dimmed">{note.heure} · {formatEuroPrecis(note.total)}</Text>
+      </Group>
+      <Table verticalSpacing={2} horizontalSpacing="xs" fz="xs" withRowBorders={false}>
+        <Table.Tbody>
+          {note.items.map((it, i) => {
+            const on = it.highlight || (note.highlight && it.lib === note.highlight)
+            return (
+              <Table.Tr key={i} style={on ? { background: 'var(--mantine-color-teal-0)' } : undefined}>
+                <Table.Td fw={on ? 700 : 400}>{it.lib}</Table.Td>
+                <Table.Td c="dimmed" ta="right" style={{ whiteSpace: 'nowrap' }}>
+                  {qteFr(it.qte)} × {formatEuroPrecis(it.pu)}
+                </Table.Td>
+                <Table.Td ta="right" fw={on ? 700 : 500} style={{ whiteSpace: 'nowrap' }}>
+                  {formatEuroPrecis(it.montant)}
+                </Table.Td>
+              </Table.Tr>
+            )
+          })}
+        </Table.Tbody>
+      </Table>
+    </Paper>
+  )
+}
+
+// Une FICHE d'exemple : à gauche les suppressions (heure + montant), à droite
+// l'encaissement correspondant (note(s) avec leur contenu). Lecture : ce qui a
+// été supprimé n'a pas disparu, il est encaissé sur la note de droite.
+function ExempleFiche({ ex }: { ex: import('../data/analyses').CasExemple }) {
+  const sommeSupp = ex.suppressions.reduce((s, d) => s + d.montant, 0)
+  // La « Somme » n'a de sens que si elle reconstitue le total d'une note (forfait) :
+  // somme des suppressions = total de la note re-facturée, au centime.
+  const noteTie = ex.suppressions.length > 1
+    ? ex.notes.find((n) => Math.abs(n.total - sommeSupp) < 0.05)
+    : undefined
+  return (
+    <Paper withBorder radius="lg" p="md">
+      <Group gap="xs" mb="sm">
+        <IconCalendar size={15} color="var(--mantine-color-dimmed)" />
+        <Text fw={700} size="sm">{ex.date}</Text>
+        {ex.article && <Badge size="sm" variant="light" color="teal">{ex.article}</Badge>}
+      </Group>
+      <SimpleGrid cols={{ base: 1, sm: 2 }} spacing="md" verticalSpacing="md">
+        {/* Suppressions */}
+        <Stack gap={6}>
+          <Text size="xs" tt="uppercase" fw={700} c="dimmed" lts={0.4}>
+            Suppression{ex.suppressions.length > 1 ? 's' : ''}
+          </Text>
+          {ex.suppressions.length === 0 ? (
+            <Text size="xs" c="dimmed" fs="italic">
+              Pas de suppression isolée : la note a directement été scindée pour le paiement.
+            </Text>
+          ) : (
+            <Stack gap={4}>
+              {ex.suppressions.map((d, i) => (
+                <Stack key={i} gap={0} style={{ borderBottom: '1px solid var(--mantine-color-gray-2)', paddingBottom: 3 }}>
+                  <Group justify="space-between" wrap="nowrap" gap="xs">
+                    <Text size="sm" c="dimmed" style={{ fontVariantNumeric: 'tabular-nums', whiteSpace: 'nowrap' }}>
+                      {ex.date} · {d.heure}
+                    </Text>
+                    <Text size="sm" fw={600} c="red.7" style={{ whiteSpace: 'nowrap' }}>
+                      − {formatEuroPrecis(d.montant)}
+                    </Text>
+                  </Group>
+                  {d.devient && (
+                    <Text size="xs" c="teal.7">
+                      → {d.devient}
+                      {d.tables && d.tables.length > 0 && (
+                        <Text span c="dimmed"> · réparti sur {d.tables.join(' · ')}</Text>
+                      )}
+                    </Text>
+                  )}
+                </Stack>
+              ))}
+              {noteTie && (
+                <Group justify="space-between" wrap="nowrap" mt={2}>
+                  <Group gap={4} wrap="nowrap">
+                    <IconCircleCheck size={14} color="var(--mantine-color-teal-7)" />
+                    <Text size="xs" c="dimmed">Somme = total de la note</Text>
+                  </Group>
+                  <Text size="sm" fw={700} style={{ whiteSpace: 'nowrap' }}>{formatEuroPrecis(sommeSupp)}</Text>
+                </Group>
+              )}
+            </Stack>
+          )}
+        </Stack>
+        {/* Encaissement correspondant */}
+        <Stack gap={6}>
+          <Group gap={4} wrap="nowrap">
+            <IconArrowRight size={14} color="var(--mantine-color-teal-7)" />
+            <Text size="xs" tt="uppercase" fw={700} c="teal.7" lts={0.4}>
+              Encaissé sur {ex.notes.length > 1 ? 'ces notes' : 'cette note'}
+            </Text>
+          </Group>
+          {ex.notes.map((n, i) => <NoteCard key={i} note={n} />)}
+        </Stack>
+      </SimpleGrid>
+    </Paper>
+  )
+}
+
+function CasSuppressionsView({ section }: { section: Extract<Section, { kind: 'casSuppressions' }> }) {
+  return (
+    <Stack gap="xl">
+      {section.cas.map((c) => (
+        <Stack key={c.id} gap="sm">
+          <div>
+            <Badge variant="light" color="teal" size="sm" mb={6}>Notre analyse</Badge>
+            <Title order={3} fw={800} style={{ letterSpacing: '-0.01em' }}>{c.titre}</Title>
+            <Text size="sm" c="dimmed" mt={2}>{c.preuve}</Text>
+          </div>
+          <Text size="md">{richText(c.description)}</Text>
+          <Text size="xs" c="dimmed">
+            Exemples datés ci-dessous (d’autres dans la pièce jointe).
+          </Text>
+          <Stack gap="md">
+            {c.exemples.map((ex, i) => <ExempleFiche key={i} ex={ex} />)}
+          </Stack>
+        </Stack>
+      ))}
+    </Stack>
+  )
+}
+
 function SectionView({ section }: { section: Section }) {
   switch (section.kind) {
+    case 'joursPartages':
+      return <JoursPartagesView section={section} />
+
+    case 'casSuppressions':
+      return <CasSuppressionsView section={section} />
+
     case 'paragraphe':
       return <Text size="md">{richText(section.texte)}</Text>
 

@@ -1,0 +1,4697 @@
+{
+ "cas": [
+  {
+   "id": "forfait",
+   "titre": "Conversion au forfait (facture sans détail)",
+   "preuve": "Preuve exacte : la somme des suppressions = le total d’une note composée uniquement de menus",
+   "description": "À la demande d’une tablée (groupe, comité), le détail à la carte est retiré et l’addition est re-facturée en menu(s) à un prix négocié. La recette n’a pas disparu : la somme des lignes supprimées égale, au centime, le total de la note encaissée, qui ne contient plus que des menus.",
+   "exemples": [
+    {
+     "date": "2022-04-21",
+     "suppressions": [
+      {
+       "heure": "12:58",
+       "montant": 4.4
+      },
+      {
+       "heure": "12:58",
+       "montant": 8.4
+      },
+      {
+       "heure": "12:58",
+       "montant": 17.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°17",
+       "heure": "12:59",
+       "total": 30.4,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 15.2,
+         "montant": 30.4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-05-04",
+     "suppressions": [
+      {
+       "heure": "19:05",
+       "montant": 4.4
+      },
+      {
+       "heure": "19:05",
+       "montant": 24.0
+      },
+      {
+       "heure": "19:05",
+       "montant": 35.2
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°13",
+       "heure": "19:05",
+       "total": 63.6,
+       "items": [
+        {
+         "lib": "Menu du jour",
+         "qte": 2.0,
+         "pu": 31.8,
+         "montant": 63.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-06-10",
+     "suppressions": [
+      {
+       "heure": "11:59",
+       "montant": 4.4
+      },
+      {
+       "heure": "11:59",
+       "montant": 4.7
+      },
+      {
+       "heure": "11:59",
+       "montant": 5.9
+      },
+      {
+       "heure": "11:59",
+       "montant": 9.4
+      },
+      {
+       "heure": "11:59",
+       "montant": 15.9
+      },
+      {
+       "heure": "11:59",
+       "montant": 17.6
+      },
+      {
+       "heure": "11:59",
+       "montant": 19.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°2",
+       "heure": "11:59",
+       "total": 76.9,
+       "items": [
+        {
+         "lib": "Menu du jour",
+         "qte": 2.0,
+         "pu": 38.45,
+         "montant": 76.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-07-01",
+     "suppressions": [
+      {
+       "heure": "19:32",
+       "montant": 6.4
+      },
+      {
+       "heure": "19:32",
+       "montant": 6.9
+      },
+      {
+       "heure": "19:32",
+       "montant": 7.2
+      },
+      {
+       "heure": "19:32",
+       "montant": 17.6
+      },
+      {
+       "heure": "19:32",
+       "montant": 19.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°17",
+       "heure": "19:33",
+       "total": 57.1,
+       "items": [
+        {
+         "lib": "Menu du jour",
+         "qte": 2.0,
+         "pu": 28.55,
+         "montant": 57.1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-08-09",
+     "suppressions": [
+      {
+       "heure": "12:13",
+       "montant": 3.9
+      },
+      {
+       "heure": "12:13",
+       "montant": 6.5
+      },
+      {
+       "heure": "12:13",
+       "montant": 17.6
+      },
+      {
+       "heure": "12:13",
+       "montant": 17.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°11",
+       "heure": "12:14",
+       "total": 45.6,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 22.8,
+         "montant": 45.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-09-09",
+     "suppressions": [
+      {
+       "heure": "12:07",
+       "montant": 3.9
+      },
+      {
+       "heure": "12:07",
+       "montant": 4.9
+      },
+      {
+       "heure": "12:07",
+       "montant": 6.9
+      },
+      {
+       "heure": "12:07",
+       "montant": 7.2
+      },
+      {
+       "heure": "12:07",
+       "montant": 7.2
+      },
+      {
+       "heure": "12:07",
+       "montant": 19.0
+      },
+      {
+       "heure": "12:07",
+       "montant": 27.8
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°3",
+       "heure": "12:08",
+       "total": 76.9,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 38.45,
+         "montant": 76.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-10-01",
+     "suppressions": [
+      {
+       "heure": "19:34",
+       "montant": 5.2
+      },
+      {
+       "heure": "19:34",
+       "montant": 15.9
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°26",
+       "heure": "19:34",
+       "total": 21.1,
+       "items": [
+        {
+         "lib": "Menu du jour",
+         "qte": 1.0,
+         "pu": 21.1,
+         "montant": 21.1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-11-03",
+     "suppressions": [
+      {
+       "heure": "13:19",
+       "montant": 4.4
+      },
+      {
+       "heure": "13:19",
+       "montant": 7.8
+      },
+      {
+       "heure": "13:19",
+       "montant": 16.9
+      },
+      {
+       "heure": "13:19",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°17",
+       "heure": "13:19",
+       "total": 47.7,
+       "items": [
+        {
+         "lib": "Menu du jour",
+         "qte": 2.0,
+         "pu": 23.85,
+         "montant": 47.7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-12-15",
+     "suppressions": [
+      {
+       "heure": "12:30",
+       "montant": 3.9
+      },
+      {
+       "heure": "12:30",
+       "montant": 4.0
+      },
+      {
+       "heure": "12:30",
+       "montant": 8.0
+      },
+      {
+       "heure": "12:30",
+       "montant": 18.6
+      },
+      {
+       "heure": "12:30",
+       "montant": 19.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°6",
+       "heure": "12:31",
+       "total": 53.5,
+       "items": [
+        {
+         "lib": "Menu du jour",
+         "qte": 2.0,
+         "pu": 26.75,
+         "montant": 53.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-01-04",
+     "suppressions": [
+      {
+       "heure": "12:20",
+       "montant": 4.4
+      },
+      {
+       "heure": "12:20",
+       "montant": 16.9
+      },
+      {
+       "heure": "12:20",
+       "montant": 18.4
+      },
+      {
+       "heure": "12:20",
+       "montant": 25.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°4",
+       "heure": "12:20",
+       "total": 64.7,
+       "items": [
+        {
+         "lib": "Menu du jour",
+         "qte": 2.0,
+         "pu": 32.35,
+         "montant": 64.7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-03-22",
+     "suppressions": [
+      {
+       "heure": "20:36",
+       "montant": 2.2
+      },
+      {
+       "heure": "20:36",
+       "montant": 5.2
+      },
+      {
+       "heure": "20:36",
+       "montant": 6.9
+      },
+      {
+       "heure": "20:36",
+       "montant": 8.5
+      },
+      {
+       "heure": "20:36",
+       "montant": 8.7
+      },
+      {
+       "heure": "20:36",
+       "montant": 10.4
+      },
+      {
+       "heure": "20:36",
+       "montant": 11.8
+      },
+      {
+       "heure": "20:36",
+       "montant": 14.4
+      },
+      {
+       "heure": "20:36",
+       "montant": 18.6
+      },
+      {
+       "heure": "20:36",
+       "montant": 24.0
+      },
+      {
+       "heure": "20:36",
+       "montant": 28.0
+      },
+      {
+       "heure": "20:36",
+       "montant": 55.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°12",
+       "heure": "20:37",
+       "total": 194.3,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 64.0,
+         "montant": 128.0
+        },
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 1.0,
+         "pu": 66.3,
+         "montant": 66.3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-05-10",
+     "suppressions": [
+      {
+       "heure": "18:56",
+       "montant": 4.2
+      },
+      {
+       "heure": "18:56",
+       "montant": 8.3
+      },
+      {
+       "heure": "18:56",
+       "montant": 25.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°12",
+       "heure": "18:56",
+       "total": 38.0,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 1.0,
+         "pu": 38.0,
+         "montant": 38.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-06-01",
+     "suppressions": [
+      {
+       "heure": "12:26",
+       "montant": 2.2
+      },
+      {
+       "heure": "12:26",
+       "montant": 4.0
+      },
+      {
+       "heure": "12:26",
+       "montant": 12.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°8",
+       "heure": "12:26",
+       "total": 18.7,
+       "items": [
+        {
+         "lib": "FORMULE EXPRESS",
+         "qte": 1.0,
+         "pu": 18.7,
+         "montant": 18.7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-07-05",
+     "suppressions": [
+      {
+       "heure": "11:53",
+       "montant": 8.3
+      },
+      {
+       "heure": "11:53",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°3",
+       "heure": "11:53",
+       "total": 26.9,
+       "items": [
+        {
+         "lib": "Formule Express",
+         "qte": 1.0,
+         "pu": 26.9,
+         "montant": 26.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-08-02",
+     "suppressions": [
+      {
+       "heure": "18:47",
+       "montant": 2.5
+      },
+      {
+       "heure": "18:47",
+       "montant": 4.8
+      },
+      {
+       "heure": "18:47",
+       "montant": 5.9
+      },
+      {
+       "heure": "18:47",
+       "montant": 5.9
+      },
+      {
+       "heure": "18:47",
+       "montant": 6.9
+      },
+      {
+       "heure": "18:47",
+       "montant": 8.6
+      },
+      {
+       "heure": "18:47",
+       "montant": 17.4
+      },
+      {
+       "heure": "18:47",
+       "montant": 19.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°15",
+       "heure": "18:47",
+       "total": 71.6,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 35.8,
+         "montant": 71.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-09-07",
+     "suppressions": [
+      {
+       "heure": "19:55",
+       "montant": 7.0
+      },
+      {
+       "heure": "19:55",
+       "montant": 7.3
+      },
+      {
+       "heure": "19:55",
+       "montant": 9.1
+      },
+      {
+       "heure": "19:55",
+       "montant": 18.6
+      },
+      {
+       "heure": "19:55",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°25",
+       "heure": "19:55",
+       "total": 60.6,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 30.3,
+         "montant": 60.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-10-11",
+     "suppressions": [
+      {
+       "heure": "12:44",
+       "montant": 4.0
+      },
+      {
+       "heure": "12:44",
+       "montant": 5.2
+      },
+      {
+       "heure": "12:44",
+       "montant": 5.9
+      },
+      {
+       "heure": "12:44",
+       "montant": 16.9
+      },
+      {
+       "heure": "12:44",
+       "montant": 24.0
+      },
+      {
+       "heure": "12:44",
+       "montant": 27.8
+      },
+      {
+       "heure": "12:44",
+       "montant": 45.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°15",
+       "heure": "12:45",
+       "total": 128.8,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 64.4,
+         "montant": 128.8
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-11-03",
+     "suppressions": [
+      {
+       "heure": "20:08",
+       "montant": 2.2
+      },
+      {
+       "heure": "20:08",
+       "montant": 2.2
+      },
+      {
+       "heure": "20:08",
+       "montant": 3.5
+      },
+      {
+       "heure": "20:08",
+       "montant": 4.0
+      },
+      {
+       "heure": "20:08",
+       "montant": 4.8
+      },
+      {
+       "heure": "20:08",
+       "montant": 6.4
+      },
+      {
+       "heure": "20:08",
+       "montant": 6.5
+      },
+      {
+       "heure": "20:08",
+       "montant": 8.9
+      },
+      {
+       "heure": "20:08",
+       "montant": 9.0
+      },
+      {
+       "heure": "20:08",
+       "montant": 15.6
+      },
+      {
+       "heure": "20:08",
+       "montant": 17.4
+      },
+      {
+       "heure": "20:08",
+       "montant": 128.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°27",
+       "heure": "20:08",
+       "total": 208.5,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 5.0,
+         "pu": 41.7,
+         "montant": 208.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-12-01",
+     "suppressions": [
+      {
+       "heure": "13:00",
+       "montant": 3.9
+      },
+      {
+       "heure": "13:00",
+       "montant": 4.2
+      },
+      {
+       "heure": "13:00",
+       "montant": 5.5
+      },
+      {
+       "heure": "13:00",
+       "montant": 6.9
+      },
+      {
+       "heure": "13:00",
+       "montant": 11.0
+      },
+      {
+       "heure": "13:00",
+       "montant": 12.6
+      },
+      {
+       "heure": "13:00",
+       "montant": 18.6
+      },
+      {
+       "heure": "13:00",
+       "montant": 19.6
+      },
+      {
+       "heure": "13:00",
+       "montant": 26.7
+      },
+      {
+       "heure": "13:00",
+       "montant": 37.2
+      },
+      {
+       "heure": "13:00",
+       "montant": 38.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°6",
+       "heure": "13:00",
+       "total": 184.2,
+       "items": [
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 6.0,
+         "pu": 30.7,
+         "montant": 184.2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-01-04",
+     "suppressions": [
+      {
+       "heure": "12:23",
+       "montant": 4.2
+      },
+      {
+       "heure": "12:23",
+       "montant": 6.9
+      },
+      {
+       "heure": "12:23",
+       "montant": 18.6
+      },
+      {
+       "heure": "12:23",
+       "montant": 19.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°7",
+       "heure": "12:23",
+       "total": 48.7,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 24.35,
+         "montant": 48.7
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-03-01",
+     "suppressions": [
+      {
+       "heure": "11:35",
+       "montant": 3.9
+      },
+      {
+       "heure": "11:35",
+       "montant": 3.9
+      },
+      {
+       "heure": "11:35",
+       "montant": 4.4
+      },
+      {
+       "heure": "11:35",
+       "montant": 4.8
+      },
+      {
+       "heure": "11:35",
+       "montant": 17.4
+      },
+      {
+       "heure": "11:35",
+       "montant": 36.2
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°1",
+       "heure": "11:35",
+       "total": 70.6,
+       "items": [
+        {
+         "lib": "FORMULE EXPRESS",
+         "qte": 2.0,
+         "pu": 23.5,
+         "montant": 47.0
+        },
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 1.0,
+         "pu": 23.6,
+         "montant": 23.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-04-03",
+     "suppressions": [
+      {
+       "heure": "11:48",
+       "montant": 3.9
+      },
+      {
+       "heure": "11:48",
+       "montant": 19.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°1",
+       "heure": "11:48",
+       "total": 22.9,
+       "items": [
+        {
+         "lib": "FORMULE EXPRESS",
+         "qte": 1.0,
+         "pu": 22.9,
+         "montant": 22.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-05-03",
+     "suppressions": [
+      {
+       "heure": "20:17",
+       "montant": 2.2
+      },
+      {
+       "heure": "20:17",
+       "montant": 3.5
+      },
+      {
+       "heure": "20:17",
+       "montant": 4.0
+      },
+      {
+       "heure": "20:17",
+       "montant": 9.0
+      },
+      {
+       "heure": "20:17",
+       "montant": 9.6
+      },
+      {
+       "heure": "20:17",
+       "montant": 14.0
+      },
+      {
+       "heure": "20:17",
+       "montant": 19.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°17",
+       "heure": "20:17",
+       "total": 61.3,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 30.65,
+         "montant": 61.3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-06-01",
+     "suppressions": [
+      {
+       "heure": "20:45",
+       "montant": 2.2
+      },
+      {
+       "heure": "20:45",
+       "montant": 4.0
+      },
+      {
+       "heure": "20:45",
+       "montant": 11.8
+      },
+      {
+       "heure": "20:45",
+       "montant": 43.8
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°24",
+       "heure": "20:45",
+       "total": 61.8,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 30.9,
+         "montant": 61.8
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-07-04",
+     "suppressions": [
+      {
+       "heure": "13:13",
+       "montant": 2.0
+      },
+      {
+       "heure": "13:13",
+       "montant": 4.0
+      },
+      {
+       "heure": "13:13",
+       "montant": 4.2
+      },
+      {
+       "heure": "13:13",
+       "montant": 4.4
+      },
+      {
+       "heure": "13:13",
+       "montant": 7.9
+      },
+      {
+       "heure": "13:13",
+       "montant": 38.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°11",
+       "heure": "13:13",
+       "total": 60.5,
+       "items": [
+        {
+         "lib": "Menu Bourguignon",
+         "qte": 2.0,
+         "pu": 30.25,
+         "montant": 60.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-08-02",
+     "suppressions": [
+      {
+       "heure": "19:39",
+       "montant": 3.5
+      },
+      {
+       "heure": "19:39",
+       "montant": 4.0
+      },
+      {
+       "heure": "19:39",
+       "montant": 6.9
+      },
+      {
+       "heure": "19:39",
+       "montant": 16.9
+      },
+      {
+       "heure": "19:39",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°20",
+       "heure": "19:39",
+       "total": 49.9,
+       "items": [
+        {
+         "lib": "Menu Végétarien",
+         "qte": 2.0,
+         "pu": 24.95,
+         "montant": 49.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-09-04",
+     "suppressions": [
+      {
+       "heure": "11:41",
+       "montant": 2.2
+      },
+      {
+       "heure": "11:41",
+       "montant": 3.9
+      },
+      {
+       "heure": "11:41",
+       "montant": 15.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°2",
+       "heure": "11:42",
+       "total": 21.6,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 1.0,
+         "pu": 21.6,
+         "montant": 21.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-10-04",
+     "suppressions": [
+      {
+       "heure": "18:54",
+       "montant": 3.9
+      },
+      {
+       "heure": "18:54",
+       "montant": 4.2
+      },
+      {
+       "heure": "18:54",
+       "montant": 5.9
+      },
+      {
+       "heure": "18:54",
+       "montant": 8.3
+      },
+      {
+       "heure": "18:54",
+       "montant": 8.9
+      },
+      {
+       "heure": "18:54",
+       "montant": 8.9
+      },
+      {
+       "heure": "18:54",
+       "montant": 11.8
+      },
+      {
+       "heure": "18:54",
+       "montant": 64.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°11",
+       "heure": "18:54",
+       "total": 115.9,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 2.0,
+         "pu": 57.95,
+         "montant": 115.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-11-07",
+     "suppressions": [
+      {
+       "heure": "19:38",
+       "montant": 3.9
+      },
+      {
+       "heure": "19:38",
+       "montant": 6.3
+      },
+      {
+       "heure": "19:38",
+       "montant": 11.0
+      },
+      {
+       "heure": "19:38",
+       "montant": 38.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°14",
+       "heure": "19:38",
+       "total": 59.2,
+       "items": [
+        {
+         "lib": "Menu Bourguignon",
+         "qte": 2.0,
+         "pu": 29.6,
+         "montant": 59.2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-12-11",
+     "suppressions": [
+      {
+       "heure": "20:36",
+       "montant": 2.2
+      },
+      {
+       "heure": "20:36",
+       "montant": 5.5
+      },
+      {
+       "heure": "20:36",
+       "montant": 7.9
+      },
+      {
+       "heure": "20:36",
+       "montant": 9.7
+      },
+      {
+       "heure": "20:36",
+       "montant": 10.5
+      },
+      {
+       "heure": "20:36",
+       "montant": 16.9
+      },
+      {
+       "heure": "20:36",
+       "montant": 19.0
+      },
+      {
+       "heure": "20:36",
+       "montant": 21.0
+      },
+      {
+       "heure": "20:36",
+       "montant": 23.6
+      },
+      {
+       "heure": "20:36",
+       "montant": 85.8
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°18",
+       "heure": "20:36",
+       "total": 202.1,
+       "items": [
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 3.0,
+         "pu": 50.0,
+         "montant": 150.0
+        },
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 1.0,
+         "pu": 52.1,
+         "montant": 52.1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2025-03-05",
+     "suppressions": [
+      {
+       "heure": "19:32",
+       "montant": 6.5
+      },
+      {
+       "heure": "19:32",
+       "montant": 8.9
+      },
+      {
+       "heure": "19:32",
+       "montant": 9.0
+      },
+      {
+       "heure": "19:32",
+       "montant": 12.0
+      },
+      {
+       "heure": "19:32",
+       "montant": 16.9
+      },
+      {
+       "heure": "19:32",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°20",
+       "heure": "19:32",
+       "total": 71.9,
+       "items": [
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 2.0,
+         "pu": 35.95,
+         "montant": 71.9
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "partage",
+   "titre": "Paiement séparé / partage de table",
+   "preuve": "Une rafale de suppressions dont les articles réapparaissent, divisés, répartis sur au moins 2 tables encaissées à des heures proches",
+   "description": "Des convives d’une même table paient séparément. Le logiciel n’acceptant qu’un règlement par note, les articles communs sont supprimés puis ré-enregistrés divisés sur plusieurs notes (0,5 chacun, ou 0,8/0,2 si l’un paie davantage). À gauche, chaque suppression et l’article qu’elle devient ; à droite, les tables qui se partagent ces articles (surlignés), encaissées dans la foulée.",
+   "exemples": [
+    {
+     "date": "2022-04-16",
+     "suppressions": [
+      {
+       "heure": "20:07",
+       "montant": 3.9,
+       "devient": "Jus de Fruit / POMMES FRITES",
+       "tables": [
+        "n°23",
+        "n°24"
+       ]
+      },
+      {
+       "heure": "20:07",
+       "montant": 3.9,
+       "devient": "Jus de Fruit / POMMES FRITES",
+       "tables": [
+        "n°23",
+        "n°24"
+       ]
+      },
+      {
+       "heure": "20:07",
+       "montant": 4.7,
+       "devient": "Crêpe Marrons",
+       "tables": [
+        "n°23",
+        "n°24"
+       ]
+      },
+      {
+       "heure": "20:07",
+       "montant": 7.8,
+       "devient": "Pinte",
+       "tables": [
+        "n°23",
+        "n°24"
+       ]
+      },
+      {
+       "heure": "20:07",
+       "montant": 8.7,
+       "devient": "Pavlova",
+       "tables": [
+        "n°23",
+        "n°24"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°23",
+       "heure": "20:22",
+       "total": 34.4,
+       "items": [
+        {
+         "lib": "Pinte",
+         "qte": 0.5,
+         "pu": 7.8,
+         "montant": 3.9,
+         "highlight": true
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 1.0,
+         "pu": 19.9,
+         "montant": 19.9,
+         "highlight": false
+        },
+        {
+         "lib": "POMMES FRITES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Marrons",
+         "qte": 0.5,
+         "pu": 4.7,
+         "montant": 2.35,
+         "highlight": true
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°24",
+       "heure": "20:22",
+       "total": 34.4,
+       "items": [
+        {
+         "lib": "Pinte",
+         "qte": 0.5,
+         "pu": 7.8,
+         "montant": 3.9,
+         "highlight": true
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 1.0,
+         "pu": 19.9,
+         "montant": 19.9,
+         "highlight": false
+        },
+        {
+         "lib": "POMMES FRITES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Marrons",
+         "qte": 0.5,
+         "pu": 4.7,
+         "montant": 2.35,
+         "highlight": true
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-05-26",
+     "suppressions": [
+      {
+       "heure": "11:51",
+       "montant": 3.9,
+       "devient": "Coca (25cl) / Limonade (25cl)",
+       "tables": [
+        "n°3",
+        "n°4"
+       ]
+      },
+      {
+       "heure": "11:51",
+       "montant": 6.9,
+       "devient": "Menu Bambin",
+       "tables": [
+        "n°3",
+        "n°4"
+       ]
+      },
+      {
+       "heure": "11:51",
+       "montant": 6.9,
+       "devient": "Menu Bambin",
+       "tables": [
+        "n°3",
+        "n°4"
+       ]
+      },
+      {
+       "heure": "11:51",
+       "montant": 17.6,
+       "devient": "MORTEAU GRILLEE",
+       "tables": [
+        "n°3",
+        "n°4"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°3",
+       "heure": "11:59",
+       "total": 27.2,
+       "items": [
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Limonade (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Menu Bambin",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": true
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": true
+        },
+        {
+         "lib": "TRUITE PESTO",
+         "qte": 0.5,
+         "pu": 15.9,
+         "montant": 7.95,
+         "highlight": false
+        },
+        {
+         "lib": "Déca",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 1.0,
+         "pu": 2.0,
+         "montant": 2.0,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°4",
+       "heure": "12:00",
+       "total": 27.2,
+       "items": [
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Limonade (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Menu Bambin",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": true
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": true
+        },
+        {
+         "lib": "TRUITE PESTO",
+         "qte": 0.5,
+         "pu": 15.9,
+         "montant": 7.95,
+         "highlight": false
+        },
+        {
+         "lib": "Déca",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 1.0,
+         "pu": 2.0,
+         "montant": 2.0,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-07-13",
+     "suppressions": [
+      {
+       "heure": "12:37",
+       "montant": 3.9,
+       "devient": "Panaché",
+       "tables": [
+        "n°16",
+        "n°17"
+       ]
+      },
+      {
+       "heure": "12:37",
+       "montant": 5.9,
+       "devient": "Blanche des plateaux",
+       "tables": [
+        "n°16",
+        "n°17"
+       ]
+      },
+      {
+       "heure": "12:37",
+       "montant": 19.0,
+       "devient": "BURGER COMTOIS",
+       "tables": [
+        "n°16",
+        "n°17"
+       ]
+      },
+      {
+       "heure": "12:37",
+       "montant": 19.9,
+       "devient": "Salade Végétarienne",
+       "tables": [
+        "n°16",
+        "n°17"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°16",
+       "heure": "12:36",
+       "total": 26.55,
+       "items": [
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Panaché",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Végétarienne",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°17",
+       "heure": "12:37",
+       "total": 26.55,
+       "items": [
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Panaché",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Végétarienne",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-04-19",
+     "suppressions": [
+      {
+       "heure": "11:24",
+       "montant": 3.9,
+       "devient": "Jus de Fruit",
+       "tables": [
+        "n°1",
+        "n°2"
+       ]
+      },
+      {
+       "heure": "11:24",
+       "montant": 18.6,
+       "devient": "POULET JURASSIENNE",
+       "tables": [
+        "n°1",
+        "n°2"
+       ]
+      },
+      {
+       "heure": "11:24",
+       "montant": 18.6,
+       "devient": "POULET JURASSIENNE",
+       "tables": [
+        "n°1",
+        "n°2"
+       ]
+      },
+      {
+       "heure": "11:24",
+       "montant": 25.0,
+       "devient": "MACHON GOURMET",
+       "tables": [
+        "n°1",
+        "n°2"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°1",
+       "heure": "11:26",
+       "total": 28.05,
+       "items": [
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Rosé Pamplemousse",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "MACHON GOURMET",
+         "qte": 0.5,
+         "pu": 25.0,
+         "montant": 12.5,
+         "highlight": true
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°2",
+       "heure": "11:27",
+       "total": 28.05,
+       "items": [
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Rosé Pamplemousse",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "MACHON GOURMET",
+         "qte": 0.5,
+         "pu": 25.0,
+         "montant": 12.5,
+         "highlight": true
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-09-13",
+     "suppressions": [
+      {
+       "heure": "19:48",
+       "montant": 3.5,
+       "devient": "GLACE 1 BOULE",
+       "tables": [
+        "n°32",
+        "n°33"
+       ]
+      },
+      {
+       "heure": "19:48",
+       "montant": 3.9,
+       "devient": "Crêpe au sucre / Galette nature",
+       "tables": [
+        "n°31",
+        "n°32",
+        "n°33"
+       ]
+      },
+      {
+       "heure": "19:48",
+       "montant": 4.0,
+       "devient": "Comté",
+       "tables": [
+        "n°32",
+        "n°33"
+       ]
+      },
+      {
+       "heure": "19:48",
+       "montant": 4.2,
+       "devient": "Panaché",
+       "tables": [
+        "n°31",
+        "n°32",
+        "n°33"
+       ]
+      },
+      {
+       "heure": "19:48",
+       "montant": 18.6,
+       "devient": "ASSIETTE FRANC-COMTO",
+       "tables": [
+        "n°31",
+        "n°32",
+        "n°33"
+       ]
+      },
+      {
+       "heure": "19:48",
+       "montant": 18.6,
+       "devient": "ASSIETTE FRANC-COMTO",
+       "tables": [
+        "n°31",
+        "n°32",
+        "n°33"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°31",
+       "heure": "19:56",
+       "total": 53.2,
+       "items": [
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "Panaché",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "Martini Blanc",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Jambon Blanc",
+         "qte": 0.5,
+         "pu": 3.8,
+         "montant": 1.9,
+         "highlight": false
+        },
+        {
+         "lib": "Œuf",
+         "qte": 0.5,
+         "pu": 0.9,
+         "montant": 0.45,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Comté",
+         "qte": 1.0,
+         "pu": 4.0,
+         "montant": 4.0,
+         "highlight": false
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crème Fraîche",
+         "qte": 1.0,
+         "pu": 1.4,
+         "montant": 1.4,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 2.9,
+         "montant": 1.45,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe au sucre",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 1.0,
+         "pu": 3.5,
+         "montant": 3.5,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°32",
+       "heure": "19:57",
+       "total": 26.64,
+       "items": [
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 0.25,
+         "pu": 6.9,
+         "montant": 1.73,
+         "highlight": false
+        },
+        {
+         "lib": "Panaché",
+         "qte": 0.25,
+         "pu": 4.2,
+         "montant": 1.05,
+         "highlight": true
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 0.25,
+         "pu": 6.9,
+         "montant": 1.73,
+         "highlight": false
+        },
+        {
+         "lib": "Martini Blanc",
+         "qte": 0.25,
+         "pu": 4.9,
+         "montant": 1.23,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.25,
+         "pu": 18.6,
+         "montant": 4.65,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.25,
+         "pu": 19.9,
+         "montant": 4.97,
+         "highlight": false
+        },
+        {
+         "lib": "Jambon Blanc",
+         "qte": 0.25,
+         "pu": 3.8,
+         "montant": 0.95,
+         "highlight": false
+        },
+        {
+         "lib": "Œuf",
+         "qte": 0.25,
+         "pu": 0.9,
+         "montant": 0.23,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Comté",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": true
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 0.25,
+         "pu": 7.9,
+         "montant": 1.98,
+         "highlight": false
+        },
+        {
+         "lib": "Crème Fraîche",
+         "qte": 0.5,
+         "pu": 1.4,
+         "montant": 0.7,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.25,
+         "pu": 2.9,
+         "montant": 0.72,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe au sucre",
+         "qte": 0.25,
+         "pu": 3.9,
+         "montant": 0.97,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°33",
+       "heure": "19:57",
+       "total": 26.56,
+       "items": [
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 0.25,
+         "pu": 6.9,
+         "montant": 1.73,
+         "highlight": false
+        },
+        {
+         "lib": "Panaché",
+         "qte": 0.25,
+         "pu": 4.2,
+         "montant": 1.05,
+         "highlight": true
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 0.25,
+         "pu": 6.9,
+         "montant": 1.73,
+         "highlight": false
+        },
+        {
+         "lib": "Martini Blanc",
+         "qte": 0.25,
+         "pu": 4.9,
+         "montant": 1.23,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.25,
+         "pu": 18.6,
+         "montant": 4.65,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.25,
+         "pu": 19.9,
+         "montant": 4.97,
+         "highlight": false
+        },
+        {
+         "lib": "Jambon Blanc",
+         "qte": 0.25,
+         "pu": 3.8,
+         "montant": 0.95,
+         "highlight": false
+        },
+        {
+         "lib": "Œuf",
+         "qte": 0.25,
+         "pu": 0.9,
+         "montant": 0.23,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Comté",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": true
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 0.25,
+         "pu": 7.9,
+         "montant": 1.98,
+         "highlight": false
+        },
+        {
+         "lib": "Crème Fraîche",
+         "qte": 0.5,
+         "pu": 1.4,
+         "montant": 0.7,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.25,
+         "pu": 2.9,
+         "montant": 0.72,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe au sucre",
+         "qte": 0.25,
+         "pu": 3.9,
+         "montant": 0.97,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-10-13",
+     "suppressions": [
+      {
+       "heure": "20:09",
+       "montant": 3.9,
+       "devient": "Cancoillotte / Crêpe au sucre",
+       "tables": [
+        "n°36",
+        "n°37"
+       ]
+      },
+      {
+       "heure": "20:09",
+       "montant": 3.9,
+       "devient": "Cancoillotte / Crêpe au sucre",
+       "tables": [
+        "n°36",
+        "n°37"
+       ]
+      },
+      {
+       "heure": "20:09",
+       "montant": 8.9,
+       "devient": "Saucisse de Morteau",
+       "tables": [
+        "n°36",
+        "n°37"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°36",
+       "heure": "20:23",
+       "total": 69.7,
+       "items": [
+        {
+         "lib": "Pinte",
+         "qte": 1.0,
+         "pu": 8.0,
+         "montant": 8.0,
+         "highlight": false
+        },
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Comté",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "Cancoillotte",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Noix",
+         "qte": 0.5,
+         "pu": 1.4,
+         "montant": 0.7,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes de Terre",
+         "qte": 0.5,
+         "pu": 3.2,
+         "montant": 1.6,
+         "highlight": false
+        },
+        {
+         "lib": "SAUCE JURASSIENNE",
+         "qte": 0.5,
+         "pu": 6.1,
+         "montant": 3.05,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "TANTE ARIE",
+         "qte": 0.5,
+         "pu": 11.9,
+         "montant": 5.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe au sucre",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "BAGATELLE",
+         "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°37",
+       "heure": "20:24",
+       "total": 69.7,
+       "items": [
+        {
+         "lib": "Pinte",
+         "qte": 1.0,
+         "pu": 8.0,
+         "montant": 8.0,
+         "highlight": false
+        },
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Comté",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "Cancoillotte",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Noix",
+         "qte": 0.5,
+         "pu": 1.4,
+         "montant": 0.7,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes de Terre",
+         "qte": 0.5,
+         "pu": 3.2,
+         "montant": 1.6,
+         "highlight": false
+        },
+        {
+         "lib": "SAUCE JURASSIENNE",
+         "qte": 0.5,
+         "pu": 6.1,
+         "montant": 3.05,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "TANTE ARIE",
+         "qte": 0.5,
+         "pu": 11.9,
+         "montant": 5.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe au sucre",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "BAGATELLE",
+         "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-05-11",
+     "suppressions": [
+      {
+       "heure": "20:43",
+       "montant": 4.2,
+       "devient": "Pontarlier",
+       "tables": [
+        "n°31",
+        "n°32"
+       ]
+      },
+      {
+       "heure": "20:43",
+       "montant": 4.2,
+       "devient": "Pontarlier",
+       "tables": [
+        "n°31",
+        "n°32"
+       ]
+      },
+      {
+       "heure": "20:43",
+       "montant": 5.2,
+       "devient": "KITTYKIR",
+       "tables": [
+        "n°31",
+        "n°32"
+       ]
+      },
+      {
+       "heure": "20:43",
+       "montant": 5.9,
+       "devient": "Macvin du Jura / Père Gregoire / Salade Verte",
+       "tables": [
+        "n°31",
+        "n°32"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°31",
+       "heure": "20:42",
+       "total": 108.05,
+       "items": [
+        {
+         "lib": "Père Gregoire",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Pontarlier",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Liqueur de Sapin",
+         "qte": 1.5,
+         "pu": 6.5,
+         "montant": 9.75,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°32",
+       "heure": "20:43",
+       "total": 108.05,
+       "items": [
+        {
+         "lib": "Père Gregoire",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Pontarlier",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Liqueur de Sapin",
+         "qte": 1.5,
+         "pu": 6.5,
+         "montant": 9.75,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-06-15",
+     "suppressions": [
+      {
+       "heure": "12:33",
+       "montant": 5.9,
+       "devient": "Chat perché",
+       "tables": [
+        "n°5",
+        "n°6"
+       ]
+      },
+      {
+       "heure": "12:33",
+       "montant": 10.5,
+       "devient": "PICHET ROSE",
+       "tables": [
+        "n°5",
+        "n°6"
+       ]
+      },
+      {
+       "heure": "12:33",
+       "montant": 16.9,
+       "devient": "TRUITE PESTO",
+       "tables": [
+        "n°5",
+        "n°6"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°5",
+       "heure": "12:45",
+       "total": 90.0,
+       "items": [
+        {
+         "lib": "Savagnin verre",
+         "qte": 0.5,
+         "pu": 8.3,
+         "montant": 4.15,
+         "highlight": false
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "pression",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "PICHET ROSE",
+         "qte": 0.5,
+         "pu": 10.5,
+         "montant": 5.25,
+         "highlight": true
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 2.0,
+         "pu": 16.9,
+         "montant": 33.8,
+         "highlight": false
+        },
+        {
+         "lib": "TRUITE PESTO",
+         "qte": 1.5,
+         "pu": 16.9,
+         "montant": 25.35,
+         "highlight": true
+        },
+        {
+         "lib": "Poulet aux Morilles",
+         "qte": 0.5,
+         "pu": 28.6,
+         "montant": 14.3,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°6",
+       "heure": "12:45",
+       "total": 90.0,
+       "items": [
+        {
+         "lib": "Savagnin verre",
+         "qte": 0.5,
+         "pu": 8.3,
+         "montant": 4.15,
+         "highlight": false
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "pression",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "PICHET ROSE",
+         "qte": 0.5,
+         "pu": 10.5,
+         "montant": 5.25,
+         "highlight": true
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 2.0,
+         "pu": 16.9,
+         "montant": 33.8,
+         "highlight": false
+        },
+        {
+         "lib": "TRUITE PESTO",
+         "qte": 1.5,
+         "pu": 16.9,
+         "montant": 25.35,
+         "highlight": true
+        },
+        {
+         "lib": "Poulet aux Morilles",
+         "qte": 0.5,
+         "pu": 28.6,
+         "montant": 14.3,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "deplacement",
+   "titre": "Articles déplacés vers la bonne table",
+   "preuve": "Preuve exacte : une rafale d’au moins 4 suppressions dont la somme = total d’une note détaillée encaissée juste après",
+   "description": "Des plats saisis sur la mauvaise table sont supprimés en bloc puis ré-enregistrés sur la bonne. La somme des suppressions égale, au centime, le total d’une note qui contient le détail des plats déplacés (au moins une ligne hors menu).",
+   "exemples": [
+    {
+     "date": "2022-04-24",
+     "suppressions": [
+      {
+       "heure": "11:58",
+       "montant": 6.6
+      },
+      {
+       "heure": "11:58",
+       "montant": 17.6
+      },
+      {
+       "heure": "11:58",
+       "montant": 19.0
+      },
+      {
+       "heure": "11:58",
+       "montant": 29.9
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°1",
+       "heure": "11:54",
+       "total": 73.1,
+       "items": [
+        {
+         "lib": "Chat perché",
+         "qte": 1.0,
+         "pu": 5.2,
+         "montant": 5.2
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0
+        },
+        {
+         "lib": "Arbois Trousseau Le",
+         "qte": 1.0,
+         "pu": 6.4,
+         "montant": 6.4
+        },
+        {
+         "lib": "IVRESSE",
+         "qte": 1.0,
+         "pu": 10.7,
+         "montant": 10.7
+        },
+        {
+         "lib": "BEGUIN",
+         "qte": 1.0,
+         "pu": 6.9,
+         "montant": 6.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-05-25",
+     "suppressions": [
+      {
+       "heure": "20:20",
+       "montant": 3.8
+      },
+      {
+       "heure": "20:20",
+       "montant": 4.0
+      },
+      {
+       "heure": "20:20",
+       "montant": 5.45
+      },
+      {
+       "heure": "20:20",
+       "montant": 13.4
+      },
+      {
+       "heure": "20:20",
+       "montant": 59.8
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°29",
+       "heure": "20:19",
+       "total": 86.45,
+       "items": [
+        {
+         "lib": "Ricard",
+         "qte": 1.0,
+         "pu": 3.8,
+         "montant": 3.8
+        },
+        {
+         "lib": "Pichet 75cl vin",
+         "qte": 1.0,
+         "pu": 13.4,
+         "montant": 13.4
+        },
+        {
+         "lib": "Menu du Dahu",
+         "qte": 2.0,
+         "pu": 29.9,
+         "montant": 59.8
+        },
+        {
+         "lib": "Escargots de Bourgog",
+         "qte": 0.5,
+         "pu": 8.0,
+         "montant": 4.0
+        },
+        {
+         "lib": "Feuilleté Forestier",
+         "qte": 0.5,
+         "pu": 10.9,
+         "montant": 5.45
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-06-01",
+     "suppressions": [
+      {
+       "heure": "12:25",
+       "montant": 1.8
+      },
+      {
+       "heure": "12:25",
+       "montant": 2.6
+      },
+      {
+       "heure": "12:25",
+       "montant": 3.3
+      },
+      {
+       "heure": "12:25",
+       "montant": 4.2
+      },
+      {
+       "heure": "12:25",
+       "montant": 8.8
+      },
+      {
+       "heure": "12:25",
+       "montant": 8.8
+      },
+      {
+       "heure": "12:25",
+       "montant": 8.8
+      },
+      {
+       "heure": "12:25",
+       "montant": 8.8
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°5",
+       "heure": "12:25",
+       "total": 47.1,
+       "items": [
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2
+        },
+        {
+         "lib": "Verre de vin",
+         "qte": 0.5,
+         "pu": 3.6,
+         "montant": 1.8
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.5,
+         "pu": 2.2,
+         "montant": 3.3
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-07-06",
+     "suppressions": [
+      {
+       "heure": "18:10",
+       "montant": 1.95
+      },
+      {
+       "heure": "18:10",
+       "montant": 2.9
+      },
+      {
+       "heure": "18:10",
+       "montant": 3.25
+      },
+      {
+       "heure": "18:10",
+       "montant": 4.5
+      },
+      {
+       "heure": "18:10",
+       "montant": 9.5
+      },
+      {
+       "heure": "18:10",
+       "montant": 9.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°13",
+       "heure": "18:10",
+       "total": 31.6,
+       "items": [
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25
+        },
+        {
+         "lib": "Fuze Tea",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5
+        },
+        {
+         "lib": "PASSION",
+         "qte": 0.5,
+         "pu": 5.8,
+         "montant": 2.9
+        },
+        {
+         "lib": "VOUIVRE",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-08-11",
+     "suppressions": [
+      {
+       "heure": "19:39",
+       "montant": 1.1
+      },
+      {
+       "heure": "19:39",
+       "montant": 1.95
+      },
+      {
+       "heure": "19:39",
+       "montant": 2.0
+      },
+      {
+       "heure": "19:39",
+       "montant": 7.95
+      },
+      {
+       "heure": "19:39",
+       "montant": 9.95
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°23",
+       "heure": "19:39",
+       "total": 22.95,
+       "items": [
+        {
+         "lib": "Perrier 33cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95
+        },
+        {
+         "lib": "Menu 'Galette'",
+         "qte": 0.5,
+         "pu": 15.9,
+         "montant": 7.95
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95
+        },
+        {
+         "lib": "Déca",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-09-04",
+     "suppressions": [
+      {
+       "heure": "20:04",
+       "montant": 2.45
+      },
+      {
+       "heure": "20:04",
+       "montant": 3.0
+      },
+      {
+       "heure": "20:04",
+       "montant": 8.0
+      },
+      {
+       "heure": "20:04",
+       "montant": 9.0
+      },
+      {
+       "heure": "20:04",
+       "montant": 14.9
+      },
+      {
+       "heure": "20:04",
+       "montant": 16.9
+      },
+      {
+       "heure": "20:04",
+       "montant": 17.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°24",
+       "heure": "20:04",
+       "total": 71.85,
+       "items": [
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45
+        },
+        {
+         "lib": "Vin de Paille",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0
+        },
+        {
+         "lib": "BALIDOU",
+         "qte": 1.0,
+         "pu": 9.0,
+         "montant": 9.0
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 1.0,
+         "pu": 16.9,
+         "montant": 16.9
+        },
+        {
+         "lib": "Escargots de Bourgog",
+         "qte": 0.5,
+         "pu": 16.0,
+         "montant": 8.0
+        },
+        {
+         "lib": "Fondue Jurassienne",
+         "qte": 1.0,
+         "pu": 14.9,
+         "montant": 14.9
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 1.0,
+         "pu": 17.6,
+         "montant": 17.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-10-05",
+     "suppressions": [
+      {
+       "heure": "20:26",
+       "montant": 1.95
+      },
+      {
+       "heure": "20:26",
+       "montant": 2.6
+      },
+      {
+       "heure": "20:26",
+       "montant": 3.6
+      },
+      {
+       "heure": "20:26",
+       "montant": 29.9
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°20",
+       "heure": "20:26",
+       "total": 38.05,
+       "items": [
+        {
+         "lib": "Menu du Dahu",
+         "qte": 1.0,
+         "pu": 29.9,
+         "montant": 29.9
+        },
+        {
+         "lib": "Schweppes",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-12-07",
+     "suppressions": [
+      {
+       "heure": "19:38",
+       "montant": 1.95
+      },
+      {
+       "heure": "19:38",
+       "montant": 1.95
+      },
+      {
+       "heure": "19:38",
+       "montant": 6.5
+      },
+      {
+       "heure": "19:38",
+       "montant": 8.45
+      },
+      {
+       "heure": "19:38",
+       "montant": 9.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°14",
+       "heure": "19:37",
+       "total": 28.35,
+       "items": [
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5
+        },
+        {
+         "lib": "TRUITE PESTO",
+         "qte": 0.5,
+         "pu": 16.9,
+         "montant": 8.45
+        },
+        {
+         "lib": "Fuze Tea",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95
+        },
+        {
+         "lib": "CREPE NUTELLA CHANTI",
+         "qte": 1.0,
+         "pu": 6.5,
+         "montant": 6.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-01-07",
+     "suppressions": [
+      {
+       "heure": "19:33",
+       "montant": 1.8
+      },
+      {
+       "heure": "19:33",
+       "montant": 3.9
+      },
+      {
+       "heure": "19:33",
+       "montant": 4.9
+      },
+      {
+       "heure": "19:33",
+       "montant": 10.5
+      },
+      {
+       "heure": "19:33",
+       "montant": 38.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°13",
+       "heure": "19:33",
+       "total": 59.1,
+       "items": [
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 2.0,
+         "pu": 19.0,
+         "montant": 38.0
+        },
+        {
+         "lib": "Pichet 50cl vin",
+         "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 1.0,
+         "pu": 1.8,
+         "montant": 1.8
+        },
+        {
+         "lib": "CALIN",
+         "qte": 1.0,
+         "pu": 10.5,
+         "montant": 10.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-03-26",
+     "suppressions": [
+      {
+       "heure": "12:27",
+       "montant": 1.1
+      },
+      {
+       "heure": "12:27",
+       "montant": 2.1
+      },
+      {
+       "heure": "12:27",
+       "montant": 3.6
+      },
+      {
+       "heure": "12:27",
+       "montant": 9.3
+      },
+      {
+       "heure": "12:27",
+       "montant": 9.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°4",
+       "heure": "12:26",
+       "total": 25.6,
+       "items": [
+        {
+         "lib": "Savagnin verre",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6
+        },
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-04-30",
+     "suppressions": [
+      {
+       "heure": "19:49",
+       "montant": 3.6
+      },
+      {
+       "heure": "19:49",
+       "montant": 4.45
+      },
+      {
+       "heure": "19:49",
+       "montant": 4.9
+      },
+      {
+       "heure": "19:49",
+       "montant": 9.5
+      },
+      {
+       "heure": "19:49",
+       "montant": 13.9
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°19",
+       "heure": "19:49",
+       "total": 36.35,
+       "items": [
+        {
+         "lib": "Jamhon Persillé",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6
+        },
+        {
+         "lib": "Salade Franc-Comptoi",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45
+        },
+        {
+         "lib": "Truite Morilles",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5
+        },
+        {
+         "lib": "Pichet 50cl vin",
+         "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-05-07",
+     "suppressions": [
+      {
+       "heure": "19:31",
+       "montant": 2.6
+      },
+      {
+       "heure": "19:31",
+       "montant": 2.95
+      },
+      {
+       "heure": "19:31",
+       "montant": 5.95
+      },
+      {
+       "heure": "19:31",
+       "montant": 9.3
+      },
+      {
+       "heure": "19:31",
+       "montant": 14.95
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°18",
+       "heure": "19:31",
+       "total": 35.75,
+       "items": [
+        {
+         "lib": "La Vouivre",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6
+        },
+        {
+         "lib": "Menu du Dahu",
+         "qte": 0.5,
+         "pu": 29.9,
+         "montant": 14.95
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3
+        },
+        {
+         "lib": "TANTE ARIE",
+         "qte": 0.5,
+         "pu": 11.9,
+         "montant": 5.95
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-06-02",
+     "suppressions": [
+      {
+       "heure": "20:03",
+       "montant": 1.95
+      },
+      {
+       "heure": "20:03",
+       "montant": 2.45
+      },
+      {
+       "heure": "20:03",
+       "montant": 8.9
+      },
+      {
+       "heure": "20:03",
+       "montant": 9.05
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°29",
+       "heure": "20:02",
+       "total": 22.35,
+       "items": [
+        {
+         "lib": "Martini Blanc",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45
+        },
+        {
+         "lib": "Limonade (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95
+        },
+        {
+         "lib": "PEUTE",
+         "qte": 0.5,
+         "pu": 17.8,
+         "montant": 8.9
+        },
+        {
+         "lib": "DADOULET",
+         "qte": 0.5,
+         "pu": 18.1,
+         "montant": 9.05
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-07-13",
+     "suppressions": [
+      {
+       "heure": "19:36",
+       "montant": 5.0
+      },
+      {
+       "heure": "19:36",
+       "montant": 5.9
+      },
+      {
+       "heure": "19:36",
+       "montant": 6.4
+      },
+      {
+       "heure": "19:36",
+       "montant": 19.8
+      },
+      {
+       "heure": "19:36",
+       "montant": 33.8
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°19",
+       "heure": "19:44",
+       "total": 70.9,
+       "items": [
+        {
+         "lib": "Pinte",
+         "qte": 1.0,
+         "pu": 8.0,
+         "montant": 8.0
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0
+        },
+        {
+         "lib": "CONQUÊTE",
+         "qte": 1.0,
+         "pu": 10.5,
+         "montant": 10.5
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 1.0,
+         "pu": 4.9,
+         "montant": 4.9
+        },
+        {
+         "lib": "CHANTILLY",
+         "qte": 1.0,
+         "pu": 2.5,
+         "montant": 2.5
+        },
+        {
+         "lib": "1 Boule Glace",
+         "qte": 1.0,
+         "pu": 3.5,
+         "montant": 3.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-08-11",
+     "suppressions": [
+      {
+       "heure": "19:15",
+       "montant": 8.9
+      },
+      {
+       "heure": "19:15",
+       "montant": 8.9
+      },
+      {
+       "heure": "19:15",
+       "montant": 14.4
+      },
+      {
+       "heure": "19:15",
+       "montant": 18.1
+      },
+      {
+       "heure": "19:15",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°20",
+       "heure": "19:10",
+       "total": 68.9,
+       "items": [
+        {
+         "lib": "Crémant",
+         "qte": 1.0,
+         "pu": 5.0,
+         "montant": 5.0
+        },
+        {
+         "lib": "Perrier 33cl",
+         "qte": 1.0,
+         "pu": 4.0,
+         "montant": 4.0
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 2.0,
+         "pu": 18.6,
+         "montant": 37.2
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 1.0,
+         "pu": 8.3,
+         "montant": 8.3
+        },
+        {
+         "lib": "Baba",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 1.0,
+         "pu": 5.5,
+         "montant": 5.5
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-09-02",
+     "suppressions": [
+      {
+       "heure": "19:56",
+       "montant": 1.1
+      },
+      {
+       "heure": "19:56",
+       "montant": 2.95
+      },
+      {
+       "heure": "19:56",
+       "montant": 2.95
+      },
+      {
+       "heure": "19:56",
+       "montant": 14.0
+      },
+      {
+       "heure": "19:56",
+       "montant": 14.0
+      },
+      {
+       "heure": "19:56",
+       "montant": 22.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°22",
+       "heure": "19:54",
+       "total": 57.5,
+       "items": [
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95
+        },
+        {
+         "lib": "La Vouivre",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95
+        },
+        {
+         "lib": "Menu 'Demi Lune'",
+         "qte": 0.5,
+         "pu": 45.0,
+         "montant": 22.5
+        },
+        {
+         "lib": "PICHET SAVAGNIN",
+         "qte": 0.5,
+         "pu": 28.0,
+         "montant": 14.0
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 0.5,
+         "pu": 28.0,
+         "montant": 14.0
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-10-19",
+     "suppressions": [
+      {
+       "heure": "20:16",
+       "montant": 1.1
+      },
+      {
+       "heure": "20:16",
+       "montant": 2.0
+      },
+      {
+       "heure": "20:16",
+       "montant": 2.95
+      },
+      {
+       "heure": "20:16",
+       "montant": 5.9
+      },
+      {
+       "heure": "20:16",
+       "montant": 14.0
+      },
+      {
+       "heure": "20:16",
+       "montant": 44.85
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°16",
+       "heure": "20:15",
+       "total": 70.8,
+       "items": [
+        {
+         "lib": "La Vouivre",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95
+        },
+        {
+         "lib": "Menu du Dahu",
+         "qte": 1.5,
+         "pu": 29.9,
+         "montant": 44.85
+        },
+        {
+         "lib": "PICHET SAVAGNIN",
+         "qte": 0.5,
+         "pu": 28.0,
+         "montant": 14.0
+        },
+        {
+         "lib": "San Pelegrino 50cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-12-09",
+     "suppressions": [
+      {
+       "heure": "20:12",
+       "montant": 3.9
+      },
+      {
+       "heure": "20:12",
+       "montant": 4.8
+      },
+      {
+       "heure": "20:12",
+       "montant": 8.3
+      },
+      {
+       "heure": "20:12",
+       "montant": 68.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°15",
+       "heure": "20:07",
+       "total": 85.0,
+       "items": [
+        {
+         "lib": "La Vouivre",
+         "qte": 2.0,
+         "pu": 5.9,
+         "montant": 11.8
+        },
+        {
+         "lib": "Beaujolais Moulin à",
+         "qte": 2.0,
+         "pu": 7.6,
+         "montant": 15.2
+        },
+        {
+         "lib": "Escargots de Bourgog",
+         "qte": 2.0,
+         "pu": 8.0,
+         "montant": 16.0
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6
+        },
+        {
+         "lib": "Expresso",
+         "qte": 2.0,
+         "pu": 2.2,
+         "montant": 4.4
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-05-18",
+     "suppressions": [
+      {
+       "heure": "11:51",
+       "montant": 2.2
+      },
+      {
+       "heure": "11:51",
+       "montant": 8.9
+      },
+      {
+       "heure": "11:51",
+       "montant": 9.0
+      },
+      {
+       "heure": "11:51",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°2",
+       "heure": "11:49",
+       "total": 38.7,
+       "items": [
+        {
+         "lib": "Sprintz",
+         "qte": 1.0,
+         "pu": 9.0,
+         "montant": 9.0
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6
+        },
+        {
+         "lib": "Baba",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-06-13",
+     "suppressions": [
+      {
+       "heure": "12:16",
+       "montant": 1.1
+      },
+      {
+       "heure": "12:16",
+       "montant": 2.45
+      },
+      {
+       "heure": "12:16",
+       "montant": 2.75
+      },
+      {
+       "heure": "12:16",
+       "montant": 3.45
+      },
+      {
+       "heure": "12:16",
+       "montant": 3.9
+      },
+      {
+       "heure": "12:16",
+       "montant": 4.2
+      },
+      {
+       "heure": "12:16",
+       "montant": 4.75
+      },
+      {
+       "heure": "12:16",
+       "montant": 6.4
+      },
+      {
+       "heure": "12:16",
+       "montant": 9.3
+      },
+      {
+       "heure": "12:16",
+       "montant": 9.95
+      },
+      {
+       "heure": "12:16",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°4",
+       "heure": "12:15",
+       "total": 66.85,
+       "items": [
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2
+        },
+        {
+         "lib": "Martini Blanc",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45
+        },
+        {
+         "lib": "Whisky L.J (4cl)",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6
+        },
+        {
+         "lib": "Pichet CdR CHUSCLAN",
+         "qte": 0.5,
+         "pu": 9.5,
+         "montant": 4.75
+        },
+        {
+         "lib": "Verre ALIGOTE",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9
+        },
+        {
+         "lib": "Crêpe Salidou",
+         "qte": 1.0,
+         "pu": 6.4,
+         "montant": 6.4
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 5.5,
+         "montant": 2.75
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-07-03",
+     "suppressions": [
+      {
+       "heure": "21:06",
+       "montant": 2.1
+      },
+      {
+       "heure": "21:06",
+       "montant": 2.1
+      },
+      {
+       "heure": "21:06",
+       "montant": 3.25
+      },
+      {
+       "heure": "21:06",
+       "montant": 3.9
+      },
+      {
+       "heure": "21:06",
+       "montant": 4.9
+      },
+      {
+       "heure": "21:06",
+       "montant": 7.3
+      },
+      {
+       "heure": "21:06",
+       "montant": 9.3
+      },
+      {
+       "heure": "21:06",
+       "montant": 9.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°32",
+       "heure": "21:01",
+       "total": 42.35,
+       "items": [
+        {
+         "lib": "pression",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1
+        },
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1
+        },
+        {
+         "lib": "Verre Rosé",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3
+        },
+        {
+         "lib": "VERDELET",
+         "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9
+        },
+        {
+         "lib": "VOUIVRE",
+         "qte": 0.5,
+         "pu": 14.6,
+         "montant": 7.3
+        },
+        {
+         "lib": "Cognac (4cl)",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-09-28",
+     "suppressions": [
+      {
+       "heure": "20:00",
+       "montant": 2.1
+      },
+      {
+       "heure": "20:00",
+       "montant": 3.95
+      },
+      {
+       "heure": "20:00",
+       "montant": 9.3
+      },
+      {
+       "heure": "20:00",
+       "montant": 12.75
+      },
+      {
+       "heure": "20:00",
+       "montant": 14.5
+      },
+      {
+       "heure": "20:00",
+       "montant": 17.0
+      },
+      {
+       "heure": "20:00",
+       "montant": 17.0
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°17",
+       "heure": "20:00",
+       "total": 76.6,
+       "items": [
+        {
+         "lib": "Arbois Chardonnay Le",
+         "qte": 0.5,
+         "pu": 29.0,
+         "montant": 14.5
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1
+        },
+        {
+         "lib": "Menu Bourguignon",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3
+        },
+        {
+         "lib": "CANCOINE",
+         "qte": 0.5,
+         "pu": 25.5,
+         "montant": 12.75
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-10-18",
+     "suppressions": [
+      {
+       "heure": "12:19",
+       "montant": 2.2
+      },
+      {
+       "heure": "12:19",
+       "montant": 9.5
+      },
+      {
+       "heure": "12:19",
+       "montant": 12.5
+      },
+      {
+       "heure": "12:19",
+       "montant": 18.6
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°2",
+       "heure": "12:26",
+       "total": 42.8,
+       "items": [
+        {
+         "lib": "Formule à 12.5",
+         "qte": 1.0,
+         "pu": 12.5,
+         "montant": 12.5
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6
+        },
+        {
+         "lib": "Pichet CdR CHUSCLAN",
+         "qte": 1.0,
+         "pu": 9.5,
+         "montant": 9.5
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-12-06",
+     "suppressions": [
+      {
+       "heure": "19:55",
+       "montant": 2.95
+      },
+      {
+       "heure": "19:55",
+       "montant": 3.95
+      },
+      {
+       "heure": "19:55",
+       "montant": 7.8
+      },
+      {
+       "heure": "19:55",
+       "montant": 8.9
+      },
+      {
+       "heure": "19:55",
+       "montant": 16.9
+      },
+      {
+       "heure": "19:55",
+       "montant": 21.9
+      },
+      {
+       "heure": "19:55",
+       "montant": 24.5
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°19",
+       "heure": "19:55",
+       "total": 86.9,
+       "items": [
+        {
+         "lib": "H.C.B BEAUNE BTL",
+         "qte": 0.5,
+         "pu": 49.0,
+         "montant": 24.5
+        },
+        {
+         "lib": "Fondue Jurassienne",
+         "qte": 1.0,
+         "pu": 16.9,
+         "montant": 16.9
+        },
+        {
+         "lib": "Fondue Forestière",
+         "qte": 1.0,
+         "pu": 21.9,
+         "montant": 21.9
+        },
+        {
+         "lib": "POMMES FRITES",
+         "qte": 2.0,
+         "pu": 3.9,
+         "montant": 7.8
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95
+        },
+        {
+         "lib": "Crepe Chocolat",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95
+        }
+       ]
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

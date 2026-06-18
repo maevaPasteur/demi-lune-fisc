@@ -7,6 +7,8 @@ import Analyses from './pages/analyses/page'
 import AnalyseDetail from './pages/analyses/[slug]/page'
 import Defense from './pages/defense/page'
 import FrontDetail from './pages/defense/[slug]/page'
+import RenduFinal from './pages/rendu-final/page'
+import GriefDetail from './pages/rendu-final/[slug]/page'
 
 // Le routeur est en place : on n'expose pour l'instant que la page d'accueil.
 // Les futures pages (documents, analyses, chronologie…) s'ajoutent ici en
@@ -22,6 +24,8 @@ export default function App() {
         <Route path="analyses/:slug" element={<AnalyseDetail />} />
         <Route path="defense" element={<Defense />} />
         <Route path="defense/:slug" element={<FrontDetail />} />
+        <Route path="rendu-final" element={<RenduFinal />} />
+        <Route path="rendu-final/:slug" element={<GriefDetail />} />
       </Route>
     </Routes>
   )

@@ -66,6 +66,66 @@ export interface Colonne {
 }
 export type LigneGraphique = Record<string, string | number>
 
+// Table partagée reconstituée (addition d'origine répartie sur N notes de même total).
+export interface PartageTable {
+  heure: string
+  nb_notes: number
+  total_par_note: number
+  total_table: number
+  notes: string[]
+  articles: { lib: string; qte: number }[]
+  fractionne: boolean
+}
+// Une suppression du jour : heure, montant, article(s) au même prix, nature.
+export interface SuppressionLigne {
+  heure: string
+  montant: number
+  articles: string[]
+  nature: string
+}
+// Ventilation à 100 % des suppressions d'une journée, par nature.
+export interface BilanSuppressions {
+  faute_frappe: { n: number; somme: number }
+  article: { n: number; somme: number }
+  compose: { n: number; somme: number }
+}
+// Croisement d'une journée : suppressions (D), ventes par table (T+lignes A), modifications (M).
+export interface ReconLigne { nom: string; lib: string; qte: number; pu: number; montant: number; modifie: boolean }
+export interface ReconTable {
+  nom: string; note: string; heure: string; total: number
+  partagee: boolean; jumelles: string[]
+  lignes: ReconLigne[]; modifications: string[]; suppressions: string[]; nb_suppressions: number
+}
+export interface ReconSuppression { nom: string; heure: string; montant: number; table: string | null; statut: string; confiance: string | null }
+export interface ReconModif { nom: string; heure: string; table: string; article: string; prix: number; prix_ref: number[] }
+export interface ReconEvenement { type: string; tables: string[]; total: number; modifications: string[]; suppressions: string[]; explication: string }
+export interface Reconciliation {
+  suppressions: ReconSuppression[]
+  modifications: ReconModif[]
+  tables: ReconTable[]
+  evenements: ReconEvenement[]
+  bilan_rattachement: Record<string, { n: number; somme: number }>
+  restantes: string[]
+  total_somme: number
+  nb_tables_partagees: number
+}
+// Journée avec ses tables partagées (pour la popin de justification des suppressions).
+export interface JourPartage {
+  date: string
+  nb_notes: number
+  nb_partages: number
+  nb_notes_partagees: number
+  nb_suppressions: number
+  suppr_somme: number
+  bilan: BilanSuppressions
+  partages_valeur: number
+  menus_forfait: { notes: number; somme: number }
+  suppressions: SuppressionLigne[]
+  suppr_par_heure: { heure: string; n: number }[]
+  partages: PartageTable[]
+  reconciliation: Reconciliation
+}
+
 // Justification détaillée d'une composante de décomposition (méthode + tableau + sources).
 export interface ComposanteDetail {
   methode: string
@@ -151,6 +211,40 @@ export type Section =
       type?: 'stacked' | 'default'
       format: 'euro' | 'int'
     }
+  // Justification des suppressions : tableau de journées + œil ouvrant une popin
+  // qui reconstitue les TABLES PARTAGÉES du jour (article par article).
+  | { kind: 'joursPartages'; intro?: string; jours: JourPartage[] }
+  // Suppressions par CAS : chaque exemple est une fiche montrant les suppressions
+  // (date/heure/montant) puis l'encaissement correspondant (note, contenu détaillé).
+  | { kind: 'casSuppressions'; cas: CasSuppression[] }
+
+export interface CasItem {
+  lib: string
+  qte: number
+  pu: number
+  montant: number
+  highlight?: boolean
+}
+export interface CasNote {
+  label: string
+  heure: string
+  total: number
+  items: CasItem[]
+  highlight?: string
+}
+export interface CasExemple {
+  date: string
+  article?: string
+  suppressions: { heure: string; montant: number; devient?: string; tables?: string[] }[]
+  notes: CasNote[]
+}
+export interface CasSuppression {
+  id: string
+  titre: string
+  preuve: string
+  description: string
+  exemples: CasExemple[]
+}
 
 export interface Analyse {
   slug: string
