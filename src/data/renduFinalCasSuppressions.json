@@ -1337,21 +1337,12 @@
   {
    "id": "partage",
    "titre": "Paiement séparé / partage de table",
-   "preuve": "Une rafale de suppressions dont les articles réapparaissent, divisés, répartis sur au moins 2 tables encaissées à des heures proches",
-   "description": "Des convives d’une même table paient séparément. Le logiciel n’acceptant qu’un règlement par note, les articles communs sont supprimés puis ré-enregistrés divisés sur plusieurs notes (0,5 chacun, ou 0,8/0,2 si l’un paie davantage). À gauche, chaque suppression et l’article qu’elle devient ; à droite, les tables qui se partagent ces articles (surlignés), encaissées dans la foulée.",
+   "preuve": "Une suppression dont le prix réapparaît, divisé en fractions sommant à un entier, réparti sur au moins 2 notes encaissées dans la foulée",
+   "description": "Des convives d’une même table paient séparément. Le logiciel n’acceptant qu’un règlement par note, l’article commun est **supprimé** puis ré-enregistré **divisé** sur plusieurs notes (0,5 chacun, ou 0,33/0,33/0,34 à trois). La suppression n’efface donc aucune recette : son **prix réapparaît**, en quantités fractionnaires réparties sur ≥2 notes encaissées dans la foulée, et la **somme des fractions reconstitue un nombre entier** de parts. À gauche, chaque suppression et l’article qu’elle redevient ; à droite, les notes qui se le partagent (article surligné).",
    "exemples": [
     {
      "date": "2022-04-16",
      "suppressions": [
-      {
-       "heure": "20:07",
-       "montant": 3.9,
-       "devient": "Jus de Fruit / POMMES FRITES",
-       "tables": [
-        "n°23",
-        "n°24"
-       ]
-      },
       {
        "heure": "20:07",
        "montant": 3.9,
@@ -1491,154 +1482,224 @@
      ]
     },
     {
-     "date": "2022-05-26",
+     "date": "2022-05-14",
      "suppressions": [
       {
-       "heure": "11:51",
-       "montant": 3.9,
-       "devient": "Coca (25cl) / Limonade (25cl)",
+       "heure": "19:47",
+       "montant": 3.8,
+       "devient": "Whisky L.J (2cl) Bab",
        "tables": [
-        "n°3",
-        "n°4"
+        "n°22",
+        "n°23"
        ]
       },
       {
-       "heure": "11:51",
-       "montant": 6.9,
-       "devient": "Menu Bambin",
+       "heure": "19:47",
+       "montant": 9.8,
+       "devient": "Pichet 50cl vin",
        "tables": [
-        "n°3",
-        "n°4"
+        "n°22",
+        "n°23"
        ]
       },
       {
-       "heure": "11:51",
-       "montant": 6.9,
-       "devient": "Menu Bambin",
+       "heure": "19:47",
+       "montant": 16.9,
+       "devient": "Croûtes Morilles",
        "tables": [
-        "n°3",
-        "n°4"
+        "n°22",
+        "n°23"
        ]
       },
       {
-       "heure": "11:51",
+       "heure": "19:47",
        "montant": 17.6,
-       "devient": "MORTEAU GRILLEE",
+       "devient": "TRUITE JURASSIENNE",
        "tables": [
-        "n°3",
-        "n°4"
+        "n°22",
+        "n°23"
        ]
       }
      ],
      "notes": [
       {
-       "label": "Note n°3",
-       "heure": "11:59",
-       "total": 27.2,
+       "label": "Note n°22",
+       "heure": "19:35",
+       "total": 56.75,
        "items": [
         {
-         "lib": "Coca (25cl)",
+         "lib": "Père Gregoire",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Crémant",
          "qte": 0.5,
          "pu": 3.9,
          "montant": 1.95,
-         "highlight": true
+         "highlight": false
         },
         {
-         "lib": "Limonade (25cl)",
+         "lib": "Whisky L.J (2cl) Bab",
          "qte": 0.5,
-         "pu": 3.9,
-         "montant": 1.95,
+         "pu": 3.8,
+         "montant": 1.9,
          "highlight": true
         },
         {
-         "lib": "Menu Bambin",
+         "lib": "Macvin du Jura",
          "qte": 0.5,
-         "pu": 6.9,
-         "montant": 3.45,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Franc-Comptoi",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 0.5,
+         "pu": 16.9,
+         "montant": 8.45,
          "highlight": true
         },
         {
-         "lib": "MORTEAU GRILLEE",
+         "lib": "TRUITE JURASSIENNE",
          "qte": 0.5,
          "pu": 17.6,
          "montant": 8.8,
          "highlight": true
         },
         {
-         "lib": "TRUITE PESTO",
+         "lib": "CANCOINE",
          "qte": 0.5,
-         "pu": 15.9,
-         "montant": 7.95,
+         "pu": 21.6,
+         "montant": 10.8,
          "highlight": false
         },
         {
-         "lib": "Déca",
+         "lib": "Pichet 50cl vin",
          "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9,
+         "highlight": true
+        },
+        {
+         "lib": "San Pelegrino",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "DOUCEUR",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.5,
          "pu": 2.2,
-         "montant": 1.1,
-         "highlight": false
-        },
-        {
-         "lib": "GLACE 1 BOULE",
-         "qte": 1.0,
-         "pu": 2.0,
-         "montant": 2.0,
+         "montant": 3.3,
          "highlight": false
         }
        ]
       },
       {
-       "label": "Note n°4",
-       "heure": "12:00",
-       "total": 27.2,
+       "label": "Note n°23",
+       "heure": "19:36",
+       "total": 56.75,
        "items": [
         {
-         "lib": "Coca (25cl)",
+         "lib": "Père Gregoire",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Crémant",
          "qte": 0.5,
          "pu": 3.9,
          "montant": 1.95,
-         "highlight": true
+         "highlight": false
         },
         {
-         "lib": "Limonade (25cl)",
+         "lib": "Whisky L.J (2cl) Bab",
          "qte": 0.5,
-         "pu": 3.9,
-         "montant": 1.95,
+         "pu": 3.8,
+         "montant": 1.9,
          "highlight": true
         },
         {
-         "lib": "Menu Bambin",
+         "lib": "Macvin du Jura",
          "qte": 0.5,
-         "pu": 6.9,
-         "montant": 3.45,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Franc-Comptoi",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 0.5,
+         "pu": 16.9,
+         "montant": 8.45,
          "highlight": true
         },
         {
-         "lib": "MORTEAU GRILLEE",
+         "lib": "TRUITE JURASSIENNE",
          "qte": 0.5,
          "pu": 17.6,
          "montant": 8.8,
          "highlight": true
         },
         {
-         "lib": "TRUITE PESTO",
+         "lib": "CANCOINE",
          "qte": 0.5,
-         "pu": 15.9,
-         "montant": 7.95,
+         "pu": 21.6,
+         "montant": 10.8,
          "highlight": false
         },
         {
-         "lib": "Déca",
+         "lib": "Pichet 50cl vin",
          "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9,
+         "highlight": true
+        },
+        {
+         "lib": "San Pelegrino",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "DOUCEUR",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.5,
          "pu": 2.2,
-         "montant": 1.1,
-         "highlight": false
-        },
-        {
-         "lib": "GLACE 1 BOULE",
-         "qte": 1.0,
-         "pu": 2.0,
-         "montant": 2.0,
+         "montant": 3.3,
          "highlight": false
         }
        ]
@@ -1646,57 +1707,406 @@
      ]
     },
     {
-     "date": "2022-07-13",
+     "date": "2022-06-25",
      "suppressions": [
       {
-       "heure": "12:37",
+       "heure": "20:16",
+       "montant": 3.8,
+       "devient": "Jambon Blanc",
+       "tables": [
+        "n°27",
+        "n°28"
+       ]
+      },
+      {
+       "heure": "20:16",
        "montant": 3.9,
-       "devient": "Panaché",
+       "devient": "POMMES FRITES",
        "tables": [
-        "n°16",
-        "n°17"
-       ]
-      },
-      {
-       "heure": "12:37",
-       "montant": 5.9,
-       "devient": "Blanche des plateaux",
-       "tables": [
-        "n°16",
-        "n°17"
-       ]
-      },
-      {
-       "heure": "12:37",
-       "montant": 19.0,
-       "devient": "BURGER COMTOIS",
-       "tables": [
-        "n°16",
-        "n°17"
-       ]
-      },
-      {
-       "heure": "12:37",
-       "montant": 19.9,
-       "devient": "Salade Végétarienne",
-       "tables": [
-        "n°16",
-        "n°17"
+        "n°25",
+        "n°26"
        ]
       }
      ],
      "notes": [
       {
-       "label": "Note n°16",
-       "heure": "12:36",
+       "label": "Note n°25",
+       "heure": "20:07",
        "total": 26.55,
        "items": [
         {
-         "lib": "Blanche des plateaux",
+         "lib": "Ambrée",
          "qte": 0.5,
          "pu": 5.9,
          "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "DADOULET",
+         "qte": 0.5,
+         "pu": 20.9,
+         "montant": 10.45,
+         "highlight": false
+        },
+        {
+         "lib": "TANTELIN",
+         "qte": 0.5,
+         "pu": 16.4,
+         "montant": 8.2,
+         "highlight": false
+        },
+        {
+         "lib": "POMMES FRITES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
          "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°26",
+       "heure": "20:07",
+       "total": 26.55,
+       "items": [
+        {
+         "lib": "Ambrée",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "DADOULET",
+         "qte": 0.5,
+         "pu": 20.9,
+         "montant": 10.45,
+         "highlight": false
+        },
+        {
+         "lib": "TANTELIN",
+         "qte": 0.5,
+         "pu": 16.4,
+         "montant": 8.2,
+         "highlight": false
+        },
+        {
+         "lib": "POMMES FRITES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°27",
+       "heure": "20:17",
+       "total": 25.3,
+       "items": [
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 2.9,
+         "montant": 2.9,
+         "highlight": false
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "Jambon Blanc",
+         "qte": 0.5,
+         "pu": 3.8,
+         "montant": 1.9,
+         "highlight": true
+        },
+        {
+         "lib": "Jambon Sec",
+         "qte": 0.5,
+         "pu": 5.4,
+         "montant": 2.7,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 1.0,
+         "pu": 2.0,
+         "montant": 2.0,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°28",
+       "heure": "20:18",
+       "total": 25.3,
+       "items": [
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 2.9,
+         "montant": 2.9,
+         "highlight": false
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "Jambon Blanc",
+         "qte": 0.5,
+         "pu": 3.8,
+         "montant": 1.9,
+         "highlight": true
+        },
+        {
+         "lib": "Jambon Sec",
+         "qte": 0.5,
+         "pu": 5.4,
+         "montant": 2.7,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 1.0,
+         "pu": 2.0,
+         "montant": 2.0,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-07-03",
+     "suppressions": [
+      {
+       "heure": "13:18",
+       "montant": 1.8,
+       "devient": "Chantilly",
+       "tables": [
+        "n°9",
+        "n°10"
+       ]
+      },
+      {
+       "heure": "13:18",
+       "montant": 3.9,
+       "devient": "Fuze Tea / GLACE 2 BOULES / Panaché",
+       "tables": [
+        "n°9",
+        "n°10",
+        "n°12",
+        "n°13"
+       ]
+      },
+      {
+       "heure": "13:18",
+       "montant": 5.8,
+       "devient": "Beaujolais Moulin à",
+       "tables": [
+        "n°12",
+        "n°13"
+       ]
+      },
+      {
+       "heure": "13:18",
+       "montant": 6.5,
+       "devient": "Mambo",
+       "tables": [
+        "n°9",
+        "n°10"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°9",
+       "heure": "13:08",
+       "total": 42.65,
+       "items": [
+        {
+         "lib": "Fuze Tea",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": true
+        },
+        {
+         "lib": "Picon bière",
+         "qte": 0.5,
+         "pu": 4.5,
+         "montant": 2.25,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 1.8,
+         "montant": 0.9,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°10",
+       "heure": "13:08",
+       "total": 42.65,
+       "items": [
+        {
+         "lib": "Fuze Tea",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": true
+        },
+        {
+         "lib": "Picon bière",
+         "qte": 0.5,
+         "pu": 4.5,
+         "montant": 2.25,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 1.8,
+         "montant": 0.9,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°12",
+       "heure": "13:17",
+       "total": 34.45,
+       "items": [
+        {
+         "lib": "Rosé Pamplemousse",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
         },
         {
          "lib": "Panaché",
@@ -1706,17 +2116,31 @@
          "highlight": true
         },
         {
-         "lib": "BURGER COMTOIS",
+         "lib": "Salade Végétarienne",
+         "qte": 1.0,
+         "pu": 19.9,
+         "montant": 19.9,
+         "highlight": false
+        },
+        {
+         "lib": "FROMAGES REGIONAUX",
          "qte": 0.5,
-         "pu": 19.0,
-         "montant": 9.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
          "highlight": true
         },
         {
-         "lib": "Salade Végétarienne",
+         "lib": "Beaujolais Moulin à",
          "qte": 0.5,
-         "pu": 19.9,
-         "montant": 9.95,
+         "pu": 5.8,
+         "montant": 2.9,
          "highlight": true
         },
         {
@@ -1729,16 +2153,16 @@
        ]
       },
       {
-       "label": "Note n°17",
-       "heure": "12:37",
-       "total": 26.55,
+       "label": "Note n°13",
+       "heure": "13:17",
+       "total": 34.45,
        "items": [
         {
-         "lib": "Blanche des plateaux",
+         "lib": "Rosé Pamplemousse",
          "qte": 0.5,
-         "pu": 5.9,
-         "montant": 2.95,
-         "highlight": true
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
         },
         {
          "lib": "Panaché",
@@ -1748,17 +2172,31 @@
          "highlight": true
         },
         {
-         "lib": "BURGER COMTOIS",
+         "lib": "Salade Végétarienne",
+         "qte": 1.0,
+         "pu": 19.9,
+         "montant": 19.9,
+         "highlight": false
+        },
+        {
+         "lib": "FROMAGES REGIONAUX",
          "qte": 0.5,
-         "pu": 19.0,
-         "montant": 9.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
          "highlight": true
         },
         {
-         "lib": "Salade Végétarienne",
+         "lib": "Beaujolais Moulin à",
          "qte": 0.5,
-         "pu": 19.9,
-         "montant": 9.95,
+         "pu": 5.8,
+         "montant": 2.9,
          "highlight": true
         },
         {
@@ -1773,51 +2211,1096 @@
      ]
     },
     {
-     "date": "2023-04-19",
+     "date": "2022-08-02",
      "suppressions": [
       {
-       "heure": "11:24",
+       "heure": "19:49",
+       "montant": 2.2,
+       "devient": "Expresso",
+       "tables": [
+        "n°29",
+        "n°30"
+       ]
+      },
+      {
+       "heure": "19:49",
+       "montant": 5.2,
+       "devient": "Chat perché",
+       "tables": [
+        "n°26",
+        "n°27"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°26",
+       "heure": "19:31",
+       "total": 71.05,
+       "items": [
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte aux Noi",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "CABRICHOU",
+         "qte": 0.5,
+         "pu": 15.9,
+         "montant": 7.95,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Végétarienne",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "TRUITE PESTO",
+         "qte": 0.5,
+         "pu": 15.9,
+         "montant": 7.95,
+         "highlight": false
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso Crème",
+         "qte": 0.5,
+         "pu": 2.4,
+         "montant": 1.2,
+         "highlight": false
+        },
+        {
+         "lib": "Bohème",
+         "qte": 0.5,
+         "pu": 29.0,
+         "montant": 14.5,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°27",
+       "heure": "19:32",
+       "total": 71.05,
+       "items": [
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte aux Noi",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "CABRICHOU",
+         "qte": 0.5,
+         "pu": 15.9,
+         "montant": 7.95,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Végétarienne",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "TRUITE PESTO",
+         "qte": 0.5,
+         "pu": 15.9,
+         "montant": 7.95,
+         "highlight": false
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso Crème",
+         "qte": 0.5,
+         "pu": 2.4,
+         "montant": 1.2,
+         "highlight": false
+        },
+        {
+         "lib": "Bohème",
+         "qte": 0.5,
+         "pu": 29.0,
+         "montant": 14.5,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°29",
+       "heure": "19:43",
+       "total": 35.35,
+       "items": [
+        {
+         "lib": "Pichet 50cl vin",
+         "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9,
+         "highlight": false
+        },
+        {
+         "lib": "Perrier 33cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "Mi",
+         "qte": 0.5,
+         "pu": 8.5,
+         "montant": 4.25,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°30",
+       "heure": "19:43",
+       "total": 35.35,
+       "items": [
+        {
+         "lib": "Pichet 50cl vin",
+         "qte": 0.5,
+         "pu": 9.8,
+         "montant": 4.9,
+         "highlight": false
+        },
+        {
+         "lib": "Perrier 33cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "Mi",
+         "qte": 0.5,
+         "pu": 8.5,
+         "montant": 4.25,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-09-25",
+     "suppressions": [
+      {
+       "heure": "19:50",
+       "montant": 2.2,
+       "devient": "Expresso",
+       "tables": [
+        "n°20",
+        "n°21"
+       ]
+      },
+      {
+       "heure": "19:50",
+       "montant": 6.9,
+       "devient": "CREME BRULEE",
+       "tables": [
+        "n°20",
+        "n°21"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°20",
+       "heure": "19:49",
+       "total": 38.3,
+       "items": [
+        {
+         "lib": "Père Gregoire",
+         "qte": 1.0,
+         "pu": 4.9,
+         "montant": 4.9,
+         "highlight": false
+        },
+        {
+         "lib": "La Vouivre",
+         "qte": 1.0,
+         "pu": 5.2,
+         "montant": 5.2,
+         "highlight": false
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": true
+        },
+        {
+         "lib": "Infusion",
+         "qte": 0.5,
+         "pu": 3.4,
+         "montant": 1.7,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°21",
+       "heure": "19:50",
+       "total": 28.2,
+       "items": [
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 17.6,
+         "montant": 8.8,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": true
+        },
+        {
+         "lib": "Infusion",
+         "qte": 0.5,
+         "pu": 3.4,
+         "montant": 1.7,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-10-22",
+     "suppressions": [
+      {
+       "heure": "20:04",
+       "montant": 2.0,
+       "devient": "GLACE 1 BOULE",
+       "tables": [
+        "n°21",
+        "n°22"
+       ]
+      },
+      {
+       "heure": "20:04",
+       "montant": 3.9,
+       "devient": "Orangina (25cl) / Pommes grenailles",
+       "tables": [
+        "n°21",
+        "n°22"
+       ]
+      },
+      {
+       "heure": "20:04",
+       "montant": 5.2,
+       "devient": "Chat perché",
+       "tables": [
+        "n°21",
+        "n°22"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°21",
+       "heure": "20:23",
+       "total": 133.1,
+       "items": [
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Whisky-Coca",
+         "qte": 0.5,
+         "pu": 7.5,
+         "montant": 3.75,
+         "highlight": false
+        },
+        {
+         "lib": "Orangina (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Whisky L.J (4cl)",
+         "qte": 2.0,
+         "pu": 5.8,
+         "montant": 11.6,
+         "highlight": false
+        },
+        {
+         "lib": "Perrier 33cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "Arbois Trousseau Bou",
+         "qte": 0.5,
+         "pu": 32.0,
+         "montant": 16.0,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 1.0,
+         "pu": 4.9,
+         "montant": 4.9,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.5,
+         "pu": 25.9,
+         "montant": 38.85,
+         "highlight": false
+        },
+        {
+         "lib": "Fondue Forestière",
+         "qte": 1.0,
+         "pu": 21.9,
+         "montant": 21.9,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes grenailles",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Verte aux Noi",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 1.5,
+         "pu": 8.9,
+         "montant": 13.35,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 0.5,
+         "pu": 2.0,
+         "montant": 1.0,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        },
+        {
+         "lib": "Eau de Vie de Poire",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "Marc du Jura (4cl)",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°22",
+       "heure": "20:23",
+       "total": 133.1,
+       "items": [
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Whisky-Coca",
+         "qte": 0.5,
+         "pu": 7.5,
+         "montant": 3.75,
+         "highlight": false
+        },
+        {
+         "lib": "Orangina (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Whisky L.J (4cl)",
+         "qte": 2.0,
+         "pu": 5.8,
+         "montant": 11.6,
+         "highlight": false
+        },
+        {
+         "lib": "Perrier 33cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "Arbois Trousseau Bou",
+         "qte": 0.5,
+         "pu": 32.0,
+         "montant": 16.0,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 1.0,
+         "pu": 4.9,
+         "montant": 4.9,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.5,
+         "pu": 25.9,
+         "montant": 38.85,
+         "highlight": false
+        },
+        {
+         "lib": "Fondue Forestière",
+         "qte": 1.0,
+         "pu": 21.9,
+         "montant": 21.9,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes grenailles",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Verte aux Noi",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 1.5,
+         "pu": 8.9,
+         "montant": 13.35,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 0.5,
+         "pu": 2.0,
+         "montant": 1.0,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        },
+        {
+         "lib": "Eau de Vie de Poire",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "Marc du Jura (4cl)",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-11-02",
+     "suppressions": [
+      {
+       "heure": "20:04",
+       "montant": 2.2,
+       "devient": "Expresso",
+       "tables": [
+        "n°25",
+        "n°26"
+       ]
+      },
+      {
+       "heure": "20:04",
+       "montant": 3.9,
+       "devient": "GLACE 2 BOULES",
+       "tables": [
+        "n°28",
+        "n°29"
+       ]
+      },
+      {
+       "heure": "20:04",
+       "montant": 5.9,
+       "devient": "Ambrée / Salade Verte / Vittel litre",
+       "tables": [
+        "n°25",
+        "n°26"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°25",
+       "heure": "20:05",
+       "total": 92.6,
+       "items": [
+        {
+         "lib": "Fondue Jurassienne",
+         "qte": 2.0,
+         "pu": 16.9,
+         "montant": 33.8,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Arbois Savagnin",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "Vittel litre",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Baba au Macvin",
+         "qte": 1.0,
+         "pu": 6.9,
+         "montant": 6.9,
+         "highlight": false
+        },
+        {
+         "lib": "Normandine",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "Crepe Chocolat",
+         "qte": 0.5,
+         "pu": 4.7,
+         "montant": 2.35,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°26",
+       "heure": "20:06",
+       "total": 92.6,
+       "items": [
+        {
+         "lib": "Fondue Jurassienne",
+         "qte": 2.0,
+         "pu": 16.9,
+         "montant": 33.8,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Arbois Savagnin",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "Vittel litre",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Baba au Macvin",
+         "qte": 1.0,
+         "pu": 6.9,
+         "montant": 6.9,
+         "highlight": false
+        },
+        {
+         "lib": "Normandine",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "Crepe Chocolat",
+         "qte": 0.5,
+         "pu": 4.7,
+         "montant": 2.35,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°28",
+       "heure": "20:08",
+       "total": 33.9,
+       "items": [
+        {
+         "lib": "1/2 Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Cancoillotte",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes de Terre",
+         "qte": 0.5,
+         "pu": 3.2,
+         "montant": 1.6,
+         "highlight": false
+        },
+        {
+         "lib": "DAMES VERTES",
+         "qte": 0.5,
+         "pu": 8.3,
+         "montant": 4.15,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°29",
+       "heure": "20:08",
+       "total": 33.9,
+       "items": [
+        {
+         "lib": "1/2 Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Cancoillotte",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes de Terre",
+         "qte": 0.5,
+         "pu": 3.2,
+         "montant": 1.6,
+         "highlight": false
+        },
+        {
+         "lib": "DAMES VERTES",
+         "qte": 0.5,
+         "pu": 8.3,
+         "montant": 4.15,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2022-12-10",
+     "suppressions": [
+      {
+       "heure": "12:41",
+       "montant": 2.2,
+       "devient": "Expresso",
+       "tables": [
+        "n°6",
+        "n°7"
+       ]
+      },
+      {
+       "heure": "12:41",
        "montant": 3.9,
        "devient": "Jus de Fruit",
        "tables": [
-        "n°1",
-        "n°2"
-       ]
-      },
-      {
-       "heure": "11:24",
-       "montant": 18.6,
-       "devient": "POULET JURASSIENNE",
-       "tables": [
-        "n°1",
-        "n°2"
-       ]
-      },
-      {
-       "heure": "11:24",
-       "montant": 18.6,
-       "devient": "POULET JURASSIENNE",
-       "tables": [
-        "n°1",
-        "n°2"
-       ]
-      },
-      {
-       "heure": "11:24",
-       "montant": 25.0,
-       "devient": "MACHON GOURMET",
-       "tables": [
-        "n°1",
-        "n°2"
+        "n°6",
+        "n°7"
        ]
       }
      ],
      "notes": [
       {
-       "label": "Note n°1",
-       "heure": "11:26",
-       "total": 28.05,
+       "label": "Note n°6",
+       "heure": "13:02",
+       "total": 33.7,
        "items": [
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
         {
          "lib": "Jus de Fruit",
          "qte": 0.5,
@@ -1826,18 +3309,569 @@
          "highlight": true
         },
         {
-         "lib": "Rosé Pamplemousse",
-         "qte": 0.5,
-         "pu": 4.2,
-         "montant": 2.1,
+         "lib": "MACHON GOURMET",
+         "qte": 1.0,
+         "pu": 25.0,
+         "montant": 25.0,
          "highlight": false
         },
         {
-         "lib": "MACHON GOURMET",
+         "lib": "Thé",
          "qte": 0.5,
-         "pu": 25.0,
-         "montant": 12.5,
+         "pu": 3.4,
+         "montant": 1.7,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
          "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°7",
+       "heure": "13:03",
+       "total": 33.7,
+       "items": [
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "MACHON GOURMET",
+         "qte": 1.0,
+         "pu": 25.0,
+         "montant": 25.0,
+         "highlight": false
+        },
+        {
+         "lib": "Thé",
+         "qte": 0.5,
+         "pu": 3.4,
+         "montant": 1.7,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-01-07",
+     "suppressions": [
+      {
+       "heure": "19:09",
+       "montant": 7.2,
+       "devient": "Jamhon Persillé / Savagnin verre",
+       "tables": [
+        "n°8",
+        "n°9",
+        "n°11",
+        "n°12"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°8",
+       "heure": "19:12",
+       "total": 31.25,
+       "items": [
+        {
+         "lib": "Kir Princier",
+         "qte": 4.0,
+         "pu": 4.2,
+         "montant": 16.8,
+         "highlight": false
+        },
+        {
+         "lib": "Feuilleté Forestier",
+         "qte": 0.5,
+         "pu": 10.9,
+         "montant": 5.45,
+         "highlight": false
+        },
+        {
+         "lib": "Jamhon Persillé",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": true
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°9",
+       "heure": "19:13",
+       "total": 31.25,
+       "items": [
+        {
+         "lib": "Kir Princier",
+         "qte": 4.0,
+         "pu": 4.2,
+         "montant": 16.8,
+         "highlight": false
+        },
+        {
+         "lib": "Feuilleté Forestier",
+         "qte": 0.5,
+         "pu": 10.9,
+         "montant": 5.45,
+         "highlight": false
+        },
+        {
+         "lib": "Jamhon Persillé",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": true
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°11",
+       "heure": "19:22",
+       "total": 49.55,
+       "items": [
+        {
+         "lib": "Vin de Paille",
+         "qte": 1.0,
+         "pu": 6.0,
+         "montant": 6.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 1.0,
+         "pu": 34.0,
+         "montant": 34.0,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": true
+        },
+        {
+         "lib": "H.C.DE BEAUNE  VERRE",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "San Pelegrino 50cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°12",
+       "heure": "19:22",
+       "total": 49.55,
+       "items": [
+        {
+         "lib": "Vin de Paille",
+         "qte": 1.0,
+         "pu": 6.0,
+         "montant": 6.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 1.0,
+         "pu": 34.0,
+         "montant": 34.0,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": true
+        },
+        {
+         "lib": "H.C.DE BEAUNE  VERRE",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "San Pelegrino 50cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-02-25",
+     "suppressions": [
+      {
+       "heure": "12:06",
+       "montant": 8.9,
+       "devient": "Assortiment charcute",
+       "tables": [
+        "n°4",
+        "n°6"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°4",
+       "heure": "12:18",
+       "total": 78.25,
+       "items": [
+        {
+         "lib": "BALIDOU",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": false
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 1.0,
+         "pu": 5.2,
+         "montant": 5.2,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "C du  Rhone St Josep",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "Baba au Macvin",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 1.0,
+         "pu": 2.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "Crepe Chocolat",
+         "qte": 0.5,
+         "pu": 4.7,
+         "montant": 2.35,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 5.8,
+         "montant": 2.9,
+         "highlight": false
+        },
+        {
+         "lib": "SAUCE CHOCO/CAFE/CAR",
+         "qte": 0.5,
+         "pu": 1.8,
+         "montant": 0.9,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°6",
+       "heure": "12:20",
+       "total": 78.25,
+       "items": [
+        {
+         "lib": "BALIDOU",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": false
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 1.0,
+         "pu": 5.2,
+         "montant": 5.2,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "C du  Rhone St Josep",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "Baba au Macvin",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 1.0,
+         "pu": 2.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "Crepe Chocolat",
+         "qte": 0.5,
+         "pu": 4.7,
+         "montant": 2.35,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 5.8,
+         "montant": 2.9,
+         "highlight": false
+        },
+        {
+         "lib": "SAUCE CHOCO/CAFE/CAR",
+         "qte": 0.5,
+         "pu": 1.8,
+         "montant": 0.9,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-03-11",
+     "suppressions": [
+      {
+       "heure": "13:13",
+       "montant": 5.2,
+       "devient": "Chat perché / La Vouivre",
+       "tables": [
+        "n°5",
+        "n°6"
+       ]
+      },
+      {
+       "heure": "13:13",
+       "montant": 7.2,
+       "devient": "Jamhon Persillé",
+       "tables": [
+        "n°5",
+        "n°6"
+       ]
+      },
+      {
+       "heure": "13:13",
+       "montant": 18.6,
+       "devient": "POULET JURASSIENNE",
+       "tables": [
+        "n°5",
+        "n°6"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°5",
+       "heure": "13:07",
+       "total": 89.1,
+       "items": [
+        {
+         "lib": "La Vouivre",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Père Gregoire",
+         "qte": 1.0,
+         "pu": 4.9,
+         "montant": 4.9,
+         "highlight": false
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Chèvre  chaud",
+         "qte": 1.0,
+         "pu": 9.6,
+         "montant": 9.6,
+         "highlight": false
+        },
+        {
+         "lib": "Jamhon Persillé",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Franc-Comptoi",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 1.5,
+         "pu": 16.9,
+         "montant": 25.35,
+         "highlight": false
         },
         {
          "lib": "POULET JURASSIENNE",
@@ -1845,6 +3879,815 @@
          "pu": 18.6,
          "montant": 9.3,
          "highlight": true
+        },
+        {
+         "lib": "PiCHET TROUSSEAU",
+         "qte": 0.5,
+         "pu": 24.0,
+         "montant": 12.0,
+         "highlight": false
+        },
+        {
+         "lib": "Baba au Macvin",
+         "qte": 1.0,
+         "pu": 6.9,
+         "montant": 6.9,
+         "highlight": false
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°6",
+       "heure": "13:07",
+       "total": 89.1,
+       "items": [
+        {
+         "lib": "La Vouivre",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Père Gregoire",
+         "qte": 1.0,
+         "pu": 4.9,
+         "montant": 4.9,
+         "highlight": false
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": true
+        },
+        {
+         "lib": "Chèvre  chaud",
+         "qte": 1.0,
+         "pu": 9.6,
+         "montant": 9.6,
+         "highlight": false
+        },
+        {
+         "lib": "Jamhon Persillé",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Franc-Comptoi",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 1.5,
+         "pu": 16.9,
+         "montant": 25.35,
+         "highlight": false
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "PiCHET TROUSSEAU",
+         "qte": 0.5,
+         "pu": 24.0,
+         "montant": 12.0,
+         "highlight": false
+        },
+        {
+         "lib": "Baba au Macvin",
+         "qte": 1.0,
+         "pu": 6.9,
+         "montant": 6.9,
+         "highlight": false
+        },
+        {
+         "lib": "CREME BRULEE",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-04-07",
+     "suppressions": [
+      {
+       "heure": "21:07",
+       "montant": 1.8,
+       "devient": "Chantilly",
+       "tables": [
+        "n°13",
+        "n°14"
+       ]
+      },
+      {
+       "heure": "21:07",
+       "montant": 4.9,
+       "devient": "Macvin du Jura",
+       "tables": [
+        "n°13",
+        "n°14"
+       ]
+      },
+      {
+       "heure": "21:07",
+       "montant": 5.8,
+       "devient": "GLACE 3 BOULES / PASSION",
+       "tables": [
+        "n°13",
+        "n°14"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°13",
+       "heure": "21:09",
+       "total": 116.6,
+       "items": [
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": true
+        },
+        {
+         "lib": "Pinte",
+         "qte": 0.5,
+         "pu": 7.8,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "Fuze Tea",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0,
+         "highlight": false
+        },
+        {
+         "lib": "Fondue Jurassienne",
+         "qte": 3.0,
+         "pu": 16.9,
+         "montant": 50.7,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes grenailles",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 1.0,
+         "pu": 4.7,
+         "montant": 4.7,
+         "highlight": false
+        },
+        {
+         "lib": "DAMES VERTES",
+         "qte": 0.5,
+         "pu": 8.3,
+         "montant": 4.15,
+         "highlight": false
+        },
+        {
+         "lib": "PASSION",
+         "qte": 0.5,
+         "pu": 5.8,
+         "montant": 2.9,
+         "highlight": true
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 5.8,
+         "montant": 2.9,
+         "highlight": true
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 1.8,
+         "montant": 0.9,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°14",
+       "heure": "21:10",
+       "total": 116.6,
+       "items": [
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": true
+        },
+        {
+         "lib": "Pinte",
+         "qte": 0.5,
+         "pu": 7.8,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "Fuze Tea",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 1.0,
+         "pu": 19.0,
+         "montant": 19.0,
+         "highlight": false
+        },
+        {
+         "lib": "Fondue Jurassienne",
+         "qte": 3.0,
+         "pu": 16.9,
+         "montant": 50.7,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes grenailles",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 1.0,
+         "pu": 4.7,
+         "montant": 4.7,
+         "highlight": false
+        },
+        {
+         "lib": "DAMES VERTES",
+         "qte": 0.5,
+         "pu": 8.3,
+         "montant": 4.15,
+         "highlight": false
+        },
+        {
+         "lib": "PASSION",
+         "qte": 0.5,
+         "pu": 5.8,
+         "montant": 2.9,
+         "highlight": true
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.7,
+         "montant": 4.35,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 5.8,
+         "montant": 2.9,
+         "highlight": true
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 1.8,
+         "montant": 0.9,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-05-13",
+     "suppressions": [
+      {
+       "heure": "12:16",
+       "montant": 4.2,
+       "devient": "Panaché / pression",
+       "tables": [
+        "n°4",
+        "n°5"
+       ]
+      },
+      {
+       "heure": "12:16",
+       "montant": 19.5,
+       "devient": "Menu 'Galette'",
+       "tables": [
+        "n°4",
+        "n°5"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°4",
+       "heure": "12:11",
+       "total": 49.4,
+       "items": [
+        {
+         "lib": "Fuze Tea",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "pression",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Panaché",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Menu 'Enfant'",
+         "qte": 0.5,
+         "pu": 9.9,
+         "montant": 4.95,
+         "highlight": false
+        },
+        {
+         "lib": "Menu 'Galette'",
+         "qte": 0.5,
+         "pu": 19.5,
+         "montant": 9.75,
+         "highlight": true
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "Bacon",
+         "qte": 0.5,
+         "pu": 3.3,
+         "montant": 1.65,
+         "highlight": false
+        },
+        {
+         "lib": "LOURNETTE",
+         "qte": 0.5,
+         "pu": 17.9,
+         "montant": 8.95,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Jambon Blanc",
+         "qte": 0.5,
+         "pu": 3.8,
+         "montant": 1.9,
+         "highlight": false
+        },
+        {
+         "lib": "Cancoillotte",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crepe CHOCO/BANANE",
+         "qte": 0.5,
+         "pu": 8.6,
+         "montant": 4.3,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°5",
+       "heure": "12:12",
+       "total": 49.4,
+       "items": [
+        {
+         "lib": "Fuze Tea",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "pression",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Panaché",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Menu 'Enfant'",
+         "qte": 0.5,
+         "pu": 9.9,
+         "montant": 4.95,
+         "highlight": false
+        },
+        {
+         "lib": "Menu 'Galette'",
+         "qte": 0.5,
+         "pu": 19.5,
+         "montant": 9.75,
+         "highlight": true
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "Bacon",
+         "qte": 0.5,
+         "pu": 3.3,
+         "montant": 1.65,
+         "highlight": false
+        },
+        {
+         "lib": "LOURNETTE",
+         "qte": 0.5,
+         "pu": 17.9,
+         "montant": 8.95,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Jambon Blanc",
+         "qte": 0.5,
+         "pu": 3.8,
+         "montant": 1.9,
+         "highlight": false
+        },
+        {
+         "lib": "Cancoillotte",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crepe CHOCO/BANANE",
+         "qte": 0.5,
+         "pu": 8.6,
+         "montant": 4.3,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-06-22",
+     "suppressions": [
+      {
+       "heure": "19:48",
+       "montant": 3.9,
+       "devient": "VERRE ROSE",
+       "tables": [
+        "n°17",
+        "n°18"
+       ]
+      },
+      {
+       "heure": "19:48",
+       "montant": 5.9,
+       "devient": "Macvin du Jura",
+       "tables": [
+        "n°17",
+        "n°18"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°17",
+       "heure": "20:13",
+       "total": 46.25,
+       "items": [
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "VERRE ROSE",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "ENTRECOTE MORILLES",
+         "qte": 0.5,
+         "pu": 34.8,
+         "montant": 17.4,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Régionale",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "PICHET SAVAGNIN",
+         "qte": 0.5,
+         "pu": 28.0,
+         "montant": 14.0,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°18",
+       "heure": "20:14",
+       "total": 46.25,
+       "items": [
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "VERRE ROSE",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "ENTRECOTE MORILLES",
+         "qte": 0.5,
+         "pu": 34.8,
+         "montant": 17.4,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Régionale",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "PICHET SAVAGNIN",
+         "qte": 0.5,
+         "pu": 28.0,
+         "montant": 14.0,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-07-07",
+     "suppressions": [
+      {
+       "heure": "12:08",
+       "montant": 5.9,
+       "devient": "Père Gregoire",
+       "tables": [
+        "n°6",
+        "n°7"
+       ]
+      },
+      {
+       "heure": "12:08",
+       "montant": 18.6,
+       "devient": "CAMEMBERT ROTI",
+       "tables": [
+        "n°6",
+        "n°7"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°6",
+       "heure": "12:06",
+       "total": 77.85,
+       "items": [
+        {
+         "lib": "pression",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "Père Gregoire",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "PICHET ROSE",
+         "qte": 0.5,
+         "pu": 10.5,
+         "montant": 5.25,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "TANTELIN",
+         "qte": 0.5,
+         "pu": 17.4,
+         "montant": 8.7,
+         "highlight": false
+        },
+        {
+         "lib": "Poulet aux Morilles",
+         "qte": 0.5,
+         "pu": 28.6,
+         "montant": 14.3,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Baba",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        },
+        {
+         "lib": "CUPIDON",
+         "qte": 1.0,
+         "pu": 9.3,
+         "montant": 9.3,
+         "highlight": false
         },
         {
          "lib": "Expresso",
@@ -1856,37 +4699,79 @@
        ]
       },
       {
-       "label": "Note n°2",
-       "heure": "11:27",
-       "total": 28.05,
+       "label": "Note n°7",
+       "heure": "12:07",
+       "total": 77.85,
        "items": [
         {
-         "lib": "Jus de Fruit",
-         "qte": 0.5,
-         "pu": 3.9,
-         "montant": 1.95,
-         "highlight": true
-        },
-        {
-         "lib": "Rosé Pamplemousse",
-         "qte": 0.5,
+         "lib": "pression",
+         "qte": 1.0,
          "pu": 4.2,
-         "montant": 2.1,
+         "montant": 4.2,
          "highlight": false
         },
         {
-         "lib": "MACHON GOURMET",
+         "lib": "Mambo",
          "qte": 0.5,
-         "pu": 25.0,
-         "montant": 12.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "Père Gregoire",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
          "highlight": true
         },
         {
-         "lib": "POULET JURASSIENNE",
+         "lib": "PICHET ROSE",
+         "qte": 0.5,
+         "pu": 10.5,
+         "montant": 5.25,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "TANTELIN",
+         "qte": 0.5,
+         "pu": 17.4,
+         "montant": 8.7,
+         "highlight": false
+        },
+        {
+         "lib": "Poulet aux Morilles",
+         "qte": 0.5,
+         "pu": 28.6,
+         "montant": 14.3,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
          "qte": 0.5,
          "pu": 18.6,
          "montant": 9.3,
          "highlight": true
+        },
+        {
+         "lib": "Baba",
+         "qte": 1.0,
+         "pu": 8.9,
+         "montant": 8.9,
+         "highlight": false
+        },
+        {
+         "lib": "CUPIDON",
+         "qte": 1.0,
+         "pu": 9.3,
+         "montant": 9.3,
+         "highlight": false
         },
         {
          "lib": "Expresso",
@@ -1894,6 +4779,243 @@
          "pu": 2.2,
          "montant": 2.2,
          "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-08-27",
+     "suppressions": [
+      {
+       "heure": "13:17",
+       "montant": 2.2,
+       "devient": "Expresso",
+       "tables": [
+        "n°12",
+        "n°13",
+        "n°14",
+        "n°15"
+       ]
+      },
+      {
+       "heure": "13:17",
+       "montant": 34.0,
+       "devient": "Menu Bourguignon",
+       "tables": [
+        "n°14",
+        "n°15"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°12",
+       "heure": "13:00",
+       "total": 26.6,
+       "items": [
+        {
+         "lib": "Luna",
+         "qte": 1.0,
+         "pu": 6.0,
+         "montant": 6.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu 'Galette'",
+         "qte": 1.0,
+         "pu": 19.5,
+         "montant": 19.5,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°13",
+       "heure": "13:01",
+       "total": 26.6,
+       "items": [
+        {
+         "lib": "Luna",
+         "qte": 1.0,
+         "pu": 6.0,
+         "montant": 6.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu 'Galette'",
+         "qte": 1.0,
+         "pu": 19.5,
+         "montant": 19.5,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°14",
+       "heure": "13:02",
+       "total": 71.6,
+       "items": [
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "BALIDOU",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": false
+        },
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Bourguignon",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": true
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°15",
+       "heure": "13:02",
+       "total": 71.6,
+       "items": [
+        {
+         "lib": "Kir Bourgogne",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "BALIDOU",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": false
+        },
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Bourguignon",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": true
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
         }
        ]
       }
@@ -1902,15 +5024,6 @@
     {
      "date": "2023-09-13",
      "suppressions": [
-      {
-       "heure": "19:48",
-       "montant": 3.5,
-       "devient": "GLACE 1 BOULE",
-       "tables": [
-        "n°32",
-        "n°33"
-       ]
-      },
       {
        "heure": "19:48",
        "montant": 3.9,
@@ -1934,26 +5047,6 @@
        "heure": "19:48",
        "montant": 4.2,
        "devient": "Panaché",
-       "tables": [
-        "n°31",
-        "n°32",
-        "n°33"
-       ]
-      },
-      {
-       "heure": "19:48",
-       "montant": 18.6,
-       "devient": "ASSIETTE FRANC-COMTO",
-       "tables": [
-        "n°31",
-        "n°32",
-        "n°33"
-       ]
-      },
-      {
-       "heure": "19:48",
-       "montant": 18.6,
-       "devient": "ASSIETTE FRANC-COMTO",
        "tables": [
         "n°31",
         "n°32",
@@ -2000,7 +5093,7 @@
          "qte": 0.5,
          "pu": 18.6,
          "montant": 9.3,
-         "highlight": true
+         "highlight": false
         },
         {
          "lib": "Entrecôte grillée",
@@ -2112,7 +5205,7 @@
          "qte": 0.25,
          "pu": 18.6,
          "montant": 4.65,
-         "highlight": true
+         "highlight": false
         },
         {
          "lib": "Entrecôte grillée",
@@ -2182,7 +5275,7 @@
          "qte": 0.5,
          "pu": 3.5,
          "montant": 1.75,
-         "highlight": true
+         "highlight": false
         }
        ]
       },
@@ -2224,7 +5317,7 @@
          "qte": 0.25,
          "pu": 18.6,
          "montant": 4.65,
-         "highlight": true
+         "highlight": false
         },
         {
          "lib": "Entrecôte grillée",
@@ -2294,7 +5387,7 @@
          "qte": 0.5,
          "pu": 3.5,
          "montant": 1.75,
-         "highlight": true
+         "highlight": false
         }
        ]
       }
@@ -2303,15 +5396,6 @@
     {
      "date": "2023-10-13",
      "suppressions": [
-      {
-       "heure": "20:09",
-       "montant": 3.9,
-       "devient": "Cancoillotte / Crêpe au sucre",
-       "tables": [
-        "n°36",
-        "n°37"
-       ]
-      },
       {
        "heure": "20:09",
        "montant": 3.9,
@@ -2573,17 +5657,1088 @@
      ]
     },
     {
-     "date": "2024-05-11",
+     "date": "2023-11-03",
      "suppressions": [
       {
-       "heure": "20:43",
-       "montant": 4.2,
-       "devient": "Pontarlier",
+       "heure": "20:08",
+       "montant": 3.5,
+       "devient": "GLACE 1 BOULE",
        "tables": [
-        "n°31",
-        "n°32"
+        "n°30",
+        "n°31"
        ]
       },
+      {
+       "heure": "20:08",
+       "montant": 8.9,
+       "devient": "Saucisse de Morteau",
+       "tables": [
+        "n°30",
+        "n°31"
+       ]
+      },
+      {
+       "heure": "20:08",
+       "montant": 9.0,
+       "devient": "BALIDOU",
+       "tables": [
+        "n°30",
+        "n°31"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°30",
+       "heure": "20:57",
+       "total": 115.75,
+       "items": [
+        {
+         "lib": "BALIDOU",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": true
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": false
+        },
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 1.0,
+         "pu": 6.9,
+         "montant": 6.9,
+         "highlight": false
+        },
+        {
+         "lib": "Sirop à l'eau",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "pichet Saint Joseph",
+         "qte": 0.5,
+         "pu": 32.2,
+         "montant": 16.1,
+         "highlight": false
+        },
+        {
+         "lib": "Menu 'Enfant'",
+         "qte": 1.0,
+         "pu": 9.9,
+         "montant": 9.9,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        },
+        {
+         "lib": "FLAMME",
+         "qte": 0.5,
+         "pu": 9.3,
+         "montant": 4.65,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        },
+        {
+         "lib": "BASILIC",
+         "qte": 0.5,
+         "pu": 12.4,
+         "montant": 6.2,
+         "highlight": false
+        },
+        {
+         "lib": "FLIRT",
+         "qte": 0.5,
+         "pu": 12.0,
+         "montant": 6.0,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°31",
+       "heure": "20:58",
+       "total": 115.75,
+       "items": [
+        {
+         "lib": "BALIDOU",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": true
+        },
+        {
+         "lib": "KITTYKIR",
+         "qte": 0.5,
+         "pu": 5.2,
+         "montant": 2.6,
+         "highlight": false
+        },
+        {
+         "lib": "Blanche des plateaux",
+         "qte": 1.0,
+         "pu": 6.9,
+         "montant": 6.9,
+         "highlight": false
+        },
+        {
+         "lib": "Sirop à l'eau",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "pichet Saint Joseph",
+         "qte": 0.5,
+         "pu": 32.2,
+         "montant": 16.1,
+         "highlight": false
+        },
+        {
+         "lib": "Menu 'Enfant'",
+         "qte": 1.0,
+         "pu": 9.9,
+         "montant": 9.9,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        },
+        {
+         "lib": "FLAMME",
+         "qte": 0.5,
+         "pu": 9.3,
+         "montant": 4.65,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 1 BOULE",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        },
+        {
+         "lib": "BASILIC",
+         "qte": 0.5,
+         "pu": 12.4,
+         "montant": 6.2,
+         "highlight": false
+        },
+        {
+         "lib": "FLIRT",
+         "qte": 0.5,
+         "pu": 12.0,
+         "montant": 6.0,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2023-12-06",
+     "suppressions": [
+      {
+       "heure": "19:33",
+       "montant": 2.2,
+       "devient": "Expresso",
+       "tables": [
+        "n°14",
+        "n°15"
+       ]
+      },
+      {
+       "heure": "19:33",
+       "montant": 5.5,
+       "devient": "GLACE 2 BOULES",
+       "tables": [
+        "n°14",
+        "n°15"
+       ]
+      },
+      {
+       "heure": "19:33",
+       "montant": 6.4,
+       "devient": "Crêpe Salidou",
+       "tables": [
+        "n°14",
+        "n°15"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°14",
+       "heure": "19:57",
+       "total": 28.75,
+       "items": [
+        {
+         "lib": "pression",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "Verre ALIGOTE",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Morbier",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 5.5,
+         "montant": 2.75,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Salidou",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°15",
+       "heure": "19:57",
+       "total": 28.75,
+       "items": [
+        {
+         "lib": "pression",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "Verre ALIGOTE",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Morbier",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 5.5,
+         "montant": 2.75,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Salidou",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-01-06",
+     "suppressions": [
+      {
+       "heure": "12:52",
+       "montant": 18.6,
+       "devient": "MORTEAU GRILLEE",
+       "tables": [
+        "n°7",
+        "n°8"
+       ]
+      },
+      {
+       "heure": "12:52",
+       "montant": 27.8,
+       "devient": "Entrecôte Forestiére",
+       "tables": [
+        "n°7",
+        "n°8"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°7",
+       "heure": "12:44",
+       "total": 60.9,
+       "items": [
+        {
+         "lib": "LOURNETTE",
+         "qte": 0.5,
+         "pu": 17.9,
+         "montant": 8.95,
+         "highlight": false
+        },
+        {
+         "lib": "BARBEULENET",
+         "qte": 0.5,
+         "pu": 17.4,
+         "montant": 8.7,
+         "highlight": false
+        },
+        {
+         "lib": "Entrecôte Forestiére",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": true
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "CUPIDON",
+         "qte": 0.5,
+         "pu": 9.3,
+         "montant": 4.65,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.5,
+         "pu": 2.2,
+         "montant": 3.3,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Confiture",
+         "qte": 0.5,
+         "pu": 5.4,
+         "montant": 2.7,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Salidou",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": false
+        },
+        {
+         "lib": "1 Boule Glace",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°8",
+       "heure": "12:45",
+       "total": 60.9,
+       "items": [
+        {
+         "lib": "LOURNETTE",
+         "qte": 0.5,
+         "pu": 17.9,
+         "montant": 8.95,
+         "highlight": false
+        },
+        {
+         "lib": "BARBEULENET",
+         "qte": 0.5,
+         "pu": 17.4,
+         "montant": 8.7,
+         "highlight": false
+        },
+        {
+         "lib": "Entrecôte Forestiére",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": true
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "CUPIDON",
+         "qte": 0.5,
+         "pu": 9.3,
+         "montant": 4.65,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.5,
+         "pu": 2.2,
+         "montant": 3.3,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Confiture",
+         "qte": 0.5,
+         "pu": 5.4,
+         "montant": 2.7,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Salidou",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": false
+        },
+        {
+         "lib": "1 Boule Glace",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-03-21",
+     "suppressions": [
+      {
+       "heure": "20:16",
+       "montant": 8.3,
+       "devient": "Savagnin verre",
+       "tables": [
+        "n°13",
+        "n°14"
+       ]
+      },
+      {
+       "heure": "20:16",
+       "montant": 8.9,
+       "devient": "Baba",
+       "tables": [
+        "n°13",
+        "n°14"
+       ]
+      },
+      {
+       "heure": "20:16",
+       "montant": 19.9,
+       "devient": "PAYSANNE",
+       "tables": [
+        "n°13",
+        "n°14"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°13",
+       "heure": "19:58",
+       "total": 35.11,
+       "items": [
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 1.25,
+         "pu": 8.3,
+         "montant": 10.38,
+         "highlight": true
+        },
+        {
+         "lib": "Menu 'Galette'",
+         "qte": 0.25,
+         "pu": 19.5,
+         "montant": 4.88,
+         "highlight": false
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 0.25,
+         "pu": 19.9,
+         "montant": 4.97,
+         "highlight": true
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 0.25,
+         "pu": 18.6,
+         "montant": 4.65,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 0.25,
+         "pu": 3.9,
+         "montant": 0.97,
+         "highlight": false
+        },
+        {
+         "lib": "Ratatouille",
+         "qte": 0.25,
+         "pu": 3.2,
+         "montant": 0.8,
+         "highlight": false
+        },
+        {
+         "lib": "PIGNONS PIN",
+         "qte": 0.25,
+         "pu": 1.4,
+         "montant": 0.35,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.25,
+         "pu": 2.9,
+         "montant": 0.72,
+         "highlight": false
+        },
+        {
+         "lib": "Champignons frais",
+         "qte": 0.25,
+         "pu": 3.2,
+         "montant": 0.8,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 0.25,
+         "pu": 8.9,
+         "montant": 2.23,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.25,
+         "pu": 5.5,
+         "montant": 1.38,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°14",
+       "heure": "20:00",
+       "total": 88.59,
+       "items": [
+        {
+         "lib": "Macvin du Jura",
+         "qte": 1.5,
+         "pu": 5.9,
+         "montant": 8.85,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 1.75,
+         "pu": 8.3,
+         "montant": 14.53,
+         "highlight": true
+        },
+        {
+         "lib": "Menu 'Galette'",
+         "qte": 0.75,
+         "pu": 19.5,
+         "montant": 14.62,
+         "highlight": false
+        },
+        {
+         "lib": "PAYSANNE",
+         "qte": 0.75,
+         "pu": 19.9,
+         "montant": 14.92,
+         "highlight": true
+        },
+        {
+         "lib": "TRUITE JURASSIENNE",
+         "qte": 0.75,
+         "pu": 18.6,
+         "montant": 13.95,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 0.75,
+         "pu": 3.9,
+         "montant": 2.92,
+         "highlight": false
+        },
+        {
+         "lib": "Ratatouille",
+         "qte": 0.75,
+         "pu": 3.2,
+         "montant": 2.4,
+         "highlight": false
+        },
+        {
+         "lib": "PIGNONS PIN",
+         "qte": 0.75,
+         "pu": 1.4,
+         "montant": 1.05,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.75,
+         "pu": 2.9,
+         "montant": 2.17,
+         "highlight": false
+        },
+        {
+         "lib": "Champignons frais",
+         "qte": 0.75,
+         "pu": 3.2,
+         "montant": 2.4,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 0.75,
+         "pu": 8.9,
+         "montant": 6.68,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.75,
+         "pu": 5.5,
+         "montant": 4.12,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-04-27",
+     "suppressions": [
+      {
+       "heure": "21:26",
+       "montant": 2.2,
+       "devient": "Expresso",
+       "tables": [
+        "n°29",
+        "n°30"
+       ]
+      },
+      {
+       "heure": "21:26",
+       "montant": 5.9,
+       "devient": "Salade Verte",
+       "tables": [
+        "n°29",
+        "n°30"
+       ]
+      },
+      {
+       "heure": "21:26",
+       "montant": 8.4,
+       "devient": "Crêpe Flambée",
+       "tables": [
+        "n°29",
+        "n°30"
+       ]
+      },
+      {
+       "heure": "21:26",
+       "montant": 8.9,
+       "devient": "Pavlova",
+       "tables": [
+        "n°29",
+        "n°30"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°29",
+       "heure": "21:09",
+       "total": 141.95,
+       "items": [
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 1.0,
+         "pu": 8.3,
+         "montant": 8.3,
+         "highlight": false
+        },
+        {
+         "lib": "MACHON GOURMET",
+         "qte": 1.0,
+         "pu": 25.0,
+         "montant": 25.0,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "ENTRECOTE MORILLES",
+         "qte": 0.5,
+         "pu": 34.8,
+         "montant": 17.4,
+         "highlight": false
+        },
+        {
+         "lib": "Père Gregoire",
+         "qte": 3.0,
+         "pu": 5.9,
+         "montant": 17.7,
+         "highlight": false
+        },
+        {
+         "lib": "Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 1.5,
+         "pu": 8.9,
+         "montant": 13.35,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Salidou",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": false
+        },
+        {
+         "lib": "Amandes grillées",
+         "qte": 0.5,
+         "pu": 1.4,
+         "montant": 0.7,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Flambée",
+         "qte": 0.5,
+         "pu": 8.4,
+         "montant": 4.2,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.5,
+         "pu": 2.2,
+         "montant": 3.3,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°30",
+       "heure": "21:10",
+       "total": 141.95,
+       "items": [
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 1.0,
+         "pu": 8.3,
+         "montant": 8.3,
+         "highlight": false
+        },
+        {
+         "lib": "MACHON GOURMET",
+         "qte": 1.0,
+         "pu": 25.0,
+         "montant": 25.0,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Verte",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "ENTRECOTE MORILLES",
+         "qte": 0.5,
+         "pu": 34.8,
+         "montant": 17.4,
+         "highlight": false
+        },
+        {
+         "lib": "Père Gregoire",
+         "qte": 3.0,
+         "pu": 5.9,
+         "montant": 17.7,
+         "highlight": false
+        },
+        {
+         "lib": "Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 1.5,
+         "pu": 8.9,
+         "montant": 13.35,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Salidou",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": false
+        },
+        {
+         "lib": "Amandes grillées",
+         "qte": 0.5,
+         "pu": 1.4,
+         "montant": 0.7,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Flambée",
+         "qte": 0.5,
+         "pu": 8.4,
+         "montant": 4.2,
+         "highlight": true
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.5,
+         "pu": 2.2,
+         "montant": 3.3,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-05-11",
+     "suppressions": [
       {
        "heure": "20:43",
        "montant": 4.2,
@@ -2798,103 +6953,1454 @@
      ]
     },
     {
-     "date": "2024-06-15",
+     "date": "2024-06-05",
      "suppressions": [
       {
-       "heure": "12:33",
-       "montant": 5.9,
-       "devient": "Chat perché",
+       "heure": "19:32",
+       "montant": 18.6,
+       "devient": "ASSIETTE PERE GREGOI / MORTEAU GRILLEE",
+       "tables": [
+        "n°20",
+        "n°21",
+        "n°23",
+        "n°24"
+       ]
+      },
+      {
+       "heure": "19:32",
+       "montant": 19.9,
+       "devient": "Entrecôte grillée",
+       "tables": [
+        "n°20",
+        "n°21"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°20",
+       "heure": "19:34",
+       "total": 26.25,
+       "items": [
+        {
+         "lib": "Gewurztraminer Le ve",
+         "qte": 1.0,
+         "pu": 7.0,
+         "montant": 7.0,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE PERE GREGOI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°21",
+       "heure": "19:35",
+       "total": 26.25,
+       "items": [
+        {
+         "lib": "Gewurztraminer Le ve",
+         "qte": 1.0,
+         "pu": 7.0,
+         "montant": 7.0,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE PERE GREGOI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°23",
+       "heure": "19:44",
+       "total": 31.1,
+       "items": [
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Crepe Chocolat",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°24",
+       "heure": "19:44",
+       "total": 31.1,
+       "items": [
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Saint Véran Verre",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Crepe Chocolat",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-07-20",
+     "suppressions": [
+      {
+       "heure": "12:54",
+       "montant": 8.9,
+       "devient": "Baba",
+       "tables": [
+        "n°12",
+        "n°13"
+       ]
+      },
+      {
+       "heure": "12:54",
+       "montant": 18.6,
+       "devient": "POULET JURASSIENNE",
+       "tables": [
+        "n°12",
+        "n°13"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°12",
+       "heure": "12:59",
+       "total": 67.6,
+       "items": [
+        {
+         "lib": "Porto",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "pression",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "PICHET ROSE",
+         "qte": 0.5,
+         "pu": 10.5,
+         "montant": 5.25,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Régionale",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "SAUCE CHOCO/CAFE/CAR",
+         "qte": 0.5,
+         "pu": 2.4,
+         "montant": 1.2,
+         "highlight": false
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 2.0,
+         "montant": 1.0,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe au sucre",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "CHANTILLY",
+         "qte": 0.5,
+         "pu": 2.5,
+         "montant": 1.25,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°13",
+       "heure": "13:00",
+       "total": 67.6,
+       "items": [
+        {
+         "lib": "Porto",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        },
+        {
+         "lib": "pression",
+         "qte": 1.0,
+         "pu": 4.2,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "PICHET ROSE",
+         "qte": 0.5,
+         "pu": 10.5,
+         "montant": 5.25,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Régionale",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": false
+        },
+        {
+         "lib": "SAUCE CHOCO/CAFE/CAR",
+         "qte": 0.5,
+         "pu": 2.4,
+         "montant": 1.2,
+         "highlight": false
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 2.0,
+         "montant": 1.0,
+         "highlight": false
+        },
+        {
+         "lib": "Baba",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe au sucre",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "CHANTILLY",
+         "qte": 0.5,
+         "pu": 2.5,
+         "montant": 1.25,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-08-03",
+     "suppressions": [
+      {
+       "heure": "19:51",
+       "montant": 3.9,
+       "devient": "FANTA",
+       "tables": [
+        "n°25",
+        "n°26"
+       ]
+      },
+      {
+       "heure": "19:51",
+       "montant": 19.0,
+       "devient": "Crémeux du Jura",
+       "tables": [
+        "n°25",
+        "n°26"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°25",
+       "heure": "20:01",
+       "total": 48.85,
+       "items": [
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "FANTA",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "CUPIDON",
+         "qte": 0.5,
+         "pu": 9.3,
+         "montant": 4.65,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°26",
+       "heure": "20:02",
+       "total": 48.85,
+       "items": [
+        {
+         "lib": "Luna",
+         "qte": 0.5,
+         "pu": 6.0,
+         "montant": 3.0,
+         "highlight": false
+        },
+        {
+         "lib": "Mambo",
+         "qte": 0.5,
+         "pu": 6.5,
+         "montant": 3.25,
+         "highlight": false
+        },
+        {
+         "lib": "FANTA",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "Crémeux du Jura",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": true
+        },
+        {
+         "lib": "GLACE 3 BOULES",
+         "qte": 1.0,
+         "pu": 7.9,
+         "montant": 7.9,
+         "highlight": false
+        },
+        {
+         "lib": "CUPIDON",
+         "qte": 0.5,
+         "pu": 9.3,
+         "montant": 4.65,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-09-29",
+     "suppressions": [
+      {
+       "heure": "12:38",
+       "montant": 17.8,
+       "devient": "PEUTE",
        "tables": [
         "n°5",
         "n°6"
        ]
       },
       {
-       "heure": "12:33",
-       "montant": 10.5,
-       "devient": "PICHET ROSE",
+       "heure": "12:38",
+       "montant": 18.6,
+       "devient": "ASSIETTE FRANC-COMTO / MORTEAU GRILLEE / POULET JURASSIENNE",
        "tables": [
         "n°5",
-        "n°6"
+        "n°6",
+        "n°8",
+        "n°9",
+        "n°10",
+        "n°11"
        ]
       },
       {
-       "heure": "12:33",
-       "montant": 16.9,
-       "devient": "TRUITE PESTO",
+       "heure": "12:38",
+       "montant": 27.8,
+       "devient": "Truite Morilles",
        "tables": [
-        "n°5",
-        "n°6"
+        "n°8",
+        "n°9"
        ]
       }
      ],
      "notes": [
       {
        "label": "Note n°5",
-       "heure": "12:45",
-       "total": 90.0,
+       "heure": "12:42",
+       "total": 118.1,
        "items": [
         {
-         "lib": "Savagnin verre",
-         "qte": 0.5,
-         "pu": 8.3,
-         "montant": 4.15,
-         "highlight": false
-        },
-        {
-         "lib": "Chat perché",
+         "lib": "Père Gregoire",
          "qte": 0.5,
          "pu": 5.9,
          "montant": 2.95,
-         "highlight": true
-        },
-        {
-         "lib": "pression",
-         "qte": 1.0,
-         "pu": 4.2,
-         "montant": 4.2,
          "highlight": false
         },
         {
-         "lib": "PICHET ROSE",
+         "lib": "La Vouivre",
          "qte": 0.5,
-         "pu": 10.5,
-         "montant": 5.25,
-         "highlight": true
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Sprintz",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "H.C.B BEAUNE BTL",
+         "qte": 0.5,
+         "pu": 49.0,
+         "montant": 24.5,
+         "highlight": false
+        },
+        {
+         "lib": "Escargots de Bourgog",
+         "qte": 3.0,
+         "pu": 8.0,
+         "montant": 24.0,
+         "highlight": false
         },
         {
          "lib": "Croûtes Morilles",
-         "qte": 2.0,
+         "qte": 0.5,
          "pu": 16.9,
-         "montant": 33.8,
+         "montant": 8.45,
          "highlight": false
         },
         {
-         "lib": "TRUITE PESTO",
-         "qte": 1.5,
-         "pu": 16.9,
-         "montant": 25.35,
+         "lib": "Feuilleté Forestier",
+         "qte": 0.5,
+         "pu": 10.9,
+         "montant": 5.45,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
          "highlight": true
         },
         {
-         "lib": "Poulet aux Morilles",
+         "lib": "FRELEE",
          "qte": 0.5,
-         "pu": 28.6,
-         "montant": 14.3,
+         "pu": 19.6,
+         "montant": 9.8,
+         "highlight": false
+        },
+        {
+         "lib": "PEUTE",
+         "qte": 0.5,
+         "pu": 17.8,
+         "montant": 8.9,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 2.0,
+         "pu": 2.2,
+         "montant": 4.4,
          "highlight": false
         }
        ]
       },
       {
        "label": "Note n°6",
-       "heure": "12:45",
-       "total": 90.0,
+       "heure": "12:43",
+       "total": 118.1,
        "items": [
         {
-         "lib": "Savagnin verre",
+         "lib": "Père Gregoire",
          "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "La Vouivre",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Sprintz",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": false
+        },
+        {
+         "lib": "Macvin du Jura",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "H.C.B BEAUNE BTL",
+         "qte": 0.5,
+         "pu": 49.0,
+         "montant": 24.5,
+         "highlight": false
+        },
+        {
+         "lib": "Escargots de Bourgog",
+         "qte": 3.0,
+         "pu": 8.0,
+         "montant": 24.0,
+         "highlight": false
+        },
+        {
+         "lib": "Croûtes Morilles",
+         "qte": 0.5,
+         "pu": 16.9,
+         "montant": 8.45,
+         "highlight": false
+        },
+        {
+         "lib": "Feuilleté Forestier",
+         "qte": 0.5,
+         "pu": 10.9,
+         "montant": 5.45,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "FRELEE",
+         "qte": 0.5,
+         "pu": 19.6,
+         "montant": 9.8,
+         "highlight": false
+        },
+        {
+         "lib": "PEUTE",
+         "qte": 0.5,
+         "pu": 17.8,
+         "montant": 8.9,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte grillée",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 2.0,
+         "pu": 2.2,
+         "montant": 4.4,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°8",
+       "heure": "12:49",
+       "total": 42.6,
+       "items": [
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "Truite Morilles",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": true
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "VOUIVRE",
+         "qte": 0.5,
+         "pu": 14.6,
+         "montant": 7.3,
+         "highlight": false
+        },
+        {
+         "lib": "TANTE ARIE",
+         "qte": 0.5,
+         "pu": 11.9,
+         "montant": 5.95,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°9",
+       "heure": "12:49",
+       "total": 42.6,
+       "items": [
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": false
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": false
+        },
+        {
+         "lib": "Truite Morilles",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": true
+        },
+        {
+         "lib": "POULET JURASSIENNE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "VOUIVRE",
+         "qte": 0.5,
+         "pu": 14.6,
+         "montant": 7.3,
+         "highlight": false
+        },
+        {
+         "lib": "TANTE ARIE",
+         "qte": 0.5,
+         "pu": 11.9,
+         "montant": 5.95,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 0.5,
+         "pu": 2.2,
+         "montant": 1.1,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°10",
+       "heure": "12:53",
+       "total": 92.55,
+       "items": [
+        {
+         "lib": "Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": false
+        },
+        {
+         "lib": "Escargots de Bourgog",
+         "qte": 1.5,
+         "pu": 8.0,
+         "montant": 12.0,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Régionale",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 1.0,
          "pu": 8.3,
-         "montant": 4.15,
+         "montant": 8.3,
+         "highlight": false
+        },
+        {
+         "lib": "Mambo",
+         "qte": 1.0,
+         "pu": 6.5,
+         "montant": 6.5,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°11",
+       "heure": "12:54",
+       "total": 92.55,
+       "items": [
+        {
+         "lib": "Arbois Béthanie",
+         "qte": 0.5,
+         "pu": 36.0,
+         "montant": 18.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": false
+        },
+        {
+         "lib": "Escargots de Bourgog",
+         "qte": 1.5,
+         "pu": 8.0,
+         "montant": 12.0,
+         "highlight": false
+        },
+        {
+         "lib": "MORTEAU GRILLEE",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "ASSIETTE FRANC-COMTO",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Salade Régionale",
+         "qte": 0.5,
+         "pu": 19.9,
+         "montant": 9.95,
+         "highlight": false
+        },
+        {
+         "lib": "Savagnin verre",
+         "qte": 1.0,
+         "pu": 8.3,
+         "montant": 8.3,
+         "highlight": false
+        },
+        {
+         "lib": "Mambo",
+         "qte": 1.0,
+         "pu": 6.5,
+         "montant": 6.5,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 1.0,
+         "pu": 2.2,
+         "montant": 2.2,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-10-30",
+     "suppressions": [
+      {
+       "heure": "20:09",
+       "montant": 18.6,
+       "devient": "CAMEMBERT ROTI",
+       "tables": [
+        "n°21",
+        "n°22"
+       ]
+      },
+      {
+       "heure": "20:09",
+       "montant": 25.0,
+       "devient": "MACHON GOURMET",
+       "tables": [
+        "n°21",
+        "n°22"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°21",
+       "heure": "19:56",
+       "total": 115.45,
+       "items": [
+        {
+         "lib": "MACHON GOURMET",
+         "qte": 0.5,
+         "pu": 25.0,
+         "montant": 12.5,
+         "highlight": true
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Bourguignon",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": false
+        },
+        {
+         "lib": "Jamhon Persillé",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Franc-Comptoi",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Fondue Forestière",
+         "qte": 1.0,
+         "pu": 21.9,
+         "montant": 21.9,
+         "highlight": false
+        },
+        {
+         "lib": "POMMES FRITES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "VOGEOTTE",
+         "qte": 0.5,
+         "pu": 13.1,
+         "montant": 6.55,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 1.5,
+         "pu": 4.9,
+         "montant": 7.35,
+         "highlight": false
+        },
+        {
+         "lib": "BANANE",
+         "qte": 0.5,
+         "pu": 2.7,
+         "montant": 1.35,
+         "highlight": false
+        },
+        {
+         "lib": "CHANTILLY",
+         "qte": 0.5,
+         "pu": 2.5,
+         "montant": 1.25,
+         "highlight": false
+        },
+        {
+         "lib": "1 Boule Glace",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°22",
+       "heure": "19:57",
+       "total": 115.45,
+       "items": [
+        {
+         "lib": "MACHON GOURMET",
+         "qte": 0.5,
+         "pu": 25.0,
+         "montant": 12.5,
+         "highlight": true
+        },
+        {
+         "lib": "Menu Franc-Comtois",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Bourguignon",
+         "qte": 0.5,
+         "pu": 34.0,
+         "montant": 17.0,
+         "highlight": false
+        },
+        {
+         "lib": "Jamhon Persillé",
+         "qte": 0.5,
+         "pu": 7.2,
+         "montant": 3.6,
+         "highlight": false
+        },
+        {
+         "lib": "Salade Franc-Comptoi",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Fondue Forestière",
+         "qte": 1.0,
+         "pu": 21.9,
+         "montant": 21.9,
+         "highlight": false
+        },
+        {
+         "lib": "POMMES FRITES",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "VOGEOTTE",
+         "qte": 0.5,
+         "pu": 13.1,
+         "montant": 6.55,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 1.5,
+         "pu": 4.9,
+         "montant": 7.35,
+         "highlight": false
+        },
+        {
+         "lib": "BANANE",
+         "qte": 0.5,
+         "pu": 2.7,
+         "montant": 1.35,
+         "highlight": false
+        },
+        {
+         "lib": "CHANTILLY",
+         "qte": 0.5,
+         "pu": 2.5,
+         "montant": 1.25,
+         "highlight": false
+        },
+        {
+         "lib": "1 Boule Glace",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-11-22",
+     "suppressions": [
+      {
+       "heure": "20:40",
+       "montant": 4.2,
+       "devient": "Ricard",
+       "tables": [
+        "n°15",
+        "n°16"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°15",
+       "heure": "20:41",
+       "total": 31.1,
+       "items": [
+        {
+         "lib": "Ricard",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "LIGOUSE",
+         "qte": 0.5,
+         "pu": 16.6,
+         "montant": 8.3,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE PERE GREGOI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "CREPE NUTELLA CHANTI",
+         "qte": 0.5,
+         "pu": 8.4,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 5.5,
+         "montant": 2.75,
+         "highlight": false
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 2.0,
+         "montant": 1.0,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°16",
+       "heure": "20:41",
+       "total": 31.1,
+       "items": [
+        {
+         "lib": "Ricard",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Ambrée",
+         "qte": 0.5,
+         "pu": 6.9,
+         "montant": 3.45,
+         "highlight": false
+        },
+        {
+         "lib": "LIGOUSE",
+         "qte": 0.5,
+         "pu": 16.6,
+         "montant": 8.3,
+         "highlight": false
+        },
+        {
+         "lib": "ASSIETTE PERE GREGOI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "CREPE NUTELLA CHANTI",
+         "qte": 0.5,
+         "pu": 8.4,
+         "montant": 4.2,
+         "highlight": false
+        },
+        {
+         "lib": "GLACE 2 BOULES",
+         "qte": 0.5,
+         "pu": 5.5,
+         "montant": 2.75,
+         "highlight": false
+        },
+        {
+         "lib": "Chantilly",
+         "qte": 0.5,
+         "pu": 2.0,
+         "montant": 1.0,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2024-12-11",
+     "suppressions": [
+      {
+       "heure": "19:45",
+       "montant": 5.9,
+       "devient": "Chat perché",
+       "tables": [
+        "n°10",
+        "n°11"
+       ]
+      },
+      {
+       "heure": "19:45",
+       "montant": 8.9,
+       "devient": "Pavlova",
+       "tables": [
+        "n°10",
+        "n°11"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°10",
+       "heure": "19:48",
+       "total": 86.1,
+       "items": [
+        {
+         "lib": "Fuze Tea",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Picon bière",
+         "qte": 0.5,
+         "pu": 4.8,
+         "montant": 2.4,
          "highlight": false
         },
         {
@@ -2905,38 +8411,638 @@
          "highlight": true
         },
         {
-         "lib": "pression",
+         "lib": "Verre ALIGOTE",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "FORMULE EXPRESS",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Végétarien",
+         "qte": 0.5,
+         "pu": 26.5,
+         "montant": 13.25,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
          "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "Entrecôte Forestiére",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Confiture",
+         "qte": 0.5,
+         "pu": 5.4,
+         "montant": 2.7,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Marrons",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        }
+       ]
+      },
+      {
+       "label": "Note n°11",
+       "heure": "19:48",
+       "total": 86.1,
+       "items": [
+        {
+         "lib": "Fuze Tea",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Coca (25cl)",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "Picon bière",
+         "qte": 0.5,
+         "pu": 4.8,
+         "montant": 2.4,
+         "highlight": false
+        },
+        {
+         "lib": "Chat perché",
+         "qte": 0.5,
+         "pu": 5.9,
+         "montant": 2.95,
+         "highlight": true
+        },
+        {
+         "lib": "Verre ALIGOTE",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "FORMULE EXPRESS",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": false
+        },
+        {
+         "lib": "Menu Végétarien",
+         "qte": 0.5,
+         "pu": 26.5,
+         "montant": 13.25,
+         "highlight": false
+        },
+        {
+         "lib": "BURGER COMTOIS",
+         "qte": 0.5,
+         "pu": 19.0,
+         "montant": 9.5,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 1.0,
+         "pu": 18.6,
+         "montant": 18.6,
+         "highlight": false
+        },
+        {
+         "lib": "Entrecôte Forestiére",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Confiture",
+         "qte": 0.5,
+         "pu": 5.4,
+         "montant": 2.7,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Marrons",
+         "qte": 0.5,
+         "pu": 6.4,
+         "montant": 3.2,
+         "highlight": false
+        },
+        {
+         "lib": "Pavlova",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": true
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2025-01-04",
+     "suppressions": [
+      {
+       "heure": "19:37",
+       "montant": 4.2,
+       "devient": "Jus de Fruit / Ricard",
+       "tables": [
+        "n°21",
+        "n°22"
+       ]
+      },
+      {
+       "heure": "19:37",
+       "montant": 18.6,
+       "devient": "CAMEMBERT ROTI",
+       "tables": [
+        "n°21",
+        "n°22"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°21",
+       "heure": "20:03",
+       "total": 77.75,
+       "items": [
+        {
+         "lib": "La Vouivre",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
+         "highlight": false
+        },
+        {
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
          "pu": 4.2,
-         "montant": 4.2,
-         "highlight": false
-        },
-        {
-         "lib": "PICHET ROSE",
-         "qte": 0.5,
-         "pu": 10.5,
-         "montant": 5.25,
+         "montant": 2.1,
          "highlight": true
         },
         {
-         "lib": "Croûtes Morilles",
+         "lib": "Ricard",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Beaujolais Moulin à",
+         "qte": 0.5,
+         "pu": 7.6,
+         "montant": 3.8,
+         "highlight": false
+        },
+        {
+         "lib": "VERRE CHUSCLAN",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "San Pelegrino 50cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes grenailles",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte Forestiére",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
          "qte": 2.0,
-         "pu": 16.9,
-         "montant": 33.8,
+         "pu": 2.2,
+         "montant": 4.4,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°22",
+       "heure": "20:03",
+       "total": 77.75,
+       "items": [
+        {
+         "lib": "La Vouivre",
+         "qte": 1.0,
+         "pu": 5.9,
+         "montant": 5.9,
          "highlight": false
         },
         {
-         "lib": "TRUITE PESTO",
-         "qte": 1.5,
-         "pu": 16.9,
-         "montant": 25.35,
+         "lib": "Jus de Fruit",
+         "qte": 0.5,
+         "pu": 4.2,
+         "montant": 2.1,
          "highlight": true
         },
         {
-         "lib": "Poulet aux Morilles",
+         "lib": "Ricard",
          "qte": 0.5,
-         "pu": 28.6,
-         "montant": 14.3,
+         "pu": 4.2,
+         "montant": 2.1,
+         "highlight": true
+        },
+        {
+         "lib": "Beaujolais Moulin à",
+         "qte": 0.5,
+         "pu": 7.6,
+         "montant": 3.8,
+         "highlight": false
+        },
+        {
+         "lib": "VERRE CHUSCLAN",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "San Pelegrino 50cl",
+         "qte": 0.5,
+         "pu": 4.0,
+         "montant": 2.0,
+         "highlight": false
+        },
+        {
+         "lib": "FONDUE VIN JAUNE",
+         "qte": 1.0,
+         "pu": 25.9,
+         "montant": 25.9,
+         "highlight": false
+        },
+        {
+         "lib": "Assortiment charcute",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "Pommes grenailles",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": false
+        },
+        {
+         "lib": "CAMEMBERT ROTI",
+         "qte": 0.5,
+         "pu": 18.6,
+         "montant": 9.3,
+         "highlight": true
+        },
+        {
+         "lib": "Entrecôte Forestiére",
+         "qte": 0.5,
+         "pu": 27.8,
+         "montant": 13.9,
+         "highlight": false
+        },
+        {
+         "lib": "Expresso",
+         "qte": 2.0,
+         "pu": 2.2,
+         "montant": 4.4,
+         "highlight": false
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "date": "2025-03-05",
+     "suppressions": [
+      {
+       "heure": "20:30",
+       "montant": 3.5,
+       "devient": "1 Boule Glace / Morbier",
+       "tables": [
+        "n°24",
+        "n°25"
+       ]
+      },
+      {
+       "heure": "20:30",
+       "montant": 3.9,
+       "devient": "FANTA",
+       "tables": [
+        "n°24",
+        "n°25"
+       ]
+      },
+      {
+       "heure": "20:30",
+       "montant": 7.9,
+       "devient": "Sauce Forestière",
+       "tables": [
+        "n°24",
+        "n°25"
+       ]
+      },
+      {
+       "heure": "20:30",
+       "montant": 9.0,
+       "devient": "MAEVA",
+       "tables": [
+        "n°24",
+        "n°25"
+       ]
+      }
+     ],
+     "notes": [
+      {
+       "label": "Note n°24",
+       "heure": "20:16",
+       "total": 53.05,
+       "items": [
+        {
+         "lib": "Pinte",
+         "qte": 0.5,
+         "pu": 8.0,
+         "montant": 4.0,
+         "highlight": false
+        },
+        {
+         "lib": "MAEVA",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": true
+        },
+        {
+         "lib": "FANTA",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "SAUCE JURASSIENNE",
+         "qte": 0.5,
+         "pu": 6.1,
+         "montant": 3.05,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "NIOLERIES",
+         "qte": 0.5,
+         "pu": 14.0,
+         "montant": 7.0,
+         "highlight": false
+        },
+        {
+         "lib": "Œuf",
+         "qte": 0.5,
+         "pu": 0.9,
+         "montant": 0.45,
+         "highlight": false
+        },
+        {
+         "lib": "TANTELIN",
+         "qte": 0.5,
+         "pu": 17.4,
+         "montant": 8.7,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": true
+        },
+        {
+         "lib": "Morbier",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        },
+        {
+         "lib": "Pommes de Terre",
+         "qte": 0.5,
+         "pu": 3.2,
+         "montant": 1.6,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Pommes",
+         "qte": 0.5,
+         "pu": 7.1,
+         "montant": 3.55,
+         "highlight": false
+        },
+        {
+         "lib": "1 Boule Glace",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
+         "highlight": false
+        }
+       ]
+      },
+      {
+       "label": "Note n°25",
+       "heure": "20:16",
+       "total": 53.05,
+       "items": [
+        {
+         "lib": "Pinte",
+         "qte": 0.5,
+         "pu": 8.0,
+         "montant": 4.0,
+         "highlight": false
+        },
+        {
+         "lib": "MAEVA",
+         "qte": 0.5,
+         "pu": 9.0,
+         "montant": 4.5,
+         "highlight": true
+        },
+        {
+         "lib": "FANTA",
+         "qte": 0.5,
+         "pu": 3.9,
+         "montant": 1.95,
+         "highlight": true
+        },
+        {
+         "lib": "SAUCE JURASSIENNE",
+         "qte": 0.5,
+         "pu": 6.1,
+         "montant": 3.05,
+         "highlight": false
+        },
+        {
+         "lib": "Saucisse de Morteau",
+         "qte": 0.5,
+         "pu": 8.9,
+         "montant": 4.45,
+         "highlight": false
+        },
+        {
+         "lib": "NIOLERIES",
+         "qte": 0.5,
+         "pu": 14.0,
+         "montant": 7.0,
+         "highlight": false
+        },
+        {
+         "lib": "Œuf",
+         "qte": 0.5,
+         "pu": 0.9,
+         "montant": 0.45,
+         "highlight": false
+        },
+        {
+         "lib": "TANTELIN",
+         "qte": 0.5,
+         "pu": 17.4,
+         "montant": 8.7,
+         "highlight": false
+        },
+        {
+         "lib": "Galette nature",
+         "qte": 1.0,
+         "pu": 3.9,
+         "montant": 3.9,
+         "highlight": false
+        },
+        {
+         "lib": "Sauce Forestière",
+         "qte": 0.5,
+         "pu": 7.9,
+         "montant": 3.95,
+         "highlight": true
+        },
+        {
+         "lib": "Morbier",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        },
+        {
+         "lib": "Pommes de Terre",
+         "qte": 0.5,
+         "pu": 3.2,
+         "montant": 1.6,
+         "highlight": false
+        },
+        {
+         "lib": "Crêpe Pommes",
+         "qte": 0.5,
+         "pu": 7.1,
+         "montant": 3.55,
+         "highlight": false
+        },
+        {
+         "lib": "1 Boule Glace",
+         "qte": 0.5,
+         "pu": 3.5,
+         "montant": 1.75,
+         "highlight": true
+        },
+        {
+         "lib": "Crêpe Nutella",
+         "qte": 0.5,
+         "pu": 4.9,
+         "montant": 2.45,
          "highlight": false
         }
        ]

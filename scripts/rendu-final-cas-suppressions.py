@@ -120,62 +120,90 @@ for ex in EXOS:
                                       "notes": [{"label": f"Note n°{no}", "heure": n["h"], "total": round(n["tot"], 2), "items": items_of(n)}]})
                     break
 
-        # --- B : PARTAGE / paiement séparé ----------------------------------
-        # Une rafale de X suppressions dont les ÉQUIVALENTS (mêmes prix d'articles)
-        # réapparaissent RÉPARTIS sur ≥2 tables encaissées à des heures proches
-        # (entre elles et de la rafale). On ne garde que les suppressions dont le
-        # montant = prix d'un article divisé (qté fractionnaire) présent sur ≥2 notes.
+        # --- B : PARTAGE / paiement séparé (lié aux suppressions DEL) --------
+        # Preuve : une suppression DEL dont le PRIX réapparaît en quantité
+        # FRACTIONNAIRE réparti sur ≥2 notes encaissées dans la foulée, la somme
+        # des fractions valant un ENTIER (l'article supprimé a été re-saisi divisé
+        # entre les convives — on ne vend pas un demi-poulet). On collecte large,
+        # puis (après la boucle) on retient pour chaque mois la fiche la plus
+        # serrée via une escalade de paliers (fenêtre courte d'abord).
         nosort = lambda x: int(x) if x.isdigit() else 0
+        FEN, SPREAD = 60, 30  # bornes larges ; l'escalade privilégie le plus serré
         for h, ms in sorted(burst.items()):
-            if len(ms) < 3:
-                continue
             T = tm(h)
-            cand = [(no, n) for no, n in notes.items() if -1 <= tm(n["h"]) - T <= 15]
+            cand = [(no, n) for no, n in notes.items() if -FEN <= tm(n["h"]) - T <= FEN]
             if len(cand) < 2:
                 continue
-            hs = [tm(n["h"]) for _, n in cand]
-            if max(hs) - min(hs) > 8:  # tables encaissées dans un mouchoir de poche
-                continue
-            pu_notes = collections.defaultdict(set)
-            pu_lib = collections.defaultdict(set)  # prix -> libellés (collisions possibles)
+            pu_notes = collections.defaultdict(set)      # prix -> notes (qté fractionnaire)
+            pu_lib = collections.defaultdict(set)        # prix -> libellés
+            pu_fracsum = collections.defaultdict(float)  # prix -> somme des qtés fractionnaires
             for no, n in cand:
                 for l, q, pu in n["lines"]:
                     if abs(q - round(q)) > 0.01 and pu > 0:
                         pu_notes[round(pu, 2)].add(no)
                         pu_lib[round(pu, 2)].add(l)
-            matched = [round(m, 2) for m in ms if len(pu_notes.get(round(m, 2), ())) >= 2]
-            if len(matched) < 3:
+                        pu_fracsum[round(pu, 2)] += q
+            # un montant DEL « correspond » si son prix est réparti fractionné sur
+            # ≥2 notes ET si la somme des fractions reconstitue un entier de parts.
+            def matched_ok(m):
+                m = round(m, 2)
+                s = pu_fracsum.get(m, 0)
+                return len(pu_notes.get(m, ())) >= 2 and abs(s - round(s)) < 0.02 and round(s) >= 1
+            matched = sorted({round(m, 2) for m in ms if matched_ok(m)})
+            if not matched:
                 continue
             impl = sorted({no for m in matched for no in pu_notes[m]}, key=nosort)
             if len(impl) < 2:
                 continue
+            hs = [tm(notes[x]["h"]) for x in impl]
+            spread = max(hs) - min(hs)
+            if spread > SPREAD:
+                continue
+            dist = max(abs(t - T) for t in hs)  # éloignement max à la rafale
             mset = set(matched)
             lib_of = lambda m: " / ".join(sorted(pu_lib[m]))
-            sup = [{"heure": h, "montant": m, "devient": lib_of(m),
-                    "tables": [f"n°{x}" for x in sorted(pu_notes[m], key=nosort)]}
-                   for m in sorted(matched)]
 
             def items_hi(n):
                 return [{"lib": l, "qte": round(q, 2), "pu": round(pu, 2), "montant": round(q * pu, 2),
                          "highlight": abs(q - round(q)) > 0.01 and round(pu, 2) in mset}
                         for l, q, pu in n["lines"]]
+            sup = [{"heure": h, "montant": m, "devient": lib_of(m),
+                    "tables": [f"n°{x}" for x in sorted(pu_notes[m], key=nosort)]}
+                   for m in matched]
             PART_CANDS.append({
-                "rang": (len(impl), len({lib_of(m) for m in matched}), len(matched)),
                 "date": d,
+                "dist": dist, "spread": spread, "n_del": len(ms),
+                "n_matched": len(matched), "n_tables": len(impl),
                 "suppressions": sup,
-                "notes": [{"label": f"Note n°{x}", "heure": notes[x]["h"], "total": round(notes[x]["tot"], 2), "items": items_hi(notes[x])} for x in impl]})
+                "notes": [{"label": f"Note n°{x}", "heure": notes[x]["h"],
+                           "total": round(notes[x]["tot"], 2), "items": items_hi(notes[x])} for x in impl]})
             FB.append((d, h, ", ".join(f"n°{x}" for x in impl), len(matched), len(impl),
-                       "; ".join(f"{lib_of(m)} {m}" for m in sorted(matched))))
+                       "; ".join(f"{lib_of(m)} ×{round(pu_fracsum[m])} ({m:.2f} €)" for m in matched)))
 
 A = [A[k] for k in sorted(A)]
 Cc = [Cc[k] for k in sorted(Cc)]
-# Partage : le meilleur exemple par mois (tables réparties, articles variés).
+# Partage : pour chaque mois, on retient la fiche la plus DÉFENDABLE via une
+# escalade de paliers (du plus strict au plus large). On ne descend d'un palier
+# que pour les mois qu'aucun palier plus strict n'a couverts ; à l'intérieur d'un
+# palier, on prend la fiche la plus probante (+ d'articles correspondants, + de
+# tables, fenêtre la plus serrée). Chaque palier garde la preuve : suppression(s)
+# DEL dont le prix se reconstitue en fractions sommant à un entier sur ≥2 tables.
+PALIERS = [  # (n_del_min, dist_max, spread_max, n_matched_min)
+    (2, 15, 12, 2), (2, 20, 15, 2), (2, 30, 15, 2),
+    (1, 20, 15, 1), (2, 45, 20, 2), (2, 60, 30, 2), (1, 60, 30, 1),
+]
 _best = {}
-for c in sorted(PART_CANDS, key=lambda x: x["rang"], reverse=True):
-    _best.setdefault(c["date"][:7], c)
+for (nd, dmax, smax, mmin) in PALIERS:
+    for c in sorted(PART_CANDS, key=lambda x: (x["n_matched"], x["n_tables"], -x["dist"]), reverse=True):
+        k = c["date"][:7]
+        if k in _best:
+            continue
+        if c["n_del"] >= nd and c["dist"] <= dmax and c["spread"] <= smax and c["n_matched"] >= mmin:
+            _best[k] = c
 B = [_best[k] for k in sorted(_best)]
 for c in B:
-    c.pop("rang", None)
+    for f in ("dist", "spread", "n_del", "n_matched", "n_tables"):
+        c.pop(f, None)
 
 cas = [
     {"id": "forfait", "titre": "Conversion au forfait (facture sans détail)",
@@ -183,8 +211,8 @@ cas = [
      "description": "À la demande d’une tablée (groupe, comité), le détail à la carte est retiré et l’addition est re-facturée en menu(s) à un prix négocié. La recette n’a pas disparu : la somme des lignes supprimées égale, au centime, le total de la note encaissée, qui ne contient plus que des menus.",
      "exemples": A},
     {"id": "partage", "titre": "Paiement séparé / partage de table",
-     "preuve": "Une rafale de suppressions dont les articles réapparaissent, divisés, répartis sur au moins 2 tables encaissées à des heures proches",
-     "description": "Des convives d’une même table paient séparément. Le logiciel n’acceptant qu’un règlement par note, les articles communs sont supprimés puis ré-enregistrés divisés sur plusieurs notes (0,5 chacun, ou 0,8/0,2 si l’un paie davantage). À gauche, chaque suppression et l’article qu’elle devient ; à droite, les tables qui se partagent ces articles (surlignés), encaissées dans la foulée.",
+     "preuve": "Une suppression dont le prix réapparaît, divisé en fractions sommant à un entier, réparti sur au moins 2 notes encaissées dans la foulée",
+     "description": "Des convives d’une même table paient séparément. Le logiciel n’acceptant qu’un règlement par note, l’article commun est **supprimé** puis ré-enregistré **divisé** sur plusieurs notes (0,5 chacun, ou 0,33/0,33/0,34 à trois). La suppression n’efface donc aucune recette : son **prix réapparaît**, en quantités fractionnaires réparties sur ≥2 notes encaissées dans la foulée, et la **somme des fractions reconstitue un nombre entier** de parts. À gauche, chaque suppression et l’article qu’elle redevient ; à droite, les notes qui se le partagent (article surligné).",
      "exemples": B},
     {"id": "deplacement", "titre": "Articles déplacés vers la bonne table",
      "preuve": "Preuve exacte : une rafale d’au moins 4 suppressions dont la somme = total d’une note détaillée encaissée juste après",
@@ -203,7 +231,7 @@ wb = openpyxl.Workbook()
 wb.remove(wb.active)
 ONGLETS = [
     ("Conversion forfait", ["Date", "Heure", "Nb suppr.", "Somme = Total (€)", "Note n°", "Menus encaissés"], FA),
-    ("Paiement separe", ["Date", "Heure", "Tables", "Nb suppr. rattachées", "Nb tables", "Articles répartis"], FB),
+    ("Paiement separe", ["Date", "Heure rafale", "Tables", "Nb articles correspondants", "Nb tables", "Articles répartis (prix)"], FB),
     ("Articles deplaces", ["Date", "Heure", "Nb suppr.", "Somme = Total (€)", "Note n°", "Articles encaissés"], FC),
 ]
 for nom, cols, rows in ONGLETS:
