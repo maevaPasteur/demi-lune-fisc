@@ -19,6 +19,18 @@ import { complements as K } from './analyseComplements'
 import RF from './renduFinalCalculs.json'
 import CAS from './renduFinalCasSuppressions.json'
 import { formatEuro, formatInt, formatPct } from '../utils/format'
+// Contenu rédigé des sous-pages (généré par scripts/rendu-final-<slug>.py,
+// chiffres reproductibles ; consommé tel quel comme Section[]).
+import RFZeroEuro from './renduFinal/articles-a-zero-euro.json'
+import RFQuantites from './renduFinal/quantites-anormales.json'
+import RFInventaire from './renduFinal/inventaire-stocks.json'
+import RFTables from './renduFinal/tables-trop-nombreuses.json'
+import RFFichiersEF from './renduFinal/fichiers-evenement-reglement.json'
+import RFTva from './renduFinal/anomalies-tva.json'
+import RFConsoAchats from './renduFinal/consommation-superieure-achats.json'
+import RFPrixMenu from './renduFinal/prix-menu-demi-lune.json'
+import RFCoefficients from './renduFinal/coefficients-de-revente.json'
+import RFReconstitution from './renduFinal/reconstitution-volumes-liquides.json'
 
 // --- Cellules de tableau (mêmes helpers que analyses.ts, locaux) -------------
 const cg = (v: string) => ({ v })
@@ -340,9 +352,7 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'Les lignes à 0 € sont 0,28 % des ventes (272 / 97 694), pour l’essentiel des cafés et de la consommation du personnel : aucune recette n’y est cachée.',
     statut: 'partiel',
-    sections: enChantier(
-      'Quantifier les lignes à 0 € (272 sur 97 694 = 0,28 %), montrer qu’elles sont concentrées sur cafés/offerts et conso personnel, et qu’elles n’ouvrent aucun canal d’encaissement.',
-    ),
+    sections: RFZeroEuro.sections as unknown as Section[],
   },
   {
     slug: 'quantites-anormales',
@@ -353,9 +363,7 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'Les quantités atypiques sont des fautes de frappe corrigées (mêmes lignes que les grosses suppressions) : elles sont annulées le jour même et n’entrent pas dans le CA.',
     statut: 'partiel',
-    sections: enChantier(
-      'Croiser les quantités anormales avec les 4 aberrations DEL déjà identifiées (32 % du total), démontrer que ce sont des corrections de saisie.',
-    ),
+    sections: RFQuantites.sections as unknown as Section[],
   },
   {
     slug: 'inventaire-stocks',
@@ -366,23 +374,19 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'L’inventaire physique des 3 fins d’exercice est disponible et détaillé ; il montre un stock stable, ce qui ferme le bilan matière.',
     statut: 'partiel',
-    sections: enChantier(
-      'Produire l’inventaire physique détaillé (3 exercices), montrer la stabilité du stock boissons et lever le motif « inventaire incomplet ».',
-    ),
+    sections: RFInventaire.sections as unknown as Section[],
   },
   {
     slug: 'tables-trop-nombreuses',
     bloc: 'rejet',
-    refRapport: 'Proposition p. 11 + p. 20-22',
+    refRapport: 'Proposition p. 11 + p. 18-19',
     titre: 'Trop de tables / tables « virtuelles »',
     griefFisc:
-      'Le nombre de tables (18 intérieures + 25 extérieures, dont des tables « virtuelles ») serait incohérent avec le chiffre d’affaires.',
+      'La caisse comporte des tables « virtuelles » et autorise la suppression d’une table et de tous ses articles ; ces modifications ne seraient pas vérifiables, rendant la comptabilité non probante.',
     reponseCourte:
-      'Les tables « virtuelles » servent aux paiements séparés et à la gestion de salle, pas à des couverts supplémentaires : à démontrer sur des journées-types.',
-    statut: 'a-etayer',
-    sections: enChantier(
-      'Sur 2 journées-types par mois et par exercice (annexes C/H), montrer que les tables « virtuelles » correspondent à des additions partagées d’une même table réelle, sans couvert supplémentaire ni recette manquante.',
-    ),
+      'Un numéro de note n’est pas une table (14 tables intérieures réelles ; les n° 13/16/17/18 n’existent pas). La table « virtuelle » est une note de règlement séparé, et la suppression de la table d’origine évite de compter le repas deux fois : elle protège le CA, elle ne le réduit pas.',
+    statut: 'demonte',
+    sections: RFTables.sections as unknown as Section[],
   },
   {
     slug: 'fichiers-evenement-reglement',
@@ -393,9 +397,7 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'Les journaux sont au contraire ce qui permet de prouver que CA = encaissements ; leurs « événements » sont des corrections d’exploitation tracées.',
     statut: 'partiel',
-    sections: enChantier(
-      'Utiliser E (événements) et F (règlements) pour la triangulation A/H/E/F et confirmer l’égalité CA = encaissements par mode de règlement.',
-    ),
+    sections: RFFichiersEF.sections as unknown as Section[],
   },
   {
     slug: 'anomalies-tva',
@@ -406,9 +408,7 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'La ventilation 10 %/20 % suit la nature des produits (sur place / à emporter, solide / liquide) ; les écarts relevés sont marginaux et explicables.',
     statut: 'a-etayer',
-    sections: enChantier(
-      'Analyser le journal de TVA (annexe G) et rapprocher la ventilation des taux de la nature réelle des ventes.',
-    ),
+    sections: RFTva.sections as unknown as Section[],
   },
   {
     slug: 'consommation-superieure-achats',
@@ -419,9 +419,7 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'Ces écarts viennent d’un étiquetage de caisse (libellés génériques / boutons mutualisés), pas de ventes cachées : le produit est acheté sous un autre nom.',
     statut: 'partiel',
-    sections: enChantier(
-      'Reprendre la table de correspondance libellés caisse ↔ factures (pièce DB6) pour montrer que les « conso > achats » sont des décalages d’étiquetage, neutralisés par le bilan matière global.',
-    ),
+    sections: RFConsoAchats.sections as unknown as Section[],
   },
   {
     slug: 'prix-menu-demi-lune',
@@ -432,9 +430,7 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'Le prix varie parce que le menu est facturé hors prix catalogue (formules, remises, prix personnalisés) ; ces lignes sont tracées et exclues du calcul d’alcool.',
     statut: 'a-etayer',
-    sections: enChantier(
-      'Tracer les ventes du Menu Demi Lune par prix (annexe B), distinguer prix catalogue vs prix personnalisés, et expliquer chaque écart.',
-    ),
+    sections: RFPrixMenu.sections as unknown as Section[],
   },
   {
     slug: 'coefficients-de-revente',
@@ -445,9 +441,7 @@ const autresGriefs: Grief[] = [
     reponseCourte:
       'Les coefficients réels intègrent la cuisine, les offerts et les pertes ; recalculés correctement, ils sont conformes au secteur.',
     statut: 'a-etayer',
-    sections: enChantier(
-      'Recalculer les coefficients de revente par famille à partir des achats réels et des prix carte, en intégrant cuisine/offerts/pertes.',
-    ),
+    sections: RFCoefficients.sections as unknown as Section[],
   },
   // ---- BLOC 2 : RECONSTITUTION DU CA ----
   {
@@ -461,9 +455,7 @@ const autresGriefs: Grief[] = [
       'Recalculé sur les achats et la caisse réels, le manquant retombe à la perte normale d’un bar ; en réinjectant les vraies ventes dans la formule du fisc, la discordance s’inverse.',
     enjeu: 'Cœur de la reconstitution (≈ +471 826 € de CA reconstitué)',
     statut: 'partiel',
-    sections: enChantier(
-      'Opposer la mesure exacte (achats factures vs consommation caisse + cuisine + menus + personnel) à la reconstitution par doses, et montrer l’inversion de la discordance avec les vraies ventes.',
-    ),
+    sections: RFReconstitution.sections as unknown as Section[],
   },
   {
     slug: 'sur-versement-au-verre',

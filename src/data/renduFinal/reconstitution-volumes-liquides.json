@@ -1,0 +1,345 @@
+{
+ "meta": {
+  "slug": "reconstitution-volumes-liquides",
+  "titre": "Reconstitution du CA par les volumes de liquides",
+  "source": "scripts/rendu-final-reconstitution-volumes-liquides.py",
+  "grief": "Proposition de rectification p. 37-53 (methode) - annexes Boissons.",
+  "enjeu": "Coeur de la reconstitution (≈ +471 826 € de CA reconstitue)",
+  "chiffres": {
+   "achat_l": 10622,
+   "achat_cout": 107924,
+   "conso_l": 7504,
+   "perte_reelle_l": 2419,
+   "perte_reelle_pct": 22.8,
+   "fisc_ca_reconstitue": 575253,
+   "fisc_coef": 3.1,
+   "ca_declare": 435525,
+   "total_ca_oublie": 315146,
+   "ca_recalcule": 260107,
+   "ecart_fisc": 139728,
+   "ecart_recalcule": -175418
+  }
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "titre": "Le grief de l'administration",
+   "sousTitre": "Proposition de rectification, p. 37-53 - methode de reconstitution"
+  },
+  {
+   "kind": "note",
+   "texte": "Le service reconstitue un chiffre d'affaires « liquides » a partir des **achats de boissons** convertis en centilitres : il divise le volume disponible par une **dose standard** pour obtenir un nombre d'articles theoriquement vendus, qu'il valorise au prix moyen. Il extrapole ensuite a la cuisine en multipliant ce CA liquides par un **coefficient liquide/solide de 3,1**. Il aboutit a **575 253 €** de CA reconstitue contre **435 525 €** declares, soit une discordance de **+139 728 €**. Cumulee sur les trois exercices, la minoration alleguee fonde une penalite de l'article 1759 de **≈ 471 826 €**. C'est le coeur chiffre de la reconstitution."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "La faille de la methode : doses exactes et zero perte",
+   "sousTitre": "Recalcule sur les achats et la caisse reels, le manquant retombe a la perte normale d'un bar"
+  },
+  {
+   "kind": "note",
+   "texte": "La methode du fisc repose sur trois hypotheses **irrealistes** dans un bar-restaurant : **(1) des doses servies au centilitre pres** (aucun sur-versement), **(2) zero perte** (ni casse, ni evaporation des futs, ni fonds de verre, ni rincage des tireuses), et **(3) la valorisation comme « CA verre » de litres qui ne sont jamais vendus au verre** (alcool de cuisine, alcool des menus non detaille en caisse, consommation du chef, aperitifs offerts). Or les achats reels se ventilent integralement : ce qui reste apres avoir trace chaque usage est une **perte normale**, pas une recette occulte."
+  },
+  {
+   "kind": "barreComposition",
+   "titre": "Ou passent les 10 622 L achetes",
+   "sousTitre": "Les achats se ventilent integralement ; le residu est une perte normale",
+   "unite": "L",
+   "total": 10622,
+   "segments": [
+    {
+     "label": "Vendu au verre",
+     "valeur": 5569,
+     "categorie": "mesure"
+    },
+    {
+     "label": "Cocktails",
+     "valeur": 998,
+     "categorie": "mesure"
+    },
+    {
+     "label": "Cuisine",
+     "valeur": 566,
+     "categorie": "calcul"
+    },
+    {
+     "label": "Menus",
+     "valeur": 228,
+     "categorie": "calcul"
+    },
+    {
+     "label": "Conso chef",
+     "valeur": 143,
+     "categorie": "estime"
+    },
+    {
+     "label": "Offerts",
+     "valeur": 40,
+     "categorie": "estime"
+    },
+    {
+     "label": "Sur-versement",
+     "valeur": 446,
+     "categorie": "calcul"
+    },
+    {
+     "label": "Stock",
+     "valeur": 213,
+     "categorie": "mesure"
+    },
+    {
+     "label": "Perte reelle",
+     "valeur": 2419,
+     "categorie": "residuel"
+    }
+   ],
+   "legende": true
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Ce que la methode du fisc a oublie de deduire.** Chaque poste ci-dessous correspond a des litres reellement consommes hors vente au verre, que la reconstitution valorise pourtant comme du CA. Valorises au prix moyen liquide implicite du fisc (82 € / L), ils representent **315 146 €** de CA surfacture."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Ce que le fisc a oublie (litres et CA valorises a tort)",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Poste oublie"
+    },
+    {
+     "label": "Litres",
+     "align": "right"
+    },
+    {
+     "label": "CA valorise a tort",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Cuisine"
+     },
+     {
+      "v": "566 L",
+      "align": "right"
+     },
+     {
+      "v": "46 427 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Menus"
+     },
+     {
+      "v": "228 L",
+      "align": "right"
+     },
+     {
+      "v": "18 702 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Conso chef"
+     },
+     {
+      "v": "143 L",
+      "align": "right"
+     },
+     {
+      "v": "11 730 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Offerts"
+     },
+     {
+      "v": "40 L",
+      "align": "right"
+     },
+     {
+      "v": "3 281 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Sur-versement"
+     },
+     {
+      "v": "446 L",
+      "align": "right"
+     },
+     {
+      "v": "36 584 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Perte reelle"
+     },
+     {
+      "v": "2 419 L",
+      "align": "right"
+     },
+     {
+      "v": "198 423 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total"
+     },
+     {
+      "v": "3 842 L",
+      "align": "right"
+     },
+     {
+      "v": "315 146 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Reconciliation du chiffre d'affaires.** En partant du CA reconstitue par le fisc et en retirant les litres jamais vendus au verre, on reinjecte les vraies ventes caisse : la discordance se referme."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Reconciliation : CA declare vs reconstitue fisc vs recalcule",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Etape"
+    },
+    {
+     "label": "Montant",
+     "align": "right"
+    },
+    {
+     "label": "Ecart vs CA declare",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "CA declare (comptabilise)"
+     },
+     {
+      "v": "435 525 €",
+      "align": "right"
+     },
+     {
+      "v": "reference",
+      "align": "center"
+     }
+    ],
+    [
+     {
+      "v": "CA reconstitue par le fisc"
+     },
+     {
+      "v": "575 253 €",
+      "align": "right"
+     },
+     {
+      "v": "+139 728 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "(-) Litres jamais vendus au verre"
+     },
+     {
+      "v": "- 315 146 €",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "center"
+     }
+    ],
+    [
+     {
+      "v": "CA recalcule (vraies ventes caisse)"
+     },
+     {
+      "v": "260 107 €",
+      "align": "right"
+     },
+     {
+      "v": "-175 418 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "graphiqueEmpile",
+   "titre": "CA declare vs reconstitue fisc vs recalcule",
+   "hauteur": 280,
+   "dataKey": "scenario",
+   "type": "default",
+   "format": "euro",
+   "series": [
+    {
+     "name": "Chiffre d'affaires",
+     "couleur": "#0f766e"
+    }
+   ],
+   "data": [
+    {
+     "scenario": "CA declare",
+     "Chiffre d'affaires": 435525
+    },
+    {
+     "scenario": "Reconstitue fisc",
+     "Chiffre d'affaires": 575253
+    },
+    {
+     "scenario": "Recalcule (vraies ventes)",
+     "Chiffre d'affaires": 260107
+    }
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "**La perte reelle est conforme au secteur.** Apres ventilation de tous les usages, le residu d'alcool est de **2 419 L**, soit **22,8 %** des achats. C'est la fourchette normale d'un bar-restaurant (15 a 25 %, casse, evaporation, fonds de verre, rincage des tireuses) et c'est exactement ce que confirme le modele Monte Carlo independant (src/data/incertitudeDisparu) : il n'y a pas de recette occulte, il y a une perte d'exploitation normale."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Cascade complete des volumes, tableau des postes oublies par la methode du fisc (litres et euros recuperes) et reconciliation du CA, le tout reproductible.",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-reconstitution-volumes-liquides.xlsx",
+     "label": "RF - Reconstitution par les volumes (cascade + methode fisc vs reelle + reconciliation)"
+    }
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Ce qu'il faut retenir",
+   "texte": "La methode du fisc surestime parce qu'elle suppose des doses exactes, zero perte, zero cuisine, zero consommation du personnel et zero offert. Recalcule sur les achats et la caisse reels, le manquant retombe a une perte normale de **22,8 %** (norme CHR). En reinjectant les litres jamais vendus au verre (**315 146 €**), le CA reconstitue passe de **575 253 €** a **260 107 €** et la discordance avec le CA declare se referme."
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Note pour l'avocat",
+   "texte": "La demonstration neutralise le coeur de la reconstitution (penalite 1759, ≈ 471 826 €). Trois angles cumulatifs : (1) la cascade des 10 622 L est integralement tracee, le residu (2 419 L = 22,8 %) est une perte sectorielle normale ; (2) le fisc valorise comme CA verre **3 842 L** jamais vendus au verre, soit **315 146 €** surfactures ; (3) reinjectees, les vraies ventes caisse referment la discordance. L'amplification par le coefficient liquide/solide (3,1) multiplie aussi l'erreur : toute surevaluation des volumes est amplifiee ~3 fois. Reproductible via scripts/rendu-final-reconstitution-volumes-liquides.py et la piece RF-reconstitution-volumes-liquides.xlsx."
+  }
+ ]
+}

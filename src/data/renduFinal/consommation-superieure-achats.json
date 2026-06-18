@@ -1,0 +1,672 @@
+{
+ "meta": {
+  "slug": "consommation-superieure-achats",
+  "titre": "Consommation vendue supérieure aux achats",
+  "source": "scripts/rendu-final-consommation-superieure-achats.py",
+  "grief": "Proposition de rectification p. 31-34 (rejet de comptabilité, 3/3).",
+  "chiffres": {
+   "nb_libelles_negatifs": 15,
+   "somme_ecarts_negatifs_l": -739.9,
+   "somme_achats_l": 10622.0,
+   "somme_conso_l": 7360.9,
+   "somme_stock_l": 213.3,
+   "bilan_net_l": 3047.8,
+   "cubis_conso_l": 426.9,
+   "bethanie_achat_total_l": 383.3,
+   "bethanie_conso_l": 309.9,
+   "bethanie_apres_l": 73.4
+  }
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "titre": "Le grief de l'administration",
+   "sousTitre": "Proposition de rectification, p. 31-34 (rejet 3/3)"
+  },
+  {
+   "kind": "note",
+   "texte": "Le service relève que, **pour certains produits, les quantités vendues dépasseraient les quantités achetées**. Il en déduit l'existence de **ventes non comptabilisées** et y voit une anomalie justifiant le rejet de la comptabilité."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Ce que sont réellement ces écarts",
+   "sousTitre": "Un effet d'étiquetage de caisse, pas des ventes cachées"
+  },
+  {
+   "kind": "note",
+   "texte": "Les écarts « conso > achats » portent sur **15 libellés** seulement, pour un total de **739,9 L** sur les 10 622 L achetés. Ils proviennent de la **façon dont la caisse étiquette** les boissons, pas d'un manque de stock : un produit vendu sous un libellé (bouton générique « verre / pichet », format non rattaché, ou appellation différente de la facture) est **acheté sous un autre nom**. La quantité achetée existe, elle figure simplement à une autre ligne."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les 15 libellés où la consommation dépasse l'achat, avec leur cause établie par la table de correspondance caisse / inventaire / factures. Aucun n'est un manquant réel."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les libellés « conso > achats » et leur cause",
+   "minWidth": 720,
+   "colonnes": [
+    {
+     "label": "Produit (libellé caisse)"
+    },
+    {
+     "label": "Achat (L)",
+     "align": "right"
+    },
+    {
+     "label": "Conso (L)",
+     "align": "right"
+    },
+    {
+     "label": "Écart (L)",
+     "align": "right"
+    },
+    {
+     "label": "Cause",
+     "align": "left"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Cubis de vin (couleur non précisée)"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "426,9",
+      "align": "right"
+     },
+     {
+      "v": "-426,9",
+      "align": "right"
+     },
+     {
+      "v": "Libelle de caisse generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Béthanie"
+     },
+     {
+      "v": "214,5",
+      "align": "right"
+     },
+     {
+      "v": "309,9",
+      "align": "right"
+     },
+     {
+      "v": "-95,4",
+      "align": "right"
+     },
+     {
+      "v": "Format d'achat non rattache",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Gewurztraminer"
+     },
+     {
+      "v": "6,0",
+      "align": "right"
+     },
+     {
+      "v": "78,9",
+      "align": "right"
+     },
+     {
+      "v": "-75,1",
+      "align": "right"
+     },
+     {
+      "v": "Verres encaisses sous le bouton generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Chablis"
+     },
+     {
+      "v": "18,0",
+      "align": "right"
+     },
+     {
+      "v": "73,7",
+      "align": "right"
+     },
+     {
+      "v": "-67,7",
+      "align": "right"
+     },
+     {
+      "v": "Verres encaisses sous le bouton generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "73,0",
+      "align": "right"
+     },
+     {
+      "v": "120,5",
+      "align": "right"
+     },
+     {
+      "v": "-48,5",
+      "align": "right"
+     },
+     {
+      "v": "Verres encaisses sous le bouton generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Miraval Rosé"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "6,0",
+      "align": "right"
+     },
+     {
+      "v": "-6,0",
+      "align": "right"
+     },
+     {
+      "v": "Libelle de caisse generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Liqueur de Cerise"
+     },
+     {
+      "v": "12,7",
+      "align": "right"
+     },
+     {
+      "v": "16,1",
+      "align": "right"
+     },
+     {
+      "v": "-4,8",
+      "align": "right"
+     },
+     {
+      "v": "Verres encaisses sous le bouton generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Hautes Côtes de Beaune blanc"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "4,5",
+      "align": "right"
+     },
+     {
+      "v": "-4,5",
+      "align": "right"
+     },
+     {
+      "v": "Achat sous un autre nom",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Marc du Jura"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "2,4",
+      "align": "right"
+     },
+     {
+      "v": "-2,4",
+      "align": "right"
+     },
+     {
+      "v": "Libelle de caisse generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Eau de Vie de Poire"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "1,7",
+      "align": "right"
+     },
+     {
+      "v": "-2,4",
+      "align": "right"
+     },
+     {
+      "v": "Libelle de caisse generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Get 31"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "0,9",
+      "align": "right"
+     },
+     {
+      "v": "-1,6",
+      "align": "right"
+     },
+     {
+      "v": "Libelle de caisse generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Eau de Vie Framboise"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "0,8",
+      "align": "right"
+     },
+     {
+      "v": "-1,5",
+      "align": "right"
+     },
+     {
+      "v": "Libelle de caisse generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Guignolet"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "-1,4",
+      "align": "right"
+     },
+     {
+      "v": "Achat sous un autre nom",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Grand Marnier"
+     },
+     {
+      "v": "8,4",
+      "align": "right"
+     },
+     {
+      "v": "8,1",
+      "align": "right"
+     },
+     {
+      "v": "-1,1",
+      "align": "right"
+     },
+     {
+      "v": "Verres encaisses sous le bouton generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "Martini Blanc"
+     },
+     {
+      "v": "13,0",
+      "align": "right"
+     },
+     {
+      "v": "12,6",
+      "align": "right"
+     },
+     {
+      "v": "-0,6",
+      "align": "right"
+     },
+     {
+      "v": "Verres encaisses sous le bouton generique",
+      "align": "left"
+     }
+    ],
+    [
+     {
+      "v": "TOTAL des écarts négatifs"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "-739,9",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "Compensés au bilan global",
+      "align": "left"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "graphique",
+   "variante": "horizontal",
+   "hauteur": 300,
+   "dataKey": "nom",
+   "serie": {
+    "name": "Écart (L)",
+    "couleur": "#b45309"
+   },
+   "format": "int",
+   "data": [
+    {
+     "nom": "Cubis de vin (couleur non précisée)",
+     "Écart (L)": 426.9
+    },
+    {
+     "nom": "Arbois Béthanie",
+     "Écart (L)": 95.4
+    },
+    {
+     "nom": "Gewurztraminer",
+     "Écart (L)": 75.1
+    },
+    {
+     "nom": "Chablis",
+     "Écart (L)": 67.7
+    },
+    {
+     "nom": "Calvados",
+     "Écart (L)": 48.5
+    },
+    {
+     "nom": "Miraval Rosé",
+     "Écart (L)": 6.0
+    },
+    {
+     "nom": "Liqueur de Cerise",
+     "Écart (L)": 4.8
+    },
+    {
+     "nom": "Hautes Côtes de Beaune blanc",
+     "Écart (L)": 4.5
+    },
+    {
+     "nom": "Marc du Jura",
+     "Écart (L)": 2.4
+    },
+    {
+     "nom": "Eau de Vie de Poire",
+     "Écart (L)": 2.4
+    },
+    {
+     "nom": "Get 31",
+     "Écart (L)": 1.6
+    },
+    {
+     "nom": "Eau de Vie Framboise",
+     "Écart (L)": 1.5
+    },
+    {
+     "nom": "Guignolet",
+     "Écart (L)": 1.4
+    },
+    {
+     "nom": "Grand Marnier",
+     "Écart (L)": 1.1
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Au niveau du **bilan matière global** (les 65 produits agrégés), ces écarts négatifs se compensent avec les écarts positifs. Seuls les totaux comptent, et l'identité comptable se ferme."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Bilan matière global des boissons (3 exercices)",
+   "minWidth": 420,
+   "colonnes": [
+    {
+     "label": "Poste"
+    },
+    {
+     "label": "Litres",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Somme des achats"
+     },
+     {
+      "v": "10 622 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "moins Conso vendue / servie"
+     },
+     {
+      "v": "7 361 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "moins Stock final (inventaire)"
+     },
+     {
+      "v": "213 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "= Bilan net (insensible à l'étiquetage)"
+     },
+     {
+      "v": "3 048 L",
+      "align": "right",
+      "badge": "ok"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Achats 10 622 L moins conso 7 361 L moins stock 213 L égale **3 048 L** net. Ce résultat est **insensible à l'étiquetage** : déplacer une quantité d'un libellé vers un autre ne change ni la somme des achats, ni la somme de la conso, ni le bilan. Les 739,9 L d'écarts négatifs sont déjà inclus dans ce net et ne créent aucun déficit."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Deux exemples complets, du libellé de caisse à la facture."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Exemples : Cubis de vin et Arbois Béthanie",
+   "minWidth": 640,
+   "colonnes": [
+    {
+     "label": "Cas"
+    },
+    {
+     "label": "Nature",
+     "align": "center"
+    },
+    {
+     "label": "Achat (L)",
+     "align": "right"
+    },
+    {
+     "label": "Conso (L)",
+     "align": "right"
+    },
+    {
+     "label": "Écart (L)",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Cubis de vin"
+     },
+     {
+      "v": "Libellé générique",
+      "align": "center"
+     },
+     {
+      "v": "0,0 L",
+      "align": "right"
+     },
+     {
+      "v": "426,9 L",
+      "align": "right"
+     },
+     {
+      "v": "-426,9 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Béthanie (75 cl mappé seul)"
+     },
+     {
+      "v": "Format non rattaché",
+      "align": "center"
+     },
+     {
+      "v": "214,5 L",
+      "align": "right"
+     },
+     {
+      "v": "309,9 L",
+      "align": "right"
+     },
+     {
+      "v": "-95,4 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Béthanie (tous formats rattachés)"
+     },
+     {
+      "v": "Après correction",
+      "align": "center",
+      "badge": "ok"
+     },
+     {
+      "v": "383,3 L",
+      "align": "right"
+     },
+     {
+      "v": "309,9 L",
+      "align": "right"
+     },
+     {
+      "v": "+73,4 L",
+      "align": "right",
+      "badge": "ok"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "**Cubis de vin** : 426,9 L vendus au verre et au pichet sous un bouton de caisse générique, 0 L acheté sous ce nom. Le vin est bien acheté, mais sous son appellation précise. Ce surplus de 426,9 L sur le bouton générique est le miroir exact des petits déficits constatés sur les vins nommés (Chablis, Gewurztraminer, etc.) : les verres y ont été saisis tantôt sous le bouton générique, tantôt sous l'appellation. **Arbois Béthanie** : seul le format 75 cl (214,5 L) avait été rattaché ; les achats en 37,5 cl (168,8 L) étaient restés en « achats non rattachés ». Rattachés, l'achat total atteint 383,3 L, supérieur à la conso (309,9 L) : l'écart négatif devient un surplus de +73,4 L, parfaitement normal."
+  },
+  {
+   "kind": "note",
+   "texte": "**Aucun encaissement créé.** Un écart négatif signifie qu'un libellé a été vendu un peu plus qu'il n'a été acheté sous ce même nom : il n'existe **aucun canal d'encaissement supplémentaire**. Le chiffre d'affaires reste celui des tickets réellement émis. Reclasser le produit sous son vrai nom déplace une quantité d'une ligne à l'autre sans générer le moindre euro de recette additionnelle."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Liste des libellés « conso > achats » avec leur cause et leur correspondance facture, bilan matière global (identité comptable) et exemples détaillés Cubis + Béthanie. La table de correspondance complète libellé caisse / appellation est fournie en pièce Boissons-6.",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-consommation-superieure-achats.xlsx",
+     "label": "RF - Consommation supérieure aux achats (causes + bilan)"
+    },
+    {
+     "fichier": "pieces-defense/Boissons-6-correspondance-libelles.xlsx",
+     "label": "Boissons-6 - Table de correspondance des libellés"
+    }
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Ce qu'il faut retenir",
+   "texte": "Les 15 écarts « conso > achats » (739,9 L) sont des artefacts d'étiquetage de caisse : le produit est acheté sous un autre nom, un autre format ou un libellé générique. Le bilan matière global se ferme sur 3 048 L net, insensible à l'étiquetage, et aucun de ces écarts ne crée de canal d'encaissement. Ils ne révèlent aucune vente non comptabilisée."
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Note pour l'avocat",
+   "texte": "Le grief « conso > achats » repose sur une lecture ligne à ligne du bilan matière, alors que la seule grandeur économiquement pertinente est le total agrégé. La preuve tient en une identité comptable : somme des achats moins somme de la conso moins stock = 3 048 L, valeur strictement indépendante de la répartition par libellé. Chaque écart négatif est rattaché à sa cause par la table de correspondance (pièce Boissons-6) ; le cas Béthanie montre qu'il suffit de rattacher le format 37,5 cl pour inverser l'écart. À soulever conjointement avec les autres griefs boissons (bilan matière unique). Reproductible via scripts/rendu-final-consommation-superieure-achats.py."
+  }
+ ]
+}

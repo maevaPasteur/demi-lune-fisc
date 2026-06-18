@@ -1,6 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
-import { BarChart } from '@mantine/charts'
+import { BarChart, LineChart } from '@mantine/charts'
 import {
   Accordion,
   ActionIcon,
@@ -32,6 +32,7 @@ import {
   IconFileText,
   IconGavel,
   IconInfoCircle,
+  IconToolsKitchen2,
 } from '@tabler/icons-react'
 import type { ComposanteDetail, JourPartage, KpiItem, Section } from '../data/analyses'
 import { fileUrl } from './PieceCards'
@@ -787,7 +788,7 @@ function SectionView({ section }: { section: Section }) {
         nous: { color: 'teal', label: 'Notre analyse' },
         neutre: { color: 'gold', label: 'En clair' },
       } as const
-      const c = MAP[section.source]
+      const c = MAP[section.source] ?? MAP.neutre
       const num = section.numero
       // Gros titre numéroté précédé d'une barre de séparation colorée (pas de carte pleine).
       return (
@@ -873,7 +874,7 @@ function SectionView({ section }: { section: Section }) {
               </Text>
             )}
             <Group gap="sm">
-              {section.fichiers.map((f) => (
+              {(section.fichiers ?? []).map((f) => (
                 <Button
                   key={f.fichier}
                   component="a"
@@ -900,6 +901,80 @@ function SectionView({ section }: { section: Section }) {
             <Kpi key={it.label} item={it} />
           ))}
         </SimpleGrid>
+      )
+
+    case 'grilleTables':
+      return (
+        <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
+          <Stack gap="sm">
+            {section.titre && (
+              <Title order={3} fz={{ base: 18, sm: 22 }}>
+                {section.titre}
+              </Title>
+            )}
+            {section.sousTitre && (
+              <Text size="sm" c="dimmed">
+                {section.sousTitre}
+              </Text>
+            )}
+            <SimpleGrid cols={{ base: 3, xs: 4, sm: 6, md: 9 }} spacing="xs" verticalSpacing="xs">
+              {section.tables.map((t) => {
+                const isNote = section.variante === 'notes' || typeof t.total === 'number'
+                const type = t.type ?? 'reelle'
+                const palette =
+                  type === 'virtuelle'
+                    ? { color: 'teal', border: 'var(--mantine-color-teal-5)', style: 'dashed', bg: 'var(--mantine-color-teal-0)', icon: 'var(--mantine-color-teal-7)' }
+                    : type === 'inexistante'
+                      ? { color: 'red', border: 'var(--mantine-color-red-4)', style: 'dashed', bg: 'var(--mantine-color-red-0)', icon: 'var(--mantine-color-red-5)' }
+                      : { color: 'gray', border: 'var(--mantine-color-gray-3)', style: 'solid', bg: undefined as string | undefined, icon: 'var(--mantine-color-gray-6)' }
+                return (
+                  <Paper
+                    key={t.numero}
+                    withBorder
+                    radius="md"
+                    p="xs"
+                    style={{
+                      borderColor: isNote ? 'var(--mantine-color-gray-3)' : palette.border,
+                      borderStyle: isNote ? 'solid' : palette.style,
+                      backgroundColor: isNote ? undefined : palette.bg,
+                    }}
+                  >
+                    <Stack gap={2} align="center">
+                      {isNote ? (
+                        <>
+                          <Text fw={700} size="sm">
+                            {t.numero}
+                          </Text>
+                          <Text fw={700} fz={22} c="teal.7" lh={1}>
+                            {(t.total ?? 0).toLocaleString('fr-FR')}
+                          </Text>
+                          <Text size="xs" c="dimmed">
+                            encaissements
+                          </Text>
+                        </>
+                      ) : (
+                        <>
+                          <IconToolsKitchen2 size={20} color={palette.icon} />
+                          <Text fw={700} size="sm" td={type === 'inexistante' ? 'line-through' : undefined}>
+                            {t.numero}
+                          </Text>
+                          <Badge size="xs" variant="light" color={palette.color} radius="sm">
+                            {type === 'virtuelle' ? 'Virtuelle' : type === 'inexistante' ? 'Inexistante' : 'Réelle'}
+                          </Badge>
+                          {t.note && (
+                            <Text size="xs" c="dimmed" ta="center" lh={1.1}>
+                              {t.note}
+                            </Text>
+                          )}
+                        </>
+                      )}
+                    </Stack>
+                  </Paper>
+                )
+              })}
+            </SimpleGrid>
+          </Stack>
+        </Paper>
       )
 
     case 'tableau':
@@ -946,6 +1021,43 @@ function SectionView({ section }: { section: Section }) {
           </Stack>
         </Paper>
       )
+
+    case 'graphiqueLignes': {
+      const ticks = section.moisTicks?.map((t) => t.tick)
+      const labels = Object.fromEntries((section.moisTicks ?? []).map((t) => [t.tick, t.label]))
+      return (
+        <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
+          <Stack gap="sm">
+            {section.titre && (
+              <Title order={3} fz={{ base: 18, sm: 22 }}>
+                {section.titre}
+              </Title>
+            )}
+            {section.sousTitre && (
+              <Text size="sm" c="dimmed">
+                {section.sousTitre}
+              </Text>
+            )}
+            <LineChart
+              h={section.hauteur}
+              data={section.data}
+              dataKey={section.dataKey}
+              series={section.series.map((s) => ({ name: s.name, color: s.couleur }))}
+              valueFormatter={(v) => (section.format === 'euro' ? formatEuro(v) : formatInt(v))}
+              curveType="monotone"
+              withDots={false}
+              connectNulls
+              withLegend
+              gridAxis="xy"
+              xAxisProps={{
+                ticks,
+                tickFormatter: (v: number) => labels[v] ?? '',
+              }}
+            />
+          </Stack>
+        </Paper>
+      )
+    }
 
     case 'graphique':
       return (

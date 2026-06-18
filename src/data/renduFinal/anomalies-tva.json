@@ -1,0 +1,257 @@
+{
+  "meta": {
+    "slug": "anomalies-tva",
+    "titre": "Incoherences de TVA",
+    "audience": "avocat",
+    "sources": [
+      "Annexe G1/G2/G3 (journal de TVA, 3 exercices)",
+      "Annexe D1/D2/D3 (synthese produit par famille de TVA)"
+    ],
+    "script": "scripts/rendu-final-anomalies-tva.py",
+    "piece": "pieces-defense/RF-anomalies-tva.xlsx",
+    "genere_le": "reproductible (script)"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Le grief de l'administration"
+    },
+    {
+      "kind": "note",
+      "ton": "fisc",
+      "texte": "Proposition de rectification, p. 22-28 (rejet 1/3 et 2/3), annexe G (journal de TVA) : selon le service, des incoherences de ventilation de TVA entacheraient la comptabilite."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le reproche vise la repartition des recettes entre le taux de 10 % et le taux de 20 %. Il faut donc verifier, exercice par exercice, que cette ventilation suit la nature reelle des produits et que la TVA collectee se reconcilie avec la comptabilite."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "La ventilation suit la nature des produits"
+    },
+    {
+      "kind": "note",
+      "ton": "droit",
+      "texte": "Regle applicable. La restauration consommee sur place releve du taux reduit de 10 % (CGI art. 279, m ; BOI-TVA-LIQ-30-10-10). Les boissons alcoolisees sont exclues du taux reduit et relevent du taux normal de 20 % (CGI art. 278 ; BOI-TVA-LIQ-30-10-10). Le journal de la caisse ne comporte que ces deux taux : aucun taux errone n'y figure."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La caisse classe elle-meme chaque produit dans l'une de trois familles par nature (annexe D) : liquides sur place a 10 % (eaux, sodas, cafe), boissons alcoolisees a 20 %, et cuisine a 10 %. La ventilation de TVA decoule mecaniquement de ce classement par nature, pas d'un arbitrage comptable."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Ventilation de la TVA collectee par taux et par exercice (annexe G)",
+      "colonnes": [
+        "Exercice",
+        "Base HT 10 %",
+        "TVA 10 %",
+        "Base HT 20 %",
+        "TVA 20 %",
+        "TVA totale",
+        "Part 10 %",
+        "Part 20 %"
+      ],
+      "lignes": [
+        [
+          "Ex. clos 31/03/2023",
+          "296 111,00 €",
+          "29 611,10 €",
+          "64 708,30 €",
+          "12 941,66 €",
+          "42 552,76 €",
+          "69,6 %",
+          "30,4 %"
+        ],
+        [
+          "Ex. clos 31/03/2024",
+          "319 174,40 €",
+          "31 917,44 €",
+          "72 413,20 €",
+          "14 482,64 €",
+          "46 400,08 €",
+          "68,8 %",
+          "31,2 %"
+        ],
+        [
+          "Ex. clos 31/03/2025",
+          "318 522,00 €",
+          "31 852,20 €",
+          "70 372,15 €",
+          "14 074,43 €",
+          "45 926,63 €",
+          "69,3 %",
+          "30,6 %"
+        ],
+        [
+          "Total 3 exercices",
+          "933 807,40 €",
+          "93 380,74 €",
+          "207 493,65 €",
+          "41 498,73 €",
+          "134 879,47 €",
+          "69,2 %",
+          "30,8 %"
+        ]
+      ],
+      "note": "Base HT par taux reconstituee par base = TVA / taux (methode neutre). La TVA par taux est la somme du champ tax_amount du journal, toujours positif et reconcilie."
+    },
+    {
+      "kind": "graphiqueEmpile",
+      "titre": "Repartition de la base HT entre 10 % et 20 % par exercice",
+      "hauteur": 300,
+      "dataKey": "nom",
+      "series": [
+        {
+          "name": "Base 10 %",
+          "couleur": "#0f766e"
+        },
+        {
+          "name": "Base 20 %",
+          "couleur": "#b45309"
+        }
+      ],
+      "data": [
+        {
+          "nom": "Ex. clos 31/03/2023",
+          "Base 10 %": 296111.0,
+          "Base 20 %": 64708.3
+        },
+        {
+          "nom": "Ex. clos 31/03/2024",
+          "Base 10 %": 319174.4,
+          "Base 20 %": 72413.2
+        },
+        {
+          "nom": "Ex. clos 31/03/2025",
+          "Base 10 %": 318522.0,
+          "Base 20 %": 70372.15
+        }
+      ],
+      "format": "euro"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La structure est stable et typique d'un restaurant : la TVA est collectee a environ 69 % au taux de 10 % (cuisine et liquides sur place) et 31 % au taux de 20 % (alcools), sur les trois exercices. Une telle constance exclut une ventilation erratique."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Coherence par famille : taux attendu (droit) vs taux applique (caisse)",
+      "colonnes": [
+        "Famille (par nature)",
+        "Taux attendu",
+        "Taux applique",
+        "CA TTC Ex. clos 31/03/2025",
+        "Coherent ?"
+      ],
+      "lignes": [
+        [
+          "Liquides sur place (eaux, sodas, cafe)",
+          "10 % (CGI 279 m)",
+          "10 %",
+          "19 723,21 €",
+          "Oui"
+        ],
+        [
+          "Boissons alcoolisees",
+          "20 % (CGI 278)",
+          "20 %",
+          "86 389,75 €",
+          "Oui"
+        ],
+        [
+          "Cuisine / restauration sur place",
+          "10 % (CGI 279 m)",
+          "10 %",
+          "329 452,00 €",
+          "Oui"
+        ]
+      ],
+      "note": "Verification automatique sur les trois exercices : aucun produit alcoolise n'est classe au taux de 10 %, aucun plat n'est classe au taux de 20 %."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Exemple concret (annexe D, Ex. clos 31/03/2023) : un alcool, « Arbois Trousseau Le », est vendu 6,40 € et taxe a 20 % ; un plat, « VOUIVRE », est vendu 9,00 € et taxe a 10 % ; un soft, « Vittel litre », est taxe a 10 %. Chaque produit porte le taux que la loi lui assigne."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Les ecarts releves sont marginaux et expliques"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La seule particularite formelle du journal est l'affichage, sur les tickets a deux taux, d'un champ « base HT » de la ligne 20 % parfois negatif (8526 lignes sur 29588, soit 28,8 % des lignes). C'est un artefact de la colonne brute d'export : ce champ n'est pas additif au TTC. Il n'affecte ni la TVA collectee ni le chiffre d'affaires."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Chiffrage des « incoherences » (cumul 3 exercices)",
+      "colonnes": [
+        "Constat",
+        "Ampleur",
+        "Poids",
+        "Explication"
+      ],
+      "lignes": [
+        [
+          "Alcool classe au taux de 10 % (annexe D)",
+          "0",
+          "0 %",
+          "Aucun. Le classement par nature est respecte."
+        ],
+        [
+          "TVA de ligne de signe anormal (tax_amount < 0)",
+          "0",
+          "0 %",
+          "Aucune. La TVA par ligne est toujours positive et reconciliee."
+        ],
+        [
+          "Champ « base HT » 20 % negatif a l'export",
+          "8526 lignes",
+          "28,8 %",
+          "Artefact d'export, sans effet sur la TVA collectee ni le CA."
+        ],
+        [
+          "Ecart de reconciliation TVA (lignes vs tickets)",
+          "0,00 €",
+          "0,0000 %",
+          "Reconciliation a l'euro pres."
+        ]
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 4,
+      "titre": "Piece justificative"
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Ventilation de la TVA par exercice, coherence par famille et chiffrage des ecarts.",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
+          "label": "RF - Incoherences de TVA : ventilation par exercice, coherence par famille, ecarts (XLSX)"
+        }
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 5,
+      "titre": "Conclusion"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La ventilation de TVA 10 % / 20 % suit la nature des produits (restauration et liquides sur place a 10 %, alcools a 20 %), elle est stable sur les trois exercices (environ 69 % / 31 % de la TVA collectee) et la TVA se reconcilie a l'euro pres avec la comptabilite. Les « incoherences » invoquees se reduisent a un artefact de la colonne « base HT » de l'export caisse, sans effet sur la TVA collectee ni sur le chiffre d'affaires. Le grief n'est pas fonde."
+    },
+    {
+      "kind": "interne",
+      "audience": "avocat",
+      "texte": "Point a tenir en cas de contestation : ne jamais raisonner sur la colonne brute VAT_base / « Base TVA 20 % » de l'annexe G (valeurs negatives trompeuses sur tickets multi-taux). La preuve repose sur le champ tax_amount (TVA de ligne, toujours positif), qui somme exactement a la TVA des tickets et a la TVA comptabilisee. La base HT se reconstitue par base = TVA / taux. Tous les chiffres sont reproductibles via le script."
+    }
+  ]
+}

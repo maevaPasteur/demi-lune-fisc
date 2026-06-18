@@ -1,0 +1,564 @@
+{
+ "meta": {
+  "slug": "prix-menu-demi-lune",
+  "titre": "Instabilite des prix du « Menu Demi Lune »",
+  "source": "scripts/rendu-final-prix-menu-demi-lune.py",
+  "grief": "Proposition de rectification, p. 33-36 (rejet de comptabilite, 3/3).",
+  "chiffres": {
+   "prix_catalogue": 45.0,
+   "nb_periodes": 5,
+   "total_q": 840,
+   "cat_q": 508,
+   "custom_q": 332,
+   "custom_eur": 14118,
+   "pct_custom": 39.5,
+   "nb_prix_distincts": 108,
+   "qte_observee_45": 515,
+   "pct_observee_45": 60.7
+  }
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "titre": "Le grief de l'administration",
+   "sousTitre": "Proposition de rectification, p. 33-36 (rejet 3/3)"
+  },
+  {
+   "kind": "note",
+   "texte": "Le service releve que, sur la carte, le Menu Demi Lune est affiche a **45,00 €**, mais que les donnees de caisse font apparaitre une **multitude de prix differents** pour ce meme menu (d'environ 24 € a 90 €). Il en deduit que la comptabilite serait **non sincere**."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Ce que mesure reellement cette variation",
+   "sousTitre": "Un prix catalogue unique et stable, et des ventes hors catalogue tracees"
+  },
+  {
+   "kind": "note",
+   "texte": "Il faut distinguer deux choses. **Le prix catalogue** du Menu Demi Lune est **unique et stable** : il vaut **45,00 €** sur **chacune** des 5 periodes de carte du controle. **La « variation »** invoquee provient exclusivement de ventes **hors prix catalogue** (forfaits de groupe, remises commerciales, prix negocies, menus a contenu adapte). Ces lignes ne sont pas dissimulees : chacune est **horodatee et tracee** dans la caisse, et **integralement encaissee**."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Premier constat : par periode de carte, le prix catalogue du Menu Demi Lune ne varie pas. La colonne « Qte hors catalogue » isole les ventes facturees a un autre prix (forfaits, remises), seule origine de l'amplitude relevee par le service."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Prix catalogue du Menu Demi Lune par periode (stable a 45,00 €)",
+   "minWidth": 720,
+   "colonnes": [
+    {
+     "label": "Periode"
+    },
+    {
+     "label": "Carte",
+     "align": "center"
+    },
+    {
+     "label": "Exercice",
+     "align": "center"
+    },
+    {
+     "label": "Dates",
+     "align": "center"
+    },
+    {
+     "label": "Prix catalogue",
+     "align": "right"
+    },
+    {
+     "label": "Qte au prix catalogue",
+     "align": "right"
+    },
+    {
+     "label": "Qte hors catalogue",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "P1"
+     },
+     {
+      "v": "C",
+      "align": "center"
+     },
+     {
+      "v": "2022-2023",
+      "align": "center"
+     },
+     {
+      "v": "01/04/2022-22/07/2022",
+      "align": "center"
+     },
+     {
+      "v": "45,00 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "41",
+      "align": "right"
+     },
+     {
+      "v": "28",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P2"
+     },
+     {
+      "v": "B",
+      "align": "center"
+     },
+     {
+      "v": "2022-2023",
+      "align": "center"
+     },
+     {
+      "v": "23/07/2022-31/03/2023",
+      "align": "center"
+     },
+     {
+      "v": "45,00 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "48",
+      "align": "right"
+     },
+     {
+      "v": "36",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P3"
+     },
+     {
+      "v": "B",
+      "align": "center"
+     },
+     {
+      "v": "2023-2024",
+      "align": "center"
+     },
+     {
+      "v": "01/04/2023-16/04/2023",
+      "align": "center"
+     },
+     {
+      "v": "45,00 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "12",
+      "align": "right"
+     },
+     {
+      "v": "1",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P4"
+     },
+     {
+      "v": "A",
+      "align": "center"
+     },
+     {
+      "v": "2023-2024",
+      "align": "center"
+     },
+     {
+      "v": "17/04/2023-31/03/2024",
+      "align": "center"
+     },
+     {
+      "v": "45,00 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "174",
+      "align": "right"
+     },
+     {
+      "v": "120",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P5"
+     },
+     {
+      "v": "A",
+      "align": "center"
+     },
+     {
+      "v": "2024-2025",
+      "align": "center"
+     },
+     {
+      "v": "01/04/2024-31/03/2025",
+      "align": "center"
+     },
+     {
+      "v": "45,00 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "232",
+      "align": "right"
+     },
+     {
+      "v": "147",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Toutes periodes"
+     },
+     {
+      "v": "",
+      "align": "center"
+     },
+     {
+      "v": "",
+      "align": "center"
+     },
+     {
+      "v": "",
+      "align": "center"
+     },
+     {
+      "v": "45,00 € (unique)",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "507",
+      "align": "right"
+     },
+     {
+      "v": "332",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Second constat : les ventes hors catalogue representent **332** des **840** Menus Demi Lune vendus, soit **39,5 %**, pour **14 118,00 €**. Elles se repartissent sur **108** prix distincts (forfaits de groupe a prix rond, remises, menus adaptes). Le tableau ci-dessous donne les prix personnalises les plus frequents."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Menu Demi Lune : prix personnalises (hors catalogue) et occurrences",
+   "minWidth": 520,
+   "colonnes": [
+    {
+     "label": "Prix de vente"
+    },
+    {
+     "label": "Occurrences",
+     "align": "right"
+    },
+    {
+     "label": "Montant encaisse",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "50,00 €"
+     },
+     {
+      "v": "43",
+      "align": "right"
+     },
+     {
+      "v": "2 150,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "60,00 €"
+     },
+     {
+      "v": "17",
+      "align": "right"
+     },
+     {
+      "v": "1 020,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "30,00 €"
+     },
+     {
+      "v": "15",
+      "align": "right"
+     },
+     {
+      "v": "450,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "49,00 €"
+     },
+     {
+      "v": "9",
+      "align": "right"
+     },
+     {
+      "v": "441,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "25,00 €"
+     },
+     {
+      "v": "8",
+      "align": "right"
+     },
+     {
+      "v": "200,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "35,40 €"
+     },
+     {
+      "v": "7",
+      "align": "right"
+     },
+     {
+      "v": "247,80 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "31,05 €"
+     },
+     {
+      "v": "6",
+      "align": "right"
+     },
+     {
+      "v": "186,30 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "40,00 €"
+     },
+     {
+      "v": "6",
+      "align": "right"
+     },
+     {
+      "v": "240,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "20,00 €"
+     },
+     {
+      "v": "5",
+      "align": "right"
+     },
+     {
+      "v": "100,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "32,38 €"
+     },
+     {
+      "v": "5",
+      "align": "right"
+     },
+     {
+      "v": "161,90 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "37,42 €"
+     },
+     {
+      "v": "5",
+      "align": "right"
+     },
+     {
+      "v": "187,10 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "39,08 €"
+     },
+     {
+      "v": "5",
+      "align": "right"
+     },
+     {
+      "v": "195,40 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total hors catalogue (108 prix distincts)"
+     },
+     {
+      "v": "332",
+      "align": "right"
+     },
+     {
+      "v": "14 118,00 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Distribution de l'ensemble des prix observes pour le Menu Demi Lune dans la caisse, tous exercices confondus (annexes B-1 a B-3, prix x quantite par produit). Sur **849** ventes, le prix de **45,00 €** est de **tres loin** le plus frequent (**515** ventes, soit **60,7 %**) ; les autres prix sont des forfaits et remises, minoritaires et disperses."
+  },
+  {
+   "kind": "graphique",
+   "variante": "horizontal",
+   "hauteur": 300,
+   "dataKey": "nom",
+   "serie": {
+    "name": "Ventes",
+    "couleur": "#0f766e"
+   },
+   "format": "int",
+   "data": [
+    {
+     "nom": "< 30 €",
+     "Ventes": 51
+    },
+    {
+     "nom": "30 a 40 €",
+     "Ventes": 105
+    },
+    {
+     "nom": "40 a 45 €",
+     "Ventes": 32
+    },
+    {
+     "nom": "45,00 € (catalogue)",
+     "Ventes": 515
+    },
+    {
+     "nom": "45 a 55 €",
+     "Ventes": 101
+    },
+    {
+     "nom": "> 55 €",
+     "Ventes": 45
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Exemple date, representatif des forfaits de groupe. Le 31/10/2024 a 13:06, un meme ticket porte **5 couverts** « Menu Demi Lune » au **meme prix personnalise de 48,68 €** (forfait groupe), pour un total de **243,40 €**, encaisse en totalite. Le prix differe du catalogue, mais il est identique pour les 5 couverts, applique sur une seule note, et trace : c'est un forfait, pas une variation erratique."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Exemple : ticket groupe du 31/10/2024 a 13:06 (annexe C-3)",
+   "minWidth": 520,
+   "colonnes": [
+    {
+     "label": "Article"
+    },
+    {
+     "label": "Prix unitaire",
+     "align": "right"
+    },
+    {
+     "label": "Couverts",
+     "align": "right"
+    },
+    {
+     "label": "Total ticket",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Menu 'Demi Lune' (forfait groupe)"
+     },
+     {
+      "v": "48,68 €",
+      "align": "right"
+     },
+     {
+      "v": "5",
+      "align": "right"
+     },
+     {
+      "v": "243,40 €",
+      "align": "right",
+      "badge": "ok"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Prix catalogue par periode (stable) et liste exhaustive des prix personnalises du Menu Demi Lune avec leurs occurrences et montants.",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-prix-menu-demi-lune.xlsx",
+     "label": "RF - Prix du Menu Demi Lune (catalogue par periode + prix personnalises)"
+    }
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Ce qu'il faut retenir",
+   "texte": "Le prix catalogue du Menu Demi Lune est unique et stable (45,00 €) sur toutes les periodes de carte. La « variation » releve uniquement de ventes hors catalogue (forfaits de groupe, remises, prix negocies), soit 39,5 % des Menus Demi Lune pour 14 118,00 €, chacune horodatee, tracee et integralement portee au chiffre d'affaires declare. Aucune recette n'est dissimulee : le grief d'insincerite n'est pas fonde."
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Note pour l'avocat",
+   "texte": "Ce grief recoupe celui des « factures sans detail / forfaits » (menus a prix personnalises) deja traite : il s'agit des memes lignes de caisse, vues sous un autre angle. La pluralite de prix n'est pas une anomalie comptable mais la trace, dans la caisse, de la pratique commerciale (groupes, remises, formules). Le point juridique a tenir : la sincerite s'apprecie sur l'exhaustivite et la tracabilite des recettes, toutes deux etablies ici (chaque vente hors catalogue est horodatee et encaissee), et non sur l'uniformite des prix de vente, qu'aucun texte n'impose a un restaurateur. Reproductible via scripts/rendu-final-prix-menu-demi-lune.py."
+  }
+ ]
+}

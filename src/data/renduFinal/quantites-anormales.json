@@ -1,0 +1,331 @@
+{
+ "meta": {
+  "slug": "quantites-anormales",
+  "titre": "Quantités « anormales »",
+  "source": "scripts/rendu-final-quantites-anormales.py",
+  "grief": "Proposition de rectification p. 18-20 (rejet de comptabilité, 1/3).",
+  "chiffres": {
+   "del_total": 21302,
+   "del_somme_eur": 430763,
+   "del_mediane_eur": 8.7,
+   "del_sup_1000": 4,
+   "del_sup_500": 5,
+   "del_sup_200": 12,
+   "top4_somme_eur": 138003.1,
+   "max_quantite": 4050
+  }
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "titre": "Le grief de l'administration",
+   "sousTitre": "Proposition de rectification, p. 18-20 (rejet 1/3)"
+  },
+  {
+   "kind": "note",
+   "texte": "Le service relève dans les fichiers de caisse des **quantités élevées ou atypiques** sur certaines lignes (plusieurs milliers d'unités d'un même article sur une seule note) et en déduit des **anomalies** entachant la sincérité de la comptabilité."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Ce que sont réellement ces quantités",
+   "sousTitre": "Des fautes de frappe annulées le jour même, jamais reversées au CA"
+  },
+  {
+   "kind": "note",
+   "texte": "Une « quantité anormale » est une **faute de frappe** : un prix unitaire correct multiplié par une quantité saisie par erreur. Servir 4 050 portions d'un même plat sur une seule addition est **matériellement impossible** (la salle compte quelques dizaines de couverts). Ces lignes sont **immédiatement supprimées** : ce sont, une par une, les **plus grosses suppressions DEL** du fichier événement, horodatées et annulées **le jour même de leur saisie**. Elles n'entrent donc jamais dans le chiffre d'affaires déclaré."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les quatre plus grosses « quantités anormales » des trois exercices, et l'article qui porte la quantité la plus aberrante de chacune. Chacune est une ligne supprimée."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les 4 quantités les plus anormales (toutes supprimées)",
+   "minWidth": 640,
+   "colonnes": [
+    {
+     "label": "Date"
+    },
+    {
+     "label": "Heure",
+     "align": "center"
+    },
+    {
+     "label": "Montant saisi",
+     "align": "right"
+    },
+    {
+     "label": "Article le plus aberrant",
+     "align": "left"
+    },
+    {
+     "label": "Quantité saisie",
+     "align": "right"
+    },
+    {
+     "label": "Statut",
+     "align": "center"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-07-26"
+     },
+     {
+      "v": "18:51",
+      "align": "center"
+     },
+     {
+      "v": "68 993,10 €",
+      "align": "right"
+     },
+     {
+      "v": "PEUTE",
+      "align": "left"
+     },
+     {
+      "v": "3 876",
+      "align": "right"
+     },
+     {
+      "v": "Supprimée",
+      "align": "center",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "2023-06-21"
+     },
+     {
+      "v": "17:06",
+      "align": "center"
+     },
+     {
+      "v": "44 955,00 €",
+      "align": "right"
+     },
+     {
+      "v": "VALENTINE",
+      "align": "left"
+     },
+     {
+      "v": "4 050",
+      "align": "right"
+     },
+     {
+      "v": "Supprimée",
+      "align": "center",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "2022-08-07"
+     },
+     {
+      "v": "18:29",
+      "align": "center"
+     },
+     {
+      "v": "19 600,00 €",
+      "align": "right"
+     },
+     {
+      "v": "Alsace Gewurztramine",
+      "align": "left"
+     },
+     {
+      "v": "560",
+      "align": "right"
+     },
+     {
+      "v": "Supprimée",
+      "align": "center",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "2024-08-15"
+     },
+     {
+      "v": "11:16",
+      "align": "center"
+     },
+     {
+      "v": "4 455,00 €",
+      "align": "right"
+     },
+     {
+      "v": "Crémant du Jura",
+      "align": "left"
+     },
+     {
+      "v": "149",
+      "align": "right"
+     },
+     {
+      "v": "Supprimée",
+      "align": "center",
+      "badge": "ok"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Exemple détaillé du 2022-07-26 à 18:51 (68 993,10 €) : un même ticket cumule des quantités qui n'ont aucun sens physique. Le prix unitaire de chaque article reste correct ; seule la quantité est fautive."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Décomposition de la ligne du 2022-07-26 (68 993,10 €, supprimée)",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Article (prix correct)"
+    },
+    {
+     "label": "Prix unitaire",
+     "align": "right"
+    },
+    {
+     "label": "Quantité saisie",
+     "align": "right"
+    },
+    {
+     "label": "Sous-total saisi",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "PICHET MOULIN A VENT"
+     },
+     {
+      "v": "27,40 €",
+      "align": "right"
+     },
+     {
+      "v": "2 518",
+      "align": "right"
+     },
+     {
+      "v": "68 993,20 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Entrecôte grillée"
+     },
+     {
+      "v": "19,90 €",
+      "align": "right"
+     },
+     {
+      "v": "3 467",
+      "align": "right"
+     },
+     {
+      "v": "68 993,30 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Crémeux du Jura"
+     },
+     {
+      "v": "19,08 €",
+      "align": "right"
+     },
+     {
+      "v": "3 616",
+      "align": "right"
+     },
+     {
+      "v": "68 993,28 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PEUTE"
+     },
+     {
+      "v": "17,80 €",
+      "align": "right"
+     },
+     {
+      "v": "3 876",
+      "align": "right"
+     },
+     {
+      "v": "68 992,80 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "**Le lien avec les suppressions est exact.** Ces lignes ne sont pas « cachées » : ce sont les mêmes que les grandes suppressions DEL traitées au bloc Suppressions de caisse. Sur **21 302** suppressions totalisant **430 763,00 €**, seules **4** dépassent 1 000 € et **12** dépassent 200 € : la médiane d'une suppression est de **8,70 €**. Les quantités anormales sont donc une poignée d'erreurs de saisie spectaculaires mais isolées, toutes annulées, et non un procédé d'occultation."
+  },
+  {
+   "kind": "graphique",
+   "variante": "horizontal",
+   "hauteur": 280,
+   "dataKey": "nom",
+   "serie": {
+    "name": "Montant supprimé",
+    "couleur": "#0f766e"
+   },
+   "format": "euro",
+   "data": [
+    {
+     "nom": "2022-07-26 (18:51)",
+     "Montant supprimé": 68993.1
+    },
+    {
+     "nom": "2023-06-21 (17:06)",
+     "Montant supprimé": 44955.0
+    },
+    {
+     "nom": "2022-08-07 (18:29)",
+     "Montant supprimé": 19600.0
+    },
+    {
+     "nom": "2024-08-15 (11:16)",
+     "Montant supprimé": 4455.0
+    }
+   ]
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Décomposition prix × quantité des 4 quantités aberrantes, et liste exhaustive des suppressions au montant anormalement élevé (>= 200 €), toutes supprimées le jour même.",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-quantites-anormales.xlsx",
+     "label": "RF - Quantités anormales (décomposition + liste)"
+    }
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Ce qu'il faut retenir",
+   "texte": "Les quantités « anormales » sont des fautes de frappe (prix correct × quantité impossible), immédiatement supprimées : ce sont les plus grosses lignes DEL, annulées le jour même de leur saisie. Elles n'ont jamais été reversées au chiffre d'affaires déclaré et ne révèlent aucune dissimulation de recettes."
+  },
+  {
+   "kind": "interne",
+   "audience": "avocat",
+   "titre": "Note pour l'avocat",
+   "texte": "Le grief « quantités anormales » et le grief « suppressions de notes » portent sur les mêmes lignes : invoquer une quantité aberrante puis la suppression correspondante reviendrait à compter deux fois la même erreur. La pièce RF-quantites-anormales.xlsx établit le rapprochement 1:1 (montant saisi = prix catalogue × quantité fautive = montant supprimé). Reproductible via scripts/rendu-final-quantites-anormales.py."
+  }
+ ]
+}

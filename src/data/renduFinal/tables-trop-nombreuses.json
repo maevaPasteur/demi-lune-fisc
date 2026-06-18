@@ -1,0 +1,4966 @@
+{
+  "meta": {
+    "slug": "tables-trop-nombreuses",
+    "titre": "Trop de tables / tables « virtuelles »",
+    "refRapport": "Proposition p. 11 et p. 18-19",
+    "griefFisc": "La caisse comporte des tables « virtuelles » et autorise la suppression d'une table et de tous ses articles ; ces modifications ne seraient pas vérifiables, rendant la comptabilité non probante.",
+    "reponseCourte": "Un numéro de note n'est pas une table (la salle a 14 tables intérieures, les n° 13/16/17/18 n'existent pas). La table « virtuelle » est une note de règlement séparé, et la suppression de la table d'origine évite de compter le repas deux fois : elle protège le CA, elle ne le réduit pas.",
+    "tables_interieures_reelles": 14,
+    "numeros_inexistants_int": [
+      13,
+      16,
+      17,
+      18
+    ],
+    "max_note": 57,
+    "notes_total": 16608,
+    "notes_fractionnees": 1906,
+    "notes_fractionnees_pct": 11.5,
+    "encaissements_total": 16605,
+    "_source": {
+      "fichiers_caisse": [
+        "public/documents/caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
+        "public/documents/caisse-enregistreuse/ANNEXE-F2_reglements_2023-2024.xls",
+        "public/documents/caisse-enregistreuse/ANNEXE-F3_reglements_2024-2025.xls"
+      ],
+      "calculs": "src/data/renduFinalCalculs.json (paiements_fractionnes, bancarisation)",
+      "cas": "src/data/renduFinalCasSuppressions.json (cas partage)",
+      "plan_salle_reel": "confirmé par la gérante (mémoire tables-physiques-reelles)",
+      "script": "scripts/rendu-final-tables-trop-nombreuses.py"
+    }
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que dit l'administration",
+      "sousTitre": "Proposition de rectification p. 11 et section « suppression de note » (p. 18-19)."
+    },
+    {
+      "kind": "note",
+      "texte": "Le vérificateur relève que la caisse comporte des **tables « virtuelles »** et qu'elle **autorise la suppression d'une table et de tous ses articles**. Il en conclut qu'« *il n'est pas possible de confirmer que ces modifications soient légitimes* » et que la comptabilité serait, de ce fait, non probante (vecteur supposé de couverts ou de recettes non déclarés)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le vérificateur décrit pourtant lui-même la fonction (p. 11) : « *quatre tables virtuelles figurent à l'écran (n° 15 à n° 18, **par exemple**). Cette modalité permet le traitement des notes multiples pour une table, au moment du règlement.* » Une table « virtuelle » n'est donc pas une table en plus : c'est une **note supplémentaire** ouverte pour encaisser séparément les convives d'une **même** table. Nous le démontrons ci-dessous, fichiers de caisse à l'appui."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "Ce que démontrent les fichiers",
+      "sousTitre": "Un numéro de note n'est pas une place ; la suppression protège le CA, elle ne le réduit pas."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Premier fait : un numéro n'est pas une table.** La salle compte en réalité **14 tables à l'intérieur** (n° 1 à 12, 14 et 15). Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros de note (règlement séparé) ou des numéros non attribués. C'est vérifiable sur place : il suffit de compter les tables de la salle."
+    },
+    {
+      "kind": "grilleTables",
+      "variante": "plan",
+      "titre": "Plan de salle réel — intérieur (14 tables, n° 1 à 15 sauf 13)",
+      "sousTitre": "Sur les 18 numéros possibles à l'intérieur, seuls 14 désignent une table. Les n° 13, 16, 17 et 18 ne correspondent à AUCUNE table physique : ce sont des numéros de note (règlement séparé) ou des numéros non attribués.",
+      "tables": [
+        {
+          "numero": "n°1",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°2",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°3",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°4",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°5",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°6",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°7",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°8",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°9",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°10",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°11",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°12",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°13",
+          "type": "inexistante",
+          "note": "Aucune table"
+        },
+        {
+          "numero": "n°14",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°15",
+          "type": "reelle"
+        },
+        {
+          "numero": "n°16",
+          "type": "inexistante",
+          "note": "Aucune table"
+        },
+        {
+          "numero": "n°17",
+          "type": "inexistante",
+          "note": "Aucune table"
+        },
+        {
+          "numero": "n°18",
+          "type": "inexistante",
+          "note": "Aucune table"
+        }
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "Même constat à l'extérieur : la **table n° 125 n'existe pas** ; les **n° 116 et 117** ne sont montées que le **14 juillet et le 31 décembre au soir** (pas de parasol le reste de l'année) ; la **n° 100** ne sert que le soir, très rarement. **Preuve décisive dans les fichiers** : si le numéro de la caisse était un numéro de table, on verrait apparaître les numéros de terrasse (101 à 125). Or le numéro de note de l'export ne va **jamais au-delà de 57** : c'est un **rang de note quotidien** (1ʳᵉ note encaissée, 2ᵉ, etc.), réattribué chaque jour, et non un numéro de table. On ne peut donc rien déduire de « couverts » à partir d'un numéro."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Deuxième fait : le profil des encaissements le confirme.** Pour chaque rang de note, voici le nombre d'encaissements sur les trois exercices. Les premiers rangs sont atteints presque chaque jour d'ouverture (~660 fois) ; le nombre décroît régulièrement ; les rangs élevés (au-delà du nombre de tables) ne surviennent que les jours de pointe et correspondent aux **notes de règlement séparé**, jamais à des tables supplémentaires."
+    },
+    {
+      "kind": "grilleTables",
+      "variante": "notes",
+      "titre": "Nombre d'encaissements par numéro de note (rang quotidien, 1 à 57)",
+      "sousTitre": "Chaque carte = un rang de note dans la journée (la 1ʳᵉ note encaissée, la 2ᵉ, etc.). Le chiffre = le nombre total d'encaissements à ce rang sur les trois exercices. Les rangs élevés (au-delà du nombre de tables) ne surviennent que les jours de pointe : ce sont des notes de règlement séparé, pas des tables.",
+      "tables": [
+        {
+          "numero": "n°1",
+          "total": 659
+        },
+        {
+          "numero": "n°2",
+          "total": 659
+        },
+        {
+          "numero": "n°3",
+          "total": 659
+        },
+        {
+          "numero": "n°4",
+          "total": 658
+        },
+        {
+          "numero": "n°5",
+          "total": 656
+        },
+        {
+          "numero": "n°6",
+          "total": 654
+        },
+        {
+          "numero": "n°7",
+          "total": 650
+        },
+        {
+          "numero": "n°8",
+          "total": 647
+        },
+        {
+          "numero": "n°9",
+          "total": 641
+        },
+        {
+          "numero": "n°10",
+          "total": 635
+        },
+        {
+          "numero": "n°11",
+          "total": 623
+        },
+        {
+          "numero": "n°12",
+          "total": 609
+        },
+        {
+          "numero": "n°13",
+          "total": 598
+        },
+        {
+          "numero": "n°14",
+          "total": 582
+        },
+        {
+          "numero": "n°15",
+          "total": 569
+        },
+        {
+          "numero": "n°16",
+          "total": 556
+        },
+        {
+          "numero": "n°17",
+          "total": 538
+        },
+        {
+          "numero": "n°18",
+          "total": 523
+        },
+        {
+          "numero": "n°19",
+          "total": 507
+        },
+        {
+          "numero": "n°20",
+          "total": 484
+        },
+        {
+          "numero": "n°21",
+          "total": 468
+        },
+        {
+          "numero": "n°22",
+          "total": 445
+        },
+        {
+          "numero": "n°23",
+          "total": 422
+        },
+        {
+          "numero": "n°24",
+          "total": 403
+        },
+        {
+          "numero": "n°25",
+          "total": 378
+        },
+        {
+          "numero": "n°26",
+          "total": 352
+        },
+        {
+          "numero": "n°27",
+          "total": 321
+        },
+        {
+          "numero": "n°28",
+          "total": 286
+        },
+        {
+          "numero": "n°29",
+          "total": 257
+        },
+        {
+          "numero": "n°30",
+          "total": 230
+        },
+        {
+          "numero": "n°31",
+          "total": 198
+        },
+        {
+          "numero": "n°32",
+          "total": 162
+        },
+        {
+          "numero": "n°33",
+          "total": 131
+        },
+        {
+          "numero": "n°34",
+          "total": 104
+        },
+        {
+          "numero": "n°35",
+          "total": 77
+        },
+        {
+          "numero": "n°36",
+          "total": 64
+        },
+        {
+          "numero": "n°37",
+          "total": 58
+        },
+        {
+          "numero": "n°38",
+          "total": 40
+        },
+        {
+          "numero": "n°39",
+          "total": 29
+        },
+        {
+          "numero": "n°40",
+          "total": 18
+        },
+        {
+          "numero": "n°41",
+          "total": 16
+        },
+        {
+          "numero": "n°42",
+          "total": 12
+        },
+        {
+          "numero": "n°43",
+          "total": 5
+        },
+        {
+          "numero": "n°44",
+          "total": 4
+        },
+        {
+          "numero": "n°45",
+          "total": 3
+        },
+        {
+          "numero": "n°46",
+          "total": 3
+        },
+        {
+          "numero": "n°47",
+          "total": 2
+        },
+        {
+          "numero": "n°48",
+          "total": 1
+        },
+        {
+          "numero": "n°49",
+          "total": 1
+        },
+        {
+          "numero": "n°50",
+          "total": 1
+        },
+        {
+          "numero": "n°51",
+          "total": 1
+        },
+        {
+          "numero": "n°52",
+          "total": 1
+        },
+        {
+          "numero": "n°53",
+          "total": 1
+        },
+        {
+          "numero": "n°54",
+          "total": 1
+        },
+        {
+          "numero": "n°55",
+          "total": 1
+        },
+        {
+          "numero": "n°56",
+          "total": 1
+        },
+        {
+          "numero": "n°57",
+          "total": 1
+        }
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le détail par **saison** et par **exercice** est donné ci-dessous (et dans la pièce jointe, recalculable ligne à ligne depuis les annexes C et F). Il montre la saisonnalité attendue d'un restaurant de bord de canal (pic l'été) et la décroissance régulière des rangs élevés, exercice après exercice."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Encaissements par numéro de note, par saison et par exercice",
+      "minWidth": 1180,
+      "colonnes": [
+        {
+          "label": "N° de note"
+        },
+        {
+          "label": "22-23 Prin.",
+          "align": "right"
+        },
+        {
+          "label": "22-23 Été.",
+          "align": "right"
+        },
+        {
+          "label": "22-23 Auto.",
+          "align": "right"
+        },
+        {
+          "label": "22-23 Hive.",
+          "align": "right"
+        },
+        {
+          "label": "23-24 Prin.",
+          "align": "right"
+        },
+        {
+          "label": "23-24 Été.",
+          "align": "right"
+        },
+        {
+          "label": "23-24 Auto.",
+          "align": "right"
+        },
+        {
+          "label": "23-24 Hive.",
+          "align": "right"
+        },
+        {
+          "label": "24-25 Prin.",
+          "align": "right"
+        },
+        {
+          "label": "24-25 Été.",
+          "align": "right"
+        },
+        {
+          "label": "24-25 Auto.",
+          "align": "right"
+        },
+        {
+          "label": "24-25 Hive.",
+          "align": "right"
+        },
+        {
+          "label": "Total",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "n°1"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "659",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°2"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "659",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°3"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "659",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°4"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "658",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°5"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "656",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°6"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "654",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°7"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "24",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "650",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°8"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "24",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "22",
+            "align": "right"
+          },
+          {
+            "v": "647",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°9"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "641",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°10"
+          },
+          {
+            "v": "52",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "60",
+            "align": "right"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "635",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°11"
+          },
+          {
+            "v": "51",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "60",
+            "align": "right"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "59",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "60",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "19",
+            "align": "right"
+          },
+          {
+            "v": "623",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°12"
+          },
+          {
+            "v": "50",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "609",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°13"
+          },
+          {
+            "v": "47",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "53",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "60",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "56",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "60",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "598",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°14"
+          },
+          {
+            "v": "44",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "52",
+            "align": "right"
+          },
+          {
+            "v": "17",
+            "align": "right"
+          },
+          {
+            "v": "58",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "56",
+            "align": "right"
+          },
+          {
+            "v": "20",
+            "align": "right"
+          },
+          {
+            "v": "53",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "59",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "582",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°15"
+          },
+          {
+            "v": "42",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "51",
+            "align": "right"
+          },
+          {
+            "v": "16",
+            "align": "right"
+          },
+          {
+            "v": "52",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "20",
+            "align": "right"
+          },
+          {
+            "v": "51",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "59",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "569",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°16"
+          },
+          {
+            "v": "43",
+            "align": "right"
+          },
+          {
+            "v": "74",
+            "align": "right"
+          },
+          {
+            "v": "49",
+            "align": "right"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "51",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "52",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "49",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "58",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "556",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°17"
+          },
+          {
+            "v": "40",
+            "align": "right"
+          },
+          {
+            "v": "73",
+            "align": "right"
+          },
+          {
+            "v": "49",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "50",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "52",
+            "align": "right"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "48",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "16",
+            "align": "right"
+          },
+          {
+            "v": "538",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°18"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "73",
+            "align": "right"
+          },
+          {
+            "v": "48",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "47",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "50",
+            "align": "right"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "46",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "52",
+            "align": "right"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "523",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°19"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "73",
+            "align": "right"
+          },
+          {
+            "v": "47",
+            "align": "right"
+          },
+          {
+            "v": "9",
+            "align": "right"
+          },
+          {
+            "v": "42",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "49",
+            "align": "right"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "42",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right"
+          },
+          {
+            "v": "50",
+            "align": "right"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "507",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°20"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "73",
+            "align": "right"
+          },
+          {
+            "v": "46",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "46",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "40",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "46",
+            "align": "right"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "484",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°21"
+          },
+          {
+            "v": "36",
+            "align": "right"
+          },
+          {
+            "v": "73",
+            "align": "right"
+          },
+          {
+            "v": "45",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "37",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "44",
+            "align": "right"
+          },
+          {
+            "v": "7",
+            "align": "right"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "44",
+            "align": "right"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "468",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°22"
+          },
+          {
+            "v": "35",
+            "align": "right"
+          },
+          {
+            "v": "73",
+            "align": "right"
+          },
+          {
+            "v": "40",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "32",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "43",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "36",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "43",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "445",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°23"
+          },
+          {
+            "v": "33",
+            "align": "right"
+          },
+          {
+            "v": "72",
+            "align": "right"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "30",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "40",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "33",
+            "align": "right"
+          },
+          {
+            "v": "63",
+            "align": "right"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "422",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°24"
+          },
+          {
+            "v": "33",
+            "align": "right"
+          },
+          {
+            "v": "69",
+            "align": "right"
+          },
+          {
+            "v": "35",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "27",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "38",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "32",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "36",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "403",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°25"
+          },
+          {
+            "v": "30",
+            "align": "right"
+          },
+          {
+            "v": "66",
+            "align": "right"
+          },
+          {
+            "v": "32",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "60",
+            "align": "right"
+          },
+          {
+            "v": "33",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "30",
+            "align": "right"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "33",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "378",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°26"
+          },
+          {
+            "v": "29",
+            "align": "right"
+          },
+          {
+            "v": "65",
+            "align": "right"
+          },
+          {
+            "v": "28",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19",
+            "align": "right"
+          },
+          {
+            "v": "59",
+            "align": "right"
+          },
+          {
+            "v": "30",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "57",
+            "align": "right"
+          },
+          {
+            "v": "31",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "352",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°27"
+          },
+          {
+            "v": "27",
+            "align": "right"
+          },
+          {
+            "v": "61",
+            "align": "right"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "56",
+            "align": "right"
+          },
+          {
+            "v": "27",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "56",
+            "align": "right"
+          },
+          {
+            "v": "27",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "321",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°28"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "58",
+            "align": "right"
+          },
+          {
+            "v": "24",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "11",
+            "align": "right"
+          },
+          {
+            "v": "54",
+            "align": "right"
+          },
+          {
+            "v": "27",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "47",
+            "align": "right"
+          },
+          {
+            "v": "22",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "286",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°29"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "55",
+            "align": "right"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "7",
+            "align": "right"
+          },
+          {
+            "v": "49",
+            "align": "right"
+          },
+          {
+            "v": "24",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "11",
+            "align": "right"
+          },
+          {
+            "v": "44",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "257",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°30"
+          },
+          {
+            "v": "24",
+            "align": "right"
+          },
+          {
+            "v": "50",
+            "align": "right"
+          },
+          {
+            "v": "17",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "7",
+            "align": "right"
+          },
+          {
+            "v": "44",
+            "align": "right"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "9",
+            "align": "right"
+          },
+          {
+            "v": "40",
+            "align": "right"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "230",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°31"
+          },
+          {
+            "v": "23",
+            "align": "right"
+          },
+          {
+            "v": "44",
+            "align": "right"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "6",
+            "align": "right"
+          },
+          {
+            "v": "39",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "8",
+            "align": "right"
+          },
+          {
+            "v": "34",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "198",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°32"
+          },
+          {
+            "v": "19",
+            "align": "right"
+          },
+          {
+            "v": "36",
+            "align": "right"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "32",
+            "align": "right"
+          },
+          {
+            "v": "17",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "7",
+            "align": "right"
+          },
+          {
+            "v": "27",
+            "align": "right"
+          },
+          {
+            "v": "6",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "162",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°33"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "29",
+            "align": "right"
+          },
+          {
+            "v": "9",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "28",
+            "align": "right"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "24",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "131",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°34"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "26",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "24",
+            "align": "right"
+          },
+          {
+            "v": "11",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "104",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°35"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "19",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17",
+            "align": "right"
+          },
+          {
+            "v": "9",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "77",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°36"
+          },
+          {
+            "v": "8",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "7",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "9",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "64",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°37"
+          },
+          {
+            "v": "8",
+            "align": "right"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "6",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "8",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "58",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°38"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "40",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°39"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "6",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "29",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°40"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "6",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "18",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°41"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "6",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "16",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°42"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "12",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°43"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°44"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°45"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°46"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°47"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°48"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°49"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°50"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°51"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°52"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°53"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°54"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°55"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°56"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "n°57"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "·",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Total",
+            "fw": 700
+          },
+          {
+            "v": "1 394",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "2 349",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 504",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "411",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 407",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "2 102",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 576",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "444",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 398",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "2 010",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 548",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "462",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "16 605",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cette régularité se voit encore mieux sur le **nombre de couverts par semaine** (un couvert = un plat ou un menu servi). En superposant les trois exercices sur un même axe avril → mars, les courbes sont **quasi identiques** : même montée au printemps, même pic estival, même creux hivernal (fermeture en janvier et février). Une activité dissimulée se traduirait par des écarts erratiques d'une année à l'autre ; au contraire, l'exploitation est stable et reproductible."
+    },
+    {
+      "kind": "graphiqueLignes",
+      "titre": "Couverts par semaine — superposition des trois exercices (avril → mars)",
+      "sousTitre": "Une ligne par exercice. Saisonnalité marquée (pic l'été, creux hivernal : le restaurant ferme janvier et février), et profils quasi superposables d'une année à l'autre.",
+      "hauteur": 340,
+      "dataKey": "semaine",
+      "series": [
+        {
+          "name": "2022-2023",
+          "couleur": "#0f766e"
+        },
+        {
+          "name": "2023-2024",
+          "couleur": "#b45309"
+        },
+        {
+          "name": "2024-2025",
+          "couleur": "#1d4ed8"
+        }
+      ],
+      "data": [
+        {
+          "semaine": 1,
+          "2022-2023": 0,
+          "2023-2024": 174,
+          "2024-2025": 184
+        },
+        {
+          "semaine": 2,
+          "2022-2023": 49,
+          "2023-2024": 262,
+          "2024-2025": 239
+        },
+        {
+          "semaine": 3,
+          "2022-2023": 451,
+          "2023-2024": 230,
+          "2024-2025": 213
+        },
+        {
+          "semaine": 4,
+          "2022-2023": 319,
+          "2023-2024": 166,
+          "2024-2025": 265
+        },
+        {
+          "semaine": 5,
+          "2022-2023": 244,
+          "2023-2024": 282,
+          "2024-2025": 222
+        },
+        {
+          "semaine": 6,
+          "2022-2023": 317,
+          "2023-2024": 247,
+          "2024-2025": 326
+        },
+        {
+          "semaine": 7,
+          "2022-2023": 318,
+          "2023-2024": 342,
+          "2024-2025": 278
+        },
+        {
+          "semaine": 8,
+          "2022-2023": 352,
+          "2023-2024": 314,
+          "2024-2025": 265
+        },
+        {
+          "semaine": 9,
+          "2022-2023": 378,
+          "2023-2024": 316,
+          "2024-2025": 242
+        },
+        {
+          "semaine": 10,
+          "2022-2023": 373,
+          "2023-2024": 285,
+          "2024-2025": 287
+        },
+        {
+          "semaine": 11,
+          "2022-2023": 327,
+          "2023-2024": 292,
+          "2024-2025": 325
+        },
+        {
+          "semaine": 12,
+          "2022-2023": 293,
+          "2023-2024": 276,
+          "2024-2025": 336
+        },
+        {
+          "semaine": 13,
+          "2022-2023": 348,
+          "2023-2024": 324,
+          "2024-2025": 290
+        },
+        {
+          "semaine": 14,
+          "2022-2023": 343,
+          "2023-2024": 363,
+          "2024-2025": 318
+        },
+        {
+          "semaine": 15,
+          "2022-2023": 515,
+          "2023-2024": 369,
+          "2024-2025": 405
+        },
+        {
+          "semaine": 16,
+          "2022-2023": 478,
+          "2023-2024": 392,
+          "2024-2025": 368
+        },
+        {
+          "semaine": 17,
+          "2022-2023": 471,
+          "2023-2024": 496,
+          "2024-2025": 322
+        },
+        {
+          "semaine": 18,
+          "2022-2023": 495,
+          "2023-2024": 414,
+          "2024-2025": 414
+        },
+        {
+          "semaine": 19,
+          "2022-2023": 464,
+          "2023-2024": 405,
+          "2024-2025": 347
+        },
+        {
+          "semaine": 20,
+          "2022-2023": 461,
+          "2023-2024": 382,
+          "2024-2025": 382
+        },
+        {
+          "semaine": 21,
+          "2022-2023": 400,
+          "2023-2024": 344,
+          "2024-2025": 360
+        },
+        {
+          "semaine": 22,
+          "2022-2023": 447,
+          "2023-2024": 394,
+          "2024-2025": 389
+        },
+        {
+          "semaine": 23,
+          "2022-2023": 341,
+          "2023-2024": 369,
+          "2024-2025": 349
+        },
+        {
+          "semaine": 24,
+          "2022-2023": 298,
+          "2023-2024": 334,
+          "2024-2025": 281
+        },
+        {
+          "semaine": 25,
+          "2022-2023": 298,
+          "2023-2024": 301,
+          "2024-2025": 328
+        },
+        {
+          "semaine": 26,
+          "2022-2023": 270,
+          "2023-2024": 298,
+          "2024-2025": 249
+        },
+        {
+          "semaine": 27,
+          "2022-2023": 267,
+          "2023-2024": 318,
+          "2024-2025": 302
+        },
+        {
+          "semaine": 28,
+          "2022-2023": 256,
+          "2023-2024": 330,
+          "2024-2025": 225
+        },
+        {
+          "semaine": 29,
+          "2022-2023": 161,
+          "2023-2024": 266,
+          "2024-2025": 231
+        },
+        {
+          "semaine": 30,
+          "2022-2023": 274,
+          "2023-2024": 266,
+          "2024-2025": 292
+        },
+        {
+          "semaine": 31,
+          "2022-2023": 358,
+          "2023-2024": 252,
+          "2024-2025": 276
+        },
+        {
+          "semaine": 32,
+          "2022-2023": 194,
+          "2023-2024": 196,
+          "2024-2025": 262
+        },
+        {
+          "semaine": 33,
+          "2022-2023": 217,
+          "2023-2024": 151,
+          "2024-2025": 201
+        },
+        {
+          "semaine": 34,
+          "2022-2023": 154,
+          "2023-2024": 123,
+          "2024-2025": 204
+        },
+        {
+          "semaine": 35,
+          "2022-2023": 103,
+          "2023-2024": 205,
+          "2024-2025": 191
+        },
+        {
+          "semaine": 36,
+          "2022-2023": 43,
+          "2023-2024": 177,
+          "2024-2025": 190
+        },
+        {
+          "semaine": 37,
+          "2022-2023": 144,
+          "2023-2024": 198,
+          "2024-2025": 227
+        },
+        {
+          "semaine": 38,
+          "2022-2023": 182,
+          "2023-2024": 203,
+          "2024-2025": 241
+        },
+        {
+          "semaine": 39,
+          "2022-2023": 133,
+          "2023-2024": 133,
+          "2024-2025": 215
+        },
+        {
+          "semaine": 40,
+          "2022-2023": 169,
+          "2023-2024": 308,
+          "2024-2025": 244
+        },
+        {
+          "semaine": 41,
+          "2022-2023": 100,
+          "2023-2024": 53,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 42,
+          "2022-2023": 0,
+          "2023-2024": 0,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 43,
+          "2022-2023": 0,
+          "2023-2024": 0,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 44,
+          "2022-2023": 0,
+          "2023-2024": 0,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 45,
+          "2022-2023": 0,
+          "2023-2024": 0,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 46,
+          "2022-2023": 0,
+          "2023-2024": 0,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 47,
+          "2022-2023": 26,
+          "2023-2024": 0,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 48,
+          "2022-2023": 156,
+          "2023-2024": 57,
+          "2024-2025": 0
+        },
+        {
+          "semaine": 49,
+          "2022-2023": 173,
+          "2023-2024": 215,
+          "2024-2025": 296
+        },
+        {
+          "semaine": 50,
+          "2022-2023": 163,
+          "2023-2024": 205,
+          "2024-2025": 195
+        },
+        {
+          "semaine": 51,
+          "2022-2023": 132,
+          "2023-2024": 191,
+          "2024-2025": 225
+        },
+        {
+          "semaine": 52,
+          "2022-2023": 207,
+          "2023-2024": 288,
+          "2024-2025": 200
+        }
+      ],
+      "format": "int",
+      "moisTicks": [
+        {
+          "tick": 1,
+          "label": "Avr"
+        },
+        {
+          "tick": 5,
+          "label": "Mai"
+        },
+        {
+          "tick": 9,
+          "label": "Juin"
+        },
+        {
+          "tick": 14,
+          "label": "Juil"
+        },
+        {
+          "tick": 18,
+          "label": "Août"
+        },
+        {
+          "tick": 22,
+          "label": "Sep"
+        },
+        {
+          "tick": 27,
+          "label": "Oct"
+        },
+        {
+          "tick": 31,
+          "label": "Nov"
+        },
+        {
+          "tick": 35,
+          "label": "Déc"
+        },
+        {
+          "tick": 40,
+          "label": "Jan"
+        },
+        {
+          "tick": 44,
+          "label": "Fév"
+        },
+        {
+          "tick": 48,
+          "label": "Mars"
+        }
+      ]
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Tout le calcul des couverts, étape par étape (lecture des annexes C de caisse) : la classification de chaque item de la carte en plat/menu ou non, le nombre de couverts par encaissement, et le total par jour et par service.",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-items-classification.xlsx",
+          "label": "Items de la caisse classés « plat/menu » (ce qui compte comme un couvert) (XLSX)"
+        },
+        {
+          "fichier": "pieces-defense/RF-encaissements-couverts.xlsx",
+          "label": "Couverts par encaissement : date, heure, identifiant, nombre de couverts (XLSX)"
+        },
+        {
+          "fichier": "pieces-defense/RF-couverts-par-service.xlsx",
+          "label": "Couverts par jour et par service (midi 10h-17h / soir 18h-minuit) (XLSX)"
+        }
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Troisième fait : la suppression de la table d'origine est nécessaire et protège le CA.** Le logiciel n'accepte **qu'un seul règlement par note**. Pour un paiement séparé, le serveur ressaisit les articles d'un convive sur une **deuxième note** (la table « virtuelle ») et l'encaisse. Les articles existent alors **en double** : sur la table d'origine et sur la note ressaisie. Supprimer la table d'origine est donc **arithmétiquement obligatoire pour ne pas compter le repas deux fois**. Sans cette suppression, le chiffre d'affaires serait **gonflé**, pas réduit. Le raisonnement de l'administration est inversé : cette suppression **garantit l'exactitude** du CA, elle ne sert pas à le diminuer."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La **signature mécanique** de ce partage est massivement présente dans les fichiers : sur **16 608 notes**, **1 906 (11,5 %)** portent une **quantité fractionnaire** (0,5 ; 0,33...), parce qu'on **divise** l'article commun entre les payeurs. En parallèle, **98,64 % des règlements sont bancarisés** et **1,36 % seulement en espèces** : aucun canal d'encaissement parallèle ne pourrait loger des couverts cachés."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le partage d'addition, déjà mesuré sur les fichiers de caisse (annexes C)",
+      "minWidth": 560,
+      "colonnes": [
+        {
+          "label": "Indicateur"
+        },
+        {
+          "label": "Valeur",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Notes (règlements) sur 3 exercices"
+          },
+          {
+            "v": "16 608",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Notes portant une quantité fractionnaire (0,5 / 0,33...)"
+          },
+          {
+            "v": "1 906 (11,5 %)",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Partages estimés sur 3 ans (environ 1 par service)"
+          },
+          {
+            "v": "~880",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Règlements bancarisés (CB, TR, CHV, CHQ)"
+          },
+          {
+            "v": "98,64 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Règlements en espèces"
+          },
+          {
+            "v": "1,36 %",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L'exemple ci-dessous (**2022-05-14**) est typique. Une même table est scindée en **deux notes (n°22 et n°23)** de **total identique (56,75 €)**, encaissées **à la même minute**. Chaque article y figure en **quantité 0,5**, y compris des plats **physiquement insécables** (une **TRUITE JURASSIENNE**, des **Croûtes Morilles**) : on ne sert pas une demi-truite à chaque convive, c'est **un seul plat payé à deux**. Une fois ces deux notes encaissées, la table d'origine est supprimée pour éviter le double comptage. 34 fiches de ce type (une par mois actif) figurent dans la pièce jointe."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Exemple daté (2022-05-14) : une table scindée en deux notes de même total",
+      "minWidth": 640,
+      "colonnes": [
+        {
+          "label": "Note"
+        },
+        {
+          "label": "Heure"
+        },
+        {
+          "label": "Article"
+        },
+        {
+          "label": "Quantité",
+          "align": "right"
+        },
+        {
+          "label": "Prix unitaire",
+          "align": "right"
+        },
+        {
+          "label": "Montant",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Père Gregoire"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          },
+          {
+            "v": "2,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Crémant"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "1,95 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Whisky L.J (2cl) Bab"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "3,80 €",
+            "align": "right"
+          },
+          {
+            "v": "1,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Macvin du Jura"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          },
+          {
+            "v": "2,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Salade Franc-Comptoi"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "8,90 €",
+            "align": "right"
+          },
+          {
+            "v": "4,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Croûtes Morilles"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "16,90 €",
+            "align": "right"
+          },
+          {
+            "v": "8,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "TRUITE JURASSIENNE"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "17,60 €",
+            "align": "right"
+          },
+          {
+            "v": "8,80 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "CANCOINE"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "21,60 €",
+            "align": "right"
+          },
+          {
+            "v": "10,80 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Pichet 50cl vin"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "9,80 €",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "San Pelegrino"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "5,90 €",
+            "align": "right"
+          },
+          {
+            "v": "2,95 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "DOUCEUR"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "8,70 €",
+            "align": "right"
+          },
+          {
+            "v": "4,35 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "Expresso"
+          },
+          {
+            "v": "1,5",
+            "align": "right"
+          },
+          {
+            "v": "2,20 €",
+            "align": "right"
+          },
+          {
+            "v": "3,30 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°22"
+          },
+          {
+            "v": "19:35"
+          },
+          {
+            "v": "TOTAL NOTE"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "56,75 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Père Gregoire"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          },
+          {
+            "v": "2,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Crémant"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "1,95 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Whisky L.J (2cl) Bab"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "3,80 €",
+            "align": "right"
+          },
+          {
+            "v": "1,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Macvin du Jura"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          },
+          {
+            "v": "2,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Salade Franc-Comptoi"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "8,90 €",
+            "align": "right"
+          },
+          {
+            "v": "4,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Croûtes Morilles"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "16,90 €",
+            "align": "right"
+          },
+          {
+            "v": "8,45 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "TRUITE JURASSIENNE"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "17,60 €",
+            "align": "right"
+          },
+          {
+            "v": "8,80 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "CANCOINE"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "21,60 €",
+            "align": "right"
+          },
+          {
+            "v": "10,80 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Pichet 50cl vin"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "9,80 €",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "San Pelegrino"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "5,90 €",
+            "align": "right"
+          },
+          {
+            "v": "2,95 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "DOUCEUR"
+          },
+          {
+            "v": "0,5",
+            "align": "right"
+          },
+          {
+            "v": "8,70 €",
+            "align": "right"
+          },
+          {
+            "v": "4,35 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "Expresso"
+          },
+          {
+            "v": "1,5",
+            "align": "right"
+          },
+          {
+            "v": "2,20 €",
+            "align": "right"
+          },
+          {
+            "v": "3,30 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Note n°23"
+          },
+          {
+            "v": "19:36"
+          },
+          {
+            "v": "TOTAL NOTE"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "56,75 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Encaissements par numéro de note (total et matrice saison × exercice), plan de salle réel, notes fractionnaires et exemple daté de table scindée.",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-tables-trop-nombreuses.xlsx",
+          "label": "RF - Tables et numéros de note : encaissements par note, saison et exercice (XLSX)"
+        }
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Conclusion"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les tables « virtuelles » sont une **fonction de règlement**, et la suppression qui les accompagne est une **opération anti-double-comptage**. Trois faits reproductibles le démontrent : (1) le numéro de note de l'export va de 1 à 57 et ne désigne **jamais** une table (la salle compte 14 tables intérieures, et les n° 13/16/17/18 n'existent pas) ; (2) le profil des encaissements par rang de note décroît régulièrement, les rangs élevés n'apparaissant que les jours de pointe ; (3) supprimer la table d'origine après ressaisie **évite de doubler le CA**. Le grief ne révèle **aucun couvert ni aucune recette non déclarée**."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cet argument se retourne contre l'administration : le vérificateur décrit lui-même (p. 11) les tables virtuelles comme servant « au traitement des notes multiples pour une table, au moment du règlement ». Il ne peut pas, ensuite, présenter cette même fonction comme la preuve d'une dissimulation. La réconciliation complète des suppressions (le CA déclaré égale les encaissements) est démontrée au grief « suppressions de caisse »."
+    }
+  ]
+}

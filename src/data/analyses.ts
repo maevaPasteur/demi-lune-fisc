@@ -142,6 +142,36 @@ export type Section =
   | { kind: 'alerte'; couleur: string; titre: string; texte: string }
   | { kind: 'kpis'; items: KpiItem[] }
   | { kind: 'tableau'; titre?: string; minWidth?: number; colonnes: Colonne[]; lignes: Cellule[][] }
+  // Grille de tuiles « table » (plan de salle) : chaque case = une table avec son
+  // numéro et son type (réelle / virtuelle), rendue avec une icône.
+  | {
+      kind: 'grilleTables'
+      titre?: string
+      sousTitre?: string
+      // variante 'plan' = plan de salle (réelle/virtuelle/inexistante) ;
+      // variante 'notes' = cartes par numéro de note avec le total d'encaissements.
+      variante?: 'plan' | 'notes'
+      tables: {
+        numero: string
+        type?: 'reelle' | 'virtuelle' | 'inexistante'
+        total?: number
+        note?: string
+      }[]
+    }
+  // Graphique multi-lignes (ex. couverts/semaine, 1 ligne par exercice).
+  // L'axe X est numérique (semaine de l'exercice) ; moisTicks place les
+  // étiquettes de mois (Avril → Mars) aux semaines de début de mois.
+  | {
+      kind: 'graphiqueLignes'
+      titre?: string
+      sousTitre?: string
+      hauteur: number
+      dataKey: string
+      series: { name: string; couleur: string }[]
+      data: LigneGraphique[]
+      format: 'euro' | 'int'
+      moisTicks?: { tick: number; label: string }[]
+    }
   | {
       kind: 'graphique'
       variante: 'vertical' | 'horizontal'

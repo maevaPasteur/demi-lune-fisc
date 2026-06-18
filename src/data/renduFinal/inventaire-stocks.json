@@ -1,0 +1,256 @@
+{
+  "meta": {
+    "slug": "inventaire-stocks",
+    "titre": "Inventaire de stocks (jugé absent ou incomplet)",
+    "bloc": "rejet",
+    "griefFisc": "Les inventaires (hormis le 31/03/2022) n'indiqueraient pas toujours la contenance des boissons, ce qui les rendrait incomplets (Proposition p. 14 a 16, rejet 1/3, point I).",
+    "reponse": "Les inventaires existent et sont détaillés (quantité, prix unitaire, valeur) ; la contenance n'est pas une mention légalement requise et a été reconstituée par l'administration elle-même. Le motif tombe.",
+    "sources": [
+      "public/documents/inventaires/inventaires.json",
+      "public/documents/inventaires/inventaire_2023-03-31.csv",
+      "public/documents/inventaires/inventaire_2024-03-31.csv",
+      "public/documents/inventaires/inventaire_2025-03-31.csv",
+      "public/documents/rapports-des-finances-publiques/synthese/02-rejet-comptabilite-1.md",
+      "public/documents/rapports-des-finances-publiques/synthese/08-annexes-A-H.md (Annexe N°1, p. 47-50)"
+    ],
+    "piece": "pieces-defense/RF-inventaire-stocks.xlsx",
+    "genereePar": "scripts/rendu-final-inventaire-stocks.py"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l'administration",
+      "sousTitre": "Inventaire de stocks juge incomplet (Proposition de rectification 3924, p. 14 a 16, rejet 1/3, point I)."
+    },
+    {
+      "kind": "note",
+      "texte": "Le vérificateur écrit (p. 14) avoir « pu consulter et obtenir les inventaires de stocks » auprès du cabinet comptable. Il relève ensuite un seul défaut : « les stocks remis, **hormis celui du 31/03/2022**, apparaissent comme incomplets dans le sens où ils **n'indiquent pas toujours les volumes des boissons** ». Il en déduit une « irrégularité grave » au regard des articles R. 123-177 et L. 123-12 du Code de commerce, qui rendrait la comptabilité non probante."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le grief est précis et limité. Il ne porte pas sur l'absence d'inventaire (le service l'a obtenu pour chaque exercice), ni sur des libellés qui ne correspondraient pas aux factures (c'est un autre point du rapport). Il porte uniquement sur un point de forme : la **contenance en centilitres** des boissons n'est pas systématiquement reportée sur les inventaires postérieurs au 31/03/2022. Or l'article R. 123-177 exige, pour chaque élément, la **quantité** et la **valeur** ; il n'impose pas d'indiquer la contenance unitaire d'un article."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "Notre réponse : un inventaire détaillé, conforme, et des volumes que le service a lui-même reconstitués",
+      "sousTitre": "Les trois inventaires physiques de clôture sont produits, détaillés ligne à ligne (produit, quantité, prix unitaire HT, valeur HT). La seule mention en cause, la contenance, figure déjà dans les propres annexes de l'administration."
+    },
+    {
+      "kind": "note",
+      "texte": "Les inventaires physiques des trois fins d'exercice vérifiées existent et sont produits : 31/03/2023 (101 lignes), 31/03/2024 (90 lignes) et 31/03/2025 (82 lignes). Sur les **273 lignes** des trois clôtures, **270 (98,9 %)** portent le libellé du produit, la **quantité**, le **prix unitaire HT** et la **valeur HT**. Le niveau de détail exigé par les articles R. 123-177 et L. 123-12 (quantité et valeur de chaque élément) est donc satisfait, produit par produit."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Stock de clôture par grande famille et par exercice (valeurs HT issues des inventaires)",
+      "minWidth": 640,
+      "colonnes": [
+        {
+          "label": "Date de clôture"
+        },
+        {
+          "label": "Lignes inventoriées",
+          "align": "right"
+        },
+        {
+          "label": "Boissons sans alcool",
+          "align": "right"
+        },
+        {
+          "label": "Alcools et vins",
+          "align": "right"
+        },
+        {
+          "label": "Stock total HT",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2023-03-31"
+          },
+          {
+            "v": "101",
+            "align": "right"
+          },
+          {
+            "v": "617,91 €",
+            "align": "right"
+          },
+          {
+            "v": "3 056,26 €",
+            "align": "right"
+          },
+          {
+            "v": "3 674,17 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-03-31"
+          },
+          {
+            "v": "90",
+            "align": "right"
+          },
+          {
+            "v": "603,61 €",
+            "align": "right"
+          },
+          {
+            "v": "3 932,80 €",
+            "align": "right"
+          },
+          {
+            "v": "4 536,41 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2025-03-31"
+          },
+          {
+            "v": "82",
+            "align": "right"
+          },
+          {
+            "v": "760,74 €",
+            "align": "right"
+          },
+          {
+            "v": "3 772,48 €",
+            "align": "right"
+          },
+          {
+            "v": "4 533,22 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "Sur le seul point réellement reproché, la contenance des boissons, deux constats suffisent. **Un**, la contenance n'est pas une mention légale de l'inventaire : R. 123-177 demande la quantité et la valeur, toutes deux présentes. La contenance est par ailleurs une caractéristique **fixe et publique** du produit (un « Crémant du Jura 75 cl » fait toujours 75 cl, un BIB 10 L toujours 10 L) : la retrouver est immédiat et sans aléa. **Deux**, l'administration l'a **elle-même reconstituée** pour chaque article dans son **Annexe N°1 (pages 47 à 50)**, un tableau « Volume / Stocks / Indiqué Oui/Non » donnant le volume unitaire en centilitres aux quatre dates d'inventaire. Le volume manquant n'a donc empêché aucun contrôle et n'a causé aucun préjudice : le service a pu mener sa reconstitution sans obstacle."
+    },
+    {
+      "kind": "graphique",
+      "variante": "vertical",
+      "hauteur": 300,
+      "dataKey": "nom",
+      "serie": {
+        "name": "Stock total HT (EUR)",
+        "couleur": "#0f766e"
+      },
+      "format": "euro",
+      "data": [
+        {
+          "nom": "2023-03-31",
+          "Stock total HT (EUR)": 3674
+        },
+        {
+          "nom": "2024-03-31",
+          "Stock total HT (EUR)": 4536
+        },
+        {
+          "nom": "2025-03-31",
+          "Stock total HT (EUR)": 4533
+        }
+      ]
+    },
+    {
+      "kind": "tableau",
+      "titre": "Variation du stock entre clôtures : un stock stable, sans déstockage caché",
+      "minWidth": 520,
+      "colonnes": [
+        {
+          "label": "Période"
+        },
+        {
+          "label": "Variation valeur HT",
+          "align": "right"
+        },
+        {
+          "label": "Variation relative",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2023-03-31 vers 2024-03-31"
+          },
+          {
+            "v": "+862,24 €",
+            "align": "right"
+          },
+          {
+            "v": "+23,5 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-03-31 vers 2025-03-31"
+          },
+          {
+            "v": "-3,19 €",
+            "align": "right"
+          },
+          {
+            "v": "-0,1 %",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le stock boissons total reste compris entre 3 674,17 € et 4 536,41 € HT sur les trois clôtures (stock moyen 4 247,93 €). Le sens de la variation est essentiel : un stock qui se maintient exclut le scénario d'un déstockage caché destiné à alimenter des ventes non comptabilisées, qui se traduirait par un stock en chute. Cette stabilité recoupe d'ailleurs les variations de stock boissons retenues par l'administration elle-même dans sa reconstitution (- 800,83 EUR, - 1 029,67 EUR et - 273,41 EUR), des montants minimes au regard du stock moyen."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Inventaire physique détaillé des trois clôtures (par produit et par famille, quantités, prix unitaires et valeurs HT) et variation de stock.",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-inventaire-stocks.xlsx",
+          "label": "RF - Inventaire de stocks : détail par produit, par famille et variation de stock (XLSX)"
+        }
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Le grief est juridiquement infondé",
+      "sousTitre": "La contenance manquante n'est ni une mention légalement exigée, ni un obstacle au contrôle."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "D'abord, le texte invoqué est respecté. L'article R. 123-177 du Code de commerce impose, pour chaque élément, la **quantité** et la **valeur** : ces deux mentions figurent sur l'inventaire pour 270 des 273 lignes (98,9 %). La contenance unitaire en centilitres, seule mention en cause, n'est pas exigée par ce texte. Elle constitue de surcroît une caractéristique fixe et publique de chaque produit (un « Crémant du Jura 75 cl » fait toujours 75 cl), immédiatement vérifiable."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ensuite, et c'est décisif, l'administration a elle-même reconstitué ces volumes. Son **Annexe N°1 (pages 47 à 50)** reporte, pour chaque article et aux quatre dates d'inventaire, le volume unitaire en centilitres, avec une colonne « Indiqué Oui/Non ». Le service a donc disposé de toute l'information nécessaire et a pu conduire l'intégralité de sa reconstitution. Un défaut purement formel, sans incidence sur le contrôle, ne peut fonder le rejet d'une comptabilité."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cette position est par ailleurs contradictoire : l'administration qualifie l'inventaire d'irrégulier tout en s'en servant comme base de sa reconstitution (lignes « Variation stocks Boissons » de ses tableaux p. 33 à 35, annexes 6-1 à 6-3 « achats ± variation de stock = quantités disponibles »). Un même document ne peut être à la fois écarté comme non probant et retenu comme socle du redressement. Enfin, la jurisprudence CE 25 juillet 1980 invoquée vise un inventaire réduit au seul montant global, sans aucun détail des quantités et des prix unitaires : c'est la situation inverse de la nôtre, où chaque produit est détaillé avec sa quantité, son prix unitaire et sa valeur."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 4,
+      "titre": "Conclusion"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L'inventaire physique des trois fins d'exercice existe et est détaillé produit par produit (101, 90 et 82 lignes, avec quantité, prix unitaire et valeur), et le stock se maintient (3 674,17 € à 4 536,41 € HT). Le seul élément reproché, la contenance en centilitres, n'est pas une mention exigée par l'article R. 123-177 et a de toute façon été reconstituée par l'administration elle-même (Annexe N°1). Le motif « inventaire incomplet » est donc privé de fondement, d'autant que le service s'appuie sur ces mêmes inventaires pour reconstituer le chiffre d'affaires."
+    }
+  ]
+}

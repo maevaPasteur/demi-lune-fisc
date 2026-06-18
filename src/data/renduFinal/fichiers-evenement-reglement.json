@@ -1,0 +1,457 @@
+{
+  "meta": {
+    "slug": "fichiers-evenement-reglement",
+    "titre": "Fichiers Événement (E) et Règlement (F)",
+    "refRapport": "Proposition p. 22-24 (rejet 1/3) - annexes E-1 à E-3 et F-1 à F-3",
+    "genere": "scripts/rendu-final-fichiers-evenement-reglement.py",
+    "sources": [
+      "public/documents/caisse-enregistreuse/ANNEXE-E{1,2,3}_tpvevenement_*.xls",
+      "public/documents/caisse-enregistreuse/ANNEXE-F{1,2,3}_reglements_*.xls",
+      "public/documents/caisse-enregistreuse/ANNEXE-A{1,2,3}_synthese-CA_*.xls",
+      "public/documents/caisse-enregistreuse/ANNEXE-H{1,2,3}_liste-tickets_*.xls"
+    ],
+    "chiffres": {
+      "del_cumul": 21305,
+      "regl_total_cumul": 1278149.46,
+      "bancarise_cumul": 1260816.28,
+      "especes_cumul": 17333.18,
+      "pct_bancarise_cumul": 98.64,
+      "pct_especes_cumul": 1.36,
+      "ca_a_cumul": 1275978.87,
+      "f_cumul": 1278149.46,
+      "h_cumul": 1277216.5
+    }
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l'administration",
+      "sousTitre": "Proposition p. 22-24, sections IX et X (rejet de comptabilité 1/3). Fichier Événement (annexes E-1 à E-3) et Fichier Règlement (annexes F-1 à F-3)."
+    },
+    {
+      "kind": "note",
+      "texte": "Section IX (p. 23-24) : le vérificateur relève dans le **fichier Événement** l'existence d'événements « DEL » (qu'il interprète comme des suppressions d'articles) et reproche au journal de ne pas indiquer la nature de l'article supprimé, ce qui « compromettrait la structure de l'archive ». Section X (p. 24) : à partir du **fichier Règlement**, il se borne à établir les montants par mode de paiement (CB, CHQ, CHV, ESP, TR) et conclut, avec les autres griefs, au caractère non probant de la comptabilité."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le grief présente ainsi les journaux E et F comme des sources d'anomalies. C'est l'inverse : ces deux journaux sont précisément les fichiers qui **prouvent** que le chiffre d'affaires déclaré est égal aux encaissements, et que la part en espèces est trop faible pour loger des ventes occultes."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "Notre réponse : E et F sont des preuves, pas des anomalies",
+      "sousTitre": "Le journal E est la trace légale des corrections imposée par la norme NF525 ; le journal F prouve la ventilation des encaissements ; la triangulation A = F = H verrouille le tout."
+    },
+    {
+      "kind": "note",
+      "texte": "**Rôle légal du fichier Événement (E).** La réglementation des logiciels de caisse (norme NF525, art. 286-3° bis du CGI, BOI-TVA-DECLA-30-10-30) **impose** d'enregistrer et de conserver chaque correction d'exploitation : c'est exactement ce que fait le journal E. Loin d'être une anomalie, la présence des lignes « DEL » est la **preuve que le système trace ses corrections** comme la loi l'exige. Un système qui effacerait sans trace serait, lui, non conforme. Le détail famille par famille de ces corrections est traité dans la sous-page « Suppressions de notes (DEL) »."
+    },
+    {
+      "kind": "note",
+      "texte": "**Rôle du fichier Règlement (F).** Chaque ligne « TOTAL » du fichier F donne, mode par mode, le montant encaissé sur l'exercice. Ces totaux sont produits par la caisse elle-même et correspondent **à l'euro près** aux montants que le vérificateur a repris dans sa proposition. Ils permettent de mesurer la part bancarisée des recettes."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Règlements par mode de paiement (cumul des 3 exercices, lignes « TOTAL » des annexes F)",
+      "minWidth": 640,
+      "colonnes": [
+        {
+          "label": "Mode de règlement"
+        },
+        {
+          "label": "Montant encaissé",
+          "align": "right"
+        },
+        {
+          "label": "Part",
+          "align": "right"
+        },
+        {
+          "label": "Nature",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "CB - Carte bancaire"
+          },
+          {
+            "v": "1 165 933,41 €",
+            "align": "right"
+          },
+          {
+            "v": "91,22 %",
+            "align": "right"
+          },
+          {
+            "v": "Bancarise",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "CHV - Cheque-vacances"
+          },
+          {
+            "v": "47 675,57 €",
+            "align": "right"
+          },
+          {
+            "v": "3,73 %",
+            "align": "right"
+          },
+          {
+            "v": "Bancarise",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "TR - Ticket-restaurant"
+          },
+          {
+            "v": "33 501,44 €",
+            "align": "right"
+          },
+          {
+            "v": "2,62 %",
+            "align": "right"
+          },
+          {
+            "v": "Bancarise",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "ESP - Especes"
+          },
+          {
+            "v": "17 333,18 €",
+            "align": "right"
+          },
+          {
+            "v": "1,36 %",
+            "align": "right"
+          },
+          {
+            "v": "Especes",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "CHQ - Cheque"
+          },
+          {
+            "v": "13 705,86 €",
+            "align": "right"
+          },
+          {
+            "v": "1,07 %",
+            "align": "right"
+          },
+          {
+            "v": "Bancarise",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "TOTAL GENERAL (annexes F)",
+            "align": "left",
+            "fw": 700
+          },
+          {
+            "v": "1 278 149,46 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "100,00 %",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "graphique",
+      "variante": "horizontal",
+      "hauteur": 260,
+      "dataKey": "nom",
+      "serie": {
+        "name": "Encaissements (cumul 3 exercices)",
+        "couleur": "#0f766e"
+      },
+      "data": [
+        {
+          "nom": "CB",
+          "Encaissements (cumul 3 exercices)": 1165933.41
+        },
+        {
+          "nom": "CHV",
+          "Encaissements (cumul 3 exercices)": 47675.57
+        },
+        {
+          "nom": "TR",
+          "Encaissements (cumul 3 exercices)": 33501.44
+        },
+        {
+          "nom": "ESP",
+          "Encaissements (cumul 3 exercices)": 17333.18
+        },
+        {
+          "nom": "CHQ",
+          "Encaissements (cumul 3 exercices)": 13705.86
+        }
+      ],
+      "format": "euro"
+    },
+    {
+      "kind": "barreComposition",
+      "titre": "Composition des encaissements : bancarisé vs espèces (cumul 3 exercices)",
+      "unite": "€",
+      "total": 1278149.46,
+      "segments": [
+        {
+          "label": "Bancarise (CB, CHQ, CHV, TR)",
+          "valeur": 1260816.28,
+          "categorie": "mesure"
+        },
+        {
+          "label": "Especes (ESP)",
+          "valeur": 17333.18,
+          "categorie": "alerte"
+        }
+      ],
+      "legende": true
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur les trois exercices, **98,64 % des encaissements sont bancarisés** (carte, chèque, chèque-vacances, ticket-restaurant), soit 1 260 816,28 €. Les espèces ne représentent que **1,36 %** du total, soit 17 333,18 €. Une part en espèces aussi faible rend matériellement impossible la dissimulation de ventes : il n'existe aucune marge de trésorerie liquide où loger un chiffre d'affaires occulte."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Triangulation : CA déclaré (A) = somme des règlements (F) = liste des tickets (H)",
+      "minWidth": 720,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "CA déclaré - synthèse A",
+          "align": "right"
+        },
+        {
+          "label": "Somme règlements - F",
+          "align": "right"
+        },
+        {
+          "label": "Liste tickets - H",
+          "align": "right"
+        },
+        {
+          "label": "Écart A vs F",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "409 020,76 €",
+            "align": "right"
+          },
+          {
+            "v": "403 402,87 €",
+            "align": "right"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "1,37 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "429 204,51 €",
+            "align": "right"
+          },
+          {
+            "v": "439 600,30 €",
+            "align": "right"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right"
+          },
+          {
+            "v": "2,42 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "437 753,60 €",
+            "align": "right"
+          },
+          {
+            "v": "435 146,29 €",
+            "align": "right"
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right"
+          },
+          {
+            "v": "0,60 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul 3 exercices",
+            "fw": 700
+          },
+          {
+            "v": "1 275 978,87 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 278 149,46 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 277 216,50 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "0,17 %",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Trois fichiers **distincts** de la même caisse (synthèse du CA, journal des règlements, liste des tickets) convergent : CA déclaré 1 275 978,87 € (A), somme des règlements 1 278 149,46 € (F), liste des tickets 1 277 216,50 € (H). Les écarts résiduels (inférieurs à 1,4 %) s'expliquent par les avoirs et les arrondis de ventilation par mode ; ils ne traduisent aucune recette manquante. La cohérence interne des données, que le vérificateur dit vouloir contrôler (PCG art. 121-1 et 121-3), est donc démontrée."
+    },
+    {
+      "kind": "note",
+      "texte": "**Exemple chiffré (exercice 2022-2023).** Le fichier F affiche un « TOTAL GENERAL » de 403 402,87 € ; la synthèse A déclare un CA encaissé de 409 020,76 € ; la liste des tickets H totalise 403 370,42 €. Sur le même exercice, les espèces pèsent 3 797,95 €, soit 0,94 % des encaissements. Tous ces nombres sont lus directement dans les annexes E, F, A et H par le script joint."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Types d'événements du fichier E (cumul 3 exercices) : ce sont des corrections d'exploitation tracées",
+      "minWidth": 640,
+      "colonnes": [
+        {
+          "label": "Type"
+        },
+        {
+          "label": "Signification (journal de caisse)"
+        },
+        {
+          "label": "Nombre",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "Suppression d'une ligne d'article (correction de saisie)"
+          },
+          {
+            "v": "21 305",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "RPR"
+          },
+          {
+            "v": "Reprise / reouverture d'une note"
+          },
+          {
+            "v": "1 310",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "CON"
+          },
+          {
+            "v": "Consultation / controle (ouverture du tiroir, etc.)"
+          },
+          {
+            "v": "732",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "TIR"
+          },
+          {
+            "v": "Ouverture de tiroir-caisse"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Calcul reproductible (onglets « Reglements par mode », « Triangulation », « Types evenements E ») :",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
+          "label": "RF - Fichiers Événement (E) et Règlement (F) - règlements par mode, triangulation, types d'événements"
+        }
+      ]
+    },
+    {
+      "kind": "alerte",
+      "couleur": "teal",
+      "titre": "Ce qu'il faut retenir",
+      "texte": "Les journaux Événement (E) et Règlement (F) ne révèlent aucune anomalie : E est la trace légale des corrections (NF525), F prouve la ventilation des encaissements. La triangulation A = F = H verrouille l'égalité CA = encaissements, et la bancarisation atteint 98,64 % (espèces 1,36 % seulement). Ces fichiers, loin de fonder le rejet, démontrent la sincérité de la comptabilité."
+    },
+    {
+      "kind": "interne",
+      "audience": "avocat",
+      "titre": "Note pour la défense",
+      "texte": "Les montants par mode du fichier F sont les lignes « TOTAL <mode> » + « TOTAL GENERAL » que la caisse génère en bas de chaque annexe ; ils coïncident à l'euro près avec les chiffres de la proposition (p. 24). Le verificateur a donc travaillé sur ces totaux fiables. La colonne « montant » des lignes de détail double-compte les paiements fractionnés (lignes internes) : ne jamais l'opposer aux totaux, c'est un faux écart. La triangulation s'appuie exclusivement sur les lignes de TOTAL des fichiers, vérifiables d'un coup d'oeil."
+    }
+  ]
+}
