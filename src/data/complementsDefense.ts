@@ -99,7 +99,12 @@ export const synthesePerteReelle = {
     totalCout: 1092,
     totalCa: 8010,
   },
-  // Cascade : où va l'alcool acheté (litres, 3 exercices)
+  // Cascade : où va l'alcool acheté (litres, 3 exercices). Pertes documentées
+  // remontées en postes explicites (cf. scripts/rendu-final-reconstitution-bloc2.py
+  // et script 14) : le résiduel devient la seule perte IRRÉDUCTIBLE (casse,
+  // évaporation, fonds de verre, rinçage). La perte d'exploitation TOTALE
+  // (chef + offerts + sur-versement + dégustation + crémant + freinte + casse)
+  // est le chiffre comparable aux 22 % validés par la CAA Paris.
   cascade: {
     achatsAlcool: 10657,
     postes: [
@@ -109,11 +114,16 @@ export const synthesePerteReelle = {
       { poste: 'Alcool des menus (non détaillé en caisse)', litres: 228 },
       { poste: 'Consommation du chef (Picon + Macvin)', litres: 143 },
       { poste: 'Apéritifs offerts aux clients', litres: 40 },
-      { poste: 'Sur-versement au verre (~8 %)', litres: 446 },
+      { poste: 'Sur-versement au verre et cocktails (free-pour)', litres: 807 },
+      { poste: 'Dégustation offerte (pichet + vin nommé au verre)', litres: 113 },
+      { poste: 'Crémant jeté en fin de journée (éventé)', litres: 126 },
+      { poste: 'Freinte technique de la bière pression', litres: 129 },
       { poste: 'Stock final (inventaire)', litres: 213 },
     ],
-    perteReelle: 2454,
-    perteReellePct: 23.0,
+    perteReelle: 1725,
+    perteReellePct: 16.2,
+    perteExploitation: 3083,
+    perteExploitationPct: 28.9,
   },
 }
 

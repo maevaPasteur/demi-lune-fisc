@@ -421,7 +421,7 @@ def page_surversement(d):
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
              "texte": f"Le service à la main sans doseur fait disparaître **{fr_l(d['litres_retenu'])}** d’alcool sur trois exercices (taux moyen {fr_pct(d['taux_blende']*100,1)}, **sous** les valeurs mesurées par [Kerr 2008]). Ce volume explique directement une part du résiduel de l’analyse « Boissons disparues » : ce n’est ni une vente, ni une disparition, c’est de l’alcool bu en plus de la dose facturée."},
             {"kind": "note",
-             "texte": f"**Articulation avec l’analyse « Boissons disparues ».** Cette dernière retient un sur-versement **prudent de 446 L** (8 % du seul service au verre) comme poste séparé de sa cascade ; le **complément**, jusqu’à **{fr_l(d['litres_retenu'])}** au taux documenté ici, est compris dans la **perte résiduelle de 22,8 %** (elle-même conforme aux 22 % validés par la CAA Paris du 17/03/2021). Le sur-versement réel est donc **borné entre 446 et {fr_l(d['litres_retenu'])}** — les deux chiffres sont cohérents, le second ne fait qu’expliciter ce que le premier laissait dans le résiduel."},
+             "texte": f"**Cohérence avec l’analyse « Boissons disparues ».** Ce **{fr_l(d['litres_retenu'])}** est désormais un **poste explicite de la cascade** des deux pages (il remplace l’ancien forfait prudent de 446 L à 8 %). Il s’ajoute à la dégustation, au crémant jeté et à la freinte de bière pour décomposer ce qui n’était auparavant qu’une « perte résiduelle » globale : le résiduel ne contient plus que la casse et l’évaporation irréductibles."},
             {"kind": "piecejointe", "intro": "Détail du calcul par régime de service :",
              "fichiers": [{"fichier": "pieces-defense/RF-sur-versement-au-verre.xlsx", "label": "RF — Sur-versement au verre (vins, spiritueux, cocktails)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Pour solidifier",
@@ -705,11 +705,14 @@ def page_cuisine(d):
 # 6. OFFERTS, REMISES ET PERTES (taux retenus)
 # =============================================================================
 def calc_offerts(bpd):
-    cascade = {c["poste"]: c["litres"] for c in bpd["synthese"]["cascade"]}
+    s = bpd["synthese"]
+    cascade = {c["poste"]: c["litres"] for c in s["cascade"]}
     return {
-        "achat_l": bpd["synthese"]["achat_alcool_l"],
-        "perte_l": bpd["synthese"]["perte_reelle_l"],
-        "perte_pct": bpd["synthese"]["perte_reelle_pct"],
+        "achat_l": s["achat_alcool_l"],
+        "perte_l": s["perte_reelle_l"],
+        "perte_pct": s["perte_reelle_pct"],
+        "exploit_l": s.get("perte_exploitation_l"),
+        "exploit_pct": s.get("perte_exploitation_pct"),
         "cascade": cascade,
     }
 
@@ -766,9 +769,9 @@ def page_offerts(d, postes_itemises):
              "colonnes": [{"label": "Poste"}, {"label": "Litres", "align": "right"}],
              "lignes": item_rows},
             {"kind": "paragraphe",
-             "texte": f"**Mise en perspective.** Après ventilation de **tous** les usages, le résiduel d’alcool s’établit à **{fr_l(d['perte_l'])}**, soit **{fr_pct(d['perte_pct'])}** des achats. C’est la fourchette normale d’un bar-restaurant et c’est **exactement** l’ordre de grandeur que **l’administration elle-même** retient en reconstitution de bar : dans l’affaire **CAA Paris, 17 mars 2021**, le vérificateur a déduit **22 % des achats** au titre du personnel, des offerts, des pertes et du vol, et la cour a **validé** la méthode. Les forfaits de 5 % du présent contrôle sont donc **inférieurs** à la réalité du secteur."},
+             "texte": f"**Mise en perspective.** En sommant ces postes documentés et la casse irréductible, la **perte d’exploitation totale** (tout ce qui n’est pas vendu comme boisson, hors cuisine et menus) atteint **{fr_pct(d['exploit_pct'])}** des achats. C’est **au-dessus** de l’ordre de grandeur que **l’administration elle-même** retient en reconstitution de bar : dans l’affaire **CAA Paris, 17 mars 2021**, le vérificateur a déduit **22 % des achats** au titre du personnel, des offerts, des pertes et du vol, et la cour a **validé** la méthode. Les forfaits de 5 % du présent contrôle sont donc nettement **inférieurs** à la réalité du secteur."},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"Les forfaits de 5 %+5 %+5 % du fisc **sous-estiment** la consommation sans vente : itemisée, elle atteint déjà **{fr_l(total_item)}** hors cuisine et menus, et le résiduel total ({fr_pct(d['perte_pct'])}) est conforme aux **22 %** validés par la jurisprudence. Loin d’être généreux, ces abattements sont des **planchers**."},
+             "texte": f"Les forfaits de 5 %+5 %+5 % du fisc **sous-estiment** la consommation sans vente : itemisée, elle atteint déjà **{fr_l(total_item)}** hors cuisine et menus, et la perte d’exploitation totale (**{fr_pct(d['exploit_pct'])}**) **dépasse** les **22 %** validés par la jurisprudence. Loin d’être généreux, ces abattements sont des **planchers**."},
             {"kind": "piecejointe", "intro": "Postes itemisés et comparaison aux forfaits / à la jurisprudence :",
              "fichiers": [{"fichier": "pieces-defense/RF-offerts-remises-pertes.xlsx", "label": "RF — Offerts, remises et pertes (forfaits vs réel)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Précautions",
@@ -867,6 +870,17 @@ def main():
     r3 = page_cremant(cr)
     r4 = page_degustation(de)
     r5 = page_cuisine(cu)
+
+    # Garde-fou : ces valeurs sont remontees en DUR dans la cascade de
+    # src/data/incertitudeDisparu/14_synthese_perte_reelle.py (SURVERSEMENT_L,
+    # FREINTE_BIERE_L, CREMANT_JETE_L, DEGUSTATION_L). Si le calcul derive, il
+    # faut mettre a jour ces constantes puis relancer 14 -> 15.
+    attendu = {"surversement": 807, "freinte": 129, "cremant": 126, "degustation": 113}
+    obtenu = {"surversement": r1[1], "freinte": r2[1], "cremant": r3[1], "degustation": r4[1]}
+    assert obtenu == attendu, (
+        f"DRIFT cascade : {obtenu} != {attendu}. Mettre a jour les constantes de "
+        "14_synthese_perte_reelle.py (et complementsDefense.ts) puis relancer 14 -> 15."
+    )
 
     # Postes itemises non vendus (hors cuisine et menus) pour la page offerts.
     casc = {c["poste"]: c["litres"] for c in bpd["synthese"]["cascade"]}

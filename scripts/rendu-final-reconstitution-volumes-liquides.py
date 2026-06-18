@@ -102,7 +102,10 @@ def calculer(bp):
         "Alcool des menus (non detaille en caisse)": "calcul",
         "Consommation du chef (Picon + Macvin)": "estime",
         "Aperitifs offerts aux clients": "estime",
-        "Sur-versement au verre (~8 %)": "calcul",
+        "Sur-versement au verre et cocktails (free-pour, Kerr 2008)": "estime",
+        "Degustation offerte (pichet + vin nomme au verre)": "estime",
+        "Cremant jete en fin de journee (eventé)": "estime",
+        "Freinte technique de la biere pression (mousse, lignes)": "estime",
         "Stock final (inventaire)": "mesure",
     }
     labels_courts = {
@@ -112,7 +115,10 @@ def calculer(bp):
         "Alcool des menus (non detaille en caisse)": "Menus",
         "Consommation du chef (Picon + Macvin)": "Conso chef",
         "Aperitifs offerts aux clients": "Offerts",
-        "Sur-versement au verre (~8 %)": "Sur-versement",
+        "Sur-versement au verre et cocktails (free-pour, Kerr 2008)": "Sur-versement",
+        "Degustation offerte (pichet + vin nomme au verre)": "Degustation",
+        "Cremant jete en fin de journee (eventé)": "Cremant jete",
+        "Freinte technique de la biere pression (mousse, lignes)": "Freinte biere",
         "Stock final (inventaire)": "Stock",
     }
 
@@ -160,7 +166,8 @@ def calculer(bp):
     cout_litre_achat = achat_cout / achat_l  # ~10,16 EUR/L (plancher)
 
     postes_oublies = []
-    for lbl in ["Cuisine", "Menus", "Conso chef", "Offerts", "Sur-versement", "Perte reelle"]:
+    for lbl in ["Cuisine", "Menus", "Conso chef", "Offerts", "Sur-versement",
+                "Degustation", "Cremant jete", "Freinte biere", "Perte reelle"]:
         litres = segments_litres(segments, lbl)
         # Au prix de revente (ce que le fisc valorise indument comme CA "verre")
         ca_indu = litres * prix_litre_liquide

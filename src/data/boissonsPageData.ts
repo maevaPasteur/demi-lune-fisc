@@ -94,6 +94,8 @@ export interface BoissonsPageData {
     disparu_brut_ca: number
     perte_reelle_l: number
     perte_reelle_pct: number
+    perte_exploitation_l?: number
+    perte_exploitation_pct?: number
     cascade: { poste: string; litres: number }[]
     fisc_ca_reconstitue: number
     fisc_coef: number

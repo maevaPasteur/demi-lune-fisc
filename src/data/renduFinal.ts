@@ -526,7 +526,7 @@ const autresGriefs: Grief[] = [
     titre: 'Offerts, remises et pertes (taux retenus)',
     griefFisc: 'Le service applique des abattements minimaux (pertes 5 %, personnel 5 %, 15 % sur la pression).',
     reponseCourte:
-      'Les forfaits de 5 %+5 %+5 % sont des planchers : itemisée, la consommation sans vente (chef, offerts, sur-versement, crémant, dégustation, freinte bière) dépasse 1 000 L hors cuisine/menus, et le résiduel total (22,8 %) rejoint les 22 % validés par la CAA Paris (17/03/2021).',
+      'Les forfaits de 5 %+5 %+5 % sont des planchers : itemisée, la consommation sans vente (chef, offerts, sur-versement, crémant, dégustation, freinte bière) dépasse 1 000 L hors cuisine/menus, et la perte d’exploitation totale (28,7 %) dépasse les 22 % validés par la CAA Paris (17/03/2021).',
     statut: 'partiel',
     sections: RFOfferts.sections as unknown as Section[],
   },

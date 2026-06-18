@@ -246,9 +246,10 @@ def main():
                 lines.append(f"  FAIL  tableau au format plat (rendu vide) : {t.get('titre','')!r}")
                 fails += 1
 
-        # 2) WARN : bloc interne (fuite a l'export)
+        # 2) INFO : bloc interne (masque par defaut hors ?interne=1 ; reste dans le JSON livre)
         if any(s.get("kind") == "interne" for s in sections):
-            lines.append("  WARN  bloc « interne » present (fuite a l'export d'une page fisc-facing)")
+            lines.append("  INFO  bloc « interne » present (masque par defaut, visible via ?interne=1 ; "
+                         "le texte reste neanmoins dans le JSON livre)")
             warns += 1
 
         # 3) WARN « a verifier » : seuil annonce > ecart reel du tableau le plus proche

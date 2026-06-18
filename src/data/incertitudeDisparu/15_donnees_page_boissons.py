@@ -189,6 +189,8 @@ synthese = {
     "disparu_brut_ca": round(disparu_total_ca),
     "perte_reelle_l": spr["cascade_alcool"]["perte_reelle_residuelle_l"],
     "perte_reelle_pct": spr["cascade_alcool"]["perte_reelle_pct_achats"],
+    "perte_exploitation_l": spr["cascade_alcool"].get("perte_exploitation_l"),
+    "perte_exploitation_pct": spr["cascade_alcool"].get("perte_exploitation_pct_achats"),
     "cascade": spr["cascade_alcool"]["postes"],
     "fisc_ca_reconstitue": 575253, "fisc_coef": 3.1, "ca_declare": 435525,
 }

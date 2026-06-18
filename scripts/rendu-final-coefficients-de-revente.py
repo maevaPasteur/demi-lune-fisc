@@ -125,6 +125,9 @@ MENUS_L = casc("menus")
 CHEF_L = casc("chef")
 OFFERTS_L = casc("offerts")
 SURVERS_L = casc("Sur-versement")
+DEGUST_L = casc("Degustation")
+CREMANT_L = casc("Cremant jete")
+FREINTE_L = casc("Freinte")
 STOCK_L = casc("Stock final")
 VERRE_L = casc("Vendu au verre")
 COCKTAILS_L = casc("cocktails")
@@ -133,7 +136,8 @@ ACHAT_L = SYN["achat_alcool_l"]
 ACHAT_COUT = SYN["achat_alcool_cout"]
 
 # Part globale de l'alcool NON revendu au verre au prix carte.
-NON_REVENDU_L = CUISINE_L + MENUS_L + CHEF_L + OFFERTS_L + SURVERS_L + STOCK_L
+NON_REVENDU_L = (CUISINE_L + MENUS_L + CHEF_L + OFFERTS_L + SURVERS_L
+                 + DEGUST_L + CREMANT_L + FREINTE_L + STOCK_L)
 PART_NON_REVENDU = NON_REVENDU_L / ACHAT_L  # fraction des litres achetes
 
 # ----------------------------------------------------------------------------- #
@@ -356,7 +360,9 @@ sections = [
               fr_pct(meta["chiffres"]["part_non_revendu_pct"]) + "** des achats : cuisine **" +
               fr_int(CUISINE_L) + " L**, menus **" + fr_int(MENUS_L) + " L**, chef **" + fr_int(CHEF_L) +
               " L**, offerts **" + fr_int(OFFERTS_L) + " L**, sur-versement **" + fr_int(SURVERS_L) +
-              " L**, stock **" + fr_int(STOCK_L) + " L**), tombe à **" + fr_coef(TOT_COEF_EFFECTIF) + "**. "
+              " L**, dégustation **" + fr_int(DEGUST_L) + " L**, crémant jeté **" + fr_int(CREMANT_L) +
+              " L**, freinte bière **" + fr_int(FREINTE_L) + " L**, stock **" + fr_int(STOCK_L) +
+              " L**), tombe à **" + fr_coef(TOT_COEF_EFFECTIF) + "**. "
               "Un coefficient de cet ordre est **conforme au secteur CHR** : la jurisprudence admet "
               "d'ailleurs un abattement de **22 à 25 %** sur les reconstitutions de liquides (CAA Paris, "
               "17/03/2021), exactement pour tenir compte de ces postes. Le coefficient « faible » reproché "

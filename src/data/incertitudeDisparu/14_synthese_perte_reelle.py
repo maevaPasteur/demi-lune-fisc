@@ -90,7 +90,16 @@ C = sum(x["conso"]["plats_l"] for x in alc)
 M = sum(x["conso"]["menu_moyen_l"] for x in alc)
 P = sum((x.get("conso_staff_l") or {}).get("moyen", 0) for x in alc)  # Picon+Macvin
 O_alc = round(1 * JOURS * 0.06, 1)  # aperitifs offerts
-S = round(0.08 * V_verre, 1)        # sur-versement ~8% du servi au verre (borne basse free-pour)
+# --- Pertes DOCUMENTEES, chiffrees et sourcees par
+# scripts/rendu-final-reconstitution-bloc2.py (reproductible ; sources statiques
+# consoTotaleParBoisson.json + itemsCaisse.json). On les remonte ici en postes
+# EXPLICITES de la cascade pour que /analyses/boissons-disparues et le rendu
+# final affichent strictement les memes chiffres. Le residuel devient alors la
+# seule perte IRREDUCTIBLE (casse, evaporation, fonds de verre, rincage).
+SURVERSEMENT_L = 807    # free-pour : vins (+20%) + spiritueux au verre (+25%) + cocktails (+8%), hors biere (Kerr 2008)
+CREMANT_JETE_L = 126    # bouteille de cremant eventee, jetee en fin de service (effervescent plat < 24 h)
+DEGUSTATION_L = 113     # 2 cl offerts : larme au pichet + bouteille montee pour le vin nomme au verre
+FREINTE_BIERE_L = 129   # freinte technique du fut (mousse, purge, lignes, fond de fut), ~10% des 1 293 L pression
 # Postes arrondis, puis PERTE = achats - somme des postes arrondis (la cascade
 # affichee se boucle EXACTEMENT : achats - postes = perte, sans ecart d'arrondi).
 ach_r = round(A)
@@ -101,19 +110,32 @@ postes = [
     {"poste": "Alcool des menus (non detaille en caisse)", "litres": round(M)},
     {"poste": "Consommation du chef (Picon + Macvin)", "litres": round(P)},
     {"poste": "Aperitifs offerts aux clients", "litres": round(O_alc)},
-    {"poste": "Sur-versement au verre (~8 %)", "litres": round(S)},
+    {"poste": "Sur-versement au verre et cocktails (free-pour, Kerr 2008)", "litres": SURVERSEMENT_L},
+    {"poste": "Degustation offerte (pichet + vin nomme au verre)", "litres": DEGUSTATION_L},
+    {"poste": "Cremant jete en fin de journee (eventé)", "litres": CREMANT_JETE_L},
+    {"poste": "Freinte technique de la biere pression (mousse, lignes)", "litres": FREINTE_BIERE_L},
     {"poste": "Stock final (inventaire)", "litres": round(stock)},
 ]
 perte_r = ach_r - sum(p["litres"] for p in postes)
+# Perte d'exploitation TOTALE (= ce qui n'est pas vendu comme boisson, hors
+# cuisine/menus/stock) : conso chef + offerts + sur-versement + degustation +
+# cremant + freinte + casse irreductible. C'est le chiffre comparable a
+# l'abattement de 22 % valide par la jurisprudence (CAA Paris).
+perte_exploitation_l = round(P) + round(O_alc) + SURVERSEMENT_L + DEGUSTATION_L \
+    + CREMANT_JETE_L + FREINTE_BIERE_L + perte_r
 cascade = {
     "achats_alcool_l": ach_r,
     "postes": postes,
     "perte_reelle_residuelle_l": perte_r,
     "perte_reelle_pct_achats": round(100 * perte_r / ach_r, 1),
-    "interpretation": "Perte d'exploitation d'un bar (casse, evaporation, mousse, sur-versement non mesure). "
-                      "A rapprocher de l'abattement que l'administration retient elle-meme en reconstitution de bar "
-                      "(CAA Paris, 17 mars 2021 : 22 % des achats pour personnel/offerts/pertes/vol, methode validee ; "
-                      "n de requete a fiabiliser). AUCUNE vente au noir : CA bancarise, especes 1,3 %.",
+    "perte_exploitation_l": perte_exploitation_l,
+    "perte_exploitation_pct_achats": round(100 * perte_exploitation_l / ach_r, 1),
+    "interpretation": "Le residuel est desormais la seule perte IRREDUCTIBLE (casse, evaporation, fonds de verre, "
+                      "rincage) : les autres pertes sont chiffrees en postes explicites. La perte d'exploitation "
+                      "TOTALE (conso personnel + offerts + sur-versement + degustation + cremant + freinte + casse) "
+                      f"atteint {round(100 * perte_exploitation_l / ach_r, 1)} % des achats, AU-DESSUS des 22 % que "
+                      "l'administration retient elle-meme en reconstitution de bar (CAA Paris, 17 mars 2021, methode "
+                      "validee ; n de requete a fiabiliser). AUCUNE vente au noir : CA bancarise, especes 1,3 %.",
 }
 
 # ---------------------------------------------------------------------------

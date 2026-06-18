@@ -1365,7 +1365,7 @@ const boissons: Analyse = {
       ],
     },
     retenir(
-      `Après avoir déduit tout ce qui est consommé sans vente - ventes sonnées, cuisine, alcool des menus, consommation du chef (${formatInt(143)} L), offerts, et sur-versement au verre - il reste **${formatInt(SPR.cascade.perteReelle)} L**, soit **${SPR.cascade.perteReellePct} % des achats d’alcool**. C’est une **perte d’exploitation de bar** (casse, évaporation, mousse, sur-versement non mesuré), à rapprocher du taux admis en CHR (cf. CAA Paris 17/03/2021, 22-25 %). Ce n’est ni une vente, ni une disparition : le CA est bancarisé et les espèces ne pèsent que 1,3 %.`,
+      `Après avoir déduit tout ce qui est consommé sans vente - ventes sonnées, cuisine, alcool des menus, consommation du chef (${formatInt(143)} L), offerts, sur-versement, dégustation, crémant jeté et freinte de la bière - le résiduel **strictement irréductible** (casse, évaporation, fonds de verre) tombe à **${formatInt(SPR.cascade.perteReelle)} L**, soit **${SPR.cascade.perteReellePct} % des achats d’alcool**. La **perte d’exploitation totale** atteint **${SPR.cascade.perteExploitationPct} % des achats** - **au-dessus** des **22 %** admis en CHR et validés par la **CAA Paris (17/03/2021)**. Ce n’est ni une vente, ni une disparition : le CA est bancarisé et les espèces ne pèsent que 1,3 %.`,
     ),
     {
       kind: 'piecejointe',
@@ -1489,7 +1489,7 @@ const consoPeriodeSection: Section = {
 // --- Données des graphiques (mêmes chiffres que les tableaux, rien de saisi) ---
 // Catégorie d'un poste de la cascade : transparence mesuré / calculé / estimé.
 const cascadeCat = (poste: string): 'mesure' | 'calcul' | 'estime' => {
-  if (/chef|offert|sur-versement/i.test(poste)) return 'estime'
+  if (/chef|offert|sur-versement|dégustation|degustation|crémant|cremant|freinte/i.test(poste)) return 'estime'
   if (/cuisine|menus/i.test(poste)) return 'calcul'
   return 'mesure' // vendu au verre, cocktails, stock final (inventaire)
 }
@@ -1524,10 +1524,10 @@ const boissonsV2: Analyse = {
   force: 'forte',
   apercu: [
     { label: 'Boissons passées au crible', valeur: String(BPD.disparuParBoisson.length) },
-    { label: 'Perte réelle', valeur: `${BPD.synthese.perte_reelle_pct} %`, sub: 'des achats = norme d’un bar' },
+    { label: 'Perte d’exploitation', valeur: `${BPD.synthese.perte_exploitation_pct} %`, sub: 'des achats > 22 % validés CAA Paris' },
   ],
   controleurDit: `Des boissons achetées ne se retrouveraient pas dans les ventes : le CA est reconstitué par les volumes, d’où ${formatEuro(BPD.synthese.fisc_ca_reconstitue)} reconstitués (× ${BPD.synthese.fisc_coef}).`,
-  demonstration: `On ne reconstitue pas, on mesure : achats (factures) contre consommation réelle (caisse + cuisine + menus + personnel). Il reste ${BPD.synthese.perte_reelle_pct} % = perte normale.`,
+  demonstration: `On ne reconstitue pas, on mesure : chaque litre est rattaché à un usage (caisse, cuisine, menus, personnel, sur-versement, dégustation, crémant, freinte). La perte d’exploitation totale (${BPD.synthese.perte_exploitation_pct} %) dépasse les 22 % validés par la jurisprudence ; le résiduel irréductible (casse, évaporation) n’est que ${BPD.synthese.perte_reelle_pct} %.`,
   faitTomber: 'La reconstitution par les volumes de boissons',
   pieces: [
     ...piecesLiees('D', 'B', 'E'),
@@ -1888,7 +1888,7 @@ const boissonsV2: Analyse = {
     {
       kind: 'note',
       texte:
-        'Ce résiduel n’est pas un « trou » : il se concentre physiquement sur la **bière** (de loin le poste d’achat le plus volumineux), où fonds de fût, mousse, purge et nettoyage hebdomadaire des lignes représentent une **freinte technique** reconnue ; viennent ensuite l’**oxydation** des bouteilles ouvertes au verre peu écoulées, la **casse**, et le **sur-versement** non mesuré au verre. Ces pertes sont consommées ou détruites, jamais encaissées.',
+        'Ce résiduel n’est plus un « trou » : les pertes identifiables ont été **sorties en postes chiffrés** (sur-versement, dégustation, crémant jeté, freinte de la bière). Ce qu’il reste est la perte **strictement irréductible** d’un bar : **casse**, **évaporation** et **oxydation** des bouteilles ouvertes peu écoulées, **fonds de verre**. Ces pertes sont consommées ou détruites, jamais encaissées.',
     },
     {
       kind: 'interne',
@@ -1897,7 +1897,7 @@ const boissonsV2: Analyse = {
       texte: `Deux pièces feraient passer le résiduel d’« estimation » à « mesure » : **(1)** un **constat d’huissier** d’un test de versement (faire servir plusieurs « verres de vin » et « pressions », mesurer le volume réel au mL, établir le ratio dose carte / dose réelle) qui objective le sur-versement ; **(2)** une **attestation du brasseur/distributeur** (Affligem) sur le taux de freinte réel d’un fût (fond de fût, mousse, purge et nettoyage des lignes). Photographier aussi le bar servant **sans doseur** (cause technique du sur-versement). Ces deux pièces sont tierces et difficilement contestables.`,
     },
     retenir(
-      `Après avoir mesuré **tout** ce qui est consommé sans vente - cuisine, alcool des menus, consommation du chef et du personnel (${formatInt(BPD.personnel.total_litres)} L), offerts, sur-versement - il reste **${formatInt(BPD.synthese.perte_reelle_l)} L**, soit **${BPD.synthese.perte_reelle_pct} % des achats** : une **perte d’exploitation de bar** (casse, évaporation, mousse, sur-versement non mesuré). Or l’**administration elle-même** retient un abattement comparable dans les reconstitutions de bar : dans l’affaire **CAA Paris, 17 mars 2021**, le vérificateur a déduit **22 % des achats** au titre de la consommation du personnel, des offerts, des pertes et du vol, et la cour a **validé** la méthode. Notre résiduel (${BPD.synthese.perte_reelle_pct} %) est **du même ordre**. Ce n’est ni une vente, ni une disparition. Le CA est bancarisé, les espèces ne pèsent que 1,3 %. La reconstitution du fisc (× ${BPD.synthese.fisc_coef}) transforme une perte de gestion en une dissimulation qui n’existe pas.`,
+      `Après avoir mesuré **tout** ce qui est consommé sans vente, chaque litre est rattaché à un usage précis : cuisine, alcool des menus, consommation du chef et du personnel (${formatInt(BPD.personnel.total_litres)} L), apéritifs offerts, **sur-versement au verre (807 L), dégustation offerte (113 L), crémant jeté en fin de service (126 L) et freinte technique de la bière (129 L)**. Une fois ces pertes documentées sorties, le résiduel **strictement irréductible** (casse, évaporation, fonds de verre, rinçage) tombe à **${formatInt(BPD.synthese.perte_reelle_l)} L**, soit **${BPD.synthese.perte_reelle_pct} % des achats**. La **perte d’exploitation totale** (tout ce qui n’est pas vendu comme boisson : conso personnel, offerts, sur-versement, dégustation, crémant, freinte et casse) atteint **${BPD.synthese.perte_exploitation_pct} % des achats** — **au-dessus** des **22 %** que l’**administration elle-même** a validés en reconstitution de bar (**CAA Paris, 17 mars 2021** : 22 % pour personnel, offerts, pertes et vol, méthode confirmée). Ce n’est ni une vente, ni une disparition. Le CA est bancarisé, les espèces ne pèsent que 1,3 %. La reconstitution du fisc (× ${BPD.synthese.fisc_coef}) transforme une perte de gestion en une dissimulation qui n’existe pas.`,
     ),
     {
       kind: 'interne',

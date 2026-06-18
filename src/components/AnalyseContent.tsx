@@ -1195,10 +1195,36 @@ function SectionView({ section }: { section: Section }) {
 }
 
 // Rend la suite des sections d'une analyse.
+// Les notes « interne » (notes de travail de l'avocat) ne doivent JAMAIS
+// apparaître sur la page montrée à l'administration, ni dans une impression /
+// capture / partage de lien. Elles sont donc masquées par défaut et ne
+// s'affichent qu'en mode interne explicite, activé par « ?interne=1 » dans l'URL.
+function modeInterneActif(): boolean {
+  if (typeof window === 'undefined') return false
+  return new URLSearchParams(window.location.search).get('interne') === '1'
+}
+
 export default function AnalyseContent({ sections }: { sections: Section[] }) {
+  const interne = modeInterneActif()
+  const visibles = interne ? sections : sections.filter((s) => s.kind !== 'interne')
   return (
     <Stack gap="lg">
-      {sections.map((section, i) => (
+      {interne && sections.some((s) => s.kind === 'interne') && (
+        <Alert
+          color="orange"
+          variant="filled"
+          radius="lg"
+          icon={<IconInfoCircle size={18} />}
+          title="Mode interne — notes de travail affichées"
+        >
+          Cette vue contient des notes internes à l’avocat.{' '}
+          <Text span fw={700}>
+            Retirez « ?interne=1 » de l’adresse
+          </Text>{' '}
+          avant toute impression, capture ou transmission à l’administration.
+        </Alert>
+      )}
+      {visibles.map((section, i) => (
         <SectionView key={i} section={section} />
       ))}
     </Stack>
