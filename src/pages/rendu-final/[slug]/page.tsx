@@ -1,14 +1,8 @@
 import { Link, useParams } from 'react-router-dom'
-import { Anchor, Badge, Box, Button, Group, Stack, Text, Title } from '@mantine/core'
+import { Anchor, Box, Button, Group, Stack, Text, Title } from '@mantine/core'
 import { IconArrowLeft, IconHome } from '@tabler/icons-react'
-import { griefParSlug, blocs, type Statut } from '../../../data/renduFinal'
+import { griefParSlug, blocs } from '../../../data/renduFinal'
 import AnalyseContent from '../../../components/AnalyseContent'
-
-const STATUT: Record<Statut, { label: string; color: string }> = {
-  demonte: { label: 'Démonté', color: 'teal' },
-  partiel: { label: 'Étayé', color: 'blue' },
-  'a-etayer': { label: 'À étayer', color: 'gray' },
-}
 
 function RetourLien() {
   return (
@@ -41,23 +35,17 @@ export default function GriefDetail() {
     )
   }
 
-  const s = STATUT[grief.statut]
   const bloc = blocs.find((b) => b.id === grief.bloc)
 
   return (
     <Stack gap={32}>
       <RetourLien />
       <Stack gap="sm">
-        <Group gap="sm">
-          {bloc && (
-            <Text fw={700} size="sm" c="gold.7" tt="uppercase" style={{ letterSpacing: '0.12em' }}>
-              Bloc {bloc.numero} — {bloc.titre}
-            </Text>
-          )}
-          <Badge variant="light" color={s.color} radius="sm">
-            {s.label}
-          </Badge>
-        </Group>
+        {bloc && (
+          <Text fw={700} size="sm" c="gold.7" tt="uppercase" style={{ letterSpacing: '0.12em' }}>
+            Bloc {bloc.numero} — {bloc.titre}
+          </Text>
+        )}
         <Title order={1} fz={{ base: 32, sm: 48 }} lh={1.05}>
           {grief.titre}
         </Title>

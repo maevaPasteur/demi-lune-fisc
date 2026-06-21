@@ -1,18 +1,10 @@
 import { Link } from 'react-router-dom'
-import { Badge, Box, Group, Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core'
+import { Box, Group, Paper, SimpleGrid, Stack, Text, Title } from '@mantine/core'
 import { IconArrowRight, IconScale } from '@tabler/icons-react'
-import { blocs, griefsParBloc, type Grief, type Statut } from '../../data/renduFinal'
-
-// Libellé + couleur du statut d'un grief.
-const STATUT: Record<Statut, { label: string; color: string }> = {
-  demonte: { label: 'Démonté', color: 'teal' },
-  partiel: { label: 'Étayé', color: 'blue' },
-  'a-etayer': { label: 'À étayer', color: 'gray' },
-}
+import { blocs, griefsParBloc, type Grief } from '../../data/renduFinal'
 
 // Carte compacte d'un grief, pensée pour une grille responsive.
 function CarteGrief({ g }: { g: Grief }) {
-  const s = STATUT[g.statut]
   return (
     <Paper
       component={Link}
@@ -29,21 +21,9 @@ function CarteGrief({ g }: { g: Grief }) {
       }}
     >
       <Stack gap="sm" style={{ flex: 1 }}>
-        <Group justify="space-between" align="flex-start" wrap="nowrap" gap="sm">
-          <Text size="xs" c="dimmed">
-            {g.refRapport}
-          </Text>
-          <Badge
-            variant="light"
-            color={s.color}
-            radius="sm"
-            size="sm"
-            tt="uppercase"
-            style={{ flexShrink: 0 }}
-          >
-            {s.label}
-          </Badge>
-        </Group>
+        <Text size="xs" c="dimmed">
+          {g.refRapport}
+        </Text>
 
         <Title order={3} ff="heading" fz={{ base: 18, sm: 20 }} lh={1.2}>
           {g.titre}
