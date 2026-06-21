@@ -340,12 +340,16 @@ const suppressions: Grief = {
         { fichier: `${SYNTH}/02-rejet-comptabilite-1.md`, label: 'Rapport du fisc — rejet 1/3 (synthèse OCR)' },
       ],
     },
-    // ---------------- RÉSULTAT ----------------
+    // ---------------- CONCLUSION ----------------
     {
-      kind: 'alerte',
-      couleur: 'teal',
-      titre: 'Résultat : chaque suppression a sa cause, aucune n’est une vente effacée',
-      texte: `Les suppressions sont **identifiées et justifiées** : les 4 grosses (${formatPct(A.aberrPctTotal)} du montant) sont des **fautes de frappe sur la quantité** ; les **factures sans détail** correspondent à ${formatInt(MCUST.custom_q)} menus au forfait (${formatEuro(MCUST.custom_eur)}, dont le Menu Demi Lune) ; les **paiements séparés** (re-saisie sur une note jumelle) et les **corrections de saisie** (petites, en service, tracées comme la loi l’exige) couvrent le reste. Pour chaque ligne supprimée, le détail caisse montre **soit une re-saisie sur la même note, soit une ré-affectation sur une autre note** : rien n’est retiré sans contrepartie. Le motif ne peut donc fonder ni le rejet de comptabilité, ni la reconstitution qui en découle.`,
+      kind: 'chapitre',
+      source: 'nous',
+      numero: 6,
+      titre: 'Conclusion',
+    },
+    {
+      kind: 'paragraphe',
+      texte: `Chaque suppression a sa cause, aucune n’est une vente effacée. Les suppressions sont **identifiées et justifiées** : les 4 grosses (${formatPct(A.aberrPctTotal)} du montant) sont des **fautes de frappe sur la quantité** ; les **factures sans détail** correspondent à ${formatInt(MCUST.custom_q)} menus au forfait (${formatEuro(MCUST.custom_eur)}, dont le Menu Demi Lune) ; les **paiements séparés** (re-saisie sur une note jumelle) et les **corrections de saisie** (petites, en service, tracées comme la loi l’exige) couvrent le reste. Pour chaque ligne supprimée, le détail caisse montre **soit une re-saisie sur la même note, soit une ré-affectation sur une autre note** : rien n’est retiré sans contrepartie. Le motif ne peut donc fonder ni le rejet de comptabilité, ni la reconstitution qui en découle.`,
     },
     {
       kind: 'interne',
