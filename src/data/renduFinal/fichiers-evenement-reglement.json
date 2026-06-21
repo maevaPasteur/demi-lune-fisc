@@ -360,6 +360,36 @@
       ]
     },
     {
+      "kind": "piecejointe",
+      "intro": "Les deux fichiers de caisse, tels que remis au service, pour les trois exercices : le Fichier Événement (E, journal des « DEL ») et le détail des tickets (C, où figure le libellé).",
+      "fichiers": [
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+          "label": "Annexe E-1 : Fichier Événement (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
+          "label": "Annexe E-2 : Fichier Événement (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
+          "label": "Annexe E-3 : Fichier Événement (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : détail des tickets, libellés (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+          "label": "Annexe C-2 : détail des tickets, libellés (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+          "label": "Annexe C-3 : détail des tickets, libellés (2024-2025)"
+        }
+      ]
+    },
+    {
       "kind": "titre",
       "texte": "Une caisse certifiée est présumée conforme"
     },
@@ -582,6 +612,24 @@
       ]
     },
     {
+      "kind": "piecejointe",
+      "intro": "Fichier Règlement (F) tel que remis au service, pour les trois exercices (lignes « TOTAL <mode> » et « TOTAL GENERAL ») :",
+      "fichiers": [
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
+          "label": "Annexe F-1 : Fichier Règlement (montants par mode de paiement) (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-F2_reglements_2023-2024.xls",
+          "label": "Annexe F-2 : Fichier Règlement (montants par mode de paiement) (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-F3_reglements_2024-2025.xls",
+          "label": "Annexe F-3 : Fichier Règlement (montants par mode de paiement) (2024-2025)"
+        }
+      ]
+    },
+    {
       "kind": "titre",
       "numero": "2.3",
       "texte": "La fluctuation du nombre d'articles"
@@ -613,6 +661,40 @@
     {
       "kind": "paragraphe",
       "texte": "Sources : [https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897) (article 286 du CGI, inaltérabilité) ; [https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) (doctrine BOI-TVA-DECLA-30-10-30) ; [https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-sa-comptabilite-et-ses-demarches/ce-quil-faut-savoir-sur-la-certification-des-logiciels-de-caisse](https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-sa-comptabilite-et-ses-demarches/ce-quil-faut-savoir-sur-la-certification-des-logiciels-de-caisse) (certification des logiciels de caisse)."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Calcul entièrement reproductible (onglet « Articles vs CA » du classeur) : le nombre d'articles et le chiffre d'affaires recalculés ligne par ligne à partir des annexes C de la caisse, sur les trois exercices.",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
+          "label": "RF - Articles vs CA : décompte variable, chiffre d'affaires invariant (onglet « Articles vs CA »)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
+          "label": "Annexe B-1 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B2_prix-vente-quantite_2023-2024.xls",
+          "label": "Annexe B-2 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B3_prix-vente-quantite_2024-2025.xls",
+          "label": "Annexe B-3 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : Détail des tickets (libellé, quantité et prix par ligne) (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+          "label": "Annexe C-2 : Détail des tickets (libellé, quantité et prix par ligne) (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+          "label": "Annexe C-3 : Détail des tickets (libellé, quantité et prix par ligne) (2024-2025)"
+        }
+      ]
     },
     {
       "kind": "titre",
@@ -769,92 +851,12 @@
       "texte": "Les fichiers Excel transmis les 13 février et 13 mars 2026 étaient des **extraits de travail**, modifiables par nature (ce sont des classeurs Excel). L'archive **inaltérable** au sens de la norme NF525, c'est l'**export certifié remis sur clé USB** le 16/30 mars 2026. Comparer un brouillon Excel à l'archive sécurisée pour conclure à une « altération » revient à confondre l'outil de travail et la pièce légale. La donnée sous-jacente (tickets Z, récapitulatifs journaliers) est stable ; c'est elle qui fait foi."
     },
     {
-      "kind": "chapitre",
-      "source": "nous",
-      "titre": "Conclusion",
-      "numero": 3
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les journaux Événement (E) et Règlement (F) ne révèlent aucune anomalie : E est la trace légale des corrections (NF525), F prouve la ventilation des encaissements. La triangulation A = F = H verrouille l'égalité CA = encaissements, et la bancarisation atteint 98,64 % (espèces 1,36 % seulement). Ces fichiers, loin de fonder le rejet, démontrent la sincérité de la comptabilité."
-    },
-    {
       "kind": "piecejointe",
-      "intro": "Les deux fichiers de caisse, tels que remis au service, pour les trois exercices : le Fichier Événement (E, journal des « DEL ») et le détail des tickets (C, où figure le libellé).",
-      "fichiers": [
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
-          "label": "Annexe E-1 : Fichier Événement (2022-2023)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
-          "label": "Annexe E-2 : Fichier Événement (2023-2024)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
-          "label": "Annexe E-3 : Fichier Événement (2024-2025)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
-          "label": "Annexe C-1 : détail des tickets, libellés (2022-2023)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
-          "label": "Annexe C-2 : détail des tickets, libellés (2023-2024)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
-          "label": "Annexe C-3 : détail des tickets, libellés (2024-2025)"
-        }
-      ]
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Calcul entièrement reproductible (onglet « Articles vs CA » du classeur) : le nombre d'articles et le chiffre d'affaires recalculés ligne par ligne à partir des annexes C de la caisse, sur les trois exercices.",
-      "fichiers": [
-        {
-          "fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
-          "label": "RF - Articles vs CA : décompte variable, chiffre d'affaires invariant (onglet « Articles vs CA »)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
-          "label": "Annexe C-1 : détail des tickets (2022-2023)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
-          "label": "Annexe C-2 : détail des tickets (2023-2024)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
-          "label": "Annexe C-3 : détail des tickets (2024-2025)"
-        }
-      ]
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Calcul reproductible (onglets « Reglements par mode », « Triangulation », « Types evenements E ») :",
+      "intro": "Triangulation et écart avec la comptabilité, reproductibles (onglets « Reglements par mode », « Triangulation », « Types evenements E »), avec leurs annexes sources : synthèse du CA (A), Fichier Règlement (F), liste des tickets (H) et journal de TVA (G), pour les trois exercices.",
       "fichiers": [
         {
           "fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
           "label": "RF - Fichiers Événement (E) et Règlement (F) - règlements par mode, triangulation, types d'événements"
-        }
-      ]
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Annexes de caisse citées dans cette page (sources, telles que remises au service) : Fichier Événement (E), Fichier Règlement (F), synthèse du CA (A), liste des tickets (H), prix/quantités (B), détail des tickets (C) et journal de TVA (G), pour les trois exercices.",
-      "fichiers": [
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
-          "label": "Annexe E-1 : Fichier Événement (journal des événements, dont les « DEL ») (2022-2023)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
-          "label": "Annexe E-2 : Fichier Événement (journal des événements, dont les « DEL ») (2023-2024)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
-          "label": "Annexe E-3 : Fichier Événement (journal des événements, dont les « DEL ») (2024-2025)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
@@ -893,30 +895,6 @@
           "label": "Annexe H-3 : Liste des tickets (2024-2025)"
         },
         {
-          "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
-          "label": "Annexe B-1 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2022-2023)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-B2_prix-vente-quantite_2023-2024.xls",
-          "label": "Annexe B-2 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2023-2024)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-B3_prix-vente-quantite_2024-2025.xls",
-          "label": "Annexe B-3 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2024-2025)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
-          "label": "Annexe C-1 : Détail des tickets (libellé, quantité et prix par ligne) (2022-2023)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
-          "label": "Annexe C-2 : Détail des tickets (libellé, quantité et prix par ligne) (2023-2024)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
-          "label": "Annexe C-3 : Détail des tickets (libellé, quantité et prix par ligne) (2024-2025)"
-        },
-        {
           "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
           "label": "Annexe G-1 : Journal de TVA (2022-2023)"
         },
@@ -929,6 +907,16 @@
           "label": "Annexe G-3 : Journal de TVA (2024-2025)"
         }
       ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "titre": "Conclusion",
+      "numero": 3
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les journaux Événement (E) et Règlement (F) ne révèlent aucune anomalie : E est la trace légale des corrections (NF525), F prouve la ventilation des encaissements. La triangulation A = F = H verrouille l'égalité CA = encaissements, et la bancarisation atteint 98,64 % (espèces 1,36 % seulement). Ces fichiers, loin de fonder le rejet, démontrent la sincérité de la comptabilité."
     },
     {
       "kind": "interne",

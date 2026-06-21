@@ -321,6 +321,16 @@ for c in CORR:
         corr_page.append([cg(c["libelle_caisse"]), cg(c["nom_canonique"]),
                           cg(c["nom_facture"] or " : ")])
 
+# Ce que le service OBTIENT, exemple par exemple (Proposition p. 31-32, point XV ;
+# valeurs reprises de src/data/volumes-disparus-fisc.json).
+fisc_rows = [
+    [cg("Calvados"), cg("2022-23"), cg("consommation > achats de 210 cl (≈ 8 % des achats)")],
+    [cg("Calvados"), cg("2023-24"), cg("consommation > achats de 802 cl (≈ 40 % des achats)")],
+    [cg("Calvados"), cg("2024-25"), cg("consommation > achats de 1 005 cl (≈ 50 % des achats)")],
+    [cg("Haute Côte de Beaune blanc"), cg("2023-24"), cg("12 950 cl « vendus », 0 bouteille achetée identifiée")],
+    [cg("Martini Blanc, eaux-de-vie (Poire, Framboise, Mirabelle)"), cg("3 exercices"), cg("petits volumes, « même problème »")],
+]
+
 doc = {
     "meta": {
         "slug": "consommation-superieure-achats",
@@ -345,11 +355,18 @@ doc = {
                   "grosse incohérence** » sur le **Haute Côte de Beaune blanc** : **12 950 cl** vendus "
                   "en 2023-2024 alors que « le service n’est pas parvenu à identifier l’achat d’une "
                   "seule bouteille de ce type »."},
+        {"kind": "tableau", "titre": "Ce que le service obtient, exemple par exemple (Proposition p. 31-32)",
+         "minWidth": 760,
+         "colonnes": [colg("Produit cité par le service"), colg("Exercice"), colg("Incohérence chiffrée par le service")],
+         "lignes": fisc_rows},
         {"kind": "paragraphe",
          "texte": "Nous répondons **exemple par exemple**, sans aucune supposition, en reliant pour "
                   "chaque produit le **libellé de caisse**, la **facture fournisseur** et "
                   "l’**inventaire**, puis en comparant, **par exercice**, les **achats (nets des avoirs)** "
-                  "à la **consommation mesurée**."},
+                  "à la **consommation réelle**. Cette consommation n’est pas réestimée ici : nous "
+                  "reprenons les **volumes réels établis poste par poste** (vente au verre, cuisine, "
+                  "sur-versement, pertes) aux pages [Reconstitution par les volumes](/rendu-final/reconstitution-volumes-liquides) "
+                  "et [Alcool en cuisine et dans les menus](/rendu-final/alcool-cuisine-doses-plats)."},
 
         # 2) METHODE
         {"kind": "chapitre", "source": "nous", "numero": 2, "titre": "La méthode : relier caisse, factures et inventaire",
@@ -403,12 +420,16 @@ doc = {
          "titre": "Calvados : l’écart est de la cuisine, pas une vente",
          "sousTitre": "Au verre, la caisse vend très peu ; l’essentiel est une estimation de cuisson"},
         {"kind": "paragraphe",
-         "texte": f"Le Calvados **vendu au verre** par la caisse ne représente que **{fr_l(calva_verre_l)}** "
-                  f"sur trois ans (donnée exacte de caisse). Tout le reste de la consommation que retient "
-                  f"le service est une **estimation de cuisson** : il l’a calculée en appliquant une dose "
-                  f"par portion aux plats flambés (**camembert rôti flambé au Calvados**, **assiette du "
-                  f"père Grégoire**). C’est si sensible à la dose que le service a lui-même **abaissé sa "
-                  f"dose de 5 à 4 cl** pour limiter l’incohérence."},
+         "texte": f"**Ce que le service obtient.** Une « surconsommation » de Calvados de **210 cl** "
+                  f"(2022-23), **802 cl** (2023-24) puis **1 005 cl** (2024-25), soit jusqu’à **50 % des "
+                  f"achats** : il y voit une vente impossible faute d’achat suffisant. **Ce que montre la "
+                  f"caisse.** Le Calvados **vendu au verre** ne représente que **{fr_l(calva_verre_l)}** "
+                  f"sur trois ans (donnée exacte de caisse, pièce jointe). **Tout le reste part en "
+                  f"cuisine** (camembert rôti flambé au Calvados, assiette du père Grégoire) : ce poste "
+                  f"est **chiffré dose par dose, plat par plat**, à la page [Alcool en cuisine et dans les "
+                  f"menus](/rendu-final/alcool-cuisine-doses-plats). C’est une **estimation de cuisson**, "
+                  f"si sensible à la dose que le service a lui-même **abaissé la sienne de 5 à 4 cl** pour "
+                  f"atténuer l’incohérence."},
         tab_achat_conso("Calvados : achats contre consommation totale (verre + cuisson estimée)",
                         [("Calvados", calva_a, calva_c)], minw=560),
         {"kind": "paragraphe",

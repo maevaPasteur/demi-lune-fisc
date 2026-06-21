@@ -24,52 +24,44 @@ def _titre(s):
 
 
 def normaliser_sections(sections):
-    # 1. Retirer le chapitre des pièces (la pièce reste une simple carte).
+    """Normalise EN PLACE, sans déplacer les pièces contextuelles (une fiche peut
+    avoir un fichier téléchargeable par section : il doit rester DANS sa section)."""
+    sections = [dict(s) for s in sections]
+
+    # 1. Retirer le chapitre des pièces (gros titre) : la pièce reste une carte en place.
     sections = [s for s in sections
                 if not (s.get("kind") == "chapitre" and TITRE_PIECES in _titre(s))]
 
-    # 2. Mettre de côté les internes (toujours en dernier, masqués) et les pièces.
-    internes = [s for s in sections if s.get("kind") == "interne"]
-    pieces = [s for s in sections if s.get("kind") == "piecejointe"]
-    rest = [s for s in sections if s.get("kind") not in ("interne", "piecejointe")]
-
-    # 3. Isoler le bloc conclusion et récupérer son/ses texte(s).
-    concl_textes = []
-    idx_chap = next((i for i, s in enumerate(rest)
-                     if s.get("kind") == "chapitre" and "conclusion" in _titre(s)), None)
-    if idx_chap is not None:
-        body = rest[:idx_chap]
-        for s in rest[idx_chap + 1:]:
-            if s.get("kind") in ("paragraphe", "alerte", "note") and s.get("texte"):
-                concl_textes.append(s["texte"])
-            # tout autre kind après le chapitre Conclusion est ignoré (cas non prévu)
+    # 2. Normaliser la conclusion EN PLACE (texte normal, jamais une carte verte).
+    ci = next((i for i, s in enumerate(sections)
+               if s.get("kind") == "chapitre" and "conclusion" in _titre(s)), None)
+    if ci is not None:
+        # Les alertes qui composent la conclusion deviennent du texte normal.
+        j = ci + 1
+        while j < len(sections) and sections[j].get("kind") in ("paragraphe", "alerte", "note"):
+            if sections[j].get("kind") == "alerte":
+                sections[j] = {"kind": "paragraphe", "texte": sections[j].get("texte", "")}
+            j += 1
     else:
-        idx_al = next((i for i in range(len(rest) - 1, -1, -1)
-                       if rest[i].get("kind") == "alerte"
-                       and any(k in _titre(rest[i]) for k in CLES_CONCL)), None)
-        if idx_al is not None:
-            if rest[idx_al].get("texte"):
-                concl_textes.append(rest[idx_al]["texte"])
-            body = rest[:idx_al] + rest[idx_al + 1:]
-        else:
-            body = rest
+        # Pas de chapitre Conclusion : la dernière alerte de conclusion le devient.
+        ai = next((i for i in range(len(sections) - 1, -1, -1)
+                   if sections[i].get("kind") == "alerte"
+                   and any(k in _titre(sections[i]) for k in CLES_CONCL)), None)
+        if ai is not None:
+            sections[ai] = {"kind": "paragraphe", "texte": sections[ai].get("texte", "")}
+            sections.insert(ai, {"kind": "chapitre", "source": "nous", "titre": "Conclusion"})
 
-    # 4. Reconstituer : contenu → Conclusion (texte normal) → pièces → internes.
-    out = list(body)
-    if concl_textes:
-        out.append({"kind": "chapitre", "source": "nous", "titre": "Conclusion"})
-        for t in concl_textes:
-            out.append({"kind": "paragraphe", "texte": t})
-    out.extend(pieces)
-    out.extend(internes)
+    # 3. Les notes internes (masquées) vont toujours en toute fin.
+    internes = [s for s in sections if s.get("kind") == "interne"]
+    sections = [s for s in sections if s.get("kind") != "interne"] + internes
 
-    # 5. Renuméroter tous les chapitres séquentiellement.
+    # 4. Renuméroter les chapitres séquentiellement.
     n = 0
-    for s in out:
+    for s in sections:
         if s.get("kind") == "chapitre":
             n += 1
             s["numero"] = n
-    return out
+    return sections
 
 
 # Compat : ancien nom utilisé par certains scripts.

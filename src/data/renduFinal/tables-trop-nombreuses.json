@@ -297,6 +297,24 @@
       "texte": "Le détail des tickets (annexes C) permet d'identifier **tous les encaissements contenant un plat ou un menu** (un couvert = un plat ou un menu servi). On estime ainsi, de façon assez juste, le **nombre de personnes servies par jour**, et même **par service** : l'**heure** de chaque encaissement le classe au **midi** (avant 18 h) ou au **soir** (18 h à minuit). Les fichiers ci-dessous contiennent ces données, recalculables ligne à ligne."
     },
     {
+      "kind": "piecejointe",
+      "intro": "Données de couverts (lecture des annexes C, reproductible) :",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-items-classification.xlsx",
+          "label": "Items de la caisse classés « plat/menu » (ce qui compte comme un couvert) (XLSX)"
+        },
+        {
+          "fichier": "pieces-defense/RF-encaissements-couverts.xlsx",
+          "label": "Couverts par encaissement : date, heure, nombre de couverts (XLSX)"
+        },
+        {
+          "fichier": "pieces-defense/RF-couverts-par-service.xlsx",
+          "label": "Couverts par jour et par service (midi avant 18 h / soir 18 h à minuit) (XLSX)"
+        }
+      ]
+    },
+    {
       "kind": "couvertsCapacite",
       "titre": "Couverts moyens par service et taux d'occupation de 58 %",
       "sousTitre": "Moyenne des couverts par service, par semaine (cycle mars → février), une ligne par exercice (les services sans couvert sont exclus de la moyenne). La ligne pointillée marque 58 % de remplissage, le taux d'occupation moyen d'un restaurant traditionnel (FIDUCIAL 2025), appliqué à l'espace ouvert : intérieur de mi-septembre à fin avril, terrasse de début mai à début septembre (un seul espace ouvert à la fois).",
@@ -1705,38 +1723,6 @@
       ]
     },
     {
-      "kind": "chapitre",
-      "source": "nous",
-      "titre": "Conclusion",
-      "numero": 3
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les tables « virtuelles » sont une **fonction de règlement**, et la suppression qui les accompagne est une **opération anti-double-comptage**. Trois faits reproductibles le démontrent : (1) le numéro de note de l'export va de 1 à 57 et ne désigne **jamais** une table (la salle compte 14 tables intérieures, et les n° 13/16/17/18 n'existent pas) ; (2) le rythme des encaissements par jour travaillé se superpose d'un exercice à l'autre (activité stable, sans à-coup inexpliqué) ; (3) supprimer la table d'origine après ressaisie **évite de doubler le CA**. Le grief ne révèle **aucun couvert ni aucune recette non déclarée**."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Cet argument se retourne contre l'administration : le vérificateur décrit lui-même (p. 11) les tables virtuelles comme servant « au traitement des notes multiples pour une table, au moment du règlement ». Il ne peut pas, ensuite, présenter cette même fonction comme la preuve d'une dissimulation. La réconciliation complète des suppressions (le CA déclaré égale les encaissements) est démontrée au grief « suppressions de caisse »."
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Données de couverts (lecture des annexes C, reproductible) :",
-      "fichiers": [
-        {
-          "fichier": "pieces-defense/RF-items-classification.xlsx",
-          "label": "Items de la caisse classés « plat/menu » (ce qui compte comme un couvert) (XLSX)"
-        },
-        {
-          "fichier": "pieces-defense/RF-encaissements-couverts.xlsx",
-          "label": "Couverts par encaissement : date, heure, nombre de couverts (XLSX)"
-        },
-        {
-          "fichier": "pieces-defense/RF-couverts-par-service.xlsx",
-          "label": "Couverts par jour et par service (midi avant 18 h / soir 18 h à minuit) (XLSX)"
-        }
-      ]
-    },
-    {
       "kind": "piecejointe",
       "intro": "Encaissements par numéro de note (total et matrice saison × exercice), plan de salle réel, notes fractionnaires et exemple daté de table scindée.",
       "fichiers": [
@@ -1745,6 +1731,20 @@
           "label": "RF - Tables et numéros de note : encaissements par note, saison et exercice (XLSX)"
         }
       ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Conclusion"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les tables « virtuelles » sont une **fonction de règlement**, et la suppression qui les accompagne est une **opération anti-double-comptage**. Trois faits reproductibles le démontrent : (1) le numéro de note de l'export va de 1 à 57 et ne désigne **jamais** une table (la salle compte 14 tables intérieures, et les n° 13/16/17/18 n'existent pas) ; (2) le rythme des encaissements par jour travaillé se superpose d'un exercice à l'autre (activité stable, sans à-coup inexpliqué) ; (3) supprimer la table d'origine après ressaisie **évite de doubler le CA**. Le grief ne révèle **aucun couvert ni aucune recette non déclarée**."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cet argument se retourne contre l'administration : le vérificateur décrit lui-même (p. 11) les tables virtuelles comme servant « au traitement des notes multiples pour une table, au moment du règlement ». Il ne peut pas, ensuite, présenter cette même fonction comme la preuve d'une dissimulation. La réconciliation complète des suppressions (le CA déclaré égale les encaissements) est démontrée au grief « suppressions de caisse »."
     }
   ]
 }

@@ -22,8 +22,81 @@
    "texte": "Au fil de la reconstitution, le service relève des produits dont les **quantités vendues dépasseraient les achats**, et en déduit que la comptabilité serait **non sincère**. Il cite des exemples précis : le **Calvados** (sur-consommation sur les trois exercices, malgré une dose ramenée de 5 à 4 cl), des **eaux-de-vie** (Poire, Framboise, Mirabelle) et le **Martini Blanc** (petits volumes), et surtout une « **très grosse incohérence** » sur le **Haute Côte de Beaune blanc** : **12 950 cl** vendus en 2023-2024 alors que « le service n’est pas parvenu à identifier l’achat d’une seule bouteille de ce type »."
   },
   {
+   "kind": "tableau",
+   "titre": "Ce que le service obtient, exemple par exemple (Proposition p. 31-32)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Produit cité par le service"
+    },
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Incohérence chiffrée par le service"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "2022-23"
+     },
+     {
+      "v": "consommation > achats de 210 cl (≈ 8 % des achats)"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "2023-24"
+     },
+     {
+      "v": "consommation > achats de 802 cl (≈ 40 % des achats)"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "2024-25"
+     },
+     {
+      "v": "consommation > achats de 1 005 cl (≈ 50 % des achats)"
+     }
+    ],
+    [
+     {
+      "v": "Haute Côte de Beaune blanc"
+     },
+     {
+      "v": "2023-24"
+     },
+     {
+      "v": "12 950 cl « vendus », 0 bouteille achetée identifiée"
+     }
+    ],
+    [
+     {
+      "v": "Martini Blanc, eaux-de-vie (Poire, Framboise, Mirabelle)"
+     },
+     {
+      "v": "3 exercices"
+     },
+     {
+      "v": "petits volumes, « même problème »"
+     }
+    ]
+   ]
+  },
+  {
    "kind": "paragraphe",
-   "texte": "Nous répondons **exemple par exemple**, sans aucune supposition, en reliant pour chaque produit le **libellé de caisse**, la **facture fournisseur** et l’**inventaire**, puis en comparant, **par exercice**, les **achats (nets des avoirs)** à la **consommation mesurée**."
+   "texte": "Nous répondons **exemple par exemple**, sans aucune supposition, en reliant pour chaque produit le **libellé de caisse**, la **facture fournisseur** et l’**inventaire**, puis en comparant, **par exercice**, les **achats (nets des avoirs)** à la **consommation réelle**. Cette consommation n’est pas réestimée ici : nous reprenons les **volumes réels établis poste par poste** (vente au verre, cuisine, sur-versement, pertes) aux pages [Reconstitution par les volumes](/rendu-final/reconstitution-volumes-liquides) et [Alcool en cuisine et dans les menus](/rendu-final/alcool-cuisine-doses-plats)."
   },
   {
    "kind": "chapitre",
@@ -228,6 +301,16 @@
       "v": "BIB COTES DE PROV ROSE 10 L (Cap des Pins)"
      }
     ]
+   ]
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Table de correspondance complète (caisse, facture, inventaire) :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-conso-achats-correspondance.xlsx",
+     "label": "RF : Correspondance caisse / facture / inventaire (XLSX)"
+    }
    ]
   },
   {
@@ -462,6 +545,16 @@
    "texte": "**Le Beaune rouge est acheté et bu de façon cohérente** : 201,8 L achetés contre 172,1 L consommés sur trois ans (excédent +29,7 L). Le **Nuits blanc** (Lupé-Cholet), vin encore différent, est lui aussi acheté (18,0 L) bien au-delà de sa consommation (2,2 L). Il n’existe donc **aucun** volume de 12 950 cl de blanc non acheté : c’est une **confusion de libellés**, levée par la table de correspondance."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Détail Beaune (rouge/blanc/Nuits) par exercice et factures :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-conso-achats-haute-cote-beaune.xlsx",
+     "label": "RF : Haute Côte de Beaune : achats vs conso (XLSX)"
+    }
+   ]
+  },
+  {
    "kind": "chapitre",
    "source": "nous",
    "numero": 4,
@@ -470,7 +563,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le Calvados **vendu au verre** par la caisse ne représente que **1,4 L** sur trois ans (donnée exacte de caisse). Tout le reste de la consommation que retient le service est une **estimation de cuisson** : il l’a calculée en appliquant une dose par portion aux plats flambés (**camembert rôti flambé au Calvados**, **assiette du père Grégoire**). C’est si sensible à la dose que le service a lui-même **abaissé sa dose de 5 à 4 cl** pour limiter l’incohérence."
+   "texte": "**Ce que le service obtient.** Une « surconsommation » de Calvados de **210 cl** (2022-23), **802 cl** (2023-24) puis **1 005 cl** (2024-25), soit jusqu’à **50 % des achats** : il y voit une vente impossible faute d’achat suffisant. **Ce que montre la caisse.** Le Calvados **vendu au verre** ne représente que **1,4 L** sur trois ans (donnée exacte de caisse, pièce jointe). **Tout le reste part en cuisine** (camembert rôti flambé au Calvados, assiette du père Grégoire) : ce poste est **chiffré dose par dose, plat par plat**, à la page [Alcool en cuisine et dans les menus](/rendu-final/alcool-cuisine-doses-plats). C’est une **estimation de cuisson**, si sensible à la dose que le service a lui-même **abaissé la sienne de 5 à 4 cl** pour atténuer l’incohérence."
   },
   {
    "kind": "tableau",
@@ -565,6 +658,16 @@
   {
    "kind": "paragraphe",
    "texte": "L’« excès » de Calvados (-47,5 L sur trois ans) **ne porte donc pas sur des ventes** : il vient entièrement d’une **dose de flambé estimée**, alcool qui part en partie à la flamme et qui, surtout, est un **coût de cuisine : jamais une recette**. Sur-estimer une dose de cuisson ne peut révéler aucune vente non déclarée. Les **73,0 L** de Calvados achetés (facturés, pièce jointe) couvrent l’ensemble du service au verre et la cuisine à une dose réaliste de flambé."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Achats de Calvados (factures) et consommation par exercice :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-conso-achats-calvados.xlsx",
+     "label": "RF : Calvados : achats vs consommation (XLSX)"
+    }
+   ]
   },
   {
    "kind": "chapitre",
@@ -678,6 +781,16 @@
    "texte": "Ces volumes sont **infimes** (quelques litres sur trois ans) et **entièrement achetés**. L’écart apparent venait uniquement de ce que la caisse et la facture nomment différemment le même alcool : exactement le **rattachement de libellé** que corrige la table de correspondance."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Détail des familles et des factures correspondantes :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-conso-achats-eaux-de-vie.xlsx",
+     "label": "RF : Eaux-de-vie, liqueurs et Martini : achats vs conso (XLSX)"
+    }
+   ]
+  },
+  {
    "kind": "chapitre",
    "source": "nous",
    "numero": 6,
@@ -713,56 +826,6 @@
    "texte": "Au niveau qui a un sens économique : **toutes boissons agrégées** : le bilan matière se ferme **largement à l’excédent** : **10 622,0 L** achetés, **7 360,9 L** consommés, **213,3 L** de variation de stock, soit **+3 047,8 L** net. Loin d’une consommation supérieure aux achats, l’établissement a, globalement, **acheté plus qu’il n’a servi**. Les rares écarts négatifs par libellé (Calvados de cuisine, libellés frères des eaux-de-vie, couleur du Beaune) sont des **artefacts de rattachement**, neutralisés dès qu’on relie correctement caisse, factures et inventaire."
   },
   {
-   "kind": "chapitre",
-   "source": "nous",
-   "titre": "Conclusion",
-   "numero": 7
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Aucun des exemples du service ne révèle de vente cachée. Le **Beaune blanc** « introuvable » est du **rouge mal étiqueté** (450 cl de blanc réel contre 12 950 cl annoncés) ; les **eaux-de-vie** et le **Martini** sont **achetés** sous des libellés voisins ; le **Calvados** « en excès » est de l’**alcool de cuisine** (flambés), un coût et non une recette. Le bilan matière global est **excédentaire de 3 047,8 L**. Le grief de comptabilité « non sincère » sur ce fondement n’est pas établi."
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Table de correspondance complète (caisse, facture, inventaire) :",
-   "fichiers": [
-    {
-     "fichier": "pieces-defense/RF-conso-achats-correspondance.xlsx",
-     "label": "RF : Correspondance caisse / facture / inventaire (XLSX)"
-    }
-   ]
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Détail Beaune (rouge/blanc/Nuits) par exercice et factures :",
-   "fichiers": [
-    {
-     "fichier": "pieces-defense/RF-conso-achats-haute-cote-beaune.xlsx",
-     "label": "RF : Haute Côte de Beaune : achats vs conso (XLSX)"
-    }
-   ]
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Achats de Calvados (factures) et consommation par exercice :",
-   "fichiers": [
-    {
-     "fichier": "pieces-defense/RF-conso-achats-calvados.xlsx",
-     "label": "RF : Calvados : achats vs consommation (XLSX)"
-    }
-   ]
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Détail des familles et des factures correspondantes :",
-   "fichiers": [
-    {
-     "fichier": "pieces-defense/RF-conso-achats-eaux-de-vie.xlsx",
-     "label": "RF : Eaux-de-vie, liqueurs et Martini : achats vs conso (XLSX)"
-    }
-   ]
-  },
-  {
    "kind": "piecejointe",
    "intro": "Bilan matière complet, produit par produit :",
    "fichiers": [
@@ -771,6 +834,16 @@
      "label": "RF : Bilan matière global par boisson (XLSX)"
     }
    ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 7,
+   "titre": "Conclusion"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Aucun des exemples du service ne révèle de vente cachée. Le **Beaune blanc** « introuvable » est du **rouge mal étiqueté** (450 cl de blanc réel contre 12 950 cl annoncés) ; les **eaux-de-vie** et le **Martini** sont **achetés** sous des libellés voisins ; le **Calvados** « en excès » est de l’**alcool de cuisine** (flambés), un coût et non une recette. Le bilan matière global est **excédentaire de 3 047,8 L**. Le grief de comptabilité « non sincère » sur ce fondement n’est pas établi."
   },
   {
    "kind": "interne",

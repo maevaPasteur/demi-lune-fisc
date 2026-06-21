@@ -594,6 +594,18 @@ annexes_fichiers = [
 ]
 
 
+def annexes_lettres(*lettres):
+    """Fichiers d'annexes (3 exercices) pour les lettres demandées, afin de placer
+    chaque source DANS le bloc qui s'en sert plutôt qu'en une liste finale."""
+    out = []
+    for lettre, slug, desc in _ANNEXES_SRC:
+        if lettre in lettres:
+            for i, exo in enumerate(_EXOS3, 1):
+                out.append({"fichier": f"caisse-enregistreuse/ANNEXE-{lettre}{i}_{slug}_{exo}.xls",
+                            "label": f"Annexe {lettre}-{i} : {desc} ({exo})"})
+    return out
+
+
 def apercu_del(n=5):
     """n premières lignes « DEL » de l'annexe E-1, avec toutes les données tracées."""
     sh = xlrd.open_workbook(os.path.join(CAISSE, F_NOMS["E1"])).sheet_by_index(0)
@@ -893,6 +905,12 @@ sections = [
         ],
         "lignes": lignes_modes,
     },
+    {
+        "kind": "piecejointe",
+        "intro": "Fichier Règlement (F) tel que remis au service, pour les trois exercices "
+                 "(lignes « TOTAL <mode> » et « TOTAL GENERAL ») :",
+        "fichiers": annexes_lettres("F"),
+    },
     {"kind": "titre", "numero": "2.3", "texte": "La fluctuation du nombre d'articles"},
     {"kind": "titre", "texte": "Un nombre d'articles différent, exactement le même chiffre d'affaires"},
     {
@@ -957,13 +975,7 @@ sections = [
         "fichiers": [
             {"fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
              "label": "RF - Articles vs CA : décompte variable, chiffre d'affaires invariant (onglet « Articles vs CA »)"},
-            {"fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
-             "label": "Annexe C-1 : détail des tickets (2022-2023)"},
-            {"fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
-             "label": "Annexe C-2 : détail des tickets (2023-2024)"},
-            {"fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
-             "label": "Annexe C-3 : détail des tickets (2024-2025)"},
-        ],
+        ] + annexes_lettres("B", "C"),
     },
     {"kind": "titre", "numero": "2.4",
      "texte": "La fluctuation du chiffre d'affaires et l'écart avec la comptabilité"},
@@ -1025,20 +1037,14 @@ sections = [
     # ----- 3. PIECE JOINTE -----
     {
         "kind": "piecejointe",
-        "intro": "Calcul reproductible (onglets « Reglements par mode », « Triangulation », « Types evenements E ») :",
+        "intro": "Triangulation et écart avec la comptabilité, reproductibles (onglets « Reglements par "
+                 "mode », « Triangulation », « Types evenements E »), avec leurs annexes sources : synthèse "
+                 "du CA (A), Fichier Règlement (F), liste des tickets (H) et journal de TVA (G), pour les "
+                 "trois exercices.",
         "fichiers": [
-            {
-                "fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
-                "label": "RF - Fichiers Événement (E) et Règlement (F) - règlements par mode, triangulation, types d'événements",
-            }
-        ],
-    },
-    {
-        "kind": "piecejointe",
-        "intro": "Annexes de caisse citées dans cette page (sources, telles que remises au service) : "
-                 "Fichier Événement (E), Fichier Règlement (F), synthèse du CA (A), liste des tickets (H), "
-                 "prix/quantités (B), détail des tickets (C) et journal de TVA (G), pour les trois exercices.",
-        "fichiers": annexes_fichiers,
+            {"fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
+             "label": "RF - Fichiers Événement (E) et Règlement (F) - règlements par mode, triangulation, types d'événements"},
+        ] + annexes_lettres("A", "F", "H", "G"),
     },
     # ----- 4. VERDICT -----
     {

@@ -329,6 +329,16 @@
       ]
     },
     {
+      "kind": "piecejointe",
+      "intro": "Calcul de la base = TVA / taux ligne a ligne et rapprochement avec la comptabilite, exercice par exercice (onglet « Reconciliation caisse-compta »). Toutes les valeurs ci-dessus y sont recalculables.",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
+          "label": "RF - TVA : reconciliation des bases HT caisse / comptabilite (XLSX)"
+        }
+      ]
+    },
+    {
       "kind": "paragraphe",
       "texte": "Lecture. Le **HT total** (10 % + 20 %) reconstitue concorde avec la comptabilite a **moins de 0,01 %** sur chacun des trois exercices. Sur l'exercice 2025, on observe une **bascule d'environ 150 € entre les deux taux** (10 % a +176,57 €, 20 % a -145,32 €) : un produit classe differemment entre l'export caisse et la comptabilite, **sans effet ni sur le HT total (ecart +31,25 €) ni sur la TVA**. Surtout, les bases reconstituees **bouclent avec le CA TTC** : 296 111,00 € + 64 708,30 € + 42 552,76 € = 403 372,06 €, soit le CA TTC de la caisse (403 370,42 €), a 1,64 € pres (arrondi de la reconstitution base = TVA / taux). La base brute du fisc, elle, ne boucle pas du tout : 269 445,43 € + (-11 645,01 €) + TVA = 300 348,63 €, tres loin du CA TTC."
     },
@@ -1001,6 +1011,16 @@
       "texte": "Enfin, le service compare a sa propre lecture de l'annexe G (« Total CA TTC » = 403 324,72 € en 2023). Notre recalcul ticket par ticket donne 403 370,42 €, soit 45,70 € d'ecart avec la ligne de total du fichier : c'est l'**arrondi de la ligne « total »** de l'export, sans aucune incidence. Les trois lectures (annexe G du service, recalcul caisse, comptabilite) tiennent dans un **mouchoir de moins de 0,2 %**, le pourboire mis a part."
     },
     {
+      "kind": "piecejointe",
+      "intro": "Detail par exercice : TVA caisse vs compta (445710), CA TTC caisse vs compta, pourboire (706800) et solde d'arrondi (onglet « Reconciliation caisse-compta »).",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
+          "label": "RF - TVA : ecarts caisse / comptabilite, exercice par exercice (XLSX)"
+        }
+      ]
+    },
+    {
       "kind": "paragraphe",
       "texte": "**Constat 1 (modes de reglement).** La discordance que le service rappelle sur les modes de reglement (cheques, CB, tickets-restaurant, cheques-vacances, especes) porte sur ces **memes comptes de tresorerie**, dont la comptabilite affiche d'ailleurs explicitement les lignes d'**ajustement de retranscription** (ex. 511200 : -567,30 € en 2023). Le rapprochement global tient : **98,6 % des reglements sont bancarises** (donc traçables aupres des banques) et **1,4 % seulement en especes**. Le total encaisse egale le chiffre d'affaires declare. Ce point, qui ne touche pas la TVA, est traite en detail au grief « suppressions de caisse / encaissements » : il ne revele aucune recette en dehors de la comptabilite."
     },
@@ -1136,40 +1156,6 @@
       "titre": "Piece justificative complete"
     },
     {
-      "kind": "chapitre",
-      "source": "nous",
-      "titre": "Conclusion",
-      "numero": 7
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Les quatre constats tombent, preuve a l'appui.** (1) Les *modes de reglement* sont des comptes de tresorerie avec ajustements de retranscription visibles, bancarises a 98,6 %, et ne touchent pas la TVA. (2) Les *bases negatives* (et la base 10 % sous-estimee) sont un defaut d'affichage d'une colonne d'export ; la base reconstituee a partir de la TVA reellement collectee (**les propres chiffres de TVA du service**) **egale la comptabilite** (706300 / 706000), HT total a moins de 0,01 %. (3) L'ecart *somme / Total TVA* est un arrondi d'affichage (au plus 0,03 %). (4) La *non-correspondance des produits* se reduit, pour le CA TTC, au **pourboire** (706800) plus quelques arrondis ; et pour la TVA, a une **sur-declaration** de 205,22 € sur trois ans (0,15 %) : la societe a paye **plus** de TVA que la caisse n'en a enregistre."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Aucun de ces quatre constats ne revele une recette dissimulee ni une erreur de TVA. La ventilation 10 % / 20 % suit exactement la nature des produits imposee par le droit (CGI art. 279, m et 278 ; BOFiP), et la TVA reellement collectee se reconcilie a l'euro pres avec la comptabilite. **Le grief d'« incoherences de TVA » n'est pas fonde et doit etre abandonne.**"
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Calcul de la base = TVA / taux ligne a ligne et rapprochement avec la comptabilite, exercice par exercice (onglet « Reconciliation caisse-compta »). Toutes les valeurs ci-dessus y sont recalculables.",
-      "fichiers": [
-        {
-          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
-          "label": "RF - TVA : reconciliation des bases HT caisse / comptabilite (XLSX)"
-        }
-      ]
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Detail par exercice : TVA caisse vs compta (445710), CA TTC caisse vs compta, pourboire (706800) et solde d'arrondi (onglet « Reconciliation caisse-compta »).",
-      "fichiers": [
-        {
-          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
-          "label": "RF - TVA : ecarts caisse / comptabilite, exercice par exercice (XLSX)"
-        }
-      ]
-    },
-    {
       "kind": "piecejointe",
       "intro": "Fichier unique, quatre onglets, tout recalculable ligne a ligne depuis l'annexe G : (1) ventilation de la TVA par exercice, (2) coherence par famille (nature du produit), (3) chiffrage des ecarts, (4) reconciliation caisse / comptabilite (bases, TVA, CA TTC, pourboire).",
       "fichiers": [
@@ -1178,6 +1164,20 @@
           "label": "RF - Incoherences de TVA : ventilation, reconciliation caisse/compta, ecarts (XLSX)"
         }
       ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 7,
+      "titre": "Conclusion"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Les quatre constats tombent, preuve a l'appui.** (1) Les *modes de reglement* sont des comptes de tresorerie avec ajustements de retranscription visibles, bancarises a 98,6 %, et ne touchent pas la TVA. (2) Les *bases negatives* (et la base 10 % sous-estimee) sont un defaut d'affichage d'une colonne d'export ; la base reconstituee a partir de la TVA reellement collectee (**les propres chiffres de TVA du service**) **egale la comptabilite** (706300 / 706000), HT total a moins de 0,01 %. (3) L'ecart *somme / Total TVA* est un arrondi d'affichage (au plus 0,03 %). (4) La *non-correspondance des produits* se reduit, pour le CA TTC, au **pourboire** (706800) plus quelques arrondis ; et pour la TVA, a une **sur-declaration** de 205,22 € sur trois ans (0,15 %) : la societe a paye **plus** de TVA que la caisse n'en a enregistre."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Aucun de ces quatre constats ne revele une recette dissimulee ni une erreur de TVA. La ventilation 10 % / 20 % suit exactement la nature des produits imposee par le droit (CGI art. 279, m et 278 ; BOFiP), et la TVA reellement collectee se reconcilie a l'euro pres avec la comptabilite. **Le grief d'« incoherences de TVA » n'est pas fonde et doit etre abandonne.**"
     }
   ]
 }
