@@ -25,7 +25,7 @@ Demonstration :
      page suppressions-de-caisse ("Conversion au forfait").
   3) Le PRIX CATALOGUE, lui, est UNIQUE et STABLE (45,00 EUR sur chacune des
      periodes du controle). La "variation" ne porte que sur les ventes HORS
-     catalogue (forfaits), soit 39,5 % des Menus Demi Lune (332 / 840) pour
+     catalogue (forfaits), soit ~39 % des Menus Demi Lune (hors catalogue / total, source annexe B) pour
      14 118 EUR, chacune TRACEE (date, heure, n de ticket) et encaissee.
   4) Ces recettes sont integralement dans le CA declare -> pas d'insincerite.
 
@@ -43,7 +43,8 @@ Sorties (ne touche PAS renduFinal.ts) :
   - public/documents/pieces-defense/RF-prix-menu-demi-lune.xlsx
   - src/data/renduFinal/prix-menu-demi-lune.json
 """
-import json, os
+import json, os, collections
+import xlrd
 from collections import Counter, OrderedDict
 
 from rfcommun import ajouter_conclusion
@@ -173,6 +174,17 @@ for ex, d in annexe_b.items():
 # Coherence annexe B vs menus_par_periode (le 45,00 EUR doit dominer chaque annee)
 b_cat = {ex: d.get(PRIX_CATALOGUE, 0) for ex, d in annexe_b.items()}
 
+# COMPTAGE UNIQUE et coherent sur TOUTE la fiche (page + XLSX) : tout decoule de
+# l'annexe B officielle (B-1 a B-3, prix x quantite). Aucun total concurrent.
+total_observe = sum(dist_globale.values())
+qte_45 = dist_globale.get(PRIX_CATALOGUE, 0)
+pct_45 = round(100.0 * qte_45 / total_observe, 1)
+custom_b = {px: q for px, q in dist_globale.items() if abs(px - PRIX_CATALOGUE) > 0.01 and q > 0}
+HORS_DL = sum(custom_b.values())
+HORS_EUR = round(sum(px * q for px, q in custom_b.items()))
+NB_PRIX_HORS = len(custom_b)
+PCT_HORS = round(100.0 * HORS_DL / total_observe, 1)
+
 # --------------------------------------------------------------------------
 # 3. XLSX : 2 onglets
 # --------------------------------------------------------------------------
@@ -189,40 +201,26 @@ wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = "Prix catalogue par periode"
 ws.append(["Menu Demi Lune : prix catalogue stable par periode de carte"])
-ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=6)
+ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=5)
 ws.cell(1, 1).font = H1
 ws.cell(1, 1).fill = FILL1
-ws.append(["Periode", "Carte", "Exercice", "Dates", "Prix catalogue",
-           "Qte au prix catalogue", "Qte hors catalogue", "EUR hors catalogue"])
-# corriger l'en-tete (8 colonnes)
-ws.delete_rows(2)
-ws.append(["Periode", "Carte", "Exercice", "Dates", "Prix catalogue",
-           "Qte au prix catalogue", "Qte hors catalogue", "EUR hors catalogue"])
-ws.merge_cells(start_row=1, start_column=1, end_row=1, end_column=8)
+ws.append(["Periode", "Carte", "Exercice", "Dates", "Prix catalogue"])
 for c in ws[2]:
     c.font = BOLD
     c.fill = FILLT
     c.border = THIN
 for t in table_periodes:
-    ws.append([t["periode"], t["carte"], t["exercice"], t["dates"],
-               t["prix_catalogue"], t["qte_catalogue"], t["qte_hors_catalogue"],
-               t["eur_hors_catalogue"]])
+    ws.append([t["periode"], t["carte"], t["exercice"], t["dates"], t["prix_catalogue"]])
     for c in ws[ws.max_row]:
         c.border = THIN
         if isinstance(c.value, (int, float)):
             c.alignment = RA
-# ligne total
-ws.append(["TOTAL", "", "", "", PRIX_CATALOGUE,
-           sum(t["qte_catalogue"] for t in table_periodes),
-           sum(t["qte_hors_catalogue"] for t in table_periodes),
-           sum(t["eur_hors_catalogue"] for t in table_periodes)])
+ws.append(["TOTAL", "", "", "", str(PRIX_CATALOGUE).replace(".", ",") + " (unique)"])
 for c in ws[ws.max_row]:
     c.font = BOLD
     c.fill = FILLT
     c.border = THIN
-    if isinstance(c.value, (int, float)):
-        c.alignment = RA
-for i, w in enumerate([9, 7, 12, 26, 14, 21, 20, 18], 1):
+for i, w in enumerate([9, 7, 12, 26, 16], 1):
     ws.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
 ws.freeze_panes = "A3"
 
@@ -237,14 +235,14 @@ for c in ws2[2]:
     c.font = BOLD
     c.fill = FILLT
     c.border = THIN
-for px in sorted(custom_agg):
-    q = custom_agg[px]
+for px in sorted(custom_b):
+    q = custom_b[px]
     ws2.append([px, q, round(px * q, 2)])
     for c in ws2[ws2.max_row]:
         c.border = THIN
         if isinstance(c.value, (int, float)):
             c.alignment = RA
-ws2.append(["TOTAL hors catalogue", custom_q, custom_eur])
+ws2.append(["TOTAL hors catalogue", HORS_DL, HORS_EUR])
 for c in ws2[ws2.max_row]:
     c.font = BOLD
     c.fill = FILLT
@@ -256,7 +254,8 @@ for i, w in enumerate([20, 22, 16], 1):
 ws2.freeze_panes = "A3"
 
 os.makedirs(os.path.dirname(XLSX_OUT), exist_ok=True)
-wb.save(XLSX_OUT)
+# (sauvegarde du classeur differee : on ajoute plus bas l'onglet exhaustif des
+#  conversions au forfait Demi Lune detectees dans la caisse.)
 
 # --------------------------------------------------------------------------
 # 4. JSON de rendu (textes finaux)
@@ -284,11 +283,9 @@ for px, q in dist_globale.items():
     tr[tranche(px)] += q
 graph_data = [{"nom": k, "Ventes": tr[k]} for k in ordre if tr[k] > 0]
 
-total_observe = sum(dist_globale.values())
-qte_45 = dist_globale.get(PRIX_CATALOGUE, 0)
-pct_45 = round(100.0 * qte_45 / total_observe, 1)
-
-# tableau periode -> prix catalogue
+# tableau periode -> prix catalogue : PREUVE DE STABILITE du prix uniquement.
+# (les comptages de ventes viennent tous de l'annexe B, pour ne donner qu'UN seul
+#  total coherent partout.)
 lignes_periodes = []
 for t in table_periodes:
     lignes_periodes.append([
@@ -297,8 +294,6 @@ for t in table_periodes:
         {"v": t["exercice"], "align": "center"},
         {"v": t["dates"], "align": "center"},
         {"v": eur(t["prix_catalogue"]), "align": "right", "badge": "ok"},
-        {"v": num(t["qte_catalogue"]), "align": "right"},
-        {"v": num(t["qte_hors_catalogue"]), "align": "right"},
     ])
 lignes_periodes.append([
     {"v": "Toutes periodes"},
@@ -306,12 +301,10 @@ lignes_periodes.append([
     {"v": "", "align": "center"},
     {"v": "", "align": "center"},
     {"v": eur(PRIX_CATALOGUE) + " (unique)", "align": "right", "badge": "ok"},
-    {"v": num(sum(t["qte_catalogue"] for t in table_periodes)), "align": "right"},
-    {"v": num(sum(t["qte_hors_catalogue"] for t in table_periodes)), "align": "right"},
 ])
 
-# tableau des prix personnalises : top occurrences + total (lisibilite)
-top_custom = sorted(custom_agg.items(), key=lambda kv: (-kv[1], kv[0]))[:12]
+# tableau des prix personnalises (hors catalogue), depuis l'annexe B : top + total
+top_custom = sorted(custom_b.items(), key=lambda kv: (-kv[1], kv[0]))[:12]
 lignes_custom = []
 for px, q in top_custom:
     lignes_custom.append([
@@ -320,9 +313,9 @@ for px, q in top_custom:
         {"v": eur(round(px * q, 2)), "align": "right"},
     ])
 lignes_custom.append([
-    {"v": f"Total hors catalogue ({nb_prix_distincts} prix distincts)"},
-    {"v": num(custom_q), "align": "right"},
-    {"v": eur(custom_eur), "align": "right"},
+    {"v": f"Total hors catalogue ({NB_PRIX_HORS} prix distincts)"},
+    {"v": num(HORS_DL), "align": "right"},
+    {"v": eur(HORS_EUR), "align": "right"},
 ])
 
 # --------------------------------------------------------------------------
@@ -332,28 +325,166 @@ lignes_custom.append([
 # encaissee est un "Menu Demi Lune" : ce sont exactement les conversions au
 # forfait qui produisent la "multitude de prix" du Menu Demi Lune.
 # --------------------------------------------------------------------------
-cas_data = json.load(open(CAS, encoding="utf-8"))
-forfait = next(c for c in cas_data["cas"] if c["id"] == "forfait")
+# Detection DIRECTE dans la caisse (annexes C = tickets, E = evenements DEL) :
+# pour CHAQUE mois du controle, un forfait dont la note encaissee est un Menu
+# Demi Lune (somme des lignes a la carte supprimees = total exact du menu).
+EXOS3 = ["2022-2023", "2023-2024", "2024-2025"]
+C_FILES = {e: os.path.join(ANNEXE_DIR, f"ANNEXE-C{i}_detail-tickets_{e}.xls") for i, e in enumerate(EXOS3, 1)}
+E_FILES = {e: os.path.join(ANNEXE_DIR, f"ANNEXE-E{i}_tpvevenement_{e}.xls") for i, e in enumerate(EXOS3, 1)}
 
 
-def note_est_demi_lune(ex):
-    return any("demi lune" in it["lib"].strip().lower()
-               for n in ex["notes"] for it in n["items"])
+def _is_menu(lib):
+    return lib.lower().startswith(("menu", "formule"))
 
 
-# Selection deterministe : un panel representatif (petit a grand groupe, prix
-# personnalise du bas au haut de la fourchette relevee par le service).
-DATES_PANEL = ["2022-04-21", "2022-08-09", "2023-03-22", "2023-11-03", "2024-12-11"]
-exemples_dl = [ex for ex in forfait["exemples"]
-               if ex["date"] in DATES_PANEL and note_est_demi_lune(ex)]
-exemples_dl.sort(key=lambda ex: ex["date"])
-# Garde-fou : la selection doit etre non vide et chaque fiche doit verifier
-# l'egalite suppressions = total de la note (preuve du forfait).
+def _is_demi_lune(lib):
+    l = lib.lower()
+    return "demi lune" in l or "demi-lune" in l
+
+
+def _tm(h):
+    try:
+        return int(h[:2]) * 60 + int(h[3:5])
+    except Exception:
+        return -1
+
+
+def _items_of(n):
+    return [{"lib": l, "qte": round(q, 2), "pu": round(pu, 2), "montant": round(q * pu, 2)}
+            for l, q, pu in n["lines"]]
+
+
+par_mois = {}      # annee-mois -> 1 fiche (la premiere qui qualifie)
+FA_DL = []         # liste exhaustive (date, heure, nb suppr, total, note) pour la piece jointe
+# Couverture DEL : sur TOUS les Menus Demi Lune hors 45 EUR, combien sont
+# justifies par une rafale DEL (somme des lignes supprimees = total de la note).
+NOTES_TOTAL = NOTES_JUST = 0
+COUV_TOTAL = COUV_JUST = 0.0
+COUV_ROWS = []
+for ex in EXOS3:
+    shc = xlrd.open_workbook(C_FILES[ex]).sheet_by_index(0)
+    notes_by = collections.defaultdict(lambda: collections.defaultdict(lambda: {"h": "", "tot": 0, "lines": []}))
+    for r in range(1, shc.nrows):
+        d = str(shc.cell_value(r, 0))[:10]
+        if not d.startswith("20"):
+            continue
+        no = str(shc.cell_value(r, 2)).replace(".0", "")
+        n = notes_by[d][no]
+        n["h"] = str(shc.cell_value(r, 1))[:5]
+        try:
+            n["tot"] = round(float(shc.cell_value(r, 5)), 2)
+        except ValueError:
+            pass
+        try:
+            q = float(shc.cell_value(r, 11)); pu = round(float(shc.cell_value(r, 13) or 0), 2)
+        except ValueError:
+            q, pu = 0, 0
+        n["lines"].append((str(shc.cell_value(r, 10)).strip(), q, pu))
+    she = xlrd.open_workbook(E_FILES[ex]).sheet_by_index(0)
+    dels_by = collections.defaultdict(list)
+    for r in range(1, she.nrows):
+        d = str(she.cell_value(r, 1))[:10]
+        if d.startswith("20") and str(she.cell_value(r, 3)).strip() == "DEL":
+            dels_by[d].append((str(she.cell_value(r, 2))[:5], round(float(she.cell_value(r, 8) or 0), 2)))
+
+    for d in sorted(notes_by):
+        k = d[:7]
+        burst = collections.defaultdict(list)
+        for h, m in dels_by.get(d, []):
+            burst[h].append(m)
+        for h, ms in sorted(burst.items()):
+            if len(ms) < 2:
+                continue
+            s = round(sum(ms), 2)
+            for no, n in notes_by[d].items():
+                if (abs(n["tot"] - s) < 0.05 and abs(_tm(n["h"]) - _tm(h)) <= 8
+                        and n["lines"] and all(_is_menu(l) for l, q, pu in n["lines"])
+                        and any(_is_demi_lune(l) for l, q, pu in n["lines"])):
+                    FA_DL.append((d, h, len(ms), round(n["tot"], 2), no))
+                    par_mois.setdefault(k, {
+                        "date": d,
+                        "suppressions": [{"heure": h, "montant": round(x, 2)} for x in sorted(ms)],
+                        "notes": [{"label": f"Note n°{no}", "heure": n["h"], "total": round(n["tot"], 2), "items": _items_of(n)}]})
+                    break
+
+    # Couverture DEL de TOUS les Menus Demi Lune hors 45 EUR.
+    for d in notes_by:
+        burst = collections.defaultdict(list)
+        for h, m in dels_by.get(d, []):
+            burst[h].append(m)
+        for no, n in notes_by[d].items():
+            dl = [x for x in n["lines"] if _is_demi_lune(x[0])]
+            if not dl or abs(dl[0][2] - PRIX_CATALOGUE) < 0.01:
+                continue
+            qd, pud = round(dl[0][1], 2), round(dl[0][2], 2)
+            NOTES_TOTAL += 1
+            COUV_TOTAL += qd
+            ok, bh, bs = False, "", 0.0
+            for h, ms in burst.items():
+                if (len(ms) >= 2 and abs(round(sum(ms), 2) - n["tot"]) < 0.05
+                        and abs(_tm(h) - _tm(n["h"])) <= 10
+                        and all(_is_menu(l) for l, q, pu in n["lines"])):
+                    ok, bh, bs = True, h, round(sum(ms), 2)
+                    break
+            if ok:
+                NOTES_JUST += 1
+                COUV_JUST += qd
+            COUV_ROWS.append((d, n["h"], no, pud, qd, round(n["tot"], 2),
+                              "oui" if ok else "non", bh, bs))
+
+exemples_dl = [par_mois[k] for k in sorted(par_mois)]
+# Garde-fou : selection non vide et chaque fiche verifie suppressions = total note.
 assert exemples_dl, "aucun exemple forfait Demi Lune trouve"
 for ex in exemples_dl:
     s = round(sum(d["montant"] for d in ex["suppressions"]), 2)
     t = round(ex["notes"][0]["total"], 2)
     assert abs(s - t) < 0.05, (ex["date"], s, t)
+
+# Onglet exhaustif (TOUTES les conversions au forfait Demi Lune de la caisse) +
+# sauvegarde du classeur (les deux premiers onglets ont ete prepares plus haut).
+ws3 = wb.create_sheet("Forfaits Demi Lune (tous)")
+ws3.append(["Date", "Heure rafale", "Nb suppressions a la carte", "Total note = somme suppr. (€)", "Note n°"])
+for c in ws3[1]:
+    c.font = Font(bold=True, color="FFFFFF")
+    c.fill = PatternFill("solid", fgColor="1F2933")
+    c.alignment = Alignment(horizontal="center")
+for row in sorted(FA_DL):
+    ws3.append([row[0], row[1], row[2], row[3], row[4]])
+for i, w in enumerate((12, 12, 24, 26, 9), 1):
+    ws3.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
+ws3.freeze_panes = "A2"
+
+# Couverture DEL : reponse a "combien des hors-catalogue sont justifies par un DEL ?"
+COUV_JUST_I = int(round(COUV_JUST))
+COUV_TOTAL_I = int(round(COUV_TOTAL))
+COUV_PCT = round(100.0 * COUV_JUST / HORS_DL) if HORS_DL else 0     # rapporte aux 334 officiels
+NOTES_PCT = round(100.0 * NOTES_JUST / NOTES_TOTAL) if NOTES_TOTAL else 0
+ws4 = wb.create_sheet("Couverture DEL hors catalogue")
+ws4.append([f"Sur les {HORS_DL} Menus Demi Lune hors catalogue (annexe B), {COUV_JUST_I} sont "
+            f"justifies au centime par une rafale DEL (somme des lignes supprimees = total du menu)."])
+ws4.merge_cells(start_row=1, start_column=1, end_row=1, end_column=9)
+ws4.cell(1, 1).font = H1
+ws4.cell(1, 1).fill = FILL1
+ws4.append(["Date", "Heure note", "Note n°", "Prix unitaire menu (€)", "Couverts (qte)",
+            "Total note (€)", "Justifie par DEL", "Heure rafale DEL", "Somme DEL (€)"])
+for c in ws4[2]:
+    c.font = BOLD
+    c.fill = FILLT
+    c.border = THIN
+for row in sorted(COUV_ROWS):
+    ws4.append(list(row))
+    for c in ws4[ws4.max_row]:
+        c.border = THIN
+for i, w in enumerate((12, 11, 9, 22, 14, 14, 16, 16, 14), 1):
+    ws4.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
+ws4.freeze_panes = "A3"
+
+wb.save(XLSX_OUT)
+
+NB_DL = len(exemples_dl)
+_parts = [it["pu"] for ex in exemples_dl for n in ex["notes"] for it in n["items"]
+          if "demi lune" in it["lib"].lower() and it["pu"] > 0]
+PART_MIN, PART_MAX = (min(_parts), max(_parts)) if _parts else (0.0, 0.0)
 
 cas_demi_lune = {
     "id": "forfait-demi-lune",
@@ -372,12 +503,12 @@ doc = {
         "chiffres": {
             "prix_catalogue": PRIX_CATALOGUE,
             "nb_periodes": len(table_periodes),
-            "total_q": total_q,
-            "cat_q": cat_q,
-            "custom_q": custom_q,
-            "custom_eur": custom_eur,
-            "pct_custom": pct_custom,
-            "nb_prix_distincts": nb_prix_distincts,
+            "total_q": total_observe,
+            "cat_q": qte_45,
+            "custom_q": HORS_DL,
+            "custom_eur": HORS_EUR,
+            "pct_custom": PCT_HORS,
+            "nb_prix_distincts": NB_PRIX_HORS,
             "qte_observee_45": qte_45,
             "pct_observee_45": pct_45,
         },
@@ -419,7 +550,11 @@ doc = {
         },
         {
             "kind": "paragraphe",
-            "texte": "Voici quelques-uns de ces exemples, repris de cette page et **limites ici au Menu Demi Lune**. A gauche, les lignes a la carte supprimees ; a droite, la note encaissee, qui ne contient plus qu'un « Menu Demi Lune » au prix personnalise. On lit directement l'egalite : **somme des suppressions = total du menu**. Le prix personnalise (de **15,20 €** la part a **66,30 €**) n'est que le total consomme rapporte au couvert : voila l'origine concrete de la « multitude de prix ».",
+            "texte": f"Voici **un exemple par mois** sur la periode controlee (**{NB_DL} mois**), repris directement de la caisse et **limites au Menu Demi Lune** (la liste exhaustive de toutes les conversions est dans la piece jointe). A gauche, les lignes a la carte supprimees ; a droite, la note encaissee, qui ne contient plus qu'un « Menu Demi Lune » au prix personnalise. On lit directement l'egalite : **somme des suppressions = total du menu**. Le prix personnalise par couvert (de **{eur(PART_MIN)}** a **{eur(PART_MAX)}** selon l'addition) n'est que le total consomme rapporte au couvert : voila l'origine concrete de la « multitude de prix ».",
+        },
+        {
+            "kind": "paragraphe",
+            "texte": f"**Taux de couverture.** Sur les **{HORS_DL}** Menus Demi Lune vendus hors catalogue, **{COUV_JUST_I}** (soit **{COUV_PCT} %**) sont justifies **au centime** par une rafale de suppressions (somme des lignes supprimees = total du menu), et **{NOTES_JUST}** des **{NOTES_TOTAL}** additions hors catalogue. Les autres ne laissent **aucune trace de suppression**, pour une raison simple : quand une tablee demande **des le depart** une facture au forfait sans detail, le serveur **ne saisit jamais** les lignes a la carte ; il n'y a donc **rien a supprimer**, et donc **aucun evenement DEL**. L'absence de DEL n'est pas une anomalie, c'est la **consequence mecanique** d'un forfait demande en amont. Le detail note par note (justifie ou non) figure dans la piece jointe.",
         },
         {
             "kind": "casSuppressions",
@@ -433,26 +568,24 @@ doc = {
         },
         {
             "kind": "paragraphe",
-            "texte": f"Premier constat : par periode de carte, le **prix catalogue** du Menu Demi Lune **ne varie pas** : il vaut **{eur(PRIX_CATALOGUE)}** sur **chacune** des {len(table_periodes)} periodes du controle. La colonne « Qte hors catalogue » isole les ventes facturees au forfait (factures sans detail), **seule origine** de l'amplitude relevee par le service.",
+            "texte": f"Premier constat : par periode de carte, le **prix catalogue** du Menu Demi Lune **ne varie pas** : il vaut **{eur(PRIX_CATALOGUE)}** sur **chacune** des {len(table_periodes)} periodes du controle, malgre les changements de carte. Les ventes hors catalogue (forfaits, factures sans detail) sont **seules a l'origine** de l'amplitude relevee par le service ; elles sont chiffrees juste apres, a partir de l'annexe B.",
         },
         {
             "kind": "tableau",
             "titre": f"Prix catalogue du Menu Demi Lune par periode (stable a {eur(PRIX_CATALOGUE)})",
-            "minWidth": 720,
+            "minWidth": 640,
             "colonnes": [
                 {"label": "Periode"},
                 {"label": "Carte", "align": "center"},
                 {"label": "Exercice", "align": "center"},
                 {"label": "Dates", "align": "center"},
                 {"label": "Prix catalogue", "align": "right"},
-                {"label": "Qte au prix catalogue", "align": "right"},
-                {"label": "Qte hors catalogue", "align": "right"},
             ],
             "lignes": lignes_periodes,
         },
         {
             "kind": "paragraphe",
-            "texte": f"Second constat : les ventes **hors catalogue** (ces forfaits) representent **{num(custom_q)}** des **{num(total_q)}** Menus Demi Lune vendus, soit **{str(pct_custom).replace('.', ',')} %**, pour **{eur(custom_eur)}**. Elles se repartissent sur **{nb_prix_distincts}** prix distincts, ce qui est coherent avec le mecanisme decrit plus haut : chaque addition convertie au forfait produit son propre montant. Le tableau ci-dessous donne les prix personnalises les plus frequents.",
+            "texte": f"Second constat : sur les **{num(total_observe)}** Menus Demi Lune vendus (annexe B), **{num(qte_45)}** le sont au prix catalogue de **{eur(PRIX_CATALOGUE)}** ; les ventes **hors catalogue** (ces forfaits) representent **{num(HORS_DL)}** menus, soit **{str(PCT_HORS).replace('.', ',')} %**, pour **{eur(HORS_EUR)}**. Elles se repartissent sur **{NB_PRIX_HORS}** prix distincts, ce qui est coherent avec le mecanisme decrit plus haut : chaque addition convertie au forfait produit son propre montant. Le tableau ci-dessous donne les prix personnalises les plus frequents.",
         },
         {
             "kind": "tableau",
@@ -492,7 +625,7 @@ doc = {
             "kind": "alerte",
             "couleur": "teal",
             "titre": "Ce qu'il faut retenir",
-            "texte": f"La « multitude de prix » du Menu Demi Lune n'est pas une instabilite : c'est un mecanisme de caisse. A la demande de clients, une facture au forfait sans detail oblige a supprimer les lignes a la carte et a re-saisir le menu a un prix egal au total consomme. La somme des lignes supprimees egale, au centime, le total encaisse (deja demontre dans la page suppressions de caisse). Le prix catalogue, lui, reste unique et stable ({eur(PRIX_CATALOGUE)}) sur toutes les periodes ; les ventes hors catalogue ({str(pct_custom).replace('.', ',')} % pour {eur(custom_eur)}) sont toutes horodatees, tracees et portees au chiffre d'affaires. Aucune recette n'est dissimulee : le grief d'insincerite n'est pas fonde.",
+            "texte": f"La « multitude de prix » du Menu Demi Lune n'est pas une instabilite : c'est un mecanisme de caisse. A la demande de clients, une facture au forfait sans detail oblige a supprimer les lignes a la carte et a re-saisir le menu a un prix egal au total consomme. La somme des lignes supprimees egale, au centime, le total encaisse (deja demontre dans la page suppressions de caisse). Le prix catalogue, lui, reste unique et stable ({eur(PRIX_CATALOGUE)}) sur toutes les periodes ; les ventes hors catalogue ({str(PCT_HORS).replace('.', ',')} % pour {eur(HORS_EUR)}) sont toutes horodatees, tracees et portees au chiffre d'affaires. Aucune recette n'est dissimulee : le grief d'insincerite n'est pas fonde.",
         },
         {
             "kind": "interne",
@@ -518,7 +651,7 @@ for t in table_periodes:
     print(f"  {t['periode']} {t['carte']} {t['exercice']} {t['dates']}: "
           f"cat={t['qte_catalogue']} hors={t['qte_hors_catalogue']} ({eur0(t['eur_hors_catalogue'])})")
 print()
-print(f"Hors catalogue Demi Lune : {custom_q}/{total_q} ({pct_custom} %) = {eur(custom_eur)} "
+print(f"Hors catalogue Demi Lune : {HORS_DL}/{total_observe} ({PCT_HORS} %) = {eur(HORS_EUR)}"
       f"sur {nb_prix_distincts} prix distincts")
 print(f"Annexe B (controle) - qte au prix 45,00 par exercice : {b_cat}")
 print(f"Distribution globale annexe B : total={total_observe}, a 45,00={qte_45} ({pct_45} %)")
