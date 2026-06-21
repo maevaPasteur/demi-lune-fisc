@@ -477,11 +477,11 @@ const autresGriefs: Grief[] = [
     slug: 'coefficients-de-revente',
     bloc: 'rejet',
     refRapport: 'Proposition p. 34-37 (rejet 3/3)',
-    titre: 'Faiblesse des coefficients de revente',
-    griefFisc: 'Des coefficients de marge jugés faibles indiqueraient une minoration de recettes.',
+    titre: 'Le coefficient de revente jugé trop bas',
+    griefFisc: 'Le coefficient de revente déclaré (≈ 2,30) serait « manifestement très bas et hors des usages de la profession » (≈ 3+), révélant une minoration.',
     reponseCourte:
-      'Les coefficients réels intègrent la cuisine, les offerts et les pertes ; recalculés correctement, ils sont conformes au secteur.',
-    statut: 'a-etayer',
+      'Sur l’alcool réellement revendu, le coefficient atteint × 3,85 (au-dessus du seuil profession) ; produit par produit, la marge est normale (× 3 à × 5). Le coefficient apparent bas vient des 36 % d’alcool jamais revendu (cuisine, sur-versement, pertes) et non d’une recette cachée.',
+    statut: 'demonte',
     sections: RFCoefficients.sections as unknown as Section[],
   },
   // ---- BLOC 2 : RECONSTITUTION DU CA ----

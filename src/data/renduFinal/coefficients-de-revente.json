@@ -1,148 +1,912 @@
 {
  "meta": {
   "slug": "coefficients-de-revente",
-  "titre": "Faiblesse des coefficients de revente",
+  "titre": "Le coefficient de revente jugé trop bas",
   "source": "scripts/rendu-final-coefficients-de-revente.py",
   "grief": "Proposition de rectification p. 34-35 (rejet de comptabilité, 3/3).",
   "chiffres": {
-   "fisc_coef": 3.1,
-   "fisc_ca_reconstitue": 575253,
-   "ca_declare": 435525,
-   "achat_alcool_l": 10622,
-   "achat_alcool_cout": 107924,
-   "non_revendu_au_verre_l": 3842,
+   "coef_declare_moyen": 2.33,
+   "coef_sur_alcool_revendu": 3.85,
    "part_non_revendu_pct": 36.2,
-   "cuisine_l": 566,
-   "menus_l": 228,
-   "chef_l": 143,
-   "offerts_l": 40,
-   "surversement_l": 720,
-   "stock_l": 213,
-   "coef_brut_global": 3.82,
-   "coef_effectif_global": 2.44
+   "nb_produits": 90,
+   "ca_couvert": 187079
   }
  },
  "sections": [
   {
    "kind": "chapitre",
    "source": "fisc",
+   "numero": 1,
    "titre": "Ce que dit l'administration",
-   "sousTitre": "Proposition de rectification, p. 34-35 (rejet 3/3)",
-   "numero": 1
+   "sousTitre": "Proposition p. 34-35 : un coefficient de revente jugé « manifestement très bas »"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service calcule, à partir de la comptabilité **déclarée** (chiffre d'affaires total rapporté au coût d'achat des matières, denrées et boissons confondues), un **coefficient de revente** de **2,303** (exercice 2023), **2,388** (2024) et **2,310** (2025). Il juge ces coefficients « **manifestement très bas et en dehors des usages habituels de la profession** » et y voit la confirmation que la comptabilité ne retranscrit pas la réalité de l'activité (p. 34)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Après sa reconstitution, le service obtient des coefficients de **3,404 / 3,144 / 3,051**, qu'il estime « conformes à ceux habituellement observés dans les établissements similaires » (p. 35). Sur le seul volet des liquides, cela revient à appliquer un coefficient d'environ **3,10** aux achats de boissons et à reconstituer un chiffre d'affaires « boissons » de **575 253 €**, contre **435 525 €** déclarés."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "titre": "Pourquoi un coefficient brut n'a aucune valeur probante",
-   "sousTitre": "Il suppose que tout l'alcool acheté est revendu au verre au prix de la carte",
-   "numero": 2
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Un coefficient calculé **brut** (chiffre d'affaires théorique au prix carte / achats) repose sur une hypothèse fausse : que **100 % des litres achetés sont revendus au verre, au prix de la carte**. Or une part importante de l'alcool n'est **jamais revendue au verre** : elle part en **cuisine** (fondues, babas, flambage, sauces), dans l'**alcool des menus** non détaillé en caisse, dans la **consommation du chef**, dans les **apéritifs offerts**, dans le **sur-versement** au verre, dans la **dégustation offerte**, le **crémant jeté ou sur-versé**, la **freinte de bière** et la **casse/perte résiduelle**. Cet alcool a un **coût d'achat** mais ne génère **aucune recette au prix carte**. Le coefficient brut le compte pourtant comme vendu : il **gonfle mécaniquement** le chiffre d'affaires reconstitué."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Coefficient théorique au prix carte (brut) face au coefficient **effectif**, par famille, après neutralisation des litres non revendus au verre (**36,2 %** des achats). Le prix d'achat et le prix de vente de chaque boisson proviennent des factures fournisseur et de la carte."
+   "texte": "Le service rapporte, **sur chacun des trois exercices contrôlés**, le **chiffre d'affaires TTC** au **coût des matières revendues** et obtient un **coefficient de revente** d'environ **2,30**. Il le juge « **manifestement très bas et en dehors des usages habituels de la profession** » (qu'il situe vers **3** et plus), puis **reconstitue le CA** jusqu'à ce que ce coefficient atteigne **~3,05**. Ce coefficient n'est donc **pas une mesure** : c'est un quotient calculé **après** la reconstitution."
   },
   {
    "kind": "tableau",
-   "titre": "Coefficient par famille : brut (prix carte) face à effectif",
-   "minWidth": 680,
+   "titre": "Le coefficient déclaré et celui obtenu après reconstitution, par exercice (Proposition p. 34-35)",
+   "minWidth": 820,
    "colonnes": [
     {
-     "label": "Famille"
+     "label": "Exercice"
     },
     {
-     "label": "Achat (€)",
+     "label": "CA déclaré TTC",
      "align": "right"
     },
     {
-     "label": "CA théorique au prix carte",
+     "label": "Coût matières",
      "align": "right"
     },
     {
-     "label": "Coef. brut",
+     "label": "Coef. déclaré",
      "align": "right"
     },
     {
-     "label": "Coef. effectif",
+     "label": "Coef. après reconstitution",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Vins et pétillants"
+      "v": "2022-2023"
      },
      {
-      "v": "82 550 €",
+      "v": "404 031 €",
       "align": "right"
      },
      {
-      "v": "291 903 €",
+      "v": "175 437 €",
       "align": "right"
      },
      {
-      "v": "× 3,54",
+      "v": "× 2,30",
       "align": "right"
      },
      {
-      "v": "× 2,26",
-      "align": "right",
-      "badge": "ok"
+      "v": "× 3,40",
+      "align": "right"
      }
     ],
     [
      {
-      "v": "Bière"
+      "v": "2023-2024"
      },
      {
-      "v": "10 309 €",
+      "v": "438 658 €",
       "align": "right"
      },
      {
-      "v": "39 447 €",
+      "v": "183 693 €",
       "align": "right"
      },
      {
-      "v": "× 3,83",
+      "v": "× 2,39",
       "align": "right"
      },
      {
-      "v": "× 2,44",
-      "align": "right",
-      "badge": "ok"
+      "v": "× 3,14",
+      "align": "right"
      }
     ],
     [
      {
-      "v": "Spiritueux, liqueurs et apéritifs"
+      "v": "2024-2025"
      },
      {
-      "v": "6 306 €",
+      "v": "435 525 €",
       "align": "right"
      },
      {
-      "v": "46 841 €",
+      "v": "188 539 €",
       "align": "right"
      },
      {
-      "v": "× 7,43",
+      "v": "× 2,31",
       "align": "right"
      },
      {
-      "v": "× 4,74",
-      "align": "right",
-      "badge": "ok"
+      "v": "× 3,05",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "La donnée brute : tout ce qui est vendu, à quel prix",
+   "sousTitre": "Sur les trois exercices : chaque format (verre, pichet, bouteille, cocktail, pression), ses ventes et ses prix réels qui varient par carte"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Avant tout coefficient, voici la **réalité de la caisse sur les trois exercices du contrôle** : pour chaque catégorie d'alcool et chaque format, **le nombre exact d'articles vendus**, le **prix moyen** et la **fourchette de prix** réellement pratiquée. La fourchette montre que les prix **changent au fil des cartes** (saisons). Rien n'est moyenné ni supposé : ce sont les lignes de caisse."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Ventes d'alcool par catégorie et format (cumul des 3 exercices)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Catégorie"
+    },
+    {
+     "label": "Format"
+    },
+    {
+     "label": "Nb ventes",
+     "align": "right"
+    },
+    {
+     "label": "Prix moyen",
+     "align": "right"
+    },
+    {
+     "label": "Fourchette de prix (saison)",
+     "align": "right"
+    },
+    {
+     "label": "CA TTC",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Apéritifs MAISON"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "6 259",
+      "align": "right"
+     },
+     {
+      "v": "5,52 €",
+      "align": "right"
+     },
+     {
+      "v": "1,10 € → 9,30 €",
+      "align": "right"
+     },
+     {
+      "v": "34 554 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Blancs"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "799",
+      "align": "right"
+     },
+     {
+      "v": "33,70 €",
+      "align": "right"
+     },
+     {
+      "v": "19,75 € → 75,00 €",
+      "align": "right"
+     },
+     {
+      "v": "26 925 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Blancs"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "2 832",
+      "align": "right"
+     },
+     {
+      "v": "7,67 €",
+      "align": "right"
+     },
+     {
+      "v": "2,00 € → 8,30 €",
+      "align": "right"
+     },
+     {
+      "v": "21 731 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "Bière (pression)"
+     },
+     {
+      "v": "3 273",
+      "align": "right"
+     },
+     {
+      "v": "5,31 €",
+      "align": "right"
+     },
+     {
+      "v": "2,10 € → 9,00 €",
+      "align": "right"
+     },
+     {
+      "v": "17 390 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Blancs"
+     },
+     {
+      "v": "Pichet (50 cl)"
+     },
+     {
+      "v": "772",
+      "align": "right"
+     },
+     {
+      "v": "21,73 €",
+      "align": "right"
+     },
+     {
+      "v": "8,50 € → 32,70 €",
+      "align": "right"
+     },
+     {
+      "v": "16 789 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Rouges"
+     },
+     {
+      "v": "Pichet (50 cl)"
+     },
+     {
+      "v": "553",
+      "align": "right"
+     },
+     {
+      "v": "25,65 €",
+      "align": "right"
+     },
+     {
+      "v": "3,90 € → 32,20 €",
+      "align": "right"
+     },
+     {
+      "v": "14 185 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Rouges"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "1 602",
+      "align": "right"
+     },
+     {
+      "v": "8,77 €",
+      "align": "right"
+     },
+     {
+      "v": "5,00 € → 38,00 €",
+      "align": "right"
+     },
+     {
+      "v": "14 048 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Rouges"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "366",
+      "align": "right"
+     },
+     {
+      "v": "38,16 €",
+      "align": "right"
+     },
+     {
+      "v": "7,00 € → 49,00 €",
+      "align": "right"
+     },
+     {
+      "v": "13 967 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Spécialités Régionales"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "2 116",
+      "align": "right"
+     },
+     {
+      "v": "6,51 €",
+      "align": "right"
+     },
+     {
+      "v": "3,40 € → 72,00 €",
+      "align": "right"
+     },
+     {
+      "v": "13 775 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHETS"
+     },
+     {
+      "v": "Pichet (50 cl)"
+     },
+     {
+      "v": "1 198",
+      "align": "right"
+     },
+     {
+      "v": "10,20 €",
+      "align": "right"
+     },
+     {
+      "v": "7,20 € → 13,40 €",
+      "align": "right"
+     },
+     {
+      "v": "12 219 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "1 530",
+      "align": "right"
+     },
+     {
+      "v": "5,45 €",
+      "align": "right"
+     },
+     {
+      "v": "3,60 € → 8,40 €",
+      "align": "right"
+     },
+     {
+      "v": "8 337 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Blancs"
+     },
+     {
+      "v": "Demi-bouteille"
+     },
+     {
+      "v": "350",
+      "align": "right"
+     },
+     {
+      "v": "21,54 €",
+      "align": "right"
+     },
+     {
+      "v": "19,00 € → 24,00 €",
+      "align": "right"
+     },
+     {
+      "v": "7 550 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pétillants"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "366",
+      "align": "right"
+     },
+     {
+      "v": "17,53 €",
+      "align": "right"
+     },
+     {
+      "v": "9,20 € → 60,00 €",
+      "align": "right"
+     },
+     {
+      "v": "6 424 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Autres Apéritifs"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "1 200",
+      "align": "right"
+     },
+     {
+      "v": "4,85 €",
+      "align": "right"
+     },
+     {
+      "v": "3,20 € → 13,00 €",
+      "align": "right"
+     },
+     {
+      "v": "5 824 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Autres Apéritifs"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "1 369",
+      "align": "right"
+     },
+     {
+      "v": "4,17 €",
+      "align": "right"
+     },
+     {
+      "v": "3,80 € → 4,20 €",
+      "align": "right"
+     },
+     {
+      "v": "5 715 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "COCKTAÏLS"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "602",
+      "align": "right"
+     },
+     {
+      "v": "8,88 €",
+      "align": "right"
+     },
+     {
+      "v": "7,20 € → 11,60 €",
+      "align": "right"
+     },
+     {
+      "v": "5 342 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pétillants"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "1 152",
+      "align": "right"
+     },
+     {
+      "v": "4,58 €",
+      "align": "right"
+     },
+     {
+      "v": "3,80 € → 7,60 €",
+      "align": "right"
+     },
+     {
+      "v": "5 276 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "AUTRES"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "583",
+      "align": "right"
+     },
+     {
+      "v": "8,49 €",
+      "align": "right"
+     },
+     {
+      "v": "4,30 € → 9,00 €",
+      "align": "right"
+     },
+     {
+      "v": "4 951 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Rosés"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "174",
+      "align": "right"
+     },
+     {
+      "v": "22,86 €",
+      "align": "right"
+     },
+     {
+      "v": "18,00 € → 45,00 €",
+      "align": "right"
+     },
+     {
+      "v": "3 966 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Rouges"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "409",
+      "align": "right"
+     },
+     {
+      "v": "8,58 €",
+      "align": "right"
+     },
+     {
+      "v": "7,90 € → 9,50 €",
+      "align": "right"
+     },
+     {
+      "v": "3 511 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "0307"
+     },
+     {
+      "v": "Pichet (50 cl)"
+     },
+     {
+      "v": "315",
+      "align": "right"
+     },
+     {
+      "v": "10,44 €",
+      "align": "right"
+     },
+     {
+      "v": "5,25 € → 10,50 €",
+      "align": "right"
+     },
+     {
+      "v": "3 290 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Digestifs"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "515",
+      "align": "right"
+     },
+     {
+      "v": "6,10 €",
+      "align": "right"
+     },
+     {
+      "v": "4,00 € → 11,00 €",
+      "align": "right"
+     },
+     {
+      "v": "3 143 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "0307"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "636",
+      "align": "right"
+     },
+     {
+      "v": "3,90 €",
+      "align": "right"
+     },
+     {
+      "v": "3,90 € → 4,25 €",
+      "align": "right"
+     },
+     {
+      "v": "2 481 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHETS"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "548",
+      "align": "right"
+     },
+     {
+      "v": "3,72 €",
+      "align": "right"
+     },
+     {
+      "v": "2,00 € → 4,50 €",
+      "align": "right"
+     },
+     {
+      "v": "2 035 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins Blancs"
+     },
+     {
+      "v": "Verre / cocktail"
+     },
+     {
+      "v": "288",
+      "align": "right"
+     },
+     {
+      "v": "7,00 €",
+      "align": "right"
+     },
+     {
+      "v": "7,00 €",
+      "align": "right"
+     },
+     {
+      "v": "2 012 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2081"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "35",
+      "align": "right"
+     },
+     {
+      "v": "29,00 €",
+      "align": "right"
+     },
+     {
+      "v": "29,00 €",
+      "align": "right"
+     },
+     {
+      "v": "1 015 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Ventes par article et par format, prix moyen et tous les prix distincts pratiqués (variation par carte), sur les 3 exercices :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-coefficients-de-revente.xlsx",
+     "label": "RF Coefficient de revente : ventes, prix, coefficient par produit (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "Le coefficient de revente, mesuré produit par produit",
+   "sousTitre": "Caisse ↔ facture, sur les 3 exercices : catégorie par catégorie puis produit par produit, le coefficient est normal à élevé"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Pour calculer le coefficient sans aucune approximation, on relie **chaque article de caisse** à la **facture du produit acheté** (table de correspondance officielle), puis on divise le **prix de vente** réel par le **coût de la matière** servie (prix d'achat de la bouteille rapporté au volume du verre, du pichet ou de la bouteille). Le calcul porte sur **90 produits** et **187 079 €** de ventes sur les trois exercices. **Catégorie par catégorie**, le coefficient est **normal à élevé** :"
+  },
+  {
+   "kind": "tableau",
+   "titre": "Coefficient de revente par catégorie (cumul des 3 exercices)",
+   "minWidth": 640,
+   "colonnes": [
+    {
+     "label": "Catégorie"
+    },
+    {
+     "label": "Nb produits",
+     "align": "right"
+    },
+    {
+     "label": "CA TTC (3 ans)",
+     "align": "right"
+    },
+    {
+     "label": "Coefficient",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "22",
+      "align": "right"
+     },
+     {
+      "v": "73 617 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,49",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "16",
+      "align": "right"
+     },
+     {
+      "v": "47 066 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,58",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "8",
+      "align": "right"
+     },
+     {
+      "v": "26 534 €",
+      "align": "right"
+     },
+     {
+      "v": "× 12,75",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins rosés"
+     },
+     {
+      "v": "7",
+      "align": "right"
+     },
+     {
+      "v": "7 623 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,31",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins (autres)"
+     },
+     {
+      "v": "3",
+      "align": "right"
+     },
+     {
+      "v": "6 520 €",
+      "align": "right"
+     },
+     {
+      "v": "× 2,55",
+      "align": "right"
      }
     ],
     [
@@ -150,182 +914,1677 @@
       "v": "Cidres"
      },
      {
-      "v": "2 418 €",
+      "v": "3",
       "align": "right"
      },
      {
-      "v": "9 594 €",
+      "v": "6 264 €",
       "align": "right"
      },
      {
-      "v": "× 3,97",
+      "v": "× 4,99",
       "align": "right"
-     },
-     {
-      "v": "× 2,53",
-      "align": "right",
-      "badge": "ok"
      }
     ],
     [
      {
-      "v": "TOTAL alcool"
+      "v": "Macvin (vin de liqueur)"
      },
      {
-      "v": "101 584 €",
+      "v": "1",
       "align": "right"
      },
      {
-      "v": "387 785 €",
+      "v": "6 067 €",
       "align": "right"
      },
      {
-      "v": "× 3,82",
+      "v": "× 4,62",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pétillants / crémant"
+     },
+     {
+      "v": "6",
       "align": "right"
      },
      {
-      "v": "× 2,44",
-      "align": "right",
-      "badge": "ok"
+      "v": "4 825 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,89",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Apéritifs"
+     },
+     {
+      "v": "5",
+      "align": "right"
+     },
+     {
+      "v": "4 645 €",
+      "align": "right"
+     },
+     {
+      "v": "× 10,10",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Liqueurs"
+     },
+     {
+      "v": "7",
+      "align": "right"
+     },
+     {
+      "v": "1 508 €",
+      "align": "right"
+     },
+     {
+      "v": "× 6,20",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Eaux-de-vie"
+     },
+     {
+      "v": "8",
+      "align": "right"
+     },
+     {
+      "v": "1 351 €",
+      "align": "right"
+     },
+     {
+      "v": "× 6,71",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Spiritueux"
+     },
+     {
+      "v": "4",
+      "align": "right"
+     },
+     {
+      "v": "1 059 €",
+      "align": "right"
+     },
+     {
+      "v": "× 7,63",
+      "align": "right"
      }
     ]
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "La cascade des volumes montre où part réellement l'alcool acheté (10 622 L). Seuls les postes « vendu au verre » et « vendu en cocktails » génèrent une recette au prix carte ; tous les autres (cuisine, menus, chef, offerts, sur-versement, dégustation, crémant, freinte, casse) n'en génèrent aucune. Le **stock final**, lui, sera vendu plus tard : il n'est donc pas compté dans la part non revendue."
+   "texte": "Les **vins** ressortent à **× 3,5 environ**, les **bières** et **spiritueux** bien plus haut (× 7 à × 13, marges classiques de ces produits). Le détail, **produit par produit**, le confirme (les 40 premiers par chiffre d'affaires ci-dessous ; la liste complète des 90 produits est dans la pièce téléchargeable) :"
   },
   {
-   "kind": "barreComposition",
-   "titre": "Cascade des volumes : où part l'alcool acheté",
-   "unite": "L",
-   "total": 9079,
-   "segments": [
+   "kind": "tableau",
+   "titre": "Coefficient de revente produit par produit (prix d'achat facture → prix de vente caisse, 3 exercices)",
+   "minWidth": 980,
+   "colonnes": [
     {
-     "label": "Vendu au verre",
-     "valeur": 5569,
-     "categorie": "mesure"
+     "label": "Produit (caisse)"
     },
     {
-     "label": "Vendu en cocktails",
-     "valeur": 998,
-     "categorie": "mesure"
+     "label": "Catégorie"
     },
     {
-     "label": "Cuisine",
-     "valeur": 566,
-     "categorie": "calcul"
+     "label": "Format servi"
     },
     {
-     "label": "Alcool des menus",
-     "valeur": 228,
-     "categorie": "calcul"
+     "label": "Nb ventes",
+     "align": "right"
     },
     {
-     "label": "Consommation du chef",
-     "valeur": 143,
-     "categorie": "calcul"
+     "label": "Prix de vente",
+     "align": "right"
     },
     {
-     "label": "Aperitifs offerts aux clients",
-     "valeur": 40,
-     "categorie": "calcul"
+     "label": "Prix d'achat matière",
+     "align": "right"
     },
     {
-     "label": "Sur-versement vins/spiritueux/cocktails",
-     "valeur": 720,
-     "categorie": "mesure"
-    },
-    {
-     "label": "Degustation offerte",
-     "valeur": 126,
-     "categorie": "calcul"
-    },
-    {
-     "label": "Cremant jete en fin de journee",
-     "valeur": 260,
-     "categorie": "calcul"
-    },
-    {
-     "label": "Cremant sur-versé",
-     "valeur": 87,
-     "categorie": "calcul"
-    },
-    {
-     "label": "Freinte technique de la biere pression",
-     "valeur": 129,
-     "categorie": "calcul"
-    },
-    {
-     "label": "Stock final",
-     "valeur": 213,
-     "categorie": "calcul"
+     "label": "Coefficient",
+     "align": "right"
     }
    ],
-   "legende": true
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Exemple chiffré sur la famille « Spiritueux, liqueurs et apéritifs » : ses achats représentent **6 306 €** pour un chiffre d'affaires théorique au prix carte de **46 841 €** (coefficient brut **× 7,43**). Mais une fraction de ces spiritueux part en cuisine (babas, flambages), en consommation du chef (Picon, Macvin) et en sur-versement. Après neutralisation de cette part non revendue au verre, le chiffre d'affaires réellement encaissable tombe à **29 898 €**, soit un coefficient effectif de **× 4,74**."
-  },
-  {
-   "kind": "graphique",
-   "variante": "horizontal",
-   "hauteur": 280,
-   "dataKey": "nom",
-   "serie": {
-    "name": "Coefficient effectif",
-    "couleur": "#0f766e"
-   },
-   "format": "int",
-   "data": [
-    {
-     "nom": "Vins",
-     "Coefficient effectif": 2.3
-    },
-    {
-     "nom": "Bière",
-     "Coefficient effectif": 2.4
-    },
-    {
-     "nom": "Spiritueux",
-     "Coefficient effectif": 4.7
-    },
-    {
-     "nom": "Cidres",
-     "Coefficient effectif": 2.5
-    }
+   "lignes": [
+    [
+     {
+      "v": "Savagnin verre"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "1 544",
+      "align": "right"
+     },
+     {
+      "v": "7,83 €",
+      "align": "right"
+     },
+     {
+      "v": "2,33 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,36",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "pression"
+     },
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "25 cl"
+     },
+     {
+      "v": "2 234",
+      "align": "right"
+     },
+     {
+      "v": "4,05 €",
+      "align": "right"
+     },
+     {
+      "v": "0,12 €",
+      "align": "right"
+     },
+     {
+      "v": "× 32,70",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Béthanie"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "238",
+      "align": "right"
+     },
+     {
+      "v": "33,69 €",
+      "align": "right"
+     },
+     {
+      "v": "10,05 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,35",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1/2 Arbois Béthanie"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Demi-bouteille 37.5 cl"
+     },
+     {
+      "v": "350",
+      "align": "right"
+     },
+     {
+      "v": "21,54 €",
+      "align": "right"
+     },
+     {
+      "v": "5,02 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,29",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET SAVAGNIN"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "254",
+      "align": "right"
+     },
+     {
+      "v": "28,02 €",
+      "align": "right"
+     },
+     {
+      "v": "7,77 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,61",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pinte"
+     },
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "877",
+      "align": "right"
+     },
+     {
+      "v": "7,86 €",
+      "align": "right"
+     },
+     {
+      "v": "0,25 €",
+      "align": "right"
+     },
+     {
+      "v": "× 31,74",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PiCHET TROUSSEAU"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "251",
+      "align": "right"
+     },
+     {
+      "v": "26,34 €",
+      "align": "right"
+     },
+     {
+      "v": "6,51 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,04",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Saint Véran Verre"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "820",
+      "align": "right"
+     },
+     {
+      "v": "7,87 €",
+      "align": "right"
+     },
+     {
+      "v": "1,81 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,34",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Macvin du Jura"
+     },
+     {
+      "v": "Macvin (vin de liqueur)"
+     },
+     {
+      "v": "Verre 6 cl"
+     },
+     {
+      "v": "1 092",
+      "align": "right"
+     },
+     {
+      "v": "5,56 €",
+      "align": "right"
+     },
+     {
+      "v": "1,20 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,62",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau Le"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "868",
+      "align": "right"
+     },
+     {
+      "v": "6,85 €",
+      "align": "right"
+     },
+     {
+      "v": "1,95 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,50",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau Bou"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "172",
+      "align": "right"
+     },
+     {
+      "v": "33,93 €",
+      "align": "right"
+     },
+     {
+      "v": "9,77 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,47",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Beaujolais Moulin à"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "375",
+      "align": "right"
+     },
+     {
+      "v": "13,60 €",
+      "align": "right"
+     },
+     {
+      "v": "2,36 €",
+      "align": "right"
+     },
+     {
+      "v": "× 5,75",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "C du Rhone St  Josep"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "94",
+      "align": "right"
+     },
+     {
+      "v": "41,95 €",
+      "align": "right"
+     },
+     {
+      "v": "13,79 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,04",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "Vins (autres)"
+     },
+     {
+      "v": "Verre 12 cl"
+     },
+     {
+      "v": "312",
+      "align": "right"
+     },
+     {
+      "v": "12,12 €",
+      "align": "right"
+     },
+     {
+      "v": "4,65 €",
+      "align": "right"
+     },
+     {
+      "v": "× 2,60",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Savagnin"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "94",
+      "align": "right"
+     },
+     {
+      "v": "39,93 €",
+      "align": "right"
+     },
+     {
+      "v": "11,66 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,43",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Crémant"
+     },
+     {
+      "v": "Pétillants / crémant"
+     },
+     {
+      "v": "Verre 10 cl"
+     },
+     {
+      "v": "810",
+      "align": "right"
+     },
+     {
+      "v": "4,58 €",
+      "align": "right"
+     },
+     {
+      "v": "1,10 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,16",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "H.C.B BEAUNE BTL"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "83",
+      "align": "right"
+     },
+     {
+      "v": "42,93 €",
+      "align": "right"
+     },
+     {
+      "v": "12,49 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,44",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Saint Véran"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "90",
+      "align": "right"
+     },
+     {
+      "v": "39,16 €",
+      "align": "right"
+     },
+     {
+      "v": "9,06 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,32",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET SAINT VERAN"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "110",
+      "align": "right"
+     },
+     {
+      "v": "30,00 €",
+      "align": "right"
+     },
+     {
+      "v": "6,04 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,97",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET ALIGOTE 50cL"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "315",
+      "align": "right"
+     },
+     {
+      "v": "10,44 €",
+      "align": "right"
+     },
+     {
+      "v": "2,62 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,99",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "H.C.DE BEAUNE  VERRE"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "368",
+      "align": "right"
+     },
+     {
+      "v": "8,66 €",
+      "align": "right"
+     },
+     {
+      "v": "2,50 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,47",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "C du  Rhone St Josep"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "358",
+      "align": "right"
+     },
+     {
+      "v": "8,38 €",
+      "align": "right"
+     },
+     {
+      "v": "2,76 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,04",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET C.DE BEAUNE B"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "265",
+      "align": "right"
+     },
+     {
+      "v": "11,15 €",
+      "align": "right"
+     },
+     {
+      "v": "8,33 €",
+      "align": "right"
+     },
+     {
+      "v": "× 1,34",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Blanche des plateaux"
+     },
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "33 cl"
+     },
+     {
+      "v": "414",
+      "align": "right"
+     },
+     {
+      "v": "6,40 €",
+      "align": "right"
+     },
+     {
+      "v": "1,78 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,59",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cidre Bouché Brut"
+     },
+     {
+      "v": "Cidres"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "167",
+      "align": "right"
+     },
+     {
+      "v": "15,20 €",
+      "align": "right"
+     },
+     {
+      "v": "2,65 €",
+      "align": "right"
+     },
+     {
+      "v": "× 5,74",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Ambrée"
+     },
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "33 cl"
+     },
+     {
+      "v": "387",
+      "align": "right"
+     },
+     {
+      "v": "6,44 €",
+      "align": "right"
+     },
+     {
+      "v": "1,80 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,58",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "pichet Saint Joseph"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "81",
+      "align": "right"
+     },
+     {
+      "v": "30,37 €",
+      "align": "right"
+     },
+     {
+      "v": "9,20 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,30",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Clair de Rosé"
+     },
+     {
+      "v": "Vins rosés"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "130",
+      "align": "right"
+     },
+     {
+      "v": "18,02 €",
+      "align": "right"
+     },
+     {
+      "v": "4,10 €",
+      "align": "right"
+     },
+     {
+      "v": "× 4,39",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET MOULIN A VENT"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "95",
+      "align": "right"
+     },
+     {
+      "v": "24,12 €",
+      "align": "right"
+     },
+     {
+      "v": "7,88 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,06",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Chablis"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "50",
+      "align": "right"
+     },
+     {
+      "v": "43,40 €",
+      "align": "right"
+     },
+     {
+      "v": "13,18 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,29",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cidre Bouché Doux"
+     },
+     {
+      "v": "Cidres"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "144",
+      "align": "right"
+     },
+     {
+      "v": "15,03 €",
+      "align": "right"
+     },
+     {
+      "v": "2,89 €",
+      "align": "right"
+     },
+     {
+      "v": "× 5,20",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "MACON VERRE"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "320",
+      "align": "right"
+     },
+     {
+      "v": "6,30 €",
+      "align": "right"
+     },
+     {
+      "v": "1,66 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,79",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET ROSE"
+     },
+     {
+      "v": "Vins rosés"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "192",
+      "align": "right"
+     },
+     {
+      "v": "10,48 €",
+      "align": "right"
+     },
+     {
+      "v": "2,64 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,97",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Gewurztraminer Le ve"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Verre 15 cl"
+     },
+     {
+      "v": "288",
+      "align": "right"
+     },
+     {
+      "v": "7,00 €",
+      "align": "right"
+     },
+     {
+      "v": "1,99 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,51",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "VIN PAILLE"
+     },
+     {
+      "v": "Vins (autres)"
+     },
+     {
+      "v": "Verre 6 cl"
+     },
+     {
+      "v": "280",
+      "align": "right"
+     },
+     {
+      "v": "6,89 €",
+      "align": "right"
+     },
+     {
+      "v": "2,66 €",
+      "align": "right"
+     },
+     {
+      "v": "× 2,59",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "MACON bouteille"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Bouteille 75 cl"
+     },
+     {
+      "v": "62",
+      "align": "right"
+     },
+     {
+      "v": "31,00 €",
+      "align": "right"
+     },
+     {
+      "v": "8,31 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,73",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET MACON"
+     },
+     {
+      "v": "Vins blancs"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "90",
+      "align": "right"
+     },
+     {
+      "v": "21,00 €",
+      "align": "right"
+     },
+     {
+      "v": "5,54 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,79",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "PICHET HCB"
+     },
+     {
+      "v": "Vins rouges"
+     },
+     {
+      "v": "Pichet 50 cl"
+     },
+     {
+      "v": "56",
+      "align": "right"
+     },
+     {
+      "v": "32,00 €",
+      "align": "right"
+     },
+     {
+      "v": "8,33 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,84",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Picon bière"
+     },
+     {
+      "v": "Bières"
+     },
+     {
+      "v": "25 cl"
+     },
+     {
+      "v": "382",
+      "align": "right"
+     },
+     {
+      "v": "4,65 €",
+      "align": "right"
+     },
+     {
+      "v": "0,12 €",
+      "align": "right"
+     },
+     {
+      "v": "× 37,53",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "cidre la Mordue"
+     },
+     {
+      "v": "Cidres"
+     },
+     {
+      "v": "27 cl"
+     },
+     {
+      "v": "342",
+      "align": "right"
+     },
+     {
+      "v": "4,58 €",
+      "align": "right"
+     },
+     {
+      "v": "1,17 €",
+      "align": "right"
+     },
+     {
+      "v": "× 3,93",
+      "align": "right"
+     }
+    ]
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Globalement, le coefficient **brut** ressort à **× 3,82** (proche du coefficient retenu par le service), mais le coefficient **effectif**, après déduction des **3 842 L** non revendus au verre (**36,2 %** des achats : cuisine **566 L**, menus **228 L**, chef **143 L**, offerts **40 L**, sur-versement **720 L**, dégustation **126 L**, crémant jeté et sur-versé **347 L**, freinte bière **129 L**, casse et perte résiduelle **1 543 L**), tombe à **× 2,44**. Un coefficient de cet ordre est **conforme au secteur CHR**. À titre de repère, la jurisprudence admet des abattements de l'ordre de **22 à 25 %** sur les reconstitutions de liquides (CAA Paris, 17/03/2021) ; l'abattement de **15 %** retenu par le service est donc inférieur tant à ce repère qu'à nos mesures poste par poste. Le coefficient « faible » reproché n'est pas l'indice d'une fraude : c'est l'effet **arithmétique** de l'alcool qui n'est pas revendu au verre."
+   "texte": "**La profession applique un coefficient dégressif, pas un seuil unique.** Contrairement au « 3 et plus » uniforme avancé par le service, le coefficient multiplicateur de la profession **décroît avec le prix d'achat** : de l'ordre de **× 4** sous 6 €, **× 3,5** de 6 à 12 €, **× 3** de 12 à 25 €, et **× 2,5** au-delà (vins premium). Nos AOC du Jura, achetées **10 à 22 € la bouteille**, relèvent donc des tranches **× 3 à × 3,5** : nos coefficients mesurés ci-dessus y sont **exactement conformes**. Sources : [https://laccorddivin.fr/les-coefficients-multiplicateurs-caviste-restaurant-bar-a-vin/](https://laccorddivin.fr/les-coefficients-multiplicateurs-caviste-restaurant-bar-a-vin/) ; [https://www.somm-it.com/blog/coefficient-multiplicateur-vin-restaurant](https://www.somm-it.com/blog/coefficient-multiplicateur-vin-restaurant) ; [https://www.lhotellerie-restauration.fr/sos-experts/question-reponse/coefficient-multiplicateur-sur-le-vin-le-calcul-s-applique-t-il-pour-un-bar-a-vins-36079](https://www.lhotellerie-restauration.fr/sos-experts/question-reponse/coefficient-multiplicateur-sur-le-vin-le-calcul-s-applique-t-il-pour-un-bar-a-vins-36079)."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Parallèle caisse ↔ facture (extrait de la table de correspondance)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Libellé caisse"
+    },
+    {
+     "label": "Format"
+    },
+    {
+     "label": "Libellé facture"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "1/2 Arbois Béthanie"
+     },
+     {
+      "v": "Demi-bouteille"
+     },
+     {
+      "v": "ARBOIS BETHANIE 75 CL / 37,5 CL"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Béthanie"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "ARBOIS BETHANIE 75 CL / 37,5 CL"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Chardonnay Le"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "ARBOIS CHARDONNAY 75 CL (J-L Tissot)"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Savagnin"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "ARBOIS SAVAGNIN 75 CL"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau Bou"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "ARBOIS TROUSSEAU 75 CL (J-L Tissot)"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau Le"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "ARBOIS TROUSSEAU 75 CL (J-L Tissot)"
+     }
+    ],
+    [
+     {
+      "v": "Crémant"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "CREMANT DU JURA 75 CL (Arbois)"
+     }
+    ],
+    [
+     {
+      "v": "Crémant Rosé"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "CREMANT DU JURA 75 CL (Arbois)"
+     }
+    ],
+    [
+     {
+      "v": "Crémant du Jura"
+     },
+     {
+      "v": "Bouteille"
+     },
+     {
+      "v": "CREMANT DU JURA 75 CL (Arbois)"
+     }
+    ],
+    [
+     {
+      "v": "Crément / Jura VERRE"
+     },
+     {
+      "v": "Verre"
+     },
+     {
+      "v": "CREMANT DU JURA 75 CL (Arbois)"
+     }
+    ]
+   ]
   },
   {
    "kind": "piecejointe",
-   "intro": "Coefficient brut et effectif par famille (achat, CA au prix carte, part non revendue, CA effectif) et cascade complète des volumes d'alcool. Chaque nombre est recalculable.",
+   "intro": "Table de correspondance complète (chaque libellé de caisse relié à sa facture et à l'inventaire) :",
    "fichiers": [
     {
-     "fichier": "pieces-defense/RF-coefficients-de-revente.xlsx",
-     "label": "RF - Coefficients de revente (par famille + cascade)"
+     "fichier": "pieces-defense/RF-conso-achats-correspondance.xlsx",
+     "label": "RF Correspondance caisse / facture / inventaire (XLSX)"
     }
    ]
   },
   {
    "kind": "chapitre",
    "source": "nous",
-   "titre": "Conclusion",
-   "numero": 3
+   "numero": 4,
+   "titre": "Pourquoi le coefficient global est bas, sans aucune recette cachée",
+   "sousTitre": "Une grande part de l'alcool acheté n'est jamais revendue ; là où il l'est, la marge est normale"
   },
   {
    "kind": "paragraphe",
-   "texte": "Un coefficient brut suppose que tout l'alcool acheté est revendu au verre au prix carte. C'est faux : **3 842 L** (36,2 % des achats) partent en cuisine, menus, consommation du chef, offerts, sur-versement, dégustation, crémant, freinte et casse, sans aucune recette. Recalculé correctement, le coefficient effectif (**× 2,44**) est conforme au secteur CHR. Le coefficient « faible » est un artefact de calcul, pas une minoration de recettes."
+   "texte": "Si la marge par produit est normale (section précédente), pourquoi le coefficient **global** est-il bas ? Parce que le coefficient « brut » du service suppose que **tout l'alcool acheté est revendu au verre au prix de la carte**. C'est faux : sur les **10 622 litres** achetés, **36 %** ne génèrent **aucun** chiffre d'affaires au verre. Ils partent en cuisine, en sur-versement, en crémant éventé jeté, en mousse de bière, en dégustations offertes, en consommation du chef ou en casse. Chaque poste est chiffré et sourcé aux pages [Reconstitution par les volumes](/rendu-final/reconstitution-volumes-liquides) et suivantes (2.2 à 2.7). Le coût de cet alcool est **bien réel**, mais il ne peut pas « remonter » dans un coefficient de revente."
+  },
+  {
+   "kind": "tableau",
+   "titre": "L'alcool acheté qui n'est JAMAIS revendu au verre (36 % des achats)",
+   "minWidth": 680,
+   "colonnes": [
+    {
+     "label": "Poste"
+    },
+    {
+     "label": "Litres",
+     "align": "right"
+    },
+    {
+     "label": "Part des achats",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Cuisine (fondues, sauces, babas, flambage)"
+     },
+     {
+      "v": "566 L",
+      "align": "right"
+     },
+     {
+      "v": "5 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Alcool des menus (non detaille en caisse)"
+     },
+     {
+      "v": "228 L",
+      "align": "right"
+     },
+     {
+      "v": "2 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Sur-versement au verre (free-pour)"
+     },
+     {
+      "v": "720 L",
+      "align": "right"
+     },
+     {
+      "v": "7 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cremant jete (fond evente) + sur-verse"
+     },
+     {
+      "v": "347 L",
+      "align": "right"
+     },
+     {
+      "v": "3 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Freinte technique de la biere"
+     },
+     {
+      "v": "129 L",
+      "align": "right"
+     },
+     {
+      "v": "1 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Degustation offerte (note par note)"
+     },
+     {
+      "v": "126 L",
+      "align": "right"
+     },
+     {
+      "v": "1 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Consommation du chef (Picon + Macvin)"
+     },
+     {
+      "v": "143 L",
+      "align": "right"
+     },
+     {
+      "v": "1 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Aperitifs offerts aux clients"
+     },
+     {
+      "v": "40 L",
+      "align": "right"
+     },
+     {
+      "v": "0 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Casse, evaporation, fonds de verre (residu)"
+     },
+     {
+      "v": "1 543 L",
+      "align": "right"
+     },
+     {
+      "v": "15 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total non revendu",
+      "fw": 700
+     },
+     {
+      "v": "3 842 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "36 %",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Coefficient apparent",
+     "valeur": "× 2,33",
+     "sub": "CA total / coût matières (reproché par le fisc)",
+     "couleur": "red"
+    },
+    {
+     "label": "Sur l'alcool réellement revendu",
+     "valeur": "× 3,85",
+     "sub": "CA alcool caisse / coût alcool revendu (3 exos)",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Alcool jamais revendu",
+     "valeur": "36 %",
+     "sub": "cuisine, sur-versement, pertes (pages 2.x)",
+     "couleur": "gray"
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le calcul est simple et reproductible : sur trois exercices, l'alcool **réellement revendu** au verre et en cocktails (6 567 L, soit un coût d'achat de **66 723 €**) a encaissé **257 210 €** en caisse. Le coefficient sur cet alcool vendu est donc de **× 3,85**, **au-dessus** du seuil de « 3 » que le service présente comme la norme de la profession. Le coefficient apparent bas ne vient donc ni d'une recette dissimulée, ni d'une marge anormale : il vient de l'alcool acheté **mais jamais revendu**."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Dernière vérification : le coefficient de la **boisson** et celui de la **nourriture** sont **au même niveau** (environ 2,3 à 2,5 chacun, sur les trois exercices). Ce n'est donc pas la boisson qui « manquerait » : les deux blocs ont la même structure de marge, celle d'un restaurant de terroir qui achète des produits de qualité."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Coefficient boisson et nourriture, par exercice (même niveau)",
+   "minWidth": 520,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Coef. boisson",
+     "align": "right"
+    },
+    {
+     "label": "Coef. nourriture",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-23"
+     },
+     {
+      "v": "× 2,35",
+      "align": "right"
+     },
+     {
+      "v": "× 2,29",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-24"
+     },
+     {
+      "v": "× 2,49",
+      "align": "right"
+     },
+     {
+      "v": "× 2,36",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-25"
+     },
+     {
+      "v": "× 2,44",
+      "align": "right"
+     },
+     {
+      "v": "× 2,27",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 5,
+   "titre": "Le coefficient « 3,05 » du fisc n'est pas mesuré : il est fabriqué",
+   "sousTitre": "Il découle de la reconstitution, elle-même circulaire (page 2.8)"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le coefficient « conforme à la profession » (3,05) que le service oppose au déclaré n'est **pas observé** : il est le **résultat** de sa propre reconstitution du CA. Or cette reconstitution est démontée à la page [Extrapolation de la cuisine (coefficient liquide → solide)](/rendu-final/coefficient-liquide-solide) : le service y applique au CA liquides un coefficient **tiré de la caisse qu'il rejette par ailleurs**, et fabrique ainsi une « cuisine fantôme » qui représente les trois quarts du redressement. Le « bon » coefficient de 3,05 n'est donc que le **reflet** de cette construction, pas une grandeur indépendante."
+  },
+  {
+   "kind": "note",
+   "texte": "**Sources et données (recalcul reproductible, 3 exercices).** Ventes et prix de vente : caisse du restaurant (ventes par article, annexes D et B). Achats et prix d'achat : factures fournisseurs (annexe d'achats). Mise en correspondance des libellés caisse ↔ facture : table de correspondance officielle. Volumes d'alcool non revendus : cascade de la page [Reconstitution par les volumes](/rendu-final/reconstitution-volumes-liquides). Tout est recalculable dans les pièces téléchargeables de cette fiche. Grief du service : Proposition de rectification p. 34-35. Coefficient multiplicateur de la profession (grille **dégressive** selon le prix d'achat) : [https://laccorddivin.fr/les-coefficients-multiplicateurs-caviste-restaurant-bar-a-vin/](https://laccorddivin.fr/les-coefficients-multiplicateurs-caviste-restaurant-bar-a-vin/) ; [https://www.somm-it.com/blog/coefficient-multiplicateur-vin-restaurant](https://www.somm-it.com/blog/coefficient-multiplicateur-vin-restaurant) ; [https://www.lhotellerie-restauration.fr/sos-experts/question-reponse/coefficient-multiplicateur-sur-le-vin-le-calcul-s-applique-t-il-pour-un-bar-a-vins-36079](https://www.lhotellerie-restauration.fr/sos-experts/question-reponse/coefficient-multiplicateur-sur-le-vin-le-calcul-s-applique-t-il-pour-un-bar-a-vins-36079)."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Conclusion",
+   "numero": 6
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Sur les **trois exercices**, le coefficient de revente est mesuré **produit par produit** (90 produits) à partir des vraies ventes et des vraies factures : il est **normal à élevé** (vins × 3,5 ; bières et spiritueux × 7 à × 13). Sur l'alcool **réellement revendu**, le coefficient global atteint **× 3,85**, au-dessus du seuil de la profession. Le coefficient apparent (**× 2,33**) n'est tiré vers le bas que par **36 % d'alcool jamais revendu** (cuisine, sur-versement, pertes), et le « 3,05 » du service n'est pas mesuré mais fabriqué par sa reconstitution circulaire (page 2.8). Le grief ne tient pas."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Recalcul intégral, reproductible : coefficient par produit et par catégorie, ventes par format, alcool revendu vs non revendu, sur les 3 exercices :",
+   "fichiers": [
+    {
+     "fichier": "pieces-defense/RF-coefficients-de-revente.xlsx",
+     "label": "RF Coefficient de revente : produit par produit, par catégorie, ventes (XLSX)"
+    }
+   ]
   },
   {
    "kind": "interne",
    "audience": "avocat",
    "titre": "Note pour l'avocat",
-   "texte": "Articuler ce bloc avec le grief « reconstitution par coefficient » : le service ne peut pas rejeter la caisse comme non probante **et** en extraire le coefficient × 3,10 qui sert à reconstituer. Surtout, son abattement de 15 % est insuffisant : nos mesures, poste par poste, situent la part non revendue au verre à 36,2 % des achats (dont cuisine et menus, qui génèrent un CA solide), au-delà même du repère de 22 à 25 % admis par la CAA Paris (17/03/2021) sur les seuls liquides. Le coefficient effectif par famille est reproductible via scripts/rendu-final-coefficients-de-revente.py (source : boissonsPageData.json, prix d'achat factures + prix de vente carte)."
+   "texte": "Argument central : coefficient mesuré PRODUIT PAR PRODUIT sur 3 exercices (normal a eleve) ; sur l'alcool REVENDU il dépasse le seuil profession (x 3,85) ; le coefficient apparent bas vient des 36 % d'alcool non revendu (cascade des pages 2.x). 5 produits ecartes du detail (incoherence volume/prix de la table de correspondance) : a faire corriger pour une version definitive. Relier a la page 2.8 (coefficient liquide -> solide, circulaire). Verser une attestation sur le positionnement qualite/terroir et les doses. Retirer cet encart de toute version remise."
   }
  ]
 }
