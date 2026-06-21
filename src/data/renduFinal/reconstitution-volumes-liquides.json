@@ -4,47 +4,704 @@
   "titre": "Reconstitution du CA par les volumes de liquides",
   "source": "scripts/rendu-final-reconstitution-volumes-liquides.py",
   "grief": "Proposition de rectification p. 37-53 (methode) - annexes Boissons.",
-  "enjeu": "Coeur de la reconstitution (≈ +471 826 € de CA reconstitue)",
+  "enjeu": "Coeur de la reconstitution : ≈ 422 k€ de CA HT redresse (3 ans), amende 1759 ≈ 472 k€",
   "chiffres": {
    "achat_l": 10622,
    "achat_cout": 107924,
    "conso_l": 7504,
-   "perte_reelle_l": 1205,
-   "perte_reelle_pct": 11.3,
+   "perte_reelle_l": 1543,
+   "perte_reelle_pct": 14.5,
    "fisc_ca_reconstitue": 575253,
    "fisc_coef": 3.1,
    "ca_declare": 435525,
-   "total_ca_oublie": 289852,
-   "ca_recalcule": 285401,
+   "total_ca_oublie": 303297,
+   "ca_recalcule": 271956,
    "ecart_fisc": 139728,
-   "ecart_recalcule": -150124
+   "ecart_recalcule": -163569
   }
  },
  "sections": [
   {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Alcool acheté (factures)",
+     "valeur": "10 622 L",
+     "sub": "107 924 € sur 3 exercices",
+     "couleur": "blue"
+    },
+    {
+     "label": "Justifié de façon indépendante",
+     "valeur": "85,5 %",
+     "sub": "9 079 L tracés poste par poste",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Résidu (perte normale)",
+     "valeur": "14,5 %",
+     "sub": "1 543 L : casse, vol, évaporation",
+     "couleur": "gray"
+    }
+   ]
+  },
+  {
    "kind": "chapitre",
    "source": "fisc",
-   "titre": "Le grief de l'administration",
-   "sousTitre": "Proposition de rectification, p. 37-53 - methode de reconstitution"
+   "numero": 1,
+   "titre": "Ce que dit l'administration",
+   "sousTitre": "Proposition p. 37-53 : une reconstitution par les volumes, puis une extrapolation à la cuisine."
+  },
+  {
+   "kind": "tableau",
+   "titre": "La méthode du fisc, en 4 étapes",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Étape"
+    },
+    {
+     "label": "Ce que fait le service"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "1. Volume disponible"
+     },
+     {
+      "v": "Achats de boissons ± variation de stock, convertis en centilitres"
+     }
+    ],
+    [
+     {
+      "v": "2. ÷ dose figée"
+     },
+     {
+      "v": "15 cl le verre, 50/75 cl le pichet, 4 cl les spiritueux → nombre d'articles « vendus »"
+     }
+    ],
+    [
+     {
+      "v": "3. × prix moyen"
+     },
+     {
+      "v": "= CA « liquides » reconstitué"
+     }
+    ],
+    [
+     {
+      "v": "4. × coefficient"
+     },
+     {
+      "v": "× 2,94 / 3,02 / 3,10 → CA « cuisine » (solides) extrapolé"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les chiffres exacts retenus par le fisc",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Paramètre"
+    },
+    {
+     "label": "Valeur retenue",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Doses (verre / pichet / spiritueux)"
+     },
+     {
+      "v": "15 cl / 50-75 cl / 4 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Abattements de fin de méthode"
+     },
+     {
+      "v": "5 % offerts + 5 % pertes + 5 % personnel",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Abattement bière (mutualisé)"
+     },
+     {
+      "v": "15 % du volume",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Coefficient liquide → solide"
+     },
+     {
+      "v": "2,94 / 3,02 / 3,10",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "CA reconstitué vs déclaré (2024-25)"
+     },
+     {
+      "v": "575 253 € vs 435 525 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Pénalité art. 1759 visée (3 ans)"
+     },
+     {
+      "v": "≈ 471 826 €",
+      "align": "right"
+     }
+    ]
+   ]
   },
   {
    "kind": "note",
-   "texte": "Le service reconstitue un chiffre d'affaires « liquides » a partir des **achats de boissons** convertis en centilitres : il divise le volume disponible par une **dose standard** pour obtenir un nombre d'articles theoriquement vendus, qu'il valorise au prix moyen. Il extrapole ensuite a la cuisine en multipliant ce CA liquides par un **coefficient liquide/solide de 3,1**. Il aboutit a **575 253 €** de CA reconstitue contre **435 525 €** declares, soit une discordance de **+139 728 €**. Cumulee sur les trois exercices, la minoration alleguee fonde une penalite de l'article 1759 de **≈ 471 826 €**. C'est le coeur chiffre de la reconstitution."
+   "texte": "Source : Proposition de rectification, p. 37-53 (méthode) et annexes Boissons 5 à 7 (doses, volumes, coefficient)."
   },
   {
    "kind": "chapitre",
    "source": "nous",
-   "titre": "La faille de la methode : doses exactes et zero perte",
-   "sousTitre": "Recalcule sur les achats et la caisse reels, le manquant retombe a la perte normale d'un bar"
+   "numero": 2,
+   "titre": "Pourquoi cette méthode ne tient pas",
+   "sousTitre": "Onze hypothèses. Chacune : ce que dit le fisc, notre réponse chiffrée et sourcée, la pièce téléchargeable, et la donnée détaillée à déplier."
   },
   {
-   "kind": "note",
-   "texte": "La methode du fisc repose sur trois hypotheses **irrealistes** dans un bar-restaurant : **(1) des doses servies au centilitre pres** (aucun sur-versement), **(2) zero perte** (ni casse, ni evaporation des futs, ni fonds de verre, ni rincage des tireuses), et **(3) la valorisation comme « CA verre » de litres qui ne sont jamais vendus au verre** (alcool de cuisine, alcool des menus non detaille en caisse, consommation du chef, aperitifs offerts). Or les achats reels se ventilent integralement : ce qui reste apres avoir trace chaque usage est une **perte normale**, pas une recette occulte."
+   "kind": "argument",
+   "titre": "1. Doses figées au centilitre (zéro sur-versement)",
+   "page": "Proposition p. 37, 41-42",
+   "accusation": "Chaque verre serait servi exactement à la dose de la carte : 15 cl le vin, 50/75 cl le pichet, 4 cl les spiritueux.",
+   "faille": "Sans doseur, **la dose réellement servie dépasse la dose de la carte** (vin +23,6 %, cocktails +42 % selon Kerr 2008 ; spiritueux +20 % selon Wansink 2005). Conséquence directe sur la méthode : en divisant le volume disponible par une dose **sous-évaluée**, le service **surcompte le nombre de verres vendables** de **720 L** (pichet pré-mesuré exclu). Ce n'est pas une recette manquante, c'est un **verre de moins à reconstituer**. Sources : [https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/) · [https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/)",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/sur-versement-au-verre",
+     "label": "Page sur-versement"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-sur-versement-au-verre.xlsx",
+     "label": "RF-sur-versement (XLSX)"
+    }
+   ],
+   "detail": {
+    "methode": "Taux mesurés par la littérature, appliqués à NOTRE consommation réelle (annexe D), pas aux doses du fisc.",
+    "colonnes": [
+     "Régime de service",
+     "Sur-versement",
+     "Source"
+    ],
+    "lignes": [
+     [
+      "Vins au verre / pichet (vin jaune, paille, macvin)",
+      "+ 23,6 %",
+      "Kerr et coll., 2008 (480 boissons, 80 établissements)"
+     ],
+     [
+      "Alcool des cocktails",
+      "+ 42 %",
+      "Kerr et coll., 2008"
+     ],
+     [
+      "Spiritueux, apéritifs, digestifs au verre",
+      "+ 20 %",
+      "Wansink & van Ittersum, BMJ 2005 (86 barmen)"
+     ]
+    ],
+    "totalLabel": "Sur-versement total (3 exercices)",
+    "totalValeur": "720 L",
+    "sources": [
+     {
+      "label": "Kerr 2008 : https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/"
+     },
+     {
+      "label": "Wansink 2005 : https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "argument",
+   "titre": "2. Zéro perte sur la bière (15 % seulement, mutualisé)",
+   "page": "Proposition p. 50-51",
+   "accusation": "85 % du fût finirait dans un verre vendu ; seuls 15 % sont retranchés, et de façon mutualisée (pertes + personnel + offerts).",
+   "faille": "La **freinte technique** d'un fût (mousse, collerette, nettoyage des lignes, fond de fût) est documentée à **~20 %** ; le service **en accorde déjà 15 %**. Retenu très prudemment : **129 L** (soit moins que l'abattement du fisc). Source : [https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer](https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer)",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/pertes-biere-mousse",
+     "label": "Page pertes bière"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-pertes-biere-mousse.xlsx",
+     "label": "RF-pertes-bière (XLSX)"
+    }
+   ],
+   "detail": {
+    "methode": "Décomposition de la freinte technique d'un fût en tirage traditionnel (% du fût tiré).",
+    "colonnes": [
+     "Poste de perte",
+     "Part du fût"
+    ],
+    "lignes": [
+     [
+      "Sur-versement / collerette de mousse",
+      "≈ 7 %"
+     ],
+     [
+      "Mousse et pertes au tirage (température, pression, fond de fût)",
+      "≈ 8 %"
+     ],
+     [
+      "Nettoyage des lignes (tous les 14 j) + purge + fond",
+      "≈ 5 %"
+     ]
+    ],
+    "totalLabel": "Freinte documentée (retenu : 129 L)",
+    "totalValeur": "≈ 20 % du fût",
+    "sources": [
+     {
+      "label": "Bar-i (rendement de fût ~95 %) : https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer"
+     },
+     {
+      "label": "Le service accorde lui-même 15 % sur la bière (Proposition p. 51)"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "argument",
+   "titre": "3. Tout le crémant réputé vendu",
+   "page": "Proposition p. 46-47",
+   "accusation": "Tout le crémant disponible serait vendu au centilitre près.",
+   "faille": "Une bouteille d'effervescent **ouverte est éventée le lendemain → jetée**, et le service au verre sur-verse. Compté **jour par jour** (annexe C) : **347 L** (jeté + sur-versé). Source : [https://www.coravin.com/blogs/community/does-champagne-expire](https://www.coravin.com/blogs/community/does-champagne-expire)",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/pertes-cremant",
+     "label": "Page crémant"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-cremant-jete.xlsx",
+     "label": "RF-crémant (XLSX)"
+    }
+   ],
+   "detail": {
+    "methode": "Deux pertes distinctes, mesurées jour par jour sur le détail des tickets (annexe C).",
+    "colonnes": [
+     "Perte de crémant",
+     "Volume (3 ans)"
+    ],
+    "lignes": [
+     [
+      "Bouteille ouverte éventée, solde jeté le soir",
+      "260 L"
+     ],
+     [
+      "Sur-versement au service (+23,6 %)",
+      "87 L"
+     ]
+    ],
+    "totalLabel": "Total perte crémant",
+    "totalValeur": "347 L",
+    "sources": [
+     {
+      "label": "Crémant ouvert éventé : https://www.coravin.com/blogs/community/does-champagne-expire"
+     },
+     {
+      "label": "Calcul jour par jour : annexe C (RF-cremant-jete.xlsx)"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "argument",
+   "titre": "4. Aucune dégustation offerte",
+   "page": "Proposition p. 37-44",
+   "accusation": "Tout le vin disponible serait vendable, sans rien réserver au geste de dégustation.",
+   "faille": "Le **goûter de 2 cl** avant de servir un vin nommé ne laisse **aucune trace en caisse**. Compté **note par note** (annexe C) : **126 L**.",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/degustation-au-verre",
+     "label": "Page dégustation"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-degustation-par-note.xlsx",
+     "label": "RF-dégustation (XLSX)"
+    }
+   ],
+   "detail": {
+    "methode": "Règle stricte appliquée ligne à ligne sur le détail des tickets (annexe C).",
+    "colonnes": [
+     "Paramètre",
+     "Valeur"
+    ],
+    "lignes": [
+     [
+      "Règle",
+      "1 dégustation par vin nommé et par note (addition)"
+     ],
+     [
+      "Dose",
+      "2 cl (une larme)"
+     ],
+     [
+      "Génériques « verre de vin » / bouteilles",
+      "exclus"
+     ]
+    ],
+    "totalLabel": "Vin offert en dégustation (3 ans)",
+    "totalValeur": "126 L",
+    "sources": [
+     {
+      "label": "Comptage note par note : annexe C (RF-degustation-par-note.xlsx)"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "argument",
+   "titre": "5. Alcool de cuisine sous-déduit",
+   "page": "Proposition p. 44-48 (repères D/E/G/Q)",
+   "accusation": "Seule une fraction de l'alcool de cuisine est déduite (quelques plats de menu), via les repères D, E, G, Q.",
+   "faille": "En appliquant **les doses confirmées par les dirigeants** (que le fisc reprend : fondue 9-10 cl, baba/flambage 4 cl, sauce 1 cl) à **toute la carte**, la cuisine consomme **566 L** d'alcool acheté, **versé dans les plats** (fondues, sauces, flambages, babas) : il quitte le stock et n'est jamais disponible pour un verre vendu.",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/alcool-cuisine-doses-plats",
+     "label": "Page cuisine"
+    },
+    {
+     "to": "/rendu-final/alcool-cuisine-doses-plats",
+     "label": "Détail plat par plat (2.6)"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-alcool-cuisine-doses-plats.xlsx",
+     "label": "RF-cuisine (XLSX)"
+    }
+   ],
+   "detail": {
+    "methode": "Alcool incorporé en cuisine, alcool par alcool, sur 3 exercices (doses confirmées par les dirigeants).",
+    "colonnes": [
+     "Alcool",
+     "Litres (3 ans)",
+     "Coût d'achat"
+    ],
+    "lignes": [
+     [
+      "Ravelin",
+      "152 L",
+      "450 €"
+     ],
+     [
+      "Macvin",
+      "123 L",
+      "2 235 €"
+     ],
+     [
+      "Arbois Vin Jaune",
+      "113 L",
+      "4 032 €"
+     ],
+     [
+      "Calvados",
+      "106 L",
+      "1 792 €"
+     ],
+     [
+      "Porto",
+      "60 L",
+      "651 €"
+     ],
+     [
+      "Grand Marnier",
+      "7 L",
+      "230 €"
+     ],
+     [
+      "Crème de Cassis",
+      "3 L",
+      "26 €"
+     ],
+     [
+      "Bailey's",
+      "1 L",
+      "18 €"
+     ]
+    ],
+    "totalLabel": "Total alcool de cuisine",
+    "totalValeur": "566 L",
+    "sources": [
+     {
+      "label": "Doses confirmées par les dirigeants (30/03/2026)"
+     },
+     {
+      "label": "Détail dose par plat : RF-alcool-cuisine-doses-plats.xlsx"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "argument",
+   "titre": "6. Alcool cuit dans les plats des menus, compté comme vendu au verre",
+   "page": "Proposition p. 37-44",
+   "accusation": "L'alcool incorporé dans les plats des menus serait du volume vendable au verre, au prix carte.",
+   "faille": "Il ne s'agit **pas** d'alcool servi dans un verre : c'est l'alcool **cuit dans les plats** d'un menu au forfait (sauces au porto, fondues au Ravelin, babas au macvin, coupes au cassis…). On le chiffre **plat par plat** : `dose × probabilité que le client choisisse ce plat` (lue en caisse) `× nombre de menus vendus` = **228 L** sur 3 ans. C'est de la cuisine, comptée **séparément** de la carte (aucun double compte).",
+   "cote": "Modérée",
+   "preuves": [
+    {
+     "to": "/rendu-final/alcool-cuisine-doses-plats",
+     "label": "Détail plat par plat (2.6)"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/Boissons-4-menus-par-periode.xlsx",
+     "label": "Menus par période (XLSX)"
+    },
+    {
+     "to": "/documents/pieces-defense/RF-reconstitution-volumes-liquides.xlsx",
+     "label": "Cascade (XLSX)"
+    }
+   ],
+   "detail": {
+    "methode": "Alcool incorporé dans les plats des menus, agrégé par alcool sur 3 exercices. Calcul de chaque ligne : nombre de menus réellement vendus × dose du plat × probabilité que ce plat soit choisi (jamais la dose entière pour une option facultative).",
+    "colonnes": [
+     "Alcool",
+     "Litres (3 ans)"
+    ],
+    "lignes": [
+     [
+      "Ravelin",
+      "100 L"
+     ],
+     [
+      "Macvin",
+      "54 L"
+     ],
+     [
+      "Crème de cassis",
+      "16 L"
+     ],
+     [
+      "Baileys",
+      "14 L"
+     ],
+     [
+      "Calvados",
+      "12 L"
+     ],
+     [
+      "Vin jaune",
+      "11 L"
+     ],
+     [
+      "Porto",
+      "10 L"
+     ],
+     [
+      "Marc de bourgogne",
+      "6 L"
+     ],
+     [
+      "Liqueur de poire",
+      "4 L"
+     ]
+    ],
+    "totalLabel": "Total alcool cuit dans les menus",
+    "totalValeur": "228 L",
+    "sources": [
+     {
+      "label": "Menus par période (menus vendus × dose × probabilité) : Boissons-4-menus-par-periode.xlsx"
+     },
+     {
+      "label": "Données : menusNonModifiesAlcool.json"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "argument",
+   "titre": "7. Consommation du personnel plafonnée à 5 %",
+   "page": "Proposition p. 51",
+   "accusation": "La consommation du personnel tiendrait dans un forfait de 5 % du CA.",
+   "faille": "Le **chef** consomme du Picon et du Macvin **jamais sonnés** (72 L de Picon achetés, 0 vendu) ; les serveurs ~6 Coca/jour. La consommation **alcool** seule : **143 L**, au-delà du forfait.",
+   "cote": "Modérée",
+   "preuves": [
+    {
+     "to": "/rendu-final/offerts-remises-pertes",
+     "label": "Page offerts/pertes"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/Consommation-personnel-et-offerts.xlsx",
+     "label": "Conso personnel (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "argument",
+   "titre": "8. Les abattements 5 %+5 %+5 % suffiraient",
+   "page": "Proposition p. 51",
+   "accusation": "Trois forfaits de 5 % (offerts, pertes, personnel) couvriraient tout le non-vendu.",
+   "faille": "Ce sont des **planchers**. La somme de nos postes documentés non vendus comme boisson (sur-versement + crémant + dégustation + freinte bière + conso chef + offerts + casse résiduelle) atteint **28,7 % des achats**, bien au-delà des 15 % accordés, et au-delà des **22-25 %** que la jurisprudence (CAA Paris) admet elle-même en reconstitution de bar. Sources : [https://blog.bar-i.com/poor-beverage-inventory-costing-bar-25000-year-math](https://blog.bar-i.com/poor-beverage-inventory-costing-bar-25000-year-math) · [https://www.wisk.ai/blog/how-do-hotel-bars-and-restaurants-prevent-liquor-theft-overpouring-and-shrinkage](https://www.wisk.ai/blog/how-do-hotel-bars-and-restaurants-prevent-liquor-theft-overpouring-and-shrinkage)",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/offerts-remises-pertes",
+     "label": "Page offerts/pertes"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-offerts-remises-pertes.xlsx",
+     "label": "RF-offerts/pertes (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "argument",
+   "titre": "9. « Volume disponible » gonflé par une variation de stock erronée",
+   "page": "Proposition p. 14, annexe 6",
+   "accusation": "Le volume disponible = achats + variation de stock (compte 310200).",
+   "faille": "La variation de stock retenue est de **signe inverse** à l'inventaire physique réel des 3 clôtures → le « disponible » est **gonflé d'environ 2 162 €**.",
+   "cote": "Modérée",
+   "preuves": [
+    {
+     "to": "/rendu-final/inventaire-stocks",
+     "label": "Page inventaire"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-inventaire-stocks.xlsx",
+     "label": "RF-inventaire (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "argument",
+   "titre": "10. « Ventes sans achat » présentées comme des recettes occultées",
+   "page": "Proposition (méthode, par produit)",
+   "accusation": "Certaines boissons seraient vendues sans aucun achat correspondant (Bordeaux Mouton Cadet, Hautes Côtes de Nuits).",
+   "faille": "**Faux, et c'est prouvé, facture à l'appui.** Un **bouton de caisse n'est pas un libellé de facture** : notre rapprochement caisse ↔ facture ↔ inventaire rattache **chaque bouton à la référence réellement achetée**. Le bouton « **Mouton Cadet** » est le **Bordeaux Supérieur (Château Grand Renom)**, facturé **9 bouteilles**, vendu 9. Le bouton « **Hautes Côtes de Nuits** » est le **HC de Nuits blanc (Lupé Cholet)**, facturé **24 bouteilles** pour 3 vendues. Les volumes que le vérificateur range sous « Côtes de Nuits » sont en réalité les **Hautes Côtes de BEAUNE (Domaine Germain)**, facturées par centaines de bouteilles : c'est une **confusion d'appellation** (Nuits ≠ Beaune). **Zéro vente sans achat : chaque vente est adossée à une facture.**",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/consommation-superieure-achats",
+     "label": "Page conso vs achats"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/Boissons-6-correspondance-libelles.xlsx",
+     "label": "Correspondance des libellés (XLSX)"
+    },
+    {
+     "to": "/documents/pieces-defense/RF-conso-achats-correspondance.xlsx",
+     "label": "Rapprochement conso/achats (XLSX)"
+    }
+   ],
+   "detail": {
+    "methode": "Rapprochement OFFICIEL caisse ↔ facture fournisseur ↔ inventaire (déjà établi). Chaque bouton de caisse pointe vers sa référence facturée : le libellé du bouton n'est qu'un nom d'écran.",
+    "colonnes": [
+     "Bouton de caisse",
+     "Vendu",
+     "Référence réelle",
+     "Facture fournisseur",
+     "Acheté (facturé)"
+    ],
+    "lignes": [
+     [
+      "BORD. MOUTON CADET",
+      "9 bouteilles",
+      "Bordeaux Supérieur",
+      "Château Grand Renom (Antoine Moueix)",
+      "9 bouteilles (2022-23)"
+     ],
+     [
+      "H.COTES DE NUITS",
+      "3 bouteilles",
+      "HC de Nuits blanc",
+      "Lupé Cholet 2017",
+      "24 bouteilles (2022-23)"
+     ],
+     [
+      "H.C. de Beaune (verre / pichet / btl)",
+      "≈ 585 services",
+      "HC de Beaune rouge",
+      "Domaine Germain",
+      "≈ 245 bouteilles (3 ans)"
+     ]
+    ],
+    "totalLabel": "Verdict",
+    "totalValeur": "Chaque vente est adossée à une facture (rapprochement des 3 sources) : aucune vente sans achat ; la « Côte de Nuits » du fisc est en réalité la Côte de Beaune",
+    "sources": [
+     {
+      "label": "Rapprochement : Boissons-6-correspondance-libelles.xlsx (_correspondance-caisse-inventaire-factures.csv)"
+     },
+     {
+      "label": "Achats : achatsBoissonsParPeriode.json ; Caisse : itemsCaisse.json (nom_canonique -> nom_facture)"
+     }
+    ]
+   }
+  },
+  {
+   "kind": "argument",
+   "titre": "11. Le coefficient liquide→solide serait neutre",
+   "page": "Proposition p. 52",
+   "accusation": "Le CA cuisine est obtenu en multipliant le CA liquides par 2,94 / 3,02 / 3,10.",
+   "faille": "Le **CA cuisine (≈ ¾ du total) n'est jamais mesuré** : il est extrapolé. Toute sur-évaluation des liquides est donc **amplifiée ~3 fois** sur le total reconstitué.",
+   "cote": "Forte",
+   "preuves": [
+    {
+     "to": "/rendu-final/coefficient-liquide-solide",
+     "label": "Page coefficient"
+    }
+   ],
+   "pieces": [
+    {
+     "to": "/documents/pieces-defense/RF-coefficient-liquide-solide.xlsx",
+     "label": "RF-coefficient (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "Notre démonstration indépendante : la cascade des 10 622 L",
+   "sousTitre": "On ne corrige pas le calcul du fisc : on part de NOS achats réels et on trace chaque litre."
   },
   {
    "kind": "barreComposition",
-   "titre": "Ou passent les 10 622 L achetes",
-   "sousTitre": "Les achats se ventilent integralement ; le residu est une perte normale",
+   "titre": "Où passent les 10 622 L achetés",
+   "sousTitre": "Chaque segment est mesuré (caisse/inventaire), calculé (recettes) ou estimé (taux sourcé) ; le résidu est la perte normale.",
    "unite": "L",
    "total": 10622,
    "segments": [
@@ -59,14 +716,49 @@
      "categorie": "mesure"
     },
     {
-     "label": "Cuisine",
+     "label": "Stock final",
+     "valeur": 213,
+     "categorie": "mesure"
+    },
+    {
+     "label": "Cuisine (carte)",
      "valeur": 566,
      "categorie": "calcul"
     },
     {
-     "label": "Menus",
+     "label": "Menus (forfait)",
      "valeur": 228,
      "categorie": "calcul"
+    },
+    {
+     "label": "Sur-versement vin",
+     "valeur": 490,
+     "categorie": "estime"
+    },
+    {
+     "label": "Sur-versement cocktails",
+     "valeur": 217,
+     "categorie": "estime"
+    },
+    {
+     "label": "Sur-versement spiritueux",
+     "valeur": 13,
+     "categorie": "estime"
+    },
+    {
+     "label": "Sur-versement crémant",
+     "valeur": 87,
+     "categorie": "estime"
+    },
+    {
+     "label": "Crémant jeté",
+     "valeur": 260,
+     "categorie": "estime"
+    },
+    {
+     "label": "Freinte bière (tout compris)",
+     "valeur": 129,
+     "categorie": "estime"
     },
     {
      "label": "Conso chef",
@@ -74,344 +766,492 @@
      "categorie": "estime"
     },
     {
-     "label": "Offerts",
+     "label": "Apéritifs offerts",
      "valeur": 40,
      "categorie": "estime"
     },
     {
-     "label": "Sur-versement",
-     "valeur": 1058,
-     "categorie": "estime"
-    },
-    {
-     "label": "Degustation",
+     "label": "Dégustation offerte",
      "valeur": 126,
      "categorie": "estime"
     },
     {
-     "label": "Cremant jete",
-     "valeur": 260,
-     "categorie": "estime"
-    },
-    {
-     "label": "Cremant sur-verse",
-     "valeur": 87,
-     "categorie": "estime"
-    },
-    {
-     "label": "Freinte biere",
-     "valeur": 129,
-     "categorie": "estime"
-    },
-    {
-     "label": "Stock",
-     "valeur": 213,
-     "categorie": "mesure"
-    },
-    {
-     "label": "Perte reelle",
-     "valeur": 1205,
+     "label": "Perte résiduelle",
+     "valeur": 1543,
      "categorie": "residuel"
     }
    ],
    "legende": true
   },
   {
-   "kind": "paragraphe",
-   "texte": "**Ce que la methode du fisc a oublie de deduire.** Chaque poste ci-dessous correspond a des litres reellement consommes hors vente au verre, que la reconstitution valorise pourtant comme du CA. Valorises au prix moyen liquide implicite du fisc (75 € / L), ils representent **289 852 €** de CA surfacture."
-  },
-  {
    "kind": "tableau",
-   "titre": "Ce que le fisc a oublie (litres et CA valorises a tort)",
-   "minWidth": 560,
+   "titre": "Cascade détaillée des 10 622 L achetés (poste par poste)",
+   "minWidth": 1040,
    "colonnes": [
     {
-     "label": "Poste oublie"
+     "label": "Poste"
     },
     {
      "label": "Litres",
      "align": "right"
     },
     {
-     "label": "CA valorise a tort",
+     "label": "% achats",
      "align": "right"
+    },
+    {
+     "label": "Nature"
+    },
+    {
+     "label": "Détaillé dans"
+    },
+    {
+     "label": "Pièce à télécharger"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Cuisine"
+      "v": "Vendu au verre (ventes enregistrées en caisse)"
+     },
+     {
+      "v": "5 569 L",
+      "align": "right"
+     },
+     {
+      "v": "52,4 %",
+      "align": "right"
+     },
+     {
+      "v": "Mesuré (caisse/inventaire)"
+     },
+     {
+      "v": "Caisse / inventaire"
+     },
+     {
+      "v": "Cascade (XLSX)",
+      "href": "/documents/pieces-defense/RF-reconstitution-volumes-liquides.xlsx"
+     }
+    ],
+    [
+     {
+      "v": "Vendu en cocktails (ventes enregistrées en caisse)"
+     },
+     {
+      "v": "998 L",
+      "align": "right"
+     },
+     {
+      "v": "9,4 %",
+      "align": "right"
+     },
+     {
+      "v": "Mesuré (caisse/inventaire)"
+     },
+     {
+      "v": "Caisse / inventaire"
+     },
+     {
+      "v": "Cascade (XLSX)",
+      "href": "/documents/pieces-defense/RF-reconstitution-volumes-liquides.xlsx"
+     }
+    ],
+    [
+     {
+      "v": "Stock final non vendu (inventaire physique)"
+     },
+     {
+      "v": "213 L",
+      "align": "right"
+     },
+     {
+      "v": "2,0 %",
+      "align": "right"
+     },
+     {
+      "v": "Mesuré (caisse/inventaire)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/inventaire-stocks"
+     },
+     {
+      "v": "RF-inventaire.xlsx",
+      "href": "/documents/pieces-defense/RF-inventaire-stocks.xlsx"
+     }
+    ],
+    [
+     {
+      "v": "Cuisine : alcool versé dans les plats à la carte"
      },
      {
       "v": "566 L",
       "align": "right"
      },
      {
-      "v": "42 701 €",
+      "v": "5,3 %",
       "align": "right"
+     },
+     {
+      "v": "Calculé (recettes)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/alcool-cuisine-doses-plats"
+     },
+     {
+      "v": "RF-cuisine.xlsx",
+      "href": "/documents/pieces-defense/RF-alcool-cuisine-doses-plats.xlsx"
      }
     ],
     [
      {
-      "v": "Menus"
+      "v": "Menus : alcool des plats servis au forfait"
      },
      {
       "v": "228 L",
       "align": "right"
      },
      {
-      "v": "17 201 €",
+      "v": "2,1 %",
       "align": "right"
+     },
+     {
+      "v": "Calculé (recettes)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/alcool-cuisine-doses-plats"
+     },
+     {
+      "v": "Cascade (XLSX)",
+      "href": "/documents/pieces-defense/RF-reconstitution-volumes-liquides.xlsx"
      }
     ],
     [
      {
-      "v": "Conso chef"
+      "v": "Sur-versement des vins au verre (free-pour, +23,6 %)"
      },
      {
-      "v": "143 L",
+      "v": "490 L",
       "align": "right"
      },
      {
-      "v": "10 788 €",
+      "v": "4,6 %",
       "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/sur-versement-au-verre"
+     },
+     {
+      "v": "RF-sur-versement.xlsx",
+      "href": "/documents/pieces-defense/RF-sur-versement-au-verre.xlsx"
      }
     ],
     [
      {
-      "v": "Offerts"
+      "v": "Sur-versement des cocktails (free-pour, +42 %)"
      },
      {
-      "v": "40 L",
+      "v": "217 L",
       "align": "right"
      },
      {
-      "v": "3 018 €",
+      "v": "2,0 %",
       "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/sur-versement-au-verre"
+     },
+     {
+      "v": "RF-sur-versement.xlsx",
+      "href": "/documents/pieces-defense/RF-sur-versement-au-verre.xlsx"
      }
     ],
     [
      {
-      "v": "Sur-versement"
+      "v": "Sur-versement des spiritueux / apéritifs (free-pour, +20 %)"
      },
      {
-      "v": "1 058 L",
+      "v": "13 L",
       "align": "right"
      },
      {
-      "v": "79 819 €",
+      "v": "0,1 %",
       "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/sur-versement-au-verre"
+     },
+     {
+      "v": "RF-sur-versement.xlsx",
+      "href": "/documents/pieces-defense/RF-sur-versement-au-verre.xlsx"
      }
     ],
     [
      {
-      "v": "Degustation"
-     },
-     {
-      "v": "126 L",
-      "align": "right"
-     },
-     {
-      "v": "9 506 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Cremant jete"
-     },
-     {
-      "v": "260 L",
-      "align": "right"
-     },
-     {
-      "v": "19 615 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Cremant sur-verse"
+      "v": "Sur-versement du crémant (free-pour, +23,6 %)"
      },
      {
       "v": "87 L",
       "align": "right"
      },
      {
-      "v": "6 564 €",
+      "v": "0,8 %",
       "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/pertes-cremant"
+     },
+     {
+      "v": "RF-crémant.xlsx",
+      "href": "/documents/pieces-defense/RF-cremant-jete.xlsx"
      }
     ],
     [
      {
-      "v": "Freinte biere"
+      "v": "Crémant jeté : fond de bouteille éventé en fin de service"
+     },
+     {
+      "v": "260 L",
+      "align": "right"
+     },
+     {
+      "v": "2,4 %",
+      "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/pertes-cremant"
+     },
+     {
+      "v": "RF-crémant.xlsx",
+      "href": "/documents/pieces-defense/RF-cremant-jete.xlsx"
+     }
+    ],
+    [
+     {
+      "v": "Freinte bière : mousse + collerette + nettoyage des lignes + fond de fût (le sur-versement de la bière est compris ICI, pas dans le sur-versement des vins)"
      },
      {
       "v": "129 L",
       "align": "right"
      },
      {
-      "v": "9 732 €",
+      "v": "1,2 %",
       "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/pertes-biere-mousse"
+     },
+     {
+      "v": "RF-bière.xlsx",
+      "href": "/documents/pieces-defense/RF-pertes-biere-mousse.xlsx"
      }
     ],
     [
      {
-      "v": "Perte reelle"
+      "v": "Consommation du chef : Picon + Macvin (jamais sonnés en caisse)"
      },
      {
-      "v": "1 205 L",
+      "v": "143 L",
       "align": "right"
      },
      {
-      "v": "90 909 €",
+      "v": "1,3 %",
       "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/offerts-remises-pertes"
+     },
+     {
+      "v": "Conso perso (XLSX)",
+      "href": "/documents/pieces-defense/Consommation-personnel-et-offerts.xlsx"
      }
     ],
     [
      {
-      "v": "Total"
+      "v": "Apéritifs offerts aux clients (estimés ~1/jour, non enregistrés en caisse)"
      },
      {
-      "v": "3 842 L",
+      "v": "40 L",
       "align": "right"
      },
      {
-      "v": "289 852 €",
+      "v": "0,4 %",
       "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/offerts-remises-pertes"
+     },
+     {
+      "v": "RF-offerts.xlsx",
+      "href": "/documents/pieces-defense/RF-offerts-remises-pertes.xlsx"
+     }
+    ],
+    [
+     {
+      "v": "Dégustation offerte : goûter du vin (2 cl, comptée note par note)"
+     },
+     {
+      "v": "126 L",
+      "align": "right"
+     },
+     {
+      "v": "1,2 %",
+      "align": "right"
+     },
+     {
+      "v": "Estimé (taux sourcé)"
+     },
+     {
+      "v": "Voir la page",
+      "to": "/rendu-final/degustation-au-verre"
+     },
+     {
+      "v": "RF-dégustation.xlsx",
+      "href": "/documents/pieces-defense/RF-degustation-par-note.xlsx"
+     }
+    ],
+    [
+     {
+      "v": "Perte résiduelle : casse, évaporation, fonds de verre, rinçage des tireuses"
+     },
+     {
+      "v": "1 543 L",
+      "align": "right"
+     },
+     {
+      "v": "14,5 %",
+      "align": "right"
+     },
+     {
+      "v": "Résidu (perte normale)"
+     },
+     {
+      "v": "Caisse / inventaire"
+     },
+     {
+      "v": "·"
+     }
+    ],
+    [
+     {
+      "v": "TOTAL ACHATS"
+     },
+     {
+      "v": "10 622 L",
+      "align": "right"
+     },
+     {
+      "v": "100 %",
+      "align": "right"
+     },
+     {
+      "v": "Factures fournisseurs"
+     },
+     {
+      "v": "·"
+     },
+     {
+      "v": "Factures fournisseurs",
+      "href": "/documents/pieces-defense/RF-reconstitution-volumes-liquides.xlsx"
      }
     ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**Reconciliation du chiffre d'affaires.** En partant du CA reconstitue par le fisc et en retirant les litres jamais vendus au verre, on reinjecte les vraies ventes caisse : la discordance se referme."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Reconciliation : CA declare vs reconstitue fisc vs recalcule",
-   "minWidth": 560,
-   "colonnes": [
-    {
-     "label": "Etape"
-    },
-    {
-     "label": "Montant",
-     "align": "right"
-    },
-    {
-     "label": "Ecart vs CA declare",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "CA declare (comptabilise)"
-     },
-     {
-      "v": "435 525 €",
-      "align": "right"
-     },
-     {
-      "v": "reference",
-      "align": "center"
-     }
-    ],
-    [
-     {
-      "v": "CA reconstitue par le fisc"
-     },
-     {
-      "v": "575 253 €",
-      "align": "right"
-     },
-     {
-      "v": "+139 728 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "(-) Litres jamais vendus au verre"
-     },
-     {
-      "v": "- 289 852 €",
-      "align": "right"
-     },
-     {
-      "v": "",
-      "align": "center"
-     }
-    ],
-    [
-     {
-      "v": "CA recalcule (vraies ventes caisse)"
-     },
-     {
-      "v": "285 401 €",
-      "align": "right"
-     },
-     {
-      "v": "-150 124 €",
-      "align": "right"
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "graphiqueEmpile",
-   "titre": "CA declare vs reconstitue fisc vs recalcule",
-   "hauteur": 280,
-   "dataKey": "scenario",
-   "type": "default",
-   "format": "euro",
-   "series": [
-    {
-     "name": "Chiffre d'affaires",
-     "couleur": "#0f766e"
-    }
-   ],
-   "data": [
-    {
-     "scenario": "CA declare",
-     "Chiffre d'affaires": 435525
-    },
-    {
-     "scenario": "Reconstitue fisc",
-     "Chiffre d'affaires": 575253
-    },
-    {
-     "scenario": "Recalcule (vraies ventes)",
-     "Chiffre d'affaires": 285401
-    }
    ]
   },
   {
    "kind": "note",
-   "texte": "**La perte reelle est conforme au secteur.** Apres ventilation de tous les usages, le residu d'alcool est de **1 205 L**, soit **11,3 %** des achats. C'est la fourchette normale d'un bar-restaurant (15 a 25 %, casse, evaporation, fonds de verre, rincage des tireuses) et c'est exactement ce que confirme le modele Monte Carlo independant (src/data/incertitudeDisparu) : il n'y a pas de recette occulte, il y a une perte d'exploitation normale."
+   "texte": "**Chaque ligne est cliquable** : colonne « Détaillé dans » = la page qui justifie le poste, colonne « Pièce » = le fichier téléchargeable (recalcul intégral). Les volumes « vendus au verre » et « en cocktails » sont les **ventes effectivement enregistrées** en caisse (total = CA déclaré, non contesté en volume) : le débat sur les suppressions porte sur leur interprétation, jamais sur ces ventes. Le **sur-versement de la bière** est compté **dans la freinte bière**, pas dans le sur-versement des vins/spiritueux (aucun double compte). Les **apéritifs offerts** ne sont **pas** enregistrés en caisse (estimation bornée, ~1/jour)."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Conclusion",
+   "numero": 4
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Sur les **10 622 L** d'alcool achetés, **85,5 %** sont **justifiés poste par poste** ci-dessus : vendus au verre ou en cocktails, en stock, ou consommés sans vente de façon **documentée et chiffrée** (cuisine, menus, sur-versement, crémant, dégustation, freinte bière, conso du chef, offerts). Le reste, **14,5 %** (1 543 L), est une **perte pure** (casse, évaporation, fonds de verre, rinçage des tireuses), **en dessous** de la démarque normale d'un bar (15-20 % du produit servi). Il ne reste donc **aucun volume disponible pour des ventes dissimulées** : la reconstitution du fisc, qui suppose des doses exactes et zéro perte, surévalue mécaniquement. Source démarque secteur : [https://blog.bar-i.com/poor-beverage-inventory-costing-bar-25000-year-math](https://blog.bar-i.com/poor-beverage-inventory-costing-bar-25000-year-math)."
   },
   {
    "kind": "piecejointe",
-   "intro": "Cascade complete des volumes, tableau des postes oublies par la methode du fisc (litres et euros recuperes) et reconciliation du CA, le tout reproductible.",
+   "intro": "Chaque poste de la cascade est recalculable depuis ces pièces (lecture seule des annexes de caisse) :",
    "fichiers": [
     {
      "fichier": "pieces-defense/RF-reconstitution-volumes-liquides.xlsx",
-     "label": "RF - Reconstitution par les volumes (cascade + methode fisc vs reelle + reconciliation)"
+     "label": "Cascade des volumes + réconciliation CA (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-sur-versement-au-verre.xlsx",
+     "label": "Sur-versement au verre (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-pertes-biere-mousse.xlsx",
+     "label": "Pertes de bière / freinte du fût (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-cremant-jete.xlsx",
+     "label": "Crémant jeté et sur-versé (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-degustation-par-note.xlsx",
+     "label": "Dégustation note par note (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-alcool-cuisine-doses-plats.xlsx",
+     "label": "Alcool de cuisine, dose par plat (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-offerts-remises-pertes.xlsx",
+     "label": "Offerts, remises et pertes (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-coefficient-liquide-solide.xlsx",
+     "label": "Coefficient liquide→solide (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/RF-inventaire-stocks.xlsx",
+     "label": "Inventaire physique des stocks (XLSX)"
     }
    ]
   },
   {
-   "kind": "alerte",
-   "couleur": "teal",
-   "titre": "Ce qu'il faut retenir",
-   "texte": "La methode du fisc surestime parce qu'elle suppose des doses exactes, zero perte, zero cuisine, zero consommation du personnel et zero offert. Recalcule sur les achats et la caisse reels, le manquant retombe a une perte normale de **11,3 %** (norme CHR). En reinjectant les litres jamais vendus au verre (**289 852 €**), le CA reconstitue passe de **575 253 €** a **285 401 €** et la discordance avec le CA declare se referme."
-  },
-  {
    "kind": "interne",
    "audience": "avocat",
-   "titre": "Note pour l'avocat",
-   "texte": "La demonstration neutralise le coeur de la reconstitution (penalite 1759, ≈ 471 826 €). Trois angles cumulatifs : (1) la cascade des 10 622 L est integralement tracee, le residu (1 205 L = 11,3 %) est une perte sectorielle normale ; (2) le fisc valorise comme CA verre **3 842 L** jamais vendus au verre, soit **289 852 €** surfactures ; (3) reinjectees, les vraies ventes caisse referment la discordance. L'amplification par le coefficient liquide/solide (3,1) multiplie aussi l'erreur : toute surevaluation des volumes est amplifiee ~3 fois. Reproductible via scripts/rendu-final-reconstitution-volumes-liquides.py et la piece RF-reconstitution-volumes-liquides.xlsx."
+   "titre": "Stratégie",
+   "texte": "Mener avec NOTRE cascade indépendante (justifiée à 85,5 %, résidu 14,5 % = perte normale), jamais avec le chiffre du fisc ; la réconciliation « sur sa formule » n'est qu'une vérification secondaire. Chaque carte renvoie à sa page dédiée et à sa pièce XLSX ; les taux de perte sont sourcés (Kerr, Wansink, Bar-i, WISK). Retirer cet encart de toute version remise."
   }
  ]
 }

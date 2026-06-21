@@ -55,23 +55,27 @@ export default function RenduFinalNav({ onNavigate }: RenduFinalNavProps) {
                 <span>{bloc.titre}</span>
               </Link>
 
-              {items.map((g, i) => {
-                const to = `/rendu-final/${g.slug}`
-                return (
-                  <Link
-                    key={g.slug}
-                    to={to}
-                    className={classes.grief}
-                    data-active={pathname === to || undefined}
-                    onClick={onNavigate}
-                  >
-                    <span className={classes.griefNum}>
-                      {bloc.numero}.{i + 1}
-                    </span>
-                    <span>{g.titre}</span>
-                  </Link>
-                )
-              })}
+              {(() => {
+                // Numérotation : les sous-pages (g.numero forcé) n'incrémentent
+                // pas le compteur, pour ne pas décaler les pages principales.
+                let auto = 0
+                return items.map((g) => {
+                  const num = g.numero ?? `${bloc.numero}.${++auto}`
+                  const to = `/rendu-final/${g.slug}`
+                  return (
+                    <Link
+                      key={g.slug}
+                      to={to}
+                      className={classes.grief}
+                      data-active={pathname === to || undefined}
+                      onClick={onNavigate}
+                    >
+                      <span className={classes.griefNum}>{num}</span>
+                      <span>{g.titre}</span>
+                    </Link>
+                  )
+                })
+              })()}
             </Box>
           )
         })}

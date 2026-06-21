@@ -38,11 +38,14 @@ Python : /tmp/xlsenv/bin/python (xlrd + openpyxl).
 import os
 import re
 import json
+import datetime
 import collections
 
 import xlrd
 import openpyxl
 from openpyxl.styles import Font, Alignment, PatternFill, Border, Side
+
+from rfcommun import normaliser_sections
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
@@ -64,6 +67,12 @@ INT_REELLES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]
 INT_INEXISTANTES = [13, 16, 17, 18]
 NB_INT_REELLES = len(INT_REELLES)  # 14
 SAISONS = ["Printemps", "Été", "Automne", "Hiver"]
+# Une couleur par exercice (mêmes teintes que le graphique couverts/semaine).
+COULEURS_EXO = {"2022-2023": "#0f766e", "2023-2024": "#b45309", "2024-2025": "#1d4ed8"}
+# Étiquettes de mois pour l'axe d'un exercice (avril -> mars).
+MOIS_LABELS = [(4, "Avr"), (5, "Mai"), (6, "Juin"), (7, "Juil"), (8, "Août"),
+               (9, "Sep"), (10, "Oct"), (11, "Nov"), (12, "Déc"),
+               (1, "Jan"), (2, "Fév"), (3, "Mars")]
 MOIS_SAISON = {3: "Printemps", 4: "Printemps", 5: "Printemps",
                6: "Été", 7: "Été", 8: "Été",
                9: "Automne", 10: "Automne", 11: "Automne",
@@ -143,6 +152,159 @@ def encaissements():
         row["total"] = sum(par_note[k][e] for e in EXOS)
         out[k] = row
     return out, matrice, totaux_ys, total_global
+
+
+# ---------------------------------------------------------------------------
+# 2 bis) Encaissements par JOUR (fichier F = règlements).
+#   Un encaissement = une note distincte = (date, no_ticket). Pour chaque date
+#   d'ouverture, on compte le nombre de notes distinctes encaissées ce jour-là.
+#   Sert au graphique « encaissements par jour travaillé, moyenne par semaine ».
+# ---------------------------------------------------------------------------
+def encaissements_par_jour():
+    """Retourne {exercice: {date 'YYYY-MM-DD': nb_encaissements}}."""
+    par_jour = {e: collections.defaultdict(int) for e in EXOS}
+    for ex in EXOS:
+        sh = xlrd.open_workbook(F[ex]).sheet_by_index(0)
+        vues = set()
+        for r in range(1, sh.nrows):
+            date = str(sh.cell_value(r, 0))[:10]
+            nt = sh.cell_value(r, 2)
+            if not DATE_RE.fullmatch(date) or not isinstance(nt, float):
+                continue
+            key = (date, int(nt))
+            if key in vues:
+                continue
+            vues.add(key)
+            par_jour[ex][date] += 1
+    return par_jour
+
+
+def _semaine_exercice(date_str, an_debut):
+    """Index de semaine 1..52 dans l'exercice (1er avril de an_debut -> mars)."""
+    d = datetime.date(int(date_str[:4]), int(date_str[5:7]), int(date_str[8:10]))
+    sem = (d - datetime.date(an_debut, 4, 1)).days // 7 + 1
+    return max(1, min(52, sem))
+
+
+def graphique_encaissements_hebdo(par_jour):
+    """Section graphiqueLignes : nombre MOYEN d'encaissements par jour travaillé,
+    pour chaque semaine de l'exercice (avril -> mars), une ligne par exercice.
+    Retourne (section, somme_par_semaine, jours_par_semaine) pour la pièce XLSX."""
+    NB_SEM = 52
+    somme = {e: collections.defaultdict(int) for e in EXOS}   # encaissements
+    jours = {e: collections.defaultdict(int) for e in EXOS}   # jours travaillés
+    for e in EXOS:
+        an = int(e[:4])
+        for date, cnt in par_jour[e].items():
+            sem = _semaine_exercice(date, an)
+            somme[e][sem] += cnt
+            jours[e][sem] += 1
+
+    # Période calendaire représentative de chaque semaine d'exercice (base
+    # 1er avril, comme l'axe des mois) : « 28/10 - 03/11 ».
+    base = datetime.date(2022, 4, 1)
+
+    def periode_label(sem):
+        debut = base + datetime.timedelta(days=(sem - 1) * 7)
+        fin = debut + datetime.timedelta(days=6)
+        return f"{debut.day:02d}/{debut.month:02d} - {fin.day:02d}/{fin.month:02d}"
+
+    data = []
+    for sem in range(1, NB_SEM + 1):
+        ligne = {"semaine": sem, "periode": periode_label(sem)}
+        for e in EXOS:
+            j = jours[e].get(sem, 0)
+            ligne[e] = int(round(somme[e][sem] / j)) if j else 0
+        data.append(ligne)
+
+    mois_ticks = []
+    for m, lib in MOIS_LABELS:
+        an = 2022 if m >= 4 else 2023
+        sem = (datetime.date(an, m, 1) - datetime.date(2022, 4, 1)).days // 7 + 1
+        mois_ticks.append({"tick": max(1, min(NB_SEM, sem)), "label": lib})
+
+    section = {
+        "kind": "graphiqueLignes",
+        "titre": "Encaissements par jour travaillé, moyenne par semaine (avril → mars)",
+        "sousTitre": ("Une ligne par exercice. Pour chaque semaine, nombre moyen de notes encaissées "
+                      "par jour d'ouverture (total des encaissements de la semaine ÷ nombre de jours "
+                      "travaillés). Les trois années se superposent : même montée au printemps, même "
+                      "pic estival, même creux hivernal (fermeture janvier-février)."),
+        "hauteur": 340,
+        "dataKey": "semaine",
+        "series": [{"name": e, "couleur": COULEURS_EXO[e]} for e in EXOS],
+        "data": data,
+        "format": "int",
+        "moisTicks": mois_ticks,
+        "tooltipSousTitre": "Moyenne de tables encaissées cette semaine",
+    }
+    return section, somme, jours
+
+
+# ---------------------------------------------------------------------------
+# XLSX dédié : toutes les données du graphique (pour le fisc).
+#   Onglet 1 : moyenne/semaine (ce qui est tracé) + jours travaillés.
+#   Onglet 2 : détail par jour (date, exercice, semaine, nb encaissements).
+# ---------------------------------------------------------------------------
+OUT_XLSX_ENC = os.path.join(ROOT, "public/documents/pieces-defense/RF-encaissements-par-jour.xlsx")
+
+
+def construire_xlsx_encaissements(par_jour, somme, jours):
+    wb = openpyxl.Workbook()
+
+    # --- Onglet 1 : moyenne par semaine (données tracées) ----------------
+    ws = wb.active
+    ws.title = "Moyenne par semaine"
+    ws.append(["Encaissements par jour travaillé : moyenne par semaine d'exercice (avril → mars)"])
+    ws["A1"].font = GRAS
+    ws.append([("Pour chaque semaine et chaque exercice : total des encaissements (notes distinctes), "
+                "nombre de jours travaillés, et moyenne d'encaissements par jour travaillé (= la "
+                "valeur tracée sur le graphique).")])
+    ws["A2"].alignment = Alignment(wrap_text=True, vertical="top")
+    ws.merge_cells("A2:J2")
+    ws.row_dimensions[2].height = 45
+    ws.append([])
+    head = ["Semaine"]
+    for e in EXOS:
+        head += [f"{e} total", f"{e} jours", f"{e} moy/jour"]
+    h = ws.max_row + 1
+    ws.append(head)
+    styler_entete(ws, len(head), h)
+    for sem in range(1, 53):
+        r = ws.max_row + 1
+        ligne = [sem]
+        for e in EXOS:
+            j = jours[e].get(sem, 0)
+            tot = somme[e].get(sem, 0)
+            moy = round(tot / j, 1) if j else 0
+            ligne += [tot, j, moy]
+        ws.append(ligne)
+        for c in range(1, len(head) + 1):
+            ws.cell(row=r, column=c).border = BORD
+    largeurs(ws, [9] + [11, 9, 11] * len(EXOS))
+    ws.freeze_panes = "B" + str(h + 1)
+
+    # --- Onglet 2 : détail par jour --------------------------------------
+    ws2 = wb.create_sheet("Détail par jour")
+    ws2.append(["Encaissements par jour (notes distinctes encaissées) : source annexes F"])
+    ws2["A1"].font = GRAS
+    ws2.append([])
+    h2 = ws2.max_row + 1
+    ws2.append(["Date", "Exercice", "Semaine d'exercice", "Nb encaissements"])
+    styler_entete(ws2, 4, h2)
+    for e in EXOS:
+        an = int(e[:4])
+        for date in sorted(par_jour[e]):
+            r = ws2.max_row + 1
+            ws2.append([date, e, _semaine_exercice(date, an), par_jour[e][date]])
+            for c in range(1, 5):
+                ws2.cell(row=r, column=c).border = BORD
+    largeurs(ws2, [14, 14, 18, 18])
+    ws2.freeze_panes = "A" + str(h2 + 1)
+
+    os.makedirs(os.path.dirname(OUT_XLSX_ENC), exist_ok=True)
+    wb.save(OUT_XLSX_ENC)
+    return OUT_XLSX_ENC
 
 
 # ---------------------------------------------------------------------------
@@ -283,11 +445,11 @@ def construire_xlsx(par_note, matrice, totaux_ys, total_global):
             lignes3.append([f"n°{n}", "Oui (intérieur)", ""])
         else:
             note = "Numéro de note (règlement séparé) / non attribué"
-            lignes3.append([f"n°{n}", "NON — aucune table", note])
-    lignes3.append(["n°100", "Extérieur, le soir uniquement", "Pas de parasol, très rarement"])
-    lignes3.append(["n°101 à 124", "Oui (terrasse)", ""])
-    lignes3.append(["n°116 et 117", "Terrasse, 14 juillet et 31 déc. au soir", "Pas de parasol sinon"])
-    lignes3.append(["n°125", "NON — aucune table", "N'existe pas"])
+            lignes3.append([f"n°{n}", "NON, aucune table", note])
+    lignes3.append(["n°101 à 117 (sauf 102)", "Oui (terrasse)", ""])
+    lignes3.append(["n°102", "NON, aucune table", "N'existe pas"])
+    lignes3.append(["n°125", "NON, aucune table", "N'existe pas"])
+    lignes3.append(["n°116 et 117", "Terrasse, occasionnelle", "Jours de forte affluence"])
     for row in lignes3:
         r = ws3.max_row + 1
         ws3.append(row)
@@ -323,7 +485,7 @@ def construire_xlsx(par_note, matrice, totaux_ys, total_global):
 
     # --- Onglet 5 : Exemple table scindee --------------------------------
     ws5 = wb.create_sheet("Exemple table scindee")
-    ws5.append([f"Exemple daté : table réelle scindée en plusieurs notes — {EX['date']}"])
+    ws5.append([f"Exemple daté : table réelle scindée en plusieurs notes : {EX['date']}"])
     ws5["A1"].font = GRAS
     ws5.append(["Deux notes de MÊME TOTAL, encaissées à la même minute, articles divisés en 0,5. "
                 "Supprimer la table d'origine évite de compter ces articles deux fois."])
@@ -386,73 +548,102 @@ def charge_section_hebdo():
     return _HEBDO_CACHE[0]
 
 
-def construire_json(par_note, matrice, totaux_ys, total_global):
+SAISONS_JSON = os.path.join(ROOT, "src/data/renduFinal/couverts-saisons.json")
+
+
+def charge_sections_saisons():
+    """Liste des 4 sections 'saisonCouverts' (couverts/jour, midi/soir, par saison),
+    produites par rendu-final-couverts.py. Liste vide si non encore généré."""
+    if not os.path.exists(SAISONS_JSON):
+        return []
+    with open(SAISONS_JSON, encoding="utf-8") as f:
+        return json.load(f)
+
+
+CAPACITE_JSON = os.path.join(ROOT, "src/data/renduFinal/couverts-capacite.json")
+
+
+def charge_section_capacite():
+    """Section 'couvertsCapacite' (couverts/jour par semaine + bandes 58 %),
+    produite par rendu-final-couverts.py. None si non encore généré."""
+    if not os.path.exists(CAPACITE_JSON):
+        return None
+    with open(CAPACITE_JSON, encoding="utf-8") as f:
+        return json.load(f)
+
+
+# Lien URL visible et cliquable (le libellé EST l'URL complète).
+def _lien(u):
+    return f"[{u}]({u})"
+
+
+U_FIDUCIAL = "https://www.sudradio.fr/sud-radio/lobservatoire-fiducial-2025-le-metier-de-la-restauration-a-la-loupe"
+U_PENNYLANE = "https://www.pennylane.com/fr/fiches-pratiques/comptabilite/taux-de-remplissage-dun-restaurant-tout-savoir"
+U_CREER = "https://www.creerentreprise.fr/taux-remplissage-occupation-hotel-restaurant-calcul-moyen/"
+
+
+def construire_json(par_note, matrice, totaux_ys, total_global, graph_enc):
     max_note = max(par_note)
 
-    # --- Card A : plan de salle réel (numéro != place) -------------------
+    # Section graphique capacité (couverts/jour vs 58 %) + valeurs dérivées.
+    _cap_section = charge_section_capacite()
+    _cap_int = _cap_section["capaciteInterieur"] if _cap_section else 44
+    _cap_ext = _cap_section["capaciteTerrasse"] if _cap_section else 43
+    _cap_int_58 = _cap_section["seuilInterieur"] if _cap_section else 26
+    _cap_ext_58 = _cap_section["seuilTerrasse"] if _cap_section else 25
+
+    # --- Card A : plan de salle réel INTÉRIEUR (numéro != place) ----------
+    # Couverts par table (places assises), confirmés par la gérante.
+    COUV_INT = {1: 2, 2: 4, 3: 2, 4: 4, 5: 4, 6: 4, 7: 2, 8: 2, 9: 4,
+                10: 2, 11: 2, 12: 4, 14: 2, 15: 6}
+    tables_int = []
+    for n in range(1, 19):
+        if n in INT_REELLES:
+            tables_int.append({"numero": f"n°{n}", "type": "reelle", "couverts": COUV_INT[n]})
+        else:
+            tables_int.append({"numero": f"n°{n}", "type": "inexistante", "note": "Aucune table"})
     grille_int = {
         "kind": "grilleTables",
         "variante": "plan",
-        "titre": "Plan de salle réel — intérieur (14 tables, n° 1 à 15 sauf 13)",
+        "titre": "Plan de salle réel à l'intérieur (14 tables, n° 1 à 15 sauf 13)",
         "sousTitre": ("Sur les 18 numéros possibles à l'intérieur, seuls 14 désignent une table. "
                       "Les n° 13, 16, 17 et 18 ne correspondent à AUCUNE table physique : ce sont "
                       "des numéros de note (règlement séparé) ou des numéros non attribués."),
-        "tables": [
-            {"numero": f"n°{n}", "type": ("reelle" if n in INT_REELLES else "inexistante"),
-             "note": (None if n in INT_REELLES else "Aucune table")}
-            for n in range(1, 19)
-        ],
+        "tables": tables_int,
+        "resume": {"tables": len(COUV_INT), "couverts": sum(COUV_INT.values())},
     }
-    # nettoyage des notes None
-    for t in grille_int["tables"]:
-        if t.get("note") is None:
-            t.pop("note")
+
+    # --- Card A bis : plan de salle réel EXTÉRIEUR (terrasse) ------------
+    # Terrasse réelle = n° 101 à 117 (la n° 102 n'existe pas). Les n° 116 et 117
+    # ne sont montées que les jours de forte affluence -> "rare", exclues du
+    # décompte des places (météo). Aucun de ces numéros n'apparaît dans l'export.
+    COUV_EXT = {101: 2, 103: 2, 104: 4, 105: 4, 106: 4, 107: 2, 108: 4,
+                109: 2, 110: 3, 111: 2, 112: 4, 113: 2, 114: 4, 115: 4}
+    METEO_EXT = {116: 2, 117: 2}
+    tables_ext = []
+    for n in range(101, 118):  # 101 à 117
+        if n == 102:
+            tables_ext.append({"numero": "n°102", "type": "inexistante", "note": "N'existe pas"})
+        elif n in METEO_EXT:
+            tables_ext.append({"numero": f"n°{n}", "type": "rare", "couverts": METEO_EXT[n],
+                               "note": "Unique pour jours exceptionnels comme 14 juillet et week-end du Chat Gourmand"})
+        else:
+            tables_ext.append({"numero": f"n°{n}", "type": "reelle", "couverts": COUV_EXT[n]})
+    # La n° 125 est citée par le service mais n'existe pas davantage que la 102.
+    tables_ext.append({"numero": "n°125", "type": "inexistante", "note": "N'existe pas"})
+    grille_ext = {
+        "kind": "grilleTables",
+        "variante": "plan",
+        "titre": "Plan de salle réel à l'extérieur (terrasse)",
+        "sousTitre": ("La terrasse porte les numéros 101 à 117 (les n° 102 et 125 n'existent pas). "
+                      "Les n° 116 et 117 ne sont montées que les jours de forte affluence : elles "
+                      "sont donc exclues du décompte des places. Aucun de ces numéros de terrasse "
+                      "n'apparaît dans l'export de caisse."),
+        "tables": tables_ext,
+        "resume": {"tables": len(COUV_EXT), "couverts": sum(COUV_EXT.values())},
+    }
 
     # --- Card B : encaissements par numéro de note -----------------------
-    cartes_notes = {
-        "kind": "grilleTables",
-        "variante": "notes",
-        "titre": "Nombre d'encaissements par numéro de note (rang quotidien, 1 à 57)",
-        "sousTitre": ("Chaque carte = un rang de note dans la journée (la 1ʳᵉ note encaissée, la 2ᵉ, "
-                      "etc.). Le chiffre = le nombre total d'encaissements à ce rang sur les trois "
-                      "exercices. Les rangs élevés (au-delà du nombre de tables) ne surviennent que "
-                      "les jours de pointe : ce sont des notes de règlement séparé, pas des tables."),
-        "tables": [{"numero": f"n°{no}", "total": par_note[no]["total"]} for no in sorted(par_note)],
-    }
-
-    # --- Tableau : note x saison x exercice ------------------------------
-    cols = [(e, s) for e in EXOS for s in SAISONS]
-    colonnes = [{"label": "N° de note"}]
-    for (e, s) in cols:
-        colonnes.append({"label": f"{e[2:4]}-{e[7:9]} {s[:4]}.", "align": "right"})
-    colonnes.append({"label": "Total", "align": "right"})
-    lignes_matrice = []
-    for no in sorted(par_note):
-        ligne = [cg(f"n°{no}")]
-        tot = 0
-        for (e, s) in cols:
-            val = matrice[no].get((e, s), 0)
-            tot += val
-            ligne.append(cd(fr_int(val) if val else "·"))
-        ligne.append({"v": fr_int(tot), "align": "right", "fw": 700})
-        lignes_matrice.append(ligne)
-    # ligne totaux
-    ligne_tot = [{"v": "Total", "fw": 700}]
-    grand = 0
-    for (e, s) in cols:
-        val = totaux_ys.get((e, s), 0)
-        grand += val
-        ligne_tot.append({"v": fr_int(val), "align": "right", "fw": 700})
-    ligne_tot.append({"v": fr_int(grand), "align": "right", "fw": 700})
-    lignes_matrice.append(ligne_tot)
-    tab_matrice = {
-        "kind": "tableau",
-        "titre": "Encaissements par numéro de note, par saison et par exercice",
-        "minWidth": 1180,
-        "colonnes": colonnes,
-        "lignes": lignes_matrice,
-    }
-
     # --- Tableau : partage mesuré ----------------------------------------
     tab_partage = {
         "kind": "tableau",
@@ -504,7 +695,7 @@ def construire_json(par_note, matrice, totaux_ys, total_global):
         {"kind": "chapitre", "source": "fisc", "numero": 1,
          "titre": "Ce que dit l'administration",
          "sousTitre": "Proposition de rectification p. 11 et section « suppression de note » (p. 18-19)."},
-        {"kind": "note",
+        {"kind": "paragraphe",
          "texte": ("Le vérificateur relève que la caisse comporte des **tables « virtuelles »** et "
                    "qu'elle **autorise la suppression d'une table et de tous ses articles**. Il en "
                    "conclut qu'« *il n'est pas possible de confirmer que ces modifications soient "
@@ -525,65 +716,82 @@ def construire_json(par_note, matrice, totaux_ys, total_global):
          "sousTitre": "Un numéro de note n'est pas une place ; la suppression protège le CA, elle ne le réduit pas."},
 
         # --- A. Le numéro n'est pas une place ---
+        {"kind": "titre", "numero": "2.1", "texte": "Premier fait : un numéro n'est pas une table"},
         {"kind": "paragraphe",
-         "texte": ("**Premier fait : un numéro n'est pas une table.** La salle compte en réalité "
+         "texte": ("Avant tout, **les fichiers d'export de la caisse ne mentionnent jamais les "
+                   "tables.** Ils ne listent que des **encaissements (les notes), numérotés de 1 à "
+                   f"{max_note}** au fil de la journée. Ce numéro **ne reflète pas le nombre de "
+                   "tables réelles** : beaucoup de clients **règlent séparément**, si bien que "
+                   "**plusieurs notes, donc plusieurs numéros, correspondent en réalité à une seule "
+                   "table**. Compter les numéros revient donc à compter des règlements, pas des "
+                   "tables.")},
+        {"kind": "paragraphe",
+         "texte": ("La salle compte en réalité "
                    f"**{NB_INT_REELLES} tables à l'intérieur** (n° 1 à 12, 14 et 15). Les numéros "
                    "**13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros "
                    "de note (règlement séparé) ou des numéros non attribués. C'est vérifiable sur "
                    "place : il suffit de compter les tables de la salle.")},
         grille_int,
-        {"kind": "note",
-         "texte": ("Même constat à l'extérieur : la **table n° 125 n'existe pas** ; les **n° 116 et "
-                   "117** ne sont montées que le **14 juillet et le 31 décembre au soir** (pas de "
-                   "parasol le reste de l'année) ; la **n° 100** ne sert que le soir, très rarement. "
-                   "**Preuve décisive dans les fichiers** : si le numéro de la caisse était un numéro "
-                   "de table, on verrait apparaître les numéros de terrasse (101 à 125). Or le "
-                   f"numéro de note de l'export ne va **jamais au-delà de {max_note}** : c'est un "
-                   "**rang de note quotidien** (1ʳᵉ note encaissée, 2ᵉ, etc.), réattribué chaque "
-                   "jour, et non un numéro de table. On ne peut donc rien déduire de « couverts » à "
-                   "partir d'un numéro.")},
+        {"kind": "paragraphe",
+         "texte": ("Même constat à l'extérieur. La terrasse porte les numéros **101 à 117** (les "
+                   "**tables n° 102 et 125 n'existent pas**). Les **tables n° 116 et 117** ne sont "
+                   "montées que les **jours de forte affluence** ; le reste de l'année, elles ne "
+                   "servent pas, et elles sont exclues du décompte des places. **Preuve décisive "
+                   "dans les fichiers** : si le numéro de la caisse était un numéro de table, on "
+                   "verrait apparaître les numéros "
+                   f"de terrasse (101 à 125). Or le numéro de note de l'export ne va **jamais "
+                   f"au-delà de {max_note}** : c'est un **rang de note quotidien** (1ʳᵉ note "
+                   "encaissée, 2ᵉ, etc.), réattribué chaque jour, et non un numéro de table. On ne "
+                   "peut donc rien déduire de « couverts » à partir d'un numéro.")},
+        grille_ext,
 
-        # --- B. Encaissements par numéro de note ---
+        # --- B. La capacité de la salle et le taux d'occupation de 58 % ---
+        {"kind": "titre", "numero": "2.2",
+         "texte": "Deuxième fait : la capacité de la salle borne le nombre de couverts"},
         {"kind": "paragraphe",
-         "texte": ("**Deuxième fait : le profil des encaissements le confirme.** Pour chaque rang "
-                   "de note, voici le nombre d'encaissements sur les trois exercices. Les premiers "
-                   "rangs sont atteints presque chaque jour d'ouverture (~660 fois) ; le nombre "
-                   "décroît régulièrement ; les rangs élevés (au-delà du nombre de tables) ne "
-                   "surviennent que les jours de pointe et correspondent aux **notes de règlement "
-                   "séparé**, jamais à des tables supplémentaires.")},
-        cartes_notes,
+         "texte": ("Le "
+                   "taux de remplissage moyen d'un restaurant traditionnel en France est de "
+                   "**58 %** (Observatoire FIDUCIAL 2025). Appliqué aux places réelles, cela "
+                   f"représente **{_cap_int_58} couverts par service à l'intérieur** ({_cap_int} "
+                   f"places) et **{_cap_ext_58} couverts en terrasse** ({_cap_ext} places). Surtout, "
+                   "**la cuisine est trop petite pour servir à la fois en salle et en terrasse** : "
+                   "un seul espace est ouvert à chaque service. **Du début mai au début septembre**, "
+                   "seule la **terrasse** est utilisée, sauf les jours de pluie où le service se fait "
+                   "à l'intérieur ; **de mi-septembre à fin avril**, seul l'**intérieur** est "
+                   "utilisé.")},
         {"kind": "paragraphe",
-         "texte": ("Le détail par **saison** et par **exercice** est donné ci-dessous (et dans la "
-                   "pièce jointe, recalculable ligne à ligne depuis les annexes C et F). Il montre "
-                   "la saisonnalité attendue d'un restaurant de bord de canal (pic l'été) et la "
-                   "décroissance régulière des rangs élevés, exercice après exercice.")},
-        tab_matrice,
-        *([{"kind": "paragraphe",
-            "texte": ("Cette régularité se voit encore mieux sur le **nombre de couverts par "
-                      "semaine** (un couvert = un plat ou un menu servi). En superposant les trois "
-                      "exercices sur un même axe avril → mars, les courbes sont **quasi "
-                      "identiques** : même montée au printemps, même pic estival, même creux "
-                      "hivernal (fermeture en janvier et février). Une activité dissimulée se "
-                      "traduirait par des écarts erratiques d'une année à l'autre ; au contraire, "
-                      "l'exploitation est stable et reproductible.")},
-           charge_section_hebdo(),
-           {"kind": "piecejointe",
-            "intro": ("Tout le calcul des couverts, étape par étape (lecture des annexes C de "
-                      "caisse) : la classification de chaque item de la carte en plat/menu ou non, "
-                      "le nombre de couverts par encaissement, et le total par jour et par service."),
-            "fichiers": [
-                {"fichier": "pieces-defense/RF-items-classification.xlsx",
-                 "label": "Items de la caisse classés « plat/menu » (ce qui compte comme un couvert) (XLSX)"},
-                {"fichier": "pieces-defense/RF-encaissements-couverts.xlsx",
-                 "label": "Couverts par encaissement : date, heure, identifiant, nombre de couverts (XLSX)"},
-                {"fichier": "pieces-defense/RF-couverts-par-service.xlsx",
-                 "label": "Couverts par jour et par service (midi 10h-17h / soir 18h-minuit) (XLSX)"},
-            ]}] if charge_section_hebdo() else []),
+         "texte": ("Sources du taux de remplissage de 58 % (restauration traditionnelle, France) : "
+                   + _lien(U_FIDUCIAL) + " ; " + _lien(U_PENNYLANE) + " ; " + _lien(U_CREER) + ".")},
+
+        # --- Méthodologie : compter les couverts depuis la caisse ---
+        {"kind": "titre", "texte": "Compter les couverts à partir de la caisse"},
+        {"kind": "paragraphe",
+         "texte": ("Le détail des tickets (annexes "
+                   "C) permet d'identifier **tous les encaissements contenant un plat ou un menu** "
+                   "(un couvert = un plat ou un menu servi). On estime ainsi, de façon assez juste, "
+                   "le **nombre de personnes servies par jour**, et même **par service** : l'**heure** "
+                   "de chaque encaissement le classe au **midi** (avant 18 h) ou au **soir** (18 h à "
+                   "minuit). Les fichiers ci-dessous contiennent ces données, recalculables ligne à "
+                   "ligne.")},
+        {"kind": "piecejointe",
+         "intro": "Données de couverts (lecture des annexes C, reproductible) :",
+         "fichiers": [
+             {"fichier": "pieces-defense/RF-items-classification.xlsx",
+              "label": "Items de la caisse classés « plat/menu » (ce qui compte comme un couvert) (XLSX)"},
+             {"fichier": "pieces-defense/RF-encaissements-couverts.xlsx",
+              "label": "Couverts par encaissement : date, heure, nombre de couverts (XLSX)"},
+             {"fichier": "pieces-defense/RF-couverts-par-service.xlsx",
+              "label": "Couverts par jour et par service (midi avant 18 h / soir 18 h à minuit) (XLSX)"},
+         ]},
+
+        # --- Graphique : couverts/jour par semaine vs capacité à 58 % ---
+        *([_cap_section] if _cap_section else []),
 
         # --- C. Le mécanisme et son retournement ---
+        {"kind": "titre", "numero": "2.3",
+         "texte": "Troisième fait : la suppression de la table d'origine est nécessaire et protège le CA"},
         {"kind": "paragraphe",
-         "texte": ("**Troisième fait : la suppression de la table d'origine est nécessaire et "
-                   "protège le CA.** Le logiciel n'accepte **qu'un seul règlement par note**. Pour "
+         "texte": ("Le logiciel n'accepte **qu'un seul règlement par note**. Pour "
                    "un paiement séparé, le serveur ressaisit les articles d'un convive sur une "
                    "**deuxième note** (la table « virtuelle ») et l'encaisse. Les articles existent "
                    "alors **en double** : sur la table d'origine et sur la note ressaisie. "
@@ -592,15 +800,6 @@ def construire_json(par_note, matrice, totaux_ys, total_global):
                    "serait **gonflé**, pas réduit. Le raisonnement de l'administration est inversé : "
                    "cette suppression **garantit l'exactitude** du CA, elle ne sert pas à le "
                    "diminuer.")},
-        {"kind": "paragraphe",
-         "texte": ("La **signature mécanique** de ce partage est massivement présente dans les "
-                   f"fichiers : sur **{fr_int(NOTES_TOTAL)} notes**, **{fr_int(NOTES_FRAC)} "
-                   f"({pct_fr} %)** portent une **quantité fractionnaire** (0,5 ; 0,33...), parce "
-                   "qu'on **divise** l'article commun entre les payeurs. En parallèle, "
-                   f"**{str(BANC_PCT).replace('.', ',')} % des règlements sont bancarisés** et "
-                   f"**{str(ESP_PCT).replace('.', ',')} % seulement en espèces** : aucun canal "
-                   "d'encaissement parallèle ne pourrait loger des couverts cachés.")},
-        tab_partage,
         {"kind": "paragraphe",
          "texte": (f"L'exemple ci-dessous (**{EX['date']}**) est typique. Une même table est scindée "
                    f"en **deux notes (n°22 et n°23)** de **total identique "
@@ -630,8 +829,8 @@ def construire_json(par_note, matrice, totaux_ys, total_global):
                    "reproductibles le démontrent : (1) le numéro de note de l'export va de 1 à "
                    f"{max_note} et ne désigne **jamais** une table (la salle compte "
                    f"{NB_INT_REELLES} tables intérieures, et les n° 13/16/17/18 n'existent pas) ; "
-                   "(2) le profil des encaissements par rang de note décroît régulièrement, les "
-                   "rangs élevés n'apparaissant que les jours de pointe ; (3) supprimer la table "
+                   "(2) le rythme des encaissements par jour travaillé se superpose d'un exercice à "
+                   "l'autre (activité stable, sans à-coup inexpliqué) ; (3) supprimer la table "
                    "d'origine après ressaisie **évite de doubler le CA**. Le grief ne révèle "
                    "**aucun couvert ni aucune recette non déclarée**.")},
         {"kind": "paragraphe",
@@ -670,6 +869,7 @@ def construire_json(par_note, matrice, totaux_ys, total_global):
         },
     }
 
+    sections = normaliser_sections(sections)
     os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
     with open(OUT_JSON, "w", encoding="utf-8") as f:
         json.dump({"meta": meta, "sections": sections}, f, ensure_ascii=False, indent=2)
@@ -679,13 +879,22 @@ def construire_json(par_note, matrice, totaux_ys, total_global):
 # ---------------------------------------------------------------------------
 def main():
     par_note, matrice, totaux_ys, total_global = encaissements()
+    par_jour = encaissements_par_jour()
+    graph_enc, somme_sem, jours_sem = graphique_encaissements_hebdo(par_jour)
     chemin_xlsx = construire_xlsx(par_note, matrice, totaux_ys, total_global)
-    chemin_json = construire_json(par_note, matrice, totaux_ys, total_global)
+    chemin_xlsx_enc = construire_xlsx_encaissements(par_jour, somme_sem, jours_sem)
+    chemin_json = construire_json(par_note, matrice, totaux_ys, total_global, graph_enc)
 
     print("=== Tables trop nombreuses : synthèse ===")
     print(f"Tables intérieures réelles : {NB_INT_REELLES} (n° 13/16/17/18 inexistants)")
     print(f"Encaissements totaux (notes distinctes) : {fr_int(total_global)}")
     print(f"Max numéro de note : {max(par_note)}")
+    for e in EXOS:
+        nj = len(par_jour[e])
+        ne = sum(par_jour[e].values())
+        moy = round(ne / nj, 1) if nj else 0
+        print(f"  {e} : {fr_int(nj)} jours travaillés, {fr_int(ne)} encaissements, "
+              f"moyenne {moy}/jour")
     for ex in EXOS:
         tot = sum(matrice[no].get((ex, s), 0) for no in par_note for s in SAISONS)
         print(f"  {ex} : {fr_int(tot)} encaissements")
@@ -696,6 +905,7 @@ def main():
     print(f"Notes fractionnaires : {fr_int(NOTES_FRAC)} / {fr_int(NOTES_TOTAL)} = {NOTES_FRAC_PCT} %")
     print(f"Exemple table scindée : {EX['date']}, total {euro(EX['notes'][0]['total'])} x{len(EX['notes'])}")
     print(f"XLSX -> {chemin_xlsx}")
+    print(f"XLSX (encaissements/jour) -> {chemin_xlsx_enc}")
     print(f"JSON -> {chemin_json}")
 
 

@@ -12,7 +12,7 @@
    "kind": "chapitre",
    "source": "fisc",
    "numero": 1,
-   "titre": "Le grief de l’administration",
+   "titre": "Ce que dit l'administration",
    "sousTitre": "Proposition p. 50-51 : la bière du fût est réputée presque intégralement vendue"
   },
   {
@@ -419,7 +419,7 @@
    ]
   },
   {
-   "kind": "note",
+   "kind": "paragraphe",
    "texte": "La répartition 25 cl / 50 cl est lue sur l’**article de caisse** (Pression 25 cl et Pression 50 cl « pinte », Picon bière 25 cl et 50 cl…), et non sur le prix : elle est donc **insensible aux variations de tarif** d’une période à l’autre (ex. demi 3,90 € / pinte 7,80 €, Picon 4,50 € / 8,90 €). Le panaché et le Monaco ne sont vendus qu’en 25 cl dans la caisse sur la période."
   },
   {
@@ -435,7 +435,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**1. Sur-versement et collerette de mousse au service (≈ 7 % du fût).** À chaque demi ou pinte, la mousse débordante et la collerette servie au-dessus du trait partent en perte. La mousse est elle-même composée à **~25 % de bière**, et le seul moussage dépasse fréquemment **10 % du fût** lorsque l’installation n’est pas parfaitement équilibrée."
+   "texte": "**1. Collerette et mousse débordante au service (≈ 7 % du fût).** À chaque demi ou pinte, la mousse débordante et la collerette servie au-dessus du trait partent en perte (poste **distinct** du sur-versement des vins/spiritueux : la bière est exclue de cette base). La mousse est elle-même composée à **~25 % de bière**, et le seul moussage dépasse fréquemment **10 % du fût** lorsque l’installation n’est pas parfaitement équilibrée."
   },
   {
    "kind": "paragraphe",
@@ -447,7 +447,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Sources de la freinte technique (5 à 25 % du fût selon l’installation) : [https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/](https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/) ; [https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/](https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/) ; [https://www.jdc.fr/blog/reduire-gaspillage-de-biere-bar](https://www.jdc.fr/blog/reduire-gaspillage-de-biere-bar) ; [https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer](https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer) ; [https://www.brewersassociation.org/educational-publications/draught-beer-quality-manual/](https://www.brewersassociation.org/educational-publications/draught-beer-quality-manual/)."
+   "texte": "Sources de la freinte technique (5 à 25 % du fût selon l’installation) : [https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/](https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/) ; [https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/](https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/) ; [https://www.jdc.fr/blog/reduire-gaspillage-de-biere-bar](https://www.jdc.fr/blog/reduire-gaspillage-de-biere-bar) ; [https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer](https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer) ; [https://www.brewersassociation.org/educational-publications/draught-beer-quality-manual/](https://www.brewersassociation.org/educational-publications/draught-beer-quality-manual/). Surtout, **le service retranche lui-même 15 %** sur la bière (Proposition p. 51) : il admet donc déjà le principe d’une freinte ; nos sources montrent seulement que ce taux est un **plancher**."
   },
   {
    "kind": "tableau",
@@ -462,7 +462,7 @@
      "align": "right"
     },
     {
-     "label": "Sur-versement / collerette (7 %)",
+     "label": "Collerette et mousse au service (7 %)",
      "align": "right"
     },
     {
@@ -637,9 +637,13 @@
    "texte": "**Le calcul.** Pour servir **1 219 L** au verre en trois ans, il faut tirer davantage du fût : à une freinte de **20 %** (moyenne sectorielle documentée), ce sont **305 L** tirés mais jamais servis (mousse, tirage, nettoyage, fond de fût). Le service n’en retranche que **15 %** : son hypothèse est donc **optimiste**, et la bière ne peut pas être réputée vendue à 85 %."
   },
   {
-   "kind": "alerte",
-   "couleur": "teal",
-   "titre": "Résultat",
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Conclusion",
+   "numero": 4
+  },
+  {
+   "kind": "paragraphe",
    "texte": "La freinte technique documentée représente **20 % du fût** (entre 5 % et 25 % selon les sources), soit **plus que les 15 % retenus par le service** : sur trois exercices, **305 L** sont tirés mais détruits, jamais servis ni encaissés. Par prudence, l’analyse globale « Boissons disparues » ne retient qu’une freinte de l’ordre de **129 L**, très en deçà de la littérature, l’écart ne fait que renforcer la démonstration."
   },
   {

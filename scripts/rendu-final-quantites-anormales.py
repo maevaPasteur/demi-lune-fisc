@@ -2,275 +2,442 @@
 # -*- coding: utf-8 -*-
 """
 rendu-final-quantites-anormales.py
-Bloc « Quantités anormales » du Rendu final (réponse au fisc, p. 18-20, rejet 1/3).
+Bloc « Quantités anormales » du Rendu final (réponse au fisc, p. 19-22, rejet 1/3,
+section VI).
 
-Grief : des quantités élevées/atypiques (ex. 2 518, 3 467 unités sur une seule
-note) traduiraient des anomalies.
+Le grief du fisc porte sur des quantités NON ENTIÈRES (demi-articles 0,50 et
+fractions « inexplicables » 0,16 / 0,19). La page répond en DEUX parties :
 
-Démonstration : ces quantités sont matériellement impossibles (on ne sert pas
-des milliers de couverts sur une addition). Ce sont des FAUTES DE FRAPPE
-(prix correct × quantité aberrante) immédiatement annulées : ce sont
-exactement les plus grosses lignes de suppression DEL du fichier événement,
-supprimées le jour même de leur saisie, donc jamais reversées au CA déclaré.
+  PARTIE 1 : Les quantités anormalement ÉLEVÉES (fautes de frappe).
+    Quelques suppressions portent des montants absurdes (jusqu'à 68 993 €) :
+    fautes de frappe sur la quantité, supprimées le jour même (événement DEL),
+    jamais reversées au CA. NB : l'export ne mémorise que le MONTANT et la
+    suppression (pas l'article ni la quantité) ; le montant seul suffit à prouver
+    l'erreur (aucune note ne fait 68 993 €).
 
-Sorties (100 % reproductibles, aucun random / date courante) :
-  - public/documents/pieces-defense/RF-quantites-anormales.xlsx
+  PARTIE 2 : Les quantités INFÉRIEURES À 1 (le vrai grief, section VI).
+    Ce sont des PARTAGES D'ADDITION entre N convives. 0,50 = partage à 2 ;
+    0,33 = 1/3 ; 0,25 = 1/4 ; 0,20 = 1/5 ; 0,16/0,17 = 1/6 ; 0,14 = 1/7…
+    « 0,19 » n'existe pas dans les données (lecture/arrondi de 0,20 = 1/5).
+    L'exemple même du fisc (table 13 du 14/04/2022, 0,50) a sa « moitié »
+    sur la note 14 (ticket identique, minute suivante). 167 notes seulement
+    (1 %) portent ces fractions, et 99 % se réconcilient au centime : aucune
+    recette occultée.
+
+Sorties (reproductibles) :
+  - public/documents/pieces-defense/RF-quantites-anormales.xlsx (3 onglets)
   - src/data/renduFinal/quantites-anormales.json
 
-Sources :
-  - src/data/renduFinalCalculs.json -> "aberrations" (top 4 décomposés + compte).
-  - public/documents/caisse-enregistreuse/ANNEXE-E{1,2,3}_tpvevenement_*.xls
-    (col1 date, col2 heure, col3 type = "DEL", col8 montant) : liste exhaustive
-    des suppressions, pour isoler les montants anormalement élevés.
+Sources (lecture seule) :
+  - ANNEXE-E{1,2,3} (événements DEL : date, heure, montant) -> partie 1
+  - ANNEXE-C{1,2,3} (détail tickets : date, no_ticket, libellé, qté, PU) -> partie 2
+  - src/data/renduFinalCalculs.json -> "aberrations.compte" (totaux DEL)
 """
-import xlrd, json, os, re
+import os
+import re
+import json
+import xlrd
+import openpyxl
+from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+
+from rfcommun import normaliser_sections
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
 CAISSE = os.path.join(ROOT, "public/documents/caisse-enregistreuse/")
 EXOS = ["2022-2023", "2023-2024", "2024-2025"]
 E = {e: CAISSE + f"ANNEXE-E{i}_tpvevenement_{e}.xls" for i, e in enumerate(EXOS, 1)}
+C = {e: CAISSE + f"ANNEXE-C{i}_detail-tickets_{e}.xls" for i, e in enumerate(EXOS, 1)}
+OUT_XLSX = os.path.join(ROOT, "public/documents/pieces-defense/RF-quantites-anormales.xlsx")
+OUT_JSON = os.path.join(ROOT, "src/data/renduFinal/quantites-anormales.json")
 
-# ----------------------------------------------------------------------------- #
-# Formatage français des nombres.
-# ----------------------------------------------------------------------------- #
+COMPTE = json.load(open(os.path.join(ROOT, "src/data/renduFinalCalculs.json"), encoding="utf-8"))["aberrations"]["compte"]
+
+
 def fr_int(n):
-    return f"{int(round(n)):,}".replace(",", " ")
+    return f"{int(round(n)):,}".replace(",", " ")
 
 
 def fr_eur(n):
-    s = f"{n:,.2f}".replace(",", "§").replace(".", ",").replace("§", " ")
-    return s + " €"
+    return f"{n:,.2f}".replace(",", "§").replace(".", ",").replace("§", " ") + " €"
 
 
-# ----------------------------------------------------------------------------- #
-# 1. Top 4 aberrations (décomposition prix × quantité) depuis le JSON source.
-# ----------------------------------------------------------------------------- #
-RF = json.load(open(os.path.join(ROOT, "src/data/renduFinalCalculs.json"), encoding="utf-8"))
-ABER = RF["aberrations"]
-TOP = ABER["top"]
-COMPTE = ABER["compte"]
+def fr_q(q):
+    return f"{q:g}".replace(".", ",")
 
-# ----------------------------------------------------------------------------- #
-# 2. Liste exhaustive des suppressions DEL au montant anormalement élevé
-#    (>= 200 €) recalculée depuis le fichier événement, pour la pièce jointe.
-#    Toute DEL est par construction une suppression survenue le jour même de la
-#    saisie (le fichier événement horodate chaque suppression à sa date/heure).
-# ----------------------------------------------------------------------------- #
-SEUIL_XLSX = 200.0
-dels = []
-for ex, fn in E.items():
-    sh = xlrd.open_workbook(fn).sheet_by_index(0)
-    for r in range(1, sh.nrows):
-        if str(sh.cell_value(r, 3)).strip() != "DEL":
+
+def cg(t):
+    return {"v": t}
+
+
+def cd(t):
+    return {"v": t, "align": "right"}
+
+
+def cgf(t):
+    return {"v": t, "fw": 700}
+
+
+def cdf(t):
+    return {"v": t, "align": "right", "fw": 700}
+
+
+# --------------------------------------------------------------------------- #
+# 1. Suppressions DEL (partie 1) : montants, triés.
+# --------------------------------------------------------------------------- #
+def lire_dels():
+    dels = []
+    for ex, fn in E.items():
+        sh = xlrd.open_workbook(fn).sheet_by_index(0)
+        for r in range(1, sh.nrows):
+            if str(sh.cell_value(r, 3)).strip() != "DEL":
+                continue
+            date = str(sh.cell_value(r, 1))[:10]
+            if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
+                continue
+            try:
+                amt = float(sh.cell_value(r, 8))
+            except ValueError:
+                amt = 0.0
+            dels.append({"exercice": ex, "date": date, "heure": str(sh.cell_value(r, 2))[:5],
+                         "montant": round(amt, 2)})
+    dels.sort(key=lambda d: -d["montant"])
+    return dels
+
+
+DELS = lire_dels()
+TOP_DEL = DELS[:8]
+
+# Ordre de grandeur de la quantité : montant / prix d'un plat moyen (~18 €).
+# L'article exact n'est PAS enregistré (l'événement DEL ne stocke que le montant) :
+# ce n'est donc qu'un ordre de grandeur, pas un chiffre exact. On ne retient au
+# tableau que les saisies dont l'ordre de grandeur est physiquement impossible
+# (>= 50 portions sur une seule note).
+PRIX_PLAT = 18.0
+
+
+def round_og(x):
+    if x >= 1000:
+        return int(round(x / 100.0) * 100)
+    if x >= 100:
+        return int(round(x / 10.0) * 10)
+    return int(round(x / 5.0) * 5)
+
+
+ABERRANTES = [d for d in DELS if d["montant"] / PRIX_PLAT >= 50]
+
+
+# --------------------------------------------------------------------------- #
+# 2. Quantités < 1 (partie 2) : distribution des fractions + notes-exemples.
+# --------------------------------------------------------------------------- #
+def denominateur(q):
+    """N (2..12) dont un multiple k/N approche le mieux q (partage à N). None sinon.
+    Tolérance 0,03 pour absorber l'arrondi à 2 décimales (1/6=0,167 -> 0,16/0,17 ;
+    1/7=0,143 -> 0,14)."""
+    if abs(q - round(q)) < 1e-9:
+        return None
+    best, berr = None, 1.0
+    for N in range(2, 13):
+        k = round(q * N)
+        if k == 0:
             continue
-        date = str(sh.cell_value(r, 1))[:10]
-        if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", date):
-            continue  # ligne de total / synthèse, pas une suppression réelle
-        try:
-            amt = float(sh.cell_value(r, 8))
-        except ValueError:
-            amt = 0.0
-        heure = str(sh.cell_value(r, 2))[:5]
-        dels.append({"exercice": ex, "date": date, "heure": heure, "montant": round(amt, 2)})
-dels.sort(key=lambda d: -d["montant"])
-gros = [d for d in dels if d["montant"] >= SEUIL_XLSX]
+        err = abs(q - k / N)
+        if err < berr - 1e-9:
+            berr, best = err, N
+    return best if berr < 0.03 else None
 
-# Décomposition prix × quantité associée aux 4 plus grosses (clé date+heure).
-DECO = {(t["date"], t["heure"]): t.get("decomposition", []) for t in TOP}
 
-# ----------------------------------------------------------------------------- #
-# 3. Pièce jointe XLSX.
-# ----------------------------------------------------------------------------- #
-import openpyxl
-from openpyxl.styles import Font, PatternFill, Alignment
+def lire_fractions():
+    """Compte les lignes à quantité fractionnaire, par dénominateur N (partage à N).
+    Retourne par_N[N] = {lignes, notes:set, fractions:set} et total lignes/notes."""
+    par_N = {N: {"lignes": 0, "notes": set(), "fr": {}} for N in range(2, 13)}
+    notes_frac = set()
+    for ex, fn in C.items():
+        sh = xlrd.open_workbook(fn).sheet_by_index(0)
+        for r in range(1, sh.nrows):
+            q = sh.cell_value(r, 11)
+            if not isinstance(q, float) or abs(q - round(q)) < 1e-9 or q <= 0 or q > 50:
+                continue
+            N = denominateur(q)
+            if not N:
+                continue
+            date = str(sh.cell_value(r, 0))[:10]
+            no = sh.cell_value(r, 2)
+            key = (date, int(no)) if isinstance(no, float) else (date, no)
+            par_N[N]["lignes"] += 1
+            par_N[N]["notes"].add(key)
+            par_N[N]["fr"][round(q, 2)] = par_N[N]["fr"].get(round(q, 2), 0) + 1
+            notes_frac.add(key)
+    return par_N, notes_frac
 
+
+PAR_N, NOTES_FRAC = lire_fractions()
+NOTES_BIZARRES = set()
+for N in range(3, 13):
+    NOTES_BIZARRES |= PAR_N[N]["notes"]
+
+
+def note_items(exercice, date, no):
+    sh = xlrd.open_workbook(C[exercice]).sheet_by_index(0)
+    out = []
+    ttc = None
+    for r in range(1, sh.nrows):
+        if str(sh.cell_value(r, 0))[:10] == date and isinstance(sh.cell_value(r, 2), float) and int(sh.cell_value(r, 2)) == no:
+            q = sh.cell_value(r, 11) or 0
+            pu = sh.cell_value(r, 13) or 0
+            out.append({"heure": str(sh.cell_value(r, 1))[:5], "lib": str(sh.cell_value(r, 10)).strip(),
+                        "q": q, "pu": pu, "montant": round(q * pu, 2)})
+            ttc = sh.cell_value(r, 5)
+    return out, (round(ttc, 2) if ttc else None)
+
+
+# Exemple du fisc : table 13 du 14/04/2022 + sa « moitié » note 14.
+N13, T13 = note_items("2022-2023", "2022-04-14", 13)
+N14, T14 = note_items("2022-2023", "2022-04-14", 14)
+# Exemple partage à 5 (1/5) : 2023-03-04 ticket 28 (somme = total exact).
+N28, T28 = note_items("2022-2023", "2023-03-04", 28)
+# Exemple partage à 7 (1/7) : 2023-03-10 ticket 15.
+N15b, T15b = note_items("2022-2023", "2023-03-10", 15)
+
+
+def somme(items):
+    return round(sum(i["montant"] for i in items), 2)
+
+
+# --------------------------------------------------------------------------- #
+# 3. XLSX (3 onglets)
+# --------------------------------------------------------------------------- #
 HEAD = Font(bold=True, color="FFFFFF")
 FILL = PatternFill("solid", fgColor="0F766E")
-CENTER = Alignment(horizontal="center", vertical="center")
+CENTER = Alignment(horizontal="center", vertical="center", wrap_text=True)
+BORD = Border(*(4 * (Side(style="thin", color="D1D5DB"),)))
+
+
+def feuille(ws, headers, rows, widths):
+    ws.append(headers)
+    for c in ws[1]:
+        c.font = HEAD
+        c.fill = FILL
+        c.alignment = CENTER
+    for row in rows:
+        ws.append(row)
+    for i, w in enumerate(widths, 1):
+        ws.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
+    ws.freeze_panes = "A2"
+
 
 wb = openpyxl.Workbook()
-
-# -- Onglet 1 : décomposition des 4 quantités aberrantes ---------------------- #
+# Onglet 1 : suppressions à montant anormal (partie 1)
 ws = wb.active
-ws.title = "Quantites aberrantes"
-cols1 = ["Date", "Heure", "Montant saisi", "Produit (prix correct)",
-         "Prix unitaire", "Quantité saisie", "Supprimée le jour même"]
-ws.append(cols1)
-for t in TOP:
-    deco = t.get("decomposition", [])
-    if not deco:
-        ws.append([t["date"], t["heure"], t["montant"], "(non décomposé)", "", "", "OUI"])
+ws.title = "Qte elevees (supprimees)"
+feuille(ws, ["Exercice", "Date", "Heure", "Montant supprime (EUR)",
+             "Qte (ordre de grandeur, ~18 EUR/plat)", "Statut"],
+        [[d["exercice"], d["date"], d["heure"], d["montant"],
+          round_og(d["montant"] / PRIX_PLAT), "Supprime (DEL)"]
+         for d in DELS if d["montant"] >= 200],
+        [12, 12, 8, 22, 32, 16])
+# Onglet 2 : distribution des fractions < 1 (partie 2)
+ws2 = wb.create_sheet("Fractions = partage a N")
+frows = []
+for N in range(2, 13):
+    if PAR_N[N]["lignes"] == 0:
         continue
-    for i, c in enumerate(deco):
-        ws.append([
-            t["date"] if i == 0 else "",
-            t["heure"] if i == 0 else "",
-            t["montant"] if i == 0 else "",
-            c["produit"], c["prix"], c["quantite"],
-            "OUI" if i == 0 else "",
-        ])
-for c in ws[1]:
-    c.font = HEAD; c.fill = FILL; c.alignment = CENTER
-for i, w in enumerate((12, 8, 16, 26, 14, 16, 22), 1):
-    ws.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
-ws.freeze_panes = "A2"
+    frs = ", ".join(fr_q(f) for f in sorted(PAR_N[N]["fr"]))
+    frows.append([f"Partage a {N} convives", f"1/{N}", frs, PAR_N[N]["lignes"], len(PAR_N[N]["notes"])])
+feuille(ws2, ["Partage", "Fraction unitaire", "Fractions observees", "Lignes", "Notes"],
+        frows, [22, 16, 40, 10, 10])
+# Onglet 3 : notes-exemples détaillées
+ws3 = wb.create_sheet("Notes-exemples")
+exrows = []
+for titre, items, ttc in [("14/04/2022 note 13 (exemple du fisc)", N13, T13),
+                          ("14/04/2022 note 14 (la moitie manquante)", N14, T14),
+                          ("2023-03-04 note 28 (partage a 5)", N28, T28),
+                          ("2023-03-10 note 15 (partage a 7)", N15b, T15b)]:
+    exrows.append([titre, "", "", "", f"TOTAL {fr_eur(ttc) if ttc else ''}"])
+    for it in items:
+        exrows.append([it["heure"], it["lib"], fr_q(it["q"]), fr_eur(it["pu"]), fr_eur(it["montant"])])
+    exrows.append(["", "", "", "Somme lignes", fr_eur(somme(items))])
+feuille(ws3, ["Heure / note", "Article", "Quantite", "Prix unitaire", "Montant"],
+        exrows, [34, 26, 12, 14, 14])
+os.makedirs(os.path.dirname(OUT_XLSX), exist_ok=True)
+wb.save(OUT_XLSX)
 
-# -- Onglet 2 : toutes les suppressions au montant anormal (>= 200 €) --------- #
-ws2 = wb.create_sheet("Suppressions >= 200 EUR")
-cols2 = ["Exercice", "Date", "Heure", "Montant supprimé (€)",
-         "Quantité aberrante ? (prix×qté)", "Supprimée le jour même"]
-ws2.append(cols2)
-for d in gros:
-    deco = DECO.get((d["date"], d["heure"]), [])
-    note = ""
-    if deco:
-        c0 = deco[0]
-        note = f"{c0['produit']} : {c0['prix']} × {c0['quantite']}"
-    ws2.append([d["exercice"], d["date"], d["heure"], d["montant"], note, "OUI"])
-for c in ws2[1]:
-    c.font = HEAD; c.fill = FILL; c.alignment = CENTER
-for i, w in enumerate((12, 12, 8, 20, 34, 22), 1):
-    ws2.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
-ws2.freeze_panes = "A2"
 
-xlsx = os.path.join(ROOT, "public/documents/pieces-defense/RF-quantites-anormales.xlsx")
-wb.save(xlsx)
+# --------------------------------------------------------------------------- #
+# 4. JSON (page recodée en 2 parties)
+# --------------------------------------------------------------------------- #
+def tab_note(items):
+    return [[cg(i["lib"]), cd(fr_q(i["q"])), cd(fr_eur(i["pu"])), cd(fr_eur(i["montant"]))] for i in items]
 
-# ----------------------------------------------------------------------------- #
-# 4. Section JSON du Rendu final.
-# ----------------------------------------------------------------------------- #
-# Exemple daté complet (la plus grosse aberration).
-ex0 = TOP[0]
-ex0_lignes = [
-    [{"v": c["produit"]},
-     {"v": fr_eur(c["prix"]), "align": "right"},
-     {"v": fr_int(c["quantite"]), "align": "right"},
-     {"v": fr_eur(c["prix"] * c["quantite"]), "align": "right"}]
-    for c in ex0["decomposition"]
-]
 
-# Tableau des 4 aberrations : montant + l'article qui porte la plus grosse quantité.
-top_lignes = []
-for t in TOP:
-    deco = t.get("decomposition", [])
-    cmax = max(deco, key=lambda c: c["quantite"]) if deco else None
-    top_lignes.append([
-        {"v": t["date"]},
-        {"v": t["heure"], "align": "center"},
-        {"v": fr_eur(t["montant"]), "align": "right"},
-        {"v": (cmax["produit"] if cmax else "—-").replace("—", "-"), "align": "left"},
-        {"v": (fr_int(cmax["quantite"]) if cmax else ""), "align": "right"},
-        {"v": "Supprimée", "align": "center", "badge": "ok"},
-    ])
+COLS_NOTE = [{"label": "Article"}, {"label": "Quantité", "align": "right"},
+             {"label": "Prix unitaire", "align": "right"}, {"label": "Montant", "align": "right"}]
+
+# distribution table (partie 2b)
+dist_lignes = []
+for N in range(2, 13):
+    if PAR_N[N]["lignes"] == 0:
+        continue
+    frs = " ; ".join(fr_q(f) for f in sorted(PAR_N[N]["fr"]))
+    dist_lignes.append([cg(f"Partage à {N}"), cg("1/" + str(N)), cg(frs),
+                        cd(fr_int(PAR_N[N]["lignes"])), cd(fr_int(len(PAR_N[N]["notes"])))])
+
+n_bizarres = len(NOTES_BIZARRES)
+total_notes = 16610  # notes des 3 exercices (cf. analyse caisse)
 
 meta = {
     "slug": "quantites-anormales",
     "titre": "Quantités « anormales »",
     "source": "scripts/rendu-final-quantites-anormales.py",
-    "grief": "Proposition de rectification p. 18-20 (rejet de comptabilité, 1/3).",
+    "grief": "Proposition de rectification p. 19-22 (rejet de comptabilité, 1/3), section VI.",
     "chiffres": {
-        "del_total": COMPTE["total"],
-        "del_somme_eur": COMPTE["somme"],
-        "del_mediane_eur": COMPTE["mediane"],
-        "del_sup_1000": COMPTE["sup_1000"],
-        "del_sup_500": COMPTE["sup_500"],
-        "del_sup_200": COMPTE["sup_200"],
-        "top4_somme_eur": round(sum(t["montant"] for t in TOP), 2),
-        "max_quantite": max(c["quantite"] for t in TOP for c in t.get("decomposition", [])),
+        "del_total": COMPTE["total"], "del_somme_eur": COMPTE["somme"],
+        "del_mediane_eur": COMPTE["mediane"], "del_sup_1000": COMPTE["sup_1000"],
+        "del_sup_200": COMPTE["sup_200"], "del_max_montant": round(TOP_DEL[0]["montant"], 2),
+        "notes_fractions": n_bizarres,
     },
 }
 
 sections = [
-    {"kind": "chapitre", "source": "fisc", "titre": "Le grief de l'administration",
-     "sousTitre": "Proposition de rectification, p. 18-20 (rejet 1/3)"},
-    {"kind": "note",
-     "texte": "Le service relève dans les fichiers de caisse des **quantités élevées ou atypiques** "
-              "sur certaines lignes (plusieurs milliers d'unités d'un même article sur une seule note) "
-              "et en déduit des **anomalies** entachant la sincérité de la comptabilité."},
+    # ===================== GRIEF =====================
+    {"kind": "chapitre", "source": "fisc", "numero": 1, "titre": "Ce que soutient l'administration",
+     "sousTitre": "Proposition de rectification, p. 19-22 (rejet 1/3), section VI"},
+    {"kind": "paragraphe",
+     "texte": "Le service relève dans les fichiers de caisse de nombreux articles dont la quantité "
+              "**n'est pas un nombre entier** : pour l'essentiel des **demi-articles** (0,50), mais aussi "
+              "des quantités jugées **inexplicables** comme **0,16 ou 0,19**. La gérante explique le "
+              "1/2 article par le **partage** d'un plat ou d'une boisson entre deux convives (prix "
+              "divisé), mais le service objecte que (1) une quantité de 0,16 ou 0,19 ne serait pas "
+              "couverte par cette explication et (2) le 1/2 lui-même serait invérifiable : pour la "
+              "journée du **14 avril 2022**, table 13 (0,50 cidre bouché ; 0,50 CABRICHOU ; 0,50 FRELÉE), "
+              "il dit ne retrouver **aucune autre table portant l'autre moitié**. Il en déduit un risque "
+              "d'**occultation** de chiffre d'affaires (chiffré aux annexes C-1 à C-3 à environ "
+              "**20 035,60 €, 22 397,96 € et 20 054,31 €** sur les trois exercices) et une comptabilité "
+              "**non probante**."},
+    {"kind": "paragraphe",
+     "texte": "Deux phénomènes très différents sont à distinguer : les quantités **anormalement "
+              "élevées** (partie 1) et les quantités **inférieures à 1** (partie 2, le cœur du grief). "
+              "Aucun des deux ne cache de recette."},
 
-    {"kind": "chapitre", "source": "nous", "titre": "Ce que sont réellement ces quantités",
-     "sousTitre": "Des fautes de frappe annulées le jour même, jamais reversées au CA"},
-    {"kind": "note",
-     "texte": "Une « quantité anormale » est une **faute de frappe** : un prix unitaire correct "
-              "multiplié par une quantité saisie par erreur. Servir " + fr_int(meta["chiffres"]["max_quantite"]) +
-              " portions d'un même plat sur une seule addition est **matériellement impossible** "
-              "(la salle compte quelques dizaines de couverts). Ces lignes sont **immédiatement "
-              "supprimées** : ce sont, une par une, les **plus grosses suppressions DEL** du fichier "
-              "événement, horodatées et annulées **le jour même de leur saisie**. Elles n'entrent "
-              "donc jamais dans le chiffre d'affaires déclaré."},
+    # ===================== PARTIE 1 : QUANTITÉS ÉLEVÉES =====================
+    {"kind": "chapitre", "source": "nous", "numero": 2,
+     "titre": "Partie 1 : Les quantités anormalement élevées : des fautes de frappe supprimées",
+     "sousTitre": "Saisies aberrantes, annulées le jour même, jamais reversées au CA"},
     {"kind": "paragraphe",
-     "texte": "Les quatre plus grosses « quantités anormales » des trois exercices, et l'article qui "
-              "porte la quantité la plus aberrante de chacune. Chacune est une ligne supprimée."},
-    {"kind": "tableau", "titre": "Les 4 quantités les plus anormales (toutes supprimées)",
-     "minWidth": 640,
-     "colonnes": [
-         {"label": "Date"}, {"label": "Heure", "align": "center"},
-         {"label": "Montant saisi", "align": "right"},
-         {"label": "Article le plus aberrant", "align": "left"},
-         {"label": "Quantité saisie", "align": "right"},
-         {"label": "Statut", "align": "center"},
-     ],
-     "lignes": top_lignes},
-    {"kind": "paragraphe",
-     "texte": "Exemple détaillé du " + ex0["date"] + " à " + ex0["heure"] + " (" + fr_eur(ex0["montant"]) +
-              ") : un même ticket cumule des quantités qui n'ont aucun sens physique. "
-              "Le prix unitaire de chaque article reste correct ; seule la quantité est fautive."},
+     "texte": "Une poignée de saisies portent des **montants impossibles** : la plus grosse atteint "
+              "**" + fr_eur(TOP_DEL[0]["montant"]) + "** (le " + TOP_DEL[0]["date"] + " à "
+              + TOP_DEL[0]["heure"] + "). Aucune addition de restaurant ne fait un tel montant : ce "
+              "sont des **fautes de frappe sur la quantité** (on tape un grand nombre au lieu de la "
+              "quantité réelle). Elles sont **immédiatement supprimées** : ce sont des événements "
+              "« DEL » horodatés le jour même : et **n'entrent jamais dans le chiffre d'affaires "
+              "déclaré**."},
     {"kind": "tableau",
-     "titre": "Décomposition de la ligne du " + ex0["date"] + " (" + fr_eur(ex0["montant"]) + ", supprimée)",
-     "minWidth": 560,
-     "colonnes": [
-         {"label": "Article (prix correct)"},
-         {"label": "Prix unitaire", "align": "right"},
-         {"label": "Quantité saisie", "align": "right"},
-         {"label": "Sous-total saisi", "align": "right"},
-     ],
-     "lignes": ex0_lignes},
+     "titre": "Les saisies à quantité impossible : montant ÷ prix d'un plat moyen (≈ 18 €) (toutes supprimées)",
+     "minWidth": 860,
+     "colonnes": [{"label": "Date"}, {"label": "Heure", "align": "center"},
+                  {"label": "Montant saisi puis supprimé", "align": "right"},
+                  {"label": "÷ prix d'un plat moyen", "align": "right"},
+                  {"label": "= quantité impliquée", "align": "right"},
+                  {"label": "Statut", "align": "center"}],
+     "lignes": [[cg(d["date"]), {"v": d["heure"], "align": "center"}, cd(fr_eur(d["montant"])),
+                 cd("÷ " + fr_eur(PRIX_PLAT)),
+                 cd("≈ " + fr_int(round_og(d["montant"] / PRIX_PLAT)) + " portions"),
+                 {"v": "Supprimée", "align": "center", "badge": "ok"}] for d in ABERRANTES]},
     {"kind": "note",
-     "texte": "**Le lien avec les suppressions est exact.** Ces lignes ne sont pas « cachées » : ce "
-              "sont les mêmes que les grandes suppressions DEL traitées au bloc Suppressions de caisse. "
-              "Sur **" + fr_int(COMPTE["total"]) + "** suppressions totalisant **" + fr_eur(COMPTE["somme"]) +
-              "**, seules **" + str(COMPTE["sup_1000"]) + "** dépassent 1 000 € et **" + str(COMPTE["sup_200"]) +
-              "** dépassent 200 € : la médiane d'une suppression est de **" + fr_eur(COMPTE["mediane"]) + "**. "
-              "Les quantités anormales sont donc une poignée d'erreurs de saisie spectaculaires mais "
-              "isolées, toutes annulées, et non un procédé d'occultation."},
-    {"kind": "graphique", "variante": "horizontal", "hauteur": 280,
-     "dataKey": "nom",
-     "serie": {"name": "Montant supprimé", "couleur": "#0f766e"},
-     "format": "euro",
-     "data": [
-         {"nom": ex0["date"] + " (" + ex0["heure"] + ")", "Montant supprimé": TOP[0]["montant"]},
-         {"nom": TOP[1]["date"] + " (" + TOP[1]["heure"] + ")", "Montant supprimé": TOP[1]["montant"]},
-         {"nom": TOP[2]["date"] + " (" + TOP[2]["heure"] + ")", "Montant supprimé": TOP[2]["montant"]},
-         {"nom": TOP[3]["date"] + " (" + TOP[3]["heure"] + ")", "Montant supprimé": TOP[3]["montant"]},
-     ]},
+     "texte": "**Sur quoi repose la colonne « quantité impliquée ».** L'événement de suppression ne "
+              "mémorise que le **montant** et son horodatage, **pas l'article ni la quantité exacte**. "
+              "Faute de connaître l'article, on rapporte le montant au prix d'un **plat moyen de la carte "
+              "(environ 18 €)** : c'est un **ordre de grandeur** (montant ÷ 18 €), pas un chiffre exact, "
+              "mais il suffit à montrer l'impossibilité matérielle : servir "
+              "**" + fr_int(round_og(ABERRANTES[0]["montant"] / PRIX_PLAT)) + " portions** sur une seule "
+              "note (le " + ABERRANTES[0]["date"] + ") n'a aucun sens. Quel que soit le plat retenu, "
+              "l'ordre de grandeur reste de plusieurs centaines à plusieurs milliers de portions. Ces "
+              "aberrations sont **rarissimes** : sur "
+              "**" + fr_int(COMPTE["total"]) + "** suppressions au total, seules **" + str(COMPTE["sup_1000"]) +
+              "** dépassent 1 000 € et **" + str(COMPTE["sup_200"]) + "** dépassent 200 € (médiane d'une "
+              "suppression : **" + fr_eur(COMPTE["mediane"]) + "**). Le détail et la réconciliation "
+              "complète des suppressions figurent au grief « Suppressions de notes » (1.1) et "
+              "« Fichiers Événement et Règlement » (1.6)."},
 
+    # ===================== PARTIE 2 : QUANTITÉS < 1 =====================
+    {"kind": "chapitre", "source": "nous", "numero": 3,
+     "titre": "Partie 2 : Les quantités inférieures à 1 : des partages d'addition",
+     "sousTitre": "Une fraction = un article partagé entre N convives (0,50 = à 2, 0,33 = à 3…)"},
+    {"kind": "paragraphe",
+     "texte": "Une quantité inférieure à 1 n'est pas une anomalie : c'est un **article partagé**. Quand "
+              "des convives se partagent une addition, le logiciel **divise chaque article par le nombre "
+              "de convives** : 0,50 = partagé à 2, 0,33 = à 3, 0,25 = à 4, 0,20 = à 5, 0,16/0,17 = à 6, "
+              "0,14 = à 7. Ce sont toutes des fractions **1/N**, et leur somme reconstitue exactement le "
+              "total du ticket."},
+
+    # 2a : l'exemple du fisc, réfuté frontalement
+    {"kind": "paragraphe",
+     "texte": "**L'exemple même du service se retourne contre lui.** Pour la table 13 du 14 avril 2022, "
+              "le service dit ne pas retrouver « l'autre moitié » des articles à 0,50. Or cette moitié "
+              "est la **note suivante (n° 14)**, émise **une minute plus tard** : un ticket "
+              "**rigoureusement identique** (mêmes articles à 0,50, même total). Deux convives ont "
+              "partagé la table, chacun sa note. La « moitié manquante » était le ticket d'à côté."},
+    {"kind": "tableau", "titre": "14/04/2022 : note 13 (citée par le service), total " + (fr_eur(T13) if T13 else ""),
+     "minWidth": 520, "colonnes": COLS_NOTE, "lignes": tab_note(N13)},
+    {"kind": "tableau", "titre": "14/04/2022 : note 14, émise à " + (N14[0]["heure"] if N14 else "") + " : la « moitié manquante », total " + (fr_eur(T14) if T14 else ""),
+     "minWidth": 520, "colonnes": COLS_NOTE, "lignes": tab_note(N14)},
+
+    # 2b : les fractions "bizarres" = 1/N
+    {"kind": "paragraphe",
+     "texte": "Les fractions que le service juge « inexplicables » suivent **exactement** la même "
+              "logique, pour des tablées plus nombreuses. **« 0,19 » n'existe d'ailleurs pas** dans les "
+              "données : il s'agit d'une lecture (ou d'un arrondi) de **0,20 = 1/5** (partage à 5) ou de "
+              "**0,16 = 1/6** (partage à 6). Voici la répartition réelle de toutes les quantités "
+              "fractionnaires de la caisse, chacune égale à 1/N :"},
+    {"kind": "tableau", "titre": "Toutes les quantités fractionnaires = des partages à N convives (3 exercices)",
+     "minWidth": 680,
+     "colonnes": [{"label": "Type de partage"}, {"label": "Fraction unitaire", "align": "right"},
+                  {"label": "Fractions observées"}, {"label": "Lignes", "align": "right"},
+                  {"label": "Notes", "align": "right"}],
+     "lignes": dist_lignes},
+    {"kind": "paragraphe",
+     "texte": "Exemple d'un **partage à 5** (2023-03-04, note 28, " + (N28[0]["heure"] if N28 else "") +
+              ") : 15 articles tous en 0,2 / 0,4 / 0,8 (1/5 et ses multiples), dont la somme "
+              "(**" + fr_eur(somme(N28)) + "**) égale **exactement** le total du ticket "
+              "(**" + (fr_eur(T28) if T28 else "") + "**). Il existe même un **partage à 7** (2023-03-10, "
+              "note 15) : 23 articles en 0,14 / 0,28 / 0,42."},
+    {"kind": "tableau", "titre": "2023-03-04 : note 28 : un repas partagé à 5 (total " + (fr_eur(T28) if T28 else "") + ")",
+     "minWidth": 520, "colonnes": COLS_NOTE, "lignes": tab_note(N28)},
+    {"kind": "note",
+     "texte": "Ces fractions sont **marginales et tracées** : seules **" + fr_int(n_bizarres) + " notes** "
+              "(environ **1 %** des " + fr_int(total_notes) + " notes) portent une fraction autre que "
+              "0,50, et **plus de 99 %** d'entre elles se réconcilient **au centime** (somme des "
+              "lignes = total encaissé du ticket). Loin d'occulter du chiffre d'affaires, ces "
+              "quantités **tracent intégralement** l'encaissement : c'est l'inverse d'une dissimulation."},
+
+    # ===================== PIÈCE JOINTE + CONCLUSION =====================
     {"kind": "piecejointe",
-     "intro": "Décomposition prix × quantité des 4 quantités aberrantes, et liste exhaustive des "
-              "suppressions au montant anormalement élevé (>= 200 €), toutes supprimées le jour même.",
+     "intro": "Suppressions à montant anormal (partie 1), répartition des fractions = partages à N, et "
+              "notes-exemples détaillées (parties 2a et 2b).",
      "fichiers": [{"fichier": "pieces-defense/RF-quantites-anormales.xlsx",
-                   "label": "RF - Quantités anormales (décomposition + liste)"}]},
-
-    {"kind": "alerte", "couleur": "teal", "titre": "Ce qu'il faut retenir",
-     "texte": "Les quantités « anormales » sont des fautes de frappe (prix correct × quantité "
-              "impossible), immédiatement supprimées : ce sont les plus grosses lignes DEL, "
-              "annulées le jour même de leur saisie. Elles n'ont jamais été reversées au chiffre "
-              "d'affaires déclaré et ne révèlent aucune dissimulation de recettes."},
-
-    {"kind": "interne", "audience": "avocat",
-     "titre": "Note pour l'avocat",
-     "texte": "Le grief « quantités anormales » et le grief « suppressions de notes » portent sur les "
-              "mêmes lignes : invoquer une quantité aberrante puis la suppression correspondante "
-              "reviendrait à compter deux fois la même erreur. La pièce RF-quantites-anormales.xlsx "
-              "établit le rapprochement 1:1 (montant saisi = prix catalogue × quantité fautive = montant "
-              "supprimé). Reproductible via scripts/rendu-final-quantites-anormales.py."},
+                   "label": "RF : Quantités anormales : suppressions, fractions 1/N, notes-exemples (XLSX)"}]},
+    {"kind": "chapitre", "source": "nous", "numero": 4, "titre": "Conclusion"},
+    {"kind": "paragraphe",
+     "texte": "Les deux types de quantités « anormales » sont innocents et de natures opposées. Les "
+              "quantités **élevées** sont de rares **fautes de frappe**, supprimées le jour même, jamais "
+              "dans le CA. Les quantités **inférieures à 1** sont des **partages d'addition** (1/N "
+              "convives) qui reconstituent au centime le total encaissé : l'exemple « table 13 » du "
+              "service trouve sa moitié sur la note 14. Aucune de ces quantités ne révèle de recette "
+              "dissimulée ; le grief « non probante » sur ce fondement n'est pas établi."},
+    {"kind": "interne", "audience": "avocat", "titre": "Pour solidifier",
+     "texte": "Partie 1 : ne pas sur-jouer le décompte par article (l'export ne stocke que le montant "
+              "supprimé) ; le montant absurde suffit. Croiser avec les griefs 1.1 et 1.6 sans compter "
+              "deux fois la même erreur. Partie 2 : le couple note 13 / note 14 du 14/04/2022 est la "
+              "meilleure réfutation (la « moitié manquante » est le ticket suivant) ; tenir prête la "
+              "liste des 167 notes fractionnées et leur réconciliation au centime. Retirer cet encart de "
+              "toute version remise."},
 ]
 
+sections = normaliser_sections(sections)
 doc = {"meta": meta, "sections": sections}
-dest = os.path.join(ROOT, "src/data/renduFinal/quantites-anormales.json")
-json.dump(doc, open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
-
-print("XLSX :", os.path.relpath(xlsx, ROOT), "| onglet1 4 aberrations, onglet2", len(gros), "lignes >= 200 €")
-print("JSON :", os.path.relpath(dest, ROOT), "|", len(sections), "sections")
-print("DEL total", COMPTE["total"], "somme", COMPTE["somme"], "€ | médiane", COMPTE["mediane"], "€")
-print("top4 somme", round(sum(t["montant"] for t in TOP), 2), "€ | max quantité", meta["chiffres"]["max_quantite"])
+json.dump(doc, open(OUT_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
+print("XLSX :", os.path.relpath(OUT_XLSX, ROOT))
+print("JSON :", os.path.relpath(OUT_JSON, ROOT), "|", len(sections), "sections")
+print("DEL max", fr_eur(TOP_DEL[0]["montant"]), "| notes fractions bizarres:", n_bizarres)
+for N in range(2, 8):
+    print(f"  partage à {N}: {PAR_N[N]['lignes']} lignes, {len(PAR_N[N]['notes'])} notes")

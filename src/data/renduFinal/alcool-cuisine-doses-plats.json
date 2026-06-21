@@ -10,7 +10,7 @@
    "kind": "chapitre",
    "source": "fisc",
    "numero": 1,
-   "titre": "Ce que retient l’administration",
+   "titre": "Ce que dit l'administration",
    "sousTitre": "Proposition p. 37 et p. 44-48 : repères D, E, G, Q (alcool de cuisine)"
   },
   {
@@ -30,171 +30,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Alcool de cuisine par produit (3 exercices)",
-   "minWidth": 480,
-   "colonnes": [
-    {
-     "label": "Alcool"
-    },
-    {
-     "label": "Litres",
-     "align": "right"
-    },
-    {
-     "label": "Coût d’achat",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Ravelin"
-     },
-     {
-      "v": "152 L",
-      "align": "right"
-     },
-     {
-      "v": "450 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Macvin"
-     },
-     {
-      "v": "123 L",
-      "align": "right"
-     },
-     {
-      "v": "2 235 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Vin Jaune"
-     },
-     {
-      "v": "113 L",
-      "align": "right"
-     },
-     {
-      "v": "4 032 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Calvados"
-     },
-     {
-      "v": "106 L",
-      "align": "right"
-     },
-     {
-      "v": "1 792 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Porto"
-     },
-     {
-      "v": "60 L",
-      "align": "right"
-     },
-     {
-      "v": "651 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Grand Marnier"
-     },
-     {
-      "v": "7 L",
-      "align": "right"
-     },
-     {
-      "v": "230 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Crème de Cassis"
-     },
-     {
-      "v": "3 L",
-      "align": "right"
-     },
-     {
-      "v": "26 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Bailey's"
-     },
-     {
-      "v": "1 L",
-      "align": "right"
-     },
-     {
-      "v": "18 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Total alcool de cuisine",
-      "fw": 700
-     },
-     {
-      "v": "566 L",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "9 434 €",
-      "align": "right",
-      "fw": 700
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "kpis",
-   "items": [
-    {
-     "label": "Alcool de cuisine",
-     "valeur": "566 L",
-     "sub": "fondues, sauces, babas, flambages",
-     "highlight": true,
-     "couleur": "teal"
-    },
-    {
-     "label": "Coût d’achat",
-     "valeur": "9 434 €",
-     "sub": "acheté puis cuit, jamais vendu",
-     "couleur": "blue"
-    },
-    {
-     "label": "Doses",
-     "valeur": "celles du fisc",
-     "sub": "confirmées par les dirigeants (30/03/2026)",
-     "couleur": "gray"
-    }
-   ]
-  },
-  {
-   "kind": "tableau",
-   "titre": "Détail des doses par plat (extrait)",
+   "titre": "1. La méthode : la dose d’alcool de chaque plat de la carte (extrait)",
    "minWidth": 520,
    "colonnes": [
     {
@@ -575,18 +411,1985 @@
    ]
   },
   {
-   "kind": "alerte",
-   "couleur": "teal",
-   "titre": "Résultat",
-   "texte": "La cuisine consomme **566 L** d’alcool acheté sur trois ans (fondues au vin jaune et Ravelin, sauces au porto, babas et flambages au macvin et calvados, coupes au Bailey’s et cassis). Le fisc n’en déduit qu’une partie : tout le reste est compté à tort comme des verres vendus."
+   "kind": "paragraphe",
+   "texte": "**2. Le calcul.** On multiplie chaque dose par le **nombre de plats réellement vendus** (caisse, annexe C) sur les trois exercices, puis on agrège **alcool par alcool**. On obtient le volume d’alcool parti en cuisine :"
+  },
+  {
+   "kind": "tableau",
+   "titre": "3. Le résultat : alcool de cuisine par produit (3 exercices)",
+   "minWidth": 480,
+   "colonnes": [
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Litres",
+     "align": "right"
+    },
+    {
+     "label": "Coût d’achat",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "152 L",
+      "align": "right"
+     },
+     {
+      "v": "450 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "123 L",
+      "align": "right"
+     },
+     {
+      "v": "2 235 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Vin Jaune"
+     },
+     {
+      "v": "113 L",
+      "align": "right"
+     },
+     {
+      "v": "4 032 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "106 L",
+      "align": "right"
+     },
+     {
+      "v": "1 792 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "60 L",
+      "align": "right"
+     },
+     {
+      "v": "651 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Grand Marnier"
+     },
+     {
+      "v": "7 L",
+      "align": "right"
+     },
+     {
+      "v": "230 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Crème de Cassis"
+     },
+     {
+      "v": "3 L",
+      "align": "right"
+     },
+     {
+      "v": "26 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bailey's"
+     },
+     {
+      "v": "1 L",
+      "align": "right"
+     },
+     {
+      "v": "18 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total alcool de cuisine",
+      "fw": 700
+     },
+     {
+      "v": "566 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "9 434 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Alcool de cuisine",
+     "valeur": "566 L",
+     "sub": "fondues, sauces, babas, flambages",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Coût d’achat",
+     "valeur": "9 434 €",
+     "sub": "acheté puis cuit, jamais vendu",
+     "couleur": "blue"
+    },
+    {
+     "label": "Doses",
+     "valeur": "celles du fisc",
+     "sub": "confirmées par les dirigeants (30/03/2026)",
+     "couleur": "gray"
+    }
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "Alcool cuit dans les plats des menus (servis au forfait)",
+   "sousTitre": "Aucune boisson : c'est l'alcool incorporé dans les entrées, plats et desserts d'un menu, chiffré par la probabilité que chaque plat alcoolisé soit choisi."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Un menu se vend **au forfait** : le client choisit une entrée, un plat et un dessert. Certains de ces plats contiennent de l'alcool **de cuisine** (sauce au porto, fondue au Ravelin, baba au macvin, coupe au cassis…), **jamais un verre d'alcool servi**. Pour le chiffrer sans le surévaluer, on procède **plat par plat** : `dose du plat × probabilité que le client le choisisse` (lue dans la caisse) = **dose moyenne par menu vendu** ; multipliée par le **nombre de menus réellement vendus** sur la période = les litres ci-dessous. Total sur 3 exercices : **228 L**."
+  },
+  {
+   "kind": "note",
+   "texte": "**Exemple chiffré (carte C).** 101,5 menus « Végétarien » ont été vendus ; leur plat « Assiette du père Grégoire » (Calvados, dose **4 cl**) n'est choisi qu'**1 fois sur 2** → 101,5 × 4 cl × 50 % = **203 cl** (2,03 L) de Calvados cuit, et non pas 101,5 × 4 = 406 cl. Chaque ligne des tableaux ci-dessous suit ce calcul ; le détail complet (chaque menu, chaque option, le nombre vendu, la dose et la probabilité) figure dans la pièce **Boissons-4-menus-par-periode.xlsx**."
+  },
+  {
+   "kind": "note",
+   "texte": "**Aucun double compte cuisine / menus.** Plus haut, la **cuisine à la carte** (566 L) : plats commandés à la carte, **itemisés un par un** en caisse. Ici, les **menus au forfait** (228 L) : l'alcool des plats servis **dans** un menu, qui n'apparaît **pas** comme une ligne distincte (le menu est sonné en un seul article). Les deux périmètres sont **disjoints** : un plat n'est jamais compté deux fois."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Période P1 : 01/04/2022-22/07/2022 (carte C, exercice 2022-2023)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Menu (vendus)"
+    },
+    {
+     "label": "Plat alcoolisé (option)"
+    },
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Dose",
+     "align": "right"
+    },
+    {
+     "label": "Proba. de choix",
+     "align": "right"
+    },
+    {
+     "label": "= Alcool obtenu",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vegetarien (101,5)"
+     },
+     {
+      "v": "Assiette du père Grégoire"
+     },
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "203 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vegetarien (101,5)"
+     },
+     {
+      "v": "Galette sarrasin forestière"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "51 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (116)"
+     },
+     {
+      "v": "Coupe Dijonnaise"
+     },
+     {
+      "v": "Crème de cassis"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "232 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (116)"
+     },
+     {
+      "v": "Baba au marc de bourgogne"
+     },
+     {
+      "v": "Marc de bourgogne"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "232 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (41)"
+     },
+     {
+      "v": "Poulet aux morilles"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "41 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (41)"
+     },
+     {
+      "v": "Feuilleté forestier"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "52 %",
+      "align": "right"
+     },
+     {
+      "v": "22 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (303)"
+     },
+     {
+      "v": "Poulet à la jurassienne"
+     },
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "152 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (303)"
+     },
+     {
+      "v": "Assiette franc-comtoise"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "606 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (303)"
+     },
+     {
+      "v": "Baba au macvin"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "32 %",
+      "align": "right"
+     },
+     {
+      "v": "394 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dahu (55)"
+     },
+     {
+      "v": "Fondue jurassienne"
+     },
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "550 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total période",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "24,8 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Période P2 : 23/07/2022-31/03/2023 (carte B, exercice 2022-2023)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Menu (vendus)"
+    },
+    {
+     "label": "Plat alcoolisé (option)"
+    },
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Dose",
+     "align": "right"
+    },
+    {
+     "label": "Proba. de choix",
+     "align": "right"
+    },
+    {
+     "label": "= Alcool obtenu",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vegetarien (162)"
+     },
+     {
+      "v": "Assiette du père Grégoire"
+     },
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "324 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vegetarien (162)"
+     },
+     {
+      "v": "Galette sarrasin forestière"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "81 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (149)"
+     },
+     {
+      "v": "Coupe Dijonnaise"
+     },
+     {
+      "v": "Crème de cassis"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "298 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (149)"
+     },
+     {
+      "v": "Baba au marc de bourgogne"
+     },
+     {
+      "v": "Marc de bourgogne"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "298 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (48)"
+     },
+     {
+      "v": "Poulet ou truite aux morilles"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "48 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (48)"
+     },
+     {
+      "v": "Feuilleté forestier"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "46 %",
+      "align": "right"
+     },
+     {
+      "v": "22 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (444)"
+     },
+     {
+      "v": "Poulet à la jurassienne"
+     },
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "222 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (444)"
+     },
+     {
+      "v": "Assiette franc-comtoise"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "888 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (444)"
+     },
+     {
+      "v": "Baba au macvin"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "32 %",
+      "align": "right"
+     },
+     {
+      "v": "577 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dahu (195)"
+     },
+     {
+      "v": "Fondue jurassienne"
+     },
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "1950 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total période",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "47,1 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Période P3 : 01/04/2023-16/04/2023 (carte B, exercice 2023-2024)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Menu (vendus)"
+    },
+    {
+     "label": "Plat alcoolisé (option)"
+    },
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Dose",
+     "align": "right"
+    },
+    {
+     "label": "Proba. de choix",
+     "align": "right"
+    },
+    {
+     "label": "= Alcool obtenu",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vegetarien (13)"
+     },
+     {
+      "v": "Assiette du père Grégoire"
+     },
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "26 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vegetarien (13)"
+     },
+     {
+      "v": "Galette sarrasin forestière"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "6 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (14)"
+     },
+     {
+      "v": "Coupe Dijonnaise"
+     },
+     {
+      "v": "Crème de cassis"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "28 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (14)"
+     },
+     {
+      "v": "Baba au marc de bourgogne"
+     },
+     {
+      "v": "Marc de bourgogne"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "28 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (12)"
+     },
+     {
+      "v": "Poulet ou truite aux morilles"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "12 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (12)"
+     },
+     {
+      "v": "Feuilleté forestier"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "46 %",
+      "align": "right"
+     },
+     {
+      "v": "6 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (30)"
+     },
+     {
+      "v": "Poulet à la jurassienne"
+     },
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "15 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (30)"
+     },
+     {
+      "v": "Assiette franc-comtoise"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "60 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (30)"
+     },
+     {
+      "v": "Baba au macvin"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "32 %",
+      "align": "right"
+     },
+     {
+      "v": "39 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dahu (23)"
+     },
+     {
+      "v": "Fondue jurassienne"
+     },
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "230 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total période",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "4,5 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Période P4 : 17/04/2023-31/03/2024 (carte A, exercice 2023-2024)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Menu (vendus)"
+    },
+    {
+     "label": "Plat alcoolisé (option)"
+    },
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Dose",
+     "align": "right"
+    },
+    {
+     "label": "Proba. de choix",
+     "align": "right"
+    },
+    {
+     "label": "= Alcool obtenu",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vegetarien (179)"
+     },
+     {
+      "v": "Assiette du père Grégoire"
+     },
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "358 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vegetarien (179)"
+     },
+     {
+      "v": "Galette sarrasin forestière"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "90 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (255,5)"
+     },
+     {
+      "v": "Coupe Dijonnaise"
+     },
+     {
+      "v": "Crème de cassis"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "511 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (255,5)"
+     },
+     {
+      "v": "Baba au Baileys"
+     },
+     {
+      "v": "Baileys"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "511 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (174,5)"
+     },
+     {
+      "v": "Poulet ou truite aux morilles"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "174 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (174,5)"
+     },
+     {
+      "v": "Feuilleté forestier"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "46 %",
+      "align": "right"
+     },
+     {
+      "v": "81 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (174,5)"
+     },
+     {
+      "v": "Coupe glacée Ivresse"
+     },
+     {
+      "v": "Baileys"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "25 %",
+      "align": "right"
+     },
+     {
+      "v": "174 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (174,5)"
+     },
+     {
+      "v": "Baba liqueur de poire"
+     },
+     {
+      "v": "Liqueur de poire"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "25 %",
+      "align": "right"
+     },
+     {
+      "v": "174 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (669,5)"
+     },
+     {
+      "v": "Poulet à la jurassienne"
+     },
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "335 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (669,5)"
+     },
+     {
+      "v": "Assiette franc-comtoise"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "1339 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dahu (375)"
+     },
+     {
+      "v": "Fondue jurassienne"
+     },
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "3750 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total période",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "75,0 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Période P5 : 01/04/2024-31/03/2025 (carte A, exercice 2024-2025)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Menu (vendus)"
+    },
+    {
+     "label": "Plat alcoolisé (option)"
+    },
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Dose",
+     "align": "right"
+    },
+    {
+     "label": "Proba. de choix",
+     "align": "right"
+    },
+    {
+     "label": "= Alcool obtenu",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vegetarien (171)"
+     },
+     {
+      "v": "Assiette du père Grégoire"
+     },
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "342 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vegetarien (171)"
+     },
+     {
+      "v": "Galette sarrasin forestière"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "86 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (259)"
+     },
+     {
+      "v": "Coupe Dijonnaise"
+     },
+     {
+      "v": "Crème de cassis"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "518 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourguignon (259)"
+     },
+     {
+      "v": "Baba au Baileys"
+     },
+     {
+      "v": "Baileys"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "518 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (232)"
+     },
+     {
+      "v": "Poulet ou truite aux morilles"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "232 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (232)"
+     },
+     {
+      "v": "Feuilleté forestier"
+     },
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "46 %",
+      "align": "right"
+     },
+     {
+      "v": "108 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (232)"
+     },
+     {
+      "v": "Coupe glacée Ivresse"
+     },
+     {
+      "v": "Baileys"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "25 %",
+      "align": "right"
+     },
+     {
+      "v": "232 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Demi Lune (232)"
+     },
+     {
+      "v": "Baba liqueur de poire"
+     },
+     {
+      "v": "Liqueur de poire"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "25 %",
+      "align": "right"
+     },
+     {
+      "v": "232 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (766)"
+     },
+     {
+      "v": "Poulet à la jurassienne"
+     },
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "1 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "383 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Franc-Comtois (766)"
+     },
+     {
+      "v": "Assiette franc-comtoise"
+     },
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "50 %",
+      "align": "right"
+     },
+     {
+      "v": "1532 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dahu (351)"
+     },
+     {
+      "v": "Fondue jurassienne"
+     },
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "10 cl",
+      "align": "right"
+     },
+     {
+      "v": "Obligatoire (100 %)",
+      "align": "right"
+     },
+     {
+      "v": "3510 cl",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total période",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "76,9 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Total d'alcool incorporé dans les menus, par alcool et par exercice",
+   "minWidth": 620,
+   "colonnes": [
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "2022-2023",
+     "align": "right"
+    },
+    {
+     "label": "2023-2024",
+     "align": "right"
+    },
+    {
+     "label": "2024-2025",
+     "align": "right"
+    },
+    {
+     "label": "Total 3 ans",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "25,0 L",
+      "align": "right"
+     },
+     {
+      "v": "39,8 L",
+      "align": "right"
+     },
+     {
+      "v": "35,1 L",
+      "align": "right"
+     },
+     {
+      "v": "99,9 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Macvin"
+     },
+     {
+      "v": "24,6 L",
+      "align": "right"
+     },
+     {
+      "v": "14,4 L",
+      "align": "right"
+     },
+     {
+      "v": "15,3 L",
+      "align": "right"
+     },
+     {
+      "v": "54,3 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Crème de cassis"
+     },
+     {
+      "v": "5,3 L",
+      "align": "right"
+     },
+     {
+      "v": "5,4 L",
+      "align": "right"
+     },
+     {
+      "v": "5,2 L",
+      "align": "right"
+     },
+     {
+      "v": "15,9 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Baileys"
+     },
+     {
+      "v": "·",
+      "align": "right"
+     },
+     {
+      "v": "6,9 L",
+      "align": "right"
+     },
+     {
+      "v": "7,5 L",
+      "align": "right"
+     },
+     {
+      "v": "14,4 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "5,3 L",
+      "align": "right"
+     },
+     {
+      "v": "3,8 L",
+      "align": "right"
+     },
+     {
+      "v": "3,4 L",
+      "align": "right"
+     },
+     {
+      "v": "12,5 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "3,7 L",
+      "align": "right"
+     },
+     {
+      "v": "3,5 L",
+      "align": "right"
+     },
+     {
+      "v": "3,8 L",
+      "align": "right"
+     },
+     {
+      "v": "11,0 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "2,6 L",
+      "align": "right"
+     },
+     {
+      "v": "3,7 L",
+      "align": "right"
+     },
+     {
+      "v": "4,2 L",
+      "align": "right"
+     },
+     {
+      "v": "10,5 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Marc de bourgogne"
+     },
+     {
+      "v": "5,3 L",
+      "align": "right"
+     },
+     {
+      "v": "0,3 L",
+      "align": "right"
+     },
+     {
+      "v": "·",
+      "align": "right"
+     },
+     {
+      "v": "5,6 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Liqueur de poire"
+     },
+     {
+      "v": "·",
+      "align": "right"
+     },
+     {
+      "v": "1,8 L",
+      "align": "right"
+     },
+     {
+      "v": "2,3 L",
+      "align": "right"
+     },
+     {
+      "v": "4,1 L",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Total menus",
+      "fw": 700
+     },
+     {
+      "v": "71,8 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "79,6 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "76,8 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "228,2 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "graphique",
+   "variante": "vertical",
+   "hauteur": 300,
+   "dataKey": "alcool",
+   "serie": {
+    "name": "Litres (3 ans)",
+    "couleur": "#1d4ed8"
+   },
+   "format": "int",
+   "data": [
+    {
+     "alcool": "Ravelin",
+     "Litres (3 ans)": 99.9
+    },
+    {
+     "alcool": "Macvin",
+     "Litres (3 ans)": 54.3
+    },
+    {
+     "alcool": "Crème de cassis",
+     "Litres (3 ans)": 15.9
+    },
+    {
+     "alcool": "Baileys",
+     "Litres (3 ans)": 14.4
+    },
+    {
+     "alcool": "Calvados",
+     "Litres (3 ans)": 12.5
+    },
+    {
+     "alcool": "Vin jaune",
+     "Litres (3 ans)": 11.0
+    },
+    {
+     "alcool": "Porto",
+     "Litres (3 ans)": 10.5
+    },
+    {
+     "alcool": "Marc de bourgogne",
+     "Litres (3 ans)": 5.6
+    },
+    {
+     "alcool": "Liqueur de poire",
+     "Litres (3 ans)": 4.1
+    }
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Conclusion",
+   "numero": 4
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "En appliquant les doses confirmées par les dirigeants à toute la carte, la **cuisine à la carte** consomme **566 L** d’alcool, et les **menus au forfait** **228 L** de plus (pondérés par la probabilité de choix). Au total, **794 L** d’alcool acheté part dans les plats sur trois ans, jamais dans un verre vendu. Le fisc n’en déduit qu’une fraction : le reste est compté à tort comme des verres vendus."
   },
   {
    "kind": "piecejointe",
-   "intro": "Alcool de cuisine par produit et dose plat par plat :",
+   "intro": "Recalcul intégral, étape par étape (lecture seule des annexes de caisse) :",
    "fichiers": [
     {
      "fichier": "pieces-defense/RF-alcool-cuisine-doses-plats.xlsx",
-     "label": "RF Alcool de cuisine (par alcool + par plat)"
+     "label": "Alcool de cuisine à la carte : par alcool + dose par plat (XLSX)"
+    },
+    {
+     "fichier": "pieces-defense/Boissons-4-menus-par-periode.xlsx",
+     "label": "Alcool des menus par période : menus vendus × dose × probabilité (XLSX)"
     }
    ]
   },

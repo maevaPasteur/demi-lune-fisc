@@ -59,6 +59,8 @@ export interface Cellule {
   align?: 'left' | 'right' | 'center'
   fw?: number
   badge?: 'ok' | 'ko'
+  href?: string // fichier à télécharger ou lien externe -> Anchor (nouvel onglet)
+  to?: string // route interne (ex. /rendu-final/...) -> Link SPA
 }
 export interface Colonne {
   label: string
@@ -139,6 +141,9 @@ export interface ComposanteDetail {
 
 export type Section =
   | { kind: 'paragraphe'; texte: string }
+  // Titre intermédiaire (sous-section), plus léger qu'un 'chapitre'.
+  // Avec 'numero' (ex. "2.1") il est plus grand et préfixé ; sans, il est plus discret.
+  | { kind: 'titre'; texte: string; numero?: string }
   | { kind: 'alerte'; couleur: string; titre: string; texte: string }
   | { kind: 'kpis'; items: KpiItem[] }
   | { kind: 'tableau'; titre?: string; minWidth?: number; colonnes: Colonne[]; lignes: Cellule[][] }
@@ -153,10 +158,13 @@ export type Section =
       variante?: 'plan' | 'notes'
       tables: {
         numero: string
-        type?: 'reelle' | 'virtuelle' | 'inexistante'
+        type?: 'reelle' | 'virtuelle' | 'inexistante' | 'rare'
         total?: number
+        couverts?: number
         note?: string
       }[]
+      // Pied de carte : nombre de tables réellement utilisées et total de couverts.
+      resume?: { tables: number; couverts: number }
     }
   // Graphique multi-lignes (ex. couverts/semaine, 1 ligne par exercice).
   // L'axe X est numérique (semaine de l'exercice) ; moisTicks place les
@@ -171,6 +179,10 @@ export type Section =
       data: LigneGraphique[]
       format: 'euro' | 'int'
       moisTicks?: { tick: number; label: string }[]
+      // Tooltip personnalisé : si défini, l'en-tête du tooltip affiche le champ
+      // `periode` du point survolé (ex. « 01/11 - 07/11 ») suivi de ce sous-titre,
+      // au lieu de la valeur brute de l'axe X (le numéro de semaine).
+      tooltipSousTitre?: string
     }
   | {
       kind: 'graphique'
@@ -247,6 +259,50 @@ export type Section =
   // Suppressions par CAS : chaque exemple est une fiche montrant les suppressions
   // (date/heure/montant) puis l'encaissement correspondant (note, contenu détaillé).
   | { kind: 'casSuppressions'; cas: CasSuppression[] }
+  // Couverts moyens/jour par semaine (cycle mars->février), 1 ligne/exercice,
+  // avec bandes de capacité à 58 % colorées par saison (terrasse / intérieur).
+  | {
+      kind: 'couvertsCapacite'
+      titre?: string
+      sousTitre?: string
+      dataKey: string
+      series: { name: string; couleur: string }[]
+      midi: LigneGraphique[]
+      soir: LigneGraphique[]
+      moisTicks?: { tick: number; label: string }[]
+      zones: { x1: number; x2: number; seuil: number; espace: 'interieur' | 'terrasse' }[]
+      seuilInterieur: number
+      seuilTerrasse: number
+      capaciteInterieur: number
+      capaciteTerrasse: number
+      occupationMois?: {
+        mois: string
+        espace: string
+        pct: number | null
+        pctMidi: number | null
+        pctSoir: number | null
+      }[]
+      occupationMoyenne?: number
+      moyenneFrance?: number
+      ecartMoyenneFrancePct?: number
+    }
+  // Couverts par jour pour une saison (3 mois) : à gauche deux courbes empilées
+  // (soir en haut, midi en bas, 1 ligne par exercice), à droite la moyenne de
+  // couverts par midi/soir, mois par mois ET exercice par exercice (services à 0 exclus).
+  | {
+      kind: 'saisonCouverts'
+      titre: string
+      sousTitre?: string
+      dataKey: string
+      series: { name: string; couleur: string }[]
+      soir: LigneGraphique[]
+      midi: LigneGraphique[]
+      moisTicks?: { tick: number; label: string }[]
+      stats: {
+        mois: string
+        parExercice: { exo: string; midis: number; soirs: number; moyMidi: number; moySoir: number }[]
+      }[]
+    }
 
 export interface CasItem {
   lib: string

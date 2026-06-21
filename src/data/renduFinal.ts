@@ -85,6 +85,7 @@ export type Statut = 'demonte' | 'partiel' | 'a-etayer'
 export interface Grief {
   slug: string
   bloc: BlocId
+  numero?: string // libellé de numérotation forcé dans la nav (ex. « 2.1.a » pour une sous-page)
   refRapport: string // ex. « Rapport p. 14-24 »
   titre: string
   griefFisc: string // résumé de l'accusation
@@ -143,7 +144,7 @@ const suppressions: Grief = {
   refRapport: 'Proposition p. 16-19 (rejet 1/3) — annexe E (fichier Événement)',
   titre: 'Les suppressions de notes (lignes « DEL »)',
   griefFisc:
-    'L’administration relève 21 302 lignes supprimées (430 763 € TTC) dans le logiciel de caisse et présume qu’il s’agit de ventes réelles effacées puis encaissées par un moyen dissimulé — fondement du rejet de comptabilité.',
+    'À partir de la démonstration faite à l’écran par la gérante, l’administration décrit le mécanisme de séparation des notes (tables « virtuelles ») suivi de la suppression, article par article, de la table d’origine pour qu’elle ne figure plus en chiffre d’affaires ni sur le ticket Z. Elle en conclut que le logiciel autorise des suppressions sans qu’il soit possible de confirmer que ces modifications aient pu être légitimes, et que la comptabilité n’est donc pas probante.',
   reponseCourte:
     'Chaque famille de suppressions s’explique positivement et se vérifie sur les fichiers : fautes de frappe sur la quantité, paiements fractionnés, factures sans détail à la demande des clients, et corrections de service. Aucune ne correspond à une vente encaissée et non déclarée.',
   enjeu: 'Fondement du rejet de comptabilité (et donc de toute la reconstitution)',
@@ -155,11 +156,11 @@ const suppressions: Grief = {
       source: 'fisc',
       numero: 1,
       titre: 'Ce que soutient l’administration',
-      sousTitre: 'Rejet de comptabilité (1/3), fichier Événement (annexe E). Présomption de recettes effacées et encaissées en dehors de la caisse.',
+      sousTitre: 'Rejet de comptabilité (1/3), section V « Le logiciel : suppression de note » (p. 18-19). La fonction de suppression d’une note rendrait la légitimité des modifications invérifiable.',
     },
     {
       kind: 'paragraphe',
-      texte: `Le vérificateur relève dans le fichier des événements un grand nombre de **suppressions de lignes** (opérations « DEL ») et présume qu’il s’agit de **ventes réellement servies, puis effacées** pour être **encaissées par un moyen dissimulé**. C’est l’un des piliers du rejet de la comptabilité. Nous ne nous contentons pas de dire « le CA égale les encaissements » : nous **expliquons positivement, fichier à l’appui, ce que sont réellement ces suppressions**, famille par famille.`,
+      texte: `À partir de la démonstration faite à l’écran, le vérificateur décrit le **cheminement d’une note** : pour une table dont les convives veulent payer séparément, la gérante recrée chaque part sur une **table « virtuelle » (n° 15 à 18)**, l’encaisse, puis **supprime la table d’origine, article par article**, à l’aide de la fonction de suppression à l’écran. Après cette manipulation, cette table « ne figure plus en chiffre d’affaires » et « n’apparaît pas sur le ticket Z servant à la comptabilité ». Le vérificateur en conclut (p. 19) que « **le logiciel autorise des suppressions sans qu’il soit possible de confirmer que ces modifications aient pu être légitimes** », d’où une comptabilité jugée non probante. C’est l’un des piliers du rejet. Nous ne nous contentons pas de dire « le CA égale les encaissements » : nous **expliquons positivement, fichier à l’appui, ce que sont réellement ces suppressions**, famille par famille.`,
     },
     {
       kind: 'kpis',
@@ -278,26 +279,55 @@ const suppressions: Grief = {
       kind: 'alerte',
       couleur: 'teal',
       titre: 'La loi impose de tracer les corrections (donc d’enregistrer des lignes d’annulation)',
-      texte: `Depuis 2018, la loi anti-fraude TVA (art. **286-I-3° bis du CGI**) impose un logiciel de caisse **inaltérable, sécurisé, conservé, archivé**. La doctrine fiscale officielle (**BOFiP, BOI-TVA-DECLA-30-10-30 § 90**, à jour au 01/10/2025) précise que **« les corrections (modifications ou annulations) s’effectuent par des opérations de "plus" et de "moins" et non par modification directe des données d’origine »**, et que **« ces opérations de correction donnent également lieu à un enregistrement »** dont l’inaltérabilité est garantie. Autrement dit : un logiciel conforme **doit** produire des lignes d’annulation tracées. Leur présence prouve que **le système fonctionne comme la loi l’exige** — un effacement *sans* trace serait illégal ; une suppression *tracée* est conforme.`,
+      texte: `Depuis 2018, la loi anti-fraude TVA ([art. 286-I-3° bis du CGI](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897)) impose un logiciel de caisse **inaltérable, sécurisé, conservé, archivé**. La doctrine fiscale officielle ([BOFiP, BOI-TVA-DECLA-30-10-30 § 90](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20251001), à jour au 01/10/2025) précise que **« les corrections (modifications ou annulations) s’effectuent par des opérations de "plus" et de "moins" et non par modification directe des données d’origine »**, et que **« ces opérations de correction donnent également lieu à un enregistrement »** dont l’inaltérabilité est garantie. Autrement dit : un logiciel conforme **doit** produire des lignes d’annulation tracées. Leur présence prouve que **le système fonctionne comme la loi l’exige** : un effacement **sans** trace serait illégal ; une suppression **tracée** est conforme.`,
     },
     {
       kind: 'paragraphe',
-      texte: `Le **profil** de ces corrections est celui d’un service normal, pas d’un effacement organisé : **${formatPct(K.del.partRafales * 100)}** surviennent en **rafale** (≥ 2 à la même minute : changement de table, transfert, répartition d’addition), **${formatPct(K.del.partInf10 * 100)}** portent sur **10 € ou moins** (un plat ou une boisson modifié), **${formatInt(K.del.delNuit)}** ont lieu **la nuit** (hors service) et **${formatPct(A.partServices)}** tombent **pendant le service**. La suppression **médiane vaut ${formatEuro(A.mediane)}** — l’ordre de grandeur d’un seul article. Les causes sont celles que documentent les éditeurs de caisse eux-mêmes : erreur de saisie, plat renvoyé, geste commercial, **transfert d’article vers une autre table** (Lightspeed), **partage de note / encaissement séparé** (L’Addition).`,
-    },
-    {
-      kind: 'tableau',
-      titre: 'Distribution des suppressions par montant : l’immense majorité sont de petites corrections',
-      minWidth: 460,
-      colonnes: [
-        { label: 'Montant de la ligne supprimée' },
-        { label: 'Nombre', align: 'right' },
-        { label: 'Part', align: 'right' },
-      ],
-      lignes: A.distribution.map((t) => [cg(t.tranche), cd(formatInt(t.n)), cd(formatPct(t.pct))]),
+      texte: `Concrètement, **corriger une erreur de saisie ne consiste jamais à effacer une ligne** : sur une caisse certifiée NF525, une ligne validée ne peut pas disparaître sans trace. Pour corriger une faute de saisie (mauvais article, mauvaise quantité, plat renvoyé), le logiciel **crée une écriture de sens inverse** (opération « en moins » ou note de rectification) et **conserve l’originale**. La « suppression » que le fisc pointe est donc précisément la **fonction de correction exigée par la certification** : la voir à l’œuvre prouve que la caisse est conforme, pas qu’elle dissimule. C’est aussi la fonction que documentent les éditeurs eux-mêmes (transfert d’article entre tables, partage d’addition, départ anticipé, division d’un produit).`,
     },
     {
       kind: 'note',
-      texte: `Sources : BOFiP **BOI-TVA-DECLA-30-10-30** § 90 (bofip.impots.gouv.fr) ; art. 286-I-3° bis du CGI (caisse certifiée NF525) ; documentations éditeurs Lightspeed (« transfer the item to another seat or table ») et L’Addition (« partager des notes, encaisser un départ anticipé, diviser un produit »). À l’inverse, aucun « taux de void » sectoriel chiffré ne fait autorité : le contrôle des annulations s’apprécie au cas par cas et par opérateur, jamais sur un volume global.`,
+      texte: `Sources (lien complet) : [https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20251001](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20251001) (BOFiP BOI-TVA-DECLA-30-10-30 § 90, à jour au 01/10/2025) ; [https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897) (art. 286-I-3° bis du CGI, Légifrance) ; [https://resto-support.lightspeedhq.com/hc/en-us/articles/226306387-Transferring-order-items](https://resto-support.lightspeedhq.com/hc/en-us/articles/226306387-Transferring-order-items) (Lightspeed : transfert d’un article vers un autre couvert ou une autre table) ; [https://www.laddition.com/fr/fonctionnalites-caisse-enregistreuse](https://www.laddition.com/fr/fonctionnalites-caisse-enregistreuse) (L’Addition : partage de note, départ anticipé, division d’un produit).`,
+    },
+    {
+      kind: 'paragraphe',
+      texte: `Le **profil** de ces corrections est celui d’un service normal, pas d’un effacement organisé : **${formatPct(K.del.partRafales * 100)}** surviennent en **rafale** (≥ 2 à la même minute : changement de table, transfert, répartition d’addition), **${formatPct(K.del.partInf10 * 100)}** portent sur **10 € ou moins** (un plat ou une boisson modifié), **${formatInt(K.del.delNuit)}** ont lieu **la nuit** (hors service) et **${formatPct(A.partServices)}** tombent **pendant le service**. La suppression **médiane vaut ${formatEuro(A.mediane)}**, l’ordre de grandeur d’un seul article. Les causes sont celles que documentent les éditeurs de caisse eux-mêmes : erreur de saisie, plat renvoyé, geste commercial, **transfert d’article vers une autre table** (Lightspeed), **partage de note / encaissement séparé** (L’Addition).`,
+    },
+    {
+      kind: 'paragraphe',
+      texte: `**Distribution des suppressions par montant** : l’immense majorité sont de petites corrections (un plat, une boisson). La distribution épouse celle d’une carte de restaurant ; une dissimulation fabriquerait au contraire des montants ronds et élevés.`,
+    },
+    {
+      kind: 'graphique',
+      variante: 'vertical',
+      hauteur: 300,
+      dataKey: 'tranche',
+      serie: { name: 'Suppressions', couleur: 'blue.6' },
+      format: 'int',
+      data: A.distribution.map((d) => ({ tranche: d.tranche, Suppressions: d.n })),
+    },
+    {
+      kind: 'paragraphe',
+      texte: `**${formatPct(A.partServices)}** des suppressions surviennent **pendant les services** (midi et soir), pas à l’heure de clôture du Z. Si elles servaient à effacer des recettes, elles se concentreraient en fin de journée : ce sont au contraire des corrections **en temps réel**.`,
+    },
+    {
+      kind: 'graphique',
+      variante: 'vertical',
+      hauteur: 300,
+      dataKey: 'heure',
+      serie: { name: 'Suppressions', couleur: 'blue.6' },
+      format: 'int',
+      data: A.parHeure.filter((h) => h.heure >= 8 && h.heure <= 23).map((h) => ({ heure: `${h.heure} h`, Suppressions: h.n })),
+    },
+    {
+      kind: 'alerte',
+      couleur: 'blue',
+      titre: 'En droit, la seule présence d’annulations ne prouve pas une dissimulation',
+      texte: `Le rejet d’une comptabilité suppose des irrégularités d’une **gravité indiscutable** (soldes inexacts, absence de pièces justificatives, enregistrement partiel des recettes…) ; des corrections d’exploitation tracées, de faible montant, n’en font pas partie. Et **c’est à l’administration** d’établir, opération par opération, qu’une suppression donnée correspond à une **vente réelle encaissée puis effacée**. Elle ne le peut pas ici : le fichier Événement ne contient **ni le produit ni la table**. Transformer le respect d’une obligation légale (tracer les corrections) en présomption de fraude reviendrait à **renverser la charge de la preuve**. À l’inverse, aucun « taux de void » sectoriel chiffré ne fait autorité : le contrôle des annulations s’apprécie au cas par cas et par opérateur, jamais sur un volume global.`,
+    },
+    {
+      kind: 'note',
+      texte: `Sources (lien complet) : [https://www.village-justice.com/articles/point-sur-arret-460520-rendu-par-conseil-etat-2023,47896.html](https://www.village-justice.com/articles/point-sur-arret-460520-rendu-par-conseil-etat-2023,47896.html) (analyse de l’arrêt Conseil d’État, 3 nov. 2023, n° 460520 : gravité requise pour le rejet) ; [https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912) (BOFiP BOI-CF-IOR-10-20 : conditions du rejet de comptabilité).`,
     },
     // ---------------- LES FICHIERS ----------------
     {
@@ -460,7 +490,7 @@ const autresGriefs: Grief[] = [
       'À partir des achats de boissons et de doses standard, le service reconstitue un CA « liquides » puis l’extrapole à la cuisine (× coefficient), d’où une minoration alléguée.',
     reponseCourte:
       'Recalculé sur les achats et la caisse réels, le manquant retombe à la perte normale d’un bar ; en réinjectant les vraies ventes dans la formule du fisc, la discordance s’inverse.',
-    enjeu: 'Cœur de la reconstitution (≈ +471 826 € de CA reconstitué)',
+    enjeu: 'Cœur de la reconstitution : ≈ 422 k€ de CA HT redressé (3 ans), amende 1759 ≈ 472 k€',
     statut: 'partiel',
     sections: RFReconstitution.sections as unknown as Section[],
   },
@@ -471,7 +501,7 @@ const autresGriefs: Grief[] = [
     titre: 'Sur-versement au verre',
     griefFisc: 'La méthode retient des doses théoriques exactes, sans tenir compte du sur-versement réel.',
     reponseCourte:
-      'Sans doseur, le service à la main dépasse la dose, aux taux mesurés par la littérature : vin +23,6 % et cocktails +42 % (Kerr 2008), spiritueux +20 % (Wansink, BMJ 2005). Sur 4 091 L servis à la main (hors bière et crémant), cela fait 1 058 L d’alcool consommé et jamais vendu sur 3 ans.',
+      'Sans doseur, le verre de vin servi à la main dépasse la dose, aux taux mesurés par la littérature : vin +23,6 % et cocktails +42 % (Kerr 2008), spiritueux +20 % (Wansink, BMJ 2005). Le pichet (rempli au contenant, pré-mesuré) est exclu par prudence : il reste 720 L d’alcool consommé et jamais vendu sur 3 ans.',
     statut: 'partiel',
     sections: RFSurversement.sections as unknown as Section[],
   },
@@ -511,11 +541,11 @@ const autresGriefs: Grief[] = [
   {
     slug: 'alcool-cuisine-doses-plats',
     bloc: 'reconstitution',
-    refRapport: 'Proposition p. 37-44 — repères cuisine',
-    titre: 'Alcool incorporé en cuisine (doses des plats)',
-    griefFisc: 'La part d’alcool partant en cuisine (sauces, flambages, desserts) est sous-évaluée par le service.',
+    refRapport: 'Proposition p. 37-44 — repères cuisine et menus',
+    titre: 'Alcool incorporé en cuisine et dans les menus (doses des plats)',
+    griefFisc: 'La part d’alcool partant en cuisine (sauces, flambages, desserts) et dans les plats des menus est sous-évaluée par le service.',
     reponseCourte:
-      'En appliquant les doses confirmées par les dirigeants (celles que le fisc reprend) à toute la carte, la cuisine consomme 566 L d’alcool acheté sur 3 ans (fondues, sauces, babas, flambages) — bien au-delà de ce que le fisc déduit via ses repères.',
+      'En appliquant les doses confirmées par les dirigeants (celles que le fisc reprend) à toute la carte, la cuisine à la carte consomme 566 L et les menus 228 L de plus (pondérés par la probabilité de choix, plat par plat) : 794 L d’alcool acheté qui part dans les plats, jamais dans un verre vendu.',
     statut: 'partiel',
     sections: RFCuisine.sections as unknown as Section[],
   },

@@ -23,6 +23,8 @@ import json
 import os
 from collections import Counter, defaultdict
 
+from rfcommun import ajouter_conclusion
+
 import xlrd
 import openpyxl
 from openpyxl.styles import Font, Alignment, PatternFill
@@ -388,16 +390,22 @@ def construire_json(res, conso, totaux):
         "titre": "Ce que soutient l'administration",
     })
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "Dans la proposition de rectification (rejet de comptabilite, "
-            "partie « articles a quantite inferieure a l'unite, prix non "
-            "fixe ou remise », p. 16 a 22), le verificateur releve la "
-            "presence, dans les tableaux de detail de la caisse, de lignes "
-            "dont le calcul aboutit a **0,00 €**. Il en deduit que "
-            "des ventes auraient pu etre **sorties du chiffre d'affaires** au "
-            "moyen de ces lignes a prix nul, et que la comptabilite ne serait "
-            "donc pas probante."
+            "partie « Le logiciel : articles a prix 0 € », p. 22), le "
+            "verificateur releve la presence, dans les annexes de detail de "
+            "la caisse (annexes C-1 a C-3), d'**articles enregistres a un prix "
+            "de 0 €**. Il rappelle que la gerante, dans son courriel du "
+            "16 mars 2026, n'a evoque que des baisses ou hausses de prix liees "
+            "a la modification d'une recette, et jamais de prix nul : selon "
+            "lui, **l'existence de ces prix n'est pas explicable** et les "
+            "donnees ne devraient pas laisser apparaitre de prix a 0 €. Il en "
+            "deduit que **une partie du chiffre d'affaires aurait pu etre "
+            "occultee** des donnees de la caisse, et que la comptabilite ne "
+            "serait donc pas probante. (Le grief voisin sur les articles a "
+            "quantite inferieure a l'unite, p. 16 a 21, est traite dans la "
+            "fiche « Quantites anormales ».)"
         ),
     })
 
@@ -411,7 +419,7 @@ def construire_json(res, conso, totaux):
     })
 
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "Nous avons repris **ligne a ligne** le detail des tickets de la "
             "caisse sur les trois exercices verifies (annexes C1, C2 et C3, "
@@ -427,7 +435,7 @@ def construire_json(res, conso, totaux):
     })
 
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "Le total que nous obtenons (" + fr_int(totaux["total"]) + " lignes "
             "de produits) est tres proche du chiffre cite par "
@@ -470,7 +478,7 @@ def construire_json(res, conso, totaux):
 
     # Argument central : aucune recette possible
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "**Une ligne a 0 € ne peut pas servir a dissimuler une "
             "recette.** Par construction, son montant encaisse est "
@@ -485,7 +493,7 @@ def construire_json(res, conso, totaux):
     })
 
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "Mieux : sur les " + fr_int(totaux["zero"]) + " lignes a "
             "0 €, **" + fr_int(totaux["zero_paye"]) + " (soit "
@@ -520,7 +528,7 @@ def construire_json(res, conso, totaux):
     })
 
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "La ventilation parle d'elle-meme : il s'agit pour l'essentiel "
             "d'**aperitifs ou verres d'alcool offerts** (kir, Macvin, "
@@ -551,7 +559,7 @@ def construire_json(res, conso, totaux):
     )
     txt_offertes = " et ".join(l[0] for l in offertes)
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "**Exemple concret date.** Ticket du **" + str(te["date"]) +
             " a " + str(te["heure"]) + "** (no " + str(int(te["no"])) + "), "
@@ -567,7 +575,7 @@ def construire_json(res, conso, totaux):
 
     # Recoupe conso personnel / offerts
     sections.append({
-        "kind": "note",
+        "kind": "paragraphe",
         "texte": (
             "Ces offerts recoupent la **consommation du personnel et les "
             "offerts deja chiffres** par ailleurs (piece "
@@ -660,6 +668,7 @@ def main():
     ecrire_xlsx(res, conso, totaux)
 
     doc = construire_json(res, conso, totaux)
+    doc["sections"] = ajouter_conclusion(doc["sections"])
     os.makedirs(DATA, exist_ok=True)
     with open(JSON_OUT, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=2)

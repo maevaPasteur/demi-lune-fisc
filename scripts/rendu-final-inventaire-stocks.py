@@ -21,9 +21,10 @@ ailleurs et trop complexe pour cette page) :
      LIGNE avec quantite + prix unitaire HT + valeur HT : exactement ce qu'exige
      R. 123-177 (quantite ET valeur). La contenance en cl n'est pas une mention
      legalement requise de l'inventaire.
-  2. La contenance est une caracteristique fixe et connue du produit, et
-     l'administration l'a ELLE-MEME reconstituee pour chaque article dans son
-     Annexe N°1 (p. 47-50 : "Volume / Stocks / Indique Oui/Non" aux 4 dates).
+  2. La contenance est une caracteristique fixe et publique (imprimee sur la
+     facture du fournisseur, ex. "SAINT VERAN 75 CL"), et l'administration a
+     ELLE-MEME converti les bouteilles en cl dans sa reconstitution (colonne
+     "Volume disponible total en cl - conversion des bouteilles/BIB", annexes 6 et 7).
      L'omission n'a donc empeche aucun controle et n'a cause aucun prejudice.
   3. Le stock est stable d'une cloture a l'autre (pas de destockage cache).
   4. Contradiction : le service qualifie l'inventaire d'irregulier mais s'en sert
@@ -44,6 +45,8 @@ Sources lues :
 import json
 import os
 from collections import defaultdict
+
+from rfcommun import normaliser_sections
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -122,6 +125,17 @@ def champs_ok(l):
 total_lignes = sum(inv["nbLignes"] for inv in inventaires)
 lignes_completes = sum(1 for inv in inventaires for l in inv["lignes"] if champs_ok(l))
 pct_completes = lignes_completes / total_lignes * 100 if total_lignes else 0
+
+# Lignes "incompletes" : ce ne sont PAS des produits a donnees manquantes, mais des
+# lignes de reconciliation (un reliquat de valeur d'une page non rattache a un produit
+# nomme lors de la transcription) ; la valeur est conservee pour que le total reste
+# exact. On les decrit honnetement plutot que de les passer sous silence.
+lignes_incompletes = [(inv["date"], l) for inv in inventaires for l in inv["lignes"] if not champs_ok(l)]
+nb_incompletes = len(lignes_incompletes)
+recon_valeurs_txt = ", ".join(fr_eur2(l.get("valeurHT") or 0) for _, l in lignes_incompletes)
+recon_dates = sorted({d for d, _ in lignes_incompletes})
+recon_dates_txt = (f"toutes au {recon_dates[0]}" if len(recon_dates) == 1
+                   else "réparties sur " + " et ".join(recon_dates))
 
 # --------------------------------------------------------------------------- #
 # 3. Stabilite du stock : variation de stock entre clotures (valeur HT)
@@ -277,23 +291,37 @@ sections.append({
     "sousTitre": "Inventaire de stocks juge incomplet (Proposition de rectification 3924, p. 14 a 16, rejet 1/3, point I).",
 })
 sections.append({
-    "kind": "note",
+    "kind": "paragraphe",
     "texte": (
-        "Le vérificateur écrit (p. 14) avoir « pu consulter et obtenir les inventaires de stocks » auprès du cabinet "
-        "comptable. Il relève ensuite un seul défaut : « les stocks remis, **hormis celui du 31/03/2022**, apparaissent "
-        "comme incomplets dans le sens où ils **n'indiquent pas toujours les volumes des boissons** ». Il en déduit une "
-        "« irrégularité grave » au regard des articles R. 123-177 et L. 123-12 du Code de commerce, qui rendrait la "
-        "comptabilité non probante."
+        "**Situation constatée.** Le vérificateur indique (p. 14) avoir « **pu consulter et obtenir les inventaires de "
+        "stocks** » auprès du cabinet comptable AGC, et reprend une partie de leurs informations (les liquides) en annexe A. "
+        "Il relève ensuite un défaut unique : « les stocks remis, **hormis celui du 31/03/2022**, apparaissent comme "
+        "incomplets dans le sens où ils **n'indiquent pas toujours les volumes des boissons** »."
     ),
 })
 sections.append({
     "kind": "paragraphe",
     "texte": (
-        "Le grief est précis et limité. Il ne porte pas sur l'absence d'inventaire (le service l'a obtenu pour chaque "
-        "exercice), ni sur des libellés qui ne correspondraient pas aux factures (c'est un autre point du rapport). Il porte "
-        "uniquement sur un point de forme : la **contenance en centilitres** des boissons n'est pas systématiquement reportée "
-        "sur les inventaires postérieurs au 31/03/2022. Or l'article R. 123-177 exige, pour chaque élément, la **quantité** et "
-        "la **valeur** ; il n'impose pas d'indiquer la contenance unitaire d'un article."
+        "**Législation invoquée.** Le rapport cite l'article **R. 123-177 du Code de commerce**, qui définit l'inventaire "
+        "comme le relevé de tous les éléments d'actif et de passif « au regard desquels sont mentionnées la **quantité** et la "
+        "**valeur** de chacun d'eux », inventaire qui « doit être **détaillé et précis** ». Il ajoute que, si le livre "
+        "d'inventaire ne détaille pas les produits, l'entreprise doit alors établir « un **état détaillé et estimatif** » "
+        "énumérant « autant d'articles qu'il existe de produits de **caractéristiques différentes en raison de leur nature, de "
+        "leurs dimensions, de leur marque, de leur prix unitaire** ». Il rappelle que l'article **L. 123-12, al. 2** impose un "
+        "**inventaire physique** annuel à la date de clôture, dont les éléments « doivent pouvoir être **identifiés grâce aux "
+        "documents ou pièces justificatives** conservées par l'entreprise », et invoque la jurisprudence **CE 25 juillet 1980 "
+        "(n° 13170)** : un livre d'inventaire ne comportant « que le **montant global** des stocks, **sans état détaillé** "
+        "faisant ressortir les quantités, les poids et les prix unitaires d'achat » confère à la comptabilité un caractère de "
+        "grave irrégularité."
+    ),
+})
+sections.append({
+    "kind": "paragraphe",
+    "texte": (
+        "**Conséquence.** L'administration en tire (p. 14) que « **cette absence de stock** [...] constitue une "
+        "**irrégularité grave** », permettant « de considérer que la comptabilité présentée n'est pas probante et qu'elle est "
+        "dans l'incapacité de justifier précisément les chiffres d'affaires ». C'est l'un des motifs avancés à l'appui du "
+        "rejet de comptabilité."
     ),
 })
 
@@ -301,19 +329,28 @@ sections.append({
 sections.append({
     "kind": "chapitre", "source": "nous", "numero": 2,
     "titre": "Notre réponse : un inventaire détaillé, conforme, et des volumes que le service a lui-même reconstitués",
-    "sousTitre": "Les trois inventaires physiques de clôture sont produits, détaillés ligne à ligne (produit, quantité, prix unitaire HT, valeur HT). La seule mention en cause, la contenance, figure déjà dans les propres annexes de l'administration.",
+    "sousTitre": "Les trois inventaires physiques de clôture sont produits, détaillés ligne à ligne (produit, quantité, prix d'achat HT, valeur HT). La seule mention en cause, la contenance, figure déjà dans les propres annexes de l'administration.",
 })
 
 sections.append({
-    "kind": "note",
+    "kind": "paragraphe",
     "texte": (
-        "Les inventaires physiques des trois fins d'exercice vérifiées existent et sont produits : "
+        "Les inventaires physiques de clôture des trois exercices vérifiés existent, sont produits, et ont été établis à la "
+        "**date de clôture** de chaque exercice par le cabinet comptable AGC (ce qui satisfait l'inventaire physique annuel de "
+        "l'article L. 123-12) : "
         f"31/03/2023 ({inventaires[0]['nbLignes']} lignes), "
         f"31/03/2024 ({inventaires[1]['nbLignes']} lignes) et "
         f"31/03/2025 ({inventaires[2]['nbLignes']} lignes). "
-        f"Sur les **{total_lignes} lignes** des trois clôtures, **{lignes_completes} ({fr_dec(pct_completes)} %)** portent "
-        "le libellé du produit, la **quantité**, le **prix unitaire HT** et la **valeur HT**. Le niveau de détail exigé par "
-        "les articles R. 123-177 et L. 123-12 (quantité et valeur de chaque élément) est donc satisfait, produit par produit."
+        "Chaque ligne porte le **libellé du produit**, la **quantité**, le **prix unitaire d'achat HT** (l'inventaire est "
+        "valorisé au coût) et la **valeur HT**. "
+        f"Sur les **{total_lignes} lignes** des trois clôtures, **{lignes_completes} ({fr_dec(pct_completes)} %)** sont des "
+        f"lignes de produit complètes ; les **{nb_incompletes} restantes** ({recon_dates_txt}) ne sont pas des produits à "
+        "données manquantes, mais des **lignes de réconciliation** : un reliquat de valeur "
+        f"({recon_valeurs_txt}) qui n'a pas pu être rattaché à un produit nommé lors de la transcription de la page "
+        "concernée, et dont la **valeur reste comptée** pour que le stock total demeure exact. "
+        "Autrement dit, **le fisc ne conteste ni la quantité ni la valeur** (toutes deux présentes pour chaque produit) : "
+        "son unique reproche vise la **contenance**. Or c'est précisément la quantité et la valeur que R. 123-177 exige, "
+        "produit par produit."
     ),
 })
 
@@ -345,16 +382,21 @@ sections.append({
 # Le coeur de la reponse au grief "volumes" : la contenance n'est pas requise
 # et le fisc l'a deja reconstituee lui-meme.
 sections.append({
-    "kind": "note",
+    "kind": "paragraphe",
     "texte": (
-        "Sur le seul point réellement reproché, la contenance des boissons, deux constats suffisent. "
-        "**Un**, la contenance n'est pas une mention légale de l'inventaire : R. 123-177 demande la quantité et la valeur, "
-        "toutes deux présentes. La contenance est par ailleurs une caractéristique **fixe et publique** du produit (un "
-        "« Crémant du Jura 75 cl » fait toujours 75 cl, un BIB 10 L toujours 10 L) : la retrouver est immédiat et sans aléa. "
-        "**Deux**, l'administration l'a **elle-même reconstituée** pour chaque article dans son **Annexe N°1 (pages 47 à 50)**, "
-        "un tableau « Volume / Stocks / Indiqué Oui/Non » donnant le volume unitaire en centilitres aux quatre dates "
-        "d'inventaire. Le volume manquant n'a donc empêché aucun contrôle et n'a causé aucun préjudice : le service a pu mener "
-        "sa reconstitution sans obstacle."
+        "Sur le seul point réellement reproché, la contenance des boissons, trois constats se renforcent. "
+        "**Un**, la contenance n'est pas une mention légale de l'inventaire : R. 123-177 demande la **quantité** et la "
+        "**valeur**, toutes deux présentes. "
+        "**Deux**, c'est une caractéristique **fixe et publique** du produit, **imprimée sur la facture du fournisseur** ; or "
+        "la « législation » citée par le rapport lui-même exige seulement que les éléments de l'inventaire « **puissent être "
+        "identifiés grâce aux pièces justificatives** » conservées : c'est exactement le cas. Exemple concret : au 31/03/2023, "
+        "l'inventaire porte « **Saint Véran : 25 bouteilles, 436,50 € HT** » (quantité et valeur, conformes) ; la contenance, "
+        "**75 cl**, figure noir sur blanc sur la facture « SAINT VÉRAN 75 CL (Lupé-Cholet) », soit 25 × 75 = **1 875 cl** "
+        "retrouvables directement par la facture. "
+        "**Trois**, l'administration a **elle-même reporté puis converti** ces contenances : sa reconstitution comporte une "
+        "colonne « **Désignation de la boisson (avec volumétrie de la bouteille/BIB)** » suivie d'une colonne « **Volume "
+        "disponible total en centilitres (conversion des bouteilles/BIB)** » (annexes 6-1/6-2/6-3 et 7-1/7-2/7-3). Le volume "
+        "prétendument manquant n'a donc empêché aucun contrôle."
     ),
 })
 
@@ -419,31 +461,41 @@ sections.append({
 sections.append({
     "kind": "paragraphe",
     "texte": (
-        f"D'abord, le texte invoqué est respecté. L'article R. 123-177 du Code de commerce impose, pour chaque élément, la "
-        f"**quantité** et la **valeur** : ces deux mentions figurent sur l'inventaire pour {lignes_completes} des "
-        f"{total_lignes} lignes ({fr_dec(pct_completes)} %). La contenance unitaire en centilitres, seule mention en cause, "
-        "n'est pas exigée par ce texte. Elle constitue de surcroît une caractéristique fixe et publique de chaque produit "
-        "(un « Crémant du Jura 75 cl » fait toujours 75 cl), immédiatement vérifiable."
+        "D'abord, le texte invoqué est respecté. R. 123-177 impose, pour chaque élément, la **quantité** et la **valeur** : les "
+        f"deux figurent pour chaque produit ({lignes_completes} lignes de produit sur {total_lignes}, le reste étant des "
+        "reliquats de valeur conservés au 31/03/2025). L'énumération que le rapport met en avant (« autant d'articles qu'il "
+        "existe de produits de **caractéristiques différentes en raison de leur nature, de leurs dimensions, de leur marque, de "
+        "leur prix unitaire** ») décrit l'**état détaillé** que doit établir l'entreprise dont le livre d'inventaire **ne "
+        f"détaille pas** ses produits. Or nos inventaires détaillent **chaque produit sur sa propre ligne nommée** "
+        f"({inventaires[0]['nbLignes']}, {inventaires[1]['nbLignes']} puis {inventaires[2]['nbLignes']} lignes), avec sa "
+        "nature, sa marque, son **prix d'achat unitaire** et sa valeur. Pour un produit conditionné, la mesure (le « poids » "
+        "visé par la jurisprudence, la contenance pour un liquide) est **intrinsèque à sa désignation** et figure sur la "
+        "**facture** ; or le texte même que cite le rapport (L. 123-12, al. 2) se satisfait de ce que les éléments de "
+        "l'inventaire « **puissent être identifiés grâce aux pièces justificatives** ». La seule mention en cause est donc, au "
+        "pire, identifiable sans difficulté."
     ),
 })
 sections.append({
     "kind": "paragraphe",
     "texte": (
-        "Ensuite, et c'est décisif, l'administration a elle-même reconstitué ces volumes. Son **Annexe N°1 (pages 47 à 50)** "
-        "reporte, pour chaque article et aux quatre dates d'inventaire, le volume unitaire en centilitres, avec une colonne "
-        "« Indiqué Oui/Non ». Le service a donc disposé de toute l'information nécessaire et a pu conduire l'intégralité de sa "
-        "reconstitution. Un défaut purement formel, sans incidence sur le contrôle, ne peut fonder le rejet d'une comptabilité."
+        "Ensuite, et c'est décisif, le défaut allégué **n'a eu aucune incidence sur le contrôle** : le service a disposé de "
+        "**toute l'information utile**. Il a lui-même reporté la **volumétrie de chaque bouteille** puis l'a convertie en "
+        "centilitres (annexes 7), et a bâti l'intégralité de sa reconstitution sur ces mêmes inventaires (annexes 6-1 à 6-3, "
+        "« achats ± variation de stock = quantités disponibles »). Une irrégularité ne peut justifier le rejet d'une "
+        "comptabilité que si elle est **grave** et fait obstacle au contrôle des recettes ; le défaut de report d'une "
+        "contenance que le service a lui-même reconstituée, sans la moindre incidence sur ce contrôle, n'atteint pas ce seuil."
     ),
 })
 sections.append({
     "kind": "paragraphe",
     "texte": (
-        "Cette position est par ailleurs contradictoire : l'administration qualifie l'inventaire d'irrégulier tout en s'en "
-        "servant comme base de sa reconstitution (lignes « Variation stocks Boissons » de ses tableaux p. 33 à 35, annexes "
-        "6-1 à 6-3 « achats ± variation de stock = quantités disponibles »). Un même document ne peut être à la fois écarté "
-        "comme non probant et retenu comme socle du redressement. Enfin, la jurisprudence CE 25 juillet 1980 invoquée vise un "
-        "inventaire réduit au seul montant global, sans aucun détail des quantités et des prix unitaires : c'est la situation "
-        "inverse de la nôtre, où chaque produit est détaillé avec sa quantité, son prix unitaire et sa valeur."
+        "Enfin, la jurisprudence **CE 25 juillet 1980** invoquée vise un livre d'inventaire réduit au **seul montant global**, "
+        "« sans état détaillé faisant ressortir les quantités, les poids et les prix unitaires d'achat de chaque catégorie » : "
+        "c'est la situation **inverse** de la nôtre, où chaque produit est détaillé (quantité, prix d'achat unitaire, valeur), "
+        "la mesure du produit conditionné étant donnée par sa désignation et sa facture. On relèvera enfin que le rapport, qui "
+        "conclut à une « **absence de stock** » (p. 14) après avoir constaté que le vérificateur « **a pu consulter et obtenir "
+        "les inventaires** », vise par cette formule le **défaut de mention**, non l'absence matérielle des documents : "
+        "l'inventaire existe, il est détaillé, et il a servi de base au redressement."
     ),
 })
 
@@ -457,10 +509,12 @@ sections.append({
     "texte": (
         "L'inventaire physique des trois fins d'exercice existe et est détaillé produit par produit "
         f"({inventaires[0]['nbLignes']}, {inventaires[1]['nbLignes']} et {inventaires[2]['nbLignes']} lignes, avec quantité, "
-        f"prix unitaire et valeur), et le stock se maintient ({fr_eur2(stock_min)} à {fr_eur2(stock_max)} HT). Le seul "
-        "élément reproché, la contenance en centilitres, n'est pas une mention exigée par l'article R. 123-177 et a de toute "
-        "façon été reconstituée par l'administration elle-même (Annexe N°1). Le motif « inventaire incomplet » est donc privé "
-        "de fondement, d'autant que le service s'appuie sur ces mêmes inventaires pour reconstituer le chiffre d'affaires."
+        f"prix d'achat unitaire et valeur), et le stock se maintient ({fr_eur2(stock_min)} à {fr_eur2(stock_max)} HT). Le "
+        "seul élément reproché, la contenance en centilitres, n'est pas une mention que R. 123-177 impose de reporter dès lors "
+        "que la quantité et la valeur figurent ; elle est de surcroît identifiable par les factures (L. 123-12, al. 2) et a "
+        "été reconstituée par l'administration elle-même (Annexe N°1, colonne « volumétrie de la bouteille »). Faute "
+        "d'incidence sur le contrôle des recettes, ce défaut formel est **dépourvu de la gravité** qui seule pourrait fonder "
+        "le rejet, d'autant que le service s'appuie sur ces mêmes inventaires pour reconstituer le chiffre d'affaires."
     ),
 })
 
@@ -470,7 +524,7 @@ doc = {
         "titre": "Inventaire de stocks (jugé absent ou incomplet)",
         "bloc": "rejet",
         "griefFisc": "Les inventaires (hormis le 31/03/2022) n'indiqueraient pas toujours la contenance des boissons, ce qui les rendrait incomplets (Proposition p. 14 a 16, rejet 1/3, point I).",
-        "reponse": "Les inventaires existent et sont détaillés (quantité, prix unitaire, valeur) ; la contenance n'est pas une mention légalement requise et a été reconstituée par l'administration elle-même. Le motif tombe.",
+        "reponse": "Les inventaires existent et sont détaillés (quantité, prix d'achat, valeur) ; la contenance n'est pas une mention que R. 123-177 impose de reporter, elle est identifiable par les factures et a été reconstituée par l'administration elle-même. Sans incidence sur le contrôle, le défaut est dépourvu de la gravité requise pour fonder le rejet.",
         "sources": [
             "public/documents/inventaires/inventaires.json",
             "public/documents/inventaires/inventaire_2023-03-31.csv",
@@ -485,6 +539,7 @@ doc = {
     "sections": sections,
 }
 
+doc["sections"] = normaliser_sections(doc["sections"])
 os.makedirs(os.path.dirname(JSON_OUT), exist_ok=True)
 with open(JSON_OUT, "w", encoding="utf-8") as f:
     json.dump(doc, f, ensure_ascii=False, indent=2)

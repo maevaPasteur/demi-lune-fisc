@@ -218,10 +218,15 @@ def main():
     for path in PAGES:
         name = os.path.basename(path)
         doc = json.load(open(path, encoding="utf-8"))
-        sections = doc.get("sections", doc if isinstance(doc, list) else [])
-        if isinstance(doc, dict) and doc.get("kind"):
-            sections = [doc]
-        if not isinstance(sections, list):
+        if isinstance(doc, list):
+            # fichier de données auxiliaire (pas une page de sections) : on ne
+            # garde que d'éventuels éléments-sections, sinon on ignore.
+            sections = [x for x in doc if isinstance(x, dict) and x.get("kind")]
+        elif isinstance(doc, dict):
+            sections = doc.get("sections") or ([doc] if doc.get("kind") else [])
+        else:
+            sections = []
+        if not sections:
             continue
         lines = []
 

@@ -3,14 +3,19 @@
   "slug": "sur-versement-au-verre",
   "source": "scripts/rendu-final-reconstitution-bloc2.py",
   "grief": "Proposition p. 37-44 (methode 1/2) - doses au verre",
-  "litres_retenu": 1058
+  "litres_retenu": 720,
+  "breakdown": {
+   "vin_verre": 491,
+   "cocktails": 217,
+   "spiritueux": 13
+  }
  },
  "sections": [
   {
    "kind": "chapitre",
    "source": "fisc",
    "numero": 1,
-   "titre": "Le grief de l’administration",
+   "titre": "Ce que dit l'administration",
    "sousTitre": "Proposition p. 37 et p. 41-42 : doses au verre figées au centilitre"
   },
   {
@@ -64,10 +69,10 @@
    "lignes": [
     [
      {
-      "v": "Vins au verre et au pichet (y c. vin jaune, paille, macvin)"
+      "v": "Vins au verre seul (pichet pré-mesuré exclu)"
      },
      {
-      "v": "3 512 L",
+      "v": "2 080 L",
       "align": "right"
      },
      {
@@ -75,7 +80,24 @@
       "align": "right"
      },
      {
-      "v": "829 L",
+      "v": "491 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vins au pichet (rempli au contenant, pré-mesuré)"
+     },
+     {
+      "v": "1 432 L",
+      "align": "right"
+     },
+     {
+      "v": "0,0 %",
+      "align": "right"
+     },
+     {
+      "v": "0 L",
       "align": "right"
      }
     ],
@@ -124,12 +146,12 @@
       "fw": 700
      },
      {
-      "v": "25,9 %",
+      "v": "17,6 %",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "1 058 L",
+      "v": "720 L",
       "align": "right",
       "fw": 700
      }
@@ -167,11 +189,11 @@
       "align": "right"
      },
      {
-      "v": "366,6 L",
+      "v": "247,7 L",
       "align": "right"
      },
      {
-      "v": "1791,5 L",
+      "v": "1672,5 L",
       "align": "right"
      }
     ],
@@ -184,11 +206,11 @@
       "align": "right"
      },
      {
-      "v": "353,9 L",
+      "v": "236,7 L",
       "align": "right"
      },
      {
-      "v": "1717,8 L",
+      "v": "1600,7 L",
       "align": "right"
      }
     ],
@@ -201,11 +223,11 @@
       "align": "right"
      },
      {
-      "v": "337,8 L",
+      "v": "236,1 L",
       "align": "right"
      },
      {
-      "v": "1640,1 L",
+      "v": "1538,4 L",
       "align": "right"
      }
     ],
@@ -220,12 +242,12 @@
       "fw": 700
      },
      {
-      "v": "1058,3 L",
+      "v": "720,5 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "5149,4 L",
+      "v": "4811,5 L",
       "align": "right",
       "fw": 700
      }
@@ -273,74 +295,6 @@
     ],
     [
      {
-      "v": "Bourgogne Aligoté maison"
-     },
-     {
-      "v": "346,8 L",
-      "align": "right"
-     },
-     {
-      "v": "107,2 L",
-      "align": "right"
-     },
-     {
-      "v": "454,0 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Savagnin"
-     },
-     {
-      "v": "429,5 L",
-      "align": "right"
-     },
-     {
-      "v": "101,4 L",
-      "align": "right"
-     },
-     {
-      "v": "530,8 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Cubis de vin (couleur non précisée)"
-     },
-     {
-      "v": "426,9 L",
-      "align": "right"
-     },
-     {
-      "v": "100,7 L",
-      "align": "right"
-     },
-     {
-      "v": "527,6 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Trousseau"
-     },
-     {
-      "v": "346,1 L",
-      "align": "right"
-     },
-     {
-      "v": "81,7 L",
-      "align": "right"
-     },
-     {
-      "v": "427,8 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
       "v": "Arbois Béthanie"
      },
      {
@@ -358,18 +312,52 @@
     ],
     [
      {
-      "v": "Côtes de Provence rosé maison (Cap des Pins)"
+      "v": "Arbois Savagnin"
      },
      {
-      "v": "286,8 L",
+      "v": "429,5 L",
       "align": "right"
      },
      {
-      "v": "68,9 L",
+      "v": "71,4 L",
       "align": "right"
      },
      {
-      "v": "355,6 L",
+      "v": "500,9 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bourgogne Aligoté maison"
+     },
+     {
+      "v": "346,8 L",
+      "align": "right"
+     },
+     {
+      "v": "70,0 L",
+      "align": "right"
+     },
+     {
+      "v": "416,8 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau"
+     },
+     {
+      "v": "346,1 L",
+      "align": "right"
+     },
+     {
+      "v": "52,1 L",
+      "align": "right"
+     },
+     {
+      "v": "398,1 L",
       "align": "right"
      }
     ],
@@ -382,28 +370,11 @@
       "align": "right"
      },
      {
-      "v": "57,9 L",
+      "v": "44,9 L",
       "align": "right"
      },
      {
-      "v": "303,4 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Côtes du Rhône rouge maison (Chusclan)"
-     },
-     {
-      "v": "190,8 L",
-      "align": "right"
-     },
-     {
-      "v": "45,0 L",
-      "align": "right"
-     },
-     {
-      "v": "235,8 L",
+      "v": "290,4 L",
       "align": "right"
      }
     ],
@@ -416,11 +387,11 @@
       "align": "right"
      },
      {
-      "v": "40,6 L",
+      "v": "30,6 L",
       "align": "right"
      },
      {
-      "v": "212,7 L",
+      "v": "202,7 L",
       "align": "right"
      }
     ],
@@ -433,45 +404,11 @@
       "align": "right"
      },
      {
-      "v": "39,0 L",
+      "v": "29,4 L",
       "align": "right"
      },
      {
-      "v": "204,1 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Macon"
-     },
-     {
-      "v": "139,8 L",
-      "align": "right"
-     },
-     {
-      "v": "33,0 L",
-      "align": "right"
-     },
-     {
-      "v": "172,8 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Moulin à Vent"
-     },
-     {
-      "v": "103,8 L",
-      "align": "right"
-     },
-     {
-      "v": "24,5 L",
-      "align": "right"
-     },
-     {
-      "v": "128,2 L",
+      "v": "194,6 L",
       "align": "right"
      }
     ],
@@ -494,6 +431,23 @@
     ],
     [
      {
+      "v": "Macon"
+     },
+     {
+      "v": "139,8 L",
+      "align": "right"
+     },
+     {
+      "v": "22,3 L",
+      "align": "right"
+     },
+     {
+      "v": "162,1 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Crème de Cassis"
      },
      {
@@ -511,6 +465,23 @@
     ],
     [
      {
+      "v": "Côtes de Provence rosé maison (Cap des Pins)"
+     },
+     {
+      "v": "286,8 L",
+      "align": "right"
+     },
+     {
+      "v": "15,9 L",
+      "align": "right"
+     },
+     {
+      "v": "302,7 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Gewurztraminer"
      },
      {
@@ -518,11 +489,11 @@
       "align": "right"
      },
      {
-      "v": "18,6 L",
+      "v": "15,7 L",
       "align": "right"
      },
      {
-      "v": "97,5 L",
+      "v": "94,5 L",
       "align": "right"
      }
     ],
@@ -535,11 +506,28 @@
       "align": "right"
      },
      {
-      "v": "17,4 L",
+      "v": "14,1 L",
       "align": "right"
      },
      {
-      "v": "91,1 L",
+      "v": "87,8 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Moulin à Vent"
+     },
+     {
+      "v": "103,8 L",
+      "align": "right"
+     },
+     {
+      "v": "13,3 L",
+      "align": "right"
+     },
+     {
+      "v": "117,0 L",
       "align": "right"
      }
     ],
@@ -557,6 +545,23 @@
      },
      {
       "v": "40,2 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cubis de vin (couleur non précisée)"
+     },
+     {
+      "v": "426,9 L",
+      "align": "right"
+     },
+     {
+      "v": "11,5 L",
+      "align": "right"
+     },
+     {
+      "v": "438,4 L",
       "align": "right"
      }
     ],
@@ -591,6 +596,23 @@
      },
      {
       "v": "46,3 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Côtes du Rhône rouge maison (Chusclan)"
+     },
+     {
+      "v": "190,8 L",
+      "align": "right"
+     },
+     {
+      "v": "7,9 L",
+      "align": "right"
+     },
+     {
+      "v": "198,7 L",
       "align": "right"
      }
     ],
@@ -846,23 +868,6 @@
      },
      {
       "v": "7,4 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Hautes Côtes de Beaune blanc"
-     },
-     {
-      "v": "4,5 L",
-      "align": "right"
-     },
-     {
-      "v": "1,1 L",
-      "align": "right"
-     },
-     {
-      "v": "5,6 L",
       "align": "right"
      }
     ],
@@ -1208,6 +1213,23 @@
     ],
     [
      {
+      "v": "Hautes Côtes de Beaune blanc"
+     },
+     {
+      "v": "4,5 L",
+      "align": "right"
+     },
+     {
+      "v": "0,0 L",
+      "align": "right"
+     },
+     {
+      "v": "4,5 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Total",
       "fw": 700
      },
@@ -1217,12 +1239,12 @@
       "fw": 700
      },
      {
-      "v": "1058,3 L",
+      "v": "720,5 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "5149,4 L",
+      "v": "4811,5 L",
       "align": "right",
       "fw": 700
      }
@@ -1251,57 +1273,6 @@
     }
    ],
    "lignes": [
-    [
-     {
-      "v": "Cubis de vin (couleur non précisée)"
-     },
-     {
-      "v": "391,3 L",
-      "align": "right"
-     },
-     {
-      "v": "92,3 L",
-      "align": "right"
-     },
-     {
-      "v": "483,6 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Savagnin"
-     },
-     {
-      "v": "144,7 L",
-      "align": "right"
-     },
-     {
-      "v": "34,2 L",
-      "align": "right"
-     },
-     {
-      "v": "178,9 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Trousseau"
-     },
-     {
-      "v": "143,4 L",
-      "align": "right"
-     },
-     {
-      "v": "33,8 L",
-      "align": "right"
-     },
-     {
-      "v": "177,3 L",
-      "align": "right"
-     }
-    ],
     [
      {
       "v": "Macvin"
@@ -1338,6 +1309,40 @@
     ],
     [
      {
+      "v": "Arbois Savagnin"
+     },
+     {
+      "v": "144,7 L",
+      "align": "right"
+     },
+     {
+      "v": "25,5 L",
+      "align": "right"
+     },
+     {
+      "v": "170,3 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau"
+     },
+     {
+      "v": "143,4 L",
+      "align": "right"
+     },
+     {
+      "v": "22,6 L",
+      "align": "right"
+     },
+     {
+      "v": "166,1 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Bourgogne Aligoté maison"
      },
      {
@@ -1362,11 +1367,11 @@
       "align": "right"
      },
      {
-      "v": "17,0 L",
+      "v": "14,0 L",
       "align": "right"
      },
      {
-      "v": "89,2 L",
+      "v": "86,1 L",
       "align": "right"
      }
     ],
@@ -1379,11 +1384,11 @@
       "align": "right"
      },
      {
-      "v": "17,0 L",
+      "v": "13,7 L",
       "align": "right"
      },
      {
-      "v": "89,0 L",
+      "v": "85,7 L",
       "align": "right"
      }
     ],
@@ -1396,11 +1401,28 @@
       "align": "right"
      },
      {
-      "v": "15,4 L",
+      "v": "12,5 L",
       "align": "right"
      },
      {
-      "v": "80,6 L",
+      "v": "77,7 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cubis de vin (couleur non précisée)"
+     },
+     {
+      "v": "391,3 L",
+      "align": "right"
+     },
+     {
+      "v": "11,0 L",
+      "align": "right"
+     },
+     {
+      "v": "402,3 L",
       "align": "right"
      }
     ],
@@ -1413,28 +1435,11 @@
       "align": "right"
      },
      {
-      "v": "11,6 L",
+      "v": "8,6 L",
       "align": "right"
      },
      {
-      "v": "60,7 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Moulin à Vent"
-     },
-     {
-      "v": "32,9 L",
-      "align": "right"
-     },
-     {
-      "v": "7,8 L",
-      "align": "right"
-     },
-     {
-      "v": "40,7 L",
+      "v": "57,7 L",
       "align": "right"
      }
     ],
@@ -1481,11 +1486,28 @@
       "align": "right"
      },
      {
-      "v": "6,4 L",
+      "v": "5,1 L",
       "align": "right"
      },
      {
-      "v": "33,7 L",
+      "v": "32,4 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Moulin à Vent"
+     },
+     {
+      "v": "32,9 L",
+      "align": "right"
+     },
+     {
+      "v": "4,1 L",
+      "align": "right"
+     },
+     {
+      "v": "37,0 L",
       "align": "right"
      }
     ],
@@ -1724,23 +1746,6 @@
      },
      {
       "v": "3,3 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Hautes Côtes de Beaune blanc"
-     },
-     {
-      "v": "3,0 L",
-      "align": "right"
-     },
-     {
-      "v": "0,7 L",
-      "align": "right"
-     },
-     {
-      "v": "3,7 L",
       "align": "right"
      }
     ],
@@ -2086,6 +2091,23 @@
     ],
     [
      {
+      "v": "Hautes Côtes de Beaune blanc"
+     },
+     {
+      "v": "3,0 L",
+      "align": "right"
+     },
+     {
+      "v": "0,0 L",
+      "align": "right"
+     },
+     {
+      "v": "3,0 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Total",
       "fw": 700
      },
@@ -2095,12 +2117,12 @@
       "fw": 700
      },
      {
-      "v": "366,6 L",
+      "v": "247,7 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "1791,5 L",
+      "v": "1672,5 L",
       "align": "right",
       "fw": 700
      }
@@ -2131,23 +2153,6 @@
    "lignes": [
     [
      {
-      "v": "Bourgogne Aligoté maison"
-     },
-     {
-      "v": "142,8 L",
-      "align": "right"
-     },
-     {
-      "v": "41,7 L",
-      "align": "right"
-     },
-     {
-      "v": "184,5 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
       "v": "Macvin"
      },
      {
@@ -2165,44 +2170,10 @@
     ],
     [
      {
-      "v": "Côtes de Provence rosé maison (Cap des Pins)"
+      "v": "Bourgogne Aligoté maison"
      },
      {
-      "v": "155,1 L",
-      "align": "right"
-     },
-     {
-      "v": "36,7 L",
-      "align": "right"
-     },
-     {
-      "v": "191,7 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Savagnin"
-     },
-     {
-      "v": "140,1 L",
-      "align": "right"
-     },
-     {
-      "v": "33,1 L",
-      "align": "right"
-     },
-     {
-      "v": "173,1 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Côtes du Rhône rouge maison (Chusclan)"
-     },
-     {
-      "v": "101,5 L",
+      "v": "142,8 L",
       "align": "right"
      },
      {
@@ -2210,7 +2181,7 @@
       "align": "right"
      },
      {
-      "v": "125,5 L",
+      "v": "166,8 L",
       "align": "right"
      }
     ],
@@ -2233,18 +2204,18 @@
     ],
     [
      {
-      "v": "Arbois Trousseau"
+      "v": "Arbois Savagnin"
      },
      {
-      "v": "97,3 L",
+      "v": "140,1 L",
       "align": "right"
      },
      {
-      "v": "23,0 L",
+      "v": "22,9 L",
       "align": "right"
      },
      {
-      "v": "120,3 L",
+      "v": "163,0 L",
       "align": "right"
      }
     ],
@@ -2257,11 +2228,28 @@
       "align": "right"
      },
      {
-      "v": "19,8 L",
+      "v": "15,9 L",
       "align": "right"
      },
      {
-      "v": "103,9 L",
+      "v": "100,0 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau"
+     },
+     {
+      "v": "97,3 L",
+      "align": "right"
+     },
+     {
+      "v": "13,4 L",
+      "align": "right"
+     },
+     {
+      "v": "110,8 L",
       "align": "right"
      }
     ],
@@ -2274,11 +2262,11 @@
       "align": "right"
      },
      {
-      "v": "15,8 L",
+      "v": "10,3 L",
       "align": "right"
      },
      {
-      "v": "82,8 L",
+      "v": "77,3 L",
       "align": "right"
      }
     ],
@@ -2291,45 +2279,11 @@
       "align": "right"
      },
      {
-      "v": "12,5 L",
+      "v": "9,0 L",
       "align": "right"
      },
      {
-      "v": "65,6 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Saint Joseph Rouge"
-     },
-     {
-      "v": "45,9 L",
-      "align": "right"
-     },
-     {
-      "v": "10,8 L",
-      "align": "right"
-     },
-     {
-      "v": "56,7 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Cubis de vin (couleur non précisée)"
-     },
-     {
-      "v": "35,6 L",
-      "align": "right"
-     },
-     {
-      "v": "8,4 L",
-      "align": "right"
-     },
-     {
-      "v": "44,0 L",
+      "v": "62,1 L",
       "align": "right"
      }
     ],
@@ -2352,18 +2306,18 @@
     ],
     [
      {
-      "v": "Moulin à Vent"
+      "v": "Saint Joseph Rouge"
      },
      {
-      "v": "34,5 L",
+      "v": "45,9 L",
       "align": "right"
      },
      {
-      "v": "8,1 L",
+      "v": "7,5 L",
       "align": "right"
      },
      {
-      "v": "42,6 L",
+      "v": "53,4 L",
       "align": "right"
      }
     ],
@@ -2386,6 +2340,23 @@
     ],
     [
      {
+      "v": "Côtes de Provence rosé maison (Cap des Pins)"
+     },
+     {
+      "v": "155,1 L",
+      "align": "right"
+     },
+     {
+      "v": "6,5 L",
+      "align": "right"
+     },
+     {
+      "v": "161,5 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Gewurztraminer"
      },
      {
@@ -2393,11 +2364,11 @@
       "align": "right"
      },
      {
-      "v": "5,9 L",
+      "v": "5,0 L",
       "align": "right"
      },
      {
-      "v": "30,8 L",
+      "v": "29,9 L",
       "align": "right"
      }
     ],
@@ -2420,18 +2391,35 @@
     ],
     [
      {
-      "v": "Chablis"
+      "v": "Côtes du Rhône rouge maison (Chusclan)"
      },
      {
-      "v": "14,8 L",
+      "v": "101,5 L",
       "align": "right"
      },
      {
-      "v": "3,5 L",
+      "v": "4,2 L",
       "align": "right"
      },
      {
-      "v": "18,4 L",
+      "v": "105,7 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Moulin à Vent"
+     },
+     {
+      "v": "34,5 L",
+      "align": "right"
+     },
+     {
+      "v": "4,0 L",
+      "align": "right"
+     },
+     {
+      "v": "38,5 L",
       "align": "right"
      }
     ],
@@ -2449,6 +2437,23 @@
      },
      {
       "v": "11,6 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Chablis"
+     },
+     {
+      "v": "14,8 L",
+      "align": "right"
+     },
+     {
+      "v": "3,2 L",
+      "align": "right"
+     },
+     {
+      "v": "18,0 L",
       "align": "right"
      }
     ],
@@ -2675,6 +2680,23 @@
     ],
     [
      {
+      "v": "Cubis de vin (couleur non précisée)"
+     },
+     {
+      "v": "35,6 L",
+      "align": "right"
+     },
+     {
+      "v": "0,5 L",
+      "align": "right"
+     },
+     {
+      "v": "36,1 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Liqueur de Sapin"
      },
      {
@@ -2687,23 +2709,6 @@
      },
      {
       "v": "1,7 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Hautes Côtes de Beaune blanc"
-     },
-     {
-      "v": "1,5 L",
-      "align": "right"
-     },
-     {
-      "v": "0,4 L",
-      "align": "right"
-     },
-     {
-      "v": "1,9 L",
       "align": "right"
      }
     ],
@@ -3015,6 +3020,23 @@
     ],
     [
      {
+      "v": "Hautes Côtes de Beaune blanc"
+     },
+     {
+      "v": "1,5 L",
+      "align": "right"
+     },
+     {
+      "v": "0,0 L",
+      "align": "right"
+     },
+     {
+      "v": "1,5 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Total",
       "fw": 700
      },
@@ -3024,12 +3046,12 @@
       "fw": 700
      },
      {
-      "v": "353,9 L",
+      "v": "236,7 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "1717,8 L",
+      "v": "1600,7 L",
       "align": "right",
       "fw": 700
      }
@@ -3060,23 +3082,6 @@
    "lignes": [
     [
      {
-      "v": "Bourgogne Aligoté maison"
-     },
-     {
-      "v": "154,5 L",
-      "align": "right"
-     },
-     {
-      "v": "44,7 L",
-      "align": "right"
-     },
-     {
-      "v": "199,2 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
       "v": "Macvin"
      },
      {
@@ -3094,6 +3099,23 @@
     ],
     [
      {
+      "v": "Bourgogne Aligoté maison"
+     },
+     {
+      "v": "154,5 L",
+      "align": "right"
+     },
+     {
+      "v": "25,2 L",
+      "align": "right"
+     },
+     {
+      "v": "179,7 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Arbois Savagnin"
      },
      {
@@ -3101,79 +3123,11 @@
       "align": "right"
      },
      {
-      "v": "34,1 L",
+      "v": "22,9 L",
       "align": "right"
      },
      {
-      "v": "178,8 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Côtes de Provence rosé maison (Cap des Pins)"
-     },
-     {
-      "v": "125,8 L",
-      "align": "right"
-     },
-     {
-      "v": "29,7 L",
-      "align": "right"
-     },
-     {
-      "v": "155,5 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Trousseau"
-     },
-     {
-      "v": "105,3 L",
-      "align": "right"
-     },
-     {
-      "v": "24,9 L",
-      "align": "right"
-     },
-     {
-      "v": "130,2 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Saint Véran"
-     },
-     {
-      "v": "89,4 L",
-      "align": "right"
-     },
-     {
-      "v": "21,1 L",
-      "align": "right"
-     },
-     {
-      "v": "110,5 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Côtes du Rhône rouge maison (Chusclan)"
-     },
-     {
-      "v": "89,3 L",
-      "align": "right"
-     },
-     {
-      "v": "21,1 L",
-      "align": "right"
-     },
-     {
-      "v": "110,4 L",
+      "v": "167,6 L",
       "align": "right"
      }
     ],
@@ -3196,6 +3150,40 @@
     ],
     [
      {
+      "v": "Arbois Trousseau"
+     },
+     {
+      "v": "105,3 L",
+      "align": "right"
+     },
+     {
+      "v": "16,0 L",
+      "align": "right"
+     },
+     {
+      "v": "121,3 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Saint Véran"
+     },
+     {
+      "v": "89,4 L",
+      "align": "right"
+     },
+     {
+      "v": "15,3 L",
+      "align": "right"
+     },
+     {
+      "v": "104,7 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Macon"
      },
      {
@@ -3203,11 +3191,11 @@
       "align": "right"
      },
      {
-      "v": "17,2 L",
+      "v": "12,0 L",
       "align": "right"
      },
      {
-      "v": "90,0 L",
+      "v": "84,9 L",
       "align": "right"
      }
     ],
@@ -3220,45 +3208,11 @@
       "align": "right"
      },
      {
-      "v": "12,8 L",
+      "v": "9,3 L",
       "align": "right"
      },
      {
-      "v": "66,9 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Hautes Côtes de Beaune rouge"
-     },
-     {
-      "v": "46,8 L",
-      "align": "right"
-     },
-     {
-      "v": "11,1 L",
-      "align": "right"
-     },
-     {
-      "v": "57,9 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Moulin à Vent"
-     },
-     {
-      "v": "36,4 L",
-      "align": "right"
-     },
-     {
-      "v": "8,6 L",
-      "align": "right"
-     },
-     {
-      "v": "45,0 L",
+      "v": "63,4 L",
       "align": "right"
      }
     ],
@@ -3276,6 +3230,40 @@
      },
      {
       "v": "41,7 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Hautes Côtes de Beaune rouge"
+     },
+     {
+      "v": "46,8 L",
+      "align": "right"
+     },
+     {
+      "v": "7,6 L",
+      "align": "right"
+     },
+     {
+      "v": "54,5 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Côtes de Provence rosé maison (Cap des Pins)"
+     },
+     {
+      "v": "125,8 L",
+      "align": "right"
+     },
+     {
+      "v": "7,0 L",
+      "align": "right"
+     },
+     {
+      "v": "132,8 L",
       "align": "right"
      }
     ],
@@ -3305,11 +3293,28 @@
       "align": "right"
      },
      {
-      "v": "6,3 L",
+      "v": "5,5 L",
       "align": "right"
      },
      {
-      "v": "33,1 L",
+      "v": "32,2 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Moulin à Vent"
+     },
+     {
+      "v": "36,4 L",
+      "align": "right"
+     },
+     {
+      "v": "5,2 L",
+      "align": "right"
+     },
+     {
+      "v": "41,6 L",
       "align": "right"
      }
     ],
@@ -3344,6 +3349,23 @@
      },
      {
       "v": "20,4 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Côtes du Rhône rouge maison (Chusclan)"
+     },
+     {
+      "v": "89,3 L",
+      "align": "right"
+     },
+     {
+      "v": "3,7 L",
+      "align": "right"
+     },
+     {
+      "v": "92,9 L",
       "align": "right"
      }
     ],
@@ -3885,12 +3907,12 @@
       "fw": 700
      },
      {
-      "v": "337,8 L",
+      "v": "236,1 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "1640,1 L",
+      "v": "1538,4 L",
       "align": "right",
       "fw": 700
      }
@@ -3908,18 +3930,22 @@
     },
     {
      "label": "Sur-versement",
-     "valeur": "1 058 L",
-     "sub": "consommés, jamais vendus",
+     "valeur": "720 L",
+     "sub": "dose réelle > dose carte : autant de verres surcomptés",
      "highlight": true,
      "couleur": "teal"
     }
    ]
   },
   {
-   "kind": "alerte",
-   "couleur": "teal",
-   "titre": "Résultat",
-   "texte": "Aux taux **exacts mesurés par la littérature**, le service à la main sans doseur fait disparaître **1 058 L** d’alcool sur trois exercices. Ce volume est un **poste explicite de la cascade** de l’analyse « Boissons disparues » : ni vente, ni disparition, mais de l’alcool bu en plus de la dose facturée."
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Conclusion",
+   "numero": 3
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Aux taux **mesurés par la littérature**, la dose réellement servie au verre dépasse la dose de la carte ; sur trois exercices, cela représente **720 L** d’alcool (pichet pré-mesuré exclu, par prudence). **Effet sur la reconstitution** : en divisant le volume disponible par une dose **sous-évaluée**, le service **surcompte le nombre de verres vendables** d’autant. Ce n’est pas une recette manquante, c’est un **verre de moins à reconstituer**."
   },
   {
    "kind": "piecejointe",

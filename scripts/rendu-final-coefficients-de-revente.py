@@ -38,6 +38,8 @@ Sources :
 """
 import json, os
 
+from rfcommun import ajouter_conclusion
+
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
 SRC = os.path.join(ROOT, "src/data/boissonsPageData.json")
@@ -127,6 +129,7 @@ OFFERTS_L = casc("offerts")
 SURVERS_L = casc("Sur-versement")
 DEGUST_L = casc("Degustation")
 CREMANT_L = casc("Cremant jete")
+CREMANT_SURV_L = casc("Cremant sur")
 FREINTE_L = casc("Freinte")
 STOCK_L = casc("Stock final")
 VERRE_L = casc("Vendu au verre")
@@ -134,10 +137,15 @@ COCKTAILS_L = casc("cocktails")
 
 ACHAT_L = SYN["achat_alcool_l"]
 ACHAT_COUT = SYN["achat_alcool_cout"]
+# Residu de perte pure (casse, vol, evaporation) = achats - tout ce qui est trace.
+RESIDU_L = round(SYN["perte_reelle_l"])
 
-# Part globale de l'alcool NON revendu au verre au prix carte.
+# Part de l'alcool achete NON revendu au verre au prix carte. UNE SEULE definition,
+# identique a la page "reconstitution par les volumes" (cascade canonique = 3 842 L) :
+# on y inclut le cremant sur-verse et le residu de casse/vol ; le STOCK final, qui
+# sera vendu, n'en fait PAS partie (il est compte avec les ventes, comme page 2.1).
 NON_REVENDU_L = (CUISINE_L + MENUS_L + CHEF_L + OFFERTS_L + SURVERS_L
-                 + DEGUST_L + CREMANT_L + FREINTE_L + STOCK_L)
+                 + DEGUST_L + CREMANT_L + CREMANT_SURV_L + FREINTE_L + RESIDU_L)
 PART_NON_REVENDU = NON_REVENDU_L / ACHAT_L  # fraction des litres achetes
 
 # ----------------------------------------------------------------------------- #
@@ -277,7 +285,7 @@ meta = {
     "slug": "coefficients-de-revente",
     "titre": "Faiblesse des coefficients de revente",
     "source": "scripts/rendu-final-coefficients-de-revente.py",
-    "grief": "Proposition de rectification p. 34-37 (rejet de comptabilité, 3/3).",
+    "grief": "Proposition de rectification p. 34-35 (rejet de comptabilité, 3/3).",
     "chiffres": {
         "fisc_coef": FISC_COEF,
         "fisc_ca_reconstitue": FISC_CA,
@@ -294,25 +302,34 @@ meta = {
 }
 
 sections = [
-    {"kind": "chapitre", "source": "fisc", "titre": "Le grief de l'administration",
-     "sousTitre": "Proposition de rectification, p. 34-37 (rejet 3/3)"},
-    {"kind": "note",
-     "texte": "Le service estime que les **coefficients de revente** du restaurant sont **anormalement "
-              "faibles** et y voit l'indice d'une **minoration de recettes**. Il retient un coefficient "
-              "« liquides » d'environ **" + fr_coef(FISC_COEF).replace("× ", "") + "** (achats rapportés "
-              "au chiffre d'affaires) et l'applique pour reconstituer un chiffre d'affaires de **" +
-              fr_eur(FISC_CA) + "**, contre **" + fr_eur(CA_DECLARE) + "** déclarés."},
+    {"kind": "chapitre", "source": "fisc", "titre": "Ce que dit l'administration",
+     "sousTitre": "Proposition de rectification, p. 34-35 (rejet 3/3)"},
+    {"kind": "paragraphe",
+     "texte": "Le service calcule, à partir de la comptabilité **déclarée** (chiffre d'affaires total "
+              "rapporté au coût d'achat des matières, denrées et boissons confondues), un **coefficient de "
+              "revente** de **2,303** (exercice 2023), **2,388** (2024) et **2,310** (2025). Il juge ces "
+              "coefficients « **manifestement très bas et en dehors des usages habituels de la profession** » "
+              "et y voit la confirmation que la comptabilité ne retranscrit pas la réalité de l'activité "
+              "(p. 34)."},
+    {"kind": "paragraphe",
+     "texte": "Après sa reconstitution, le service obtient des coefficients de **3,404 / 3,144 / 3,051**, "
+              "qu'il estime « conformes à ceux habituellement observés dans les établissements similaires » "
+              "(p. 35). Sur le seul volet des liquides, cela revient à appliquer un coefficient d'environ **" +
+              fr_coef(FISC_COEF).replace("× ", "") + "** aux achats de boissons et à reconstituer un chiffre "
+              "d'affaires « boissons » de **" + fr_eur(FISC_CA) + "**, contre **" + fr_eur(CA_DECLARE) +
+              "** déclarés."},
 
     {"kind": "chapitre", "source": "nous", "titre": "Pourquoi un coefficient brut n'a aucune valeur probante",
      "sousTitre": "Il suppose que tout l'alcool acheté est revendu au verre au prix de la carte"},
-    {"kind": "note",
+    {"kind": "paragraphe",
      "texte": "Un coefficient calculé **brut** (chiffre d'affaires théorique au prix carte / achats) repose "
               "sur une hypothèse fausse : que **100 % des litres achetés sont revendus au verre, au prix de "
               "la carte**. Or une part importante de l'alcool n'est **jamais revendue au verre** : elle part "
               "en **cuisine** (fondues, babas, flambage, sauces), dans l'**alcool des menus** non détaillé en "
               "caisse, dans la **consommation du chef**, dans les **apéritifs offerts**, dans le "
-              "**sur-versement** au verre, et reste en **stock**. Cet alcool a un **coût d'achat** mais ne "
-              "génère **aucune recette au prix carte**. Le coefficient brut le compte pourtant comme vendu : "
+              "**sur-versement** au verre, dans la **dégustation offerte**, le **crémant jeté ou sur-versé**, "
+              "la **freinte de bière** et la **casse/perte résiduelle**. Cet alcool a un **coût d'achat** "
+              "mais ne génère **aucune recette au prix carte**. Le coefficient brut le compte pourtant comme vendu : "
               "il **gonfle mécaniquement** le chiffre d'affaires reconstitué."},
     {"kind": "paragraphe",
      "texte": "Coefficient théorique au prix carte (brut) face au coefficient **effectif**, par famille, "
@@ -333,8 +350,9 @@ sections = [
     {"kind": "paragraphe",
      "texte": "La cascade des volumes montre où part réellement l'alcool acheté (" + fr_int(ACHAT_L) +
               " L). Seuls les postes « vendu au verre » et « vendu en cocktails » génèrent une recette "
-              "au prix carte ; tous les autres (cuisine, menus, chef, offerts, sur-versement, stock) "
-              "n'en génèrent aucune."},
+              "au prix carte ; tous les autres (cuisine, menus, chef, offerts, sur-versement, dégustation, "
+              "crémant, freinte, casse) n'en génèrent aucune. Le **stock final**, lui, sera vendu plus tard : "
+              "il n'est donc pas compté dans la part non revendue."},
     {"kind": "barreComposition", "titre": "Cascade des volumes : où part l'alcool acheté", "unite": "L",
      "total": round(sum(c["litres"] for c in CASCADE)),
      "segments": segments, "legende": True},
@@ -353,21 +371,23 @@ sections = [
      "format": "int",
      "data": [{"nom": g["nom"], "Coefficient effectif": g["valeur"]} for g in graph_data]},
 
-    {"kind": "note",
+    {"kind": "paragraphe",
      "texte": "Globalement, le coefficient **brut** ressort à **" + fr_coef(TOT_COEF_BRUT) + "** (proche du "
               "coefficient retenu par le service), mais le coefficient **effectif**, après déduction des **" +
               fr_int(NON_REVENDU_L) + " L** non revendus au verre (**" +
               fr_pct(meta["chiffres"]["part_non_revendu_pct"]) + "** des achats : cuisine **" +
               fr_int(CUISINE_L) + " L**, menus **" + fr_int(MENUS_L) + " L**, chef **" + fr_int(CHEF_L) +
               " L**, offerts **" + fr_int(OFFERTS_L) + " L**, sur-versement **" + fr_int(SURVERS_L) +
-              " L**, dégustation **" + fr_int(DEGUST_L) + " L**, crémant jeté **" + fr_int(CREMANT_L) +
-              " L**, freinte bière **" + fr_int(FREINTE_L) + " L**, stock **" + fr_int(STOCK_L) +
+              " L**, dégustation **" + fr_int(DEGUST_L) + " L**, crémant jeté et sur-versé **" +
+              fr_int(CREMANT_L + CREMANT_SURV_L) + " L**, freinte bière **" + fr_int(FREINTE_L) +
+              " L**, casse et perte résiduelle **" + fr_int(RESIDU_L) +
               " L**), tombe à **" + fr_coef(TOT_COEF_EFFECTIF) + "**. "
-              "Un coefficient de cet ordre est **conforme au secteur CHR** : la jurisprudence admet "
-              "d'ailleurs un abattement de **22 à 25 %** sur les reconstitutions de liquides (CAA Paris, "
-              "17/03/2021), exactement pour tenir compte de ces postes. Le coefficient « faible » reproché "
-              "n'est donc pas l'indice d'une fraude : c'est l'effet **arithmétique** de l'alcool qui n'est "
-              "pas revendu au verre."},
+              "Un coefficient de cet ordre est **conforme au secteur CHR**. À titre de repère, la "
+              "jurisprudence admet des abattements de l'ordre de **22 à 25 %** sur les reconstitutions de "
+              "liquides (CAA Paris, 17/03/2021) ; l'abattement de **15 %** retenu par le service est donc "
+              "inférieur tant à ce repère qu'à nos mesures poste par poste. Le coefficient « faible » "
+              "reproché n'est pas l'indice d'une fraude : c'est l'effet **arithmétique** de l'alcool qui "
+              "n'est pas revendu au verre."},
 
     {"kind": "piecejointe",
      "intro": "Coefficient brut et effectif par famille (achat, CA au prix carte, part non revendue, CA "
@@ -379,7 +399,7 @@ sections = [
      "texte": "Un coefficient brut suppose que tout l'alcool acheté est revendu au verre au prix carte. "
               "C'est faux : **" + fr_int(NON_REVENDU_L) + " L** (" +
               fr_pct(meta["chiffres"]["part_non_revendu_pct"]) + " des achats) partent en cuisine, menus, "
-              "consommation du chef, offerts, sur-versement et stock, sans aucune recette. Recalculé "
+              "consommation du chef, offerts, sur-versement, dégustation, crémant, freinte et casse, sans aucune recette. Recalculé "
               "correctement, le coefficient effectif (**" + fr_coef(TOT_COEF_EFFECTIF) + "**) est conforme "
               "au secteur CHR. Le coefficient « faible » est un artefact de calcul, pas une minoration de "
               "recettes."},
@@ -390,12 +410,14 @@ sections = [
               "rejeter la caisse comme non probante **et** en extraire le coefficient × " +
               fr_coef(FISC_COEF).replace("× ", "") + " qui sert à reconstituer. Surtout, son abattement de "
               "15 % est insuffisant : nos mesures, poste par poste, situent la part non revendue au verre à " +
-              fr_pct(meta["chiffres"]["part_non_revendu_pct"]) + " des achats, en plein dans la fourchette "
-              "22 à 25 % admise par la CAA Paris (17/03/2021). Le coefficient effectif par famille est "
+              fr_pct(meta["chiffres"]["part_non_revendu_pct"]) + " des achats (dont cuisine et menus, qui "
+              "génèrent un CA solide), au-delà même du repère de 22 à 25 % admis par la CAA Paris "
+              "(17/03/2021) sur les seuls liquides. Le coefficient effectif par famille est "
               "reproductible via scripts/rendu-final-coefficients-de-revente.py (source : "
               "boissonsPageData.json, prix d'achat factures + prix de vente carte)."},
 ]
 
+sections = ajouter_conclusion(sections)
 doc = {"meta": meta, "sections": sections}
 dest = os.path.join(ROOT, "src/data/renduFinal/coefficients-de-revente.json")
 json.dump(doc, open(dest, "w", encoding="utf-8"), ensure_ascii=False, indent=1)

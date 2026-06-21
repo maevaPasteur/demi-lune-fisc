@@ -5,7 +5,7 @@ rendu-final-prix-menu-demi-lune.py
 
 Bloc de defense : "Instabilite des prix du Menu Demi Lune".
 
-Grief du fisc (Proposition de rectification, p. 33-36, rejet 3/3) : la multitude
+Grief du fisc (Proposition de rectification, p. 33-34, rejet 3/3, section XVI) : la multitude
 de prix observes pour le Menu Demi Lune dans la caisse traduirait une
 comptabilite non sincere.
 
@@ -45,6 +45,8 @@ Sorties (ne touche PAS renduFinal.ts) :
 """
 import json, os
 from collections import Counter, OrderedDict
+
+from rfcommun import ajouter_conclusion
 
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
@@ -323,12 +325,50 @@ lignes_custom.append([
     {"v": eur(custom_eur), "align": "right"},
 ])
 
+# --------------------------------------------------------------------------
+# 3 bis. Exemples "forfait" cibles sur le Menu Demi Lune (memes lignes de caisse
+# que le grief "suppressions de notes"). On reprend le cas "forfait" deja publie
+# (renduFinalCasSuppressions.json) et on ne garde que les fiches dont la note
+# encaissee est un "Menu Demi Lune" : ce sont exactement les conversions au
+# forfait qui produisent la "multitude de prix" du Menu Demi Lune.
+# --------------------------------------------------------------------------
+cas_data = json.load(open(CAS, encoding="utf-8"))
+forfait = next(c for c in cas_data["cas"] if c["id"] == "forfait")
+
+
+def note_est_demi_lune(ex):
+    return any("demi lune" in it["lib"].strip().lower()
+               for n in ex["notes"] for it in n["items"])
+
+
+# Selection deterministe : un panel representatif (petit a grand groupe, prix
+# personnalise du bas au haut de la fourchette relevee par le service).
+DATES_PANEL = ["2022-04-21", "2022-08-09", "2023-03-22", "2023-11-03", "2024-12-11"]
+exemples_dl = [ex for ex in forfait["exemples"]
+               if ex["date"] in DATES_PANEL and note_est_demi_lune(ex)]
+exemples_dl.sort(key=lambda ex: ex["date"])
+# Garde-fou : la selection doit etre non vide et chaque fiche doit verifier
+# l'egalite suppressions = total de la note (preuve du forfait).
+assert exemples_dl, "aucun exemple forfait Demi Lune trouve"
+for ex in exemples_dl:
+    s = round(sum(d["montant"] for d in ex["suppressions"]), 2)
+    t = round(ex["notes"][0]["total"], 2)
+    assert abs(s - t) < 0.05, (ex["date"], s, t)
+
+cas_demi_lune = {
+    "id": "forfait-demi-lune",
+    "titre": "Conversion au forfait : le Menu Demi Lune re-saisi au total consomme",
+    "preuve": "Preuve exacte : la somme des lignes a la carte supprimees = le total de la note, qui ne contient plus qu'un Menu Demi Lune au prix personnalise.",
+    "description": "A la demande d'une tablee (groupe, comite, evenement), l'addition est refacturee en menu(s) sans le detail des plats. Le serveur supprime les lignes a la carte et re-saisit un Menu Demi Lune a un prix personnalise egal au total consomme (divise par le nombre de couverts). La recette n'a pas disparu : a gauche les lignes supprimees, a droite la note encaissee. La somme des suppressions egale, au centime, le total du menu. C'est ce mecanisme qui cree autant de prix differents qu'il y a d'additions.",
+    "exemples": exemples_dl,
+}
+
 doc = {
     "meta": {
         "slug": "prix-menu-demi-lune",
         "titre": "Instabilite des prix du « Menu Demi Lune »",
         "source": "scripts/rendu-final-prix-menu-demi-lune.py",
-        "grief": "Proposition de rectification, p. 33-36 (rejet de comptabilite, 3/3).",
+        "grief": "Proposition de rectification, p. 33-34 (rejet de comptabilite, 3/3, section XVI).",
         "chiffres": {
             "prix_catalogue": PRIX_CATALOGUE,
             "nb_periodes": len(table_periodes),
@@ -347,25 +387,53 @@ doc = {
             "kind": "chapitre",
             "source": "fisc",
             "titre": "Le grief de l'administration",
-            "sousTitre": "Proposition de rectification, p. 33-36 (rejet 3/3)",
+            "sousTitre": "Proposition de rectification, p. 33-34 (rejet 3/3, section XVI)",
         },
         {
-            "kind": "note",
+            "kind": "paragraphe",
             "texte": "Le service releve que, sur la carte, le Menu Demi Lune est affiche a **45,00 €**, mais que les donnees de caisse font apparaitre une **multitude de prix differents** pour ce meme menu (d'environ 24 € a 90 €). Il en deduit que la comptabilite serait **non sincere**.",
         },
         {
             "kind": "chapitre",
             "source": "nous",
-            "titre": "Ce que mesure reellement cette variation",
-            "sousTitre": "Un prix catalogue unique et stable, et des ventes hors catalogue tracees",
-        },
-        {
-            "kind": "note",
-            "texte": f"Il faut distinguer deux choses. **Le prix catalogue** du Menu Demi Lune est **unique et stable** : il vaut **{eur(PRIX_CATALOGUE)}** sur **chacune** des {len(table_periodes)} periodes de carte du controle. **La « variation »** invoquee provient exclusivement de ventes **hors prix catalogue** (forfaits de groupe, remises commerciales, prix negocies, menus a contenu adapte). Ces lignes ne sont pas dissimulees : chacune est **horodatee et tracee** dans la caisse, et **integralement encaissee**.",
+            "titre": "Une mecanique de caisse, pas une instabilite de prix",
+            "sousTitre": "Le prix personnalise du menu = le total reellement consomme, refacture au forfait a la demande du client",
         },
         {
             "kind": "paragraphe",
-            "texte": "Premier constat : par periode de carte, le prix catalogue du Menu Demi Lune ne varie pas. La colonne « Qte hors catalogue » isole les ventes facturees a un autre prix (forfaits, remises), seule origine de l'amplitude relevee par le service.",
+            "texte": "Cette « multitude de prix » n'a rien d'erratique : c'est la **signature d'un mecanisme de caisse** parfaitement identifie. Certains clients (groupes, comites d'entreprise, tables d'evenement) demandent une **facture au forfait, sans le detail des plats** : un seul montant, libelle « menu », pour toute la table. Or le logiciel de caisse ne sait pas transformer une addition detaillee en forfait.",
+        },
+        {
+            "kind": "paragraphe",
+            "texte": "Le serveur est donc **oblige de supprimer les lignes de plats et de boissons** saisies a la carte, puis de **re-saisir un « Menu Demi Lune » a un prix personnalise egal au total reellement consomme** (le cas echeant divise par le nombre de couverts). Le prix affiche pour le menu **n'est pas un prix de carte** : c'est **le total de l'addition reconditionne en forfait**. Mecaniquement, il y a donc **autant de prix differents qu'il y a d'additions** : c'est exactement ce que le service a observe.",
+        },
+        {
+            "kind": "paragraphe",
+            "texte": "C'est aussi pourquoi ce grief et celui des **« suppressions de notes »** designent **les memes lignes de caisse** : les suppressions presumees etre des recettes effacees sont, pour une part, exactement ces conversions au forfait. La preuve est **arithmetique et se verifie ticket par ticket** : la **somme des lignes supprimees egale, au centime, le total du menu re-saisi**, lui-meme **integralement encaisse** et porte au chiffre d'affaires. Rien n'est retire sans contrepartie.",
+        },
+        {
+            "kind": "alerte",
+            "couleur": "blue",
+            "titre": "Deja demontre, exemples dates a l'appui",
+            "texte": "Ce mecanisme de conversion au forfait est demontre en detail, fiche par fiche, dans la page **Les suppressions de notes (lignes « DEL ») -> « Conversion au forfait (facture sans detail) »**. Voir la demonstration complete : [Suppressions de caisse : conversion au forfait](/rendu-final/suppressions-de-caisse).",
+        },
+        {
+            "kind": "paragraphe",
+            "texte": "Voici quelques-uns de ces exemples, repris de cette page et **limites ici au Menu Demi Lune**. A gauche, les lignes a la carte supprimees ; a droite, la note encaissee, qui ne contient plus qu'un « Menu Demi Lune » au prix personnalise. On lit directement l'egalite : **somme des suppressions = total du menu**. Le prix personnalise (de **15,20 €** la part a **66,30 €**) n'est que le total consomme rapporte au couvert : voila l'origine concrete de la « multitude de prix ».",
+        },
+        {
+            "kind": "casSuppressions",
+            "cas": [cas_demi_lune],
+        },
+        {
+            "kind": "chapitre",
+            "source": "nous",
+            "titre": "Le prix catalogue, lui, ne bouge pas",
+            "sousTitre": "Un prix de carte unique et stable, et des ventes hors catalogue toutes tracees",
+        },
+        {
+            "kind": "paragraphe",
+            "texte": f"Premier constat : par periode de carte, le **prix catalogue** du Menu Demi Lune **ne varie pas** : il vaut **{eur(PRIX_CATALOGUE)}** sur **chacune** des {len(table_periodes)} periodes du controle. La colonne « Qte hors catalogue » isole les ventes facturees au forfait (factures sans detail), **seule origine** de l'amplitude relevee par le service.",
         },
         {
             "kind": "tableau",
@@ -384,7 +452,7 @@ doc = {
         },
         {
             "kind": "paragraphe",
-            "texte": f"Second constat : les ventes hors catalogue representent **{num(custom_q)}** des **{num(total_q)}** Menus Demi Lune vendus, soit **{str(pct_custom).replace('.', ',')} %**, pour **{eur(custom_eur)}**. Elles se repartissent sur **{nb_prix_distincts}** prix distincts (forfaits de groupe a prix rond, remises, menus adaptes). Le tableau ci-dessous donne les prix personnalises les plus frequents.",
+            "texte": f"Second constat : les ventes **hors catalogue** (ces forfaits) representent **{num(custom_q)}** des **{num(total_q)}** Menus Demi Lune vendus, soit **{str(pct_custom).replace('.', ',')} %**, pour **{eur(custom_eur)}**. Elles se repartissent sur **{nb_prix_distincts}** prix distincts, ce qui est coherent avec le mecanisme decrit plus haut : chaque addition convertie au forfait produit son propre montant. Le tableau ci-dessous donne les prix personnalises les plus frequents.",
         },
         {
             "kind": "tableau",
@@ -399,7 +467,7 @@ doc = {
         },
         {
             "kind": "paragraphe",
-            "texte": f"Distribution de l'ensemble des prix observes pour le Menu Demi Lune dans la caisse, tous exercices confondus (annexes B-1 a B-3, prix x quantite par produit). Sur **{num(total_observe)}** ventes, le prix de **{eur(PRIX_CATALOGUE)}** est de **tres loin** le plus frequent (**{num(qte_45)}** ventes, soit **{str(pct_45).replace('.', ',')} %**) ; les autres prix sont des forfaits et remises, minoritaires et disperses.",
+            "texte": f"Distribution de l'ensemble des prix observes pour le Menu Demi Lune dans la caisse, tous exercices confondus (annexes B-1 a B-3, prix x quantite par produit). Sur **{num(total_observe)}** ventes, le prix de **{eur(PRIX_CATALOGUE)}** est de **tres loin** le plus frequent (**{num(qte_45)}** ventes, soit **{str(pct_45).replace('.', ',')} %**) ; les autres prix sont des forfaits (factures sans detail), minoritaires et disperses.",
         },
         {
             "kind": "graphique",
@@ -409,29 +477,6 @@ doc = {
             "serie": {"name": "Ventes", "couleur": "#0f766e"},
             "format": "int",
             "data": graph_data,
-        },
-        {
-            "kind": "paragraphe",
-            "texte": "Exemple date, representatif des forfaits de groupe. Le 31/10/2024 a 13:06, un meme ticket porte **5 couverts** « Menu Demi Lune » au **meme prix personnalise de 48,68 €** (forfait groupe), pour un total de **243,40 €**, encaisse en totalite. Le prix differe du catalogue, mais il est identique pour les 5 couverts, applique sur une seule note, et trace : c'est un forfait, pas une variation erratique.",
-        },
-        {
-            "kind": "tableau",
-            "titre": "Exemple : ticket groupe du 31/10/2024 a 13:06 (annexe C-3)",
-            "minWidth": 520,
-            "colonnes": [
-                {"label": "Article"},
-                {"label": "Prix unitaire", "align": "right"},
-                {"label": "Couverts", "align": "right"},
-                {"label": "Total ticket", "align": "right"},
-            ],
-            "lignes": [
-                [
-                    {"v": "Menu 'Demi Lune' (forfait groupe)"},
-                    {"v": eur(48.68), "align": "right"},
-                    {"v": "5", "align": "right"},
-                    {"v": eur(243.40), "align": "right", "badge": "ok"},
-                ],
-            ],
         },
         {
             "kind": "piecejointe",
@@ -447,17 +492,18 @@ doc = {
             "kind": "alerte",
             "couleur": "teal",
             "titre": "Ce qu'il faut retenir",
-            "texte": f"Le prix catalogue du Menu Demi Lune est unique et stable ({eur(PRIX_CATALOGUE)}) sur toutes les periodes de carte. La « variation » releve uniquement de ventes hors catalogue (forfaits de groupe, remises, prix negocies), soit {str(pct_custom).replace('.', ',')} % des Menus Demi Lune pour {eur(custom_eur)}, chacune horodatee, tracee et integralement portee au chiffre d'affaires declare. Aucune recette n'est dissimulee : le grief d'insincerite n'est pas fonde.",
+            "texte": f"La « multitude de prix » du Menu Demi Lune n'est pas une instabilite : c'est un mecanisme de caisse. A la demande de clients, une facture au forfait sans detail oblige a supprimer les lignes a la carte et a re-saisir le menu a un prix egal au total consomme. La somme des lignes supprimees egale, au centime, le total encaisse (deja demontre dans la page suppressions de caisse). Le prix catalogue, lui, reste unique et stable ({eur(PRIX_CATALOGUE)}) sur toutes les periodes ; les ventes hors catalogue ({str(pct_custom).replace('.', ',')} % pour {eur(custom_eur)}) sont toutes horodatees, tracees et portees au chiffre d'affaires. Aucune recette n'est dissimulee : le grief d'insincerite n'est pas fonde.",
         },
         {
             "kind": "interne",
             "audience": "avocat",
             "titre": "Note pour l'avocat",
-            "texte": "Ce grief recoupe celui des « factures sans detail / forfaits » (menus a prix personnalises) deja traite : il s'agit des memes lignes de caisse, vues sous un autre angle. La pluralite de prix n'est pas une anomalie comptable mais la trace, dans la caisse, de la pratique commerciale (groupes, remises, formules). Le point juridique a tenir : la sincerite s'apprecie sur l'exhaustivite et la tracabilite des recettes, toutes deux etablies ici (chaque vente hors catalogue est horodatee et encaissee), et non sur l'uniformite des prix de vente, qu'aucun texte n'impose a un restaurateur. Reproductible via scripts/rendu-final-prix-menu-demi-lune.py.",
+            "texte": "Ce grief recoupe directement celui des « suppressions de notes » : memes lignes de caisse, deux angles de lecture. A tenir : (1) la pluralite de prix n'est pas une anomalie comptable mais la trace mecanique de la conversion au forfait (suppression des lignes a la carte -> re-saisie du menu au total consomme), prouvee par l'egalite somme des suppressions = total de la note, deja illustree fiche par fiche dans la page suppressions ; (2) la sincerite s'apprecie sur l'exhaustivite et la tracabilite des recettes, toutes deux etablies (chaque vente hors catalogue est horodatee et encaissee), et non sur l'uniformite des prix de vente, qu'aucun texte n'impose a un restaurateur ; (3) ne pas laisser le service additionner les deux griefs comme s'ils chiffraient des sommes distinctes. Reproductible via scripts/rendu-final-prix-menu-demi-lune.py.",
         },
     ],
 }
 
+doc["sections"] = ajouter_conclusion(doc["sections"])
 os.makedirs(os.path.dirname(JSON_OUT), exist_ok=True)
 json.dump(doc, open(JSON_OUT, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 

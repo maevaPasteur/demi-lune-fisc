@@ -114,7 +114,7 @@ export const synthesePerteReelle = {
       { poste: 'Alcool des menus (non détaillé en caisse)', litres: 228 },
       { poste: 'Consommation du chef (Picon + Macvin)', litres: 143 },
       { poste: 'Apéritifs offerts aux clients', litres: 40 },
-      { poste: 'Sur-versement vins/spiritueux/cocktails (free-pour : Kerr 2008, Wansink 2005)', litres: 1058 },
+      { poste: 'Sur-versement vins/spiritueux/cocktails (free-pour : Kerr 2008, Wansink 2005)', litres: 720 },
       { poste: 'Dégustation offerte (comptée note par note, annexe C)', litres: 126 },
       { poste: 'Crémant jeté en fin de journée (éventé)', litres: 260 },
       { poste: 'Crémant sur-versé (free-pour +23,6 %)', litres: 87 },

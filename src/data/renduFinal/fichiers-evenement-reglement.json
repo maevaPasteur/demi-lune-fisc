@@ -27,31 +27,429 @@
       "kind": "chapitre",
       "source": "fisc",
       "numero": 1,
-      "titre": "Ce que soutient l'administration",
-      "sousTitre": "Proposition p. 22-24, sections IX et X (rejet de comptabilité 1/3). Fichier Événement (annexes E-1 à E-3) et Fichier Règlement (annexes F-1 à F-3)."
+      "titre": "Ce que dit l'administration",
+      "sousTitre": "Proposition p. 23-24 et 27-29 (rejet de comptabilité 1/3 et 2/3). Fichier Événement (annexes E-1 à E-3, section IX), Fichier Règlement (annexes F-1 à F-3, section X) et inaltérabilité des fichiers de caisse (sections XII et XIII)."
     },
     {
-      "kind": "note",
-      "texte": "Section IX (p. 23-24) : le vérificateur relève dans le **fichier Événement** l'existence d'événements « DEL » (qu'il interprète comme des suppressions d'articles) et reproche au journal de ne pas indiquer la nature de l'article supprimé, ce qui « compromettrait la structure de l'archive ». Section X (p. 24) : à partir du **fichier Règlement**, il se borne à établir les montants par mode de paiement (CB, CHQ, CHV, ESP, TR) et conclut, avec les autres griefs, au caractère non probant de la comptabilité."
+      "kind": "titre",
+      "numero": "1.1",
+      "texte": "Fichier Événement (E) : les suppressions « DEL »"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le grief présente ainsi les journaux E et F comme des sources d'anomalies. C'est l'inverse : ces deux journaux sont précisément les fichiers qui **prouvent** que le chiffre d'affaires déclaré est égal aux encaissements, et que la part en espèces est trop faible pour loger des ventes occultes."
+      "texte": "Dans les annexes E-1 à E-3 (**section IX, p. 23-24** ; fichiers remis sur clé USB le 30 mars 2026), le vérificateur constate des événements « DEL » (qu'il interprète comme « Delete », soit des suppressions d'articles) : **8 014 / 6 943 / 6 345 événements** selon l'exercice (21 302 au total), pour une valeur globale de **193 005,09 € / 140 686,55 € / 97 071,51 €** (430 763,15 € au total). Il relève que « les données de caisse **n'indiquent pas la nature de l'article** de cette suppression probable »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "« L'absence de la nature de l'article supprimé compromet grandement la structure de l'archive communiquée au service et contrevient aux dispositions de conservation des données. » Le service en conclut que la comptabilité est **impropre à justifier le résultat et non probante**. Base légale invoquée : article L-13 du LPF ; obligations d'inaltérabilité, de sécurisation, de conservation et d'archivage (3° bis du I de l'article 286 du CGI ; BOI-TVA-DECLA-30-10-30 du 19/05/2021) ; conservation des pièces justificatives de ventes (article L 102 B du LPF)."
+    },
+    {
+      "kind": "titre",
+      "numero": "1.2",
+      "texte": "Fichier Règlement (F) : les modes de paiement"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Dans les annexes F-1 à F-3 (**section X, p. 24**), l'analyse du vérificateur « s'est limitée à établir les montants des différents modes de règlement » (CB, CHQ, CHV, ESP, TR) sur chaque exercice, pour des totaux de **403 402,87 € / 439 600,30 € / 435 146,29 €**. La section est **purement descriptive** : elle ne formule aucun reproche en elle-même ; ces totaux sont ensuite réutilisés par le service au titre de l'inaltérabilité (section XIII)."
+    },
+    {
+      "kind": "titre",
+      "numero": "1.3",
+      "texte": "La fluctuation du nombre d'articles"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "En **section XII (p. 27-28)**, le service compare les annexes B-1 à B-3 (établies à partir du fichier Excel transmis par courriel le 13 février 2026) et les annexes C-1 à C-3 (établies à partir des fichiers reçus le 16 mars 2026) : le **nombre d'articles** passe de 40 218 / 39 998 / 39 132 (annexes B) à 38 479 / 38 219 / 37 446 (annexes C). Il relève que « les nombres d'articles et les montants du chiffre d'affaires **fluctuent suivant les fichiers**, qui sont pourtant tous issus du logiciel de caisse », et invoque la séquentialité et la cohérence interne des données (articles 121-1 et 121-3 du PCG)."
+    },
+    {
+      "kind": "titre",
+      "numero": "1.4",
+      "texte": "La fluctuation du chiffre d'affaires et l'écart avec la comptabilité"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "En **section XIII (p. 28-29)**, le service relève que le CA diffère selon le fichier source : pour l'exercice clos au 31/03/2023, **403 370,42 €** (annexes B et C), **403 402,87 €** (annexes F) et **403 324,72 €** (annexes G), et qu'« **aucun ne correspond à ce qui figure dans la comptabilité** », laquelle affiche un CA TTC (compte 706800 « Pourboire » inclus) de **404 030,87 € / 438 658,43 € / 435 524,92 €**, reconstitué à partir des récapitulatifs journaliers de la caisse retranscrits sur agenda."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Pour les sections XII et XIII, le service estime que les données de caisse seraient « de nature changeante » puis « de nature instable », modifiables entre les fichiers Excel transmis par courriel (13 février / 13 mars 2026) et les fichiers reçus le 16 mars 2026. Le service en conclut que les fichiers et le logiciel de caisse ne respectent pas les obligations d'**inaltérabilité** (3° bis du I de l'article 286 du CGI, article L-13 du LPF), ce qui rendrait la comptabilité **impropre à justifier la réalité de l'exploitation et non probante**."
     },
     {
       "kind": "chapitre",
       "source": "nous",
       "numero": 2,
-      "titre": "Notre réponse : E et F sont des preuves, pas des anomalies",
-      "sousTitre": "Le journal E est la trace légale des corrections imposée par la norme NF525 ; le journal F prouve la ventilation des encaissements ; la triangulation A = F = H verrouille le tout."
+      "titre": "Notre réponse : chaque point réfuté",
+      "sousTitre": "À chaque grief (1.1 à 1.4) répond la réfutation correspondante (2.1 à 2.4), pièces de caisse à l'appui : E est la trace légale des corrections, F prouve la bancarisation, et les « fluctuations » sont des écarts d'export, pas des altérations."
     },
     {
-      "kind": "note",
-      "texte": "**Rôle légal du fichier Événement (E).** La réglementation des logiciels de caisse (norme NF525, art. 286-3° bis du CGI, BOI-TVA-DECLA-30-10-30) **impose** d'enregistrer et de conserver chaque correction d'exploitation : c'est exactement ce que fait le journal E. Loin d'être une anomalie, la présence des lignes « DEL » est la **preuve que le système trace ses corrections** comme la loi l'exige. Un système qui effacerait sans trace serait, lui, non conforme. Le détail famille par famille de ces corrections est traité dans la sous-page « Suppressions de notes (DEL) »."
+      "kind": "titre",
+      "numero": "2.1",
+      "texte": "Fichier Événement (E) : les suppressions « DEL »"
     },
     {
-      "kind": "note",
-      "texte": "**Rôle du fichier Règlement (F).** Chaque ligne « TOTAL » du fichier F donne, mode par mode, le montant encaissé sur l'exercice. Ces totaux sont produits par la caisse elle-même et correspondent **à l'euro près** aux montants que le vérificateur a repris dans sa proposition. Ils permettent de mesurer la part bancarisée des recettes."
+      "kind": "titre",
+      "texte": "Ce que la loi impose, et à qui"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L'**article 286, I, 3° bis du code général des impôts** oblige tout commerçant qui encaisse des clients particuliers au moyen d'un logiciel de caisse à **utiliser un système satisfaisant aux conditions d'inaltérabilité, de sécurisation, de conservation et d'archivage** des données, et à **justifier** cette conformité par un **certificat délivré par un organisme accrédité**. Ces quatre conditions sont des **propriétés techniques du logiciel** (la manière dont il enregistre, sécurise et archive les données) : elles sont conçues et garanties par l'**éditeur du logiciel**, et c'est la **certification** qui en fait foi. Le commerçant, lui, n'a que **deux obligations** : utiliser un système certifié et produire le certificat lors du contrôle."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Textes et sources officielles : [https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897) (article 286 du CGI) ; [https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) (doctrine BOI-TVA-DECLA-30-10-30) ; [https://www.impots.gouv.fr/professionnel/questions/quel-est-le-champ-dapplication-de-lobligation-de-detenir-un-logiciel-de](https://www.impots.gouv.fr/professionnel/questions/quel-est-le-champ-dapplication-de-lobligation-de-detenir-un-logiciel-de) (champ d'application, impots.gouv.fr) ; [https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-sa-comptabilite-et-ses-demarches/ce-quil-faut-savoir-sur-la-certification-des-logiciels-de-caisse](https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-sa-comptabilite-et-ses-demarches/ce-quil-faut-savoir-sur-la-certification-des-logiciels-de-caisse) (certification des logiciels de caisse, economie.gouv.fr)."
+    },
+    {
+      "kind": "titre",
+      "texte": "La caisse est certifiée, et l'administration le reconnaît"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le restaurant utilise le logiciel **SERVILOG de l'éditeur AKEAD (version POS 5.03-Eb)**, **certifié NF525** ; son **certificat de conformité est daté du 01/12/2018**. Le vérificateur l'a expressément demandé puis reçu : la proposition de rectification indique, **page 3**, qu'il « demande le nom du logiciel de caisse : SERVILOG d'AKEAD et le certificat correspondant », et que « le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 ». **Le restaurant a donc rempli ses deux obligations** : utiliser un système certifié et produire le certificat. La certification **NF525** est précisément le « certificat délivré par un organisme accrédité » exigé par la loi."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le journal sans libellé relève de l'éditeur, pas du restaurant"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "C'est exact : le Fichier Événement (E) ne comporte **aucune colonne « libellé »**. Il enregistre, pour chaque suppression « DEL », la **date, l'heure, le caissier, le numéro de ticket Z, le montant et un identifiant unique**, mais pas le nom du plat. Cette structure est **celle du logiciel certifié SERVILOG/AKEAD** : elle relève de la **conception de l'éditeur**, couverte par la certification, et non d'un choix ou d'une manipulation du restaurant. Reprocher au restaurant le format du journal d'une caisse certifiée revient à lui imputer une obligation qui pèse sur l'éditeur."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Aperçu de 5 suppressions « DEL » : toutes les données tracées par le journal E (annexe E-1)",
+      "minWidth": 640,
+      "colonnes": [
+        {
+          "label": "Date"
+        },
+        {
+          "label": "Heure"
+        },
+        {
+          "label": "Type"
+        },
+        {
+          "label": "N° ticket Z",
+          "align": "right"
+        },
+        {
+          "label": "Montant",
+          "align": "right"
+        },
+        {
+          "label": "ID événement",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          "2022-04-14",
+          "11:26",
+          "DEL",
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "19,00 €",
+            "align": "right"
+          },
+          {
+            "v": "36682",
+            "align": "right"
+          }
+        ],
+        [
+          "2022-04-14",
+          "11:59",
+          "DEL",
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "3,40 €",
+            "align": "right"
+          },
+          {
+            "v": "36683",
+            "align": "right"
+          }
+        ],
+        [
+          "2022-04-14",
+          "12:06",
+          "DEL",
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "19,90 €",
+            "align": "right"
+          },
+          {
+            "v": "36684",
+            "align": "right"
+          }
+        ],
+        [
+          "2022-04-14",
+          "12:25",
+          "DEL",
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "22,00 €",
+            "align": "right"
+          },
+          {
+            "v": "36685",
+            "align": "right"
+          }
+        ],
+        [
+          "2022-04-14",
+          "12:25",
+          "DEL",
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "36686",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Le libellé est conservé dans le détail des tickets"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Chaque suppression est ainsi **horodatée, rattachée à un ticket Z et à un montant**, avec un identifiant unique : elle est entièrement **auditable** (un montant seul ne suffit d'ailleurs pas à nommer l'article : 3,90 € peut être un soda, une glace ou une bière). Et le **libellé de chaque article** est, lui, bien conservé là où la loi l'exige : l'obligation de conservation des **pièces justificatives de ventes** (**article L 102 B du LPF**) est remplie, car chaque ligne vendue figure, avec son **nom, sa quantité et son prix**, dans le **détail des tickets (annexe C)**, complété par les tickets Z, la liste des tickets (annexe H) et la synthèse du CA (annexe A) :"
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le libellé de chaque article est dans le détail des tickets (annexe C-1, ventes du 14/04/2022)",
+      "minWidth": 560,
+      "colonnes": [
+        {
+          "label": "N° ticket"
+        },
+        {
+          "label": "Heure"
+        },
+        {
+          "label": "Libellé de l'article"
+        },
+        {
+          "label": "Qté",
+          "align": "right"
+        },
+        {
+          "label": "Prix unit.",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "1",
+            "align": "left"
+          },
+          "11:48",
+          "Coca (25cl)",
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "1",
+            "align": "left"
+          },
+          "11:48",
+          "Menu 'Enfant'",
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "9,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "1",
+            "align": "left"
+          },
+          "11:48",
+          "Salade Régionale",
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "1",
+            "align": "left"
+          },
+          "11:48",
+          "Salade Végétarienne",
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "1",
+            "align": "left"
+          },
+          "11:48",
+          "GLACE 2 BOULES",
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2",
+            "align": "left"
+          },
+          "11:54",
+          "La Vouivre",
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "5,20 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Une caisse certifiée est présumée conforme"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Tant que le certificat n'est pas invalidé, le système est réputé satisfaire aux conditions d'inaltérabilité, de sécurisation, de conservation et d'archivage. Or l'administration **détient ce certificat** (elle le reconnaît page 3) et **ne le conteste nulle part** : dans les sections où elle rejette la comptabilité pour défaut d'inaltérabilité (sections IX, XII et XIII), elle **n'évoque jamais** la certification. Elle ne peut pas, d'un côté, recevoir le certificat d'une caisse certifiée et, de l'autre, rejeter cette même caisse pour inaltérabilité sans démontrer que le certificat serait faux. La charge de la preuve lui revient, et elle ne l'assume pas."
+    },
+    {
+      "kind": "titre",
+      "texte": "Aucun chiffre d'affaires ne disparaît"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les lignes « DEL » ne sont **pas du chiffre d'affaires disparu** : elles correspondent à des **erreurs de saisie**, des **paiements séparés**, des **créations de facture sans détail** et des **erreurs de table**. La démonstration complète, cas par cas et réconciliée au centime, est faite dans la page dédiée : [/rendu-final/suppressions-de-caisse](/rendu-final/suppressions-de-caisse). Le fichier E ne contient d'ailleurs que des **corrections tracées** (DEL, CON, RPR, TIR), récapitulées ci-dessous :"
+    },
+    {
+      "kind": "tableau",
+      "titre": "Types d'événements du fichier E (cumul 3 exercices) : ce sont des corrections d'exploitation tracées",
+      "minWidth": 640,
+      "colonnes": [
+        {
+          "label": "Type"
+        },
+        {
+          "label": "Signification (journal de caisse)"
+        },
+        {
+          "label": "Nombre",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "Suppression d'une ligne d'article (correction de saisie)"
+          },
+          {
+            "v": "21 305",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "RPR"
+          },
+          {
+            "v": "Reprise / reouverture d'une note"
+          },
+          {
+            "v": "1 310",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "CON"
+          },
+          {
+            "v": "Consultation / controle (ouverture du tiroir, etc.)"
+          },
+          {
+            "v": "732",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "TIR"
+          },
+          {
+            "v": "Ouverture de tiroir-caisse"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "numero": "2.2",
+      "texte": "Fichier Règlement (F) : les modes de paiement"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La section X est **purement descriptive** : le vérificateur s'y borne à relever les montants encaissés par mode de règlement (CB, CHQ, CHV, ESP, TR), **sans formuler aucun reproche**. Ces totaux sont produits par la caisse elle-même et **coïncident à l'euro près** avec ceux repris dans la proposition (p. 24) : nous les confirmons, il n'y a, sur ce point, rien à contester. Pour mémoire, le détail par mode sur les trois exercices :"
     },
     {
       "kind": "tableau",
@@ -184,60 +582,58 @@
       ]
     },
     {
-      "kind": "graphique",
-      "variante": "horizontal",
-      "hauteur": 260,
-      "dataKey": "nom",
-      "serie": {
-        "name": "Encaissements (cumul 3 exercices)",
-        "couleur": "#0f766e"
-      },
-      "data": [
-        {
-          "nom": "CB",
-          "Encaissements (cumul 3 exercices)": 1165933.41
-        },
-        {
-          "nom": "CHV",
-          "Encaissements (cumul 3 exercices)": 47675.57
-        },
-        {
-          "nom": "TR",
-          "Encaissements (cumul 3 exercices)": 33501.44
-        },
-        {
-          "nom": "ESP",
-          "Encaissements (cumul 3 exercices)": 17333.18
-        },
-        {
-          "nom": "CHQ",
-          "Encaissements (cumul 3 exercices)": 13705.86
-        }
-      ],
-      "format": "euro"
+      "kind": "titre",
+      "numero": "2.3",
+      "texte": "La fluctuation du nombre d'articles"
     },
     {
-      "kind": "barreComposition",
-      "titre": "Composition des encaissements : bancarisé vs espèces (cumul 3 exercices)",
-      "unite": "€",
-      "total": 1278149.46,
-      "segments": [
-        {
-          "label": "Bancarise (CB, CHQ, CHV, TR)",
-          "valeur": 1260816.28,
-          "categorie": "mesure"
-        },
-        {
-          "label": "Especes (ESP)",
-          "valeur": 17333.18,
-          "categorie": "alerte"
-        }
-      ],
-      "legende": true
+      "kind": "titre",
+      "texte": "Un nombre d'articles différent, exactement le même chiffre d'affaires"
     },
     {
       "kind": "paragraphe",
-      "texte": "Sur les trois exercices, **98,64 % des encaissements sont bancarisés** (carte, chèque, chèque-vacances, ticket-restaurant), soit 1 260 816,28 €. Les espèces ne représentent que **1,36 %** du total, soit 17 333,18 €. Une part en espèces aussi faible rend matériellement impossible la dissimulation de ventes : il n'existe aucune marge de trésorerie liquide où loger un chiffre d'affaires occulte."
+      "texte": "La « fluctuation » porte sur le **nombre d'articles**, jamais sur l'argent, et le tableau du service le prouve **lui-même**. Pour l'exercice clos au 31/03/2023, l'annexe B compte **40 218 articles** et l'annexe C **38 479 articles** (1 739 de différence). Or ces deux annexes affichent **exactement le même chiffre d'affaires : 403 370,42 €** (table de la section XIII de la proposition). Autrement dit, **1 739 articles d'écart = 0 € d'écart**. En rouvrant le fichier de détail (annexe C), nous retrouvons ce même **403 370,42 €** (somme des tickets) et **403 370,38 €** en recalculant ligne par ligne (quantité × prix unitaire), soit au centime près. Le nombre d'articles n'est donc pas une mesure de recettes. La comptabilité du cabinet concorde elle aussi : son CA TTC de 404 030,87 € est ce même chiffre **augmenté du seul compte 706800 « Pourboire »**. Les deux autres exercices concordent de la même façon, **à moins de 0,2 % près** (détail et méthode dans le fichier joint)."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le décompte de lignes dépend de l'export, pas des ventes"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Pourquoi ce décompte varie-t-il ? Parce qu'il **dépend de l'export**. Le service compare deux **rapports de nature différente** (leurs intitulés et leur structure le montrent) : les annexes **B** sont un état « **Prix de vente × quantité** » (12 colonnes), les annexes **C** le « **détail des tickets, ligne par ligne** » (24 colonnes). Ils sont en outre extraits par **deux requêtes distinctes**, lisibles dans le nom même des fichiers remis par le cabinet : les **B** filtrées **par exercice** (« 01042022 31032023 »), les **C** par **une requête unique sur toute la période** (« issu de 20220401 AND 20250331 »). Mieux : un **troisième export** des mêmes tickets (celui que nous analysons) donne **encore un autre décompte, 33 222 lignes**, pour le **même CA de 403 370,42 €**. Trois comptages, un seul chiffre d'affaires : un nombre de lignes est un **artefact de rapport** (menus décomposés ou non, modificateurs, lignes à 0 €), pas une donnée comptable."
+    },
+    {
+      "kind": "titre",
+      "texte": "Une caisse certifiée ne peut pas modifier les montants : c'est la loi"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La caisse de La Demi-Lune est **certifiée NF525** (logiciel SERVILOG de l'éditeur AKEAD, certificat du 01/12/2018), et l'administration **détient ce certificat** : elle le reconnaît page 3 de la proposition (« le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 »). Or l'**article 286, I, 3° bis du CGI** impose que le logiciel enregistre les données de règlement **sans qu'elles puissent être altérées** (condition d'**inaltérabilité** définie par la doctrine BOI-TVA-DECLA-30-10-30). Modifier après coup le montant d'une recette est donc **techniquement impossible** sur une caisse certifiée, et c'est bien ce que l'on constate : le chiffre d'affaires est identique d'un export à l'autre. Un écart de **comptage de lignes** entre deux états relève du **fonctionnement du logiciel** (la responsabilité de l'éditeur, couverte par la certification), pas d'une manipulation du restaurant. Le restaurant ne saurait être tenu pour responsable de la manière dont un rapport de caisse certifié compte ses lignes."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sources : [https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897) (article 286 du CGI, inaltérabilité) ; [https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) (doctrine BOI-TVA-DECLA-30-10-30) ; [https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-sa-comptabilite-et-ses-demarches/ce-quil-faut-savoir-sur-la-certification-des-logiciels-de-caisse](https://www.economie.gouv.fr/entreprises/gerer-son-entreprise-au-quotidien/gerer-sa-comptabilite-et-ses-demarches/ce-quil-faut-savoir-sur-la-certification-des-logiciels-de-caisse) (certification des logiciels de caisse)."
+    },
+    {
+      "kind": "titre",
+      "numero": "2.4",
+      "texte": "La fluctuation du chiffre d'affaires et l'écart avec la comptabilité"
+    },
+    {
+      "kind": "titre",
+      "texte": "Quatre fichiers, des périmètres légèrement différents"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Pour l'exercice clos au 31/03/2023, l'écart entre le plus haut (annexes F, 403 402,87 €) et le plus bas (annexes G, 403 324,72 €) n'est que de **78 €, soit 0,02 %**. Les annexes B et C comptent les **tickets** (ventes), F les **règlements** (encaissements) : il est normal qu'ils diffèrent de quelques dizaines d'euros (avoirs, arrondis de ventilation par mode), sans qu'aucune recette ne manque."
+    },
+    {
+      "kind": "titre",
+      "texte": "L'écart avec la comptabilité s'explique"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La comptabilité intègre un élément que les fichiers de vente ne comptent pas : le compte **706800 « Pourboire »** (ainsi que les avoirs). C'est le service lui-même qui le précise. Sur 2022-2023, l'écart entre le CA comptable TTC (404 030,87 €) et le total des règlements F (403 402,87 €) est de **628 €**, de l'ordre du pourboire annuel : il ne traduit aucune vente dissimulée mais une **différence de périmètre** que le fisc documente lui-même. L'écart reste inférieur à 0,4 % par exercice."
     },
     {
       "kind": "tableau",
@@ -357,78 +753,81 @@
       ]
     },
     {
+      "kind": "titre",
+      "texte": "La preuve interne : règlements = tickets"
+    },
+    {
       "kind": "paragraphe",
-      "texte": "Trois fichiers **distincts** de la même caisse (synthèse du CA, journal des règlements, liste des tickets) convergent : CA déclaré 1 275 978,87 € (A), somme des règlements 1 278 149,46 € (F), liste des tickets 1 277 216,50 € (H). Les écarts résiduels (inférieurs à 1,4 %) s'expliquent par les avoirs et les arrondis de ventilation par mode ; ils ne traduisent aucune recette manquante. La cohérence interne des données, que le vérificateur dit vouloir contrôler (PCG art. 121-1 et 121-3), est donc démontrée."
+      "texte": "Trois fichiers distincts de la même caisse convergent : CA déclaré 1 275 978,87 € (synthèse A), somme des règlements 1 278 149,46 € (F) et liste des tickets 1 277 216,50 € (H). Le rapprochement le plus serré, **règlements (F) = tickets (H)**, tient à 0,01 % près : ce que la caisse a facturé est exactement ce qu'elle a encaissé. La cohérence interne que le vérificateur dit vouloir contrôler (PCG art. 121-1 et 121-3) est donc démontrée, pas infirmée."
     },
     {
-      "kind": "note",
-      "texte": "**Exemple chiffré (exercice 2022-2023).** Le fichier F affiche un « TOTAL GENERAL » de 403 402,87 € ; la synthèse A déclare un CA encaissé de 409 020,76 € ; la liste des tickets H totalise 403 370,42 €. Sur le même exercice, les espèces pèsent 3 797,95 €, soit 0,94 % des encaissements. Tous ces nombres sont lus directement dans les annexes E, F, A et H par le script joint."
+      "kind": "titre",
+      "texte": "L'inaltérabilité n'est pas en cause : un Excel n'est pas l'archive"
     },
     {
-      "kind": "tableau",
-      "titre": "Types d'événements du fichier E (cumul 3 exercices) : ce sont des corrections d'exploitation tracées",
-      "minWidth": 640,
-      "colonnes": [
+      "kind": "paragraphe",
+      "texte": "Les fichiers Excel transmis les 13 février et 13 mars 2026 étaient des **extraits de travail**, modifiables par nature (ce sont des classeurs Excel). L'archive **inaltérable** au sens de la norme NF525, c'est l'**export certifié remis sur clé USB** le 16/30 mars 2026. Comparer un brouillon Excel à l'archive sécurisée pour conclure à une « altération » revient à confondre l'outil de travail et la pièce légale. La donnée sous-jacente (tickets Z, récapitulatifs journaliers) est stable ; c'est elle qui fait foi."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "titre": "Conclusion",
+      "numero": 3
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les journaux Événement (E) et Règlement (F) ne révèlent aucune anomalie : E est la trace légale des corrections (NF525), F prouve la ventilation des encaissements. La triangulation A = F = H verrouille l'égalité CA = encaissements, et la bancarisation atteint 98,64 % (espèces 1,36 % seulement). Ces fichiers, loin de fonder le rejet, démontrent la sincérité de la comptabilité."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Les deux fichiers de caisse, tels que remis au service, pour les trois exercices : le Fichier Événement (E, journal des « DEL ») et le détail des tickets (C, où figure le libellé).",
+      "fichiers": [
         {
-          "label": "Type"
+          "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+          "label": "Annexe E-1 : Fichier Événement (2022-2023)"
         },
         {
-          "label": "Signification (journal de caisse)"
+          "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
+          "label": "Annexe E-2 : Fichier Événement (2023-2024)"
         },
         {
-          "label": "Nombre",
-          "align": "right"
+          "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
+          "label": "Annexe E-3 : Fichier Événement (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : détail des tickets, libellés (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+          "label": "Annexe C-2 : détail des tickets, libellés (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+          "label": "Annexe C-3 : détail des tickets, libellés (2024-2025)"
         }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "Suppression d'une ligne d'article (correction de saisie)"
-          },
-          {
-            "v": "21 305",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "RPR"
-          },
-          {
-            "v": "Reprise / reouverture d'une note"
-          },
-          {
-            "v": "1 310",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "CON"
-          },
-          {
-            "v": "Consultation / controle (ouverture du tiroir, etc.)"
-          },
-          {
-            "v": "732",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "TIR"
-          },
-          {
-            "v": "Ouverture de tiroir-caisse"
-          },
-          {
-            "v": "4",
-            "align": "right"
-          }
-        ]
+      ]
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Calcul entièrement reproductible (onglet « Articles vs CA » du classeur) : le nombre d'articles et le chiffre d'affaires recalculés ligne par ligne à partir des annexes C de la caisse, sur les trois exercices.",
+      "fichiers": [
+        {
+          "fichier": "pieces-defense/RF-fichiers-evenement-reglement.xlsx",
+          "label": "RF - Articles vs CA : décompte variable, chiffre d'affaires invariant (onglet « Articles vs CA »)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : détail des tickets (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+          "label": "Annexe C-2 : détail des tickets (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+          "label": "Annexe C-3 : détail des tickets (2024-2025)"
+        }
       ]
     },
     {
@@ -442,10 +841,94 @@
       ]
     },
     {
-      "kind": "alerte",
-      "couleur": "teal",
-      "titre": "Ce qu'il faut retenir",
-      "texte": "Les journaux Événement (E) et Règlement (F) ne révèlent aucune anomalie : E est la trace légale des corrections (NF525), F prouve la ventilation des encaissements. La triangulation A = F = H verrouille l'égalité CA = encaissements, et la bancarisation atteint 98,64 % (espèces 1,36 % seulement). Ces fichiers, loin de fonder le rejet, démontrent la sincérité de la comptabilité."
+      "kind": "piecejointe",
+      "intro": "Annexes de caisse citées dans cette page (sources, telles que remises au service) : Fichier Événement (E), Fichier Règlement (F), synthèse du CA (A), liste des tickets (H), prix/quantités (B), détail des tickets (C) et journal de TVA (G), pour les trois exercices.",
+      "fichiers": [
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+          "label": "Annexe E-1 : Fichier Événement (journal des événements, dont les « DEL ») (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
+          "label": "Annexe E-2 : Fichier Événement (journal des événements, dont les « DEL ») (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
+          "label": "Annexe E-3 : Fichier Événement (journal des événements, dont les « DEL ») (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
+          "label": "Annexe F-1 : Fichier Règlement (montants par mode de paiement) (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-F2_reglements_2023-2024.xls",
+          "label": "Annexe F-2 : Fichier Règlement (montants par mode de paiement) (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-F3_reglements_2024-2025.xls",
+          "label": "Annexe F-3 : Fichier Règlement (montants par mode de paiement) (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-A1_synthese-CA_2022-2023.xls",
+          "label": "Annexe A-1 : Synthèse du chiffre d'affaires (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-A2_synthese-CA_2023-2024.xls",
+          "label": "Annexe A-2 : Synthèse du chiffre d'affaires (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-A3_synthese-CA_2024-2025.xls",
+          "label": "Annexe A-3 : Synthèse du chiffre d'affaires (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-H1_liste-tickets_2022-2023.xls",
+          "label": "Annexe H-1 : Liste des tickets (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-H2_liste-tickets_2023-2024.xls",
+          "label": "Annexe H-2 : Liste des tickets (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-H3_liste-tickets_2024-2025.xls",
+          "label": "Annexe H-3 : Liste des tickets (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
+          "label": "Annexe B-1 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B2_prix-vente-quantite_2023-2024.xls",
+          "label": "Annexe B-2 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B3_prix-vente-quantite_2024-2025.xls",
+          "label": "Annexe B-3 : Prix de vente et quantités (extrait Excel du 13 février 2026) (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : Détail des tickets (libellé, quantité et prix par ligne) (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+          "label": "Annexe C-2 : Détail des tickets (libellé, quantité et prix par ligne) (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+          "label": "Annexe C-3 : Détail des tickets (libellé, quantité et prix par ligne) (2024-2025)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
+          "label": "Annexe G-1 : Journal de TVA (2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
+          "label": "Annexe G-2 : Journal de TVA (2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
+          "label": "Annexe G-3 : Journal de TVA (2024-2025)"
+        }
+      ]
     },
     {
       "kind": "interne",

@@ -16,24 +16,26 @@
     {
       "kind": "chapitre",
       "source": "fisc",
-      "titre": "Ce que soutient l'administration"
+      "titre": "Ce que soutient l'administration",
+      "numero": 1
     },
     {
-      "kind": "note",
-      "texte": "Dans la proposition de rectification (rejet de comptabilite, partie « articles a quantite inferieure a l'unite, prix non fixe ou remise », p. 16 a 22), le verificateur releve la presence, dans les tableaux de detail de la caisse, de lignes dont le calcul aboutit a **0,00 €**. Il en deduit que des ventes auraient pu etre **sorties du chiffre d'affaires** au moyen de ces lignes a prix nul, et que la comptabilite ne serait donc pas probante."
+      "kind": "paragraphe",
+      "texte": "Dans la proposition de rectification (rejet de comptabilite, partie « Le logiciel : articles a prix 0 € », p. 22), le verificateur releve la presence, dans les annexes de detail de la caisse (annexes C-1 a C-3), d'**articles enregistres a un prix de 0 €**. Il rappelle que la gerante, dans son courriel du 16 mars 2026, n'a evoque que des baisses ou hausses de prix liees a la modification d'une recette, et jamais de prix nul : selon lui, **l'existence de ces prix n'est pas explicable** et les donnees ne devraient pas laisser apparaitre de prix a 0 €. Il en deduit que **une partie du chiffre d'affaires aurait pu etre occultee** des donnees de la caisse, et que la comptabilite ne serait donc pas probante. (Le grief voisin sur les articles a quantite inferieure a l'unite, p. 16 a 21, est traite dans la fiche « Quantites anormales ».)"
     },
     {
       "kind": "chapitre",
       "source": "nous",
       "titre": "Notre reponse",
-      "sousTitre": "Les lignes a 0 € sont marginales et n'ouvrent aucun canal d'encaissement"
+      "sousTitre": "Les lignes a 0 € sont marginales et n'ouvrent aucun canal d'encaissement",
+      "numero": 2
     },
     {
-      "kind": "note",
+      "kind": "paragraphe",
       "texte": "Nous avons repris **ligne a ligne** le detail des tickets de la caisse sur les trois exercices verifies (annexes C1, C2 et C3, colonne « prix unitaire TTC »). Sur **97 769 lignes de vente**, seules **272 lignes** sont a prix unitaire nul, soit **0,28 %** du total. C'est exactement le nombre de lignes que l'annexe de caisse signale elle-meme dans sa colonne « Prix a 0 € » (272 lignes), ce qui confirme le comptage."
     },
     {
-      "kind": "note",
+      "kind": "paragraphe",
       "texte": "Le total que nous obtenons (97 769 lignes de produits) est tres proche du chiffre cite par l'administration (97 694 lignes). L'ecart, de l'ordre de quelques dizaines de lignes, tient a la maniere de compter les lignes techniques vides : nous conservons **nos chiffres recalcules**, integralement reproductibles a partir des annexes fournies."
     },
     {
@@ -128,11 +130,11 @@
       ]
     },
     {
-      "kind": "note",
+      "kind": "paragraphe",
       "texte": "**Une ligne a 0 € ne peut pas servir a dissimuler une recette.** Par construction, son montant encaisse est « prix unitaire x quantite », soit **0,00 €** au total pour les 272 lignes concernees. Aucun argent ne transite par ces lignes : il n'y a donc rien a « sortir ». Pour detourner une recette, il faudrait au contraire une ligne **encaissee** que l'on ferait ensuite disparaitre, ce qui est l'inverse d'une ligne a prix nul."
     },
     {
-      "kind": "note",
+      "kind": "paragraphe",
       "texte": "Mieux : sur les 272 lignes a 0 €, **259 (soit 95 %) figurent a l'interieur d'un ticket par ailleurs encaisse** (total TTC du ticket superieur a 0). Il s'agit du cas classique du cafe ou de l'apero offert en fin de repas : le repas est paye, le geste commercial est saisi a 0 €. Les 13 lignes restantes sont sur des tickets entierement a 0 € (offerts purs ou essais), sans aucun encaissement non plus."
     },
     {
@@ -207,7 +209,7 @@
       ]
     },
     {
-      "kind": "note",
+      "kind": "paragraphe",
       "texte": "La ventilation parle d'elle-meme : il s'agit pour l'essentiel d'**aperitifs ou verres d'alcool offerts** (kir, Macvin, pression, verre de vin : 192 lignes), de **softs et eaux** (37 lignes), de **cafes et boissons chaudes offerts** (27 lignes) et de quelques **desserts** (16 lignes). Ce sont les gestes commerciaux (verre ou cafe offert) et la consommation du personnel deja decrits a l'administration, et non des ventes masquees."
     },
     {
@@ -240,12 +242,22 @@
       "format": "int"
     },
     {
-      "kind": "note",
+      "kind": "paragraphe",
       "texte": "**Exemple concret date.** Ticket du **2022-05-14 a 20:41** (no 28), encaisse **42,20 € TTC**. La note comprend des plats et desserts payes (Entrecôte grillée (19,90 €), TANTELIN (16,40 €), GLACE 2 BOULES (3,90 €), GLACE 1 BOULE (2,00 €)) et, en fin de repas, **Fuze Tea et Expresso a 0 €**. Le repas a bien ete encaisse ; seul le geste commercial final est saisi a prix nul. On voit ici, sur une vraie note, qu'une ligne a 0 € accompagne une recette encaissee au lieu de la faire disparaitre."
     },
     {
-      "kind": "note",
+      "kind": "paragraphe",
       "texte": "Ces offerts recoupent la **consommation du personnel et les offerts deja chiffres** par ailleurs (piece « Consommation personnel et offerts »)  : 8 010,00 € de CA equivalent d'offerts et 39 319,00 € de conso personnel sur la periode. Loin d'etre cachees, ces consommations ont ete reconstituees et communiquees : elles confirment que les lignes a 0 € correspondent a une realite d'exploitation ordinaire, sans enjeu fiscal."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "titre": "Conclusion",
+      "numero": 3
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les lignes a 0 € representent 0,28 % des ventes (272 sur 97 769), pour un montant encaisse de 0,00 €. Ce sont des aperitifs, verres d'alcool, softs et cafes offerts ou consommes par le personnel, dont 95 % a l'interieur de tickets par ailleurs payes. Une ligne a prix nul ne porte aucun encaissement : elle ne peut, par nature, servir a sortir une recette du chiffre d'affaires. Le grief n'est pas fonde."
     },
     {
       "kind": "piecejointe",
@@ -256,12 +268,6 @@
           "label": "Articles a 0 € : comptage, categories et detail par produit (XLSX)"
         }
       ]
-    },
-    {
-      "kind": "alerte",
-      "couleur": "teal",
-      "titre": "Ce que ce grief fait tomber",
-      "texte": "Les lignes a 0 € representent 0,28 % des ventes (272 sur 97 769), pour un montant encaisse de 0,00 €. Ce sont des aperitifs, verres d'alcool, softs et cafes offerts ou consommes par le personnel, dont 95 % a l'interieur de tickets par ailleurs payes. Une ligne a prix nul ne porte aucun encaissement : elle ne peut, par nature, servir a sortir une recette du chiffre d'affaires. Le grief n'est pas fonde."
     }
   ]
 }

@@ -29,6 +29,7 @@ import csv
 import json
 import openpyxl
 from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
+from rfcommun import normaliser_sections
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
@@ -318,7 +319,7 @@ for c in CORR:
     if any(k in blob for k in ("calvados", "beaune", "nuits", "eau de vie", "poire william",
                                "framboise", "mirabelle", "martini")):
         corr_page.append([cg(c["libelle_caisse"]), cg(c["nom_canonique"]),
-                          cg(c["nom_facture"] or "—")])
+                          cg(c["nom_facture"] or " : ")])
 
 doc = {
     "meta": {
@@ -334,7 +335,7 @@ doc = {
     "sections": [
         # 1) GRIEF
         {"kind": "chapitre", "source": "fisc", "numero": 1, "titre": "Le grief de l’administration",
-         "sousTitre": "Proposition p. 31-32 (rejet 3/3, point XV) — « plus de consommation vendue que d’achat »"},
+         "sousTitre": "Proposition p. 31-32 (rejet 3/3, point XV) : « plus de consommation vendue que d’achat »"},
         {"kind": "paragraphe",
          "texte": "Au fil de la reconstitution, le service relève des produits dont les **quantités "
                   "vendues dépasseraient les achats**, et en déduit que la comptabilité serait **non "
@@ -366,7 +367,7 @@ doc = {
          "colonnes": [colg("Libellé de caisse"), colg("Produit (canonique)"), colg("Facture fournisseur")],
          "lignes": corr_page},
         {"kind": "piecejointe", "intro": "Table de correspondance complète (caisse, facture, inventaire) :",
-         "fichiers": [{"fichier": F_CORR, "label": "RF — Correspondance caisse / facture / inventaire (XLSX)"}]},
+         "fichiers": [{"fichier": F_CORR, "label": "RF : Correspondance caisse / facture / inventaire (XLSX)"}]},
 
         # 3) HAUTE COTE DE BEAUNE
         {"kind": "chapitre", "source": "nous", "numero": 3,
@@ -386,7 +387,7 @@ doc = {
                         [("Beaune rouge", beaune_rge_a, beaune_rge_c),
                          ("Beaune blanc", beaune_blc_a, beaune_blc_c),
                          ("Nuits blanc (vin distinct)", nuits_a, nuits_c)], minw=640),
-        {"kind": "note",
+        {"kind": "paragraphe",
          "texte": f"**Le Beaune rouge est acheté et bu de façon cohérente** : {fr_l(tot3(beaune_rge_a))} "
                   f"achetés contre {fr_l(tot3(beaune_rge_c))} consommés sur trois ans (excédent "
                   f"{sgn_l(round(tot3(beaune_rge_a) - tot3(beaune_rge_c), 1))}). Le **Nuits blanc** "
@@ -395,7 +396,7 @@ doc = {
                   f"de 12 950 cl de blanc non acheté : c’est une **confusion de libellés**, levée par la "
                   f"table de correspondance."},
         {"kind": "piecejointe", "intro": "Détail Beaune (rouge/blanc/Nuits) par exercice et factures :",
-         "fichiers": [{"fichier": F_HCB, "label": "RF — Haute Côte de Beaune : achats vs conso (XLSX)"}]},
+         "fichiers": [{"fichier": F_HCB, "label": "RF : Haute Côte de Beaune : achats vs conso (XLSX)"}]},
 
         # 4) CALVADOS
         {"kind": "chapitre", "source": "nous", "numero": 4,
@@ -410,16 +411,16 @@ doc = {
                   f"dose de 5 à 4 cl** pour limiter l’incohérence."},
         tab_achat_conso("Calvados : achats contre consommation totale (verre + cuisson estimée)",
                         [("Calvados", calva_a, calva_c)], minw=560),
-        {"kind": "note",
+        {"kind": "paragraphe",
          "texte": f"L’« excès » de Calvados ({sgn_l(round(tot3(calva_a) - tot3(calva_c), 1))} sur trois "
                   f"ans) **ne porte donc pas sur des ventes** : il vient entièrement d’une **dose de "
                   f"flambé estimée**, alcool qui part en partie à la flamme et qui, surtout, est un "
-                  f"**coût de cuisine — jamais une recette**. Sur-estimer une dose de cuisson ne peut "
+                  f"**coût de cuisine : jamais une recette**. Sur-estimer une dose de cuisson ne peut "
                   f"révéler aucune vente non déclarée. Les **{fr_l(tot3(calva_a))}** de Calvados achetés "
                   f"(facturés, pièce jointe) couvrent l’ensemble du service au verre et la cuisine à une "
                   f"dose réaliste de flambé."},
         {"kind": "piecejointe", "intro": "Achats de Calvados (factures) et consommation par exercice :",
-         "fichiers": [{"fichier": F_CAL, "label": "RF — Calvados : achats vs consommation (XLSX)"}]},
+         "fichiers": [{"fichier": F_CAL, "label": "RF : Calvados : achats vs consommation (XLSX)"}]},
 
         # 5) EAUX-DE-VIE / LIQUEURS / MARTINI
         {"kind": "chapitre", "source": "nous", "numero": 5,
@@ -437,13 +438,13 @@ doc = {
          "lignes": [[cg(lab), cd(fr_l(tot3(a))), cd(fr_l(tot3(c))),
                      bdg(sgn_l(round(tot3(a) - tot3(c), 1)), tot3(a) - tot3(c) >= -0.5)]
                     for lab, c, a, al in fam]},
-        {"kind": "note",
+        {"kind": "paragraphe",
          "texte": "Ces volumes sont **infimes** (quelques litres sur trois ans) et **entièrement "
                   "achetés**. L’écart apparent venait uniquement de ce que la caisse et la facture "
-                  "nomment différemment le même alcool — exactement le **rattachement de libellé** que "
+                  "nomment différemment le même alcool : exactement le **rattachement de libellé** que "
                   "corrige la table de correspondance."},
         {"kind": "piecejointe", "intro": "Détail des familles et des factures correspondantes :",
-         "fichiers": [{"fichier": F_EDV, "label": "RF — Eaux-de-vie, liqueurs et Martini : achats vs conso (XLSX)"}]},
+         "fichiers": [{"fichier": F_EDV, "label": "RF : Eaux-de-vie, liqueurs et Martini : achats vs conso (XLSX)"}]},
 
         # 6) BILAN GLOBAL
         {"kind": "chapitre", "source": "nous", "numero": 6, "titre": "Le bilan matière global se ferme à l’excédent",
@@ -454,7 +455,7 @@ doc = {
             {"label": "Bilan net", "valeur": sgn_l(g_net), "sub": "achats − conso − stock", "highlight": True, "couleur": "teal"},
         ]},
         {"kind": "paragraphe",
-         "texte": f"Au niveau qui a un sens économique — **toutes boissons agrégées** — le bilan matière "
+         "texte": f"Au niveau qui a un sens économique : **toutes boissons agrégées** : le bilan matière "
                   f"se ferme **largement à l’excédent** : **{fr_l(g_achat)}** achetés, **{fr_l(g_conso)}** "
                   f"consommés, **{fr_l(g_stock)}** de variation de stock, soit **{sgn_l(g_net)}** net. "
                   f"Loin d’une consommation supérieure aux achats, l’établissement a, globalement, "
@@ -463,7 +464,7 @@ doc = {
                   f"rattachement**, neutralisés dès qu’on relie correctement caisse, factures et "
                   f"inventaire."},
         {"kind": "piecejointe", "intro": "Bilan matière complet, produit par produit :",
-         "fichiers": [{"fichier": F_GLO, "label": "RF — Bilan matière global par boisson (XLSX)"}]},
+         "fichiers": [{"fichier": F_GLO, "label": "RF : Bilan matière global par boisson (XLSX)"}]},
 
         # 7) CONCLUSION
         {"kind": "chapitre", "source": "nous", "numero": 7, "titre": "Conclusion"},
@@ -480,11 +481,12 @@ doc = {
                   "Germain (rouge) et Lupé-Cholet (Nuits) ; pour le Calvados, une attestation sur la dose "
                   "réelle de flambé (qui s’évapore) et le rappel que l’alcool de cuisine est un achat-coût. "
                   "Tenir prêt l’argument de principe : un écart « conso > achats » sur un libellé isolé est "
-                  "un problème d’**étiquetage**, pas de recette — la seule grandeur probante est le bilan "
+                  "un problème d’**étiquetage**, pas de recette : la seule grandeur probante est le bilan "
                   "matière agrégé. Reproductible via le script. Retirer cet encart de toute version remise."},
     ],
 }
 
+doc["sections"] = normaliser_sections(doc["sections"])
 os.makedirs(os.path.dirname(OUT_JSON), exist_ok=True)
 json.dump(doc, open(OUT_JSON, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 print("JSON ecrit :", OUT_JSON, "| sections:", len(doc["sections"]))

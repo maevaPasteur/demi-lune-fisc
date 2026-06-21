@@ -249,7 +249,7 @@ def fichier_items(fam_of, qte, classif):
     wb = openpyxl.Workbook()
     ws = wb.active
     ws.title = "Classification items"
-    ws.append(["Items vendus en caisse — un couvert = un plat OU un menu"])
+    ws.append(["Items vendus en caisse : un couvert = un plat OU un menu"])
     ws["A1"].font = GRAS
     ws.append(["Oui = compte comme un couvert (plat/menu). Galettes = plats ; salades = plats "
                "sauf salade chèvre chaud et salade verte aux noix (entrées). « À vérifier » = "
@@ -446,7 +446,7 @@ def fichier_hebdo(encs):
 
     section = {
         "kind": "graphiqueLignes",
-        "titre": "Couverts par semaine — superposition des trois exercices (avril → mars)",
+        "titre": "Couverts par semaine : superposition des trois exercices (avril → mars)",
         "sousTitre": ("Une ligne par exercice. Saisonnalité marquée (pic l'été, creux hivernal : "
                       "le restaurant ferme janvier et février), et profils quasi superposables "
                       "d'une année à l'autre."),
@@ -459,6 +459,227 @@ def fichier_hebdo(encs):
     }
     os.makedirs(OUT_JSON_DIR, exist_ok=True)
     p = OUT_JSON_DIR + "couverts-hebdomadaires.json"
+    with open(p, "w", encoding="utf-8") as f:
+        json.dump(section, f, ensure_ascii=False, indent=2)
+    return p
+
+
+# ---------------------------------------------------------------------------
+# JSON : couverts par JOUR, par saison (4 trimestres), service midi / soir
+# separes, + stats par mois (services AVEC couverts uniquement, 0 exclus).
+# Une section "saisonCouverts" par saison.
+# ---------------------------------------------------------------------------
+SAISONS = [
+    ("Mars, avril, mai", [(3, "Mars"), (4, "Avril"), (5, "Mai")]),
+    ("Juin, juillet, août", [(6, "Juin"), (7, "Juillet"), (8, "Août")]),
+    ("Septembre, octobre, novembre", [(9, "Septembre"), (10, "Octobre"), (11, "Novembre")]),
+    ("Décembre, janvier, février", [(12, "Décembre"), (1, "Janvier"), (2, "Février")]),
+]
+JOURS_MOIS = {1: 31, 2: 29, 3: 31, 4: 30, 5: 31, 6: 30, 7: 31, 8: 31, 9: 30, 10: 31, 11: 30, 12: 31}
+
+
+def fichier_saisons(encs):
+    # Agrege par date : couverts midi / soir (split a 18h), avec l'exercice.
+    jours = {}
+    for rec in encs:
+        j = jours.setdefault(rec["date"], {"exo": rec["exo"], "midi": 0.0, "soir": 0.0})
+        if rec["heure"] >= "18:00":
+            j["soir"] += rec["couverts"]
+        else:
+            j["midi"] += rec["couverts"]
+
+    sections = []
+    for titre, mois in SAISONS:
+        offset, acc = {}, 0
+        for m, _ in mois:
+            offset[m] = acc
+            acc += JOURS_MOIS[m]
+        total = acc
+        mois_set = {m for m, _ in mois}
+
+        soir = {i: {"jour": i} for i in range(1, total + 1)}
+        midi = {i: {"jour": i} for i in range(1, total + 1)}
+        # Stats par mois ET par exercice (une moyenne par année). Seuls les
+        # services AVEC couverts comptent (un service à 0 est exclu du dénominateur).
+        stat = {m: {e: {"midis": 0, "soirs": 0, "sm": 0.0, "ss": 0.0} for e in EXOS}
+                for m, _ in mois}
+
+        for date, j in jours.items():
+            m, d = int(date[5:7]), int(date[8:10])
+            if m not in mois_set:
+                continue
+            idx = offset[m] + d
+            e = j["exo"]
+            if j["soir"] > 0:
+                soir[idx][e] = round(j["soir"])
+            if j["midi"] > 0:
+                midi[idx][e] = round(j["midi"])
+            s = stat[m][e]
+            if j["midi"] > 0:
+                s["midis"] += 1
+                s["sm"] += j["midi"]
+            if j["soir"] > 0:
+                s["soirs"] += 1
+                s["ss"] += j["soir"]
+
+        stats = [{
+            "mois": lib,
+            "parExercice": [{
+                "exo": e,
+                "midis": stat[m][e]["midis"],
+                "soirs": stat[m][e]["soirs"],
+                "moyMidi": round(stat[m][e]["sm"] / stat[m][e]["midis"]) if stat[m][e]["midis"] else 0,
+                "moySoir": round(stat[m][e]["ss"] / stat[m][e]["soirs"]) if stat[m][e]["soirs"] else 0,
+            } for e in EXOS],
+        } for m, lib in mois]
+
+        sections.append({
+            "kind": "saisonCouverts",
+            "titre": titre,
+            "sousTitre": ("Couverts par jour : service du soir (en haut) et du midi (en bas), "
+                          "une ligne par exercice. À droite, la moyenne de couverts par midi et "
+                          "par soir, mois par mois et exercice par exercice. Seuls les services "
+                          "ayant eu des couverts comptent dans la moyenne (les services à 0, ou "
+                          "non travaillés, sont exclus)."),
+            "dataKey": "jour",
+            "series": [{"name": e, "couleur": COULEURS_EXO[e]} for e in EXOS],
+            "soir": [soir[i] for i in range(1, total + 1)],
+            "midi": [midi[i] for i in range(1, total + 1)],
+            "moisTicks": [{"tick": offset[m] + 1, "label": lib} for m, lib in mois],
+            "stats": stats,
+        })
+
+    os.makedirs(OUT_JSON_DIR, exist_ok=True)
+    p = OUT_JSON_DIR + "couverts-saisons.json"
+    with open(p, "w", encoding="utf-8") as f:
+        json.dump(sections, f, ensure_ascii=False, indent=2)
+    return p
+
+
+# ---------------------------------------------------------------------------
+# JSON : couverts moyens par jour travaille, par semaine (cycle mars -> fevrier),
+# 1 ligne par exercice, + bandes de capacite a 58 % (taux d'occupation FIDUCIAL) :
+# zone TERRASSE (debut mai -> 1re semaine de septembre) et zone INTERIEUR (reste).
+# ---------------------------------------------------------------------------
+CAP_INT = 44          # places assises en salle interieure (somme des couverts/table)
+CAP_EXT = 43          # places en terrasse (hors 116/117 occasionnelles)
+TAUX_OCC = 0.58       # taux de remplissage moyen restauration traditionnelle (FIDUCIAL 2025)
+SEUIL_INT = round(CAP_INT * TAUX_OCC)   # 26
+SEUIL_EXT = round(CAP_EXT * TAUX_OCC)   # 25
+MOIS_CYCLE = [(3, "Mars"), (4, "Avr"), (5, "Mai"), (6, "Juin"), (7, "Juil"), (8, "Août"),
+              (9, "Sep"), (10, "Oct"), (11, "Nov"), (12, "Déc"), (1, "Jan"), (2, "Fév")]
+
+
+def _semaine_cycle(m, d):
+    """Semaine (1..52) dans le cycle mars -> fevrier, alignee par mois calendaire."""
+    y = 2001 if m >= 3 else 2002
+    return (datetime.date(y, m, d) - datetime.date(2001, 3, 1)).days // 7 + 1
+
+
+def fichier_capacite(encs):
+    # Couverts par (date, service) : split midi / soir a 18h.
+    jours = {}
+    for rec in encs:
+        j = jours.setdefault(rec["date"], {"exo": rec["exo"], "midi": 0.0, "soir": 0.0})
+        if rec["heure"] >= "18:00":
+            j["soir"] += rec["couverts"]
+        else:
+            j["midi"] += rec["couverts"]
+    # moyenne par service AVEC couverts (0 exclu), par (exo, semaine).
+    aggm = {e: collections.defaultdict(lambda: [0.0, 0]) for e in EXOS}
+    aggs = {e: collections.defaultdict(lambda: [0.0, 0]) for e in EXOS}
+    for date, j in jours.items():
+        wk = _semaine_cycle(int(date[5:7]), int(date[8:10]))
+        if j["midi"] > 0:
+            a = aggm[j["exo"]][wk]
+            a[0] += j["midi"]
+            a[1] += 1
+        if j["soir"] > 0:
+            a = aggs[j["exo"]][wk]
+            a[0] += j["soir"]
+            a[1] += 1
+    NB_WK = 52
+
+    def build(agg):
+        out = []
+        for wk in range(1, NB_WK + 1):
+            row = {"semaine": wk}
+            for e in EXOS:
+                a = agg[e].get(wk)
+                if a and a[1] > 0:
+                    row[e] = round(a[0] / a[1])
+            out.append(row)
+        return out
+
+    # --- Taux d'occupation par mois (couverts moyens/service / places ouvertes) ---
+    # Espace ouvert : terrasse de mai a aout (43 places), interieur le reste (44).
+    def _cap_mois(m):
+        return (CAP_EXT, "terrasse") if m in (5, 6, 7, 8) else (CAP_INT, "intérieur")
+
+    ORDRE_MOIS = [(3, "Mars"), (4, "Avril"), (5, "Mai"), (6, "Juin"), (7, "Juillet"),
+                  (8, "Août"), (9, "Sept."), (10, "Oct."), (11, "Nov."), (12, "Déc."),
+                  (1, "Janv."), (2, "Févr.")]
+    magg = {m: {"sm": 0.0, "nm": 0, "ss": 0.0, "ns": 0} for m in range(1, 13)}
+    for date, j in jours.items():
+        a = magg[int(date[5:7])]
+        if j["midi"] > 0:
+            a["sm"] += j["midi"]
+            a["nm"] += 1
+        if j["soir"] > 0:
+            a["ss"] += j["soir"]
+            a["ns"] += 1
+    occupation = []
+    for m, lib in ORDRE_MOIS:
+        a = magg[m]
+        cap, esp = _cap_mois(m)
+        tot_c, tot_s = a["sm"] + a["ss"], a["nm"] + a["ns"]
+        occupation.append({
+            "mois": lib,
+            "espace": esp,
+            "pct": round(100 * (tot_c / tot_s) / cap) if tot_s else None,
+            "pctMidi": round(100 * (a["sm"] / a["nm"]) / cap) if a["nm"] else None,
+            "pctSoir": round(100 * (a["ss"] / a["ns"]) / cap) if a["ns"] else None,
+        })
+    # Taux d'occupation moyen PONDERE : total couverts / total capacite servie
+    # (chaque service compte pour la capacite de l'espace ouvert ce mois-la).
+    tot_couv = sum(magg[m]["sm"] + magg[m]["ss"] for m in range(1, 13))
+    tot_capa = sum((magg[m]["nm"] + magg[m]["ns"]) * _cap_mois(m)[0] for m in range(1, 13))
+    occ_moy_exact = 100 * tot_couv / tot_capa if tot_capa else 0
+    MOY_FR = 58  # taux d'occupation moyen restauration traditionnelle (FIDUCIAL 2025)
+
+    w_mai = _semaine_cycle(5, 1)     # debut mai
+    w_sep = _semaine_cycle(9, 7)     # fin de la 1re semaine de septembre
+    zones = [
+        {"x1": 1, "x2": w_mai, "seuil": SEUIL_INT, "espace": "interieur"},
+        {"x1": w_mai, "x2": w_sep, "seuil": SEUIL_EXT, "espace": "terrasse"},
+        {"x1": w_sep, "x2": NB_WK, "seuil": SEUIL_INT, "espace": "interieur"},
+    ]
+    section = {
+        "kind": "couvertsCapacite",
+        "titre": "Couverts moyens par service et taux d'occupation de 58 %",
+        "sousTitre": ("Moyenne des couverts par service, par semaine (cycle mars → février), une "
+                      "ligne par exercice (les services sans couvert sont exclus de la moyenne). "
+                      "La ligne pointillée marque 58 % de remplissage, le taux d'occupation moyen "
+                      "d'un restaurant traditionnel (FIDUCIAL 2025), appliqué à l'espace ouvert : "
+                      "intérieur de mi-septembre à fin avril, terrasse de début mai à début "
+                      "septembre (un seul espace ouvert à la fois)."),
+        "dataKey": "semaine",
+        "series": [{"name": e, "couleur": COULEURS_EXO[e]} for e in EXOS],
+        "midi": build(aggm),
+        "soir": build(aggs),
+        "moisTicks": [{"tick": _semaine_cycle(m, 1), "label": lib} for m, lib in MOIS_CYCLE],
+        "zones": zones,
+        "seuilInterieur": SEUIL_INT,
+        "seuilTerrasse": SEUIL_EXT,
+        "capaciteInterieur": CAP_INT,
+        "capaciteTerrasse": CAP_EXT,
+        "occupationMois": occupation,
+        "occupationMoyenne": round(occ_moy_exact),
+        "moyenneFrance": MOY_FR,
+        "ecartMoyenneFrancePct": round((occ_moy_exact / MOY_FR - 1) * 100),
+    }
+    os.makedirs(OUT_JSON_DIR, exist_ok=True)
+    p = OUT_JSON_DIR + "couverts-capacite.json"
     with open(p, "w", encoding="utf-8") as f:
         json.dump(section, f, ensure_ascii=False, indent=2)
     return p
@@ -483,6 +704,8 @@ def main():
     p2 = fichier_encaissements(encs)
     p3, tm, ts = fichier_services(encs)
     p4 = fichier_hebdo(encs)
+    p5 = fichier_saisons(encs)
+    p6 = fichier_capacite(encs)
 
     # bilan console
     nb_oui = sum(1 for v in classif.values() if v[0])
@@ -500,6 +723,8 @@ def main():
     print(f"XLSX -> {p2}")
     print(f"XLSX -> {p3}")
     print(f"JSON -> {p4}")
+    print(f"JSON -> {p5}")
+    print(f"JSON -> {p6}")
 
 
 if __name__ == "__main__":

@@ -2,6 +2,17 @@ import { useState, type ReactNode } from 'react'
 import { Link } from 'react-router-dom'
 import { BarChart, LineChart } from '@mantine/charts'
 import {
+  CartesianGrid,
+  ComposedChart,
+  Legend,
+  Line as RLine,
+  ReferenceLine,
+  ResponsiveContainer,
+  Tooltip as RTooltip,
+  XAxis,
+  YAxis,
+} from 'recharts'
+import {
   Accordion,
   ActionIcon,
   Alert,
@@ -35,8 +46,9 @@ import {
   IconGavel,
   IconInfoCircle,
   IconToolsKitchen2,
+  IconUsers,
 } from '@tabler/icons-react'
-import type { ComposanteDetail, JourPartage, KpiItem, Section } from '../data/analyses'
+import type { ComposanteDetail, JourPartage, KpiItem, LigneGraphique, Section } from '../data/analyses'
 import { fileUrl } from './PieceCards'
 import { formatEuro, formatEuroPrecis, formatInt } from '../utils/format'
 
@@ -78,7 +90,7 @@ function richText(texte: string): ReactNode[] {
     if (tok.startsWith('[')) {
       const link = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(tok)!
       nodes.push(
-        <Anchor key={i++} href={link[2]} target="_blank" rel="noopener noreferrer" fw={600} c="gold.7">
+        <Anchor key={i++} href={link[2]} target="_blank" rel="noopener noreferrer" c="violet.7" fw={500} style={{ fontStyle: 'italic', textDecoration: 'underline', fontSize: '0.9em' }}>
           {link[1]}
         </Anchor>,
       )
@@ -99,6 +111,24 @@ function richText(texte: string): ReactNode[] {
     )
   }
   return nodes
+}
+
+// Rend un corps de texte (paragraphe / note). Si le texte commence par un
+// lead-in « **Titre.** » court, on l'affiche comme un vrai sous-titre (gras
+// foncé) plutôt qu'en gras doré (qui le confondrait avec une emphase).
+function renderCorps(texte: string): ReactNode {
+  const m = /^\*\*\s*([^*\n]{2,70}?)\s*[.:]\*\*\s+([\s\S]+)$/.exec(texte)
+  if (m) {
+    return (
+      <Stack gap={3}>
+        <Text fw={800} fz={{ base: 16, sm: 18 }} lh={1.25} c="dark.8">
+          {m[1]}
+        </Text>
+        <Text size="md">{richText(m[2])}</Text>
+      </Stack>
+    )
+  }
+  return <Text size="md">{richText(texte)}</Text>
 }
 
 // Couleur de la cote d'attaquabilité (forte = favorable à la défense).
@@ -769,7 +799,21 @@ function SectionView({ section }: { section: Section }) {
       return <CasSuppressionsView section={section} />
 
     case 'paragraphe':
-      return <Text size="md">{richText(section.texte)}</Text>
+      return renderCorps(section.texte)
+
+    case 'titre':
+      return section.numero ? (
+        <Title order={3} fz={{ base: 21, sm: 26 }} mt="lg">
+          <Text span inherit c="gold.7" fw={800} mr={8}>
+            {section.numero}
+          </Text>
+          {section.texte}
+        </Title>
+      ) : (
+        <Title order={4} fz={{ base: 17, sm: 19 }} mt="xs">
+          {section.texte}
+        </Title>
+      )
 
     case 'alerte':
       return (
@@ -800,9 +844,9 @@ function SectionView({ section }: { section: Section }) {
 
     case 'note':
       return (
-        <Text size="xs" c="dimmed">
-          {section.texte}
-        </Text>
+        <Box pl="md" style={{ borderLeft: '3px solid var(--mantine-color-gray-3)' }}>
+          {renderCorps(section.texte)}
+        </Box>
       )
 
     case 'interne': {
@@ -987,7 +1031,7 @@ function SectionView({ section }: { section: Section }) {
                 {section.sousTitre}
               </Text>
             )}
-            <SimpleGrid cols={{ base: 3, xs: 4, sm: 6, md: 9 }} spacing="xs" verticalSpacing="xs">
+            <SimpleGrid cols={{ base: 2, xs: 3, sm: 4, md: 6 }} spacing="xs" verticalSpacing="xs">
               {section.tables.map((t) => {
                 const isNote = section.variante === 'notes' || typeof t.total === 'number'
                 const type = t.type ?? 'reelle'
@@ -996,7 +1040,9 @@ function SectionView({ section }: { section: Section }) {
                     ? { color: 'teal', border: 'var(--mantine-color-teal-5)', style: 'dashed', bg: 'var(--mantine-color-teal-0)', icon: 'var(--mantine-color-teal-7)' }
                     : type === 'inexistante'
                       ? { color: 'red', border: 'var(--mantine-color-red-4)', style: 'dashed', bg: 'var(--mantine-color-red-0)', icon: 'var(--mantine-color-red-5)' }
-                      : { color: 'gray', border: 'var(--mantine-color-gray-3)', style: 'solid', bg: undefined as string | undefined, icon: 'var(--mantine-color-gray-6)' }
+                      : type === 'rare'
+                        ? { color: 'orange', border: 'var(--mantine-color-orange-4)', style: 'dashed', bg: 'var(--mantine-color-orange-0)', icon: 'var(--mantine-color-orange-5)' }
+                        : { color: 'gray', border: 'var(--mantine-color-gray-3)', style: 'solid', bg: undefined as string | undefined, icon: 'var(--mantine-color-gray-6)' }
                 return (
                   <Paper
                     key={t.numero}
@@ -1028,11 +1074,32 @@ function SectionView({ section }: { section: Section }) {
                           <Text fw={700} size="sm" td={type === 'inexistante' ? 'line-through' : undefined}>
                             {t.numero}
                           </Text>
-                          <Badge size="xs" variant="light" color={palette.color} radius="sm">
-                            {type === 'virtuelle' ? 'Virtuelle' : type === 'inexistante' ? 'Inexistante' : 'Réelle'}
+                          <Badge size="xs" variant="light" color={palette.color} radius="sm" fullWidth>
+                            {type === 'virtuelle'
+                              ? 'Virtuelle'
+                              : type === 'inexistante'
+                                ? 'Inexistante'
+                                : type === 'rare'
+                                  ? 'Occas.'
+                                  : 'Réelle'}
                           </Badge>
+                          {typeof t.couverts === 'number' && (
+                            <Group gap={4} wrap="nowrap" justify="center">
+                              <IconUsers size={14} color="var(--mantine-color-gray-6)" />
+                              <Text size="xs" fw={600}>
+                                {t.couverts} couv.
+                              </Text>
+                            </Group>
+                          )}
                           {t.note && (
-                            <Text size="xs" c="dimmed" ta="center" lh={1.1}>
+                            <Text
+                              size="xs"
+                              c="dimmed"
+                              ta="center"
+                              lh={1.15}
+                              lineClamp={3}
+                              style={{ wordBreak: 'break-word' }}
+                            >
                               {t.note}
                             </Text>
                           )}
@@ -1043,6 +1110,28 @@ function SectionView({ section }: { section: Section }) {
                 )
               })}
             </SimpleGrid>
+            {section.resume && (
+              <Group gap="xl" mt="xs">
+                <Group gap={6} wrap="nowrap">
+                  <IconToolsKitchen2 size={18} color="var(--mantine-color-gold-7)" />
+                  <Text size="sm">
+                    Tables utilisées :{' '}
+                    <Text span fw={700}>
+                      {section.resume.tables}
+                    </Text>
+                  </Text>
+                </Group>
+                <Group gap={6} wrap="nowrap">
+                  <IconUsers size={18} color="var(--mantine-color-gold-7)" />
+                  <Text size="sm">
+                    Couverts :{' '}
+                    <Text span fw={700}>
+                      {section.resume.couverts}
+                    </Text>
+                  </Text>
+                </Group>
+              </Group>
+            )}
           </Stack>
         </Paper>
       )
@@ -1084,6 +1173,8 @@ function SectionView({ section }: { section: Section }) {
                         align?: 'left' | 'right' | 'center'
                         fw?: number
                         badge?: 'ok' | 'ko'
+                        href?: string
+                        to?: string
                       }
                       return (
                         <Table.Td key={ci} ta={cell.align ?? 'left'} fw={cell.fw}>
@@ -1091,6 +1182,14 @@ function SectionView({ section }: { section: Section }) {
                             <Badge color={cell.badge === 'ok' ? 'teal' : 'red'} variant="light" radius="sm">
                               {cell.v}
                             </Badge>
+                          ) : cell.to ? (
+                            <Anchor component={Link} to={cell.to} fw={600} c="gold.7">
+                              {cell.v}
+                            </Anchor>
+                          ) : cell.href ? (
+                            <Anchor href={cell.href} target="_blank" rel="noopener noreferrer" fw={600} c="gold.7">
+                              {cell.v}
+                            </Anchor>
                           ) : (
                             cell.v
                           )}
@@ -1109,6 +1208,37 @@ function SectionView({ section }: { section: Section }) {
     case 'graphiqueLignes': {
       const ticks = section.moisTicks?.map((t) => t.tick)
       const labels = Object.fromEntries((section.moisTicks ?? []).map((t) => [t.tick, t.label]))
+      const fmt = (v: number) => (section.format === 'euro' ? formatEuro(v) : formatInt(v))
+      // Tooltip personnalisé optionnel : en-tête = période du point (champ
+      // `periode`), puis un sous-titre explicatif, puis chaque série.
+      type TooltipPoint = { name: string; value: number; color: string; payload: Record<string, unknown> }
+      const tooltipProps = section.tooltipSousTitre
+        ? {
+            // eslint-disable-next-line @typescript-eslint/no-explicit-any
+            content: ({ payload }: any) => {
+              const pts = (payload ?? []) as TooltipPoint[]
+              if (pts.length === 0) return null
+              const periode = pts[0]?.payload?.periode as string | undefined
+              return (
+                <Paper withBorder shadow="md" radius="md" p="sm">
+                  <Text fw={700} size="sm">{periode ?? ''}</Text>
+                  <Text size="xs" c="dimmed" mb={6}>{section.tooltipSousTitre}</Text>
+                  <Stack gap={2}>
+                    {pts.map((p) => (
+                      <Group key={p.name} justify="space-between" gap="lg" wrap="nowrap">
+                        <Group gap={6} wrap="nowrap">
+                          <Box w={10} h={10} style={{ borderRadius: 2, backgroundColor: p.color }} />
+                          <Text size="xs">{p.name}</Text>
+                        </Group>
+                        <Text size="xs" fw={600} style={{ fontVariantNumeric: 'tabular-nums' }}>{fmt(p.value)}</Text>
+                      </Group>
+                    ))}
+                  </Stack>
+                </Paper>
+              )
+            },
+          }
+        : undefined
       return (
         <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
           <Stack gap="sm">
@@ -1127,17 +1257,313 @@ function SectionView({ section }: { section: Section }) {
               data={section.data}
               dataKey={section.dataKey}
               series={section.series.map((s) => ({ name: s.name, color: s.couleur }))}
-              valueFormatter={(v) => (section.format === 'euro' ? formatEuro(v) : formatInt(v))}
+              valueFormatter={fmt}
               curveType="monotone"
               withDots={false}
               connectNulls
               withLegend
               gridAxis="xy"
+              tooltipProps={tooltipProps}
               xAxisProps={{
                 ticks,
                 tickFormatter: (v: number) => labels[v] ?? '',
               }}
             />
+          </Stack>
+        </Paper>
+      )
+    }
+
+    case 'couvertsCapacite': {
+      const capSection = section
+      const labels = Object.fromEntries((capSection.moisTicks ?? []).map((t) => [t.tick, t.label]))
+      const ticks = capSection.moisTicks?.map((t) => t.tick)
+      const yMaxData = Math.max(
+        ...[...capSection.midi, ...capSection.soir].flatMap((d) =>
+          capSection.series.map((s) => Number(d[s.name] ?? 0)),
+        ),
+        capSection.seuilInterieur,
+        capSection.seuilTerrasse,
+      )
+      const top = Math.ceil((yMaxData + 6) / 10) * 10
+      const nbSem = Math.max(capSection.midi.length, capSection.soir.length)
+      const courbe = (data: LigneGraphique[], legend: boolean) => (
+        <div style={{ width: '100%', height: 230 }}>
+          <ResponsiveContainer>
+            <ComposedChart data={data} margin={{ top: 8, right: 12, bottom: 4, left: -8 }}>
+              <CartesianGrid strokeDasharray="3 3" stroke="var(--mantine-color-gray-3)" vertical={false} />
+              {capSection.zones.map((z, i) => (
+                <ReferenceLine
+                  key={i}
+                  segment={[
+                    { x: z.x1, y: z.seuil },
+                    { x: z.x2, y: z.seuil },
+                  ]}
+                  stroke="#868e96"
+                  strokeWidth={2}
+                  strokeDasharray="5 4"
+                  ifOverflow="extendDomain"
+                />
+              ))}
+              <XAxis
+                dataKey={capSection.dataKey}
+                type="number"
+                domain={[1, nbSem]}
+                ticks={ticks}
+                tickFormatter={(v: number) => labels[v] ?? ''}
+                tick={{ fontSize: 12, fill: 'var(--mantine-color-gray-6)' }}
+              />
+              <YAxis domain={[0, top]} tick={{ fontSize: 12, fill: 'var(--mantine-color-gray-6)' }} />
+              <RTooltip
+                formatter={(v) => [formatInt(Number(v ?? 0)), ''] as [string, string]}
+                labelFormatter={(v) => `Semaine ${v}`}
+              />
+              {legend && <Legend />}
+              {capSection.series.map((s) => (
+                <RLine
+                  key={s.name}
+                  type="monotone"
+                  dataKey={s.name}
+                  stroke={s.couleur}
+                  strokeWidth={2}
+                  dot={false}
+                  connectNulls
+                />
+              ))}
+            </ComposedChart>
+          </ResponsiveContainer>
+        </div>
+      )
+      return (
+        <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
+          <Stack gap="sm">
+            {capSection.titre && (
+              <Title order={3} fz={{ base: 18, sm: 22 }}>
+                {capSection.titre}
+              </Title>
+            )}
+            {capSection.sousTitre && (
+              <Text size="sm" c="dimmed">
+                {capSection.sousTitre}
+              </Text>
+            )}
+            <Text size="xs" tt="uppercase" fw={700} c="dimmed">
+              Service du midi
+            </Text>
+            {courbe(capSection.midi, true)}
+            <Text size="xs" tt="uppercase" fw={700} c="dimmed" mt="xs">
+              Service du soir
+            </Text>
+            {courbe(capSection.soir, false)}
+            <Group gap={8} wrap="nowrap" mt="xs">
+              <Box w={22} h={0} style={{ borderTop: '2px dashed #868e96', flexShrink: 0 }} />
+              <Text size="xs" c="dimmed">
+                Ligne pointillée = 58 % de remplissage, le taux d'occupation moyen d'un restaurant
+                traditionnel (FIDUCIAL 2025) : {capSection.seuilInterieur} couverts à l'intérieur (
+                {capSection.capaciteInterieur} places), {capSection.seuilTerrasse} en terrasse (
+                {capSection.capaciteTerrasse} places).
+              </Text>
+            </Group>
+            {capSection.occupationMois && capSection.occupationMois.length > 0 && (
+              <Box mt="md">
+                <Text size="xs" tt="uppercase" fw={700} c="dimmed" mb="sm">
+                  Taux d'occupation par mois
+                </Text>
+                <SimpleGrid cols={{ base: 3, xs: 4, sm: 6 }} spacing="xs" verticalSpacing="xs">
+                  {capSection.occupationMois.map((o) => (
+                    <Paper key={o.mois} withBorder radius="md" p="xs" bg="var(--mantine-color-gray-0)">
+                      <Stack gap={2} align="center">
+                        <Text size="sm" fw={600}>
+                          {o.mois}
+                        </Text>
+                        <Text ff="heading" fz={22} fw={700} c="gold.8" lh={1}>
+                          {o.pct === null ? '-' : `${o.pct} %`}
+                        </Text>
+                        <Text size="xs" c="dimmed" ta="center" lh={1.2}>
+                          {o.pctMidi === null ? '-' : `${o.pctMidi} %`} midi
+                        </Text>
+                        <Text size="xs" c="dimmed" ta="center" lh={1.2}>
+                          {o.pctSoir === null ? '-' : `${o.pctSoir} %`} soir
+                        </Text>
+                        <Text size="xs" c="dimmed">
+                          {o.espace}
+                        </Text>
+                      </Stack>
+                    </Paper>
+                  ))}
+                </SimpleGrid>
+                {typeof capSection.occupationMoyenne === 'number' && (
+                  <Group justify="center" align="flex-start" mt="xl" gap={56}>
+                    <div style={{ textAlign: 'center' }}>
+                      <Text size="xs" tt="uppercase" c="dimmed" fw={600}>
+                        Taux d'occupation moyen
+                      </Text>
+                      <Text ff="heading" fz={{ base: 44, sm: 60 }} fw={800} c="gold.8" lh={1.1}>
+                        {capSection.occupationMoyenne} %
+                      </Text>
+                    </div>
+                    <div style={{ textAlign: 'center' }}>
+                      <Text size="xs" tt="uppercase" c="dimmed" fw={600}>
+                        Comparé à la moyenne française
+                      </Text>
+                      <Text
+                        ff="heading"
+                        fz={{ base: 44, sm: 60 }}
+                        fw={800}
+                        c={(capSection.ecartMoyenneFrancePct ?? 0) >= 0 ? 'teal.7' : 'red.7'}
+                        lh={1.1}
+                      >
+                        {(capSection.ecartMoyenneFrancePct ?? 0) >= 0 ? '+' : ''}
+                        {capSection.ecartMoyenneFrancePct} %
+                      </Text>
+                      <Text size="xs" c="dimmed">
+                        moyenne française : {capSection.moyenneFrance} %
+                      </Text>
+                    </div>
+                  </Group>
+                )}
+              </Box>
+            )}
+          </Stack>
+        </Paper>
+      )
+    }
+
+    case 'saisonCouverts': {
+      const ticks = section.moisTicks?.map((t) => t.tick)
+      const labels = Object.fromEntries((section.moisTicks ?? []).map((t) => [t.tick, t.label]))
+      const series = section.series.map((s) => ({ name: s.name, color: s.couleur }))
+      const xAxisProps = { ticks, tickFormatter: (v: number) => labels[v] ?? '' }
+      const courbe = (data: typeof section.soir, withLegend: boolean) => (
+        <LineChart
+          h={150}
+          data={data}
+          dataKey={section.dataKey}
+          series={series}
+          valueFormatter={(v) => formatInt(v)}
+          curveType="monotone"
+          withDots={false}
+          connectNulls
+          withLegend={withLegend}
+          gridAxis="xy"
+          xAxisProps={xAxisProps}
+        />
+      )
+      return (
+        <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
+          <Stack gap="sm">
+            <Title order={3} fz={{ base: 18, sm: 22 }}>
+              {section.titre}
+            </Title>
+            {section.sousTitre && (
+              <Text size="sm" c="dimmed">
+                {section.sousTitre}
+              </Text>
+            )}
+            <Box style={{ display: 'flex', gap: 24, flexWrap: 'wrap', alignItems: 'flex-start' }}>
+              <Box style={{ flex: '2 1 340px', minWidth: 0 }}>
+                <Stack gap={2}>
+                  <Text size="xs" tt="uppercase" fw={700} c="dimmed">
+                    Service du soir
+                  </Text>
+                  {courbe(section.soir, true)}
+                  <Text size="xs" tt="uppercase" fw={700} c="dimmed" mt="xs">
+                    Service du midi
+                  </Text>
+                  {courbe(section.midi, false)}
+                </Stack>
+              </Box>
+              <Box style={{ flex: '1 1 260px' }}>
+                <Stack gap="sm">
+                  <Text size="xs" tt="uppercase" fw={700} c="dimmed">
+                    Couverts moyens par jour et par exercice
+                  </Text>
+                  {section.stats.map((st) => (
+                    <Paper key={st.mois} withBorder radius="md" p="sm">
+                      <Text fw={700} mb={6}>
+                        {st.mois}
+                      </Text>
+                      <Table verticalSpacing={3} horizontalSpacing="xs" fz="xs" withRowBorders={false}>
+                        <Table.Thead>
+                          <Table.Tr>
+                            <Table.Th>
+                              <Text size="xs" c="dimmed" fw={600}>
+                                Exercice
+                              </Text>
+                            </Table.Th>
+                            <Table.Th ta="right">
+                              <Text size="xs" c="dimmed" fw={600}>
+                                Midi
+                              </Text>
+                            </Table.Th>
+                            <Table.Th ta="right">
+                              <Text size="xs" c="dimmed" fw={600}>
+                                Soir
+                              </Text>
+                            </Table.Th>
+                          </Table.Tr>
+                        </Table.Thead>
+                        <Table.Tbody>
+                          {st.parExercice.map((pe) => {
+                            const couleur = section.series.find((s) => s.name === pe.exo)?.couleur
+                            return (
+                              <Table.Tr key={pe.exo}>
+                                <Table.Td>
+                                  <Group gap={6} wrap="nowrap">
+                                    <Box
+                                      w={8}
+                                      h={8}
+                                      style={{ borderRadius: 999, background: couleur, flexShrink: 0 }}
+                                    />
+                                    {pe.exo.slice(2, 4)}-{pe.exo.slice(7, 9)}
+                                  </Group>
+                                </Table.Td>
+                                <Table.Td ta="right" style={{ whiteSpace: 'nowrap' }}>
+                                  {pe.midis ? (
+                                    <>
+                                      <Text span fw={700}>
+                                        {pe.moyMidi}
+                                      </Text>{' '}
+                                      <Text span c="dimmed">
+                                        ({pe.midis})
+                                      </Text>
+                                    </>
+                                  ) : (
+                                    <Text span c="dimmed">
+                                      —
+                                    </Text>
+                                  )}
+                                </Table.Td>
+                                <Table.Td ta="right" style={{ whiteSpace: 'nowrap' }}>
+                                  {pe.soirs ? (
+                                    <>
+                                      <Text span fw={700}>
+                                        {pe.moySoir}
+                                      </Text>{' '}
+                                      <Text span c="dimmed">
+                                        ({pe.soirs})
+                                      </Text>
+                                    </>
+                                  ) : (
+                                    <Text span c="dimmed">
+                                      —
+                                    </Text>
+                                  )}
+                                </Table.Td>
+                              </Table.Tr>
+                            )
+                          })}
+                        </Table.Tbody>
+                      </Table>
+                    </Paper>
+                  ))}
+                  <Text size="xs" c="dimmed">
+                    Moyenne de couverts par service ; entre parenthèses, le nombre de services
+                    travaillés (les services à 0 sont exclus). « — » : mois non travaillé cet exercice.
+                  </Text>
+                </Stack>
+              </Box>
+            </Box>
           </Stack>
         </Paper>
       )

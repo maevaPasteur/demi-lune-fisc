@@ -39,6 +39,8 @@ Sources EXTERNES citees (verifiables) :
 import json
 import os
 
+from rfcommun import ajouter_conclusion
+
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SRC_DATA = os.path.join(ROOT, "src", "data")
 PIECES = os.path.join(ROOT, "public", "documents", "pieces-defense")
@@ -142,19 +144,28 @@ U_MRM = "https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-lo
 U_BA = "https://www.brewersassociation.org/educational-publications/draught-beer-quality-manual/"
 U_LB = "https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/"
 U_JDC = "https://www.jdc.fr/blog/reduire-gaspillage-de-biere-bar"
+# Sources officielles ajoutees (audit critique) :
+# - Legifrance CGI annexe IV (taux reglementaires de pertes/freinte sur alcools et boissons)
+# - USDA (table d'alcool restant apres cuisson) + reprise lisible par Idaho State University
+# - Bar-i / WISK (demarque "shrinkage" bar : 15-20 %, dont ~75 % de vol)
+U_LEGI_FREINTE = "https://www.legifrance.gouv.fr/codes/id/LEGISCTA000035423123/2020-08-30"
+U_BARI_SHRINK = "https://blog.bar-i.com/poor-beverage-inventory-costing-bar-25000-year-math"
+U_WISK = "https://www.wisk.ai/blog/how-do-hotel-bars-and-restaurants-prevent-liquor-theft-overpouring-and-shrinkage"
+U_CASSE = "https://www.barandrestaurant.com/operations/breaking-cycle-reducing-glassware-costs"
 
 
-def calc_surversement(conso):
-    """Sur-versement (free-pour) sur TOUT ce qui est servi a la main, hors biere
-    (freinte dediee), hors bouteille scellee, et HORS CREMANT (pris a part :
-    page cremant = jete + sur-versement propre). Taux = ceux des sources :
-      - vin au verre/pichet -> +23,6 % (Kerr 2008, mesure du verre de vin)
+def calc_surversement(conso, items):
+    """Sur-versement (free-pour) sur ce qui est servi a la main, hors biere
+    (freinte dediee), hors bouteille scellee, et HORS CREMANT (pris a part).
+    Le PICHET (50/75 cl) est rempli au contenant (BIB/cubis, volume calibre) :
+    il est EXCLU du free-pour (taux 0), par PRUDENCE (sinon attaquable : un
+    pichet n'est pas servi a main levee). Taux = ceux des sources :
+      - vin au VERRE -> +23,6 % (Kerr 2008, mesure du verre de vin)
       - spiritueux/aperitifs/digestifs au verre -> +20 % (Wansink BMJ 2005)
       - alcool des cocktails -> +42 % (Kerr 2008, mixed drinks)
     Base = volume REELLEMENT consomme (notre mesure consoTotaleParBoisson).
     """
-    sec, cock = conso_seches_cocktails(conso)
-    # petillant (cremant/champagne) EXCLU ici : traite sur la page cremant.
+    from collections import defaultdict
     # vin_de_liqueur (macvin) classé AVEC les vins -> taux vin +23,6 %.
     VIN = ["vin_blanc", "vin_rouge", "vin", "vin_rose", "vin_de_liqueur"]
     SPIRIT = ["aperitif", "liqueur", "eau_de_vie", "spiritueux", "digestif"]
@@ -163,23 +174,24 @@ def calc_surversement(conso):
     RATE_SEC.update({c: taux_spirit for c in SPIRIT})
     INSCOPE = set(VIN) | set(SPIRIT)
 
-    base_vin = sum(sec.get(c, 0) for c in VIN)
-    base_spirit = sum(sec.get(c, 0) for c in SPIRIT)
-    base_cocktail = sum(cock.get(c, 0) for c in (VIN + SPIRIT))
-    l_vin = base_vin * taux_vin
-    l_spirit = base_spirit * taux_spirit
-    l_cock = base_cocktail * taux_cock
-    total = l_vin + l_spirit + l_cock
+    # --- Volume PICHET (pré-mesuré) par boisson et par exercice (itemsCaisse) --
+    # Tous les pichets de la carte sont des vins (BIB/cubis) -> retirés de la base vin.
+    items_list = items.values() if isinstance(items, dict) else items
+    pichet_nom_ex = {e: defaultdict(float) for e in EXERCICES}
+    for it in items_list:
+        if not isinstance(it, dict) or "Pichet" not in (it.get("format_service") or ""):
+            continue
+        nom = it.get("nom_canonique") or it.get("produit") or "?"
+        vol = (it.get("volume_unitaire_cl") or 0) / 100.0  # cl -> L
+        for e in EXERCICES:
+            q = (it.get("quantite", {}) or {}).get(e, 0) or 0
+            pichet_nom_ex[e][nom] += q * vol
 
-    postes = [
-        {"label": "Vins au verre et au pichet (y c. vin jaune, paille, macvin)", "base": base_vin, "taux": taux_vin, "litres": l_vin},
-        {"label": "Spiritueux, apéritifs et digestifs au verre", "base": base_spirit, "taux": taux_spirit, "litres": l_spirit},
-        {"label": "Alcool des cocktails (hors crémant)", "base": base_cocktail, "taux": taux_cock, "litres": l_cock},
-    ]
-
-    # --- Détail par boisson ET par exercice (conso / sur-versement / total) ---
-    per = {e: {} for e in EXERCICES}   # exercice -> nom -> {conso, surverse}
-    tot = {}                            # nom -> {conso, surverse}
+    # --- Détail par boisson ET par exercice ; les bases sont accumulées ICI
+    #     (agrégat == détail par construction, pichet exclu du sur-versement). --
+    per = {e: {} for e in EXERCICES}
+    tot = {}
+    base_vin_verre = base_spirit = base_cocktail = pichet_excl = 0.0
     for b in conso:
         cat = b.get("categorie")
         if cat not in INSCOPE:
@@ -192,13 +204,34 @@ def calc_surversement(conso):
             c = de.get("ingredients_cocktails", 0) or 0
             if s <= 0 and c <= 0:
                 continue
-            sv = s * rate_sec + c * taux_cock
+            s_verre = s
+            if cat in VIN:
+                pe = pichet_nom_ex[e].get(nom, 0.0)
+                s_verre = max(0.0, s - pe)      # vin au verre = sec - pichet pré-mesuré
+                pichet_excl += s - s_verre
+                base_vin_verre += s_verre
+            elif cat in SPIRIT:
+                base_spirit += s
+            base_cocktail += c
+            sv = s_verre * rate_sec + c * taux_cock   # pichet à taux 0
             per[e].setdefault(nom, {"conso": 0.0, "surverse": 0.0})
-            per[e][nom]["conso"] += s + c
-            per[e][nom]["surverse"] += sv
+            per[e][nom]["conso"] += s + c              # conso = volume bu (pichet inclus)
+            per[e][nom]["surverse"] += sv               # sur-versement (pichet exclu)
             tot.setdefault(nom, {"conso": 0.0, "surverse": 0.0})
             tot[nom]["conso"] += s + c
             tot[nom]["surverse"] += sv
+
+    l_vin = base_vin_verre * taux_vin
+    l_spirit = base_spirit * taux_spirit
+    l_cock = base_cocktail * taux_cock
+    total = l_vin + l_spirit + l_cock
+
+    postes = [
+        {"label": "Vins au verre seul (pichet pré-mesuré exclu)", "base": base_vin_verre, "taux": taux_vin, "litres": l_vin},
+        {"label": "Vins au pichet (rempli au contenant, pré-mesuré)", "base": pichet_excl, "taux": 0.0, "litres": 0.0},
+        {"label": "Spiritueux, apéritifs et digestifs au verre", "base": base_spirit, "taux": taux_spirit, "litres": l_spirit},
+        {"label": "Alcool des cocktails (hors crémant)", "base": base_cocktail, "taux": taux_cock, "litres": l_cock},
+    ]
 
     def liste(dico):
         rows = [{"nom": n, "conso": v["conso"], "surverse": v["surverse"],
@@ -210,12 +243,14 @@ def calc_surversement(conso):
 
     per_periode = {e: liste(per[e]) for e in EXERCICES}
     total_alcools = liste(tot)
+    base_servie = base_vin_verre + pichet_excl + base_spirit + base_cocktail
 
     return {
         "postes": postes,
-        "base_totale": base_vin + base_spirit + base_cocktail,
+        "base_totale": base_servie,
         "litres_retenu": total,
-        "taux_blende": total / (base_vin + base_spirit + base_cocktail),
+        "pichet_l": pichet_excl,
+        "taux_blende": total / base_servie if base_servie else 0,
         "per_periode": per_periode,
         "total_alcools": total_alcools,
     }
@@ -402,6 +437,7 @@ def ecrire_xlsx(path, titre, sous_titre, onglets):
 
 def ecrire_json(slug, doc):
     os.makedirs(RENDU_DIR, exist_ok=True)
+    doc["sections"] = ajouter_conclusion(doc["sections"])
     p = os.path.join(RENDU_DIR, f"{slug}.json")
     with open(p, "w", encoding="utf-8") as f:
         json.dump(doc, f, ensure_ascii=False, indent=1)
@@ -474,10 +510,16 @@ def page_surversement(d):
     doc = {
         "meta": {"slug": slug, "source": "scripts/rendu-final-reconstitution-bloc2.py",
                  "grief": "Proposition p. 37-44 (methode 1/2) - doses au verre",
-                 "litres_retenu": round(d["litres_retenu"])},
+                 "litres_retenu": round(d["litres_retenu"]),
+                 # Ventilation pour la cascade granulaire (page 2.1) : vin verre / cocktails / spiritueux.
+                 "breakdown": {
+                     "vin_verre": round(next((p["litres"] for p in d["postes"] if "verre seul" in p["label"]), 0)),
+                     "cocktails": round(next((p["litres"] for p in d["postes"] if "cocktail" in p["label"].lower()), 0)),
+                     "spiritueux": round(next((p["litres"] for p in d["postes"] if "Spiritueux" in p["label"]), 0)),
+                 }},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Le grief de l’administration",
+             "titre": "Ce que dit l'administration",
              "sousTitre": "Proposition p. 37 et p. 41-42 : doses au verre figées au centilitre"},
             {"kind": "paragraphe",
              "texte": "Pour reconstituer le nombre de verres vendus, le service **divise le volume disponible par une dose figée** (15 cl le verre de vin, 50/75 cl le pichet, 4 cl les alcools forts), en supposant que **chaque verre est servi au centilitre près de la carte**. C’est faux : sans doseur, on sert toujours un peu plus."},
@@ -499,10 +541,10 @@ def page_surversement(d):
             *detail_sections,
             {"kind": "kpis", "items": [
                 {"label": "Base servie à la main", "valeur": fr_l(d["base_totale"]), "sub": "vins + spiritueux au verre + cocktails (hors bière et crémant)", "couleur": "blue"},
-                {"label": "Sur-versement", "valeur": fr_l(d["litres_retenu"]), "sub": "consommés, jamais vendus", "highlight": True, "couleur": "teal"},
+                {"label": "Sur-versement", "valeur": fr_l(d["litres_retenu"]), "sub": "dose réelle > dose carte : autant de verres surcomptés", "highlight": True, "couleur": "teal"},
             ]},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"Aux taux **exacts mesurés par la littérature**, le service à la main sans doseur fait disparaître **{fr_l(d['litres_retenu'])}** d’alcool sur trois exercices. Ce volume est un **poste explicite de la cascade** de l’analyse « Boissons disparues » : ni vente, ni disparition, mais de l’alcool bu en plus de la dose facturée."},
+             "texte": f"Aux taux **mesurés par la littérature**, la dose réellement servie au verre dépasse la dose de la carte ; sur trois exercices, cela représente **{fr_l(d['litres_retenu'])}** d’alcool (pichet pré-mesuré exclu, par prudence). **Effet sur la reconstitution** : en divisant le volume disponible par une dose **sous-évaluée**, le service **surcompte le nombre de verres vendables** d’autant. Ce n’est pas une recette manquante, c’est un **verre de moins à reconstituer**."},
             {"kind": "piecejointe", "intro": "Détail du calcul par régime de service :",
              "fichiers": [{"fichier": "pieces-defense/RF-sur-versement-au-verre.xlsx", "label": "RF Sur-versement au verre (vins, spiritueux, cocktails)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Pour solidifier",
@@ -546,7 +588,7 @@ def page_biere(d):
 
     # ---- Tableau 2 : freinte technique par exercice (composants % du fut) ----
     cols2 = [{"label": "Période"}, {"label": "Bière servie (L)", "align": "right"},
-             {"label": "Sur-versement / collerette (7 %)", "align": "right"},
+             {"label": "Collerette et mousse au service (7 %)", "align": "right"},
              {"label": "Mousse & tirage (8 %)", "align": "right"},
              {"label": "Nettoyage + purge + fond (5 %)", "align": "right"},
              {"label": "Freinte totale (L)", "align": "right"},
@@ -585,7 +627,7 @@ def page_biere(d):
             [22, 16, 13, 11, 11, 11, 11, 11, 11, 11, 11],
         ), (
             "Freinte par exercice",
-            ["Periode", "Biere servie (L)", "Sur-versement/collerette 7% (L)",
+            ["Periode", "Biere servie (L)", "Collerette/mousse au service 7% (L)",
              "Mousse & tirage 8% (L)", "Nettoyage+purge+fond 5% (L)", "Freinte totale (L)", "Taux % du fut"],
             [[EXL[e], round(d["base_l_ex"][e]), round(d["comp_ex"][e]["sv"]),
               round(d["comp_ex"][e]["mousse"]), round(d["comp_ex"][e]["net"]),
@@ -606,7 +648,7 @@ def page_biere(d):
                 ["Distinction 25/50 cl", "Lue sur l'article de caisse (insensible au prix, qui varie par periode)"],
                 ["", ""],
                 ["TAUX DE FREINTE (% du fut tire)", ""],
-                ["Sur-versement / collerette", "7 %"],
+                ["Collerette et mousse au service", "7 %"],
                 ["Mousse & tirage (temperature, pression, debut/fond de fut)", "8 %"],
                 ["Nettoyage des lignes + purge + fond de fut", "5 %"],
                 ["Total freinte retenue", "20 % du fut = 305 L sur 3 ans"],
@@ -636,7 +678,7 @@ def page_biere(d):
                  "taux_documente": d["taux_doc"]},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Le grief de l’administration",
+             "titre": "Ce que dit l'administration",
              "sousTitre": "Proposition p. 50-51 : la bière du fût est réputée presque intégralement vendue"},
             {"kind": "paragraphe",
              "texte": "Le service reconstitue la bière en divisant le **volume de fût disponible** par les doses servies (pression 25 cl, pinte 50 cl, part bière des Picon-bière, panachés et Monaco, p. 50), en ne retranchant que **15 % de pertes** (p. 51). Il suppose donc que **85 % du fût finit dans un verre vendu**. La littérature professionnelle montre que ce taux de perte est **sous-estimé** : un fût de tirage traditionnel perd davantage entre la mousse, le réglage du tirage et le nettoyage des lignes."},
@@ -647,7 +689,7 @@ def page_biere(d):
              "texte": "Voici, lue dans la caisse, **chaque article tiré du fût**, taille par taille (la caisse enregistre des articles distincts pour le 25 cl et le 50 cl). Deux grandeurs à ne pas confondre : la **contenance du verre** servi, et la **part bière réelle**. Un panaché et un Monaco sont **moitié bière, moitié limonade** (le Monaco ajoute un trait de grenadine) ; un Picon bière contient **2 cl de Picon** (4 cl en pinte), le reste étant de la bière. Seule la **part bière** sort du fût Affligem."},
             {"kind": "tableau", "titre": "Articles du fût Affligem servis au verre (contenance et part bière)",
              "minWidth": 1180, "colonnes": cols1, "lignes": lignes1},
-            {"kind": "note",
+            {"kind": "paragraphe",
              "texte": "La répartition 25 cl / 50 cl est lue sur l’**article de caisse** (Pression 25 cl et Pression 50 cl « pinte », Picon bière 25 cl et 50 cl…), et non sur le prix : elle est donc **insensible aux variations de tarif** d’une période à l’autre (ex. demi 3,90 € / pinte 7,80 €, Picon 4,50 € / 8,90 €). Le panaché et le Monaco ne sont vendus qu’en 25 cl dans la caisse sur la période."},
             {"kind": "chapitre", "source": "nous", "numero": 3,
              "titre": "La freinte technique dépasse les 15 % retenus par le service",
@@ -655,12 +697,12 @@ def page_biere(d):
             {"kind": "paragraphe",
              "texte": f"La littérature professionnelle situe le gaspillage d’un fût entre **5 %** (système parfaitement réglé) et **25 %** (installation courante), avec une **moyenne de l’ordre de 20 %**, donc **au-dessus des 15 % retenus par le service**. En France, les distributeurs CHR estiment la perte d’un fût en tirage traditionnel autour de **10 %** à **15 %**. Trois postes, tous documentés, composent cette freinte :"},
             {"kind": "paragraphe",
-             "texte": f"**1. Sur-versement et collerette de mousse au service (≈ 7 % du fût).** À chaque demi ou pinte, la mousse débordante et la collerette servie au-dessus du trait partent en perte. La mousse est elle-même composée à **~25 % de bière**, et le seul moussage dépasse fréquemment **10 % du fût** lorsque l’installation n’est pas parfaitement équilibrée."},
+             "texte": f"**1. Collerette et mousse débordante au service (≈ 7 % du fût).** À chaque demi ou pinte, la mousse débordante et la collerette servie au-dessus du trait partent en perte (poste **distinct** du sur-versement des vins/spiritueux : la bière est exclue de cette base). La mousse est elle-même composée à **~25 % de bière**, et le seul moussage dépasse fréquemment **10 % du fût** lorsque l’installation n’est pas parfaitement équilibrée."},
             {"kind": "paragraphe",
              "texte": f"**2. Mousse et pertes au tirage (≈ 8 % du fût).** Température de conservation (idéalement 3-5 °C) et pression de CO₂ mal réglées, premiers verres de chaque service, début et fond de fût peu tirables : autant de bière qui mousse et finit à l’évier."},
             {"kind": "paragraphe",
              "texte": f"**3. Nettoyage des lignes, purge et fond de fût (≈ 5 % du fût).** La **Brewers Association** recommande un nettoyage des lignes **tous les 14 jours** : à chaque cycle, toute la bière contenue dans les lignes est jetée. S’y ajoutent la **purge au changement de fût** et le **fond de fût** non tirable."},
-            {"kind": "paragraphe", "texte": f"Sources de la freinte technique (5 à 25 % du fût selon l’installation) : {lien(U_MRM)} ; {lien(U_LB)} ; {lien(U_JDC)} ; {lien(U_BIERE_BARI)} ; {lien(U_BA)}."},
+            {"kind": "paragraphe", "texte": f"Sources de la freinte technique (5 à 25 % du fût selon l’installation) : {lien(U_MRM)} ; {lien(U_LB)} ; {lien(U_JDC)} ; {lien(U_BIERE_BARI)} ; {lien(U_BA)}. Surtout, **le service retranche lui-même 15 %** sur la bière (Proposition p. 51) : il admet donc déjà le principe d’une freinte ; nos sources montrent seulement que ce taux est un **plancher**."},
             {"kind": "tableau", "titre": "Freinte technique par exercice (composants en % du fût tiré)",
              "minWidth": 920, "colonnes": cols2, "lignes": lignes2},
             {"kind": "kpis", "items": [
@@ -705,7 +747,7 @@ def page_cremant(d):
                  "litres_retenu": round(total)},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Le grief de l’administration",
+             "titre": "Ce que dit l'administration",
              "sousTitre": "Proposition p. 46-47 : tout le crémant disponible est réputé vendu, au centilitre"},
             {"kind": "paragraphe",
              "texte": "Le service répartit **tout le crémant acheté** entre les articles qui en consomment (verre, cocktails La Vouivre, Père Grégoire, KITTYKIR…) et **divise le volume disponible par les doses** pour en déduire des ventes (Proposition p. 46-47, ingrédient CRÉMANT). Deux réalités lui échappent, **distinctes et cumulables** : le crémant est **sur-versé** comme tout vin servi à la main, et **il s’évente** : la bouteille ouverte ne se garde pas."},
@@ -714,7 +756,7 @@ def page_cremant(d):
              "sousTitre": "Calculé jour par jour sur le détail des tickets (annexe C), verre + cocktails"},
             {"kind": "paragraphe",
              "texte": f"Nous avons compté, **jour par jour dans le détail des tickets** (annexe C), tout le crémant servi, **au verre et dans les cocktails** (La Vouivre 8 cl, KITTYKIR 9 cl, Père Grégoire 1 cl, Kir Princier 10 cl). Sur chaque journée, on applique d’abord le **sur-versement de +23,6 %** (Kerr 2008) pour obtenir le volume **réellement** versé, puis on en déduit le **nombre de bouteilles de 75 cl ouvertes** ce jour-là et le **solde jeté** le soir (un effervescent ouvert est plat le lendemain). Sources : {lien(U_KERR)} ; {lien(U_SPARKLING)}."},
-            {"kind": "tableau", "titre": "Crémant jeté en fin de journée, par exercice (sur-versement +23,6 % inclus dans le servi)",
+            {"kind": "tableau", "titre": "Crémant jeté en fin de journée, par exercice (le « servi » inclut le sur-versement ; le « jeté » est le fond de bouteille non servi)",
              "minWidth": 620,
              "colonnes": [{"label": "Exercice"}, {"label": "Jours servis", "align": "right"}, {"label": "Crémant servi", "align": "right"}, {"label": "Bouteilles ouvertes", "align": "right"}, {"label": "Crémant jeté", "align": "right"}],
              "lignes": ex_rows},
@@ -724,7 +766,7 @@ def page_cremant(d):
                 {"label": "Total perte crémant", "valeur": fr_l(total, 1), "sub": "sur-versement + jeté, 3 ans", "highlight": True, "couleur": "teal"},
             ]},
             {"kind": "paragraphe",
-             "texte": f"**Les deux pertes n’ont rien à voir et s’additionnent.** Le **sur-versement** (**{fr_l(surverse,1)}**) est le crémant **bu en plus** de la dose, pendant le service. Le **jeté** (**{fr_l(jete,1)}**, le solde de ~{fr_int(bouteilles)} bouteilles ouvertes sur {fr_int(jours_tot)} jours) est le crémant **détruit** parce que la bouteille entamée ne se garde pas. Ensemble : **{fr_l(total,1)}** de crémant acheté qui ne produit **aucune vente**."},
+             "texte": f"**Deux tranches disjointes, qui s’additionnent sans double compte.** Le **sur-versement** (**{fr_l(surverse,1)}**) est le crémant **bu en plus** de la dose, **dans le verre** du client. Le **jeté** (**{fr_l(jete,1)}**, le **fond non servi** de ~{fr_int(bouteilles)} bouteilles ouvertes sur {fr_int(jours_tot)} jours) est ce qui **reste dans la bouteille** et n’est jamais servi : `bouteille = servi + fond jeté`, aucun centilitre compté deux fois. Le sur-versement gonfle d’ailleurs le « servi », donc **réduit** le « jeté » : le calcul est prudent. Ensemble : **{fr_l(total,1)}** de crémant acheté qui ne produit **aucune vente**."},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
              "texte": f"Le crémant, mesuré jour par jour sur la caisse, fait **{fr_l(total,1)}** de perte sur trois ans (**{fr_l(surverse,1)}** de sur-versement + **{fr_l(jete,1)}** jeté). C’est un poste explicite de la cascade « Boissons disparues » : ni vente, ni disparition, mais du vin bu en plus de la dose, et des fonds de bouteille éventés."},
             {"kind": "piecejointe", "intro": "Calcul jour par jour (annexe C) : crémant servi, bouteilles ouvertes et solde jeté par exercice, libellés et doses :",
@@ -753,7 +795,7 @@ def page_degustation(d):
                  "litres_retenu": round(total_l)},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Le grief de l’administration",
+             "titre": "Ce que dit l'administration",
              "sousTitre": "Proposition p. 37-44 : tout le vin disponible est réputé vendable"},
             {"kind": "paragraphe",
              "texte": "La reconstitution **convertit en verres vendus la totalité du vin disponible**, sans rien réserver au **geste de dégustation** qui précède le service. Or ce geste est systématique et ne laisse **aucune trace en caisse** : il n’est ni un article, ni une remise."},
@@ -793,7 +835,14 @@ def calc_cuisine(bpd):
     total_l = sum(r["litres_3ans"] for r in par_alcool)
     total_cout = sum(r.get("cout", 0) for r in par_alcool)
     plats = bpd["cuisine"]
-    return {"par_alcool": par_alcool, "total_l": total_l, "total_cout": total_cout, "plats": plats}
+    # Données MENUS (fusion de l'ancienne sous-page 2.1.a) : plats de menu avec
+    # alcool, par période de carte, et probabilité de choix.
+    # Détail COMPLET du calcul (menus vendus × dose × proba = cl) : menusNonModifiesAlcool.
+    with open(os.path.join(SRC_DATA, "calculsBoissons", "menusNonModifiesAlcool.json"), encoding="utf-8") as f:
+        menus_detail = json.load(f)["periodes"]
+    return {"par_alcool": par_alcool, "total_l": total_l, "total_cout": total_cout, "plats": plats,
+            "menus": bpd.get("menusParPeriode", {}), "menu_alc": bpd.get("menuAlcoolParPeriode", {}),
+            "menus_detail": menus_detail}
 
 
 def page_cuisine(d):
@@ -818,13 +867,109 @@ def page_cuisine(d):
     alc_rows = [[cg(r["alcool"]), cd(fr_l(r["litres_3ans"])), cd(fr_eur(r.get("cout", 0)))] for r in d["par_alcool"]]
     alc_rows.append([cgf("Total alcool de cuisine"), cdf(fr_l(d["total_l"])), cdf(fr_eur(d["total_cout"]))])
     plat_rows = [[cg(p["plat"]), cg(p["type"]), cg(p["alcool"]), cd(fr_cl(p["dose_cl"]))] for p in d["plats"][:24]]
+
+    # --- MENUS : alcool par période + probabilité de choix (ex-sous-page 2.1.a) --
+    menus, menu_alc = d["menus"], d["menu_alc"]
+    EXOS_M = list(menu_alc.keys())
+    MENUS_L = round(sum(r["litres"] for ex in menu_alc.values() for r in ex))
+
+    def lignes_menu(periode):
+        out = []
+        for l in menus[periode]["lignes"]:
+            choix = "Obligatoire" if l.get("obligatoire") else fr_pct(l["proba_pct"], 0)
+            out.append([cg(l["menu"]), cg(l["service"]), cg(l["option"]),
+                        cg(l["alcool"].capitalize()), cd(fr_cl(l["dose_cl"])),
+                        cd(choix), cd(fr_cl(l["cl_moyen"], 1))])
+        return out
+
+    alcools_m = sorted({r["alcool"] for ex in menu_alc.values() for r in ex})
+
+    def _la(a, ex):
+        return next((r["litres"] for r in menu_alc[ex] if r["alcool"] == a), 0.0)
+
+    lignes_menu_total = []
+    for a in sorted(alcools_m, key=lambda a: -sum(_la(a, e) for e in EXOS_M)):
+        row = [cg(a.capitalize())]
+        tt = 0.0
+        for e in EXOS_M:
+            v = _la(a, e)
+            tt += v
+            row.append(cd(fr_l(v, 1) if v else "·"))
+        row.append(cdf(fr_l(tt, 1)))
+        lignes_menu_total.append(row)
+    _tm = [cgf("Total menus")]
+    _g = 0.0
+    for e in EXOS_M:
+        ss = sum(_la(a, e) for a in alcools_m)
+        _g += ss
+        _tm.append(cdf(fr_l(ss, 1)))
+    _tm.append(cdf(fr_l(_g, 1)))
+    lignes_menu_total.append(_tm)
+
+    COLS_MENU = [{"label": "Menu"}, {"label": "Service"}, {"label": "Plat (option)"},
+                 {"label": "Alcool"}, {"label": "Dose", "align": "right"},
+                 {"label": "Proba. de choix", "align": "right"}, {"label": "Dose moy./menu", "align": "right"}]
+    cols_menu_total = [{"label": "Alcool"}] + [{"label": e, "align": "right"} for e in EXOS_M] + [{"label": "Total 3 ans", "align": "right"}]
+    # Agrégat par alcool (3 ans) pour le diagramme.
+    _magg = {}
+    for ex in EXOS_M:
+        for r in menu_alc[ex]:
+            _magg[r["alcool"]] = _magg.get(r["alcool"], 0) + r["litres"]
+    graph_menus = [{"alcool": k.capitalize(), "Litres (3 ans)": round(v, 1)}
+                   for k, v in sorted(_magg.items(), key=lambda x: -x[1])]
+
+    sections_menus = [
+        {"kind": "chapitre", "source": "nous", "numero": 3,
+         "titre": "Alcool cuit dans les plats des menus (servis au forfait)",
+         "sousTitre": "Aucune boisson : c'est l'alcool incorporé dans les entrées, plats et desserts d'un menu, chiffré par la probabilité que chaque plat alcoolisé soit choisi."},
+        {"kind": "paragraphe",
+         "texte": f"Un menu se vend **au forfait** : le client choisit une entrée, un plat et un dessert. Certains de ces plats contiennent de l'alcool **de cuisine** (sauce au porto, fondue au Ravelin, baba au macvin, coupe au cassis…), **jamais un verre d'alcool servi**. Pour le chiffrer sans le surévaluer, on procède **plat par plat** : `dose du plat × probabilité que le client le choisisse` (lue dans la caisse) = **dose moyenne par menu vendu** ; multipliée par le **nombre de menus réellement vendus** sur la période = les litres ci-dessous. Total sur 3 exercices : **{fr_l(MENUS_L)}**."},
+        {"kind": "note",
+         "texte": "**Exemple chiffré (carte C).** 101,5 menus « Végétarien » ont été vendus ; leur plat « Assiette du père Grégoire » (Calvados, dose **4 cl**) n'est choisi qu'**1 fois sur 2** → 101,5 × 4 cl × 50 % = **203 cl** (2,03 L) de Calvados cuit, et non pas 101,5 × 4 = 406 cl. Chaque ligne des tableaux ci-dessous suit ce calcul ; le détail complet (chaque menu, chaque option, le nombre vendu, la dose et la probabilité) figure dans la pièce **Boissons-4-menus-par-periode.xlsx**."},
+        {"kind": "note",
+         "texte": f"**Aucun double compte cuisine / menus.** Plus haut, la **cuisine à la carte** ({fr_l(d['total_l'])}) : plats commandés à la carte, **itemisés un par un** en caisse. Ici, les **menus au forfait** ({fr_l(MENUS_L)}) : l'alcool des plats servis **dans** un menu, qui n'apparaît **pas** comme une ligne distincte (le menu est sonné en un seul article). Les deux périmètres sont **disjoints** : un plat n'est jamais compté deux fois."},
+    ]
+    # Tableau DÉTAILLÉ par période : pour chaque menu (× nombre vendu) et chaque
+    # plat alcoolisé, sa probabilité de choix et le volume d'alcool qui en résulte
+    # (cl = menus vendus × dose × probabilité). Source : menusNonModifiesAlcool.json.
+    COLS_MD = [{"label": "Menu (vendus)"}, {"label": "Plat alcoolisé (option)"}, {"label": "Alcool"},
+               {"label": "Dose", "align": "right"}, {"label": "Proba. de choix", "align": "right"},
+               {"label": "= Alcool obtenu", "align": "right"}]
+
+    def _nb(n):
+        return f"{n:g}".replace(".", ",")
+
+    for pk in sorted(d["menus_detail"].keys()):
+        p = d["menus_detail"][pk]
+        rows = []
+        ptot = 0.0
+        for mn, m in p["menus"].items():
+            nb = m.get("quantite_non_modifiee", 0)
+            for o in m["options_alcool"]:
+                proba = "Obligatoire (100 %)" if o.get("obligatoire") else fr_pct(o["proba_moyenne"] * 100, 0)
+                cl = o["cl_moyen"]
+                ptot += cl
+                rows.append([cg(f"{mn} ({_nb(nb)})"), cg(o["option"]), cg(o["alcool"].capitalize()),
+                             cd(fr_cl(o["dose_cl"])), cd(proba), cd(f"{round(cl)} cl")])
+        rows.append([cgf("Total période"), cg(""), cg(""), cd(""), cd(""), cdf(fr_l(ptot / 100, 1))])
+        sections_menus.append({"kind": "tableau",
+            "titre": f"Période {pk} : {p['dates']} (carte {p['carte']}, exercice {p['exercice']})",
+            "minWidth": 900, "colonnes": COLS_MD, "lignes": rows})
+    sections_menus.append({
+        "kind": "tableau", "titre": "Total d'alcool incorporé dans les menus, par alcool et par exercice",
+        "minWidth": 620, "colonnes": cols_menu_total, "lignes": lignes_menu_total})
+    sections_menus.append({
+        "kind": "graphique", "variante": "vertical", "hauteur": 300, "dataKey": "alcool",
+        "serie": {"name": "Litres (3 ans)", "couleur": "#1d4ed8"}, "format": "int",
+        "data": graph_menus})
+
     doc = {
         "meta": {"slug": slug, "source": "scripts/rendu-final-reconstitution-bloc2.py",
                  "grief": "Proposition p. 37, p. 44-48 - reperes D/E/G/Q (alcool cuisine)",
                  "litres_retenu": round(d["total_l"])},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Ce que retient l’administration",
+             "titre": "Ce que dit l'administration",
              "sousTitre": "Proposition p. 37 et p. 44-48 : repères D, E, G, Q (alcool de cuisine)"},
             {"kind": "paragraphe",
              "texte": "Le service reconnaît qu’une partie de l’alcool part en cuisine et l’« ampute » du volume vendable via ses **repères D (calvados), E (vin jaune), G (porto) et Q (macvin)** (Proposition p. 44-48). Mais il **n’en déduit qu’une fraction**, calculée à partir de quelques plats du menu et de proportions, en retenant des doses parfois minorées (ex. **1 cl** de porto par sauce, p. 45-46). L’alcool réellement incorporé dans **toute** la carte (fondues, sauces, flambages, babas, coupes glacées) est plus large."},
@@ -833,7 +978,13 @@ def page_cuisine(d):
              "sousTitre": "Doses confirmées par les dirigeants : celles-là mêmes que le fisc reprend"},
             {"kind": "paragraphe",
              "texte": "Nous reprenons **les doses confirmées par les dirigeants** (entrevue du 30 mars 2026, que le vérificateur retient lui-même : fondues 9-10 cl, babas/flambages 4 cl, sauces 1 cl) et nous les appliquons à **l’intégralité des plats alcoolisés vendus**, pas seulement à ceux des menus. Chaque centilitre ainsi tracé est de l’alcool **acheté puis cuit**, qui ne peut plus être vendu au verre."},
-            {"kind": "tableau", "titre": "Alcool de cuisine par produit (3 exercices)",
+            {"kind": "tableau", "titre": "1. La méthode : la dose d’alcool de chaque plat de la carte (extrait)",
+             "minWidth": 520,
+             "colonnes": [{"label": "Plat / préparation"}, {"label": "Type"}, {"label": "Alcool"}, {"label": "Dose", "align": "right"}],
+             "lignes": plat_rows},
+            {"kind": "paragraphe",
+             "texte": "**2. Le calcul.** On multiplie chaque dose par le **nombre de plats réellement vendus** (caisse, annexe C) sur les trois exercices, puis on agrège **alcool par alcool**. On obtient le volume d’alcool parti en cuisine :"},
+            {"kind": "tableau", "titre": "3. Le résultat : alcool de cuisine par produit (3 exercices)",
              "minWidth": 480,
              "colonnes": [{"label": "Alcool"}, {"label": "Litres", "align": "right"}, {"label": "Coût d’achat", "align": "right"}],
              "lignes": alc_rows},
@@ -842,14 +993,14 @@ def page_cuisine(d):
                 {"label": "Coût d’achat", "valeur": fr_eur(d["total_cout"]), "sub": "acheté puis cuit, jamais vendu", "couleur": "blue"},
                 {"label": "Doses", "valeur": "celles du fisc", "sub": "confirmées par les dirigeants (30/03/2026)", "couleur": "gray"},
             ]},
-            {"kind": "tableau", "titre": "Détail des doses par plat (extrait)",
-             "minWidth": 520,
-             "colonnes": [{"label": "Plat / préparation"}, {"label": "Type"}, {"label": "Alcool"}, {"label": "Dose", "align": "right"}],
-             "lignes": plat_rows},
+            *sections_menus,
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"La cuisine consomme **{fr_l(d['total_l'])}** d’alcool acheté sur trois ans (fondues au vin jaune et Ravelin, sauces au porto, babas et flambages au macvin et calvados, coupes au Bailey’s et cassis). Le fisc n’en déduit qu’une partie : tout le reste est compté à tort comme des verres vendus."},
-            {"kind": "piecejointe", "intro": "Alcool de cuisine par produit et dose plat par plat :",
-             "fichiers": [{"fichier": "pieces-defense/RF-alcool-cuisine-doses-plats.xlsx", "label": "RF Alcool de cuisine (par alcool + par plat)"}]},
+             "texte": f"En appliquant les doses confirmées par les dirigeants à toute la carte, la **cuisine à la carte** consomme **{fr_l(d['total_l'])}** d’alcool, et les **menus au forfait** **{fr_l(MENUS_L)}** de plus (pondérés par la probabilité de choix). Au total, **{fr_l(d['total_l'] + MENUS_L)}** d’alcool acheté part dans les plats sur trois ans, jamais dans un verre vendu. Le fisc n’en déduit qu’une fraction : le reste est compté à tort comme des verres vendus."},
+            {"kind": "piecejointe", "intro": "Recalcul intégral, étape par étape (lecture seule des annexes de caisse) :",
+             "fichiers": [
+                 {"fichier": "pieces-defense/RF-alcool-cuisine-doses-plats.xlsx", "label": "Alcool de cuisine à la carte : par alcool + dose par plat (XLSX)"},
+                 {"fichier": "pieces-defense/Boissons-4-menus-par-periode.xlsx", "label": "Alcool des menus par période : menus vendus × dose × probabilité (XLSX)"},
+             ]},
             {"kind": "interne", "audience": "avocat", "titre": "Angle",
              "texte": "Argument fort car il **retourne les propres doses du fisc** (repères D/E/G/Q) en les appliquant à toute la carte, pas aux seuls menus. Verser le document de composition des plats (doses par recette) confirmé par la gérante. Ne pas sur-jouer l’absinthe de la crème brûlée (chiffre OCR douteux côté fisc) : s’en tenir aux doses confirmées. Retirer cet encart de toute version remise."},
         ],
@@ -912,7 +1063,7 @@ def page_offerts(d, postes_itemises):
                  "litres_retenu": round(total_item)},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Ce que retient l’administration",
+             "titre": "Ce que dit l'administration",
              "sousTitre": "Proposition p. 51 : trois forfaits de 5 % et un abattement bière de 15 %"},
             {"kind": "paragraphe",
              "texte": "À la fin de la reconstitution, le service applique **5 % du CA reconstitué pour les offerts/remises, 5 % pour les pertes, 5 % pour la consommation du personnel**, et **15 % supplémentaires sur le volume de bière** (Proposition p. 51). Il reconnaît donc que ces consommations **existent**, mais il les fixe à des **forfaits ronds**, faute, dit-il, de pouvoir les identifier dans la caisse."},
@@ -927,6 +1078,8 @@ def page_offerts(d, postes_itemises):
              "lignes": item_rows},
             {"kind": "paragraphe",
              "texte": f"**Mise en perspective.** En sommant ces postes documentés et la casse irréductible, la **perte d’exploitation totale** (tout ce qui n’est pas vendu comme boisson, hors cuisine et menus) atteint **{fr_pct(d['exploit_pct'])}** des achats. C’est **au-dessus** de l’ordre de grandeur que **l’administration elle-même** retient en reconstitution de bar : dans l’affaire **CAA Paris, 17 mars 2021**, le vérificateur a déduit **22 % des achats** au titre du personnel, des offerts, des pertes et du vol, et la cour a **validé** la méthode. Les forfaits de 5 % du présent contrôle sont donc nettement **inférieurs** à la réalité du secteur."},
+            {"kind": "paragraphe",
+             "texte": f"**Ces ordres de grandeur sont confirmés par le secteur.** Les auditeurs d’inventaire spécialisés situent la **démarque totale** d’un bar (vol, casse, sur-versement, offerts, gaspillage) autour de **15 à 20 %** du produit servi, dont l’essentiel (de l’ordre de **75 %**) provient du **vol**, surtout interne. La **casse de verrerie** seule atteint couramment **10 à 33 % par an** du parc de verres. Autant de pertes bien réelles que les forfaits de 5 % du contrôle ne capturent pas. Sources : {lien(U_BARI_SHRINK)} ; {lien(U_WISK)} ; {lien(U_CASSE)}."},
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
              "texte": f"Les forfaits de 5 %+5 %+5 % du fisc **sous-estiment** la consommation sans vente : itemisée, elle atteint déjà **{fr_l(total_item)}** hors cuisine et menus, et la perte d’exploitation totale (**{fr_pct(d['exploit_pct'])}**) **dépasse** les **22 %** validés par la jurisprudence. Loin d’être généreux, ces abattements sont des **planchers**."},
             {"kind": "piecejointe", "intro": "Postes itemisés et comparaison aux forfaits / à la jurisprudence :",
@@ -943,67 +1096,175 @@ def page_offerts(d, postes_itemises):
 # 7. COEFFICIENT LIQUIDE -> SOLIDE
 # =============================================================================
 def calc_coefficient(bpd):
-    # Recapitulation par exercice citee dans la Proposition p. 52 (synthese OCR).
+    # Recapitulation par exercice (Proposition p. 52, synthese 06-methode-reconstitution-2.md)
+    # + CA reel liquides/solides de la caisse (analyses-independantes/boissons/data/
+    # ventes-caisse.json, genere depuis les ANNEXES D), d'ou le fisc TIRE son coefficient.
     recap = [
-        {"ex": "2022-2023", "liq_avant": 178341, "liq_apres": 151590, "coef": 2.94, "solides": 445675, "total": 597265},
-        {"ex": "2023-2024", "liq_avant": 169014, "liq_apres": 143662, "coef": 3.02, "solides": 433860, "total": 577522},
-        {"ex": "2024-2025", "liq_avant": 165065, "liq_apres": 140306, "coef": 3.10, "solides": 434947, "total": 575253},
+        {"ex": "2022-2023", "liq_avant": 178341, "liq_apres": 151590, "coef": 2.94,
+         "solides": 445675, "total": 597265, "declare": 404031,
+         "liq_reel": 102425, "sol_reel": 300747},
+        {"ex": "2023-2024", "liq_avant": 169014, "liq_apres": 143662, "coef": 3.02,
+         "solides": 433860, "total": 577522, "declare": 438658,
+         "liq_reel": 108919, "sol_reel": 329362},
+        {"ex": "2024-2025", "liq_avant": 165065, "liq_apres": 140306, "coef": 3.10,
+         "solides": 434947, "total": 575253, "declare": 435525,
+         "liq_reel": 106113, "sol_reel": 329452},
     ]
+    for r in recap:
+        r["ratio_reel"] = r["sol_reel"] / r["liq_reel"]        # = coefficient du fisc
+        r["fantome"] = r["solides"] - r["sol_reel"]            # cuisine extrapolee EN TROP
+        r["inflation_liq"] = r["liq_apres"] / r["liq_reel"]    # facteur de gonflement du liquide
+        r["discordance"] = r["total"] - r["declare"]
+        r["amplif"] = 1 + r["coef"]                            # total = liquide x (1 + coef)
     coef_moyen = sum(r["coef"] for r in recap) / len(recap)
     total_reconstitue = sum(r["total"] for r in recap)
-    return {"recap": recap, "coef_moyen": coef_moyen, "total_reconstitue": total_reconstitue}
+    total_fantome = sum(r["fantome"] for r in recap)
+    total_discordance = sum(r["discordance"] for r in recap)
+    return {"recap": recap, "coef_moyen": coef_moyen, "total_reconstitue": total_reconstitue,
+            "total_fantome": total_fantome, "total_discordance": total_discordance,
+            "part_fantome": total_fantome / total_discordance}
 
 
 def page_coefficient(d, litres_oublies, cout_litre):
     slug = "coefficient-liquide-solide"
     xlsx = os.path.join(PIECES, "RF-coefficient-liquide-solide.xlsx")
     recap = d["recap"]
+    coef2 = lambda v: f"{v:.2f}".replace(".", ",")
+    coef3 = lambda v: f"{v:.3f}".replace(".", ",")
+
+    # --- XLSX : 4 onglets (recap fisc, origine du coefficient, cuisine fantome, levier) ---
     ecrire_xlsx(
         xlsx, "Extrapolation de la cuisine - coefficient liquide -> solide",
-        "Le CA solides (cuisine) n'est pas mesure : il est obtenu en multipliant le CA liquides reconstitue par 2,94 / 3,02 / 3,10. Toute erreur sur les liquides est donc amplifiee ~3 fois.",
+        "Le CA cuisine n'est jamais mesure : il est obtenu en multipliant le CA liquides reconstitue "
+        "par 2,94/3,02/3,10. Or ce coefficient EST le ratio solides/liquides de la propre caisse du "
+        "restaurant : l'appliquer a un liquide gonfle recopie le gonflement sur la cuisine (cuisine "
+        "fantome = 75 % du redressement) et amplifie x4 toute erreur sur les boissons.",
         [(
             "Recap fisc par exercice",
-            ["Exercice", "CA liquides (apres abatt.)", "Coefficient", "CA solides", "Total reconstitue"],
-            [[r["ex"], r["liq_apres"], r["coef"], r["solides"], r["total"]] for r in recap]
-            + [["TOTAL 3 ans", sum(r["liq_apres"] for r in recap), round(d["coef_moyen"], 2), sum(r["solides"] for r in recap), d["total_reconstitue"]]],
-            [14, 22, 12, 16, 18],
+            ["Exercice", "CA liquides (apres abatt.)", "Coefficient", "CA solides reconstitue", "Total reconstitue", "CA declare", "Discordance"],
+            [[r["ex"], r["liq_apres"], r["coef"], r["solides"], r["total"], r["declare"], r["discordance"]] for r in recap]
+            + [["TOTAL 3 ans", sum(r["liq_apres"] for r in recap), round(d["coef_moyen"], 2),
+                sum(r["solides"] for r in recap), d["total_reconstitue"],
+                sum(r["declare"] for r in recap), d["total_discordance"]]],
+            [14, 22, 12, 20, 18, 14, 14],
+        ), (
+            "Origine du coefficient",
+            ["Exercice", "CA liquides REEL (caisse)", "CA solides REEL (caisse)", "Ratio solides/liquides reel", "Coefficient applique par le fisc"],
+            [[r["ex"], r["liq_reel"], r["sol_reel"], round(r["ratio_reel"], 3), r["coef"]] for r in recap],
+            [14, 22, 22, 24, 26],
+        ), (
+            "Cuisine fantome",
+            ["Exercice", "Cuisine REELLE (caisse)", "Cuisine reconstituee (fisc)", "Cuisine fantome (ecart)", "Gonflement du liquide"],
+            [[r["ex"], r["sol_reel"], r["solides"], r["fantome"], f"+{round((r['inflation_liq']-1)*100)} %"] for r in recap]
+            + [["TOTAL 3 ans", sum(r["sol_reel"] for r in recap), sum(r["solides"] for r in recap), d["total_fantome"], ""]],
+            [14, 22, 24, 22, 20],
+        ), (
+            "Effet de levier",
+            ["Exercice", "Coefficient", "Levier sur le total (1 + coef)", "Lecture"],
+            [[r["ex"], r["coef"], round(r["amplif"], 2), "1 EUR de liquide sur-estime -> " + coef2(r["amplif"]) + " EUR de redressement"] for r in recap],
+            [14, 12, 26, 56],
         )],
     )
-    recap_rows = [[cg(r["ex"]), cd(fr_eur(r["liq_apres"])), cd(str(r["coef"]).replace(".", ",")), cd(fr_eur(r["solides"])), cd(fr_eur(r["total"]))] for r in recap]
-    recap_rows.append([cgf("Total 3 ans"), cdf(fr_eur(sum(r["liq_apres"] for r in recap))), cdf("≈ " + f"{d['coef_moyen']:.2f}".replace(".", ",")), cdf(fr_eur(sum(r["solides"] for r in recap))), cdf(fr_eur(d["total_reconstitue"]))])
-    # Effet d'amplification : 1 € de liquide sur-estime -> coef € de CA total
-    amplif = d["coef_moyen"]
-    ca_liquide_oublie = litres_oublies * cout_litre  # ordre de grandeur au cout d'achat (plancher)
+
+    # --- Tableaux de la page ---
+    recap_rows = [[cg(r["ex"]), cd(fr_eur(r["liq_apres"])), cd(coef2(r["coef"])),
+                   cd(fr_eur(r["solides"])), cd(fr_eur(r["total"])), cd(fr_eur(r["declare"])),
+                   cd(fr_eur(r["discordance"]))] for r in recap]
+    recap_rows.append([cgf("Total 3 ans"), cdf(fr_eur(sum(r["liq_apres"] for r in recap))),
+                       cdf("≈ " + coef2(d["coef_moyen"])), cdf(fr_eur(sum(r["solides"] for r in recap))),
+                       cdf(fr_eur(d["total_reconstitue"])), cdf(fr_eur(sum(r["declare"] for r in recap))),
+                       cdf(fr_eur(d["total_discordance"]))])
+
+    origine_rows = [[cg(r["ex"]), cd(fr_eur(r["liq_reel"])), cd(fr_eur(r["sol_reel"]),),
+                     cd(coef3(r["ratio_reel"])), cdf(coef2(r["coef"]))] for r in recap]
+
+    fantome_rows = [[cg(r["ex"]), cd(fr_eur(r["sol_reel"])), cd(fr_eur(r["solides"])),
+                     cdf(fr_eur(r["fantome"])), cd(f"+{round((r['inflation_liq']-1)*100)} %")] for r in recap]
+    fantome_rows.append([cgf("Total 3 ans"), cdf(fr_eur(sum(r["sol_reel"] for r in recap))),
+                         cdf(fr_eur(sum(r["solides"] for r in recap))), cdf(fr_eur(d["total_fantome"])), cdf("")])
+
+    levier_rows = [[cg(r["ex"]), cd(coef2(r["coef"])), cdf("× " + coef2(r["amplif"]))] for r in recap]
+
+    part = round(d["part_fantome"] * 100)
+
     doc = {
         "meta": {"slug": slug, "source": "scripts/rendu-final-reconstitution-bloc2.py",
                  "grief": "Proposition p. 52 - coefficient liquide/solide 2,94 / 3,02 / 3,10",
                  "coef_moyen": round(d["coef_moyen"], 2)},
         "sections": [
             {"kind": "chapitre", "source": "fisc", "numero": 1,
-             "titre": "Ce que retient l’administration",
-             "sousTitre": "Proposition p. 52 : le CA cuisine est extrapolé, jamais mesuré"},
+             "titre": "Ce que dit l'administration",
+             "sousTitre": "Proposition p. 52 : le CA cuisine n’est pas reconstitué, il est extrapolé des boissons"},
             {"kind": "paragraphe",
-             "texte": "Le service ne reconstitue **pas** la cuisine : il **multiplie le CA liquides reconstitué par un coefficient** (« rapport liquide/solides pour 1 € ») de **2,94** (2023), **3,02** (2024) et **3,10** (2025) pour obtenir le « CA solides » (Proposition p. 52). Le CA cuisine, qui pèse les trois quarts du total reconstitué, **n’est donc jamais mesuré** : il est entièrement déduit du CA liquides."},
-            {"kind": "tableau", "titre": "Récapitulation du fisc par exercice (Proposition p. 52)",
-             "minWidth": 620,
-             "colonnes": [{"label": "Exercice"}, {"label": "CA liquides (après abatt.)", "align": "right"}, {"label": "Coef.", "align": "right"}, {"label": "CA solides", "align": "right"}, {"label": "Total reconstitué", "align": "right"}],
+             "texte": "Le service ne **reconstitue jamais** le chiffre d’affaires de la cuisine. Il **multiplie le CA liquides reconstitué par un coefficient** (« rapport liquide/solides pour 1 € ») de **2,94** (2022-2023), **3,02** (2023-2024) et **3,10** (2024-2025), puis ajoute ce « CA solides » au CA liquides pour obtenir le total reconstitué (Proposition p. 52). La cuisine pèse près des **trois quarts** du total reconstitué : elle n’est donc **jamais mesurée**, elle est entièrement déduite des boissons."},
+            {"kind": "tableau", "titre": "La méthode du fisc, exercice par exercice (Proposition p. 52)",
+             "minWidth": 900,
+             "colonnes": [{"label": "Exercice"}, {"label": "CA liquides (après abatt.)", "align": "right"},
+                          {"label": "Coef.", "align": "right"}, {"label": "CA solides reconstitué", "align": "right"},
+                          {"label": "Total reconstitué", "align": "right"}, {"label": "CA déclaré", "align": "right"},
+                          {"label": "Discordance", "align": "right"}],
              "lignes": recap_rows},
+            {"kind": "note",
+             "texte": "**D’où vient ce coefficient ?** Ce ne sont pas des repères de la profession : **2,94 / 3,02 / 3,10 sont, à 0,01 près, les ratios solides/liquides de la propre caisse du restaurant** (2,936 ; 3,024 ; 3,105), mesurés exercice par exercice. Le service les a donc **lus dans la comptabilité du restaurant** (annexes D)."},
+
             {"kind": "chapitre", "source": "nous", "numero": 2,
-             "titre": "Le coefficient amplifie l’erreur sur les liquides",
-             "sousTitre": "Chaque litre sur-estimé au verre devient ~3 fois plus de CA fictif"},
+             "titre": "Le coefficient sort de la caisse que le fisc rejette par ailleurs",
+             "sousTitre": "On ne peut pas tenir la caisse pour fiable sur le ratio et fausse sur les montants"},
             {"kind": "paragraphe",
-             "texte": f"Le coefficient est une **loupe** : comme le CA solides = CA liquides × {f'{amplif:.2f}'.replace('.', ',')}, **chaque euro de CA liquides sur-estimé engendre environ {f'{amplif:.2f}'.replace('.', ',')} € de CA total fictif** (1 € de liquides + {f'{amplif-1:.2f}'.replace('.', ',')} € de solides extrapolés). Or les pages précédentes montrent que la reconstitution des liquides est gonflée : elle valorise comme des verres vendus des litres jamais vendus au verre (cuisine, menus, sur-versement, crémant jeté, dégustations, conso du chef, freinte bière). En corrigeant les liquides **puis** en réappliquant le propre coefficient du fisc, le total reconstitué s’effondre bien plus vite que l’erreur de départ."},
+             "texte": "**Une contradiction au cœur de la méthode.** Pour fixer son coefficient, le service **fait confiance à la structure de la caisse** : il y lit le partage entre cuisine et boissons (ratios réels 2,936 ; 3,024 ; 3,105). Mais pour le CA liquides, il **rejette cette même caisse** et lui substitue un montant reconstitué **gonflé de +32 % à +48 %**. Les deux postures sont incompatibles : un ratio n’est valable que pour **le couple de montants sur lequel il est mesuré**."},
+            {"kind": "tableau", "titre": "Le coefficient du fisc EST le ratio de la caisse réelle",
+             "minWidth": 820,
+             "colonnes": [{"label": "Exercice"}, {"label": "CA liquides réel (caisse)", "align": "right"},
+                          {"label": "CA solides réel (caisse)", "align": "right"},
+                          {"label": "Ratio réel", "align": "right"}, {"label": "Coef. du fisc", "align": "right"}],
+             "lignes": origine_rows},
+            {"kind": "paragraphe",
+             "texte": "Mesuré sur **(liquide réel, solides réels)**, le coefficient de **3,105** ne décrit que ce couple. L’**accoler à un liquide gonflé** ne mesure plus rien : cela **transporte mécaniquement le gonflement des boissons sur la cuisine**. Source : la ventilation liquides/solides de la caisse (annexes D) figure dans la pièce téléchargeable ci-dessous."},
+
+            {"kind": "chapitre", "source": "nous", "numero": 3,
+             "titre": "Démonstration chiffrée : 75 % du redressement est une cuisine fantôme",
+             "sousTitre": "Le redressement « cuisine » n’est que l’écho du redressement « boissons »"},
+            {"kind": "paragraphe",
+             "texte": "Puisque le coefficient vaut `CA solides réel ÷ CA liquides réel`, le CA cuisine reconstitué est, **par construction**, égal au **CA cuisine réellement encaissé multiplié par le facteur de gonflement des boissons**. Exercice par exercice, le service ajoute donc à la cuisine réelle une **cuisine fantôme** strictement proportionnelle au gonflement des liquides :"},
+            {"kind": "tableau", "titre": "Cuisine réellement encaissée vs cuisine reconstituée par le fisc",
+             "minWidth": 880,
+             "colonnes": [{"label": "Exercice"}, {"label": "Cuisine réelle (caisse)", "align": "right"},
+                          {"label": "Cuisine reconstituée (fisc)", "align": "right"},
+                          {"label": "Cuisine fantôme", "align": "right"}, {"label": "Gonflement liquide", "align": "right"}],
+             "lignes": fantome_rows},
+            {"kind": "paragraphe",
+             "texte": f"Sur trois exercices, cette **cuisine fantôme atteint {fr_eur(d['total_fantome'])}**, soit **{part} % du redressement total** ({fr_eur(d['total_discordance'])}). Or la cuisine réelle est **enregistrée plat par plat** dans la caisse (annexes C-1 à C-3) : le service ne produit **aucune preuve** de repas supplémentaires, ni couverts en plus, ni achats alimentaires supplémentaires. Une cuisine ne sort pas **plus de 100 000 € de plats par an du néant**."},
+
+            {"kind": "chapitre", "source": "nous", "numero": 4,
+             "titre": "L’effet de levier : chaque euro de boisson sur-estimé pèse près de 4 € au total",
+             "sousTitre": "Total reconstitué = CA liquides × (1 + coefficient)"},
+            {"kind": "paragraphe",
+             "texte": "Comme `total reconstitué = CA liquides × (1 + coefficient)`, **chaque euro de CA liquides sur-estimé engendre près de 4 € de redressement total** (1 € de boisson + ~3 € de cuisine extrapolée). Le facteur exact est de **3,94 ; 4,02 ; 4,10** selon l’exercice."},
+            {"kind": "tableau", "titre": "Bras de levier du coefficient sur le total",
+             "minWidth": 520,
+             "colonnes": [{"label": "Exercice"}, {"label": "Coefficient", "align": "right"},
+                          {"label": "Levier sur le total (1 + coef.)", "align": "right"}],
+             "lignes": levier_rows},
             {"kind": "kpis", "items": [
-                {"label": "Coefficient moyen", "valeur": "× " + f"{d['coef_moyen']:.2f}".replace(".", ","), "sub": "2,94 / 3,02 / 3,10 selon l’exercice", "couleur": "red"},
-                {"label": "Effet d’amplification", "valeur": "≈ × 3", "sub": "1 € de liquides sur-estimé → ~3 € de CA fictif", "highlight": True, "couleur": "red"},
-                {"label": "CA cuisine", "valeur": "jamais mesuré", "sub": "entièrement extrapolé du liquide", "couleur": "gray"},
+                {"label": "Effet de levier", "valeur": "≈ × 4", "sub": "1 € de boisson sur-estimé → ~4 € de redressement", "highlight": True, "couleur": "red"},
+                {"label": "Cuisine fantôme", "valeur": f"{fr_eur(d['total_fantome'])}", "sub": f"{part} % du redressement, jamais mesurée", "couleur": "red"},
+                {"label": "CA cuisine", "valeur": "jamais mesuré", "sub": "déduit des boissons, pas des tickets", "couleur": "gray"},
             ]},
+            {"kind": "paragraphe",
+             "texte": "Conséquence directe : les sur-estimations de boissons démontrées **poste par poste** aux pages 2.1 à 2.7 (sur-versement, crémant jeté, dégustation, freinte bière, cuisine, menus, consommation du chef) ne se corrigent pas à l’unité. **Chaque litre rendu à sa vraie destination retranche près de 4 fois sa valeur** au total reconstitué : c’est ce qui fait repasser le total, coefficient compris, **sous le CA déclaré**."},
+
+            {"kind": "chapitre", "source": "nous", "numero": 5,
+             "titre": "Ce que le service aurait dû faire : mesurer la cuisine, qui est dans la caisse",
+             "sousTitre": "Une reconstitution doit être aussi précise que les données disponibles le permettent"},
+            {"kind": "paragraphe",
+             "texte": "Le restaurant remet une caisse qui enregistre **chaque plat et chaque menu vendu**, ticket par ticket (annexes C-1, C-2, C-3). Le CA cuisine y est **directement lisible**, sans aucune extrapolation. Substituer à cette donnée mesurée un **coefficient grossier appliqué à une base contestée** n’est pas une reconstitution : c’est une **amplification**. Le service n’a procédé à **aucun contrôle d’exhaustivité de la cuisine** (cohérence couverts ↔ achats alimentaires ↔ ventes), alors que tous les éléments figuraient au dossier."},
+
             {"kind": "alerte", "couleur": "teal", "titre": "Résultat",
-             "texte": f"Le coefficient n’ajoute aucune mesure : il **multiplie par ~{f'{amplif:.2f}'.replace('.', ',')}** l’erreur commise sur les liquides. La défense doit donc se concentrer sur les volumes de liquides (sur-versement, crémant, dégustation, cuisine, menus) : toute correction y est amplifiée ~3 fois sur le total, et fait passer le CA reconstitué **sous** le CA déclaré."},
-            {"kind": "piecejointe", "intro": "Récapitulation du fisc et mécanique d’amplification :",
-             "fichiers": [{"fichier": "pieces-defense/RF-coefficient-liquide-solide.xlsx", "label": "RF Coefficient liquide/solide (amplification)"}]},
+             "texte": f"Le coefficient n’apporte **aucune mesure**. Il (1) **quadruple** (× 1 + coef ≈ 4) toute sur-estimation des boissons, et (2) **recopie le gonflement des boissons sur une cuisine pourtant enregistrée plat par plat**, fabriquant **{fr_eur(d['total_fantome'])}** de cuisine fantôme, soit **{part} % du redressement** ({fr_eur(d['total_discordance'])}). Le service tire son coefficient de la caisse du restaurant mais en refuse les montants : la même caisse ne peut pas être **fiable pour le ratio et fausse pour les sommes**. Une fois les boissons rendues à leur vraie destination (pages 2.1 à 2.7), le total reconstitué, coefficient compris, **repasse sous le CA déclaré**."},
+            {"kind": "piecejointe", "intro": "Méthode du fisc, origine du coefficient (caisse réelle), cuisine fantôme et effet de levier, recalculables :",
+             "fichiers": [{"fichier": "pieces-defense/RF-coefficient-liquide-solide.xlsx", "label": "RF Coefficient liquide/solide : recap, origine, cuisine fantôme, levier (XLSX)"}]},
             {"kind": "interne", "audience": "avocat", "titre": "Angle",
-             "texte": "Le coefficient est le **point de levier** : inutile de le contester en lui-même (il vient des ratios de la profession), il faut l’utiliser **contre** le fisc en montrant qu’il amplifie ~3× toute sur-évaluation des liquides, laquelle est démontrée poste par poste dans les autres sous-pages du bloc 2. Relier explicitement à la page « Reconstitution par les volumes » (réconciliation du CA). Retirer cet encart de toute version remise."},
+             "texte": "Deux leviers complémentaires, tous deux chiffrés et sourcés : (1) l’**incohérence interne** (le coefficient est tiré de la caisse que le fisc rejette) et (2) la **cuisine fantôme** (75 % du redressement = écho du gonflement des liquides, sur une cuisine pourtant enregistrée). Insister sur le fait que le service **n’a pas mesuré** la cuisine alors qu’il le pouvait (annexes C) : c’est un vice de méthode opposable (reconstitution non probante car non appuyée sur les données disponibles). Relier à la page « Reconstitution par les volumes » (cascade des liquides) et aux pages couverts. Retirer cet encart de toute version remise."},
         ],
     }
     ecrire_json(slug, doc)
@@ -1013,7 +1274,7 @@ def page_coefficient(d, litres_oublies, cout_litre):
 # =============================================================================
 def main():
     items, bpd, conso = charger()
-    sv = calc_surversement(conso)
+    sv = calc_surversement(conso, items)
     bi = calc_biere(items)
     cr = calc_cremant()
     de = calc_degustation()
@@ -1036,7 +1297,7 @@ def main():
     obtenu = {"surversement": r1[1], "freinte": r2[1],
               "cremant_jete": cremant_jete, "cremant_surverse": cremant_surverse,
               "degustation": r4[1]}
-    attendu = {"surversement": 1058, "freinte": 129,
+    attendu = {"surversement": 720, "freinte": 129,
                "cremant_jete": 260, "cremant_surverse": 87, "degustation": 126}
     assert obtenu == attendu, (
         f"DRIFT cascade : {obtenu} != {attendu}. Mettre a jour les constantes de "

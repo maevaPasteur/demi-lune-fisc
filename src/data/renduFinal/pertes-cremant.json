@@ -10,7 +10,7 @@
    "kind": "chapitre",
    "source": "fisc",
    "numero": 1,
-   "titre": "Le grief de l’administration",
+   "titre": "Ce que dit l'administration",
    "sousTitre": "Proposition p. 46-47 : tout le crémant disponible est réputé vendu, au centilitre"
   },
   {
@@ -30,7 +30,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Crémant jeté en fin de journée, par exercice (sur-versement +23,6 % inclus dans le servi)",
+   "titre": "Crémant jeté en fin de journée, par exercice (le « servi » inclut le sur-versement ; le « jeté » est le fond de bouteille non servi)",
    "minWidth": 620,
    "colonnes": [
     {
@@ -171,12 +171,16 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Les deux pertes n’ont rien à voir et s’additionnent.** Le **sur-versement** (**86,7 L**) est le crémant **bu en plus** de la dose, pendant le service. Le **jeté** (**260,2 L**, le solde de ~952 bouteilles ouvertes sur 647 jours) est le crémant **détruit** parce que la bouteille entamée ne se garde pas. Ensemble : **346,9 L** de crémant acheté qui ne produit **aucune vente**."
+   "texte": "**Deux tranches disjointes, qui s’additionnent sans double compte.** Le **sur-versement** (**86,7 L**) est le crémant **bu en plus** de la dose, **dans le verre** du client. Le **jeté** (**260,2 L**, le **fond non servi** de ~952 bouteilles ouvertes sur 647 jours) est ce qui **reste dans la bouteille** et n’est jamais servi : `bouteille = servi + fond jeté`, aucun centilitre compté deux fois. Le sur-versement gonfle d’ailleurs le « servi », donc **réduit** le « jeté » : le calcul est prudent. Ensemble : **346,9 L** de crémant acheté qui ne produit **aucune vente**."
   },
   {
-   "kind": "alerte",
-   "couleur": "teal",
-   "titre": "Résultat",
+   "kind": "chapitre",
+   "source": "nous",
+   "titre": "Conclusion",
+   "numero": 3
+  },
+  {
+   "kind": "paragraphe",
    "texte": "Le crémant, mesuré jour par jour sur la caisse, fait **346,9 L** de perte sur trois ans (**86,7 L** de sur-versement + **260,2 L** jeté). C’est un poste explicite de la cascade « Boissons disparues » : ni vente, ni disparition, mais du vin bu en plus de la dose, et des fonds de bouteille éventés."
   },
   {
