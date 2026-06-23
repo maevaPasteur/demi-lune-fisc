@@ -146,6 +146,9 @@ export type Section =
   | { kind: 'titre'; texte: string; numero?: string }
   | { kind: 'alerte'; couleur: string; titre: string; texte: string }
   | { kind: 'kpis'; items: KpiItem[] }
+  // Panneau encadré (fond gris) regroupant un titre et une rangée de KPI.
+  // Sert à présenter un second niveau de lecture sous une première rangée de KPI.
+  | { kind: 'panneauKpis'; titre?: string; sousTitre?: string; items: KpiItem[] }
   | { kind: 'tableau'; titre?: string; minWidth?: number; colonnes: Colonne[]; lignes: Cellule[][] }
   // Grille de tuiles « table » (plan de salle) : chaque case = une table avec son
   // numéro et son type (réelle / virtuelle), rendue avec une icône.

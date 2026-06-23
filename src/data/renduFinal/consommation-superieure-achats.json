@@ -822,6 +822,32 @@
    ]
   },
   {
+   "kind": "panneauKpis",
+   "titre": "Et avec notre consommation réelle reconstituée (sur-versement, freinte, dégustation, offerts…) ?",
+   "sousTitre": "Le « surplus » brut de +3 047,8 L n'est pas une réserve de ventes cachées : c'est de l'alcool réellement consommé mais non vendu au verre, tracé poste par poste dans la reconstitution.",
+   "items": [
+    {
+     "label": "Consommation réelle finale",
+     "valeur": "9 079 L",
+     "sub": "85,5 % des achats : vendue + cuisine + sur-versement, freinte bière, crémant, dégustation, offerts",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Perte normale résiduelle",
+     "valeur": "1 543 L",
+     "sub": "14,5 % : casse, vol, évaporation",
+     "couleur": "gray"
+    },
+    {
+     "label": "Bilan ajusté",
+     "valeur": "≈ 0 L",
+     "sub": "10 622 achetés = 9 079 consommés + 1 543 perte : le bilan matière se ferme",
+     "couleur": "blue"
+    }
+   ]
+  },
+  {
    "kind": "paragraphe",
    "texte": "Au niveau qui a un sens économique : **toutes boissons agrégées** : le bilan matière se ferme **largement à l’excédent** : **10 622,0 L** achetés, **7 360,9 L** consommés, **213,3 L** de variation de stock, soit **+3 047,8 L** net. Loin d’une consommation supérieure aux achats, l’établissement a, globalement, **acheté plus qu’il n’a servi**. Les rares écarts négatifs par libellé (Calvados de cuisine, libellés frères des eaux-de-vie, couleur du Beaune) sont des **artefacts de rattachement**, neutralisés dès qu’on relie correctement caisse, factures et inventaire."
   },

@@ -1017,6 +1017,29 @@ function SectionView({ section }: { section: Section }) {
         </SimpleGrid>
       )
 
+    case 'panneauKpis':
+      return (
+        <Paper bg="gray.1" radius="lg" p={{ base: 'md', sm: 'lg' }}>
+          <Stack gap="md">
+            {section.titre && (
+              <Text ff="heading" fz={{ base: 16, sm: 18 }} fw={700}>
+                {section.titre}
+              </Text>
+            )}
+            {section.sousTitre && (
+              <Text size="sm" c="dimmed" mt={-8}>
+                {section.sousTitre}
+              </Text>
+            )}
+            <SimpleGrid cols={{ base: 2, md: Math.min(section.items.length, 4) }} spacing="lg">
+              {section.items.map((it) => (
+                <Kpi key={it.label} item={it} />
+              ))}
+            </SimpleGrid>
+          </Stack>
+        </Paper>
+      )
+
     case 'grilleTables':
       return (
         <Paper p={{ base: 'md', sm: 'lg' }} radius="lg">
