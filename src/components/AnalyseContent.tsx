@@ -1202,7 +1202,27 @@ function SectionView({ section }: { section: Section }) {
                       return (
                         <Table.Td key={ci} ta={cell.align ?? 'left'} fw={cell.fw}>
                           {cell.badge ? (
-                            <Badge color={cell.badge === 'ok' ? 'teal' : 'red'} variant="light" radius="sm">
+                            <Badge
+                              color={cell.badge === 'ok' ? 'teal' : 'red'}
+                              variant="light"
+                              radius="sm"
+                              styles={{
+                                root: {
+                                  height: 'auto',
+                                  maxWidth: '100%',
+                                  textTransform: 'none',
+                                  paddingTop: 4,
+                                  paddingBottom: 4,
+                                },
+                                label: {
+                                  whiteSpace: 'normal',
+                                  overflow: 'visible',
+                                  textOverflow: 'clip',
+                                  lineHeight: 1.35,
+                                  display: 'block',
+                                },
+                              }}
+                            >
                               {cell.v}
                             </Badge>
                           ) : cell.to ? (
