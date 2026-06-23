@@ -640,15 +640,111 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La « fluctuation » porte sur le **nombre d'articles**, jamais sur l'argent, et le tableau du service le prouve **lui-même**. Pour l'exercice clos au 31/03/2023, l'annexe B compte **40 218 articles** et l'annexe C **38 479 articles** (1 739 de différence). Or ces deux annexes affichent **exactement le même chiffre d'affaires : 403 370,42 €** (table de la section XIII de la proposition). Autrement dit, **1 739 articles d'écart = 0 € d'écart**. En rouvrant le fichier de détail (annexe C), nous retrouvons ce même **403 370,42 €** (somme des tickets) et **403 370,38 €** en recalculant ligne par ligne (quantité × prix unitaire), soit au centime près. Le nombre d'articles n'est donc pas une mesure de recettes. La comptabilité du cabinet concorde elle aussi : son CA TTC de 404 030,87 € est ce même chiffre **augmenté du seul compte 706800 « Pourboire »**. Les deux autres exercices concordent de la même façon, **à moins de 0,2 % près** (détail et méthode dans le fichier joint)."
+      "texte": "Le « nombre d'articles » du service n'est pas un nombre de ventes : c'est la **somme de la colonne « Qté »** du fichier de caisse. Pour l'exercice clos au 31/03/2023, cette somme vaut **40 217,8** dans l'annexe B et **38 479,3** dans l'annexe C (les « 40 218 » et « 38 479 » du service), soit **1 738,5 d'écart**. Or ces deux annexes affichent **exactement le même chiffre d'affaires : 403 370,42 €** (table de la section XIII de la proposition), que nous retrouvons **au centime** en recalculant l'annexe C ligne par ligne (quantité × prix unitaire : **403 370,38 €**). Autrement dit, **1 739 « articles » d'écart = 0 € d'écart**. Le nombre d'articles n'est donc pas une mesure de recettes. La comptabilité du cabinet concorde elle aussi : son CA TTC de 404 030,87 € est ce même chiffre **augmenté du seul compte 706800 « Pourboire »**. Les deux autres exercices concordent de la même façon, **à moins de 0,2 % près** (détail et méthode dans le fichier joint)."
     },
     {
       "kind": "titre",
-      "texte": "Le décompte de lignes dépend de l'export, pas des ventes"
+      "texte": "Cette « quantité » compte des parts d'articles partagés, pas des ventes"
     },
     {
       "kind": "paragraphe",
-      "texte": "Pourquoi ce décompte varie-t-il ? Parce qu'il **dépend de l'export**. Le service compare deux **rapports de nature différente** (leurs intitulés et leur structure le montrent) : les annexes **B** sont un état « **Prix de vente × quantité** » (12 colonnes), les annexes **C** le « **détail des tickets, ligne par ligne** » (24 colonnes). Ils sont en outre extraits par **deux requêtes distinctes**, lisibles dans le nom même des fichiers remis par le cabinet : les **B** filtrées **par exercice** (« 01042022 31032023 »), les **C** par **une requête unique sur toute la période** (« issu de 20220401 AND 20250331 »). Mieux : un **troisième export** des mêmes tickets (celui que nous analysons) donne **encore un autre décompte, 33 222 lignes**, pour le **même CA de 403 370,42 €**. Trois comptages, un seul chiffre d'affaires : un nombre de lignes est un **artefact de rapport** (menus décomposés ou non, modificateurs, lignes à 0 €), pas une donnée comptable."
+      "texte": "La cause de l'écart est vérifiable, fichier en main : **les deux annexes contiennent exactement le même nombre de lignes (33 222) et les mêmes tickets** ; seule la **valeur de la colonne « Qté » diffère**. Et cette colonne ne contient pas que des entiers : on y lit des quantités **fractionnaires** (0,5 ; 0,33 ; 0,25), signature des **additions partagées** (un café, une bouteille ou un dessert partagé à plusieurs est enregistré en parts). Les deux exports répartissent ces parts différemment : l'annexe **C** est plus « éclatée » (**5,0 %** de quantité fractionnaire : elle inscrit la part réelle sur chaque note séparée), l'annexe **B** plus « regroupée » (**2,6 %** : davantage d'unités pleines). D'où un total de quantités légèrement supérieur dans B, **sans le moindre euro de différence**. Un compte qui additionne des 0,33 n'est pas une mesure de recettes, c'est un indicateur de gestion."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Exemple : l'Expresso.** Chaque annexe comporte **1 978 lignes** d'Expresso, mais l'annexe B totalise **3 257,5 unités** contre **3 102,5** dans l'annexe C (écart +155). Le tableau ci-dessous montre la mécanique : l'annexe C compte davantage de cafés partagés en demi-parts et d'unités simples, là où l'annexe B en regroupe davantage par deux ou trois."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Expresso, exercice 2022-2023 : mêmes 1 978 lignes, quantités réparties différemment",
+      "minWidth": 560,
+      "colonnes": [
+        {
+          "label": "Valeur de « Qté » par ligne"
+        },
+        {
+          "label": "Lignes (annexe B)",
+          "align": "right"
+        },
+        {
+          "label": "Lignes (annexe C)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "0,5 (café partagé à deux)"
+          },
+          {
+            "v": "46",
+            "align": "right"
+          },
+          {
+            "v": "84",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "1"
+          },
+          {
+            "v": "898",
+            "align": "right"
+          },
+          {
+            "v": "932",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2"
+          },
+          {
+            "v": "807",
+            "align": "right"
+          },
+          {
+            "v": "751",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "3"
+          },
+          {
+            "v": "124",
+            "align": "right"
+          },
+          {
+            "v": "108",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total : 1 978 lignes (chaque annexe)",
+            "fw": 700
+          },
+          {
+            "v": "3 257,5 unités",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "3 102,5 unités",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce même mécanisme se retrouve sur **tous les produits sujets au partage** (cafés, desserts, menus, fondues, vins au verre), proportionnellement à leur fréquence de partage : l'écart total de **1 738,5** est ainsi **dispersé, jamais concentré**, et toujours **à argent constant**. Aucun produit identifiable ne « manque » : c'est l'écart entre deux façons de compter les parts d'articles partagés, pour le même chiffre d'affaires."
     },
     {
       "kind": "titre",
@@ -656,7 +752,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La caisse de La Demi-Lune est **certifiée NF525** (logiciel SERVILOG de l'éditeur AKEAD, certificat du 01/12/2018), et l'administration **détient ce certificat** : elle le reconnaît page 3 de la proposition (« le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 »). Or l'**article 286, I, 3° bis du CGI** impose que le logiciel enregistre les données de règlement **sans qu'elles puissent être altérées** (condition d'**inaltérabilité** définie par la doctrine BOI-TVA-DECLA-30-10-30). Modifier après coup le montant d'une recette est donc **techniquement impossible** sur une caisse certifiée, et c'est bien ce que l'on constate : le chiffre d'affaires est identique d'un export à l'autre. Un écart de **comptage de lignes** entre deux états relève du **fonctionnement du logiciel** (la responsabilité de l'éditeur, couverte par la certification), pas d'une manipulation du restaurant. Le restaurant ne saurait être tenu pour responsable de la manière dont un rapport de caisse certifié compte ses lignes."
+      "texte": "La caisse de La Demi-Lune est **certifiée NF525** (logiciel SERVILOG de l'éditeur AKEAD, certificat du 01/12/2018), et l'administration **détient ce certificat** : elle le reconnaît page 3 de la proposition (« le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 »). Or l'**article 286, I, 3° bis du CGI** impose que le logiciel enregistre les données de règlement **sans qu'elles puissent être altérées** (condition d'**inaltérabilité** définie par la doctrine BOI-TVA-DECLA-30-10-30). Modifier après coup le montant d'une recette est donc **techniquement impossible** sur une caisse certifiée, et c'est bien ce que l'on constate : le chiffre d'affaires est identique d'un export à l'autre. Un écart de **comptage des quantités** entre deux états relève du **fonctionnement du logiciel** (la responsabilité de l'éditeur, couverte par la certification), pas d'une manipulation du restaurant. Le restaurant ne saurait être tenu pour responsable de la manière dont un rapport de caisse certifié additionne les parts d'articles partagés."
     },
     {
       "kind": "paragraphe",
