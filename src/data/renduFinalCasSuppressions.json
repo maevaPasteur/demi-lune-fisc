@@ -1338,7 +1338,7 @@
    "id": "partage",
    "titre": "Paiement séparé / partage de table",
    "preuve": "Une suppression dont le prix réapparaît, divisé en fractions sommant à un entier, réparti sur au moins 2 notes encaissées dans la foulée",
-   "description": "Des convives d’une même table paient séparément. Le logiciel n’acceptant qu’un règlement par note, l’article commun est **supprimé** puis ré-enregistré **divisé** sur plusieurs notes (0,5 chacun, ou 0,33/0,33/0,34 à trois). La suppression n’efface donc aucune recette : son **prix réapparaît**, en quantités fractionnaires réparties sur ≥2 notes encaissées dans la foulée, et la **somme des fractions reconstitue un nombre entier** de parts. À gauche, chaque suppression et l’article qu’elle redevient ; à droite, les notes qui se le partagent (article surligné).",
+   "description": "Des convives d’une même table veulent des notes séparées. La caisse permet bien de régler une note **en plusieurs fois**, mais elle ne permet pas de remettre à chaque client une note ne portant **que ce qu’il paie** : l’article commun est donc **supprimé** puis ré-enregistré **divisé** sur plusieurs notes (0,5 chacun, ou 0,33/0,33/0,34 à trois). La suppression n’efface donc aucune recette : son **prix réapparaît**, en quantités fractionnaires réparties sur ≥2 notes encaissées dans la foulée, et la **somme des fractions reconstitue un nombre entier** de parts. À gauche, chaque suppression et l’article qu’elle redevient ; à droite, les notes qui se le partagent (article surligné).",
    "exemples": [
     {
      "date": "2022-04-16",
