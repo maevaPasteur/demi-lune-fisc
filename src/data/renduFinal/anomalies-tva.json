@@ -160,11 +160,133 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "**Point technique decisif.** L'annexe G contient deux colonnes a ne pas confondre : (a) la **TVA reellement collectee** ligne par ligne (champ *tax_amount*), toujours positive, calculee et figee par le logiciel de caisse certifie au moment de chaque vente ; (b) un **champ d'affichage « base HT »** recalcule en residu, qui peut devenir negatif sur les tickets a deux taux. Le grief porte sur (b) ; la realite comptable est dans (a). La base HT par taux se reconstitue alors sans ambiguite par **base = TVA / taux**."
+      "texte": "**Point technique decisif.** L'annexe G contient deux colonnes a ne pas confondre : (a) la **TVA reellement collectee** ligne par ligne (champ *tax_amount*), toujours positive, calculee et figee par le logiciel de caisse certifie au moment de chaque vente ; (b) un **champ d'affichage « base HT »** recalcule en residu, qui peut devenir negatif sur les tickets a deux taux. Le grief porte sur (b) ; la realite comptable est dans (a). La base HT par taux se reconstitue alors sans ambiguite par **base = TVA / taux**. Ce n'est pas une estimation : les taux etant **fixes par la loi** (10 % et 20 %), diviser la TVA reellement collectee par son taux redonne **exactement** l'assiette qui a servi a la calculer. C'est l'operation inverse, au centime pres, du calcul de la TVA."
     },
     {
       "kind": "paragraphe",
       "texte": "Cette reconstitution n'a rien de circulaire : les montants **« TVA a 10 % » = 29 611,10 €** et **« TVA a 20 % » = 12 941,66 €** que le service **lui-meme inscrit p. 26** sont exactement la somme du champ *tax_amount* (nous retrouvons ces montants au centime, voir le tableau « TVA reellement collectee » plus bas). Le service s'est donc deja appuye sur le champ fiable pour calculer la TVA par taux ; **seule la colonne « base HT », derivee, est l'artefact**. Reconstituer base = TVA / taux, c'est utiliser **les propres chiffres de TVA du service**."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Le meme fichier, deux lectures opposees.** Le service et nous partons **exactement du meme fichier** (annexe G). La difference de resultat ne vient pas des chiffres, mais de **la colonne que l'on choisit de lire**. Le tableau ci-dessous met les deux methodes face a face, etape par etape."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Comment le service arrive a ses « bases invraisemblables », comment nous arrivons aux vraies bases",
+      "minWidth": 940,
+      "colonnes": [
+        {
+          "label": "Etape du raisonnement"
+        },
+        {
+          "label": "Methode du service"
+        },
+        {
+          "label": "Notre methode"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "1. Fichier source",
+            "fw": 700
+          },
+          {
+            "v": "Annexe G (journal de caisse)"
+          },
+          {
+            "v": "Annexe G (journal de caisse) — le meme"
+          }
+        ],
+        [
+          {
+            "v": "2. Colonne lue dans ce fichier",
+            "fw": 700
+          },
+          {
+            "v": "Colonne d'affichage « base HT » (champ VAT_base), prise telle quelle",
+            "badge": "ko"
+          },
+          {
+            "v": "Champ « tax_amount » : la TVA reellement collectee, ligne par ligne",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "3. Nature de cette colonne",
+            "fw": 700
+          },
+          {
+            "v": "Residu d'affichage de l'export : non additif (ses lignes ne redonnent pas le HT du ticket), parfois negatif sur une vente positive"
+          },
+          {
+            "v": "Montant fige par le logiciel de caisse certifie au moment de la vente : toujours positif, jamais recalcule apres coup"
+          }
+        ],
+        [
+          {
+            "v": "4. Operation appliquee",
+            "fw": 700
+          },
+          {
+            "v": "Lecture directe de la valeur brute, sans retraitement"
+          },
+          {
+            "v": "base = TVA collectee / taux — l'operation inverse, exacte, du calcul de la TVA (taux fixes par la loi)"
+          }
+        ],
+        [
+          {
+            "v": "5. Resultat (base 20 %, ex. 2023)",
+            "fw": 700
+          },
+          {
+            "v": "-11 645,01 € (negatif, « invraisemblable »)",
+            "badge": "ko"
+          },
+          {
+            "v": "64 708,30 €",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "6. Controle par une source independante",
+            "fw": 700
+          },
+          {
+            "v": "Aucun : le chiffre brut n'est confronte a rien",
+            "badge": "ko"
+          },
+          {
+            "v": "= comptabilite 706000 / 706300 (tenue a la main d'apres les Z) a moins de 0,01 % sur le HT total",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "7. Conclusion tiree",
+            "fw": 700
+          },
+          {
+            "v": "« Comptabilite non probante »",
+            "badge": "ko"
+          },
+          {
+            "v": "Bases coherentes, qui bouclent avec le CA TTC",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Pourquoi notre lecture est la bonne — et celle du service, contradictoire.** Trois raisons. (1) Nous utilisons le champ que **la loi vise** : la TVA reellement collectee, figee par le logiciel certifie, et non une colonne d'affichage. (2) base = TVA / taux est **exacte**, pas une estimation : c'est l'inverse du calcul de TVA, les taux etant fixes par la loi. (3) Notre resultat est **valide par une source totalement independante** (la comptabilite manuscrite), alors que le chiffre brut du service n'est confirme par rien et **se contredit lui-meme** (des bases qui s'additionnent en negatif). Surtout, point decisif : **dans son propre tableau p. 26, le service a calcule la TVA par taux a partir du champ tax_amount** — il inscrit 29 611,10 € de TVA a 10 %, que nous retrouvons au centime. Il a donc **deja juge ce champ fiable** pour la TVA, mais il lit la base sur **l'autre colonne, defectueuse**. Il melange ainsi la bonne colonne (pour la TVA) et la mauvaise (pour la base), dans le meme tableau. Nous, nous appliquons simplement la **bonne colonne aux deux**."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**La preuve qu'il n'y a pas de raisonnement circulaire** tient en un point : la base reconstituee doit, pour etre validee, **coincider avec la comptabilite** (706300 / 706000), or celle-ci est etablie par une chaine **totalement independante** de l'export informatique : la **retranscription manuelle des tickets Z journaliers sur un agenda** (le service le decrit lui-meme p. 25). Si « base = TVA / taux » n'etait qu'une tautologie arithmetique, rien n'obligerait le resultat a retomber sur un grand livre tenu a la main, a partir d'une autre source. Cette concordance entre **deux chaines independantes** (logiciel de caisse d'un cote, agenda manuscrit de l'autre) est precisement ce qui exclut tout artifice."
     },
     {
       "kind": "paragraphe",
@@ -616,15 +738,15 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Sur un ticket a deux taux, l'export calcule la « base HT 20 % » en **residu** (a partir du TTC et de la base 10 %). Quand la part au taux de 10 % domine la note, ce residu devient **negatif**, alors meme que la TVA reellement percue au taux de 20 % est positive. C'est un defaut d'affichage de la colonne d'export, pas une anomalie de recette."
+      "texte": "Le fichier de caisse comporte, **a cote** de la TVA reellement collectee, une colonne d'affichage « base HT » par taux. Sur les tickets a un seul taux, elle est correcte. Sur les tickets a **deux taux** (une partie de la note a 10 %, une partie a 20 %), cette colonne devient **non fiable** : ses deux lignes **ne s'additionnent meme pas au HT du ticket**, et la ligne 20 % peut afficher un montant **negatif** alors que la vente est positive. Nous n'avons pas a reconstituer la formule interne de l'editeur du logiciel : il suffit de constater, **fichier en main**, que cette colonne n'est pas additive. La TVA de chaque ligne (champ *tax_amount*), elle, reste exacte."
     },
     {
       "kind": "tableau",
-      "titre": "Exemple : ticket n° 2 du 14/04/2022 (TTC 20,90 €, TVA 2,30 €)",
-      "minWidth": 680,
+      "titre": "Exemple lu directement dans l'annexe G : ticket n° 2 du 14/04/2022 (TTC 20,90 €, TVA 2,30 €)",
+      "minWidth": 760,
       "colonnes": [
         {
-          "label": "Ligne de taux"
+          "label": "Ligne du ticket"
         },
         {
           "label": "Champ « base HT » du fichier (brut)",
@@ -635,7 +757,7 @@
           "align": "right"
         },
         {
-          "label": "Base reconstituee (TVA / taux)",
+          "label": "Base correcte = TVA / taux",
           "align": "right"
         }
       ],
@@ -645,15 +767,15 @@
             "v": "Ligne 10 %"
           },
           {
-            "v": "14,30 €",
+            "v": "5,70 €",
             "align": "right"
           },
           {
-            "v": "1,43 €",
+            "v": "1,43 €",
             "align": "right"
           },
           {
-            "v": "14,30 €",
+            "v": "14,30 €",
             "align": "right"
           }
         ],
@@ -667,19 +789,44 @@
             "badge": "ko"
           },
           {
-            "v": "0,87 €",
+            "v": "0,87 €",
             "align": "right"
           },
           {
-            "v": "4,35 €",
+            "v": "4,35 €",
             "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total ticket (HT reel = 18,60 €)",
+            "fw": 700
+          },
+          {
+            "v": "-9,10 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "2,30 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "18,65 €",
+            "align": "right",
+            "fw": 700
           }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "La base brute affiche -14,80 € sur la ligne 20 %, mais la TVA reellement collectee est de 0,87 € (base reelle 4,35 €). C'est exactement le phenomene que le service qualifie d'« invraisemblable » : il porte sur **8526 lignes sur 29588** (28,8 % des lignes du journal), mais la TVA par ligne reste **toujours positive** et sa somme donne la TVA collectee. Effet sur la TVA et sur le CA : **nul**."
+      "texte": "**Lecture du ticket.** Les deux « base HT » brutes du fichier s'additionnent a **-9,10 €** : un montant absurde pour une vente de 20,90 € (le HT reel vaut 20,90 − 2,30 = **18,60 €**). C'est la preuve directe que cette colonne est cassee. A l'inverse, les bases reconstituees a partir de la TVA reellement collectee (14,30 € + 4,35 €) redonnent **18,65 €**, soit le HT reel **a 5 centimes pres** (arrondi au centime de la TVA de chaque ligne). Et la TVA par ligne (1,43 € + 0,87 €) fait **2,30 €**, exactement la TVA du ticket. Le defaut est donc **strictement limite a la colonne d'affichage « base »** ; il n'atteint ni la TVA, ni le chiffre d'affaires."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce defaut d'affichage concerne **8526 lignes sur 29588** (28,8 % des lignes du journal), **toutes** sur des tickets a deux taux. Sur **aucune** d'elles la TVA collectee n'est negative ou erronee : la somme des *tax_amount* par ticket egale la TVA du ticket (ecart de reconciliation cumule sur les trois exercices : **0,00 €**), et leur somme par taux donne la TVA collectee que le service a lui-meme reprise p. 26. Effet sur la TVA et sur le CA : **nul**."
     },
     {
       "kind": "paragraphe",

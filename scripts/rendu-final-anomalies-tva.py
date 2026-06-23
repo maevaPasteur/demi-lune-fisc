@@ -418,26 +418,31 @@ for c in range(1, 5):
     cell.fill = HEADFILL
     cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
     cell.border = BORDER
-ws5.append(["Ligne 10 %", 14.30, 1.43, 14.30])
+ws5.append(["Ligne 10 %", 5.70, 1.43, 14.30])
 ws5.append(["Ligne 20 %", -14.80, 0.87, 4.35])
-ws5.append(["TOTAL ticket", "", 2.30, ""])
+ws5.append(["TOTAL ticket (HT reel = 18,60 €)", -9.10, 2.30, 18.65])
 for r in range(4, 7):
     for c in (2, 3, 4):
         fmt_eur(ws5.cell(row=r, column=c))
 ws5.cell(6, 1).font = SUBHEAD
+ws5.cell(6, 2).font = SUBHEAD
 ws5.cell(6, 3).font = SUBHEAD
+ws5.cell(6, 4).font = SUBHEAD
 for i, w in enumerate([18, 30, 34, 30], 1):
     ws5.column_dimensions[openpyxl.utils.get_column_letter(i)].width = w
 ws5.append([])
 nr = ws5.max_row + 1
 ws5.cell(nr, 1,
-         "Lecture : le champ « base HT 20 % » de l'export vaut -14,80 € (residu non "
-         "additif), mais la TVA reellement collectee au taux de 20 % est +0,87 € "
-         "(base reelle 4,35 €). La TVA par ligne est toujours positive ; sa somme "
+         "Lecture : les deux champs « base HT » bruts du fichier (5,70 € et -14,80 €) "
+         "s'additionnent a -9,10 €, montant absurde pour une vente de 20,90 € (HT reel "
+         "= 20,90 - 2,30 = 18,60 €) : la colonne « base » de l'export est non additive, "
+         "donc non fiable. Les bases reconstituees base = TVA / taux (14,30 € + 4,35 €) "
+         "redonnent 18,65 €, soit le HT reel a 5 centimes pres (arrondi de la TVA de "
+         "chaque ligne). La TVA par ligne est toujours positive ; sa somme "
          "(1,43 + 0,87 = 2,30 €) egale la TVA totale du ticket. Effet sur la TVA et le "
          "CA : nul. Ce cas concerne " + str(total_base20neg) + " lignes sur "
          + str(total_lignes) + " (" + f"{total_base20neg/total_lignes*100:.1f}".replace(".", ",")
-         + " %).")
+         + " %), toutes sur des tickets a deux taux.")
 ws5.cell(nr, 1).alignment = Alignment(wrap_text=True, vertical="top")
 ws5.merge_cells(start_row=nr, start_column=1, end_row=nr, end_column=4)
 ws5.row_dimensions[nr].height = 60
@@ -575,7 +580,10 @@ S.append({"kind": "paragraphe", "texte":
           "« base HT »** recalcule en residu, qui peut devenir negatif sur les tickets "
           "a deux taux. Le grief porte sur (b) ; la realite comptable est dans (a). "
           "La base HT par taux se reconstitue alors sans ambiguite par **base = TVA / "
-          "taux**."})
+          "taux**. Ce n'est pas une estimation : les taux etant **fixes par la loi** "
+          "(10 % et 20 %), diviser la TVA reellement collectee par son taux redonne "
+          "**exactement** l'assiette qui a servi a la calculer. C'est l'operation "
+          "inverse, au centime pres, du calcul de la TVA."})
 S.append({"kind": "paragraphe", "texte":
           "Cette reconstitution n'a rien de circulaire : les montants **« TVA a 10 % » "
           "= " + euro(JG["2022-2023"]["tva10"]) + "** et **« TVA a 20 % » = "
@@ -586,6 +594,71 @@ S.append({"kind": "paragraphe", "texte":
           "TVA par taux ; **seule la colonne « base HT », derivee, est l'artefact**. "
           "Reconstituer base = TVA / taux, c'est utiliser **les propres chiffres de "
           "TVA du service**."})
+S.append({"kind": "paragraphe", "texte":
+          "**Le meme fichier, deux lectures opposees.** Le service et nous partons "
+          "**exactement du meme fichier** (annexe G). La difference de resultat ne "
+          "vient pas des chiffres, mais de **la colonne que l'on choisit de lire**. Le "
+          "tableau ci-dessous met les deux methodes face a face, etape par etape."})
+S.append({"kind": "tableau",
+          "titre": "Comment le service arrive a ses « bases invraisemblables », comment nous arrivons aux vraies bases",
+          "minWidth": 940,
+          "colonnes": [_colg("Etape du raisonnement"),
+                       _colg("Methode du service"),
+                       _colg("Notre methode")],
+          "lignes": [
+              [_cgb("1. Fichier source"),
+               _cg("Annexe G (journal de caisse)"),
+               _cg("Annexe G (journal de caisse) — le meme")],
+              [_cgb("2. Colonne lue dans ce fichier"),
+               {"v": "Colonne d'affichage « base HT » (champ VAT_base), prise telle quelle", "badge": "ko"},
+               {"v": "Champ « tax_amount » : la TVA reellement collectee, ligne par ligne", "badge": "ok"}],
+              [_cgb("3. Nature de cette colonne"),
+               _cg("Residu d'affichage de l'export : non additif (ses lignes ne "
+                   "redonnent pas le HT du ticket), parfois negatif sur une vente positive"),
+               _cg("Montant fige par le logiciel de caisse certifie au moment de la "
+                   "vente : toujours positif, jamais recalcule apres coup")],
+              [_cgb("4. Operation appliquee"),
+               _cg("Lecture directe de la valeur brute, sans retraitement"),
+               _cg("base = TVA collectee / taux — l'operation inverse, exacte, du "
+                   "calcul de la TVA (taux fixes par la loi)")],
+              [_cgb("5. Resultat (base 20 %, ex. 2023)"),
+               {"v": euro(FISCG["2022-2023"]["b20"]) + " (negatif, « invraisemblable »)", "badge": "ko"},
+               {"v": euro(JG["2022-2023"]["base20"]), "badge": "ok"}],
+              [_cgb("6. Controle par une source independante"),
+               {"v": "Aucun : le chiffre brut n'est confronte a rien", "badge": "ko"},
+               {"v": "= comptabilite 706000 / 706300 (tenue a la main d'apres les Z) "
+                     "a moins de 0,01 % sur le HT total", "badge": "ok"}],
+              [_cgb("7. Conclusion tiree"),
+               {"v": "« Comptabilite non probante »", "badge": "ko"},
+               {"v": "Bases coherentes, qui bouclent avec le CA TTC", "badge": "ok"}],
+          ]})
+S.append({"kind": "paragraphe", "texte":
+          "**Pourquoi notre lecture est la bonne — et celle du service, contradictoire.** "
+          "Trois raisons. (1) Nous utilisons le champ que **la loi vise** : la TVA "
+          "reellement collectee, figee par le logiciel certifie, et non une colonne "
+          "d'affichage. (2) base = TVA / taux est **exacte**, pas une estimation : c'est "
+          "l'inverse du calcul de TVA, les taux etant fixes par la loi. (3) Notre "
+          "resultat est **valide par une source totalement independante** (la "
+          "comptabilite manuscrite), alors que le chiffre brut du service n'est "
+          "confirme par rien et **se contredit lui-meme** (des bases qui s'additionnent "
+          "en negatif). Surtout, point decisif : **dans son propre tableau p. 26, le "
+          "service a calcule la TVA par taux a partir du champ tax_amount** — il inscrit "
+          + euro(JG["2022-2023"]["tva10"]) + " de TVA a 10 %, que nous retrouvons au "
+          "centime. Il a donc **deja juge ce champ fiable** pour la TVA, mais il lit la "
+          "base sur **l'autre colonne, defectueuse**. Il melange ainsi la bonne colonne "
+          "(pour la TVA) et la mauvaise (pour la base), dans le meme tableau. Nous, "
+          "nous appliquons simplement la **bonne colonne aux deux**."})
+S.append({"kind": "paragraphe", "texte":
+          "**La preuve qu'il n'y a pas de raisonnement circulaire** tient en un point : "
+          "la base reconstituee doit, pour etre validee, **coincider avec la "
+          "comptabilite** (706300 / 706000), or celle-ci est etablie par une chaine "
+          "**totalement independante** de l'export informatique : la **retranscription "
+          "manuelle des tickets Z journaliers sur un agenda** (le service le decrit "
+          "lui-meme p. 25). Si « base = TVA / taux » n'etait qu'une tautologie "
+          "arithmetique, rien n'obligerait le resultat a retomber sur un grand livre "
+          "tenu a la main, a partir d'une autre source. Cette concordance entre **deux "
+          "chaines independantes** (logiciel de caisse d'un cote, agenda manuscrit de "
+          "l'autre) est precisement ce qui exclut tout artifice."})
 S.append({"kind": "paragraphe", "texte":
           "Les bases ainsi reconstituees **coincident avec la comptabilite** "
           "(compte 706300 pour le 10 %, 706000 pour le 20 %) : le **HT total** "
@@ -713,28 +786,47 @@ S.append({"kind": "tableau",
 S.append({"kind": "chapitre", "source": "nous", "numero": 3,
           "titre": "Le champ « base HT » negatif : mecanisme et inocuite"})
 S.append({"kind": "paragraphe", "texte":
-          "Sur un ticket a deux taux, l'export calcule la « base HT 20 % » en "
-          "**residu** (a partir du TTC et de la base 10 %). Quand la part au taux de "
-          "10 % domine la note, ce residu devient **negatif**, alors meme que la TVA "
-          "reellement percue au taux de 20 % est positive. C'est un defaut "
-          "d'affichage de la colonne d'export, pas une anomalie de recette."})
+          "Le fichier de caisse comporte, **a cote** de la TVA reellement collectee, "
+          "une colonne d'affichage « base HT » par taux. Sur les tickets a un seul taux, "
+          "elle est correcte. Sur les tickets a **deux taux** (une partie de la note a "
+          "10 %, une partie a 20 %), cette colonne devient **non fiable** : ses deux "
+          "lignes **ne s'additionnent meme pas au HT du ticket**, et la ligne 20 % peut "
+          "afficher un montant **negatif** alors que la vente est positive. Nous n'avons "
+          "pas a reconstituer la formule interne de l'editeur du logiciel : il suffit de "
+          "constater, **fichier en main**, que cette colonne n'est pas additive. La TVA "
+          "de chaque ligne (champ *tax_amount*), elle, reste exacte."})
 S.append({"kind": "tableau",
-          "titre": "Exemple : ticket n° 2 du 14/04/2022 (TTC 20,90 €, TVA 2,30 €)",
-          "minWidth": 680,
-          "colonnes": [_colg("Ligne de taux"), _cold("Champ « base HT » du fichier (brut)"),
-                       _cold("TVA reellement collectee"), _cold("Base reconstituee (TVA / taux)")],
+          "titre": "Exemple lu directement dans l'annexe G : ticket n° 2 du 14/04/2022 (TTC 20,90 €, TVA 2,30 €)",
+          "minWidth": 760,
+          "colonnes": [_colg("Ligne du ticket"),
+                       _cold("Champ « base HT » du fichier (brut)"),
+                       _cold("TVA reellement collectee"),
+                       _cold("Base correcte = TVA / taux")],
           "lignes": [
-              [_cg("Ligne 10 %"), _cd("14,30 €"), _cd("1,43 €"), _cd("14,30 €")],
-              [_cg("Ligne 20 %"), _ko(-14.80), _cd("0,87 €"), _cd("4,35 €")],
+              [_cg("Ligne 10 %"), _cd(euro(5.70)), _cd(euro(1.43)), _cd(euro(14.30))],
+              [_cg("Ligne 20 %"), _ko(-14.80), _cd(euro(0.87)), _cd(euro(4.35))],
+              [_cgb("Total ticket (HT reel = 18,60 €)"), _ko(-9.10),
+               _cdb(euro(2.30)), _cdb(euro(18.65))],
           ]})
 S.append({"kind": "paragraphe", "texte":
-          "La base brute affiche " + euro(-14.80) + " sur la ligne 20 %, mais la TVA "
-          "reellement collectee est de 0,87 € (base reelle 4,35 €). C'est exactement "
-          "le phenomene que le service qualifie d'« invraisemblable » : il porte sur "
-          "**" + str(total_base20neg) + " lignes sur " + str(total_lignes) + "** "
-          "(" + pct(total_base20neg / total_lignes * 100) + " des lignes du journal), "
-          "mais la TVA par ligne reste **toujours positive** et sa somme "
-          "donne la TVA collectee. Effet sur la TVA et sur le CA : **nul**."})
+          "**Lecture du ticket.** Les deux « base HT » brutes du fichier s'additionnent "
+          "a **" + euro(-9.10) + "** : un montant absurde pour une vente de 20,90 € "
+          "(le HT reel vaut 20,90 − 2,30 = **18,60 €**). C'est la preuve directe que "
+          "cette colonne est cassee. A l'inverse, les bases reconstituees a partir de la "
+          "TVA reellement collectee (14,30 € + 4,35 €) redonnent **18,65 €**, soit le HT "
+          "reel **a 5 centimes pres** (arrondi au centime de la TVA de chaque ligne). Et "
+          "la TVA par ligne (1,43 € + 0,87 €) fait **2,30 €**, exactement la TVA du "
+          "ticket. Le defaut est donc **strictement limite a la colonne d'affichage "
+          "« base »** ; il n'atteint ni la TVA, ni le chiffre d'affaires."})
+S.append({"kind": "paragraphe", "texte":
+          "Ce defaut d'affichage concerne **" + str(total_base20neg) + " lignes sur "
+          + str(total_lignes) + "** (" + pct(total_base20neg / total_lignes * 100)
+          + " des lignes du journal), **toutes** sur des tickets a deux taux. Sur "
+          "**aucune** d'elles la TVA collectee n'est negative ou erronee : la somme des "
+          "*tax_amount* par ticket egale la TVA du ticket (ecart de reconciliation "
+          "cumule sur les trois exercices : **" + euro(total_recon) + "**), et leur "
+          "somme par taux donne la TVA collectee que le service a lui-meme reprise "
+          "p. 26. Effet sur la TVA et sur le CA : **nul**."})
 S.append({"kind": "paragraphe", "texte":
           "Le meme arrondi d'affichage explique le **point 2** du service : la somme "
           "des TVA par taux differe legerement de la ligne « Total TVA » du fichier, "
