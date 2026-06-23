@@ -192,6 +192,21 @@ calva_verre_cl = sum(sum(x["quantite"].get(e, 0) for e in EXOS) * (x.get("volume
                      for x in ITEMS if str(x.get("produit", "")).lower().startswith("calvados"))
 calva_verre_l = round(calva_verre_cl / 100.0, 1)
 
+# Conso Calvados recalculee a une dose de FLAMBAGE de 2 cl (au lieu de 4 cl).
+# Tout l'usage cuisine du Calvados est du flambage a 4 cl ; seul le verre
+# (boissons_seches) ne depend pas de la dose. La conso etant lineaire en la
+# dose de flambage :  conso_2cl = verre + (conso_4cl - verre) / 2.
+def _calva_conso_2cl():
+    rec = next((b for b in CONSO if b["nom_canonique"] == "Calvados"), None)
+    out = {}
+    for e in EXOS:
+        pp = (rec or {}).get("par_periode", {}).get(e, {})
+        seche = pp.get("detail_exact_l", {}).get("boissons_seches", 0.0)
+        tot_moyen = pp.get("total_l", {}).get("moyen", 0.0)
+        out[e] = round(seche + (tot_moyen - seche) / 2.0, 1)
+    return out
+calva_c2 = _calva_conso_2cl()
+
 
 def famille(canon_list, pred):
     c = {e: 0.0 for e in EXOS}
@@ -440,6 +455,21 @@ doc = {
                   f"révéler aucune vente non déclarée. Les **{fr_l(tot3(calva_a))}** de Calvados achetés "
                   f"(facturés, pièce jointe) couvrent l’ensemble du service au verre et la cuisine à une "
                   f"dose réaliste de flambé."},
+        {"kind": "paragraphe",
+         "texte": "**Hypothèse alternative : une dose de flambage réaliste de 2 cl.** Les calculs "
+                  "ci-dessus retiennent **4 cl** de Calvados par plat flambé. Or les références "
+                  "culinaires situent le flambage plus bas : le guide du cuisinier de JDS recommande, "
+                  "pour flamber un dessert, **« 7 à 8 cl d’alcool à 40° pour quatre personnes »**, soit "
+                  "**environ 2 cl par portion** "
+                  "([jds.fr, « Nos conseils pour flamber vos desserts à l’alcool »]"
+                  "(https://www.jds.fr/gastronomie/guide-du-cuisinier/nos-conseils-pour-flamber-vos-desserts-31607_A)). "
+                  "À cette dose, le verre reste identique mais l’alcool de cuisson est **divisé par "
+                  "deux**. Le tableau ci-dessous recalcule la consommation totale : achats et "
+                  "consommation **s’équilibrent alors quasiment chaque année**, avec un **excédent global "
+                  f"de {sgn_l(round(tot3(calva_a) - tot3(calva_c2), 1))} sur trois ans**. La prétendue "
+                  "« surconsommation » disparaît : elle ne tenait qu’à la dose de flambage retenue."},
+        tab_achat_conso("Hypothèse de consommation de Calvados en cuisine",
+                        [("Calvados", calva_a, calva_c2)], minw=560),
         {"kind": "piecejointe", "intro": "Achats de Calvados (factures) et consommation par exercice :",
          "fichiers": [{"fichier": F_CAL, "label": "RF : Calvados : achats vs consommation (XLSX)"}]},
 
@@ -474,6 +504,20 @@ doc = {
             {"label": "Achats (3 exercices)", "valeur": fr_l(g_achat), "sub": "factures nettes des avoirs", "couleur": "blue"},
             {"label": "Consommation", "valeur": fr_l(g_conso), "sub": "caisse + cuisine mesurées", "couleur": "blue"},
             {"label": "Bilan net", "valeur": sgn_l(g_net), "sub": "achats − conso − stock", "highlight": True, "couleur": "teal"},
+        ]},
+        {"kind": "panneauKpis",
+         "titre": "Et avec notre consommation réelle reconstituée (sur-versement, freinte, dégustation, offerts…) ?",
+         "sousTitre": "Le « surplus » brut de +3 047,8 L n’est pas une réserve de ventes cachées : c’est de "
+                      "l’alcool réellement consommé mais non vendu au verre, tracé poste par poste dans la "
+                      "reconstitution.",
+         "items": [
+            {"label": "Consommation réelle finale", "valeur": "9 079 L",
+             "sub": "85,5 % des achats : vendue + cuisine + sur-versement, freinte bière, crémant, dégustation, offerts",
+             "highlight": True, "couleur": "teal"},
+            {"label": "Perte normale résiduelle", "valeur": "1 543 L",
+             "sub": "14,5 % : casse, vol, évaporation", "couleur": "gray"},
+            {"label": "Bilan ajusté", "valeur": "≈ 0 L",
+             "sub": "10 622 achetés = 9 079 consommés + 1 543 perte : le bilan matière se ferme", "couleur": "blue"},
         ]},
         {"kind": "paragraphe",
          "texte": f"Au niveau qui a un sens économique : **toutes boissons agrégées** : le bilan matière "

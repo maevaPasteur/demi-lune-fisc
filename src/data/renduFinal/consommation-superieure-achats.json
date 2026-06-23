@@ -660,6 +660,100 @@
    "texte": "L’« excès » de Calvados (-47,5 L sur trois ans) **ne porte donc pas sur des ventes** : il vient entièrement d’une **dose de flambé estimée**, alcool qui part en partie à la flamme et qui, surtout, est un **coût de cuisine : jamais une recette**. Sur-estimer une dose de cuisson ne peut révéler aucune vente non déclarée. Les **73,0 L** de Calvados achetés (facturés, pièce jointe) couvrent l’ensemble du service au verre et la cuisine à une dose réaliste de flambé."
   },
   {
+   "kind": "paragraphe",
+   "texte": "**Hypothèse alternative : une dose de flambage réaliste de 2 cl.** Les calculs ci-dessus retiennent **4 cl** de Calvados par plat flambé. Or les références culinaires situent le flambage plus bas : le guide du cuisinier de JDS recommande, pour flamber un dessert, **« 7 à 8 cl d’alcool à 40° pour quatre personnes »**, soit **environ 2 cl par portion** ([jds.fr, « Nos conseils pour flamber vos desserts à l’alcool »](https://www.jds.fr/gastronomie/guide-du-cuisinier/nos-conseils-pour-flamber-vos-desserts-31607_A)). À cette dose, le verre reste identique mais l’alcool de cuisson est **divisé par deux**. Le tableau ci-dessous recalcule la consommation totale : achats et consommation **s’équilibrent alors quasiment chaque année**, avec un **excédent global de +12,1 L sur trois ans**. La prétendue « surconsommation » disparaît : elle ne tenait qu’à la dose de flambage retenue."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Hypothèse de consommation de Calvados en cuisine",
+   "minWidth": 560,
+   "colonnes": [
+    {
+     "label": "Produit"
+    },
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Achat (L)",
+     "align": "right"
+    },
+    {
+     "label": "Conso (L)",
+     "align": "right"
+    },
+    {
+     "label": "Achat − conso",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "2022-23"
+     },
+     {
+      "v": "32,0 L",
+      "align": "right"
+     },
+     {
+      "v": "21,1 L",
+      "align": "right"
+     },
+     {
+      "v": "+10,9 L",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "2023-24"
+     },
+     {
+      "v": "22,0 L",
+      "align": "right"
+     },
+     {
+      "v": "20,0 L",
+      "align": "right"
+     },
+     {
+      "v": "+2,0 L",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "2024-25"
+     },
+     {
+      "v": "19,0 L",
+      "align": "right"
+     },
+     {
+      "v": "19,8 L",
+      "align": "right"
+     },
+     {
+      "v": "-0,8 L",
+      "align": "right",
+      "badge": "ko"
+     }
+    ]
+   ]
+  },
+  {
    "kind": "piecejointe",
    "intro": "Achats de Calvados (factures) et consommation par exercice :",
    "fichiers": [
@@ -824,7 +918,7 @@
   {
    "kind": "panneauKpis",
    "titre": "Et avec notre consommation réelle reconstituée (sur-versement, freinte, dégustation, offerts…) ?",
-   "sousTitre": "Le « surplus » brut de +3 047,8 L n'est pas une réserve de ventes cachées : c'est de l'alcool réellement consommé mais non vendu au verre, tracé poste par poste dans la reconstitution.",
+   "sousTitre": "Le « surplus » brut de +3 047,8 L n’est pas une réserve de ventes cachées : c’est de l’alcool réellement consommé mais non vendu au verre, tracé poste par poste dans la reconstitution.",
    "items": [
     {
      "label": "Consommation réelle finale",
