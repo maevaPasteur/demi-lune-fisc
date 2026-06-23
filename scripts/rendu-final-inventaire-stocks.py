@@ -324,6 +324,24 @@ sections.append({
         "rejet de comptabilité."
     ),
 })
+# Card verte : la contradiction du fisc, mise en avant des le grief.
+sections.append({
+    "kind": "alerte",
+    "couleur": "teal",
+    "titre": "La contradiction majeure de l'administration",
+    "texte": (
+        "Le service **ne peut pas, à la fois**, juger l'inventaire trop incomplet pour être probant **et** s'en servir comme "
+        "socle de tous ses calculs. Après avoir qualifié l'inventaire d'« **irrégularité grave** » justifiant le rejet de la "
+        "comptabilité (p. 14), l'administration **fonde l'intégralité de sa reconstitution du chiffre d'affaires « boissons » "
+        "sur ces mêmes inventaires** : elle part des **stocks de début et de fin d'exercice** pour calculer les « **quantités "
+        "disponibles** » (achats ± variation de stock), dans ses **annexes 6-1 à 6-3 (p. 29-31, 35-37 et 41-43)** et toute sa "
+        "méthode de reconstitution (p. 36 et suivantes). Un inventaire jugé inexploitable ne peut pas, quelques pages plus "
+        "loin, devenir assez fiable pour chiffrer un redressement de plusieurs dizaines de milliers d'euros. "
+        "**De deux choses l'une : ou l'inventaire est exploitable, et le grief d'« inventaire incomplet » tombe ; ou il ne "
+        "l'est pas, et c'est alors toute la reconstitution du chiffre d'affaires de l'administration qui s'effondre avec "
+        "lui.** Le service ne peut pas retenir les deux à la fois."
+    ),
+})
 
 # 2) Notre demonstration
 sections.append({
