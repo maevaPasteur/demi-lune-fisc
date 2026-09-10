@@ -3,6 +3,7 @@ import {
   IconFiles,
   IconGavel,
   IconLayoutDashboard,
+  IconMessage2Exclamation,
   IconScale,
   type Icon,
 } from '@tabler/icons-react'
@@ -19,6 +20,7 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { to: '/', label: 'Accueil', icon: IconLayoutDashboard, end: true, ready: true },
+  { to: '/reponse-1', label: 'Réponse 1', icon: IconMessage2Exclamation, ready: true },
   { to: '/rendu-final', label: 'Rendu final', icon: IconScale, ready: true },
   { to: '/defense', label: 'Défense', icon: IconGavel, ready: true },
   { to: '/analyses', label: 'Analyses', icon: IconChartBar, ready: true },

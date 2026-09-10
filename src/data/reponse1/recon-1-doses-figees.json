@@ -1,0 +1,373 @@
+{
+  "meta": {
+    "slug": "recon-1-doses-figees",
+    "source": "Réponse DDFiP 39 du 04/09/2026, p. 60"
+  },
+  "entete": {
+    "positionService": "Le service maintient intégralement sa reconstitution sur ce point. Il retient que Maître THIVEND « considère donc qu’il ne peut y avoir que des sur-dosages et que ces sur-dosages expliquent tout », que dans le tableau joint en clé USB « tous les sur-dosages sont fixés arbitrairement pour tenter de justifier qu’il n’y a pas de ventes dissimulées », et que la réponse « n’apporte aucune preuve qu’il puisse y avoir des sur-dosages », s’agissant d’« une simple affirmation gratuite ». Il demande enfin pourquoi les sur-dosages seraient plus importants pour certains articles que pour d’autres, et conclut qu’il « ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 60).",
+    "reponseCourte": "Les taux ne sont pas des affirmations gratuites mais deux mesures publiées auxquelles le service n’oppose aucune mesure ; recalculé par régime de service, le sur-versement est de 494 L, soit moins du quart de l’écart que le stock lui-même autorise.",
+    "enjeu": "Le sur-versement au verre chiffré à 720 L sur les trois exercices, que le service refuse de retenir dans sa reconstitution.",
+    "statut": "partiel"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l’administration",
+      "sousTitre": "Point 1 des onze points de la reconstitution : « 1. Doses figées au centilitre (zéro sur-versement) : Proposition p. 37, 41-42 », p. 60 de la réponse du 04/09/2026."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le courrier introduit cette série en indiquant que le service « considère la méthode comme non probante et appuie ces positions en abordant onze points successifs » (p. 60). Le premier de ces onze points est celui des doses figées au centilitre. Comme pour les autres points, le courrier reprend d’abord les positions en présence dans deux encarts, puis développe sous le titre « Réponse du service : » la position que l’administration entend maintenir."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le débat tel que le courrier le présente",
+      "numero": "1.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le premier encart rappelle la position retenue dans la proposition de rectifications : « Service : Chaque verre serait servi exactement à la dose de la carte : 15 cl le vin, 50/75 cl le pichet, 4 cl les spiritueux. » (p. 60). Autrement dit, la reconstitution du service divise le volume d’alcool disponible par la dose affichée sur la carte, sans marge d’écart au service."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Vin au verre",
+          "valeur": "15 cl",
+          "sub": "dose de la carte retenue par le service (p. 60)"
+        },
+        {
+          "label": "Pichet",
+          "valeur": "50 / 75 cl",
+          "sub": "dose de la carte retenue par le service (p. 60)"
+        },
+        {
+          "label": "Spiritueux",
+          "valeur": "4 cl",
+          "sub": "dose de la carte retenue par le service (p. 60)"
+        }
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le second encart reproduit la réponse de Maître THIVEND (il porte lui aussi la mention « Service : » dans le courrier) : « Sans doseur, **la dose réellement servie dépasse la dose de la carte** (vin +23,6 %, cocktails +42 % selon Kerr 2008 ; spiritueux +20 % selon Wansink 2005). Conséquence directe sur la méthode : en divisant le volume disponible par une dose **sous-évaluée**, le service **surcompte le nombre de verres vendables** de **720 L** (pichet pré-mesuré exclu). Ce n’est pas une recette manquante, c’est un **verre de moins à reconstituer**. » (p. 60)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cet encart cite deux sources scientifiques (Kerr et coll., 2008 et Wansink & van Ittersum, BMJ 2005), accessibles aux adresses reproduites dans le courrier, et une pièce du dossier : « Pièces : 49-rf-sur-versement-au-verre.xlsx » (p. 60). Il précise également que les taux sont « appliqués à la consommation réelle (annexe D), non aux doses du service » (p. 60)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Tableau reproduit p. 60 : taux de sur-versement par régime de service",
+      "minWidth": 720,
+      "colonnes": [
+        {
+          "label": "Régime de service"
+        },
+        {
+          "label": "Sur-versement",
+          "align": "right"
+        },
+        {
+          "label": "Source"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Vins au verre / pichet (vin jaune, paille, macvin)"
+          },
+          {
+            "v": "+ 23,6 %",
+            "align": "right"
+          },
+          {
+            "v": "Kerr et coll., 2008 (480 boissons, 80 établissements)"
+          }
+        ],
+        [
+          {
+            "v": "Alcool des cocktails"
+          },
+          {
+            "v": "+ 42 %",
+            "align": "right"
+          },
+          {
+            "v": "Kerr et coll., 2008"
+          }
+        ],
+        [
+          {
+            "v": "Spiritueux, apéritifs, digestifs au verre"
+          },
+          {
+            "v": "+ 20 %",
+            "align": "right"
+          },
+          {
+            "v": "Wansink & van Ittersum, BMJ 2005 (86 barmen)"
+          }
+        ],
+        [
+          {
+            "v": "Sur-versement total (3 exercices)"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "720 L"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "Tableau reproduit tel qu’il figure p. 60 du courrier : le total de 720 L y est imprimé dans la colonne « Source » et non dans la colonne « Sur-versement »."
+    },
+    {
+      "kind": "titre",
+      "texte": "La réponse du service",
+      "numero": "1.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Premier argument : le caractère univoque de l’hypothèse.** Le service écrit : « Tout d’abord, dans son hypothèse, Maître THIVEND considère donc qu’il ne peut y avoir que des sur-dosages et que ces sur-dosages expliquent tout. » (p. 60). Il ne conteste pas ici l’existence même d’un écart au service, mais le fait que la réponse ne retienne qu’un sens d’écart et lui fasse porter la totalité de l’explication."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Deuxième argument : des taux jugés arbitraires.** Le service poursuit : « Puis, encore une fois, dans le tableau joint en clé USB pour soutenir cette position, tous les sur-dosages sont fixés arbitrairement pour tenter de justifier qu’il n’y a pas de ventes dissimulées. » (p. 60). Le grief vise donc le mode de fixation des taux dans le fichier remis, la formule « encore une fois » renvoyant à des reproches d’arbitraire déjà formulés sur d’autres points du courrier."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Troisième argument : l’absence de preuve.** « La réponse, en elle-même, n’apporte aucune preuve qu’il puisse y avoir des sur-dosages. Il s’agit d’une simple affirmation gratuite. » (p. 60). Le service place ainsi la charge de la démonstration du sur-versement sur l’entreprise, et qualifie d’affirmation non probante l’ensemble de l’argumentaire, sources scientifiques citées comprises."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Quatrième argument : la variation des taux selon les articles.** « Enfin, pourquoi les sur-dosages seraient plus importants pour des articles plutôt que pour d’autres (confère colonne du sur-versement de la réponse). » (p. 60). Le service interroge le fait que le tableau retienne trois taux distincts (+ 23,6 %, + 42 % et + 20 %) selon le régime de service, sans que la différenciation lui paraisse justifiée."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Conclusion du service sur ce point.** Le courrier tranche par une phrase soulignée : « A la lecture de la réponse, pour ces types de boissons, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications. » (p. 60). Aucun chiffre n’est modifié, aucun contre-calcul n’est produit et aucune source contraire n’est opposée aux deux études citées."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Sur-versement demandé",
+          "valeur": "720 L",
+          "sub": "3 exercices, pichet pré-mesuré exclu (p. 60)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Retenu par le service",
+          "valeur": "0 L",
+          "sub": "« aucune raison de modifier sa reconstitution » (p. 60)",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Contre-chiffrage produit",
+          "valeur": "Aucun",
+          "sub": "aucune source ni calcul opposé aux études citées (p. 60)",
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "Notre réponse",
+      "sousTitre": "Le service qualifie d’affirmation gratuite deux mesures publiées, sans en opposer aucune ; séparé par régime de service, le sur-versement est de 494 L et le stock en autorise quatre fois plus."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les taux ne sont ni gratuits ni arbitraires : ils sont **publiés et vérifiables**. Kerr et coll. ont mesuré le volume de 480 boissons servies dans 80 bars et restaurants : le verre de vin y est servi à 6,18 oz pour une mesure de référence de 5 oz, soit **+ 23,6 %**, et le cocktail contient 0,85 oz d’éthanol pour 0,60 oz de référence, soit **+ 42 %** ([https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/)). Wansink et van Ittersum ont mesuré 86 barmen professionnels à qui il était demandé de verser 44,3 ml : ils en versent 54,6 ml dans le verre bas et large, soit **+ 23,2 %** ([https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/)). Le taux de + 20 % que nous retenons pour les spiritueux au verre est donc **en deçà** de la mesure."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service n’oppose à ces mesures **aucune étude, aucun relevé, aucune pesée, aucun test de service**. Il ne dit pas non plus d’où viennent ses propres doses : les 15 cl, les 50 et 75 cl et les 4 cl sont recopiés de la carte, sans constatation matérielle sur place. Dans une procédure contradictoire, c’est à l’administration d’établir le bien-fondé des bases qu’elle retient et de motiver sa réponse aux observations (LPF, art. L. 57)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "À la question « pourquoi les sur-dosages seraient plus importants pour des articles plutôt que pour d’autres » (p. 60), la réponse est technique : le geste diffère. Un vin versé au verre, un alcool dosé dans un cocktail et un digestif servi au verre ne sont pas le même geste, et chaque taux correspond au régime de service mesuré par l’étude dont il est issu. Ce qui est rempli au contenant calibré (le pichet) ou servi scellé (la bouteille) reste à zéro."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Recalculé assiette par assiette sur les données de caisse, le sur-versement s’établit à **493,9 L** sur trois exercices et non à 720 L : la ligne du mémoire du 10 juillet 2026 incluait 960,2 L vendus en bouteilles, qui ne supportent aucun sur-versement. Nous le corrigeons. Cette demande reste très en deçà de ce que le stock autorise : 2 035,6 L d’écart entre le disponible au service et le volume vendu aux doses de la carte, dont le sur-versement n’absorbe que 24,3 %."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le même calcul, assiette par assiette (3 exercices, données de caisse)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Régime de service"
+        },
+        {
+          "label": "Volume vendu",
+          "align": "right"
+        },
+        {
+          "label": "Part de la base",
+          "align": "right"
+        },
+        {
+          "label": "Taux applicable",
+          "align": "right"
+        },
+        {
+          "label": "Sur-versement",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Vin au verre (versé à la main)"
+          },
+          {
+            "v": "1 119,9 L",
+            "align": "right"
+          },
+          {
+            "v": "27,4 %",
+            "align": "right"
+          },
+          {
+            "v": "23,6 %",
+            "align": "right"
+          },
+          {
+            "v": "264,3 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vin au pichet de 50 ou 75 cl (rempli au contenant calibré)"
+          },
+          {
+            "v": "1 431,5 L",
+            "align": "right"
+          },
+          {
+            "v": "35,0 %",
+            "align": "right"
+          },
+          {
+            "v": "0,0 %",
+            "align": "right"
+          },
+          {
+            "v": "0,0 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vin à la bouteille ou à la demi-bouteille"
+          },
+          {
+            "v": "960,2 L",
+            "align": "right"
+          },
+          {
+            "v": "23,5 %",
+            "align": "right"
+          },
+          {
+            "v": "0,0 %",
+            "align": "right"
+          },
+          {
+            "v": "0,0 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Spiritueux, apéritifs et digestifs au verre"
+          },
+          {
+            "v": "62,7 L",
+            "align": "right"
+          },
+          {
+            "v": "1,5 %",
+            "align": "right"
+          },
+          {
+            "v": "20,0 %",
+            "align": "right"
+          },
+          {
+            "v": "12,5 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Alcool des cocktails (hors crémant)"
+          },
+          {
+            "v": "516,7 L",
+            "align": "right"
+          },
+          {
+            "v": "12,6 %",
+            "align": "right"
+          },
+          {
+            "v": "42,0 %",
+            "align": "right"
+          },
+          {
+            "v": "217,0 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total"
+          },
+          {
+            "v": "4 091,1 L",
+            "align": "right"
+          },
+          {
+            "v": "100,0 %",
+            "align": "right"
+          },
+          {
+            "v": "12,07 %",
+            "align": "right"
+          },
+          {
+            "v": "493,9 L",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service développe le même sujet, beaucoup plus longuement, dans la partie N de sa réponse (p. 78 à 81) : contenants prétendument impossibles de 17,64 cl, 58,80 cl et 88,20 cl, goût des cocktails, volatilité des taux, taux de disparition négatif dans son propre tableau. La démonstration complète, avec la fourchette bornée par le stock boisson par boisson, figure à la page [Sur-versement au verre (partie N)](/reponse-1/sur-versement-au-verre)."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Le détail du calcul, régime de service par régime de service, puis boisson par boisson et exercice par exercice :",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-sur-versement-fourchette.xlsx",
+          "label": "R1 Sur-versement au verre : régimes de service et fourchette bornée par le stock, par boisson et par exercice"
+        }
+      ]
+    }
+  ]
+}

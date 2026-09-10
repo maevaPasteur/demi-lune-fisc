@@ -1,0 +1,634 @@
+{
+  "meta": {
+    "slug": "recon-4-degustation",
+    "source": "Réponse DDFiP 39 du 04/09/2026, p. 64",
+    "lettre": ""
+  },
+  "entete": {
+    "positionService": "Le service refuse toute déduction au titre du vin offert en dégustation. Il oppose d’abord un argument de fait : lors d’une dégustation, le client « ne consomme pas la totalité de l’échantillon versé » et « conserve son verre qui est finalement rempli à hauteur du solde de la dose vendue » (p. 64). Il soutient ensuite que le comptage note par note « part du principe que du vin est consommé pour chaque note », alors qu’un taux offert/perte/consommation du personnel de 15 % est déjà retenu en fin de méthode de reconstitution et que tous les clients ne consomment pas du vin. Il chiffre enfin cet abattement de 15 % exercice par exercice (198 L pour les vins au BIB, environ 500 L pour les bouteilles bouchées sur trois ans) pour conclure qu’il « ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 64).",
+    "reponseCourte": "Le service ne discute aucun fait : il oppose un forfait de 15 % qu’il a lui-même intégralement affecté aux offerts, aux pertes et à la consommation du personnel, et dont les 198 litres « vins au BIB » portent sur le vin que le décompte exclut.",
+    "enjeu": "Le volume de vin réputé vendable : 126 L de dégustations offertes sur trois ans, que le service refuse de retrancher au motif que son abattement forfaitaire de 15 % les couvrirait déjà.",
+    "statut": "demonte"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l’administration",
+      "sousTitre": "Réponse aux observations du contribuable du 04/09/2026, page 64, point « 4. Aucune dégustation offerte », renvoyant à la proposition de rectification p. 37 à 44."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Dose de dégustation retenue par la défense",
+          "valeur": "2 cl",
+          "sub": "« une larme », avant de servir un vin nommé (p. 64)"
+        },
+        {
+          "label": "Vin offert en dégustation sur 3 ans",
+          "valeur": "126 L",
+          "sub": "Comptage note par note, annexe C (p. 64)"
+        },
+        {
+          "label": "Volume repris par le service",
+          "valeur": "125,80 L",
+          "sub": "Chiffre cité six fois dans la réponse du service (p. 64)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Taux offert / perte / consommation du personnel",
+          "valeur": "15 %",
+          "sub": "« déjà retenu (en fin de méthode de reconstitution) » (p. 64)",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Abattement 15 % sur les vins au BIB (3 ans)",
+          "valeur": "198 L",
+          "sub": "« arrondis », soit plus que les 125,80 L proposés (p. 64)"
+        },
+        {
+          "label": "Abattement 15 % sur les bouteilles bouchées (3 ans)",
+          "valeur": "500 L",
+          "sub": "« près de 4 fois supérieur aux 125,80 litres » (p. 64)",
+          "highlight": true,
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Le débat tel que le courrier le présente",
+      "numero": "1.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le courrier ouvre le point 4 par un encadré en deux lignes. La position du service y est résumée ainsi : « **Tout le vin disponible serait vendable, sans rien réserver au geste de dégustation.** » (p. 64). La réponse de Maître THIVEND y est résumée de la façon suivante : « **Le goûter de 2 cl avant de servir un vin nommé ne laisse aucune trace en caisse. Compté note par note (annexe C) : 126 L.** » (p. 64)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le courrier reproduit ensuite les paramètres de ce comptage, présentés comme une « **règle stricte appliquée ligne à ligne sur le détail des tickets (annexe C)** » (p. 64), et cite les pièces correspondantes : « **Comptage note par note : annexe C (RF-degustation-par-note.xlsx)** », pièce « **52-rf-degustation-par-note.xlsx** »."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les paramètres du comptage de la défense, tels que reproduits par le service (p. 64)",
+      "minWidth": 620,
+      "colonnes": [
+        {
+          "label": "Paramètre"
+        },
+        {
+          "label": "Valeur"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Règle"
+          },
+          {
+            "v": "1 dégustation par vin nommé et par note (addition)"
+          }
+        ],
+        [
+          {
+            "v": "Dose"
+          },
+          {
+            "v": "2 cl (une larme)"
+          }
+        ],
+        [
+          {
+            "v": "Génériques « verre de vin » / bouteilles"
+          },
+          {
+            "v": "exclus"
+          }
+        ],
+        [
+          {
+            "v": "Vin offert en dégustation (3 ans)"
+          },
+          {
+            "v": "126 L"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Premier argument du service : le client finit son échantillon dans le solde de la dose vendue",
+      "numero": "1.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La « Réponse du service » s’ouvre sur un argument de fait, tiré de ce que le service présente comme le déroulement habituel d’une dégustation : « **Généralement, dans le cadre d’une dégustation, avant consommation, il est nettement plus courant que le client, une fois qu’il a goûté le vin : ne consomme pas la totalité de l’échantillon versé ; conserve son verre qui est finalement rempli à hauteur du solde de la dose vendue.** » (p. 64)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Autrement dit, pour le service, la larme de dégustation ne s’ajoute pas à la dose vendue : elle s’y **impute**, le verre du client étant complété à concurrence de la dose facturée. Le service n’apporte aucune observation matérielle, aucun constat sur place ni aucune pièce à l’appui de cette description : il la présente comme ce qui est « nettement plus courant » (p. 64)."
+    },
+    {
+      "kind": "titre",
+      "texte": "Deuxième argument : le comptage note par note supposerait que chaque note comporte du vin",
+      "numero": "1.3"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reproche ensuite au comptage de la défense sa base même : « **La réponse part du principe que du vin est consommé pour chaque note.** » (p. 64). Il en tire deux objections, expressément listées : « **C’est complètement occulté le fait que : le service a déjà retenu un taux offert/perte/consommation du personnel de 15 % (en fin de méthode de reconstitution) ; que tous les clients (et donc toutes les notes) ne consomment pas tous du vin.** » (p. 64)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le premier point est un argument de **double emploi** : la dégustation serait déjà couverte par l’abattement forfaitaire de 15 % appliqué en fin de reconstitution au titre des offerts, des pertes et de la consommation du personnel. Le second est un argument de **surestimation** : toutes les notes ne comportant pas du vin, une règle « 1 dégustation par vin nommé et par note » gonflerait le volume revendiqué."
+    },
+    {
+      "kind": "titre",
+      "texte": "Troisième argument : le chiffrage de l’abattement de 15 %, exercice par exercice",
+      "numero": "1.4"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service développe ensuite l’argument central du point 4 : « **De plus, le service a déjà retranché une fraction importante du volume de vin disponible (Cf méthode de reconstitution) pour minorer les chiffres d’affaires reconstitués. Les calculs ci-dessous le démontrent** » (p. 64). Suivent deux séries de calculs, l’une pour les vins au BIB, l’autre pour les bouteilles bouchées, chacune obtenue en appliquant 15 % au volume de vin disponible de l’exercice."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les volumes que le service dit avoir déjà retranchés au titre du taux de 15 % (p. 64)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Catégorie"
+        },
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Base retenue par le service",
+          "align": "right"
+        },
+        {
+          "label": "Taux",
+          "align": "right"
+        },
+        {
+          "label": "Volume retranché",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Vins au BIB"
+          },
+          {
+            "v": "Exercice 1"
+          },
+          {
+            "v": "45 433 cl",
+            "align": "right"
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "67,99 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vins au BIB"
+          },
+          {
+            "v": "Exercice 2"
+          },
+          {
+            "v": "44 079 cl",
+            "align": "right"
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "66,12 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vins au BIB"
+          },
+          {
+            "v": "Exercice 3"
+          },
+          {
+            "v": "42 696 cl",
+            "align": "right"
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "64,04 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vins au BIB"
+          },
+          {
+            "v": "Cumul 3 exercices"
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "198 L (arrondis)",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vins bouteilles bouchées"
+          },
+          {
+            "v": "Exercice 1"
+          },
+          {
+            "v": "1 169 L",
+            "align": "right"
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "175,35 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vins bouteilles bouchées"
+          },
+          {
+            "v": "Exercice 2"
+          },
+          {
+            "v": "1 153,87 L",
+            "align": "right"
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "173,08 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vins bouteilles bouchées"
+          },
+          {
+            "v": "Exercice 3"
+          },
+          {
+            "v": "1 020,75 L",
+            "align": "right"
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "153,11 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vins bouteilles bouchées"
+          },
+          {
+            "v": "Cumul 3 exercices"
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "500 L (arrondis)",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Proposition de la défense"
+          },
+          {
+            "v": "Cumul 3 exercices"
+          },
+          {
+            "v": "Comptage note par note, annexe C",
+            "align": "right"
+          },
+          {
+            "v": "2 cl",
+            "align": "right"
+          },
+          {
+            "v": "125,80 L",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur les vins au BIB, le service souligne la logique annuelle de son calcul : « **Ces calculs sont faits EXERCICE PAR EXERCICE. Le total de 198 litres (arrondis) sur les trois exercices dépasse donc largement les 125,80 litres proposées par Maître THIVEND** » (p. 64). C’est donc ici le **cumul sur trois ans** qui est comparé aux 125,80 L, chaque exercice pris isolément (67,99 L, 66,12 L, 64,04 L) restant inférieur à ce volume."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur les bouteilles bouchées, la comparaison est faite à deux niveaux : « **Ces calculs sont aussi faits EXERCICE PAR EXERCICE. Le total annuel dépasse déjà largement les 125,80 litres proposées par Maître THIVEND. Quant au cumul de 500 litres (arrondis) sur les trois exercices est près de 4 fois supérieur aux 125,80 litres proposées par Maître THIVEND** » (p. 64)."
+    },
+    {
+      "kind": "titre",
+      "texte": "La conclusion du service : aucune modification de la reconstitution",
+      "numero": "1.5"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service en tire une conclusion générale, soulignée dans le courrier : « **Ainsi, pour les deux catégories de vin, la quantité soustraite, PAR EXERCICE, par le service est déjà beaucoup plus importante que la quantité proposée globalement sur 3 ans par Maître THIVEND.** » (p. 64). Le raisonnement repose donc entièrement sur une comparaison de volumes : puisque l’abattement forfaitaire de 15 % dépasse le volume de dégustations revendiqué, ce dernier serait sans objet."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le point se clôt sans aucune concession chiffrée : « **Par conséquent, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications.** » (p. 64). Le grief « aucune dégustation offerte » est donc maintenu en totalité, et les montants des pages 37 à 44 de la proposition de rectification restent inchangés."
+    },
+    {
+      "kind": "alerte",
+      "couleur": "red",
+      "titre": "Le cœur de la position du service tient en une phrase",
+      "texte": "L’abattement forfaitaire de 15 % pour offerts, pertes et consommation du personnel absorberait, à lui seul et exercice par exercice, les 125,80 L de dégustations comptées note par note : le service refuse en conséquence toute déduction supplémentaire et maintient la reconstitution à l’identique (p. 64)."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "Notre réponse",
+      "sousTitre": "Un abattement forfaitaire déjà affecté à trois autres postes ne peut pas absorber un décompte lu ligne à ligne dans la caisse."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service ne conteste aucun fait. Ni les **6 292 dégustations**, ni la dose de **2 cl**, ni la règle « une dégustation par vin nommé et par note », ni la lecture ligne à ligne de l’annexe C ne sont discutées. Le seul motif de rejet est que son abattement forfaitaire de 15 % représenterait un volume plus important. Or un forfait supplée l’absence de mesure : là où la mesure existe et se vérifie ligne à ligne, il n’a plus d’objet."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce forfait est en outre déjà entièrement affecté. Le service le décompose lui-même en **5 % d’offerts**, **5 % de pertes** (p. 72) et **5 % de consommation du personnel** (p. 73), chaque tranche chiffrée à **35 133,26 €** par exercice. Il l’oppose pourtant successivement à la freinte de la bière (p. 61 et p. 83), aux offerts et aux pertes (p. 72), à la consommation du personnel (p. 73), à la dégustation (p. 64, 86 et 89) et enfin à la vraisemblance de son coefficient (p. 93)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les postes que la réponse du 04/09/2026 impute au même taux de 15 %",
+      "minWidth": 820,
+      "colonnes": [
+        {
+          "label": "Page"
+        },
+        {
+          "label": "Poste de perte en discussion"
+        },
+        {
+          "label": "Ce que le service oppose"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "p. 61 et p. 83"
+          },
+          {
+            "v": "Freinte technique de la bière (mousse, collerette, nettoyage des lignes, fond de fût)"
+          },
+          {
+            "v": "« le service applique, en fin de méthode, 15 %, supplémentaires en taux de perte/offert/consommation du personnel », d’où « un taux total de 30 % sur la bière »"
+          }
+        ],
+        [
+          {
+            "v": "p. 72"
+          },
+          {
+            "v": "Offerts commerciaux"
+          },
+          {
+            "v": "La tranche de 5 % « offert », chiffrée à 35 133,26 € par exercice"
+          }
+        ],
+        [
+          {
+            "v": "p. 72"
+          },
+          {
+            "v": "Pertes et casse"
+          },
+          {
+            "v": "La tranche de 5 % « pertes », chiffrée à 35 133,26 € par exercice"
+          }
+        ],
+        [
+          {
+            "v": "p. 73"
+          },
+          {
+            "v": "Consommation du personnel"
+          },
+          {
+            "v": "La tranche de 5 % « consommation du personnel », chiffrée à 35 133,26 € par exercice"
+          }
+        ],
+        [
+          {
+            "v": "p. 64 et p. 86",
+            "fw": 700
+          },
+          {
+            "v": "Dégustation offerte (goûter du vin)",
+            "fw": 700
+          },
+          {
+            "v": "Le même 15 %, appliqué cette fois au vin disponible : 198 L au BIB, 500 L en bouteilles bouchées",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "p. 89",
+            "fw": 700
+          },
+          {
+            "v": "Dégustation offerte (à nouveau)",
+            "fw": 700
+          },
+          {
+            "v": "Les trois mêmes tranches de 5 %, aux mêmes 35 133,26 € par exercice",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "p. 93"
+          },
+          {
+            "v": "Vraisemblance du coefficient multiplicateur"
+          },
+          {
+            "v": "Le même 15 %, cette fois compté une seule fois : « 3,85 x (1-0,15) = 3,2725 »"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les **198 litres** opposés en premier ne portent pas sur le même vin. Ils sont, selon les termes du service, l’abattement de 15 % appliqué aux « **VINS AU BIB** ». Or le décompte exclut expressément les génériques « Verre de vin » et « Pichet vin », c’est-à-dire précisément le vin au cubi. Les deux volumes ne se recouvrent pas."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’objection tirée de la « globalisation sur 3 ans » appelle enfin une réponse simple : le décompte a été refait exercice par exercice sur les annexes C1, C2 et C3, soit **35,36 L**, **45,14 L** et **45,34 L**, pour un total de **125,84 L** portant sur 6 326 lignes de vin nommé et 5 457 notes distinctes. Ce décompte suit la carte : l’Aligoté, le Chusclan et le Mâcon n’apparaissent qu’au deuxième exercice, le Chablis disparaît au troisième."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le décompte refait exercice par exercice (annexes C1, C2, C3)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Notes distinctes concernées",
+          "align": "right"
+        },
+        {
+          "label": "Dégustations (vin nommé x note)",
+          "align": "right"
+        },
+        {
+          "label": "Volume offert",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Exercice 1 (2022-2023)"
+          },
+          {
+            "v": "1 531",
+            "align": "right"
+          },
+          {
+            "v": "1 768",
+            "align": "right"
+          },
+          {
+            "v": "35,36 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Exercice 2 (2023-2024)"
+          },
+          {
+            "v": "1 962",
+            "align": "right"
+          },
+          {
+            "v": "2 257",
+            "align": "right"
+          },
+          {
+            "v": "45,14 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Exercice 3 (2024-2025)"
+          },
+          {
+            "v": "1 964",
+            "align": "right"
+          },
+          {
+            "v": "2 267",
+            "align": "right"
+          },
+          {
+            "v": "45,34 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul des 3 exercices",
+            "fw": 700
+          },
+          {
+            "v": "5 457",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "6 292",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "125,84 L",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La démonstration complète, le contrôle arithmétique des calculs de la page 64 (501,54 litres et non 500 pour les bouteilles bouchées, 68,15 litres et non 67,99 pour l’exercice 1 des BIB) et le détail par vin figurent dans [la partie Q, « Dégustation offerte (goûter du vin) »](/reponse-1/degustation-offerte)."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Ce que cela fait tomber",
+      "sousTitre": "Le seul motif de rejet du point 4 ne tient pas."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le refus de toute déduction repose entièrement sur un forfait déjà affecté à d’autres postes et calculé, pour sa première branche, sur un périmètre que le décompte exclut. Les **125,84 litres** de vin nommé offert doivent être retranchés du volume réputé vendable avant application du taux de 15 %, et non après lui, avec la propagation qui s’ensuit sur le chiffre d’affaires cuisine extrapolé par coefficient."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Décompte refait sur les annexes C1, C2 et C3 par le script reproductible « scripts/reponse1-degustations.py » : onglet 1, les dégustations par exercice et par vin nommé ; onglet 2, la comparaison avec les volumes opposés par le service ; onglet 3, le recontrôle de ses calculs ; onglet 4, le relevé des postes auxquels le même taux de 15 % est opposé dans le courrier.",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-degustations-par-note.xlsx",
+          "label": "R1 : dégustations par exercice et par vin, contrôle du double emploi des 15 %"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,402 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+REPONSE 1 - Piece "R1-inventaires-comparatif.xlsx"
+==================================================
+Objet : demontrer que l'etat d'inventaire produit en reponse a la proposition de
+rectifications n'est PAS une "correction" mais la MEME piece, augmentee d'une
+colonne de contenance : les quantites, les prix unitaires et les valeurs sont
+inchanges.
+
+Deux sources, lues seulement :
+  1. Etat d'ORIGINE (celui obtenu sur place par le service) :
+     - les 21 articles que le service reproduit lui-meme p. 33 de sa reponse du
+       04/09/2026. Ces 21 lignes sont recopiees ci-dessous telles qu'imprimees
+       dans le courrier. Elles correspondent, ligne pour ligne et dans le meme
+       ordre, aux lignes 5 a 25 de la page 11 du PDF
+       public/documents/inventaires/Inventaire_Demi_Lune_2023-03-31.pdf
+       (onglet "ALCOOL", colonnes "Produit alcoolise / Quantite / Prix unitaire
+       HT / Total").
+  2. Etat COMPLETE (celui produit en reponse) :
+     - public/documents/inventaires/inventaire_{2023,2024,2025}-03-31.csv,
+       ou la contenance est portee dans la designation de chaque article.
+
+Sortie : public/documents/pieces-reponse-1/R1-inventaires-comparatif.xlsx
+
+Aucun chiffre saisi a la main hors de la constante EXTRAIT_P33 (transcription du
+courrier, verifiable page 33).
+"""
+
+import csv
+import os
+import re
+
+from openpyxl import Workbook
+from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
+from openpyxl.utils import get_column_letter
+
+ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+INV_DIR = os.path.join(ROOT, "public/documents/inventaires")
+OUT = os.path.join(ROOT, "public/documents/pieces-reponse-1/R1-inventaires-comparatif.xlsx")
+
+CLOTURES = [
+    ("2023-03-31", "2022-2023"),
+    ("2024-03-31", "2023-2024"),
+    ("2025-03-31", "2024-2025"),
+]
+
+# --------------------------------------------------------------------------- #
+# 1. Etat d'origine : extrait reproduit par le service, reponse du 04/09/2026 p. 33
+#    (libelle, quantite, prix unitaire, valeur) - aucune colonne de contenance.
+# --------------------------------------------------------------------------- #
+EXTRAIT_P33 = [
+    ("Cidre brut", 15, 2.54, 38.10),
+    ("Cidre doux", 14, 2.89, 40.46),
+    ("Pontarlier", 1, 17.95, 17.95),
+    ("Ricard", 1, 17.56, 17.56),
+    ("Clan Campbell", 1, 12.56, 12.56),
+    ("Jack daniel", 1, 19.26, 19.26),
+    ("Marc du jura", 1, 18.61, 18.61),
+    ("Martini", 1, 8.15, 8.15),
+    ("Marc de bourgogne", 0, 25.90, 0.00),
+    ("Porto", 4, 7.71, 30.84),
+    ("Sapin", 2, 21.16, 42.32),
+    ("Creme mure", 1, 8.27, 8.27),
+    ("Creme cassis", 2, 8.39, 16.78),
+    ("Creme cerise", 2, 7.88, 15.76),
+    ("Vodka pollakiof", 1, 9.03, 9.03),
+    ("Cognac Park", 1, 19.62, 19.62),
+    ("Absinthe", 2, 30.89, 61.78),
+    ("Calvados", 2, 16.53, 33.06),
+    ("Mirabelle", 1, 20.04, 20.04),
+    ("Framboise", 1, 21.65, 21.65),
+    ("Soho", 0, 9.72, 0.00),
+]
+
+# Correspondance libelle du courrier -> designation de l'etat complete (CSV 2023).
+CORRESPONDANCE = {
+    "Cidre brut": "Cidre Brut 75cl",
+    "Cidre doux": "Cidre Doux 75cl",
+    "Pontarlier": "Pontarlier Anis 100cl",
+    "Ricard": "Ricard 100cl",
+    "Clan Campbell": "Clan Campbell 70cl",
+    "Jack daniel": "Jack Daniel's 70cl",
+    "Marc du jura": "Marc du Jura 70cl",
+    "Martini": "Martini 100cl",
+    "Marc de bourgogne": "Marc de Bourgogne 70cl",
+    "Porto": "Porto 75cl",
+    "Sapin": "Liqueur de Sapin 100cl",
+    "Creme mure": "Crème de Mûre 100cl",
+    "Creme cassis": "Crème de Cassis 100cl",
+    "Creme cerise": "Crème de Cerise 100cl",
+    "Vodka pollakiof": "Vodka Poliakov 70cl",
+    "Cognac Park": "Cognac Park 70cl",
+    "Absinthe": "Absinthe 70cl",
+    "Calvados": "Calvados 100cl",
+    "Mirabelle": "Mirabelle 70cl",
+    "Framboise": "Eau de Vie Framboise 70cl",
+    "Soho": "Soho Litchi 70cl",
+}
+
+# --------------------------------------------------------------------------- #
+# 2. Lecture de l'etat complete
+# --------------------------------------------------------------------------- #
+RE_CONTENANCE = re.compile(r"(\d+(?:[.,]\d+)?)\s*(cl|CL|L|kg)\b")
+
+
+def contenance(libelle):
+    """Contenance portee dans la designation de l'etat complete (ex. '75 cl')."""
+    trouve = RE_CONTENANCE.findall(libelle)
+    if not trouve:
+        return ""
+    valeur, unite = trouve[-1]
+    return f"{valeur.replace('.', ',')} {unite.lower()}"
+
+
+def lire(date):
+    chemin = os.path.join(INV_DIR, f"inventaire_{date}.csv")
+    lignes = []
+    with open(chemin, encoding="utf-8") as f:
+        for r in csv.DictReader(f, delimiter=";"):
+            def nb(x):
+                x = (x or "").strip()
+                return float(x.replace(",", ".")) if x else None
+
+            lignes.append(
+                {
+                    "produit": r["produit"].strip(),
+                    "categorie": r["categorie"].strip(),
+                    "quantite": nb(r["quantite"]),
+                    "pu": nb(r["prix_unitaire_ht"]),
+                    "valeur": nb(r["valeur_ht"]),
+                    "page": (r.get("page") or "").strip(),
+                    "contenance": contenance(r["produit"].strip()),
+                }
+            )
+    return lignes
+
+
+INVENTAIRES = {d: lire(d) for d, _ in CLOTURES}
+
+# --------------------------------------------------------------------------- #
+# 3. Comparatif article par article sur l'extrait de la page 33
+# --------------------------------------------------------------------------- #
+index2023 = {l["produit"]: l for l in INVENTAIRES["2023-03-31"]}
+
+comparatif = []
+for libelle, qte, pu, val in EXTRAIT_P33:
+    cible = CORRESPONDANCE[libelle]
+    ligne = index2023.get(cible)
+    if ligne is None:
+        raise SystemExit(f"Article introuvable dans l'etat complete : {cible}")
+    ecart_q = (ligne["quantite"] or 0) - qte
+    ecart_v = round((ligne["valeur"] or 0) - val, 2)
+    comparatif.append(
+        {
+            "origine_libelle": libelle,
+            "origine_qte": qte,
+            "origine_pu": pu,
+            "origine_val": val,
+            "complete_libelle": ligne["produit"],
+            "contenance": ligne["contenance"],
+            "complete_qte": ligne["quantite"],
+            "complete_pu": ligne["pu"],
+            "complete_val": ligne["valeur"],
+            "ecart_qte": ecart_q,
+            "ecart_val": ecart_v,
+        }
+    )
+
+nb_lignes_comp = len(comparatif)
+qte_identiques = sum(1 for c in comparatif if abs(c["ecart_qte"]) < 1e-9)
+val_identiques = sum(1 for c in comparatif if abs(c["ecart_val"]) < 0.005)
+ecart_total = round(sum(c["ecart_val"] for c in comparatif), 2)
+total_origine = round(sum(c["origine_val"] for c in comparatif), 2)
+total_complete = round(sum(c["complete_val"] or 0 for c in comparatif), 2)
+
+# --------------------------------------------------------------------------- #
+# 4. Recapitulatif par exercice
+# --------------------------------------------------------------------------- #
+recap = []
+for date, exercice in CLOTURES:
+    lignes = INVENTAIRES[date]
+    sans_alcool = round(sum(l["valeur"] or 0 for l in lignes if l["categorie"] == "boisson_sans_alcool"), 2)
+    alcool = round(sum(l["valeur"] or 0 for l in lignes if l["categorie"] == "alcool"), 2)
+    avec_q = sum(1 for l in lignes if l["quantite"] is not None)
+    avec_v = sum(1 for l in lignes if l["valeur"] is not None)
+    alcools = [l for l in lignes if l["categorie"] == "alcool"]
+    avec_c = sum(1 for l in lignes if l["contenance"])
+    alc_total = len(alcools)
+    alc_avec_c = sum(1 for l in alcools if l["contenance"])
+    recap.append(
+        {
+            "date": date,
+            "exercice": exercice,
+            "nb": len(lignes),
+            "avec_quantite": avec_q,
+            "avec_valeur": avec_v,
+            "avec_contenance": avec_c,
+            "alcools": alc_total,
+            "alcools_avec_contenance": alc_avec_c,
+            "sans_alcool": sans_alcool,
+            "alcool": alcool,
+            "total": round(sans_alcool + alcool, 2),
+        }
+    )
+
+for i in range(1, len(recap)):
+    recap[i]["variation"] = round(recap[i]["total"] - recap[i - 1]["total"], 2)
+recap[0]["variation"] = None
+
+# --------------------------------------------------------------------------- #
+# 5. Ecriture du classeur
+# --------------------------------------------------------------------------- #
+GRIS = PatternFill("solid", fgColor="F2F2F2")
+ENTETE = PatternFill("solid", fgColor="1F3864")
+VERT = PatternFill("solid", fgColor="E2EFDA")
+ORANGE = PatternFill("solid", fgColor="FCE4D6")
+BLANC = Font(color="FFFFFF", bold=True)
+BORD = Border(*[Side(style="thin", color="BFBFBF")] * 4)
+
+
+def entete(ws, labels, ligne=1):
+    for i, lab in enumerate(labels, start=1):
+        c = ws.cell(row=ligne, column=i, value=lab)
+        c.fill = ENTETE
+        c.font = BLANC
+        c.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+        c.border = BORD
+    ws.freeze_panes = ws.cell(row=ligne + 1, column=1)
+
+
+def largeurs(ws, valeurs):
+    for i, w in enumerate(valeurs, start=1):
+        ws.column_dimensions[get_column_letter(i)].width = w
+
+
+wb = Workbook()
+
+# --- Feuille 0 : notice ---------------------------------------------------- #
+ws = wb.active
+ws.title = "Notice"
+notice = [
+    ["R1 - Inventaires de stocks : etat d'origine et etat complete"],
+    [""],
+    ["Objet", "Verifier si l'etat d'inventaire produit en reponse a la proposition de rectifications "
+              "modifie les quantites ou les valeurs de l'etat obtenu sur place par le service."],
+    ["Etat d'origine", "Etat de stocks papier remis lors des interventions sur place. Le service en "
+                       "reproduit 21 articles page 33 de sa reponse du 04/09/2026. Ces 21 lignes "
+                       "correspondent aux lignes 5 a 25 de la page 11 du PDF "
+                       "Inventaire_Demi_Lune_2023-03-31.pdf (onglet ALCOOL)."],
+    ["Etat complete", "Meme etat, la contenance etant portee dans la designation de chaque article "
+                      "(fichiers inventaire_2023-03-31.csv, inventaire_2024-03-31.csv, "
+                      "inventaire_2025-03-31.csv)."],
+    ["Resultat", f"Sur les {nb_lignes_comp} articles reproduits par le service : quantites identiques "
+                 f"sur {qte_identiques} lignes, valeurs identiques au centime sur {val_identiques} lignes. "
+                 f"Ecart de valeur cumule : {ecart_total:+.2f} EUR sur un total de {total_origine:.2f} EUR."],
+    ["Lecture des ecarts", "Les rares ecarts sont des erreurs de frappe de la retranscription "
+                           "informatique ; l'etat d'origine, joint en PDF, fait foi. Ils ne "
+                           "proviennent d'aucune modification de l'inventaire physique."],
+    ["Feuilles", "Comparatif p.33 ; Cloture 31-03-2023 ; Cloture 31-03-2024 ; Cloture 31-03-2025 ; Recapitulatif."],
+    ["Unites", "Quantites en bouteilles ou unites ; prix unitaires et valeurs en euros HT."],
+    ["Script", "scripts/reponse1-inventaires-comparatif.py (reproductible)."],
+]
+for r, ligne in enumerate(notice, start=1):
+    for c, v in enumerate(ligne, start=1):
+        cell = ws.cell(row=r, column=c, value=v)
+        cell.alignment = Alignment(vertical="top", wrap_text=True)
+        if c == 1:
+            cell.font = Font(bold=True)
+ws.cell(row=1, column=1).font = Font(bold=True, size=14)
+largeurs(ws, [22, 110])
+
+# --- Feuille 1 : comparatif ------------------------------------------------ #
+ws = wb.create_sheet("Comparatif p.33")
+entete(
+    ws,
+    [
+        "Article (etat d'origine, p. 33)",
+        "Quantite",
+        "Prix unitaire HT",
+        "Valeur HT",
+        "Article (etat complete)",
+        "Contenance ajoutee",
+        "Quantite",
+        "Prix unitaire HT",
+        "Valeur HT",
+        "Ecart quantite",
+        "Ecart valeur HT",
+    ],
+)
+r = 2
+for c in comparatif:
+    identique = abs(c["ecart_qte"]) < 1e-9 and abs(c["ecart_val"]) < 0.005
+    valeurs = [
+        c["origine_libelle"], c["origine_qte"], c["origine_pu"], c["origine_val"],
+        c["complete_libelle"], c["contenance"], c["complete_qte"], c["complete_pu"],
+        c["complete_val"], c["ecart_qte"], c["ecart_val"],
+    ]
+    for i, v in enumerate(valeurs, start=1):
+        cell = ws.cell(row=r, column=i, value=v)
+        cell.border = BORD
+        if i in (2, 3, 4, 7, 8, 9, 10, 11):
+            cell.alignment = Alignment(horizontal="right")
+        if i in (3, 4, 8, 9, 11):
+            cell.number_format = "# ##0.00"
+        if i in (10, 11):
+            cell.fill = VERT if identique else ORANGE
+    r += 1
+for i, v in enumerate(
+    ["TOTAL", "", "", total_origine, "", "", "", "", total_complete, "", ecart_total], start=1
+):
+    cell = ws.cell(row=r, column=i, value=v)
+    cell.font = Font(bold=True)
+    cell.fill = GRIS
+    cell.border = BORD
+    if i in (4, 9, 11):
+        cell.number_format = "# ##0.00"
+        cell.alignment = Alignment(horizontal="right")
+largeurs(ws, [26, 10, 15, 12, 30, 16, 10, 15, 12, 13, 14])
+
+# --- Feuilles 2 a 4 : etat complete par cloture ---------------------------- #
+for date, exercice in CLOTURES:
+    ws = wb.create_sheet(f"Cloture {date.replace('-', '-')}"[:31])
+    ws.title = "Cloture " + date.replace("-", "-")
+    entete(
+        ws,
+        ["Article (etat complete)", "Contenance", "Famille", "Quantite",
+         "Prix unitaire HT", "Valeur HT", "Page du PDF d'origine"],
+    )
+    r = 2
+    for l in INVENTAIRES[date]:
+        famille = "Alcools et vins" if l["categorie"] == "alcool" else "Boissons sans alcool"
+        for i, v in enumerate(
+            [l["produit"], l["contenance"], famille, l["quantite"], l["pu"],
+             l["valeur"], l["page"]], start=1
+        ):
+            cell = ws.cell(row=r, column=i, value=v)
+            cell.border = BORD
+            if i in (4, 5, 6, 7):
+                cell.alignment = Alignment(horizontal="right")
+            if i in (5, 6):
+                cell.number_format = "# ##0.00"
+        r += 1
+    tot = round(sum(l["valeur"] or 0 for l in INVENTAIRES[date]), 2)
+    for i, v in enumerate([f"TOTAL {exercice}", "", "", "", "", tot, ""], start=1):
+        cell = ws.cell(row=r, column=i, value=v)
+        cell.font = Font(bold=True)
+        cell.fill = GRIS
+        cell.border = BORD
+        if i == 6:
+            cell.number_format = "# ##0.00"
+            cell.alignment = Alignment(horizontal="right")
+    largeurs(ws, [40, 12, 20, 10, 15, 12, 20])
+
+# --- Feuille 5 : recapitulatif --------------------------------------------- #
+ws = wb.create_sheet("Recapitulatif")
+entete(
+    ws,
+    ["Cloture", "Exercice", "Lignes inventoriees", "Lignes avec quantite",
+     "Lignes avec valeur", "Lignes avec contenance", "Lignes alcools et vins",
+     "Dont avec contenance", "Boissons sans alcool", "Alcools et vins",
+     "Stock total HT", "Variation vs cloture precedente"],
+)
+r = 2
+for d in recap:
+    for i, v in enumerate(
+        [d["date"], d["exercice"], d["nb"], d["avec_quantite"], d["avec_valeur"],
+         d["avec_contenance"], d["alcools"], d["alcools_avec_contenance"],
+         d["sans_alcool"], d["alcool"], d["total"], d["variation"]], start=1
+    ):
+        cell = ws.cell(row=r, column=i, value=v)
+        cell.border = BORD
+        if i >= 3:
+            cell.alignment = Alignment(horizontal="right")
+        if i >= 9:
+            cell.number_format = "# ##0.00"
+    r += 1
+largeurs(ws, [13, 12, 18, 18, 16, 20, 18, 18, 20, 16, 15, 26])
+
+os.makedirs(os.path.dirname(OUT), exist_ok=True)
+wb.save(OUT)
+
+# --------------------------------------------------------------------------- #
+# 6. Trace console
+# --------------------------------------------------------------------------- #
+print(f"Ecrit : {OUT}")
+print(f"Comparatif p.33 : {nb_lignes_comp} articles")
+print(f"  quantites identiques : {qte_identiques}/{nb_lignes_comp}")
+print(f"  valeurs identiques au centime : {val_identiques}/{nb_lignes_comp}")
+print(f"  total origine {total_origine:.2f} EUR / total complete {total_complete:.2f} EUR "
+      f"/ ecart {ecart_total:+.2f} EUR")
+for c in comparatif:
+    if abs(c["ecart_qte"]) > 1e-9 or abs(c["ecart_val"]) > 0.005:
+        print(f"    ecart : {c['origine_libelle']} -> {c['complete_libelle']} "
+              f"(valeur {c['origine_val']:.2f} vs {c['complete_val']:.2f})")
+print()
+for d in recap:
+    print(f"{d['date']} ({d['exercice']}) : {d['nb']} lignes, "
+          f"{d['avec_quantite']} avec quantite, {d['avec_valeur']} avec valeur, "
+          f"{d['avec_contenance']} avec contenance, "
+          f"alcools {d['alcools_avec_contenance']}/{d['alcools']} avec contenance, "
+          f"total {d['total']:.2f} EUR, variation {d['variation']}")

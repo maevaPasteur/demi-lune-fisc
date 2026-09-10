@@ -1,0 +1,2346 @@
+{
+  "meta": {
+    "slug": "suppressions-de-notes",
+    "source": "Réponse DDFiP 39 du 04/09/2026, p. 3 à 17",
+    "lettre": "A"
+  },
+  "entete": {
+    "positionService": "Le service maintient intégralement son grief. Il relève que le fichier « tpvenement » comporte 21 302 lignes « DEL » et que la réponse n’en documente que 944 (134 + 748 + 62 lignes dans les trois onglets du fichier « 01-cas suppressions.xlsx »), soit « une infime partie ». Il ajoute que la colonne « id » de ce fichier n’est reprise dans aucun des fichiers Règlement, Ticket ligne, Ticket et TVA remis au titre de l’article L. 47 A-II du LPF, de sorte qu’un rapprochement fondé sur les seules heures et les seuls montants ne peut, au regard du BOI-TVA-DECLA-30-10-30, emporter la certitude exigée. Deux contre-exemples détaillés (09/09/2022 et 21/03/2024) le conduisent à conclure que la comptabilité est « impropre à justifier de la réalité du volume d’affaires » et que le rejet ouvre droit à reconstitution de recettes.",
+    "reponseCourte": "Le service écarte le rapprochement par l’heure et le montant puis l’adopte lui-même page 13, et les sept lignes qu’il imprime page 7 totalisent au centime près les 76,90 € de la note qu’il reproduit page 8 : le premier motif de rejet ne tient pas.",
+    "enjeu": "Pilier n° 1 du rejet de comptabilité et fondement invoqué pour la reconstitution de recettes.",
+    "statut": "demonte"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l’administration",
+      "sousTitre": "Partie « A- LES SUPPRESSIONS DE NOTES (Lignes « DEL ») », p. 3 à 17 de la réponse du 04/09/2026, renvoyant aux pages 16 à 19 de la proposition de rectifications."
+    },
+    {
+      "kind": "titre",
+      "texte": "La position de Me THIVEND telle que le service la restitue",
+      "numero": "1.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service ouvre la partie A en reproduisant la réponse du 10/07/2026 (p. 3 à 5). Il en retient que « chaque famille de suppressions s’explique positivement et se vérifie sur les fichiers : fautes de frappe sur la quantité, paiements fractionnés, factures sans détail à la demande des clients, et corrections de service », et qu’« aucune ne correspond à une vente encaissée et non déclarée » (p. 3)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il rappelle aussi ce qu’il avait lui-même écrit dans la proposition de rectifications, à partir de la démonstration faite à l’écran : pour une table dont les convives veulent payer séparément, la gérante recrée chaque part sur une table « virtuelle » (n° 15 à 18), l’encaisse, puis supprime la table d’origine article par article ; après cette manipulation la table « ne figure plus en chiffre d’affaires » et « n’apparaît pas sur le ticket Z servant à la comptabilité », d’où la conclusion de la p. 19 de la proposition selon laquelle « le logiciel autorise des suppressions sans qu’il soit possible de confirmer que ces modifications aient pu être légitimes » (p. 3)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reproduit ensuite les trois chiffres mis en avant par la réponse : **21 302 lignes supprimées (DEL)** sur trois exercices, **430 763 €** de montant brandi (TTC, présenté comme recettes effacées) et **9 €** de suppression médiane, « l’ordre de grandeur d’un seul article » (p. 3). Il reprend enfin le tableau des quatre plus grosses suppressions, présentées par la réponse comme des fautes de frappe sur la quantité."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les 4 plus grosses suppressions, telles que reprises par le service (p. 3)",
+      "minWidth": 680,
+      "colonnes": [
+        {
+          "label": "Date"
+        },
+        {
+          "label": "Heure"
+        },
+        {
+          "label": "Montant supprimé",
+          "align": "right"
+        },
+        {
+          "label": "Se décompose en",
+          "align": "right"
+        },
+        {
+          "label": "Part du total",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-07-26"
+          },
+          {
+            "v": "18:51"
+          },
+          {
+            "v": "68 993 €",
+            "align": "right"
+          },
+          {
+            "v": "27,40 € × 2 518",
+            "align": "right"
+          },
+          {
+            "v": "16,0 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-06-21"
+          },
+          {
+            "v": "17:06"
+          },
+          {
+            "v": "44 955 €",
+            "align": "right"
+          },
+          {
+            "v": "45,00 € × 999",
+            "align": "right"
+          },
+          {
+            "v": "10,4 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-08-07"
+          },
+          {
+            "v": "18:29"
+          },
+          {
+            "v": "19 600 €",
+            "align": "right"
+          },
+          {
+            "v": "100,00 € × 196",
+            "align": "right"
+          },
+          {
+            "v": "4,6 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-08-15"
+          },
+          {
+            "v": "11:16"
+          },
+          {
+            "v": "4 455 €",
+            "align": "right"
+          },
+          {
+            "v": "55,00 € × 81",
+            "align": "right"
+          },
+          {
+            "v": "1,0 %",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reproduit également les trois familles de suppressions légitimes exposées par la réponse, chacune avec son exemple daté : la **conversion au forfait** (facture sans détail), le **paiement séparé / partage de table** et les **articles déplacés vers la bonne table**. Il note que la réponse papier contient « environ une trentaine d’exemples » pour les deux premières familles et « un peu plus d’une vingtaine d’exemples » pour la troisième, complétés sur clef USB par le fichier « 01-cas suppressions.xlsx » (p. 4 et 5)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les trois exemples types de la réponse, tels que reproduits par le service (p. 4 et 5)",
+      "minWidth": 720,
+      "colonnes": [
+        {
+          "label": "Famille"
+        },
+        {
+          "label": "Exemple"
+        },
+        {
+          "label": "Suppressions"
+        },
+        {
+          "label": "Note encaissée"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Conversion au forfait"
+          },
+          {
+            "v": "2022-04-21"
+          },
+          {
+            "v": "12:58 : 4,40 € / 8,40 € / 17,60 €"
+          },
+          {
+            "v": "Note n°17 (12:59), total 30,40 € : 2× Menu « Demi Lune » à 15,20 €"
+          }
+        ],
+        [
+          {
+            "v": "Paiement séparé / partage de table"
+          },
+          {
+            "v": "2022-04-16"
+          },
+          {
+            "v": "20:07 : 3,90 € / 4,70 € / 7,80 € / 8,70 €"
+          },
+          {
+            "v": "Notes n°23 et n°24 (20:22), 34,40 € chacune, articles en quantités 0,5"
+          }
+        ],
+        [
+          {
+            "v": "Articles déplacés vers la bonne table"
+          },
+          {
+            "v": "2022-04-24"
+          },
+          {
+            "v": "11:58 : 6,60 € / 17,60 € / 19,00 € / 29,90 €"
+          },
+          {
+            "v": "Note n°1 (11:54), total 73,10 €, 7 lignes détaillées"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "La « Réponse du service » : 944 lignes documentées sur 21 302",
+      "numero": "1.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le premier argument du service est arithmétique (p. 5). Il constate d’abord que « dans le fichier « tpvenement », sur lequel cette partie de la réponse est basée, comme vous l’écrivez, comporte 21 302 lignes « DEL » ». Il observe ensuite que la réponse concentre son propos sur les quatre plus grosses lignes, puis sur les trois onglets du fichier « 01-cas suppressions.xlsx », dont il donne le décompte exact."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Lignes « DEL » dans tpvenement",
+          "valeur": "21 302",
+          "sub": "chiffre repris de la réponse (p. 5)",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Lignes documentées par les 3 onglets",
+          "valeur": "944",
+          "sub": "134 + 748 + 62 (p. 5)",
+          "couleur": "gold"
+        },
+        {
+          "label": "Fichiers reprenant la colonne « id »",
+          "valeur": "0 sur 4",
+          "sub": "Règlement, Ticket ligne, Ticket, TVA (p. 5)",
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le décompte du fichier « 01-cas suppressions.xlsx » selon le service (p. 5)",
+      "minWidth": 520,
+      "colonnes": [
+        {
+          "label": "Onglet"
+        },
+        {
+          "label": "Lignes",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Conversion Forfait"
+          },
+          {
+            "v": "134",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Paiement séparé"
+          },
+          {
+            "v": "748",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Articles déplacés"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total des trois onglets"
+          },
+          {
+            "v": "944",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service en tire une conclusion en une phrase (p. 5) : « L’exposé et les éléments joints à la réponse n’en expliquent donc qu’une infime partie. » C’est la clef de voûte de toute la partie A : le raisonnement n’est pas attaqué famille par famille, il est disqualifié par son volume."
+    },
+    {
+      "kind": "titre",
+      "texte": "L’argument de l’identifiant unique « id »",
+      "numero": "1.3"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le second argument est technique (p. 5). Le service relève que le fichier « tpvenement » comprend une colonne « id », « faisant référence, semble-t-il, à un numéro d’identifiant unique pour chacune des opérations de ce fichier et notamment les opérations « DEL » ». Mais, poursuit-il, « ce numéro d’identifiant unique n’est repris dans aucun des autres fichiers remis par la société dans le cadre de la procédure de l’article L-47-A-II, à savoir : Règlement, Ticket ligne, Ticket, TVA »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il en déduit que la méthode de la réponse est fragile par construction : « Votre réponse tente, avec ces autres fichiers, encore une fois pour une infime partie des opérations « DEL », à partir des montants et des heures de les expliquer. Mais l’absence de cet identifiant compromet grandement la certitude que les opérations que vous faites correspondre, correspondent bel et bien » (p. 5)."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le fondement de droit : BOI-TVA-DECLA-30-10-30 et article 286 I 3° bis du CGI",
+      "numero": "1.4"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les pages 6 et 7 sont un développement doctrinal. Le service cite le BOI-TVA-DECLA-30-10-30 (publié du 19/05/2021 au 16/04/2025) et le 3° bis du I de l’article 286 du CGI : tout assujetti à la TVA qui vend à des clients particuliers et enregistre les règlements au moyen d’un logiciel ou système de caisse est tenu d’utiliser un logiciel qui satisfasse aux conditions **d’inaltérabilité, de sécurisation, de conservation et d’archivage** des données en vue du contrôle de l’administration."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il détaille ensuite les données de détail d’une transaction, « qui doivent être enregistrées ligne par ligne » : le numéro du justificatif, la date (année, mois, jour, heure, minute), le numéro de la caisse, le montant total toutes taxes comprises, le détail des articles ou prestations (libellé, quantité, prix unitaire, total hors taxe de la ligne, taux de TVA associé), les données liées à la réception du paiement (mode de règlement notamment) et « les traces de modifications et corrections apportées aux transactions enregistrées » (p. 6). Sont également concernées les données assurant la traçabilité et l’intégrité, et celles permettant de générer des données d’archive selon un procédé fiable."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "De cette énumération le service tire directement sa réfutation de méthode (passage souligné dans le courrier, p. 6) : « Ainsi, comme indiqué plus haut, votre argumentation est uniquement axée sur les heures et les montants. Néanmoins, contrairement aux dispositions prévues, ces deux informations ne permettent pas à elles seules d’avoir la certitude que ces évènements sont forcément liés. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il rappelle ensuite le régime des corrections : si des corrections sont apportées aux données, « ces corrections (modifications ou annulations) s’effectuent par des opérations de « plus » et de « moins » et non par modification directe des données d’origine enregistrées », et « ces opérations de correction donnent également lieu à un enregistrement » dont l’inaltérabilité doit être garantie (p. 6). Il précise que l’inaltérabilité vise aussi « les modifications non tracées effectuées par le propriétaire et détenteur des données lui-même », et non les seules atteintes de tiers réprimées par les articles 323-1 à 323-3 du code pénal."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il décrit enfin les deux niveaux d’inaltérabilité attendus (logique de haut niveau, privant l’utilisateur de toute fonctionnalité de modification, et de bas niveau, garantissant l’intégrité des données enregistrées par empreinte numérique à clé privée ou chaînage), puis conclut, en soulignant (p. 7) : « Votre réponse pour faire le lien entre différents éléments ne reposant que sur les heures et les montants, le service n’est pas concrètement en mesure de confirmer avec certitude les arguments que vous vous permettez d’avancer. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service annonce alors trois contre-exemples, « un seul et unique exemple, parfaitement parlant, de chacune de vos parties d’argument » (p. 7) : la conversion au forfait, le paiement séparé / partage des tables, et les articles déplacés vers la bonne table."
+    },
+    {
+      "kind": "titre",
+      "texte": "a) Le contre-exemple de la conversion au forfait : la journée du 09/09/2022",
+      "numero": "1.5"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reprend l’un des exemples de la réponse (p. 7) : sept suppressions à 12h07 le 09/09/2022, face à la note n°3 encaissée à 12h08 pour 76,90 €, composée de 2× Menu « Demi Lune » à 38,45 €."
+    },
+    {
+      "kind": "tableau",
+      "titre": "L’exemple du 09/09/2022 tel que reproduit par le service (p. 7)",
+      "minWidth": 560,
+      "colonnes": [
+        {
+          "label": "Suppressions (colonne de gauche)"
+        },
+        {
+          "label": "Note encaissée (colonne de droite)"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "12:07 : 3,90 €"
+          },
+          {
+            "v": "Note n°3 (12:08), total 76,90 €"
+          }
+        ],
+        [
+          {
+            "v": "12:07 : 4,90 €"
+          },
+          {
+            "v": "2× Menu « Demi Lune » à 38,45 € = 76,90 €"
+          }
+        ],
+        [
+          {
+            "v": "12:07 : 6,90 €"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "12:07 : 7,20 €"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "12:07 : 7,20 €"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "12:07 : 19,00 €"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "12:07 : 27,80 €"
+          },
+          {
+            "v": ""
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service identifie l’origine de chaque colonne. La colonne de gauche « correspond aux données présentes dans le fichier « tpvenement ». En effet, il n’y a que ce fichier à indiquer des « DEL » » (p. 7). La colonne de droite correspond au fichier « règlement », « il n’y a que ce fichier à indiquer la note n°3 à 12h08 pour 76,90 €, le 09 septembre 2022 » (p. 8). Il produit alors l’extrait brut de tpvenement correspondant à cette minute."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Extrait du fichier « tpvenement », 09/09/2022 à 12h07 (p. 7)",
+      "minWidth": 700,
+      "colonnes": [
+        {
+          "label": "date_even"
+        },
+        {
+          "label": "heure_even"
+        },
+        {
+          "label": "typ_even"
+        },
+        {
+          "label": "no_z_report",
+          "align": "right"
+        },
+        {
+          "label": "amount",
+          "align": "right"
+        },
+        {
+          "label": "id",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-09-09"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3052",
+            "align": "right"
+          },
+          {
+            "v": "6,90 €",
+            "align": "right"
+          },
+          {
+            "v": "42080",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-09-09"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3052",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "42081",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-09-09"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3052",
+            "align": "right"
+          },
+          {
+            "v": "7,20 €",
+            "align": "right"
+          },
+          {
+            "v": "42082",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-09-09"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3052",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          },
+          {
+            "v": "42083",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-09-09"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3052",
+            "align": "right"
+          },
+          {
+            "v": "19,00 €",
+            "align": "right"
+          },
+          {
+            "v": "42084",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-09-09"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3052",
+            "align": "right"
+          },
+          {
+            "v": "27,80 €",
+            "align": "right"
+          },
+          {
+            "v": "42085",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-09-09"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3052",
+            "align": "right"
+          },
+          {
+            "v": "7,20 €",
+            "align": "right"
+          },
+          {
+            "v": "42086",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’extrait du fichier « règlement » produit page 8 confirme la note : le 09/09/2022, ticket n°3 à 12h08, no_z_report 3052, tot_ttc 76,90 €, tot_tva 6,99 €, id 51162, mode de règlement CB, montant 76,90 € (la ligne est surlignée dans le courrier). Le service concède alors : « Vos arguments semblent donc avoir un semblant de véracité. Toutefois, à la lecture plus précise des éléments figurant dans le fichier « tpvenement », ce n’est plus le cas » (p. 8)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les pages 9 à 11 reproduisent alors l’intégralité des événements enregistrés sur la journée du 09/09/2022 dans « tpvenement », puis la totalité des lignes du fichier « ticket ligne » de cette même journée. Le service précise (p. 12) que « ces données correspondent à l’exhaustivité des informations enregistrée sur la journée du 09 septembre 2022 »."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Opérations dans tpevenement.xls le 09/09/2022",
+          "valeur": "71",
+          "sub": "toutes natures confondues (p. 12)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Opérations qui ne sont pas des « DEL »",
+          "valeur": "4",
+          "sub": "p. 12",
+          "couleur": "blue"
+        },
+        {
+          "label": "Opérations « DEL » attendues dans « ticket ligne »",
+          "valeur": "67",
+          "sub": "selon la logique que le service prête à la réponse (p. 12)",
+          "highlight": true,
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "C’est le cœur de la démonstration du service (p. 12) : « à la journée du 09 septembre 2022, le fichier « tpevenement.xls » mentionne 71 opérations, dont 4 qui ne sont pas des opérations « DEL » ». Il en déduit : « Compte tenu de la logique de la réponse de Maître THIVEND, le service serait donc en droit d’attendre que ces 67 opérations « DEL » apparaissent dans les données du fichier « 20220401 AND 20250331 ticket ligne.xls » ». Puis il constate : « En fait à la lecture de toutes ces informations, de nombreux évènements « DEL » ne se retrouvent pas dans les informations qui figurent dans le fichier « ticket ligne »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les pages 13 à 15 présentent la comparaison sur deux colonnes : à gauche les événements « DEL » de tpvenement, à droite les opérations du fichier « ticket ligne », mises en regard par l’horaire. Le service explicite lui-même sa méthode (p. 13) : « Cette démonstration est faite en suivant la même logique que Maître THIVEND, c’est-à-dire l’horaire, seul élément susceptible de faire le lien à défaut de numéro d’identification unique. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il conclut ce premier contre-exemple (p. 15) : « au regard de cet extrait qui met clairement en évidence les lacunes de la démonstration, les arguments avancés par votre conseil permettraient éventuellement d’expliquer qu’une infime partie des évènements « DEL ». De très nombreuses opérations « DEL » demeurent donc sans explication. » Il ajoute que le numéro id du fichier tpevenement.xls n’est pas le même que celui qui apparaît dans le fichier ticket ligne, situation qui « empêche donc toute possibilité de lien pour essayer de découvrir où les opérations « DEL » introuvables auraient pu être affectées »."
+    },
+    {
+      "kind": "titre",
+      "texte": "b) Le contre-exemple du paiement séparé : la soirée du 21/03/2024",
+      "numero": "1.6"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le second contre-exemple porte sur le partage de table (p. 16 et 17). Le service reprend l’exemple du 21/03/2024 de la réponse : trois suppressions à 20h16 (8,30 €, 8,90 € et 19,90 €) mises en regard de deux notes encaissées, la note n°13 (19:58) pour 35,11 € et la note n°14 (20:00) pour 88,59 €, chacune comportant douze articles en quantités fractionnaires."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les deux notes du 21/03/2024 selon le fichier « ticket ligne » (p. 17)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Article (lib_ticket)"
+        },
+        {
+          "label": "Prix unitaire",
+          "align": "right"
+        },
+        {
+          "label": "Note n°13 (19:58) : 35,11 €",
+          "align": "right"
+        },
+        {
+          "label": "Note n°14 (20:00) : 88,59 €",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Macvin du Jura"
+          },
+          {
+            "v": "5,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,50",
+            "align": "right"
+          },
+          {
+            "v": "1,50",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Savagnin verre"
+          },
+          {
+            "v": "8,30 €",
+            "align": "right"
+          },
+          {
+            "v": "1,25",
+            "align": "right"
+          },
+          {
+            "v": "1,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Menu « Galette »"
+          },
+          {
+            "v": "19,50 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "PAYSANNE"
+          },
+          {
+            "v": "19,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "TRUITE JURASSIENNE"
+          },
+          {
+            "v": "18,60 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Galette nature"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ratatouille"
+          },
+          {
+            "v": "3,20 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "PIGNONS PIN"
+          },
+          {
+            "v": "1,40 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Salade Verte"
+          },
+          {
+            "v": "2,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Champignons frais"
+          },
+          {
+            "v": "3,20 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Baba"
+          },
+          {
+            "v": "8,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "GLACE 2 BOULES"
+          },
+          {
+            "v": "5,50 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service oppose à la réponse sa propre formulation (p. 16) : « à gauche, chaque suppression et l’article qu’elle redevient ; à droite les notes qui se le partage ». Il en tire l’attente logique que « chacun des articles présents dans la colonne de droite se retrouvent dans la colonne de gauche ». Or, écrit-il, « dans cet exemple, qui vaut pour tous les autres, tel n’est pas le cas. En effet, il n’y a à gauche que le verre de Savagnin à 8,30 €, le baba à 8,90 €, et la paysanne à 19,90 €. Pourquoi tous les autres articles qui sont à droite, ne se retrouvent pas à gauche ? »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service produit alors l’extrait de « tpvenement » pour le 21/03/2024 à 20h16, qui comporte huit lignes « DEL » et non trois."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Extrait du fichier « tpvenement », 21/03/2024 à 20h16 (p. 16)",
+      "minWidth": 720,
+      "colonnes": [
+        {
+          "label": "date_even"
+        },
+        {
+          "label": "heure_even"
+        },
+        {
+          "label": "typ_even"
+        },
+        {
+          "label": "no_z_report",
+          "align": "right"
+        },
+        {
+          "label": "amount",
+          "align": "right"
+        },
+        {
+          "label": "id",
+          "align": "right"
+        },
+        {
+          "label": "Relevé par le service"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "8,90 €",
+            "align": "right"
+          },
+          {
+            "v": "52827",
+            "align": "right"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "8,30 €",
+            "align": "right"
+          },
+          {
+            "v": "52828",
+            "align": "right"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "4,80 €",
+            "align": "right"
+          },
+          {
+            "v": "52829",
+            "align": "right"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "20,10 €",
+            "align": "right"
+          },
+          {
+            "v": "52830",
+            "align": "right"
+          },
+          {
+            "v": "Absent des notes encaissées",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "19,90 €",
+            "align": "right"
+          },
+          {
+            "v": "52831",
+            "align": "right"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "8,90 €",
+            "align": "right"
+          },
+          {
+            "v": "52832",
+            "align": "right"
+          },
+          {
+            "v": ""
+          }
+        ],
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "8,00 €",
+            "align": "right"
+          },
+          {
+            "v": "52833",
+            "align": "right"
+          },
+          {
+            "v": "Absent des notes encaissées",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "2024-03-21"
+          },
+          {
+            "v": "20:16"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "3370",
+            "align": "right"
+          },
+          {
+            "v": "10,00 €",
+            "align": "right"
+          },
+          {
+            "v": "52834",
+            "align": "right"
+          },
+          {
+            "v": "Absent des notes encaissées",
+            "badge": "ko"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service formule alors le reproche symétrique (p. 17) : « tous les articles de ces deux notes devraient se retrouver dans les données du fichier « tpvenement », c’est-à-dire celle de gauche. En effet, pourquoi seulement une petite partie des articles de votre colonne de droite devraient se retrouver à gauche, alors qu’en toute logique, ils ont fait l’objet d’un enregistrement préalable en tant qu’article « entier », puis, ont ensuite été divisés. De toute évidence, tel n’est clairement pas le cas. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il donne trois exemples d’articles présents à droite et absents à gauche : **la truite jurassienne à 18,60 €, la salade verte à 2,90 € et le menu galette à 19,50 €**, qui « ne sont pas en colonne de gauche et n’existent pas en « DEL » dans le fichier tpvenement » (p. 17). Et trois exemples inverses : « le n° id 52 830 à 20,10 €, le n° 52833 à 8,00 € et n°52834 à 10,00 €, sont absents de la colonne de droite (note encaissées) »."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Lignes « DEL » relevées le 21/03/2024 à 20h16",
+          "valeur": "8",
+          "sub": "ids 52827 à 52834 (p. 16)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Suppressions citées par la réponse",
+          "valeur": "3",
+          "sub": "8,30 € / 8,90 € / 19,90 € (p. 16)",
+          "couleur": "gold"
+        },
+        {
+          "label": "Articles à droite sans « DEL » à gauche",
+          "valeur": "3 cités",
+          "sub": "truite 18,60 €, salade verte 2,90 €, menu galette 19,50 € (p. 17)",
+          "couleur": "red"
+        },
+        {
+          "label": "Ids « DEL » absents des notes encaissées",
+          "valeur": "3 cités",
+          "sub": "52 830 (20,10 €), 52 833 (8,00 €), 52 834 (10,00 €) (p. 17)",
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service en conclut (p. 17) : « Le service est donc en droit de s’interroger sur les arguments de votre réponse. Ils semblent constituer une tentative d’explications exhaustive alors qu’il fait apparaître clairement que tous vos exemples sont incomplets et impropres à justifier toutes les anomalies relevées dans les fichiers. »"
+    },
+    {
+      "kind": "titre",
+      "texte": "c) Les articles déplacés vers la bonne table",
+      "numero": "1.7"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le troisième contre-exemple, annoncé page 7 sous l’intitulé « Articles déplacés vers la bonne table », n’est jamais développé : après la conclusion du point b) en page 17, le courrier passe directement à la partie « B- LES FACTURES SANS DETAIL » en page 18. Aucun exemple, aucun extrait de fichier et aucun décompte ne sont opposés aux 62 lignes de l’onglet « Articles déplacés »."
+    },
+    {
+      "kind": "titre",
+      "texte": "La conclusion du service sur la partie A",
+      "numero": "1.8"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service tire deux conséquences, l’une sur la valeur probante de la comptabilité, l’autre sur la procédure. Sur la première (p. 15) : « L’ensemble de ces constats permet donc au service de soutenir que la comptabilité est impropre à justifier de la réalité du volume d’affaires de la société. Cela permet surtout de conformer le fait que la comptabilité présentée doit être rejetée. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur la seconde, en caractères soulignés (p. 15) : « Tous ces constats ouvrent donc droit à la possibilité par le service de procéder à une reconstitution de recettes. » Et, pour clore la partie A (p. 17, souligné également) : « Par conséquent, le motif de rejet de comptabilité présenté, sur cet aspect, par le service apparait comme parfaitement valable à la lumière de ces explications peu pertinentes et surtout totalement non corroborées sur l’ensemble des données fournies. »"
+    },
+    {
+      "kind": "alerte",
+      "couleur": "red",
+      "titre": "Le grief est maintenu dans son intégralité",
+      "texte": "Sur les quinze pages de la partie A, le service n’abandonne aucun élément de la proposition de rectifications. Il déplace le débat : il ne discute plus la légitimité de telle ou telle suppression, il oppose le volume (944 lignes documentées sur 21 302) et l’impossibilité technique de certifier un rapprochement en l’absence d’identifiant commun entre les fichiers."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "Notre réponse",
+      "sousTitre": "Le service écarte le rapprochement par l’heure et le montant, puis l’adopte lui-même page 13 ; et les sept lignes qu’il imprime page 7 font très exactement les 76,90 € de la note qu’il reproduit page 8."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le service refuse une méthode, puis il l’applique",
+      "numero": "2.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Aux pages 6 et 7, le service écarte par principe tout rapprochement fondé sur l’heure et le montant. Page 6, en caractères soulignés : « Ainsi, comme indiqué plus haut, votre argumentation est uniquement axée sur les heures et les montants. Néanmoins, contrairement aux dispositions prévues, ces deux informations ne permettent pas à elles seules d’avoir la certitude que ces évènements sont forcément liés. » Page 7, également souligné : « Votre réponse pour faire le lien entre différents éléments ne reposant que sur les heures et les montants, le service n’est pas concrètement en mesure de confirmer avec certitude les arguments que vous vous permettez d’avancer. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Page 13, pour construire sa propre démonstration, le service écrit : « **Cette démonstration est faite en suivant la même logique que Maître THIVEND, c’est-à-dire l’horaire, seul élément susceptible de faire le lien à défaut de numéro d’identification unique.** » Le tableau des pages 13 à 15, dont il tire la conclusion que « la comptabilité est impropre à justifier de la réalité du volume d’affaires » (p. 15), est donc construit sur le seul critère qu’il vient de déclarer insuffisant."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Une méthode ne peut pas être impropre à établir la régularité et propre à établir l’irrégularité. Ou bien le rapprochement par l’horaire est recevable, et il faut alors examiner au fond les rapprochements que nous produisons ; ou bien il ne l’est pas, et le tableau des pages 13 à 15, seule pièce à charge de toute la partie A, tombe avec lui."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La phrase de la page 13 contient d’ailleurs l’aveu que l’horaire est le « seul élément susceptible de faire le lien ». C’est reconnaître que l’absence d’identifiant unique ne rend pas le rapprochement impossible : elle impose seulement de le faire autrement, ce que les deux parties ont fait."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le service imprime lui-même la preuve du rapprochement qu’il déclare hors d’atteinte",
+      "numero": "2.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Page 7, le service reproduit l’extrait brut du fichier « tpvenement » pour le 09/09/2022 à 12h07 : sept lignes « DEL », ids 42080 à 42086, sur le ticket Z 3052. Page 8, il reproduit l’extrait du fichier « règlement » de la même journée et surligne la note n°3, encaissée à 12h08 pour 76,90 €, id 51162, réglée par carte bancaire. Il n’a pas fait l’addition des sept montants. La voici, reprise à l’identique de son propre extrait et vérifiée sur l’annexe E1."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les sept lignes « DEL » du 09/09/2022 à 12h07 imprimées par le service en page 7",
+      "minWidth": 620,
+      "colonnes": [
+        {
+          "label": "id tpvenement",
+          "align": "right"
+        },
+        {
+          "label": "Heure"
+        },
+        {
+          "label": "Montant supprimé",
+          "align": "right"
+        },
+        {
+          "label": "Article de la carte à ce prix, ce jour-là"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "42080",
+            "align": "right"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "6,90 €",
+            "align": "right"
+          },
+          {
+            "v": "Baba au Macvin"
+          }
+        ],
+        [
+          {
+            "v": "42081",
+            "align": "right"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "Limonade / Jus de fruit / Glace 2 boules"
+          }
+        ],
+        [
+          {
+            "v": "42082",
+            "align": "right"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "7,20 €",
+            "align": "right"
+          },
+          {
+            "v": "Savagnin verre"
+          }
+        ],
+        [
+          {
+            "v": "42083",
+            "align": "right"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          },
+          {
+            "v": "Macvin du Jura / Père Grégoire"
+          }
+        ],
+        [
+          {
+            "v": "42084",
+            "align": "right"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "19,00 €",
+            "align": "right"
+          },
+          {
+            "v": "Burger comtois / Crémeux du Jura"
+          }
+        ],
+        [
+          {
+            "v": "42085",
+            "align": "right"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "27,80 €",
+            "align": "right"
+          },
+          {
+            "v": "Entrecôte forestière"
+          }
+        ],
+        [
+          {
+            "v": "42086",
+            "align": "right"
+          },
+          {
+            "v": "12:07"
+          },
+          {
+            "v": "7,20 €",
+            "align": "right"
+          },
+          {
+            "v": "Savagnin verre"
+          }
+        ],
+        [
+          {
+            "v": "Total",
+            "fw": 700
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "76,90 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "= note n°3, encaissée à 12h08, 76,90 € (id 51162, CB), soit 2 Menus « Demi Lune » à 38,45 €",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La coïncidence n’est pas isolée. Page 13, le même tableau reproduit la rafale suivante, celle de 12h23 : neuf lignes « DEL », ids 42087 à 42095. En regard, dans la colonne « ticket ligne » de la même page, figure la note n°8, encaissée à 12h23, composée d’une seule ligne : « Menu « Demi Lune », qté 4,00, prix unitaire 51,75, total TTC 207,00 ». La somme des neuf suppressions fait 207,00 €."
+    },
+    {
+      "kind": "tableau",
+      "titre": "La rafale de 12h23 imprimée par le service en page 13",
+      "minWidth": 560,
+      "colonnes": [
+        {
+          "label": "ids tpvenement"
+        },
+        {
+          "label": "Montants supprimés"
+        },
+        {
+          "label": "Somme",
+          "align": "right"
+        },
+        {
+          "label": "Note encaissée"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "42087 à 42095 (9 lignes)"
+          },
+          {
+            "v": "15,60 + 6,50 + 20,80 + 7,00 + 2,20 + 29,90 + 35,20 + 59,80 + 30,00"
+          },
+          {
+            "v": "207,00 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "Note n°8 (12:23), 207,00 €, id 51158, CB : 4 Menus « Demi Lune » à 51,75 €"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Deux rafales, deux totaux exacts au centime près, sur les deux seuls extraits que le service a choisi d’imprimer. Sept montants tous différents dont la somme donne par hasard le total d’une note encaissée à la minute suivante, cela n’arrive pas ; neuf montants qui recommencent seize minutes plus tard, encore moins. C’est le mécanisme même de la conversion au forfait : à la demande du client, le détail des plats est retiré, le menu est enregistré à son prix, la note est encaissée pour le même montant."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service écrivait page 8 : « Vos arguments semblent donc avoir un semblant de véracité. » L’addition qu’il n’a pas faite transforme le semblant en démonstration. Ses propres pièces, choisies par lui, établissent le lien qu’il déclare impossible à établir."
+    },
+    {
+      "kind": "titre",
+      "texte": "Ce que sont les 21 302 lignes : des articles, pas des notes",
+      "numero": "2.3"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le débat sur le volume ne se tranche pas par des exemples, il se tranche par une mesure portant sur la totalité du fichier. Sur les trois exercices, les 21 302 lignes « DEL » ne prennent que **398 valeurs différentes**. Or les 16 605 notes encaissées présentent, elles, **2 592 totaux distincts**. Une population de 21 302 recettes effacées ne peut pas tenir dans 398 valeurs."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Confrontées au catalogue des prix effectivement pratiqués sur le même exercice (459 prix unitaires distincts), ces valeurs s’expliquent presque toutes : **18 841 lignes, soit 88,4 %, valent exactement un prix unitaire de la carte** ; **2 103 de plus, soit 9,9 %, valent une quantité entière multipliée par un prix de la carte** (deux cafés, trois verres). Au total 98,3 %. Il reste 358 lignes, 1,7 %."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Valeurs distinctes prises par les 21 302 lignes « DEL »",
+          "valeur": "398",
+          "sub": "contre 2 592 totaux de notes distincts",
+          "highlight": true,
+          "couleur": "teal"
+        },
+        {
+          "label": "Lignes égales à un prix unitaire de la carte",
+          "valeur": "88,4 %",
+          "sub": "18 841 sur 21 302",
+          "couleur": "teal"
+        },
+        {
+          "label": "Lignes égales à une quantité entière × un prix",
+          "valeur": "9,9 %",
+          "sub": "2 103 de plus",
+          "couleur": "teal"
+        },
+        {
+          "label": "Lignes sans correspondance de prix",
+          "valeur": "1,7 %",
+          "sub": "358 lignes",
+          "couleur": "gold"
+        }
+      ]
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les 21 302 lignes « DEL » confrontées aux prix de la carte, exercice par exercice",
+      "minWidth": 680,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Lignes « DEL »",
+          "align": "right"
+        },
+        {
+          "label": "= un prix unitaire de la carte",
+          "align": "right"
+        },
+        {
+          "label": "= quantité entière × un prix",
+          "align": "right"
+        },
+        {
+          "label": "Sans correspondance",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "8 014",
+            "align": "right"
+          },
+          {
+            "v": "7 033",
+            "align": "right"
+          },
+          {
+            "v": "845",
+            "align": "right"
+          },
+          {
+            "v": "136",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "6 943",
+            "align": "right"
+          },
+          {
+            "v": "6 167",
+            "align": "right"
+          },
+          {
+            "v": "645",
+            "align": "right"
+          },
+          {
+            "v": "131",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "6 345",
+            "align": "right"
+          },
+          {
+            "v": "5 641",
+            "align": "right"
+          },
+          {
+            "v": "613",
+            "align": "right"
+          },
+          {
+            "v": "91",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total",
+            "fw": 700
+          },
+          {
+            "v": "21 302",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "18 841",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "2 103",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "358",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Une recette effacée aurait la forme d’une note : 30,40 €, 76,90 €, 123,70 €, une valeur prise dans le nuage des 2 592 totaux. Les lignes « DEL » n’ont pas cette forme : elles ont celle du prix d’un plat ou d’un verre, répétée des centaines de fois. Ce sont des articles retirés d’une table, pas des notes escamotées, et cette mesure porte sur les 21 302 lignes, non sur un échantillon de 944."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le totalisateur perpétuel de la caisse ne présente aucune rupture",
+      "numero": "2.4"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le BOFiP que le service invoque impose au logiciel de calculer et de conserver, à chaque clôture, « des données cumulatives et récapitulatives, intègres et inaltérables », dont « le cumul du grand total de la période et le total perpétuel pour la période ». Il définit ce dernier comme « le cumul de chiffre d’affaires décompté depuis le début de l’utilisation du logiciel ou système », un compteur « ne se remettant jamais à zéro », et précise que ces données « ne doivent donc jamais être purgées » ([BOI-TVA-DECLA-30-10-30, § 170](https://bofip.impots.gouv.fr/bofip/10691-PGP.html))."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce compteur figure dans les fichiers remis : le fichier « TVA » porte, pour chaque ticket, la colonne « tot_sum » du total perpétuel. C’est le juge de paix arithmétique du dossier, et le service ne l’interroge nulle part. Il dit, ticket après ticket, tout ce que la caisse a enregistré comme encaissé depuis la mise en service du logiciel."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Nous avons vérifié son chaînage sur les **16 605 tickets** des trois exercices : entre deux tickets consécutifs, le compteur progresse exactement du montant TTC du ticket. **Aucune rupture, aucun écart d’un centime**, du premier au dernier ticket de la période vérifiée. Le contrôle est reproductible sur les annexes G1, G2 et G3 (pièce jointe, onglet « Chainage grand total »)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Contrôle du grand total perpétuel (annexes G1 / G2 / G3)",
+      "minWidth": 700,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Tickets",
+          "align": "right"
+        },
+        {
+          "label": "Somme des tickets TTC",
+          "align": "right"
+        },
+        {
+          "label": "Progression du totalisateur",
+          "align": "right"
+        },
+        {
+          "label": "Écart",
+          "align": "right"
+        },
+        {
+          "label": "Lignes « DEL » de l’exercice",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "5 658",
+            "align": "right"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "8 014",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "5 529",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "6 943",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "5 418",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "6 345",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total",
+            "fw": 700
+          },
+          {
+            "v": "16 605",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 276 191,20 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 276 191,20 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "21 302",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce contrôle établit un point que le service n’aborde nulle part : entre ce que la caisse a enregistré et ce qui a été porté en comptabilité, **rien n’a été retiré**. Les 21 302 suppressions n’ont pas fait bouger d’un centime le totalisateur. La journée du 09/09/2022, choisie par le service, en donne l’illustration : 67 suppressions, 25 notes, et un compteur qui progresse très exactement de 1 928,20 €, le chiffre d’affaires encaissé du jour."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service soutient à la fois que le logiciel est soumis aux obligations d’inaltérabilité de l’article 286, I, 3° bis du CGI (p. 6) et qu’il aurait permis de faire disparaître 430 763,15 € de recettes. Si tel était le cas, le compteur que la doctrine rend inaltérable et non purgeable devrait porter la trace de l’écart. Il n’en porte aucune, sur 16 605 tickets et trois exercices."
+    },
+    {
+      "kind": "titre",
+      "texte": "L’absence d’identifiant commun est un fait de l’éditeur, pas du contribuable",
+      "numero": "2.5"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service relève que la colonne « id » du fichier « tpvenement » « n’est repris dans aucun des autres fichiers remis par la société dans le cadre de la procédure de l’article L-47-A-II, à savoir : Règlement, Ticket ligne, Ticket, TVA » (p. 5). Le constat est exact. Sa portée est l’inverse de celle que le service lui donne."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’article L. 47 A, II du LPF met à la charge du contribuable la mise à disposition, dans les quinze jours, des « copies des documents, données et traitements soumis à contrôle » ([LPF, art. L. 47 A](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037526053)). L’obligation porte sur la communication de ce qui existe, jamais sur la production d’une donnée nouvelle. L’arrêté d’application, l’article A. 47 A-2 du même livre, ne fixe que des normes de support et d’encodage : il n’impose aucune liste de champs ([LPF, art. A. 47 A-2](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000027789224))."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La doctrine que le service cite dit la même chose du logiciel lui-même : « Le législateur n’a pas défini de cahier des charges, ni de solution technique. L’élaboration de référentiels ou de solutions techniques est donc du ressort des seuls acteurs privés » ([BOI-TVA-DECLA-30-10-30, § 60](https://bofip.impots.gouv.fr/bofip/10691-PGP.html)). Les cinq tables remises sont celles que produit la caisse ; leur structure est le fait de l’éditeur, non de l’exploitant. Reprocher au contribuable l’absence d’une colonne que son logiciel n’exporte pas revient à lui opposer une obligation que ni la loi, ni l’arrêté, ni la doctrine ne prévoient."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service ne dit nulle part avoir demandé un export complémentaire portant l’identifiant de table ou de note, alors que la même procédure le lui permettait et que l’éditeur du logiciel était identifié. Une donnée qui n’a pas été demandée ne peut pas être opposée comme manquante, encore moins servir de motif de rejet."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Enfin, les fichiers ne sont pas dépourvus de tout lien commun. Chaque ligne « DEL » porte le numéro de ticket Z (« no_z_report »), la date et l’heure à la minute, c’est-à-dire exactement les données de détail que le BOFiP énumère en page 6 du courrier. Sur la journée du 09/09/2022, les 67 suppressions et les 25 notes portent toutes le même Z 3052 ; le 21/03/2024, le même Z 3370. Le rapprochement n’est pas certain à la ligne près : il n’est pas impossible, et le service le pratique lui-même page 13."
+    },
+    {
+      "kind": "titre",
+      "texte": "La traçabilité des corrections est une obligation légale : leur présence est attendue",
+      "numero": "2.6"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service cite lui-même, page 6, la doctrine applicable : les corrections « s’effectuent par des opérations de « plus » et de « moins » et non par modification directe des données d’origine enregistrées », et « ces opérations de correction donnent également lieu à un enregistrement et leur inaltérabilité doit également être garantie » ([BOI-TVA-DECLA-30-10-30, § 90](https://bofip.impots.gouv.fr/bofip/10691-PGP.html)). Le même document range parmi les données à enregistrer ligne par ligne « les traces de modifications et corrections apportées aux transactions enregistrées » (§ 50)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il en résulte qu’un logiciel conforme **produit nécessairement des lignes d’annulation**. Ce que la loi interdit, c’est l’effacement sans trace ; ce qu’elle impose, c’est la ligne « DEL ». Le service fonde donc le premier motif de son rejet sur l’existence même de la trace que le texte qu’il invoque commande de créer."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le volume ne dit rien d’autre que le volume d’activité. 21 302 corrections rapportées à 16 605 notes et 659 jours de service, cela fait **1,3 correction par note** et **32 par jour de service**, dans un restaurant qui sert deux services quotidiens, transfère des articles entre tables, partage des additions et corrige des erreurs de saisie en temps réel. La suppression médiane vaut 8,70 € : l’ordre de grandeur d’un plat ou d’un verre."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce raisonnement figurait dans la réponse du 10/07/2026. Le service le reproduit intégralement page 18 de son courrier, dans la partie B, sous le titre « Les règles légales imposent de tracer les corrections (donc d’enregistrer des lignes d’annulation) », et n’y répond ni page 18, ni ailleurs."
+    },
+    {
+      "kind": "titre",
+      "texte": "« Une infime partie » : la charge de la preuve ne se déplace pas",
+      "numero": "2.7"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’argument central du service est arithmétique : 944 lignes documentées sur 21 302, donc « l’exposé et les éléments joints à la réponse n’en expliquent donc qu’une infime partie » (p. 5). Le raisonnement suppose qu’il appartenait à la société de justifier les 21 302 lignes une par une. Ce n’est pas la règle applicable."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Dans la procédure de rectification contradictoire, lorsque le contribuable n’a pas accepté les rehaussements, « il incombe à l’administration d’apporter la preuve du bien-fondé des suppléments d’impôt » ([CE, 9e ch., 5 janvier 2023, n° 452595, pt 2](https://www.legifrance.gouv.fr/juri/id/CETATEXT000046949615)). Et aux termes de l’article L. 192, alinéa 2, du livre des procédures fiscales, « la charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » ([LPF, art. L. 192](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037993633))."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le rejet d’une comptabilité suppose au surplus des irrégularités d’une gravité particulière. Le Conseil d’État écarte le rejet lorsque « l’administration ne démontre pas que les irrégularités relevées dans la comptabilité […] soient de nature à retirer à celle-ci toute valeur probante » ([CE, 9e et 7e sous-sect., 5 octobre 1990, n° 63817](https://www.legifrance.gouv.fr/juri/id/CETATEXT000007630108)) ; statuant sur le cas d’un restaurant, il exige des « irrégularités graves et répétées » ([CE, 9e et 7e sous-sect., 22 janvier 1992, n° 57816](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000007631618))."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Or, sur les quinze pages de la partie A, le service ne désigne **pas une seule suppression dont il établisse qu’elle correspond à une vente réellement encaissée et non déclarée**. Il n’indique pas davantage combien de lignes il a lui-même auditées. Ce qu’il caractérise est une possibilité théorique offerte par une fonctionnalité, non une minoration de recettes constatée."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce qui est demandé à la société est en réalité la preuve d’un fait négatif : établir qu’aucune des 21 302 lignes ne dissimule une recette, à partir d’un fichier dont le service souligne lui-même qu’il ne porte ni le produit, ni la table. Ce qui manque au dossier n’est pas notre démonstration : c’est la sienne."
+    },
+    {
+      "kind": "alerte",
+      "couleur": "orange",
+      "titre": "Le décompte de 944 lignes n’était pas un inventaire",
+      "texte": "Le fichier « 01-cas suppressions.xlsx » a été produit pour démontrer un mécanisme, avec un exemple daté par mois et par cas sur trois exercices, non pour recenser les 21 302 lignes. Le service le lit comme un inventaire exhaustif et lui oppose son incomplétude. La mesure du point 2.3, qui porte sur la totalité des 21 302 lignes, répond à l’objection sur son propre terrain."
+    },
+    {
+      "kind": "titre",
+      "texte": "L’exemple du 21/03/2024 se retourne",
+      "numero": "2.8"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reproche que les articles des notes n°13 et n°14 ne se retrouvent pas tous en « DEL » : « pourquoi seulement une petite partie des articles de votre colonne de droite devraient se retrouver à gauche, alors qu’en toute logique, ils ont fait l’objet d’un enregistrement préalable en tant qu’article « entier », puis, ont ensuite été divisés » (p. 17). La prémisse est fausse, et le fichier qu’il produit le montre."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les deux notes se partagent une seule et même table de **123,70 €** (35,11 € + 88,59 €). Sur les douze articles, **onze sont divisés exactement au quart et aux trois quarts** : c’est la signature de la fonction de partage du logiciel, qui divise les quantités déjà enregistrées sur la table sans supprimer ni ressaisir la ligne. Une ligne divisée par cette fonction ne produit aucune suppression. C’est pourquoi la truite jurassienne, la salade verte et le menu galette n’apparaissent pas à 20h16 : ils n’ont jamais été ressaisis."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le seul article dont les parts s’écartent de ce partage automatique est le **verre de Savagnin** : 1,25 et 1,75 au lieu de 0,75 et 2,25, une demi-part déplacée à la main d’un convive à l’autre. Et c’est précisément le Savagnin, à **8,30 €**, qui figure parmi les suppressions de 20h16. L’intervention manuelle laisse une trace ; le partage automatique n’en laisse pas. La question posée page 17 a donc une réponse, et elle est dans les données du service."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le partage de la table du 21/03/2024 entre les notes n°13 et n°14 (annexe C2)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Article"
+        },
+        {
+          "label": "Prix unitaire",
+          "align": "right"
+        },
+        {
+          "label": "Note n°13",
+          "align": "right"
+        },
+        {
+          "label": "Note n°14",
+          "align": "right"
+        },
+        {
+          "label": "Total table",
+          "align": "right"
+        },
+        {
+          "label": "Lecture du partage"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Macvin du Jura"
+          },
+          {
+            "v": "5,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,50",
+            "align": "right"
+          },
+          {
+            "v": "1,50",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "Savagnin verre"
+          },
+          {
+            "v": "8,30 €",
+            "align": "right"
+          },
+          {
+            "v": "1,25",
+            "align": "right"
+          },
+          {
+            "v": "1,75",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "part ajustée à la main (au lieu de 0,75 / 2,25)",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Menu « Galette »"
+          },
+          {
+            "v": "19,50 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "PAYSANNE"
+          },
+          {
+            "v": "19,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "TRUITE JURASSIENNE"
+          },
+          {
+            "v": "18,60 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "Galette nature"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "Ratatouille"
+          },
+          {
+            "v": "3,20 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "PIGNONS PIN"
+          },
+          {
+            "v": "1,40 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "Salade Verte"
+          },
+          {
+            "v": "2,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "Champignons frais"
+          },
+          {
+            "v": "3,20 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "Baba"
+          },
+          {
+            "v": "8,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "GLACE 2 BOULES"
+          },
+          {
+            "v": "5,50 €",
+            "align": "right"
+          },
+          {
+            "v": "0,25",
+            "align": "right"
+          },
+          {
+            "v": "0,75",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "quart / trois quarts exacts"
+          }
+        ],
+        [
+          {
+            "v": "Total",
+            "fw": 700
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "35,11 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "88,59 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "123,70 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "une seule table, intégralement encaissée",
+            "badge": "ok",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service affirme ensuite (p. 17) que la truite jurassienne à 18,60 €, la salade verte à 2,90 € et le menu galette à 19,50 € « ne sont pas en colonne de gauche et **n’existent pas en « DEL » dans le fichier tpvenement** ». Le fichier dit le contraire : sur les trois exercices, **18,60 € y figure 1 113 fois, 2,90 € 149 fois et 19,50 € 77 fois**. Ces articles produisent des suppressions comme les autres, simplement pas ce soir-là."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Quant aux trois montants que le service dit absents des notes, l’explication est la même que pour l’ensemble du fichier : **sept des huit suppressions de 20h16 valent exactement un prix de la carte** (8,90 € le Baba, 8,30 € le Savagnin verre, 4,80 € le Picon bière, 19,90 € la Paysanne, 8,90 € à nouveau, 8,00 € les Escargots de Bourgogne, 10,00 € la coupe de Champagne). Seule la valeur 20,10 € n’a pas d’équivalent au catalogue, et elle apparaît **une seule fois sur les 21 302 lignes** des trois exercices. Une rafale de 20h16 n’a d’ailleurs aucune raison de se limiter à une seule table : c’est l’heure du coup de feu."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Reste la chronologie, que le service ne relève pas. Les notes n°13 et n°14 sont encaissées à **19h58 et 20h00**. Les huit suppressions sont horodatées à **20h16**. La recette est déjà enregistrée, réglée, portée au ticket Z 3370 et au totalisateur perpétuel quand la table d’origine est nettoyée. On n’efface pas à 20h16 une recette encaissée depuis 19h58."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le troisième contre-exemple annoncé n’est jamais produit",
+      "numero": "2.9"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Page 7, le service annonce qu’il va traiter « un seul et unique exemple, parfaitement parlant, de chacune de vos parties d’argument », et en énumère trois : « Conversion au forfait », « Sur le paiement séparé / partage des tables », « Articles déplacés vers la bonne table ». Les deux premières familles sont traitées, aux pages 7 à 15 puis 16 et 17."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La troisième ne l’est jamais. Après la conclusion de la page 17, le courrier ouvre directement en page 18 la partie « B - LES FACTURES SANS DETAIL (Menus à Prix personnalisé) ». Aucun exemple, aucun extrait de fichier, aucun décompte n’est opposé aux **62 lignes de l’onglet « Articles déplacés »**, que le service inclut pourtant dans les 944 lignes qu’il qualifie d’« infime partie »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur ce point, la démonstration de la réponse du 10/07/2026 demeure donc entière et non contredite. Un article saisi sur une table et servi à une autre doit être retiré de la première et ajouté à la seconde : le retrait produit une ligne « DEL » sans qu’un euro de recette ne change de place."
+    },
+    {
+      "kind": "titre",
+      "texte": "Une recette effacée devrait laisser un excédent d’espèces",
+      "numero": "2.10"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La thèse du service, telle qu’il l’a formulée en page 19 de la proposition de rectifications, est que la table supprimée « ne figure plus en chiffre d’affaires » et « n’apparaît pas sur le ticket Z ». Elle suppose donc que les convives ont payé. Il faut alors expliquer par quel canal cet argent est entré, puisque le mode de règlement est enregistré note par note dans le fichier « règlement » que le service a lui-même reproduit page 8."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur les trois exercices, **98,64 % des règlements sont bancarisés** : carte bancaire 91,22 %, chèques-vacances 3,73 %, titres restaurant 2,62 %, chèques 1,07 %. Les espèces représentent **1,36 % des règlements**, soit **17 042,16 € sur trois ans**, 1,34 % du chiffre d’affaires TTC. Tous ces flux sont tracés par un tiers (banque, ANCV, émetteur de titres) et se retrouvent au crédit des comptes bancaires."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Règlements bancarisés",
+          "valeur": "98,64 %",
+          "sub": "CB, chèques-vacances, titres restaurant, chèques",
+          "highlight": true,
+          "couleur": "teal"
+        },
+        {
+          "label": "Espèces encaissées en trois ans",
+          "valeur": "17 042 €",
+          "sub": "1,34 % du chiffre d’affaires TTC",
+          "couleur": "blue"
+        },
+        {
+          "label": "Montant brandi au titre des suppressions",
+          "valeur": "430 763 €",
+          "sub": "soit 25 fois la totalité des espèces",
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le montant que le service met en avant, 430 763,15 €, représente **25 fois la totalité des espèces passées par la caisse en trois ans**. Une dissimulation de cet ordre supposerait un flux d’espèces qui n’existe ni dans la caisse, ni sur les comptes, et dont le service ne fait état nulle part."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les deux journées choisies par le service le confirment en réduction. Le **09/09/2022** : 67 suppressions pour 933,80 €, et **64,40 € d’espèces** encaissés dans la journée, tout le reste étant réglé par carte, chèque-vacances ou titre restaurant. Le **21/03/2024** : 22 suppressions pour 246,10 €, et **35,26 € d’espèces**. Il n’y a pas, ces jours-là, de quoi encaisser en liquide ce que le service suppose effacé."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Ce que cela fait tomber",
+      "sousTitre": "Le premier motif de rejet repose sur une méthode que le service condamne puis emploie, et sur une inversion de la charge de la preuve."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La partie A tient sur deux affirmations. La première, que le rapprochement par l’heure et le montant ne peut rien établir, est démentie par la page 13, où le service adopte cette méthode pour bâtir sa propre démonstration, et par les pages 7 et 8, où les sept lignes qu’il imprime totalisent au centime près les 76,90 € de la note qu’il reproduit, comme les neuf lignes de la page 13 totalisent les 207,00 € de la note n°8."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La seconde, que la société n’expliquerait qu’« une infime partie » des 21 302 lignes, déplace la charge de la preuve. Sur quinze pages, aucune suppression n’est identifiée comme une vente encaissée et non déclarée, alors que la preuve du bien-fondé des rectifications et celle des graves irrégularités incombent à l’administration."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Mesurée sur la totalité du fichier, la population des 21 302 lignes est une population d’articles : 398 valeurs seulement, dont 98,3 % égales à un prix de la carte ou à un multiple entier de ce prix. Le totalisateur perpétuel de la caisse progresse exactement de la somme des 16 605 tickets, sans une seule rupture sur trois exercices. Et 98,64 % des encaissements sont bancarisés."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le motif ne caractérise donc pas les irrégularités graves et répétées qu’exige le rejet d’une comptabilité. Il ne peut fonder ni ce rejet, ni la reconstitution de recettes qui en découle, ni les **430 763,15 €** présentés comme des recettes effacées."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Rapprochements intégralement recalculés depuis les annexes de caisse remises au titre de l’article L. 47 A, II du LPF (annexes C, E, F et G des trois exercices), par le script reproductible « scripts/reponse1-suppressions.py ». Huit onglets : synthèse, journée du 09/09/2022 (rafales, détail des 67 suppressions, 25 notes encaissées), journée du 21/03/2024 (détail des suppressions, partage des notes n°13 et n°14), contrôle du grand total perpétuel et confrontation des 21 302 lignes « DEL » aux prix de la carte.",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-suppressions-rapprochements.xlsx",
+          "label": "Suppressions « DEL » : rapprochements du 09/09/2022 et du 21/03/2024, chaînage du totalisateur et confrontation des 21 302 lignes aux prix de la carte (XLSX, 8 onglets)"
+        }
+      ]
+    }
+  ]
+}

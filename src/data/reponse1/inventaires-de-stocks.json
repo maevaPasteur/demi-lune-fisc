@@ -1,0 +1,1636 @@
+{
+  "meta": {
+    "slug": "inventaires-de-stocks",
+    "source": "Réponse DDFiP 39 du 04/09/2026, p. 30 à 34",
+    "lettre": "E"
+  },
+  "entete": {
+    "positionService": "Le service maintient intégralement le grief d’inventaire de stocks non conforme. Il indique que le rejet de comptabilité a été fondé sur les copies papier des inventaires obtenues lors des interventions sur place, états qui ne comportaient que le libellé, la quantité, le prix unitaire et la valeur, sans la contenance des boissons. Il constate que la société « a corrigé ses inventaires pour les rendre conforme aux dispositions prévues », mais oppose que ces corrections sont « intervenues post-proposition de rectifications » et ne peuvent donc effacer le motif de rejet. Il ajoute une seconde jurisprudence (CE n° 56 621 du 24 juillet 1987) et relie le grief à la variabilité des chiffres d’affaires entre fichiers EXCEL pour conclure que « l’absence d’inventaires de stocks conforme aux dispositions prévues constitue donc un motif de rejet de comptabilité valable ».",
+    "reponseCourte": "Le service admet page 33 que les inventaires produits sont conformes, ne conserve plus qu’une objection de date qu’aucun texte ne soutient, et tire pourtant de ces mêmes états les 2 103,91 € de variation de stock qui fixent son volume disponible : le motif de rejet ne subsiste pas.",
+    "enjeu": "Ce grief est l’un des motifs de rejet de la comptabilité, alors même que la reconstitution du chiffre d’affaires « boissons » est bâtie sur ces mêmes inventaires.",
+    "statut": "demonte"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l’administration",
+      "sousTitre": "Partie « E- Inventaires de stocks » du courrier du 04/09/2026, p. 30 à 34 : rappel de la position de Me THIVEND (p. 30 à 33), puis « Réponse du service » (p. 33 et 34)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La partie E du courrier s’ouvre p. 30 par la formule habituelle : « Maître THIVEND présente sa position comme suit ». Le service reproduit alors, sur près de trois pages, l’argumentaire du mémoire du 10/07/2026 relatif au point « Inventaire de stocks (jugé absent ou incomplet) », renvoyant aux pages 14 à 16 de la proposition de rectification (motif de rejet n° 1/3). Sa propre réponse ne commence qu’au milieu de la page 33, sous l’intitulé « Réponse du service », et se poursuit jusqu’à la page 34."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le rappel de la position de Me THIVEND",
+      "numero": "1.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le courrier reprend d’abord le constat du vérificateur tel que la défense l’avait cité : le vérificateur indique (p. 14 de la proposition) avoir « pu consulter et obtenir les inventaires de stocks » auprès du cabinet comptable AGC et en reprend une partie (les liquides) en annexe A, avant de relever un défaut unique, à savoir que « les stocks remis, hormis celui du 31/03/2022, apparaissent comme incomplets dans le sens où ils n’indiquent pas toujours les volumes des boissons »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sont ensuite rappelés les fondements juridiques invoqués par le service dans la proposition : l’article R. 123-177 du Code de commerce, qui définit l’inventaire comme le relevé de tous les éléments d’actif et de passif « au regard desquels sont mentionnées la quantité et la valeur de chacun d’eux », inventaire qui « doit être détaillé et précis » ; l’article L. 123-12, al. 2, dont les éléments « doivent pouvoir être identifiés grâce aux documents ou pièces justificatives conservées par l’entreprise » ; et la jurisprudence CE 25 juillet 1980 (n° 13170), selon laquelle un livre d’inventaire ne comportant « que le montant global des stocks, sans état détaillé faisant ressortir les quantités, les poids et les prix unitaires d’achat » confère à la comptabilité un caractère de grave irrégularité. Le service en avait conclu (p. 14) que « cette absence de stock […] constitue une irrégularité grave » permettant « de considérer que la comptabilité présentée n’est pas probante et qu’elle est dans l’incapacité de justifier précisément les chiffres d’affaires »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le courrier restitue enfin les arguments de la défense : les trois inventaires physiques de clôture existent et ont été établis à la date de clôture de chaque exercice (31/03/2023 : 101 lignes ; 31/03/2024 : 90 lignes ; 31/03/2025 : 82 lignes) ; sur les 273 lignes des trois clôtures, 270 (98,9 %) sont des lignes de produit complètes, les 3 restantes (toutes au 31/03/2025) étant des reliquats de valeur (91,97 €, 226,44 € et 94,59 €) ; le stock boissons total reste compris entre 3 674,17 € et 4 536,41 € HT (stock moyen 4 247,93 €), ce qui exclut un déstockage caché ; la contenance n’est pas une mention exigée par R. 123-177 et figure sur les factures (exemple du « Saint Véran : 25 bouteilles, 436,50 € HT » au 31/03/2023, contenance 75 cl portée sur la facture) ; l’administration a elle-même reporté puis converti ces contenances dans ses annexes 6-1 à 6-3 et 7-1 à 7-3."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Stock de clôture par exercice, tel que reproduit dans le courrier (p. 31)",
+      "minWidth": 680,
+      "colonnes": [
+        {
+          "label": "Date de clôture"
+        },
+        {
+          "label": "Lignes inventoriées",
+          "align": "right"
+        },
+        {
+          "label": "Boissons sans alcool",
+          "align": "right"
+        },
+        {
+          "label": "Alcools et vins",
+          "align": "right"
+        },
+        {
+          "label": "Stock total HT",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "31/03/2023"
+          },
+          {
+            "v": "101",
+            "align": "right"
+          },
+          {
+            "v": "617,91 €",
+            "align": "right"
+          },
+          {
+            "v": "3 056,26 €",
+            "align": "right"
+          },
+          {
+            "v": "3 674,17 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "31/03/2024"
+          },
+          {
+            "v": "90",
+            "align": "right"
+          },
+          {
+            "v": "603,61 €",
+            "align": "right"
+          },
+          {
+            "v": "3 932,80 €",
+            "align": "right"
+          },
+          {
+            "v": "4 536,41 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "31/03/2025"
+          },
+          {
+            "v": "82",
+            "align": "right"
+          },
+          {
+            "v": "760,74 €",
+            "align": "right"
+          },
+          {
+            "v": "3 772,48 €",
+            "align": "right"
+          },
+          {
+            "v": "4 533,22 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 2,
+      "titre": "La « Réponse du service » (p. 33 et 34)",
+      "sousTitre": "Le service oppose les états papier obtenus sur place, la date des corrections, une seconde jurisprudence et la variabilité des fichiers EXCEL."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service ouvre sa réponse en déplaçant le débat sur les pièces qu’il détenait au moment du contrôle : « Lors des interventions sur place, le service avait obtenu une copie des inventaires de stock sous format papier. Le rejet de comptabilité a donc été fondé sur ces documents qui indiquaient ainsi (pour les articles équivalents à ceux figurant dans les fichiers excel de la réponse) » (p. 33). Suit la reproduction d’un extrait de cet état papier, portant sur vingt et un articles."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Extrait de l’état de stocks papier reproduit par le service (p. 33)",
+      "minWidth": 620,
+      "colonnes": [
+        {
+          "label": "Article"
+        },
+        {
+          "label": "Quantité",
+          "align": "right"
+        },
+        {
+          "label": "Prix unitaire",
+          "align": "right"
+        },
+        {
+          "label": "Valeur",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Cidre brut"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "2,54",
+            "align": "right"
+          },
+          {
+            "v": "38,1",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cidre doux"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "2,89",
+            "align": "right"
+          },
+          {
+            "v": "40,46",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Pontarlier"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17,95",
+            "align": "right"
+          },
+          {
+            "v": "17,95",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ricard"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17,56",
+            "align": "right"
+          },
+          {
+            "v": "17,56",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Clan Campbell"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "12,56",
+            "align": "right"
+          },
+          {
+            "v": "12,56",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Jack daniel"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,26",
+            "align": "right"
+          },
+          {
+            "v": "19,26",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Marc du jura"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "18,61",
+            "align": "right"
+          },
+          {
+            "v": "18,61",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Martini"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "8,15",
+            "align": "right"
+          },
+          {
+            "v": "8,15",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Marc de bourgogne"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "25,9",
+            "align": "right"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Porto"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "7,71",
+            "align": "right"
+          },
+          {
+            "v": "30,84",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Sapin"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "21,16",
+            "align": "right"
+          },
+          {
+            "v": "42,32",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Creme mure"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "8,27",
+            "align": "right"
+          },
+          {
+            "v": "8,27",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Creme cassis"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "8,39",
+            "align": "right"
+          },
+          {
+            "v": "16,78",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Creme cerise"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "7,88",
+            "align": "right"
+          },
+          {
+            "v": "15,76",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Vodka pollakiof"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "9,03",
+            "align": "right"
+          },
+          {
+            "v": "9,03",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cognac Park"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,62",
+            "align": "right"
+          },
+          {
+            "v": "19,62",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Absinthe"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "30,89",
+            "align": "right"
+          },
+          {
+            "v": "61,78",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Calvados"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "16,53",
+            "align": "right"
+          },
+          {
+            "v": "33,06",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Mirabelle"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "20,04",
+            "align": "right"
+          },
+          {
+            "v": "20,04",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Framboise"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "21,65",
+            "align": "right"
+          },
+          {
+            "v": "21,65",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Soho"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "9,72",
+            "align": "right"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cet extrait est reproduit sans en-tête de colonnes ni indication d’exercice. Les trois colonnes chiffrées se lisent comme une quantité, un prix unitaire et une valeur : le produit des deux premières donne exactement la troisième pour chacune des vingt et une lignes (15 × 2,54 = 38,1 ; 4 × 7,71 = 30,84 ; 2 × 30,89 = 61,78, etc.). Aucune colonne de contenance n’y figure, ce qui est précisément le point que le service entend démontrer."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service tire de cette pièce deux affirmations successives, et c’est le cœur de sa réponse. D’abord une concession : « Le service note donc que la société a corrigé ses inventaires pour les rendre conforme aux dispositions prévues » (p. 33). Ensuite l’objection qui neutralise cette concession : « Toutefois, cela n’enlève rien à la validité de ce motif de rejet de la comptabilité, les corrections étant intervenues post-proposition de rectifications » (p. 33). Autrement dit, le service ne discute plus le contenu des inventaires produits par la défense : il en conteste la date."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service répond ensuite à l’argument de contradiction (utiliser l’inventaire comme socle de la reconstitution tout en le jugeant non probant) en le retournant en faveur du contribuable : « Concernant les volumes retenus pour la reconstitution, c’est à l’avantage de la société que le service a choisi cette option. Que la réponse puisse considérer que ce choix supprime totalement le motif ce rejet de comptabilité ne peut êtr admis par le service » (p. 34, orthographe du courrier). La contradiction relevée par la défense est donc présentée comme un choix de méthode favorable, sans autre justification."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur le terrain jurisprudentiel, le service ne défend pas la décision CE 25 juillet 1980 qu’il avait citée : il en ajoute une autre. « Enfin, bien que vous citiez une jurisprudence de l’année 1980 sur le point, le service rappellera également en réponse une autre jurisprudence du Conseil d’État (n° 56 621 du 24 juillet 1987) » (p. 34). L’extrait reproduit vise « un commerce de véhicules utilitaires d’occasion et de pièces détachées » qui « n’établissait pas chaque année un inventaire détaillé de ses stocks et que sa caisse n’était pas tenue au jour le jour, des discordances importantes existant au surplus entre le brouillard de caisse et le journal auxiliaire de caisse ; qu’à elles seules, ces omissions graves et répétées, qui sont de nature à retirer toute valeur probante à la comptabilité »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service articule alors ce précédent avec le grief informatique traité ailleurs dans le courrier : il « rappellera également qu’il a été démontré une variabilité certaine des chiffres d’affaires entre les différents fichiers EXCEL qui ont été communiqués à l’administration dans le cadre de la procédure de l’article L-47-A-II », puis pose que « cette variabilité suffit à elle-même, quelque que soit l’importance des différences constatées, à mettre en évidence que la caisse utilisée n’a pas permis à la société de pouvoir fournir des archives fiscales dites “inaltérables” » (p. 34)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La chaîne de déduction est ensuite déroulée en trois temps : « La comptabilité a été enregistrée à partir des données de caisses » ; « Il a été démontré que ces données pouvaient être désormais considérées comme impropre à justifier la comptabilité » ; de ce fait, tout ce qui compose la comptabilité présentée, à savoir « sa tenue de caisse journalière », « le brouillard de caisse » et « le journal auxiliaire de caisse », « est également impropre à justifier le volume d’activité déclaré » (p. 34). Le service reconstitue ainsi, sur les fichiers de caisse, les deux branches de l’arrêt de 1987 (inventaire non détaillé et caisse non probante)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La partie E se clôt sur une phrase soulignée dans le courrier : « Il en résulte que, conformément à la lecture de l’arrêt du Conseil d’État du 24 juillet 1987 cité ci dessus, l’absence d’inventaires de stocks conforme aux dispositions prévues constitue donc un motif de rejet de comptabilité valable » (p. 34). Le grief est donc maintenu en totalité, sans aucune atténuation chiffrée."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Motif de rejet",
+          "valeur": "Maintenu",
+          "sub": "« constitue donc un motif de rejet de comptabilité valable » (p. 34)",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Concession du service",
+          "valeur": "Inventaires corrigés",
+          "sub": "« la société a corrigé ses inventaires pour les rendre conforme aux dispositions prévues » (p. 33)",
+          "couleur": "gold"
+        },
+        {
+          "label": "Seule objection maintenue",
+          "valeur": "Post-proposition",
+          "sub": "« les corrections étant intervenues post-proposition de rectifications » (p. 33)",
+          "couleur": "red"
+        },
+        {
+          "label": "Articles de l’état papier reproduit",
+          "valeur": "21",
+          "sub": "Libellé, quantité, prix unitaire, valeur : aucune colonne de contenance (p. 33)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Jurisprudence ajoutée",
+          "valeur": "CE n° 56 621",
+          "sub": "24 juillet 1987, en complément de CE 25 juillet 1980 n° 13170 (p. 34)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Seuil de gravité retenu",
+          "valeur": "Aucun",
+          "sub": "« quelque que soit l’importance des différences constatées » (p. 34)",
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "alerte",
+      "couleur": "orange",
+      "titre": "Le débat a changé de nature entre la proposition et la réponse",
+      "texte": "Dans la proposition de rectification, le grief portait sur le contenu des inventaires (volumes des boissons non toujours indiqués). Dans la réponse du 04/09/2026, le service admet que les inventaires produits sont conformes et ne conserve qu’une objection de date : les corrections seraient « intervenues post-proposition de rectifications » (p. 33)."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Notre réponse : le service écarte l’inventaire et s’en sert dans le même courrier",
+      "sousTitre": "La contradiction n’a pas reçu de réponse, la « correction » n’en est pas une, l’objection de date n’a aucun fondement, la décision de 1987 dit autre chose, et le grief n’est chiffré nulle part."
+    },
+    {
+      "kind": "titre",
+      "texte": "L’inventaire est l’un des deux termes du calcul du disponible",
+      "numero": "3.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La formule de la reconstitution est celle que le service rappelle lui-même dans ce courrier : « Le volume disponible = achats + variation de stock (compte 310200) » (p. 74). Les annexes 6-1 à 6-3 de la proposition de rectification la portent en toutes lettres : « achats ± variation de stock = quantités disponibles ». Or la variation de stock ne se lit nulle part ailleurs que dans les inventaires de clôture. C’est donc la pièce déclarée non probante qui fixe le point de départ de toute la reconstitution."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service ne s’est pas contenté de retenir cette variation dans son principe : il l’a chiffrée. Sa reconstitution retient des variations de stock boissons de **800,83 €**, **1 029,67 €** et **273,41 €** (comptabilisées en diminution), soit **2 103,91 €** sur les trois exercices vérifiés. Ces montants sortent des inventaires des 31/03/2023, 31/03/2024 et 31/03/2025, c’est-à-dire des états mêmes dont la page 34 conclut qu’ils ne sont pas conformes."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Ce que le service tire des inventaires qu’il déclare non probants",
+      "minWidth": 700,
+      "colonnes": [
+        {
+          "label": "Élément de la reconstitution"
+        },
+        {
+          "label": "Ce que le service y prend"
+        },
+        {
+          "label": "Portée",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Variation de stock boissons, exercice 2022-2023"
+          },
+          {
+            "v": "Variation tirée des inventaires physiques (compte 310200)"
+          },
+          {
+            "v": "800,83 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Variation de stock boissons, exercice 2023-2024"
+          },
+          {
+            "v": "Variation tirée des inventaires physiques (compte 310200)"
+          },
+          {
+            "v": "1 029,67 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Variation de stock boissons, exercice 2024-2025"
+          },
+          {
+            "v": "Variation tirée des inventaires physiques (compte 310200)"
+          },
+          {
+            "v": "273,41 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul des trois exercices"
+          },
+          {
+            "v": "Montant retenu par le service dans son propre calcul"
+          },
+          {
+            "v": "2 103,91 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Quantités disponibles, annexes 6-1 à 6-3"
+          },
+          {
+            "v": "« achats ± variation de stock = quantités disponibles »"
+          },
+          {
+            "v": "100 % des volumes reconstitués",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Volumétrie des bouteilles, annexes 7"
+          },
+          {
+            "v": "Contenance reportée puis convertie en centilitres par le service lui-même"
+          },
+          {
+            "v": "La mention dont le service dit qu’elle manque",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La réponse apportée à cette objection tient en une phrase : « c’est à l’avantage de la société que le service a choisi cette option » (p. 34). Elle ne répond pas à la difficulté. La question n’est pas de savoir qui profite du choix, mais si une même pièce peut être à la fois assez fiable pour servir d’assiette au calcul et trop irrégulière pour être probante. Un document n’a pas une valeur probante variable selon l’usage qu’on en fait."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’avantage allégué n’est au demeurant pas démontré : le service n’indique pas quel volume disponible il aurait retenu sans les inventaires, ni de combien celui-ci aurait différé. Faute de ce calcul, l’affirmation reste sans portée vérifiable. Et s’il tenait réellement ces états pour inutilisables, il lui appartenait d’écarter la variation de stock et d’en tirer les conséquences sur sa méthode, non de la conserver en l’état."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Variation de stock reprise des inventaires",
+          "valeur": "2 103,91 €",
+          "sub": "800,83 € + 1 029,67 € + 273,41 € sur les trois exercices, retenus par le service dans son volume disponible",
+          "highlight": true,
+          "couleur": "teal"
+        },
+        {
+          "label": "Part du disponible qui passe par l’inventaire",
+          "valeur": "100 %",
+          "sub": "« achats ± variation de stock = quantités disponibles » (annexes 6-1 à 6-3)",
+          "couleur": "teal"
+        },
+        {
+          "label": "Réponse du service à la contradiction",
+          "valeur": "1 phrase",
+          "sub": "« c’est à l’avantage de la société que le service a choisi cette option » (p. 34)",
+          "couleur": "red"
+        },
+        {
+          "label": "Chiffrage du disponible sans les inventaires",
+          "valeur": "Non produit",
+          "sub": "Le service n’indique aucun volume de remplacement",
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Il n’y a pas eu de correction : la même pièce, avec la contenance explicitée",
+      "numero": "3.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service écrit que la société « a corrigé ses inventaires pour les rendre conforme aux dispositions prévues » (p. 33). Le mot est inexact. L’état produit en réponse n’est pas un inventaire refait : c’est le même relevé, article par article, dans le même ordre, la contenance étant simplement portée dans la désignation de chaque boisson. Une correction modifie une donnée ; ici, aucune quantité et aucune valorisation n’ont été modifiées."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La démonstration se fait avec la pièce que le service a lui-même choisie. Les vingt et un articles qu’il reproduit page 33 sont les lignes 5 à 25 de la page « ALCOOL » de l’inventaire au 31/03/2023, celui que le vérificateur a obtenu sur place et qui est joint au présent mémoire en PDF. Confrontés article par article à l’état complété, ces vingt et un articles donnent : **quantités identiques sur les 21 lignes**, **valeurs identiques au centime sur 18 lignes**."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Article par article : l’extrait de la page 33 confronté à l’état complété (clôture au 31/03/2023)",
+      "minWidth": 860,
+      "colonnes": [
+        {
+          "label": "Article (état d’origine, p. 33)"
+        },
+        {
+          "label": "Qté",
+          "align": "right"
+        },
+        {
+          "label": "P.U. HT",
+          "align": "right"
+        },
+        {
+          "label": "Valeur HT",
+          "align": "right"
+        },
+        {
+          "label": "Contenance ajoutée",
+          "align": "right"
+        },
+        {
+          "label": "Qté",
+          "align": "right"
+        },
+        {
+          "label": "Valeur HT",
+          "align": "right"
+        },
+        {
+          "label": "Écart de valeur",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Cidre brut"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "2,54",
+            "align": "right"
+          },
+          {
+            "v": "38,10",
+            "align": "right"
+          },
+          {
+            "v": "75 cl",
+            "align": "right"
+          },
+          {
+            "v": "15",
+            "align": "right"
+          },
+          {
+            "v": "38,10",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Cidre doux"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "2,89",
+            "align": "right"
+          },
+          {
+            "v": "40,46",
+            "align": "right"
+          },
+          {
+            "v": "75 cl",
+            "align": "right"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "40,46",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Pontarlier"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17,95",
+            "align": "right"
+          },
+          {
+            "v": "17,95",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17,95",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Ricard"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17,56",
+            "align": "right"
+          },
+          {
+            "v": "17,56",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17,56",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Clan Campbell"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "12,56",
+            "align": "right"
+          },
+          {
+            "v": "12,56",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "17,56",
+            "align": "right"
+          },
+          {
+            "v": "+5,00",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Jack daniel"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,26",
+            "align": "right"
+          },
+          {
+            "v": "19,26",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,26",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Marc du jura"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "18,61",
+            "align": "right"
+          },
+          {
+            "v": "18,61",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "18,61",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Martini"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "8,15",
+            "align": "right"
+          },
+          {
+            "v": "8,15",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "8,15",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Marc de bourgogne"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "25,90",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Porto"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "7,71",
+            "align": "right"
+          },
+          {
+            "v": "30,84",
+            "align": "right"
+          },
+          {
+            "v": "75 cl",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "30,84",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Sapin"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "21,16",
+            "align": "right"
+          },
+          {
+            "v": "42,32",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "42,32",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Creme mure"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "8,27",
+            "align": "right"
+          },
+          {
+            "v": "8,27",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "8,22",
+            "align": "right"
+          },
+          {
+            "v": "-0,05",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Creme cassis"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "8,39",
+            "align": "right"
+          },
+          {
+            "v": "16,78",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "16,78",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Creme cerise"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "7,88",
+            "align": "right"
+          },
+          {
+            "v": "15,76",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "16,78",
+            "align": "right"
+          },
+          {
+            "v": "+1,02",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Vodka pollakiof"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "9,03",
+            "align": "right"
+          },
+          {
+            "v": "9,03",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "9,03",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Cognac Park"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,62",
+            "align": "right"
+          },
+          {
+            "v": "19,62",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "19,62",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Absinthe"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "30,89",
+            "align": "right"
+          },
+          {
+            "v": "61,78",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "61,78",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Calvados"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "16,53",
+            "align": "right"
+          },
+          {
+            "v": "33,06",
+            "align": "right"
+          },
+          {
+            "v": "100 cl",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "33,06",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Mirabelle"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "20,04",
+            "align": "right"
+          },
+          {
+            "v": "20,04",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "20,04",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Framboise"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "21,65",
+            "align": "right"
+          },
+          {
+            "v": "21,65",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "21,65",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Soho"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "9,72",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right"
+          },
+          {
+            "v": "70 cl",
+            "align": "right"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les trois lignes qui ne coïncident pas ne sont pas des corrections d’inventaire mais des erreurs de frappe de la retranscription informatique : Clan Campbell (17,56 € saisis au lieu de 12,56 €), Crème de Mûre (8,22 € au lieu de 8,27 €) et Crème de Cerise (16,78 € au lieu de 15,76 €). Elles totalisent **5,97 €** sur un stock de clôture de 3 674,17 € HT, soit **0,16 %**. Nous les rectifions au vu de l’état d’origine, qui fait foi et dont les valeurs sont exactement celles que le service reproduit."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur le seul point réellement reproché, la contenance, l’état complété est intégral pour les articles concernés : **63 lignes d’alcools et vins sur 63** portent une contenance au 31/03/2023, **60 sur 60** au 31/03/2024 et **56 sur 58** au 31/03/2025. Les lignes qui n’en portent pas sont des cafés, thés et infusions, pour lesquels une contenance en centilitres n’a pas d’objet et qui n’entrent dans aucun calcul de volume."
+    },
+    {
+      "kind": "alerte",
+      "couleur": "teal",
+      "titre": "Ce que la pièce de la page 33 démontre en réalité",
+      "texte": "L’état que le service oppose porte, pour chacun des vingt et un articles, un libellé, une quantité, un prix unitaire et une valeur cohérente au centime : ce sont exactement les deux mentions que l’article R. 123-177 du Code de commerce exige, la quantité et la valeur. La pièce produite au soutien du grief établit que l’inventaire d’origine était déjà détaillé."
+    },
+    {
+      "kind": "titre",
+      "texte": "La date de production d’une pièce n’est pas une objection",
+      "numero": "3.3"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Toute la position du service tient désormais à une chronologie : les corrections seraient « intervenues post-proposition de rectifications » (p. 33). Aucun texte n’est cité au soutien de cette idée, et pour cause. L’article [R.* 57-1 du livre des procédures fiscales](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019271343) dispose que l’administration « invite, en même temps, le contribuable à faire parvenir son acceptation ou ses observations dans un délai de trente jours à compter de la réception de la proposition ». Produire des pièces après la proposition n’est donc pas une anomalie : c’est l’objet même du délai que la loi ouvre."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’article [L. 57 du même livre](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022177777) achève la démonstration : « lorsque l’administration rejette les observations du contribuable sa réponse doit également être motivée ». Le critère n’est pas la date à laquelle une pièce est produite, mais la date à laquelle le document a été établi : « les parties peuvent s’appuyer sur tous documents à condition qu’ils aient été établis antérieurement à la vérification ou aux constatations, objets du litige » ([BOI-CTX-DG-20-20-40, § 120](https://bofip.impots.gouv.fr/bofip/1968-PGP.html/identifiant=BOI-CTX-DG-20-20-40-20120912)). Les inventaires en cause ont été établis aux clôtures des 31/03/2023, 31/03/2024 et 31/03/2025, avant le contrôle, et le vérificateur les a lui-même obtenus sur place."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’objection se retourne enfin sur le fond. Ce qui a été produit après la proposition n’est pas une donnée nouvelle : c’est l’explicitation d’un état que le service détenait déjà. La contenance des bouteilles n’a pas été créée en juillet 2026, elle figure sur les factures d’achat depuis l’origine, et l’administration l’avait elle-même reportée dans ses propres annexes, puis convertie en centilitres, avant d’adresser la proposition de rectification."
+    },
+    {
+      "kind": "titre",
+      "texte": "La décision du 24 juillet 1987 ne dit pas ce que le service lui fait dire",
+      "numero": "3.4"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La décision invoquée existe : [CE, 7e et 9e sous-sections réunies, 24 juillet 1987, n° 56621](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/1987-07-24/56621). Deux précisions s’imposent néanmoins. Elle est inédite au recueil Lebon, et n’a donc pas la portée d’une décision de principe. Elle statue en matière de taxe sur la valeur ajoutée, pour les années 1975 à 1978, sur la régularité d’une procédure de **rectification d’office**, qui n’est pas la procédure contradictoire suivie ici."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur le fond, la décision repose sur trois constatations réunies : le contribuable « n’établissait pas chaque année un inventaire détaillé de ses stocks », « sa caisse n’était pas tenue au jour le jour », et « des discordances importantes existant au surplus entre le brouillard de caisse et le journal auxiliaire de caisse ». La formule « qu’à elles seules, ces omissions graves et répétées » ne signifie pas que chacune suffirait isolément : le pluriel « ces omissions » renvoie à l’ensemble, et « à elles seules » veut dire que ce faisceau se suffit, sans qu’il soit besoin d’un autre motif."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Or la branche que le service invoque ici, l’absence d’inventaire détaillé annuel, est précisément celle qui fait défaut dans notre dossier : les inventaires sont établis à chaque clôture, détaillés produit par produit, et le service admet page 33 qu’ils sont conformes. Les deux autres branches concernent la tenue de la caisse et sont contestées aux parties du courrier qui leur sont consacrées. Enfin, le seuil que pose cette décision est celui d’omissions « graves et répétées » : le défaut de report d’une contenance que l’administration a elle-même reconstituée ne l’atteint pas."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Quant à la décision du 25 juillet 1980 (n° 13170) citée par la proposition de rectification, le service ne la défend pas et n’en reproduit pas les motifs. Nous n’avons pas été en mesure de la retrouver sous ces date et numéro dans les bases publiques (Légifrance, ArianeWeb, Juricaf) et ne l’analysons donc pas au fond ; nous invitons le service à produire la décision qu’il invoque. L’exigence d’état détaillé qu’elle exprimerait figure en tout état de cause dans la doctrine ([BOI-BIC-DECLA-30-10-20-50, § 70](https://bofip.impots.gouv.fr/bofip/2835-PGP)), qui demande d’énumérer « autant d’articles qu’il existe de produits présentant des caractéristiques différentes au regard de leur nature, de leur dimension, de leur marque » : c’est exactement ce que font les trois inventaires, ligne par ligne."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le grief n’est chiffré nulle part",
+      "numero": "3.5"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La partie E ne rattache à ce grief aucun montant de rectification. Ni la proposition de rectification ni la réponse du 04/09/2026 n’indiquent quelle recette aurait été dissimulée du fait de l’absence de contenance, ni en quoi le contrôle en aurait été empêché. Le service n’a d’ailleurs signalé aucune impossibilité : il a mené sa reconstitution à son terme, sur ces mêmes inventaires, et jusqu’au centime."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Or un motif de rejet suppose une irrégularité grave, et la doctrine administrative, opposable au service en application de l’article L. 80 A du livre des procédures fiscales, est explicite : « Une comptabilité ne doit pas être écartée si elle n’est entachée que d’irrégularités insuffisantes pour lui enlever toute valeur probante. Le défaut de valeur probante ne peut résulter que d’irrégularités ayant un caractère de gravité indiscutable » ([BOI-CF-IOR-10-20, § 90](https://bofip.impots.gouv.fr/bofip/4298-PGP)). La liste d’exemples qu’énumère ce paragraphe ne comporte pas l’absence de contenance sur un état de stocks."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le courrier écarte d’ailleurs lui-même toute appréciation de gravité, en retenant que la variabilité des fichiers suffit « quelque que soit l’importance des différences constatées » (p. 34). Une irrégularité dont on refuse par principe de mesurer l’importance ne peut pas, dans le même mouvement, être qualifiée de grave."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le glissement final de la partie E le confirme. Pour conclure, le courrier ne s’appuie plus sur les inventaires mais sur « une variabilité certaine des chiffres d’affaires entre les différents fichiers EXCEL » de la procédure de l’article L. 47 A, II (p. 34). Ce motif est distinct, il est traité ailleurs dans le courrier et il y est contesté : il ne peut pas servir à établir la gravité d’un grief auquel il est étranger. Retirée cette béquille, la conclusion de la page 34 ne repose plus que sur une objection de date."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 4,
+      "titre": "Ce que cela fait tomber",
+      "sousTitre": "Le premier des trois motifs de rejet de la comptabilité perd son objet."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reconnaît lui-même, page 33, que les inventaires produits sont conformes aux dispositions applicables. Il ne conserve donc plus qu’une objection de date, qu’aucun texte ne soutient et qui contredit l’économie même de la procédure contradictoire. Le grief tel qu’il subsiste ne porte plus sur le contenu des inventaires, mais sur le moment où leur lisibilité a été améliorée."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Dans le même temps, le service continue de tirer de ces états les **2 103,91 €** de variation de stock qui déterminent son volume disponible sur les trois exercices, et il a lui-même reconstitué la contenance qu’il dit manquante. La position ne peut pas être tenue dans les deux sens à la fois : ou bien les inventaires sont exploitables, et le motif de rejet disparaît, ou bien ils ne le sont pas, et la reconstitution perd son socle."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Aucun montant de rectification n’étant rattaché à ce grief, sa disparition ne réduit directement aucun chiffre. Elle atteint en revanche le fondement du rejet de comptabilité : sur les trois motifs invoqués, le premier ne subsiste pas, et la reconstitution qui en découle perd d’autant sa justification."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Comparatif article par article de l’état d’inventaire d’origine et de l’état complété, récapitulatif du stock de clôture par exercice, et inventaires d’origine scannés tels que remis au vérificateur.",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-inventaires-comparatif.xlsx",
+          "label": "R1 - Inventaires : état d’origine et état complété, comparatif par article et récapitulatif par exercice (XLSX)"
+        },
+        {
+          "fichier": "inventaires/Inventaire_Demi_Lune_2023-03-31.pdf",
+          "label": "Inventaire d’origine au 31/03/2023 (PDF, l’extrait de la page 33 du courrier en est la page 11)"
+        },
+        {
+          "fichier": "inventaires/Inventaire_Demi_Lune_2024-03-31.pdf",
+          "label": "Inventaire d’origine au 31/03/2024 (PDF)"
+        },
+        {
+          "fichier": "inventaires/Inventaire_Demi_Lune_2025-03-31.pdf",
+          "label": "Inventaire d’origine au 31/03/2025 (PDF)"
+        }
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "Sources : courrier de la DDFiP du Jura du 04/09/2026, partie « E- Inventaires de stocks », p. 30 à 34. Les citations entre guillemets sont reproduites telles qu’elles figurent dans le courrier, y compris ses fautes de frappe."
+    }
+  ]
+}

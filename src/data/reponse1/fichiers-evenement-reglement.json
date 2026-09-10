@@ -1,0 +1,2005 @@
+{
+  "meta": {
+    "slug": "fichiers-evenement-reglement",
+    "source": "Réponse DDFiP 39 du 04/09/2026, p. 38 à 45",
+    "lettre": "G"
+  },
+  "entete": {
+    "positionService": "Le service maintient l’intégralité de ses constats sur les fichiers Événement et Règlement. Il refuse de discuter la certification de la caisse, qu’il qualifie d’auto-certification, et affirme qu’aucune clé d’identification unique ne relie le fichier « tpvevenement » aux fichiers Règlement, Ticket ligne, Ticket et TVA, ce qui interdirait toute traçabilité certaine des suppressions. Il oppose ensuite les écarts de nombre d’articles entre les annexes B (40 218 / 39 998 / 39 132) et les annexes C (38 479 / 38 219 / 37 446), qu’il juge en outre « clairement et nettement minorées », ainsi que les écarts de chiffre d’affaires entre les annexes B, C, F et G, toutes issues du même logiciel. Il ajoute enfin un grief nouveau, tiré d’une incohérence de taux de TVA dans les annexes C-1 à C-3, dont il n’exclut pas qu’elle provienne d’une manipulation du logiciel par les dirigeants.",
+    "reponseCourte": "Refaits sur les fichiers eux mêmes, les quatre montants du service se réconcilient intégralement : deux d’entre eux sont le même compteur de caisse arrêté à deux endroits, l’annexe B est un sous-ensemble strict de l’archive certifiée qu’elle est censée contredire, et les colonnes de TVA invoquées ont été ajoutées par le service, dont le propre calcul diminue la TVA due de 9 424,74 €.",
+    "enjeu": "Pilier « logiciel » du rejet de comptabilité : traçabilité des suppressions, nombre d’articles, chiffre d’affaires et taux de TVA.",
+    "statut": "demonte"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l’administration",
+      "sousTitre": "Partie « G- Fichiers Evènement et Règlement (Pages 22 à 29 de la proposition de rectifications) », p. 38 à 45 de la réponse du 04/09/2026."
+    },
+    {
+      "kind": "titre",
+      "numero": "1",
+      "texte": "Ce que le service retient de la réponse de Me THIVEND"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service ouvre la partie en renvoyant aux « fichiers 20 à 35 de la clé USB qui soutiennent ses explications » et en notant que « Maître THIVEND commence par rappeler les éléments et les montants qui figurent dans la proposition de rectifications et dans les annexes E-1 à E-3 puis F-1 à F-3. il rappelle que la caisse a été certifiée » (p. 38). Il reproduit ensuite les extraits de la réponse : le restaurant aurait rempli ses deux obligations (utiliser un système certifié et produire le certificat), le Fichier Événement sans colonne « libellé » relèverait de la conception de l’éditeur SERVILOG/AKEAD, le libellé de chaque article serait conservé là où la loi l’exige (détail des tickets, annexe C), et une caisse certifiée serait présumée conforme tant que le certificat n’est pas invalidé (p. 38 et 39)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Extrait de la réponse reproduit par le service : 5 suppressions « DEL » du journal E (annexe E-1, p. 38)",
+      "minWidth": 680,
+      "colonnes": [
+        {
+          "label": "Date"
+        },
+        {
+          "label": "Heure"
+        },
+        {
+          "label": "Type"
+        },
+        {
+          "label": "N° ticket Z",
+          "align": "right"
+        },
+        {
+          "label": "Montant",
+          "align": "right"
+        },
+        {
+          "label": "ID événement",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-04-14"
+          },
+          {
+            "v": "11:26"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "19,00 €",
+            "align": "right"
+          },
+          {
+            "v": "36682",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-04-14"
+          },
+          {
+            "v": "11:59"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "3,40 €",
+            "align": "right"
+          },
+          {
+            "v": "36683",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-04-14"
+          },
+          {
+            "v": "12:06"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "19,90 €",
+            "align": "right"
+          },
+          {
+            "v": "36684",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-04-14"
+          },
+          {
+            "v": "12:25"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "22,00 €",
+            "align": "right"
+          },
+          {
+            "v": "36685",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-04-14"
+          },
+          {
+            "v": "12:25"
+          },
+          {
+            "v": "DEL"
+          },
+          {
+            "v": "2938",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "36686",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reproduit également le passage de la réponse consacré au nombre d’articles (p. 40) : la somme de la colonne « Qté » vaudrait 40 217,8 dans l’annexe B et 38 479,3 dans l’annexe C pour l’exercice clos au 31/03/2023, soit 1 738,5 d’écart, alors que les deux annexes afficheraient exactement le même chiffre d’affaires de 403 370,42 €, pour un nombre de lignes identique (33 222) et les mêmes tickets, la seule différence tenant à la répartition des quantités fractionnaires issues des additions partagées. L’exemple de l’Expresso, repris page 41, est censé illustrer cette mécanique."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Extrait de la réponse reproduit par le service : Expresso, exercice 2022-2023, mêmes 1 978 lignes (p. 41)",
+      "minWidth": 620,
+      "colonnes": [
+        {
+          "label": "Valeur de « Qté » par ligne"
+        },
+        {
+          "label": "Lignes (annexe B)",
+          "align": "right"
+        },
+        {
+          "label": "Lignes (annexe C)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "0,5 (café partagé à deux)"
+          },
+          {
+            "v": "46",
+            "align": "right"
+          },
+          {
+            "v": "84",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "1"
+          },
+          {
+            "v": "898",
+            "align": "right"
+          },
+          {
+            "v": "932",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2"
+          },
+          {
+            "v": "807",
+            "align": "right"
+          },
+          {
+            "v": "751",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "3"
+          },
+          {
+            "v": "124",
+            "align": "right"
+          },
+          {
+            "v": "108",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total : 1 978 lignes (chaque annexe)",
+            "fw": 700
+          },
+          {
+            "v": "3 257,5 unités",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "3 102,5 unités",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Enfin, le service reproduit le point de la réponse sur la fluctuation du chiffre d’affaires (p. 45) : pour l’exercice clos au 31/03/2023, l’écart entre le plus haut (annexes F, 403 402,87 €) et le plus bas (annexes G, 403 324,72 €) ne serait que de 78 €, soit 0,02 % ; l’écart avec la comptabilité s’expliquerait par le compte 706800 « Pourboire » (628 € sur 2022-2023, entre un CA comptable TTC de 404 030,87 € et un total des règlements F de 403 402,87 €) ; et les classeurs Excel transmis les 13 février et 13 mars 2026 ne seraient que des extraits de travail, l’archive inaltérable étant l’export certifié remis sur clé USB les 16 et 30 mars 2026."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Extrait de la réponse reproduit par le service : triangulation CA déclaré (A), règlements (F), tickets (H) (p. 45)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "CA déclaré, synthèse A",
+          "align": "right"
+        },
+        {
+          "label": "Somme règlements F",
+          "align": "right"
+        },
+        {
+          "label": "Liste tickets H",
+          "align": "right"
+        },
+        {
+          "label": "Écart A vs F",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "409 020,76 €",
+            "align": "right"
+          },
+          {
+            "v": "403 402,87 €",
+            "align": "right"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "1,37 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "429 204,51 €",
+            "align": "right"
+          },
+          {
+            "v": "439 600,30 €",
+            "align": "right"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right"
+          },
+          {
+            "v": "2,42 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "437 753,60 €",
+            "align": "right"
+          },
+          {
+            "v": "435 146,29 €",
+            "align": "right"
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right"
+          },
+          {
+            "v": "0,60 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul 3 exercices",
+            "fw": 700
+          },
+          {
+            "v": "1 275 978,87 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 278 149,46 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 277 216,50 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "0,17 %",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "numero": "2",
+      "texte": "La certification n’est pas discutée, elle est écartée"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service ne conteste pas le certificat, mais refuse d’en tirer la moindre conséquence. Il écrit : « Tout d’abord, il n’appartient pas au service de contester une certification. Cela est d’autant plus vrai à partir du moment où il s’agit d’une auto-certification. » (p. 39). La présomption de conformité invoquée par la réponse est donc traitée comme sans objet, au motif que la certification serait une auto-certification."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il inverse ensuite l’ordre du raisonnement : « Ensuite, c’est le travail mené par le service sur le rejet de la comptabilité qui aboutit à remettre en cause les chiffre d’affaires déclarés par la société. C’est cela qui permet donc de soutenir que les fichiers de caisses sont impropres à justifier le volume d’affaires réel de la société. » (p. 39). Autrement dit, ce n’est pas le défaut de la caisse qui fonde le rejet, c’est le rejet qui fonde le défaut de la caisse."
+    },
+    {
+      "kind": "titre",
+      "numero": "3",
+      "texte": "L’absence de clé d’identification unique entre les fichiers"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur les suppressions, le service renvoie à ce qu’il a déjà écrit et affirme : « Contrairement à ce que la réponse affirme, il n’y a aucune traçabilité dans les fichiers. En effet, cette traçabilité ne doit pas reposer que sur les numéros de notes ou bien sur les horaires d’édition ou d’émission de ticket, mais sur une clé d’identification unique. » (p. 39). Il ajoute : « Or, force est de constater que cette clé d’identification UNIQUE n’existe pas entre les fichiers remis à l’administration. » (p. 39)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le raisonnement est le suivant : les fichiers « reglement.xls », « ticket ligne.xls », « ticket.xls » et « tva.xls » (préfixés « 20220401' AND '20250331 ») « mentionnent bien pour chaque note, et dans une colonne spécifique, un « numéro d’identification » », mais « ce numéro est différent dans le fichier « 20220401' AND '20250331 tpvevenement.xls ». Cette différence empêche donc le service de pouvoir disposer d’une traçabilité certaine pour les suppressions apparaissant dans le fichier 20220401' AND '20250331 tpvevenement.xls. » (p. 39). Conclusion du service : « il est impossible de pouvoir affirmer avec certitude que chaque ticket Z peut être tracée pour une suppression ou une modification particulière » (p. 39)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service tire de cette clé un second argument : sa présence dans les quatre fichiers « devrait permettre au logiciel de se prémunir contre les écarts de chiffre d’affaires entre fichiers » (p. 40). Or il constate des différences entre les annexes, qu’il présente dans un tableau repris de la proposition de rectifications, en les qualifiant lui-même d’écarts qui « ne seraient pas significatifs » tout en les jugeant « inexplicables » (p. 40)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Chiffre d’affaires selon les séries d’annexes, tableau repris de la proposition de rectifications (p. 40, reproduit p. 45)",
+      "minWidth": 700,
+      "colonnes": [
+        {
+          "label": ""
+        },
+        {
+          "label": "Exercice clos au 31/03/2023",
+          "align": "right"
+        },
+        {
+          "label": "Exercice clos au 31/03/2024",
+          "align": "right"
+        },
+        {
+          "label": "Exercice clos au 31/03/2025",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Annexes B-1 à B-3"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Annexes C-1 à C-3"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right"
+          },
+          {
+            "v": "435 594,96 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Annexes F-1 à F-3"
+          },
+          {
+            "v": "403 402,87 €",
+            "align": "right"
+          },
+          {
+            "v": "439 600,30 €",
+            "align": "right"
+          },
+          {
+            "v": "435 146,29 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Annexes G-1 à G-3"
+          },
+          {
+            "v": "403 324,72 €",
+            "align": "right"
+          },
+          {
+            "v": "437 881,12 €",
+            "align": "right"
+          },
+          {
+            "v": "434 709,26 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service conclut ce point en soulignant : « En effet, au-delà des montants, c’est cette fluctuation, sur des fichiers qui sont pourtant tous issus du même logiciel de caisse utilisé, qui nuit gravement à la comptabilité et donc au final à la société. Maître THIVEND n’y apporte aucune justification. » (p. 40). Sur les modes de règlement en revanche, le service se borne à constater que « Maître THIVEND aborde ensuite le point des modes de règlement en rappelant les montants ressortant des fichiers F (tout en citant leurs références) , en considérant qu’aucun reproche n’est formulé » (p. 40), sans opposer d’argument chiffré."
+    },
+    {
+      "kind": "titre",
+      "numero": "4",
+      "texte": "Le nombre d’articles : l’écart entre annexes B et C est maintenu, et aggravé"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service rattache expressément ce point au paragraphe « XII » de la proposition de rectifications, intitulé « Le logiciel : Le nombre d’articles » (p. 41). Il rappelle les données qu’il oppose, en deux tableaux."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Nombre d’articles opposé par le service, annexes B-1 à B-3 et C-1 à C-3 (p. 41, repris p. 43)",
+      "minWidth": 700,
+      "colonnes": [
+        {
+          "label": ""
+        },
+        {
+          "label": "Exercice clos au 31/03/2023",
+          "align": "right"
+        },
+        {
+          "label": "Exercice clos au 31/03/2024",
+          "align": "right"
+        },
+        {
+          "label": "Exercice clos au 31/03/2025",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Nombre d’articles, annexes B-1 à B-3"
+          },
+          {
+            "v": "40 218",
+            "align": "right"
+          },
+          {
+            "v": "39 998",
+            "align": "right"
+          },
+          {
+            "v": "39 132",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Nombre d’articles, annexes C-1 à C-3"
+          },
+          {
+            "v": "38 479",
+            "align": "right"
+          },
+          {
+            "v": "38 219",
+            "align": "right"
+          },
+          {
+            "v": "37 446",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service écrit ensuite : « Néanmoins, la logique employée interpelle le service. » (p. 41). Il reconstruit la démonstration de la réponse sur les articles « non entiers » comme une comparaison en deux colonnes : à gauche les articles non entiers, qui ne pourraient provenir que du fichier « tpvenement », à droite la note reconstituée en entier, qui ne pourrait correspondre qu’au fichier « ticket ligne » (p. 42). De cette lecture il déduit que « tous les articles des notes devraient se retrouver dans les données du fichier « tpvenement », c’est-à-dire celle de gauche », puisqu’ils auraient « fait l’objet d’un enregistrement préalable en tant qu’article « entier », puis, ont ensuite été divisés » (p. 42)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Or, poursuit le service, « les articles, inscrits dans la colonne de droite, ne se retrouvaient pas toujours en article « non entier » dans la colonne de gauche. En fait, ils ne s’y retrouvaient que pour une infime partie. » (p. 42). Comme les annexes C-1 à C-3 sont issues du fichier « ticket ligne », il en tire que les quantités de ces annexes, « soit : 38 479 / 38 219 / 37 446 », « Sont clairement et nettement minorées » (p. 42)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La conséquence que le service en tire est une aggravation du grief : « Ces quantités devraient donc être ajoutées à celles des annexes C-1 à C-3, et accroître l’incohérence. A la lecture de vos dires, finalement, cette situation est donc de nature à pouvoir soutenir et amplifier le rejet de la comptabilité présentée. » (p. 42). Aucun chiffrage de ces quantités prétendument manquantes n’est produit."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service déplace ensuite le débat vers le moment de la remise des données : « le service appuie son rejet sur la variabilité des quantités entre les différents moments de remise des données. Elles sont pourtant issues du même logiciel. De ce fait, il est totalement incohérent que des données d’un même logiciel de caisse puisse donner des résultats différents, qu’il s’agisse d’une archive fiscale ou de fichiers EXCEL. » (p. 42)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "À l’appui, il reproduit deux extraits de la journée du 14/04/2022, l’un de l’annexe B-1 (16 lignes à quantité 0,50, tables 11, 13 et 15) et l’autre de l’annexe C-1 (mêmes libellés, ticket Z 2938, identifiants 46636 à 46641), et conclut : « Il est à noter que des différences apparaissent très clairement. En fait, de plus nombreux articles figurent en annexe C-1 par rapport à B-1. » (p. 43). Puis, revenant aux totaux : « les quantités globales en annexes B-1 à B-3 ( 40 218 / 39 998 / 39 132 ) sont nettement supérieures : aux quantités globales en annexes C-1 à C-3 ( 38 479 / 38 219 / 37 446 ) » (p. 43)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service clôt le point ainsi : « Le service est légitimement en droit d’être interpellé sur ces différences de quantités importantes pour lesquelles la réponse n’apporte aucune justification. Finalement, cette réponse se borne à évoquer le nombre de lignes et le montant du chiffre d’affaires pour toute explication. » (p. 43)."
+    },
+    {
+      "kind": "titre",
+      "numero": "5",
+      "texte": "Un grief nouveau : les taux de TVA des annexes C-1 à C-3"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service introduit ici un point qui n’était pas discuté par la réponse : « Il est également important de souligner l’absence de toute remarque relative à un point des annexes C-1 à C-3. En effet, l’analyse du service a mis en évidence une incohérence dans l’application du taux de TVA suivant les articles. » (p. 44). Il produit un extrait de la journée du 14/04/2022 (ticket Z 2938), dans lequel deux colonnes ajoutées, intitulées « Erreur Taux TVA dans Base Envoyée Faux/Corr » (colonne E) et « Correction TVA Sur Taux » (colonne F), signalent les lignes en cause."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Extrait produit par le service : lignes signalées comme erronées en taux de TVA, 14/04/2022, ticket Z 2938 (p. 44)",
+      "minWidth": 720,
+      "colonnes": [
+        {
+          "label": "Heure"
+        },
+        {
+          "label": "N° ticket",
+          "align": "right"
+        },
+        {
+          "label": "Libellé"
+        },
+        {
+          "label": "Qté",
+          "align": "right"
+        },
+        {
+          "label": "Prix TTC × Qté",
+          "align": "right"
+        },
+        {
+          "label": "Erreur taux TVA"
+        },
+        {
+          "label": "Correction TVA",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "12:29"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "pression"
+          },
+          {
+            "v": "0,50",
+            "align": "right"
+          },
+          {
+            "v": "1,95 €",
+            "align": "right"
+          },
+          {
+            "v": "10 % / 20 %"
+          },
+          {
+            "v": "0,15 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "12:29"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "Père Gregoire"
+          },
+          {
+            "v": "0,50",
+            "align": "right"
+          },
+          {
+            "v": "2,45 €",
+            "align": "right"
+          },
+          {
+            "v": "20 % / 10 %"
+          },
+          {
+            "v": "-0,19 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "12:29"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          },
+          {
+            "v": "Croûtes Morilles"
+          },
+          {
+            "v": "0,50",
+            "align": "right"
+          },
+          {
+            "v": "8,45 €",
+            "align": "right"
+          },
+          {
+            "v": "20 % / 10 %"
+          },
+          {
+            "v": "-0,64 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "12:44"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "Cidre Bouché Brut"
+          },
+          {
+            "v": "0,50",
+            "align": "right"
+          },
+          {
+            "v": "7,00 €",
+            "align": "right"
+          },
+          {
+            "v": "10 % / 20 %"
+          },
+          {
+            "v": "0,53 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "12:52"
+          },
+          {
+            "v": "16",
+            "align": "right"
+          },
+          {
+            "v": "Savagnin verre"
+          },
+          {
+            "v": "0,50",
+            "align": "right"
+          },
+          {
+            "v": "3,60 €",
+            "align": "right"
+          },
+          {
+            "v": "10 % / 20 %"
+          },
+          {
+            "v": "0,27 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service en tire deux conclusions. D’abord, sur les taux eux-mêmes : « Ainsi, il ressort de ces données que des articles devant être soumis à un taux réduit, sont soumis à un taux normal, et l’inverse a aussi été constaté. » (p. 44). Ensuite, sur l’inaltérabilité : « Ce fichier de données met donc en évidence une problématique plus profonde sur l’inaltérabilité des informations. En effet, sur les fiches « produit » qui ont été mis à l’écran par les dirigeants, ces erreurs de taux n’existent pas. Ainsi, à chaque article, la société a bien inscrit le bon taux. Or, dans ce fichier, tel n’est pas le cas. Cette situation interroge le service sur la véracité globale des données de la caisse fournies par la société. » (p. 44)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service reconnaît ne pas savoir d’où vient l’anomalie, tout en avançant une hypothèse d’intention : « A ce stade, il est difficile de mettre en évidence la source dont pourrait la génération de cette erreur signification. En tous cas, il n’est pas exclu de pouvoir penser qu’elle puisse avoir pour origine une manipulation du logiciel, par les dirigeants, générant des erreurs qui ne peuvent être repérées que par ce biais. » (p. 44)."
+    },
+    {
+      "kind": "alerte",
+      "couleur": "red",
+      "titre": "Une accusation de manipulation posée sans preuve",
+      "texte": "C’est la seule fois, dans cette partie, où le service met en cause personnellement les dirigeants. Il le fait sur le mode de l’hypothèse (« il n’est pas exclu de pouvoir penser »), après avoir écrit qu’il lui est « difficile de mettre en évidence la source » de l’erreur (p. 44)."
+    },
+    {
+      "kind": "titre",
+      "numero": "6",
+      "texte": "Le chiffre d’affaires : la fluctuation entre les quatre séries d’annexes est maintenue"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service rattache ce dernier point au paragraphe « XIII » de la proposition de rectifications, intitulé « Les chiffres d’affaires » (p. 45), et écarte l’explication par les périmètres : « En effet, la réponse n’apporte aucune explication sur le fait que les différents fichiers de caisse transmis au service puissent laisser apparaître des montants totalement différents entre eux » (p. 45). Il reproduit alors à l’identique le tableau des annexes B, C, F et G déjà donné page 40."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La conclusion de la partie G est reprise mot pour mot de la proposition de rectifications : « Comme la proposition de rectifications l’indiquait, c’est cette fluctuation, sur des fichiers, qui sont pourtant tous issus du même logiciel de caisse utilisé, qui nuit gravement à la comptabilité et donc au final à la société. » (p. 45)."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Clé d’identification unique",
+          "valeur": "Absente",
+          "sub": "Entre « tpvevenement » et les fichiers Règlement, Ticket ligne, Ticket et TVA (p. 39)",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Nombre d’articles, annexes B-1 à B-3",
+          "valeur": "40 218 / 39 998 / 39 132",
+          "sub": "Exercices clos aux 31/03/2023, 2024 et 2025 (p. 41)"
+        },
+        {
+          "label": "Nombre d’articles, annexes C-1 à C-3",
+          "valeur": "38 479 / 38 219 / 37 446",
+          "sub": "Quantités jugées « clairement et nettement minorées » (p. 42)",
+          "couleur": "red"
+        },
+        {
+          "label": "Écart de quantités 2022-2023 rappelé par la réponse",
+          "valeur": "1 738,5",
+          "sub": "Somme de la colonne « Qté », annexe B contre annexe C (p. 40)"
+        },
+        {
+          "label": "CA 2022-2023 selon les quatre séries d’annexes",
+          "valeur": "403 324,72 € à 403 402,87 €",
+          "sub": "Annexes B, C, F et G, même exercice (p. 40 et 45)"
+        },
+        {
+          "label": "Certification de la caisse",
+          "valeur": "Qualifiée d’auto-certification",
+          "sub": "« il n’appartient pas au service de contester une certification » (p. 39)"
+        }
+      ]
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 2,
+      "titre": "Notre réponse : quatre annexes, quatre grandeurs différentes",
+      "sousTitre": "Les écarts que le service qualifie d’inexplicables ont tous été refaits sur les fichiers eux mêmes. Deux des quatre chiffres qu’il compare ne sont pas des sommes de ventes : ce sont deux arrêtés du même compteur de caisse."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Écart entre l’archive certifiée et le CA comptable",
+          "valeur": "0,08 %",
+          "sub": "997,72 € sur 1 277 216,50 € (cumul des 3 exercices)",
+          "highlight": true,
+          "couleur": "teal"
+        },
+        {
+          "label": "Lignes de l’annexe B absentes de l’annexe C",
+          "valeur": "0",
+          "sub": "Sur les 3 exercices : l’extrait du 13/02/2026 est un sous-ensemble strict de l’archive du 16/03/2026",
+          "couleur": "teal"
+        },
+        {
+          "label": "Colonne de contrôle du service, annexe B",
+          "valeur": "- 17 561,00 €",
+          "sub": "« prix unitaire × Qté » moins le CA de l’annexe, exercice 2022-2023",
+          "couleur": "red"
+        },
+        {
+          "label": "Même colonne, annexe C",
+          "valeur": "- 0,04 €",
+          "sub": "L’archive certifiée est cohérente à 4 centimes près sur l’année",
+          "couleur": "teal"
+        },
+        {
+          "label": "Total de la colonne « Correction TVA Sur Taux » du service",
+          "valeur": "- 9 424,74 €",
+          "sub": "Cumul des 3 exercices : la correction qu’il calcule diminue la TVA due",
+          "couleur": "blue"
+        },
+        {
+          "label": "Chiffrage produit à l’appui des quantités « minorées »",
+          "valeur": "Aucun",
+          "sub": "p. 42, aucune quantité, aucun article, aucun euro",
+          "couleur": "red"
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Les quatre chiffres du service sortent des mêmes fichiers, et deux d’entre eux ne comptent pas des ventes"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service oppose quatre montants pour un même exercice et en tire une « fluctuation » qui « nuit gravement à la comptabilité » (p. 40 et 45). Nous avons refait le rapprochement à partir des fichiers remis, sans rien y ajouter. Les quatre annexes ne mesurent pas la même grandeur : les annexes C et H additionnent les ventes de l’archive certifiée, l’annexe F additionne les encaissements, et les annexes B et G ne sont pas des additions du tout."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Les annexes B et G sont deux lectures du compteur perpétuel de la caisse.** Le fichier porte lui même la clé : dans les annexes G et H, la cellule qui contient le montant repris par le service est accompagnée de la mention « Différence somme Entre 01-04 et 31-03 ». Il s’agit du grand total cumulé de la caisse, dont on retranche la valeur d’ouverture (ligne « A NOUVEAUX »). Selon l’endroit où l’on arrête ce compteur, on obtient l’un ou l’autre des deux chiffres que le service croit contradictoires."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le compteur perpétuel de la caisse produit à lui seul les deux chiffres « B » et « G » (calcul refait sur les annexes H-1 à H-3)",
+      "minWidth": 860,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Compteur à l’ouverture",
+          "align": "right"
+        },
+        {
+          "label": "Maximum atteint",
+          "align": "right"
+        },
+        {
+          "label": "Maximum moins ouverture",
+          "align": "right"
+        },
+        {
+          "label": "Dernière ligne du fichier",
+          "align": "right"
+        },
+        {
+          "label": "Dernière ligne moins ouverture",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "977 739,78 €",
+            "align": "right"
+          },
+          {
+            "v": "1 381 110,20 €",
+            "align": "right"
+          },
+          {
+            "v": "403 370,42 € = annexe B-1",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "1 381 064,50 €",
+            "align": "right"
+          },
+          {
+            "v": "403 324,72 € = annexe G-1",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "1 381 110,20 €",
+            "align": "right"
+          },
+          {
+            "v": "1 819 103,12 €",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 € = annexe B-2",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "1 818 991,32 €",
+            "align": "right"
+          },
+          {
+            "v": "437 881,12 € = annexe G-2",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "1 819 103,12 €",
+            "align": "right"
+          },
+          {
+            "v": "2 253 930,98 €",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 € = annexe B-3",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "2 253 812,38 €",
+            "align": "right"
+          },
+          {
+            "v": "434 709,26 € = annexe G-3",
+            "align": "right",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La correspondance est exacte au centime sur les trois exercices, et elle n’a rien de mystérieux : les fichiers sont triés par numéro de ticket et non par ordre chronologique, de sorte que la dernière ligne du fichier n’est pas le dernier ticket de l’exercice. Le montant de l’annexe G est donc le même compteur que celui de l’annexe B, arrêté quelques tickets plus tôt. Le service ne compare pas deux fichiers divergents : il compare deux façons de lire une même colonne."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Réconciliation des annexes, par exercice, recalculée sur les fichiers de caisse remis",
+      "minWidth": 900,
+      "colonnes": [
+        {
+          "label": "Annexe"
+        },
+        {
+          "label": "Ce que la colonne mesure réellement"
+        },
+        {
+          "label": "2022-2023",
+          "align": "right"
+        },
+        {
+          "label": "2023-2024",
+          "align": "right"
+        },
+        {
+          "label": "2024-2025",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "A-1 à A-3"
+          },
+          {
+            "v": "Récapitulatif annuel édité par la caisse, ventes par famille (remis le 13/01/2026)"
+          },
+          {
+            "v": "409 020,76 €",
+            "align": "right"
+          },
+          {
+            "v": "429 204,51 €",
+            "align": "right"
+          },
+          {
+            "v": "437 698,49 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "B-1 à B-3"
+          },
+          {
+            "v": "Compteur perpétuel, du minimum au maximum de l’exercice"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "C-1 à C-3"
+          },
+          {
+            "v": "Somme des lignes de vente de l’archive certifiée (référence)"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right"
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "H-1 à H-3"
+          },
+          {
+            "v": "Somme des tickets de la même archive"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "F-1 à F-3"
+          },
+          {
+            "v": "Somme des lignes de règlement (encaissements, avoirs inclus)"
+          },
+          {
+            "v": "403 402,87 €",
+            "align": "right"
+          },
+          {
+            "v": "439 600,30 €",
+            "align": "right"
+          },
+          {
+            "v": "435 146,29 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "G-1 à G-3"
+          },
+          {
+            "v": "Même compteur perpétuel, arrêté à la dernière ligne du fichier"
+          },
+          {
+            "v": "403 324,72 €",
+            "align": "right"
+          },
+          {
+            "v": "437 881,12 €",
+            "align": "right"
+          },
+          {
+            "v": "434 709,26 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Amplitude B / C / F / G",
+            "fw": 700
+          },
+          {
+            "v": "Écart entre le plus haut et le plus bas des quatre chiffres",
+            "fw": 700
+          },
+          {
+            "v": "78,15 € soit 0,02 %",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 719,18 € soit 0,39 %",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "855,70 € soit 0,20 %",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Une précision utile : le tableau du service porte, pour l’annexe C-3, le montant de 435 594,96 € (p. 40 et p. 45), alors que le fichier totalise 435 564,96 €, chiffre que le service reprend d’ailleurs correctement en page 45 pour l’annexe H-3. Il s’agit d’une inversion de trente euros, sans portée, mais elle illustre que l’écart invoqué se joue à ce niveau de précision."
+    },
+    {
+      "kind": "titre",
+      "texte": "Les quantités des annexes C ne sont pas minorées : c’est l’annexe B qui compte deux fois les additions partagées"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service affirme, page 42, que les quantités des annexes C « sont clairement et nettement minorées » et qu’il faudrait leur ajouter des articles manquants. La démonstration est vérifiable sur les deux extraits qu’il reproduit lui même, pages 42 et 43 : ce sont les mêmes notes, du 14/04/2022, tickets 11 à 16, filtrées sur les quantités égales à 0,50."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ces six notes sont trois additions partagées : la note 11 et la note 12 portent les mêmes articles, à la même minute (12:29), pour le même total de 29,35 €. L’annexe C inscrit la part réelle sur chacune des deux moitiés (0,50 et 0,50). L’annexe B inscrit 0,50 sur la première et 1,00 sur la seconde, alors que le montant, lui, reste identique dans les deux annexes. Autrement dit, l’annexe B compte une fois et demie un article vendu une fois."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Additions partagées du 14/04/2022, notes 11 et 12 : mêmes articles, mêmes montants, décomptes différents (annexes B-1 et C-1)",
+      "minWidth": 800,
+      "colonnes": [
+        {
+          "label": "Article"
+        },
+        {
+          "label": "Prix unitaire",
+          "align": "right"
+        },
+        {
+          "label": "Annexe B : Qté notes 11 + 12",
+          "align": "right"
+        },
+        {
+          "label": "Annexe C : Qté notes 11 + 12",
+          "align": "right"
+        },
+        {
+          "label": "Montant TTC (identique)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Salade Verte aux Noix"
+          },
+          {
+            "v": "5,90 €",
+            "align": "right"
+          },
+          {
+            "v": "0,50 + 1,00 = 1,50",
+            "align": "right"
+          },
+          {
+            "v": "0,50 + 0,50 = 1,00",
+            "align": "right"
+          },
+          {
+            "v": "5,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Croûtes Morilles"
+          },
+          {
+            "v": "16,90 €",
+            "align": "right"
+          },
+          {
+            "v": "1,50",
+            "align": "right"
+          },
+          {
+            "v": "1,00",
+            "align": "right"
+          },
+          {
+            "v": "16,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Père Gregoire"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          },
+          {
+            "v": "1,50",
+            "align": "right"
+          },
+          {
+            "v": "1,00",
+            "align": "right"
+          },
+          {
+            "v": "4,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "BARBEULENET"
+          },
+          {
+            "v": "13,90 €",
+            "align": "right"
+          },
+          {
+            "v": "1,50",
+            "align": "right"
+          },
+          {
+            "v": "1,00",
+            "align": "right"
+          },
+          {
+            "v": "13,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "GLACE 2 BOULES"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "1,00 + 2,00 = 3,00",
+            "align": "right"
+          },
+          {
+            "v": "1,00 + 1,00 = 2,00",
+            "align": "right"
+          },
+          {
+            "v": "7,80 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Chantilly"
+          },
+          {
+            "v": "1,80 €",
+            "align": "right"
+          },
+          {
+            "v": "3,00",
+            "align": "right"
+          },
+          {
+            "v": "2,00",
+            "align": "right"
+          },
+          {
+            "v": "3,60 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "SAUCE CHOCO/CAFE/CAR"
+          },
+          {
+            "v": "1,80 €",
+            "align": "right"
+          },
+          {
+            "v": "1,50",
+            "align": "right"
+          },
+          {
+            "v": "1,00",
+            "align": "right"
+          },
+          {
+            "v": "1,80 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "pression"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          },
+          {
+            "v": "1,50",
+            "align": "right"
+          },
+          {
+            "v": "1,00",
+            "align": "right"
+          },
+          {
+            "v": "3,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total des deux notes",
+            "fw": 700
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "13,50 « articles »",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "9,00 articles",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "58,70 €",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service dispose de la preuve arithmétique de ce sur-comptage : il l’a calculée lui même. Les annexes B et C, telles qu’il les produit, comportent des colonnes ajoutées par ses soins, numérotées A et B après les colonnes 1 à 17 du logiciel, qui multiplient le prix unitaire par la quantité et comparent le résultat au chiffre d’affaires de l’annexe. Dans l’annexe C, l’écart est de quatre centimes sur un exercice entier. Dans l’annexe B, il dépasse 17 000 €."
+    },
+    {
+      "kind": "tableau",
+      "titre": "La colonne de contrôle ajoutée par le service : « prix unitaire × Qté » comparé au chiffre d’affaires de l’annexe",
+      "minWidth": 880,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Somme « Qté » annexe B",
+          "align": "right"
+        },
+        {
+          "label": "Somme « Qté » annexe C",
+          "align": "right"
+        },
+        {
+          "label": "Contrôle du service, annexe B",
+          "align": "right"
+        },
+        {
+          "label": "Contrôle du service, annexe C",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "40 217,81",
+            "align": "right"
+          },
+          {
+            "v": "38 479,35",
+            "align": "right"
+          },
+          {
+            "v": "- 17 561,00 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "- 0,04 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "39 997,93",
+            "align": "right"
+          },
+          {
+            "v": "38 218,83",
+            "align": "right"
+          },
+          {
+            "v": "- 20 011,12 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "+ 44,58 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "39 131,88",
+            "align": "right"
+          },
+          {
+            "v": "37 445,50",
+            "align": "right"
+          },
+          {
+            "v": "- 20 115,28 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "+ 131,08 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La conclusion s’impose d’elle même : l’annexe dont la colonne « Qté » est incohérente avec son propre chiffre d’affaires est l’annexe B, celle dont le service retient le décompte le plus élevé. L’annexe C, qui est l’archive certifiée, est cohérente à quelques dizaines d’euros près sur trois exercices. Le grief de « minoration » vise donc précisément la seule des deux annexes qui compte juste."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Enfin, la thèse d’une donnée « de nature changeante » entre les remises est démentie par la comparaison ligne à ligne : **aucune ligne de l’annexe B ne manque dans l’annexe C**. L’extrait Excel du 13 février 2026 est un sous-ensemble strict de l’archive du 16 mars 2026, laquelle contient en outre treize lignes de plus sur 2023-2024 et soixante-deux sur 2024-2025. Une donnée altérée perd de l’information ; ici, la remise ultérieure en apporte davantage."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Comparaison ligne à ligne des annexes B et C (date, numéro de note, référence produit et libellé)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Lignes de B absentes de C",
+          "align": "right"
+        },
+        {
+          "label": "Lignes de C absentes de B",
+          "align": "right"
+        },
+        {
+          "label": "Montant correspondant",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "286,73 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "734,01 €",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Le service constate en page 43 l’inverse de ce qu’il affirme en page 42"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "En page 42, le service retient que les quantités des annexes C-1 à C-3 « sont clairement et nettement minorées » et qu’il faudrait leur ajouter les articles manquants. En page 43, commentant les deux extraits de la journée du 14/04/2022 qu’il vient de reproduire, il écrit : « Il est à noter que des différences apparaissent très clairement. En fait, de plus nombreux articles figurent en annexe C-1 par rapport à B-1. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les deux propositions ne peuvent pas fonder le même grief. Elles se concilient pourtant sans difficulté, et leur conciliation ruine le grief : l’annexe C comporte bien **plus de lignes** sur cette journée, parce qu’elle porte les deux moitiés de chaque addition partagée, et **moins de quantité totale**, parce qu’elle inscrit une demi-part là où l’annexe B en inscrit une entière. Le service a sous les yeux, à deux pages d’intervalle, les deux moitiés de l’explication qu’il dit ne pas avoir reçue."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il faut ajouter que l’affirmation de la page 42 n’est assortie d’aucun chiffrage : ni le nombre d’articles prétendument manquants, ni leur libellé, ni leur montant ne sont indiqués. Le service en tire pourtant une aggravation expresse du rejet (« amplifier le rejet de la comptabilité présentée », p. 42). Une rectification ne peut se fonder sur une quantité que l’administration ne chiffre pas."
+    },
+    {
+      "kind": "titre",
+      "texte": "Les colonnes de TVA invoquées page 44 sont celles du service, et leur total joue contre sa thèse"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les deux colonnes reproduites page 44, intitulées « Erreur Taux TVA dans Base Envoyée Faux/Correct » et « Correction TVA Sur Taux », ne sont pas des colonnes du logiciel de caisse. La structure du fichier le montre sans ambiguïté : les colonnes issues de la caisse y sont numérotées de 1 à 17, et celles que le service a ajoutées dans son propre tableur sont désignées par les lettres A à G. Les deux colonnes en cause sont les lettres E et F. Le service produit donc son propre calcul comme s’il s’agissait d’une anomalie du fichier."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce calcul, tel qu’il l’a lui même établi, aboutit à un résultat qu’il ne relève pas : la somme de sa colonne « Correction TVA Sur Taux » est **négative sur les trois exercices**. Si l’on appliquait les taux que le service estime corrects, la TVA due par la société diminuerait de 9 424,74 € sur la période vérifiée. L’anomalie qu’il invoque, à la supposer établie, joue au détriment de la société et non du Trésor."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Colonnes E et F ajoutées par le service dans les annexes C-1 à C-3 : décompte et total de la correction",
+      "minWidth": 820,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Lignes signalées « 10 % / 20 % »",
+          "align": "right"
+        },
+        {
+          "label": "Lignes signalées « 20 % / 10 % »",
+          "align": "right"
+        },
+        {
+          "label": "Total des lignes signalées",
+          "align": "right"
+        },
+        {
+          "label": "Total de la colonne « Correction TVA »",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "4 854",
+            "align": "right"
+          },
+          {
+            "v": "5 610",
+            "align": "right"
+          },
+          {
+            "v": "10 464",
+            "align": "right"
+          },
+          {
+            "v": "- 3 289,55 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "5 486",
+            "align": "right"
+          },
+          {
+            "v": "5 449",
+            "align": "right"
+          },
+          {
+            "v": "10 935",
+            "align": "right"
+          },
+          {
+            "v": "- 3 358,48 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "5 484",
+            "align": "right"
+          },
+          {
+            "v": "5 164",
+            "align": "right"
+          },
+          {
+            "v": "10 648",
+            "align": "right"
+          },
+          {
+            "v": "- 2 776,71 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul",
+            "fw": 700
+          },
+          {
+            "v": "15 824",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "16 223",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "32 047",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "- 9 424,74 €",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le sens des écarts confirme qu’il s’agit d’un champ d’affichage et non d’une base d’imposition : les lignes signalées se répartissent presque également dans les deux sens, 15 824 dans un sens et 16 223 dans l’autre. Une manipulation destinée à réduire l’impôt ne produirait pas un partage à parts égales. Surtout, la TVA effectivement liquidée ne se lit pas dans cette colonne de ligne mais au niveau du ticket et du journal de TVA (annexes G), qui totalisent 42 552,76 € pour l’exercice 2022-2023 : c’est ce montant, et non le champ de ligne, qui a été déclaré."
+    },
+    {
+      "kind": "titre",
+      "texte": "La certification n’est pas une « auto-certification » : la loi ouvre deux voies, l’une et l’autre"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service écarte le certificat en écrivant : « il n’appartient pas au service de contester une certification. Cela est d’autant plus vrai à partir du moment où il s’agit d’une auto-certification. » (p. 39). La qualification est inexacte en droit. L’article 286, I, 3° bis du code général des impôts dispose que le respect des conditions d’inaltérabilité, de sécurisation, de conservation et d’archivage est justifié « par un certificat délivré par un organisme accrédité dans les conditions prévues à l’article L. 433-4 du code de la consommation **ou** par une attestation individuelle de l’éditeur »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La doctrine que le service invoque lui même dit exactement la même chose. Le BOI-TVA-DECLA-30-10-30 consacre son paragraphe 320 au certificat délivré par un organisme accrédité et son paragraphe 360 à l’attestation individuelle de l’éditeur, dont il fournit le modèle (BOI-LETTRE-000242). Les deux voies sont alternatives et de valeur égale : la seconde n’est pas une voie dégradée, c’est un mode de preuve que la loi institue."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cette alternative était en vigueur pendant toute la période vérifiée (du 1er avril 2022 au 31 mars 2025). Elle a été supprimée par l’article 43 de la loi n° 2025-127 du 14 février 2025 de finances pour 2025, avec effet au 16 février 2025, puis **rétablie** par l’article 125 de la loi n° 2026-103 du 19 février 2026 de finances pour 2026, avec effet au 21 février 2026. Elle était donc pleinement applicable aux exercices vérifiés, et elle l’est de nouveau à la date de la réponse du service."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sources : [article 286 du CGI](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897) ; [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) ; [suppression par la loi de finances pour 2025](https://bofip.impots.gouv.fr/bofip/14667-PGP.html/ACTU-2025-00075) ; [rétablissement par la loi de finances pour 2026](https://bofip.impots.gouv.fr/bofip/15035-PGP.html/ACTU-2026-00073)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La société a produit, le 13 janvier 2026, la pièce datée du 1er décembre 2018 relative au logiciel SERVILOG d’AKEAD (POS 5.03-Eb), que la proposition de rectification mentionne page 3 et dont elle indique page 22 que le logiciel « figure sur les attestations transmises au service ». Que cette pièce relève de la première ou de la seconde voie, elle satisfait à l’obligation légale. Le service ne peut la neutraliser par une qualification qu’il n’étaye pas, sans dire laquelle des deux voies serait en cause ni en quoi la pièce serait irrégulière."
+    },
+    {
+      "kind": "interne",
+      "audience": "avocat",
+      "titre": "À joindre au mémoire",
+      "texte": "La pièce du 01/12/2018 n’est pas dans le dossier numérique. Joindre l’original au mémoire et préciser sa nature exacte : certificat NF525 délivré par AFNOR Certification sous accréditation COFRAC, ou attestation individuelle de l’éditeur AKEAD conforme au modèle BOI-LETTRE-000242. Dans les deux cas l’argument tient, mais la formulation gagne à nommer la voie retenue."
+    },
+    {
+      "kind": "titre",
+      "texte": "Une hypothèse de manipulation n’est pas une constatation"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Page 44, le service écrit qu’« il est difficile de mettre en évidence la source » de l’anomalie de taux, puis ajoute : « il n’est pas exclu de pouvoir penser qu’elle puisse avoir pour origine une manipulation du logiciel, par les dirigeants ». Ces deux phrases se suivent. La seconde met en cause personnellement les dirigeants ; la première reconnaît que le service ne sait pas d’où vient l’anomalie."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La charge de la preuve est ici sans ambiguïté. L’article L. 195 A du livre des procédures fiscales dispose qu’« en cas de contestation des pénalités fiscales appliquées à un contribuable au titre des impôts directs, de la taxe sur la valeur ajoutée et des autres taxes sur le chiffre d’affaires […] la preuve de la mauvaise foi et des manœuvres frauduleuses incombe à l’administration ». Plus largement, il appartient au service d’établir les faits qu’il allègue, non au contribuable de démontrer qu’il n’a rien fait."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Nous demandons en conséquence que ce passage soit retiré ou étayé. S’il est maintenu, il devra l’être avec l’indication de ce qui aurait été manipulé, quand, par quel moyen et pour quel montant. Nous relevons qu’aucun de ces éléments ne figure dans la réponse, et que la colonne sur laquelle repose le soupçon a été créée par le service."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le format des extractions est celui du logiciel, pas un choix du contribuable"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les fichiers ont été remis au titre du II de l’article L. 47 A du livre des procédures fiscales, qui permet à l’administration de demander « la copie des documents, données et traitements soumis à contrôle », produite « sur tous supports informatiques répondant à des normes fixées par arrêté ». Ces normes portent sur le support et le format de la copie remise. Elles n’imposent pas au contribuable de créer une donnée que son logiciel ne conserve pas."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le contribuable a remis ce que la caisse produit : le journal des événements sans colonne de libellé, les tickets avec leur libellé, les règlements et le journal de TVA. L’absence, dans le fichier « tpvevenement », d’une clé partagée avec les fichiers de tickets relève de la conception de l’éditeur, couverte par la pièce de conformité du 01/12/2018. Reprocher au restaurant la structure interne d’un logiciel dont la conformité est justifiée revient à lui imputer une obligation qui pèse sur un tiers."
+    },
+    {
+      "kind": "alerte",
+      "couleur": "orange",
+      "titre": "Le raisonnement de la page 39 est circulaire",
+      "texte": "Le service écrit que « c’est le travail mené par le service sur le rejet de la comptabilité qui aboutit à remettre en cause les chiffre d’affaires déclarés », et que « c’est cela qui permet donc de soutenir que les fichiers de caisses sont impropres à justifier le volume d’affaires réel » (p. 39). Le rejet ne peut pas servir de preuve du défaut qui le fonde."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Ce que cela fait tomber",
+      "sousTitre": "La partie G ne comporte plus, après vérification, aucune anomalie qui puisse soutenir le rejet de la comptabilité."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les quatre montants opposés par le service se réconcilient intégralement : deux d’entre eux sont deux arrêtés du même compteur de caisse, un troisième est la somme des encaissements, le quatrième est la somme des ventes, et l’amplitude résiduelle est de 0,02 % à 0,39 % selon l’exercice. L’écart de quantités entre les annexes B et C est expliqué article par article, et il est à l’avantage de l’annexe C, dont la cohérence interne est établie par la colonne de contrôle du service lui même."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La démonstration se referme sur le chiffre qui compte : le chiffre d’affaires comptabilisé et l’archive certifiée de la caisse concordent à 997,72 € près sur trois exercices et 1 277 216,50 € de recettes, soit 0,08 %, différence que le service impute lui même page 45 au compte 706800 « Pourboire »."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le chiffre d’affaires comptabilisé et l’archive certifiée de la caisse (annexes C et H)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "CA comptable TTC (proposition, p. 28)",
+          "align": "right"
+        },
+        {
+          "label": "Archive certifiée, annexes C et H",
+          "align": "right"
+        },
+        {
+          "label": "Écart",
+          "align": "right"
+        },
+        {
+          "label": "Écart en %",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "404 030,87 €",
+            "align": "right"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "660,45 €",
+            "align": "right"
+          },
+          {
+            "v": "0,16 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "438 658,43 €",
+            "align": "right"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right"
+          },
+          {
+            "v": "377,31 €",
+            "align": "right"
+          },
+          {
+            "v": "0,09 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "435 524,92 €",
+            "align": "right"
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right"
+          },
+          {
+            "v": "- 40,04 €",
+            "align": "right"
+          },
+          {
+            "v": "- 0,01 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul 3 exercices",
+            "fw": 700
+          },
+          {
+            "v": "1 278 214,22 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 277 216,50 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "997,72 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "0,08 %",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il reste, dans la partie G, une accusation de manipulation formulée à l’état d’hypothèse et une affirmation de minoration formulée sans un seul chiffre. Ni l’une ni l’autre ne peut fonder un rejet de comptabilité, ni a fortiori une majoration pour manquement délibéré, dont la preuve incombe à l’administration."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Réconciliation complète des annexes A, B, C, F, G et H, par exercice, avec l’origine chiffrée de chaque écart. Le classeur est produit par un script qui relit les fichiers de caisse remis au service, sans aucune saisie manuelle : six onglets (CA par annexe, compteur perpétuel, quantités B contre C, exemple du 14/04/2022, lignes de l’annexe C absentes de l’annexe B, colonnes de TVA ajoutées par le service).",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-reconciliation-annexes.xlsx",
+          "label": "R1 - Réconciliation des annexes A, B, C, F, G et H (3 exercices)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
+          "label": "Annexe B-1 : prix de vente et quantités (extrait Excel du 13/02/2026)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : détail des tickets (archive certifiée du 16/03/2026)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-H1_liste-tickets_2022-2023.xls",
+          "label": "Annexe H-1 : liste des tickets (compteur perpétuel)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
+          "label": "Annexe G-1 : journal de TVA"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
+          "label": "Annexe F-1 : règlements"
+        }
+      ]
+    }
+  ]
+}

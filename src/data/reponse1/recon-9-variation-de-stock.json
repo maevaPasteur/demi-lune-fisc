@@ -1,0 +1,458 @@
+{
+  "meta": {
+    "slug": "recon-9-variation-de-stock",
+    "source": "Réponse DDFiP 39 du 04/09/2026, p. 74",
+    "lettre": "L"
+  },
+  "entete": {
+    "positionService": "Le service maintient sa reconstitution sans y apporter la moindre correction. Il rappelle que le volume disponible se calcule comme les achats augmentés de la variation de stock (compte 310200), puis écarte l’argument de Me THIVEND par une seule objection d’unité de mesure : « La réponse se base sur un montant en €uros. Or, la reconstitution ne s’est basé que des volumes en stocks ». Il conclut qu’il « ne voit donc aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications ». Ni le sens de la variation de stock retenue, ni l’inventaire physique des trois clôtures, ni le chiffrage d’environ 2 162 € ne sont discutés au fond.",
+    "reponseCourte": "Le compte 310200 que le service invoque pour définir le volume disponible est un solde en euros, et la démonstration refaite en litres donne le même résultat : le stock physique augmente de 133,29 litres sur 2023-2024 quand la variation retenue le fait diminuer, ce qui gonfle le volume disponible de 2 162,13 € (environ 175 à 200 litres).",
+    "enjeu": "Le « volume disponible » est le point de départ de toute la reconstitution du chiffre d’affaires boissons : une variation de stock prise à l’envers augmente mécaniquement le volume réputé vendable, donc le chiffre d’affaires reconstitué.",
+    "statut": "demonte"
+  },
+  "sections": [
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 1,
+      "titre": "Ce que soutient l’administration",
+      "sousTitre": "Point 9 du courrier du 04/09/2026, p. 74 : « “Volume disponible” gonflé par une variation de stock erronée · Proposition p. 14, annexe 6 »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le point 9 occupe le haut de la page 74 et suit la présentation en trois temps utilisée dans toute cette partie du courrier : un encadré qui rappelle la position du service puis celle de Me THIVEND, la mention des pièces produites, et enfin la « Réponse du service ». Le renvoi porté en tête de l’encadré vise la page 14 de la proposition de rectification et son annexe 6."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La position du service est résumée en une ligne : « Service : Le volume disponible = achats + variation de stock (compte 310200) ». C’est donc la formule de calcul du volume réputé disponible à la vente qui est rappelée, avec le numéro du compte comptable dont la variation de stock est tirée."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La position de la défense est résumée juste en dessous : « Réponse : La variation de stock retenue est de signe inverse à l’inventaire physique réel des 3 clôtures », de sorte que « le “disponible” est gonflé d’environ 2 162 € ». L’encadré indique ensuite la pièce produite au soutien de cette démonstration : « Pièces : 09-rf-inventaire-stocks.xlsx »."
+    },
+    {
+      "kind": "chapitre",
+      "source": "fisc",
+      "numero": 2,
+      "titre": "La « Réponse du service » (p. 74)",
+      "sousTitre": "Deux phrases, une objection d’unité de mesure, aucune discussion du signe de la variation de stock."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La réponse du service tient intégralement en deux phrases, reproduites ici mot pour mot : « La réponse se base sur un montant en €uros. Or, la reconstitution ne s’est basé que des volumes en stocks. » (orthographe du courrier). L’objection est donc exclusivement une objection d’unité : le service ne dit pas que le signe de la variation de stock serait correct, ni que l’inventaire physique invoqué serait inexact, il dit que la démonstration adverse est exprimée en euros alors que sa reconstitution, selon lui, ne s’appuierait que sur des volumes."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Aucun chiffre n’est opposé au montant de 2 162 € avancé par la défense : le service ne le recalcule pas, ne le conteste pas et n’en propose pas d’équivalent en volume. La pièce 09-rf-inventaire-stocks.xlsx n’est ni citée ni examinée dans la réponse. Le compte 310200, que le service avait lui-même mis en avant, n’est plus mentionné."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Vient ensuite, en italique et souligné dans le courrier, la phrase de conclusion : « Le service ne voit donc aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications. » Elle est placée immédiatement après la réponse au point 9, avant l’encadré du point 10. Le rejet est donc total : les montants de la proposition de rectification restent inchangés."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Gonflement du « disponible » allégué",
+          "valeur": "≈ 2 162 €",
+          "sub": "Chiffrage de Me THIVEND repris dans l’encadré, non discuté par le service (p. 74)",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Formule rappelée par le service",
+          "valeur": "Achats + variation de stock",
+          "sub": "Variation tirée du compte 310200 (p. 74)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Clôtures visées par la défense",
+          "valeur": "3",
+          "sub": "Inventaire physique réel des 3 clôtures, dont le signe serait inverse à la variation retenue (p. 74)",
+          "couleur": "blue"
+        },
+        {
+          "label": "Longueur de la réponse du service",
+          "valeur": "2 phrases",
+          "sub": "Une seule objection, portant sur l’unité de mesure (p. 74)",
+          "couleur": "gold"
+        },
+        {
+          "label": "Modification de la reconstitution",
+          "valeur": "Aucune",
+          "sub": "« Le service ne voit donc aucune raison de modifier sa reconstitution » (p. 74)",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Pièce produite au soutien",
+          "valeur": "09-rf-inventaire-stocks.xlsx",
+          "sub": "Visée dans l’encadré, jamais examinée dans la réponse du service (p. 74)",
+          "couleur": "gold"
+        }
+      ]
+    },
+    {
+      "kind": "alerte",
+      "couleur": "orange",
+      "titre": "Le service ne répond pas sur le signe, il répond sur l’unité",
+      "texte": "Le grief portait sur le sens de la variation de stock retenue dans le calcul du volume disponible. La réponse du 04/09/2026 ne traite ni ce sens, ni l’inventaire physique des trois clôtures, ni le montant de 2 162 € : elle oppose seulement que la démonstration serait exprimée en euros alors que la reconstitution serait en volumes."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 3,
+      "titre": "Notre réponse : l’objection d’unité se retourne contre la reconstitution",
+      "sousTitre": "Le compte que le service invoque pour définir le volume disponible est un solde en euros ; refaite en litres, la démonstration donne exactement le même résultat, et le sens de la variation reste inversé."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le compte 310200 invoqué par le service est un solde en euros",
+      "numero": "3.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La formule est celle du service, écrite en tête du point 9 : « **Le volume disponible = achats + variation de stock (compte 310200)** » (p. 74). Un compte de la classe 3 enregistre des stocks valorisés à leur coût d’achat : son solde s’exprime en euros, jamais en litres ni en bouteilles. Le service l’a d’ailleurs chiffré au centime, exercice par exercice : **800,83 €**, **1 029,67 €** et **273,41 €**, comptabilisés en diminution."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ces montants ne sont pas restés au stade du raisonnement. Le montant de **1 029,67 €** figure dans les annexes boissons de la proposition de rectification, à l’annexe n° 7-2, à côté de 1 646,54 € pour les denrées, parmi les lignes qui conduisent au coût d’achat des matières revendues et au coefficient de revente. Écrire ensuite que « la reconstitution ne s’est basé que des volumes en stocks » est contredit par la formule portée à la même page et par les propres annexes du service."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Deux lectures seulement sont possibles, et elles conduisent au même point. **Ou bien** la variation de stock provient du compte 310200, et elle est en euros : l’objection tombe, notre réponse étant exprimée dans l’unité même que le service a retenue. **Ou bien** elle provient des inventaires physiques, donc de volumes : ce sont alors ces inventaires qui la démentent, comme le montrent les deux tableaux ci-après."
+    },
+    {
+      "kind": "titre",
+      "texte": "La même démonstration, refaite en litres",
+      "numero": "3.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Puisque le service demande des volumes, voici les volumes. Les trois inventaires physiques de clôture ont été repris ligne à ligne (273 lignes) et convertis en litres, la contenance unitaire étant **lue sur le libellé de l’inventaire lui-même** (« Crémant du Jura 75cl », « Bourgogne Aligoté BIB 10L », « Coca-Cola 33cl ») : aucune contenance n’est supposée. Les cafés, thés et infusions, qui ne sont pas des liquides en stock, sont exclus des litres, jamais des euros."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Stock physique de boissons aux trois clôtures, en litres (inventaires des 31/03/2023, 31/03/2024 et 31/03/2025)",
+      "minWidth": 760,
+      "colonnes": [
+        {
+          "label": "Poste"
+        },
+        {
+          "label": "31/03/2023",
+          "align": "right"
+        },
+        {
+          "label": "31/03/2024",
+          "align": "right"
+        },
+        {
+          "label": "31/03/2025",
+          "align": "right"
+        },
+        {
+          "label": "Variation 2023-2024",
+          "align": "right"
+        },
+        {
+          "label": "Variation 2024-2025",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Alcools et vins"
+          },
+          {
+            "v": "262,73 L",
+            "align": "right"
+          },
+          {
+            "v": "363,14 L",
+            "align": "right"
+          },
+          {
+            "v": "301,90 L",
+            "align": "right"
+          },
+          {
+            "v": "+ 100,41 L",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "- 61,24 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Boissons sans alcool"
+          },
+          {
+            "v": "190,56 L",
+            "align": "right"
+          },
+          {
+            "v": "223,44 L",
+            "align": "right"
+          },
+          {
+            "v": "262,64 L",
+            "align": "right"
+          },
+          {
+            "v": "+ 32,88 L",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "+ 39,20 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "**Total boissons**"
+          },
+          {
+            "v": "**453,29 L**",
+            "align": "right"
+          },
+          {
+            "v": "**586,58 L**",
+            "align": "right"
+          },
+          {
+            "v": "**564,54 L**",
+            "align": "right"
+          },
+          {
+            "v": "**+ 133,29 L**",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "**- 22,04 L**",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le résultat est le même dans les deux unités. Entre le 31/03/2023 et le 31/03/2024, le stock physique **augmente** de **133,29 litres** et de **862,24 € HT**. Un stock qui augmente **diminue** le volume disponible à la vente, puisque ces litres sont restés en cave. Le service retient l’inverse : une variation **négative** de 1 029,67 €, qui **augmente** son disponible. L’inversion de sens est donc constatée en litres exactement comme en euros."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce détour montre au passage pourquoi une variation de stock se mesure en valeur. Un stock de boissons additionne des fûts de 8 litres, des bouteilles de 75 cl et des canettes de 33 cl dont le coût va de moins de 1 € le litre (eaux, sodas) à plus de 40 € le litre (absinthe, eaux-de-vie) : la somme des litres ne dit rien de ce qui est en cave, et c’est la raison pour laquelle l’inventaire est valorisé et le compte de stock tenu en euros."
+    },
+    {
+      "kind": "titre",
+      "texte": "Le sens de la variation et ce qu’il ajoute au volume disponible",
+      "numero": "3.3"
+    },
+    {
+      "kind": "tableau",
+      "titre": "Variation de stock : inventaire physique contre variation retenue par le service",
+      "minWidth": 820,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Variation physique (litres)",
+          "align": "right"
+        },
+        {
+          "label": "Variation physique (€ HT)",
+          "align": "right"
+        },
+        {
+          "label": "Variation retenue (compte 310200)",
+          "align": "right"
+        },
+        {
+          "label": "Sur-évaluation du disponible",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023 (clôture 31/03/2023)"
+          },
+          {
+            "v": "non calculable",
+            "align": "right"
+          },
+          {
+            "v": "non calculable",
+            "align": "right"
+          },
+          {
+            "v": "- 800,83 €",
+            "align": "right"
+          },
+          {
+            "v": "l’inventaire d’ouverture au 31/03/2022 n’est pas repris dans nos états",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024 (clôture 31/03/2024)"
+          },
+          {
+            "v": "+ 133,29 L",
+            "align": "right"
+          },
+          {
+            "v": "+ 862,24 €",
+            "align": "right"
+          },
+          {
+            "v": "- 1 029,67 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "**+ 1 891,91 €**",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025 (clôture 31/03/2025)"
+          },
+          {
+            "v": "- 22,04 L",
+            "align": "right"
+          },
+          {
+            "v": "- 3,19 €",
+            "align": "right"
+          },
+          {
+            "v": "- 273,41 €",
+            "align": "right"
+          },
+          {
+            "v": "**+ 270,22 €**",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "**Cumul**"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "**+ 2 162,13 €**",
+            "align": "right",
+            "badge": "ko"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La sur-évaluation cumulée du volume disponible est de **2 162,13 €**, dont **1 891,91 €** sur le seul exercice 2023-2024, celui où le sens est inversé. Sur 2024-2025, le sens retenu est le bon mais l’amplitude est excessive : la variation physique est de 3,19 €, celle retenue de 273,41 €."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Exprimée dans l’unité que le service réclame, cette sur-évaluation représente, au prix d’achat moyen du stock d’alcools constaté aux inventaires (10,83 € à 12,50 € HT le litre selon la clôture retenue), **de l’ordre de 175 à 200 litres** ajoutés au volume disponible avant toute dose et tout prix de vente."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "L’erreur ne reste pas au stade du stock. Le volume disponible est le **point de départ** de la reconstitution : chaque litre est ensuite converti en doses, valorisé au prix de vente moyen, puis le chiffre d’affaires liquides ainsi obtenu sert de base au chiffre d’affaires solides par application du rapport liquides/solides (3,02 pour l’exercice 2023-2024, annexe n° 7-2). Une quantité ajoutée au départ est donc reproduite à chaque étage."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service n’oppose à ce chiffrage aucun calcul contraire. Il ne conteste ni l’existence des trois inventaires physiques, ni leurs quantités, ni leurs valeurs, ni le sens qu’elles imposent à la variation de stock. Sa conclusion selon laquelle les montants « demeureront les mêmes » n’est appuyée sur aucune vérification."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Sens de la variation, exercice 2023-2024",
+          "valeur": "Inversé",
+          "sub": "stock physique + 133,29 L et + 862,24 € HT, variation retenue - 1 029,67 €",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Sur-évaluation du volume disponible",
+          "valeur": "2 162,13 €",
+          "sub": "1 891,91 € sur 2023-2024 et 270,22 € sur 2024-2025",
+          "highlight": true,
+          "couleur": "red"
+        },
+        {
+          "label": "Équivalent en volume",
+          "valeur": "175 à 200 L",
+          "sub": "au prix d’achat moyen du stock d’alcools (10,83 à 12,50 € HT le litre)",
+          "couleur": "gold"
+        },
+        {
+          "label": "Unité du compte 310200",
+          "valeur": "Euros",
+          "sub": "800,83 €, 1 029,67 € et 273,41 € ; le montant de 1 029,67 € figure en annexe n° 7-2",
+          "couleur": "blue"
+        },
+        {
+          "label": "Inventaires physiques repris",
+          "valeur": "273 lignes",
+          "sub": "trois clôtures, contenance lue sur le libellé, aucune contenance supposée",
+          "couleur": "teal"
+        }
+      ]
+    },
+    {
+      "kind": "alerte",
+      "couleur": "orange",
+      "titre": "L’objection d’unité ne sauve pas le calcul",
+      "texte": "Le service oppose que la démonstration serait en euros alors que sa reconstitution serait en volumes. Refaite en litres, elle aboutit au même constat : le stock de boissons augmente de 133,29 litres sur l’exercice 2023-2024, quand la variation retenue le fait diminuer. Changer d’unité ne change pas le sens d’une variation."
+    },
+    {
+      "kind": "chapitre",
+      "source": "nous",
+      "numero": 4,
+      "titre": "Ce que cela fait tomber",
+      "sousTitre": "Le point de départ de la reconstitution des boissons est surévalué, dans les deux unités."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le volume disponible retenu pour les trois exercices intègre une variation de stock dont le sens est démenti par l’inventaire physique de clôture, pour **2 162,13 €**, soit environ **175 à 200 litres**. Ce n’est pas une divergence de présentation : c’est une quantité qui n’a jamais été à la vente et qui est pourtant réputée vendue."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La seule objection opposée, tirée de l’unité de mesure, est inopérante : elle vise un compte dont le service a lui-même écrit qu’il fondait sa formule et dont les montants figurent en euros dans ses propres annexes. La reconstitution doit être reprise à partir du volume disponible corrigé, avant même l’examen des doses, des pertes et des abattements."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Le calcul ci-dessus est intégralement reproductible. La pièce jointe donne les volumes en litres aux trois clôtures, le détail ligne par ligne des 273 lignes d’inventaire avec la contenance retenue, la comparaison entre variation physique et variation retenue par le service, et la méthode de conversion. Script de production : scripts/reponse1-variation-de-stock-volumes.py, source : les trois inventaires physiques de clôture.",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-variation-de-stock-en-volumes.xlsx",
+          "label": "R1 - Variation de stock refaite en volumes (litres), trois clôtures"
+        }
+      ]
+    }
+  ]
+}

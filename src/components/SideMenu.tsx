@@ -3,6 +3,7 @@ import { useMatch } from 'react-router-dom'
 import { navLinks } from './navLinks'
 import NavLinkItem from './NavLinkItem'
 import RenduFinalNav from './RenduFinalNav'
+import Reponse1Nav from './Reponse1Nav'
 import Brand from './Brand'
 
 // Colonne complète, affichée en tablette/desktop : marque en haut puis navigation.
@@ -11,6 +12,10 @@ export default function SideMenu() {
   // numéroté du Rendu final (blocs > griefs).
   const surRenduFinal = Boolean(useMatch({ path: '/rendu-final/*', end: false }))
   if (surRenduFinal) return <RenduFinalNav />
+
+  // Idem sur /reponse-1(/*) : sommaire de la contre-analyse de la réponse du fisc.
+  const surReponse1 = Boolean(useMatch({ path: '/reponse-1/*', end: false }))
+  if (surReponse1) return <Reponse1Nav />
 
   return (
     <Stack h="100%" gap={0} p="md">

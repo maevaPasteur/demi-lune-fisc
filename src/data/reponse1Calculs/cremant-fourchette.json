@@ -1,0 +1,471 @@
+{
+ "exercices": {
+  "2022-2023": {
+   "jours_servis": 217,
+   "nominal_cl": 11629.8,
+   "dispo_bouteilles": 275,
+   "dispo_cl": 20625.0,
+   "bouteilles_vendues_entieres": 11.0,
+   "dispo_service_cl": 19800.0,
+   "ecart_a_expliquer_cl": 8170.2,
+   "ecart_pct_du_dispo": 41.26,
+   "scenarios": [
+    {
+     "taux": 0.0,
+     "servi_cl": 11629.8,
+     "bouteilles_ouvertes": 266,
+     "utilise_cl": 19950.0,
+     "jete_cl": 8320.2,
+     "non_vendu_cl": 8320.2,
+     "surversement_cl": 0.0,
+     "reste_dispo_cl": -150.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.025,
+     "servi_cl": 11920.5,
+     "bouteilles_ouvertes": 267,
+     "utilise_cl": 20025.0,
+     "jete_cl": 8104.5,
+     "non_vendu_cl": 8395.2,
+     "surversement_cl": 290.7,
+     "reste_dispo_cl": -225.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.05,
+     "servi_cl": 12211.3,
+     "bouteilles_ouvertes": 281,
+     "utilise_cl": 21075.0,
+     "jete_cl": 8863.7,
+     "non_vendu_cl": 9445.2,
+     "surversement_cl": 581.5,
+     "reste_dispo_cl": -1275.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.075,
+     "servi_cl": 12502.0,
+     "bouteilles_ouvertes": 281,
+     "utilise_cl": 21075.0,
+     "jete_cl": 8573.0,
+     "non_vendu_cl": 9445.2,
+     "surversement_cl": 872.2,
+     "reste_dispo_cl": -1275.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.1,
+     "servi_cl": 12792.8,
+     "bouteilles_ouvertes": 281,
+     "utilise_cl": 21075.0,
+     "jete_cl": 8282.2,
+     "non_vendu_cl": 9445.2,
+     "surversement_cl": 1163.0,
+     "reste_dispo_cl": -1275.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.125,
+     "servi_cl": 13083.5,
+     "bouteilles_ouvertes": 281,
+     "utilise_cl": 21075.0,
+     "jete_cl": 7991.5,
+     "non_vendu_cl": 9445.2,
+     "surversement_cl": 1453.7,
+     "reste_dispo_cl": -1275.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.15,
+     "servi_cl": 13374.3,
+     "bouteilles_ouvertes": 301,
+     "utilise_cl": 22575.0,
+     "jete_cl": 9200.7,
+     "non_vendu_cl": 10945.2,
+     "surversement_cl": 1744.5,
+     "reste_dispo_cl": -2775.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.175,
+     "servi_cl": 13665.0,
+     "bouteilles_ouvertes": 302,
+     "utilise_cl": 22650.0,
+     "jete_cl": 8985.0,
+     "non_vendu_cl": 11020.2,
+     "surversement_cl": 2035.2,
+     "reste_dispo_cl": -2850.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.2,
+     "servi_cl": 13955.8,
+     "bouteilles_ouvertes": 303,
+     "utilise_cl": 22725.0,
+     "jete_cl": 8769.2,
+     "non_vendu_cl": 11095.2,
+     "surversement_cl": 2326.0,
+     "reste_dispo_cl": -2925.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.236,
+     "servi_cl": 14374.4,
+     "bouteilles_ouvertes": 303,
+     "utilise_cl": 22725.0,
+     "jete_cl": 8350.6,
+     "non_vendu_cl": 11095.2,
+     "surversement_cl": 2744.6,
+     "reste_dispo_cl": -2925.0,
+     "compatible": false
+    }
+   ],
+   "taux_max_compatible": null,
+   "taux_max_compatible_fin": null,
+   "jete_theorique_cl": 8137.5,
+   "jete_theorique_ecart_pct": -0.4,
+   "ecart_par_jour_cl": 37.7,
+   "equilibre": {
+    "taux": 0.0,
+    "servi_cl": 11629.8,
+    "bouteilles_ouvertes": 266,
+    "utilise_cl": 19950.0,
+    "jete_cl": 8320.2,
+    "depassement_cl": 150.0
+   },
+   "par_libelle": {
+    "La Vouivre": 621.5,
+    "Père Gregoire": 503.0,
+    "Crémant": 242.0,
+    "KITTYKIR": 233.8,
+    "Kir Princier": 37.0,
+    "VOUIVRE": 22.0
+   }
+  },
+  "2023-2024": {
+   "jours_servis": 212,
+   "nominal_cl": 14259.0,
+   "dispo_bouteilles": 325,
+   "dispo_cl": 24375.0,
+   "bouteilles_vendues_entieres": 10.0,
+   "dispo_service_cl": 23625.0,
+   "ecart_a_expliquer_cl": 9366.0,
+   "ecart_pct_du_dispo": 39.64,
+   "scenarios": [
+    {
+     "taux": 0.0,
+     "servi_cl": 14259.0,
+     "bouteilles_ouvertes": 300,
+     "utilise_cl": 22500.0,
+     "jete_cl": 8241.0,
+     "non_vendu_cl": 8241.0,
+     "surversement_cl": 0.0,
+     "reste_dispo_cl": 1125.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.025,
+     "servi_cl": 14615.5,
+     "bouteilles_ouvertes": 302,
+     "utilise_cl": 22650.0,
+     "jete_cl": 8034.5,
+     "non_vendu_cl": 8391.0,
+     "surversement_cl": 356.5,
+     "reste_dispo_cl": 975.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.05,
+     "servi_cl": 14972.0,
+     "bouteilles_ouvertes": 315,
+     "utilise_cl": 23625.0,
+     "jete_cl": 8653.0,
+     "non_vendu_cl": 9366.0,
+     "surversement_cl": 713.0,
+     "reste_dispo_cl": 0.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.075,
+     "servi_cl": 15328.4,
+     "bouteilles_ouvertes": 315,
+     "utilise_cl": 23625.0,
+     "jete_cl": 8296.6,
+     "non_vendu_cl": 9366.0,
+     "surversement_cl": 1069.4,
+     "reste_dispo_cl": 0.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.1,
+     "servi_cl": 15684.9,
+     "bouteilles_ouvertes": 318,
+     "utilise_cl": 23850.0,
+     "jete_cl": 8165.1,
+     "non_vendu_cl": 9591.0,
+     "surversement_cl": 1425.9,
+     "reste_dispo_cl": -225.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.125,
+     "servi_cl": 16041.4,
+     "bouteilles_ouvertes": 318,
+     "utilise_cl": 23850.0,
+     "jete_cl": 7808.6,
+     "non_vendu_cl": 9591.0,
+     "surversement_cl": 1782.4,
+     "reste_dispo_cl": -225.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.15,
+     "servi_cl": 16397.9,
+     "bouteilles_ouvertes": 328,
+     "utilise_cl": 24600.0,
+     "jete_cl": 8202.1,
+     "non_vendu_cl": 10341.0,
+     "surversement_cl": 2138.9,
+     "reste_dispo_cl": -975.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.175,
+     "servi_cl": 16754.3,
+     "bouteilles_ouvertes": 328,
+     "utilise_cl": 24600.0,
+     "jete_cl": 7845.7,
+     "non_vendu_cl": 10341.0,
+     "surversement_cl": 2495.3,
+     "reste_dispo_cl": -975.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.2,
+     "servi_cl": 17110.8,
+     "bouteilles_ouvertes": 333,
+     "utilise_cl": 24975.0,
+     "jete_cl": 7864.2,
+     "non_vendu_cl": 10716.0,
+     "surversement_cl": 2851.8,
+     "reste_dispo_cl": -1350.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.236,
+     "servi_cl": 17624.1,
+     "bouteilles_ouvertes": 334,
+     "utilise_cl": 25050.0,
+     "jete_cl": 7425.9,
+     "non_vendu_cl": 10791.0,
+     "surversement_cl": 3365.1,
+     "reste_dispo_cl": -1425.0,
+     "compatible": false
+    }
+   ],
+   "taux_max_compatible": 0.075,
+   "taux_max_compatible_fin": 0.086,
+   "jete_theorique_cl": 7950.0,
+   "jete_theorique_ecart_pct": -15.1,
+   "ecart_par_jour_cl": 44.2,
+   "equilibre": {
+    "taux": 0.086,
+    "servi_cl": 15485.3,
+    "bouteilles_ouvertes": 315,
+    "utilise_cl": 23625.0,
+    "jete_cl": 8139.7,
+    "depassement_cl": 0.0
+   },
+   "par_libelle": {
+    "La Vouivre": 794.0,
+    "Père Gregoire": 559.0,
+    "Crémant": 305.0,
+    "KITTYKIR": 288.5,
+    "VOUIVRE": 65.0,
+    "Kir Princier": 30.0
+   }
+  },
+  "2024-2025": {
+   "jours_servis": 218,
+   "nominal_cl": 13509.0,
+   "dispo_bouteilles": 322,
+   "dispo_cl": 24150.0,
+   "bouteilles_vendues_entieres": 13.0,
+   "dispo_service_cl": 23175.0,
+   "ecart_a_expliquer_cl": 9666.0,
+   "ecart_pct_du_dispo": 41.71,
+   "scenarios": [
+    {
+     "taux": 0.0,
+     "servi_cl": 13509.0,
+     "bouteilles_ouvertes": 291,
+     "utilise_cl": 21825.0,
+     "jete_cl": 8316.0,
+     "non_vendu_cl": 8316.0,
+     "surversement_cl": 0.0,
+     "reste_dispo_cl": 1350.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.025,
+     "servi_cl": 13846.7,
+     "bouteilles_ouvertes": 292,
+     "utilise_cl": 21900.0,
+     "jete_cl": 8053.3,
+     "non_vendu_cl": 8391.0,
+     "surversement_cl": 337.7,
+     "reste_dispo_cl": 1275.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.05,
+     "servi_cl": 14184.4,
+     "bouteilles_ouvertes": 303,
+     "utilise_cl": 22725.0,
+     "jete_cl": 8540.6,
+     "non_vendu_cl": 9216.0,
+     "surversement_cl": 675.4,
+     "reste_dispo_cl": 450.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.075,
+     "servi_cl": 14522.2,
+     "bouteilles_ouvertes": 303,
+     "utilise_cl": 22725.0,
+     "jete_cl": 8202.8,
+     "non_vendu_cl": 9216.0,
+     "surversement_cl": 1013.2,
+     "reste_dispo_cl": 450.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.1,
+     "servi_cl": 14859.9,
+     "bouteilles_ouvertes": 304,
+     "utilise_cl": 22800.0,
+     "jete_cl": 7940.1,
+     "non_vendu_cl": 9291.0,
+     "surversement_cl": 1350.9,
+     "reste_dispo_cl": 375.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.125,
+     "servi_cl": 15197.6,
+     "bouteilles_ouvertes": 304,
+     "utilise_cl": 22800.0,
+     "jete_cl": 7602.4,
+     "non_vendu_cl": 9291.0,
+     "surversement_cl": 1688.6,
+     "reste_dispo_cl": 375.0,
+     "compatible": true
+    },
+    {
+     "taux": 0.15,
+     "servi_cl": 15535.4,
+     "bouteilles_ouvertes": 320,
+     "utilise_cl": 24000.0,
+     "jete_cl": 8464.6,
+     "non_vendu_cl": 10491.0,
+     "surversement_cl": 2026.4,
+     "reste_dispo_cl": -825.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.175,
+     "servi_cl": 15873.1,
+     "bouteilles_ouvertes": 321,
+     "utilise_cl": 24075.0,
+     "jete_cl": 8201.9,
+     "non_vendu_cl": 10566.0,
+     "surversement_cl": 2364.1,
+     "reste_dispo_cl": -900.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.2,
+     "servi_cl": 16210.8,
+     "bouteilles_ouvertes": 324,
+     "utilise_cl": 24300.0,
+     "jete_cl": 8089.2,
+     "non_vendu_cl": 10791.0,
+     "surversement_cl": 2701.8,
+     "reste_dispo_cl": -1125.0,
+     "compatible": false
+    },
+    {
+     "taux": 0.236,
+     "servi_cl": 16697.1,
+     "bouteilles_ouvertes": 324,
+     "utilise_cl": 24300.0,
+     "jete_cl": 7602.9,
+     "non_vendu_cl": 10791.0,
+     "surversement_cl": 3188.1,
+     "reste_dispo_cl": -1125.0,
+     "compatible": false
+    }
+   ],
+   "taux_max_compatible": 0.125,
+   "taux_max_compatible_fin": 0.136,
+   "jete_theorique_cl": 8175.0,
+   "jete_theorique_ecart_pct": -15.4,
+   "ecart_par_jour_cl": 44.3,
+   "equilibre": {
+    "taux": 0.136,
+    "servi_cl": 15346.2,
+    "bouteilles_ouvertes": 304,
+    "utilise_cl": 22800.0,
+    "jete_cl": 7453.8,
+    "depassement_cl": -375.0
+   },
+   "par_libelle": {
+    "La Vouivre": 704.5,
+    "Père Gregoire": 545.5,
+    "KITTYKIR": 345.0,
+    "Crémant": 263.0,
+    "VOUIVRE": 76.5,
+    "Kir Princier": 23.0,
+    "Crément / Jura VERRE": 4.0
+   }
+  }
+ },
+ "taux": [
+  0.0,
+  0.025,
+  0.05,
+  0.075,
+  0.1,
+  0.125,
+  0.15,
+  0.175,
+  0.2,
+  0.236
+ ],
+ "meta": {
+  "doses_service": {
+   "La Vouivre": 6,
+   "VOUIVRE": 6,
+   "Père Gregoire": 6,
+   "Père Grégoire": 6,
+   "KITTYKIR": 6,
+   "Kittykir": 6,
+   "Crémant": 12,
+   "Crément / Jura VERRE": 12,
+   "Kir Princier": 12
+  },
+  "omis_par_le_service": [
+   "Kir Princier",
+   "VOUIVRE"
+  ],
+  "bouteille_cl": 75.0,
+  "dispo_bouteilles_service": {
+   "2022-2023": 275,
+   "2023-2024": 325,
+   "2024-2025": 322
+  },
+  "source": "public/documents/caisse-enregistreuse/ANNEXE-C{1,2,3} (lecture seule)",
+  "surversement_haut": "Kerr, Patterson, Koenen & Greenfield (2008), +23,6 %"
+ }
+}
