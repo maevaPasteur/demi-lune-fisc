@@ -6,7 +6,7 @@
   },
   "entete": {
     "positionService": "Sous le titre « U- Motifs de rejet de comptabilité absent dans la réponse » (p. 93), le service relève trois motifs de rejet de comptabilité auxquels, selon lui, le mémoire de Maître THIVEND du 10/07/2026 n’a pas répondu. D’abord la documentation technique de la caisse informatique, que « la société n’a pas été en meure de produire (…) tout au long de la procédure fiscale » et qui « ne figure pas non plus dans la réponse ». Ensuite les erreurs d’application de taux de TVA article par article, mises en évidence par les annexes C-1 à C-3 remises sur clé USB le lundi 30 mars 2026 (Partie VIII de la proposition de rectifications) : la réponse « aborde bien la problématique de la TVA à plusieurs reprises mais sans directement faire allusion à cette question d’erreur de taux (article par article) ». Enfin le différentiel d’encaissements par mode de règlement entre comptabilité et données de caisse (Partie X) : la réponse « n’explique jamais pourquoi les données de caisse propose des chiffres, par mode de règlement, alors que la comptabilité en mentionne d’autres ». Sur ce dernier point, le service admet que « les écarts ne semblent pas significatifs » mais estime qu’ils « sont de nature à interroger le service sur la qualité et l’inaltérabilité des données de caisse ».",
-    "reponseCourte": "Chiffrés à partir des propres annexes du service, les trois motifs se retournent : 9 424,74 € de TVA payée en trop et un écart d’encaissements de 0,29 % du chiffre d’affaires, tous deux au bénéfice du Trésor.",
+    "reponseCourte": "Chiffrés à partir des propres annexes du service, les trois motifs se retournent : les corrections de taux que le vérificateur a lui-même calculées, appliquées intégralement, laissent la TVA reconstituée à 18,76 € de la TVA reversée sur trois exercices, et l’écart d’encaissements ressort à 0,29 % du chiffre d’affaires, l’un et l’autre au bénéfice du Trésor.",
     "enjeu": "Trois motifs de rejet de comptabilité que le service considère comme non contestés, donc acquis, et qu’il ajoute au soutien du rejet et de la reconstitution.",
     "statut": "demonte"
   },
@@ -137,17 +137,21 @@
     },
     {
       "kind": "titre",
-      "texte": "Point b : l’incidence des « erreurs de taux » est chiffrable, et elle joue contre la société",
+      "texte": "Point b : l’incidence des « erreurs de taux » est chiffrable, et elle est nulle",
       "numero": "2.2"
     },
     {
       "kind": "paragraphe",
-      "texte": "Les annexes C-1 à C-3 ne se bornent pas à signaler des erreurs. Le vérificateur y a ajouté deux colonnes : la colonne E « **Erreur Taux TVA dans Base Envoyée Faux/Correct** », qui indique le sens de l’écart, et la colonne F « **Correction TVA sur taux** », qui en donne l’incidence en euros, ligne par ligne. Il suffisait de totaliser cette colonne F. Nous l’avons fait sur les trois exercices, ligne à ligne."
+      "texte": "Les annexes C-1 à C-3 ne se bornent pas à signaler des erreurs. Le vérificateur y a ajouté deux colonnes : la colonne E « **Erreur Taux TVA dans Base Envoyée Faux/Correct** », qui indique pour chaque ligne le taux porté par le fichier et celui qu’il tient pour correct, et la colonne F « **Correction TVA sur taux** », qui chiffre cet écart en euros. La formule de la colonne F se vérifie au centime : elle applique au montant TTC de la ligne la différence entre les deux taux, soit ce montant divisé par 13,2, positivement lorsque le service redresse 10 % vers 20 %, négativement dans l’autre sens. Nous l’avons totalisée sur les trois exercices, puis nous avons refait le calcul de TVA que ces corrections impliquent."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Une précaution de lecture s’impose : la dernière ligne de chaque annexe C porte déjà, dans la colonne F, le total des lignes qui la précèdent. Une addition qui balaie le fichier sans exclure cette ligne obtient exactement le double du vrai total. Le total de la colonne F est de **9 424,74 €** sur les trois exercices, non de 18 849,48 €."
     },
     {
       "kind": "tableau",
-      "titre": "Incidence des « erreurs de taux » signalées par le service, colonne F des annexes C-1 à C-3",
-      "minWidth": 860,
+      "titre": "Incidence des corrections de taux du service, annexes C-1 à C-3, recalculée ligne à ligne",
+      "minWidth": 1060,
       "colonnes": [
         {
           "label": "Exercice clos"
@@ -157,19 +161,23 @@
           "align": "right"
         },
         {
-          "label": "10 % au lieu de 20 % : TVA due en plus",
+          "label": "Total de la colonne F du service",
           "align": "right"
         },
         {
-          "label": "20 % au lieu de 10 % : TVA payée en trop",
+          "label": "TVA reconstituée aux taux portés par le fichier",
           "align": "right"
         },
         {
-          "label": "Incidence nette",
+          "label": "TVA reconstituée aux taux corrigés par le service",
           "align": "right"
         },
         {
-          "label": "Part de la TVA collectée déclarée",
+          "label": "TVA collectée reversée (compte 445710)",
+          "align": "right"
+        },
+        {
+          "label": "Écart final",
           "align": "right"
         }
       ],
@@ -183,21 +191,25 @@
             "align": "right"
           },
           {
-            "v": "3 814,75 €",
-            "align": "right"
-          },
-          {
-            "v": "−7 104,31 €",
-            "align": "right"
-          },
-          {
             "v": "−3 289,55 €",
+            "align": "right"
+          },
+          {
+            "v": "45 711,80 €",
+            "align": "right"
+          },
+          {
+            "v": "42 422,26 €",
+            "align": "right"
+          },
+          {
+            "v": "42 614,45 €",
+            "align": "right"
+          },
+          {
+            "v": "−192,19 €",
             "align": "right",
             "badge": "ok"
-          },
-          {
-            "v": "−7,72 %",
-            "align": "right"
           }
         ],
         [
@@ -209,21 +221,25 @@
             "align": "right"
           },
           {
-            "v": "4 411,15 €",
-            "align": "right"
-          },
-          {
-            "v": "−7 769,63 €",
-            "align": "right"
-          },
-          {
             "v": "−3 358,48 €",
+            "align": "right"
+          },
+          {
+            "v": "49 774,68 €",
+            "align": "right"
+          },
+          {
+            "v": "46 416,20 €",
+            "align": "right"
+          },
+          {
+            "v": "46 464,79 €",
+            "align": "right"
+          },
+          {
+            "v": "−48,59 €",
             "align": "right",
             "badge": "ok"
-          },
-          {
-            "v": "−7,23 %",
-            "align": "right"
           }
         ],
         [
@@ -235,54 +251,69 @@
             "align": "right"
           },
           {
-            "v": "4 644,37 €",
-            "align": "right"
-          },
-          {
-            "v": "−7 421,08 €",
-            "align": "right"
-          },
-          {
             "v": "−2 776,71 €",
+            "align": "right"
+          },
+          {
+            "v": "49 003,27 €",
+            "align": "right"
+          },
+          {
+            "v": "46 227,47 €",
+            "align": "right"
+          },
+          {
+            "v": "46 005,45 €",
+            "align": "right"
+          },
+          {
+            "v": "+222,02 €",
             "align": "right",
             "badge": "ok"
-          },
-          {
-            "v": "−6,04 %",
-            "align": "right"
           }
         ],
         [
           {
-            "v": "Cumul des 3 exercices"
+            "v": "Cumul des 3 exercices",
+            "fw": 700
           },
           {
             "v": "32 047",
-            "align": "right"
-          },
-          {
-            "v": "12 870,27 €",
-            "align": "right"
-          },
-          {
-            "v": "−22 295,02 €",
-            "align": "right"
+            "align": "right",
+            "fw": 700
           },
           {
             "v": "−9 424,74 €",
             "align": "right",
-            "badge": "ok"
+            "fw": 700
           },
           {
-            "v": "−6,98 %",
-            "align": "right"
+            "v": "144 489,75 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "135 065,93 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "135 084,69 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "−18,76 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
           }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "Le calcul que le service a lui-même porté dans ses annexes aboutit à **9 424,74 € de TVA payée en trop** par la société sur les trois exercices, et non à un manque à gagner pour le Trésor. Le résultat est de même sens sur chacun des trois exercices. Un motif de rejet suppose une insuffisance : la colonne du vérificateur établit l’inverse."
+      "texte": "Les 9 424,74 € de la colonne F ne sont pas de la TVA payée en trop : ils mesurent l’écart entre la colonne « taux » du fichier remis et les taux que le service tient pour corrects. Le contrôle est immédiat. Reconstituée ligne à ligne à partir de la colonne « taux » telle qu’elle figure dans le fichier, la TVA des trois exercices ressortirait à **144 489,75 €**, un montant que personne n’a jamais déclaré ni reversé. Une fois appliquées les corrections du service, la même reconstitution donne **135 065,93 €**, soit **18,76 € de la TVA collectée effectivement reversée** (135 084,69 € au compte 445710) : un écart de **0,014 %**, et en faveur du Trésor. Le calcul du vérificateur ne révèle donc aucune insuffisance, et pas davantage un trop-payé : il restitue la taxe telle qu’elle a été liquidée et reversée. Son incidence sur la TVA due est nulle."
     },
     {
       "kind": "titre",
@@ -295,7 +326,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Ce n’est pas ce que montrent les annexes C. Sur l’exercice clos le 31/03/2023, **239 des 291 références** du fichier apparaissent tantôt à 10 %, tantôt à 20 % (256 sur 310, puis 246 sur 295 sur les deux exercices suivants). La référence 0106 « Coca (25cl) » y figure 269 fois à 10 % et 136 fois à 20 %. Aucun paramétrage de fiche article ne produit ce résultat : la colonne « taux » de l’export ne restitue pas le taux de l’article, mais répartit sur les lignes du ticket les taux applicables à ce ticket."
+      "texte": "Ce n’est pas ce que montrent les annexes C. Sur l’exercice clos le 31/03/2023, **239 des 291 références** du fichier apparaissent tantôt à 10 %, tantôt à 20 % (256 sur 310, puis 246 sur 295 sur les deux exercices suivants). La référence 0106 « Coca (25cl) » y figure 269 fois à 10 % et 136 fois à 20 %. Aucun paramétrage de fiche article ne produit ce résultat : la colonne « taux » de l’export ne restitue pas le taux de l’article, mais répartit sur les lignes du ticket les taux applicables à ce ticket. Les corrections du service le confirment : une fois la colonne E appliquée, **288 de ces 291 références retrouvent un taux unique** (306 sur 310, puis 294 sur 295 sur les deux exercices suivants). Ce que corrigent les colonnes E et F, c’est le champ « taux » de l’export, et non le paramétrage de la caisse."
     },
     {
       "kind": "paragraphe",
@@ -577,7 +608,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Deux des trois motifs sont chiffrables à partir des annexes du service, et une fois chiffrés ils se retournent : les « erreurs de taux » aboutissent à **9 424,74 € de TVA payée en trop** par la société, et le différentiel d’encaissements à **3 703,29 €, soit 0,29 % du chiffre d’affaires TTC déclaré**, au bénéfice du Trésor. Le troisième, la documentation de caisse, ne reçoit dans le courrier aucune incidence chiffrée."
+      "texte": "Deux des trois motifs sont chiffrables à partir des annexes du service, et une fois chiffrés ils se retournent. Les « erreurs de taux », corrigées intégralement selon les colonnes E et F du vérificateur lui-même, laissent la TVA reconstituée à **18,76 € de la TVA reversée** sur trois exercices, soit 0,014 %, et en faveur du Trésor : le grief est sans incidence sur l’impôt. Le différentiel d’encaissements ressort à **3 703,29 €, soit 0,29 % du chiffre d’affaires TTC déclaré**, également au bénéfice du Trésor. Le troisième, la documentation de caisse, ne reçoit dans le courrier aucune incidence chiffrée."
     },
     {
       "kind": "paragraphe",
@@ -585,8 +616,12 @@
     },
     {
       "kind": "piecejointe",
-      "intro": "Relevé complet des lignes dont le taux de TVA est signalé par le service, avec l’incidence en euros, et rapprochement des encaissements par mode de règlement entre la caisse et la comptabilité. Calculs reproductibles : scripts/reponse1-taux-tva-encaissements.py.",
+      "intro": "Relevé complet des lignes dont le taux de TVA est signalé par le service, sémantique des colonnes E et F, incidence recalculée sur la TVA due, et rapprochement des encaissements par mode de règlement entre la caisse et la comptabilité. Calculs reproductibles : scripts/reponse1-tva-colonnes-ef.py et scripts/reponse1-taux-tva-encaissements.py.",
       "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-tva-colonnes-ef.xlsx",
+          "label": "R1 : colonnes E et F des annexes C-1 à C-3, sémantique et incidence réelle"
+        },
         {
           "fichier": "pieces-reponse-1/R1-taux-tva-et-encaissements.xlsx",
           "label": "R1 : taux de TVA article par article et encaissements par mode de règlement"

@@ -1254,6 +1254,13 @@
           "sub": "compte 445710 (p. 26 de la proposition)"
         },
         {
+          "label": "Corrections de TVA du service, une fois appliquées",
+          "valeur": "18,76 €",
+          "sub": "Écart résiduel avec la TVA reversée sur les 3 exercices, soit 0,014 %",
+          "couleur": "teal",
+          "highlight": true
+        },
+        {
           "label": "Écart avec le journal de caisse",
           "valeur": "-205,22 €",
           "sub": "soit 0,15 %, en faveur du Trésor",
@@ -1281,7 +1288,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le seul écart réellement documenté tient au taux porté par certains articles dans le détail des tickets, que le service a lui-même identifié dans les colonnes E et F de l’annexe C. Un tel écart se corrige article par article, et il est sans effet sur le total : une fois les corrections du service appliquées, la TVA recalculée depuis les tickets s’établit à 135 065,93 € sur trois ans, à 18,76 € de la TVA reversée. Le détail figure dans la pièce jointe, onglet 5."
+      "texte": "Le seul écart réellement documenté tient au taux porté par certains articles dans le détail des tickets, que le service a lui-même identifié dans les colonnes E et F de l’annexe C. Ces colonnes corrigent le champ « taux » du fichier remis, non la taxe liquidée : leur total, 9 424,74 € sur trois exercices, mesure l’écart entre ce champ et les taux que le service tient pour corrects, et non un trop-payé. Une fois les corrections appliquées, la TVA recalculée depuis les tickets s’établit à 135 065,93 € sur trois ans, à 18,76 € de la TVA reversée, soit 0,014 % et en faveur du Trésor. Un tel écart se corrige article par article et reste sans effet sur l’impôt. Le détail figure dans la pièce jointe, onglet 5, et le calcul complet dans la pièce consacrée aux colonnes E et F."
     },
     {
       "kind": "paragraphe",
@@ -1307,11 +1314,15 @@
     },
     {
       "kind": "piecejointe",
-      "intro": "Le rapprochement complet, par exercice et par taux, de la TVA issue du journal de caisse, du détail des tickets et de la comptabilité (onglet 1), le même rapprochement sur les bases d’imposition (onglet 2), le contrôle ticket par ticket (onglet 3), le décompte des valeurs négatives colonne par colonne (onglet 4) et le détail des corrections de taux (onglet 5). Recalculable de bout en bout depuis les annexes de caisse par le script scripts/reponse1-tva-rapprochement.py.",
+      "intro": "Le rapprochement complet, par exercice et par taux, de la TVA issue du journal de caisse, du détail des tickets et de la comptabilité (onglet 1), le même rapprochement sur les bases d’imposition (onglet 2), le contrôle ticket par ticket (onglet 3), le décompte des valeurs négatives colonne par colonne (onglet 4) et le détail des corrections de taux (onglet 5). Recalculable de bout en bout depuis les annexes de caisse par le script scripts/reponse1-tva-rapprochement.py. La sémantique des colonnes E et F de l’annexe C et l’incidence réelle des corrections de taux sur la TVA due sont établies par une pièce distincte, produite par scripts/reponse1-tva-colonnes-ef.py.",
       "fichiers": [
         {
           "fichier": "pieces-reponse-1/R1-tva-rapprochement.xlsx",
           "label": "Rapprochement TVA caisse / tickets / comptabilité (XLSX, 6 onglets)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-tva-colonnes-ef.xlsx",
+          "label": "Colonnes E et F des annexes C-1 à C-3 : sémantique et incidence réelle (XLSX, 6 onglets)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",

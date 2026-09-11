@@ -6,7 +6,7 @@
   },
   "entete": {
     "positionService": "Le service répond que « la réponse n’a pas pris en considération l’ensemble des éléments qui sont détaillés dans la méthode de reconstitution ». Il expose qu’il applique en fin de reconstitution un taux de 15 % pour pertes, offerts et consommations du personnel, mais qu’il avait « auparavant, déjà appliqué un taux spécifique sur perte de bière de 15 % ». En cumulant les deux, il revendique « un taux de pertes, offerts, consommation du personnel de 30 % », soit selon lui « bien au-delà des 25 % que semble vouloir retenir » Maître THIVEND. Il conclut : « Le service ayant appliqué un taux supérieur, il n’y a donc pas lieu qu’il modifie sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications ».",
-    "reponseCourte": "Les deux taux de 15 % que le service additionne ne portent ni sur la même assiette, ni sur le même objet, ni au même moment : rejoués avec ses propres paramètres ils retirent 27,75 % du fût et non 30 %, et le même abattement de fin de méthode lui sert à répondre tour à tour à la freinte, aux offerts et à la consommation du personnel.",
+    "reponseCourte": "Les annexes du service ne font pas l’addition qu’il invoque : elles retirent 15 % du volume puis 15 % du chiffre d’affaires, soit 27,75 % du fût et non 30 %, et une fraction seulement de ce total répond à des pertes physiques ; nous corrigeons de notre côté l’assiette de notre propre taux et ramenons la freinte de 129 L à 121,9 L, très en deçà des 314,4 L que le service accorde déjà.",
     "enjeu": "Partie « O- Perte de bières (mousse et tirage) », renvoyant aux pages 44 à 53 de la proposition de rectifications : le taux de freinte technique retenu sur la bière pression et, par conséquent, le volume de bière réputé vendu.",
     "statut": "partiel"
   },
@@ -345,41 +345,538 @@
     {
       "kind": "alerte",
       "couleur": "red",
-      "titre": "Toute la réponse du service tient en une addition",
-      "texte": "Sur les deux pages consacrées à la perte de bière, le service n’oppose aucun chiffre aux volumes de la défense. Il additionne deux taux de 15 % pour affirmer qu’il accorde déjà 30 %, puis conclut que sa reconstitution reste inchangée."
+      "titre": "Le refus opposé page 83 repose sur une seule addition",
+      "texte": "Le service ne discute aucun des volumes produits par la défense. Il oppose un calcul unique, l’addition de deux taux de 15 % appliqués à deux assiettes différentes, et en déduit qu’il accorde déjà 30 % du fût. C’est cette addition, et elle seule, qui fonde le maintien de la reconstitution."
     },
     {
       "kind": "chapitre",
       "source": "nous",
       "numero": 2,
-      "titre": "Notre réponse : 15 % et 15 % ne s’additionnent pas, parce qu’ils ne portent pas sur la même chose",
-      "sousTitre": "Le premier taux retire des litres au fût, à l’entrée du calcul ; le second retire des euros au chiffre d’affaires liquides, à sa sortie. Rejoués avec les paramètres du service, les deux ensemble font 27,75 % du fût."
+      "titre": "Notre réponse : le matériel est documenté par son constructeur, et les deux taux de 15 % ne s’additionnent pas",
+      "sousTitre": "Le service reconstitue la bière d’un fût Blade de 8 litres qu’il désigne lui-même dans ses annexes. Le constructeur de ce matériel chiffre ses pertes, le calendrier de la caisse les date, et les deux abattements que le service additionne retirent 27,75 % du fût, non 30 %."
     },
     {
       "kind": "titre",
-      "texte": "Où chaque taux s’applique, lu dans la méthode du service",
+      "texte": "Le matériel est identifié au dossier, et son constructeur le documente",
       "numero": "2.1"
     },
     {
       "kind": "paragraphe",
-      "texte": "**Le premier taux porte sur un volume.** Les annexes finales jointes à la proposition de rectifications donnent le calcul de la bière ligne à ligne : volume disponible de 63 200 cl (79 fûts de 8 L), déduction de 9 480 cl libellée « consommation personnel et pertes », volume net de 53 720 cl. Ce volume net est ensuite réparti entre les articles de la caisse (pression 25 cl, pinte, part bière des Picon, panachés et Monaco), puis converti en euros : il produit 7 180,52 € TTC de chiffre d’affaires bière."
+      "texte": "**Le service désigne lui-même le matériel dans ses annexes.** La ligne bière des annexes finales de la proposition porte « Fût Affligem Blade 800 cl », pour 79 fûts et 63 200 cl de volume disponible. Le matériel de l’établissement n’est donc pas en discussion : c’est le système Heineken Blade, dont les fûts de 8 litres embarquent leur propre tube de soutirage, jeté avec le fût. Sa documentation technique est publique, et c’est elle, et non une moyenne de secteur, qui décrit les pertes de cet établissement."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Ce que le constructeur écrit du matériel que le service désigne lui-même dans ses annexes",
+      "minWidth": 980,
+      "colonnes": [
+        {
+          "label": "Donnée"
+        },
+        {
+          "label": "Citation du constructeur"
+        },
+        {
+          "label": "Où"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Contenance du fût"
+          },
+          {
+            "v": "« Volume du fût : 8 litres »"
+          },
+          {
+            "v": "manuel d’utilisation Blade, ch. 9.1, p. 31",
+            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/user-manual/2023_03_09_Blade_user_manual_FR_V007.pdf"
+          }
+        ],
+        [
+          {
+            "v": "Volume résiduel admis dans un fût vide"
+          },
+          {
+            "v": "« Le volume résiduel acceptable s’élève à 1,5 % (120 ml) »"
+          },
+          {
+            "v": "manuel, ch. 6.3 « Dérangement, causes possibles et remèdes », p. 28 (seuil de tolérance)",
+            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/user-manual/2023_03_09_Blade_user_manual_FR_V007.pdf"
+          }
+        ],
+        [
+          {
+            "v": "Durée de vie utile après perçage"
+          },
+          {
+            "v": "« Un fût qui a été inséré et ouvert doit rester dans l’appareil, et l’appareil lui-même doit rester allumé, jusqu’à avoir vidé le fût ou jusqu’à ce que la durée de vie utile de 30 jours ait expiré » ; « si le fût a séjourné dans le Blade plus de 30 jours, nous recommandons de le remplacer par un fût tout juste sorti du réfrigérateur »"
+          },
+          {
+            "v": "manuel, ch. 1.2, p. 7 ; ch. 6.3, p. 26 et 28 (remèdes conditionnés à un défaut constaté)",
+            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/user-manual/2023_03_09_Blade_user_manual_FR_V007.pdf"
+          }
+        ],
+        [
+          {
+            "v": "Pré-refroidissement"
+          },
+          {
+            "v": "« Le fût doit être refroidi dans un réfrigérateur pendant au moins 16 heures avant de le mettre dans le Blade. Si ce n’est pas fait, la bière va mousser excessivement au soutirage »"
+          },
+          {
+            "v": "manuel, ch. 6.3, p. 26",
+            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/user-manual/2023_03_09_Blade_user_manual_FR_V007.pdf"
+          }
+        ],
+        [
+          {
+            "v": "Mousse retirée à chaque verre"
+          },
+          {
+            "v": "« Utiliser un coupe-mousse pour enlever l’excès de mousse », puis « Remplir jusqu’au trait de jauge »"
+          },
+          {
+            "v": "carte de référence rapide Blade, étape 4",
+            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/blade-quick-reference-card-FR.pdf"
+          }
+        ],
+        [
+          {
+            "v": "Perte au montage et au retrait du fût"
+          },
+          {
+            "v": "« une certaine quantité de bière risque de s’échapper » ; « une valve de soutirage ouverte entraînera une perte incontrôlée de bière »"
+          },
+          {
+            "v": "manuel, ch. 3.5, p. 13 et ch. 4.7, p. 21",
+            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/user-manual/2023_03_09_Blade_user_manual_FR_V007.pdf"
+          }
+        ],
+        [
+          {
+            "v": "Aucune ligne à nettoyer"
+          },
+          {
+            "v": "« Cleaning cycle: No. Disposable line in keg » ; « no maintenance, no line cleaning required »"
+          },
+          {
+            "v": "fiche technique Blade, Heineken UK",
+            "href": "https://smartdispense.heineken.co.uk/technology/bar-systems/blade/"
+          }
+        ]
+      ]
     },
     {
       "kind": "paragraphe",
-      "texte": "**Le second taux porte sur des euros, et sur toutes les boissons.** Ce n’est qu’au bas de la reconstitution, une fois chaque boisson convertie en chiffre d’affaires, que le service applique trois forfaits de 5 % au chiffre d’affaires liquides : remise, pertes, consommation du personnel, soit 8 253,27 € chacun sur 165 065,33 € TTC. Le solde, 140 305,53 € TTC, est ensuite multiplié par le coefficient liquides vers solides de 3,10 pour obtenir la cuisine."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les deux taux n’ont donc ni la même assiette (un volume de fût pour l’un, un chiffre d’affaires toutes boissons confondues pour l’autre), ni le même moment (l’entrée du calcul pour l’un, sa sortie pour l’autre), ni le même objet. Les additionner, c’est additionner des pourcentages de bases différentes."
+      "texte": "**Le format de 8 litres multiplie les mises en perce.** Les 2 096 L achetés sur les trois exercices représentent 262 fûts, donc 262 mises en perce et 262 tubes de soutirage jetés, là où des fûts de 30 litres en auraient demandé 70. Chaque fût vide emporte le volume résiduel que le constructeur admet, et le manuel signale deux autres moments de perte qu’il ne chiffre pas : le montage, où « une certaine quantité de bière risque de s’échapper », et le retrait d’un fût partiellement vide, où « une valve de soutirage ouverte entraînera une perte incontrôlée de bière »."
     },
     {
       "kind": "titre",
-      "texte": "L’addition exacte donne 27,75 %, et non 30 %",
+      "texte": "Ce que ces règles donnent, appliquées aux pièces du dossier",
       "numero": "2.2"
     },
     {
       "kind": "paragraphe",
-      "texte": "Deux abattements successifs ne s’additionnent pas : ils se composent. Une fois 15 % retirés du fût, il ne reste que 85 % du volume, et le second abattement de 15 % ne s’applique plus qu’à ces 85 %. Le total retiré vaut 1 moins 0,85 multiplié par 0,85, soit **27,75 % du fût**. Le calcul est refait ci-dessous sur les volumes réellement facturés par le fournisseur."
+      "texte": "**Le volume résiduel est chiffré par le constructeur, mais comme un seuil.** Le manuel indique, au chapitre 6.3 consacré aux dérangements, que « le volume résiduel acceptable s’élève à 1,5 % (120 ml) » : c’est le volume qu’un fût vide peut normalement conserver, au-delà duquel le constructeur invite à rechercher une anomalie. Rapporté aux 262 fûts portés sur les factures du fournisseur, ce seuil représente **31,4 L**. Nous ne le présentons pas comme une mesure faite sur nos fûts, ni comme une perte moyenne constatée : c’est le majorant que le constructeur tient pour normal."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**La règle des 30 jours se date sur le calendrier de la caisse.** Le manuel prévoit qu’un fût inséré et ouvert doit rester dans l’appareil « jusqu’à avoir vidé le fût ou jusqu’à ce que la durée de vie utile de 30 jours ait expiré » (ch. 1.2, p. 7). Le détail des tickets que le service a lui-même extrait (annexes C1 à C3) montre que l’établissement ferme chaque hiver 45, 53 puis 58 jours d’affilée, sans un seul service : un fût encore percé au dernier service avant la fermeture dépasse nécessairement ce délai."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les fermetures d’hiver, lues jour par jour dans le détail des tickets que le service a lui-même extrait (annexes C1 à C3)",
+      "minWidth": 900,
+      "colonnes": [
+        {
+          "label": "Hiver"
+        },
+        {
+          "label": "Dernier service"
+        },
+        {
+          "label": "Réouverture"
+        },
+        {
+          "label": "Jours sans activité",
+          "align": "right"
+        },
+        {
+          "label": "Jours d’ouverture en janvier",
+          "align": "right"
+        },
+        {
+          "label": "Bière servie en janvier",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "8 janvier 2023"
+          },
+          {
+            "v": "23 février 2023"
+          },
+          {
+            "v": "45 j",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "5 j",
+            "align": "right"
+          },
+          {
+            "v": "3,4 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "7 janvier 2024"
+          },
+          {
+            "v": "1er mars 2024"
+          },
+          {
+            "v": "53 j",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "5 j",
+            "align": "right"
+          },
+          {
+            "v": "4,3 L",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "5 janvier 2025"
+          },
+          {
+            "v": "5 mars 2025"
+          },
+          {
+            "v": "58 j",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "4 j",
+            "align": "right"
+          },
+          {
+            "v": "4,7 L",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "En rejouant fût par fût ce calendrier, l’effet est faible et nous le disons. Dans l’hypothèse la plus favorable au service (la totalité des 2 096 L achetés passe par le bec, les fûts tournent donc au plus vite), deux fûts seulement atteignent la limite des 30 jours sans être vides : **1,4 L**. Dans l’hypothèse inverse, où seul le volume lu en caisse sort du fût, ce sont trois fûts et 13,1 L. Nous retenons le chiffre le plus bas. La règle des 30 jours n’est donc pas, à elle seule, un poste de freinte significatif : elle établit que le calendrier de l’établissement est daté, vérifiable et contraire à une rotation continue des fûts."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Ces deux postes ne mesurent pas la freinte, et nous ne les présentons pas comme tels.** Le résidu de fin de fût (31,4 L au seuil du constructeur) et les fûts périmés (1,4 L) représentent ensemble 32,8 L. Ils ne comprennent ni la mousse retirée au service, ni le moussage d’un fût insuffisamment pré-refroidi, ni la bière perdue au montage et au retrait des fûts, que le manuel décrit expressément sans les chiffrer. Ces 32,8 L ne sont donc pas un taux de freinte et ne peuvent pas être comparés au taux du service : ils chiffrent deux postes parmi plusieurs, ceux-là seuls que le constructeur chiffre."
+    },
+    {
+      "kind": "titre",
+      "numero": "2.3",
+      "texte": "Le taux que nous retenons, et l’assiette sur laquelle nous l’appliquons"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les sources professionnelles convergentes situent la perte d’un fût entre 10 % et 20 %, et elles expriment ce taux en pourcentage **du fût**. Nous retenons la borne basse, 10 %, et nous l’appliquons non pas au fût acheté, ce qui donnerait 209,6 L, mais au seul volume de bière réellement sorti du fût et lu dans la caisse, soit **1 219,2 L**. La freinte retenue est donc de **121,9 L**, soit 5,82 % du fût acheté."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Nous corrigeons ici notre propre assiette, et nous le signalons.** Notre mémoire du 10 juillet 2026 appliquait ce taux à la contenance des verres, 1 292,9 L, ce qui donnait 129 L. Cette contenance comprend **73,7 L** de limonade, de grenadine et de Picon, qui ne sont jamais sortis du fût : un taux de perte de fût ne pouvait pas leur être appliqué, puisque nous soutenons précisément par ailleurs que seule la part bière en sort. L’assiette exacte est cette part bière, 1 219,2 L, et la freinte retenue passe de 129 L à **121,9 L**. La cascade des volumes et la pièce jointe sont corrigées en conséquence."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les niveaux en présence, sur les 2 096 L de fût achetés",
+      "minWidth": 900,
+      "colonnes": [
+        {
+          "label": "Niveau"
+        },
+        {
+          "label": "Litres",
+          "align": "right"
+        },
+        {
+          "label": "% du fût acheté",
+          "align": "right"
+        },
+        {
+          "label": "Nature"
+        },
+        {
+          "label": "Assiette et source"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Les deux seuls postes que le constructeur chiffre"
+          },
+          {
+            "v": "32,8 L",
+            "align": "right"
+          },
+          {
+            "v": "1,57 %",
+            "align": "right"
+          },
+          {
+            "v": "documenté"
+          },
+          {
+            "v": "seuil de 120 ml sur 262 fûts, plus les fûts non écoulés dans les 30 jours, datés sur le calendrier des annexes C. Ne comprend pas la mousse de service : ce n’est pas un taux de freinte"
+          }
+        ],
+        [
+          {
+            "v": "Freinte que nous retenons",
+            "fw": 700
+          },
+          {
+            "v": "121,9 L",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "5,82 %",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "estimé"
+          },
+          {
+            "v": "10 % de la bière réellement sortie du fût (1 219,2 L lus en caisse), borne basse des sources professionnelles"
+          }
+        ],
+        [
+          {
+            "v": "Premier abattement accordé par le service"
+          },
+          {
+            "v": "314,4 L",
+            "align": "right"
+          },
+          {
+            "v": "15 %",
+            "align": "right"
+          },
+          {
+            "v": "accordé"
+          },
+          {
+            "v": "annexes finales : « consommation personnel et pertes », 15 % du volume de fût disponible"
+          }
+        ],
+        [
+          {
+            "v": "Pour mémoire : le même taux de 10 % appliqué au fût acheté"
+          },
+          {
+            "v": "209,6 L",
+            "align": "right"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "non retenu"
+          },
+          {
+            "v": "assiette des sources, que nous ne retenons pas"
+          }
+        ],
+        [
+          {
+            "v": "Pour mémoire : borne haute des sources"
+          },
+          {
+            "v": "419,2 L",
+            "align": "right"
+          },
+          {
+            "v": "20 %",
+            "align": "right"
+          },
+          {
+            "v": "non retenu"
+          },
+          {
+            "v": "Modern Restaurant Management et OA Formation : nous ne la demandons pas"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce chiffre de 121,9 L est inférieur de plus de moitié au premier abattement que le service accorde déjà, 314,4 L. **Nous ne demandons donc pas, au titre de la freinte, davantage que ce que le service consent** : nous contestons son addition et l’usage qu’il fait du second abattement, non le niveau du premier."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les sources du taux, vérifiées une par une",
+      "minWidth": 1000,
+      "colonnes": [
+        {
+          "label": "Source"
+        },
+        {
+          "label": "Ce qu’elle énonce exactement"
+        },
+        {
+          "label": "Taux",
+          "align": "right"
+        },
+        {
+          "label": "Portée"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Manuel d’utilisation Heineken Blade (constructeur, éd. 2023)",
+            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/user-manual/2023_03_09_Blade_user_manual_FR_V007.pdf"
+          },
+          {
+            "v": "« Le volume résiduel acceptable s’élève à 1,5 % (120 ml) » (ch. 6.3, « Dérangement, causes possibles et remèdes », p. 28) ; durée de vie utile de 30 jours après perçage (ch. 1.2, p. 7) ; sans pré-refroidissement de 16 heures, « la bière va mousser excessivement au soutirage » (ch. 6.3, p. 26)"
+          },
+          {
+            "v": "1,5 % de résidu",
+            "align": "right"
+          },
+          {
+            "v": "seuil de tolérance et règles d’emploi, propres au matériel réellement utilisé ; le manuel ne chiffre aucun taux de perte global"
+          }
+        ],
+        [
+          {
+            "v": "Bar-i, audits d’inventaire de bars (États-Unis)",
+            "href": "https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer"
+          },
+          {
+            "v": "« you should be able to achieve a keg yield of 95% or better » ; « it typically drops their keg yield to about 90% »"
+          },
+          {
+            "v": "5 % à 10 %",
+            "align": "right"
+          },
+          {
+            "v": "perte technique pure, hors offerts et hors non-enregistrements"
+          }
+        ],
+        [
+          {
+            "v": "Le Bihan Boissons, distributeur CHR (France)",
+            "href": "https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/"
+          },
+          {
+            "v": "« selon les estimations du secteur, une perte de 10% par fût »"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "perte courante par fût"
+          }
+        ],
+        [
+          {
+            "v": "OA Formation, exploitation CHR (France)",
+            "href": "https://oaformation.com/ladministration-fiscale-face-coulage-pertes-offerts-restaurant/"
+          },
+          {
+            "v": "« Bière : 10-20 % : les débuts ou encore les fins de fûts, les problèmes de pression de stockage sont à l’origine de pertes importantes »"
+          },
+          {
+            "v": "10 % à 20 %",
+            "align": "right"
+          },
+          {
+            "v": "fourchette de démarque admise en contrôle, par produit"
+          }
+        ],
+        [
+          {
+            "v": "Modern Restaurant Management (États-Unis)",
+            "href": "https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/"
+          },
+          {
+            "v": "« Let’s examine average waste at 20 percent per keg »"
+          },
+          {
+            "v": "20 %",
+            "align": "right"
+          },
+          {
+            "v": "moyenne annoncée, non sourcée : borne haute"
+          }
+        ],
+        [
+          {
+            "v": "Brewers Association, Draught Beer Quality Manual, 4e éd.",
+            "href": "https://cdn.brewersassociation.org/wp-content/uploads/2019/03/13094643/Draught-Beer-Quality-Manual-2019.pdf"
+          },
+          {
+            "v": "« the beer loss normally associated with changing a keg » ; « foam is 25% to 33% beer »"
+          },
+          {
+            "v": "aucun taux",
+            "align": "right"
+          },
+          {
+            "v": "mécanismes de perte, pas de pourcentage",
+            "badge": "ko"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Deux corrections que nous apportons nous-mêmes.** D’abord, notre mémoire du 10 juillet 2026 citait le « Draught Beer Quality Manual » de la Brewers Association parmi les sources d’une fourchette de 5 % à 25 %. Vérification faite sur le texte intégral, ce manuel ne comporte **aucun pourcentage** de perte ou de rendement : il documente des mécanismes, non un taux, et nous ne le citons désormais que pour ce qu’il établit. Ensuite, le poste « nettoyage des lignes tous les 14 jours » figurant dans notre tableau ne s’applique pas au matériel de l’établissement, qui n’a aucune ligne à nettoyer : **nous le retirons**. La perte correspondante existe néanmoins sous une autre forme, et le constructeur la chiffre : le tube de soutirage et le résidu de 120 ml sont jetés avec chaque fût, 262 fois sur la période."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Nous corrigeons également la présentation de notre propre taux.** La page « Pertes de bière et mousse » du mémoire du 10 juillet 2026 retenait une moyenne sectorielle de 20 % du fût, tout en n’imputant à la cascade que 129 L. Nous abandonnons cette moyenne de 20 % au profit de **10 %**, borne basse des sources, et nous appliquons ce taux à la seule bière réellement sortie du fût : la freinte imputée à la cascade passe de 129 L à **121,9 L**. Une borne prudente, sourcée et appliquée à la bonne assiette est plus solide qu’une moyenne généreuse."
+    },
+    {
+      "kind": "titre",
+      "texte": "Les deux taux de 15 % ne portent pas sur la même assiette, et leur somme fait 27,75 %",
+      "numero": "2.4"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Le premier taux porte sur un volume.** Les annexes finales donnent le calcul de la bière ligne à ligne : volume disponible de 63 200 cl (79 fûts de 8 L), déduction de 9 480 cl libellée « consommation personnel et pertes », volume net de 53 720 cl. Ce volume net est ensuite réparti entre les articles de la caisse (pression 25 cl, pinte, part bière des Picon, panachés et Monaco), puis converti en euros : il produit 7 180,52 € TTC de chiffre d’affaires bière."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Le second taux porte sur des euros, et sur toutes les boissons.** Ce n’est qu’au bas de la reconstitution, une fois chaque boisson convertie en chiffre d’affaires, que le service applique trois forfaits de 5 % au chiffre d’affaires liquides : remise, pertes, consommation du personnel. Sur l’exercice des annexes finales, chacun vaut **8 253,27 €** TTC sur 165 065,33 € de chiffre d’affaires liquides, et le solde, 140 305,53 €, est multiplié par le coefficient liquides vers solides de 3,10. Le service chiffre ailleurs le même forfait à **35 133,26 €** par exercice (p. 72, 73 et 89) : ce n’est pas un autre taux ni un autre abattement, c’est le même, mesuré sur un autre exercice et **après** amplification cuisine (8 917,07 € de liquides, proposition p. 52, multipliés par 1 plus le coefficient de revente de 2,94). Les deux taux de 15 % n’ont donc ni la même assiette, ni le même moment, ni le même objet."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Et deux abattements successifs ne s’additionnent pas : ils se composent.** Une fois 15 % retirés du fût, il ne reste que 85 % du volume, et le second abattement de 15 % ne s’applique plus qu’à ces 85 %. Le total retiré vaut 1 moins 0,85 multiplié par 0,85, soit **27,75 % du fût**, et non 30 %."
     },
     {
       "kind": "tableau",
@@ -570,12 +1067,12 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "L’écart avec le taux revendiqué est de 2,25 points de fût, soit 47,2 L sur les trois exercices. Aux paramètres du service lui-même (16,38 € TTC le litre de bière, coefficient liquides vers solides de 3,10), il représente environ 2 692 € de chiffre d’affaires reconstitué. Le montant n’est pas l’essentiel : l’essentiel est que le refus opposé page 83 repose entièrement sur une addition inexacte."
+      "texte": "Nous ne tirons de cette correction aucune demande chiffrée, et nous le disons nettement. Les annexes finales appliquent déjà les deux taux l’un après l’autre (63 200 cl, moins 9 480 cl, soit 53 720 cl, puis les forfaits sur le chiffre d’affaires) : la reconstitution incorpore donc déjà la composition à 27,75 %. Le « 30 % » n’est qu’une formule de la lettre du 4 septembre 2026, et le corriger ne modifie aucun montant du redressement. Ce qui tombe n’est pas un euro de la reconstitution : c’est le motif du refus, qui repose tout entier sur une addition que les annexes du service ne font pas."
     },
     {
       "kind": "titre",
-      "texte": "Ce que le second abattement couvre réellement",
-      "numero": "2.3"
+      "texte": "Le second abattement ne mesure pas une perte, et il ne peut pas servir trois fois",
+      "numero": "2.5"
     },
     {
       "kind": "paragraphe",
@@ -583,8 +1080,8 @@
     },
     {
       "kind": "tableau",
-      "titre": "Ce que recouvre le second taux de 15 %, poste par poste (annexes finales et proposition p. 51)",
-      "minWidth": 820,
+      "titre": "Ce que recouvre le second taux de 15 %, poste par poste (annexes finales, proposition p. 51, réponse p. 72, 73 et 89)",
+      "minWidth": 980,
       "colonnes": [
         {
           "label": "Forfait de fin de méthode"
@@ -598,7 +1095,7 @@
           "align": "right"
         },
         {
-          "label": "Équivalent en litres de fût (3 exercices)",
+          "label": "Le même forfait chiffré par le service p. 72, 73 et 89",
           "align": "right"
         },
         {
@@ -619,11 +1116,11 @@
             "align": "right"
           },
           {
-            "v": "89,1 L",
+            "v": "35 133,26 €",
             "align": "right"
           },
           {
-            "v": "non : réduction de prix sur une consommation servie",
+            "v": "non : réduction de prix sur une consommation servie et encaissée",
             "badge": "ko"
           }
         ],
@@ -640,11 +1137,11 @@
             "align": "right"
           },
           {
-            "v": "89,1 L",
+            "v": "35 133,26 €",
             "align": "right"
           },
           {
-            "v": "oui",
+            "v": "oui, soit 89,1 L en équivalent-litres de fût",
             "badge": "ok"
           }
         ],
@@ -661,7 +1158,7 @@
             "align": "right"
           },
           {
-            "v": "89,1 L",
+            "v": "35 133,26 €",
             "align": "right"
           },
           {
@@ -685,32 +1182,24 @@
             "fw": 700
           },
           {
-            "v": "267,2 L",
+            "v": "105 399,78 €",
             "align": "right",
             "fw": 700
           },
           {
-            "v": ""
+            "v": "dont 89,1 L de pertes physiques",
+            "fw": 700
           }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "Sur les 267,2 L que le second abattement représente en équivalent-litres de fût, **89,1 L seulement** sont retirés au titre des pertes. Le reste répond à des postes que la partie O ne discute pas."
-    },
-    {
-      "kind": "titre",
-      "texte": "Freinte technique et gestes commerciaux sont deux postes disjoints",
-      "numero": "2.4"
+      "texte": "Sur les 267,2 L que le second abattement représente en équivalent-litres de fût, **89,1 L seulement** sont retirés au titre des pertes. Un litre sorti du fût ne peut suivre que trois chemins : il est servi et facturé, il est servi sans être facturé (offert, consommation du personnel), ou il n’est jamais servi. La freinte technique appartient exclusivement à la troisième catégorie : la mousse retirée au coupe-mousse, le résidu jeté avec le fût, la bière perdue au montage. Cette bière ne rencontre jamais un client. Un verre offert, lui, est bu."
     },
     {
       "kind": "paragraphe",
-      "texte": "Un litre sorti du fût ne peut suivre que trois chemins : il est servi et facturé, il est servi sans être facturé (offert, consommation du personnel), ou il n’est jamais servi. La **freinte technique** appartient exclusivement à la troisième catégorie : la collerette de mousse qui déborde du verre, le premier verre après un changement de fût, le résidu non tirable jeté avec le fût, la bière perdue au changement de fût. Cette bière ne rencontre jamais un client. Un verre offert, lui, est bu."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les deux postes ne peuvent donc pas être couverts par le même pourcentage, et c’est pourtant le même forfait de fin de méthode que le service oppose successivement à la freinte (partie O, p. 83), à la consommation du personnel (point 7, p. 70 et 71) et aux abattements eux-mêmes (point 8, p. 71 à 73). Sur la seule bière, ce forfait vaut 267,2 L, soit environ 17 950 € de chiffre d’affaires reconstitué : il ne peut être dépensé qu’une fois."
+      "texte": "C’est pourtant le même forfait de fin de méthode que le service oppose successivement à la freinte (p. 61 et p. 83), à la consommation du personnel ([point 7, p. 70 et 71](/reponse-1/recon-7-conso-personnel)) et aux abattements eux-mêmes ([point 8, p. 71 à 73](/reponse-1/recon-8-abattements)). Sur la seule bière, il vaut 267,2 L en équivalent-litres de fût, dont 89,1 L au titre des pertes : il ne peut pas être dépensé trois fois."
     },
     {
       "kind": "paragraphe",
@@ -718,51 +1207,43 @@
     },
     {
       "kind": "titre",
-      "texte": "Le bilan matière du fût, en litres",
-      "numero": "2.5"
+      "numero": "2.6",
+      "texte": "La freinte retenue, exercice par exercice"
     },
     {
       "kind": "paragraphe",
-      "texte": "Les factures du fournisseur Franche-Comté Boissons Services portent, sur les trois exercices vérifiés, **2 096 L de fût Affligem Blade 8 L**, soit 262 fûts (99, puis 79, puis 84). Le relevé recoupe exactement la base du service : ses annexes retiennent 79 fûts, soit 632 L, ce qui correspond au litre près à nos factures de l’exercice 2023-2024. La caisse enregistre sur la même période 1 219,2 L de bière effectivement servie au verre, part bière réelle (un panaché et un Monaco sont à moitié limonade, un Picon bière contient 2 cl de Picon, 4 cl en pinte)."
+      "texte": "Les factures du fournisseur Franche-Comté Boissons Services portent, sur les trois exercices vérifiés, **2 096 L de fût Affligem Blade 8 L**, soit 262 fûts (99, puis 79, puis 84). Les annexes finales du service retiennent de leur côté 79 fûts, soit 632 L, sur un seul exercice que l’annexe n’identifie pas. La caisse enregistre sur les trois exercices **4 132 unités de vente** de bière (des quantités de caisse, fractionnaires lorsqu’une addition est partagée, et non un nombre de verres), soit 1 292,9 L de contenance servie et **1 219,2 L de bière** en part réelle : un panaché et un Monaco sont à moitié limonade, un Picon bière contient 2 cl de Picon, 4 cl en pinte."
     },
     {
       "kind": "tableau",
-      "titre": "Du fût acheté au volume facturable, exercice par exercice",
-      "minWidth": 1040,
+      "titre": "La freinte retenue, exercice par exercice",
+      "minWidth": 980,
       "colonnes": [
         {
           "label": "Exercice"
         },
         {
-          "label": "Fûts achetés",
+          "label": "Fûts de 8 L achetés",
           "align": "right"
         },
         {
-          "label": "Nombre de fûts de 8 L",
+          "label": "Fûts achetés (L)",
           "align": "right"
         },
         {
-          "label": "Résidu non tirable (1,5 %, manuel Heineken)",
+          "label": "Bière réellement sortie du fût, lue en caisse",
           "align": "right"
         },
         {
-          "label": "Freinte au taux retenu (10 %)",
+          "label": "Taux retenu",
           "align": "right"
         },
         {
-          "label": "Facturable à 10 %",
+          "label": "Freinte retenue",
           "align": "right"
         },
         {
-          "label": "Freinte à la borne haute (20 %)",
-          "align": "right"
-        },
-        {
-          "label": "Facturable à 20 %",
-          "align": "right"
-        },
-        {
-          "label": "Bière servie en caisse",
+          "label": "dont résidu de fin de fût, au seuil du constructeur",
           "align": "right"
         }
       ],
@@ -772,35 +1253,27 @@
             "v": "2022-2023"
           },
           {
-            "v": "792,0 L",
-            "align": "right"
-          },
-          {
             "v": "99",
             "align": "right"
           },
           {
-            "v": "11,9 L",
-            "align": "right"
-          },
-          {
-            "v": "79,2 L",
-            "align": "right"
-          },
-          {
-            "v": "712,8 L",
-            "align": "right"
-          },
-          {
-            "v": "158,4 L",
-            "align": "right"
-          },
-          {
-            "v": "633,6 L",
+            "v": "792,0 L",
             "align": "right"
           },
           {
             "v": "431,7 L",
+            "align": "right"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "43,2 L",
+            "align": "right"
+          },
+          {
+            "v": "11,9 L",
             "align": "right"
           }
         ],
@@ -809,35 +1282,27 @@
             "v": "2023-2024"
           },
           {
-            "v": "632,0 L",
-            "align": "right"
-          },
-          {
             "v": "79",
             "align": "right"
           },
           {
-            "v": "9,5 L",
-            "align": "right"
-          },
-          {
-            "v": "63,2 L",
-            "align": "right"
-          },
-          {
-            "v": "568,8 L",
-            "align": "right"
-          },
-          {
-            "v": "126,4 L",
-            "align": "right"
-          },
-          {
-            "v": "505,6 L",
+            "v": "632,0 L",
             "align": "right"
           },
           {
             "v": "391,1 L",
+            "align": "right"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "39,1 L",
+            "align": "right"
+          },
+          {
+            "v": "9,5 L",
             "align": "right"
           }
         ],
@@ -846,35 +1311,27 @@
             "v": "2024-2025"
           },
           {
-            "v": "672,0 L",
-            "align": "right"
-          },
-          {
             "v": "84",
             "align": "right"
           },
           {
-            "v": "10,1 L",
-            "align": "right"
-          },
-          {
-            "v": "67,2 L",
-            "align": "right"
-          },
-          {
-            "v": "604,8 L",
-            "align": "right"
-          },
-          {
-            "v": "134,4 L",
-            "align": "right"
-          },
-          {
-            "v": "537,6 L",
+            "v": "672,0 L",
             "align": "right"
           },
           {
             "v": "396,4 L",
+            "align": "right"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "39,6 L",
+            "align": "right"
+          },
+          {
+            "v": "10,1 L",
             "align": "right"
           }
         ],
@@ -884,37 +1341,12 @@
             "fw": 700
           },
           {
-            "v": "2 096,0 L",
-            "align": "right",
-            "fw": 700
-          },
-          {
             "v": "262",
             "align": "right",
             "fw": 700
           },
           {
-            "v": "31,4 L",
-            "align": "right",
-            "fw": 700
-          },
-          {
-            "v": "209,6 L",
-            "align": "right",
-            "fw": 700
-          },
-          {
-            "v": "1 886,4 L",
-            "align": "right",
-            "fw": 700
-          },
-          {
-            "v": "419,2 L",
-            "align": "right",
-            "fw": 700
-          },
-          {
-            "v": "1 676,8 L",
+            "v": "2 096,0 L",
             "align": "right",
             "fw": 700
           },
@@ -922,199 +1354,54 @@
             "v": "1 219,2 L",
             "align": "right",
             "fw": 700
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Le matériel de l’établissement est documenté par son constructeur.** La bière est livrée en fûts Blade de 8 L, dont le tube de soutirage est intégré au fût et jeté avec lui. Le manuel Heineken fixe le volume résiduel non tirable à « 1,5 % (120 ml) » par fût : sur 262 fûts, ce seul poste représente 31,4 L jetés pleins. Le même manuel prescrit qu’un fût percé soit remplacé « jusqu’à ce que la durée de vie utile de 30 jours ait expiré », impose un pré-refroidissement de 16 heures faute de quoi « la bière va mousser excessivement au soutirage », et fait retirer l’excès de mousse au coupe-mousse à chaque verre. Le format de 8 L multiplie enfin les mises en perce : 262 sur trois exercices, contre une soixantaine si la bière était livrée en fûts de 30 L."
-    },
-    {
-      "kind": "barreComposition",
-      "titre": "Les 2 096 L de fût achetés sur les trois exercices",
-      "sousTitre": "Bière servie lue en caisse, freinte retenue dans la cascade « Boissons disparues », solde relevant des autres postes du dossier",
-      "unite": "L",
-      "total": 2096,
-      "segments": [
-        {
-          "label": "Bière servie au verre (caisse)",
-          "valeur": 1219.2,
-          "categorie": "mesure"
-        },
-        {
-          "label": "Freinte retenue dans la cascade",
-          "valeur": 129.0,
-          "categorie": "calcul"
-        },
-        {
-          "label": "Solde : offerts, personnel, casse, sur-versement",
-          "valeur": 747.8,
-          "categorie": "residuel"
-        }
-      ],
-      "legende": true
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Au taux de 10 % que nous retenons, 209,6 L n’atteignent jamais un verre et le volume facturable revient à 1 886,4 L ; à la borne haute de 20 %, il tombe à 1 676,8 L. Dans les deux cas il subsiste un écart avec la caisse. Cet écart n’est pas de la freinte et nous ne le présentons pas comme tel : il relève des autres postes du dossier (offerts, consommation du personnel, casse, sur-versement au verre), chiffrés à leurs pages respectives. C’est précisément pourquoi ces postes ne peuvent pas être fondus dans un pourcentage unique."
-    },
-    {
-      "kind": "titre",
-      "texte": "Ce que les sources disent, et ce qu’elles ne disent pas",
-      "numero": "2.6"
-    },
-    {
-      "kind": "tableau",
-      "titre": "Les sources de la freinte, vérifiées une par une",
-      "minWidth": 1000,
-      "colonnes": [
-        {
-          "label": "Source"
-        },
-        {
-          "label": "Ce qu’elle énonce exactement"
-        },
-        {
-          "label": "Taux",
-          "align": "right"
-        },
-        {
-          "label": "Portée"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "Manuel d’utilisation Heineken Blade (constructeur, éd. 2023)",
-            "href": "https://www.theheinekencompany.com/sites/heineken-corp/files/driven-by-draught/pdf/user-manual/2023_03_09_Blade_user_manual_FR_V007.pdf"
-          },
-          {
-            "v": "« Le volume résiduel acceptable s’élève à 1,5 % (120 ml) » ; « un fût qui a été inséré et ouvert doit rester dans l’appareil […] jusqu’à avoir vidé le fût ou jusqu’à ce que la durée de vie utile de 30 jours ait expiré » ; sans pré-refroidissement de 16 heures, « la bière va mousser excessivement au soutirage »"
-          },
-          {
-            "v": "1,5 % de résidu",
-            "align": "right"
-          },
-          {
-            "v": "chiffre du constructeur, propre au matériel réellement utilisé"
-          }
-        ],
-        [
-          {
-            "v": "Brewers Association, Draught Beer Quality Manual, 4e éd.",
-            "href": "https://cdn.brewersassociation.org/wp-content/uploads/2019/03/13094643/Draught-Beer-Quality-Manual-2019.pdf"
-          },
-          {
-            "v": "« the beer loss normally associated with changing a keg » ; « foam is 25% to 33% beer »"
-          },
-          {
-            "v": "aucun taux",
-            "align": "right"
-          },
-          {
-            "v": "mécanismes de perte, pas de pourcentage"
-          }
-        ],
-        [
-          {
-            "v": "Bar-i, audits d’inventaire de bars (États-Unis)",
-            "href": "https://blog.bar-i.com/what-is-the-normal-waste-level-for-draft-beer"
-          },
-          {
-            "v": "« you should be able to achieve a keg yield of 95% or better » ; « it typically drops their keg yield to about 90% »"
-          },
-          {
-            "v": "5 % à 10 %",
-            "align": "right"
-          },
-          {
-            "v": "perte technique pure, hors offerts et hors non-enregistrements"
-          }
-        ],
-        [
-          {
-            "v": "Le Bihan Boissons, distributeur CHR (France)",
-            "href": "https://lebihanboissons.com/tirage-pression-comment-choisir-ses-futs-et-eviter-la-perte-mousse-stockage-service/"
-          },
-          {
-            "v": "« selon les estimations du secteur, une perte de 10% par fût »"
           },
           {
             "v": "10 %",
-            "align": "right"
+            "align": "right",
+            "fw": 700
           },
           {
-            "v": "perte courante par fût"
-          }
-        ],
-        [
-          {
-            "v": "OA Formation, exploitation CHR (France)",
-            "href": "https://oaformation.com/ladministration-fiscale-face-coulage-pertes-offerts-restaurant/"
+            "v": "121,9 L",
+            "align": "right",
+            "fw": 700
           },
           {
-            "v": "« Bière : 10-20 % : les débuts ou encore les fins de fûts, les problèmes de pression de stockage sont à l’origine de pertes importantes »"
-          },
-          {
-            "v": "10 % à 20 %",
-            "align": "right"
-          },
-          {
-            "v": "fourchette de démarque admise en contrôle, par produit"
-          }
-        ],
-        [
-          {
-            "v": "Modern Restaurant Management (États-Unis)",
-            "href": "https://modernrestaurantmanagement.com/seven-wasteful-sins-how-youre-losing-profits-on-draft-beer-sales/"
-          },
-          {
-            "v": "« Let’s examine average waste at 20 percent per keg »"
-          },
-          {
-            "v": "20 %",
-            "align": "right"
-          },
-          {
-            "v": "moyenne annoncée, non sourcée : borne haute"
+            "v": "31,4 L",
+            "align": "right",
+            "fw": 700
           }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "**Deux précisions que nous apportons nous-mêmes.** D’abord, notre mémoire du 10 juillet 2026 citait le « Draught Beer Quality Manual » de la Brewers Association parmi les sources d’une fourchette de 5 % à 25 %. Vérification faite sur le texte intégral, ce manuel ne comporte **aucun pourcentage** de perte ou de rendement : il documente des mécanismes, non un taux, et nous ne le citons désormais que pour ce qu’il établit. Ensuite, le poste « nettoyage des lignes tous les 14 jours » figurant dans notre tableau ne s’applique pas au matériel de l’établissement : la fiche technique du Blade porte « Cleaning cycle: No. Disposable line in keg ». **Nous le retirons.** La perte correspondante existe néanmoins, sous une autre forme, et elle est chiffrée par le constructeur lui-même : le tube de soutirage et le résidu de 120 ml sont jetés avec chaque fût, 262 fois sur la période."
+      "texte": "Le résidu de fin de fût figure dans la dernière colonne pour mémoire : il est **compris** dans les 121,9 L, et non ajouté. Nous ne présentons pas ici le bilan matière du fût. Rapprocher trois exercices d’achats du volume lu en caisse met en jeu la variation des stocks, les offerts, la consommation du personnel et la casse, qui sont chiffrés à leurs pages respectives et récapitulés dans [la cascade des 10 622 L](/reponse-1/cascade-10622-litres). La partie O ne pose qu’une question, celle du taux de freinte, et c’est à elle seule que nous répondons."
     },
     {
       "kind": "paragraphe",
-      "texte": "Les taux, eux, viennent de sources qui les énoncent : un rendement de fût optimal de 95 % et un rendement courant d’environ 90 % (Bar-i, sur ses propres audits, en perte technique pure et hors offerts), une perte de 10 % par fût (Le Bihan Boissons), une fourchette de démarque admise de 10 % à 20 % sur la bière (OA Formation), une moyenne annoncée à 20 % (Modern Restaurant Management). **Le taux que nous retenons est 10 %**, borne basse de cette convergence, et c’est exactement celui que le vérificateur avait lui-même appliqué dans l’affaire 22MA01609 que le service nous oppose."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Appliqué à la contenance réellement servie (1 292,9 L de verres sur trois exercices), ce taux de 10 % donne les **129 L** que le mémoire retient, soit **6,2 % du fût acheté**. Nous ne demandons donc pas, au titre de la freinte, davantage que les 15 % que le service accorde : nous contestons son addition et l’usage qu’il fait du second abattement, non le niveau du premier."
+      "texte": "Les autres postes conservent leur place et leur page : les offerts et la consommation du personnel ([point 7](/reponse-1/recon-7-conso-personnel) et [point 8](/reponse-1/recon-8-abattements)), la casse et le résiduel de la [cascade des 10 622 L](/reponse-1/cascade-10622-litres). La bière est en revanche exclue de la base du [sur-versement au verre](/reponse-1/sur-versement-au-verre) : la mousse est comptée ici, dans la freinte, et nulle part ailleurs. C’est précisément parce que ces postes sont distincts qu’ils ne peuvent pas être fondus dans un pourcentage unique."
     },
     {
       "kind": "titre",
-      "texte": "Les trois décisions citées page 61 ne fixent aucune norme",
+      "texte": "Les décisions citées page 61 ne fixent aucun taux, et la première dit l’inverse de ce qu’on lui fait dire",
       "numero": "2.7"
     },
     {
       "kind": "paragraphe",
-      "texte": "**Deux d’entre elles sont vérifiées, et aucune ne fixe de taux.** Dans l’affaire marseillaise du 3 octobre 2024, c’est le vérificateur qui avait retenu 10 % de perte sur les fûts ; la cour s’est bornée à le valider parce que la société, dont l’imposition avait été établie conformément à l’avis de la commission départementale, n’établissait pas un taux supérieur. Dans l’affaire parisienne du 24 février 2011, la société avait fait l’objet d’une **taxation d’office** après procès-verbaux de défaut de présentation de comptabilité, et la cour a rejeté sa contestation faute de justification. Dans les deux cas, la charge de la preuve pesait sur le contribuable ; tel n’est pas le cas ici, où la procédure est contradictoire."
+      "texte": "**La décision marseillaise de 2024 construit exactement la répartition que nous soutenons.** Son point 14 décrit la méthode du vérificateur : « A partir des achats comptabilisés et des fûts offerts, il a calculé un nombre total de litres de bière commercialisables, diminué d’un coefficient de perte de 10 % et d’un montant d’offerts équivalent au montant des fûts gratuits concédés par le fournisseur » ; puis, « à la suite de l’avis de la commission départementale, l’administration a également pris en compte un pourcentage de consommation du personnel de 1 % sur les achats effectués ». Le taux de 10 % y couvre la **seule** perte technique : les offerts et la consommation du personnel s’y **ajoutent**, en postes séparés."
     },
     {
       "kind": "paragraphe",
-      "texte": "**Surtout, la première décision dit l’inverse de ce que le service en tire.** Le vérificateur y avait appliqué 10 % de perte sur les fûts de bière pression, **puis** 1 % de consommation du personnel, **puis** les offerts, comptés à part. Trois postes distincts, cumulés, exactement comme nous le soutenons ici. Quant à la décision parisienne, elle retient au contraire une réfaction **globale** de 10 % couvrant à la fois la casse, le coulage, les offerts et la consommation du gérant et des employés. Deux affaires, deux constructions opposées : c’est la démonstration qu’il n’existe pas de taux normatif, mais une appréciation au cas par cas, au vu des pièces produites."
+      "texte": "**La décision parisienne de 2011 construit le taux de la manière opposée.** La cour y relève que l’administration « a retenu une réfaction globale de 10 % sur les quantités achetées pour tenir compte des pertes (casse et coulage), des offerts et des consommations du gérant et des employés ». Un seul taux pour trois postes. Deux affaires, deux constructions incompatibles : un « taux global d’environ 10 % » qui vaudrait pour l’une vaut mécaniquement davantage pour l’autre. Ces deux décisions ne peuvent donc pas être additionnées pour dégager une norme, elles démontrent l’inverse."
     },
     {
       "kind": "paragraphe",
-      "texte": "**La troisième référence n’a pas pu être vérifiée.** L’arrêt qui serait rendu par la cour administrative d’appel de Marseille le 4 octobre 2018 sous le numéro 17MA00424 ne figure ni sur Légifrance, ni sur Juricaf, ni sur ArianeWeb. Nous ne la contestons pas au fond, faute d’en connaître le texte : nous demandons au service de bien vouloir nous en communiquer une copie, comme il est d’usage lorsqu’une jurisprudence est opposée au contribuable."
+      "texte": "**Dans les deux affaires, le juge n’a pas fixé de taux : il a constaté un défaut de preuve.** À Marseille, la société demandait 15 % en se prévalant de ses conditions d’exploitation (une réserve située à 37,25 mètres du bac de tirage, un groupe froid en façade) ; la cour a écarté ses constats d’huissier parce qu’ils étaient postérieurs de six ans à l’exercice, reposaient sur les déclarations du gérant et « ne quantifient au demeurant pas précisément un taux de perte ». À Paris, la société demandait 10 % de plus au titre de la mousse sans « aucun élément de justification ». Dans les deux cas, la charge de la preuve pesait sur le contribuable, sur le fondement de l’article L. 192 du livre des procédures fiscales à Marseille (imposition établie conformément à l’avis de la commission départementale) et de l’article L. 193 à Paris (taxation d’office). Aucun de ces deux régimes n’est, en l’état, celui de la présente procédure : la société n’est pas taxée d’office et aucune imposition n’a été établie conformément à un avis de la commission. Il appartient donc à l’administration d’établir le bien-fondé de sa reconstitution."
     },
     {
       "kind": "tableau",
-      "titre": "Les trois décisions citées page 61, vérifiées",
-      "minWidth": 980,
+      "titre": "Les trois décisions citées page 61, vérifiées une par une",
+      "minWidth": 1040,
       "colonnes": [
         {
           "label": "Référence"
@@ -1123,10 +1410,10 @@
           "label": "Activité et procédure"
         },
         {
-          "label": "Ce qui a été retenu"
+          "label": "Ce qui a été retenu, et par qui"
         },
         {
-          "label": "Par qui"
+          "label": "Motif de la décision"
         }
       ],
       "lignes": [
@@ -1136,13 +1423,13 @@
             "href": "https://www.legifrance.gouv.fr/juri/id/CETATEXT000050320516"
           },
           {
-            "v": "Débit de boissons à Marseille ; imposition établie conformément à l’avis de la commission départementale, donc charge de la preuve sur le contribuable"
+            "v": "Débit de boissons à Marseille (8e), où la bière pression représente 80 % des achats ; comptabilité irrégulière non contestée et imposition établie conformément à l’avis de la commission départementale, donc charge de la preuve sur le contribuable (LPF, art. L. 192)"
           },
           {
-            "v": "10 % de perte sur les fûts de bière pression, plus 1 % de consommation du personnel, plus les offerts : trois postes distincts et cumulés"
+            "v": "Le vérificateur : 10 % de perte sur les fûts, puis les offerts comptés à part, puis 1 % de consommation du personnel ajouté après l’avis de la commission. Trois postes distincts et cumulés"
           },
           {
-            "v": "le vérificateur ; la cour valide faute de preuve contraire"
+            "v": "La société « n’apporte pas la preuve qui lui incombe » : ses constats d’huissier de 2019 portaient sur un exercice 2013, reposaient sur les dires du gérant et « ne quantifient au demeurant pas précisément un taux de perte »"
           }
         ],
         [
@@ -1150,7 +1437,7 @@
             "v": "CAA de Marseille, 4 octobre 2018, n° 17MA00424"
           },
           {
-            "v": "Référence non retrouvée sur Légifrance, Juricaf et ArianeWeb"
+            "v": "Non diffusée par Juricaf au jour du présent mémoire ; Legifrance n’a pas pu être interrogé"
           },
           {
             "v": "inconnu"
@@ -1166,25 +1453,190 @@
             "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEPARIS-20110224-09PA02832"
           },
           {
-            "v": "Café, hôtel, restaurant à Colombes ; taxation d’office après procès-verbaux de défaut de présentation de comptabilité"
+            "v": "Café, hôtel, restaurant à Colombes ; taxation d’office après procès-verbaux de défaut de présentation de comptabilité, donc charge de la preuve sur le contribuable (LPF, art. L. 193)"
           },
           {
-            "v": "réfaction globale de 10 % « pour tenir compte des pertes (casse et coulage), des offerts et des consommations du gérant et des employés »"
+            "v": "Le vérificateur : une réfaction globale de 10 % « pour tenir compte des pertes (casse et coulage), des offerts et des consommations du gérant et des employés ». Un taux unique couvrant trois postes"
           },
           {
-            "v": "le vérificateur ; la cour rejette faute de justification"
+            "v": "La société demandait 10 % de plus au titre de la seule mousse mais « n’assortit son argumentation sur ces différents points d’aucun élément de justification »"
           }
         ]
       ]
     },
     {
+      "kind": "paragraphe",
+      "texte": "**La troisième référence n’a pas pu être consultée.** L’arrêt qui serait rendu par la cour administrative d’appel de Marseille le 4 octobre 2018 sous le numéro 17MA00424 n’a pu être retrouvé dans aucune base librement accessible : il n’est pas référencé par Juricaf au jour du présent mémoire. Nous ne soutenons pas qu’il n’existe pas, les cours ne diffusant pas tous leurs arrêts. Nous constatons seulement que la société n’est pas en mesure d’en prendre connaissance, ni d’en vérifier la portée, ni d’en discuter la transposition à son cas. Une décision que le contribuable ne peut pas lire ne peut pas fonder un taux qu’on lui oppose : nous en demandons la communication."
+    },
+    {
       "kind": "titre",
-      "texte": "Le taux de 25 % prêté à la défense n’est pas celui qu’elle soutient",
+      "texte": "Il n’existe aucun taux normatif, et l’administration accorde couramment davantage",
       "numero": "2.8"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service compare son cumul aux « 25 % que semble vouloir retenir dans la méthode de reconstitution, Maître THIVEND » (p. 83). Le chiffre de 25 % ne figure nulle part dans notre demande : il correspond, dans le texte que le service reproduit lui-même deux pages plus haut, à la borne haute de la fourchette documentée pour une installation courante. Le tableau reproduit en haut de la page 83 chiffre la freinte à **20 % du fût**, et le volume effectivement retenu dans la cascade est de **129 L**, que le service qualifie lui-même page 61 de « moins que l’abattement du service »."
+      "texte": "Le service tire de ses trois arrêts que « le taux de perte global retenu avoisine les 10 % ». Le relevé des décisions publiées dit autre chose : en restauration et en débit de boissons, les taux effectivement retenus vont de 12,5 % à 30 %, et ce sont le plus souvent les vérificateurs eux-mêmes qui accordent 12,5 %, 15 %, 17 %, 20 % ou 22 %, la commission départementale les relevant parfois encore."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les taux de perte, offerts et consommation du personnel réellement retenus en restauration et débit de boissons",
+      "minWidth": 1060,
+      "colonnes": [
+        {
+          "label": "Décision"
+        },
+        {
+          "label": "Établissement"
+        },
+        {
+          "label": "Taux retenu"
+        },
+        {
+          "label": "Fixé par"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "CAA de Paris, 2e ch., 17 mars 2021, n° 19PA01171",
+            "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEPARIS-20210317-19PA01171"
+          },
+          {
+            "v": "Bar à tapas, Paris 5e"
+          },
+          {
+            "v": "« en retranchant 22 % des achats bruts » au titre de « la consommation du personnel, des offerts, de la perte et du vol »"
+          },
+          {
+            "v": "le vérificateur"
+          }
+        ],
+        [
+          {
+            "v": "CAA de Marseille, 4e ch., 31 mai 2011, n° 11MA00132",
+            "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEMARSEILLE-20110531-11MA00132"
+          },
+          {
+            "v": "Discothèque et restaurant"
+          },
+          {
+            "v": "« le taux d’offerts, consommations personnelles et pertes à 20 % des liquides en cause, taux qui a été porté à 30 % sur avis […] de la commission départementale »"
+          },
+          {
+            "v": "le vérificateur, puis la commission"
+          }
+        ],
+        [
+          {
+            "v": "CAA de Marseille, 3e ch., 19 novembre 2020, n° 19MA00726",
+            "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEMARSEILLE-20201119-19MA00726"
+          },
+          {
+            "v": "Bar, restaurant, Aix-en-Provence"
+          },
+          {
+            "v": "« Le service a admis en déduction des achats d’alcool, au titre des pertes et des offerts, 20 % pour la bière pression et 5 % pour les autres alcools »"
+          },
+          {
+            "v": "le service"
+          }
+        ],
+        [
+          {
+            "v": "CAA de Marseille, 4e ch., 13 mars 2018, n° 17MA02280",
+            "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEMARSEILLE-20180313-17MA02280"
+          },
+          {
+            "v": "Société dont la bière représente 12,8 % à 16,2 % du chiffre d’affaires"
+          },
+          {
+            "v": "« divers abattements pour tenir compte des offerts, des pertes et des prélèvements de l’exploitant […] s’élevant globalement à un taux de 17 % pour tenir compte notamment des pertes lors de la mise en service des fûts et du coulage des bières »"
+          },
+          {
+            "v": "le vérificateur, au terme d’un débat contradictoire avec le gérant"
+          }
+        ],
+        [
+          {
+            "v": "CAA de Bordeaux, 4e ch., 20 mai 2020, n° 17BX03376",
+            "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEBORDEAUX-20200520-17BX03376"
+          },
+          {
+            "v": "Bar, Toulouse"
+          },
+          {
+            "v": "« porter le taux de pertes et offerts sur les ventes de bières à la pression, de 10 % à 15 %, pour tenir compte des “happy hours” »"
+          },
+          {
+            "v": "le vérificateur, puis la commission"
+          }
+        ],
+        [
+          {
+            "v": "CAA de Douai, 4e ch., 1er avril 2021, n° 19DA00790",
+            "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEDOUAI-20210401-19DA00790"
+          },
+          {
+            "v": "Débit de boissons et discothèque"
+          },
+          {
+            "v": "« aux quantités de bières achetées en fût […] un abattement de 12,5 % » ; le ministre calcule en défense que les déductions opérées reviennent à porter l’abattement pour offerts « de 5 % […] à 8,11 % […], à 7,33 % […] et à 7,60 % »"
+          },
+          {
+            "v": "le vérificateur ; taux d’offerts recalculés par le ministre en défense"
+          }
+        ],
+        [
+          {
+            "v": "CAA de Paris, 9e ch., 27 novembre 2014, n° 12PA04560",
+            "href": "https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEPARIS-20141127-12PA04560"
+          },
+          {
+            "v": "Deux pubs irlandais, Paris"
+          },
+          {
+            "v": "« un taux de pertes de 30 %, au lieu du taux de 15 % retenu par le service », plus « un abattement supplémentaire de 5 % pour “consommations et offerts” »"
+          },
+          {
+            "v": "le juge, contre l’administration",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Aucune norme ne se dégage de ces décisions, et c’est précisément le point.** Les taux relevés ci-dessus vont de 12,5 % à 30 %, et ils ont pour la plupart été accordés par les vérificateurs eux-mêmes, parfois relevés ensuite par la commission départementale. Un taux « avoisinant les 10 % » n’est donc ni un plafond ni une règle de droit : c’est un usage, que l’administration dépasse couramment lorsque les conditions concrètes d’exploitation le justifient."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Nous ne prétendons pas pour autant que tous les taux dépassent 10 %.** Des taux de l’ordre de 10 % sont aussi retenus et validés, notamment lorsque le contribuable ne produit rien. C’est justement la démonstration recherchée : le taux n’est pas une règle de droit, il est une question de fait, appréciée au vu des conditions concrètes d’exploitation et des pièces produites. Le service ne peut donc pas opposer un taux moyen à un établissement dont il connaît, par ses propres annexes, le matériel et le calendrier."
+    },
+    {
+      "kind": "titre",
+      "texte": "Ce que la jurisprudence exige de nous, et que nous produisons",
+      "numero": "2.9"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les décisions qui refusent un taux supérieur le font toujours pour la même raison, et elle est instructive. À Toulouse, la société réclamait 42 % mais « ne se prévaut, pour justifier ces coefficients, d’aucune donnée comptable tirée de sa propre comptabilité ou de celle d’entreprises similaires », et une attestation du président de l’Union des métiers et des industries de l’hôtellerie a été jugée insuffisante. À Marseille, les constats d’huissier étaient postérieurs de six ans à l’exercice et « ne quantifient au demeurant pas précisément un taux de perte »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**Nous en tirons la conséquence, y compris contre nous-mêmes.** Une fourchette tirée de la presse professionnelle ne suffirait pas, et nous ne fondons pas notre demande sur elle. Nous produisons trois choses d’une autre nature : la documentation technique du constructeur du matériel que le service désigne lui-même dans ses annexes ; le calendrier des ventes de bière jour par jour, tiré des fichiers que le service a lui-même extraits de la caisse ; et le relevé des 262 fûts achetés, tiré des factures du fournisseur. Ce sont des données de l’exploitation, contemporaines des exercices vérifiés et chiffrées."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "**À l’inverse, un taux supérieur a déjà été obtenu sur pièces.** Dans l’affaire des pubs irlandais parisiens, la cour a elle-même retenu, pour la bière pression, « un taux de pertes de 30 %, au lieu du taux de 15 % retenu par le service », et y a ajouté « un abattement supplémentaire de 5 % pour “consommations et offerts” », au vu d’un pré-rapport d’expertise judiciaire qui chiffrait à 12,5 % les pertes supplémentaires liées à une installation défectueuse. Nous ne demandons rien de tel : nous demandons 121,9 L, soit moins de la moitié de ce que le service accorde déjà."
+    },
+    {
+      "kind": "titre",
+      "numero": "2.10",
+      "texte": "Le taux de 25 % que le service nous prête, et que nous abandonnons"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service compare son cumul aux « 25 % que semble vouloir retenir dans la méthode de reconstitution, Maître THIVEND » (p. 83). Ce chiffre vient de notre propre mémoire du 10 juillet 2026, qui situait le gaspillage d’un fût « entre 5 % et 25 % (installation courante), avec une moyenne de l’ordre de 20 % », deux paragraphes après une fourchette de 5 % à 20 % : le service ne l’a pas inventé, il a retenu la borne la plus haute que nous produisions. Nous ne la soutenons plus. Cette fourchette était tirée de la presse professionnelle et décrivait des installations à lignes, sans rapport avec un matériel dont le tube de soutirage est jeté avec le fût. Nous nous en tenons au taux et à l’assiette exposés ci-dessus : 10 % de la bière réellement sortie du fût, soit **121,9 L**, très en deçà des 314,4 L que le service accorde déjà."
     },
     {
       "kind": "kpis",
@@ -1192,27 +1644,27 @@
         {
           "label": "Taux réellement retiré du fût",
           "valeur": "27,75 %",
-          "sub": "et non 30 % : 1 moins 0,85 x 0,85",
+          "sub": "et non 30 % : 1 moins 0,85 x 0,85, comme les annexes le calculent déjà",
           "highlight": true,
           "couleur": "teal"
         },
         {
-          "label": "Fûts achetés sur 3 exercices",
-          "valeur": "2 096 L",
-          "sub": "262 fûts de 8 L, factures du fournisseur",
+          "label": "Freinte que nous retenons",
+          "valeur": "121,9 L",
+          "sub": "10 % de la bière réellement sortie du fût (1 219,2 L), soit 5,82 % du fût acheté",
+          "couleur": "teal"
+        },
+        {
+          "label": "Premier abattement du service",
+          "valeur": "314,4 L",
+          "sub": "15 % des 2 096 L achetés : plus du double de ce que nous demandons",
           "couleur": "blue"
         },
         {
-          "label": "Valeur du second abattement sur la bière",
+          "label": "Second abattement, en équivalent-fût",
           "valeur": "267,2 L",
-          "sub": "soit environ 17 950 € de CA reconstitué",
+          "sub": "dont 89,1 L seulement au titre des pertes",
           "couleur": "gold"
-        },
-        {
-          "label": "Freinte que nous retenons",
-          "valeur": "129 L",
-          "sub": "6,2 % du fût acheté, moins que les 15 % du service",
-          "couleur": "teal"
         }
       ]
     },
@@ -1221,23 +1673,29 @@
       "source": "nous",
       "numero": 3,
       "titre": "Ce que cela fait tomber",
-      "sousTitre": "Le seul motif opposé à la partie O est une addition qui ne se vérifie pas, et un abattement compté plusieurs fois."
+      "sousTitre": "Le motif du refus est une addition que les annexes du service ne font pas, et un abattement de fin de méthode opposé trois fois au même dossier."
     },
     {
       "kind": "paragraphe",
-      "texte": "La conclusion de la page 83 (« Le service ayant appliqué un taux supérieur, il n’y a donc pas lieu qu’il modifie sa reconstitution ») repose sur une prémisse unique : 15 % plus 15 % feraient 30 % du fût. Rejouée sur les volumes facturés, la méthode du service en retire 27,75 %, et sur ces 27,75 % une fraction seulement répond à des pertes physiques, le reste couvrant des remises et de la bière servie au personnel."
+      "texte": "La conclusion des pages 61 et 83 (« le service ayant appliqué un taux supérieur, il n’y a donc pas lieu qu’il modifie sa reconstitution ») repose sur une prémisse unique : 15 % plus 15 % feraient 30 % du fût. Les annexes finales ne font pas cette addition : elles retirent 15 % du volume, puis 15 % du chiffre d’affaires, soit 27,75 % du fût. Et sur ces 27,75 %, une fraction seulement répond à des pertes physiques, le reste couvrant des remises de prix et de la bière servie et bue par le personnel."
     },
     {
       "kind": "paragraphe",
-      "texte": "Nous ne demandons pas, au titre de la seule freinte, plus que le premier abattement du service. Nous demandons que le second ne soit pas compté une seconde fois comme freinte : sur la bière, il vaut 267,2 L, soit environ 17 950 € de chiffre d’affaires reconstitué, et il doit rester disponible pour les postes auxquels il est destiné, les remises, les offerts et la consommation du personnel, traités aux points 7 et 8 de la même réponse."
+      "texte": "Nous ne demandons pas, au titre de la seule freinte, plus que le premier abattement du service : **121,9 L contre 314,4 L**. Nous demandons que le second ne soit pas compté une seconde fois comme freinte. Sur la bière, il vaut 267,2 L en équivalent-litres de fût, dont 89,1 L seulement au titre des pertes, et il doit rester disponible pour les postes auxquels le service l’a lui-même affecté : les remises, les offerts et la consommation du personnel."
+    },
+    {
+      "kind": "interne",
+      "audience": "avocat",
+      "titre": "Points à sécuriser avant dépôt (ne pas produire)",
+      "texte": "DEUX DÉCISIONS ONT ÉTÉ RETIRÉES DU CORPS DE CETTE PAGE ET DE LA PAGE L, APRÈS RELECTURE DU TEXTE INTÉGRAL SUR JURICAF. 1) CAA de Lyon, 5e ch., 20 décembre 2022, n° 21LY01371 (SARL RJM) : la cour y relève que le vérificateur « a appliqué le taux de perte de 15 % aux consommations de bière et a admis un taux de perte, offerts et consommation du personnel de 15 % pour l’ensemble des boissons, soit un taux plus favorable que le taux de 5 % à 10 % communément admis », et elle rejette intégralement le recours du contribuable. C’est mot pour mot la structure à deux étages que nous combattons, validée et qualifiée de généreuse : la produire revenait à offrir au service la seule décision publiée qui décrive sa méthode et l’approuve. 2) CE, 8e ch., 24 juillet 2023, n° 469535 (société Paradiso) : la citation sur la méthode directe est exacte, mais le point 1 de l’arrêt expose que l’administration avait constaté que la société « avait altéré les fichiers de son système de caisse et effacé certaines lignes de recettes », avec des majorations de 80 % pour manœuvres frauduleuses, et le Conseil d’État donne raison au ministre en annulant les abattements de pertes et d’offerts accordés par la cour. Compte tenu des 430 k€ de lignes supprimées traités à la page « Suppressions de notes », cette référence importait dans le débat le précédent le plus défavorable possible. CE QUI NOUS DISTINGUE, SI L’AVOCAT VEUT NÉANMOINS S’EN SERVIR : à Lyon, le contribuable ne produisait aucune pièce d’exploitation et la charge de la preuve lui incombait (L. 192) ; ici, la procédure est contradictoire, aucune imposition n’a été établie conformément à un avis de la commission, et nous produisons la documentation du constructeur, les factures et le calendrier de la caisse. Dans l’affaire Paradiso, la reconstitution était DIRECTE (lignes effacées x recette moyenne) ; ici, elle est indirecte et fondée sur la comptabilité matière, ce que l’arrêt distingue expressément. Ces deux nuances sont réelles, mais elles ne compensent pas le risque de citer ces décisions dans un mémoire adressé au service. AUTRES POINTS. Demander formellement la communication de l’arrêt n° 17MA00424 : Juricaf ne le référence pas, Legifrance n’a pas pu être interrogé (erreur 403), l’affirmation « aucune base » a donc été ramenée à ce qui a été réellement vérifié. Joindre au mémoire le manuel d’utilisation Blade et la carte de référence rapide, imprimés. Attention : le manuel, au ch. 4.4 p. 19, prescrit d’ouvrir le robinet en grand et de refermer « lorsque le verre est plein » et ne mentionne ni coupe-mousse ni trait de jauge ; ces deux termes proviennent de la carte de référence rapide, qu’il faut donc produire, faute de quoi le service opposera le manuel. La freinte a été ramenée de 129 L à 121,9 L : l’assiette du taux de 10 % était la contenance des verres (1 292,9 L), qui comprend 73,7 L de limonade, de grenadine et de Picon. La cascade des 10 622 L porte désormais 122 L (arrondi) : relancer scripts/reponse1-cascade-coherence.py. L’onglet « Rendu final » (src/data/renduFinal/pertes-biere-mousse.json et src/data/renduFinal.ts) porte encore 129 L et un taux de 20 % : à aligner avant toute production simultanée des deux onglets. Enfin, itemsCaisse.json omet 66,5 Monaco que les annexes C du service enregistrent sur 2022-2023 : nos 1 219,2 L de part bière correspondent à 1 227,5 L dans les annexes C ; l’écart de 8,3 L joue en notre défaveur et doit être arbitré avant dépôt. Retirer cet encart de toute version remise."
     },
     {
       "kind": "piecejointe",
-      "intro": "Calcul intégralement reproductible à partir des factures du fournisseur, de la caisse et des annexes finales de la proposition, par le script scripts/reponse1-biere-freinte.py :",
+      "intro": "Calcul intégralement reproductible à partir des factures du fournisseur, du détail des tickets remis par le service (annexes C1 à C3) et des annexes finales de la proposition, par le script scripts/reponse1-biere-freinte.py :",
       "fichiers": [
         {
           "fichier": "pieces-reponse-1/R1-biere-freinte.xlsx",
-          "label": "Bière pression : du fût acheté au volume facturable, et assiette des deux abattements (XLSX, 5 onglets)"
+          "label": "Bière pression : du fût acheté au volume facturable, calendrier des mises en perce et assiette des deux abattements (XLSX, 8 onglets)"
         }
       ]
     }

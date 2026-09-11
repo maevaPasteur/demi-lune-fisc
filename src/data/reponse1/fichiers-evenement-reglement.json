@@ -6,7 +6,7 @@
   },
   "entete": {
     "positionService": "Le service maintient l’intégralité de ses constats sur les fichiers Événement et Règlement. Il refuse de discuter la certification de la caisse, qu’il qualifie d’auto-certification, et affirme qu’aucune clé d’identification unique ne relie le fichier « tpvevenement » aux fichiers Règlement, Ticket ligne, Ticket et TVA, ce qui interdirait toute traçabilité certaine des suppressions. Il oppose ensuite les écarts de nombre d’articles entre les annexes B (40 218 / 39 998 / 39 132) et les annexes C (38 479 / 38 219 / 37 446), qu’il juge en outre « clairement et nettement minorées », ainsi que les écarts de chiffre d’affaires entre les annexes B, C, F et G, toutes issues du même logiciel. Il ajoute enfin un grief nouveau, tiré d’une incohérence de taux de TVA dans les annexes C-1 à C-3, dont il n’exclut pas qu’elle provienne d’une manipulation du logiciel par les dirigeants.",
-    "reponseCourte": "Refaits sur les fichiers eux mêmes, les quatre montants du service se réconcilient intégralement : deux d’entre eux sont le même compteur de caisse arrêté à deux endroits, l’annexe B est un sous-ensemble strict de l’archive certifiée qu’elle est censée contredire, et les colonnes de TVA invoquées ont été ajoutées par le service, dont le propre calcul diminue la TVA due de 9 424,74 €.",
+    "reponseCourte": "Refaits sur les fichiers eux mêmes, les quatre montants du service se réconcilient intégralement : deux d’entre eux sont le même compteur de caisse arrêté à deux endroits, l’annexe B est un sous-ensemble strict de l’archive certifiée qu’elle est censée contredire, et les colonnes de TVA invoquées, ajoutées par le service, ramènent une fois appliquées la TVA reconstituée à 18,76 € de la TVA reversée sur trois exercices.",
     "enjeu": "Pilier « logiciel » du rejet de comptabilité : traçabilité des suppressions, nombre d’articles, chiffre d’affaires et taux de TVA.",
     "statut": "demonte"
   },
@@ -881,10 +881,10 @@
           "couleur": "teal"
         },
         {
-          "label": "Total de la colonne « Correction TVA Sur Taux » du service",
-          "valeur": "- 9 424,74 €",
-          "sub": "Cumul des 3 exercices : la correction qu’il calcule diminue la TVA due",
-          "couleur": "blue"
+          "label": "Corrections de TVA du service, une fois appliquées",
+          "valeur": "18,76 €",
+          "sub": "Écart résiduel avec la TVA reversée sur les 3 exercices, soit 0,014 % : sa correction restitue la taxe déjà liquidée",
+          "couleur": "teal"
         },
         {
           "label": "Chiffrage produit à l’appui des quantités « minorées »",
@@ -1648,7 +1648,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Ce calcul, tel qu’il l’a lui même établi, aboutit à un résultat qu’il ne relève pas : la somme de sa colonne « Correction TVA Sur Taux » est **négative sur les trois exercices**. Si l’on appliquait les taux que le service estime corrects, la TVA due par la société diminuerait de 9 424,74 € sur la période vérifiée. L’anomalie qu’il invoque, à la supposer établie, joue au détriment de la société et non du Trésor."
+      "texte": "Ce calcul, tel qu’il l’a lui même établi, aboutit à un résultat qu’il ne relève pas. La somme de sa colonne « Correction TVA Sur Taux » est **négative sur les trois exercices**, - 9 424,74 € au total. Mais ce montant n’est pas de la TVA payée en trop : il mesure l’écart entre la colonne « taux » de son propre fichier et les taux qu’il tient pour corrects. Appliquées, ces corrections ramènent la TVA reconstituée ligne à ligne de 144 489,75 € à **135 065,93 €**, soit à **18,76 € de la TVA collectée effectivement reversée** (135 084,69 €), 0,014 %. Le calcul du service restitue donc exactement la taxe déjà liquidée : le grief qu’il en tire est sans incidence sur l’impôt, dans un sens comme dans l’autre."
     },
     {
       "kind": "tableau",
@@ -1769,7 +1769,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le sens des écarts confirme qu’il s’agit d’un champ d’affichage et non d’une base d’imposition : les lignes signalées se répartissent presque également dans les deux sens, 15 824 dans un sens et 16 223 dans l’autre. Une manipulation destinée à réduire l’impôt ne produirait pas un partage à parts égales. Surtout, la TVA effectivement liquidée ne se lit pas dans cette colonne de ligne mais au niveau du ticket et du journal de TVA (annexes G), qui totalisent 42 552,76 € pour l’exercice 2022-2023 : c’est ce montant, et non le champ de ligne, qui a été déclaré."
+      "texte": "Le sens des écarts confirme qu’il s’agit d’un champ d’affichage et non d’une base d’imposition : les lignes signalées se répartissent presque également dans les deux sens, 15 824 dans un sens et 16 223 dans l’autre. Une manipulation destinée à réduire l’impôt ne produirait pas un partage à parts égales. Surtout, la TVA effectivement liquidée ne se lit pas dans cette colonne de ligne mais au niveau du ticket et du journal de TVA (annexes G), qui totalisent 42 552,76 € pour l’exercice 2022-2023 : c’est ce montant, et non le champ de ligne, qui a été déclaré. Le contrôle le vérifie ticket par ticket : reconstituée avec la colonne « taux » du fichier, la ventilation 10 % / 20 % ne retrouve celle du journal de TVA que dans un ticket sur cinq, contre plus de quatre sur cinq une fois les corrections du service appliquées. Ces colonnes réparent l’export, elles ne redressent pas la société."
     },
     {
       "kind": "titre",
@@ -1973,11 +1973,15 @@
     },
     {
       "kind": "piecejointe",
-      "intro": "Réconciliation complète des annexes A, B, C, F, G et H, par exercice, avec l’origine chiffrée de chaque écart. Le classeur est produit par un script qui relit les fichiers de caisse remis au service, sans aucune saisie manuelle : six onglets (CA par annexe, compteur perpétuel, quantités B contre C, exemple du 14/04/2022, lignes de l’annexe C absentes de l’annexe B, colonnes de TVA ajoutées par le service).",
+      "intro": "Réconciliation complète des annexes A, B, C, F, G et H, par exercice, avec l’origine chiffrée de chaque écart. Le classeur est produit par un script qui relit les fichiers de caisse remis au service, sans aucune saisie manuelle : six onglets (CA par annexe, compteur perpétuel, quantités B contre C, exemple du 14/04/2022, lignes de l’annexe C absentes de l’annexe B, colonnes de TVA ajoutées par le service). La sémantique des colonnes E et F et l’incidence réelle des corrections de taux sur la TVA due font l’objet d’une pièce distincte, produite par scripts/reponse1-tva-colonnes-ef.py.",
       "fichiers": [
         {
           "fichier": "pieces-reponse-1/R1-reconciliation-annexes.xlsx",
           "label": "R1 - Réconciliation des annexes A, B, C, F, G et H (3 exercices)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-tva-colonnes-ef.xlsx",
+          "label": "R1 - Colonnes E et F des annexes C-1 à C-3 : sémantique et incidence réelle"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",

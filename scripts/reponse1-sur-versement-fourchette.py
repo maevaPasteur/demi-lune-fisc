@@ -43,11 +43,23 @@ Taux de reference, verifies en ligne le 10/09/2026 :
     https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/
   - Wansink B, van Ittersum K, « Shape of glass and amount of alcohol poured:
     comparative study of effect of practice and concentration », BMJ, 2005,
-    331(7531):1512-1514. 86 barmen, mesure demandee 44,3 ml : 54,6 ml verses dans
-    le verre bas et large (+ 23,2 %), 46,4 ml dans le verre haut et etroit (+ 4,7 %).
-    Le taux de + 20 % retenu pour les spiritueux au verre est INFERIEUR au
-    depassement mesure pour le verre bas et large.
+    331(7531):1512-1514, DOI 10.1136/bmj.331.7531.1512. 86 barmen de Philadelphie,
+    6,3 ans d'experience en moyenne, mesure demandee 44,3 ml : TABLE 2, ligne
+    « All drinks », colonne « Average » : 54,6 ml verses dans le verre bas et large
+    (+ 23,2 %) et 46,4 ml dans le verre haut et etroit (+ 4,7 %). Le taux de + 20 %
+    retenu pour les spiritueux au verre est INFERIEUR au depassement mesure pour le
+    verre bas et large. Article NI retracte NI corrige (verifie sur PubMed et
+    Crossref le 10/09/2026).
     https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/
+  - Note de prudence : Kerr et coll. mesurent les SHOTS de spiritueux servis a la
+    mesure de reference (1,51 oz pour 1,50 oz, n = 61). C'est pourquoi les taux du
+    vin et du cocktail ne sont PAS appliques aux spiritueux au verre, et pourquoi
+    la variante « plafonne_sans_spiritueux_l » est publiee : le poste ne pese que
+    12,25 L sur 475,36 L.
+  - Le taux de + 23,6 % du vin est un calcul (6,18 oz / 5 oz) a partir de la Table 2
+    de Kerr et coll. et de la definition du verre de reference americain qu'elle pose
+    (« 5 ounces (148 ml) of 12 %ABV wine »). L'article publie de son cote + 43 % en
+    ethanol, chiffre PLUS eleve, que nous ne retenons pas.
 
 Sorties :
   src/data/reponse1Calculs/sur-versement-fourchette.json
@@ -155,6 +167,11 @@ def main():
             ecart = dispo_service - vendu_nominal
             borne = ecart > 0 and base_main > 0
             taux_max = (ecart / base_main) if borne else 0.0
+            # PLAFONNEMENT : le sur-versement ne peut jamais depasser l'ecart de
+            # bilan matiere de la ligne. Quand l'ecart est negatif (la conso depasse
+            # les achats FACTURES connus), le bilan matiere ne borne rien : la ligne
+            # est signalee, pas plafonnee.
+            plafonne = min(retenu, ecart) if borne else retenu
 
             lignes.append({
                 "exercice": e,
@@ -175,12 +192,32 @@ def main():
                 "taux_max": round(taux_max, 4),
                 "taux_retenu": round(retenu / base_main, 4) if base_main > 0 else 0.0,
                 "surversement_retenu_l": round(retenu, 2),
+                "surversement_plafonne_l": round(plafonne, 2),
                 "compatible": (retenu <= ecart + 1e-9) if borne else None,
                 "borne": borne,
                 "stock_ouverture_estime": i == 0,
             })
         if any(l["vendu_nominal_l"] > 0 or l["disponible_l"] > 0 for l in lignes):
-            boissons.append({"nom": nom, "categorie": b["categorie"], "lignes": lignes})
+            cumul = {
+                "achats_l": round(sum(l["achats_l"] for l in lignes), 2),
+                "disponible_service_l": round(sum(l["disponible_service_l"] for l in lignes), 2),
+                "vendu_nominal_l": round(sum(l["vendu_nominal_l"] for l in lignes), 2),
+                "ecart_l": round(sum(l["ecart_l"] for l in lignes), 2),
+                "base_main_l": round(sum(l["base_main_l"] for l in lignes), 2),
+                "verre_l": round(sum(l["verre_l"] for l in lignes), 2),
+                "pichet_l": round(sum(l["pichet_l"] for l in lignes), 2),
+                "bouteille_l": round(sum(l["bouteille_l"] for l in lignes), 2),
+                "cocktails_l": round(sum(l["cocktails_l"] for l in lignes), 2),
+                "retenu_l": round(sum(l["surversement_retenu_l"] for l in lignes), 2),
+                "plafonne_l": round(sum(l["surversement_plafonne_l"] for l in lignes), 2),
+            }
+            bm, ec = cumul["base_main_l"], cumul["ecart_l"]
+            cumul["taux_max"] = round(ec / bm, 4) if (bm > 0 and ec > 0) else 0.0
+            cumul["taux_retenu"] = round(cumul["retenu_l"] / bm, 4) if bm > 0 else 0.0
+            cumul["achats_connus"] = cumul["achats_l"] > 0
+            cumul["compatible_cumul"] = (cumul["retenu_l"] <= ec + 1e-9) if bm > 0 else None
+            boissons.append({"nom": nom, "categorie": b["categorie"],
+                             "cumul": cumul, "lignes": lignes})
 
     # ---- Agregat par regime de service, exercice par exercice -------------
     regimes = {e: collections.defaultdict(float) for e in EXOS}
@@ -207,21 +244,50 @@ def main():
 
     # Variantes plafonnees ligne a ligne par le bilan matiere.
     v_retenu = v_plafonne = v_prudent = 0.0
+    # Ventilation du sur-versement PLAFONNE par regime de service : le plafond de
+    # la ligne est reparti au prorata entre sa composante « verre » et sa
+    # composante « cocktail ».
+    pl = {"vin_verre": 0.0, "spiritueux_verre": 0.0, "cocktails": 0.0}
+    n_bornees = n_lignes = 0
     lignes_incompatibles = []
+    achats_incomplets = []
     for b in boissons:
+        c = b["cumul"]
+        if c["retenu_l"] > 0 and not c["achats_connus"]:
+            achats_incomplets.append({"boisson": b["nom"], "retenu_l": c["retenu_l"]})
         for l in b["lignes"]:
             v_retenu += l["surversement_retenu_l"]
+            if l["surversement_retenu_l"] > 0:
+                k = l["surversement_plafonne_l"] / l["surversement_retenu_l"]
+                tx = TAUX_VIN if b["categorie"] in VIN else TAUX_SPIRIT
+                cle = "vin_verre" if b["categorie"] in VIN else "spiritueux_verre"
+                pl[cle] += l["verre_l"] * tx * k
+                pl["cocktails"] += l["cocktails_l"] * TAUX_COCKTAIL * k
+            if l["base_main_l"] > 0:
+                n_lignes += 1
             if l["borne"]:
-                c = min(l["surversement_retenu_l"], l["ecart_l"])
-                v_plafonne += c
-                v_prudent += c
+                n_bornees += 1
+                v_plafonne += l["surversement_plafonne_l"]
+                v_prudent += l["surversement_plafonne_l"]
                 if not l["compatible"]:
                     lignes_incompatibles.append({
-                        "boisson": b["nom"], "exercice": l["exercice"],
-                        "retenu_l": l["surversement_retenu_l"], "ecart_l": l["ecart_l"]})
+                        "boisson": b["nom"], "categorie": b["categorie"],
+                        "exercice": l["exercice"],
+                        "base_main_l": l["base_main_l"],
+                        "verre_l": l["verre_l"], "cocktails_l": l["cocktails_l"],
+                        "retenu_l": l["surversement_retenu_l"],
+                        "ecart_l": l["ecart_l"],
+                        "plafonne_l": l["surversement_plafonne_l"],
+                        "retranche_l": round(l["surversement_retenu_l"] - l["ecart_l"], 2),
+                        "taux_retenu": l["taux_retenu"], "taux_max": l["taux_max"],
+                        "cumul_achats_l": c["achats_l"],
+                        "cumul_ecart_l": c["ecart_l"],
+                        "cumul_retenu_l": c["retenu_l"],
+                        "compatible_sur_3_exercices": c["compatible_cumul"],
+                    })
             else:
-                # Ecart negatif : la consommation depasse les achats connus, donc le
-                # bilan matiere ne borne rien (achats incomplets, cf. Intermarche).
+                # Ecart negatif : la consommation depasse les achats FACTURES connus,
+                # donc le bilan matiere ne borne rien (achats incomplets, cf. Intermarche).
                 v_plafonne += l["surversement_retenu_l"]
 
     def bloc(r):
@@ -278,7 +344,19 @@ def main():
             "retenu_l": round(v_retenu, 2),
             "plafonne_stock_l": round(v_plafonne, 2),
             "plafonne_stock_prudent_l": round(v_prudent, 2),
+            "plafonne_par_regime": {k: round(x, 2) for k, x in pl.items()},
+            # Variante de controle : Kerr et coll. mesurent les shots de spiritueux
+            # servis A la mesure de reference (1,51 oz pour 1,50 oz). On verifie
+            # donc ce que devient le total si le poste « spiritueux au verre »
+            # est ramene a zero.
+            "plafonne_sans_spiritueux_l": round(v_plafonne - pl["spiritueux_verre"], 2),
+            "verres_15cl_surcomptes": round(pl["vin_verre"] / 0.15),
+            "doses_4cl_surcomptees": round(pl["spiritueux_verre"] / 0.04),
+            "lignes_bornees": n_bornees,
+            "lignes_base_main": n_lignes,
             "lignes_incompatibles": lignes_incompatibles,
+            "boissons_achats_incomplets": achats_incomplets,
+            "retenu_achats_incomplets_l": round(sum(x["retenu_l"] for x in achats_incomplets), 2),
         },
         "contenants_vendus": {e: {k: round(x, 1) for k, x in nb[e].items()} for e in EXOS},
         "contenants_vendus_total": {k: round(sum(nb[e][k] for e in EXOS), 1)
@@ -309,6 +387,19 @@ def main():
     print("  contenants vendus        ", res["contenants_vendus_total"])
     print("  variantes                ", {k: v for k, v in res["variantes"].items()
                                           if k != "lignes_incompatibles"})
+    print()
+    print("=== Lignes ou le taux des sources depasse le plafond de stock ===")
+    for x in res["variantes"]["lignes_incompatibles"]:
+        print(f"  {x['boisson'][:26]:26s} {x['exercice']}  retenu {x['retenu_l']:6.2f} L  "
+              f"plafond {x['ecart_l']:6.2f} L  retranche {x['retranche_l']:5.2f} L  "
+              f"cumul 3 exos : achats {x['cumul_achats_l']:7.1f} L  ecart {x['cumul_ecart_l']:7.2f} L "
+              f"retenu {x['cumul_retenu_l']:6.2f} L  "
+              f"{'compatible' if x['compatible_sur_3_exercices'] else 'NON compatible'}")
+    print(f"  {len(res['variantes']['lignes_incompatibles'])} lignes sur "
+          f"{res['variantes']['lignes_bornees']} bornees "
+          f"({res['variantes']['lignes_base_main']} lignes a base non nulle)")
+    print("  boissons sans achat facture connu :",
+          res["variantes"]["boissons_achats_incomplets"])
     print()
     print("=== Fourchette par boisson (total 3 exercices) ===")
     for b in sorted(res["boissons"], key=lambda x: -sum(l["base_main_l"] for l in x["lignes"]))[:20]:
@@ -465,7 +556,103 @@ def ecrire_xlsx(res):
     largeurs(ws2, [30, 16, 14] + [16] * 13 + [18, 24, 22, 20, 13])
     ws2.freeze_panes = "D5"
 
-    # ---- Feuille 3 : sources et conventions -------------------------------
+    # ---- Feuille 3 : la fourchette par boisson, 3 exercices cumules -------
+    ws4 = wb.create_sheet("Fourchette 3 exercices")
+    ws4.append(["Fourchette de sur-versement compatible avec le stock, par boisson, "
+                "sur les trois exercices cumules"])
+    ws4["A1"].font = Font(bold=True, size=13)
+    ws4.append(["Le taux n'est pas postule : il est encadre. La borne basse est 0 %, la borne "
+                "haute est ce que le bilan matiere autorise (ecart / base versee a la main). "
+                "Le taux retenu est le PLUS PETIT des deux : celui de la mesure publiee, ou "
+                "celui du plafond de stock. Une boisson sans achat facture connu n'est bornee "
+                "par rien : elle est signalee comme telle."])
+    ws4["A2"].font = Font(italic=True, size=9, color="64748B")
+    ws4.append([])
+    cols4 = ["Boisson", "Categorie", "Achats factures (L)", "Disponible au service (L)",
+             "Vendu aux doses de la carte (L)", "dont verre (L)", "dont pichet (L)",
+             "dont bouteille (L)", "dont cocktails (L)", "Ecart (L)",
+             "Base versee a la main (L)",
+             "Borne basse", "Borne haute compatible avec le stock",
+             "Taux des sources", "Sur-versement aux taux des sources (L)",
+             "Sur-versement plafonne par le stock (L)",
+             "Taux effectif rapporte au volume vendu", "Statut"]
+    entetes(ws4, cols4, 4)
+    for b in sorted(res["boissons"], key=lambda x: -x["cumul"]["base_main_l"]):
+        c = b["cumul"]
+        if c["base_main_l"] <= 0:
+            continue
+        if not c["achats_connus"]:
+            statut = "achats factures absents : non borne"
+        elif c["ecart_l"] <= 0:
+            statut = "conso superieure aux achats factures : non borne"
+        elif c["compatible_cumul"]:
+            statut = "compatible"
+        else:
+            statut = "plafonne"
+        eff = (c["plafonne_l"] / c["vendu_nominal_l"]) if c["vendu_nominal_l"] > 0 else 0.0
+        ws4.append([b["nom"], b["categorie"], c["achats_l"], c["disponible_service_l"],
+                    c["vendu_nominal_l"], c["verre_l"], c["pichet_l"], c["bouteille_l"],
+                    c["cocktails_l"], c["ecart_l"], c["base_main_l"], "0,0 %",
+                    (f"{fr(c['taux_max'] * 100, 1)} %" if c["taux_max"] > 0 else "non borne"),
+                    f"{fr(c['taux_retenu'] * 100, 1)} %", c["retenu_l"], c["plafonne_l"],
+                    f"{fr(eff * 100, 1)} %", statut])
+        r = ligne_bordee(ws4, 3)
+        if statut != "compatible":
+            for cc in range(1, len(cols4) + 1):
+                ws4.cell(row=r, column=cc).fill = alerte
+    largeurs(ws4, [32, 16, 18, 20, 22, 14, 14, 16, 16, 14, 20, 14, 26, 16, 24, 24, 22, 34])
+    ws4.freeze_panes = "C5"
+
+    # ---- Feuille 4 : les lignes plafonnees --------------------------------
+    ws5 = wb.create_sheet("Lignes plafonnees")
+    ws5.append(["Les lignes ou le taux de la mesure publiee depasse le plafond de stock, "
+                "et le plafonnement applique"])
+    ws5["A1"].font = Font(bold=True, size=13)
+    ws5.append(["Sur les lignes ci-dessous, le sur-versement calcule au taux de la source "
+                "depasse l'ecart de bilan matiere de l'exercice. Il est ramene a l'ecart. "
+                "La derniere colonne indique si, sur les trois exercices cumules, le bilan "
+                "matiere de la meme boisson reste compatible : le depassement provient alors "
+                "du decoupage annuel du stock (inventaire arrete au 31/03) et non d'une "
+                "impossibilite materielle."])
+    ws5["A2"].font = Font(italic=True, size=9, color="64748B")
+    ws5.append([])
+    cols5 = ["Boisson", "Exercice", "Base versee a la main (L)", "dont verre (L)",
+             "dont cocktails (L)", "Taux des sources", "Plafond de stock",
+             "Sur-versement aux taux des sources (L)", "Plafond (ecart, L)",
+             "Sur-versement retenu apres plafonnement (L)", "Retranche (L)",
+             "Achats factures 3 exercices (L)", "Ecart 3 exercices (L)",
+             "Sur-versement 3 exercices (L)", "Compatible sur 3 exercices"]
+    entetes(ws5, cols5, 4)
+    for x in res["variantes"]["lignes_incompatibles"]:
+        ws5.append([x["boisson"], x["exercice"], x["base_main_l"], x["verre_l"],
+                    x["cocktails_l"], f"{fr(x['taux_retenu'] * 100, 1)} %",
+                    f"{fr(x['taux_max'] * 100, 1)} %", x["retenu_l"], x["ecart_l"],
+                    x["plafonne_l"], x["retranche_l"], x["cumul_achats_l"],
+                    x["cumul_ecart_l"], x["cumul_retenu_l"],
+                    "oui" if x["compatible_sur_3_exercices"] else "NON"])
+        ligne_bordee(ws5, 3)
+    v = res["variantes"]
+    ws5.append([])
+    ws5.append([f"{len(v['lignes_incompatibles'])} lignes plafonnees sur "
+                f"{v['lignes_bornees']} lignes bornees par le stock ; "
+                f"total retranche : {fr(v['retenu_l'] - v['plafonne_stock_l'], 2)} L ; "
+                f"sur-versement retenu apres plafonnement : "
+                f"{fr(v['plafonne_stock_l'], 2)} L."])
+    ws5.cell(row=ws5.max_row, column=1).font = Font(bold=True)
+    ws5.append([])
+    ws5.append(["Boissons sans achat facture connu sur les trois exercices "
+                "(le bilan matiere ne les borne pas) :"])
+    ws5.cell(row=ws5.max_row, column=1).font = Font(bold=True)
+    for x in v["boissons_achats_incomplets"]:
+        ws5.append([x["boisson"], "", "", "", "", "", "", x["retenu_l"]])
+        ligne_bordee(ws5, 3)
+    ws5.append([f"Variante prudente, ces boissons ramenees a zero : "
+                f"{fr(v['plafonne_stock_prudent_l'], 2)} L."])
+    ws5.cell(row=ws5.max_row, column=1).font = Font(bold=True)
+    largeurs(ws5, [30, 14, 20, 16, 18, 16, 16, 26, 18, 28, 14, 22, 20, 22, 22])
+    ws5.freeze_panes = "C5"
+
+    # ---- Feuille 5 : sources et conventions -------------------------------
     ws3 = wb.create_sheet("Sources et conventions")
     ws3.append(["Sources des taux et conventions de calcul"])
     ws3["A1"].font = Font(bold=True, size=13)

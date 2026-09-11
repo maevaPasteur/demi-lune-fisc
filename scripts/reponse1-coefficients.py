@@ -11,9 +11,10 @@ Ce script etablit, a partir des seules donnees de caisse remises au service :
      enregistres, exercice par exercice (annexes D, controle sur les annexes C) ;
   2. le chiffre d'affaires reconstitue par le service et la part qui provient de
      l'extrapolation cuisine (bras de levier du coefficient) ;
-  3. le coefficient sur achat revendu, par exercice et globalise, puis les DEUX
-     manieres de lui appliquer un taux de perte de 15 % : sur le resultat (methode
-     du service, p. 59 et 93) ou sur la matiere (le denominateur).
+  3. le coefficient sur achat revendu, par exercice et globalise, puis le passage
+     au coefficient rapporte a la TOTALITE des achats : le calcul du service
+     (3,85 x (1-0,15) = 3,2725, p. 59 et 93, qui suppose 85 % des achats revendus)
+     et le meme calcul avec la part revendue MESUREE (61,82 %), qui donne 2,383251.
 
 READ-ONLY sur les sources. Sortie :
   public/documents/pieces-reponse-1/R1-coefficients-et-extrapolation.xlsx
@@ -142,7 +143,8 @@ for lib, _ in EXOS:
 
 
 # --------------------------------------------------------------------------- #
-# 4. Le coefficient sur achat revendu (3,85) et les deux corrections a 15 %.
+# 4. Le coefficient sur achat revendu (3,85) et son passage au coefficient sur
+#    la totalite des achats (calcul du service p. 59/93, puis part mesuree).
 # --------------------------------------------------------------------------- #
 BD = json.load(open(os.path.join(ROOT, "src/data/boissonsPageData.json"), encoding="utf-8"))
 SYN = BD["synthese"]
@@ -160,20 +162,18 @@ COEF_ACHATS_TOTAUX = CA_ALCOOL / ACHAT_COUT     # 2,38
 
 TAUX_SERVICE = 0.15
 
-# Methode A : celle du service (p. 59 et 93). L'abattement porte sur le RESULTAT.
-# Le denominateur (cout de l'alcool revendu) est inchange : cela revient a
-# amputer de 15 % le chiffre d'affaires encaisse.
-# Le service pose 3,85 x (1-0,15) = 3,2725 : on reprend son propre resultat.
-A_COEF = round(3.85 * (1 - TAUX_SERVICE), 4)    # 3,2725, chiffre du courrier
-A_COUT = COUT_REVENDU
-A_CA = A_COEF * A_COUT
-
-# Methode B : l'abattement porte sur la MATIERE. Si 15 % seulement des achats ne
-# sont pas revendus, alors le cout des achats effectivement revendus passe de
-# 61,8 % a 85 % des achats. Le chiffre d'affaires encaisse, lui, ne bouge pas.
-B_COUT = ACHAT_COUT * (1 - TAUX_SERVICE)
-B_CA = CA_ALCOOL
-B_COEF = B_CA / B_COUT
+# Le service (p. 59 et p. 93) pose : 3,85 x (1-0,15) = 3,2725. Cette operation
+# est exacte dans sa forme : le coefficient rapporte a la TOTALITE des achats
+# est le produit du coefficient sur achat revendu par la part des achats
+# reellement revendue. Le service suppose cette part egale a 85 % ; la cascade
+# des 10 622 L la mesure a 61,82 %. L'identite de controle, sur nos donnees :
+#     COEF_REVENDU x PART_REVENDUE = COEF_ACHATS_TOTAUX
+#     3,854864     x 0,6182452     = 2,383251
+PART_SERVICE = 1 - TAUX_SERVICE                 # 85 % supposes revendus
+A_COEF = round(3.85 * PART_SERVICE, 4)          # 3,2725, chiffre du courrier
+A_COEF_EXACT = COEF_REVENDU * PART_SERVICE      # 3,276635 sans l'arrondi a 3,85
+MES_COEF = COEF_ACHATS_TOTAUX                   # 2,383251, part revendue mesuree
+IDENTITE = COEF_REVENDU * PART_REVENDUE         # doit valoir MES_COEF
 
 # Repartition par exercice du cout de l'alcool : poids de chaque exercice dans
 # les achats d'alcool factures (FCBS). La cascade des volumes n'est etablie que
@@ -198,9 +198,11 @@ for lib, _ in EXOS:
     # Ce que devient le CA reconstitue si l'on applique a chaque exercice le
     # repere de coefficient global retenu (methode A du service, puis methode B).
     s["ca_si_A"] = A_COEF * s["matieres"]
-    s["ca_si_B"] = B_COEF * s["matieres"]
+    s["ca_si_M"] = MES_COEF * s["matieres"]
     s["exces_A"] = s["total_recon"] - s["ca_si_A"]
-    s["exces_B"] = s["total_recon"] - s["ca_si_B"]
+    s["exces_M"] = s["total_recon"] - s["ca_si_M"]
+    s["ecart_declare_M"] = s["declare"] - s["ca_si_M"]
+    s["coef_declare"] = s["declare"] / s["matieres"]
 
 
 # --------------------------------------------------------------------------- #
@@ -326,50 +328,94 @@ ws.append(["Le volume d'alcool non revendu (cascade de 10 622 L) n'est etabli qu
            "triennal."])
 
 ws.append([])
-ws.append(["Les deux facons d'appliquer un taux de perte de 15 % au coefficient de "
-           "3,85 (reponse du 04/09/2026, p. 59 et p. 93)"])
+ws.append(["Du coefficient sur achat revendu au coefficient sur la TOTALITE des "
+           "achats : le calcul du service (reponse du 04/09/2026, p. 59 et p. 93) "
+           "et le meme calcul avec la part revendue mesuree"])
 gras_ligne(ws)
-ws.append(["Methode", "Ce sur quoi porte l'abattement", "Cout retenu au denominateur",
-           "CA retenu au numerateur", "Coefficient obtenu"])
+ws.append(["Lecture", "Part des achats supposee ou mesuree revendue",
+           "Coefficient sur achat revendu", "Coefficient sur la totalite des achats "
+           "(produit des deux colonnes precedentes)",
+           "CA alcool que cela implique pour 107 924 € d'achats"])
 gras_ligne(ws)
-ws.append(["A - calcul du service : 3,85 x (1-0,15)",
-           "sur le RESULTAT : le denominateur ne bouge pas, ce qui revient a "
-           "amputer de 15 % le chiffre d'affaires encaisse",
-           A_COUT, A_CA, A_COEF])
-ws.append(["B - correction de la matiere",
-           "sur le DENOMINATEUR : si 15 % seulement des achats ne sont pas revendus, "
-           "le cout des achats revendus passe de 61,8 % a 85 % des achats ; le CA "
-           "encaisse est inchange",
-           B_COUT, B_CA, B_COEF])
-ws.append(["Ecart entre les deux methodes", "", B_COUT - A_COUT, B_CA - A_CA,
-           B_COEF - A_COEF])
+ws.append(["Service, p. 59 et 93 : 3,85 x (1-0,15) = 3,2725", PART_SERVICE, 3.85,
+           A_COEF, A_COEF * ACHAT_COUT])
+ws.append(["Le meme calcul sans l'arrondi du courrier (3,854864 au lieu de 3,85)",
+           PART_SERVICE, COEF_REVENDU, A_COEF_EXACT, A_COEF_EXACT * ACHAT_COUT])
+ws.append(["Part revendue MESUREE (cascade des 10 622 L : 6 567 L revendus)",
+           PART_REVENDUE, COEF_REVENDU, MES_COEF, MES_COEF * ACHAT_COUT])
+ws.append(["Ecart entre le repere du service et la mesure", PART_SERVICE - PART_REVENDUE,
+           "", A_COEF - MES_COEF, (A_COEF - MES_COEF) * ACHAT_COUT])
 gras_ligne(ws)
-for r in range(ws.max_row - 2, ws.max_row + 1):
+for r in range(ws.max_row - 3, ws.max_row + 1):
+    ws.cell(row=r, column=2).number_format = PCT
     for c in (3, 4):
-        ws.cell(row=r, column=c).number_format = EURO
-    ws.cell(row=r, column=5).number_format = NB3
+        ws.cell(row=r, column=c).number_format = NB3
+    ws.cell(row=r, column=5).number_format = EURO
+
+ws.append([])
+ws.append(["Controle d'identite : le coefficient sur la totalite des achats est, par "
+           "construction, le produit du coefficient sur achat revendu par la part des "
+           "achats effectivement revendue. Sur les donnees mesurees : %.6f x %.7f = "
+           "%.6f, soit exactement le coefficient sur la totalite des achats de la "
+           "ligne GLOBALISE ci-dessus (%.6f). L'operation du service, 3,85 x (1-0,15), "
+           "est donc exacte dans sa FORME : elle applique la meme identite avec une "
+           "part revendue de 85 %%. Tout l'ecart entre 3,2725 et 2,383251 tient a "
+           "cette part supposee, non a l'arithmetique."
+           % (COEF_REVENDU, PART_REVENDUE, IDENTITE, COEF_ACHATS_TOTAUX)])
 
 # ---- 4. Confrontation aux coefficients reconstitues ------------------------ #
 ws = wb.create_sheet("4 Confrontation")
 entete(ws, ["Exercice", "Cout des matieres (proposition p. 34-35)",
-            "CA reconstitue par le service", "Coefficient reconstitue",
-            "Repere methode A (3,2725)", "CA correspondant au repere A",
-            "Exces du CA reconstitue sur le repere A", "Repere methode B",
-            "CA correspondant au repere B", "Exces du CA reconstitue sur le repere B"],
-       [13, 20, 18, 16, 15, 18, 20, 15, 18, 20])
+            "CA declare", "CA reconstitue par le service",
+            "Coefficient declare", "Coefficient reconstitue",
+            "Repere du service (3,2725 : part revendue supposee de 85 %)",
+            "CA correspondant au repere du service",
+            "Ecart du CA reconstitue au repere du service",
+            "Repere mesure (2,383251 : part revendue mesuree de 61,82 %)",
+            "CA correspondant au repere mesure",
+            "Ecart du CA reconstitue au repere mesure",
+            "Ecart du CA declare au repere mesure"],
+       [13, 20, 15, 18, 14, 14, 18, 18, 18, 18, 18, 18, 18])
 for lib, _ in EXOS:
     s = SERVICE[lib]
-    ws.append([lib, s["matieres"], s["total_recon"], s["coef_recon"], A_COEF,
-               s["ca_si_A"], s["exces_A"], B_COEF, s["ca_si_B"], s["exces_B"]])
-ws.append(["TOTAL 3 ans", sum(SERVICE[l]["matieres"] for l, _ in EXOS),
-           T["total_recon"], "", A_COEF,
+    ws.append([lib, s["matieres"], s["declare"], s["total_recon"], s["coef_declare"],
+               s["coef_recon"], A_COEF, s["ca_si_A"], s["exces_A"], MES_COEF,
+               s["ca_si_M"], s["exces_M"], s["ecart_declare_M"]])
+TM = sum(SERVICE[l]["matieres"] for l, _ in EXOS)
+ws.append(["TOTAL 3 ans", TM, T["declare"], T["total_recon"], T["declare"] / TM,
+           T["total_recon"] / TM, A_COEF,
            sum(SERVICE[l]["ca_si_A"] for l, _ in EXOS),
-           sum(SERVICE[l]["exces_A"] for l, _ in EXOS), B_COEF,
-           sum(SERVICE[l]["ca_si_B"] for l, _ in EXOS),
-           sum(SERVICE[l]["exces_B"] for l, _ in EXOS)])
+           sum(SERVICE[l]["exces_A"] for l, _ in EXOS), MES_COEF,
+           sum(SERVICE[l]["ca_si_M"] for l, _ in EXOS),
+           sum(SERVICE[l]["exces_M"] for l, _ in EXOS),
+           sum(SERVICE[l]["ecart_declare_M"] for l, _ in EXOS)])
 gras_ligne(ws)
-fmt(ws, [2, 3, 6, 7, 9, 10], EURO)
-fmt(ws, [4, 5, 8], NB3)
+fmt(ws, [2, 3, 4, 8, 9, 11, 12, 13], EURO)
+fmt(ws, [5, 6, 7, 10], NB3)
+
+ws.append([])
+ws.append(["Lecture. Colonnes 7 a 9 : le test de la page 93 tel que le service le pose. "
+           "Globalement, le CA reconstitue est INFERIEUR de %d € a son propre repere : "
+           "sur ce point precis, le courrier n'est pas pris en defaut, et la societe en "
+           "convient. Le test n'est cependant pas reussi partout : sur 2022-2023, le CA "
+           "reconstitue depasse le repere de %d €. Colonnes 10 a 13 : le meme test, la "
+           "seule part revendue supposee (85 %%) etant remplacee par la part mesuree "
+           "(61,82 %%). Le CA declare se situe alors a %d € du repere, soit %.1f %% ; le "
+           "CA reconstitue le depasse de %d €, soit %.1f %%."
+           % (abs(sum(SERVICE[l]["exces_A"] for l, _ in EXOS)),
+              SERVICE["2022-2023"]["exces_A"],
+              sum(SERVICE[l]["ecart_declare_M"] for l, _ in EXOS),
+              sum(SERVICE[l]["ecart_declare_M"] for l, _ in EXOS)
+              / sum(SERVICE[l]["ca_si_M"] for l, _ in EXOS) * 100,
+              sum(SERVICE[l]["exces_M"] for l, _ in EXOS),
+              sum(SERVICE[l]["exces_M"] for l, _ in EXOS)
+              / sum(SERVICE[l]["ca_si_M"] for l, _ in EXOS) * 100)])
+ws.append(["Reserve de perimetre : le repere de la colonne 7 comme celui de la colonne 10 "
+           "sont tires de l'ALCOOL seul (CA alcool TVA 20 % rapporte aux achats d'alcool), "
+           "alors que les coefficients des colonnes 5 et 6 portent sur la TOTALITE des "
+           "matieres, boisson et nourriture confondues. La confrontation est reprise ici "
+           "telle que le service la construit page 93 ; elle suppose, sans le demontrer, "
+           "que la nourriture supporte le meme coefficient que l'alcool."])
 
 # ---- 5. Sources ------------------------------------------------------------ #
 ws = wb.create_sheet("5 Sources")
@@ -415,12 +461,17 @@ print("Cuisine reelle 3 ans : %.0f | extrapolee : %.0f | fantome : %.0f (%.1f %%
          T["cuisine_fantome"] / T["discordance"] * 100, T["discordance"]))
 print("Coefficient sur achat revendu globalise : %.4f" % COEF_REVENDU)
 print("Coefficient sur la totalite des achats d'alcool : %.4f" % COEF_ACHATS_TOTAUX)
-print("Methode A (service) : %.4f   Methode B (matiere) : %.4f   ecart %.4f"
-      % (A_COEF, B_COEF, A_COEF - B_COEF))
+print("Identite de controle : %.6f x %.7f = %.6f  (coef sur la totalite des achats %.6f)"
+      % (COEF_REVENDU, PART_REVENDUE, IDENTITE, COEF_ACHATS_TOTAUX))
+print("Repere du service (85 %% revendus) : %.4f   Repere mesure (%.2f %% revendus) : %.6f"
+      % (A_COEF, PART_REVENDUE * 100, MES_COEF))
 for lib, _ in EXOS:
     s = SERVICE[lib]
-    print("  %s exces/repere A %+9.0f €   exces/repere B %+9.0f €"
-          % (lib, s["exces_A"], s["exces_B"]))
-print("Exces sur repere A : %.0f €   sur repere B : %.0f €"
+    print("  %s  ecart recon/repere service %+9.0f €   ecart recon/repere mesure %+9.0f €"
+          "   ecart declare/repere mesure %+9.0f €"
+          % (lib, s["exces_A"], s["exces_M"], s["ecart_declare_M"]))
+print("Total : recon/repere service %+.0f €   recon/repere mesure %+.0f €   "
+      "declare/repere mesure %+.0f €"
       % (sum(SERVICE[l]["exces_A"] for l, _ in EXOS),
-         sum(SERVICE[l]["exces_B"] for l, _ in EXOS)))
+         sum(SERVICE[l]["exces_M"] for l, _ in EXOS),
+         sum(SERVICE[l]["ecart_declare_M"] for l, _ in EXOS)))

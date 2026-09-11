@@ -1,693 +1,693 @@
 {
-  "meta": {
-    "slug": "factures-sans-detail",
-    "source": "Réponse DDFiP 39 du 04/09/2026, p. 18 à 20",
-    "lettre": "B",
-    "titreCourrier": "B- LES FACTURES SANS DETAIL (Menus à Prix personnalisé)"
+ "meta": {
+  "slug": "factures-sans-detail",
+  "source": "Réponse DDFiP 39 du 04/09/2026, p. 18 à 20",
+  "lettre": "B",
+  "titreCourrier": "B- LES FACTURES SANS DETAIL (Menus à Prix personnalisé)"
+ },
+ "entete": {
+  "positionService": "Le service admet qu’il « soit possible que la société puisse proposer des menus à prix personnalisé », mais juge l’argument « tardif » : il n’a jamais été évoqué lors des nombreux échanges intervenus sur place avec les dirigeants, notamment sur les prix. Il oppose ensuite les obligations d’archivage du BOI-TVA-DECLA-30-10-30, qu’il cite in extenso (périodicité au maximum annuelle, date certaine, intégrité, format ouvert, notice en français, traçabilité de la purge). Il constate enfin qu’un numéro d’identification unique existe bien dans les fichiers reglement.xls, ticket ligne.xls, ticket.xls et tva.xls, mais qu’il est différent dans tpvevenement.xls, ce qui le prive d’une traçabilité certaine des suppressions. Il en conclut que le motif de rejet de comptabilité « apparait comme parfaitement valable ».",
+  "reponseCourte": "Le service concède le principe des menus à prix personnalisé, puis répond sur l’archivage et sur un identifiant qui existe : il ne discute aucun des cinq tableaux de prix par période, qui établissent 594 menus facturés au forfait sur 10 098, tous encaissés et déclarés.",
+  "enjeu": "Motif n° 2 du rejet de comptabilité : les factures sans détail",
+  "statut": "demonte"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que soutient l’administration",
+   "sousTitre": "Partie « B- LES FACTURES SANS DETAIL (Menus à Prix personnalisé) », p. 18 à 20 du courrier du 04/09/2026"
   },
-  "entete": {
-    "positionService": "Le service admet qu’il « soit possible que la société puisse proposer des menus à prix personnalisé », mais juge l’argument « tardif » : il n’a jamais été évoqué lors des nombreux échanges intervenus sur place avec les dirigeants, notamment sur les prix. Il oppose ensuite les obligations d’archivage du BOI-TVA-DECLA-30-10-30, qu’il cite in extenso (périodicité au maximum annuelle, date certaine, intégrité, format ouvert, notice en français, traçabilité de la purge). Il constate enfin qu’un numéro d’identification unique existe bien dans les fichiers reglement.xls, ticket ligne.xls, ticket.xls et tva.xls, mais qu’il est différent dans tpvevenement.xls, ce qui le prive d’une traçabilité certaine des suppressions. Il en conclut que le motif de rejet de comptabilité « apparait comme parfaitement valable ».",
-    "reponseCourte": "Le service concède le principe des menus à prix personnalisé, puis répond sur l’archivage et sur un identifiant qui existe : il ne discute aucun des cinq tableaux de prix par période, qui établissent 594 menus facturés au forfait sur 10 098, tous encaissés et déclarés.",
-    "enjeu": "Motif n° 2 du rejet de comptabilité : les factures sans détail",
-    "statut": "demonte"
+  {
+   "kind": "titre",
+   "numero": "1.1",
+   "texte": "Ce que le service retient de la réponse de Maître THIVEND"
   },
-  "sections": [
+  {
+   "kind": "paragraphe",
+   "texte": "Le service ouvre la partie B en constatant que « la réponse de Maître THIVEND aborde ensuite la question des menus à prix personnalisé » et que, « pour appuyer ses explications, plusieurs tableaux, se rapportant à différentes périodes (P1 / P2 / P3 / P4 /P5) sont joints. Ces derniers détaillent, par menu, les quantités (catalogue ou hors catalogue) » (p. 18)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il reproduit ensuite, sans les discuter à ce stade, trois encadrés de la réponse : celui rappelant que **« les règles légales imposent de tracer les corrections (donc d’enregistrer des lignes d’annulation) »** au visa de l’article 286-I-3° bis du CGI et du BOI-TVA-DECLA-30-10-30 § 90 (à jour au 01/10/2025), pour qui « les corrections (modifications ou annulations) s’effectuent par des opérations de \"plus\" et de \"moins\" et non par modification directe des données d’origine » ; celui décrivant **le profil des corrections** (85,3 % en rafale, 57,8 % portant sur 10 € ou moins, 0 la nuit, 96,6 % pendant le service, suppression médiane de 9 €) ; celui soutenant qu’**« en droit fiscal, la seule présence d’annulations ne prouve pas une dissimulation »** (p. 18). Il note que la réponse fournit « divers graphiques pour montrer que ces suppressions ont lieu pendant les horaires de services » et « divers fichiers, joints en clé USB »."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il reprend enfin la conclusion de Maître THIVEND (p. 19) : « Chaque suppression a sa cause, aucune n’est une vente effacée. Les suppressions sont identifiées et justifiées : les 4 grosses (32,0 % du montant) sont des fautes de frappe sur la quantité ; les factures sans détail correspondent à 594 menus au forfait (21 433 €, dont le Menu Demi Lune) ; les paiements séparés (re-saisie sur une note jumelle) et les corrections de saisie (petites, en service, tracées comme la loi l’exige) couvrent le reste. »"
+  },
+  {
+   "kind": "kpis",
+   "items": [
     {
-      "kind": "chapitre",
-      "source": "fisc",
-      "numero": 1,
-      "titre": "Ce que soutient l’administration",
-      "sousTitre": "Partie « B- LES FACTURES SANS DETAIL (Menus à Prix personnalisé) », p. 18 à 20 du courrier du 04/09/2026"
+     "label": "Menus au forfait",
+     "valeur": "594",
+     "sub": "Les factures sans détail, selon la conclusion de Maître THIVEND reproduite p. 19",
+     "highlight": true,
+     "couleur": "blue"
     },
     {
-      "kind": "titre",
-      "numero": "1.1",
-      "texte": "Ce que le service retient de la réponse de Maître THIVEND"
+     "label": "Montant correspondant",
+     "valeur": "21 433 €",
+     "sub": "« dont le Menu Demi Lune » (p. 19)",
+     "couleur": "blue"
     },
     {
-      "kind": "paragraphe",
-      "texte": "Le service ouvre la partie B en constatant que « la réponse de Maître THIVEND aborde ensuite la question des menus à prix personnalisé » et que, « pour appuyer ses explications, plusieurs tableaux, se rapportant à différentes périodes (P1 / P2 / P3 / P4 /P5) sont joints. Ces derniers détaillent, par menu, les quantités (catalogue ou hors catalogue) » (p. 18)."
+     "label": "4 grosses suppressions",
+     "valeur": "32,0 %",
+     "sub": "Part du montant, imputée à des fautes de frappe sur la quantité (p. 19)",
+     "couleur": "gold"
     },
     {
-      "kind": "paragraphe",
-      "texte": "Il reproduit ensuite, sans les discuter à ce stade, trois encadrés de la réponse : celui rappelant que **« les règles légales imposent de tracer les corrections (donc d’enregistrer des lignes d’annulation) »** au visa de l’article 286-I-3° bis du CGI et du BOI-TVA-DECLA-30-10-30 § 90 (à jour au 01/10/2025), pour qui « les corrections (modifications ou annulations) s’effectuent par des opérations de \"plus\" et de \"moins\" et non par modification directe des données d’origine » ; celui décrivant **le profil des corrections** (85,3 % en rafale, 57,8 % portant sur 10 € ou moins, 0 la nuit, 96,6 % pendant le service, suppression médiane de 9 €) ; celui soutenant qu’**« en droit fiscal, la seule présence d’annulations ne prouve pas une dissimulation »** (p. 18). Il note que la réponse fournit « divers graphiques pour montrer que ces suppressions ont lieu pendant les horaires de services » et « divers fichiers, joints en clé USB »."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Il reprend enfin la conclusion de Maître THIVEND (p. 19) : « Chaque suppression a sa cause, aucune n’est une vente effacée. Les suppressions sont identifiées et justifiées : les 4 grosses (32,0 % du montant) sont des fautes de frappe sur la quantité ; les factures sans détail correspondent à 594 menus au forfait (21 433 €, dont le Menu Demi Lune) ; les paiements séparés (re-saisie sur une note jumelle) et les corrections de saisie (petites, en service, tracées comme la loi l’exige) couvrent le reste. »"
-    },
-    {
-      "kind": "kpis",
-      "items": [
-        {
-          "label": "Menus au forfait",
-          "valeur": "594",
-          "sub": "Les factures sans détail, selon la conclusion de Maître THIVEND reproduite p. 19",
-          "highlight": true,
-          "couleur": "blue"
-        },
-        {
-          "label": "Montant correspondant",
-          "valeur": "21 433 €",
-          "sub": "« dont le Menu Demi Lune » (p. 19)",
-          "couleur": "blue"
-        },
-        {
-          "label": "4 grosses suppressions",
-          "valeur": "32,0 %",
-          "sub": "Part du montant, imputée à des fautes de frappe sur la quantité (p. 19)",
-          "couleur": "gold"
-        },
-        {
-          "label": "Suppressions pendant le service",
-          "valeur": "96,6 %",
-          "sub": "Profil des corrections rappelé p. 18, écarté par le service p. 20",
-          "couleur": "gold"
-        }
-      ]
-    },
-    {
-      "kind": "titre",
-      "numero": "1.2",
-      "texte": "Un argument jugé « tardif »"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La réponse du service commence par une concession : « Le service entend qu’il soit possible que la société puisse proposer des menus à prix personnalisé » (p. 19). Elle est immédiatement retirée sur le terrain de la chronologie : « Toutefois, malgré les nombreux échanges intervenus sur place avec les dirigeants, notamment sur les prix, jamais cette possibilité n’a été évoquée. L’absence de cet argument lorsque les dirigeants ont défendu leur position paraît surprenant pour le service » (p. 19)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service n’en tire cependant pas un rejet de principe : « Toutefois, même si le service retenait à présent, cet argument tardif, cette position amène des interrogations légitimes que la réponse ne semble pas aborder » (p. 19). C’est à ce titre qu’il enchaîne sur l’archivage et la traçabilité, et non sur le contenu même des menus à prix personnalisé."
-    },
-    {
-      "kind": "titre",
-      "numero": "1.3",
-      "texte": "Le BOI-TVA-DECLA-30-10-30 cité in extenso sur l’archivage"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service introduit sa citation ainsi : « Tout d’abord (conformément au **BOI-TVA-DECLA-30-10-30** (Date de début de publication du BOI : **19/05/2021** - Date de fin de publication du BOI : **16/04/2025**) » (p. 19). Suivent, en italique et pour partie soulignés, six blocs de doctrine reproduits mot à mot."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Périodicité et date certaine** (passage souligné par le service) : « Le logiciel ou le système de caisse doit permettre d’archiver les données enregistrées selon une périodicité choisie, au maximum annuelle ou par exercice. La procédure d’archivage a pour objet de figer les données et de donner date certaine aux données archivées. » (p. 19)"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Intégrité et purge** : « Elle doit prévoir un dispositif technique garantissant l’intégrité dans le temps des archives produites et leur conformité aux données initiales à partir desquelles elles sont créées. Les archives peuvent être conservées dans le logiciel ou système lui-même ou en dehors du logiciel ou système lorsqu’il existe une procédure de purge. » (p. 19)"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Archivage n’est pas sauvegarde** : « L’obligation d’archivage ne doit pas être confondue avec une solution de sauvegarde des données présentes dans le logiciel ou système de caisse. Ces sauvegardes sont entendues comme une copie des données toujours présentes sur la caisse pour permettre la reprise technique en cas de panne de la caisse. » (p. 19)"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Lecture par l’administration, format ouvert, notice en français** : « Les archives doivent pouvoir être lues aisément par l’administration en cas de contrôle, y compris lorsque l’entreprise a changé de logiciel ou de système de caisse. A cette fin, les données d’archivage doivent être enregistrées dans un format ouvert. Une notice explicative en langue française doit être jointe au contenu de l’archive. » (p. 19)"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Sécurisation admise, mais lecture sans contrainte** : « Il est admis que les données d’archivage soient enregistrées de manière sécurisée, mais l’administration doit être en mesure de lire les données sans contrainte particulière (mise à sa disposition d’une clef de déchiffrement par l’éditeur par exemple...). » (p. 19)"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Traçabilité de la génération des archives et de la purge** : « Le logiciel ou système doit prévoir une traçabilité de la génération des données d’archives, selon un procédé fiable. Les données de traçabilité de la procédure de purge et d’archivage doivent être conservées. » (p. 19)"
-    },
-    {
-      "kind": "titre",
-      "numero": "1.4",
-      "texte": "Le numéro d’identification unique : quatre fichiers sur cinq"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service qualifie d’abord les pièces reçues : « Les données de caisse qui ont été fournies le 13 Mars 2026 sont des fichiers EXCEL qui indiquent jour après jour, des numéros de note pour les tables qui auraient été utilisées » (p. 20). Il admet ensuite l’existence de l’identifiant : « Il existe bien un numéro d’identification UNIQUE pour chaque note, et dans une colonne spécifique, un « numéro d’identification » mais seulement pour les fichiers » qu’il énumère (p. 20)."
-    },
-    {
-      "kind": "tableau",
-      "titre": "La ventilation faite par le service (p. 20)",
-      "minWidth": 620,
-      "colonnes": [
-        {
-          "label": "Fichier EXCEL transmis le 13 mars 2026"
-        },
-        {
-          "label": "Numéro d’identification unique en colonne spécifique"
-        },
-        {
-          "label": "Conséquence tirée par le service"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "20220401' AND '20250331 reglement.xls"
-          },
-          {
-            "v": "Présent",
-            "badge": "ok"
-          },
-          {
-            "v": "Aucune réserve exprimée"
-          }
-        ],
-        [
-          {
-            "v": "20220401' AND '20250331 ticket ligne.xls"
-          },
-          {
-            "v": "Présent",
-            "badge": "ok"
-          },
-          {
-            "v": "Aucune réserve exprimée"
-          }
-        ],
-        [
-          {
-            "v": "20220401' AND '20250331 ticket.xls"
-          },
-          {
-            "v": "Présent",
-            "badge": "ok"
-          },
-          {
-            "v": "Aucune réserve exprimée"
-          }
-        ],
-        [
-          {
-            "v": "20220401' AND '20250331 tva.xls"
-          },
-          {
-            "v": "Présent",
-            "badge": "ok"
-          },
-          {
-            "v": "Aucune réserve exprimée"
-          }
-        ],
-        [
-          {
-            "v": "20220401' AND '20250331 tpvevenement.xls"
-          },
-          {
-            "v": "Numéro différent",
-            "badge": "ko"
-          },
-          {
-            "v": "Pas de « traçabilité certaine » pour les suppressions de ce fichier"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le constat central est souligné dans le courrier : « En revanche, ce numéro est différent dans le fichier « 20220401' AND '20250331 tpvevenement.xls ». Cette différence empêche donc le service de pouvoir disposer d’une traçabilité certaine pour les suppressions apparaissant dans le fichier 20220401' AND '20250331 tpvevenement.xls. » (p. 20)"
-    },
-    {
-      "kind": "titre",
-      "numero": "1.5",
-      "texte": "Les arguments de la réponse que le service écarte"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Le moment des suppressions** : « Que les suppressions interviennent pendant le service ne change rien à cette absence de traçabilité » (p. 20). Le service refuse donc de voir dans le profil horaire (96,6 % pendant le service, 0 la nuit) une réponse au grief."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Le raisonnement sur la périodicité** : « De plus, que Maître THIVEND puisse estimer que cette périodicité de suppression signifierait qu’il ne puisse pas y avoir de dissimulations de recettes parce que, à son sens, s’il y en avait, ces suppressions devraient intervenir en fin de service ou de journée, n’est pas de nature à pouvoir justifier une quelconque absence de dissimulations de recettes » (p. 20)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Le renvoi à la journée du 9 septembre 2022** : « Enfin, contrairement à ce qu’affirme Maître THIVEND, et surtout comme le montre, en partie précédente, l’analyse de la journée du 09 septembre 2022 sur les suppressions, la réponse n’apporte aucune justification sur la disparition des lignes « DEL » du fichier tpevenement.xls, du fichier « 20220401' AND '20250331 ticket ligne.xls » » (p. 20). Le service généralise ensuite : « De plus, l’absence de toute traçabilité est démontrée de par l’absence d’identification UNIQUE entre tous les fichiers EXCEL transmis » (p. 20)."
-    },
-    {
-      "kind": "titre",
-      "numero": "1.6",
-      "texte": "La conclusion du service"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La partie B se termine par un paragraphe entièrement souligné : « Par conséquent, le motif de rejet de comptabilité présenté par le service apparait comme parfaitement valable à la lumière de ces explications peu pertinentes et surtout totalement superficielles, compte tenu de l’impossibilité effective de rapprochement des différentes données en raison du non respect des règles relatives à l’archivage des données. » (p. 20)"
-    },
-    {
-      "kind": "alerte",
-      "couleur": "red",
-      "titre": "Le grief a changé de terrain",
-      "texte": "Ouverte sur les factures sans détail et les menus à prix personnalisé, la partie B se referme sur l’archivage et sur l’identifiant du fichier tpvevenement.xls. Le service ne dit à aucun moment que les 594 menus au forfait (21 433 €) n’existent pas : il soutient qu’il ne peut pas les rapprocher des autres fichiers."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 2,
-      "titre": "Notre réponse : la question posée n’a pas reçu de réponse",
-      "sousTitre": "Le service admet le principe des menus à prix personnalisé, puis traite de l’archivage et d’un identifiant qui existe. Les cinq tableaux de prix par période ne sont discutés nulle part."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.1",
-      "texte": "Un moyen produit dans le délai de réponse n’est pas un moyen tardif"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service qualifie de « tardif » (p. 19) un moyen présenté dans les observations du contribuable. C’est l’objet même de la procédure contradictoire. L’article L. 57 du livre des procédures fiscales impose à l’administration d’adresser « une proposition de rectification motivée lui permettant de formuler ses observations ou son acceptation » ([LPF, art. L. 57](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022177777)), et l’article R.* 57-1 précise que l’administration « invite, en même temps, le contribuable à faire parvenir son acceptation ou ses observations dans un délai de trente jours à compter de la réception de la proposition » ([LPF, art. R.* 57-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019271343)). Le mémoire du 10 juillet 2026 a été déposé dans ce délai."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Aucun texte n’enferme les moyens de fait du contribuable dans le débat oral qui précède la proposition de rectification. L’article L. 199 C du même livre autorise au contraire l’administration comme le contribuable à « faire valoir tout moyen nouveau, tant devant le tribunal administratif que devant la cour administrative d’appel, jusqu’à la clôture de l’instruction » ([LPF, art. L. 199 C](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006316009)). Un moyen nouveau étant recevable devant le juge de l’impôt, il l’est a fortiori au stade des observations, qui est le premier moment où le contribuable dispose des motifs écrits des rectifications."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service n’indique du reste ni la date, ni la teneur de la question qui aurait été posée aux dirigeants sur les prix négociés des menus de groupe, et ne renvoie à aucun compte rendu d’entrevue. Surtout, la qualification de « tardif » ne dispense pas de l’examen : le dernier alinéa de l’article L. 57 dispose que « lorsque l’administration rejette les observations du contribuable sa réponse doit également être motivée ». Le service l’admet implicitement puisqu’il déclare retenir l’argument (p. 19), avant de ne jamais le discuter."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.2",
-      "texte": "Le motif du rejet était les factures sans détail : la réponse porte sur l’archivage"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La partie B s’ouvre sur les menus à prix personnalisé et sur les « plusieurs tableaux, se rapportant à différentes périodes (P1 / P2 / P3 / P4 /P5) » qui « détaillent, par menu, les quantités (catalogue ou hors catalogue) » (p. 18). Elle se referme, deux pages plus loin, sur « l’impossibilité effective de rapprochement des différentes données en raison du non respect des règles relatives à l’archivage des données » (p. 20). Entre les deux, pas une ligne sur les tableaux annoncés."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Ce que la réponse du 04/09/2026 traite, et ce qu’elle laisse de côté",
-      "minWidth": 720,
-      "colonnes": [
-        {
-          "label": "Question soulevée par le motif B"
-        },
-        {
-          "label": "Réponse du service (p. 19 et 20)"
-        },
-        {
-          "label": "Traité ?"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "Le restaurant peut-il facturer un menu à un prix négocié ?"
-          },
-          {
-            "v": "« Le service entend qu’il soit possible que la société puisse proposer des menus à prix personnalisé » (p. 19)"
-          },
-          {
-            "v": "Admis",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "Les cinq tableaux de prix par période (P1 à P5) sont-ils exacts ?"
-          },
-          {
-            "v": "Aucune mention après leur description p. 18"
-          },
-          {
-            "v": "Sans réponse",
-            "badge": "ko"
-          }
-        ],
-        [
-          {
-            "v": "Les 594 menus facturés au forfait (21 433 €) sont-ils justifiés ?"
-          },
-          {
-            "v": "Aucun chiffre repris, aucun contre-calcul"
-          },
-          {
-            "v": "Sans réponse",
-            "badge": "ko"
-          }
-        ],
-        [
-          {
-            "v": "La recette correspondante a-t-elle été encaissée et déclarée ?"
-          },
-          {
-            "v": "Non examinée"
-          },
-          {
-            "v": "Sans réponse",
-            "badge": "ko"
-          }
-        ],
-        [
-          {
-            "v": "Ce que le service traite à la place"
-          },
-          {
-            "v": "L’archivage (BOI-TVA-DECLA-30-10-30) et le numéro d’identification du fichier tpvevenement.xls"
-          },
-          {
-            "v": "Autre grief",
-            "badge": "ko"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le déplacement n’est pas anodin : il fait reposer la validité du motif B sur un fait (la traçabilité des fichiers) qui constitue déjà, dans la même proposition de rectification, un motif distinct. Un même reproche ne peut pas fonder deux motifs de rejet, et le motif « factures sans détail » reste, lui, sans démonstration."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.3",
-      "texte": "La preuve positive existe, période par période, et n’est pas contestée"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les prix des menus ne sont pas instables : ils changent avec la carte, et l’immense majorité des menus est vendue au prix affiché. Sur les trois exercices vérifiés, 9 504 menus ont été vendus au prix catalogue et 594 à un prix négocié, soit 5,9 % des menus, pour 21 433 € sur 255 059 € de menus encaissés. Le détail figure dans la pièce jointe, prix par prix."
-    },
-    {
-      "kind": "kpis",
-      "items": [
-        {
-          "label": "Menus vendus au prix catalogue",
-          "valeur": "9 504",
-          "sub": "sur 10 098 menus vendus, soit 94,1 %",
-          "highlight": true,
-          "couleur": "teal"
-        },
-        {
-          "label": "Menus facturés au forfait",
-          "valeur": "594",
-          "sub": "5,9 % des menus, 21 433 € encaissés",
-          "couleur": "blue"
-        },
-        {
-          "label": "Total encaissé sur les menus",
-          "valeur": "255 059 €",
-          "sub": "dont 233 627 € au prix catalogue",
-          "couleur": "blue"
-        },
-        {
-          "label": "Menu Demi Lune au forfait",
-          "valeur": "39,5 %",
-          "sub": "332 menus sur 840, 14 118 € : c’est ce menu haut de gamme qui explique l’« instabilité des prix »",
-          "couleur": "gold"
-        }
-      ]
-    },
-    {
-      "kind": "tableau",
-      "titre": "Menus vendus par période de carte : prix catalogue et prix négocié",
-      "minWidth": 760,
-      "colonnes": [
-        {
-          "label": "Période de carte"
-        },
-        {
-          "label": "Au prix catalogue",
-          "align": "right"
-        },
-        {
-          "label": "Au forfait",
-          "align": "right"
-        },
-        {
-          "label": "% au forfait",
-          "align": "right"
-        },
-        {
-          "label": "Recette au forfait",
-          "align": "right"
-        },
-        {
-          "label": "Total encaissé",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "P1, carte C (01/04/2022 au 22/07/2022)"
-          },
-          {
-            "v": "1 294",
-            "align": "right"
-          },
-          {
-            "v": "32",
-            "align": "right"
-          },
-          {
-            "v": "2,4 %",
-            "align": "right"
-          },
-          {
-            "v": "1 082 €",
-            "align": "right"
-          },
-          {
-            "v": "29 261 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "P2, carte B (23/07/2022 au 31/03/2023)"
-          },
-          {
-            "v": "1 911",
-            "align": "right"
-          },
-          {
-            "v": "46",
-            "align": "right"
-          },
-          {
-            "v": "2,4 %",
-            "align": "right"
-          },
-          {
-            "v": "1 694 €",
-            "align": "right"
-          },
-          {
-            "v": "46 425 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "P3, carte B (01/04/2023 au 16/04/2023)"
-          },
-          {
-            "v": "169",
-            "align": "right"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "0,6 %",
-            "align": "right"
-          },
-          {
-            "v": "25 €",
-            "align": "right"
-          },
-          {
-            "v": "4 177 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "P4, carte A (17/04/2023 au 31/03/2024)"
-          },
-          {
-            "v": "3 045",
-            "align": "right"
-          },
-          {
-            "v": "218",
-            "align": "right"
-          },
-          {
-            "v": "6,7 %",
-            "align": "right"
-          },
-          {
-            "v": "7 539 €",
-            "align": "right"
-          },
-          {
-            "v": "83 916 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "P5, carte A (01/04/2024 au 31/03/2025)"
-          },
-          {
-            "v": "3 085",
-            "align": "right"
-          },
-          {
-            "v": "297",
-            "align": "right"
-          },
-          {
-            "v": "8,8 %",
-            "align": "right"
-          },
-          {
-            "v": "11 092 €",
-            "align": "right"
-          },
-          {
-            "v": "91 280 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Total des trois exercices"
-          },
-          {
-            "v": "9 504",
-            "align": "right"
-          },
-          {
-            "v": "594",
-            "align": "right"
-          },
-          {
-            "v": "5,9 %",
-            "align": "right"
-          },
-          {
-            "v": "21 432 €",
-            "align": "right"
-          },
-          {
-            "v": "255 059 €",
-            "align": "right"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "note",
-      "texte": "Les recettes sont arrondies à l’euro par période : leur cumul (21 432 €) diffère de 1 € du total consolidé de 21 433 € cité p. 19. Source : caisse certifiée, annexes B et C, recalcul par scripts/reponse1-menus-prix-personnalises.py."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Facturer une tablée au forfait est une pratique commerciale licite : un groupe, un comité d’entreprise ou un repas d’événement demande un prix par convive et une facture sans le détail des plats. Le serveur supprime alors les lignes de plats et saisit le menu au prix convenu. La recette est encaissée, enregistrée sur la note, portée au ticket Z, déclarée à la TVA au taux applicable. Il n’y a ni recette dissimulée, ni écriture manquante : seulement un prix de vente différent du prix affiché, ce qu’aucun texte n’interdit."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.4",
-      "texte": "La doctrine citée ne traite pas des prix, et le service en cite une version périmée"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les six blocs reproduits pages 19 et 20 sont extraits de la section du [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html) consacrée à l’archivage (§ 220 et suivants). Ils énoncent les conditions auxquelles doit satisfaire « le logiciel ou le système de caisse » : périodicité d’archivage, date certaine, format ouvert, notice, traçabilité de la purge. Ces obligations pèsent sur le produit et sur son éditeur, qui les atteste par la certification. Aucune ne porte sur le prix de vente d’un menu. Opposer ce texte à des tableaux de prix revient à répondre à côté de la question."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le même BOI énonce en outre, au § 90, que les corrections « s’effectuent par des opérations de \"plus\" et de \"moins\" et non par modification directe des données d’origine enregistrées ». Les lignes « DEL » du fichier événement sont exactement cela : la trace que la doctrine exige. Le service reproche donc à la caisse de faire ce que le texte qu’il cite lui impose de faire."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Enfin, le service cite le BOI en indiquant lui-même « Date de fin de publication du BOI : 16/04/2025 » (p. 19). Il oppose ainsi au contribuable une version qu’il sait remplacée, alors que la version publiée le 01/10/2025, celle sur laquelle s’appuyait le mémoire du 10/07/2026, était disponible, et que la version aujourd’hui en vigueur est celle du 25/03/2026. La doctrine opposable est celle en vigueur, non une version dont le service constate lui-même qu’elle a cessé d’être publiée."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.5",
-      "texte": "Un identifiant différent n’est pas un identifiant absent"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service écrit que le numéro d’identification « est différent » dans le fichier des événements (p. 20), et non qu’il y est absent. La différence s’explique sans anomalie : les deux fichiers ne décrivent pas le même objet. Le fichier des tickets numérote des notes ; le fichier des événements numérote des événements de caisse. Deux compteurs distincts pour deux réalités distinctes, chacun unique dans son fichier."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Colonnes réellement présentes dans les deux fichiers (exercice 2022-2023)",
-      "minWidth": 760,
-      "colonnes": [
-        {
-          "label": "Fichier"
-        },
-        {
-          "label": "Ce qu’il numérote"
-        },
-        {
-          "label": "Identifiant propre"
-        },
-        {
-          "label": "Colonnes de rapprochement"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "tpvevenement.xls (ANNEXE E)"
-          },
-          {
-            "v": "Chaque événement de caisse (DEL, RPR, CON, TIR)"
-          },
-          {
-            "v": "Colonne « id », une valeur par événement"
-          },
-          {
-            "v": "dateEven, heureEven, no_zEport, amount"
-          }
-        ],
-        [
-          {
-            "v": "ticket ligne.xls (ANNEXE C)"
-          },
-          {
-            "v": "Chaque note, et ses lignes d’articles"
-          },
-          {
-            "v": "Colonne « Id », une valeur par note"
-          },
-          {
-            "v": "Date Ticket, Heure Ticket, No_z Report, Tot_rem Ttc"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le rapprochement que le service dit impossible a été fait. Sur les trois exercices, les 21 302 suppressions du fichier événement se rattachent toutes, sans exception, à une journée et à un numéro de ticket Z présents dans le fichier des tickets. Pour 15 991 d’entre elles (75,1 %), le montant supprimé se retrouve au centime près sur une ligne de note du même Z. Le solde correspond aux lignes qui ont précisément été déplacées ou refacturées au forfait, c’est-à-dire à l’objet du présent motif."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le fichier des événements porte d’ailleurs sa propre preuve d’intégrité : son compteur court de 36 681 à 60 019 sur les trois exercices, soit 23 339 identifiants attendus et 23 339 présents, sans un seul trou. Un journal auquel il ne manque aucun numéro n’est pas un journal dépourvu de traçabilité. Les deux constats sont vérifiables ligne à ligne dans la pièce jointe, onglet « Rapprochement DEL-tickets »."
-    },
-    {
-      "kind": "alerte",
-      "couleur": "orange",
-      "titre": "Une difficulté de lecture ne vaut pas preuve de dissimulation",
-      "texte": "Le service tire de l’impossibilité alléguée de rapprocher deux extractions que le rejet de comptabilité est « parfaitement valable » (p. 20). Le rejet suppose des irrégularités graves et répétées, établies par l’administration. Une clé de rapprochement jugée peu commode n’en est pas une, surtout lorsque le rapprochement aboutit."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 3,
-      "titre": "Ce que cela fait tomber",
-      "sousTitre": "Le motif « factures sans détail » n’est pas démontré"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service admet le principe des menus à prix personnalisé et ne conteste aucun des chiffres produits : 9 504 menus vendus au prix catalogue, 594 facturés au forfait pour 21 433 €, la totalité encaissée et déclarée. Le motif B ne repose donc plus que sur un texte relatif à l’archivage, qui ne concerne ni les prix ni le contribuable, et sur un identifiant qui existe et permet le rapprochement. Faute de démonstration au fond, ce deuxième motif ne peut fonder ni le rejet de la comptabilité, ni la reconstitution qui en découle."
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Prix catalogue, quantités vendues au prix catalogue et au forfait, total encaissé par période et par menu, liste de tous les prix négociés, et rapprochement des suppressions avec le fichier des tickets :",
-      "fichiers": [
-        {
-          "fichier": "pieces-reponse-1/R1-menus-prix-personnalises.xlsx",
-          "label": "Menus à prix personnalisé et rapprochement DEL / tickets (XLSX, 9 onglets)"
-        }
-      ]
+     "label": "Suppressions pendant le service",
+     "valeur": "96,6 %",
+     "sub": "Profil des corrections rappelé p. 18, écarté par le service p. 20",
+     "couleur": "gold"
     }
-  ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "1.2",
+   "texte": "Un argument jugé « tardif »"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La réponse du service commence par une concession : « Le service entend qu’il soit possible que la société puisse proposer des menus à prix personnalisé » (p. 19). Elle est immédiatement retirée sur le terrain de la chronologie : « Toutefois, malgré les nombreux échanges intervenus sur place avec les dirigeants, notamment sur les prix, jamais cette possibilité n’a été évoquée. L’absence de cet argument lorsque les dirigeants ont défendu leur position paraît surprenant pour le service » (p. 19)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service n’en tire cependant pas un rejet de principe : « Toutefois, même si le service retenait à présent, cet argument tardif, cette position amène des interrogations légitimes que la réponse ne semble pas aborder » (p. 19). C’est à ce titre qu’il enchaîne sur l’archivage et la traçabilité, et non sur le contenu même des menus à prix personnalisé."
+  },
+  {
+   "kind": "titre",
+   "numero": "1.3",
+   "texte": "Le BOI-TVA-DECLA-30-10-30 cité in extenso sur l’archivage"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service introduit sa citation ainsi : « Tout d’abord (conformément au **BOI-TVA-DECLA-30-10-30** (Date de début de publication du BOI : **19/05/2021** - Date de fin de publication du BOI : **16/04/2025**) » (p. 19). Suivent, en italique et pour partie soulignés, six blocs de doctrine reproduits mot à mot."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Périodicité et date certaine** (passage souligné par le service) : « Le logiciel ou le système de caisse doit permettre d’archiver les données enregistrées selon une périodicité choisie, au maximum annuelle ou par exercice. La procédure d’archivage a pour objet de figer les données et de donner date certaine aux données archivées. » (p. 19)"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Intégrité et purge** : « Elle doit prévoir un dispositif technique garantissant l’intégrité dans le temps des archives produites et leur conformité aux données initiales à partir desquelles elles sont créées. Les archives peuvent être conservées dans le logiciel ou système lui-même ou en dehors du logiciel ou système lorsqu’il existe une procédure de purge. » (p. 19)"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Archivage n’est pas sauvegarde** : « L’obligation d’archivage ne doit pas être confondue avec une solution de sauvegarde des données présentes dans le logiciel ou système de caisse. Ces sauvegardes sont entendues comme une copie des données toujours présentes sur la caisse pour permettre la reprise technique en cas de panne de la caisse. » (p. 19)"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Lecture par l’administration, format ouvert, notice en français** : « Les archives doivent pouvoir être lues aisément par l’administration en cas de contrôle, y compris lorsque l’entreprise a changé de logiciel ou de système de caisse. A cette fin, les données d’archivage doivent être enregistrées dans un format ouvert. Une notice explicative en langue française doit être jointe au contenu de l’archive. » (p. 19)"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Sécurisation admise, mais lecture sans contrainte** : « Il est admis que les données d’archivage soient enregistrées de manière sécurisée, mais l’administration doit être en mesure de lire les données sans contrainte particulière (mise à sa disposition d’une clef de déchiffrement par l’éditeur par exemple...). » (p. 19)"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Traçabilité de la génération des archives et de la purge** : « Le logiciel ou système doit prévoir une traçabilité de la génération des données d’archives, selon un procédé fiable. Les données de traçabilité de la procédure de purge et d’archivage doivent être conservées. » (p. 19)"
+  },
+  {
+   "kind": "titre",
+   "numero": "1.4",
+   "texte": "Le numéro d’identification unique : quatre fichiers sur cinq"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service qualifie d’abord les pièces reçues : « Les données de caisse qui ont été fournies le 13 Mars 2026 sont des fichiers EXCEL qui indiquent jour après jour, des numéros de note pour les tables qui auraient été utilisées » (p. 20). Il admet ensuite l’existence de l’identifiant : « Il existe bien un numéro d’identification UNIQUE pour chaque note, et dans une colonne spécifique, un « numéro d’identification » mais seulement pour les fichiers » qu’il énumère (p. 20)."
+  },
+  {
+   "kind": "tableau",
+   "titre": "La ventilation faite par le service (p. 20)",
+   "minWidth": 620,
+   "colonnes": [
+    {
+     "label": "Fichier EXCEL transmis le 13 mars 2026"
+    },
+    {
+     "label": "Numéro d’identification unique en colonne spécifique"
+    },
+    {
+     "label": "Conséquence tirée par le service"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "20220401' AND '20250331 reglement.xls"
+     },
+     {
+      "v": "Présent",
+      "badge": "ok"
+     },
+     {
+      "v": "Aucune réserve exprimée"
+     }
+    ],
+    [
+     {
+      "v": "20220401' AND '20250331 ticket ligne.xls"
+     },
+     {
+      "v": "Présent",
+      "badge": "ok"
+     },
+     {
+      "v": "Aucune réserve exprimée"
+     }
+    ],
+    [
+     {
+      "v": "20220401' AND '20250331 ticket.xls"
+     },
+     {
+      "v": "Présent",
+      "badge": "ok"
+     },
+     {
+      "v": "Aucune réserve exprimée"
+     }
+    ],
+    [
+     {
+      "v": "20220401' AND '20250331 tva.xls"
+     },
+     {
+      "v": "Présent",
+      "badge": "ok"
+     },
+     {
+      "v": "Aucune réserve exprimée"
+     }
+    ],
+    [
+     {
+      "v": "20220401' AND '20250331 tpvevenement.xls"
+     },
+     {
+      "v": "Numéro différent",
+      "badge": "ko"
+     },
+     {
+      "v": "Pas de « traçabilité certaine » pour les suppressions de ce fichier"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le constat central est souligné dans le courrier : « En revanche, ce numéro est différent dans le fichier « 20220401' AND '20250331 tpvevenement.xls ». Cette différence empêche donc le service de pouvoir disposer d’une traçabilité certaine pour les suppressions apparaissant dans le fichier 20220401' AND '20250331 tpvevenement.xls. » (p. 20)"
+  },
+  {
+   "kind": "titre",
+   "numero": "1.5",
+   "texte": "Les arguments de la réponse que le service écarte"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Le moment des suppressions** : « Que les suppressions interviennent pendant le service ne change rien à cette absence de traçabilité » (p. 20). Le service refuse donc de voir dans le profil horaire (96,6 % pendant le service, 0 la nuit) une réponse au grief."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Le raisonnement sur la périodicité** : « De plus, que Maître THIVEND puisse estimer que cette périodicité de suppression signifierait qu’il ne puisse pas y avoir de dissimulations de recettes parce que, à son sens, s’il y en avait, ces suppressions devraient intervenir en fin de service ou de journée, n’est pas de nature à pouvoir justifier une quelconque absence de dissimulations de recettes » (p. 20)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Le renvoi à la journée du 9 septembre 2022** : « Enfin, contrairement à ce qu’affirme Maître THIVEND, et surtout comme le montre, en partie précédente, l’analyse de la journée du 09 septembre 2022 sur les suppressions, la réponse n’apporte aucune justification sur la disparition des lignes « DEL » du fichier tpevenement.xls, du fichier « 20220401' AND '20250331 ticket ligne.xls » » (p. 20). Le service généralise ensuite : « De plus, l’absence de toute traçabilité est démontrée de par l’absence d’identification UNIQUE entre tous les fichiers EXCEL transmis » (p. 20)."
+  },
+  {
+   "kind": "titre",
+   "numero": "1.6",
+   "texte": "La conclusion du service"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La partie B se termine par un paragraphe entièrement souligné : « Par conséquent, le motif de rejet de comptabilité présenté par le service apparait comme parfaitement valable à la lumière de ces explications peu pertinentes et surtout totalement superficielles, compte tenu de l’impossibilité effective de rapprochement des différentes données en raison du non respect des règles relatives à l’archivage des données. » (p. 20)"
+  },
+  {
+   "kind": "alerte",
+   "couleur": "red",
+   "titre": "Le grief a changé de terrain",
+   "texte": "Ouverte sur les factures sans détail et les menus à prix personnalisé, la partie B se referme sur l’archivage et sur l’identifiant du fichier tpvevenement.xls. Le service ne dit à aucun moment que les 594 menus au forfait (21 433 €) n’existent pas : il soutient qu’il ne peut pas les rapprocher des autres fichiers."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse : la question posée n’a pas reçu de réponse",
+   "sousTitre": "Le service admet le principe des menus à prix personnalisé, puis traite de l’archivage et d’un identifiant qui existe. Les cinq tableaux de prix par période ne sont discutés nulle part."
+  },
+  {
+   "kind": "titre",
+   "numero": "2.1",
+   "texte": "Un moyen produit dans le délai de réponse n’est pas un moyen tardif"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service qualifie de « tardif » (p. 19) un moyen présenté dans les observations du contribuable. C’est l’objet même de la procédure contradictoire. L’article L. 57 du livre des procédures fiscales impose à l’administration d’adresser « une proposition de rectification motivée lui permettant de formuler ses observations ou son acceptation » ([LPF, art. L. 57](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022177777)), et l’article R.* 57-1 précise que l’administration « invite, en même temps, le contribuable à faire parvenir son acceptation ou ses observations dans un délai de trente jours à compter de la réception de la proposition » ([LPF, art. R.* 57-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000019271343)). Le mémoire du 10 juillet 2026 a été déposé dans ce délai."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Aucun texte n’enferme les moyens de fait du contribuable dans le débat oral qui précède la proposition de rectification. L’article L. 199 C du même livre autorise au contraire l’administration comme le contribuable à « faire valoir tout moyen nouveau, tant devant le tribunal administratif que devant la cour administrative d’appel, jusqu’à la clôture de l’instruction » ([LPF, art. L. 199 C](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006316009)). Un moyen nouveau étant recevable devant le juge de l’impôt, il l’est a fortiori au stade des observations, qui est le premier moment où le contribuable dispose des motifs écrits des rectifications."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service n’indique du reste ni la date, ni la teneur de la question qui aurait été posée aux dirigeants sur les prix négociés des menus de groupe, et ne renvoie à aucun compte rendu d’entrevue. Surtout, la qualification de « tardif » ne dispense pas de l’examen : le dernier alinéa de l’article L. 57 dispose que « lorsque l’administration rejette les observations du contribuable sa réponse doit également être motivée ». Le service l’admet implicitement puisqu’il déclare retenir l’argument (p. 19), avant de ne jamais le discuter."
+  },
+  {
+   "kind": "titre",
+   "numero": "2.2",
+   "texte": "Le motif du rejet était les factures sans détail : la réponse porte sur l’archivage"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La partie B s’ouvre sur les menus à prix personnalisé et sur les « plusieurs tableaux, se rapportant à différentes périodes (P1 / P2 / P3 / P4 /P5) » qui « détaillent, par menu, les quantités (catalogue ou hors catalogue) » (p. 18). Elle se referme, deux pages plus loin, sur « l’impossibilité effective de rapprochement des différentes données en raison du non respect des règles relatives à l’archivage des données » (p. 20). Entre les deux, pas une ligne sur les tableaux annoncés."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Ce que la réponse du 04/09/2026 traite, et ce qu’elle laisse de côté",
+   "minWidth": 720,
+   "colonnes": [
+    {
+     "label": "Question soulevée par le motif B"
+    },
+    {
+     "label": "Réponse du service (p. 19 et 20)"
+    },
+    {
+     "label": "Traité ?"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Le restaurant peut-il facturer un menu à un prix négocié ?"
+     },
+     {
+      "v": "« Le service entend qu’il soit possible que la société puisse proposer des menus à prix personnalisé » (p. 19)"
+     },
+     {
+      "v": "Admis",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Les cinq tableaux de prix par période (P1 à P5) sont-ils exacts ?"
+     },
+     {
+      "v": "Aucune mention après leur description p. 18"
+     },
+     {
+      "v": "Sans réponse",
+      "badge": "ko"
+     }
+    ],
+    [
+     {
+      "v": "Les 594 menus facturés au forfait (21 433 €) sont-ils justifiés ?"
+     },
+     {
+      "v": "Aucun chiffre repris, aucun contre-calcul"
+     },
+     {
+      "v": "Sans réponse",
+      "badge": "ko"
+     }
+    ],
+    [
+     {
+      "v": "La recette correspondante a-t-elle été encaissée et déclarée ?"
+     },
+     {
+      "v": "Non examinée"
+     },
+     {
+      "v": "Sans réponse",
+      "badge": "ko"
+     }
+    ],
+    [
+     {
+      "v": "Ce que le service traite à la place"
+     },
+     {
+      "v": "L’archivage (BOI-TVA-DECLA-30-10-30) et le numéro d’identification du fichier tpvevenement.xls"
+     },
+     {
+      "v": "Autre grief",
+      "badge": "ko"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le déplacement n’est pas anodin : il fait reposer la validité du motif B sur un fait (la traçabilité des fichiers) qui constitue déjà, dans la même proposition de rectification, un motif distinct. Un même reproche ne peut pas fonder deux motifs de rejet, et le motif « factures sans détail » reste, lui, sans démonstration."
+  },
+  {
+   "kind": "titre",
+   "numero": "2.3",
+   "texte": "La preuve positive existe, période par période, et n’est pas contestée"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les prix des menus ne sont pas instables : ils changent avec la carte, et l’immense majorité des menus est vendue au prix affiché. Sur les trois exercices vérifiés, 9 504 menus ont été vendus au prix catalogue et 594 à un prix négocié, soit 5,9 % des menus, pour 21 433 € sur 255 059 € de menus encaissés. Le détail figure dans la pièce jointe, prix par prix."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Menus vendus au prix catalogue",
+     "valeur": "9 504",
+     "sub": "sur 10 098 menus vendus, soit 94,1 %",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Menus facturés au forfait",
+     "valeur": "594",
+     "sub": "5,9 % des menus, 21 433 € encaissés",
+     "couleur": "blue"
+    },
+    {
+     "label": "Total encaissé sur les menus",
+     "valeur": "255 059 €",
+     "sub": "dont 233 627 € au prix catalogue",
+     "couleur": "blue"
+    },
+    {
+     "label": "Menu Demi Lune au forfait",
+     "valeur": "39,6 %",
+     "sub": "332 menus sur 839, 14 118 € : c’est ce menu haut de gamme qui explique l’« instabilité des prix »",
+     "couleur": "gold"
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Menus vendus par période de carte : prix catalogue et prix négocié",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Période de carte"
+    },
+    {
+     "label": "Au prix catalogue",
+     "align": "right"
+    },
+    {
+     "label": "Au forfait",
+     "align": "right"
+    },
+    {
+     "label": "% au forfait",
+     "align": "right"
+    },
+    {
+     "label": "Recette au forfait",
+     "align": "right"
+    },
+    {
+     "label": "Total encaissé",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "P1, carte C (01/04/2022 au 22/07/2022)"
+     },
+     {
+      "v": "1 294",
+      "align": "right"
+     },
+     {
+      "v": "32",
+      "align": "right"
+     },
+     {
+      "v": "2,4 %",
+      "align": "right"
+     },
+     {
+      "v": "1 082 €",
+      "align": "right"
+     },
+     {
+      "v": "29 261 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P2, carte B (23/07/2022 au 31/03/2023)"
+     },
+     {
+      "v": "1 911",
+      "align": "right"
+     },
+     {
+      "v": "46",
+      "align": "right"
+     },
+     {
+      "v": "2,4 %",
+      "align": "right"
+     },
+     {
+      "v": "1 694 €",
+      "align": "right"
+     },
+     {
+      "v": "46 425 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P3, carte B (01/04/2023 au 16/04/2023)"
+     },
+     {
+      "v": "169",
+      "align": "right"
+     },
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "0,6 %",
+      "align": "right"
+     },
+     {
+      "v": "25 €",
+      "align": "right"
+     },
+     {
+      "v": "4 177 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P4, carte A (17/04/2023 au 31/03/2024)"
+     },
+     {
+      "v": "3 045",
+      "align": "right"
+     },
+     {
+      "v": "218",
+      "align": "right"
+     },
+     {
+      "v": "6,7 %",
+      "align": "right"
+     },
+     {
+      "v": "7 539 €",
+      "align": "right"
+     },
+     {
+      "v": "83 916 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "P5, carte A (01/04/2024 au 31/03/2025)"
+     },
+     {
+      "v": "3 085",
+      "align": "right"
+     },
+     {
+      "v": "297",
+      "align": "right"
+     },
+     {
+      "v": "8,8 %",
+      "align": "right"
+     },
+     {
+      "v": "11 092 €",
+      "align": "right"
+     },
+     {
+      "v": "91 280 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total des trois exercices"
+     },
+     {
+      "v": "9 504",
+      "align": "right"
+     },
+     {
+      "v": "594",
+      "align": "right"
+     },
+     {
+      "v": "5,9 %",
+      "align": "right"
+     },
+     {
+      "v": "21 432 €",
+      "align": "right"
+     },
+     {
+      "v": "255 059 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Les recettes sont arrondies à l’euro par période : leur cumul (21 432 €) diffère de 1 € du total consolidé de 21 433 € cité p. 19. Source : caisse certifiée, annexes B et C, recalcul par scripts/reponse1-menus-prix-personnalises.py."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Facturer une tablée au forfait est une pratique commerciale licite : un groupe, un comité d’entreprise ou un repas d’événement demande un prix par convive et une facture sans le détail des plats. Le serveur supprime alors les lignes de plats et saisit le menu au prix convenu. La recette est encaissée, enregistrée sur la note, portée au ticket Z, déclarée à la TVA au taux applicable. Il n’y a ni recette dissimulée, ni écriture manquante : seulement un prix de vente différent du prix affiché, ce qu’aucun texte n’interdit."
+  },
+  {
+   "kind": "titre",
+   "numero": "2.4",
+   "texte": "La doctrine citée ne traite pas des prix, et le service en cite une version périmée"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les six blocs reproduits pages 19 et 20 sont extraits de la section du [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html) consacrée à l’archivage (§ 220 et suivants). Ils énoncent les conditions auxquelles doit satisfaire « le logiciel ou le système de caisse » : périodicité d’archivage, date certaine, format ouvert, notice, traçabilité de la purge. Ces obligations pèsent sur le produit et sur son éditeur, qui les atteste par la certification. Aucune ne porte sur le prix de vente d’un menu. Opposer ce texte à des tableaux de prix revient à répondre à côté de la question."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le même BOI énonce en outre, au § 90, que les corrections « s’effectuent par des opérations de \"plus\" et de \"moins\" et non par modification directe des données d’origine enregistrées ». Les lignes « DEL » du fichier événement sont exactement cela : la trace que la doctrine exige. Le service reproche donc à la caisse de faire ce que le texte qu’il cite lui impose de faire."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Enfin, le service cite le BOI en indiquant lui-même « Date de fin de publication du BOI : 16/04/2025 » (p. 19). Il oppose ainsi au contribuable une version qu’il sait remplacée, alors que la version publiée le 01/10/2025, celle sur laquelle s’appuyait le mémoire du 10/07/2026, était disponible, et que la version aujourd’hui en vigueur est celle du 25/03/2026. La doctrine opposable est celle en vigueur, non une version dont le service constate lui-même qu’elle a cessé d’être publiée."
+  },
+  {
+   "kind": "titre",
+   "numero": "2.5",
+   "texte": "Un identifiant différent n’est pas un identifiant absent"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service écrit que le numéro d’identification « est différent » dans le fichier des événements (p. 20), et non qu’il y est absent. La différence s’explique sans anomalie : les deux fichiers ne décrivent pas le même objet. Le fichier des tickets numérote des notes ; le fichier des événements numérote des événements de caisse. Deux compteurs distincts pour deux réalités distinctes, chacun unique dans son fichier."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Colonnes réellement présentes dans les deux fichiers (exercice 2022-2023)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Fichier"
+    },
+    {
+     "label": "Ce qu’il numérote"
+    },
+    {
+     "label": "Identifiant propre"
+    },
+    {
+     "label": "Colonnes de rapprochement"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "tpvevenement.xls (ANNEXE E)"
+     },
+     {
+      "v": "Chaque événement de caisse (DEL, RPR, CON, TIR)"
+     },
+     {
+      "v": "Colonne « id », une valeur par événement"
+     },
+     {
+      "v": "dateEven, heureEven, no_zEport, amount"
+     }
+    ],
+    [
+     {
+      "v": "ticket ligne.xls (ANNEXE C)"
+     },
+     {
+      "v": "Chaque note, et ses lignes d’articles"
+     },
+     {
+      "v": "Colonne « Id », une valeur par note"
+     },
+     {
+      "v": "Date Ticket, Heure Ticket, No_z Report, Tot_rem Ttc"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le rapprochement que le service dit impossible a été fait. Sur les trois exercices, les 21 302 suppressions du fichier événement se rattachent toutes, sans exception, à une journée et à un numéro de ticket Z présents dans le fichier des tickets. Pour 15 991 d’entre elles (75,1 %), le montant supprimé se retrouve au centime près sur une ligne de note du même Z. Le solde correspond aux lignes qui ont précisément été déplacées ou refacturées au forfait, c’est-à-dire à l’objet du présent motif."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le fichier des événements porte d’ailleurs sa propre preuve d’intégrité : son compteur court de 36 681 à 60 019 sur les trois exercices, soit 23 339 identifiants attendus et 23 339 présents, sans un seul trou. Un journal auquel il ne manque aucun numéro n’est pas un journal dépourvu de traçabilité. Les deux constats sont vérifiables ligne à ligne dans la pièce jointe, onglet « Rapprochement DEL-tickets »."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "orange",
+   "titre": "Une difficulté de lecture ne vaut pas preuve de dissimulation",
+   "texte": "Le service tire de l’impossibilité alléguée de rapprocher deux extractions que le rejet de comptabilité est « parfaitement valable » (p. 20). Le rejet suppose des irrégularités graves et répétées, établies par l’administration. Une clé de rapprochement jugée peu commode n’en est pas une, surtout lorsque le rapprochement aboutit."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "Ce que cela fait tomber",
+   "sousTitre": "Le motif « factures sans détail » n’est pas démontré"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service admet le principe des menus à prix personnalisé et ne conteste aucun des chiffres produits : 9 504 menus vendus au prix catalogue, 594 facturés au forfait pour 21 433 €, la totalité encaissée et déclarée. Le motif B ne repose donc plus que sur un texte relatif à l’archivage, qui ne concerne ni les prix ni le contribuable, et sur un identifiant qui existe et permet le rapprochement. Faute de démonstration au fond, ce deuxième motif ne peut fonder ni le rejet de la comptabilité, ni la reconstitution qui en découle."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Prix catalogue, quantités vendues au prix catalogue et au forfait, total encaissé par période et par menu, liste de tous les prix négociés, et rapprochement des suppressions avec le fichier des tickets :",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-menus-prix-personnalises.xlsx",
+     "label": "Menus à prix personnalisé et rapprochement DEL / tickets (XLSX, 9 onglets)"
+    }
+   ]
+  }
+ ]
 }

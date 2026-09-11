@@ -222,9 +222,10 @@ def bloc():
                   "Frelée d’un côté, crêpes Grappins, Basilic et Normandine de l’autre. C’est le seul "
                   "paramètre libre de la démonstration, et le camembert rôti pèse à lui seul 81 % du "
                   "volume. 2. La crêpe Normandine est-elle bien flambée au Calvados ? Le décompte du "
-                  "service le suppose, sur 125,5 portions. 3. Achetait-on du Calvados à Intermarché ? "
-                  "Une réponse positive verrouille l’hypothèse haute et rend le débat sur la dose "
-                  "sans objet."},
+                  "service le suppose, sur 125,5 portions. 3. Se souvient-on d’avoir acheté du "
+                  "Calvados, du whisky ou une autre eau-de-vie à Intermarché ? La question ne "
+                  "conditionne pas la démonstration, qui tient par le stock, mais une réponse "
+                  "positive rendrait le débat sur la dose sans objet."},
     ]
 
 
@@ -246,11 +247,8 @@ def main():
     meta[MARQUE] = {"debut": ancre + 1, "nb": len(nouveau),
                     "source": "scripts/reponse1-calvados-encadrement.py"}
 
-    doc["entete"]["reponseCourte"] = (
-        "Le service concède lui-même l’exemple qui portait le grief, son disponible ignore les "
-        "spiritueux du second fournisseur qu’il cite, et sur le Calvados sa propre colonne applique "
-        "3,39 cl là où elle annonce 4 cl : encadrée entre 2 et 3 cl, la dose de flambage explique "
-        "l’intégralité de l’écart, sans laisser un centilitre vendable.")
+    # La reponse courte de la page est ecrite par
+    # scripts/reponse1-conso-achats-redaction.py : ce script ne la modifie pas.
     json.dump(doc, open(CIBLE, "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     print("écrit :", CIBLE, "->", len(secs), "sections (bloc de", len(nouveau), "sections)")
     print(f"dose d'équilibre {DOSE_BILAN:.2f} cl | verre {TOT_V:.0f} doses, {CA_VERRE:.2f} € TTC")

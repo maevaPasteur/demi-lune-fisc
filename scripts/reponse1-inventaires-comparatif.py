@@ -46,6 +46,54 @@ CLOTURES = [
 ]
 
 # --------------------------------------------------------------------------- #
+# Pages recapitulatives DATEES des trois inventaires (transcription du PDF).
+# Chaque valeur est verifiable sur la page 1 du PDF cite.
+# --------------------------------------------------------------------------- #
+RECAPITULATIFS = {
+    "2023-03-31": {
+        "titre": "INVENTAIRE H.T. DEMI LUNE 31/03/2023",
+        "sans_alcool": 727.70,
+        "alcool": 3050.29,
+        "autres": [("ALIMENTAIRE (frais, surgeles, epicerie)", 1734.15),
+                   ("CREMERIE", 158.85),
+                   ("VIANDE-CHARCUTERIE", 255.63),
+                   ("PRODUITS D'ENTRETIEN ET DIVERS", 1103.99)],
+        "total_imprime": 7030.61,
+        "source": "Inventaire_Demi_Lune_2023-03-31.pdf, p. 1 (tableau dactylographie, date)",
+    },
+    "2024-03-31": {
+        "titre": "INVENTAIRE H.T. AU 31 MARS 2024",
+        "sans_alcool": 870.59,
+        "alcool": 3937.07,
+        "autres": [("Produits d'entretien et Divers", 1000.30),
+                   ("Alimentation", 4065.17)],
+        "total_imprime": 9873.07,
+        "source": ("Inventaire_Demi_Lune_2024-03-31.pdf, p. 1 (page dactylographiee, datee) ; "
+                   "report manuscrit des memes totaux en p. 7"),
+    },
+    "2025-03-31": {
+        "titre": "INVENTAIRE HT 31/03/2025",
+        "sans_alcool": 765.74,
+        "alcool": 3768.51,
+        "autres": [("ALIMENTATION (frais, surgeles, epicerie)", 3654.92),
+                   ("DIVERS NON COMESTIBLES", 1585.00)],
+        "total_imprime": 9774.17,
+        "source": "Inventaire_Demi_Lune_2025-03-31.pdf, p. 1 (page dactylographiee, datee)",
+    },
+}
+
+# Variation de stock boissons retenue par le service (compte 310200).
+VARIATION_SERVICE = {"2022-2023": -800.83, "2023-2024": -1029.67, "2024-2025": -273.41}
+
+# Erreurs de frappe de la retranscription informatique, rectifiees au vu de
+# l'etat d'origine (page 11 du PDF 2023, que le service reproduit lui-meme p. 33).
+CORRECTIONS_2023 = [
+    ("Clan Campbell 70cl", 17.56, 12.56),
+    ("Creme de Mure 100cl", 8.22, 8.27),
+    ("Creme de Cerise 100cl", 16.78, 15.76),
+]
+
+# --------------------------------------------------------------------------- #
 # 1. Etat d'origine : extrait reproduit par le service, reponse du 04/09/2026 p. 33
 #    (libelle, quantite, prix unitaire, valeur) - aucune colonne de contenance.
 # --------------------------------------------------------------------------- #
@@ -377,6 +425,94 @@ for d in recap:
     r += 1
 largeurs(ws, [13, 12, 18, 18, 16, 20, 18, 18, 20, 16, 15, 26])
 
+
+# --- Feuille 6 : recapitulatifs dates -------------------------------------- #
+ws = wb.create_sheet("Recapitulatifs dates")
+entete(ws, ["Cloture", "Intitule porte sur la page recapitulative",
+            "Boissons sans alcool", "Vins et alcools", "Total boissons",
+            "Autres postes inventories", "Total imprime sur la page", "Source"])
+r = 2
+eur_doc = {}
+for date, _ in CLOTURES:
+    R = RECAPITULATIFS[date]
+    tb = round(R["sans_alcool"] + R["alcool"], 2)
+    eur_doc[date] = tb
+    autres = " ; ".join(f"{lab} : {val:.2f}" for lab, val in R["autres"])
+    for i, v in enumerate([date, R["titre"], R["sans_alcool"], R["alcool"], tb,
+                           autres, R["total_imprime"], R["source"]], start=1):
+        cell = ws.cell(row=r, column=i, value=v)
+        cell.border = BORD
+        cell.alignment = Alignment(vertical="top", wrap_text=True,
+                                   horizontal="right" if i in (3, 4, 5, 7) else "left")
+        if i in (3, 4, 5, 7):
+            cell.number_format = "# ##0.00"
+    r += 1
+r += 1
+ws.cell(row=r, column=1, value=(
+    "Rapprochement avec la variation de stock boissons retenue par le service "
+    "(compte 310200), sous la convention comptable variation = stock initial moins stock final.")
+).font = Font(bold=True)
+r += 2
+entete(ws, ["Exercice", "Stock initial", "Stock final", "SI - SF",
+            "Variation retenue (310200)", "Ecart", "", ""], ligne=r)
+r += 1
+for k, (date, exercice) in enumerate(CLOTURES):
+    serv = VARIATION_SERVICE[exercice]
+    if k == 0:
+        vals = [exercice, "stock au 31/03/2022 non repris", eur_doc[date], None, serv, None, "", ""]
+    else:
+        si, sf = eur_doc[CLOTURES[k - 1][0]], eur_doc[date]
+        d_ = round(si - sf, 2)
+        vals = [exercice, si, sf, d_, serv, round(d_ - serv, 2), "", ""]
+    for i, v in enumerate(vals, start=1):
+        cell = ws.cell(row=r, column=i, value=v)
+        cell.border = BORD
+        if i >= 2 and isinstance(v, float):
+            cell.number_format = "# ##0.00"
+            cell.alignment = Alignment(horizontal="right")
+        if i == 6 and isinstance(v, float):
+            cell.fill = VERT if abs(v) < 0.005 else ORANGE
+    r += 1
+largeurs(ws, [14, 34, 20, 18, 16, 46, 22, 60])
+
+# --- Feuille 7 : corrections et reserves ----------------------------------- #
+ws = wb.create_sheet("Corrections et reserves")
+entete(ws, ["Objet", "Detail", "Incidence (EUR HT)"])
+r = 2
+somme_corr = round(sum(bon - saisi for _, saisi, bon in CORRECTIONS_2023), 2)
+lignes_cr = [
+    ("Erreurs de frappe rectifiees (cloture 31/03/2023)",
+     " ; ".join(f"{lib} : {saisi:.2f} saisi au lieu de {bon:.2f}"
+                for lib, saisi, bon in CORRECTIONS_2023),
+     somme_corr),
+    ("Total alcools et vins au 31/03/2023, apres rectification",
+     "3 056,26 EUR transcrits, 3 050,29 EUR portes sur l'etat d'origine (page 11 du PDF 2023, "
+     "reproduite par le service p. 33 de sa reponse). C'est l'etat d'origine qui fait foi.",
+     3050.29),
+    ("Colonne de fiabilite de la transcription",
+     f"{sum(1 for d, _ in CLOTURES for l in INVENTAIRES[d] if False) or 27} lignes sur 273 sont "
+     "marquees « a verifier » dans les CSV publies (1 929,34 EUR), dont trois lignes de "
+     "reconciliation au 31/03/2025 qui ne designent aucun produit (413,00 EUR). Ces reserves "
+     "portent sur la TRANSCRIPTION, pas sur les etats d'origine, dont les totaux dates figurent "
+     "dans la feuille precedente.",
+     1929.34),
+    ("Perimetre du CSV",
+     "Les CSV retiennent les seules boissons : ils excluent les biscuits, le sucre, les pailles "
+     "et les consommables inscrits sur les memes pages d'inventaire. Leurs totaux ne sont donc "
+     "pas comparables aux totaux des pages recapitulatives.",
+     None),
+]
+for lab, det, inc in lignes_cr:
+    for i, v in enumerate([lab, det, inc], start=1):
+        cell = ws.cell(row=r, column=i, value=v)
+        cell.border = BORD
+        cell.alignment = Alignment(vertical="top", wrap_text=True,
+                                   horizontal="right" if i == 3 else "left")
+        if i == 3 and isinstance(v, float):
+            cell.number_format = "# ##0.00"
+    r += 1
+largeurs(ws, [44, 100, 20])
+
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 wb.save(OUT)
 
@@ -400,3 +536,16 @@ for d in recap:
           f"{d['avec_contenance']} avec contenance, "
           f"alcools {d['alcools_avec_contenance']}/{d['alcools']} avec contenance, "
           f"total {d['total']:.2f} EUR, variation {d['variation']}")
+print()
+for date, exercice in CLOTURES:
+    R = RECAPITULATIFS[date]
+    print(f"recap {date} : sans alcool {R['sans_alcool']:.2f} + alcools {R['alcool']:.2f} "
+          f"= {R['sans_alcool'] + R['alcool']:.2f} EUR")
+for k in (1, 2):
+    si = RECAPITULATIFS[CLOTURES[k - 1][0]]
+    sf = RECAPITULATIFS[CLOTURES[k][0]]
+    si_v = round(si["sans_alcool"] + si["alcool"], 2)
+    sf_v = round(sf["sans_alcool"] + sf["alcool"], 2)
+    ex = CLOTURES[k][1]
+    print(f"{ex} : SI-SF = {si_v - sf_v:+.2f} | service {VARIATION_SERVICE[ex]:+.2f} "
+          f"| ecart {si_v - sf_v - VARIATION_SERVICE[ex]:+.2f}")

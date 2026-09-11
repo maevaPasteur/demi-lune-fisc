@@ -8,12 +8,17 @@ vérification contradictoire sur les factures et sur le stock :
   - crémant           347 L -> 272 L (borné par le stock, page recon-3)
   - sur-versement     720 L -> 494 L (assiette par assiette, page N)
   - alcool de cuisine 794 L -> 745 L (plafonné aux factures, pages 5, 6 et R)
+  - freinte bière    129 L -> 122 L (assiette corrigée : le taux de 10 % est
+    appliqué à la bière réellement sortie du fût, 1 219,2 L lus en caisse, et
+    non à la contenance des verres, 1 292,9 L, qui comprend 73,7 L de limonade,
+    de grenadine et de Picon ; pages O et L)
     ATTENTION : 745 L est le volume PHYSIQUEMENT consommé en cuisine, seul pertinent
     dans un bilan matière. Les 173 L cités dans la page 5 sont autre chose : c'est le
     supplément demandé au service, une fois retranché ce qu'il déduit déjà lui-même
     dans sa reconstitution (repères D, E, G et Q).
-Ce script répercute ces corrections sur les deux pages de cadrage du bloc 3
-(parties L et M), de sorte qu'aucun chiffre du site ne se contredise.
+Ce script répercute ces corrections sur la page de cadrage chiffrée du bloc 3
+(partie M), de sorte qu'aucun chiffre du site ne se contredise. La partie L ne
+porte plus de volume poste par poste : elle n'est plus patchée ici.
 
 Idempotent : il réécrit toujours les mêmes sections à partir des valeurs
 ci-dessous. Exécution : python3 scripts/reponse1-cascade-coherence.py
@@ -42,8 +47,9 @@ POSTES = [
      "Sur-versement", "sur-versement-au-verre"),
     ("degustation", "Dégustation offerte", 126, "mesure",
      "Notes relevées une à une dans l’annexe C", "Dégustation", "degustation-offerte"),
-    ("biere", "Freinte technique de la bière", 129, "estime",
-     "Freinte de fût retenue au taux prudent de 10 %", "Perte de bière", "perte-de-biere"),
+    ("biere", "Freinte technique de la bière", 122, "estime",
+     "10 % de la bière réellement sortie du fût (1 219,2 L lus en caisse), "
+     "soit 121,9 L arrondis", "Perte de bière", "perte-de-biere"),
     ("chef", "Consommation du chef", 143, "estime",
      "Base journalière déclarée x jours de service", "Consommation du personnel",
      "recon-7-conso-personnel"),
@@ -274,26 +280,10 @@ def main():
     })
 
     # ------------------------------------------------ partie L (cadrage) ----
-    remplace("reconstitution-cadre-general", {
-        26: para(
-            f"Nous corrigeons nous-mêmes trois postes de cet encadré, et les trois corrections "
-            f"jouent contre nous : le [crémant](/reponse-1/recon-3-cremant-vendu) passe de 347 L à "
-            f"**272 L**, borné par le stock ; le [sur-versement au verre]"
-            f"(/reponse-1/sur-versement-au-verre) de 720 L à **494 L**, une fois les pichets et les "
-            f"bouteilles retirés de l’assiette ; l’[alcool de cuisine]"
-            f"(/reponse-1/recon-5-alcool-cuisine) de 795 L à **745 L**, plafonné aux achats "
-            f"facturés. Le volume justifié passe donc de 9 079 L à **{N(JUSTIFIE)} L** et le résidu "
-            f"de 1 543 L à **{N(RESIDU)} L**, soit **{P(PCT_RESIDU)}** des achats. Aucune de ces "
-            f"corrections ne libère de volume vendable : un litre qui sort du « justifié poste par "
-            f"poste » entre dans la perte non ventilée, il n’entre pas dans les recettes."),
-        36: para(
-            f"Les onze points et les huit parties qui suivent sont examinés un à un dans les pages "
-            f"liées ci-dessus. Le bilan matière d’ensemble est traité à [la partie M]"
-            f"(/reponse-1/cascade-10622-litres) : les {N(ACHATS)} L achetés s’expliquent à hauteur "
-            f"de {N(JUSTIFIE)} L par des postes mesurés ou calculés sur la caisse, et le résidu de "
-            f"{N(RESIDU)} L reste une perte d’exploitation normale, en dessous de la démarque de "
-            f"25 % du volume acheté publiée par les auditeurs d’inventaire de bar."),
-    })
+    # La page « reconstitution-cadre-general » (partie L) ne fige plus aucun volume
+    # poste par poste : elle porte la méthode et le droit du bloc, et renvoie à la
+    # partie M pour le chiffrage. Elle n'est donc plus patchée ici, et aucune
+    # correction de volume n'a d'incidence sur son texte.
 
     ecrire_xlsx()
 

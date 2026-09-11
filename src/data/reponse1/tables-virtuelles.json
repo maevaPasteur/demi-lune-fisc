@@ -1,1247 +1,1358 @@
 {
-  "meta": {
-    "slug": "tables-virtuelles",
-    "source": "Réponse DDFiP 39 du 04/09/2026, p. 35 à 37",
-    "lettre": "F"
+ "meta": {
+  "slug": "tables-virtuelles",
+  "source": "Réponse DDFiP 39 du 04/09/2026, p. 35 à 37",
+  "lettre": "F",
+  "_bloc_tickets_zero": {
+   "debut": 28,
+   "nb": 7,
+   "source": "scripts/reponse1-tickets-zero.py"
+  }
+ },
+ "entete": {
+  "positionService": "Le service ne conteste pas la description de la fonction « table virtuelle », mais il reproche à la démonstration de ne pas envisager le double service : si une même table est utilisée deux fois pendant un service, « le taux de remplissage peut largement être augmenté ». Il maintient surtout que la justification de toutes les opérations « DEL » n’est pas apportée et que, comme en partie A, « seule une infime partie de ces suppressions est expliquée ». Le fichier « tpévenement.xls » ne permettant selon lui « aucune traçabilité effective comme prévu par la législation », il juge « totalement impossible » de vérifier que chaque suppression a bien donné lieu à un ré-enregistrement dans une autre note, et renvoie à l’extrait de la journée du 09 septembre 2022.",
+  "reponseCourte": "Sur les 659 journées des trois exercices, sans exception, les numéros de la caisse forment la suite 1, 2, 3 … n des additions du jour : ce sont des rangs de note et non des tables, et le double service, loin d’être ignoré, est déjà compté dans les couverts.",
+  "enjeu": "Motif « trop de tables » du rejet de comptabilité (renvoi aux pages 11, 18 et 19 de la proposition de rectifications)",
+  "statut": "demonte"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que soutient l’administration",
+   "sousTitre": "Partie « F- Trop de Tables / Tables virtuelles », réponse du 04/09/2026, p. 35 à 37, qui renvoie aux pages 11, 18 et 19 de la proposition de rectifications."
   },
-  "entete": {
-    "positionService": "Le service ne conteste pas la description de la fonction « table virtuelle », mais il reproche à la démonstration de ne pas envisager le double service : si une même table est utilisée deux fois pendant un service, « le taux de remplissage peut largement être augmenté ». Il maintient surtout que la justification de toutes les opérations « DEL » n’est pas apportée et que, comme en partie A, « seule une infime partie de ces suppressions est expliquée ». Le fichier « tpévenement.xls » ne permettant selon lui « aucune traçabilité effective comme prévu par la législation », il juge « totalement impossible » de vérifier que chaque suppression a bien donné lieu à un ré-enregistrement dans une autre note, et renvoie à l’extrait de la journée du 09 septembre 2022.",
-    "reponseCourte": "Sur les 659 journées des trois exercices, sans exception, les numéros de la caisse forment la suite 1, 2, 3 … n des additions du jour : ce sont des rangs de note et non des tables, et le double service, loin d’être ignoré, est déjà compté dans les couverts.",
-    "enjeu": "Motif « trop de tables » du rejet de comptabilité (renvoi aux pages 11, 18 et 19 de la proposition de rectifications)",
-    "statut": "demonte"
+  {
+   "kind": "paragraphe",
+   "texte": "La partie F du courrier se lit en deux temps. Le service commence par **reproduire longuement la position de Maître THIVEND** (p. 35 et p. 36), puis il lui oppose sa propre **« Réponse du service »** (p. 36), avant de renvoyer à un **extrait de la journée du 09 septembre 2022** reproduit en pleine page (p. 37)."
   },
-  "sections": [
+  {
+   "kind": "titre",
+   "texte": "Le rappel de la position de Maître THIVEND",
+   "numero": "1.1"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le courrier reprend d’abord l’explication du fonctionnement de la caisse : « Un numéro de note n’est pas une table (14 tables intérieures réelles ; les n° 13/16/17/18 n’existent pas). La table “virtuelle” est une note de règlement séparé, et la suppression de la table d’origine évite de compter le repas deux fois : elle protège le CA, elle ne le réduit pas. » (p. 35)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il rappelle ensuite le grief d’origine : le vérificateur relève que la caisse comporte des tables « virtuelles » et qu’elle autorise la suppression d’une table et de tous ses articles, et il en conclut qu’« il n’est pas possible de confirmer que ces modifications soient légitimes », la comptabilité étant de ce fait tenue pour non probante, comme vecteur supposé de couverts ou de recettes non déclarés (p. 35). La réponse oppose la description faite par le vérificateur lui même en page 11 de la proposition : « quatre tables virtuelles figurent à l’écran (n° 15 à n° 18, par exemple). Cette modalité permet le traitement des notes multiples pour une table, au moment du règlement. » (p. 35)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Premier fait invoqué : un numéro n’est pas une table.** Les fichiers d’export de la caisse ne mentionnent jamais les tables : ils ne listent que des encaissements (les notes), numérotés de 1 à 57 au fil de la journée. « Compter les numéros revient donc à compter des règlements, pas des tables. » (p. 35). L’argument est présenté comme vérifiable sur place, puisqu’il suffit de compter les tables de la salle."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les numéros de table selon le rappel de la réponse THIVEND (p. 35)",
+   "minWidth": 900,
+   "colonnes": [
     {
-      "kind": "chapitre",
-      "source": "fisc",
-      "numero": 1,
-      "titre": "Ce que soutient l’administration",
-      "sousTitre": "Partie « F- Trop de Tables / Tables virtuelles », réponse du 04/09/2026, p. 35 à 37, qui renvoie aux pages 11, 18 et 19 de la proposition de rectifications."
+     "label": "Zone"
     },
     {
-      "kind": "paragraphe",
-      "texte": "La partie F du courrier se lit en deux temps. Le service commence par **reproduire longuement la position de Maître THIVEND** (p. 35 et p. 36), puis il lui oppose sa propre **« Réponse du service »** (p. 36), avant de renvoyer à un **extrait de la journée du 09 septembre 2022** reproduit en pleine page (p. 37)."
+     "label": "Numéros qui correspondent à une table"
     },
     {
-      "kind": "titre",
-      "texte": "Le rappel de la position de Maître THIVEND",
-      "numero": "1.1"
+     "label": "Numéros sans table physique"
     },
     {
-      "kind": "paragraphe",
-      "texte": "Le courrier reprend d’abord l’explication du fonctionnement de la caisse : « Un numéro de note n’est pas une table (14 tables intérieures réelles ; les n° 13/16/17/18 n’existent pas). La table “virtuelle” est une note de règlement séparé, et la suppression de la table d’origine évite de compter le repas deux fois : elle protège le CA, elle ne le réduit pas. » (p. 35)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Il rappelle ensuite le grief d’origine : le vérificateur relève que la caisse comporte des tables « virtuelles » et qu’elle autorise la suppression d’une table et de tous ses articles, et il en conclut qu’« il n’est pas possible de confirmer que ces modifications soient légitimes », la comptabilité étant de ce fait tenue pour non probante, comme vecteur supposé de couverts ou de recettes non déclarés (p. 35). La réponse oppose la description faite par le vérificateur lui même en page 11 de la proposition : « quatre tables virtuelles figurent à l’écran (n° 15 à n° 18, par exemple). Cette modalité permet le traitement des notes multiples pour une table, au moment du règlement. » (p. 35)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Premier fait invoqué : un numéro n’est pas une table.** Les fichiers d’export de la caisse ne mentionnent jamais les tables : ils ne listent que des encaissements (les notes), numérotés de 1 à 57 au fil de la journée. « Compter les numéros revient donc à compter des règlements, pas des tables. » (p. 35). L’argument est présenté comme vérifiable sur place, puisqu’il suffit de compter les tables de la salle."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Les numéros de table selon le rappel de la réponse THIVEND (p. 35)",
-      "minWidth": 900,
-      "colonnes": [
-        {
-          "label": "Zone"
-        },
-        {
-          "label": "Numéros qui correspondent à une table"
-        },
-        {
-          "label": "Numéros sans table physique"
-        },
-        {
-          "label": "Précision apportée"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "Intérieur (salle)"
-          },
-          {
-            "v": "n° 1 à 12, 14 et 15, soit 14 tables réelles"
-          },
-          {
-            "v": "13, 16, 17 et 18"
-          },
-          {
-            "v": "« des numéros de note (règlement séparé) ou des numéros non attribués »"
-          }
-        ],
-        [
-          {
-            "v": "Terrasse"
-          },
-          {
-            "v": "n° 101 à 117"
-          },
-          {
-            "v": "102 et 125"
-          },
-          {
-            "v": "Les tables n° 116 et 117 ne sont montées que les jours de forte affluence et sont exclues du décompte des places"
-          }
-        ],
-        [
-          {
-            "v": "Export de la caisse"
-          },
-          {
-            "v": "Aucun : uniquement des numéros de note, de 1 à 57"
-          },
-          {
-            "v": "Les numéros de terrasse (101 à 125) n’apparaissent jamais"
-          },
-          {
-            "v": "« le numéro de note de l’export ne va jamais au delà de 57 : c’est un rang de note quotidien, réattribué chaque jour, et non un numéro de table »"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Deuxième fait invoqué : la capacité de la salle borne le nombre de couverts.** Le taux de remplissage moyen d’un restaurant traditionnel en France est donné à 58 % (Observatoire FIDUCIAL 2025). Appliqué aux places réelles, cela représente 26 couverts par service à l’intérieur (44 places) et 25 couverts en terrasse (43 places). La cuisine est décrite comme trop petite pour servir à la fois en salle et en terrasse : un seul espace est ouvert à chaque service, la terrasse du début mai au début septembre sauf les jours de pluie, l’intérieur de mi septembre à fin avril (p. 35)."
-    },
-    {
-      "kind": "kpis",
-      "items": [
-        {
-          "label": "Tables intérieures réelles",
-          "valeur": "14",
-          "sub": "n° 1 à 12, 14 et 15 (p. 35)"
-        },
-        {
-          "label": "Numéros sans table physique",
-          "valeur": "13, 16, 17, 18",
-          "sub": "à l’intérieur (p. 35)"
-        },
-        {
-          "label": "Numéros de note dans l’export",
-          "valeur": "1 à 57",
-          "sub": "rang quotidien réattribué chaque jour (p. 35)"
-        },
-        {
-          "label": "Taux de remplissage retenu",
-          "valeur": "58 %",
-          "sub": "Observatoire FIDUCIAL 2025 (p. 35)"
-        },
-        {
-          "label": "Couverts par service",
-          "valeur": "26 / 25",
-          "sub": "intérieur 44 places, terrasse 43 places (p. 35)"
-        }
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le courrier reprend aussi la méthode de comptage des couverts proposée : le détail des tickets (annexes C) permet d’identifier tous les encaissements contenant un plat ou un menu, un couvert valant un plat ou un menu servi, l’heure de chaque encaissement classant la note au midi (avant 18 h) ou au soir (18 h à minuit). Trois fichiers sont cités comme reproductibles : **10-rf-items-classification.xlsx**, **11-rf-encaissements-couverts.xlsx** et **12-rf-couverts-par-service.xlsx** (p. 36). Le service note que la réponse « complète par un petit graphique »."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Troisième fait invoqué : la suppression de la table d’origine est nécessaire et protège le CA.** Lorsque des convives veulent des notes séparées ne portant que leur propre détail, le serveur doit ressaisir les articles de chaque convive sur une deuxième note (la table « virtuelle ») et l’encaisser ; les articles existent alors en double, sur la table d’origine et sur la note ressaisie, si bien que supprimer la table d’origine est « arithmétiquement obligatoire pour ne pas compter le repas deux fois ». Le courrier note que l’exemple des notes n° 22 et n° 23 est cité de nouveau (p. 36). La conclusion rappelée tient en trois points : le numéro de note va de 1 à 57 et ne désigne jamais une table ; le rythme des encaissements par jour travaillé se superpose d’un exercice à l’autre ; supprimer la table d’origine après ressaisie évite de doubler le CA, de sorte que « le grief ne révèle aucun couvert ni aucune recette non déclarée » (p. 36)."
-    },
-    {
-      "kind": "titre",
-      "texte": "La réponse du service",
-      "numero": "1.2"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le premier argument du service porte sur la **rotation des tables**. « Toute la démonstration n’aborde pas la possibilité du double service pour une même table. Ainsi, s’il n’y a qu’un service, le graphique de la réponse pourrait avoir un semblant de véracité. » (p. 36). Et il poursuit : « Il en va tout autrement à partir du moyen où il peut y avoir des mêmes tables utilisées deux fois pendant un service. Par ce simple fait, le taux de remplissage peut largement être augmenté. » (p. 36). Le service ne chiffre ni le nombre de tables concernées, ni le nombre de journées, ni l’effet sur le taux de 58 %."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le second argument déplace le débat des tables « virtuelles » vers les **suppressions**. Le service admet la mécanique décrite : « Sur l’aspect des tables supprimées, le service s’est limité à décrire ce procédé. La suppression des articles paraît logique pour créer une nouvelle note. » (p. 36). Mais il maintient le grief : « Toutefois, contrairement à ce que la réponse de Maître THIVEND prétend, aucune explication pertinente n’est apporté sur la justification de toutes les opérations “DEL”. Et comme la réponse du service en “partie A-Les suppressions de notes”, seule une infime partie de ces suppressions est expliquée. » (p. 36)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le troisième argument est celui de la **traçabilité**. « De plus, le fichier “tpévenement.xls” ne permettant aucune traçabilité effective comme prévu par la législation, il est totalement impossible d’avoir la certitude que toutes les suppressions ont conduit à un ré-enregistrement dans une autre note à un quelconque moment. » (p. 36). Le service enchaîne en renvoyant à ce qu’il a montré sur la journée du 09 septembre 2022 en « partie A-Les suppressions de notes », dont il reproduit un « court extrait » en pleine page (p. 37) : à gauche les lignes du fichier tpevenements.xls, à droite celles du fichier ticketligne.xls, mises en vis à vis pour la même journée."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Extrait reproduit par le service : journée du 09 septembre 2022, fichier tpevenements.xls (p. 37)",
-      "minWidth": 760,
-      "colonnes": [
-        {
-          "label": "no Caisse",
-          "align": "right"
-        },
-        {
-          "label": "date Even"
-        },
-        {
-          "label": "heure Even",
-          "align": "right"
-        },
-        {
-          "label": "typ Even"
-        },
-        {
-          "label": "no_z Eport",
-          "align": "right"
-        },
-        {
-          "label": "amount",
-          "align": "right"
-        },
-        {
-          "label": "id",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "07:52",
-            "align": "right"
-          },
-          {
-            "v": "CON"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          },
-          {
-            "v": "42061",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:09",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "6,40 €",
-            "align": "right"
-          },
-          {
-            "v": "42062",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:09",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "7,20 €",
-            "align": "right"
-          },
-          {
-            "v": "42063",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:09",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "15,90 €",
-            "align": "right"
-          },
-          {
-            "v": "42064",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:09",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "16,90 €",
-            "align": "right"
-          },
-          {
-            "v": "42065",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:28",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "17,60 €",
-            "align": "right"
-          },
-          {
-            "v": "42066",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:28",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "4,00 €",
-            "align": "right"
-          },
-          {
-            "v": "42067",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:29",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "7,80 €",
-            "align": "right"
-          },
-          {
-            "v": "42068",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:30",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "4,40 €",
-            "align": "right"
-          },
-          {
-            "v": "42069",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:30",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "3,90 €",
-            "align": "right"
-          },
-          {
-            "v": "42070",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:30",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "6,50 €",
-            "align": "right"
-          },
-          {
-            "v": "42071",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2022-09-09"
-          },
-          {
-            "v": "11:30",
-            "align": "right"
-          },
-          {
-            "v": "DEL"
-          },
-          {
-            "v": "3052",
-            "align": "right"
-          },
-          {
-            "v": "30,00 €",
-            "align": "right"
-          },
-          {
-            "v": "42072",
-            "align": "right"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "note",
-      "texte": "Les douze premières lignes du bloc de gauche de la page 37, reproduites telles qu’elles figurent au courrier. La page comporte d’autres lignes « DEL » de la même journée (identifiants 42073 à 42097, de 11:41 à 12:36) et, en vis à vis, le détail des articles du fichier ticketligne.xls (colonnes Date Ticket, Heure Ticket, No Ticket, Dat_z, No_z Report, id, Ref_prd, Lib_ticket, Qte, Uprice_wt, Total TTC), dont la lisibilité du scan ne permet pas une reprise intégrale certaine."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La partie F se termine en haut de la page suivante : « de nombreuses opérations de suppression ne trouvent aucune correspondance dans les notes du fichier ticketligne.xls. Par conséquent, les arguments de la réponse ne permettent pas d’expliquer, ou au mieux seulement à la marge, les anomalies relevées. » (p. 38). Le service ne chiffre à ce stade aucun couvert supplémentaire ni aucune recette omise au titre de la partie F."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 2,
-      "titre": "Notre réponse : le numéro de la caisse est un rang d’addition, pas une place à table",
-      "sousTitre": "Sur les 659 journées d’ouverture des trois exercices, sans une seule exception, les numéros de note forment la suite 1, 2, 3 … n des additions du jour."
-    },
-    {
-      "kind": "titre",
-      "texte": "Ce que montrent les 659 journées de caisse",
-      "numero": "2.1"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le grief F repose tout entier sur la lecture des numéros portés par l’export de la caisse. Cette lecture est vérifiable, et nous l’avons vérifiée sur la totalité des trois exercices : les annexes C1 à C3 couvrent **659 journées d’ouverture et 16 607 additions**. Le résultat ne laisse aucune marge d’interprétation."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Sur ces 659 journées, **sans une seule exception**, les numéros utilisés forment la suite 1, 2, 3 … n : la numérotation commence au n° 1 (659 jours sur 659), elle ne comporte **aucun trou** (659 jours sur 659), et le numéro le plus élevé de la journée est **toujours exactement égal au nombre d’additions du jour** (659 jours sur 659). La corrélation entre ces deux grandeurs est de **1,0000**."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Un parc de tables ne se comporte pas ainsi. Il faudrait admettre qu’un restaurant de 14 tables occupe chaque jour ses tables dans l’ordre exact 1, 2, 3 … sans jamais en sauter une, puis qu’il en fasse apparaître jusqu’à 43 de plus les jours de forte affluence, toujours dans l’ordre, avant de tout remettre à zéro le lendemain matin. La seule lecture cohérente est celle d’un **compteur d’additions quotidien**."
-    },
-    {
-      "kind": "kpis",
-      "items": [
-        {
-          "label": "Journées d’ouverture analysées",
-          "valeur": "659",
-          "sub": "annexes C1 à C3, trois exercices"
-        },
-        {
-          "label": "Additions (notes) analysées",
-          "valeur": "16 607",
-          "sub": "et 37 369 couverts"
-        },
-        {
-          "label": "Journées où les numéros forment la suite 1 … n",
-          "valeur": "100 %",
-          "sub": "659 sur 659, aucun trou",
-          "highlight": true,
-          "couleur": "teal"
-        },
-        {
-          "label": "Corrélation n° le plus élevé / nombre d’additions",
-          "valeur": "1,0000",
-          "sub": "identité, pas simple corrélation"
-        },
-        {
-          "label": "Journées où le n° le plus élevé dépasse 15",
-          "valeur": "84,4 %",
-          "sub": "556 jours, alors que la dernière table porte le n° 15"
-        }
-      ]
-    },
-    {
-      "kind": "tableau",
-      "titre": "Le numéro le plus élevé suit le nombre d’additions du jour, jamais un parc de tables",
-      "minWidth": 760,
-      "colonnes": [
-        {
-          "label": "Additions encaissées dans la journée"
-        },
-        {
-          "label": "Journées concernées",
-          "align": "right"
-        },
-        {
-          "label": "N° de note le plus élevé (moyenne)",
-          "align": "right"
-        },
-        {
-          "label": "Couverts servis (moyenne)",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "de 1 à 9"
-          },
-          {
-            "v": "24",
-            "align": "right"
-          },
-          {
-            "v": "7,0",
-            "align": "right"
-          },
-          {
-            "v": "18",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "de 10 à 19"
-          },
-          {
-            "v": "151",
-            "align": "right"
-          },
-          {
-            "v": "15,0",
-            "align": "right"
-          },
-          {
-            "v": "35",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "de 20 à 29"
-          },
-          {
-            "v": "254",
-            "align": "right"
-          },
-          {
-            "v": "25,0",
-            "align": "right"
-          },
-          {
-            "v": "57",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "de 30 à 39"
-          },
-          {
-            "v": "212",
-            "align": "right"
-          },
-          {
-            "v": "33,3",
-            "align": "right"
-          },
-          {
-            "v": "73",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "de 40 à 49"
-          },
-          {
-            "v": "17",
-            "align": "right"
-          },
-          {
-            "v": "42,2",
-            "align": "right"
-          },
-          {
-            "v": "87",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "50 et plus"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "57,0",
-            "align": "right"
-          },
-          {
-            "v": "134",
-            "align": "right"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le rang le plus élevé du jour dépasse **15**, dernier numéro de table de la salle, sur **556 journées (84,4 %)**, et dépasse **18**, dernier numéro affiché à l’écran de la caisse, sur **507 journées (76,9 %)**. Lu comme un numéro de table, cela signifierait que le restaurant a ouvert jusqu’à 57 tables un samedi de juillet dans une salle qui en compte 14."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La fréquence de chaque rang confirme la mécanique. Le rang n° 1 est utilisé **les 659 jours (100 %)**. Le rang n° 25 n’apparaît que **378 jours (57,4 %)**, le rang n° 40 seulement **18 jours (2,7 %)** et le rang n° 57 **une seule fois**. Un numéro de table ne dépend pas de l’affluence du jour : la table existe, ou elle n’existe pas. Un rang d’addition, lui, n’est atteint que si la journée a compté autant de clients."
-    },
-    {
-      "kind": "alerte",
-      "couleur": "teal",
-      "titre": "Deux tests simples, et ils échouent tous les deux",
-      "texte": "Si le numéro désignait une table, il manquerait des numéros les jours creux (toutes les tables ne sont pas occupées) et les numéros de terrasse 101 à 115 apparaîtraient de mai à septembre, lorsque la terrasse est le seul espace ouvert. Sur les 659 journées vérifiées, il ne manque jamais un numéro et aucun numéro de terrasse n’apparaît jamais."
-    },
-    {
-      "kind": "titre",
-      "texte": "Deux journées d’exemple",
-      "numero": "2.2"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le samedi **09 juillet 2022** est la journée la plus chargée des trois exercices : **57 additions et 134 couverts**. Les numéros y suivent l’horloge, du n° 1 encaissé à 10 h 35 au n° 57 encaissé à 20 h 52, sans jamais revenir en arrière. La veille, la journée s’était arrêtée au n° 33 ; le lendemain, elle repart au n° 1 et s’arrête au n° 29."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Trois journées consécutives : la numérotation repart à 1 chaque matin",
-      "minWidth": 720,
-      "colonnes": [
-        {
-          "label": "Journée"
-        },
-        {
-          "label": "Additions",
-          "align": "right"
-        },
-        {
-          "label": "Numéros utilisés"
-        },
-        {
-          "label": "Couverts",
-          "align": "right"
-        },
-        {
-          "label": "Services",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "Vendredi 08 juillet 2022"
-          },
-          {
-            "v": "33",
-            "align": "right"
-          },
-          {
-            "v": "n° 1 à n° 33"
-          },
-          {
-            "v": "71",
-            "align": "right"
-          },
-          {
-            "v": "2",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Samedi 09 juillet 2022"
-          },
-          {
-            "v": "57",
-            "align": "right"
-          },
-          {
-            "v": "n° 1 à n° 57"
-          },
-          {
-            "v": "134",
-            "align": "right"
-          },
-          {
-            "v": "2",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Dimanche 10 juillet 2022"
-          },
-          {
-            "v": "29",
-            "align": "right"
-          },
-          {
-            "v": "n° 1 à n° 29"
-          },
-          {
-            "v": "75",
-            "align": "right"
-          },
-          {
-            "v": "2",
-            "align": "right"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "tableau",
-      "titre": "Journée du samedi 09 juillet 2022 : le rang de note suit l’heure de l’addition",
-      "minWidth": 620,
-      "colonnes": [
-        {
-          "label": "N° de note",
-          "align": "right"
-        },
-        {
-          "label": "Heure de l’addition",
-          "align": "right"
-        },
-        {
-          "label": "Couverts",
-          "align": "right"
-        },
-        {
-          "label": "Service"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "n° 1",
-            "align": "right"
-          },
-          {
-            "v": "10:35",
-            "align": "right"
-          },
-          {
-            "v": "2",
-            "align": "right"
-          },
-          {
-            "v": "midi"
-          }
-        ],
-        [
-          {
-            "v": "n° 10",
-            "align": "right"
-          },
-          {
-            "v": "12:30",
-            "align": "right"
-          },
-          {
-            "v": "2",
-            "align": "right"
-          },
-          {
-            "v": "midi"
-          }
-        ],
-        [
-          {
-            "v": "n° 20",
-            "align": "right"
-          },
-          {
-            "v": "13:05",
-            "align": "right"
-          },
-          {
-            "v": "3",
-            "align": "right"
-          },
-          {
-            "v": "midi"
-          }
-        ],
-        [
-          {
-            "v": "n° 28",
-            "align": "right"
-          },
-          {
-            "v": "13:23",
-            "align": "right"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "midi"
-          }
-        ],
-        [
-          {
-            "v": "n° 35",
-            "align": "right"
-          },
-          {
-            "v": "18:19",
-            "align": "right"
-          },
-          {
-            "v": "4",
-            "align": "right"
-          },
-          {
-            "v": "soir"
-          }
-        ],
-        [
-          {
-            "v": "n° 45",
-            "align": "right"
-          },
-          {
-            "v": "19:32",
-            "align": "right"
-          },
-          {
-            "v": "2",
-            "align": "right"
-          },
-          {
-            "v": "soir"
-          }
-        ],
-        [
-          {
-            "v": "n° 57",
-            "align": "right"
-          },
-          {
-            "v": "20:52",
-            "align": "right"
-          },
-          {
-            "v": "3",
-            "align": "right"
-          },
-          {
-            "v": "soir"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "note",
-      "texte": "Extrait de la journée : le fichier joint R1-numeros-de-note-par-jour.xlsx contient les 57 notes de cette journée, ligne à ligne, ainsi que celles du dimanche 05 mars 2023 (journée creuse, 12 notes de n° 1 à n° 12, un seul service)."
-    },
-    {
-      "kind": "titre",
-      "texte": "La salle réelle : 14 tables à l’intérieur, 14 en terrasse",
-      "numero": "2.3"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La salle intérieure compte **14 tables** (n° 1 à 12, 14 et 15) et **44 places**. Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros de note ouverts pour un règlement séparé, ou des numéros non attribués. La terrasse compte **14 tables** (n° 101 à 115) et **43 places** ; les numéros **102 et 125 n’existent pas**, et les tables **n° 116 et 117** ne sont montées que les jours exceptionnels, ce qui les exclut du décompte des places. Le point est vérifiable sur place, en comptant les tables."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La cuisine ne permet pas de servir simultanément la salle et la terrasse : **un seul espace est ouvert à chaque service**, la terrasse de début mai à début septembre (sauf les jours de pluie), l’intérieur de mi septembre à fin avril. C’est la raison pour laquelle la capacité de référence est de 44 places ou de 43 places selon la saison, et non de 87."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Plan de salle réel (confirmé par la gérante, vérifiable sur place)",
-      "minWidth": 820,
-      "colonnes": [
-        {
-          "label": "Zone"
-        },
-        {
-          "label": "Numéros qui désignent une table"
-        },
-        {
-          "label": "Tables",
-          "align": "right"
-        },
-        {
-          "label": "Places",
-          "align": "right"
-        },
-        {
-          "label": "Numéros sans table physique"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "Intérieur"
-          },
-          {
-            "v": "n° 1 à 12, 14 et 15"
-          },
-          {
-            "v": "14",
-            "align": "right"
-          },
-          {
-            "v": "44",
-            "align": "right"
-          },
-          {
-            "v": "13, 16, 17, 18"
-          }
-        ],
-        [
-          {
-            "v": "Terrasse"
-          },
-          {
-            "v": "n° 101 à 115"
-          },
-          {
-            "v": "14",
-            "align": "right"
-          },
-          {
-            "v": "43",
-            "align": "right"
-          },
-          {
-            "v": "102 et 125 ; n° 116 et 117 réservées aux jours exceptionnels"
-          }
-        ],
-        [
-          {
-            "v": "Export de la caisse"
-          },
-          {
-            "v": "aucun : uniquement des rangs de note de 1 à 57"
-          },
-          {
-            "v": "sans objet",
-            "align": "right"
-          },
-          {
-            "v": "sans objet",
-            "align": "right"
-          },
-          {
-            "v": "les numéros 101 à 125 n’apparaissent jamais, y compris l’été"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "titre",
-      "texte": "Le double service n’est pas ignoré : il est compté",
-      "numero": "2.4"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service objecte que la démonstration « n’aborde pas la possibilité du double service pour une même table » et que « par ce simple fait, le taux de remplissage peut largement être augmenté » (p. 36). L’objection porterait si nos couverts étaient **déduits** d’un plafond de places. Ils ne le sont pas : ils sont **comptés**, addition par addition, dans le détail des tickets (annexes C), un couvert étant un plat ou un menu réellement encaissé."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Une table qui tourne deux fois produit deux additions, donc deux séries de plats, donc deux fois des couverts dans notre décompte. **La rotation n’est pas une hypothèse écartée : elle est mesurée.** Le taux de 58 % de l’Observatoire FIDUCIAL n’a jamais servi de plafond dans notre démonstration : il sert de point de comparaison, pour montrer que le niveau d’activité enregistré est normal."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le résultat mesuré est d’ailleurs **supérieur** à ce point de comparaison. Sur les **1 269 services** effectivement servis des trois exercices, l’occupation moyenne s’établit à **67,7 % des places de l’espace ouvert**, soit près de dix points au-dessus de la moyenne nationale invoquée. Et **89 services (7,0 %) dépassent 100 % des places** : ce sont précisément les services où une table a tourné, et ils figurent déjà dans nos chiffres, jusqu’à **163 %** un midi de juillet."
-    },
-    {
-      "kind": "kpis",
-      "items": [
-        {
-          "label": "Occupation moyenne mesurée",
-          "valeur": "67,7 %",
-          "sub": "couverts comptés / places de l’espace ouvert",
-          "highlight": true,
-          "couleur": "teal"
-        },
-        {
-          "label": "Moyenne nationale invoquée",
-          "valeur": "58 %",
-          "sub": "Observatoire FIDUCIAL 2025 (p. 35)"
-        },
-        {
-          "label": "Services servis",
-          "valeur": "1 269",
-          "sub": "midi ou soir avec au moins un couvert"
-        },
-        {
-          "label": "Services au-delà de 100 % des places",
-          "valeur": "89",
-          "sub": "7,0 % : la rotation de table, déjà comptée"
-        },
-        {
-          "label": "Occupation la plus forte observée",
-          "valeur": "163 %",
-          "sub": "un service de midi en terrasse"
-        }
-      ]
-    },
-    {
-      "kind": "graphique",
-      "variante": "vertical",
-      "hauteur": 300,
-      "dataKey": "nom",
-      "serie": {
-        "name": "Occupation (%)",
-        "couleur": "teal.6"
-      },
-      "format": "int",
-      "data": [
-        {
-          "nom": "Mars",
-          "Occupation (%)": 49
-        },
-        {
-          "nom": "Avril",
-          "Occupation (%)": 61
-        },
-        {
-          "nom": "Mai",
-          "Occupation (%)": 71
-        },
-        {
-          "nom": "Juin",
-          "Occupation (%)": 73
-        },
-        {
-          "nom": "Juillet",
-          "Occupation (%)": 90
-        },
-        {
-          "nom": "Août",
-          "Occupation (%)": 89
-        },
-        {
-          "nom": "Sept.",
-          "Occupation (%)": 71
-        },
-        {
-          "nom": "Oct.",
-          "Occupation (%)": 65
-        },
-        {
-          "nom": "Nov.",
-          "Occupation (%)": 51
-        },
-        {
-          "nom": "Déc.",
-          "Occupation (%)": 51
-        },
-        {
-          "nom": "Janv.",
-          "Occupation (%)": 55
-        },
-        {
-          "nom": "Févr.",
-          "Occupation (%)": 42
-        }
-      ]
-    },
-    {
-      "kind": "note",
-      "texte": "Taux d’occupation moyen par mois (couverts comptés en caisse rapportés aux places de l’espace ouvert : terrasse de mai à août, intérieur le reste de l’année). Moyenne des trois exercices."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service ne tire enfin de son objection **aucun chiffre**. Il ne dit ni combien de tables auraient tourné, ni sur combien de journées, ni de combien le taux de 58 % devrait être relevé, ni surtout quel couvert supplémentaire en résulterait. Une observation qui ne se traduit par aucune quantité ne peut pas fonder une rectification, dont il appartient à l’administration d’établir le bien fondé."
-    },
-    {
-      "kind": "titre",
-      "texte": "Le service concède l’essentiel, puis change de terrain",
-      "numero": "2.5"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Sur le grief lui même, le service ne conteste plus rien. Il écrit : « Sur l’aspect des tables supprimées, le service s’est limité à décrire ce procédé. **La suppression des articles paraît logique pour créer une nouvelle note.** » (p. 36). Il ne discute ni les 14 tables intérieures, ni l’inexistence des n° 13, 16, 17 et 18, ni le fait que l’export ne porte que des rangs de note. Le motif « trop de tables » perd ainsi son objet, par l’effet de la réponse elle même."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La suite de la « Réponse du service » ne parle plus de tables. Elle porte sur « la justification de toutes les opérations “DEL” », renvoie expressément à la « **partie A-Les suppressions de notes** », affirme que le fichier « tpévenement.xls » « ne permett[rait] aucune traçabilité effective comme prévu par la législation », puis reproduit un extrait de la journée du 09 septembre 2022 (p. 36 et p. 37). Ces trois points sont ceux des parties A et G, où ils sont traités. Ils ne répondent pas à la question posée en partie F : les tables « virtuelles » révèlent elles des couverts ou des recettes non déclarés ?"
-    },
-    {
-      "kind": "titre",
-      "texte": "Aucun enjeu chiffré n’est rattaché à ce grief",
-      "numero": "2.6"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La partie F se termine sur une formule générale : « les arguments de la réponse ne permettent pas d’expliquer, ou au mieux seulement à la marge, les anomalies relevées » (p. 38). **Aucun montant, aucun couvert, aucune recette n’y est rattaché.** La reconstitution du service ne repose sur aucun décompte de tables ni de numéros de notes : elle part des volumes de liquides, puis extrapole la cuisine par un coefficient. Le grief F ne sert donc qu’à alimenter le rejet de comptabilité."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 3,
-      "titre": "Ce que cela fait tomber"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le grief F est bâti sur une confusion de lecture, et cette confusion se démontre sur la totalité des données : **659 journées sur 659**, les numéros de la caisse forment la suite des additions du jour, sans un trou, avec une corrélation de 1,0000 entre le numéro le plus élevé et le nombre d’additions. Un numéro élevé signale une journée chargée, jamais une table de plus."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "L’unique argument nouveau du service, le double service, ne l’atteint pas : les couverts sont comptés et non plafonnés, la rotation y est déjà incluse (89 services au-delà de 100 % des places), et l’occupation mesurée de 67,7 % dépasse déjà la moyenne nationale que le service ne conteste pas. Le service concède par ailleurs la logique des suppressions et ne chiffre rien."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "En conséquence, le motif « trop de tables / tables virtuelles » ne peut plus soutenir le rejet de comptabilité, et il n’apporte **aucun euro** à la reconstitution."
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Fichier recalculable à partir des seules annexes de caisse (script scripts/reponse1-numeros-de-note.py, lecture seule des annexes C1 à C3). Il contient la synthèse des tests, les 659 journées ligne à ligne (numéro le plus élevé, nombre d’additions, couverts, services, espace ouvert, taux d’occupation par service), la fréquence d’utilisation de chacun des 57 rangs de note et le détail des deux journées d’exemple.",
-      "fichiers": [
-        {
-          "fichier": "pieces-reponse-1/R1-numeros-de-note-par-jour.xlsx",
-          "label": "R1 : numéros de note, additions, couverts et services, jour par jour (3 exercices)"
-        }
-      ]
+     "label": "Précision apportée"
     }
-  ]
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Intérieur (salle)"
+     },
+     {
+      "v": "n° 1 à 12, 14 et 15, soit 14 tables réelles"
+     },
+     {
+      "v": "13, 16, 17 et 18"
+     },
+     {
+      "v": "« des numéros de note (règlement séparé) ou des numéros non attribués »"
+     }
+    ],
+    [
+     {
+      "v": "Terrasse"
+     },
+     {
+      "v": "n° 101 à 117"
+     },
+     {
+      "v": "102 et 125"
+     },
+     {
+      "v": "Les tables n° 116 et 117 ne sont montées que les jours de forte affluence et sont exclues du décompte des places"
+     }
+    ],
+    [
+     {
+      "v": "Export de la caisse"
+     },
+     {
+      "v": "Aucun : uniquement des numéros de note, de 1 à 57"
+     },
+     {
+      "v": "Les numéros de terrasse (101 à 125) n’apparaissent jamais"
+     },
+     {
+      "v": "« le numéro de note de l’export ne va jamais au delà de 57 : c’est un rang de note quotidien, réattribué chaque jour, et non un numéro de table »"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Deuxième fait invoqué : la capacité de la salle borne le nombre de couverts.** Le taux de remplissage moyen d’un restaurant traditionnel en France est donné à 58 % (Observatoire FIDUCIAL 2025). Appliqué aux places réelles, cela représente 26 couverts par service à l’intérieur (44 places) et 25 couverts en terrasse (43 places). La cuisine est décrite comme trop petite pour servir à la fois en salle et en terrasse : un seul espace est ouvert à chaque service, la terrasse du début mai au début septembre sauf les jours de pluie, l’intérieur de mi septembre à fin avril (p. 35)."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Tables intérieures réelles",
+     "valeur": "14",
+     "sub": "n° 1 à 12, 14 et 15 (p. 35)"
+    },
+    {
+     "label": "Numéros sans table physique",
+     "valeur": "13, 16, 17, 18",
+     "sub": "à l’intérieur (p. 35)"
+    },
+    {
+     "label": "Numéros de note dans l’export",
+     "valeur": "1 à 57",
+     "sub": "rang quotidien réattribué chaque jour (p. 35)"
+    },
+    {
+     "label": "Taux de remplissage retenu",
+     "valeur": "58 %",
+     "sub": "Observatoire FIDUCIAL 2025 (p. 35)"
+    },
+    {
+     "label": "Couverts par service",
+     "valeur": "26 / 25",
+     "sub": "intérieur 44 places, terrasse 43 places (p. 35)"
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le courrier reprend aussi la méthode de comptage des couverts proposée : le détail des tickets (annexes C) permet d’identifier tous les encaissements contenant un plat ou un menu, un couvert valant un plat ou un menu servi, l’heure de chaque encaissement classant la note au midi (avant 18 h) ou au soir (18 h à minuit). Trois fichiers sont cités comme reproductibles : **10-rf-items-classification.xlsx**, **11-rf-encaissements-couverts.xlsx** et **12-rf-couverts-par-service.xlsx** (p. 36). Le service note que la réponse « complète par un petit graphique »."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Troisième fait invoqué : la suppression de la table d’origine est nécessaire et protège le CA.** Lorsque des convives veulent des notes séparées ne portant que leur propre détail, le serveur doit ressaisir les articles de chaque convive sur une deuxième note (la table « virtuelle ») et l’encaisser ; les articles existent alors en double, sur la table d’origine et sur la note ressaisie, si bien que supprimer la table d’origine est « arithmétiquement obligatoire pour ne pas compter le repas deux fois ». Le courrier note que l’exemple des notes n° 22 et n° 23 est cité de nouveau (p. 36). La conclusion rappelée tient en trois points : le numéro de note va de 1 à 57 et ne désigne jamais une table ; le rythme des encaissements par jour travaillé se superpose d’un exercice à l’autre ; supprimer la table d’origine après ressaisie évite de doubler le CA, de sorte que « le grief ne révèle aucun couvert ni aucune recette non déclarée » (p. 36)."
+  },
+  {
+   "kind": "titre",
+   "texte": "La réponse du service",
+   "numero": "1.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le premier argument du service porte sur la **rotation des tables**. « Toute la démonstration n’aborde pas la possibilité du double service pour une même table. Ainsi, s’il n’y a qu’un service, le graphique de la réponse pourrait avoir un semblant de véracité. » (p. 36). Et il poursuit : « Il en va tout autrement à partir du moyen où il peut y avoir des mêmes tables utilisées deux fois pendant un service. Par ce simple fait, le taux de remplissage peut largement être augmenté. » (p. 36). Le service ne chiffre ni le nombre de tables concernées, ni le nombre de journées, ni l’effet sur le taux de 58 %."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le second argument déplace le débat des tables « virtuelles » vers les **suppressions**. Le service admet la mécanique décrite : « Sur l’aspect des tables supprimées, le service s’est limité à décrire ce procédé. La suppression des articles paraît logique pour créer une nouvelle note. » (p. 36). Mais il maintient le grief : « Toutefois, contrairement à ce que la réponse de Maître THIVEND prétend, aucune explication pertinente n’est apporté sur la justification de toutes les opérations “DEL”. Et comme la réponse du service en “partie A-Les suppressions de notes”, seule une infime partie de ces suppressions est expliquée. » (p. 36)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le troisième argument est celui de la **traçabilité**. « De plus, le fichier “tpévenement.xls” ne permettant aucune traçabilité effective comme prévu par la législation, il est totalement impossible d’avoir la certitude que toutes les suppressions ont conduit à un ré-enregistrement dans une autre note à un quelconque moment. » (p. 36). Le service enchaîne en renvoyant à ce qu’il a montré sur la journée du 09 septembre 2022 en « partie A-Les suppressions de notes », dont il reproduit un « court extrait » en pleine page (p. 37) : à gauche les lignes du fichier tpevenements.xls, à droite celles du fichier ticketligne.xls, mises en vis à vis pour la même journée."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Extrait reproduit par le service : journée du 09 septembre 2022, fichier tpevenements.xls (p. 37)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "no Caisse",
+     "align": "right"
+    },
+    {
+     "label": "date Even"
+    },
+    {
+     "label": "heure Even",
+     "align": "right"
+    },
+    {
+     "label": "typ Even"
+    },
+    {
+     "label": "no_z Eport",
+     "align": "right"
+    },
+    {
+     "label": "amount",
+     "align": "right"
+    },
+    {
+     "label": "id",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "07:52",
+      "align": "right"
+     },
+     {
+      "v": "CON"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "0,00 €",
+      "align": "right"
+     },
+     {
+      "v": "42061",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:09",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "6,40 €",
+      "align": "right"
+     },
+     {
+      "v": "42062",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:09",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "7,20 €",
+      "align": "right"
+     },
+     {
+      "v": "42063",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:09",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "15,90 €",
+      "align": "right"
+     },
+     {
+      "v": "42064",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:09",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "16,90 €",
+      "align": "right"
+     },
+     {
+      "v": "42065",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:28",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "17,60 €",
+      "align": "right"
+     },
+     {
+      "v": "42066",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:28",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "4,00 €",
+      "align": "right"
+     },
+     {
+      "v": "42067",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:29",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "7,80 €",
+      "align": "right"
+     },
+     {
+      "v": "42068",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:30",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "4,40 €",
+      "align": "right"
+     },
+     {
+      "v": "42069",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:30",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "3,90 €",
+      "align": "right"
+     },
+     {
+      "v": "42070",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:30",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "6,50 €",
+      "align": "right"
+     },
+     {
+      "v": "42071",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "2022-09-09"
+     },
+     {
+      "v": "11:30",
+      "align": "right"
+     },
+     {
+      "v": "DEL"
+     },
+     {
+      "v": "3052",
+      "align": "right"
+     },
+     {
+      "v": "30,00 €",
+      "align": "right"
+     },
+     {
+      "v": "42072",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Les douze premières lignes du bloc de gauche de la page 37, reproduites telles qu’elles figurent au courrier. La page comporte d’autres lignes « DEL » de la même journée (identifiants 42073 à 42097, de 11:41 à 12:36) et, en vis à vis, le détail des articles du fichier ticketligne.xls (colonnes Date Ticket, Heure Ticket, No Ticket, Dat_z, No_z Report, id, Ref_prd, Lib_ticket, Qte, Uprice_wt, Total TTC), dont la lisibilité du scan ne permet pas une reprise intégrale certaine."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La partie F se termine en haut de la page suivante : « de nombreuses opérations de suppression ne trouvent aucune correspondance dans les notes du fichier ticketligne.xls. Par conséquent, les arguments de la réponse ne permettent pas d’expliquer, ou au mieux seulement à la marge, les anomalies relevées. » (p. 38). Le service ne chiffre à ce stade aucun couvert supplémentaire ni aucune recette omise au titre de la partie F."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse : le numéro de la caisse est un rang d’addition, pas une place à table",
+   "sousTitre": "Sur les 659 journées d’ouverture des trois exercices, sans une seule exception, les numéros de note forment la suite 1, 2, 3 … n des additions du jour."
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que montrent les 659 journées de caisse",
+   "numero": "2.1"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le grief F repose tout entier sur la lecture des numéros portés par l’export de la caisse. Cette lecture est vérifiable, et nous l’avons vérifiée sur la totalité des trois exercices : les annexes C1 à C3 couvrent **659 journées d’ouverture et 16 607 additions**. Le résultat ne laisse aucune marge d’interprétation."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Sur ces 659 journées, **sans une seule exception**, les numéros utilisés forment la suite 1, 2, 3 … n : la numérotation commence au n° 1 (659 jours sur 659), elle ne comporte **aucun trou** (659 jours sur 659), et le numéro le plus élevé de la journée est **toujours exactement égal au nombre d’additions du jour** (659 jours sur 659). La corrélation entre ces deux grandeurs est de **1,0000**."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Un parc de tables ne se comporte pas ainsi. Il faudrait admettre qu’un restaurant de 14 tables occupe chaque jour ses tables dans l’ordre exact 1, 2, 3 … sans jamais en sauter une, puis qu’il en fasse apparaître jusqu’à 43 de plus les jours de forte affluence, toujours dans l’ordre, avant de tout remettre à zéro le lendemain matin. La seule lecture cohérente est celle d’un **compteur d’additions quotidien**."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Journées d’ouverture analysées",
+     "valeur": "659",
+     "sub": "annexes C1 à C3, trois exercices"
+    },
+    {
+     "label": "Additions (notes) analysées",
+     "valeur": "16 607",
+     "sub": "et 37 369 couverts"
+    },
+    {
+     "label": "Journées où les numéros forment la suite 1 … n",
+     "valeur": "100 %",
+     "sub": "659 sur 659, aucun trou",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Corrélation n° le plus élevé / nombre d’additions",
+     "valeur": "1,0000",
+     "sub": "identité, pas simple corrélation"
+    },
+    {
+     "label": "Journées où le n° le plus élevé dépasse 15",
+     "valeur": "84,4 %",
+     "sub": "556 jours, alors que la dernière table porte le n° 15"
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le numéro le plus élevé suit le nombre d’additions du jour, jamais un parc de tables",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Additions encaissées dans la journée"
+    },
+    {
+     "label": "Journées concernées",
+     "align": "right"
+    },
+    {
+     "label": "N° de note le plus élevé (moyenne)",
+     "align": "right"
+    },
+    {
+     "label": "Couverts servis (moyenne)",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "de 1 à 9"
+     },
+     {
+      "v": "24",
+      "align": "right"
+     },
+     {
+      "v": "7,0",
+      "align": "right"
+     },
+     {
+      "v": "18",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "de 10 à 19"
+     },
+     {
+      "v": "151",
+      "align": "right"
+     },
+     {
+      "v": "15,0",
+      "align": "right"
+     },
+     {
+      "v": "35",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "de 20 à 29"
+     },
+     {
+      "v": "254",
+      "align": "right"
+     },
+     {
+      "v": "25,0",
+      "align": "right"
+     },
+     {
+      "v": "57",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "de 30 à 39"
+     },
+     {
+      "v": "212",
+      "align": "right"
+     },
+     {
+      "v": "33,3",
+      "align": "right"
+     },
+     {
+      "v": "73",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "de 40 à 49"
+     },
+     {
+      "v": "17",
+      "align": "right"
+     },
+     {
+      "v": "42,2",
+      "align": "right"
+     },
+     {
+      "v": "87",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "50 et plus"
+     },
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "57,0",
+      "align": "right"
+     },
+     {
+      "v": "134",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le rang le plus élevé du jour dépasse **15**, dernier numéro de table de la salle, sur **556 journées (84,4 %)**, et dépasse **18**, dernier numéro affiché à l’écran de la caisse, sur **507 journées (76,9 %)**. Lu comme un numéro de table, cela signifierait que le restaurant a ouvert jusqu’à 57 tables un samedi de juillet dans une salle qui en compte 14."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La fréquence de chaque rang confirme la mécanique. Le rang n° 1 est utilisé **les 659 jours (100 %)**. Le rang n° 25 n’apparaît que **378 jours (57,4 %)**, le rang n° 40 seulement **18 jours (2,7 %)** et le rang n° 57 **une seule fois**. Un numéro de table ne dépend pas de l’affluence du jour : la table existe, ou elle n’existe pas. Un rang d’addition, lui, n’est atteint que si la journée a compté autant de clients."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Deux tests simples, et ils échouent tous les deux",
+   "texte": "Si le numéro désignait une table, il manquerait des numéros les jours creux (toutes les tables ne sont pas occupées) et les numéros de terrasse 101 à 115 apparaîtraient de mai à septembre, lorsque la terrasse est le seul espace ouvert. Sur les 659 journées vérifiées, il ne manque jamais un numéro et aucun numéro de terrasse n’apparaît jamais."
+  },
+  {
+   "kind": "titre",
+   "texte": "Les tickets clôturés à zéro : ce que le service trouvera s’il ouvre l’annexe H"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La démonstration qui précède porte sur les **annexes C**, c’est-à-dire sur les notes qui contiennent des articles. Nous le disons sans détour, parce que le service le verra : l’**annexe H**, qui liste tous les tickets, en compte 19 903, soit 3 296 de plus, dont **3 281 clôturés à 0,00 € sans aucune ligne d’article**. Sur cette base élargie, l’identité entre le numéro le plus élevé et le nombre de tickets ne se vérifie plus que 22 jours sur 659. Il faut donc dire ce que sont ces tickets."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La réponse est dans les données, et elle est sans ambiguïté : **3 278 de ces 3 281 tickets, soit 99,9 %, portent un numéro que porte aussi, le même jour, un ticket encaissé**. Ce ne sont pas des notes effacées : ce sont les enveloppes vides laissées par le transfert ou le partage d’une addition. La table est ouverte sous le numéro N, son contenu est déplacé ou réparti entre plusieurs convives, la note d’origine se referme à zéro et la note réellement encaissée porte le même numéro N."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Tickets clôturés à 0,00 €",
+     "valeur": "3 281",
+     "sub": "annexe H, trois exercices"
+    },
+    {
+     "label": "Appariés à un ticket encaissé",
+     "valeur": "3 278",
+     "sub": "99,9 %, même jour, même numéro",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Sans jumeau encaissé",
+     "valeur": "3",
+     "sub": "sur 3 281 et sur trois exercices"
+    },
+    {
+     "label": "Montant de ces tickets",
+     "valeur": "0,00 €",
+     "sub": "aucune ligne d’article, aucun encaissement"
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les trois seuls tickets à 0,00 € sans jumeau encaissé, sur les trois exercices",
+   "minWidth": 480,
+   "colonnes": [
+    {
+     "label": "Date"
+    },
+    {
+     "label": "Heure"
+    },
+    {
+     "label": "N° de ticket",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-04-29"
+     },
+     {
+      "v": "13:15"
+     },
+     {
+      "v": "n° 15",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2022-12-28"
+     },
+     {
+      "v": "20:05"
+     },
+     {
+      "v": "n° 17",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-03-23"
+     },
+     {
+      "v": "20:18"
+     },
+     {
+      "v": "n° 5",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Trois tickets sur 3 281 et sur trois exercices, tous au premier exercice. Deux d’entre eux tombent sur des journées que la page consacrée aux [articles à prix 0 €](/reponse-1/articles-a-zero-euro) documente déjà : ce sont les notes intégralement offertes, dont le détail est reproduit ligne à ligne. Il ne subsiste donc, au terme de ce contrôle, **aucun ticket clôturé à zéro dont la contrepartie ne soit pas identifiée**."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ce constat referme le grief plutôt qu’il ne l’ouvre. Si des recettes avaient été logées dans ces tickets, ils seraient orphelins : une note encaissée en espèces puis vidée ne laisserait pas, le même jour et sous le même numéro, une seconde note régulièrement encaissée et déclarée. C’est pourtant ce que montrent 99,9 % des cas."
+  },
+  {
+   "kind": "titre",
+   "texte": "Deux journées d’exemple",
+   "numero": "2.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le samedi **09 juillet 2022** est la journée la plus chargée des trois exercices : **57 additions et 134 couverts**. Les numéros y suivent l’horloge, du n° 1 encaissé à 10 h 35 au n° 57 encaissé à 20 h 52, sans jamais revenir en arrière. La veille, la journée s’était arrêtée au n° 33 ; le lendemain, elle repart au n° 1 et s’arrête au n° 29."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Trois journées consécutives : la numérotation repart à 1 chaque matin",
+   "minWidth": 720,
+   "colonnes": [
+    {
+     "label": "Journée"
+    },
+    {
+     "label": "Additions",
+     "align": "right"
+    },
+    {
+     "label": "Numéros utilisés"
+    },
+    {
+     "label": "Couverts",
+     "align": "right"
+    },
+    {
+     "label": "Services",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vendredi 08 juillet 2022"
+     },
+     {
+      "v": "33",
+      "align": "right"
+     },
+     {
+      "v": "n° 1 à n° 33"
+     },
+     {
+      "v": "71",
+      "align": "right"
+     },
+     {
+      "v": "2",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Samedi 09 juillet 2022"
+     },
+     {
+      "v": "57",
+      "align": "right"
+     },
+     {
+      "v": "n° 1 à n° 57"
+     },
+     {
+      "v": "134",
+      "align": "right"
+     },
+     {
+      "v": "2",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dimanche 10 juillet 2022"
+     },
+     {
+      "v": "29",
+      "align": "right"
+     },
+     {
+      "v": "n° 1 à n° 29"
+     },
+     {
+      "v": "75",
+      "align": "right"
+     },
+     {
+      "v": "2",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Journée du samedi 09 juillet 2022 : le rang de note suit l’heure de l’addition",
+   "minWidth": 620,
+   "colonnes": [
+    {
+     "label": "N° de note",
+     "align": "right"
+    },
+    {
+     "label": "Heure de l’addition",
+     "align": "right"
+    },
+    {
+     "label": "Couverts",
+     "align": "right"
+    },
+    {
+     "label": "Service"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "n° 1",
+      "align": "right"
+     },
+     {
+      "v": "10:35",
+      "align": "right"
+     },
+     {
+      "v": "2",
+      "align": "right"
+     },
+     {
+      "v": "midi"
+     }
+    ],
+    [
+     {
+      "v": "n° 10",
+      "align": "right"
+     },
+     {
+      "v": "12:30",
+      "align": "right"
+     },
+     {
+      "v": "2",
+      "align": "right"
+     },
+     {
+      "v": "midi"
+     }
+    ],
+    [
+     {
+      "v": "n° 20",
+      "align": "right"
+     },
+     {
+      "v": "13:05",
+      "align": "right"
+     },
+     {
+      "v": "3",
+      "align": "right"
+     },
+     {
+      "v": "midi"
+     }
+    ],
+    [
+     {
+      "v": "n° 28",
+      "align": "right"
+     },
+     {
+      "v": "13:23",
+      "align": "right"
+     },
+     {
+      "v": "1",
+      "align": "right"
+     },
+     {
+      "v": "midi"
+     }
+    ],
+    [
+     {
+      "v": "n° 35",
+      "align": "right"
+     },
+     {
+      "v": "18:19",
+      "align": "right"
+     },
+     {
+      "v": "4",
+      "align": "right"
+     },
+     {
+      "v": "soir"
+     }
+    ],
+    [
+     {
+      "v": "n° 45",
+      "align": "right"
+     },
+     {
+      "v": "19:32",
+      "align": "right"
+     },
+     {
+      "v": "2",
+      "align": "right"
+     },
+     {
+      "v": "soir"
+     }
+    ],
+    [
+     {
+      "v": "n° 57",
+      "align": "right"
+     },
+     {
+      "v": "20:52",
+      "align": "right"
+     },
+     {
+      "v": "3",
+      "align": "right"
+     },
+     {
+      "v": "soir"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Extrait de la journée : le fichier joint R1-numeros-de-note-par-jour.xlsx contient les 57 notes de cette journée, ligne à ligne, ainsi que celles du dimanche 05 mars 2023 (journée creuse, 12 notes de n° 1 à n° 12, un seul service)."
+  },
+  {
+   "kind": "titre",
+   "texte": "La salle réelle : 14 tables à l’intérieur, 14 en terrasse",
+   "numero": "2.3"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La salle intérieure compte **14 tables** (n° 1 à 12, 14 et 15) et **44 places**. Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros de note ouverts pour un règlement séparé, ou des numéros non attribués. La terrasse compte **14 tables** (n° 101 à 115) et **43 places** ; les numéros **102 et 125 n’existent pas**, et les tables **n° 116 et 117** ne sont montées que les jours exceptionnels, ce qui les exclut du décompte des places. Le point est vérifiable sur place, en comptant les tables."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La cuisine ne permet pas de servir simultanément la salle et la terrasse : **un seul espace est ouvert à chaque service**, la terrasse de début mai à début septembre (sauf les jours de pluie), l’intérieur de mi septembre à fin avril. C’est la raison pour laquelle la capacité de référence est de 44 places ou de 43 places selon la saison, et non de 87."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Plan de salle réel (confirmé par la gérante, vérifiable sur place)",
+   "minWidth": 820,
+   "colonnes": [
+    {
+     "label": "Zone"
+    },
+    {
+     "label": "Numéros qui désignent une table"
+    },
+    {
+     "label": "Tables",
+     "align": "right"
+    },
+    {
+     "label": "Places",
+     "align": "right"
+    },
+    {
+     "label": "Numéros sans table physique"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Intérieur"
+     },
+     {
+      "v": "n° 1 à 12, 14 et 15"
+     },
+     {
+      "v": "14",
+      "align": "right"
+     },
+     {
+      "v": "44",
+      "align": "right"
+     },
+     {
+      "v": "13, 16, 17, 18"
+     }
+    ],
+    [
+     {
+      "v": "Terrasse"
+     },
+     {
+      "v": "n° 101 à 115"
+     },
+     {
+      "v": "14",
+      "align": "right"
+     },
+     {
+      "v": "43",
+      "align": "right"
+     },
+     {
+      "v": "102 et 125 ; n° 116 et 117 réservées aux jours exceptionnels"
+     }
+    ],
+    [
+     {
+      "v": "Export de la caisse"
+     },
+     {
+      "v": "aucun : uniquement des rangs de note de 1 à 57"
+     },
+     {
+      "v": "sans objet",
+      "align": "right"
+     },
+     {
+      "v": "sans objet",
+      "align": "right"
+     },
+     {
+      "v": "les numéros 101 à 125 n’apparaissent jamais, y compris l’été"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Le double service n’est pas ignoré : il est compté",
+   "numero": "2.4"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service objecte que la démonstration « n’aborde pas la possibilité du double service pour une même table » et que « par ce simple fait, le taux de remplissage peut largement être augmenté » (p. 36). L’objection porterait si nos couverts étaient **déduits** d’un plafond de places. Ils ne le sont pas : ils sont **comptés**, addition par addition, dans le détail des tickets (annexes C), un couvert étant un plat ou un menu réellement encaissé."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Une table qui tourne deux fois produit deux additions, donc deux séries de plats, donc deux fois des couverts dans notre décompte. **La rotation n’est pas une hypothèse écartée : elle est mesurée.** Le taux de 58 % de l’Observatoire FIDUCIAL n’a jamais servi de plafond dans notre démonstration : il sert de point de comparaison, pour montrer que le niveau d’activité enregistré est normal."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le résultat mesuré est d’ailleurs **supérieur** à ce point de comparaison. Sur les **1 269 services** effectivement servis des trois exercices, l’occupation moyenne s’établit à **67,7 % des places de l’espace ouvert**, soit près de dix points au-dessus de la moyenne nationale invoquée. Et **89 services (7,0 %) dépassent 100 % des places** : ce sont précisément les services où une table a tourné, et ils figurent déjà dans nos chiffres, jusqu’à **163 %** un midi de juillet."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Occupation moyenne mesurée",
+     "valeur": "67,7 %",
+     "sub": "couverts comptés / places de l’espace ouvert",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Moyenne nationale invoquée",
+     "valeur": "58 %",
+     "sub": "Observatoire FIDUCIAL 2025 (p. 35)"
+    },
+    {
+     "label": "Services servis",
+     "valeur": "1 269",
+     "sub": "midi ou soir avec au moins un couvert"
+    },
+    {
+     "label": "Services au-delà de 100 % des places",
+     "valeur": "89",
+     "sub": "7,0 % : la rotation de table, déjà comptée"
+    },
+    {
+     "label": "Occupation la plus forte observée",
+     "valeur": "163 %",
+     "sub": "un service de midi en terrasse"
+    }
+   ]
+  },
+  {
+   "kind": "graphique",
+   "variante": "vertical",
+   "hauteur": 300,
+   "dataKey": "nom",
+   "serie": {
+    "name": "Occupation (%)",
+    "couleur": "teal.6"
+   },
+   "format": "int",
+   "data": [
+    {
+     "nom": "Mars",
+     "Occupation (%)": 49
+    },
+    {
+     "nom": "Avril",
+     "Occupation (%)": 61
+    },
+    {
+     "nom": "Mai",
+     "Occupation (%)": 71
+    },
+    {
+     "nom": "Juin",
+     "Occupation (%)": 73
+    },
+    {
+     "nom": "Juillet",
+     "Occupation (%)": 90
+    },
+    {
+     "nom": "Août",
+     "Occupation (%)": 89
+    },
+    {
+     "nom": "Sept.",
+     "Occupation (%)": 71
+    },
+    {
+     "nom": "Oct.",
+     "Occupation (%)": 65
+    },
+    {
+     "nom": "Nov.",
+     "Occupation (%)": 51
+    },
+    {
+     "nom": "Déc.",
+     "Occupation (%)": 51
+    },
+    {
+     "nom": "Janv.",
+     "Occupation (%)": 55
+    },
+    {
+     "nom": "Févr.",
+     "Occupation (%)": 42
+    }
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Taux d’occupation moyen par mois (couverts comptés en caisse rapportés aux places de l’espace ouvert : terrasse de mai à août, intérieur le reste de l’année). Moyenne des trois exercices."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service ne tire enfin de son objection **aucun chiffre**. Il ne dit ni combien de tables auraient tourné, ni sur combien de journées, ni de combien le taux de 58 % devrait être relevé, ni surtout quel couvert supplémentaire en résulterait. Une observation qui ne se traduit par aucune quantité ne peut pas fonder une rectification, dont il appartient à l’administration d’établir le bien fondé."
+  },
+  {
+   "kind": "titre",
+   "texte": "Le service concède l’essentiel, puis change de terrain",
+   "numero": "2.5"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Sur le grief lui même, le service ne conteste plus rien. Il écrit : « Sur l’aspect des tables supprimées, le service s’est limité à décrire ce procédé. **La suppression des articles paraît logique pour créer une nouvelle note.** » (p. 36). Il ne discute ni les 14 tables intérieures, ni l’inexistence des n° 13, 16, 17 et 18, ni le fait que l’export ne porte que des rangs de note. Le motif « trop de tables » perd ainsi son objet, par l’effet de la réponse elle même."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La suite de la « Réponse du service » ne parle plus de tables. Elle porte sur « la justification de toutes les opérations “DEL” », renvoie expressément à la « **partie A-Les suppressions de notes** », affirme que le fichier « tpévenement.xls » « ne permett[rait] aucune traçabilité effective comme prévu par la législation », puis reproduit un extrait de la journée du 09 septembre 2022 (p. 36 et p. 37). Ces trois points sont ceux des parties A et G, où ils sont traités. Ils ne répondent pas à la question posée en partie F : les tables « virtuelles » révèlent elles des couverts ou des recettes non déclarés ?"
+  },
+  {
+   "kind": "titre",
+   "texte": "Aucun enjeu chiffré n’est rattaché à ce grief",
+   "numero": "2.6"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La partie F se termine sur une formule générale : « les arguments de la réponse ne permettent pas d’expliquer, ou au mieux seulement à la marge, les anomalies relevées » (p. 38). **Aucun montant, aucun couvert, aucune recette n’y est rattaché.** La reconstitution du service ne repose sur aucun décompte de tables ni de numéros de notes : elle part des volumes de liquides, puis extrapole la cuisine par un coefficient. Le grief F ne sert donc qu’à alimenter le rejet de comptabilité."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "Ce que cela fait tomber"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le grief F est bâti sur une confusion de lecture, et cette confusion se démontre sur la totalité des données : **659 journées sur 659**, les numéros de la caisse forment la suite des additions du jour, sans un trou, avec une corrélation de 1,0000 entre le numéro le plus élevé et le nombre d’additions. Un numéro élevé signale une journée chargée, jamais une table de plus."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "L’unique argument nouveau du service, le double service, ne l’atteint pas : les couverts sont comptés et non plafonnés, la rotation y est déjà incluse (89 services au-delà de 100 % des places), et l’occupation mesurée de 67,7 % dépasse déjà la moyenne nationale que le service ne conteste pas. Le service concède par ailleurs la logique des suppressions et ne chiffre rien."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "En conséquence, le motif « trop de tables / tables virtuelles » ne peut plus soutenir le rejet de comptabilité, et il n’apporte **aucun euro** à la reconstitution."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Fichier recalculable à partir des seules annexes de caisse (script scripts/reponse1-numeros-de-note.py, lecture seule des annexes C1 à C3). Il contient la synthèse des tests, les 659 journées ligne à ligne (numéro le plus élevé, nombre d’additions, couverts, services, espace ouvert, taux d’occupation par service), la fréquence d’utilisation de chacun des 57 rangs de note et le détail des deux journées d’exemple.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-numeros-de-note-par-jour.xlsx",
+     "label": "R1 : numéros de note, additions, couverts et services, jour par jour (3 exercices)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-tickets-a-zero.xlsx",
+     "label": "Les tickets clôturés à 0,00 € et leur jumeau encaissé (XLSX)"
+    }
+   ]
+  }
+ ]
 }

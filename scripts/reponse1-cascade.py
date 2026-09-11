@@ -1,6 +1,12 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+ATTENTION : ce script produit la cascade DU MEMOIRE DU 10/07/2026
+(9 004 L justifies / 84,8 %). La cascade a jour, apres les corrections portees
+contre nous-memes, est produite par scripts/reponse1-cascade-coherence.py et
+ecrite dans R1-cascade-bilan-matiere.xlsx. Les deux fichiers sont distincts
+depuis l audit des sources : ne pas les confondre.
+
 REPONSE 1 - Partie L (p. 59) et partie M (p. 76-77) : la cascade des 10 622 L.
 
 Bilan matiere de l'alcool achete sur les 3 exercices verifies : un litre achete
@@ -22,7 +28,7 @@ Entrees (lecture seule, deja produites par les pipelines du dossier) :
   src/data/incertitudeDisparu/synthese_perte_reelle.json   (cascade memoire)
   src/data/reponse1Calculs/cremant-fourchette.json         (cremant borne par le stock)
 Sortie :
-  public/documents/pieces-reponse-1/R1-cascade-bilan-matiere.xlsx
+  public/documents/pieces-reponse-1/R1-cascade-bilan-matiere-memoire-juillet.xlsx
 """
 import os
 import json
@@ -35,7 +41,7 @@ ROOT = os.path.normpath(os.path.join(ICI, ".."))
 SYNTHESE = os.path.join(ROOT, "src/data/incertitudeDisparu/synthese_perte_reelle.json")
 CREMANT = os.path.join(ROOT, "src/data/reponse1Calculs/cremant-fourchette.json")
 PIECES = os.path.join(ROOT, "public/documents/pieces-reponse-1/")
-SORTIE = os.path.join(PIECES, "R1-cascade-bilan-matiere.xlsx")
+SORTIE = os.path.join(PIECES, "R1-cascade-bilan-matiere-memoire-juillet.xlsx")
 
 # --- Qualification de chaque poste de la cascade -----------------------------
 # nature : MESURE (lu dans la caisse ou l'inventaire), CALCUL (quantite mesuree

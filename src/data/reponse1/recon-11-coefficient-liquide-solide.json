@@ -1,341 +1,341 @@
 {
-  "meta": {
-    "slug": "recon-11-coefficient-liquide-solide",
-    "source": "Réponse DDFiP 39 du 04/09/2026, p. 76"
+ "meta": {
+  "slug": "recon-11-coefficient-liquide-solide",
+  "source": "Réponse DDFiP 39 du 04/09/2026, p. 76"
+ },
+ "entete": {
+  "positionService": "Le service reconnaît avoir « effectivement déterminé un rapport liquides/solides » pour sa méthode de reconstitution, et résume la critique de Maître THIVEND : ce rapport « permet d’extrapoler le chiffre d’affaires cuisine qui, par cette logique, n’est jamais mesuré ». Il oppose un seul argument : « ce rapport liquides/solides provient directement des données de la caisse informatique qui reflète des données d’exploitation qui peuvent être considérées comme significatives, en terme de volume d’information ». Il en tire une conclusion qu’il souligne dans son courrier : « Ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable » (p. 76).",
+  "reponseCourte": "L’origine des données ne prouve pas le résultat : retenue jusqu’au bout, la caisse que le service dit « exhaustive » donne directement un chiffre d’affaires cuisine de 959 561 €, contre 1 314 482 € extrapolés.",
+  "enjeu": "Point 11 de la reconstitution du chiffre d’affaires (proposition de rectifications p. 52) : le coefficient qui fait passer du chiffre d’affaires liquides au chiffre d’affaires cuisine, et donc au total reconstitué.",
+  "statut": "demonte"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que soutient l’administration",
+   "sousTitre": "Point « 11. Le coefficient liquide → solide serait neutre · Proposition p. 52 », p. 76 de la réponse du 04/09/2026."
   },
-  "entete": {
-    "positionService": "Le service reconnaît avoir « effectivement déterminé un rapport liquides/solides » pour sa méthode de reconstitution, et résume la critique de Maître THIVEND : ce rapport « permet d’extrapoler le chiffre d’affaires cuisine qui, par cette logique, n’est jamais mesuré ». Il oppose un seul argument : « ce rapport liquides/solides provient directement des données de la caisse informatique qui reflète des données d’exploitation qui peuvent être considérées comme significatives, en terme de volume d’information ». Il en tire une conclusion qu’il souligne dans son courrier : « Ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable » (p. 76).",
-    "reponseCourte": "L’origine des données ne prouve pas le résultat : retenue jusqu’au bout, la caisse que le service dit « exhaustive » donne directement un chiffre d’affaires cuisine de 959 561 €, contre 1 314 482 € extrapolés.",
-    "enjeu": "Point 11 de la reconstitution du chiffre d’affaires (proposition de rectifications p. 52) : le coefficient qui fait passer du chiffre d’affaires liquides au chiffre d’affaires cuisine, et donc au total reconstitué.",
-    "statut": "demonte"
+  {
+   "kind": "titre",
+   "texte": "Le débat tel que le courrier le présente",
+   "numero": "1.1"
   },
-  "sections": [
+  {
+   "kind": "paragraphe",
+   "texte": "Le courrier rappelle d’abord la position critiquée, sous l’intitulé « Service » : « Le CA cuisine est obtenu en multipliant le CA liquides par 2,94 / 3,02 / 3,10 » (p. 76). Le chiffre d’affaires cuisine n’est donc pas reconstitué à partir de données propres à la cuisine, mais déduit du chiffre d’affaires liquides par application de ces trois coefficients."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il reproduit ensuite la réponse de Maître THIVEND, sous l’intitulé « Réponse » : « Le **CA cuisine (≈ ¾ du total) n’est jamais mesuré** : il est extrapolé. Toute sur-évaluation des liquides est donc **amplifiée ~3 fois** sur le total reconstitué » (p. 76). La pièce visée à l’appui de ce point est « 59-rf-coefficient-liquide-solide.xlsx »."
+  },
+  {
+   "kind": "kpis",
+   "items": [
     {
-      "kind": "chapitre",
-      "source": "fisc",
-      "numero": 1,
-      "titre": "Ce que soutient l’administration",
-      "sousTitre": "Point « 11. Le coefficient liquide → solide serait neutre · Proposition p. 52 », p. 76 de la réponse du 04/09/2026."
+     "label": "Coefficients appliqués au CA liquides",
+     "valeur": "2,94 / 3,02 / 3,10",
+     "sub": "trois coefficients cités p. 76, renvoyant à la proposition p. 52",
+     "highlight": true,
+     "couleur": "red"
     },
     {
-      "kind": "titre",
-      "texte": "Le débat tel que le courrier le présente",
-      "numero": "1.1"
+     "label": "Part du CA cuisine dans le total",
+     "valeur": "≈ ¾",
+     "sub": "part jamais mesurée mais extrapolée, selon la réponse reproduite p. 76",
+     "couleur": "blue"
     },
     {
-      "kind": "paragraphe",
-      "texte": "Le courrier rappelle d’abord la position critiquée, sous l’intitulé « Service » : « Le CA cuisine est obtenu en multipliant le CA liquides par 2,94 / 3,02 / 3,10 » (p. 76). Le chiffre d’affaires cuisine n’est donc pas reconstitué à partir de données propres à la cuisine, mais déduit du chiffre d’affaires liquides par application de ces trois coefficients."
+     "label": "Amplification d’une sur-évaluation des liquides",
+     "valeur": "~3 fois",
+     "sub": "effet sur le total reconstitué, selon la réponse reproduite p. 76",
+     "couleur": "gold"
     },
     {
-      "kind": "paragraphe",
-      "texte": "Il reproduit ensuite la réponse de Maître THIVEND, sous l’intitulé « Réponse » : « Le **CA cuisine (≈ ¾ du total) n’est jamais mesuré** : il est extrapolé. Toute sur-évaluation des liquides est donc **amplifiée ~3 fois** sur le total reconstitué » (p. 76). La pièce visée à l’appui de ce point est « 59-rf-coefficient-liquide-solide.xlsx »."
-    },
-    {
-      "kind": "kpis",
-      "items": [
-        {
-          "label": "Coefficients appliqués au CA liquides",
-          "valeur": "2,94 / 3,02 / 3,10",
-          "sub": "trois coefficients cités p. 76, renvoyant à la proposition p. 52",
-          "highlight": true,
-          "couleur": "red"
-        },
-        {
-          "label": "Part du CA cuisine dans le total",
-          "valeur": "≈ ¾",
-          "sub": "part jamais mesurée mais extrapolée, selon la réponse reproduite p. 76",
-          "couleur": "blue"
-        },
-        {
-          "label": "Amplification d’une sur-évaluation des liquides",
-          "valeur": "~3 fois",
-          "sub": "effet sur le total reconstitué, selon la réponse reproduite p. 76",
-          "couleur": "gold"
-        },
-        {
-          "label": "Suite donnée par le service",
-          "valeur": "Méthode « parfaitement valable »",
-          "sub": "aucun coefficient ni aucun montant n’est modifié (p. 76)",
-          "couleur": "red"
-        }
-      ]
-    },
-    {
-      "kind": "titre",
-      "texte": "La réponse du service",
-      "numero": "1.2"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Premier temps : le service confirme l’existence du coefficient.** Il écrit : « Pour sa méthode de reconstitution, le service a effectivement déterminé un rapport liquides/solides » (p. 76). Le principe même du procédé contesté n’est donc pas discuté : le chiffre d’affaires solides est bien obtenu par application d’un rapport au chiffre d’affaires liquides."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Deuxième temps : le service reformule la critique.** Il indique : « Maître THIVEND semble contester ce rapport, considérant qu’il permet d’extrapoler le chiffre d’affaires cuisine qui, par cette logique, n’est jamais mesuré » (p. 76). Cette reformulation retient la question de l’extrapolation, mais laisse de côté le second membre de la critique, celui de l’amplification : le courrier ne reprend nulle part le fait que le chiffre d’affaires cuisine représenterait environ les trois quarts du total, ni le facteur d’environ 3 appliqué à toute sur-évaluation des liquides."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Troisième temps : l’unique justification opposée, l’origine des données.** Le service répond : « Toutefois, ce rapport liquides/solides provient directement des données de la caisse informatique qui reflète des données d’exploitation qui peuvent être considérées comme significatives, en terme de volume d’information » (p. 76). L’argument porte sur la provenance et sur le volume des données ayant servi à calculer le rapport, et non sur la fiabilité du résultat obtenu ni sur le mécanisme de propagation dénoncé."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**Quatrième temps : la conclusion, soulignée dans le courrier.** Le service termine par la phrase suivante, qu’il souligne : « Ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable » (p. 76). La validité de l’ensemble de la méthode de reconstitution est ainsi déduite d’un seul élément, l’origine du rapport liquides/solides."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le point 11 se clôt sur cette phrase, sans autre développement. Le service ne produit ni le calcul du rapport, ni la période retenue, ni le détail des données de caisse utilisées, et ne modifie ni les coefficients de 2,94, 3,02 et 3,10, ni les montants de la proposition de rectifications. Le courrier passe immédiatement au titre suivant, « M- Notre Méthode : La cascade des 10 622 L » (p. 76)."
-    },
-    {
-      "kind": "alerte",
-      "couleur": "red",
-      "titre": "Une validation par la source, non par le résultat",
-      "texte": "Toute la réponse du service tient en une proposition : le rapport vient de la caisse, donc la méthode est valable. L’origine des données est présentée comme suffisante « à lui seul », sans qu’aucun contrôle du résultat obtenu, ni aucune réponse à l’argument d’amplification, ne soit apporté."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 2,
-      "titre": "Notre réponse : l’origine des données ne valide pas le résultat, et elle se retourne contre la reconstitution",
-      "sousTitre": "Version résumée : la démonstration complète, chiffrée exercice par exercice, figure à la page « Extrapolation cuisine »."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le fond de la démonstration, avec le détail des annexes et les tableaux exercice par exercice, est exposé à la page [Extrapolation cuisine](/reponse-1/extrapolation-cuisine)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service répond que le rapport liquides/solides « provient directement des données de la caisse informatique » et en déduit que « ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable » (p. 76). Cette réponse laisse entière la critique, pour trois raisons."
-    },
-    {
-      "kind": "titre",
-      "texte": "La caisse ne peut pas être significative pour le rapport et non probante pour les montants",
-      "numero": "2.1"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le même courrier qualifie ces données, en page 92, de « significatives, en terme de volume d’informations **et surtout exhaustives** », et, en page 93, met en cause « **la qualité et l’inaltérabilité des données de caisse** », avant de conclure en page 94 que « toutes les anomalies relevées dans les données de caisse demeurent sans explications ». Il s’agit du même fichier, sur les mêmes exercices. Un rapport ne peut pas avoir une valeur probante supérieure à celle de la source dont il est extrait."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le rapport n’est d’ailleurs pas seulement lu dans la caisse : il est calculé au bas des annexes D établies par le service, dont la dernière ligne, « RAPPORT POUR 1 € DE CA LIQUIDE », porte les valeurs 2,9363, 3,0239 et 3,1047, soit les coefficients de 2,94, 3,02 et 3,10 de la proposition p. 52."
-    },
-    {
-      "kind": "titre",
-      "texte": "Retenue jusqu’au bout, la même caisse donne directement le chiffre d’affaires cuisine",
-      "numero": "2.2"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Si les données sont exhaustives pour établir la proportion, elles le sont aussi pour établir le montant. Les annexes D portent le chiffre d’affaires cuisine enregistré, recontrôlé ligne à ligne sur le détail des tickets des annexes C sans aucun écart. Il n’avait donc pas à être extrapolé."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Chiffre d’affaires cuisine enregistré en caisse et chiffre d’affaires cuisine extrapolé",
-      "minWidth": 760,
-      "colonnes": [
-        {
-          "label": "Exercice"
-        },
-        {
-          "label": "Cuisine enregistrée (annexes C et D)",
-          "align": "right"
-        },
-        {
-          "label": "Cuisine extrapolée (proposition p. 52)",
-          "align": "right"
-        },
-        {
-          "label": "Écart",
-          "align": "right"
-        },
-        {
-          "label": "Part du rehaussement de l’exercice",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "2022-2023"
-          },
-          {
-            "v": "300 747 €",
-            "align": "right"
-          },
-          {
-            "v": "445 675 €",
-            "align": "right"
-          },
-          {
-            "v": "144 928 €",
-            "align": "right"
-          },
-          {
-            "v": "75,0 %",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "2023-2024"
-          },
-          {
-            "v": "329 362 €",
-            "align": "right"
-          },
-          {
-            "v": "433 860 €",
-            "align": "right"
-          },
-          {
-            "v": "104 498 €",
-            "align": "right"
-          },
-          {
-            "v": "75,3 %",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "2024-2025"
-          },
-          {
-            "v": "329 452 €",
-            "align": "right"
-          },
-          {
-            "v": "434 947 €",
-            "align": "right"
-          },
-          {
-            "v": "105 495 €",
-            "align": "right"
-          },
-          {
-            "v": "75,5 %",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Total 3 ans"
-          },
-          {
-            "v": "959 561 €",
-            "align": "right"
-          },
-          {
-            "v": "1 314 482 €",
-            "align": "right"
-          },
-          {
-            "v": "354 921 €",
-            "align": "right"
-          },
-          {
-            "v": "75,2 %",
-            "align": "right"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "titre",
-      "texte": "L’argument d’amplification, resté sans réponse, est vérifiable sur la formule du service",
-      "numero": "2.3"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le total reconstitué s’écrit « chiffre d’affaires liquides x (1 + rapport) ». Toute sur évaluation du chiffre d’affaires liquides est donc reportée sur le total dans un rapport de 3,94, 4,02 ou 4,10 selon l’exercice : 1 000 € de boissons ajoutés à tort produisent 3 940 € à 4 100 € de rehaussement. Le service, qui écrit ailleurs qu’« il est normal que les rehaussements proposés correspondent à 75 % puisqu’il s’agit d’une conséquence directe du rapport » (p. 92), constate le même mécanisme en sens inverse."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Effet, sur le rehaussement total, de 1 000 € de chiffre d’affaires liquides sur évalués",
-      "minWidth": 600,
-      "colonnes": [
-        {
-          "label": "Exercice"
-        },
-        {
-          "label": "Coefficient",
-          "align": "right"
-        },
-        {
-          "label": "Effet sur le total reconstitué",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "2022-2023"
-          },
-          {
-            "v": "2,94",
-            "align": "right"
-          },
-          {
-            "v": "3 940 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "2023-2024"
-          },
-          {
-            "v": "3,02",
-            "align": "right"
-          },
-          {
-            "v": "4 020 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "2024-2025"
-          },
-          {
-            "v": "3,10",
-            "align": "right"
-          },
-          {
-            "v": "4 100 €",
-            "align": "right"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Enfin, la formule « à lui seul » ne suffit pas à établir le bien fondé d’une reconstitution. Le Conseil d’État juge qu’un ratio tiré du nombre de ventes et appliqué sans tenir compte « des volumes respectifs d’un verre et d’une bouteille ni de la nature des boissons vendues » vicie la méthode dans son principe ([CE, 3e ch., 5 octobre 2016, n° 389822](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2016-10-05/389822)). Ici, le rapport a été mesuré sur un couple de montants réels puis appliqué à un chiffre d’affaires liquides majoré de 32 % à 48 % : les conditions dans lesquelles il a été constaté ne sont plus réunies."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 3,
-      "titre": "Ce que cela fait tomber",
-      "sousTitre": "L’extrapolation cuisine, soit 354 921 € sur 471 826 € de rehaussement."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La justification par la provenance des données se retourne : retenue jusqu’au bout, elle impose de lire le chiffre d’affaires cuisine dans les annexes plutôt que de l’extrapoler, soit 959 561 € sur trois exercices au lieu de 1 314 482 €. L’écart de 354 921 €, soit 75,2 % du rehaussement, doit être abandonné."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le détail de la démonstration, la contradiction relevée entre les pages 92 et 93, le contrôle des annexes C et la discussion du coefficient sur achat revendu figurent à la page [Extrapolation cuisine](/reponse-1/extrapolation-cuisine) et à la page [Coefficient de revente](/reponse-1/coefficient-de-revente)."
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Recalcul intégral et reproductible, à partir des annexes de caisse remises au service (script scripts/reponse1-coefficients.py) :",
-      "fichiers": [
-        {
-          "fichier": "pieces-reponse-1/R1-coefficients-et-extrapolation.xlsx",
-          "label": "Coefficients et extrapolation cuisine : CA liquides et cuisine réellement enregistrés, part du rehaussement provenant de l’extrapolation, coefficient sur achat revendu et les deux corrections à 15 %"
-        }
-      ]
+     "label": "Suite donnée par le service",
+     "valeur": "Méthode « parfaitement valable »",
+     "sub": "aucun coefficient ni aucun montant n’est modifié (p. 76)",
+     "couleur": "red"
     }
-  ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "La réponse du service",
+   "numero": "1.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Premier temps : le service confirme l’existence du coefficient.** Il écrit : « Pour sa méthode de reconstitution, le service a effectivement déterminé un rapport liquides/solides » (p. 76). Le principe même du procédé contesté n’est donc pas discuté : le chiffre d’affaires solides est bien obtenu par application d’un rapport au chiffre d’affaires liquides."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Deuxième temps : le service reformule la critique.** Il indique : « Maître THIVEND semble contester ce rapport, considérant qu’il permet d’extrapoler le chiffre d’affaires cuisine qui, par cette logique, n’est jamais mesuré » (p. 76). Cette reformulation retient la question de l’extrapolation, mais laisse de côté le second membre de la critique, celui de l’amplification : le courrier ne reprend nulle part le fait que le chiffre d’affaires cuisine représenterait environ les trois quarts du total, ni le facteur d’environ 3 appliqué à toute sur-évaluation des liquides."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Troisième temps : l’unique justification opposée, l’origine des données.** Le service répond : « Toutefois, ce rapport liquides/solides provient directement des données de la caisse informatique qui reflète des données d’exploitation qui peuvent être considérées comme significatives, en terme de volume d’information » (p. 76). L’argument porte sur la provenance et sur le volume des données ayant servi à calculer le rapport, et non sur la fiabilité du résultat obtenu ni sur le mécanisme de propagation dénoncé."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Quatrième temps : la conclusion, soulignée dans le courrier.** Le service termine par la phrase suivante, qu’il souligne : « Ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable » (p. 76). La validité de l’ensemble de la méthode de reconstitution est ainsi déduite d’un seul élément, l’origine du rapport liquides/solides."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le point 11 se clôt sur cette phrase, sans autre développement. Le service ne produit ni le calcul du rapport, ni la période retenue, ni le détail des données de caisse utilisées, et ne modifie ni les coefficients de 2,94, 3,02 et 3,10, ni les montants de la proposition de rectifications. Le courrier passe immédiatement au titre suivant, « M- Notre Méthode : La cascade des 10 622 L » (p. 76)."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "red",
+   "titre": "Une validation par la source, non par le résultat",
+   "texte": "Toute la réponse du service tient en une proposition : le rapport vient de la caisse, donc la méthode est valable. L’origine des données est présentée comme suffisante « à lui seul », sans qu’aucun contrôle du résultat obtenu, ni aucune réponse à l’argument d’amplification, ne soit apporté."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse : l’origine des données ne valide pas le résultat, et elle se retourne contre la reconstitution",
+   "sousTitre": "Version résumée : la démonstration complète, chiffrée exercice par exercice, figure à la page « Extrapolation cuisine »."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le fond de la démonstration, avec le détail des annexes et les tableaux exercice par exercice, est exposé à la page [Extrapolation cuisine](/reponse-1/extrapolation-cuisine)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service répond que le rapport liquides/solides « provient directement des données de la caisse informatique » et en déduit que « ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable » (p. 76). Cette réponse laisse entière la critique, pour trois raisons."
+  },
+  {
+   "kind": "titre",
+   "texte": "La caisse ne peut pas être significative pour le rapport et non probante pour les montants",
+   "numero": "2.1"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le même courrier qualifie ces données, en page 92, de « significatives, en terme de volume d’informations **et surtout exhaustives** », et, en page 93, met en cause « **la qualité et l’inaltérabilité des données de caisse** », avant de conclure en page 94 que « toutes les anomalies relevées dans les données de caisse demeurent sans explications ». Il s’agit du même fichier, sur les mêmes exercices. Un rapport ne peut pas avoir une valeur probante supérieure à celle de la source dont il est extrait."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le rapport n’est d’ailleurs pas seulement lu dans la caisse : il est calculé au bas des annexes D établies par le service, dont la dernière ligne, « RAPPORT POUR 1 € DE CA LIQUIDE », porte les valeurs 2,9363, 3,0239 et 3,1047, soit les coefficients de 2,94, 3,02 et 3,10 de la proposition p. 52."
+  },
+  {
+   "kind": "titre",
+   "texte": "Retenue jusqu’au bout, la même caisse donne directement le chiffre d’affaires cuisine",
+   "numero": "2.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Si les données sont exhaustives pour établir la proportion, elles le sont aussi pour établir le montant. Les annexes D portent le chiffre d’affaires cuisine enregistré, recontrôlé ligne à ligne sur le détail des tickets des annexes C sans aucun écart. Il n’avait donc pas à être extrapolé."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Chiffre d’affaires cuisine enregistré en caisse et chiffre d’affaires cuisine extrapolé",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Cuisine enregistrée (annexes C et D)",
+     "align": "right"
+    },
+    {
+     "label": "Cuisine extrapolée (proposition p. 52)",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    },
+    {
+     "label": "Part du rehaussement de l’exercice",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "300 747 €",
+      "align": "right"
+     },
+     {
+      "v": "445 675 €",
+      "align": "right"
+     },
+     {
+      "v": "144 928 €",
+      "align": "right"
+     },
+     {
+      "v": "75,0 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "329 362 €",
+      "align": "right"
+     },
+     {
+      "v": "433 860 €",
+      "align": "right"
+     },
+     {
+      "v": "104 498 €",
+      "align": "right"
+     },
+     {
+      "v": "75,3 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "329 452 €",
+      "align": "right"
+     },
+     {
+      "v": "434 947 €",
+      "align": "right"
+     },
+     {
+      "v": "105 495 €",
+      "align": "right"
+     },
+     {
+      "v": "75,5 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 ans"
+     },
+     {
+      "v": "959 561 €",
+      "align": "right"
+     },
+     {
+      "v": "1 314 482 €",
+      "align": "right"
+     },
+     {
+      "v": "354 921 €",
+      "align": "right"
+     },
+     {
+      "v": "75,2 %",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "L’argument d’amplification, resté sans réponse, est vérifiable sur la formule du service",
+   "numero": "2.3"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le total reconstitué s’écrit « chiffre d’affaires liquides x (1 + rapport) ». Toute sur évaluation du chiffre d’affaires liquides est donc reportée sur le total dans un rapport de 3,94, 4,02 ou 4,10 selon l’exercice : 1 000 € de boissons ajoutés à tort produisent 3 940 € à 4 100 € de rehaussement. Le service, qui écrit ailleurs qu’« il est normal que les rehaussements proposés correspondent à 75 % puisqu’il s’agit d’une conséquence directe du rapport » (p. 92), constate le même mécanisme en sens inverse."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Effet, sur le rehaussement total, de 1 000 € de chiffre d’affaires liquides sur évalués",
+   "minWidth": 600,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Coefficient",
+     "align": "right"
+    },
+    {
+     "label": "Effet sur le total reconstitué",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "2,94",
+      "align": "right"
+     },
+     {
+      "v": "3 940 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "3,02",
+      "align": "right"
+     },
+     {
+      "v": "4 020 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "3,10",
+      "align": "right"
+     },
+     {
+      "v": "4 100 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Enfin, la formule « à lui seul » ne suffit pas à établir le bien fondé d’une reconstitution. Le Conseil d’État juge qu’un ratio tiré du nombre de ventes et appliqué sans tenir compte « des volumes respectifs d’un verre et d’une bouteille ni de la nature des boissons vendues » vicie la méthode dans son principe ([CE, 3e ch., 5 octobre 2016, n° 389822](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2016-10-05/389822)). Ici, le rapport a été mesuré sur un couple de montants réels puis appliqué à un chiffre d’affaires liquides majoré de 32 % à 48 % : les conditions dans lesquelles il a été constaté ne sont plus réunies."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "Ce que cela fait tomber",
+   "sousTitre": "L’extrapolation cuisine, soit 354 921 € sur 471 826 € de rehaussement."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La justification par la provenance des données se retourne : retenue jusqu’au bout, elle impose de lire le chiffre d’affaires cuisine dans les annexes plutôt que de l’extrapoler, soit 959 561 € sur trois exercices au lieu de 1 314 482 €. L’écart de 354 921 €, soit 75,2 % du rehaussement, doit être abandonné."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le détail de la démonstration, la contradiction relevée entre les pages 92 et 93, le contrôle des annexes C et la discussion du coefficient sur achat revendu figurent à la page [Extrapolation cuisine](/reponse-1/extrapolation-cuisine) et à la page [Coefficient de revente](/reponse-1/coefficient-de-revente)."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Recalcul intégral et reproductible, à partir des annexes de caisse remises au service (script scripts/reponse1-coefficients.py) :",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-coefficients-et-extrapolation.xlsx",
+     "label": "Coefficients et extrapolation cuisine : CA liquides et cuisine réellement enregistrés, part du rehaussement provenant de l’extrapolation, et ce que mesure le repère de 3,2725 retenu par le service"
+    }
+   ]
+  }
+ ]
 }
