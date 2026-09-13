@@ -35,6 +35,25 @@ ci-dessous. Exécution : python3 scripts/reponse1-cascade-coherence.py
 """
 import os, json
 
+# --- NEUTRALISE le 13/09/2026 ------------------------------------------------
+# Ce script patche la page cascade-10622-litres PAR INDEX DE SECTION, et son
+# texte est perime : il porte encore 795 L, 745 L et 173 L, alors que la
+# partition retenue est 10 622 = 8 394 (79,0 %) + 2 228 (21,0 %) et que la page
+# a ete entierement reecrite (55 -> 77 sections). Le lancer detruirait la page
+# et remettrait des valeurs fausses aux mauvais endroits.
+#
+# Le producteur unique de la cascade est desormais reponse1-cascade-valeurs.py,
+# controle par reponse1-cascade-controle.py (24 controles).
+# Pour relancer celui-ci sciemment, exporter REPONSE1_CASCADE_COHERENCE_FORCE=1,
+# apres avoir reecrit ses index et ses textes.
+import os as _os
+if not _os.environ.get("REPONSE1_CASCADE_COHERENCE_FORCE"):
+    raise SystemExit(
+        "reponse1-cascade-coherence.py est neutralise : il patche la page par "
+        "index avec un texte perime. Voir le commentaire en tete de fichier."
+    )
+
+
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 DATA = os.path.join(ROOT, "src/data/reponse1")
 

@@ -69,6 +69,11 @@ import json
 import os
 import re
 
+# Volume que le service retranche deja lui-meme au titre de ses reperes D, E, G
+# et Q. Constante etablie sur ses annexes : 744,62 L de cuisine avant le
+# plafonnement du marc, moins les 173,38 L de supplement alors demandes.
+RETRANCHEMENTS_SERVICE_L = 571.24
+
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
 DATA = os.path.join(ROOT, "src", "data")
@@ -569,10 +574,17 @@ def ecrire_json(c, v):
         "cuisine": {
             "calcule_l": c["cuisine_calc"], "plafonne_l": c["postes"][2]["litres"],
             "carte_l": c["plats"], "menus_l": c["menus"],
-            "supplement_demande_au_service_l": 173.38,
-            "note": "173,38 L est le supplément demandé au service une fois déduits ses "
-                    "propres retranchements (repères D, E, G, Q). Ce n’est pas un poste de "
-                    "la cascade et il ne s’y ajoute jamais.",
+            # Le supplement etait fige a 173,38 L, valeur calculee AVANT le
+            # plafonnement du marc de Bourgogne. Il est desormais derive du poste
+            # cuisine, pour qu'il suive toute variation de celui-ci :
+            #   744,62 (cuisine avant plafonnement du marc) - 173,38 = 571,24 L
+            # deja retranches par le service au titre de ses reperes D, E, G et Q.
+            "supplement_demande_au_service_l": round(
+                c["postes"][2]["litres"] - RETRANCHEMENTS_SERVICE_L, 2),
+            "note": "Le supplément demandé au service est le poste cuisine de la cascade "
+                    "diminué de ce qu’il retranche déjà lui-même au titre de ses repères "
+                    "D, E, G et Q, soit %.2f L. Ce n’est pas un poste de la cascade et il "
+                    "ne s’y ajoute jamais." % RETRANCHEMENTS_SERVICE_L,
         },
         "par_exercice": {
             "cremant_l": c["cremant_exo"], "surversement_l": c["sv_exo"],
