@@ -6,8 +6,8 @@
   {
    "cle": "verre",
    "libelle": "Vendu au verre",
-   "litres": 5272.8,
-   "litres_arrondi": 5273,
+   "litres": 5457.3,
+   "litres_arrondi": 5457,
    "nature": "mesure",
    "source": "Détail des tickets, annexes C1 à C3, hors panaché, Monaco et Picon bière, dont l’alcool est porté par la ligne cocktails",
    "page": "Doses figées",
@@ -46,8 +46,8 @@
   {
    "cle": "surversement",
    "libelle": "Sur-versement au verre",
-   "litres": 493.92,
-   "litres_arrondi": 494,
+   "litres": 483.03,
+   "litres_arrondi": 483,
    "nature": "estime",
    "source": "Taux publiés appliqués au seul volume versé à la main, borné par le stock",
    "page": "Sur-versement",
@@ -104,42 +104,54 @@
    "slug": "recon-9-variation-de-stock"
   }
  ],
- "attribue_l": 8393.92,
- "attribue_arrondi_l": 8394,
- "attribue_pct": 79.02,
- "residu_l": 2228.08,
- "residu_arrondi_l": 2228,
- "residu_pct": 20.98,
+ "attribue_l": 8567.53,
+ "attribue_arrondi_l": 8567,
+ "attribue_pct": 80.66,
+ "residu_l": 2054.47,
+ "residu_arrondi_l": 2055,
+ "residu_pct": 19.34,
  "nature": {
   "mesure": {
-   "litres": 5611.77,
-   "litres_arrondi": 5612
+   "litres": 5796.27,
+   "litres_arrondi": 5796
   },
   "calcul": {
    "litres": 2010.76,
    "litres_arrondi": 2011
   },
   "estime": {
-   "litres": 771.39,
-   "litres_arrondi": 771
+   "litres": 760.5,
+   "litres_arrondi": 760
   },
   "residu": {
-   "litres": 2228.08,
-   "litres_arrondi": 2228
+   "litres": 2054.47,
+   "litres_arrondi": 2055
   }
  },
- "part_caisse_l": 7622.53,
- "part_caisse_arrondi_l": 7623,
- "part_caisse_pct": 71.77,
- "revendu_l": 6270.4,
- "revendu_arrondi_l": 6271,
- "part_revendue_pct": 59.0322,
+ "part_caisse_l": 7807.03,
+ "part_caisse_arrondi_l": 7807,
+ "part_caisse_pct": 73.5,
+ "revendu_l": 6454.9,
+ "revendu_arrondi_l": 6455,
+ "part_revendue_pct": 60.7692,
+ "reclassement_bouteille": {
+  "unites": 307.5,
+  "volume_l": 184.5,
+  "surversement_retire_l": 10.89,
+  "verre_retire_l": 46.13,
+  "bouteille_ajoutee_l": 230.63,
+  "verre_pipeline_l": 5568.79,
+  "verre_brut_corrige_l": 5753.29,
+  "explication": "« Arbois Chardonnay Le » (référence 2019) et « Beaujolais Moulin à » sous la seule référence 1831 sont des ventes de bouteille de 75 cl, comptées à 15 cl par le pipeline. Les 307,5 unités valent 184,50 L de plus : elles cessent d’être comptées comme disparues pour être comptées comme vendues, et quittent l’assiette du sur-versement, qui perd 10,89 L. Le total de 10 622 L est inchangé.",
+  "producteur": "scripts/reponse1-surversement-libelles-bouteille.py",
+  "piece": "R1-sur-versement-libelles-bouteille.xlsx"
+ },
  "doubles_comptages": {
   "biere": {
    "litres": 295.99,
    "explication": "Contenance des quatre articles mixtes (panaché, Monaco, Picon bière, pinte Picon), comptée dans « vendu au verre » alors que leur alcool est déjà porté par « vendu en cocktails ».",
-   "verre_avant": 5568.79,
-   "verre_apres": 5272.8,
+   "verre_avant": 5753.29,
+   "verre_apres": 5457.3,
    "alcool_reel": {
     "Picon": 28.3,
     "Fût Affligem": 208.14
@@ -172,9 +184,9 @@
    "2024-2025": 96.66
   },
   "surversement_l": {
-   "2022-2023": 163.49,
-   "2023-2024": 166.12,
-   "2024-2025": 164.31
+   "2022-2023": 160.43,
+   "2023-2024": 162.67,
+   "2024-2025": 159.94
   },
   "degustation_l": {
    "2022-2023": 35.36,
@@ -251,18 +263,18 @@
   },
   {
    "poste": "Sur-versement au verre",
-   "litres": 493.92,
-   "euros": 43134.87,
+   "litres": 483.03,
+   "euros": 42183.83,
    "base": "87.33 €/L (moyenne pondérée des régimes servis)",
    "litres_par_exercice": {
-    "2022-2023": 163.49,
-    "2023-2024": 166.12,
-    "2024-2025": 164.31
+    "2022-2023": 160.43,
+    "2023-2024": 162.67,
+    "2024-2025": 159.94
    },
    "euros_par_exercice": {
-    "2022-2023": 14277.86,
-    "2023-2024": 14507.54,
-    "2024-2025": 14349.47
+    "2022-2023": 14010.33,
+    "2023-2024": 14205.95,
+    "2024-2025": 13967.54
    }
   },
   {
@@ -380,46 +392,46 @@
   {
    "cle": "A",
    "libelle": "Postes itemisés, hors cuisine et menus",
-   "litres": 1169.25,
-   "litres_arrondi": 1169,
-   "pct_achats": 11.01,
-   "euros": 80125.9,
-   "pct_du_forfait_en_volume": 73.4,
-   "pct_du_forfait_en_euros": 104.2,
-   "ecart_euros_au_forfait": 3262.72
+   "litres": 1158.36,
+   "litres_arrondi": 1158,
+   "pct_achats": 10.91,
+   "euros": 79174.86,
+   "pct_du_forfait_en_volume": 72.7,
+   "pct_du_forfait_en_euros": 103.0,
+   "ecart_euros_au_forfait": 2311.68
   },
   {
    "cle": "B",
    "libelle": "Postes itemisés, cuisine et alcool des menus compris",
-   "litres": 1910.39,
-   "litres_arrondi": 1910,
-   "pct_achats": 17.99,
-   "euros": 142254.31,
-   "pct_du_forfait_en_volume": 119.9,
-   "pct_du_forfait_en_euros": 185.1,
-   "ecart_euros_au_forfait": 65391.13
+   "litres": 1899.5,
+   "litres_arrondi": 1899,
+   "pct_achats": 17.88,
+   "euros": 141303.27,
+   "pct_du_forfait_en_volume": 119.2,
+   "pct_du_forfait_en_euros": 183.8,
+   "ecart_euros_au_forfait": 64440.09
   },
   {
    "cle": "C",
    "libelle": "Perte d’exploitation totale, hors cuisine et menus (postes itemisés et résidu de perte pure)",
-   "litres": 3397.33,
-   "litres_arrondi": 3397,
-   "pct_achats": 31.98,
-   "euros": 167131.25,
-   "pct_du_forfait_en_volume": 213.2,
-   "pct_du_forfait_en_euros": 217.4,
-   "ecart_euros_au_forfait": 90268.07
+   "litres": 3212.83,
+   "litres_arrondi": 3213,
+   "pct_achats": 30.25,
+   "euros": 159400.83,
+   "pct_du_forfait_en_volume": 201.6,
+   "pct_du_forfait_en_euros": 207.4,
+   "ecart_euros_au_forfait": 82537.65
   },
   {
    "cle": "D",
    "libelle": "Alcool acheté et non vendu, cuisine et menus compris",
-   "litres": 4138.47,
-   "litres_arrondi": 4138,
-   "pct_achats": 38.96,
-   "euros": 229259.65,
-   "pct_du_forfait_en_volume": 259.7,
-   "pct_du_forfait_en_euros": 298.3,
-   "ecart_euros_au_forfait": 152396.47
+   "litres": 3953.97,
+   "litres_arrondi": 3954,
+   "pct_achats": 37.22,
+   "euros": 221529.23,
+   "pct_du_forfait_en_volume": 248.2,
+   "pct_du_forfait_en_euros": 288.2,
+   "ecart_euros_au_forfait": 144666.05
   }
  ]
 }

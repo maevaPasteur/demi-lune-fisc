@@ -5,8 +5,8 @@
   },
   "entete": {
     "positionService": "Le service maintient intégralement sa reconstitution sur ce point. Il retient que Maître THIVEND « considère donc qu’il ne peut y avoir que des sur-dosages et que ces sur-dosages expliquent tout », que dans le tableau joint en clé USB « tous les sur-dosages sont fixés arbitrairement pour tenter de justifier qu’il n’y a pas de ventes dissimulées », et que la réponse « n’apporte aucune preuve qu’il puisse y avoir des sur-dosages », s’agissant d’« une simple affirmation gratuite ». Il demande enfin pourquoi les sur-dosages seraient plus importants pour certains articles que pour d’autres, question qu’il reprend mot pour mot p. 92, et conclut qu’il « ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 60).",
-    "reponseCourte": "Le service qualifie d’affirmation gratuite deux mesures publiées portant sur 480 boissons et 86 barmen, sans en opposer aucune, alors qu’il écrit lui-même que ses propres doses viennent de la carte et des dires des dirigeants, que la source qu’il invoque les donne en fourchette (« environ 4 à 5 cl »), et qu’il a retenu 5 cl de macvin dans sa proposition puis 4 cl dans sa réponse. Nous corrigeons notre chiffre de 720 L à 493,9 L, soit 27,4 % seulement de l’écart que le stock permet de borner.",
-    "enjeu": "La méthode elle-même : la dose par laquelle le service divise tout le volume d’alcool disponible, et le sur-versement au verre chiffré à 493,9 L sur trois exercices, qu’il refuse de retenir.",
+    "reponseCourte": "Le service qualifie d’affirmation gratuite deux mesures publiées portant sur 480 boissons et 86 barmen, sans en opposer aucune, alors qu’il écrit lui-même que ses propres doses viennent de la carte et des dires des dirigeants, que la source qu’il invoque les donne en fourchette (« environ 4 à 5 cl »), et qu’il a retenu 5 cl de macvin dans sa proposition puis 4 cl dans sa réponse. Nous corrigeons notre chiffre de 720 L à 493,9 L, puis à 483,0 L après le retrait de deux libellés de caisse qui sont des ventes de bouteille, soit 29,8 % seulement de l’écart que le stock permet de borner.",
+    "enjeu": "La méthode elle-même : la dose par laquelle le service divise tout le volume d’alcool disponible, et le sur-versement au verre chiffré à 483,0 L sur trois exercices, qu’il refuse de retenir.",
     "statut": "partiel"
   },
   "sections": [
@@ -159,8 +159,8 @@
       "items": [
         {
           "label": "Sur-versement demandé",
-          "valeur": "493,9 L",
-          "sub": "après séparation par régime de service ; 720 L dans le mémoire du 10/07/2026",
+          "valeur": "483,0 L",
+          "sub": "après séparation par régime de service et retrait de deux libellés de bouteille ; 720 L dans le mémoire du 10/07/2026",
           "couleur": "blue"
         },
         {
@@ -704,7 +704,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Nos taux ne sont pas des affirmations : ce sont des mesures faites par des tiers, publiées, et vérifiables aux adresses que le courrier reproduit lui-même page 60. **Kerr et coll., 2008** ont acheté et mesuré 480 boissons dans 80 établissements de 21 villes, « A total of 480 drinks were purchased and measured » dans « 80 drinking establishments in 21 towns ». Le verre de vin y est servi à 6,18 oz pour une mesure de référence de 5 oz, soit **+ 23,6 % de volume**, et le cocktail contient 0,85 oz d’éthanol pour 0,60 oz de référence, soit **+ 42 %** ([texte intégral](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/)). **Wansink et van Ittersum, BMJ 2005** ont mesuré 86 barmen professionnels à qui il était demandé de verser 44,3 ml : ils versent 54,6 ml dans le verre bas et large et 46,4 ml dans le verre haut et étroit ([texte intégral](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/))."
+      "texte": "Nos taux ne sont pas des affirmations : ce sont des mesures faites par des tiers, publiées, et vérifiables aux adresses que le courrier reproduit lui-même page 60. **Kerr et coll., 2008** ont acheté et mesuré 480 boissons dans 80 établissements de dix comtés du nord de la Californie, « A total of 480 drinks were purchased and measured » dans « 80 drinking establishments in 21 towns [...] throughout 10 Northern California counties ». Le verre de vin y est servi à 6,18 oz pour une mesure de référence de 5 oz, soit **+ 23,6 % de volume**, et le cocktail contient 0,85 oz d’éthanol pour 0,60 oz de référence, soit **+ 42 %** ([texte intégral](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/)). **Wansink et van Ittersum, BMJ 2005** ont mesuré 86 barmen professionnels à qui il était demandé de verser 44,3 ml : ils versent 54,6 ml dans le verre bas et large et 46,4 ml dans le verre haut et étroit ([texte intégral](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/))."
     },
     {
       "kind": "paragraphe",
@@ -724,7 +724,7 @@
         {
           "label": "Boissons mesurées, Kerr 2008",
           "valeur": "480",
-          "sub": "dans 80 établissements de 21 villes",
+          "sub": "dans 80 établissements de dix comtés du nord de la Californie",
           "couleur": "teal"
         },
         {
@@ -758,7 +758,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "**Sur nos propres taux**, le premier tiret nous oblige autant qu’il l’oblige, et nous nous y conformons. Un pourcentage tiré de statistiques extérieures ne peut pas tenir lieu de méthode : il ne peut que « conforter les résultats obtenus par d’autres méthodes ». C’est exactement la place que nos taux occupent, et c’est pourquoi ils ne sont pas un rétro-calcul. Le résultat est obtenu par une autre méthode, le bilan matière boisson par boisson et exercice par exercice, qui compare le volume disponible au service et le volume vendu aux doses de la carte : sur les 46 boissons versées à la main, cet écart est de **1 804,5 L**. Le taux publié ne crée pas cet écart, il vient après lui, et il n’en explique que **27,4 %**. La matière autoriserait d’aller jusqu’à 106,2 % de la base versée à la main, soit 3,65 fois notre demande."
+      "texte": "**Sur nos propres taux**, le premier tiret nous oblige autant qu’il l’oblige, et nous nous y conformons. Un pourcentage tiré de statistiques extérieures ne peut pas tenir lieu de méthode : il ne peut que « conforter les résultats obtenus par d’autres méthodes ». C’est exactement la place que nos taux occupent, et c’est pourquoi ils ne sont pas un rétro-calcul. Le résultat est obtenu par une autre méthode, le bilan matière boisson par boisson et exercice par exercice, qui compare le volume disponible au service et le volume vendu aux doses de la carte : sur les 46 boissons versées à la main, cet écart est de **1 620,0 L**. Le taux publié ne crée pas cet écart, il vient après lui, et il n’en explique que **29,8 %**. La matière autoriserait d’aller jusqu’à 98,0 % de la base versée à la main, soit 3,35 fois notre demande."
     },
     {
       "kind": "paragraphe",
@@ -779,7 +779,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le grief de la page 60 ne porte pas sur un volume mais sur une manière de raisonner, et à ce titre il tombe en entier. Les trois taux ne sont pas fixés arbitrairement : ils sont mesurés, publiés, ouverts, et retenus en deçà de ce que leurs auteurs établissent. Ils ne sont pas déterminés mathématiquement pour justifier les écarts : ils n’expliquent que 27,4 % de l’écart que le stock permet de borner, et ils laissent 58,5 % de l’assiette à zéro. Ils ne varient pas sans raison d’un article à l’autre : ils suivent le régime de service, comme les doses du service lui-même, qui vont de 1 à 15 cl. Et ils ne sont pas une affirmation opposée à une mesure, puisque aucune mesure ne leur est opposée."
+      "texte": "Le grief de la page 60 ne porte pas sur un volume mais sur une manière de raisonner, et à ce titre il tombe en entier. Les trois taux ne sont pas fixés arbitrairement : ils sont mesurés, publiés, ouverts, et retenus en deçà de ce que leurs auteurs établissent. Ils ne sont pas déterminés mathématiquement pour justifier les écarts : ils n’expliquent que 29,8 % de l’écart que le stock permet de borner, et ils laissent 58,5 % de l’assiette à zéro. Ils ne varient pas sans raison d’un article à l’autre : ils suivent le régime de service, comme les doses du service lui-même, qui vont de 1 à 15 cl. Et ils ne sont pas une affirmation opposée à une mesure, puisque aucune mesure ne leur est opposée."
     },
     {
       "kind": "paragraphe",
@@ -787,7 +787,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Ce qui reste est notre chiffre, et nous le corrigeons nous-mêmes. Recalculé assiette par assiette sur les données de caisse, le sur-versement s’établit à **493,9 L** sur trois exercices et non à 720 L : la ligne du mémoire du 10 juillet 2026 incluait 960,2 L vendus en bouteilles, qui ne supportent aucun sur-versement. Borné ligne à ligne par le stock, ce chiffre revient à **475,4 L** ; ramené en outre à zéro sur les boissons dont les achats connus sont incomplets, à **439,8 L**. La demande est donc comprise entre 440 L et 494 L. Concrètement, la thèse est celle d’un verre annoncé à 15 cl et versé à **18,54 cl**, soit les 18,28 cl mesurés par Kerr et coll. à 1,4 % près, dans un verre à vin de restaurant qui en contient 25 à 35."
+      "texte": "Ce qui reste est notre chiffre, et nous le corrigeons nous-mêmes. Recalculé assiette par assiette sur les données de caisse, le sur-versement s’établit à **493,9 L** sur trois exercices et non à 720 L : la ligne du mémoire du 10 juillet 2026 incluait 960,2 L vendus en bouteilles, qui ne supportent aucun sur-versement. Borné ligne à ligne par le stock, ce chiffre revient à **475,4 L** ; ramené en outre à zéro sur les boissons dont les achats connus sont incomplets, à **439,8 L**. La demande est donc comprise entre 440 L et 494 L, et nous la ramenons à **483,0 L** en retirant deux libellés de caisse qui sont des ventes de bouteille de 75 cl et non des ventes au verre, comme l’établit la page [Sur-versement au verre](/reponse-1/sur-versement-au-verre). Concrètement, la thèse est celle d’un verre annoncé à 15 cl et versé à **18,54 cl**, soit les 18,28 cl mesurés par Kerr et coll. à 1,4 % près."
     },
     {
       "kind": "paragraphe",
@@ -798,14 +798,14 @@
       "items": [
         {
           "label": "Écart que le stock permet de borner",
-          "valeur": "1 804,5 L",
+          "valeur": "1 620,0 L",
           "sub": "46 boissons versées à la main, disponible au service moins vendu aux doses de la carte",
           "couleur": "blue"
         },
         {
           "label": "Part de cet écart que nos taux expliquent",
-          "valeur": "27,4 %",
-          "sub": "493,9 L ; la matière en autoriserait 3,65 fois plus",
+          "valeur": "29,8 %",
+          "sub": "483,0 L ; la matière en autoriserait 3,35 fois plus",
           "highlight": true,
           "couleur": "teal"
         },
@@ -819,7 +819,7 @@
     },
     {
       "kind": "piecejointe",
-      "intro": "Le relevé des doses et de leur origine, document par document et page par page, le recalcul du tableau du Calvados, puis le calcul du sur-versement régime par régime et la fourchette bornée par le stock :",
+      "intro": "Le relevé des doses et de leur origine, document par document et page par page, le recalcul du tableau du Calvados, le calcul du sur-versement régime par régime et la fourchette bornée par le stock, puis le relevé des deux libellés de caisse qui sont des ventes de bouteille :",
       "fichiers": [
         {
           "fichier": "pieces-reponse-1/R1-doses-origines.xlsx",
@@ -828,6 +828,10 @@
         {
           "fichier": "pieces-reponse-1/R1-sur-versement-fourchette.xlsx",
           "label": "R1 Sur-versement au verre : régimes de service et fourchette bornée par le stock, par boisson et par exercice"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-sur-versement-libelles-bouteille.xlsx",
+          "label": "R1 Sur-versement au verre : les deux libellés de caisse qui sont des ventes de bouteille, relevé des tickets et effet sur l’assiette"
         }
       ]
     }

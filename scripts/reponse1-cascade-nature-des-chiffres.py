@@ -69,7 +69,14 @@ def chk(libelle, condition, detail=""):
 # ---------------------------------------------------------------------------
 # Les grandeurs comptees, relues dans les donnees brutes
 # ---------------------------------------------------------------------------
-def grandeurs():
+def grandeurs(recl=None):
+    """recl : bloc « reclassement_bouteille » de la cascade, seule autorite.
+    Deux libelles de caisse tronques a vingt caracteres sont des ventes de
+    bouteille de 75 cl et non des ventes au verre ; le pipeline les valorisait
+    a 15 cl. Le reclassement est applique ici aux memes grandeurs que dans
+    scripts/reponse1-cascade-valeurs.py, sans quoi les controles compareraient
+    la cascade corrigee a des grandeurs non corrigees."""
+    recl = recl or {}
     g = {}
 
     # 1. Articles de boisson vendus hors cocktails, et leur volume.
@@ -80,6 +87,9 @@ def grandeurs():
                                 - sum(x["total_quantite"] for x in mixtes), 1)
     g["verre_litres"] = round(sum(x["total_volume_l"] for x in hc)
                               - sum(x["total_volume_l"] for x in mixtes), 2)
+    # reclassement des ventes de bouteille : les articles restent les memes,
+    # seule leur contenance change (15 cl -> 75 cl).
+    g["verre_litres"] = round(g["verre_litres"] + recl.get("volume_l", 0.0), 2)
     g["verre_formats"] = len(hc) - len(mixtes)
     g["mixtes_articles"] = round(sum(x["total_quantite"] for x in mixtes), 1)
     g["mixtes_litres"] = round(sum(x["total_volume_l"] for x in mixtes), 2)
@@ -114,9 +124,14 @@ def grandeurs():
     g["sv_base_totale_l"] = r["base_totale_l"]
     g["sv_pichet_l"] = r["vin_pichet_l"]
     g["sv_bouteille_l"] = r["vin_bouteille_l"]
-    g["sv_litres"] = round(sv["variantes"]["retenu_l"], 2)
-    g["sv_taux_main"] = r["taux_sur_base_main"]
-    g["sv_taux_totale"] = r["taux_sur_base_totale"]
+    g["sv_litres"] = round(sv["variantes"]["retenu_l"] - recl.get("surversement_retire_l", 0.0), 2)
+    # les 307,5 unites reclassees quittent le regime du verre pour celui de la
+    # bouteille : l'assiette versee a la main se reduit d'autant.
+    g["sv_base_main_l"] = round(g["sv_base_main_l"] - recl.get("verre_retire_l", 0.0), 2)
+    g["sv_bouteille_l"] = round(g["sv_bouteille_l"] + recl.get("bouteille_ajoutee_l", 0.0), 2)
+    g["sv_base_totale_l"] = round(g["sv_base_totale_l"] + recl.get("volume_l", 0.0), 2)
+    g["sv_taux_main"] = round(g["sv_litres"] / g["sv_base_main_l"], 4)
+    g["sv_taux_totale"] = round(g["sv_litres"] / g["sv_base_totale_l"], 4)
     g["sv_contenants"] = sv["contenants_vendus_total"]
 
     # 6. Cuisine : plats et desserts vendus, lus dans la piece deja publiee.
@@ -423,7 +438,7 @@ def main():
     d = lire(os.path.join(CALC, "cascade-10622.json"))
     print("Cascade lue : %.2f L achetés = %.2f L attribués + %.2f L de résidu"
           % (d["achats_l"], d["attribue_l"], d["residu_l"]))
-    g = grandeurs()
+    g = grandeurs(d.get("reclassement_bouteille"))
     print("\nContrôles :")
     ecrire(d, g)
     if ECHECS:

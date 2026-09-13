@@ -90,6 +90,33 @@ DOSE_APERITIF_CL = 6.0
 # (cf. src/data/incertitudeDisparu/14_synthese_perte_reelle.py).
 AVOIRS = {"Cidre Brut": 22.5, "Bourgogne Aligoté maison": 10.0, "Grand Marnier": 2.1}
 
+# Reclassement de deux libelles de caisse qui sont des ventes de BOUTEILLE et
+# non des ventes au verre. Le libelle de la caisse est tronque a vingt
+# caracteres : « Arbois Chardonnay Le » (reference 2019, 217,5 unites a 24,90
+# puis 29,00 euros) et « Beaujolais Moulin a » sous la SEULE reference 1831
+# (90,0 unites a 29,00 puis 38,00 euros) etaient comptes a 15 cl alors que la
+# carte des vins ne connait ces prix que dans la colonne 75 cl. La reference
+# 1832 du meme libelle, a 5,80 puis 7,60 euros, est bien le verre et n'est pas
+# touchee. Le service l'ecrit lui-meme deux fois, proposition du 18/05/2026
+# p. 36 et p. 41 (« L'Arbois Bethanie et chardonnay (vendu uniquement a la 1/2
+# bouteille ou bouteille) »).
+#   307,5 unites x (75 - 15) cl = 184,50 L qui cessent d'etre comptes comme
+#   disparus pour etre comptes comme vendus : le poste « vendu au verre » les
+#   reprend, le residu les perd, et le total de 10 622 L ne bouge pas.
+# L'assiette du sur-versement suit : ces 307,5 unites quittent le regime du
+# verre, ou le taux de 23,6 % s'applique, pour celui de la bouteille, ou il est
+# nul, soit 307,5 x 0,15 x 0,236 = 10,89 L de moins demandes.
+# Producteur et controle : scripts/reponse1-surversement-libelles-bouteille.py,
+# piece R1-sur-versement-libelles-bouteille.xlsx, dont le scenario « avant »
+# reproduit a l'identique tous les totaux publies.
+RECLASSEMENT_UNITES = 307.5
+RECLASSEMENT_VOLUME_L = 184.50
+RECLASSEMENT_VERRE_RETIRE_L = 46.13     # 307,5 x 15 cl, qui quittent le regime du verre
+RECLASSEMENT_BOUTEILLE_AJOUTEE_L = 230.63   # 307,5 x 75 cl, portes au regime scelle
+RECLASSEMENT_SURVERSEMENT_L = 10.89
+# repartition par exercice du sur-versement retire : unites x 0,15 x 0,236
+RECLASSEMENT_SV_EXO = {"2022-2023": 3.06, "2023-2024": 3.45, "2024-2025": 4.37}
+
 # Les quatre libelles de caisse presents a la fois dans CAISSE2CANON et dans
 # CAISSE_COCKTAIL. Les formats sont ceux de boissonsHorsCocktail.json.
 FORMATS_MIXTES = ["Panaché 25cl", "Monaco 25cl", "Demi+Picon 25cl", "Pinte+Picon 50cl"]
@@ -236,7 +263,10 @@ def construire():
     noms_alcool = {b["nom"] for b in alc}
 
     achats = round(sum(b["achats_l"] for b in alc) - sum(AVOIRS.values()), 2)
-    verre_brut = round(sum(b["conso"]["seches_l"] for b in alc), 2)
+    verre_pipeline = round(sum(b["conso"]["seches_l"] for b in alc), 2)
+    # Les 307,5 ventes de bouteille etaient valorisees a 15 cl par le pipeline :
+    # elles valent 75 cl, soit 184,50 L de plus reellement vendus.
+    verre_brut = round(verre_pipeline + RECLASSEMENT_VOLUME_L, 2)
     cocktails = round(sum(b["conso"]["cocktails_l"] for b in alc), 2)
     plats = round(sum(b["conso"]["plats_l"] for b in alc), 2)
     menus = round(sum(b["conso"]["menu_moyen_l"] for b in alc), 2)
@@ -285,12 +315,15 @@ def construire():
 
     # --- sur-versement ------------------------------------------------------
     sv = lire(os.path.join(CALC, "sur-versement-fourchette.json"))
-    surversement = round(sv["variantes"]["retenu_l"], 2)
+    # Le reclassement des 307,5 ventes de bouteille retire 10,89 L a l'assiette
+    # versee a la main : le taux de 23,6 % ne s'applique plus a ces 46,13 L.
+    surversement = round(sv["variantes"]["retenu_l"] - RECLASSEMENT_SURVERSEMENT_L, 2)
     sv_exo = {e: 0.0 for e in EXOS}
     for b in sv["boissons"]:
         for lg in b["lignes"]:
             sv_exo[lg["exercice"]] += lg["surversement_retenu_l"]
-    sv_exo = {e: round(v, 2) for e, v in sv_exo.items()}
+    sv_exo = {e: round(v - RECLASSEMENT_SV_EXO[e], 2) for e, v in sv_exo.items()}
+    assert abs(sum(sv_exo.values()) - surversement) < 0.02, (sv_exo, surversement)
     sv_regimes = sv["regimes_total"]
 
     # --- degustation --------------------------------------------------------
@@ -363,7 +396,8 @@ def construire():
     return dict(
         achats=achats, postes=postes, attribue=attribue, residu=residu,
         attribue_arrondi=attribue_r, residu_arrondi=residu_r,
-        verre_brut=verre_brut, double_biere=double_biere, mixtes=mixtes,
+        verre_brut=verre_brut, verre_pipeline=verre_pipeline,
+        double_biere=double_biere, mixtes=mixtes,
         alcool_mixte=alcool_mixte, biere_servie=biere_servie, biere_pure=biere_pure,
         zero_l=zero_l, zero_mixte=zero_mixte, zero_net=zero_net, zero_detail=zero_detail,
         zero_lignes=zero_lignes, zero_articles=zero_articles,
@@ -552,6 +586,24 @@ def ecrire_json(c, v):
         "revendu_l": revendu,
         "revendu_arrondi_l": revendu_r,
         "part_revendue_pct": round(100 * revendu / c["achats"], 4),
+        "reclassement_bouteille": {
+            "unites": RECLASSEMENT_UNITES,
+            "volume_l": RECLASSEMENT_VOLUME_L,
+            "surversement_retire_l": RECLASSEMENT_SURVERSEMENT_L,
+            "verre_retire_l": RECLASSEMENT_VERRE_RETIRE_L,
+            "bouteille_ajoutee_l": RECLASSEMENT_BOUTEILLE_AJOUTEE_L,
+            "verre_pipeline_l": c["verre_pipeline"],
+            "verre_brut_corrige_l": c["verre_brut"],
+            "explication": "« Arbois Chardonnay Le » (référence 2019) et « Beaujolais "
+                           "Moulin à » sous la seule référence 1831 sont des ventes de "
+                           "bouteille de 75 cl, comptées à 15 cl par le pipeline. Les "
+                           "307,5 unités valent 184,50 L de plus : elles cessent d’être "
+                           "comptées comme disparues pour être comptées comme vendues, et "
+                           "quittent l’assiette du sur-versement, qui perd 10,89 L. Le "
+                           "total de 10 622 L est inchangé.",
+            "producteur": "scripts/reponse1-surversement-libelles-bouteille.py",
+            "piece": "R1-sur-versement-libelles-bouteille.xlsx",
+        },
         "doubles_comptages": {
             "biere": {
                 "litres": c["double_biere"],
