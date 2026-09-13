@@ -5,10 +5,10 @@
     "lettre": "G"
   },
   "entete": {
-    "positionService": "Le service maintient l’intégralité de ses constats sur les fichiers Événement et Règlement. Il refuse de discuter la certification de la caisse, qu’il qualifie d’auto-certification, et affirme qu’aucune clé d’identification unique ne relie le fichier « tpvevenement » aux fichiers Règlement, Ticket ligne, Ticket et TVA, ce qui interdirait toute traçabilité certaine des suppressions. Il oppose ensuite les écarts de nombre d’articles entre les annexes B (40 218 / 39 998 / 39 132) et les annexes C (38 479 / 38 219 / 37 446), qu’il juge en outre « clairement et nettement minorées », ainsi que les écarts de chiffre d’affaires entre les annexes B, C, F et G, toutes issues du même logiciel. Il ajoute enfin un grief nouveau, tiré d’une incohérence de taux de TVA dans les annexes C-1 à C-3, dont il n’exclut pas qu’elle provienne d’une manipulation du logiciel par les dirigeants.",
-    "reponseCourte": "Refaits sur les fichiers eux mêmes, les quatre montants du service se réconcilient à 0,39 % au plus : deux d’entre eux sont le même compteur de caisse arrêté à deux endroits, l’annexe B est un sous-ensemble strict de l’archive certifiée qu’elle est censée contredire, et les colonnes de TVA invoquées, ajoutées par le service, ramènent une fois appliquées la TVA reconstituée à 18,76 € de la TVA reversée sur trois exercices. La certification de la caisse reste à produire : la pièce du 01/12/2018 n’est pas au dossier.",
-    "enjeu": "Pilier « logiciel » du rejet de comptabilité : traçabilité des suppressions, nombre d’articles, chiffre d’affaires et taux de TVA.",
-    "statut": "a-etayer"
+    "positionService": "Le service maintient l’intégralité de ses constats sur les fichiers Événement et Règlement. Il refuse de discuter la certification de la caisse, qu’il qualifie d’auto-certification, et affirme qu’aucune clé d’identification unique ne relie le fichier « tpvevenement » aux fichiers Règlement, Ticket ligne, Ticket et TVA, ce qui interdirait toute traçabilité certaine des suppressions. Il oppose ensuite les écarts de nombre d’articles entre les annexes B (40 218 / 39 998 / 39 132) et les annexes C (38 479 / 38 219 / 37 446), qu’il juge en outre « clairement et nettement minorées », ainsi que les écarts de chiffre d’affaires entre les annexes B, C, F et G, toutes issues du même logiciel. Il revient aussi sur l’incohérence de taux de TVA des annexes C-1 à C-3, point de sa proposition que la réponse n’avait pas traité, dont il n’exclut pas qu’elle provienne d’une manipulation du logiciel par les dirigeants. Il conclut enfin, en haut de la page 46, par un motif qui ne dépend d’aucun des précédents : les fichiers remis sur la clé USB « étaient des fichiers EXCEL », donc la société « n’a pas transmis d’archive fiscale inaltérable », donc « la comptabilité est non probante dans sa totalité et incapable de justifier le volume d’affaires déclarée ».",
+    "reponseCourte": "Les « normes établies par l’administration » dont le service tire son motif de rejet ne figurent nulle part : ni dans la doctrine applicable à la période vérifiée, ni dans la plus récente, et la phrase du code qui les annonce est en vigueur depuis le 26 juin 2026, quinze mois après le dernier exercice vérifié. Sur le reste, ses quatre montants se réconcilient sur ses propres fichiers : le fichier de tickets porte deux compteurs cumulés qui se raccordent d’un exercice au suivant au centime, huit raccords sans un écart, et leur lecture donne chacun de ses quatre chiffres. Aucune des 97 694 lignes de l’extraction de février ne manque au fichier de mars, qui en contient 75 de plus. Et l’archive, qui pèse sur le logiciel, pouvait rester dans la caisse : ce que le service a reçu est la copie de l’option c, que la loi lui ordonne de détruire.",
+    "enjeu": "Le motif de rejet le plus large du dossier : le service déduit du format des fichiers que la comptabilité serait non probante dans sa totalité et incapable de justifier le volume d’affaires déclaré.",
+    "statut": "demonte"
   },
   "sections": [
     {
@@ -604,12 +604,11 @@
     },
     {
       "kind": "titre",
-      "numero": "5",
-      "texte": "Un grief nouveau : les taux de TVA des annexes C-1 à C-3"
+      "texte": "Les taux de TVA des annexes C-1 à C-3, que la réponse n’avait pas discutés"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service introduit ici un point qui n’était pas discuté par la réponse : « Il est également important de souligner l’absence de toute remarque relative à un point des annexes C-1 à C-3. En effet, l’analyse du service a mis en évidence une incohérence dans l’application du taux de TVA suivant les articles. » (p. 44). Il produit un extrait de la journée du 14/04/2022 (ticket Z 2938), dans lequel deux colonnes ajoutées, intitulées « Erreur Taux TVA dans Base Envoyée Faux/Corr » (colonne E) et « Correction TVA Sur Taux » (colonne F), signalent les lignes en cause."
+      "texte": "Le service revient ici sur un point que la réponse du 10 juillet 2026 n’avait pas traité, et qui figurait dans la partie « VIII - LE LOGICIEL : La TVA - Première partie (Annexe C-1 à C-3) » de la proposition de rectification (p. 23) : « Il est également important de souligner l’absence de toute remarque relative à un point des annexes C-1 à C-3. En effet, l’analyse du service a mis en évidence une incohérence dans l’application du taux de TVA suivant les articles. » (p. 44). Il produit un extrait de la journée du 14/04/2022 (ticket Z 2938), dans lequel deux colonnes ajoutées, intitulées « Erreur Taux TVA dans Base Envoyée Faux/Corr » (colonne E) et « Correction TVA Sur Taux » (colonne F), signalent les lignes en cause."
     },
     {
       "kind": "tableau",
@@ -819,6 +818,12 @@
       "kind": "kpis",
       "items": [
         {
+          "label": "Conséquence que le service tire du format des fichiers",
+          "valeur": "Comptabilité non probante dans sa totalité",
+          "sub": "« la société n’a pas transmis d’archive fiscale inaltérable » (p. 46)",
+          "couleur": "red"
+        },
+        {
           "label": "Clé commune entre les cinq fichiers, selon le service",
           "valeur": "Absente",
           "sub": "Entre « tpvevenement » et les fichiers Règlement, Ticket ligne, Ticket et TVA (p. 39)",
@@ -830,14 +835,9 @@
           "sub": "Exercices clos aux 31/03/2023, 2024 et 2025 (p. 41)"
         },
         {
-          "label": "Nombre d’articles, annexes C-1 à C-3 (quantités que le service dit « minorées »)",
+          "label": "Nombre d’articles, annexes C-1 à C-3, que le service dit « minorées »",
           "valeur": "38 479 / 38 219 / 37 446",
           "sub": "Quantités jugées « clairement et nettement minorées » (p. 42)"
-        },
-        {
-          "label": "Écart de quantités 2022-2023 rappelé par la réponse",
-          "valeur": "1 738,5",
-          "sub": "Somme de la colonne « Qté », annexe B contre annexe C (p. 40)"
         },
         {
           "label": "CA 2022-2023 selon les quatre séries d’annexes",
@@ -855,90 +855,111 @@
       "kind": "chapitre",
       "source": "nous",
       "numero": 2,
-      "titre": "Notre réponse : quatre annexes, quatre grandeurs différentes",
-      "sousTitre": "Les écarts que le service qualifie d’inexplicables ont tous été refaits sur les fichiers eux mêmes. Deux des quatre chiffres qu’il compare ne sont pas des sommes de ventes : ce sont deux arrêtés du même compteur de caisse."
+      "titre": "Notre réponse : deux compteurs continus, quatre grandeurs, aucune ligne disparue",
+      "sousTitre": "Les quatre montants que le service oppose ont été refaits sur les fichiers qu’il a lui même reçus. Le fichier de tickets porte deux compteurs cumulés, qui se raccordent d’un exercice à l’autre au centime, et leur lecture donne chacun de ses quatre chiffres."
     },
     {
       "kind": "kpis",
       "items": [
         {
-          "label": "Écart entre l’archive certifiée et le CA comptable",
-          "valeur": "0,08 %",
-          "sub": "997,72 € sur 1 277 216,50 € (cumul des 3 exercices)",
+          "label": "Normes de format des données archivées établies par l’administration",
+          "valeur": "Aucune",
+          "sub": "Absentes du BOI-TVA-DECLA-30-10-30 dans sa version applicable à la période comme dans la plus récente",
           "highlight": true,
           "couleur": "teal"
         },
         {
-          "label": "Lignes de l’annexe B absentes de l’annexe C",
-          "valeur": "0",
-          "sub": "Sur les 3 exercices : l’extrait du 13/02/2026 est un sous-ensemble strict de l’archive du 16/03/2026",
+          "label": "Raccords des compteurs de caisse d’un exercice au suivant",
+          "valeur": "8 sur 8, écart 0,00 €",
+          "sub": "Deux séries de compteurs, en recettes et en taxe, sur deux changements d’exercice : la clôture est reprise au centime à l’ouverture suivante",
+          "highlight": true,
+          "couleur": "teal"
+        },
+        {
+          "label": "Lignes de l’extraction de février absentes du fichier de mars",
+          "valeur": "0 sur 97 694",
+          "sub": "Sur les trois exercices : la seconde remise contient la première, et 75 lignes de plus",
           "couleur": "teal"
         },
         {
           "label": "Colonne de contrôle du service : annexe B contre annexe C",
-          "valeur": "- 17 561,00 € contre - 0,04 €",
-          "sub": "Exercice 2022-2023 ; l’annexe B n’est pas une somme de ventes mais le compteur perpétuel de la caisse",
+          "valeur": "17 561,00 € contre 0,04 €",
+          "sub": "Exercice 2022-2023, écart entre « prix unitaire × quantité » et le chiffre d’affaires de l’annexe",
           "couleur": "teal"
         },
         {
           "label": "Corrections de TVA du service, une fois appliquées",
           "valeur": "18,76 €",
-          "sub": "Écart résiduel avec la TVA reversée sur les 3 exercices, soit 0,014 % : sa correction restitue la taxe déjà liquidée",
+          "sub": "Écart résiduel avec la TVA reversée sur les trois exercices, soit 0,014 %",
           "couleur": "teal"
         },
         {
           "label": "Chiffrage produit à l’appui des quantités « minorées »",
           "valeur": "Aucun",
-          "sub": "p. 42, aucune quantité, aucun article, aucun euro",
+          "sub": "p. 42 : aucune quantité, aucun article, aucun euro",
           "couleur": "red"
         }
       ]
     },
     {
       "kind": "titre",
-      "texte": "Les quatre chiffres du service sortent des mêmes fichiers, et deux d’entre eux ne comptent pas des ventes"
+      "texte": "Les quatre montants du service sortent de deux compteurs que la caisse n’a jamais remis à zéro"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service oppose quatre montants pour un même exercice et en tire une « fluctuation » qui « nuit gravement à la comptabilité » (p. 40 et 45). Nous avons refait le rapprochement à partir des fichiers remis, sans rien y ajouter. Les quatre annexes ne mesurent pas la même grandeur : les annexes C et H additionnent les ventes de l’archive certifiée, l’annexe F additionne les encaissements, et les annexes B et G ne sont pas des additions du tout."
+      "texte": "Le service oppose quatre montants pour un même exercice et en tire une « fluctuation » qui « nuit gravement à la comptabilité et donc au final à la société » (p. 40 et p. 45). Refaits sur les fichiers eux mêmes, ces quatre montants ne fluctuent pas : ce sont quatre grandeurs distinctes, dont l’origine se lit dans le fichier, ligne par ligne."
     },
     {
       "kind": "paragraphe",
-      "texte": "**Les annexes B et G sont deux lectures du compteur perpétuel de la caisse.** Le fichier porte lui même la clé : dans les annexes G et H, la cellule qui contient le montant repris par le service est accompagnée de la mention « Différence somme Entre 01-04 et 31-03 ». Il s’agit du grand total cumulé de la caisse, dont on retranche la valeur d’ouverture (ligne « A NOUVEAUX »). Selon l’endroit où l’on arrête ce compteur, on obtient l’un ou l’autre des deux chiffres que le service croit contradictoires."
+      "texte": "Le fichier « ticket.xls », dont le service a tiré les annexes H, et le fichier « tva.xls », dont il a tiré les annexes G, portent deux colonnes cumulatives, **tot_sum** et **tot_tax_sum**, qui s’incrémentent ticket après ticket. Ces fichiers couvrent la période entière, du 1er avril 2022 au 31 mars 2025, comme leur nom l’indique ; c’est le service qui les a scindés par exercice pour construire ses annexes, chacune portant en première ligne la valeur d’ouverture du compteur, sous la mention **« A NOUVEAUX »**."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ces colonnes ne portent pas une suite unique, mais **deux séries distinctes**, et c’est là que se joue tout le débat. La première va de 977 739,78 € à l’ouverture de la période à 2 253 930,98 € à sa clôture ; elle porte 5 660, 5 529 et 5 418 tickets. La seconde, beaucoup plus petite, va de 51,40 € à 1 076,70 € sur la même période ; elle porte 1 188, 1 101 et 1 007 notes, dont la quasi totalité sont à 0 €. Chacune des deux se raccorde d’un exercice au suivant, au centime."
     },
     {
       "kind": "tableau",
-      "titre": "Le compteur perpétuel de la caisse produit à lui seul les deux chiffres « B » et « G » (calcul refait sur les annexes H-1 à H-3)",
-      "minWidth": 860,
+      "titre": "Les deux séries de compteurs de la caisse, d’un exercice à l’autre (annexes H-1 à H-3)",
+      "minWidth": 960,
       "colonnes": [
+        {
+          "label": "Série"
+        },
         {
           "label": "Exercice"
         },
         {
-          "label": "Compteur à l’ouverture",
+          "label": "Tickets",
           "align": "right"
         },
         {
-          "label": "Maximum atteint",
+          "label": "Ouverture",
           "align": "right"
         },
         {
-          "label": "Maximum moins ouverture",
+          "label": "Clôture",
           "align": "right"
         },
         {
-          "label": "Dernière ligne du fichier",
+          "label": "Écart avec l’ouverture suivante",
           "align": "right"
         },
         {
-          "label": "Dernière ligne moins ouverture",
+          "label": "Somme des montants TTC",
           "align": "right"
         }
       ],
       "lignes": [
         [
           {
+            "v": "Première série"
+          },
+          {
             "v": "2022-2023"
+          },
+          {
+            "v": "5 660",
+            "align": "right"
           },
           {
             "v": "977 739,78 €",
@@ -949,23 +970,25 @@
             "align": "right"
           },
           {
-            "v": "403 370,42 € = annexe B-1",
+            "v": "0,00 €",
             "align": "right",
             "badge": "ok"
           },
           {
-            "v": "1 381 064,50 €",
+            "v": "403 370,42 €",
             "align": "right"
-          },
-          {
-            "v": "403 324,72 € = annexe G-1",
-            "align": "right",
-            "badge": "ok"
           }
         ],
         [
           {
+            "v": "Première série"
+          },
+          {
             "v": "2023-2024"
+          },
+          {
+            "v": "5 529",
+            "align": "right"
           },
           {
             "v": "1 381 110,20 €",
@@ -976,23 +999,25 @@
             "align": "right"
           },
           {
-            "v": "437 992,92 € = annexe B-2",
+            "v": "0,00 €",
             "align": "right",
             "badge": "ok"
           },
           {
-            "v": "1 818 991,32 €",
+            "v": "437 992,92 €",
             "align": "right"
-          },
-          {
-            "v": "437 881,12 € = annexe G-2",
-            "align": "right",
-            "badge": "ok"
           }
         ],
         [
           {
+            "v": "Première série"
+          },
+          {
             "v": "2024-2025"
+          },
+          {
+            "v": "5 418",
+            "align": "right"
           },
           {
             "v": "1 819 103,12 €",
@@ -1003,36 +1028,124 @@
             "align": "right"
           },
           {
-            "v": "434 827,86 € = annexe B-3",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "2 253 812,38 €",
+            "v": "fin de période",
             "align": "right"
           },
           {
-            "v": "434 709,26 € = annexe G-3",
+            "v": "434 827,86 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Seconde série"
+          },
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "1 188",
+            "align": "right"
+          },
+          {
+            "v": "51,40 €",
+            "align": "right"
+          },
+          {
+            "v": "51,40 €",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
             "align": "right",
             "badge": "ok"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Seconde série"
+          },
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "1 101",
+            "align": "right"
+          },
+          {
+            "v": "51,40 €",
+            "align": "right"
+          },
+          {
+            "v": "339,60 €",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "288,20 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Seconde série"
+          },
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "1 007",
+            "align": "right"
+          },
+          {
+            "v": "339,60 €",
+            "align": "right"
+          },
+          {
+            "v": "1 076,70 €",
+            "align": "right"
+          },
+          {
+            "v": "fin de période",
+            "align": "right"
+          },
+          {
+            "v": "737,10 €",
+            "align": "right"
           }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "La correspondance est exacte au centime sur les trois exercices, et elle n’a rien de mystérieux : les fichiers sont triés par numéro de ticket et non par ordre chronologique, de sorte que la dernière ligne du fichier n’est pas le dernier ticket de l’exercice. Le montant de l’annexe G est donc le même compteur que celui de l’annexe B, arrêté quelques tickets plus tôt. Le service ne compare pas deux fichiers divergents : il compare deux façons de lire une même colonne."
+      "texte": "Les colonnes de taxe se raccordent de la même façon, sur les deux séries : 145 417,91 € puis 191 817,99 € pour la première, 4,67 € puis 35,62 € pour la seconde, à chaque fois valeur de clôture d’un exercice et valeur d’ouverture du suivant. Deux séries, deux colonnes, trois exercices : huit raccords, aucun écart. Des compteurs cumulés qui courent sans rupture sur 1,28 million d’euros de recettes et 19 903 tickets sont le contraire d’une donnée « de nature changeante » (proposition, p. 28) ou « de nature instable » (proposition, p. 29)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La dernière colonne du tableau donne la réponse au grief. La somme des tickets de la première série vaut 403 370,42 €, 437 992,92 € et 434 827,86 € : ce sont, au centime, les trois montants que le service attribue aux annexes B. Les deux séries réunies valent 403 370,42 €, 438 281,12 € et 435 564,96 € : ce sont, au centime, les trois montants qu’il attribue aux annexes C. **L’écart entre ses annexes B et ses annexes C est la seconde série de compteurs, et rien d’autre.**"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les quatre montants se lisent alors sans difficulté. Chacun a une origine, une colonne et un fichier."
     },
     {
       "kind": "tableau",
-      "titre": "Réconciliation des annexes, par exercice, recalculée sur les fichiers de caisse remis",
-      "minWidth": 900,
+      "titre": "L’origine, dans les fichiers, de chacun des quatre montants opposés par le service",
+      "minWidth": 880,
       "colonnes": [
         {
-          "label": "Annexe"
+          "label": "Série d’annexes"
         },
         {
-          "label": "Ce que la colonne mesure réellement"
+          "label": "Ce que le montant est"
         },
         {
           "label": "2022-2023",
@@ -1050,30 +1163,10 @@
       "lignes": [
         [
           {
-            "v": "A-1 à A-3"
+            "v": "Annexes B-1 à B-3"
           },
           {
-            "v": "Récapitulatif annuel édité par la caisse, ventes par famille (remis le 13/01/2026)"
-          },
-          {
-            "v": "409 020,76 €",
-            "align": "right"
-          },
-          {
-            "v": "429 204,51 €",
-            "align": "right"
-          },
-          {
-            "v": "437 698,49 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "B-1 à B-3"
-          },
-          {
-            "v": "Compteur perpétuel, du minimum au maximum de l’exercice"
+            "v": "Tickets de la première série de compteurs"
           },
           {
             "v": "403 370,42 €",
@@ -1090,10 +1183,10 @@
         ],
         [
           {
-            "v": "C-1 à C-3"
+            "v": "Annexes C-1 à C-3"
           },
           {
-            "v": "Somme des lignes de vente de l’archive certifiée (référence)"
+            "v": "Tickets des deux séries réunies"
           },
           {
             "v": "403 370,42 €",
@@ -1110,33 +1203,10 @@
         ],
         [
           {
-            "v": "H-1 à H-3"
+            "v": "Annexes F-1 à F-3"
           },
           {
-            "v": "Somme des tickets de la même archive"
-          },
-          {
-            "v": "403 370,42 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "438 281,12 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "435 564,96 €",
-            "align": "right",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "F-1 à F-3"
-          },
-          {
-            "v": "Somme des lignes de règlement (encaissements, avoirs inclus)"
+            "v": "Somme des règlements encaissés"
           },
           {
             "v": "403 402,87 €",
@@ -1153,10 +1223,10 @@
         ],
         [
           {
-            "v": "G-1 à G-3"
+            "v": "Annexes G-1 à G-3"
           },
           {
-            "v": "Même compteur perpétuel, arrêté à la dernière ligne du fichier"
+            "v": "Compteur lu à la dernière ligne du fichier"
           },
           {
             "v": "403 324,72 €",
@@ -1173,25 +1243,25 @@
         ],
         [
           {
-            "v": "Amplitude B / C / F / G",
+            "v": "Amplitude des quatre",
             "fw": 700
           },
           {
-            "v": "Écart entre le plus haut et le plus bas des quatre chiffres",
+            "v": "Du plus haut au plus bas",
             "fw": 700
           },
           {
-            "v": "78,15 € soit 0,02 %",
+            "v": "78,15 €, soit 0,02 %",
             "align": "right",
             "fw": 700
           },
           {
-            "v": "1 719,18 € soit 0,39 %",
+            "v": "1 719,18 €, soit 0,39 %",
             "align": "right",
             "fw": 700
           },
           {
-            "v": "855,70 € soit 0,20 %",
+            "v": "855,70 €, soit 0,20 %",
             "align": "right",
             "fw": 700
           }
@@ -1200,24 +1270,469 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Une précision utile : le tableau du service porte, pour l’annexe C-3, le montant de 435 594,96 € (p. 40 et p. 45), alors que le fichier totalise 435 564,96 €, chiffre que le service reprend d’ailleurs correctement en page 45 pour l’annexe H-3. Il s’agit d’une inversion de trente euros, sans portée, mais elle illustre que l’écart invoqué se joue à ce niveau de précision."
-    },
-    {
-      "kind": "titre",
-      "texte": "Les quantités des annexes C ne sont pas minorées : c’est l’annexe B qui compte deux fois les additions partagées"
+      "texte": "Les montants des annexes C et G sont donc deux lectures du même compteur, à deux instants. Le service en détient lui même la clé : la ligne « TOTAL » des annexes G et H porte, sous les deux colonnes cumulatives, la mention **« Différence sommeEntre01-04 et 31-03 »**, et la valeur qui y figure est, au centime, le chiffre qu’il attribue aux annexes G. La même ligne de l’annexe H, deux colonnes plus à gauche, porte la somme des montants TTC des tickets, qui est le chiffre qu’il attribue aux annexes C. Les deux montants qu’il oppose l’un à l’autre sont côte à côte dans la même ligne du même fichier."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service affirme, page 42, que les quantités des annexes C « sont clairement et nettement minorées » et qu’il faudrait leur ajouter des articles manquants. La démonstration est vérifiable sur les deux extraits qu’il reproduit lui même, pages 42 et 43 : ce sont les mêmes notes, du 14/04/2022, tickets 11 à 16, filtrées sur les quantités égales à 0,50."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Ces six notes sont trois additions partagées : la note 11 et la note 12 portent les mêmes articles, à la même minute (12:29), pour le même total de 29,35 €. L’annexe C inscrit la part réelle sur chacune des deux moitiés (0,50 et 0,50). L’annexe B inscrit 0,50 sur la première et 1,00 sur la seconde, alors que le montant, lui, reste identique dans les deux annexes. Autrement dit, l’annexe B compte une fois et demie un article vendu une fois."
+      "texte": "L’écart entre ces deux lectures est identifié ticket par ticket. Le fichier n’est pas rangé dans l’ordre du compteur : quelques tickets de fin d’exercice y portent une valeur de compteur supérieure à celle de la dernière ligne. Ils sont au nombre de un, deux et un, et leur montant est exactement l’écart entre les deux lectures."
     },
     {
       "kind": "tableau",
-      "titre": "Additions partagées du 14/04/2022, notes 11 et 12 : mêmes articles, mêmes montants, décomptes différents (annexes B-1 et C-1)",
-      "minWidth": 800,
+      "titre": "Les tickets qui séparent les deux lectures du compteur",
+      "minWidth": 860,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Écart entre les deux lectures",
+          "align": "right"
+        },
+        {
+          "label": "Tickets concernés",
+          "align": "right"
+        },
+        {
+          "label": "Identification dans le fichier"
+        },
+        {
+          "label": "Total TTC",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "45,70 €",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "31/03/2023 à 20:43, ticket n° 21, ticket Z 3158"
+          },
+          {
+            "v": "45,70 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "111,80 €",
+            "align": "right"
+          },
+          {
+            "v": "2",
+            "align": "right"
+          },
+          {
+            "v": "31/03/2024 à 20:18 et 20:20, tickets n° 20 et 21, ticket Z 3378"
+          },
+          {
+            "v": "111,80 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "118,60 €",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "30/03/2025 à 13:28, ticket n° 13, ticket Z 3596"
+          },
+          {
+            "v": "118,60 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Une précision de lecture, enfin. Le tableau du service porte, pour l’annexe C-3, le montant de 435 594,96 € (p. 40 et p. 45, repris de la proposition p. 27 et 28). Le fichier C-3 et l’annexe C-3 imprimée portent 435 564,96 €, soit trente euros de moins. L’écart est une inversion de chiffres dans la recopie, il ne change rien au raisonnement, et nous retenons la valeur du fichier."
+    },
+    {
+      "kind": "titre",
+      "texte": "L’extraction de février est contenue dans le fichier de mars : aucune ligne n’a disparu"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le grief de la « nature changeante » des données, formulé dans la proposition (p. 28), et celui de la « variabilité des quantités entre les différents moments de remise des données », repris page 42, supposent tous deux qu’une donnée aurait été modifiée entre deux remises. Le rapprochement ligne à ligne le dément. Les deux fichiers ont été comparés sur la clé la plus exigeante que leurs colonnes communes permettent : date du ticket, numéro de ticket, référence du produit, libellé de l’article et montant TTC de la ligne."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Rapprochement ligne à ligne de l’annexe B et de l’annexe C",
+      "minWidth": 900,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Lignes de vente, annexe B",
+          "align": "right"
+        },
+        {
+          "label": "Lignes de vente, annexe C",
+          "align": "right"
+        },
+        {
+          "label": "Lignes de B absentes de C",
+          "align": "right"
+        },
+        {
+          "label": "Lignes de C absentes de B",
+          "align": "right"
+        },
+        {
+          "label": "Montant de ces lignes",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "33 220",
+            "align": "right"
+          },
+          {
+            "v": "33 220",
+            "align": "right"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "32 745",
+            "align": "right"
+          },
+          {
+            "v": "32 758",
+            "align": "right"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "13",
+            "align": "right"
+          },
+          {
+            "v": "288,20 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "31 729",
+            "align": "right"
+          },
+          {
+            "v": "31 791",
+            "align": "right"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "62",
+            "align": "right"
+          },
+          {
+            "v": "737,10 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul",
+            "fw": 700
+          },
+          {
+            "v": "97 694",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "97 769",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "75",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 025,30 €",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur trois exercices et 97 694 lignes de vente, pas une seule ligne de l’extraction remise par courriel n’est absente du fichier remis le 13 mars 2026. La seconde remise contient la première et y ajoute 75 lignes, réparties sur 17 tickets, pour 1 025,30 €. Rien n’a été retiré entre les deux remises : quelque chose y a été ajouté. Une donnée altérée perd de l’information ; ici, la remise ultérieure en apporte davantage."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Et ces 17 tickets ne sont pas apparus de nulle part : **ce sont exactement les tickets à montant non nul de la seconde série de compteurs**, celle que l’extraction de février ne reprenait pas. Cinq tickets sur l’exercice 2023-2024, pour 288,20 €, douze sur l’exercice 2024-2025, pour 737,10 €, aucun sur 2022-2023 où la seconde série est entièrement à 0 €. Ces deux montants sont, au centime, l’écart de chiffre d’affaires entre les annexes C et les annexes B. La boucle est fermée : l’écart entre les deux remises, l’écart entre les deux annexes et le total de la seconde série de compteurs sont un seul et même nombre. Le détail des 17 tickets et des 75 lignes est produit article par article dans la pièce jointe."
+    },
+    {
+      "kind": "titre",
+      "texte": "Les quantités de l’annexe C ne sont pas minorées : la colonne de contrôle du service le dit"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Page 42, le service écrit que les quantités des annexes C « sont clairement et nettement minorées » et qu’il faudrait ajouter à ces annexes les articles manquants, ce qui viendrait « amplifier le rejet de la comptabilité présentée ». Il ne chiffre ni le nombre d’articles en cause, ni leur libellé, ni leur montant. La vérification est pourtant immédiate, et il l’a lui même faite."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Dans chacune des deux annexes, le service a ajouté une colonne qui multiplie le prix unitaire par la quantité, puis une colonne d’écart avec le chiffre d’affaires porté par la ligne. Il décrit l’opération dans sa proposition, page 15 : « Afin d’opérer une simple comparaison, le vérificateur a créé deux nouvelles colonnes intitulées : - « A-Prix TTC * Qté », faisant apparaître pour chaque ligne, à l’aide d’une simple multiplication entre la colonne 6 et 8 du tableau transmis, un montant de chiffre d’affaires théorique. - « B-Ecart », résultant de la différence entre la colonne A créée par le service ci-dessus et la colonne du tableau du prestataire « 10-Total TTC ». » Si une quantité est minorée, cette colonne le montre aussitôt : le produit du prix par la quantité tombe en dessous de la recette."
+    },
+    {
+      "kind": "tableau",
+      "titre": "La colonne de contrôle créée par le service, appliquée à l’annexe B puis à l’annexe C",
+      "minWidth": 900,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Annexe"
+        },
+        {
+          "label": "Chiffre d’affaires de l’annexe",
+          "align": "right"
+        },
+        {
+          "label": "Prix unitaire × quantité",
+          "align": "right"
+        },
+        {
+          "label": "Écart",
+          "align": "right"
+        },
+        {
+          "label": "Écart en %",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "Annexe B"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "420 931,42 €",
+            "align": "right"
+          },
+          {
+            "v": "17 561,00 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "4,35 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2022-2023"
+          },
+          {
+            "v": "Annexe C"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "403 370,38 €",
+            "align": "right"
+          },
+          {
+            "v": "0,04 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0,00 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "Annexe B"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "458 004,04 €",
+            "align": "right"
+          },
+          {
+            "v": "20 011,12 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "4,57 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "Annexe C"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right"
+          },
+          {
+            "v": "438 325,70 €",
+            "align": "right"
+          },
+          {
+            "v": "44,58 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0,01 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "Annexe B"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          },
+          {
+            "v": "454 943,14 €",
+            "align": "right"
+          },
+          {
+            "v": "20 115,28 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "4,63 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "Annexe C"
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right"
+          },
+          {
+            "v": "435 696,04 €",
+            "align": "right"
+          },
+          {
+            "v": "131,08 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0,03 %",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le résultat est sans équivoque, et il est celui du service. L’annexe dont la colonne « Qté » reproduit son propre chiffre d’affaires est l’annexe C : à 0,04 €, 44,58 € et 131,08 € près, soit trois centièmes de pour cent au plus. L’annexe B s’en écarte de 17 561,00 €, 20 011,12 € et 20 115,28 €, montants que le service porte lui même page 15 de sa proposition. Des quantités minorées creuseraient l’écart dans l’autre sens. Celles de l’annexe C sont celles qui redonnent la recette."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La cause de l’écart est visible sur la journée que le service choisit lui même, le 14 avril 2022, et sur les deux notes qu’il reproduit page 43. Les notes 11 et 12 portent les mêmes huit articles, à la même minute, pour le même total de 29,35 € chacune : c’est une addition partagée en deux. L’annexe C inscrit la part réelle sur chacune des deux moitiés. L’annexe B inscrit une demi-part sur la première note et une part entière sur la seconde, alors que le montant, lui, reste identique dans les deux annexes."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Additions partagées du 14/04/2022, notes 11 et 12 : mêmes articles, mêmes montants, décomptes différents",
+      "minWidth": 820,
       "colonnes": [
         {
           "label": "Article"
@@ -1418,12 +1933,12 @@
             "align": "right"
           },
           {
-            "v": "13,50 « articles »",
+            "v": "15,00 « articles »",
             "align": "right",
             "fw": 700
           },
           {
-            "v": "9,00 articles",
+            "v": "10,00 articles",
             "align": "right",
             "fw": 700
           },
@@ -1437,190 +1952,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service dispose de la preuve arithmétique de ce sur-comptage : il l’a calculée lui même. Les annexes B et C, telles qu’il les produit, comportent des colonnes ajoutées par ses soins, numérotées A et B après les colonnes 1 à 17 du logiciel, qui multiplient le prix unitaire par la quantité et comparent le résultat au chiffre d’affaires de l’annexe. Dans l’annexe C, l’écart est de quatre centimes sur un exercice entier. Dans l’annexe B, il dépasse 17 000 €."
-    },
-    {
-      "kind": "tableau",
-      "titre": "La colonne de contrôle ajoutée par le service : « prix unitaire × Qté » comparé au chiffre d’affaires de l’annexe",
-      "minWidth": 880,
-      "colonnes": [
-        {
-          "label": "Exercice"
-        },
-        {
-          "label": "Somme « Qté » annexe B",
-          "align": "right"
-        },
-        {
-          "label": "Somme « Qté » annexe C",
-          "align": "right"
-        },
-        {
-          "label": "Contrôle du service, annexe B",
-          "align": "right"
-        },
-        {
-          "label": "Contrôle du service, annexe C",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "2022-2023"
-          },
-          {
-            "v": "40 217,81",
-            "align": "right"
-          },
-          {
-            "v": "38 479,35",
-            "align": "right"
-          },
-          {
-            "v": "- 17 561,00 €",
-            "align": "right",
-            "badge": "ko"
-          },
-          {
-            "v": "- 0,04 €",
-            "align": "right",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "2023-2024"
-          },
-          {
-            "v": "39 997,93",
-            "align": "right"
-          },
-          {
-            "v": "38 218,83",
-            "align": "right"
-          },
-          {
-            "v": "- 20 011,12 €",
-            "align": "right",
-            "badge": "ko"
-          },
-          {
-            "v": "+ 44,58 €",
-            "align": "right",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "2024-2025"
-          },
-          {
-            "v": "39 131,88",
-            "align": "right"
-          },
-          {
-            "v": "37 445,50",
-            "align": "right"
-          },
-          {
-            "v": "- 20 115,28 €",
-            "align": "right",
-            "badge": "ko"
-          },
-          {
-            "v": "+ 131,08 €",
-            "align": "right",
-            "badge": "ok"
-          }
-        ]
-      ]
+      "texte": "Seize lignes, 58,70 € dans les deux annexes, quinze « articles » d’un côté et dix de l’autre. La ligne « Salade Verte aux Noix » de la note 12 porte, dans l’annexe B, une quantité de 1,00 pour un prix unitaire de 5,90 € et un total TTC de 2,95 € : le produit du prix par la quantité y vaut le double de la recette. C’est ce décalage, répété sur toutes les parts d’additions partagées, qui produit les 17 561,00 € de la colonne de contrôle du service. Il ne manque pas un article : un article vendu une fois est compté une fois et demie."
     },
     {
       "kind": "paragraphe",
-      "texte": "La conclusion s’impose d’elle même : l’annexe dont la colonne « Qté » est incohérente avec son propre chiffre d’affaires est l’annexe B, celle dont le service retient le décompte le plus élevé. L’annexe C, qui est l’archive certifiée, est cohérente à quelques dizaines d’euros près sur trois exercices. Le grief de « minoration » vise donc précisément la seule des deux annexes qui compte juste."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Enfin, la thèse d’une donnée « de nature changeante » entre les remises est démentie par la comparaison ligne à ligne : **aucune ligne de l’annexe B ne manque dans l’annexe C**. L’extrait Excel du 13 février 2026 est un sous-ensemble strict de l’archive du 16 mars 2026, laquelle contient en outre treize lignes de plus sur 2023-2024 et soixante-deux sur 2024-2025. Une donnée altérée perd de l’information ; ici, la remise ultérieure en apporte davantage."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Comparaison ligne à ligne des annexes B et C (date, numéro de note, référence produit et libellé)",
-      "minWidth": 760,
-      "colonnes": [
-        {
-          "label": "Exercice"
-        },
-        {
-          "label": "Lignes de B absentes de C",
-          "align": "right"
-        },
-        {
-          "label": "Lignes de C absentes de B",
-          "align": "right"
-        },
-        {
-          "label": "Montant correspondant",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "2022-2023"
-          },
-          {
-            "v": "0",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "0",
-            "align": "right"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "2023-2024"
-          },
-          {
-            "v": "0",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "13",
-            "align": "right"
-          },
-          {
-            "v": "286,73 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "2024-2025"
-          },
-          {
-            "v": "0",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "62",
-            "align": "right"
-          },
-          {
-            "v": "734,01 €",
-            "align": "right"
-          }
-        ]
-      ]
+      "texte": "Le même mécanisme se retrouve sur tous les produits sujets au partage, proportionnellement à leur fréquence de partage. Sur l’Expresso, que le service reproduit page 41, les deux annexes comportent exactement les mêmes 1 978 lignes, pour 3 257,5 unités en annexe B contre 3 102,5 en annexe C. L’écart est dispersé, jamais concentré, et toujours à argent constant."
     },
     {
       "kind": "titre",
@@ -1632,11 +1968,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les deux propositions ne peuvent pas fonder le même grief. Elles se concilient pourtant sans difficulté, et leur conciliation ruine le grief : l’annexe C comporte bien **plus de lignes** sur cette journée, parce qu’elle porte les deux moitiés de chaque addition partagée, et **moins de quantité totale**, parce qu’elle inscrit une demi-part là où l’annexe B en inscrit une entière. Le service a sous les yeux, à deux pages d’intervalle, les deux moitiés de l’explication qu’il dit ne pas avoir reçue."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Il faut ajouter que l’affirmation de la page 42 n’est assortie d’aucun chiffrage : ni le nombre d’articles prétendument manquants, ni leur libellé, ni leur montant ne sont indiqués. Le service en tire pourtant une aggravation expresse du rejet (« amplifier le rejet de la comptabilité présentée », p. 42). Une rectification ne peut se fonder sur une quantité que l’administration ne chiffre pas."
+      "texte": "Les deux constats se concilient, et leur conciliation est la réponse au grief : l’annexe C comporte **plus de lignes**, parce qu’elle porte les deux moitiés de chaque addition partagée, et **moins de quantité totale**, parce qu’elle inscrit une demi-part là où l’annexe B inscrit une part entière. Le service a sous les yeux, à deux pages d’intervalle, les deux moitiés de l’explication qu’il dit ne pas avoir reçue. Et sur l’ensemble des trois exercices, le rapprochement ligne à ligne confirme le sens de l’écart : l’annexe C contient 75 lignes de vente de plus que l’annexe B, et pas une de moins."
     },
     {
       "kind": "titre",
@@ -1644,11 +1976,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les deux colonnes reproduites page 44, intitulées « Erreur Taux TVA dans Base Envoyée Faux/Correct » et « Correction TVA Sur Taux », ne sont pas des colonnes du logiciel de caisse. La structure du fichier le montre sans ambiguïté : les colonnes issues de la caisse y sont numérotées de 1 à 17, et celles que le service a ajoutées dans son propre tableur sont désignées par les lettres A à G. Les deux colonnes en cause sont les lettres E et F. Le service produit donc son propre calcul comme s’il s’agissait d’une anomalie du fichier."
+      "texte": "Les deux colonnes reproduites page 44, intitulées « Erreur Taux TVA dans Base Envoyée Faux/Correct » et « Correction TVA Sur Taux », ne sont pas des colonnes du logiciel de caisse. La première ligne du fichier C-1 le dit littéralement : les dix sept colonnes issues de la caisse y sont numérotées de « 1 Date Ticket » à « 17 Tot_rem Ttc », et les sept colonnes suivantes, ajoutées dans le tableur du service, sont désignées par les lettres A à G. Les deux colonnes en cause sont les lettres E et F. Le service décrit d’ailleurs le même procédé, pour l’annexe B, page 15 de sa proposition. Il produit donc son propre calcul comme s’il s’agissait d’une anomalie du fichier."
     },
     {
       "kind": "paragraphe",
-      "texte": "Ce calcul, tel qu’il l’a lui même établi, aboutit à un résultat qu’il ne relève pas. La somme de sa colonne « Correction TVA Sur Taux » est **négative sur les trois exercices**, - 9 424,74 € au total. Mais ce montant n’est pas de la TVA payée en trop : il mesure l’écart entre la colonne « taux » de son propre fichier et les taux qu’il tient pour corrects. Appliquées, ces corrections ramènent la TVA reconstituée ligne à ligne de 144 489,75 € à **135 065,93 €**, soit à **18,76 € de la TVA collectée effectivement reversée** (135 084,69 €), 0,014 %. Le calcul du service restitue donc exactement la taxe déjà liquidée : le grief qu’il en tire est sans incidence sur l’impôt, dans un sens comme dans l’autre."
+      "texte": "Ce calcul, tel qu’il l’a lui même établi, aboutit à un résultat qu’il ne relève pas. La somme de sa colonne « Correction TVA Sur Taux » est de **- 9 424,74 €** sur les trois exercices. Ce montant n’est pas de la TVA payée en trop : il mesure l’écart entre la colonne « taux » du fichier et les taux que le service tient pour corrects. Appliquées, ces corrections ramènent la TVA reconstituée ligne à ligne de 144 489,75 € à **135 065,93 €**, soit à **18,76 € de la TVA collectée que la société a reversée** (135 084,69 €, montant du compte 445710 reproduit par le service page 26 de sa proposition), 0,014 %. Le calcul du service restitue donc exactement la taxe déjà liquidée : le grief qu’il en tire est sans incidence sur l’impôt, dans un sens comme dans l’autre."
     },
     {
       "kind": "tableau",
@@ -1769,31 +2101,19 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le sens des écarts confirme qu’il s’agit d’un champ d’affichage et non d’une base d’imposition : les lignes signalées se répartissent presque également dans les deux sens, 15 824 dans un sens et 16 223 dans l’autre. Une manipulation destinée à réduire l’impôt ne produirait pas un partage à parts égales. Surtout, la TVA effectivement liquidée ne se lit pas dans cette colonne de ligne mais au niveau du ticket et du journal de TVA (annexes G), qui totalisent 42 552,76 € pour l’exercice 2022-2023 : c’est ce montant, et non le champ de ligne, qui a été déclaré. Le contrôle le vérifie ticket par ticket : reconstituée avec la colonne « taux » du fichier, la ventilation 10 % / 20 % ne retrouve celle du journal de TVA que dans un ticket sur cinq, contre plus de quatre sur cinq une fois les corrections du service appliquées. Ces colonnes réparent l’export, elles ne redressent pas la société."
+      "texte": "Le sens des écarts confirme qu’il s’agit d’un champ d’affichage et non d’une base d’imposition : les lignes signalées se répartissent presque également dans les deux sens, 15 824 dans un sens et 16 223 dans l’autre. Une manipulation destinée à réduire l’impôt ne produirait pas un partage à parts égales. Surtout, la TVA effectivement liquidée ne se lit pas dans cette colonne de ligne mais au niveau du ticket et du journal de TVA. Le contrôle le vérifie ticket par ticket : reconstituée avec la colonne « taux » du fichier, la ventilation 10 % / 20 % ne retrouve celle du journal de TVA que dans 20,4 % des tickets sur les trois exercices, contre 82,1 % une fois les corrections du service appliquées. Ces colonnes réparent l’export, elles ne redressent pas la société."
     },
     {
       "kind": "titre",
-      "texte": "La certification n’est pas une « auto-certification » : la loi ouvre deux voies, l’une et l’autre"
+      "texte": "La clé d’identification : deux compteurs distincts, et une structure qui est celle de l’éditeur"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service écarte le certificat en écrivant : « il n’appartient pas au service de contester une certification. Cela est d’autant plus vrai à partir du moment où il s’agit d’une auto-certification. » (p. 39). La qualification est inexacte en droit. L’article 286, I, 3° bis du code général des impôts dispose que le respect des conditions d’inaltérabilité, de sécurisation, de conservation et d’archivage est justifié « par un certificat délivré par un organisme accrédité dans les conditions prévues à l’article L. 433-4 du code de la consommation **ou** par une attestation individuelle de l’éditeur »."
+      "texte": "Le service relève, page 39, que la colonne « id » du fichier « tpvevenement » ne porte pas les mêmes valeurs que celle des quatre autres fichiers. Le constat est exact, et nous ne le discutons pas : dans les annexes E, la colonne « id » est un compteur d’événements, qui s’incrémente à chaque événement enregistré par la caisse ; dans les annexes C, F et H, elle est un compteur de notes. Ce sont deux séquences distinctes, comme le sont les deux objets qu’elles numérotent. Le lien que le fichier porte entre les deux est celui que la caisse enregistre : la date, le numéro de ticket Z et l’horodatage à la minute. C’est d’ailleurs avec ces seules colonnes que le service a lui même identifié, compté et valorisé 8 014, 6 943 et 6 345 événements « DEL », pour 193 005,09 €, 140 686,55 € et 97 071,51 € (proposition, p. 23)."
     },
     {
       "kind": "paragraphe",
-      "texte": "La doctrine que le service invoque lui même dit exactement la même chose. Le BOI-TVA-DECLA-30-10-30 consacre son paragraphe 320 au certificat délivré par un organisme accrédité et son paragraphe 360 à l’attestation individuelle de l’éditeur, dont il fournit le modèle (BOI-LETTRE-000242). Les deux voies sont alternatives et de valeur égale : la seconde n’est pas une voie dégradée, c’est un mode de preuve que la loi institue."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Cette alternative était en vigueur pendant toute la période vérifiée (du 1er avril 2022 au 31 mars 2025). Elle a été supprimée par l’article 43 de la loi n° 2025-127 du 14 février 2025 de finances pour 2025, avec effet au 16 février 2025, puis **rétablie** par l’article 125 de la loi n° 2026-103 du 19 février 2026 de finances pour 2026, avec effet au 21 février 2026. Elle était donc pleinement applicable aux exercices vérifiés, et elle l’est de nouveau à la date de la réponse du service."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Sources : [article 286 du CGI](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897) ; [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) ; [suppression par la loi de finances pour 2025](https://bofip.impots.gouv.fr/bofip/14667-PGP.html/ACTU-2025-00075) ; [rétablissement par la loi de finances pour 2026](https://bofip.impots.gouv.fr/bofip/15035-PGP.html/ACTU-2026-00073)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La société a produit, le 13 janvier 2026, la pièce datée du 1er décembre 2018 relative au logiciel SERVILOG d’AKEAD (POS 5.03-Eb), que la proposition de rectification mentionne page 3 et dont elle indique page 22 que le logiciel « figure sur les attestations transmises au service ». Que cette pièce relève de la première ou de la seconde voie, elle satisfait à l’obligation légale. Le service ne peut la neutraliser par une qualification qu’il n’étaye pas, sans dire laquelle des deux voies serait en cause ni en quoi la pièce serait irrégulière. Cette production écarte par elle même l’amende de l’article 1770 duodecies du code général des impôts, qui sanctionne de 7 500 € par système de caisse le seul fait de ne pas justifier, par l’attestation ou le certificat de l’article 286, I, 3° bis, de la conformité du logiciel détenu."
+      "texte": "Ce que le service reproche ici est donc la structure interne d’un journal d’événements, c’est à dire un choix de conception du logiciel. La doctrine qu’il invoque met cette obligation à la charge du logiciel, et non de son utilisateur : « Le logiciel ou système doit prévoir une traçabilité de la génération des données d’archives, selon un procédé fiable » (BOI-TVA-DECLA-30-10-30, § 240, version du 19/05/2021). Le traitement de chaque suppression, cas par cas et réconcilié au centime, figure dans notre réponse sur les [suppressions de notes](/reponse-1/suppressions-de-notes)."
     },
     {
       "kind": "titre",
@@ -1805,7 +2125,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La charge de la preuve est ici sans ambiguïté. L’article L. 195 A du livre des procédures fiscales dispose qu’« en cas de contestation des pénalités fiscales appliquées à un contribuable au titre des impôts directs, de la taxe sur la valeur ajoutée et des autres taxes sur le chiffre d’affaires […] la preuve de la mauvaise foi et des manœuvres frauduleuses incombe à l’administration ». Plus largement, il appartient au service d’établir les faits qu’il allègue, non au contribuable de démontrer qu’il n’a rien fait."
+      "texte": "La charge de la preuve est ici sans ambiguïté. L’article L. 195 A du livre des procédures fiscales dispose qu’« en cas de contestation des pénalités fiscales appliquées à un contribuable au titre des impôts directs, de la taxe sur la valeur ajoutée et des autres taxes sur le chiffre d’affaires [...] la preuve de la mauvaise foi et des manœuvres frauduleuses incombe à l’administration ». Le service pose lui même la règle applicable au rejet, page 7 de sa proposition : la garantie fiscale est écartée « lorsque **l’administration établit** que la comptabilité est irrégulière et non probante », et le délai sur place n’est porté à six mois, page 8, qu’« en cas de **graves irrégularités** privant de valeur probante la comptabilité »."
     },
     {
       "kind": "paragraphe",
@@ -1813,39 +2133,168 @@
     },
     {
       "kind": "titre",
-      "texte": "Le format des extractions est celui du logiciel, pas un choix du contribuable"
+      "texte": "Le motif de la page 46 : ce que la loi met à la charge du logiciel, et ce qu’elle a demandé au contribuable"
     },
     {
       "kind": "paragraphe",
-      "texte": "Les fichiers ont été remis au titre du II de l’article L. 47 A du livre des procédures fiscales, qui permet à l’administration de demander « la copie des documents, données et traitements soumis à contrôle », produite « sur tous supports informatiques répondant à des normes fixées par arrêté ». Ces normes portent sur le support et le format de la copie remise. Elles n’imposent pas au contribuable de créer une donnée que son logiciel ne conserve pas."
+      "texte": "Le service tire du format des fichiers, en haut de la page 46, un motif de rejet qui ne dépend d’aucun des griefs qui précèdent : les fichiers remis sur la clé USB étaient des fichiers Excel, donc la société n’aurait transmis aucune archive fiscale inaltérable, donc la comptabilité serait « non probante dans sa totalité et incapable de justifier le volume d’affaires déclarée ». Sur le fait, il faut concéder, et le dire nettement : ce qui a été remis le 13 mars 2026 est bien une extraction au format .xls, et l’affirmation de notre mémoire du 10 juillet 2026, selon laquelle cet export serait l’archive inaltérable au sens de la norme, est inexacte ; nous ne la maintenons pas. Reste à savoir ce que la loi tire de ce fait. Elle n’en tire pas cela."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le contribuable a remis ce que la caisse produit : le journal des événements sans colonne de libellé, les tickets avec leur libellé, les règlements et le journal de TVA. L’absence, dans le fichier « tpvevenement », d’une clé partagée avec les fichiers de tickets relève de la conception de l’éditeur, couverte par la pièce de conformité du 01/12/2018. Reprocher au restaurant la structure interne d’un logiciel dont la conformité est justifiée revient à lui imputer une obligation qui pèse sur un tiers."
+      "texte": "Le seul texte qui subordonne les données archivées à un format est le **second alinéa** du 3° bis du I de l’article 286 du code général des impôts : « Les données archivées mentionnées au premier alinéa du présent 3° bis sont restituées dans un format répondant aux normes établies par l’administration. » Deux constatations le privent d’effet ici. La première tient à sa date. Le code consolidé donne l’article 286 dans sa rédaction issue de l’**article 87 de la loi n° 2026-534 du 25 juin 2026**, en vigueur depuis le 26 juin 2026, et cette modification est la seule que le code enregistre sur l’article 286 depuis le 20 février 2026. Le service devra donc établir, avant d’opposer cette phrase à la société, qu’elle était applicable à des exercices clos les 31 mars 2023, 2024 et 2025."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La seconde constatation ne dépend d’aucune date, et elle suffit. Les « normes établies par l’administration » auxquelles ce texte renvoie ne sont énoncées nulle part. Le bulletin qui commente cette obligation, le BOI-TVA-DECLA-30-10-30, ne les contient ni dans la version applicable à la période vérifiée, publiée le 19 mai 2021 et en vigueur jusqu’au 16 avril 2025, ni dans sa version la plus récente, publiée le 25 mars 2026 : l’expression n’y figure pas, et aucun format de fichier déterminé n’y est prescrit pour les données archivées. Or la doctrine administrative est opposable au service par l’article L. 80 A du livre des procédures fiscales. Une norme qui n’a pas été établie ne peut pas avoir été méconnue. Sources : [texte consolidé du code général des impôts](https://codes.droit.org/PDF/Code%20g%C3%A9n%C3%A9ral%20des%20imp%C3%B4ts.pdf), où l’article 286 porte la mention « LOI n° 2026-534 du 25 juin 2026 - art. 87 » ; [BOI-TVA-DECLA-30-10-30, version du 19/05/2021](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) et [version du 25/03/2026](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20260325)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La doctrine que le service reproduit lui même, sur la plus grande partie de sa page 19, est écrite tout entière au sujet du logiciel. Elle est extraite du BOI-TVA-DECLA-30-10-30 dans sa version publiée le 19 mai 2021, celle dont il précise lui même qu’elle a couru jusqu’au 16 avril 2025, c’est à dire sur toute la période vérifiée. Son paragraphe 220 dispose : « **Le logiciel ou le système de caisse doit permettre d’archiver** les données enregistrées selon une périodicité choisie, au maximum annuelle ou par exercice. La procédure d’archivage a pour objet de figer les données et de donner date certaine aux données archivées. Elle doit prévoir un dispositif technique garantissant l’intégrité dans le temps des archives produites et leur conformité aux données initiales à partir desquelles elles sont créées. **Les archives peuvent être conservées dans le logiciel ou système lui-même** ou en dehors du logiciel ou système lorsqu’il existe une procédure de purge. »"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Deux conséquences en découlent, et le service les tire toutes deux à l’envers. La première : la doctrine admet expressément que l’archive demeure dans la caisse. Il n’y avait donc rien à sortir de la machine pour satisfaire à l’obligation. La seconde : **aucun paragraphe de ce bulletin n’impose au contribuable de transmettre son archive à l’administration**. Ce qu’il lui impose est de la conserver : « Les utilisateurs ont en effet l’obligation de conserver les données archivées pendant six ans (LPF, art. L. 102 B) » (§ 250). Les deux seules exigences qui rapprochent l’archive de l’administration sont des exigences de lisibilité et de disponibilité « en cas de contrôle » (§ 230 et § 250), non de remise. Reprocher à la société de n’avoir « pas transmis d’archive fiscale inaltérable » revient à lui reprocher de n’avoir pas fait ce que le texte ne lui demande pas."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ce que le service a demandé, et obtenu, est un autre objet. Le 6 mars 2026, il a engagé la procédure du II de l’article L. 47 A du livre des procédures fiscales et remis en main propre le document permettant à la société de choisir son mode de traitement (proposition, p. 5 et p. 9). La société a retourné la lettre d’option le 13 mars 2026 en choisissant l’option c, dont le texte est le suivant : « Le contribuable peut également demander que le contrôle ne soit pas effectué sur le matériel de l’entreprise. **Il met alors à la disposition de l’administration, dans les quinze jours suivant la formalisation par écrit de son choix, les copies des documents, données et traitements soumis à contrôle.** Ces copies sont produites sur tous supports informatiques, répondant à des normes fixées par arrêté du ministre chargé du budget. » Ce qui a été remis est donc une **copie** produite pour les traitements du vérificateur, et rien d’autre."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Que l’archive et cette copie soient deux objets distincts, le texte le dit par leur destin opposé. L’archive de l’article 286, I, 3° bis du code général des impôts doit être conservée six ans (article L. 102 B du livre des procédures fiscales). La copie du II de l’article L. 47 A, elle, doit être détruite : « **L’administration détruit, avant la mise en recouvrement, les copies des fichiers transmis.** » Un fichier dont la loi ordonne la destruction ne peut pas être l’archive dont elle ordonne la conservation."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Deux objets, deux régimes",
+      "minWidth": 980,
+      "colonnes": [
+        {
+          "label": "Ce qui les sépare"
+        },
+        {
+          "label": "L’archive de l’article 286, I, 3° bis du CGI"
+        },
+        {
+          "label": "La copie du c du II de l’article L. 47 A du LPF"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Sur qui pèse l’obligation"
+          },
+          {
+            "v": "Le logiciel ou le système de caisse, et son éditeur"
+          },
+          {
+            "v": "Le contribuable, une fois son option formalisée par écrit"
+          }
+        ],
+        [
+          {
+            "v": "Quand elle naît"
+          },
+          {
+            "v": "En permanence, indépendamment de tout contrôle"
+          },
+          {
+            "v": "Dans les quinze jours suivant la formalisation du choix, pour le seul contrôle"
+          }
+        ],
+        [
+          {
+            "v": "Où elle se trouve"
+          },
+          {
+            "v": "Dans le logiciel lui même, ou sur un support externe en cas de purge (§ 220 et § 250)"
+          },
+          {
+            "v": "Entre les mains du vérificateur, sur le support convenu avec lui"
+          }
+        ],
+        [
+          {
+            "v": "Ce qu’elle devient"
+          },
+          {
+            "v": "Conservée six ans (LPF, art. L. 102 B)"
+          },
+          {
+            "v": "Détruite par l’administration avant la mise en recouvrement (LPF, art. L. 47 A, II)"
+          }
+        ],
+        [
+          {
+            "v": "Comment sa régularité se prouve"
+          },
+          {
+            "v": "Par un certificat d’organisme accrédité ou une attestation individuelle de l’éditeur"
+          },
+          {
+            "v": "Par sa conformité aux normes de l’article A. 47 A-2 du LPF, au besoin adaptées en accord avec le vérificateur"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les normes de remise de cette copie sont fixées par l’article A. 47 A-2 du livre des procédures fiscales, et la doctrine administrative en précise elle même la portée exacte, dans des termes qui règlent le débat : « **les normes définies à l’article A. 47 A-2 du LPF concernent des modalités de remise de fichiers à l’administration et non de conservation, cette dernière restant libre** » (BOI-CF-IOR-60-40-30, § 180). Le même bulletin admet expressément le support employé ici : « En accord avec le service vérificateur, d’autres supports pourront être utilisés (clé USB par exemple) » (§ 300). Un texte qui ne régit pas la conservation ne peut pas servir à juger si ce qui a été remis constitue ou non une archive."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La loi a d’ailleurs envisagé l’hypothèse d’une copie remise dans des formes non conformes, et elle y a attaché une conséquence nommée. Le 2° de l’article 1729 H du code général des impôts sanctionne « le défaut de mise à disposition des copies des documents, données et traitements soumis à contrôle dans les délais et **selon les normes** prévus aux b et c du même II de l’article L. 47 A » par « une amende égale à 5 000 € ou, en cas de rectification et si le montant en est plus élevé, d’une majoration de 10 % des droits ». La doctrine le confirme expressément pour le cas du format : l’amende est applicable « lorsque les copies [...] ne sont pas conformes aux normes prévues à l’article A. 47 A-2 du LPF » (BOI-CF-IOR-60-40-30, § 550, version du 13 janvier 2021, toujours en vigueur), et « elle ne s’applique qu’une fois par contrôle » (§ 560)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le rejet de la valeur probante est une constatation de fait, non une conséquence attachée au format d’une copie de travail. Le seul effet que la loi attache au format de cette remise est l’amende que l’on vient de citer, et le service ne l’a pas appliquée. Il ne peut donc pas transformer, au stade de la réponse aux observations, un manquement que la loi tarife à 5 000 € et qu’il n’a jamais relevé, en un rejet de la comptabilité « dans sa totalité »."
     },
     {
       "kind": "titre",
-      "texte": "Ce que le service a reçu le 16 mars 2026, il l’a lui même appelé une archive fiscale"
+      "texte": "Ce que le service a lui même écrit de ces fichiers, et ce qu’il en a fait"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service tire du format des fichiers, en haut de la page 46, un motif de rejet qui ne dépend d’aucun des douze griefs : les fichiers remis sur la clé USB étaient des fichiers Excel, donc la société n’aurait transmis aucune archive fiscale inaltérable, donc la comptabilité serait « non probante dans sa totalité ». Sur le fait, il faut concéder, et le dire nettement : ce qui a été remis est bien une extraction au format .xls. L’affirmation de notre mémoire du 10 juillet 2026, selon laquelle l’export remis sur clé USB les 16 et 30 mars 2026 serait l’archive inaltérable au sens de la norme, est inexacte et nous ne la maintenons pas. L’archive, elle, est produite et conservée par le système certifié lui même ; elle est restée dans la caisse, et le service ne l’a jamais demandée. Ce qu’il a demandé, et reçu, est la copie des données soumises à contrôle, selon l’option c qu’il a lui même fait formaliser par écrit. La conséquence qu’il tire du format de cette copie est démentie par ses propres pièces, par le texte au titre duquel elle a été remise, et par l’usage qu’il en a fait."
+      "texte": "Le premier démenti de la page 46 est dans la proposition de rectification du 18 mai 2026. Le service y décrit la remise du 13 mars 2026 en ces termes : « la société a : - Retourné la lettre d’option (annexe II) des modalités de l’article L-47-A-II du L-P-F, choisissant l’option c - **transmis ses archives fiscales de sa caisse informatique** pour la période vérifiée, les 5 fichiers communiqués, étant enregistrés sur une clé USB KeyOuest sous les noms suivants : 20220401’ AND ’20250331 tpvevenement .xls [...] » (p. 5, passage répété p. 10). Il a donc qualifié ces cinq fichiers d’archives fiscales en les nommant avec leur extension, et il en a accusé réception par un courrier recommandé du 16 mars 2026 « indiquant la nature des fichiers envoyés par la société (noms, taille, commentaires divers) » (p. 6), sans formuler la moindre réserve de format."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le premier démenti est dans la proposition de rectification du 18 mai 2026. Le service y décrit lui même la remise du 13 mars 2026 en ces termes : « la société a : - Retourné la lettre d’option (annexe II) des modalités de l’article L-47-A-II du L-P-F, choisissant l’option c - transmis ses archives fiscales de sa caisse informatique pour la période vérifiée, les 5 fichiers communiqués, étant enregistrés sur une clé USB KeyOuest sous les noms suivants : 20220401 AND 20250331 tpvevenement .xls […] » (p. 5, passage répété p. 10). Le service a donc qualifié ces cinq fichiers d’« archives fiscales » en les nommant avec leur extension, et il en a accusé réception par un courrier recommandé du 16 mars 2026 « indiquant la nature des fichiers envoyés par la société (noms, taille, commentaires divers) » (p. 6), sans formuler la moindre réserve de format. La page 46 dit le contraire de la page 5."
+      "texte": "Le deuxième démenti est dans la partie même de la proposition à laquelle la page 38 renvoie. Dans la partie IX, consacrée au fichier Événement, le service écrit en conclusion : « L’absence de la nature de l’article supprimé compromet grandement **la structure de l’archive communiquée au service**. En effet, elle contrevient aux dispositions de conservation des données. » (p. 24). Le grief qu’il formait alors portait sur la structure de l’archive qu’il déclarait avoir reçue. Celui de la page 46 porte sur son inexistence. Ce n’est pas le même grief, et le second ne fonde aucune des parties du rejet de la proposition : sur ce terrain, les motifs y sont la « nature changeante » puis « instable » des données (p. 28 et p. 29), jamais leur format."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le deuxième démenti est dans le texte au titre duquel ces fichiers ont été remis. L’option c du II de l’article L. 47 A du livre des procédures fiscales prévoit que le contribuable « met alors à la disposition de l’administration, dans les quinze jours suivant la formalisation par écrit de son choix, les copies des documents, données et traitements soumis à contrôle », ces copies étant « produites sur tous supports informatiques, répondant à des normes fixées par arrêté du ministre chargé du budget ». Une copie remise pour l’exécution des traitements du vérificateur n’est pas l’archive de l’article 286 du code général des impôts : les deux objets n’ont ni la même fonction, ni le même régime, ni le même destinataire. Et si le service avait estimé cette copie non conforme à l’arrêté, la voie ouverte était procédurale, par une demande de régularisation du support ou du format ; il ne l’a jamais empruntée, et une irrégularité de copie qu’il n’a pas relevée ne peut pas devenir, au stade de la réponse aux observations, un motif de rejet de la comptabilité."
+      "texte": "Le troisième démenti est dans la chronologie que le service établit lui même. La page 46 affirme que « l’ensemble des fichiers transmis par la société, depuis le début, [...] sont tous du même format ». Ses propres pages en distinguent trois remises, de nature et de régime différents : le 13 janvier 2026, par courriel, « le certificat de conformité de la caisse informatique, daté du 01/12/2018 » et trois récapitulatifs annuels (p. 3) ; en février 2026, par courriel, « des fichiers EXCEL pour chacun des exercices visés par le contrôle », que la proposition date du 10 février page 15 et du 13 février pages 5 et 6, et dont il précise que « **ces fichiers ont été ressortis des données de la caisse informatique, par le prestataire SERVILOG**, pour justifier de l’enregistrement des chiffres d’affaires dans la comptabilité » (p. 15) ; et le 13 mars 2026, par courrier, les cinq fichiers de l’option c (p. 5). Seule la troisième a été faite au titre du II de l’article L. 47 A. Le format des deux premières n’a jamais relevé de ce texte, et celui de la seconde est, de l’aveu du service, celui qu’a produit le prestataire du logiciel."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le troisième démenti est dans le texte de l’obligation elle même. L’article 286, I, 3° bis du code général des impôts impose d’« utiliser un logiciel ou un système satisfaisant à des conditions d’inaltérabilité, de sécurisation, de conservation et d’archivage des données en vue du contrôle de l’administration fiscale, attestées par un certificat délivré par un organisme accrédité […] ou par une attestation individuelle de l’éditeur […] ». L’obligation pèse sur le logiciel ou le système, et sa preuve est la pièce de conformité, non le format du fichier que le contribuable remet au vérificateur. La doctrine que le service invoque lui même sur trois pages est écrite dans les mêmes termes : le BOI-TVA-DECLA-30-10-30, § 220 et suivants, commence chacune de ses phrases par « le logiciel ou système de caisse doit » permettre d’archiver les données et prévoir une traçabilité. Or le service n’a jamais examiné la procédure d’archivage sur la machine : il n’a usé ni du a) du II de l’article L. 47 A, ni du III, et l’unique intervention devant l’écran de la caisse, le 29 janvier 2026, a porté sur l’édition de statistiques par article. Il conclut à un défaut d’archivage sans avoir regardé l’archivage."
+      "texte": "Le quatrième démenti tient à ce que le service n’a jamais examiné. Il conclut à un défaut d’archivage sans avoir regardé la procédure d’archivage. Il n’a usé ni du a) du II de l’article L. 47 A, qui lui aurait permis de vérifier sur le matériel de l’entreprise, ni du III du même article. Les passages devant l’écran de la caisse que sa proposition relate ont porté, le 29 janvier 2026, sur l’édition des statistiques de ventes par produit et la navigation dans les familles d’articles (p. 4), et le 6 mars 2026, sur « son fonctionnement général » (p. 5). Sa proposition ne relate aucune constatation sur la fonction d’archivage, sur le support d’archivage ni sur la traçabilité des purges."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le dernier point est de simple cohérence. Les annexes C, D, E, F, G et H, c’est à dire la comptabilité matière, la totalité du rejet et la totalité de la reconstitution, sont construites sur ces mêmes cinq fichiers, que la proposition range sous l’intitulé « Issues des données communiquées par courrier du 13 Mars 2026 » (p. 5 et 6). Le service ne peut pas fonder 471 826 € de rehaussement sur des fichiers dont il soutient, page 46, qu’ils n’ont aucune valeur : ou bien ces fichiers permettent d’établir les ventes, les quantités, les règlements et la TVA, et c’est ce qu’il a fait pendant douze annexes, ou bien ils ne le permettent pas, et c’est la reconstitution qui tombe avec eux. Le format d’une copie que le service a lui même appelée archive fiscale, dont il a accusé réception sans réserve et dont il a tiré l’intégralité de ses chiffrages, ne peut pas rendre une comptabilité « non probante dans sa totalité »."
+      "texte": "Le dernier point est le plus simple. Le service avait lui même énoncé, le 5 février 2026, la condition à laquelle il subordonnait le caractère probant de la comptabilité : « le service devait obtenir **un détail précis des ventes avec les quantités par articles, exercice par exercice**. A défaut, la comptabilité ne pourrait être retenue comme probante. » (proposition, p. 4). Il l’a obtenu. Les fichiers du 13 mars 2026 lui ont livré 97 769 lignes de vente détaillées avec leur libellé, leur quantité et leur prix, la liste des 19 903 tickets avec leurs compteurs, les règlements et le journal de TVA. Il les a lues, triées, recoupées et exploitées, et en a tiré les annexes C, D, E, F, G et H, c’est à dire la comptabilité matière, la totalité du rejet et la totalité de la reconstitution, soit 421 899 € de produits reconstitués et 49 927 € de profit sur le trésor sur trois exercices. Nous n’en tirons pas un reproche : la doctrine invite au contraire le vérificateur à exploiter les données informatisées disponibles. Nous en tirons un fait. Des fichiers qui se laissent lire, trier, recouper et exploiter de bout en bout, et qui portent le détail ligne à ligne des ventes et non des agrégats, ne sont pas des fichiers dont le format ferait obstacle au contrôle."
+    },
+    {
+      "kind": "titre",
+      "texte": "La certification n’est pas une auto-certification, et les mots sont ceux du service"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service écarte le certificat en écrivant : « il n’appartient pas au service de contester une certification. Cela est d’autant plus vrai à partir du moment où il s’agit d’une auto-certification. » (p. 39). Sa propre proposition dit le contraire, deux fois. Page 3, décrivant la première intervention, il indique avoir « demandé à la comptable le nom du logiciel de caisse, à savoir SERVILOG d’AKEAD et le certificat correspondant », puis : « En réponse à ces interrogations, le 13 janvier 2026, le cabinet comptable a transmis par courriels : - **le certificat de conformité de la caisse informatique, daté du 01/12/2018** - 3 récapitulatifs annuels ». Page 9, ouvrant la partie consacrée à l’article L. 47 A-II : « Cette caisse informatique utilise le logiciel SERVILOG de AKEAD POS 5.03-Eb (référence figurant sur l’écran de la caisse), et **figure sur les attestations transmises au service**. » Le service a demandé la pièce, il l’a reçue, il l’a nommée, et il la détient."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La qualification d’« auto-certification » ne correspond à aucune des deux voies que la loi ouvre. L’article 286, I, 3° bis du code général des impôts fait justifier les conditions d’inaltérabilité, de sécurisation, de conservation et d’archivage « par un certificat délivré par un organisme accrédité [...] **ou** par une attestation individuelle de l’éditeur ». La doctrine que le service invoque neuf fois dans sa proposition le confirme sans réserve : « Il s’agit d’un **mode de preuve alternatif** : un seul de ces deux documents (certificat ou attestation individuelle) suffit à justifier du respect des conditions susvisées » (BOI-TVA-DECLA-30-10-30, § 270, version du 19/05/2021)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le même bulletin exclut expressément que l’assujetti se certifie lui même, et dit qui produit la pièce : « Qu’il s’agisse du certificat ou de l’attestation individuelle, **c’est l’éditeur du logiciel ou système de caisse qui fait produire le certificat demandé à un organisme certificateur accrédité ou qui produit le document (attestation individuelle). Ce n’est pas l’assujetti qui demande la certification du logiciel ou système de caisse qu’il détient à l’autorité certifiante.** » (§ 290). Il ajoute que « une attestation délivrée par un éditeur engage sa responsabilité » (§ 300), et réserve l’exigence d’un certificat d’organisme accrédité au seul cas où le logiciel est développé par l’assujetti pour ses besoins propres (§ 375). Une société de restauration qui utilise le logiciel d’un éditeur tiers n’est dans aucun de ces cas. Que la pièce du 1er décembre 2018 relève de l’une ou de l’autre voie, elle satisfait à l’obligation, et le mot « auto-certification » ne la décrit ni dans un cas ni dans l’autre."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Cette alternative a couvert toute la période vérifiée. Elle figurait au 3° bis jusqu’au 15 février 2025 ; l’article 43 de la loi n° 2025-127 du 14 février 2025 de finances pour 2025 l’a supprimée à compter du 16 février 2025, avant que l’article 125 de la loi n° 2026-103 du 19 février 2026 de finances pour 2026 ne la rétablisse à compter du 21 février 2026. Pour les six dernières semaines de la période vérifiée, l’administration a elle même maintenu l’attestation : « Du 16 février 2025 au 31 août 2025, les assujettis utilisant un logiciel ou système de caisse non certifié pourront continuer à justifier de la conformité de ce dernier aux conditions fixées au 3° bis du I de l’article 286 du CGI par la production de l’attestation individuelle délivrée par l’éditeur. » Sources : [BOI-TVA-DECLA-30-10-30, version du 19/05/2021](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) ; [actualité du 16/04/2025 sur la suppression de l’attestation](https://bofip.impots.gouv.fr/bofip/14667-PGP.html/ACTU-2025-00075) ; [actualité du 25/03/2026 sur son rétablissement](https://bofip.impots.gouv.fr/bofip/15035-PGP.html/ACTU-2026-00073) ; [BOI-CF-IOR-60-40-30, version du 13/01/2021](https://bofip.impots.gouv.fr/bofip/9027-PGP.html/identifiant=BOI-CF-IOR-60-40-30-20210113) ; [textes consolidés du livre des procédures fiscales](https://codes.droit.org/PDF/Livre%20des%20proc%C3%A9dures%20fiscales.pdf)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Il faut enfin relever ce que le service n’a pas fait. L’article 1770 duodecies du code général des impôts sanctionne d’une amende de 7 500 € par système de caisse « le fait, pour une personne assujettie à la taxe sur la valeur ajoutée, de ne pas justifier, par la production de l’attestation ou du certificat prévus au 3° bis du I de l’article 286, que le ou les logiciels ou systèmes de caisse qu’elle détient satisfont aux conditions d’inaltérabilité, de sécurisation, de conservation et d’archivage des données ». C’est la sanction propre au manquement que la page 46 décrit. Le service ne l’a pas appliquée, alors qu’il a appliqué la majoration de 40 % de l’article 1729 et la pénalité de 100 % de l’article 1759. La conformité du logiciel n’a donc donné lieu à aucune sanction."
     },
     {
       "kind": "alerte",
@@ -1858,20 +2307,36 @@
       "source": "nous",
       "numero": 3,
       "titre": "Ce que cela fait tomber",
-      "sousTitre": "La partie G ne comporte plus, après vérification, aucune anomalie qui puisse soutenir le rejet de la comptabilité."
+      "sousTitre": "Les quatre montants se réconcilient sur les fichiers du service, aucune ligne n’a disparu entre les deux remises, et le motif tiré du format n’a de fondement dans aucun des textes applicables."
     },
     {
       "kind": "paragraphe",
-      "texte": "Les quatre montants opposés par le service se réconcilient, à 0,39 % au plus : deux d’entre eux sont deux arrêtés du même compteur de caisse, un troisième est la somme des encaissements, le quatrième est la somme des ventes, et l’amplitude résiduelle est de 0,02 % à 0,39 % selon l’exercice. L’écart de quantités entre les annexes B et C est expliqué article par article, et il est à l’avantage de l’annexe C, dont la cohérence interne est établie par la colonne de contrôle du service lui même."
+      "texte": "Sur les montants, les compteurs de la caisse répondent seuls. Le fichier de tickets en porte deux, qui se raccordent l’un et l’autre d’un exercice au suivant au centime, en recettes comme en taxe, sur 1,28 million d’euros et 19 903 tickets. La somme des tickets de la première série donne les montants des annexes B, les deux séries réunies donnent ceux des annexes C, la somme des règlements donne ceux des annexes F, et le compteur lu à la dernière ligne du fichier donne ceux des annexes G. L’amplitude résiduelle entre les quatre est de 0,02 % à 0,39 % selon l’exercice, et l’écart entre les deux lectures du compteur est identifié à un, deux et un ticket près. Il n’y a pas de fluctuation à expliquer, il y a quatre mesures différentes d’une même exploitation."
     },
     {
       "kind": "paragraphe",
-      "texte": "La démonstration se referme sur le chiffre qui compte : le chiffre d’affaires comptabilisé et l’archive certifiée de la caisse concordent à 997,72 € près sur trois exercices et 1 277 216,50 € de recettes, soit 0,08 %, différence que le service impute lui même page 45 au compte 706800 « Pourboire »."
+      "texte": "Sur la variabilité entre les remises, le rapprochement ligne à ligne est sans reste : sur 97 694 lignes de vente et trois exercices, **aucune ligne de l’extraction de février n’est absente du fichier de mars**, et les 75 lignes que celui ci contient en plus sont exactement les 17 tickets à montant non nul de la seconde série de compteurs, pour 288,20 € et 737,10 €, soit au centime l’écart de chiffre d’affaires entre les deux annexes. L’écart de quantités, lui, est expliqué article par article, et il joue à l’avantage de l’annexe C, dont la cohérence interne est établie par la colonne de contrôle du service lui même : 0,04 €, 44,58 € et 131,08 € d’écart, contre 17 561,00 €, 20 011,12 € et 20 115,28 € pour l’annexe B."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur la TVA, les deux colonnes invoquées ont été créées par le service dans son propre tableur, et leur application ramène la taxe reconstituée à 18,76 € de la taxe effectivement reversée. Le grief est sans incidence sur l’impôt."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Sur le motif de la page 46, l’exigence de format dont le service se réclame est sans objet. La phrase du code général des impôts qui soumet les données archivées à un format figure dans la rédaction issue de l’article 87 de la loi n° 2026-534 du 25 juin 2026, en vigueur depuis le 26 juin 2026, soit quinze mois après la clôture du dernier exercice vérifié. Et les « normes établies par l’administration » auxquelles elle renvoie ne figurent ni dans la doctrine applicable à la période, ni dans la plus récente : une norme qui n’a pas été établie ne peut pas avoir été méconnue."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Et quand bien même ce texte serait applicable, aucun des trois maillons du raisonnement ne tient. L’obligation d’inaltérabilité, de sécurisation, de conservation et d’archivage pèse sur le logiciel, et la doctrine que le service reproduit admet que l’archive demeure dans la caisse : rien n’imposait de la transmettre, et le service ne l’a jamais demandée. Ce qu’il a demandé et reçu est la copie de l’option c, un objet que la loi lui ordonne de détruire avant la mise en recouvrement, et dont la doctrine dit que les normes qui la régissent « concernent des modalités de remise de fichiers à l’administration et non de conservation ». Le seul effet que la loi attache au format de cette copie est l’amende de l’article 1729 H du code général des impôts, que le service n’a pas appliquée. Et ce qu’il qualifie page 46 d’absence d’archive, il l’appelait page 5 de sa proposition « ses archives fiscales », et page 24 « l’archive communiquée au service »."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La démonstration se referme sur le chiffre qui compte. Le chiffre d’affaires comptabilisé et le détail des tickets remis au service concordent à 997,72 € près sur trois exercices et 1 277 216,50 € de recettes, soit 0,08 %, sur un périmètre dont le service indique lui même qu’il inclut le compte 706800 « Pourboire » (proposition, p. 28), lequel représente 1 852,36 € sur la même période."
     },
     {
       "kind": "tableau",
-      "titre": "Le chiffre d’affaires comptabilisé et l’archive certifiée de la caisse (annexes C et H)",
-      "minWidth": 760,
+      "titre": "Le chiffre d’affaires comptabilisé et le détail des tickets remis au service (annexes C et H)",
+      "minWidth": 780,
       "colonnes": [
         {
           "label": "Exercice"
@@ -1881,7 +2346,7 @@
           "align": "right"
         },
         {
-          "label": "Archive certifiée, annexes C et H",
+          "label": "Annexes C et H",
           "align": "right"
         },
         {
@@ -1987,16 +2452,20 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Il reste, dans la partie G, une accusation de manipulation formulée à l’état d’hypothèse et une affirmation de minoration formulée sans un seul chiffre. Ni l’une ni l’autre ne peut fonder un rejet de comptabilité, ni a fortiori une majoration pour manquement délibéré, dont la preuve incombe à l’administration."
+      "texte": "Subsistent dans la partie G deux affirmations que le service n’étaye pas : une accusation de manipulation formulée à l’état d’hypothèse par celui qui écrit dans la même phrase ne pas savoir d’où vient l’anomalie, et une minoration de quantités affirmée sans un seul chiffre. Ni l’une ni l’autre ne peut fonder un rejet de comptabilité, que le service subordonne lui même page 7 à ce que « l’administration établit » et page 8 à de « graves irrégularités », ni a fortiori une majoration pour manquement délibéré, dont la preuve lui incombe."
     },
     {
       "kind": "paragraphe",
-      "texte": "La certification de la caisse reste à produire. La pièce du 1er décembre 2018 dont la société se prévaut ne figure pas dans le dossier numérique communiqué, et sa nature exacte, certificat de conformité NF525 ou attestation individuelle de l’éditeur, doit être arrêtée sur l’original. La société la demande à son éditeur. Les développements qui précèdent sur les pages 63 à 68 du courrier supposent cette pièce, et ils sont présentés sous cette réserve ; les réconciliations de montants qui précèdent, elles, se refont sur les seuls fichiers remis au service."
+      "texte": "Une demande, pour finir. La pièce du 1er décembre 2018 que le service qualifie page 3 de « certificat de conformité de la caisse informatique » ne figure pas dans le dossier numérique qui nous a été communiqué. Nous en demandons la communication, et nous demandons au service de préciser, s’il entend maintenir le mot « auto-certification », laquelle des deux voies de l’article 286, I, 3° bis il tient pour non remplie et en quoi la pièce qu’il détient serait irrégulière."
     },
     {
       "kind": "piecejointe",
-      "intro": "Réconciliation complète des annexes A, B, C, F, G et H, par exercice, avec l’origine chiffrée de chaque écart. Le classeur est produit par un script qui relit les fichiers de caisse remis au service, sans aucune saisie manuelle : six onglets (CA par annexe, compteur perpétuel, quantités B contre C, exemple du 14/04/2022, lignes de l’annexe C absentes de l’annexe B, colonnes de TVA ajoutées par le service). La sémantique des colonnes E et F et l’incidence réelle des corrections de taux sur la TVA due font l’objet d’une pièce distincte, produite par scripts/reponse1-tva-colonnes-ef.py.",
+      "intro": "Trois classeurs, produits par des scripts qui relisent les fichiers de caisse remis au service, sans aucune saisie manuelle. Le premier établit les deux séries de compteurs cumulés de la caisse, leur raccord d’un exercice à l’autre, l’origine de chacun des quatre montants opposés par le service, les tickets qui séparent ses deux lectures du compteur, le rapprochement ligne à ligne des annexes B et C avec le détail des 75 lignes en écart, et la colonne de contrôle du service appliquée aux deux annexes. Le deuxième reprend la réconciliation d’ensemble des annexes A, B, C, F, G et H. Le troisième porte sur la sémantique des colonnes E et F et l’incidence réelle des corrections de taux sur la TVA due.",
       "fichiers": [
+        {
+          "fichier": "pieces-reponse-1/R1-compteur-perpetuel.xlsx",
+          "label": "R1 - Les deux compteurs de la caisse et l’origine des quatre montants"
+        },
         {
           "fichier": "pieces-reponse-1/R1-reconciliation-annexes.xlsx",
           "label": "R1 - Réconciliation des annexes A, B, C, F, G et H (3 exercices)"
@@ -2007,15 +2476,15 @@
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
-          "label": "Annexe B-1 : prix de vente et quantités (extrait Excel du 13/02/2026)"
+          "label": "Annexe B-1 : prix de vente et quantités (extraction transmise par courriel)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
-          "label": "Annexe C-1 : détail des tickets (archive certifiée du 16/03/2026)"
+          "label": "Annexe C-1 : détail des tickets (remise du 13/03/2026)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-H1_liste-tickets_2022-2023.xls",
-          "label": "Annexe H-1 : liste des tickets (compteur perpétuel)"
+          "label": "Annexe H-1 : liste des tickets et compteur perpétuel"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
@@ -2024,6 +2493,10 @@
         {
           "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
           "label": "Annexe F-1 : règlements"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+          "label": "Annexe E-1 : journal des événements de caisse"
         }
       ]
     }

@@ -229,6 +229,24 @@ NB_FACTURES_FCBS = FACT["nbFactures"]
 
 # --- 4 ter. annexe n 5 : les 78 factures Intermarche -------------------------
 import re
+
+# --- NEUTRALISE le 13/09/2026 ------------------------------------------------
+# La page consommation-superieure-achats a ete entierement reecrite : le Calvados
+# y boucle desormais sans aucune dose (73 L entres, 73 L sortis, achats et stocks
+# identiques aux annexes n. 1 et n. 6 du service), le bloc des cidres est refute
+# par le decalage d'un rang de la colonne « Quantites Vendues », et le trou de la
+# colonne « Achats Inter-M » est etabli comme structurel sur 152 lignes.
+#
+# Ce script regenererait la page dans son etat anterieur et detruirait ces
+# demonstrations. Pour le relancer sciemment, exporter
+# REPONSE1_CONSO_ACHATS_FORCE=1, et relire d'abord la page.
+import os as _os
+if not _os.environ.get("REPONSE1_CONSO_ACHATS_FORCE"):
+    raise SystemExit(
+        "reponse1-conso-achats-redaction.py est neutralise : il reecrirait la "
+        "page dans son etat anterieur. Voir le commentaire en tete de fichier."
+    )
+
 OCR = os.path.join(ROOT, "public/documents/rapports-des-finances-publiques/synthese/"
                           "_ocr-brut/Proposition_3_Annexes_Boissons.txt")
 _ok = []
