@@ -19,6 +19,24 @@ Idempotent : relancer le script remplace le bloc au lieu de l'empiler.
 import os, json, collections
 import xlrd
 
+# --- NEUTRALISE le 13/09/2026 ------------------------------------------------
+# La page consommation-superieure-achats a ete reecrite : nous ne substituons
+# plus de dose au Calvados. La dose declaree par les dirigeants reste 4 cl, et
+# les valeurs de 2, 2,40, 2,48, 2,60 et 3 cl ne sont plus presentees comme des
+# doses mais comme « ce que le disponible retenu par le service suffirait a
+# couvrir ». Deduire une dose d'un bilan matiere est precisement ce que le
+# service reproche a la reponse (p. 63 et p. 66).
+#
+# Ce script regenererait le bloc dans son etat ancien : encadrement de la dose
+# entre 2 et 3 cl, et encart interne. Il est donc neutralise. Pour le relancer
+# sciemment, exporter REPONSE1_CALVADOS_FORCE=1, et relire d'abord la page.
+if not os.environ.get("REPONSE1_CALVADOS_FORCE"):
+    raise SystemExit(
+        "reponse1-calvados-encadrement.py est neutralise : il reecrirait la page "
+        "dans son etat anterieur (dose deduite d'un bilan matiere). "
+        "Voir le commentaire en tete de fichier."
+    )
+
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 CAISSE = os.path.join(ROOT, "public/documents/caisse-enregistreuse/")
 CIBLE = os.path.join(ROOT, "src/data/reponse1/consommation-superieure-achats.json")

@@ -5,9 +5,9 @@
  },
  "entete": {
   "positionService": "Le service maintient intégralement sa reconstitution sur ce point. Il retient que Maître THIVEND « considère donc qu’il ne peut y avoir que des sur-dosages et que ces sur-dosages expliquent tout », que dans le tableau joint en clé USB « tous les sur-dosages sont fixés arbitrairement pour tenter de justifier qu’il n’y a pas de ventes dissimulées », et que la réponse « n’apporte aucune preuve qu’il puisse y avoir des sur-dosages », s’agissant d’« une simple affirmation gratuite ». Il demande enfin pourquoi les sur-dosages seraient plus importants pour certains articles que pour d’autres, et conclut qu’il « ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 60).",
-  "reponseCourte": "Les taux ne sont pas des affirmations gratuites mais deux mesures publiées auxquelles le service n’oppose aucune mesure ; recalculé par régime de service le sur-versement est de 494 L, soit moins du quart de l’écart constaté, quand le stock en autoriserait jusqu’à 119,8 % de la base versée à la main.",
+  "reponseCourte": "Les taux ne sont pas des affirmations gratuites mais deux mesures publiées auxquelles le service n’oppose aucune mesure. Nous corrigeons notre propre chiffre : la ligne de 720 L du mémoire de juillet incluait 960,2 L vendus en bouteilles, qui ne supportent aucun sur-versement ; recalculé par régime de service, le sur-versement est de 494 L, soit une fraction minoritaire de l’écart que le stock permet de borner, et ce stock en autoriserait davantage.",
   "enjeu": "Le sur-versement au verre chiffré à 720 L sur les trois exercices, que le service refuse de retenir dans sa reconstitution.",
-  "statut": "demonte"
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -159,22 +159,21 @@
    "items": [
     {
      "label": "Sur-versement demandé",
-     "valeur": "720 L",
-     "sub": "3 exercices, pichet pré-mesuré exclu (p. 60)",
+     "valeur": "493,9 L",
+     "sub": "après séparation par régime de service ; 720 L dans le mémoire du 10/07/2026, corrigé au chapitre 2 de cette page",
      "couleur": "blue"
     },
     {
      "label": "Retenu par le service",
      "valeur": "0 L",
      "sub": "« aucune raison de modifier sa reconstitution » (p. 60)",
-     "highlight": true,
      "couleur": "red"
     },
     {
-     "label": "Contre-chiffrage produit",
-     "valeur": "Aucun",
-     "sub": "aucune source ni calcul opposé aux études citées (p. 60)",
-     "couleur": "red"
+     "label": "Mesure opposée aux deux études citées",
+     "valeur": "Aucune",
+     "sub": "ni étude, ni relevé, ni pesée, ni test de service (p. 60)",
+     "couleur": "teal"
     }
    ]
   },
@@ -183,7 +182,7 @@
    "source": "nous",
    "numero": 2,
    "titre": "Notre réponse",
-   "sousTitre": "Le service qualifie d’affirmation gratuite deux mesures publiées, sans en opposer aucune ; séparé par régime de service, le sur-versement est de 494 L et le stock en autorise quatre fois plus."
+   "sousTitre": "Le service qualifie d’affirmation gratuite deux mesures publiées, sans en opposer aucune ; séparé par régime de service, le sur-versement est de 494 L et le stock en autorise plus de trois fois et demie."
   },
   {
    "kind": "paragraphe",
@@ -191,7 +190,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service n’oppose à ces mesures **aucune étude, aucun relevé, aucune pesée, aucun test de service**. Il ne dit pas non plus d’où viennent ses propres doses : les 15 cl, les 50 et 75 cl et les 4 cl sont recopiés de la carte, sans constatation matérielle sur place. Dans une procédure contradictoire, c’est à l’administration d’établir le bien-fondé des bases qu’elle retient et de motiver sa réponse aux observations (LPF, art. L. 57)."
+   "texte": "Le service n’oppose à ces mesures **aucune étude, aucun relevé, aucune pesée, aucun test de service**. Pour le verre, le pichet et le spiritueux, il ne dit pas d’où viennent ses doses : elles sont recopiées de la carte, sans constatation matérielle sur place. Pour la cuisine et pour le crémant, il l’écrit lui-même : ce sont les doses que les dirigeants lui ont confirmées (p. 62, 65, 66, 67 et 68). Dans une procédure contradictoire, c’est à l’administration d’établir le bien-fondé des bases qu’elle retient et de motiver sa réponse aux observations (LPF, art. L. 57)."
   },
   {
    "kind": "paragraphe",
@@ -199,7 +198,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Recalculé assiette par assiette sur les données de caisse, le sur-versement s’établit à **493,9 L** sur trois exercices et non à 720 L : la ligne du mémoire du 10 juillet 2026 incluait 960,2 L vendus en bouteilles, qui ne supportent aucun sur-versement. Nous le corrigeons. Cette demande reste très en deçà de ce que le stock autorise : 2 035,6 L d’écart entre le disponible au service et le volume vendu aux doses de la carte, dont le sur-versement n’absorbe que 24,3 %."
+   "texte": "Recalculé assiette par assiette sur les données de caisse, le sur-versement s’établit à **493,9 L** sur trois exercices et non à 720 L : la ligne du mémoire du 10 juillet 2026 incluait 960,2 L vendus en bouteilles, qui ne supportent aucun sur-versement. Nous le corrigeons. Cette demande reste très en deçà de ce que le stock autorise : 1 804,5 L d’écart entre le disponible au service et le volume vendu aux doses de la carte, sur les 46 boissons que le stock permet de borner, dont le sur-versement n’absorbe que 27,4 %."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Concrètement, la thèse est celle d’un verre annoncé à 15 cl et versé à **18,54 cl**, soit 18,28 cl mesurés par Kerr et coll. à 1,4 % près. Nous l’assumons : un verre à vin de restaurant contient 25 à 35 cl, et le service ne démontre aucune impossibilité matérielle à y servir 18,54 cl."
   },
   {
    "kind": "tableau",
@@ -357,7 +360,35 @@
   },
   {
    "kind": "paragraphe",
+   "texte": "Borné ligne à ligne par le stock, ce chiffre revient à **475,4 L** ; ramené en outre à zéro sur les boissons dont les achats connus sont incomplets, à **439,8 L**. La demande est donc comprise entre 440 L et 494 L."
+  },
+  {
+   "kind": "paragraphe",
    "texte": "Le service développe le même sujet, beaucoup plus longuement, dans la partie N de sa réponse (p. 78 à 81) : contenants prétendument impossibles de 17,64 cl, 58,80 cl et 88,20 cl, goût des cocktails, volatilité des taux, taux de disparition négatif dans son propre tableau. La démonstration complète, avec la fourchette bornée par le stock boisson par boisson, figure à la page [Sur-versement au verre (partie N)](/reponse-1/sur-versement-au-verre)."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Sur-versement recalculé assiette par assiette",
+     "valeur": "493,9 L",
+     "sub": "notre chiffre, régime de service par régime de service, sur 3 exercices",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Part de la base qui ne supporte aucun sur-versement",
+     "valeur": "58,5 %",
+     "sub": "pichets calibrés 1 431,5 L et bouteilles 960,2 L sur 4 091,1 L",
+     "couleur": "blue"
+    },
+    {
+     "label": "Écart que le stock permet de borner",
+     "valeur": "1 804,5 L",
+     "sub": "le sur-versement retenu n’en absorbe que 27,4 % : les taux ne sont pas un rétro-calcul",
+     "couleur": "teal"
+    }
+   ]
   },
   {
    "kind": "piecejointe",

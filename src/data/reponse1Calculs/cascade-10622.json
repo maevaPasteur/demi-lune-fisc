@@ -1,0 +1,425 @@
+{
+ "description": "Cascade des 10 622 L d'alcool achetés sur les trois exercices vérifiés, et itémisation des abattements. SOURCE UNIQUE : produite par scripts/reponse1-cascade-valeurs.py. Aucun autre script ni aucune page ne doit figer ces valeurs.",
+ "producteur": "scripts/reponse1-cascade-valeurs.py",
+ "achats_l": 10622.0,
+ "postes": [
+  {
+   "cle": "verre",
+   "libelle": "Vendu au verre",
+   "litres": 5272.8,
+   "litres_arrondi": 5273,
+   "nature": "mesure",
+   "source": "Détail des tickets, annexes C1 à C3, hors panaché, Monaco et Picon bière, dont l’alcool est porté par la ligne cocktails",
+   "page": "Doses figées",
+   "slug": "recon-1-doses-figees"
+  },
+  {
+   "cle": "cocktails",
+   "libelle": "Vendu en cocktails",
+   "litres": 997.6,
+   "litres_arrondi": 998,
+   "nature": "calcul",
+   "source": "Cocktails vendus en caisse x recette de la carte",
+   "page": "Doses figées",
+   "slug": "recon-1-doses-figees"
+  },
+  {
+   "cle": "cuisine",
+   "libelle": "Cuisine et alcool des menus",
+   "litres": 744.62,
+   "litres_arrondi": 745,
+   "nature": "calcul",
+   "source": "Plats et menus vendus en caisse x dose, plafonnés aux achats facturés",
+   "page": "Alcool de cuisine",
+   "slug": "recon-5-alcool-cuisine"
+  },
+  {
+   "cle": "cremant",
+   "libelle": "Crémant non vendu",
+   "litres": 272.02,
+   "litres_arrondi": 272,
+   "nature": "calcul",
+   "source": "Bilan matière jour par jour, borné par le stock retenu par le service",
+   "page": "Crémant",
+   "slug": "recon-3-cremant-vendu"
+  },
+  {
+   "cle": "surversement",
+   "libelle": "Sur-versement au verre",
+   "litres": 493.92,
+   "litres_arrondi": 494,
+   "nature": "estime",
+   "source": "Taux publiés appliqués au seul volume versé à la main, borné par le stock",
+   "page": "Sur-versement",
+   "slug": "sur-versement-au-verre"
+  },
+  {
+   "cle": "degustation",
+   "libelle": "Dégustation offerte",
+   "litres": 125.84,
+   "litres_arrondi": 126,
+   "nature": "mesure",
+   "source": "Notes relevées une à une dans l’annexe C : 6 292 dégustations de 2 cl",
+   "page": "Dégustation",
+   "slug": "degustation-offerte"
+  },
+  {
+   "cle": "biere",
+   "libelle": "Freinte technique de la bière",
+   "litres": 120.5,
+   "litres_arrondi": 120,
+   "nature": "estime",
+   "source": "10 % de la bière réellement sortie du fût (1205,0 L lus en caisse, Picon à 4 cl et 8 cl)",
+   "page": "Perte de bière",
+   "slug": "perte-de-biere"
+  },
+  {
+   "cle": "chef",
+   "libelle": "Consommation du chef",
+   "litres": 143.0,
+   "litres_arrondi": 143,
+   "nature": "estime",
+   "source": "Base journalière déclarée x jours de service (macvin 99,3 L, Picon 43,7 L)",
+   "page": "Consommation du personnel",
+   "slug": "recon-7-conso-personnel"
+  },
+  {
+   "cle": "offerts",
+   "libelle": "Offerts non enregistrés en caisse",
+   "litres": 13.97,
+   "litres_arrondi": 14,
+   "nature": "estime",
+   "source": "Un apéritif de 6 cl par jour de service, déduction faite des 25,75 L d’alcool déjà enregistrés à 0,00 € dans la caisse",
+   "page": "Abattements",
+   "slug": "recon-8-abattements"
+  },
+  {
+   "cle": "stock",
+   "libelle": "Stock final",
+   "litres": 213.13,
+   "litres_arrondi": 213,
+   "nature": "mesure",
+   "source": "Inventaire de clôture",
+   "page": "Variation de stock",
+   "slug": "recon-9-variation-de-stock"
+  }
+ ],
+ "attribue_l": 8397.4,
+ "attribue_arrondi_l": 8398,
+ "attribue_pct": 79.06,
+ "residu_l": 2224.6,
+ "residu_arrondi_l": 2224,
+ "residu_pct": 20.94,
+ "nature": {
+  "mesure": {
+   "litres": 5611.77,
+   "litres_arrondi": 5612
+  },
+  "calcul": {
+   "litres": 2014.24,
+   "litres_arrondi": 2015
+  },
+  "estime": {
+   "litres": 771.39,
+   "litres_arrondi": 771
+  },
+  "residu": {
+   "litres": 2224.6,
+   "litres_arrondi": 2224
+  }
+ },
+ "part_caisse_l": 7626.01,
+ "part_caisse_arrondi_l": 7627,
+ "part_caisse_pct": 71.8,
+ "revendu_l": 6270.4,
+ "revendu_arrondi_l": 6271,
+ "part_revendue_pct": 59.0322,
+ "doubles_comptages": {
+  "biere": {
+   "litres": 295.99,
+   "explication": "Contenance des quatre articles mixtes (panaché, Monaco, Picon bière, pinte Picon), comptée dans « vendu au verre » alors que leur alcool est déjà porté par « vendu en cocktails ».",
+   "verre_avant": 5568.79,
+   "verre_apres": 5272.8,
+   "alcool_reel": {
+    "Picon": 28.3,
+    "Fût Affligem": 208.14
+   },
+   "biere_servie_l": 1205.01,
+   "biere_pression_et_pintes_l": 996.88
+  },
+  "offerts": {
+   "litres_bruts": 27.25,
+   "dont_articles_mixtes": 1.5,
+   "litres_nets": 25.75,
+   "lignes_annexe_d": 114,
+   "articles": 251.0,
+   "poste_avant": 39.72,
+   "poste_apres": 13.97
+  }
+ },
+ "cuisine": {
+  "calcule_l": 794.62,
+  "plafonne_l": 744.62,
+  "carte_l": 566.31,
+  "menus_l": 228.31,
+  "supplement_demande_au_service_l": 173.38,
+  "note": "173,38 L est le supplément demandé au service une fois déduits ses propres retranchements (repères D, E, G, Q). Ce n’est pas un poste de la cascade et il ne s’y ajoute jamais."
+ },
+ "par_exercice": {
+  "cremant_l": {
+   "2022-2023": 81.7,
+   "2023-2024": 93.66,
+   "2024-2025": 96.66
+  },
+  "surversement_l": {
+   "2022-2023": 163.49,
+   "2023-2024": 166.12,
+   "2024-2025": 164.31
+  },
+  "degustation_l": {
+   "2022-2023": 35.36,
+   "2023-2024": 45.14,
+   "2024-2025": 45.34
+  }
+ },
+ "forfait_15pct": {
+  "litres": 1593.3,
+  "euros_ca_boissons": 76863.18,
+  "detail_5pct_par_exercice": [
+   8917.07,
+   8450.72,
+   8253.27
+  ]
+ },
+ "prix_de_revente_eur_par_l": {
+  "vins": 48.04,
+  "spiritueux": 132.57,
+  "cremant": 32.5,
+  "biere": 15.6,
+  "aperitif_offert": 91.71,
+  "sur_versement_pondere": 87.33,
+  "residu_moyenne_des_achats": 39.05
+ },
+ "itemisation": [
+  {
+   "poste": "Consommation du chef (Picon et macvin)",
+   "litres": 143.0,
+   "euros": 14575,
+   "base": "valorisation du fichier 56 remis au service",
+   "litres_par_exercice": {
+    "2022-2023": 48.0,
+    "2023-2024": 48.0,
+    "2024-2025": 47.0
+   },
+   "euros_par_exercice": {
+    "2022-2023": 4892.31,
+    "2023-2024": 4892.31,
+    "2024-2025": 4790.38
+   }
+  },
+  {
+   "poste": "Offerts non enregistrés en caisse",
+   "litres": 13.97,
+   "euros": 1281.23,
+   "base": "91.71 €/L (prix de revente d’un apéritif)",
+   "litres_par_exercice": {
+    "2022-2023": 4.69,
+    "2023-2024": 4.69,
+    "2024-2025": 4.59
+   },
+   "euros_par_exercice": {
+    "2022-2023": 430.06,
+    "2023-2024": 430.06,
+    "2024-2025": 421.1
+   }
+  },
+  {
+   "poste": "Cafés offerts (sans volume d’alcool)",
+   "litres": 0.0,
+   "euros": 4369,
+   "base": "3 cafés par jour x 662 jours, fichier 56",
+   "litres_par_exercice": {
+    "2022-2023": 0.0,
+    "2023-2024": 0.0,
+    "2024-2025": 0.0
+   },
+   "euros_par_exercice": {
+    "2022-2023": 1456.33,
+    "2023-2024": 1456.33,
+    "2024-2025": 1456.33
+   }
+  },
+  {
+   "poste": "Sur-versement au verre",
+   "litres": 493.92,
+   "euros": 43134.87,
+   "base": "87.33 €/L (moyenne pondérée des régimes servis)",
+   "litres_par_exercice": {
+    "2022-2023": 163.49,
+    "2023-2024": 166.12,
+    "2024-2025": 164.31
+   },
+   "euros_par_exercice": {
+    "2022-2023": 14277.86,
+    "2023-2024": 14507.54,
+    "2024-2025": 14349.47
+   }
+  },
+  {
+   "poste": "Crémant non vendu",
+   "litres": 272.02,
+   "euros": 8840.65,
+   "base": "32.50 €/L",
+   "litres_par_exercice": {
+    "2022-2023": 81.7,
+    "2023-2024": 93.66,
+    "2024-2025": 96.66
+   },
+   "euros_par_exercice": {
+    "2022-2023": 2655.25,
+    "2023-2024": 3043.95,
+    "2024-2025": 3141.45
+   }
+  },
+  {
+   "poste": "Dégustation offerte",
+   "litres": 125.84,
+   "euros": 6045.36,
+   "base": "48.04 €/L (prix de revente moyen des vins)",
+   "litres_par_exercice": {
+    "2022-2023": 35.36,
+    "2023-2024": 45.14,
+    "2024-2025": 45.34
+   },
+   "euros_par_exercice": {
+    "2022-2023": 1698.7,
+    "2023-2024": 2168.53,
+    "2024-2025": 2178.13
+   }
+  },
+  {
+   "poste": "Freinte technique de la bière",
+   "litres": 120.5,
+   "euros": 1879.8,
+   "base": "15.60 €/L (fût Affligem)",
+   "litres_par_exercice": {
+    "2022-2023": 42.76,
+    "2023-2024": 38.58,
+    "2024-2025": 39.16
+   },
+   "euros_par_exercice": {
+    "2022-2023": 667.06,
+    "2023-2024": 601.85,
+    "2024-2025": 610.9
+   }
+  }
+ ],
+ "cuisine_valorisee": [
+  {
+   "alcool": "Ravelin",
+   "litres": 251.8,
+   "euros": 12096.48,
+   "base": "48.04 €/L"
+  },
+  {
+   "alcool": "Macvin",
+   "litres": 177.51,
+   "euros": 14497.24,
+   "base": "81.67 €/L"
+  },
+  {
+   "alcool": "Arbois Vin Jaune",
+   "litres": 124.48,
+   "euros": 12448.0,
+   "base": "100.00 €/L"
+  },
+  {
+   "alcool": "Calvados",
+   "litres": 73.0,
+   "euros": 12592.5,
+   "base": "172.50 €/L"
+  },
+  {
+   "alcool": "Porto",
+   "litres": 68.27,
+   "euros": 4323.54,
+   "base": "63.33 €/L"
+  },
+  {
+   "alcool": "Crème de Cassis",
+   "litres": 18.67,
+   "euros": 2475.07,
+   "base": "132.57 €/L"
+  },
+  {
+   "alcool": "Bailey's",
+   "litres": 15.28,
+   "euros": 1986.4,
+   "base": "130.00 €/L"
+  },
+  {
+   "alcool": "Grand Marnier",
+   "litres": 5.96,
+   "euros": 774.8,
+   "base": "130.00 €/L"
+  },
+  {
+   "alcool": "Marc de Bourgogne",
+   "litres": 5.58,
+   "euros": 725.4,
+   "base": "130.00 €/L"
+  },
+  {
+   "alcool": "Liqueur de Poire",
+   "litres": 4.07,
+   "euros": 661.38,
+   "base": "162.50 €/L"
+  }
+ ],
+ "assiettes": [
+  {
+   "cle": "A",
+   "libelle": "Postes itemisés, hors cuisine et menus",
+   "litres": 1169.25,
+   "litres_arrondi": 1169,
+   "pct_achats": 11.01,
+   "euros": 80125.9,
+   "pct_du_forfait_en_volume": 73.4,
+   "pct_du_forfait_en_euros": 104.2,
+   "ecart_euros_au_forfait": 3262.72
+  },
+  {
+   "cle": "B",
+   "libelle": "Postes itemisés, cuisine et alcool des menus compris",
+   "litres": 1913.87,
+   "litres_arrondi": 1914,
+   "pct_achats": 18.02,
+   "euros": 142706.71,
+   "pct_du_forfait_en_volume": 120.1,
+   "pct_du_forfait_en_euros": 185.7,
+   "ecart_euros_au_forfait": 65843.53
+  },
+  {
+   "cle": "C",
+   "libelle": "Perte d’exploitation totale, hors cuisine et menus (postes itemisés et résidu de perte pure)",
+   "litres": 3393.85,
+   "litres_arrondi": 3393,
+   "pct_achats": 31.95,
+   "euros": 166995.35,
+   "pct_du_forfait_en_volume": 213.0,
+   "pct_du_forfait_en_euros": 217.3,
+   "ecart_euros_au_forfait": 90132.17
+  },
+  {
+   "cle": "D",
+   "libelle": "Alcool acheté et non vendu, cuisine et menus compris",
+   "litres": 4138.47,
+   "litres_arrondi": 4138,
+   "pct_achats": 38.96,
+   "euros": 229576.16,
+   "pct_du_forfait_en_volume": 259.7,
+   "pct_du_forfait_en_euros": 298.7,
+   "ecart_euros_au_forfait": 152712.98
+  }
+ ]
+}

@@ -14,7 +14,8 @@ Ce script etablit, a partir des seules donnees de caisse remises au service :
   3. le coefficient sur achat revendu, par exercice et globalise, puis le passage
      au coefficient rapporte a la TOTALITE des achats : le calcul du service
      (3,85 x (1-0,15) = 3,2725, p. 59 et 93, qui suppose 85 % des achats revendus)
-     et le meme calcul avec la part revendue MESUREE (61,82 %), qui donne 2,383251.
+     et le meme calcul avec la part revendue CALCULEE POSTE PAR POSTE (59,03 %),
+    qui donne 2,383251.
 
 READ-ONLY sur les sources. Sortie :
   public/documents/pieces-reponse-1/R1-coefficients-et-extrapolation.xlsx
@@ -148,13 +149,20 @@ for lib, _ in EXOS:
 # --------------------------------------------------------------------------- #
 BD = json.load(open(os.path.join(ROOT, "src/data/boissonsPageData.json"), encoding="utf-8"))
 SYN = BD["synthese"]
-CASCADE = {c["poste"]: c["litres"] for c in SYN["cascade"]}
+# La part revendue vient de la SOURCE UNIQUE de la cascade, jamais de
+# boissonsPageData.json, qui porte encore les postes du memoire de juillet.
+_CASC = os.path.join(ROOT, "src/data/reponse1Calculs/cascade-10622.json")
+if not os.path.exists(_CASC):
+    raise SystemExit("Lancer d'abord : python3 scripts/reponse1-cascade-valeurs.py")
+CASC = json.load(open(_CASC, encoding="utf-8"))
 
-ACHAT_L = SYN["achat_alcool_l"]                 # 10 622 L
+ACHAT_L = CASC["achats_l"]                      # 10 622 L
 ACHAT_COUT = SYN["achat_alcool_cout"]           # 107 924 €
-REVENDU_L = (CASCADE["Vendu au verre (caisse)"]
-             + CASCADE["Vendu en cocktails (caisse, biere des cocktails incluse)"])
-PART_REVENDUE = REVENDU_L / ACHAT_L             # 61,8 %
+# Vendu au verre + vendu en cocktails, APRES retrait des 296 L de contenance
+# des articles mixtes comptes deux fois (panache, Monaco, Picon biere, pinte
+# Picon) : voir scripts/reponse1-cascade-valeurs.py.
+REVENDU_L = CASC["revendu_l"]
+PART_REVENDUE = REVENDU_L / ACHAT_L             # 59,0 %
 COUT_REVENDU = ACHAT_COUT * PART_REVENDUE
 CA_ALCOOL = sum(SERVICE[lib]["alcool_reel"] for lib, _ in EXOS)
 COEF_REVENDU = CA_ALCOOL / COUT_REVENDU         # 3,85
@@ -166,9 +174,11 @@ TAUX_SERVICE = 0.15
 # est exacte dans sa forme : le coefficient rapporte a la TOTALITE des achats
 # est le produit du coefficient sur achat revendu par la part des achats
 # reellement revendue. Le service suppose cette part egale a 85 % ; la cascade
-# des 10 622 L la mesure a 61,82 %. L'identite de controle, sur nos donnees :
+# des 10 622 L la mesure a 59,03 %. L'identite de controle, sur nos donnees :
 #     COEF_REVENDU x PART_REVENDUE = COEF_ACHATS_TOTAUX
-#     3,854864     x 0,6182452     = 2,383251
+#     4,037205     x 0,5903220     = 2,383251
+# (le coefficient sur la TOTALITE des achats, 2,383251, ne bouge pas : il ne
+# depend que du CA encaisse et du cout des achats, pas de la cascade.)
 PART_SERVICE = 1 - TAUX_SERVICE                 # 85 % supposes revendus
 A_COEF = round(3.85 * PART_SERVICE, 4)          # 3,2725, chiffre du courrier
 A_COEF_EXACT = COEF_REVENDU * PART_SERVICE      # 3,276635 sans l'arrondi a 3,85
@@ -339,9 +349,12 @@ ws.append(["Lecture", "Part des achats supposee ou mesuree revendue",
 gras_ligne(ws)
 ws.append(["Service, p. 59 et 93 : 3,85 x (1-0,15) = 3,2725", PART_SERVICE, 3.85,
            A_COEF, A_COEF * ACHAT_COUT])
-ws.append(["Le meme calcul sans l'arrondi du courrier (3,854864 au lieu de 3,85)",
+ws.append(["Le meme calcul sans l'arrondi du courrier (%s au lieu de 3,85)"
+           % ("%.6f" % COEF_REVENDU).replace(".", ","),
            PART_SERVICE, COEF_REVENDU, A_COEF_EXACT, A_COEF_EXACT * ACHAT_COUT])
-ws.append(["Part revendue MESUREE (cascade des 10 622 L : 6 567 L revendus)",
+ws.append(["Part revendue MESUREE (cascade des 10 622 L : %s L revendus au verre et "
+           "en cocktails, apres retrait des 296 L de contenance comptes deux fois)"
+           % CASC["revendu_arrondi_l"],
            PART_REVENDUE, COEF_REVENDU, MES_COEF, MES_COEF * ACHAT_COUT])
 ws.append(["Ecart entre le repere du service et la mesure", PART_SERVICE - PART_REVENDUE,
            "", A_COEF - MES_COEF, (A_COEF - MES_COEF) * ACHAT_COUT])
@@ -371,7 +384,7 @@ entete(ws, ["Exercice", "Cout des matieres (proposition p. 34-35)",
             "Repere du service (3,2725 : part revendue supposee de 85 %)",
             "CA correspondant au repere du service",
             "Ecart du CA reconstitue au repere du service",
-            "Repere mesure (2,383251 : part revendue mesuree de 61,82 %)",
+            "Repere calcule (2,383251 : part revendue de 59,03 %, poste par poste)",
             "CA correspondant au repere mesure",
             "Ecart du CA reconstitue au repere mesure",
             "Ecart du CA declare au repere mesure"],
@@ -400,7 +413,7 @@ ws.append(["Lecture. Colonnes 7 a 9 : le test de la page 93 tel que le service l
            "convient. Le test n'est cependant pas reussi partout : sur 2022-2023, le CA "
            "reconstitue depasse le repere de %d €. Colonnes 10 a 13 : le meme test, la "
            "seule part revendue supposee (85 %%) etant remplacee par la part mesuree "
-           "(61,82 %%). Le CA declare se situe alors a %d € du repere, soit %.1f %% ; le "
+           "(59,03 %%). Le CA declare se situe alors a %d € du repere, soit %.1f %% ; le "
            "CA reconstitue le depasse de %d €, soit %.1f %%."
            % (abs(sum(SERVICE[l]["exces_A"] for l, _ in EXOS)),
               SERVICE["2022-2023"]["exces_A"],

@@ -17,11 +17,11 @@ Ce script produit la piece R1-abattements-double-emploi.xlsx :
      euros, avec la decomposition exacte des 35 133,26 € et 105 399,78 €.
 
 Sources (lecture seule, reproductible) :
-  - src/data/boissonsPageData.json                     (cascade, offerts, personnel,
-                                                        prix de revente par boisson)
-  - src/data/renduFinal/sur-versement-au-verre.json    (sur-versement par exercice)
-  - src/data/renduFinal/pertes-cremant.json            (cremant jete par exercice)
-  - src/data/renduFinal/pertes-biere-mousse.json       (freinte biere par exercice)
+  - src/data/reponse1Calculs/cascade-10622.json        SOURCE UNIQUE des volumes
+    et des euros de l'itemisation. Produite par scripts/reponse1-cascade-valeurs.py.
+    Ce script ne recalcule plus aucun poste : il met en forme. Les valeurs de
+    juillet 2026 (sur-versement 720 L, cremant 347 L, freinte 129 L, itemisation
+    1 505 L et 95 976 EUR) ne doivent plus apparaitre ici.
   - proposition de rectifications du 18/05/2026, p. 52 (recapitulation par
     exercice), reprise dans
     public/documents/rapports-des-finances-publiques/synthese/06-methode-reconstitution-2.md
@@ -31,12 +31,10 @@ Sortie :
 """
 import json
 import os
-import re
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
 DATA = os.path.join(ROOT, "src", "data")
-RF = os.path.join(DATA, "renduFinal")
 PIECES = os.path.join(ROOT, "public", "documents", "pieces-reponse-1")
 EXOS = ["2022-2023", "2023-2024", "2024-2025"]
 
@@ -50,8 +48,12 @@ RECAP = [
      "apres": 151590.21, "coef": 2.94, "total": 597265.42, "declare": 404030.87},
     {"ex": "2023-2024", "avant": 169014.34, "cinq_pct": 8450.72,
      "apres": 143662.19, "coef": 3.02, "total": 577522.00, "declare": 438658.43},
+    # 455 249,20 EUR etait un artefact d'OCR : l'OCR brut porte HT 389 519,47 et
+    # TVA 46 005,45, dont la somme fait 435 524,92 EUR. Controle decisif : le
+    # courrier ecrit lui-meme « - 139 727,76 EUR » sur cet exercice, et
+    # 575 252,68 - 435 524,92 = 139 727,76 exactement.
     {"ex": "2024-2025", "avant": 165065.33, "cinq_pct": 8253.27,
-     "apres": 140305.53, "coef": 3.10, "total": 575252.68, "declare": 455249.20},
+     "apres": 140305.53, "coef": 3.10, "total": 575252.68, "declare": 435524.92},
 ]
 
 # --- RELEVE PAGE PAR PAGE (reponse du service du 04/09/2026) ----------------
@@ -100,143 +102,32 @@ RELEVE = [
 
 # --- Lecture des donnees internes -------------------------------------------
 def charger():
-    with open(os.path.join(DATA, "boissonsPageData.json"), encoding="utf-8") as f:
+    """Lit la SOURCE UNIQUE de la cascade et de l'itemisation."""
+    chemin = os.path.join(DATA, "reponse1Calculs", "cascade-10622.json")
+    if not os.path.exists(chemin):
+        raise SystemExit("Lancer d'abord : python3 scripts/reponse1-cascade-valeurs.py")
+    with open(chemin, encoding="utf-8") as f:
         return json.load(f)
 
 
-def tableau(slug, motif):
-    """Retourne les lignes (listes de valeurs texte) du premier tableau d'une
-    page renduFinal dont le titre contient `motif`."""
-    with open(os.path.join(RF, slug + ".json"), encoding="utf-8") as f:
-        doc = json.load(f)
-    for s in doc["sections"]:
-        if s.get("kind") == "tableau" and motif in s.get("titre", ""):
-            return [[c.get("v", "") for c in ligne] for ligne in s["lignes"]]
-    raise KeyError(f"tableau « {motif} » introuvable dans {slug}.json")
-
-
-def nombre(txt):
-    """« 247,7 L » -> 247.7 ; « 1 505 L » -> 1505.0 (espaces fines incluses)."""
-    t = re.sub(r"[  \s]", "", str(txt)).replace(",", ".")
-    m = re.search(r"-?\d+(?:\.\d+)?", t)
-    return float(m.group()) if m else 0.0
-
-
-def repartir(total, cles):
-    """Repartit `total` au prorata de `cles` (liste de poids), en conservant
-    exactement le total."""
-    s = sum(cles)
-    parts = [total * k / s for k in cles]
-    return parts
-
-
-# --- Prix de revente au litre, calcules depuis nos propres donnees ----------
-VIN = {"vin_blanc", "vin_rouge", "vin_rose", "vin", "vin_de_liqueur"}
-SPIRIT = {"aperitif", "liqueur", "eau_de_vie", "spiritueux", "digestif"}
-
-
-def prix_moyen(boissons, categories):
-    num = den = 0.0
-    for b in boissons:
-        if b.get("categorie") in categories and b.get("prix_revente"):
-            num += b["conso_l"] * b["prix_revente"]
-            den += b["conso_l"]
-    return num / den
-
-
-def prix_unitaire(boissons, nom):
-    for b in boissons:
-        if b["nom"] == nom:
-            return b["prix_revente"]
-    raise KeyError(nom)
-
-
 # --- Construction des postes itemises, par exercice --------------------------
-def postes(bpd):
-    bo = bpd["disparuParBoisson"]
-    p_vin = prix_moyen(bo, VIN)
-    p_spirit = prix_moyen(bo, SPIRIT)
-    p_cremant = prix_unitaire(bo, "Crémant du Jura")
-    p_biere = prix_unitaire(bo, "Fût Affligem")
-
-    # 1. Consommation du chef : litres par exercice mesures (consoParPeriode),
-    #    valorisation reprise du fichier « Consommation personnel et offerts »
-    #    (Macvin 8 085 € pour 99 L + Picon 6 490 € pour 44 L).
-    chef_l = [bpd["consoParPeriode"][e]["personnel_l"] for e in EXOS]
-    lignes_perso = {l["poste"][:6]: l for l in bpd["personnel"]["lignes"]}
-    chef_eur_tot = lignes_perso["Macvin"]["ca_equivalent_eur"] + lignes_perso["Picon "]["ca_equivalent_eur"]
-
-    # 2 et 3. Offerts (aperitifs + cafes) : bases journalieres (662 jours),
-    #    reparties au prorata des jours de service de chaque exercice, mesures
-    #    ici par les litres de consommation du chef (meme base journaliere).
-    ap = [l for l in bpd["offerts"]["lignes"] if l["litres"]][0]
-    cafes = [l for l in bpd["offerts"]["lignes"] if not l["litres"]][0]
-
-    # 4. Sur-versement : litres par exercice mesures ; valorisation au prix de
-    #    revente du regime de service concerne (vin au verre / spiritueux /
-    #    alcool des cocktails).
-    sv_ex = tableau("sur-versement-au-verre", "Volume consommé et sur-versé par exercice")
-    sv_l = [nombre(l[2]) for l in sv_ex if l[0] in EXOS]
-    sv_reg = tableau("sur-versement-au-verre", "Sur-versement par régime de service")
-    reg = {l[0]: nombre(l[3]) for l in sv_reg if not l[0].startswith("Total")}
-    sv_vin = sum(v for k, v in reg.items() if k.startswith("Vins"))
-    sv_spirit = sum(v for k, v in reg.items() if not k.startswith("Vins"))
-    sv_prix = (sv_vin * p_vin + sv_spirit * p_spirit) / (sv_vin + sv_spirit)
-
-    # 5 et 6. Cremant : jete mesure par exercice ; sur-versement du cremant
-    #    reparti au prorata du cremant servi.
-    cr = tableau("pertes-cremant", "Crémant jeté en fin de journée")
-    cr_jete = [nombre(l[4]) for l in cr if l[0] in EXOS]
-    cr_servi = [nombre(l[2]) for l in cr if l[0] in EXOS]
-    casc = {c["poste"]: c["litres"] for c in bpd["synthese"]["cascade"]}
-    cr_surv_tot = casc["Cremant sur-versé (free-pour +23,6 %)"]
-
-    # 7. Degustation : total mesure note par note (annexe C), reparti au prorata
-    #    du volume vendu en caisse de chaque exercice.
-    deg_tot = casc["Degustation offerte (note par note, annexe C)"]
-    caisse_l = [bpd["consoParPeriode"][e]["caisse_l"] for e in EXOS]
-
-    # 8. Freinte biere : le dossier ne retient que 129 L (mode CHR prudent de
-    #    10 %) sur les 305 L documentes a 20 % ; repartis au prorata de la
-    #    freinte mesuree exercice par exercice.
-    bi = tableau("pertes-biere-mousse", "Freinte technique par exercice")
-    bi_l = [nombre(l[5]) for l in bi if not l[0].startswith("Total")]
-    freinte_tot = casc["Freinte technique de la biere pression (mousse, lignes)"]
-
+# Aucun calcul ici : les litres, les euros et les prix de revente viennent tous
+# de src/data/reponse1Calculs/cascade-10622.json, produit par
+# scripts/reponse1-cascade-valeurs.py.
+def postes(casc):
     P = []
-
-    def ajout(nom, litres, eur, base):
-        P.append({"poste": nom, "litres": litres, "eur": eur, "base": base})
-
-    ajout("Consommation du chef (Picon + Macvin)", chef_l,
-          repartir(chef_eur_tot, chef_l),
-          "litres mesures par exercice ; valorisation du fichier 56 (Macvin + Picon)")
-    ajout("Aperitifs offerts aux clients", repartir(ap["litres"], chef_l),
-          repartir(ap["ca_equivalent_eur"], chef_l),
-          "base journaliere (1 aperitif 6 cl/jour x 662 j), prorata jours de service")
-    ajout("Cafes offerts (hors volume d'alcool)", [0.0, 0.0, 0.0],
-          repartir(cafes["ca_equivalent_eur"], chef_l),
-          "base journaliere (3 cafes/jour x 662 j), prorata jours de service")
-    ajout("Sur-versement (vins, spiritueux, cocktails)", sv_l,
-          [v * sv_prix for v in sv_l],
-          f"litres mesures par exercice ; {sv_prix:.2f} €/L (moyenne ponderee des regimes servis)")
-    ajout("Cremant jete en fin de journee", cr_jete,
-          [v * p_cremant for v in cr_jete],
-          f"litres mesures par exercice ; {p_cremant:.2f} €/L (prix de revente du cremant)")
-    ajout("Cremant sur-verse", repartir(cr_surv_tot, cr_servi),
-          [v * p_cremant for v in repartir(cr_surv_tot, cr_servi)],
-          f"prorata du cremant servi ; {p_cremant:.2f} €/L")
-    ajout("Degustation offerte (note par note)", repartir(deg_tot, caisse_l),
-          [v * p_vin for v in repartir(deg_tot, caisse_l)],
-          f"prorata du volume vendu en caisse ; {p_vin:.2f} €/L (prix de revente des vins)")
-    ajout("Freinte technique de la biere pression", repartir(freinte_tot, bi_l),
-          [v * p_biere for v in repartir(freinte_tot, bi_l)],
-          f"prorata de la freinte mesuree ; {p_biere:.2f} €/L (fut Affligem)")
-    return P, {"vin": p_vin, "spirit": p_spirit, "cremant": p_cremant, "biere": p_biere}
+    for it in casc["itemisation"]:
+        P.append({
+            "poste": it["poste"],
+            "litres": [it["litres_par_exercice"][e] for e in EXOS],
+            "eur": [it["euros_par_exercice"][e] for e in EXOS],
+            "base": it["base"],
+        })
+    return P, casc["prix_de_revente_eur_par_l"]
 
 
 # --- Ecriture de la piece ----------------------------------------------------
-def ecrire(bpd, P, prix):
+def ecrire(casc, P, prix):
     from openpyxl import Workbook
     from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
     from openpyxl.utils import get_column_letter
@@ -296,8 +187,11 @@ def ecrire(bpd, P, prix):
     titre(ws, "Nos postes de consommation sans vente, en litres et en euros, par exercice",
           "Perimetre : hors cuisine et hors alcool des menus. Litres : mesures par exercice "
           "quand la source le permet, sinon repartis selon la cle indiquee. Euros : prix de "
-          "revente au litre issus de nos propres donnees (src/data/boissonsPageData.json), "
-          "sauf consommation du chef et offerts, repris du fichier 56 remis au service.")
+          "revente au litre issus de nos propres donnees, sauf consommation du chef et "
+          "offerts, repris du fichier 56 remis au service. Volumes et euros lus dans "
+          "src/data/reponse1Calculs/cascade-10622.json, source unique de la cascade. "
+          "Les offerts deja enregistres a 0,00 EUR (25,75 L) sont deja compris dans les "
+          "postes de vente de la cascade : ils ne sont pas reclames une seconde fois ici.")
     entetes(ws, ["Poste"] + [f"{e} (L)" for e in EXOS] + ["Total (L)"]
             + [f"{e} (€)" for e in EXOS] + ["Total (€)", "Base de calcul"])
     tl = [0.0, 0.0, 0.0]
@@ -318,13 +212,14 @@ def ecrire(bpd, P, prix):
     largeurs(ws, [42, 13, 13, 13, 13, 13, 13, 13, 14, 70])
 
     # ---- Feuille 3 : forfait contre itemisation ----------------------------
-    s = bpd["synthese"]
-    achat_l = s["achat_alcool_l"]
-    forfait_l = 0.15 * achat_l
+    achat_l = casc["achats_l"]
+    forfait_l = casc["forfait_15pct"]["litres"]
+    forfait_l_r = int(round(forfait_l))
     item_l = sum(tl)
-    exploit_l = s["perte_exploitation_l"]
-    cuisine_l = s["cascade"][2]["litres"]
-    menus_l = s["cascade"][3]["litres"]
+    ASS = {a["cle"]: a for a in casc["assiettes"]}
+    exploit_l = ASS["C"]["litres"]
+    cuisine_l = casc["cuisine"]["plafonne_l"]
+    residu_l = casc["residu_arrondi_l"]
 
     ws = wb.create_sheet("3. Forfait vs itemisation")
     titre(ws, "Ce que le forfait de 15 % represente reellement, et ce qu'il devrait couvrir",
@@ -377,20 +272,30 @@ def ecrire(bpd, P, prix):
                  , ""])
     for lbl, v in [
         ("Alcool achete sur les 3 exercices", achat_l),
-        ("Ce que represente le forfait de 15 % du service", forfait_l),
-        ("Nos postes itemises, hors cuisine et menus", item_l),
-        ("Perte d'exploitation totale, hors cuisine et menus", exploit_l),
-        ("Alcool passe en cuisine (jamais vendu comme boisson)", cuisine_l),
-        ("Alcool des menus, non detaille en caisse", menus_l),
+        ("Ce que represente le forfait de 15 % du service", forfait_l_r),
+        ("A. Nos postes itemises, hors cuisine et menus", ASS["A"]["litres_arrondi"]),
+        ("Alcool passe en cuisine et dans les menus, plafonne aux achats factures",
+         round(cuisine_l)),
+        ("B. Nos postes itemises, cuisine et alcool des menus compris", ASS["B"]["litres_arrondi"]),
+        ("Residu de perte pure (solde du bilan matiere)", residu_l),
+        ("C. Perte d'exploitation totale, hors cuisine et menus", ASS["C"]["litres_arrondi"]),
+        ("D. Alcool achete et non vendu, cuisine et menus compris", ASS["D"]["litres_arrondi"]),
     ]:
         ws.append([lbl, round(v), round(100 * v / achat_l, 1)])
         for c in range(1, 4):
             ws.cell(row=ws.max_row, column=c).border = bord
-    ws.append(["Le forfait de 15 % est deja absorbe par les seuls postes itemises",
-               round(item_l), round(100 * item_l / forfait_l, 1)])
-    for c in range(1, 4):
+    ws.append(["Part du forfait de 15 % que chaque assiette represente, en volume",
+               "A : %.1f %%" % ASS["A"]["pct_du_forfait_en_volume"],
+               "B : %.1f %%" % ASS["B"]["pct_du_forfait_en_volume"],
+               "C : %.1f %%" % ASS["C"]["pct_du_forfait_en_volume"],
+               "D : %.1f %%" % ASS["D"]["pct_du_forfait_en_volume"]])
+    for c in range(1, 6):
         ws.cell(row=ws.max_row, column=c).font = gras
         ws.cell(row=ws.max_row, column=c).fill = alerte
+    ws.append(["Les seuls postes itemises hors cuisine et menus ne suffisent plus a absorber "
+               "le forfait : ils en representent %.1f %%. C'est l'assiette B, cuisine et alcool "
+               "des menus compris, qui le depasse la premiere."
+               % ASS["A"]["pct_du_forfait_en_volume"]])
     ws.append([])
 
     entetes(ws, ["C. Comparaison en euros de chiffre d'affaires boissons (3 exercices)",
@@ -398,12 +303,24 @@ def ecrire(bpd, P, prix):
     part_boissons = sum(3 * r["cinq_pct"] for r in RECAP)
     for lbl, v in [
         ("Ce que le forfait de 15 % retire au CA boissons reconstitue", part_boissons),
-        ("Nos postes itemises, valorises au prix de revente", sum(te)),
-        ("Ecart", sum(te) - part_boissons),
+        ("A. Nos postes itemises, hors cuisine et menus, valorises au prix de revente",
+         ASS["A"]["euros"]),
+        ("    Ecart de l'assiette A au forfait", ASS["A"]["ecart_euros_au_forfait"]),
+        ("B. Cuisine et alcool des menus compris", ASS["B"]["euros"]),
+        ("    Ecart de l'assiette B au forfait", ASS["B"]["ecart_euros_au_forfait"]),
+        ("C. Perte d'exploitation totale, hors cuisine et menus", ASS["C"]["euros"]),
+        ("    Ecart de l'assiette C au forfait", ASS["C"]["ecart_euros_au_forfait"]),
+        ("D. Alcool achete et non vendu, cuisine et menus compris", ASS["D"]["euros"]),
+        ("    Ecart de l'assiette D au forfait", ASS["D"]["ecart_euros_au_forfait"]),
     ]:
         ws.append([lbl, round(v, 2)])
         for c in range(1, 3):
             ws.cell(row=ws.max_row, column=c).border = bord
+    ws.append([])
+    ws.append(["Le residu de perte pure des assiettes C et D est valorise a %.2f EUR/L, "
+               "moyenne des prix de revente ponderee par les litres achetes : c'est une "
+               "moyenne, non une mesure."
+               % casc["prix_de_revente_eur_par_l"]["residu_moyenne_des_achats"]])
     largeurs(ws, [78, 18, 18, 18, 18])
 
     os.makedirs(PIECES, exist_ok=True)
@@ -411,33 +328,35 @@ def ecrire(bpd, P, prix):
     wb.save(out)
     return out, {
         "forfait_l": forfait_l, "item_l": item_l, "exploit_l": exploit_l,
-        "achat_l": achat_l, "cuisine_l": cuisine_l, "menus_l": menus_l,
+        "achat_l": achat_l, "cuisine_l": cuisine_l, "assiettes": ASS,
         "item_eur": sum(te), "part_boissons": part_boissons,
         "eur_par_exo": te, "l_par_exo": tl, "prix": prix,
     }
 
 
 def main():
-    bpd = charger()
-    P, prix = postes(bpd)
-    out, r = ecrire(bpd, P, prix)
+    casc = charger()
+    P, prix = postes(casc)
+    out, r = ecrire(casc, P, prix)
     print("REPONSE 1 - Abattements : le meme 15 % oppose a six postes")
     print("-" * 66)
     for pg, poste, _ in RELEVE:
         print(f"  p. {pg:>3} : {poste}")
     print("-" * 66)
-    print(f"  Prix de revente retenus : vins {prix['vin']:.2f} €/L, spiritueux "
-          f"{prix['spirit']:.2f} €/L, cremant {prix['cremant']:.2f} €/L, biere {prix['biere']:.2f} €/L")
+    print(f"  Prix de revente retenus : vins {prix['vins']:.2f} €/L, spiritueux "
+          f"{prix['spiritueux']:.2f} €/L, cremant {prix['cremant']:.2f} €/L, "
+          f"biere {prix['biere']:.2f} €/L")
     print(f"  Litres par exercice     : {[round(v) for v in r['l_par_exo']]}  "
           f"(total {round(r['item_l'])} L)")
     print(f"  Euros par exercice      : {[round(v) for v in r['eur_par_exo']]}  "
           f"(total {round(r['item_eur'])} €)")
-    print(f"  Forfait 15 % en volume  : {round(r['forfait_l'])} L "
-          f"({round(100 * r['item_l'] / r['forfait_l'], 1)} % deja absorbes par l'itemisation)")
-    print(f"  Perte d'exploitation    : {round(r['exploit_l'])} L "
-          f"({round(100 * r['exploit_l'] / r['achat_l'], 1)} % des achats)")
+    print(f"  Forfait 15 % en volume  : {round(r['forfait_l'])} L")
     print(f"  Forfait 15 % en euros (part boissons) : {r['part_boissons']:.2f} €")
-    print(f"  Itemisation en euros                  : {r['item_eur']:.2f} €")
+    for cle in ("A", "B", "C", "D"):
+        a = r["assiettes"][cle]
+        print(f"  {cle}. {a['libelle'][:52]:<52} {a['litres']:>9.1f} L "
+              f"({a['pct_du_forfait_en_volume']:>5.1f} % du forfait)  "
+              f"{a['euros']:>12.2f} € ({a['pct_du_forfait_en_euros']:>5.1f} %)")
     print(f"  Piece : {out}")
 
 

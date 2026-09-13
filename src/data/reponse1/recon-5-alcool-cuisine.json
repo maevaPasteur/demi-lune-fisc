@@ -7,9 +7,9 @@
  },
  "entete": {
   "positionService": "Le service refuse de déduire davantage d’alcool de cuisine. Il reproche d’abord à la réponse de « globaliser » les volumes sur trois exercices et sur plusieurs alcools, ce qui « permet de lisser les quantités et surtout de couvrir des incohérences importantes », et d’omettre la comparaison avec les volumes disponibles (p. 65). Il reprend ensuite les quatre repères cités (D Calvados, E Vin jaune, G Porto, Q Macvin) et oppose pour chacun un tableau par exercice croisant le volume consommé, le nombre de plats lu en caisse et le volume disponible : il en déduit qu’il faudrait admettre une sur-consommation de 37 % à 55 % sur le vin jaune, de 40 % à 50 % sur le macvin, ou multiplier par 5 la dose de porto et par 2 celle du macvin, ce qu’il juge « totalement improbable ». Il conclut qu’il « ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 68).",
-  "reponseCourte": "Le service n’applique pas les doses qu’il annonce (87,5 L d’alcool de cuisine manquants sur onze de ses douze lignes), sa colonne « volume disponible » est en réalité les achats d’un seul fournisseur augmentés de la variation de stock, et le bilan matière montre que le stock permettrait une dose supérieure pour neuf alcools sur dix : 745 L sont bien partis en cuisine, dont 173 L qu’il n’a pas retranchés.",
+  "reponseCourte": "Le service n’applique pas les doses qu’il annonce : 87,5 L d’alcool de cuisine manquent sur onze de ses douze lignes, sa colonne « volume disponible » est en réalité les achats d’un seul fournisseur augmentés de la variation de stock, et le stock permettrait une dose supérieure pour huit alcools sur dix. Le volume parti en cuisine s’établit à 745 L, Calvados, Grand Marnier et marc de Bourgogne plafonnés de nous mêmes aux achats facturés, dont 170 L qu’il n’a pas retranchés ; la sélection d’articles qu’il a retenue n’a jamais été communiquée.",
   "enjeu": "Volet 5 de la reconstitution des recettes : l’alcool acheté puis versé dans les plats, repères D (Calvados), E (Vin jaune), G (Porto) et Q (Macvin) de la proposition de rectifications (p. 44 à 48)",
-  "statut": "demonte"
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -219,7 +219,6 @@
      "label": "Conclusion",
      "valeur": "Reconstitution inchangée",
      "sub": "« aucune raison de modifier sa reconstitution » (p. 68)",
-     "highlight": true,
      "couleur": "red"
     }
    ]
@@ -1127,10 +1126,10 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Alcool de cuisine manquant",
+     "label": "Litres que les colonnes du service ne retrouvent pas",
      "valeur": "87,5 L",
      "sub": "sur les seules colonnes du service",
-     "couleur": "red",
+     "couleur": "teal",
      "highlight": true
     },
     {
@@ -1740,7 +1739,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le porto en fournit l’illustration la plus nette. L’annexe n° 1 convertit ses bouteilles à **70 cl**, alors que les 173 bouteilles de porto facturées sur les trois exercices sont **toutes des 75 cl** (Sandeman rouge, Sandeman blanc, Offley Ruby), et que les inventaires de clôture les désignent eux-mêmes comme des « Porto 75cl ». L’erreur joue ici en faveur de la société, de 5 cl par bouteille : nous la relevons pour ce qu’elle établit, c’est-à-dire que la colonne est un calcul du service et non une donnée du dossier."
+   "texte": "Le porto en fournit l’illustration la plus nette. L’annexe n° 1 convertit ses bouteilles à **70 cl**, alors que les 173 bouteilles de porto facturées sur les trois exercices sont **toutes des 75 cl** (Sandeman rouge, Sandeman blanc, Offley Ruby). L’erreur joue ici en faveur de la société, de 5 cl par bouteille : nous la relevons pour ce qu’elle établit, c’est-à-dire que la colonne est un calcul du service et non une donnée du dossier."
   },
   {
    "kind": "paragraphe",
@@ -1755,7 +1754,7 @@
    "source": "nous",
    "numero": 4,
    "titre": "Encadrer la dose au lieu de la postuler",
-   "sousTitre": "Pour chaque alcool, une borne basse que le service admet lui-même, une borne haute donnée par le stock, et la dose retenue à l’intérieur."
+   "sousTitre": "Pour chaque alcool, la dose que le service admet lui-même, et la borne haute que le volume disponible lui oppose."
   },
   {
    "kind": "paragraphe",
@@ -1763,7 +1762,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La **borne basse** est la dose que le service retient lui-même : celle que les dirigeants ont confirmée le 30 mars 2026 et qu’il reprend en en-tête de ses propres tableaux (fondue 10 cl, baba et flambage 4 cl, sauce 1 cl). Elle n’est pas discutable entre nous, puisqu’il l’a faite sienne. La **borne haute** est le seuil au-delà duquel le bilan matière ne suit plus : la dose à laquelle l’alcool disponible, diminué de ce qui en sort autrement (verres vendus et cocktails, lus en caisse), serait intégralement absorbé par la cuisine, sans qu’il en reste un centilitre à vendre."
+   "texte": "La **dose retenue** est celle que le service retient lui-même : celle que les dirigeants ont confirmée le 30 mars 2026 et qu’il reprend en en-tête de ses propres tableaux (fondue 10 cl, baba et flambage 4 cl, sauce 1 cl). Elle n’est pas discutable entre nous, puisqu’il l’a faite sienne. La déclaration porte « 9 à 10 cl » pour la fondue ; nous retenons 10 cl parce que c’est la valeur que le service applique effectivement : son tableau p. 66 imprime 3 717 cl pour 1 507 sauces et 221 fondues, soit exactement 1 507 × 1 cl + 221 × 10 cl. À 9 cl, le ravelin reculerait de 25,2 L et le vin jaune de 6,6 L. La **borne haute** est le seuil au-delà duquel le bilan matière ne suit plus : la dose à laquelle l’alcool disponible, diminué de ce qui en sort autrement (verres vendus et cocktails, lus en caisse), serait intégralement absorbé par la cuisine, sans qu’il en reste un centilitre à vendre."
   },
   {
    "kind": "paragraphe",
@@ -1778,7 +1777,7 @@
      "label": "Alcool"
     },
     {
-     "label": "Dose retenue (borne basse)"
+     "label": "Dose retenue"
     },
     {
      "label": "Volume disponible",
@@ -1801,7 +1800,7 @@
      "align": "right"
     },
     {
-     "label": "Dose plafond (borne haute)",
+     "label": "Dose que le disponible du service suffirait encore à couvrir",
      "align": "right"
     }
    ],
@@ -2078,7 +2077,7 @@
       "v": "baba 4 cl"
      },
      {
-      "v": "980",
+      "v": "280",
       "align": "right"
      },
      {
@@ -2086,7 +2085,7 @@
       "align": "right"
      },
      {
-      "v": "890",
+      "v": "190",
       "align": "right"
      },
      {
@@ -2094,12 +2093,12 @@
       "align": "right"
      },
      {
-      "v": "1,59",
+      "v": "0,34",
       "align": "right",
-      "badge": "ok"
+      "badge": "ko"
      },
      {
-      "v": "6,38 cl",
+      "v": "1,36 cl",
       "align": "right"
      }
     ],
@@ -2144,19 +2143,19 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le résultat est le même pour neuf alcools sur dix : **la dose retenue est très en deçà de ce que le stock permettrait**. Sur le macvin, dont le service juge « totalement improbable » qu’il faille « multiplier par 2 » la dose de cuisine (p. 67), le bilan matière autorise un coefficient de **2,83** : l’hypothèse qu’il écarte comme matériellement invraisemblable est précisément celle que ses propres volumes disponibles admettent. Sur le porto, il faudrait selon lui « multiplier par 5 » : le stock permet 1,58 fois la dose, et nous ne demandons même pas cela, puisque nous retenons le centilitre qu’il retient lui-même."
+   "texte": "Le résultat est le même pour huit alcools sur dix : **la dose retenue est très en deçà de ce que le stock permettrait**. Sur le macvin, dont le service juge « totalement improbable » qu’il faille « multiplier par 2 » la dose de cuisine (p. 67), le bilan matière autorise un coefficient de **2,83** : l’hypothèse qu’il écarte comme matériellement invraisemblable est précisément celle que ses propres volumes disponibles admettent. Sur le porto, il faudrait selon lui « multiplier par 5 » : le stock permet 1,58 fois la dose, et nous ne demandons même pas cela, puisque nous retenons le centilitre qu’il retient lui-même."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le reproche de doses « maximisées » est donc démenti par le bilan matière. À ces doses, il reste de l’alcool disponible pour tous les alcools sauf un, et le service ne peut pas soutenir à la fois que les doses sont trop fortes et que les volumes disponibles excèdent largement les volumes consommés : les deux propositions se contredisent."
+   "texte": "Le bilan matière n’interdit pas ces doses : pour **huit alcools sur dix**, le volume disponible que le service retient lui même les couvre. Le reproche de doses « maximisées » doit donc être établi autrement que par l’invraisemblance matérielle, puisque ce sont ses propres volumes qui les admettent."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le seul alcool pour lequel la dose retenue dépasse ce que le stock permet est le **Calvados**, dont le coefficient admissible est de **0,60**, soit une dose plafond de **2,40 cl** au lieu de 4. Nous en tirons la conséquence, et elle joue contre nous : ce poste est plafonné aux achats facturés, 73,0 L au lieu des 119,1 L calculés."
+   "texte": "Deux alcools font exception, ceux dont la dose retenue dépasse ce que le stock permet : le **Calvados** et le **marc de bourgogne**. Pour le Calvados, le coefficient admissible est de **0,60** : le disponible qu’il retient ne couvrirait la carte qu’à 2,40 cl par plat, alors que la dose déclarée est de 4 cl. Nous n’y substituons pas une dose : nous plafonnons notre demande aux achats que nous détenons, 73,0 L au lieu des 119,1 L calculés. Pour le marc de bourgogne, le coefficient est de **0,34** et le disponible ne couvrirait le baba qu’à 1,36 cl par part : nous plafonnons de la même façon, à 2,1 L au lieu des 5,6 L calculés, le marc du Jura étant un autre produit."
   },
   {
    "kind": "note",
-   "texte": "Le Calvados est étudié en détail à la page [Consommation supérieure aux achats](/reponse-1/consommation-superieure-achats), où la dose de flambage est encadrée entre **2 cl**, borne basse tirée de la référence culinaire déjà versée au débat (un dessert flambé demande 7 à 8 cl d’alcool pour quatre personnes), et **3 cl**, seuil au-delà duquel le stock ne suit plus, avec un point d’équilibre à 2,60 cl sur le seul décompte de plats du service. La borne de 2,40 cl retenue ici est un peu plus basse parce que le périmètre est plus large : il inclut le Calvados des plats compris dans les menus, que le décompte de la page 65 ne comporte pas. Les deux valeurs sont à l’intérieur du même intervalle."
+   "texte": "Le Calvados est étudié en détail à la page [Consommation supérieure aux achats](/reponse-1/consommation-superieure-achats), où ce que le disponible du service suffirait à couvrir est chiffré à **2,60 cl** sur son seul décompte de plats, soit (7 300 − 144) / 2 750. La valeur de **2,40 cl** retenue ici est un peu plus basse parce que le périmètre est plus large : elle vaut 4 × (7 156 / 11 907) et inclut le Calvados des plats compris dans les menus, que le décompte de la page 65 ne comporte pas. Ce sont deux lectures du même bilan matière sur deux assiettes de plats différentes, et non deux doses."
   },
   {
    "kind": "chapitre",
@@ -2329,10 +2328,10 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Porto laissé sans emploi",
+     "label": "Porto que la colonne du service laisse sans emploi",
      "valeur": "96,6 L",
      "sub": "colonne du service, 3 exercices",
-     "couleur": "red"
+     "couleur": "teal"
     },
     {
      "label": "Verres que cela représenterait",
@@ -2361,7 +2360,7 @@
    "source": "nous",
    "numero": 6,
    "titre": "Deux grandeurs à établir séparément",
-   "sousTitre": "Le volume physiquement parti en cuisine, 745 L, et le supplément que nous demandons au service, 173 L, répondent à deux questions différentes."
+   "sousTitre": "Le volume physiquement parti en cuisine, 745 L, et le supplément que nous demandons au service, 170 L, répondent à deux questions différentes."
   },
   {
    "kind": "paragraphe",
@@ -2373,7 +2372,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**La seconde est une demande** : ce qu’il resterait à retrancher de la reconstitution du service une fois déduit ce qu’il en retranche déjà lui-même, au titre des repères D, E, G et Q, du volume unique des BIB et de la part « desserts » des crèmes. Elle s’élève à **173 L**. Un litre déjà retranché ne peut pas être demandé une seconde fois : c’est la seule raison pour laquelle les deux chiffres diffèrent."
+   "texte": "**La seconde est une demande** : ce qu’il resterait à retrancher de la reconstitution du service une fois déduit ce qu’il en retranche déjà lui-même, au titre des repères D, E, G et Q, du volume unique des BIB et de la part « desserts » des crèmes. Elle s’élève à **170 L**. Un litre déjà retranché ne peut pas être demandé une seconde fois : c’est la seule raison pour laquelle les deux chiffres diffèrent."
   },
   {
    "kind": "tableau",
@@ -2613,7 +2612,7 @@
       "align": "right"
      },
      {
-      "v": "5,6",
+      "v": "2,1",
       "align": "right"
      },
      {
@@ -2621,12 +2620,12 @@
       "align": "right"
      },
      {
-      "v": "5,6",
+      "v": "2,1",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "14 bouteilles de marc facturées sur 3 exercices"
+      "v": "4 bouteilles de marc de Bourgogne facturées sur 3 exercices, 280 cl ; plafonné aux achats"
      }
     ],
     [
@@ -2665,7 +2664,7 @@
       "fw": 700
      },
      {
-      "v": "744,6",
+      "v": "741,1",
       "align": "right",
       "fw": 700
      },
@@ -2675,7 +2674,7 @@
       "fw": 700
      },
      {
-      "v": "173,4",
+      "v": "169,9",
       "align": "right",
       "fw": 700
      },
@@ -2687,7 +2686,7 @@
   },
   {
    "kind": "note",
-   "texte": "Le total de la colonne « déjà retranché », 811,6 L, n’est pas comparable ligne à ligne au nôtre : 318,1 L y sont pris sur un ensemble de sept références de BIB qui, sur l’exercice 1, ne contient aucun litre de ravelin, et 93,2 L de Calvados y sont retranchés alors que le service n’inscrit que 73,0 L disponibles. C’est une fois chaque retranchement rapporté au produit qu’il est censé couvrir que le solde de 173,4 L apparaît."
+   "texte": "Le total de la colonne « déjà retranché », 811,6 L, n’est pas comparable ligne à ligne au nôtre : 318,1 L y sont pris sur un ensemble de sept références de BIB qui, sur l’exercice 1, ne contient aucun litre de ravelin, et 93,2 L de Calvados y sont retranchés alors que le service n’inscrit que 73,0 L disponibles. C’est une fois chaque retranchement rapporté au produit qu’il est censé couvrir que le solde de 169,9 L apparaît. Les totaux sont calculés sur les valeurs non arrondies : la somme des lignes affichées donne 794,7 / 741,3 / 811,7 / 170,0."
   },
   {
    "kind": "barreComposition",
@@ -2704,19 +2703,19 @@
     },
     {
      "label": "Supplément demandé",
-     "valeur": 173.4,
+     "valeur": 169.9,
      "categorie": "calcul"
     },
     {
      "label": "Écrêté, faute de facture correspondante",
-     "valeur": 50.0,
+     "valeur": 53.5,
      "categorie": "residuel"
     }
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous portons deux corrections de notre propre chiffrage, et les deux jouent contre nous. Le **Calvados** est plafonné à 73,0 L au lieu des 119,1 L calculés, parce que nous n’entendons rien demander au-delà des factures que nous détenons, alors même que la démonstration de la page [Consommation supérieure aux achats](/reponse-1/consommation-superieure-achats) établit que le produit est intégralement consommé. Le **Grand Marnier** l’est de même, à 6,0 L au lieu de 7,4 L. Ces deux écrêtements retirent 50 L à notre chiffrage."
+   "texte": "Nous portons trois corrections de notre propre chiffrage, et les trois jouent contre nous. Le **Calvados** est plafonné à 73,0 L au lieu des 119,1 L calculés, parce que nous n’entendons rien demander au-delà des factures que nous détenons, alors même que la démonstration de la page [Consommation supérieure aux achats](/reponse-1/consommation-superieure-achats) établit que le produit est intégralement consommé. Le **Grand Marnier** l’est de même, à 6,0 L au lieu de 7,4 L. Le **marc de bourgogne** l’est à son tour, à **2,1 L au lieu de 5,6 L** : 280 cl de marc de Bourgogne seulement ont été facturés sur les trois exercices, dont 210 cl sont sortis du stock, le marc du Jura étant un autre produit, vendu au verre. Ces trois écrêtements retirent **53,5 L** à notre chiffrage."
   },
   {
    "kind": "note",
@@ -2735,27 +2734,25 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le motif tiré de ce que nos doses seraient « maximisées, donc totalement erronés » (p. 66) tombe avec eux, pour trois raisons cumulatives : ce sont les doses du service, il ne les applique pas lui-même, et le bilan matière montre que le stock permettrait davantage pour neuf alcools sur dix."
+   "texte": "Le motif tiré de ce que nos doses seraient « maximisées, donc totalement erronés » (p. 66) tombe avec eux, pour trois raisons cumulatives : ce sont les doses du service, il ne les applique pas lui-même, et le bilan matière montre que le stock permettrait davantage pour huit alcools sur dix."
   },
   {
    "kind": "paragraphe",
-   "texte": "Il reste **173 L** d’alcool de cuisine à retrancher de la reconstitution, dont **87,5 L** que les propres tableaux du service commandaient déjà de retrancher. Compte tenu du coefficient d’extrapolation appliqué à la cuisine (2,94 à 3,10 selon l’exercice), l’incidence sur le chiffre d’affaires reconstitué est de l’ordre du triple de la valeur de ces litres."
+   "texte": "Il reste **170 L** d’alcool de cuisine à retrancher de la reconstitution, dont **87,5 L** que les propres tableaux du service commandaient déjà de retrancher. Compte tenu du coefficient d’extrapolation appliqué à la cuisine (2,94 à 3,10 selon l’exercice), l’incidence sur le chiffre d’affaires reconstitué est de l’ordre du triple de la valeur de ces litres."
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous demandons en conséquence que le service produise, pour chaque alcool et chaque exercice, la liste des articles retenus dans sa colonne « nombre de plats » et le détail de sa colonne « volume disponible », ainsi que la ventilation des achats du second fournisseur que la proposition retient. À défaut, la comparaison sur laquelle repose son refus n’est pas vérifiable, et la charge d’établir le bien-fondé de la reconstitution lui appartient."
+   "texte": "La reconstitution des colonnes du service est arithmétique et non documentaire, et nous ne la présentons pas autrement. Elle retrouve onze de ses douze lignes ; quatre cases de sa colonne « volume disponible » ne se reconstituent par aucune combinaison des achats et de la variation de stock, et celle du vin jaune ne se reconstitue pas du tout. Ces colonnes ne sont donc pas vérifiables en l’état, et la raison en est connue : la liste des articles que le service a retenus, ses annexes 7-1, 7-2 et 7-3, n’a jamais été communiquée. Sa production est demandée."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Nous demandons en conséquence que le service produise, pour chaque alcool et chaque exercice, la liste des articles retenus dans sa colonne « nombre de plats » et le détail de sa colonne « volume disponible », ainsi que la ventilation des achats du second fournisseur que la proposition retient. Cette production est nécessaire pour que la comparaison sur laquelle repose son refus soit vérifiable."
   },
   {
    "kind": "alerte",
    "couleur": "orange",
    "titre": "Un point de méthode",
    "texte": "Le service reproche à la réponse de « globaliser sur les trois exercices », puis conduit lui-même toute sa démonstration en volume globalisé sur trois ans (p. 68, 69 et 88). Tous les tableaux ci-dessus sont présentés exercice par exercice : ils donnent le même résultat."
-  },
-  {
-   "kind": "interne",
-   "audience": "avocat",
-   "titre": "Points à sécuriser avant l’entretien",
-   "texte": "1. La reconstitution des colonnes « nombre de plats » est arithmétique, non documentaire : elle est unique et exacte sur trois exercices pour le porto et le macvin, à une unité près pour le Calvados, mais il faut demander formellement au service la liste des articles retenus (annexes 7-1, 7-2 et 7-3), qui n’a jamais été communiquée. 2. La colonne « vin jaune, sauces à 1 cl » (1 507 / 1 449 / 1 748) n’a pu être reproduite par aucune méthode : ne pas affirmer plus que le fait, vérifiable, que 1 748 dépasse le nombre de plats à la jurassienne vendus sur n’importe lequel des trois exercices. 3. Quatre cases de la colonne « volume disponible » ne se reconstituent pas (vin jaune exercice 3 + 310 cl, macvin exercices 2 et 3, porto exercice 2) : nous l’assumons et nous le disons ; les achats du second fournisseur, non ventilés pour les spiritueux, sont la seule explication plausible de l’écart positif. 4. La borne basse de l’encadrement est ici la dose que le service admet lui-même ; des références culinaires publiées (fondue au comté, sauce réduite, baba imbibé, flambage) la renforceraient encore, et seule celle du flambage est aujourd’hui versée au débat. 5. Le plafonnement du Calvados à 73,0 L et du Grand Marnier à 6,0 L retire 50 L à notre chiffrage : c’est une correction que nous portons nous-mêmes, elle doit être présentée comme telle."
   },
   {
    "kind": "piecejointe",

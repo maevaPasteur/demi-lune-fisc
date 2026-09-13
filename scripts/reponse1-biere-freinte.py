@@ -47,9 +47,16 @@ CONTENANCE_FUT_L = 8.0
 # Le "Draught Beer Quality Manual" de la Brewers Association ne donne AUCUN
 # taux : il documente des mecanismes, pas un pourcentage.
 # ASSIETTE : le taux est applique au volume de biere REELLEMENT SORTI DU FUT
-# (part biere lue en caisse, 1 219,2 L), et NON a la contenance des verres
-# (1 292,9 L), qui comprend 73,7 L de limonade, de grenadine et de Picon jamais
-# sortis du fut. Correction apportee au memoire du 10/07/2026 : 129 L -> 121,9 L.
+# (part biere lue en caisse, 1 205,0 L), et NON a la contenance des verres
+# (1 292,9 L), qui comprend 87,9 L de limonade, de grenadine et de Picon jamais
+# sortis du fut. Correction apportee au memoire du 10/07/2026 : 129 L -> 120,5 L.
+# DOSE DE PICON : 4 cl au demi de 25 cl, 8 cl a la pinte de 50 cl. C'est la
+# dose de cocktailsComposition.json, et c'est la SEULE qui boucle sur les
+# achats : Picon achete 72,0 L = 28,30 L de cocktails + 43,70 L de
+# consommation du chef, au centilitre, stock final nul. La dose de 2 cl / 4 cl
+# que portait ce script laissait 13,9 L de Picon inexpliques et elargissait
+# l'assiette de la freinte de 14,2 L : elle est abandonnee.
+# Source unique des volumes de la cascade : scripts/reponse1-cascade-valeurs.py.
 FREINTE_RETENUE = 0.10      # taux retenu, borne basse de la convergence
 FREINTE_HAUTE = 0.20        # borne haute des sources, NON demandee
 # Volume residuel admis dans un fut vide, chiffre CONSTRUCTEUR du fut Blade 8 L.
@@ -75,7 +82,7 @@ VIE_UTILE_J = 30
 # Colonne 11 "Lib_ticket", colonne 12 "Qte", colonne 1 "Date Ticket".
 LIB_CAISSE = {
     "pression": 25.0, "Pinte": 50.0, "Panaché": 12.5,
-    "Picon bière": 23.0, "Pinte Picon": 46.0, "Monaco": 12.5,
+    "Picon bière": 21.0, "Pinte Picon": 42.0, "Monaco": 12.5,
 }
 ANNEXES_C = {
     "2022-2023": "ANNEXE-C1_detail-tickets_2022-2023.xls",
@@ -84,14 +91,14 @@ ANNEXES_C = {
 }
 
 # --- Part biere reelle de chaque article de caisse (cl) ---------------------
-# Le panache et le Monaco sont moitie biere ; le Picon biere contient 2 cl de
-# Picon (4 cl en pinte) : seule la part biere sort du fut Affligem.
+# Le panache et le Monaco sont moitie biere ; le Picon biere contient 4 cl de
+# Picon (8 cl en pinte) : seule la part biere sort du fut Affligem.
 FORMAT_BIERE = {
     "Pression 25cl":    ("Pression 25 cl", 25, 25.0, 1),
     "Pinte 50cl":       ("Pression 50 cl (pinte)", 50, 50.0, 2),
     "Panaché 25cl": ("Panaché 25 cl", 25, 12.5, 3),
-    "Demi+Picon 25cl":  ("Picon bière 25 cl", 25, 23.0, 4),
-    "Pinte+Picon 50cl": ("Picon bière 50 cl", 50, 46.0, 5),
+    "Demi+Picon 25cl":  ("Picon bière 25 cl", 25, 21.0, 4),
+    "Pinte+Picon 50cl": ("Picon bière 50 cl", 50, 42.0, 5),
     "Monaco 25cl":      ("Monaco 25 cl", 25, 12.5, 6),
 }
 
@@ -351,7 +358,7 @@ def main():
          "au titre des pertes"],
         ["Freinte retenue par la defense",
          round(tot["fr_ret"], 1), "L",
-         "10 % de la biere reellement sortie du fut (1 219,2 L lus en caisse)"],
+         "10 % de la biere reellement sortie du fut (1 205,0 L lus en caisse)"],
     ]
 
     # --- Calendrier des mises en perce et regle des 30 jours --------------
@@ -401,11 +408,11 @@ def main():
          "donc pas un taux de freinte et il ne peut pas être comparé au taux "
          "du service"],
         ["Freinte retenue par la défense (10 % de la bière réellement sortie "
-         "du fût, 1 219,2 L lus en caisse)",
+         "du fût, 1 205,0 L lus en caisse)",
          round(tot["fr_ret"], 1), "estimé",
          "sources professionnelles convergentes, borne basse. Assiette "
          "corrigée : le mémoire du 10/07/2026 appliquait ce taux à la "
-         "contenance des verres (1 292,9 L), qui comprend 73,7 L de limonade, "
+         "contenance des verres (1 292,9 L), qui comprend 87,9 L de limonade, "
          "de grenadine et de Picon jamais sortis du fût. 129 L -> "
          f"{fr(tot['fr_ret'], 1)} L, soit "
          f"{fr(100 * tot['fr_ret'] / tot['achat'], 2)} % du fût acheté"],

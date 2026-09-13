@@ -40,10 +40,9 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Menus au forfait",
+     "label": "Menus au forfait, selon le service",
      "valeur": "594",
      "sub": "Les factures sans détail, selon la conclusion de Maître THIVEND reproduite p. 19",
-     "highlight": true,
      "couleur": "blue"
     },
     {
@@ -586,7 +585,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les six blocs reproduits pages 19 et 20 sont extraits de la section du [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html) consacrée à l’archivage (§ 220 et suivants). Ils énoncent les conditions auxquelles doit satisfaire « le logiciel ou le système de caisse » : périodicité d’archivage, date certaine, format ouvert, notice, traçabilité de la purge. Ces obligations pèsent sur le produit et sur son éditeur, qui les atteste par la certification. Aucune ne porte sur le prix de vente d’un menu. Opposer ce texte à des tableaux de prix revient à répondre à côté de la question."
+   "texte": "Les six blocs reproduits pages 19 et 20 sont extraits de la section du [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html) consacrée à l’archivage (§ 220 et suivants). Ils énoncent les conditions auxquelles doit satisfaire « le logiciel ou le système de caisse » : périodicité d’archivage, date certaine, format ouvert, notice, traçabilité de la purge. Ces obligations pèsent sur le produit et sur son éditeur, qui les atteste par la certification. Aucune ne porte sur le prix de vente d’un menu. Opposer ce texte à des tableaux de prix revient à répondre à côté de la question. Le service en tire, page 46, la conclusion que la société n’aurait transmis aucune archive fiscale inaltérable et que la comptabilité serait non probante dans sa totalité. Ce moyen est traité à la page [Fichiers Événement et Règlement](/reponse-1/fichiers-evenement-reglement)."
   },
   {
    "kind": "paragraphe",
@@ -660,7 +659,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le fichier des événements porte d’ailleurs sa propre preuve d’intégrité : son compteur court de 36 681 à 60 019 sur les trois exercices, soit 23 339 identifiants attendus et 23 339 présents, sans un seul trou. Un journal auquel il ne manque aucun numéro n’est pas un journal dépourvu de traçabilité. Les deux constats sont vérifiables ligne à ligne dans la pièce jointe, onglet « Rapprochement DEL-tickets »."
+   "texte": "Le fichier des événements porte d’ailleurs sa propre preuve d’intégrité : son compteur court de 36 681 à 60 019 sur les trois exercices, soit 23 339 identifiants attendus et 23 339 présents, sans un seul trou. Un journal auquel il ne manque aucun numéro n’est pas un journal dépourvu de traçabilité. Les deux constats sont récapitulés, exercice par exercice, dans la pièce jointe, onglet « Rapprochement DEL-tickets » : 21 302 suppressions, toutes rattachées à une journée et à un ticket Z du fichier des tickets, et un compteur d’événements continu de 36 681 à 60 019, soit 23 339 identifiants présents sur 23 339 attendus, sans un seul manquant."
   },
   {
    "kind": "alerte",

@@ -6,7 +6,7 @@
   },
   "entete": {
     "positionService": "Le service maintient sa reconstitution sans y apporter la moindre correction. Il rappelle que le volume disponible se calcule comme les achats augmentés de la variation de stock (compte 310200), puis écarte l’argument de Me THIVEND par une seule objection d’unité de mesure : « La réponse se base sur un montant en €uros. Or, la reconstitution ne s’est basé que des volumes en stocks ». Il conclut qu’il « ne voit donc aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications ». Ni le sens de la variation de stock retenue, ni l’inventaire physique des trois clôtures, ni le chiffrage d’environ 2 162 € ne sont discutés au fond.",
-    "reponseCourte": "Vérification refaite sur les trois inventaires datés, le grief tiré d’une inversion de signe ne tient pas : la variation retenue par le service pour l’exercice 2023-2024, moins 1 029,67 €, est exactement celle qui ressort de nos propres états, et la société ne la conteste plus ; seule demeure l’inexactitude de l’objection tirée de l’unité de mesure.",
+    "reponseCourte": "Le point 9 est retiré : la variation de stock de l’exercice 2023-2024 retenue par le service, moins 1 029,67 €, est exactement celle qui ressort de nos inventaires datés, et le chiffrage d’environ 2 162 € du mémoire de juillet reposait sur une convention de signe erronée. La vérification établit en revanche que ces mêmes inventaires existaient à la clôture et sont exacts au centime, ce qui prive de fondement le motif de rejet tiré de leur non conformité.",
     "enjeu": "Le « volume disponible » est le point de départ de la reconstitution du chiffre d’affaires boissons. La vérification de la variation de stock ne le réduit pas, mais elle établit que les inventaires que le service déclare non conformes fournissent, au centime, le chiffre qu’il utilise.",
     "statut": "partiel"
   },
@@ -53,11 +53,10 @@
       "kind": "kpis",
       "items": [
         {
-          "label": "Gonflement du « disponible » allégué",
-          "valeur": "≈ 2 162 €",
-          "sub": "Chiffrage de Me THIVEND repris dans l’encadré, non discuté par le service (p. 74)",
-          "highlight": true,
-          "couleur": "red"
+          "label": "Longueur de la réponse du service",
+          "valeur": "2 phrases",
+          "sub": "Une seule objection, portant sur l’unité de mesure (p. 74)",
+          "couleur": "gold"
         },
         {
           "label": "Formule rappelée par le service",
@@ -72,16 +71,9 @@
           "couleur": "blue"
         },
         {
-          "label": "Longueur de la réponse du service",
-          "valeur": "2 phrases",
-          "sub": "Une seule objection, portant sur l’unité de mesure (p. 74)",
-          "couleur": "gold"
-        },
-        {
-          "label": "Modification de la reconstitution",
+          "label": "Modification apportée par le service",
           "valeur": "Aucune",
           "sub": "« Le service ne voit donc aucune raison de modifier sa reconstitution » (p. 74)",
-          "highlight": true,
           "couleur": "red"
         },
         {
@@ -406,10 +398,8 @@
       "texte": "Il reste enfin que la réponse du service, en deux phrases, n’examine ni la pièce produite, ni les montants, ni le compte qu’il avait lui-même mis en avant, et qu’elle repose sur une affirmation inexacte quant à l’unité de mesure de sa propre reconstitution. La conclusion « le service ne voit donc aucune raison de modifier sa reconstitution » n’est appuyée sur aucune vérification, quand bien même son résultat se trouve, sur ce point, être le bon."
     },
     {
-      "kind": "interne",
-      "audience": "avocat",
-      "titre": "Conséquences à tirer ailleurs dans le dossier",
-      "texte": "1. Le chiffrage de 2 162 € (et ses composantes 1 891,91 € et 270,22 €) est abandonné. Il figure encore dans l’onglet Rendu final (src/data/renduFinal/reconstitution-volumes-liquides.json et src/data/renduFinal/inventaire-stocks.json) et dans src/data/analyseBoissons.ts (erreurStockTotale, tableau « Variation physique contre variation retenue »). Ces valeurs doivent être retirées avant toute production, faute de quoi le mémoire se contredit. 2. L’écart de 546,82 € sur l’exercice 2024-2025 joue en faveur de la société : le service a retranché la variation au lieu de l’ajouter, et son disponible est d’autant plus bas. Il ne doit pas être signalé ; il est mentionné ici pour que personne ne le soulève par inadvertance. 3. Le total de stock 2023 utilisé dans tout le dossier doit être harmonisé : la page récapitulative datée et la page 11 du PDF portent 3 050,29 € pour les alcools et vins, non 3 056,26 €. Trois fautes de frappe de la retranscription (5,97 €) sont à corriger dans public/documents/inventaires/inventaire_2023-03-31.csv et inventaires.json, avec reprise des pages consommatrices. 4. La page « Cascade des 10 622 litres » retient 213 L de stock final « mesuré » en renvoyant à la présente page, qui en donne 301,90 L pour les seuls alcools au 31/03/2025. L’écart doit être tranché avant l’entretien."
+      "kind": "paragraphe",
+      "texte": "Le point 9 est retiré, et la vérification qui conduit à ce retrait appelle une précision. La variation de stock de l’exercice 2023-2024 retenue par le service est exactement celle qui ressort des inventaires datés de la société ; le chiffrage du mémoire du 10 juillet 2026 reposait sur une convention de signe erronée et n’est plus soutenu. Le stock final d’alcool au 31 mars 2025 est par ailleurs énoncé selon deux périmètres différents d’une page à l’autre du présent mémoire, selon que l’on retient le seul poste de la cascade ou l’ensemble des libellés d’alcool de l’inventaire : le périmètre retenu est précisé à la page M, « Notre méthode : la cascade des 10 622 L », et les deux pages portent désormais la même définition."
     },
     {
       "kind": "piecejointe",

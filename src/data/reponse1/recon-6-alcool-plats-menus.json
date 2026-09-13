@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service oppose d’abord que notre réponse « regroupe les volumes sur trois exercices », ce qui viserait « probablement » à « maximiser les quantités totales d’alcool cuit dans les menus ». Il soutient ensuite que sa reconstitution a déjà retranché un volume destiné aux plats et aux desserts, en annexes 7-1, 7-2 et 7-3 : Calvados 93 L, Vin jaune 111 L, Porto 15 L, Macvin 240 L sur trois ans, Ravelin 796,43 L, crème de cassis 33,28 L pour les desserts et 75,64 L pour les cocktails, soit selon lui bien au-delà des 100 L et des 16 L réclamés. Pour le Baileys, le Marc de Bourgogne et la liqueur de poire, il répond que les volumes demandés dépassent les achats disponibles et la consommation lisible en caisse. Conclusion : « le service ne voit aucune raison de modifier sa reconstitution ».",
-  "reponseCourte": "La prémisse du raisonnement sur le ravelin est inexacte, l’annexe n° 1 du service inventoriant lui-même ce vin en bouteilles au 31/03/2022 ; les volumes disponibles opposés au Bailey’s, au marc et à la liqueur de poire sont des fractions d’exercice (1 400 cl au lieu de 2 240, 70 au lieu de 280, 140 au lieu de 1 680) ; et le grief de valorisation au prix du verre reste sans réponse.",
-  "enjeu": "228 L d’alcool cuit dans les plats des menus sur 3 exercices, comptés par le service comme vendus au verre au prix carte",
-  "statut": "demonte"
+  "reponseCourte": "La prémisse du raisonnement sur le ravelin est inexacte, l’annexe n° 1 du service inventoriant lui même ce vin en bouteilles au 31/03/2022, et les volumes disponibles qu’il oppose au Bailey’s, au marc et à la liqueur de poire sont des fractions d’exercice et non des achats de trois ans. Sur les 228 L annoncés, le supplément qui reste à retrancher est de 98,2 L, le service ayant déjà déduit davantage pour le macvin, la crème de cassis, le Calvados, le vin jaune et le porto ; le grief de valorisation au prix du verre, lui, reste sans réponse.",
+  "enjeu": "228 L d’alcool cuit dans les plats des menus sur 3 exercices, dont 98,2 L restent à retrancher, comptés par le service comme vendus au verre au prix carte",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -510,14 +510,14 @@
      "couleur": "blue"
     },
     {
-     "label": "Ravelin déjà retranché",
-     "valeur": "796,43 L",
-     "sub": "cuisine et kirs sur 3 ans, contre 100 L demandés (p. 69)",
+     "label": "Exercices d’achat de ravelin",
+     "valeur": "3 et non 2",
+     "sub": "douze factures de l’exercice 1 et l’annexe n° 1 du service",
      "highlight": true,
-     "couleur": "red"
+     "couleur": "teal"
     },
     {
-     "label": "Crème de cassis, desserts",
+     "label": "Crème de cassis, desserts, déjà retranchée selon le service",
      "valeur": "33,28 L",
      "sub": "contre 16 L demandés (p. 69)",
      "couleur": "red"
@@ -529,9 +529,9 @@
      "couleur": "gold"
     },
     {
-     "label": "Baileys acheté sur 3 ans",
+     "label": "Bailey’s que le service dit disponible",
      "valeur": "1 400 cl",
-     "sub": "soit exactement les 14 L demandés (p. 69)",
+     "sub": "chiffre du service (p. 69) ; les factures en portent 2 240 cl sur trois exercices",
      "couleur": "red"
     },
     {
@@ -810,14 +810,14 @@
     ],
     [
      {
-      "v": "Marc (Bourgogne et Jura)"
+      "v": "Marc de Bourgogne"
      },
      {
       "v": "70",
       "align": "right"
      },
      {
-      "v": "630 / 280 / 70",
+      "v": "70 / 140 / 70",
       "align": "right"
      },
      {
@@ -830,7 +830,7 @@
       "align": "right"
      },
      {
-      "v": "une bouteille, soit les achats d’un seul exercice",
+      "v": "une bouteille : le service a classé deux des quatre bouteilles de marc de Bourgogne dans sa colonne « Marc Du Jura » (annexe n° 6)",
       "badge": "ko"
      }
     ],
@@ -864,19 +864,19 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Bailey’s.** Le service additionne 280 + 1 050 + 70 cl (p. 69). Le premier terme est exact : l’exercice 1 compte 4 bouteilles de 70 cl, avoir déduit. Le deuxième ne correspond à aucun exercice : l’exercice 2 en compte 16, soit 1 120 cl, et l’écart est exactement la première facture de l’exercice, la n° 487459 du 07/04/2023. Le troisième, 70 cl, est une seule bouteille là où l’exercice 3 en compte douze, soit 840 cl : c’est, là encore, la première facture de l’exercice, la n° 512569 du 26/04/2024. Le total facturé est de **2 240 cl** : les 15,3 L que nous chiffrons en représentent 68 %, et non « la totalité des achats disponibles »."
+   "texte": "**Bailey’s.** Le service additionne 280 + 1 050 + 70 cl (p. 69), soit 20 bouteilles quand les factures FCBS en portent 32, pour 2 240 cl. Le premier terme est exact : l’exercice 1 compte 4 bouteilles de 70 cl, avoir déduit. Le deuxième ne correspond à aucun exercice : l’exercice 2 en compte 16, soit 1 120 cl, et l’écart est exactement la première facture de l’exercice, la n° 487459 du 07/04/2023. Le troisième, 70 cl, est une seule bouteille là où l’exercice 3 en compte douze, soit 840 cl : c’est, là encore, la première facture de l’exercice, la n° 512569 du 26/04/2024. Le total facturé est de **2 240 cl** : les 15,3 L que nous chiffrons en représentent 68 %, et non « la totalité des achats disponibles »."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Marc.** Les 70 cl cités sont une bouteille. Sur les trois exercices, le fournisseur facture **14 bouteilles de 70 cl de marc**, soit 9,8 L : 4 bouteilles de marc de Bourgogne Jacoulot et 10 de marc du Jura Tissot. Neuf de ces quatorze bouteilles, soit 6,3 L, sont achetées sur le seul exercice 1, où se situent 5,3 des 5,6 L que nous chiffrons. Le volume demandé est donc couvert, exercice par exercice, par les achats de l’exercice correspondant."
+   "texte": "**Marc.** Les 70 cl cités sont une bouteille. Sur les trois exercices, le fournisseur facture **4 bouteilles de marc de Bourgogne Jacoulot 45°, soit 280 cl** (factures des 18/11/2022, 26/05/2023, 15/09/2023 et 05/04/2024) et, séparément, **10 bouteilles de marc du Jura Tissot 50°, soit 700 cl**. Ce sont deux produits distincts, et le second est vendu au verre. Le service en compte lui aussi quatorze au total, mais il en range deux, de Bourgogne, dans sa colonne « Marc Du Jura » (annexe n° 6) : ses 70 cl sont donc faux, le chiffre exact est de **280 cl**. Nous ne dissimulons pas la limite que cela pose à notre propre demande. Le volume que nous chiffrions, 558 cl, dépasse les 280 cl de marc de Bourgogne facturés et les 210 cl sortis du stock sur trois exercices ; sur l’exercice 1, où se situe l’essentiel de la demande, une seule bouteille de 70 cl a été achetée. **Nous ramenons donc cette demande à 2,1 L au lieu de 5,58 L, soit une concession de 3,5 L**, du même ordre que celles déjà portées sur le Calvados et le Grand Marnier. Sur les dix alcools de cuisine, deux seulement appellent ce plafonnement, le Calvados et le marc de Bourgogne : notre propre pièce d’encadrement porte pour le Calvados une dose plafond de 2,40 cl et la mention « la dose retenue tient-elle ? non », et nous la produisons plutôt que de la taire ; les huit autres alcools sont couverts par les achats."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Liqueur de poire.** Les 140 cl cités sont les achats du seul exercice 1 (factures n° 474405 du 05/08/2022 et n° 477349 du 30/09/2022). Sur les trois exercices, **24 bouteilles de 70 cl** de liqueur Golden Eight sont facturées, soit 16,8 L, quand nous chiffrons 4,1 L, situés sur les exercices 2 et 3, où 22 bouteilles ont été achetées. Le courrier le dit d’ailleurs lui-même sans en tirer la conséquence : deux lignes plus bas, il relève une consommation de 480 cl lue en caisse, très supérieure aux 140 cl qu’il déclare disponibles (p. 70)."
+   "texte": "**Liqueur de poire.** Les 140 cl cités sont les achats du seul exercice 1 (factures n° 474405 du 05/08/2022 et n° 477349 du 30/09/2022). Sur les trois exercices, **25 bouteilles de 70 cl** de liqueur Golden Eight sont facturées, soit 17,5 L, quand nous chiffrons 4,1 L, situés sur les exercices 2 et 3, où 23 bouteilles ont été achetées. Le courrier le dit d’ailleurs lui-même sans en tirer la conséquence : deux lignes plus bas, il relève une consommation de 480 cl lue en caisse, très supérieure aux 140 cl qu’il déclare disponibles (p. 70)."
   },
   {
    "kind": "note",
-   "texte": "Les 24 bouteilles retenues jusqu’ici dans notre propre chiffrage étaient elles-mêmes incomplètes : la ligne du 15/03/2024 (facture n° 508974) porte une désignation tronquée, « LIQUEUR GOLDEN EIGHT 70 CL 25° », sans la mention « liqueur de poire William ». La relecture par code article en ajoute une : 25 bouteilles, 1 680 cl. Nous le corrigeons de nous-mêmes."
+   "texte": "Les 24 bouteilles retenues jusqu’ici dans notre propre chiffrage étaient elles-mêmes incomplètes : la ligne du 15/03/2024 (facture n° 508974) porte une désignation tronquée, « LIQUEUR GOLDEN EIGHT 70 CL 25° », sans la mention « liqueur de poire William ». La relecture par code article en ajoute une : 25 bouteilles, 1 750 cl. Nous le corrigeons de nous-mêmes."
   },
   {
    "kind": "chapitre",
@@ -921,11 +921,41 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La prémisse du raisonnement sur le ravelin est inexacte : le vin est acheté dès l’exercice 1, en bouteilles, pour 105,7 L, et l’annexe n° 1 du service l’inventorie en cave au 31/03/2022. Les volumes disponibles retenus pour le Bailey’s, le marc et la liqueur de poire sont des fractions d’exercice, non des totaux sur trois ans : 1 400 cl au lieu de 2 240, 70 cl au lieu de 280, 140 cl au lieu de 1 680. Le motif tiré de ce que les volumes demandés dépasseraient les achats disponibles tombe pour ces trois alcools. Restent à retrancher, à ce titre, **76,7 L de ravelin, 15,3 L de Bailey’s, 5,6 L de marc et 4,1 L de liqueur de poire**."
+   "texte": "La prémisse du raisonnement sur le ravelin est inexacte : le vin est acheté dès l’exercice 1, en bouteilles, pour 105,7 L, et l’annexe n° 1 du service l’inventorie en cave au 31/03/2022. Les volumes disponibles retenus pour le Bailey’s, le marc et la liqueur de poire sont des fractions d’exercice, non des totaux sur trois ans : 1 400 cl au lieu de 2 240, 70 cl au lieu de 280, 140 cl au lieu de 1 750. Le motif tiré de ce que les volumes demandés dépasseraient les achats disponibles tombe pour le Bailey’s et pour la liqueur de poire ; **il ne tombe pas pour le marc de Bourgogne**, et nous ramenons notre demande à ce que le stock permet, **2,1 L au lieu de 5,6 L**. Ces quatre volumes, 76,7 L de ravelin, 15,3 L de Bailey’s, 4,1 L de liqueur de poire et 2,1 L de marc de Bourgogne, soit **98,2 L**, sont **déjà compris** dans les 173,4 L demandés à la page [Alcool de cuisine sous-déduit](/reponse-1/recon-5-alcool-cuisine). Ils ne s’y ajoutent pas."
   },
   {
    "kind": "paragraphe",
    "texte": "Le grief de valorisation, lui, demeure entier : la réponse du service ne discute à aucun moment le prix auquel l’alcool cuit dans un plat de menu est reconstitué. Le maintien intégral des montants n’est donc pas motivé sur le point qui était soulevé."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Bailey’s, marc de Bourgogne et liqueur de poire facturés",
+     "valeur": "2 240 / 280 / 1 750 cl",
+     "sub": "relecture par code article ; marc de Bourgogne seul, le marc du Jura étant un autre produit",
+     "couleur": "teal",
+     "highlight": true
+    },
+    {
+     "label": "Volumes que le service leur oppose",
+     "valeur": "1 400 / 70 / 140 cl",
+     "sub": "fractions d’un seul exercice (p. 69 et 70)",
+     "couleur": "red"
+    },
+    {
+     "label": "Supplément qui reste à retrancher",
+     "valeur": "98,2 L",
+     "sub": "sur les 228 L annoncés, le marc de Bourgogne étant plafonné à 2,1 L",
+     "couleur": "teal"
+    },
+    {
+     "label": "Ce que le point 6 contestait, et qui n’est pas discuté",
+     "valeur": "un prix",
+     "sub": "la réponse du service ne traite que des volumes",
+     "couleur": "gold"
+    }
+   ]
   },
   {
    "kind": "alerte",

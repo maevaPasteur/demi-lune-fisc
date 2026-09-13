@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service estime que Maître THIVEND « se contente de rappeler ses tableaux évoqués dans la partie “Reconstitution du Chiffre d’affaires”, sans apporter un quelconque élément complémentaire » (p. 89) et se borne donc à résumer ses propres conclusions. Il oppose à l’itemisation de la défense une comparaison en euros : chacun de ses trois abattements de 5 % (offerts, pertes, consommation du personnel) minorerait le chiffre d’affaires TTC reconstitué de 35 133,26 € par exercice, soit 105 399,78 € sur trois exercices, à comparer aux 8 010 € d’offerts et aux 39 319 € de consommation du personnel chiffrés par la défense, ce qui représenterait « plus de 13 fois » et « près de 3 fois » ces montants (p. 89). Il ajoute que 35 133,26 € équivalent à 8,70 % du chiffre d’affaires TTC déclaré sur le premier exercice, proportion qu’il juge « significative ». Il conclut qu’il « ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 89).",
-  "reponseCourte": "Cette partie S, intitulée par erreur « Dégustation Offerte », reproduit les pages 72 et 73 et appelle la même réponse : un abattement unique de 15 % ne peut pas couvrir séparément chacun des six postes auxquels le service l’oppose, et il vaut 1 593 L quand notre itemisation en documente déjà 1 505 L hors cuisine et menus.",
-  "enjeu": "La question de savoir si les trois abattements forfaitaires de 5 % couvrent réellement la consommation sans vente, itemisée par la défense à 1 505 L hors cuisine et menus, ou si ces forfaits doivent être traités comme des planchers à compléter par les postes réellement constatés.",
-  "statut": "demonte"
+  "reponseCourte": "Cette partie S, intitulée par erreur « Dégustation Offerte », reproduit les pages 72 et 73 et appelle la même réponse : un abattement unique de 15 % ne peut pas couvrir séparément chacun des six postes auxquels le service l’oppose, et il vaut 1 593 L quand notre itemisation en documente 1 169 L hors cuisine et menus, et 1 914 L une fois l’alcool de cuisine et l’alcool des menus ajoutés.",
+  "enjeu": "La question de savoir si les trois abattements forfaitaires de 5 % couvrent réellement la consommation sans vente, itemisée par la défense à 1 169 L hors cuisine et menus, et à 1 914 L cuisine et menus compris, ou si ces forfaits doivent être traités comme des planchers à compléter par les postes réellement constatés.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -29,7 +29,6 @@
      "label": "Abattements retenus par le service",
      "valeur": "5 % + 5 % + 5 %",
      "sub": "Offerts, pertes, consommation du personnel (p. 89)",
-     "highlight": true,
      "couleur": "red"
     },
     {
@@ -38,20 +37,26 @@
      "sub": "« hors cuisine et menus », position de la défense reprise p. 89"
     },
     {
+     "label": "Itemisation après nos corrections",
+     "valeur": "1 914 L",
+     "sub": "Cuisine et alcool des menus compris ; 1 169 L hors cuisine et menus",
+     "couleur": "teal"
+    },
+    {
      "label": "Perte d’exploitation totale",
      "valeur": "28,7 %",
-     "sub": "Taux avancé par la défense et reproduit p. 89"
+     "sub": "Taux du mémoire du 10/07/2026 reproduit p. 89 ; 31,9 % après nos corrections"
     },
     {
      "label": "Minoration du CA TTC par abattement",
      "valeur": "35 133,26 €",
-     "sub": "Par exercice et par poste de 5 % (p. 89)",
+     "sub": "Par exercice et par poste de 5 % (p. 89), dont 26 216,19 € de cuisine extrapolée",
      "couleur": "blue"
     },
     {
      "label": "Minoration sur 3 exercices",
      "valeur": "105 399,78 €",
-     "sub": "Chiffre obtenu par le service en multipliant par 3 (p. 89)",
+     "sub": "Chiffre obtenu par le service en multipliant par 3 (p. 89) ; l’effet réel des trois abattements sur trois exercices est de 308 830,68 €, dont 76 863,18 € seulement de chiffre d’affaires boissons",
      "couleur": "blue"
     },
     {
@@ -89,7 +94,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Aucune des données de la pièce 57-rf-offerts-remises-pertes.xlsx n’est discutée, ni les 1 505 L itemisés, ni le taux de perte d’exploitation de 28,7 %, ni l’argument juridique du **plancher** et de la jurisprudence. Le service traite trois postes seulement, dans l’ordre suivant : les offerts, les pertes, les consommations du personnel."
+   "texte": "Aucune des données de la pièce 57-rf-offerts-remises-pertes.xlsx n’est discutée, ni les litres itemisés, ni le taux de perte d’exploitation, ni l’argument juridique du **plancher** et de la jurisprudence. Le service traite trois postes seulement, dans l’ordre suivant : les offerts, les pertes, les consommations du personnel."
   },
   {
    "kind": "titre",
@@ -305,7 +310,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La partie se clôt sur la formule employée dans l’ensemble du bloc reconstitution, soulignée dans le courrier : « **Par conséquent, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications.** » (p. 89). Ni les 1 505 L itemisés, ni le taux de 28,7 %, ni la qualification des abattements comme planchers ne donnent lieu à la moindre concession chiffrée."
+   "texte": "La partie se clôt sur la formule employée dans l’ensemble du bloc reconstitution, soulignée dans le courrier : « **Par conséquent, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications.** » (p. 89). Ni le volume itemisé, ni le taux de perte d’exploitation, ni la qualification des abattements comme planchers ne donnent lieu à la moindre concession chiffrée."
   },
   {
    "kind": "alerte",
@@ -326,19 +331,19 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Un.** L’abattement de 15 % est appliqué **une seule fois**, en fin de méthode (proposition p. 51 et 52). Le service l’oppose pourtant à six postes différents, dans huit pages de sa réponse : freinte de bière (p. 61 et 83), dégustation au verre (p. 64 et 86), offerts, pertes et consommation du personnel (p. 72, 73 et 89), coefficient de revente (p. 93). S’il couvre les trois postes des pages 72 et 73, il ne reste rien pour les autres."
+   "texte": "**Un.** L’abattement de 15 % est appliqué **une seule fois**, en fin de méthode (proposition p. 51 et 52). Le service l’oppose pourtant à six postes différents, dans huit pages de sa réponse : freinte de bière (p. 61 et 83), dégustation au verre (p. 64 et 86), offerts, pertes et consommation du personnel (p. 72, 73 et 89), coefficient de revente (p. 93). S’il couvre les trois postes des pages 72 et 73, il ne peut pas couvrir en outre les trois autres."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Deux.** Les montants avancés ne sont pas homogènes à ceux de la défense. Les 35 133,26 € s’obtiennent en multipliant l’abattement réellement pratiqué sur les liquides (8 917,07 €, proposition p. 52) par 1 plus le coefficient de revente de 2,94 : les trois quarts de la somme sont du chiffre d’affaires cuisine extrapolé. Sur les trois exercices, le forfait de 15 % ne retire que **76 863,18 €** de chiffre d’affaires boissons, quand nos postes itemisés, valorisés aux mêmes prix, en représentent **95 976 €**. Quant aux 105 399,78 €, ils correspondent exactement à la totalité du 15 % du seul exercice 1 (702 665,20 € moins 597 265,42 €), et non au 5 % d’offerts de trois exercices."
+   "texte": "**Deux.** Les montants avancés ne sont pas homogènes à ceux de la défense. Les 35 133,26 €, que le service donne pour la minoration de chaque exercice (exercice 2022-2023 ; 33 971,89 € et 33 838,41 € sur les deux suivants), s’obtiennent en multipliant l’abattement réellement pratiqué sur les liquides (8 917,07 €, proposition p. 52) par 1 plus le coefficient de revente de 2,94 : les trois quarts de la somme, **26 216,19 €**, sont du chiffre d’affaires cuisine extrapolé. Sur les trois exercices, le forfait de 15 % ne retire que **76 863,18 €** de chiffre d’affaires boissons, quand nos postes itemisés hors cuisine et menus, valorisés aux mêmes prix, en représentent **80 126 €**. L’écart reste favorable à la société, mais il n’est que de 3 263 € et il dépend d’une convention de prix de revente que nous ne pouvons pas démontrer : ce n’est donc pas la comparaison en euros qui porte notre démonstration, c’est celle des volumes, faite au point Quatre. Quant aux 105 399,78 €, ils correspondent exactement à la totalité du 15 % du seul exercice 1 (702 665,20 € moins 597 265,42 €), et non au 5 % d’offerts de trois exercices."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Trois.** Le service ne répond ni au volume itemisé qu’il reproduit lui-même (1 505 L hors cuisine et menus), ni au taux de perte d’exploitation de 28,7 %, ni aux 22 % d’abattement sur achats bruts retenus par le vérificateur dans l’affaire jugée par la cour administrative d’appel de Paris le 17 mars 2021. Il écarte l’ensemble au motif que la défense « se contente de rappeler ses tableaux » (p. 89) : c’est un refus d’examen, non une réfutation."
+   "texte": "**Trois.** Le service ne répond ni au volume itemisé qu’il reproduit lui-même (**1 505 L dans le mémoire de juillet, 1 169 L après nos corrections**), ni au taux de perte d’exploitation (**28,7 %, puis 31,9 %**), ni aux 22 % d’abattement sur achats bruts retenus par le vérificateur dans l’affaire jugée par la cour administrative d’appel de Paris le 17 mars 2021. Il écarte l’ensemble au motif que la défense « se contente de rappeler ses tableaux » (p. 89) : c’est un refus d’examen, non une réfutation."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Quatre.** Rapporté à une unité commune, le forfait de 15 % vaut **1 593 L** sur les 10 622 L d’alcool achetés en trois exercices, quand les seuls postes itemisés en représentent déjà **1 505 L**, avant la cuisine (566 L), l’alcool des menus (228 L) et la casse. Un abattement forfaitaire tient lieu de mesure faute de mieux : lorsqu’un décompte itemisé et vérifiable est produit, c’est un plancher, non un plafond."
+   "texte": "**Quatre.** Rapporté à une unité commune, le forfait de 15 % vaut **1 593 L** sur les 10 622 L achetés. Nos postes itemisés hors cuisine et menus, après les six corrections que nous portons contre nous, en représentent **1 169 L** ; l’alcool réellement parti en cuisine et dans les plats des menus en ajoute **745 L**, plafonnés aux achats facturés, ce qui porte l’ensemble à **1 914 L, soit 18,0 % des achats et 120 % du forfait**, avant même les **2 224 L** de perte non ventilée. Un abattement forfaitaire tient lieu de mesure faute de mieux : lorsqu’un décompte itemisé et vérifiable est produit, c’est un plancher, non un plafond."
   },
   {
    "kind": "tableau",
@@ -381,21 +386,38 @@
     ],
     [
      {
-      "v": "Postes itemisés, hors cuisine et menus",
+      "v": "Postes itemisés, hors cuisine et menus"
+     },
+     {
+      "v": "1 169 L",
+      "align": "right"
+     },
+     {
+      "v": "11,0 %",
+      "align": "right"
+     },
+     {
+      "v": "80 126 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Postes itemisés, cuisine et alcool des menus compris",
       "fw": 700
      },
      {
-      "v": "1 505 L",
+      "v": "1 914 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "14,2 %",
+      "v": "18,0 %",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "95 976 €",
+      "v": "142 707 €",
       "align": "right",
       "fw": 700
      }
@@ -405,11 +427,11 @@
       "v": "Perte d’exploitation totale, hors cuisine et menus"
      },
      {
-      "v": "3 048 L",
+      "v": "3 393 L",
       "align": "right"
      },
      {
-      "v": "28,7 %",
+      "v": "31,9 %",
       "align": "right"
      },
      {
@@ -419,7 +441,7 @@
     ],
     [
      {
-      "v": "Alcool passé en cuisine et alcool des menus"
+      "v": "Alcool passé en cuisine et alcool des menus, plafonné aux achats facturés"
      },
      {
       "v": "745 L",
@@ -441,8 +463,32 @@
    "texte": "Deux points supplémentaires, développés sur la page [Point 8 : les abattements 5 %+5 %+5 %](/reponse-1/recon-8-abattements), achèvent la démonstration : le service utilise les 0,28 % d’articles à 0 € pour plafonner les offerts alors qu’il soutient, dans sa partie C (p. 21 à 27), que les offerts n’étaient pas gérés sur la caisse ; et il oppose les montants d’avantages en nature des DADS, qui sont des forfaits par repas évalués au minimum garanti, à des volumes de boissons qu’ils n’ont jamais eu pour objet de mesurer."
   },
   {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Ce que le forfait de 15 % représente en volume",
+     "valeur": "1 593 L",
+     "sub": "15 % des 10 622 L d’alcool achetés sur les trois exercices",
+     "couleur": "blue"
+    },
+    {
+     "label": "Nos postes itemisés, cuisine et alcool des menus compris",
+     "valeur": "1 914 L",
+     "sub": "Soit 120 % du forfait, et 18,0 % des achats d’alcool",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Postes itemisés hors cuisine et menus, valorisés",
+     "valeur": "80 126 €",
+     "sub": "Contre 76 863,18 € de chiffre d’affaires boissons retirés par le forfait",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
    "kind": "piecejointe",
-   "intro": "Relevé page par page, itemisation par exercice et comparaison forfait / itemisation (script reproductible `scripts/reponse1-abattements.py`) :",
+   "intro": "Relevé page par page, itemisation par exercice et comparaison forfait / itemisation (script reproductible `scripts/reponse1-abattements.py`, qui lit la cascade unique produite par `scripts/reponse1-cascade-valeurs.py`) :",
    "fichiers": [
     {
      "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",

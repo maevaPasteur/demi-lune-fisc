@@ -6,9 +6,9 @@
   },
   "entete": {
     "positionService": "Le service maintient intégralement le grief d’inventaire de stocks non conforme. Il indique que le rejet de comptabilité a été fondé sur les copies papier des inventaires obtenues lors des interventions sur place, états qui ne comportaient que le libellé, la quantité, le prix unitaire et la valeur, sans la contenance des boissons. Il constate que la société « a corrigé ses inventaires pour les rendre conforme aux dispositions prévues », mais oppose que ces corrections sont « intervenues post-proposition de rectifications » et ne peuvent donc effacer le motif de rejet. Il ajoute une seconde jurisprudence (CE n° 56 621 du 24 juillet 1987) et relie le grief à la variabilité des chiffres d’affaires entre fichiers EXCEL pour conclure que « l’absence d’inventaires de stocks conforme aux dispositions prévues constitue donc un motif de rejet de comptabilité valable ».",
-    "reponseCourte": "Les trois inventaires existent, chacun est arrêté par une page récapitulative datée de la clôture, et c’est d’eux que sort, au centime près, la variation du compte 310200 dont le service se sert : le contrôle annuel que l’article R. 123-177 du Code de commerce impose a bien été fait, et la contenance qu’on nous reproche d’avoir omise n’est exigée par aucun texte.",
+    "reponseCourte": "Les trois inventaires existent et chacun est arrêté par une page récapitulative datée que le vérificateur détenait avant sa proposition ; la variation du compte 310200 de l’exercice 2023-2024, moins 1 029,67 €, est au centime la différence entre deux d’entre eux, et la contenance qu’on nous reproche d’avoir omise n’est exigée ni par l’article R. 123-177 du Code de commerce ni par l’article L. 123-12. Reste à établir, feuilles de comptage à l’appui, que le relevé physique a bien été fait à la date de chaque clôture.",
     "enjeu": "Ce grief est l’un des trois motifs de rejet de la comptabilité, alors que la reconstitution du chiffre d’affaires « boissons » repose sur la variation de stock que ces mêmes inventaires donnent.",
-    "statut": "demonte"
+    "statut": "a-etayer"
   },
   "sections": [
     {
@@ -554,20 +554,20 @@
       "kind": "kpis",
       "items": [
         {
-          "label": "Motif de rejet",
-          "valeur": "Maintenu",
-          "sub": "« constitue donc un motif de rejet de comptabilité valable » (p. 34)",
-          "highlight": true,
-          "couleur": "red"
-        },
-        {
           "label": "Concession du service",
           "valeur": "Inventaires corrigés",
           "sub": "« la société a corrigé ses inventaires pour les rendre conforme aux dispositions prévues » (p. 33)",
-          "couleur": "gold"
+          "highlight": true,
+          "couleur": "teal"
         },
         {
-          "label": "Seule objection maintenue",
+          "label": "Position du service sur le motif E",
+          "valeur": "Maintenu",
+          "sub": "« constitue donc un motif de rejet de comptabilité valable » (p. 34)",
+          "couleur": "red"
+        },
+        {
+          "label": "Seule objection que le service maintient",
           "valeur": "Post-proposition",
           "sub": "« les corrections étant intervenues post-proposition de rectifications » (p. 33)",
           "couleur": "red"
@@ -585,7 +585,7 @@
           "couleur": "blue"
         },
         {
-          "label": "Seuil de gravité retenu",
+          "label": "Seuil de gravité retenu par le service",
           "valeur": "Aucun",
           "sub": "« quelque que soit l’importance des différences constatées » (p. 34)",
           "couleur": "red"
@@ -875,7 +875,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Ce rapprochement décide le débat. Une pièce dont on tire, au centime, le chiffre que l’on porte en comptabilité matière et sur lequel on bâtit toute une reconstitution n’est pas une pièce inexploitable. Le service ne s’est pas contenté d’utiliser ces inventaires faute de mieux : il en a repris la valeur exacte. Sur l’exercice 2024-2025, le signe porté au compte diffère de celui qu’appelle la convention rappelée ci-dessus ; la société ne conteste pas ce montant et n’en tire aucune demande."
+      "texte": "Ce rapprochement décide le débat. Une pièce dont le service reprend le résultat au centime dans sa propre comptabilité matière est exploitable pour ce résultat, c’est à dire pour la valeur du stock à la clôture. Le service ne s’est pas contenté d’utiliser ces inventaires faute de mieux : il en a repris la valeur exacte. Sur l’exercice 2024-2025, le signe porté au compte diffère de celui qu’appelle la convention rappelée ci-dessus ; la société ne conteste pas ce montant et n’en tire aucune demande."
     },
     {
       "kind": "kpis",
@@ -903,7 +903,8 @@
           "label": "Montant de rectification rattaché au grief",
           "valeur": "0 €",
           "sub": "Ni la proposition ni la réponse du 04/09/2026 n’en chiffrent aucun",
-          "couleur": "gold"
+          "highlight": true,
+          "couleur": "teal"
         }
       ]
     },
@@ -1701,7 +1702,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le même document répond au fond. Son § 150 rappelle que « le juge s’attache davantage à la valeur d’ensemble de la comptabilité plutôt qu’à la tenue des seuls livres en fonction des exigences du code du commerce », et que « l’absence d’un livre exigé par le code de commerce tel le livre d’inventaire et la circonstance que le livre-journal ne reprend que les soldes mensuels des comptes, ne sont pas suffisantes pour faire regarder une comptabilité comme non probante dès lors que les inventaires ont été régulièrement établis » (CE, arrêt du 7 novembre 1975, n° 90786). Si l’absence même d’un livre d’inventaire ne suffit pas, l’absence d’une colonne de contenance sur un inventaire qui existe et qui est exact ne peut pas suffire davantage."
+      "texte": "Le même document répond au fond. Son § 150 rappelle que « le juge s’attache davantage à la valeur d’ensemble de la comptabilité plutôt qu’à la tenue des seuls livres en fonction des exigences du code du commerce », et que « l’absence d’un livre exigé par le code de commerce tel le livre d’inventaire et la circonstance que le livre-journal ne reprend que les soldes mensuels des comptes, ne sont pas suffisantes pour faire regarder une comptabilité comme non probante dès lors que les inventaires ont été régulièrement établis » ([CE, arrêt du 7 novembre 1975, n° 90786](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19751107-90786)). Le contribuable y obtient la réformation : le Conseil d’État retient que ses résultats sont « suffisamment corroborés [...] par les indications tirées de la reconstitution d’une comptabilité matières et les explications fournies au sujet de la casse, de la perte ou du vol de certains articles ». Si l’absence même d’un livre d’inventaire ne suffit pas, l’absence d’une colonne de contenance sur un inventaire qui existe et qui est exact ne peut pas suffire davantage."
     },
     {
       "kind": "titre",
@@ -1727,7 +1728,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La décision invoquée existe : [CE, 7e et 9e sous-sections réunies, 24 juillet 1987, n° 56621](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/1987-07-24/56621). Deux précisions s’imposent néanmoins. Elle est inédite au recueil Lebon, et n’a donc pas la portée d’une décision de principe. Elle statue en matière de taxe sur la valeur ajoutée, pour les années 1975 à 1978, sur la régularité d’une procédure de **rectification d’office**, qui n’est pas la procédure contradictoire suivie ici."
+      "texte": "La décision invoquée existe : [CE, 7e et 9e sous-sections réunies, 24 juillet 1987, n° 56621](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19870724-56621). Deux précisions s’imposent néanmoins. Elle est inédite au recueil Lebon, et n’a donc pas la portée d’une décision de principe. Elle statue en matière de taxe sur la valeur ajoutée, pour les années 1975 à 1978, sur la régularité d’une procédure de **rectification d’office**, qui n’est pas la procédure contradictoire suivie ici."
     },
     {
       "kind": "paragraphe",
@@ -1739,7 +1740,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Quant à la décision du 25 juillet 1980 (n° 13170) citée par la proposition de rectification, le service ne la défend pas et n’en reproduit pas les motifs. Nous n’avons pas été en mesure de la retrouver sous ces date et numéro dans les bases publiques (Légifrance, ArianeWeb, Juricaf) et ne l’analysons donc pas au fond. L’exigence d’un état détaillé qu’elle exprimerait est au demeurant satisfaite : la doctrine demande d’énumérer « autant d’articles qu’il existe de produits présentant des caractéristiques différentes au regard de leur nature, de leur dimension, de leur marque » ([BOI-BIC-DECLA-30-10-20-50, § 70](https://bofip.impots.gouv.fr/bofip/2835-PGP)), et c’est exactement ce que font les trois inventaires, ligne par ligne, avec un prix unitaire et une valeur par article."
+      "texte": "Quant à la décision du 25 juillet 1980 (n° 13170) citée par la proposition de rectification, le service ne la défend pas et n’en reproduit pas les motifs. Nous n’avons pas été en mesure de la retrouver sous ces date et numéro dans aucune base librement accessible et ne l’analysons donc pas au fond. L’exigence d’un état détaillé qu’elle exprimerait est au demeurant satisfaite : la doctrine demande d’énumérer « autant d’articles qu’il existe de produits présentant des caractéristiques différentes au regard de leur nature, de leur dimension, de leur marque » ([BOI-BIC-DECLA-30-10-20-50, § 70](https://bofip.impots.gouv.fr/bofip/2835-PGP)), et c’est exactement ce que font les trois inventaires, ligne par ligne, avec un prix unitaire et une valeur par article."
     },
     {
       "kind": "titre",
@@ -1756,7 +1757,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le courrier écarte d’ailleurs lui-même toute appréciation de gravité, en retenant que la variabilité des fichiers suffit « quelque que soit l’importance des différences constatées » (p. 34). Une irrégularité dont on refuse par principe de mesurer l’importance ne peut pas, dans le même mouvement, être qualifiée de grave."
+      "texte": "Le courrier écarte d’ailleurs lui-même toute appréciation de gravité, en retenant que la variabilité des fichiers suffit « quelque que soit l’importance des différences constatées » (p. 34). Le service renonce ainsi à toute appréciation de l’importance des écarts, alors que la doctrine qu’il applique subordonne le rejet à des irrégularités graves et répétées. Il lui appartient d’indiquer en quoi consiste ici la gravité."
     },
     {
       "kind": "paragraphe",
@@ -1775,17 +1776,15 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Leur exactitude n’est pas une affirmation : elle est vérifiable. La variation de stock boissons de l’exercice 2023-2024 que le service a retenue, moins 1 029,67 €, est exactement la différence entre les deux inventaires datés qu’il conteste. Une pièce dont la comptabilité matière du service reprend le résultat au centime ne peut pas, dans le même courrier, être déclarée impropre à justifier ce résultat."
+      "texte": "Leur exactitude n’est pas une affirmation : elle est vérifiable. La variation de stock boissons de l’exercice 2023-2024 que le service a retenue, moins 1 029,67 €, est exactement la différence entre les deux inventaires datés qu’il conteste. Une pièce dont la comptabilité matière du service reprend le résultat au centime ne peut pas, dans le même courrier, être déclarée impropre à justifier la valeur du stock à la clôture, qui est ce résultat."
     },
     {
       "kind": "paragraphe",
       "texte": "Aucun montant de rectification n’étant rattaché à ce grief, sa disparition ne réduit directement aucun chiffre. Elle atteint en revanche le fondement du rejet de comptabilité : sur les trois motifs invoqués, le premier ne subsiste pas, et la reconstitution qui en découle perd d’autant sa justification."
     },
     {
-      "kind": "interne",
-      "audience": "avocat",
-      "titre": "À vérifier avec la gérante avant l’entretien",
-      "texte": "1. Origine des supports de comptage. Le comptage du 31/03/2024 est porté sur une fiche client Franche-Comté Boissons Service éditée le 7 mars 2024, dont une colonne est intitulée « Quantités à commander », et celui du 31/03/2025 sur des feuilles manuscrites non datées et raturées. Question à poser : le comptage physique a-t-il été fait le 31 mars, le tarif fournisseur n’ayant servi que de trame de liste ? Existe-t-il des feuilles de comptage datées ? Tant que la réponse n’est pas connue, la page ne soutient que ce qui est vérifiable : les pages récapitulatives sont datées, et leurs totaux se raccordent au centime au compte 310200. 2. Transcription. En recoupant la page 10 du PDF 2023 avec le CSV publié, deux écarts de transcription apparaissent dans le fichier public inventaire_2023-03-31.csv : une ligne « Vittel 50cl » (29,04 €) qui fait doublon avec « San Pellegrino 50cl », et une ligne « Infusion Verveine » portée à 0 alors que l’original porte 1 à 8,80 €. Après ces deux corrections et le retrait des biscuits, du sucre et des crackers (130,03 €), la transcription retombe exactement sur le total de 727,70 € de la page récapitulative. Ces deux corrections n’ont pas été appliquées ici : le fichier inventaires.json alimente d’autres pages du site, et la reprise doit être faite en une fois, avec vérification des pages consommatrices. 3. Les 27 lignes « à vérifier » du CSV public (1 929,34 €) sont désormais assumées dans le corps de la page. Si le choix est de ne pas les exposer, c’est le fichier qui doit être retiré de la publication, pas la mention qui doit être supprimée de la page. 4. La page « 5 - L’alcool passé en cuisine » invoque un libellé « Porto 75cl » comme étant celui de l’inventaire de clôture. L’original porte « Porto », sans contenance : la mention vient de l’état complété. L’argument est à retirer de cette page, faute de quoi il confirme le grief traité ici. 5. La page 3.1.9 « Le volume disponible gonflé par une variation de stock erronée » était bâtie sur une inversion de signe : le rapprochement du paragraphe 3.3 la prive de son objet et elle a été reprise en conséquence. Les chiffres de 2 162 € et de 1 892 € figurent encore dans l’onglet Rendu final (renduFinal/reconstitution-volumes-liquides.json, renduFinal/inventaire-stocks.json) et dans src/data/analyseBoissons.ts : ils doivent être retirés avant toute production."
+      "kind": "paragraphe",
+      "texte": "Un point de ce grief reste à établir par une pièce. Les trois inventaires sont arrêtés par une page récapitulative datée de la clôture, et la variation qu’ils produisent se retrouve au centime dans le compte 310200. Les feuilles de comptage qui ont servi à les établir ne sont en revanche pas encore versées au dossier, et la société les recherche. Tant qu’elles ne le sont pas, nous ne soutenons pas que la date du relevé physique soit démontrée : nous soutenons que le grief, tel que le service le formule, porte sur l’existence et sur la forme des inventaires, et que sur ces deux points il est contredit par les pièces qu’il détenait avant sa proposition."
     },
     {
       "kind": "piecejointe",
@@ -1809,7 +1808,7 @@
         },
         {
           "fichier": "inventaires/Inventaire_Demi_Lune_2025-03-31.pdf",
-          "label": "Inventaire d’origine au 31/03/2025 (PDF : récapitulatif daté en page 1, feuilles de comptage à partir de la page 8)"
+          "label": "Inventaire d’origine au 31/03/2025 (PDF : récapitulatif daté en page 1, comptage manuscrit à partir de la page 2, feuilles de comptage des boissons à partir de la page 8)"
         }
       ]
     },

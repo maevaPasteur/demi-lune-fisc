@@ -1,14 +1,14 @@
 {
   "meta": {
     "slug": "fichiers-evenement-reglement",
-    "source": "Réponse DDFiP 39 du 04/09/2026, p. 38 à 45",
+    "source": "Réponse DDFiP 39 du 04/09/2026, p. 38 à 46",
     "lettre": "G"
   },
   "entete": {
     "positionService": "Le service maintient l’intégralité de ses constats sur les fichiers Événement et Règlement. Il refuse de discuter la certification de la caisse, qu’il qualifie d’auto-certification, et affirme qu’aucune clé d’identification unique ne relie le fichier « tpvevenement » aux fichiers Règlement, Ticket ligne, Ticket et TVA, ce qui interdirait toute traçabilité certaine des suppressions. Il oppose ensuite les écarts de nombre d’articles entre les annexes B (40 218 / 39 998 / 39 132) et les annexes C (38 479 / 38 219 / 37 446), qu’il juge en outre « clairement et nettement minorées », ainsi que les écarts de chiffre d’affaires entre les annexes B, C, F et G, toutes issues du même logiciel. Il ajoute enfin un grief nouveau, tiré d’une incohérence de taux de TVA dans les annexes C-1 à C-3, dont il n’exclut pas qu’elle provienne d’une manipulation du logiciel par les dirigeants.",
-    "reponseCourte": "Refaits sur les fichiers eux mêmes, les quatre montants du service se réconcilient intégralement : deux d’entre eux sont le même compteur de caisse arrêté à deux endroits, l’annexe B est un sous-ensemble strict de l’archive certifiée qu’elle est censée contredire, et les colonnes de TVA invoquées, ajoutées par le service, ramènent une fois appliquées la TVA reconstituée à 18,76 € de la TVA reversée sur trois exercices.",
+    "reponseCourte": "Refaits sur les fichiers eux mêmes, les quatre montants du service se réconcilient à 0,39 % au plus : deux d’entre eux sont le même compteur de caisse arrêté à deux endroits, l’annexe B est un sous-ensemble strict de l’archive certifiée qu’elle est censée contredire, et les colonnes de TVA invoquées, ajoutées par le service, ramènent une fois appliquées la TVA reconstituée à 18,76 € de la TVA reversée sur trois exercices. La certification de la caisse reste à produire : la pièce du 01/12/2018 n’est pas au dossier.",
     "enjeu": "Pilier « logiciel » du rejet de comptabilité : traçabilité des suppressions, nombre d’articles, chiffre d’affaires et taux de TVA.",
-    "statut": "demonte"
+    "statut": "a-etayer"
   },
   "sections": [
     {
@@ -16,7 +16,7 @@
       "source": "fisc",
       "numero": 1,
       "titre": "Ce que soutient l’administration",
-      "sousTitre": "Partie « G- Fichiers Evènement et Règlement (Pages 22 à 29 de la proposition de rectifications) », p. 38 à 45 de la réponse du 04/09/2026."
+      "sousTitre": "Partie « G- Fichiers Evènement et Règlement (Pages 22 à 29 de la proposition de rectifications) », p. 38 à 46 de la réponse du 04/09/2026."
     },
     {
       "kind": "titre",
@@ -277,7 +277,7 @@
           "label": "Exercice"
         },
         {
-          "label": "CA déclaré, synthèse A",
+          "label": "Total de la synthèse de caisse, annexe A",
           "align": "right"
         },
         {
@@ -808,13 +808,20 @@
       "texte": "La conclusion de la partie G est reprise mot pour mot de la proposition de rectifications : « Comme la proposition de rectifications l’indiquait, c’est cette fluctuation, sur des fichiers, qui sont pourtant tous issus du même logiciel de caisse utilisé, qui nuit gravement à la comptabilité et donc au final à la société. » (p. 45)."
     },
     {
+      "kind": "titre",
+      "texte": "La conclusion de la partie G : l’archive fiscale et le format des fichiers"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service tire enfin, en haut de la page 46, une conclusion générale du format des fichiers qui lui ont été remis : « À la lecture de la réponse, Maître THIVEND semble considérer que les fichiers EXCEL ne sont pas des archives inaltérables et que ces fichiers inaltérables sont ceux remis sur la clé USB envoyée par la société au service 13 mars 2026. Or, les fichiers remis sur cette clé USB étaient des fichiers EXCEL. Ainsi, contrairement à ce qu’affirme Maître THIVEND, l’ensemble des fichiers transmis par la société, depuis le début, du fait que ce soit des fichiers EXCEL, sont tous du même format et ne peuvent donc être considérés, les uns comme les autres, comme une archive inaltérable. Du fait de cette nature, le service est donc en droit de considérer que la société n’a pas transmis d’archive fiscale inaltérable et que de ce fait, **la comptabilité est non probante dans sa totalité et incapable de justifier le volume d’affaires déclarée**. » (p. 46)."
+    },
+    {
       "kind": "kpis",
       "items": [
         {
-          "label": "Clé d’identification unique",
+          "label": "Clé commune entre les cinq fichiers, selon le service",
           "valeur": "Absente",
           "sub": "Entre « tpvevenement » et les fichiers Règlement, Ticket ligne, Ticket et TVA (p. 39)",
-          "highlight": true,
           "couleur": "red"
         },
         {
@@ -823,10 +830,9 @@
           "sub": "Exercices clos aux 31/03/2023, 2024 et 2025 (p. 41)"
         },
         {
-          "label": "Nombre d’articles, annexes C-1 à C-3",
+          "label": "Nombre d’articles, annexes C-1 à C-3 (quantités que le service dit « minorées »)",
           "valeur": "38 479 / 38 219 / 37 446",
-          "sub": "Quantités jugées « clairement et nettement minorées » (p. 42)",
-          "couleur": "red"
+          "sub": "Quantités jugées « clairement et nettement minorées » (p. 42)"
         },
         {
           "label": "Écart de quantités 2022-2023 rappelé par la réponse",
@@ -869,15 +875,9 @@
           "couleur": "teal"
         },
         {
-          "label": "Colonne de contrôle du service, annexe B",
-          "valeur": "- 17 561,00 €",
-          "sub": "« prix unitaire × Qté » moins le CA de l’annexe, exercice 2022-2023",
-          "couleur": "red"
-        },
-        {
-          "label": "Même colonne, annexe C",
-          "valeur": "- 0,04 €",
-          "sub": "L’archive certifiée est cohérente à 4 centimes près sur l’année",
+          "label": "Colonne de contrôle du service : annexe B contre annexe C",
+          "valeur": "- 17 561,00 € contre - 0,04 €",
+          "sub": "Exercice 2022-2023 ; l’annexe B n’est pas une somme de ventes mais le compteur perpétuel de la caisse",
           "couleur": "teal"
         },
         {
@@ -1793,13 +1793,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La société a produit, le 13 janvier 2026, la pièce datée du 1er décembre 2018 relative au logiciel SERVILOG d’AKEAD (POS 5.03-Eb), que la proposition de rectification mentionne page 3 et dont elle indique page 22 que le logiciel « figure sur les attestations transmises au service ». Que cette pièce relève de la première ou de la seconde voie, elle satisfait à l’obligation légale. Le service ne peut la neutraliser par une qualification qu’il n’étaye pas, sans dire laquelle des deux voies serait en cause ni en quoi la pièce serait irrégulière."
-    },
-    {
-      "kind": "interne",
-      "audience": "avocat",
-      "titre": "À joindre au mémoire",
-      "texte": "La pièce du 01/12/2018 n’est pas dans le dossier numérique. Joindre l’original au mémoire et préciser sa nature exacte : certificat NF525 délivré par AFNOR Certification sous accréditation COFRAC, ou attestation individuelle de l’éditeur AKEAD conforme au modèle BOI-LETTRE-000242. Dans les deux cas l’argument tient, mais la formulation gagne à nommer la voie retenue."
+      "texte": "La société a produit, le 13 janvier 2026, la pièce datée du 1er décembre 2018 relative au logiciel SERVILOG d’AKEAD (POS 5.03-Eb), que la proposition de rectification mentionne page 3 et dont elle indique page 22 que le logiciel « figure sur les attestations transmises au service ». Que cette pièce relève de la première ou de la seconde voie, elle satisfait à l’obligation légale. Le service ne peut la neutraliser par une qualification qu’il n’étaye pas, sans dire laquelle des deux voies serait en cause ni en quoi la pièce serait irrégulière. Cette production écarte par elle même l’amende de l’article 1770 duodecies du code général des impôts, qui sanctionne de 7 500 € par système de caisse le seul fait de ne pas justifier, par l’attestation ou le certificat de l’article 286, I, 3° bis, de la conformité du logiciel détenu."
     },
     {
       "kind": "titre",
@@ -1830,6 +1824,30 @@
       "texte": "Le contribuable a remis ce que la caisse produit : le journal des événements sans colonne de libellé, les tickets avec leur libellé, les règlements et le journal de TVA. L’absence, dans le fichier « tpvevenement », d’une clé partagée avec les fichiers de tickets relève de la conception de l’éditeur, couverte par la pièce de conformité du 01/12/2018. Reprocher au restaurant la structure interne d’un logiciel dont la conformité est justifiée revient à lui imputer une obligation qui pèse sur un tiers."
     },
     {
+      "kind": "titre",
+      "texte": "Ce que le service a reçu le 16 mars 2026, il l’a lui même appelé une archive fiscale"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service tire du format des fichiers, en haut de la page 46, un motif de rejet qui ne dépend d’aucun des douze griefs : les fichiers remis sur la clé USB étaient des fichiers Excel, donc la société n’aurait transmis aucune archive fiscale inaltérable, donc la comptabilité serait « non probante dans sa totalité ». Sur le fait, il faut concéder, et le dire nettement : ce qui a été remis est bien une extraction au format .xls. L’affirmation de notre mémoire du 10 juillet 2026, selon laquelle l’export remis sur clé USB les 16 et 30 mars 2026 serait l’archive inaltérable au sens de la norme, est inexacte et nous ne la maintenons pas. L’archive, elle, est produite et conservée par le système certifié lui même ; elle est restée dans la caisse, et le service ne l’a jamais demandée. Ce qu’il a demandé, et reçu, est la copie des données soumises à contrôle, selon l’option c qu’il a lui même fait formaliser par écrit. La conséquence qu’il tire du format de cette copie est démentie par ses propres pièces, par le texte au titre duquel elle a été remise, et par l’usage qu’il en a fait."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le premier démenti est dans la proposition de rectification du 18 mai 2026. Le service y décrit lui même la remise du 13 mars 2026 en ces termes : « la société a : - Retourné la lettre d’option (annexe II) des modalités de l’article L-47-A-II du L-P-F, choisissant l’option c - transmis ses archives fiscales de sa caisse informatique pour la période vérifiée, les 5 fichiers communiqués, étant enregistrés sur une clé USB KeyOuest sous les noms suivants : 20220401 AND 20250331 tpvevenement .xls […] » (p. 5, passage répété p. 10). Le service a donc qualifié ces cinq fichiers d’« archives fiscales » en les nommant avec leur extension, et il en a accusé réception par un courrier recommandé du 16 mars 2026 « indiquant la nature des fichiers envoyés par la société (noms, taille, commentaires divers) » (p. 6), sans formuler la moindre réserve de format. La page 46 dit le contraire de la page 5."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le deuxième démenti est dans le texte au titre duquel ces fichiers ont été remis. L’option c du II de l’article L. 47 A du livre des procédures fiscales prévoit que le contribuable « met alors à la disposition de l’administration, dans les quinze jours suivant la formalisation par écrit de son choix, les copies des documents, données et traitements soumis à contrôle », ces copies étant « produites sur tous supports informatiques, répondant à des normes fixées par arrêté du ministre chargé du budget ». Une copie remise pour l’exécution des traitements du vérificateur n’est pas l’archive de l’article 286 du code général des impôts : les deux objets n’ont ni la même fonction, ni le même régime, ni le même destinataire. Et si le service avait estimé cette copie non conforme à l’arrêté, la voie ouverte était procédurale, par une demande de régularisation du support ou du format ; il ne l’a jamais empruntée, et une irrégularité de copie qu’il n’a pas relevée ne peut pas devenir, au stade de la réponse aux observations, un motif de rejet de la comptabilité."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le troisième démenti est dans le texte de l’obligation elle même. L’article 286, I, 3° bis du code général des impôts impose d’« utiliser un logiciel ou un système satisfaisant à des conditions d’inaltérabilité, de sécurisation, de conservation et d’archivage des données en vue du contrôle de l’administration fiscale, attestées par un certificat délivré par un organisme accrédité […] ou par une attestation individuelle de l’éditeur […] ». L’obligation pèse sur le logiciel ou le système, et sa preuve est la pièce de conformité, non le format du fichier que le contribuable remet au vérificateur. La doctrine que le service invoque lui même sur trois pages est écrite dans les mêmes termes : le BOI-TVA-DECLA-30-10-30, § 220 et suivants, commence chacune de ses phrases par « le logiciel ou système de caisse doit » permettre d’archiver les données et prévoir une traçabilité. Or le service n’a jamais examiné la procédure d’archivage sur la machine : il n’a usé ni du a) du II de l’article L. 47 A, ni du III, et l’unique intervention devant l’écran de la caisse, le 29 janvier 2026, a porté sur l’édition de statistiques par article. Il conclut à un défaut d’archivage sans avoir regardé l’archivage."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le dernier point est de simple cohérence. Les annexes C, D, E, F, G et H, c’est à dire la comptabilité matière, la totalité du rejet et la totalité de la reconstitution, sont construites sur ces mêmes cinq fichiers, que la proposition range sous l’intitulé « Issues des données communiquées par courrier du 13 Mars 2026 » (p. 5 et 6). Le service ne peut pas fonder 471 826 € de rehaussement sur des fichiers dont il soutient, page 46, qu’ils n’ont aucune valeur : ou bien ces fichiers permettent d’établir les ventes, les quantités, les règlements et la TVA, et c’est ce qu’il a fait pendant douze annexes, ou bien ils ne le permettent pas, et c’est la reconstitution qui tombe avec eux. Le format d’une copie que le service a lui même appelée archive fiscale, dont il a accusé réception sans réserve et dont il a tiré l’intégralité de ses chiffrages, ne peut pas rendre une comptabilité « non probante dans sa totalité »."
+    },
+    {
       "kind": "alerte",
       "couleur": "orange",
       "titre": "Le raisonnement de la page 39 est circulaire",
@@ -1844,7 +1862,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les quatre montants opposés par le service se réconcilient intégralement : deux d’entre eux sont deux arrêtés du même compteur de caisse, un troisième est la somme des encaissements, le quatrième est la somme des ventes, et l’amplitude résiduelle est de 0,02 % à 0,39 % selon l’exercice. L’écart de quantités entre les annexes B et C est expliqué article par article, et il est à l’avantage de l’annexe C, dont la cohérence interne est établie par la colonne de contrôle du service lui même."
+      "texte": "Les quatre montants opposés par le service se réconcilient, à 0,39 % au plus : deux d’entre eux sont deux arrêtés du même compteur de caisse, un troisième est la somme des encaissements, le quatrième est la somme des ventes, et l’amplitude résiduelle est de 0,02 % à 0,39 % selon l’exercice. L’écart de quantités entre les annexes B et C est expliqué article par article, et il est à l’avantage de l’annexe C, dont la cohérence interne est établie par la colonne de contrôle du service lui même."
     },
     {
       "kind": "paragraphe",
@@ -1970,6 +1988,10 @@
     {
       "kind": "paragraphe",
       "texte": "Il reste, dans la partie G, une accusation de manipulation formulée à l’état d’hypothèse et une affirmation de minoration formulée sans un seul chiffre. Ni l’une ni l’autre ne peut fonder un rejet de comptabilité, ni a fortiori une majoration pour manquement délibéré, dont la preuve incombe à l’administration."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La certification de la caisse reste à produire. La pièce du 1er décembre 2018 dont la société se prévaut ne figure pas dans le dossier numérique communiqué, et sa nature exacte, certificat de conformité NF525 ou attestation individuelle de l’éditeur, doit être arrêtée sur l’original. La société la demande à son éditeur. Les développements qui précèdent sur les pages 63 à 68 du courrier supposent cette pièce, et ils sont présentés sous cette réserve ; les réconciliations de montants qui précèdent, elles, se refont sur les seuls fichiers remis au service."
     },
     {
       "kind": "piecejointe",

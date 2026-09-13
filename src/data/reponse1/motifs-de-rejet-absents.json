@@ -6,9 +6,9 @@
   },
   "entete": {
     "positionService": "Sous le titre « U- Motifs de rejet de comptabilité absent dans la réponse » (p. 93), le service relève trois motifs de rejet de comptabilité auxquels, selon lui, le mémoire de Maître THIVEND du 10/07/2026 n’a pas répondu. D’abord la documentation technique de la caisse informatique, que « la société n’a pas été en meure de produire (…) tout au long de la procédure fiscale » et qui « ne figure pas non plus dans la réponse ». Ensuite les erreurs d’application de taux de TVA article par article, mises en évidence par les annexes C-1 à C-3 remises sur clé USB le lundi 30 mars 2026 (Partie VIII de la proposition de rectifications) : la réponse « aborde bien la problématique de la TVA à plusieurs reprises mais sans directement faire allusion à cette question d’erreur de taux (article par article) ». Enfin le différentiel d’encaissements par mode de règlement entre comptabilité et données de caisse (Partie X) : la réponse « n’explique jamais pourquoi les données de caisse propose des chiffres, par mode de règlement, alors que la comptabilité en mentionne d’autres ». Sur ce dernier point, le service admet que « les écarts ne semblent pas significatifs » mais estime qu’ils « sont de nature à interroger le service sur la qualité et l’inaltérabilité des données de caisse ».",
-    "reponseCourte": "Chiffrés à partir des propres annexes du service, les trois motifs se retournent : les corrections de taux que le vérificateur a lui-même calculées, appliquées intégralement, laissent la TVA reconstituée à 18,76 € de la TVA reversée sur trois exercices, et l’écart d’encaissements ressort à 0,29 % du chiffre d’affaires, l’un et l’autre au bénéfice du Trésor.",
+    "reponseCourte": "Chiffrés à partir des propres annexes du service, deux des trois motifs se retournent : les corrections de taux que le vérificateur a lui-même calculées, appliquées intégralement, laissent la TVA reconstituée à 18,76 € de la TVA reversée sur trois exercices, et l’écart d’encaissements ressort à 0,29 % du chiffre d’affaires, l’un et l’autre au bénéfice du Trésor. Le troisième, la documentation de caisse, n’est pas chiffré par le service et n’est toujours pas produit : il est établi et détenu par l’éditeur.",
     "enjeu": "Trois motifs de rejet de comptabilité que le service considère comme non contestés, donc acquis, et qu’il ajoute au soutien du rejet et de la reconstitution.",
-    "statut": "demonte"
+    "statut": "partiel"
   },
   "sections": [
     {
@@ -41,8 +41,7 @@
         {
           "label": "Erreurs de taux visées",
           "valeur": "10 % / 20 %",
-          "sub": "« taux de 10 % appliqué, au lieu de 20 %, et inversement » (p. 93)",
-          "highlight": true
+          "sub": "« taux de 10 % appliqué, au lieu de 20 %, et inversement » (p. 93)"
         },
         {
           "label": "Parties de la proposition visées",
@@ -69,7 +68,15 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service ne précise ici ni quelle documentation exacte a été demandée, ni à quelle date, ni sur quel fondement légal, ni quelle conséquence il tire de cette absence sur le caractère probant de la comptabilité. Il se borne à constater deux silences successifs : celui de la procédure de contrôle, puis celui du mémoire du 10/07/2026. Ce constat est rangé, par le titre même de la partie, parmi les **motifs de rejet de comptabilité** que la réponse n’aurait pas discutés."
+      "texte": "Le courrier n’ajoute ici aucun élément : le point a/ de la page 93 tient en deux phrases. Le grief est exposé dans la **proposition de rectification du 18 mai 2026**, sous le titre « III LA DOCUMENTATION DE LA CAISSE INFORMATIQUE », sur le fondement des articles 911-2 et 911-4 du plan comptable général, et il y est expressément qualifié de « point complémentaire ». C’est à ce grief, dans ces termes, que le chapitre 3 répond."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le constat auquel ce sous-point renvoie est antérieur, et il figure page 3 de la proposition de rectification : « Le jeudi 29 janvier 2026, à 10h00, comme prévu, le vérificateur et Monsieur Valentin BOUZER se sont présentés au restaurant où ils ont été accueillis par la comptable et le fils de Madame Ghislaine BEHEM. A leur arrivée, un guide d’utilisation du logiciel SERVILOG a été présenté. Mais, ce document n’a pas permis de beaucoup aider à la compréhension de la caisse. En effet, aucune des copies écran figurant dans ce guide ne correspondaient aux écrans apparaissant sur la caisse du restaurant. » Le vérificateur ajoute que « les différences étaient telles, qu’il n’a pas été possible [...] de pouvoir considérer que cette documentation correspondait à la caisse utilisée par la société ». C’est donc une non-correspondance, et non l’absence de tout document, qui est constatée page 3."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le grief lui-même est développé page 17 de la proposition, sous le titre « III LA DOCUMENTATION DE LA CAISSE INFORMATIQUE » : « Malgré ses demandes, et les recherches par la comptable, la société a été dans l’incapacité de fournir une quelconque documentation ou manuel d’utilisation relative précisément à sa caisse informatique. » Le service y cite l’article 911-2 du plan comptable général, « Une documentation décrivant les procédures et l’organisation comptables est établie en vue de permettre la compréhension et le contrôle du système de traitement. Cette documentation est conservée aussi longtemps qu’est exigée la présentation des documents comptables auxquels elle se rapporte. », puis l’article 911-4, « L’organisation de la comptabilité tenue au moyen de systèmes informatisés implique l’accès à la documentation relative aux analyses, à la programmation et à l’exécution des traitements, en vue, notamment, de procéder aux tests nécessaires à la vérification des conditions d’enregistrement et de conservation des écritures. » Il en tire que « l’absence de toute documentation constitue **un point complémentaire** permettant de considérer que la comptabilité présentée est impropre à justifier de la réalité de l’activité de l’entreprise »."
     },
     {
       "kind": "titre",
@@ -480,6 +487,10 @@
       "texte": "Le tableau de la page 25 porte d’ailleurs en lui-même une partie de l’explication : le service y compare une extraction brute de caisse à des comptes de trésorerie retraités. Sa propre colonne « comptabilité » est arrêtée après ajustements de remise en banque et après déduction des pourboires (compte 706800), et elle comprend un compte 511240 « chèques KDOLE » (290 €, 525 € puis 390 €) qui ne correspond à aucune touche de règlement de la caisse. Deux périmètres différents ne se rapprochent pas à l’euro près."
     },
     {
+      "kind": "paragraphe",
+      "texte": "La cause de l’écart est du reste nommée par le service lui-même. La proposition de rectification du 18 mai 2026 relève, page 25, que « la comptabilité se base sur des récapitulatifs journaliers émis par la caisse et **retranscrits sur un agenda** pour aider à l’enregistrement comptable », et précise, page 9, que les données d’encaissement issues du logiciel de caisse sont « reprises manuellement » dans la comptabilité. Un écart cumulé de **3 703,29 € sur 1 278 214,22 €, soit 0,29 %**, réparti sur trois exercices et sur des centaines de reports manuels, est la signature d’une recopie, non d’une altération de données. Le service qualifie lui-même ces écarts de non significatifs (p. 93)."
+    },
+    {
       "kind": "titre",
       "texte": "Deux annexes du service, tirées de la même caisse, divergent davantage entre elles",
       "numero": "2.5"
@@ -588,16 +599,32 @@
     },
     {
       "kind": "titre",
-      "texte": "Point a : la documentation technique est celle de l’éditeur, et son absence ne chiffre rien",
+      "texte": "Point a : une documentation a bien été présentée, et son absence ne chiffrerait rien",
       "numero": "2.6"
     },
     {
       "kind": "paragraphe",
-      "texte": "La documentation technique d’un logiciel de caisse est établie et détenue par son éditeur, non par l’exploitant du restaurant. La société ne peut remettre que ce que l’éditeur lui a fourni. Le courrier ne précise du reste ni quelle documentation exacte a été demandée, ni à quelle date, ni sur quel fondement."
+      "texte": "La documentation technique d’un logiciel de caisse est établie et détenue par son éditeur. Le grief, tel que la proposition de rectification du 18 mai 2026 le formule sous le titre « III LA DOCUMENTATION DE LA CAISSE INFORMATIQUE », appelle quatre réponses, toutes tirées des pièces du service."
     },
     {
       "kind": "paragraphe",
-      "texte": "Surtout, l’absence d’une documentation ne caractérise aucune minoration de recettes : elle ne dit rien du montant du chiffre d’affaires encaissé. Le service ne lui attribue d’ailleurs, page 93, aucune incidence chiffrée. Un rejet de comptabilité suivi d’une reconstitution ne peut pas reposer sur une pièce manquante dont le service n’a tiré aucun constat matériel."
+      "texte": "D’abord, **une documentation a été produite, et c’est le vérificateur qui l’écrit** : son compte rendu de la visite du 29 janvier 2026 relève qu’« un guide d’utilisation du logiciel SERVILOG a été présenté ». Le reproche réel n’est donc pas l’absence de documentation, mais le fait qu’« aucune des copies écran figurant dans ce guide ne correspondaient aux écrans apparaissant sur la caisse du restaurant ». Ce n’est pas le même reproche et il ne se traite pas de la même façon."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ensuite, **cette non-correspondance s’explique par la nature du document** : le guide est celui de l’éditeur, et la proposition identifie elle-même la version installée, « SERVILOG de AKEAD POS 5.03-Eb ». Un guide générique ne reproduit pas l’interface paramétrée d’un établissement."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Ensuite, l’article 911-2 du plan comptable général, que le service cite lui-même, exige « une documentation décrivant **les procédures et l’organisation comptables** [...] en vue de permettre la compréhension et le contrôle du système de traitement ». Le service, lui, demande « une quelconque documentation ou manuel d’utilisation relative précisément à sa caisse informatique ». Il oppose un texte à un objet que ce texte ne vise pas."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Enfin, **le service qualifie lui-même ce motif de « point complémentaire »** et ne lui attache aucune incidence chiffrée, alors qu’il a exécuté l’intégralité de ses traitements sur les données de cette caisse et en a tiré douze annexes."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "En tout état de cause, l’absence d’une documentation ne caractérise aucune minoration de recettes : elle ne dit rien du montant du chiffre d’affaires encaissé. Le service ne lui attribue d’ailleurs, page 93, aucune incidence chiffrée. Un rejet de comptabilité suivi d’une reconstitution ne peut pas reposer sur une pièce manquante dont le service n’a tiré aucun constat matériel."
     },
     {
       "kind": "chapitre",
@@ -613,6 +640,40 @@
     {
       "kind": "paragraphe",
       "texte": "Aucun de ces trois points ne peut donc soutenir un rejet de comptabilité, ni la reconstitution qui en découle, laquelle notifie **421 899,17 € de minoration de chiffre d’affaires hors taxes** et **49 927 € de rappels de TVA** sur les trois exercices vérifiés."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le même contrôle, mené ticket par ticket, va dans le même sens. La ventilation 10 / 20 reconstituée avec la colonne « taux » du fichier remis ne retrouve celle du journal de TVA que dans **un ticket sur cinq** (21,2 %, 19,1 % puis 21,0 %) ; avec les taux corrigés par le service, elle la retrouve dans **76,2 %, 84,3 % puis 86,1 % des tickets**. Le résidu de 14 à 24 % de tickets qui ne se recalent pas ne se lit pas contre la société : il mesure ce qui reste d’approximatif dans la colonne « taux » du fichier remis, celle-là même dont nous soutenons qu’elle n’est pas la donnée de liquidation. La donnée de liquidation, elle, est la TVA figée ticket par ticket par la caisse, et elle se rapproche du compte 445710 à **205,22 € près, soit 0,15 %**."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Motifs de la page 93 auxquels la présente réponse répond au fond",
+          "valeur": "3 sur 3",
+          "sub": "a/ documentation de caisse, b/ taux de TVA article par article, c/ encaissements ; le point a/ est traité tel que la proposition du 18/05/2026 le formule",
+          "couleur": "teal"
+        },
+        {
+          "label": "Incidence des corrections de taux du vérificateur, appliquées intégralement",
+          "valeur": "18,76 €",
+          "sub": "TVA reconstituée 135 065,93 € contre 135 084,69 € reversés au compte 445710, soit 0,014 %, en faveur du Trésor",
+          "couleur": "teal"
+        },
+        {
+          "label": "Écart d’encaissements recalculé, annexe F contre comptabilité",
+          "valeur": "0,29 %",
+          "sub": "3 703,29 € sur 1 278 214,22 € de chiffre d’affaires TTC déclaré, la comptabilité déclarant plus que la caisse",
+          "couleur": "teal"
+        },
+        {
+          "label": "Rappel de droits chiffré par le service sur la partie U",
+          "valeur": "0 €",
+          "sub": "la page 93 n’attache aucune incidence chiffrée à aucun des trois motifs",
+          "couleur": "teal",
+          "highlight": true
+        }
+      ]
     },
     {
       "kind": "piecejointe",

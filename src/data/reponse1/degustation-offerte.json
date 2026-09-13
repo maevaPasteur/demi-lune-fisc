@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service ne conteste ni le décompte note par note (6 292 dégustations), ni la dose de 2 cl, ni la lecture ligne à ligne de l’annexe C. Il oppose deux choses : d’abord que les 125,80 litres de Maître THIVEND sont « une globalisation sur 3 ans » ; ensuite que sa propre reconstitution retranche déjà, PAR EXERCICE, une fraction de 15 % sur les vins au BIB (198 litres arrondis sur trois exercices) et une fraction de 15 % supplémentaire sur les bouteilles bouchées de 75 cl (500 litres arrondis sur trois exercices), soit « près de 4 fois supérieur » aux 125,80 litres demandés. Il en conclut qu’il « ne voit aucune raison de modifier sa reconstitution ».",
-  "reponseCourte": "Le service ne conteste aucun fait : il oppose un forfait de 15 % dont il a lui-même affecté l’intégralité aux offerts, aux pertes et à la consommation du personnel, et dont la fraction « vins au BIB » porte précisément sur le périmètre que le décompte exclut.",
+  "reponseCourte": "Le service ne recalcule aucune ligne du décompte : il oppose un forfait de 15 % dont il a lui-même affecté l’intégralité aux offerts, aux pertes et à la consommation du personnel, et dont la fraction « vins au BIB » porte pour l’essentiel sur le périmètre que le décompte exclut. Il conteste en revanche le geste, en soutenant que la larme s’impute sur la dose vendue : les 125,84 L reposent sur une pratique de service qui reste à attester.",
   "enjeu": "Poste « dégustation offerte » de la reconstitution du chiffre d’affaires (proposition de rectifications, p. 37 à 44)",
-  "statut": "demonte"
+  "statut": "a-etayer"
  },
  "sections": [
   {
@@ -43,11 +43,11 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Dégustations",
+     "label": "Dégustations comptées note par note (annexe C)",
      "valeur": "6 292",
      "sub": "1 par vin nommé et par note (annexe C)",
      "highlight": true,
-     "couleur": "gold"
+     "couleur": "teal"
     },
     {
      "label": "Dose",
@@ -62,6 +62,10 @@
      "couleur": "teal"
     }
    ]
+  },
+  {
+   "kind": "note",
+   "texte": "Précision de méthode : la dose de 2 cl est une dose conventionnelle déclarée par la société, jamais mesurée, appliquée uniformément aux 6 292 dégustations comptées. Ce qui est mesuré ici est le nombre de lignes de vin nommé relevées dans le détail des tickets, pas le volume."
   },
   {
    "kind": "tableau",
@@ -300,11 +304,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La réponse du 04/09/2026 laisse intacte la totalité du décompte. Elle ne conteste ni les **6 292 dégustations**, ni la dose de **2 cl**, ni la règle « une dégustation par vin nommé et par note », ni le fait que le volume soit lu dans le détail des tickets et non estimé. Elle ne recalcule aucune des douze lignes du tableau des vins et ne discute pas la pièce produite. Le fait générateur et sa mesure sont donc hors débat."
+   "texte": "La réponse du 04/09/2026 laisse intacte la totalité du décompte. Elle ne conteste ni les **6 292 dégustations**, ni la dose de **2 cl**, ni la règle « une dégustation par vin nommé et par note », ni le fait que le volume soit lu dans le détail des tickets et non estimé. Elle ne recalcule aucune des douze lignes du tableau des vins et ne discute pas la pièce produite. Le nombre de lignes et la règle de comptage ne sont donc pas en débat. Ce que le service conteste, en page 64, c’est l’imputation du geste : la larme se serait, selon lui, retrouvée dans le verre vendu. C’est le seul point de fond, et il est traité plus bas."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le seul motif de rejet est un motif de comparaison : l’abattement forfaitaire de **15 %** que le service applique en fin de reconstitution représenterait un volume supérieur aux 125,80 litres demandés (p. 86). Un forfait est pourtant un instrument de substitution : il supplée l’absence de mesure. Lorsque la mesure existe, qu’elle est exhaustive et vérifiable ligne à ligne, elle ne peut pas être écartée au profit du taux moyen qui n’avait été retenu que faute de mieux."
+   "texte": "Le seul motif de rejet est un motif de comparaison : l’abattement forfaitaire de **15 %** que le service applique en fin de reconstitution représenterait un volume supérieur aux 125,80 litres demandés (p. 86). Un forfait est pourtant un instrument de substitution : il supplée l’absence de mesure. Lorsqu’un décompte existe et se vérifie ligne à ligne, un forfait retenu faute de mesure ne peut lui être préféré sans motif."
   },
   {
    "kind": "paragraphe",
@@ -319,7 +323,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service décompose son taux dans son propre courrier : **5 % pour les offerts**, **5 % pour les pertes** (p. 72) et **5 % pour la consommation du personnel** (p. 73), chaque tranche étant chiffrée à **35 133,26 €** de chiffre d’affaires TTC abandonné par exercice. Le forfait de 15 % est donc intégralement affecté, poste par poste, à trois objets précis. Il n’en reste rien de disponible pour un quatrième."
+   "texte": "Le service décompose son taux dans son propre courrier : **5 % pour les offerts**, **5 % pour les pertes** (p. 72) et **5 % pour la consommation du personnel** (p. 73), chaque tranche étant chiffrée à **35 133,26 €** de chiffre d’affaires TTC abandonné par exercice (exercice 2022-2023 ; 33 971,89 € et 33 838,41 € sur les deux suivants). Le forfait de 15 % est donc intégralement affecté, poste par poste, à trois objets précis. Il n’en reste rien de disponible pour un quatrième."
   },
   {
    "kind": "tableau",
@@ -419,12 +423,24 @@
      {
       "v": "Le même 15 %, cette fois compté une seule fois : « 3,85 x (1-0,15) = 3,2725 »"
      }
+    ],
+    [
+     {
+      "v": "p. 62 et p. 63"
+     },
+     {
+      "v": "Crémant jeté (fond de bouteille non vendu)"
+     },
+     {
+      "v": "Aucun abattement opposé : le service conteste ici le principe même de la perte, et n’invoque aucun taux",
+      "fw": 700
+     }
     ]
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Aucun des trois postes ainsi désignés n’est la larme versée avant le service. Ce n’est pas un offert commercial (il n’y a ni article offert, ni remise), ce n’est pas une casse, ce n’est pas une consommation du personnel. Le service oppose pourtant le même 15 % à la freinte technique du fût (p. 61 et p. 83), aux offerts (p. 72), aux pertes (p. 72), à la consommation du personnel (p. 73), à la dégustation (p. 64, 86 et 89), puis s’en sert une dernière fois pour valider son coefficient (p. 93). Un taux appliqué une fois ne peut pas être opposé six fois."
+   "texte": "Aucun des trois postes ainsi désignés n’est la larme versée avant le service. Ce n’est pas un offert commercial (il n’y a ni article offert, ni remise), ce n’est pas une casse, ce n’est pas une consommation du personnel. Le service oppose le même 15 % à six postes distincts, énumérés ci-dessus avec la page où il le fait. Une fois affecté aux postes des pages 72 et 73, il ne couvre plus la larme versée avant le service."
   },
   {
    "kind": "paragraphe",
@@ -444,16 +460,16 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 4,
-   "titre": "Les volumes comparés ne portent pas sur le même vin",
-   "sousTitre": "Les 198 litres opposés au décompte sont un abattement calculé sur le vin au BIB, que le décompte exclut par construction."
+   "titre": "Les volumes comparés ne portent pas sur les mêmes vins, sauf pour deux d’entre eux",
+   "sousTitre": "Les 198 litres opposés au décompte sont un abattement calculé sur le vin au BIB : il couvre 21,8 L des 125,84 L comptés, que nous retirons de la demande, et laisse de côté les 104,0 L de vins en bouteilles bouchées."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le décompte ne porte que sur les **vins nommés servis au verre ou au pichet**, versés depuis une bouteille. Les génériques « Verre de vin » et « Pichet vin », dont la caisse ne précise pas le type et qui correspondent au vin au **cubi**, en sont expressément exclus, de même que les bouteilles vendues entières. C’est écrit dans l’exposé que le service reproduit lui-même en page 85."
+   "texte": "Le décompte ne porte que sur les **vins nommés servis au verre ou au pichet**. **Deux d’entre eux, l’Aligoté et le Chusclan, sont conditionnés en BIB de 10 L** ; les dix autres sont versés depuis une bouteille. Les génériques « Verre de vin » et « Pichet vin », dont la caisse ne précise pas le type et qui correspondent au vin au **cubi**, en sont expressément exclus, de même que les bouteilles vendues entières. C’est écrit dans l’exposé que le service reproduit lui-même en page 85."
   },
   {
    "kind": "paragraphe",
-   "texte": "Or les **198 litres** que le service oppose en premier sont, selon ses propres termes, l’abattement de 15 % appliqué aux « **VINS AU BIB** » (p. 86). Ils portent donc exactement sur le périmètre que le décompte laisse de côté. Comparer les deux revient à opposer à une perte constatée sur les vins de la carte un abattement calculé sur un autre vin : les deux volumes ne se recouvrent en rien."
+   "texte": "Or les **198 litres** que le service oppose en premier sont, selon ses propres termes, l’abattement de 15 % appliqué aux « **VINS AU BIB** » (p. 86). Ils portent donc, pour l’essentiel, sur le périmètre que le décompte laisse de côté. Le recouvrement existe cependant, et il est chiffré : **1 092 dégustations portent sur l’Aligoté et le Chusclan, qui sont des BIB, soit 21,8 L des 125,8 L**. Sur ces 21,8 L nous ne demandons rien, l’abattement de 198 L les couvre. Les 104,0 L restants portent sur des vins en bouteilles bouchées, auxquels le service oppose un autre abattement, déjà affecté trois fois ailleurs."
   },
   {
    "kind": "paragraphe",
@@ -1129,7 +1145,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Cette affirmation ne peut pas être opposée à un décompte de caisse. Elle porte sur un fait matériel qui n’a jamais été observé au cours du contrôle, et il appartient à l’administration d’établir le bien fondé de sa reconstitution, non au contribuable de démontrer que six mille verres n’ont pas été complétés au ras de la dose. Le verre de dégustation est distinct du verre servi, et la larme précède le service."
+   "texte": "La société produit un décompte de caisse, note par note, de ces dégustations. Le service ne lui oppose aucun relevé, aucune constatation faite sur place, aucun autre décompte. Il lui appartient d’établir le bien-fondé des bases qu’il retient."
   },
   {
    "kind": "chapitre",
@@ -1140,11 +1156,41 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service ne conteste aucun élément du décompte : il lui oppose un forfait dont il a lui-même affecté l’intégralité à trois autres postes, et dont il compare la fraction « vins au BIB » à un volume qui, par construction, exclut le vin au BIB. Ce motif ne peut pas fonder le rejet."
+   "texte": "Le service ne recalcule aucune ligne du décompte : il lui oppose un forfait dont il a lui-même affecté l’intégralité à trois autres postes, et dont il compare la fraction « vins au BIB » à un volume qui **n’en relève qu’à hauteur de 21,8 L sur 125,8**. Ce motif de comparaison ne peut pas fonder le rejet du poste. Reste la seule objection de fond que le courrier formule, en page 64 : que la larme s’imputerait sur la dose vendue. Elle porte sur un geste de service que la société doit attester."
   },
   {
    "kind": "paragraphe",
-   "texte": "Les **125,84 litres** de vin nommé offert, soit 35,36 L, 45,14 L et 45,34 L par exercice, doivent en conséquence être retranchés du volume réputé vendable avant application du taux forfaitaire de 15 %, et non après lui. L’incidence se propage ensuite à la totalité du chiffre d’affaires reconstitué, le service extrapolant le chiffre d’affaires cuisine à partir des liquides par un coefficient d’environ trois."
+   "texte": "Les **125,84 litres** de vin nommé offert, soit 35,36 L, 45,14 L et 45,34 L par exercice, doivent en conséquence être retranchés du volume réputé vendable avant application du taux forfaitaire de 15 %, et non après lui. Sur ces 125,84 L, **104,0 L font l’objet de la demande** ; les 21,8 L de vins conditionnés en BIB sont retirés de la demande, tout en restant, comme volume de matière, dans le bilan des 10 622 L. L’incidence se propage ensuite à la totalité du chiffre d’affaires reconstitué, le service extrapolant le chiffre d’affaires cuisine à partir des liquides par un coefficient d’environ trois."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Lignes du décompte recalculées par le service",
+     "valeur": "aucune",
+     "sub": "sur 12 lignes de vin nommé et 6 292 dégustations",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Volume effectivement demandé, hors vins au BIB",
+     "valeur": "104,0 L",
+     "sub": "sur 125,84 L comptés",
+     "couleur": "teal"
+    },
+    {
+     "label": "Postes auxquels le service oppose le même forfait de 15 %",
+     "valeur": "6",
+     "sub": "pages 61, 72, 73, 83, 86 et 93",
+     "couleur": "gold"
+    },
+    {
+     "label": "Trace laissée en caisse par une dégustation",
+     "valeur": "aucune",
+     "sub": "le volume se lit sur les lignes vendues, pas sur un encaissement",
+     "couleur": "blue"
+    }
+   ]
   },
   {
    "kind": "piecejointe",

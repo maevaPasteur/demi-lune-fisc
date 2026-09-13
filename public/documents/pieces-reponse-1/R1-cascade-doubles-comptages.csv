@@ -1,0 +1,59 @@
+﻿SARL LA DEMI LUNE - controle des doubles comptages de la cascade des 10 622 L
+Produit par scripts/reponse1-cascade-valeurs.py
+
+1. Biere : la contenance des articles mixtes etait comptee en plus de leur recette
+Article de caisse;Format;Quantite 3 exercices;Contenance comptee dans 'vendu au verre' (L);Alcool reel porte par 'vendu en cocktails' (L)
+Picon bière;Demi+Picon 25cl;382.5;95.62;95.62
+Panaché;Panaché 25cl;346.5;86.62;43.31
+Pinte Picon;Pinte+Picon 50cl;162.5;81.25;81.25
+Monaco;Monaco 25cl;130.0;32.50;16.25
+TOTAL;;;295.99;236.44
+Double comptage retire du poste 'vendu au verre';;;295.99;
+
+Controle : biere reellement sortie du fut
+Pression et pintes pures;996.88
+Biere des quatre articles mixtes;208.14
+Total biere servie;1205.01
+Freinte technique a 10 %;120.50
+
+2. Offerts : alcool deja enregistre a 0,00 EUR dans l'annexe D
+Poste de la cascade;Produit;Litres
+vendu au verre;Fût Affligem;9.00
+vendu en cocktails;Macvin;2.78
+vendu au verre;Rouget de Lisle Ambrée 33cl;1.98
+vendu au verre;Rouget de Lisle Blanche 33cl;1.98
+vendu en cocktails;Crémant du Jura;1.68
+vendu en cocktails;Fût Affligem;1.09
+vendu au verre;Crémant du Jura;0.80
+vendu en cocktails;Bourgogne Aligoté maison;0.80
+vendu au verre;Hautes Côtes de Beaune rouge;0.75
+vendu au verre;Arbois Savagnin;0.75
+vendu au verre;Cidre Doux;0.75
+vendu au verre;Macvin;0.72
+vendu au verre;Cidre La Mordue;0.54
+vendu au verre;Bourgogne Aligoté maison;0.50
+vendu au verre;Saint Véran;0.45
+vendu au verre;Arbois Béthanie;0.38
+vendu au verre;Martini Blanc;0.36
+vendu en cocktails;Crème de Cassis;0.30
+vendu au verre;Saint Joseph Rouge;0.30
+vendu en cocktails;Passoa;0.24
+vendu en cocktails;Liqueur de Cerise;0.20
+vendu en cocktails;Picon;0.16
+vendu au verre;Arbois Trousseau;0.15
+vendu en cocktails;Soho Litchi;0.08
+vendu au verre;Pontarlier Anis;0.08
+vendu au verre;Get 27;0.08
+vendu au verre;Bailey's;0.08
+vendu au verre;Ricard;0.06
+vendu en cocktails;Tequila Camino Real;0.04
+vendu au verre;Marc de Bourgogne;0.04
+vendu au verre;Marc du Jura;0.04
+vendu au verre;Liqueur de Poire;0.04
+vendu en cocktails;Vodka;0.04
+vendu au verre;Pastis 51;0.02
+TOTAL brut;;27.25
+dont contenance d'articles mixtes, deja retiree par la correction 1;;1.50
+TOTAL net deja compte dans les ventes;;25.75
+Poste 'offerts' avant correction (1 aperitif de 6 cl x 662 jours);;39.72
+Poste 'offerts' apres correction;;13.97

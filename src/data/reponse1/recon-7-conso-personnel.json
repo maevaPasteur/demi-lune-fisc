@@ -5,9 +5,9 @@
  },
  "entete": {
   "positionService": "Le service estime avoir « fait preuve d’une grande générosité » en appliquant le forfait de 5 % à toutes les boissons, y compris alcoolisées, alors que « la loi interdit aux salariés des restaurants/bar de consommer de l’alcool lors de leur période de travail ». Il chiffre ce forfait sur le premier exercice : 5 % de 1 676,83 litres de vin (83,84 L) et 5 % de 1 229,23 litres d’autres alcools (61,46 L), soit selon lui exactement « le volume souhaité par Maître THIVEND ». Il ajoute que ce forfait minore le chiffre d’affaires TTC reconstitué de 35 133,26 €, soit 8,70 % du CA TTC déclaré sur cet exercice. Il ne modifie donc rien à sa reconstitution.",
-  "reponseCourte": "Le service applique son taux de 5 % tantôt à des volumes, tantôt à un chiffre d’affaires, totalise des listes qu’il dit lui-même partielles et compare un exercice à trois : rétablie sur des bases homogènes, la consommation du personnel atteint 1 453,76 litres sur trois exercices, soit le double de ce que le forfait couvre.",
+  "reponseCourte": "Le service applique son taux de 5 % tantôt à des volumes, tantôt à un chiffre d’affaires, totalise des listes qu’il dit lui-même partielles et compare un exercice à trois : rétablie sur des bases homogènes, la consommation du personnel atteint 1 453,76 litres sur trois exercices, soit le double de ce que le forfait couvre. Sur le seul alcool du chef, en revanche, le forfait suffit, et nous le disons.",
   "enjeu": "Point n° 7 des observations sur la reconstitution (Proposition de rectifications p. 51)",
-  "statut": "demonte"
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -249,7 +249,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service convertit enfin ce forfait en euros pour en souligner le poids : « Pour être encore plus parlant, et sachant que cette logique vaut pour tous les exercices, en retenant une proportion de 5 % pour consommation du personnel, le service minore le montant du chiffres d’affaires TTC reconstitué à hauteur de 35 133,26 €. » (p. 71). Il précise ensuite la portée de ce montant : « A titre d’information, ce montant équivaut à 8,70 % du chiffre d’affaires TTC déclaré par la société sur ce premier exercice. Une telle proportion est donc significative. » (p. 71)."
+   "texte": "Le service convertit enfin ce forfait en euros pour en souligner le poids : « Pour être encore plus parlant, et sachant que cette logique vaut pour tous les exercices, en retenant une proportion de 5 % pour consommation du personnel, le service minore le montant du chiffres d’affaires TTC reconstitué à hauteur de 35 133,26 €. » (p. 71). Il précise ensuite la portée de ce montant : « A titre d’information, ce montant équivaut à 8,70 % du chiffre d’affaires TTC déclaré par la société sur ce premier exercice. Une telle proportion est donc significative. » (p. 71). Ce montant est celui d’un seul exercice (exercice 2022-2023 ; 33 971,89 € et 33 838,41 € sur les deux suivants) : c’est la logique qui vaut pour les trois exercices, pas le chiffre."
   },
   {
    "kind": "paragraphe",
@@ -284,13 +284,12 @@
      "label": "Cumul opposé à la réponse",
      "valeur": "145,30 L",
      "sub": "83,84 + 61,46, à comparer aux 143 L chiffrés par Maître THIVEND (p. 70 et 71)",
-     "highlight": true,
      "couleur": "red"
     },
     {
-     "label": "Minoration du CA TTC reconstitué",
+     "label": "Minoration que le service dit accorder",
      "valeur": "35 133,26 €",
-     "sub": "soit 8,70 % du CA TTC déclaré sur le premier exercice (p. 71)",
+     "sub": "soit 8,70 % du CA TTC déclaré du premier exercice selon le service (p. 71) ; ce montant comprend 26 216,19 € de cuisine extrapolée",
      "couleur": "gold"
     }
    ]
@@ -847,7 +846,34 @@
   },
   {
    "kind": "paragraphe",
+   "texte": "Ces volumes ne sont demandés qu’une fois. Dans la [cascade des 10 622 litres](/reponse-1/cascade-10622-litres), la consommation d’alcool du chef figure avec les offerts dans un poste unique de 157 litres : 143 litres pour le chef, 14 litres pour les seuls offerts qui n’ont pas été enregistrés en caisse. Les 25,75 litres d’alcool sonnés à 0,00 € sont déjà compris dans les ventes de la caisse, qui en additionne les quantités sans regarder le prix unitaire : ils ne sont pas redemandés ici."
+  },
+  {
+   "kind": "paragraphe",
    "texte": "Enfin, l’argument tiré de « la loi » ne peut pas être maintenu en l’état. Les articles R. 4228-20 et R. 4228-21 du code du travail autorisent expressément le vin et la bière sur le lieu de travail, c’est-à-dire 83,7 % du volume sur lequel le service fonde sa générosité, et ils ne fournissent aucun élément permettant de tenir pour vendus des litres qui n’ont pas été encaissés."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Consommation du personnel, rétablie sur des bases homogènes",
+     "valeur": "1 453,76 L",
+     "sub": "notre mesure, poste par poste, sur les trois exercices (pièce R1)",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Ce que le forfait de 5 % du service couvre",
+     "valeur": "145,30 L",
+     "sub": "alcool seul, sur un seul exercice (p. 70 et 71)",
+     "couleur": "blue"
+    },
+    {
+     "label": "Alcool du chef : ce que nous ne contestons pas",
+     "valeur": "143,00 L",
+     "sub": "Picon 43,7 L et macvin 99,3 L sur trois exercices : sur ce seul poste, le forfait du service suffit, et nous ne demandons rien de plus"
+    }
+   ]
   },
   {
    "kind": "piecejointe",

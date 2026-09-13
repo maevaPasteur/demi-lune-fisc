@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service refuse toute perte sur le crémant. Il oppose que le crémant entre dans la composition de nombreux articles (donc qu’une bouteille ouverte se termine dans le service), que les dirigeants savent conserver cette boisson « de par leur longue expérience professionnelle », et que les pertes annoncées sont exagérées : 93,20 L jetés sur 206,25 L disponibles au premier exercice représenteraient « 45,18 % de pertes, ce qui est considérable et non-vivable économiquement ». Il ajoute que, en cumulant les bouteilles éventées et un sur-versement de 23,60 % appliqué aux 118,08 L lus dans la caisse, il faudrait 239,05 L de crémant pour 206,25 L réellement disponibles, et que le même constat se répète aux exercices 2 (+6,95 %) et 3 (+7,48 %). Il conclut qu’avec une dose vendue de 12 cl dans une petite coupe, une sur-dose de 23,60 % conduirait à « remplir le verre d’une façon exagérée », et qu’il n’y a « aucune raison de modifier sa reconstitution ».",
-  "reponseCourte": "Le service a raison de refuser le cumul du sur-versement maximal et du fond de bouteille : corrigé avec ses propres volumes et ses propres doses, le bilan matière du crémant boucle exercice par exercice et ne laisse aucun volume vendable.",
+  "reponseCourte": "Le service a raison de refuser le cumul du sur-versement maximal et du fond de bouteille, et nous ramenons en conséquence la perte de crémant de 346,9 L à 272,0 L. Corrigé avec ses propres volumes et ses propres doses, le bilan matière du crémant boucle exercice par exercice et ne laisse aucun volume vendable.",
   "enjeu": "Crémant : 272,0 L sur trois exercices",
-  "statut": "demonte"
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -472,7 +472,6 @@
      "label": "Pertes alléguées, exercice 1",
      "valeur": "45,18 %",
      "sub": "93,20 L jetés sur 206,25 L disponibles (p. 62)",
-     "highlight": true,
      "couleur": "red"
     },
     {
@@ -518,11 +517,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le tableau de la page 62 applique 6 cl de crémant à La Vouivre, au Père Grégoire et au KITTYKIR, et 12 cl au verre de crémant. **Nous reprenons ces doses telles quelles** : elles ne peuvent pas nous être opposées. Le recomptage, ligne à ligne, du détail des tickets (annexe C) retrouve exactement les quantités du service pour le premier exercice : 621,5 La Vouivre pour 622, 503 Père Grégoire pour 503, 233,8 KITTYKIR pour 234, 242 verres de crémant pour 242. La correspondance est acquise."
+   "texte": "Le tableau de la page 62 applique 6 cl de crémant à La Vouivre, au Père Grégoire et au KITTYKIR, et 12 cl au verre de crémant. **Nous reprenons ces doses telles quelles** : elles ne peuvent pas nous être opposées. Le recomptage, ligne à ligne, du détail des tickets (annexe C) retrouve exactement les quantités du service pour le premier exercice : 621,5 La Vouivre pour 622, 503 Père Grégoire pour 503, 233,8 KITTYKIR pour 234, 242 verres de crémant pour 242. La correspondance est acquise. Nos propres recettes portent 8 cl pour La Vouivre, 9 cl pour le KITTYKIR, 1 cl pour le Père Grégoire et 10 cl pour le Kir Princier. Le remplacement n’est pas neutre et il joue **contre nous** : recalculé jour par jour, il retire 80,4 L à l’écart au titre du Père Grégoire et 18,1 L au titre du verre et du Kir Princier, contre 71,7 L ajoutés au titre de La Vouivre et du KITTYKIR, soit **une concession nette de 26,8 L d’écart et de 11,0 L de crémant jeté**. Une réserve doit être portée, parce qu’elle est visible : le Père Grégoire est un apéritif de 6 cl, et 6 cl de crémant le remplissent entièrement. Nous retenons ici la dose du service parce que c’est la sienne et qu’elle nous coûte ; notre recette, qui sert au bilan matière, porte 1 cl de crémant, 4 cl de macvin et 1 cl de liqueur de cerise."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le tableau du service **omet en revanche deux libellés** qui contiennent du crémant : le Kir Princier et le libellé VOUIVRE. Nous les réintégrons. Cet ajout joue contre nous et en faveur du service : il augmente la consommation reconnue en caisse, donc il **réduit** l’écart qui nous est reproché. Les Kir Bourgogne et Kir Pamplemousse, faits de vin tranquille, restent exclus, comme le service les exclut."
+   "texte": "Le tableau du service **omet en revanche trois libellés** qui contiennent du crémant : le Kir Princier, le libellé VOUIVRE et le libellé « Crément / Jura VERRE », qui ne figure pas davantage dans son tableau, où le crémant du Jura n’apparaît qu’en bouteille de 75 cl. Nous les réintégrons. Cet ajout joue contre nous et en faveur du service : il augmente la consommation reconnue en caisse, donc il **réduit** l’écart qui nous est reproché. Les Kir Bourgogne et Kir Pamplemousse, faits de vin tranquille, restent exclus, comme le service les exclut."
   },
   {
    "kind": "tableau",
@@ -1004,8 +1003,8 @@
       "align": "right"
      },
      {
-      "v": "oui",
-      "badge": "ok"
+      "v": "non",
+      "badge": "ko"
      }
     ]
    ]
@@ -1205,11 +1204,11 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Écart à expliquer",
+     "label": "Écart que le service nous oppose, et que le fond de bouteille explique",
      "valeur": "272,0 L",
      "sub": "3 exercices, doses du service",
      "highlight": true,
-     "couleur": "red"
+     "couleur": "teal"
     },
     {
      "label": "Jours de service",
@@ -1676,7 +1675,7 @@
     {
      "label": "Crémant jeté, 3 exercices",
      "valeur": "233,8 L à 248,8 L",
-     "sub": "quel que soit le taux retenu dans la fourchette",
+     "sub": "aux deux bornes de 0 % et de +23,6 % ; le balayage complet ci-dessous va de 233,1 L à 263,9 L",
      "highlight": true,
      "couleur": "teal"
     }
@@ -2762,6 +2761,10 @@
     {
      "fichier": "pieces-reponse-1/R1-cremant-jour-par-jour-2024-2025.csv",
      "label": "Crémant ouvert jour par jour, exercice 2024-2025 (CSV)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-sincerite-encaissements.xlsx",
+     "label": "Sincérité des encaissements : CA de caisse, modes de règlement et rapport entre la discordance soutenue et les espèces réellement encaissées (XLSX, 4 onglets)"
     }
    ]
   }

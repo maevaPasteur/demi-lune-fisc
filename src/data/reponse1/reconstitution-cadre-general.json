@@ -6,7 +6,7 @@
  },
  "entete": {
   "positionService": "Sous le titre « L- Reconstitution du chiffre d’affaires (Pages 37 à 53 de la proposition de rectifications) » (p. 59), le service n’oppose encore aucun argument de fond : il se borne à reproduire le chapeau du mémoire de Maître THIVEND. Il rappelle que l’avocat part des achats de boissons et de doses standard, qu’il conteste l’extrapolation du CA « liquides » à la cuisine par coefficient, et il reprend son encadré chiffré : 10 622 L d’alcool acheté pour 107 924 € sur 3 exercices, 85,5 % justifiés de façon indépendante (9 079 L tracés poste par poste) et 14,5 % de résidu (1 543 L de casse, vol et évaporation). Il note enfin que la réponse « rappelle les éléments généraux de la méthode de reconstitution du service (les volumes disponibles, les doses, les prix moyens, les coefficients…) ». La discussion de fond n’est ouverte qu’à la page suivante, où le service annonce les « onze points successifs » qu’il va traiter un à un.",
-  "reponseCourte": "La preuve de la reconstitution incombe au service, et sur les dix-neuf rubriques du bloc il n’oppose jamais un volume alternatif à un poste du bilan matière : il maintient ses montants sans les établir.",
+  "reponseCourte": "La preuve de la reconstitution incombe au service, et sur les dix-neuf rubriques du bloc il n’oppose jamais un volume mesuré : les seuls litres qu’il cite sont ceux que produisent ses propres abattements forfaitaires ou ses propres colonnes, et il maintient ses montants sans les établir.",
   "enjeu": "C’est le chapeau de tout le bloc « reconstitution » : les pages 37 à 53 de la proposition de rectification, soit la totalité du chiffre d’affaires reconstitué, liquides puis cuisine extrapolée.",
   "statut": "demonte"
  },
@@ -35,26 +35,26 @@
     {
      "label": "Justifié de façon indépendante",
      "valeur": "85,5 %",
-     "sub": "Part du volume acheté tracée poste par poste (p. 59)",
+     "sub": "Part du volume acheté tracée poste par poste (p. 59). Valeur du mémoire du 10/07/2026, portée à 79,1 % après nos six corrections (voir la page M, la cascade des 10 622 L).",
      "couleur": "teal",
      "highlight": true
     },
     {
      "label": "Volume tracé poste par poste",
      "valeur": "9 079 L",
-     "sub": "Détail des postes de consommation sans vente (p. 59)",
+     "sub": "Détail des postes de consommation sans vente (p. 59). Valeur du mémoire du 10/07/2026, portée à 8 398 L après nos six corrections (voir la page M, la cascade des 10 622 L).",
      "couleur": "teal"
     },
     {
-     "label": "Résidu (perte normale)",
+     "label": "Résidu, solde du bilan matière",
      "valeur": "14,5 %",
-     "sub": "Part non expliquée poste par poste (p. 59)",
+     "sub": "Part non expliquée poste par poste (p. 59). Valeur du mémoire du 10/07/2026, portée à 20,9 % après nos six corrections (voir la page M, la cascade des 10 622 L).",
      "couleur": "gold"
     },
     {
      "label": "Volume résiduel",
      "valeur": "1 543 L",
-     "sub": "« casse, vol, évaporation » (p. 59)",
+     "sub": "« casse, vol, évaporation » (p. 59). Valeur du mémoire du 10/07/2026, portée à 2 224 L après nos six corrections (voir la page M, la cascade des 10 622 L).",
      "couleur": "gold"
     },
     {
@@ -98,7 +98,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reprend enfin l’encadré chiffré à trois cases qui figure dans le mémoire, et qui sert de fil directeur à tout le bloc : **10 622 L** d’**alcool acheté (factures)**, soit **107 924 € sur 3 exercices** ; **85,5 %** de ce volume **justifié de façon indépendante**, soit **9 079 L tracés poste par poste** ; **14,5 %** de **résidu (perte normale)**, soit **1 543 L** au titre de la « **casse, vol, évaporation** »."
+   "texte": "Le service reprend enfin l’encadré chiffré à trois cases qui figure dans le mémoire, et qui sert de fil directeur à tout le bloc : **10 622 L** d’**alcool acheté (factures)**, soit **107 924 € sur 3 exercices** ; **85,5 %** de ce volume **justifié de façon indépendante**, soit **9 079 L tracés poste par poste** ; **14,5 %** de **résidu (perte normale)**, soit **1 543 L** au titre de la « **casse, vol, évaporation** ». Ces quatre chiffres sont ceux du mémoire du 10 juillet 2026. Les corrections que nous portons depuis les ramènent à **79,1 %**, **8 398 L**, **20,9 %** et **2 224 L** : voir la page [M](/reponse-1/cascade-10622-litres)."
   },
   {
    "kind": "titre",
@@ -413,7 +413,7 @@
    "source": "nous",
    "numero": 2,
    "titre": "Notre réponse : la preuve de la reconstitution incombe au service, et le courrier ne l’apporte sur aucun poste",
-   "sousTitre": "Ni le défaut de présentation de comptabilité ni l’avis conforme de la commission ne sont réunis : la charge de la preuve reste à l’administration. Or, sur les dix-neuf rubriques « Réponse du service » du bloc, aucune n’oppose de volume alternatif à un poste du bilan matière."
+   "sousTitre": "Ni le défaut de présentation de comptabilité ni l’avis conforme de la commission ne sont réunis : la charge de la preuve reste à l’administration. Or, sur les dix-neuf rubriques « Réponse du service » du bloc, aucune n’oppose de volume mesuré à un poste du bilan matière : les seuls litres qu’elles citent sont le produit de ses propres abattements forfaitaires ou de ses propres colonnes."
   },
   {
    "kind": "titre",
@@ -450,7 +450,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Enfin, le rejet des observations doit être motivé.** L’article L. 57 du livre des procédures fiscales dispose que « lorsque l’administration rejette les observations du contribuable sa réponse doit également être motivée » ([LPF, art. L. 57](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022177777)). Le juge apprécie cette motivation au vu de ce que la réponse contient réellement : il a jugé suffisante une réponse qui reprenait la teneur des observations « en exposant les raisons de droit et de fait pour lesquelles ces observations ont été regardées comme de nature à ne remettre en cause qu’une partie des rectifications notifiées », le service ayant corrigé ses propres erreurs de calcul sur la reconstitution des ventes de vins mousseux et de Picon-bière ([CAA de Douai, 4e ch., 18 septembre 2025, n° 25DA00174](https://juricaf.org/arret/FRANCE-COURADMINISTRATIVEDAPPELDEDOUAI-20250918-25DA00174), considérants 10 et 11). C’est cette exigence, de fait autant que de droit, qu’il faut confronter au relevé qui suit."
+   "texte": "**Enfin, le rejet des observations doit être motivé.** L’article L. 57 du livre des procédures fiscales dispose que « lorsque l’administration rejette les observations du contribuable sa réponse doit également être motivée » ([LPF, art. L. 57](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000022177777)). C’est cette exigence, de fait autant que de droit, qu’il faut confronter au relevé qui suit."
   },
   {
    "kind": "titre",
@@ -463,7 +463,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La réponse est non pour **dix-huit rubriques sur dix-neuf**. La dix-neuvième, le point 10, est une concession. Le relevé complet, avec la phrase de conclusion du courrier et sa page, est joint en fin de page."
+   "texte": "La réponse est non pour **dix-huit rubriques sur dix-neuf** : le relevé joint porte vingt lignes, dont le repère L, qui ne comporte pas de rubrique « Réponse du service », et le point 10, qui est une concession. Le courrier avance bien des volumes, 2 132 L au total (198 L et 500 L au titre du 15 %, 93, 111, 15 et 240 L des repères D, E, G et Q, 796,43 L sur le volume unique des BIB, 33,28 L sur les crèmes, 83,84 L et 61,46 L au titre du forfait de 5 %) : aucun n’est un relevé, tous sont le produit de ses propres taux ou de ses propres colonnes. Le relevé complet, avec la phrase de conclusion du courrier et sa page, est joint en fin de page."
   },
   {
    "kind": "kpis",
@@ -659,8 +659,7 @@
       "v": "15 cl le verre, 50 ou 75 cl le pichet, 4 cl les spiritueux"
      },
      {
-      "v": "non : dose de la carte",
-      "badge": "ko"
+      "v": "Dose de la carte pour le verre, le pichet et le spiritueux ; doses confirmées par les dirigeants pour la cuisine (p. 65 à 68) et pour le crémant (p. 62)"
      },
      {
       "v": "Doses figées et sur-versement",
@@ -719,7 +718,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le tableau fait apparaître une contradiction que le courrier ne lève pas. Le prix moyen et le coefficient d’extrapolation sont puisés dans la caisse, dont le service écrit qu’elle « reflète des données d’exploitation qui peuvent être considérées comme significatives, en terme de volume d’informations et surtout exhaustives » (p. 92). Mais cette même caisse est déclarée non probante pour justifier le rejet de la comptabilité, et ses données cessent d’être opposables dès qu’elles servent à établir une dose réelle, une dégustation offerte ou un plat cuisiné à l’alcool. Une caisse ne peut pas être exhaustive au numérateur et non probante au dénominateur."
+   "texte": "Le tableau fait apparaître une dissymétrie que le courrier ne justifie pas. La caisse est celle dont le service écrit qu’elle « reflète des données d’exploitation qui peuvent être considérées comme significatives, en terme de volume d’informations et surtout exhaustives » (p. 92), mais qui est déclarée non probante pour justifier le rejet de la comptabilité, et dont les données cessent d’être opposables dès qu’elles servent à établir une dose réelle, une dégustation offerte ou un plat cuisiné à l’alcool. Le service puise dans la caisse deux des quatre paramètres de sa méthode, le prix moyen et le coefficient d’extrapolation, et écarte les montants que le même fichier enregistre. Il lui appartient d’indiquer pourquoi la même source vaut pour les uns et non pour les autres, et à quel écart chiffré cette différence de traitement correspond."
   },
   {
    "kind": "paragraphe",
@@ -743,7 +742,7 @@
    "source": "nous",
    "numero": 3,
    "titre": "Ce que cela fait tomber",
-   "sousTitre": "Le service devait établir sa reconstitution : sur les dix-neuf rubriques du bloc, il n’oppose aucun volume alternatif, et il tient les deux paramètres qui commandent le résultat de sources étrangères à l’entreprise."
+   "sousTitre": "Le service devait établir sa reconstitution : sur les dix-neuf rubriques du bloc, il n’oppose aucun volume mesuré, les seuls litres qu’il cite étant le produit de ses propres abattements forfaitaires ou de ses propres colonnes, et il tient les deux paramètres qui commandent le résultat de sources étrangères à l’entreprise."
   },
   {
    "kind": "paragraphe",
@@ -751,17 +750,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Face au bilan matière qui lui était opposé, le courrier ne produit ni contre-bilan, ni volume alternatif, ni recoupement par une seconde méthode. Il oppose ses propres abattements, calculés sur une autre assiette, et des calculs de cohérence qui ne mesurent rien. Dix-huit rubriques sur dix-neuf se concluent sans modifier un seul chiffre, et la dix-neuvième abandonne le grief des ventes sans achat. Une reconstitution ainsi maintenue n’est pas établie : elle est réaffirmée."
+   "texte": "Face au bilan matière qui lui était opposé, le courrier ne produit ni contre-bilan, ni volume **mesuré**, ni recoupement par une seconde méthode. Il oppose ses propres abattements, calculés sur une autre assiette, et des calculs de cohérence qui ne mesurent rien : les seuls litres qu’il avance sont le produit de ses propres taux forfaitaires appliqués à ses propres volumes disponibles. Dix-huit rubriques sur dix-neuf se concluent sans modifier un seul chiffre, et la dix-neuvième abandonne le grief des ventes sans achat. Une reconstitution ainsi maintenue n’est pas établie : elle est réaffirmée."
   },
   {
    "kind": "paragraphe",
    "texte": "Les onze points et les huit parties qui suivent sont examinés un à un dans les pages liées ci-dessus, et le bilan matière d’ensemble est traité à [la partie M](/reponse-1/cascade-10622-litres), qui en porte le chiffrage à jour."
-  },
-  {
-   "kind": "interne",
-   "audience": "avocat",
-   "titre": "Points à sécuriser avant dépôt",
-   "texte": "1. Références écartées faute de vérification en ligne : l’arrêt CAA Toulouse, 1re ch., 18 juillet 2024, n° 22TL21401 (extrapolation depuis une catégorie marginale) figurait dans une version antérieure de cette page ; il n’a pas pu être ouvert et confirmé, il a donc été retiré. À rechercher si l’on veut un précédent supplémentaire sur l’imprécision née d’un fort coefficient d’extrapolation. 2. La troisième décision citée par le service en p. 61 (CAA de Marseille, 4 octobre 2018, n° 17MA00424) n’a pas été vérifiée : elle n’est donc pas discutée ici. Il reste utile de l’ouvrir, les deux autres s’étant révélées favorables à notre lecture. 3. Le relevé des dix-neuf rubriques est une lecture du courrier, page par page : chaque ligne du fichier joint porte sa page et la phrase de conclusion, de sorte qu’il est contrôlable en séance. 4. Cette page ne fige aucun volume : le chiffrage poste par poste vit à la partie M et dans les sous-pages, le poste sur-versement étant encore susceptible d’évoluer. 5. La sanction de l’insuffisance de motivation d’une réponse aux observations n’est pas systématique : nous n’en tirons ici aucun moyen d’irrégularité de procédure, seulement le constat que les éléments produits n’ont pas été discutés, ce qui relève de l’appréciation du caractère probant de la reconstitution. Ne pas durcir cet argument sans une recherche dédiée."
   },
   {
    "kind": "piecejointe",
@@ -773,7 +766,7 @@
     },
     {
      "fichier": "pieces-reponse-1/R1-cascade-bilan-matiere.xlsx",
-     "label": "Bilan matière des 10 622 L : poste par poste, en litres, avec la nature du chiffre (mesuré, calculé, estimé), sa source et la pièce détaillée correspondante (XLSX, 3 onglets)"
+     "label": "Bilan matière des 10 622 L : poste par poste, en litres, avec la nature du chiffre (mesuré, calculé, estimé), sa source et la pièce détaillée correspondante (XLSX, 4 onglets)"
     }
    ]
   }

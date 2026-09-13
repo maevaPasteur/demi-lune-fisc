@@ -39,6 +39,26 @@ DOC = json.load(open(CIBLE, encoding="utf-8"))
 SECTIONS = DOC["sections"]
 BD = json.load(open(BDJ, encoding="utf-8"))
 ROWS = BD["disparuParBoisson"]
+
+# --- correction du double comptage de la biere -----------------------------
+# boissonsPageData.json porte, pour le fut Affligem, une consommation de
+# 1 501,0 L : la contenance entiere du panache, du Monaco et du Picon biere y
+# est comptee en plus de leur recette, alors que l'alcool de ces quatre
+# articles est deja porte par les cocktails. La contenance en double, etablie
+# par scripts/reponse1-cascade-valeurs.py, est retiree ici de la consommation
+# du fut. Sans cette correction, le bilan matiere par famille de cette page
+# contredit la cascade des 10 622 L. La source (boissonsPageData.json) n'est
+# pas modifiee : elle alimente aussi l'onglet /analyses/.
+_CASC = os.path.join(ROOT, "src/data/reponse1Calculs/cascade-10622.json")
+if not os.path.exists(_CASC):
+    raise SystemExit("Lancer d'abord : python3 scripts/reponse1-cascade-valeurs.py")
+DOUBLE_BIERE_L = json.load(open(_CASC, encoding="utf-8"))["doubles_comptages"]["biere"]["litres"]
+for _r in ROWS:
+    if _r["nom"] == "Fût Affligem":
+        _r["conso_l"] = round(_r["conso_l"] - DOUBLE_BIERE_L, 2)
+        break
+else:
+    raise SystemExit("Fût Affligem introuvable dans disparuParBoisson")
 EXOS = ["31/03/2023", "31/03/2024", "31/03/2025"]
 
 

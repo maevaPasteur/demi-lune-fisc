@@ -32,9 +32,10 @@
           "sub": "Cabinet THIVEND AVOCAT, courrier du 10/07/2026 (p. 1 et 2)"
         },
         {
-          "label": "Clé USB transmise",
+          "label": "Fichiers remis au service et déclarés lus",
           "valeur": "59 fichiers",
           "sub": "« une clef USB comprenant 59 fichiers » (p. 2)",
+          "couleur": "teal",
           "highlight": true
         },
         {
@@ -110,30 +111,16 @@
     },
     {
       "kind": "panneauKpis",
-      "titre": "Les deux délais de 30 jours ouverts par la page 1",
-      "sousTitre": "Ils courent à compter de la réception du courrier du 04/09/2026.",
+      "titre": "Ce que porte l’imprimé de la page 1",
+      "sousTitre": "Organismes dont la saisine est offerte au contribuable, et sens de la décision retenue par le service.",
       "items": [
-        {
-          "label": "Saisine d’un organisme",
-          "valeur": "30 jours",
-          "sub": "« Vous disposez d’un délai de 30 jours à compter de la réception de ce courrier pour m’informer de votre intention de saisir cet (ou ces) organisme(s) » (p. 1)",
-          "couleur": "red",
-          "highlight": true
-        },
-        {
-          "label": "Observations sur les sanctions",
-          "valeur": "30 jours",
-          "sub": "« Le présent courrier mentionne des sanctions fiscales. Vous disposez d’un délai de 30 jours pour m’adresser vos éventuelles observations » (p. 1)",
-          "couleur": "red",
-          "highlight": true
-        },
         {
           "label": "Organismes listés",
           "valeur": "4",
           "sub": "Commission des impôts directs et taxes sur le CA (ou Commission nationale), Commission départementale de conciliation, Comité de l’abus de droit fiscal, Comité consultatif CIR (p. 1)"
         },
         {
-          "label": "Sens de la décision",
+          "label": "Décision portée par l’imprimé du service",
           "valeur": "Maintien en totalité",
           "sub": "Case retenue sur l’imprimé, les deux autres étant barrées (p. 1)",
           "couleur": "red"
@@ -279,6 +266,30 @@
       "texte": "La conséquence se combine avec le dernier alinéa de l’article L. 57 : le rejet des observations doit être motivé. Ayant déclaré avoir tout lu, le service devait répondre au contenu des 112 pages et des 59 fichiers, pièce par pièce lorsqu’elles chiffrent un grief. Chaque point du mémoire du 10/07/2026 laissé sans réponse chiffrée dans les 96 pages du 04/09/2026 relève ainsi d’un défaut de motivation, et non d’un défaut de production."
     },
     {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Effet juridique du silence constaté p. 2",
+          "valeur": "Aucun",
+          "sub": "Ni R.* 57-1, ni L. 57, ni L. 190 n’attachent de renonciation à l’absence d’observation sur un point (2.1)",
+          "couleur": "teal",
+          "highlight": true
+        },
+        {
+          "label": "Moyens de procédure encore invocables",
+          "valeur": "Tous",
+          "sub": "Interlocuteur départemental, commission des impôts directs, réclamation contentieuse, tribunal administratif (2.1)",
+          "couleur": "teal"
+        },
+        {
+          "label": "Ce que le service reconnaît avoir reçu et lu",
+          "valeur": "112 pages et 59 fichiers",
+          "sub": "« à la lecture de la réponse et de tous les documents qui ont été transmis » (p. 2)",
+          "couleur": "teal"
+        }
+      ]
+    },
+    {
       "kind": "chapitre",
       "source": "nous",
       "numero": 3,
@@ -292,12 +303,6 @@
     {
       "kind": "paragraphe",
       "texte": "En sens inverse, la page 2 produit deux effets utiles à la société : elle acte la réception intégrale des 112 pages et des 59 fichiers, ce qui interdit d’écarter une pièce comme non produite, et elle fait courir deux délais de trente jours. Le premier doit être utilisé : la commission est compétente sur le montant du chiffre d’affaires reconstitué, qui est le cœur du litige."
-    },
-    {
-      "kind": "interne",
-      "audience": "avocat",
-      "titre": "Échéances à sécuriser",
-      "texte": "Deux délais de trente jours courent depuis la réception du courrier du 04/09/2026 : demande de saisine de la commission des impôts directs et des taxes sur le chiffre d’affaires (LPF, art. L. 59 et R.* 59-1) et observations sur les sanctions. La demande de saisine se fait par simple courrier informant le service de l’intention de saisir la commission. À vérifier également : la date exacte de réception, et l’incohérence de la mention « proposition de rectifications du 18 mai 2026 (AR du 04/12/2025) » portée en page 2, dont il faut faire préciser à quel acte elle se rapporte."
     }
   ]
 }

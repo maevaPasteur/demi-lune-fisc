@@ -1,11 +1,18 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-ATTENTION : ce script produit la cascade DU MEMOIRE DU 10/07/2026
-(9 004 L justifies / 84,8 %). La cascade a jour, apres les corrections portees
-contre nous-memes, est produite par scripts/reponse1-cascade-coherence.py et
-ecrite dans R1-cascade-bilan-matiere.xlsx. Les deux fichiers sont distincts
-depuis l audit des sources : ne pas les confondre.
+ATTENTION : ce script ne produit QUE la cascade HISTORIQUE du memoire du
+10/07/2026, telle qu elle a ete soumise au service et telle qu il la reproduit
+p. 76 de sa reponse du 04/09/2026. C est une piece de reference, pas la
+cascade en vigueur.
+
+La cascade EN VIGUEUR a un seul producteur : scripts/reponse1-cascade-valeurs.py,
+qui ecrit src/data/reponse1Calculs/cascade-10622.json et la piece
+R1-cascade-bilan-matiere.xlsx. Ce script-ci se contente de LIRE ce JSON pour
+afficher, en regard du memoire, les valeurs retenues aujourd hui. Il ne
+recalcule plus aucun poste corrige : la colonne « corrige » qu il portait
+auparavant (9 004 L justifies, correction du seul cremant) etait une TROISIEME
+cascade et elle est supprimee.
 
 REPONSE 1 - Partie L (p. 59) et partie M (p. 76-77) : la cascade des 10 622 L.
 
@@ -26,8 +33,10 @@ Deux colonnes de volumes :
 
 Entrees (lecture seule, deja produites par les pipelines du dossier) :
   src/data/incertitudeDisparu/synthese_perte_reelle.json   (cascade memoire)
-  src/data/reponse1Calculs/cremant-fourchette.json         (cremant borne par le stock)
-Sortie :
+  src/data/reponse1Calculs/cascade-10622.json              (cascade en vigueur)
+Sortie (piece NON publiee par defaut : elle n est rattachee a aucune page et
+elle porte des valeurs abandonnees ; ne la publier que si le conseil decide de
+produire la cascade de juillet telle qu elle a ete soumise) :
   public/documents/pieces-reponse-1/R1-cascade-bilan-matiere-memoire-juillet.xlsx
 """
 import os
@@ -39,7 +48,7 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
 SYNTHESE = os.path.join(ROOT, "src/data/incertitudeDisparu/synthese_perte_reelle.json")
-CREMANT = os.path.join(ROOT, "src/data/reponse1Calculs/cremant-fourchette.json")
+CASCADE_JSON = os.path.join(ROOT, "src/data/reponse1Calculs/cascade-10622.json")
 PIECES = os.path.join(ROOT, "public/documents/pieces-reponse-1/")
 SORTIE = os.path.join(PIECES, "R1-cascade-bilan-matiere-memoire-juillet.xlsx")
 
@@ -135,14 +144,15 @@ def norm(s):
 
 def charger():
     syn = json.load(open(SYNTHESE, encoding="utf-8"))["cascade_alcool"]
-    cre = json.load(open(CREMANT, encoding="utf-8"))["exercices"]
-    # Cremant corrige = ecart a expliquer (cremant sorti du stock et non vendu),
-    # somme des trois exercices, calcule sur les volumes disponibles du service.
-    cremant_corrige = sum(x["ecart_a_expliquer_cl"] for x in cre.values()) / 100.0
-    return syn, cremant_corrige
+    if not os.path.exists(CASCADE_JSON):
+        raise SystemExit("Lancer d'abord : python3 scripts/reponse1-cascade-valeurs.py")
+    casc = json.load(open(CASCADE_JSON, encoding="utf-8"))
+    return syn, casc
 
 
-def construire(syn, cremant_corrige):
+def construire(syn, casc):
+    """Table du memoire de juillet seule. Les totaux « en vigueur » sont lus
+    dans casc et ne sont jamais recalcules ici."""
     achats = float(syn["achats_alcool_l"])
     lignes = []
     cremant_memoire = 0.0
@@ -156,12 +166,12 @@ def construire(syn, cremant_corrige):
         lignes.append([lib, val, val, q[0], q[1], q[2], q[3]])
     q = QUALIF_CREMANT
     lignes.append(
-        [LIB_CREMANT, cremant_memoire, cremant_corrige, q[0], q[1], q[2], q[3]]
+        [LIB_CREMANT, cremant_memoire, cremant_memoire, q[0], q[1], q[2], q[3]]
     )
     total_mem = sum(l[1] for l in lignes)
-    total_cor = sum(l[2] for l in lignes)
+    total_cor = float(casc["attribue_l"])
     residu_mem = achats - total_mem
-    residu_cor = achats - total_cor
+    residu_cor = float(casc["residu_l"])
     return achats, lignes, total_mem, total_cor, residu_mem, residu_cor
 
 
@@ -200,8 +210,8 @@ def ecrire(ws, ligne, gras=False, fill=None):
 
 
 def main():
-    syn, cremant_corrige = charger()
-    achats, lignes, tot_mem, tot_cor, res_mem, res_cor = construire(syn, cremant_corrige)
+    syn, casc = charger()
+    achats, lignes, tot_mem, tot_cor, res_mem, res_cor = construire(syn, casc)
 
     wb = Workbook()
     ws = wb.active
@@ -212,10 +222,14 @@ def main():
     )
     ws["A1"].font = Font(bold=True, size=12)
     ws["A2"] = (
-        "Un litre achete est soit vendu, soit en stock, soit consomme sans vente, "
-        "soit perdu. Colonne 'memoire' = cascade soumise le 10/07/2026 et reproduite "
-        "p. 76 ; colonne 'corrige' = apres correction du poste cremant, borne par le "
-        "stock a la suite de l'objection du service (p. 62-63)."
+        "PIECE HISTORIQUE. Toutes les lignes de ce tableau reproduisent la cascade "
+        "soumise le 10/07/2026, telle que le service la reprend p. 76. Elles ne "
+        "portent PAS les corrections apportees depuis. La cascade en vigueur est "
+        "dans R1-cascade-bilan-matiere.xlsx, produite par "
+        "scripts/reponse1-cascade-valeurs.py : elle attribue "
+        f"{casc['attribue_l']:.1f} L a un poste identifie et laisse "
+        f"{casc['residu_l']:.1f} L de perte pure, soit {casc['residu_pct']:.1f} % "
+        "des achats."
     )
     ws["A2"].alignment = Alignment(wrap_text=True)
     ws.append([])
@@ -224,7 +238,7 @@ def main():
         [
             "Poste de la cascade",
             "Litres (memoire 10/07/2026)",
-            "Litres (corrige)",
+            "Litres (memoire, rappel)",
             "Nature",
             "Source du chiffre",
             "Piece detaillee (USB 10/07/2026)",
@@ -278,7 +292,8 @@ def main():
     )
 
     ws2 = wb.create_sheet("Synthese")
-    entete(ws2, ["Indicateur", "Memoire 10/07/2026", "Corrige"], [46, 22, 22])
+    entete(ws2, ["Indicateur", "Memoire 10/07/2026",
+                 "En vigueur (cascade-10622.json)"], [46, 22, 30])
     ecrire(ws2, ["Alcool achete (L)", round(achats, 1), round(achats, 1)])
     ecrire(ws2, ["Justifie poste par poste (L)", round(tot_mem, 1), round(tot_cor, 1)])
     ecrire(
@@ -318,7 +333,7 @@ def main():
     )
 
     ws3 = wb.create_sheet("Nature des postes")
-    entete(ws3, ["Nature", "Definition", "Postes concernes", "Volume corrige (L)"], [12, 60, 62, 18])
+    entete(ws3, ["Nature", "Definition", "Postes concernes", "Volume memoire (L)"], [12, 60, 62, 18])
     for nat, defi in [
         ("MESURE", "Lu directement dans la caisse certifiee ou dans l'inventaire de cloture, sans hypothese"),
         ("CALCUL", "Quantite mesuree en caisse multipliee par une recette, une dose ou une contrainte de stock"),
@@ -352,10 +367,7 @@ def main():
     print("  justifie corr.: %8.1f L (%.1f %%)" % (tot_cor, 100 * tot_cor / achats))
     print("  residu mem.   : %8.1f L (%.1f %%)" % (res_mem, 100 * res_mem / achats))
     print("  residu corr.  : %8.1f L (%.1f %%)" % (res_cor, 100 * res_cor / achats))
-    print("  cremant       : %8.1f L -> %.1f L" % (
-        sum(l[1] for l in lignes if l[0] == LIB_CREMANT),
-        cremant_corrige,
-    ))
+    print("  cremant memoire : %8.1f L" % sum(l[1] for l in lignes if l[0] == LIB_CREMANT))
 
 
 if __name__ == "__main__":

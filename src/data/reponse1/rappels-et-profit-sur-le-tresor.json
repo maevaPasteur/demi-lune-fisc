@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service refuse toute conséquence sur les rappels. Il rappelle que « Tout au long de la présente réponse, le service s’est attaché à démontrer que les arguments de Maître THIVEND n’apportaient aucun élément pertinent susceptible de modifier les montants de chiffres d’affaires ressortant de la méthode de reconstitution employée » (p. 94). Il en déduit que « les chiffres d’affaires reconstitués n’ont pas été impactés et demeurent les mêmes que ceux qui figuraient dans la proposition de rectifications » (p. 94). Conclusion soulignée dans le courrier : « Tous les rappels et rehaussements demeurant inchangés, le profit sur le trésor demeure également identique par rapport à la proposition de rectifications » (p. 94).",
-  "reponseCourte": "Le service ne défend ni le rappel de TVA ni le profit sur le Trésor pour eux-mêmes : il les fait reposer en totalité sur sa reconstitution, ses propres tableaux montrent que le profit sur le Trésor est intégralement neutralisé par la cascade, et le rappel du premier exercice y porte deux montants différents, le plus élevé servant à asseoir l’amende de 100 %.",
+  "reponseCourte": "Le service ne défend ni le rappel de TVA ni le profit sur le Trésor pour eux mêmes : il les fait reposer en totalité sur sa reconstitution, et nous n’élevons contre eux aucun moyen propre. Ses propres tableaux montrent que le profit sur le Trésor est intégralement neutralisé par la cascade, et que le rappel du premier exercice y porte deux montants différents, le plus élevé servant à asseoir l’amende de 100 %.",
   "enjeu": "Le rappel de TVA collectée et le profit sur le Trésor (article L. 77 du LPF), tous deux entièrement adossés à la reconstitution de chiffre d’affaires contestée",
-  "statut": "demonte"
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -59,7 +59,6 @@
      "label": "Conséquence retenue par le service",
      "valeur": "Aucun changement",
      "sub": "chiffres d’affaires reconstitués, rappels, rehaussements et profit sur le Trésor (p. 94)",
-     "highlight": true,
      "couleur": "red"
     },
     {
@@ -114,7 +113,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Ce texte n’institue pas le profit sur le Trésor : l’expression n’y figure pas. L’article L. 77 organise la **cascade**, c’est à dire une déduction opérée au bénéfice du contribuable. Le profit sur le Trésor procède, lui, de l’article 38-2 du code général des impôts et de l’avis du Conseil d’État du 19 octobre 1990 n° 117 924, que la proposition de rectification cite elle même page 56. Les deux mécanismes sont distincts, et ils jouent en sens inverse."
+   "texte": "Ce texte n’institue pas le profit sur le Trésor : l’expression n’y figure pas. L’article L. 77 organise la **cascade**, c’est à dire une déduction opérée au bénéfice du contribuable. Le profit sur le Trésor procède, lui, de l’article 38-2 du code général des impôts et de [l’avis du Conseil d’État du 19 octobre 1990 n° 117 924](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19901019-117924), que la proposition de rectification cite elle même page 56. Les deux mécanismes sont distincts, et ils jouent en sens inverse."
   },
   {
    "kind": "titre",
@@ -343,14 +342,20 @@
      "label": "Effet net du profit sur la base IS",
      "valeur": "0 €",
      "sub": "le résultat rectifié est le résultat déclaré augmenté de la seule minoration de CA HT",
-     "couleur": "teal",
-     "highlight": true
+     "couleur": "teal"
     },
     {
      "label": "Écart interne à trancher",
      "valeur": "380 €",
      "sub": "20 421 € (p. 54 et 56) contre 20 041 € (p. 59 et 63), exercice clos le 31/03/2023",
      "couleur": "gold"
+    },
+    {
+     "label": "Profit sur le Trésor dans l’amende de 100 %",
+     "valeur": "49 927 €",
+     "sub": "49 547 € plus l’écart de 380 € ; vérifié au centime pour le seul exercice 1, 172 813,45 + 20 421,10 = 193 234,55 € (proposition p. 58)",
+     "couleur": "red",
+     "highlight": true
     }
    ]
   },

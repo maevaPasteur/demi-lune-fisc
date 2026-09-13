@@ -1,7 +1,17 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-REPONSE 1 - Mise en cohérence de la cascade des 10 622 L.
+REPONSE 1 - Mise en cohérence des PAGES sur la cascade des 10 622 L.
+
+ATTENTION : ce script n'est plus producteur de la cascade. Il la CONSOMME.
+La seule source de vérité est scripts/reponse1-cascade-valeurs.py, qui écrit
+src/data/reponse1Calculs/cascade-10622.json et la pièce
+R1-cascade-bilan-matiere.xlsx. Ce script se borne à réécrire les sections
+chiffrées de la page « cascade-10622-litres » à partir de ce JSON.
+Lancer d'abord reponse1-cascade-valeurs.py.
+
+Il ÉCRIT dans src/data/reponse1/ : ne pas le lancer tant que la vague de
+correction des pages n'a pas été passée sur la fiche 12-cascade-unifiee.md.
 
 Trois postes ont été corrigés A LA BAISSE dans les sous-pages, après
 vérification contradictoire sur les factures et sur le stock :
@@ -28,45 +38,26 @@ import os, json
 ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), ".."))
 DATA = os.path.join(ROOT, "src/data/reponse1")
 
-ACHATS = 10622  # litres d'alcool achetés sur les 3 exercices (factures)
+_CASC = os.path.join(ROOT, "src/data/reponse1Calculs/cascade-10622.json")
+if not os.path.exists(_CASC):
+    raise SystemExit("Lancer d'abord : python3 scripts/reponse1-cascade-valeurs.py")
+CASC = json.load(open(_CASC, encoding="utf-8"))
+
+ACHATS = int(round(CASC["achats_l"]))
 
 # (clé, libellé, litres, nature, source, page de démonstration, slug)
-POSTES = [
-    ("verre", "Vendu au verre", 5569, "mesure", "Détail des tickets, annexes C1 à C3",
-     "Doses figées", "recon-1-doses-figees"),
-    ("cocktails", "Vendu en cocktails", 998, "calcul",
-     "Cocktails vendus en caisse x recette de la carte", "Doses figées", "recon-1-doses-figees"),
-    ("cuisine", "Cuisine et alcool des menus", 745, "calcul",
-     "Plats et menus vendus en caisse x dose, plafonnés aux achats facturés",
-     "Alcool de cuisine", "recon-5-alcool-cuisine"),
-    ("cremant", "Crémant non vendu", 272, "calcul",
-     "Bilan matière jour par jour, borné par le stock retenu par le service",
-     "Crémant", "recon-3-cremant-vendu"),
-    ("surversement", "Sur-versement au verre", 494, "estime",
-     "Taux publiés appliqués au seul volume versé à la main, borné par le stock",
-     "Sur-versement", "sur-versement-au-verre"),
-    ("degustation", "Dégustation offerte", 126, "mesure",
-     "Notes relevées une à une dans l’annexe C", "Dégustation", "degustation-offerte"),
-    ("biere", "Freinte technique de la bière", 122, "estime",
-     "10 % de la bière réellement sortie du fût (1 219,2 L lus en caisse), "
-     "soit 121,9 L arrondis", "Perte de bière", "perte-de-biere"),
-    ("chef", "Consommation du chef", 143, "estime",
-     "Base journalière déclarée x jours de service", "Consommation du personnel",
-     "recon-7-conso-personnel"),
-    ("offerts", "Apéritifs offerts", 40, "estime",
-     "Un apéritif de 6 cl par jour de service", "Abattements", "recon-8-abattements"),
-    ("stock", "Stock final", 213, "mesure", "Inventaire de clôture", "Variation de stock",
-     "recon-9-variation-de-stock"),
-]
+POSTES = [(p["cle"], p["libelle"], p["litres_arrondi"], p["nature"], p["source"],
+           p["page"], p["slug"]) for p in CASC["postes"]]
 
-JUSTIFIE = sum(p[2] for p in POSTES)
-RESIDU = ACHATS - JUSTIFIE
+JUSTIFIE = CASC["attribue_arrondi_l"]
+RESIDU = CASC["residu_arrondi_l"]
 PCT_RESIDU = 100 * RESIDU / ACHATS
 PCT_JUSTIFIE = 100 * JUSTIFIE / ACHATS
-MESURE = sum(p[2] for p in POSTES if p[3] == "mesure")
-CALCUL = sum(p[2] for p in POSTES if p[3] == "calcul")
-ESTIME = sum(p[2] for p in POSTES if p[3] == "estime")
+MESURE = CASC["nature"]["mesure"]["litres_arrondi"]
+CALCUL = CASC["nature"]["calcul"]["litres_arrondi"]
+ESTIME = CASC["nature"]["estime"]["litres_arrondi"]
 CAISSE = MESURE + CALCUL
+ASS = {a["cle"]: a for a in CASC["assiettes"]}
 
 N = lambda x, d=0: f"{x:,.{d}f}".replace(",", " ").replace(".", ",")
 P = lambda x, d=1: f"{x:,.{d}f}".replace(",", " ").replace(".", ",") + " %"
@@ -78,7 +69,7 @@ NATURE = {"mesure": "mesuré", "calcul": "calculé", "estime": "estimé"}
 def barre():
     return {
         "kind": "barreComposition",
-        "titre": "Où passent les 10 622 L d’alcool achetés, après les trois corrections que nous portons",
+        "titre": "Où passent les 10 622 L d’alcool achetés, après les six corrections que nous portons",
         "sousTitre": "Chaque segment est mesuré en caisse, calculé sur des quantités de caisse, ou "
                      "estimé à un taux publié. Le dernier segment est le solde : il n’est pas choisi.",
         "unite": "L",
@@ -124,85 +115,9 @@ def kpis():
     ]}
 
 
-def ecrire_xlsx():
-    """Régénère la pièce R1-cascade-bilan-matiere.xlsx sur les valeurs corrigées."""
-    from openpyxl import Workbook
-    from openpyxl.styles import Font, PatternFill, Alignment, Border, Side
-    from openpyxl.utils import get_column_letter
-
-    wb = Workbook()
-    blanc = Font(bold=True, color="FFFFFF")
-    tete = PatternFill("solid", fgColor="0F766E")
-    surligne = PatternFill("solid", fgColor="CCE7E2")
-    trait = Side(style="thin", color="D8DEE4")
-    bord = Border(left=trait, right=trait, top=trait, bottom=trait)
-    droite = Alignment(horizontal="right")
-
-    ws = wb.active
-    ws.title = "Cascade"
-    ws.append(["Bilan matiere des 10 622 L d'alcool achetes sur les trois exercices verifies"])
-    ws["A1"].font = Font(bold=True, size=13)
-    ws.append(["Un litre achete est soit vendu, soit encore en stock, soit consomme sans vente, "
-               "soit perdu. Le residu n'est pas choisi : c'est le solde de l'egalite. Version "
-               "integrant les trois corrections portees contre nous-memes (cremant borne par le "
-               "stock, sur-versement separe par assiette, alcool de cuisine plafonne aux factures)."])
-    ws["A2"].font = Font(italic=True, size=9, color="64748B")
-    ws.append([])
-    cols = ["Poste", "Litres", "Part des achats", "Nature du chiffre", "Source",
-            "Page de demonstration"]
-    ws.append(cols)
-    for c in range(1, len(cols) + 1):
-        cell = ws.cell(row=4, column=c)
-        cell.font, cell.fill, cell.border = blanc, tete, bord
-        cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
-    for p in POSTES:
-        ws.append([p[1], p[2], p[2] / ACHATS, NATURE[p[3]], p[4], p[5]])
-        r = ws.max_row
-        for c in range(1, len(cols) + 1):
-            ws.cell(row=r, column=c).border = bord
-        ws.cell(row=r, column=2).alignment = droite
-        ws.cell(row=r, column=3).number_format = "0,0 %"
-    ws.append(["Total attribue a un poste identifie", JUSTIFIE, JUSTIFIE / ACHATS, "", "", ""])
-    ws.append(["Perte pure (casse, evaporation, fonds de verre, rincage)", RESIDU,
-               RESIDU / ACHATS, "residu", "Solde du bilan matiere", ""])
-    ws.append(["Total achete (factures)", ACHATS, 1.0, "", "", ""])
-    for r in range(ws.max_row - 2, ws.max_row + 1):
-        for c in range(1, len(cols) + 1):
-            ws.cell(row=r, column=c).font = Font(bold=True)
-            ws.cell(row=r, column=c).fill = surligne
-            ws.cell(row=r, column=c).border = bord
-        ws.cell(row=r, column=2).alignment = droite
-        ws.cell(row=r, column=3).number_format = "0,0 %"
-    for i, w in enumerate([46, 12, 16, 18, 52, 28], 1):
-        ws.column_dimensions[get_column_letter(i)].width = w
-    ws.freeze_panes = "A5"
-
-    ws2 = wb.create_sheet("Nature des postes")
-    ws2.append(["Repartition des 10 622 L par nature du chiffre"])
-    ws2["A1"].font = Font(bold=True, size=13)
-    ws2.append([])
-    ws2.append(["Nature", "Litres", "Part des achats", "Definition"])
-    for c in range(1, 5):
-        cell = ws2.cell(row=3, column=c)
-        cell.font, cell.fill, cell.border = blanc, tete, bord
-    for lib, v, d in [
-        ("Mesure", MESURE, "Lu directement dans le detail des tickets ou dans l'inventaire"),
-        ("Calcule", CALCUL, "Quantite lue en caisse multipliee par une dose ou une recette de la carte"),
-        ("Estime", ESTIME, "Taux publie applique a une base lue en caisse"),
-        ("Residu", RESIDU, "Solde de l'egalite : aucun taux, aucune hypothese"),
-    ]:
-        ws2.append([lib, v, v / ACHATS, d])
-        r = ws2.max_row
-        for c in range(1, 5):
-            ws2.cell(row=r, column=c).border = bord
-        ws2.cell(row=r, column=2).alignment = droite
-        ws2.cell(row=r, column=3).number_format = "0,0 %"
-    for i, w in enumerate([16, 12, 16, 76], 1):
-        ws2.column_dimensions[get_column_letter(i)].width = w
-
-    chemin = os.path.join(ROOT, "public/documents/pieces-reponse-1/R1-cascade-bilan-matiere.xlsx")
-    wb.save(chemin)
-    print("écrit :", chemin)
+# La pièce R1-cascade-bilan-matiere.xlsx est produite par
+# scripts/reponse1-cascade-valeurs.py, seul producteur de la cascade.
+# Ce script ne l'écrit plus.
 
 
 def remplace(slug, remplacements):
@@ -225,15 +140,17 @@ def main():
         28: tableau(),
         29: kpis(),
         30: para(
-            f"**Les trois quarts du bilan reposent sur la caisse.** {N(MESURE)} L sont lus "
+            f"**Près des trois quarts du bilan reposent sur la caisse.** {N(MESURE)} L sont lus "
             f"directement dans la caisse ou dans l’inventaire et {N(CALCUL)} L sont calculés à "
             f"partir de quantités lues en caisse, soit {P(100 * CAISSE / ACHATS)} des achats. Les "
             f"postes estimés à partir d’un taux publié ne pèsent que {N(ESTIME)} L, soit "
             f"{P(100 * ESTIME / ACHATS)} des achats. L’objection selon laquelle notre méthode "
             f"serait une construction d’hypothèses ne correspond pas à ce qu’elle contient."),
-        31: {"kind": "titre", "texte": "Trois corrections que nous apportons contre nous-mêmes"},
+        31: {"kind": "titre", "texte": "Six corrections que nous apportons contre nous-mêmes"},
         32: para(
-            "Le service a formulé trois objections qui portent, et nous les intégrons. Sur le "
+            "Le service a formulé trois objections qui portent, et nous les intégrons. Nous en "
+            "ajoutons trois que nous avons trouvées nous-mêmes en reprenant notre propre "
+            "pipeline de calcul. Sur le "
             "[crémant](/reponse-1/recon-3-cremant-vendu), il a montré page 63 que le sur-versement "
             "maximal et le fond de bouteille ne pouvaient pas être cumulés : le volume n’est plus "
             "déduit d’un taux mais **borné par le stock lui-même**, jour par jour, avec ses propres "
@@ -245,9 +162,17 @@ def main():
             "factures montre que le Calvados et le Grand Marnier ne pouvaient pas être retenus au "
             "volume calculé : plafonné aux achats, le poste tombe de 795 L à **745 L**. Sur ces "
             "745 L réellement partis en cuisine, le service en retranche déjà une part dans sa "
-            "propre reconstitution : nous ne lui en demandons que **173 L de plus**."),
+            "propre reconstitution : nous ne lui en demandons que **173 L de plus**. "
+            "Sur la [perte de bière](/reponse-1/perte-de-biere), notre assiette incluait la "
+            "contenance des verres, limonade, grenadine et Picon compris : ramenée à la bière "
+            "réellement sortie du fût, 1 205,0 L lus en caisse, la freinte tombe de 129 L à "
+            "**120 L**. Sur le poste « vendu au verre », le panaché, le Monaco et le Picon "
+            "bière étaient comptés pour la contenance entière du verre alors que leur alcool "
+            "est déjà porté par le poste « vendu en cocktails » : **296 L étaient comptés deux "
+            "fois**, nous les retirons. Sur les offerts enfin, les 25,8 L d’alcool sonnés à "
+            "0,00 € figurent déjà dans les ventes : le poste tombe de 40 L à **14 L**."),
         33: para(
-            f"Ces trois corrections jouent contre nous et nous les portons quand même, parce qu’un "
+            f"Ces six corrections jouent contre nous et nous les portons quand même, parce qu’un "
             f"bilan matière n’a de valeur que s’il est rectifié dès qu’il est pris en défaut. Le "
             f"volume attribué à un poste identifié passe de 9 079 L à **{N(JUSTIFIE)} L** "
             f"({P(PCT_JUSTIFIE)}) et la perte pure de 1 543 L à **{N(RESIDU)} L**, soit "
@@ -255,7 +180,11 @@ def main():
             f"dissimulée** : un litre qui cesse d’être « justifié poste par poste » devient de la "
             f"perte non ventilée, il ne devient pas une recette. Dans les deux cas, il n’a pas été "
             f"vendu, et la reconstitution, qui suppose des doses exactes et zéro perte, le compte "
-            f"comme s’il l’avait été."),
+            f"comme s’il l’avait été. **Aucun litre ne figure dans deux postes** : le panaché, "
+            f"le Monaco et le Picon bière ne sont portés que par le poste des cocktails, les "
+            f"offerts enregistrés à 0,00 € ne sont portés que par les postes de vente, et les "
+            f"173 L de supplément d’alcool de cuisine demandés au service ne sont pas un poste "
+            f"de la cascade mais une demande : ils ne s’y ajoutent pas."),
         37: para(
             f"**Notre résidu se compare à la démarque du secteur sur la même base.** Beverage "
             f"Metrics et Stock-Taker retiennent 25 % **du volume acheté**, qui est exactement notre "
@@ -284,8 +213,6 @@ def main():
     # poste par poste : elle porte la méthode et le droit du bloc, et renvoie à la
     # partie M pour le chiffrage. Elle n'est donc plus patchée ici, et aucune
     # correction de volume n'a d'incidence sur son texte.
-
-    ecrire_xlsx()
 
     print(f"\nCascade : {N(ACHATS)} L achetés = {N(JUSTIFIE)} L justifiés ({P(PCT_JUSTIFIE)}) "
           f"+ {N(RESIDU)} L de résidu ({P(PCT_RESIDU)})")

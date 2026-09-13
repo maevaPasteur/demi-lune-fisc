@@ -6,7 +6,7 @@
   },
   "entete": {
     "positionService": "Le service concède que « la suppression des articles paraît logique pour créer une nouvelle note », mais objecte qu’« aucune explication pertinente n’est apportée sur la justification de toutes les opérations « DEL » » et que, comme en partie A, « seule une infime partie de ces suppressions est expliquée ». Il ajoute que le fichier « tpévenement.xls » ne permettant « aucune traçabilité effective comme prévu par la législation », « il est totalement impossible d’avoir la certitude que toutes les suppressions ont conduit à un ré-enregistrement dans une autre note à un quelconque moment ». Il renvoie à sa partie A et reproduit, à l’appui, un extrait de caisse de la journée du 09 septembre 2022 confrontant le fichier des évènements et le fichier des lignes de ticket. Il ne discute en revanche ni les prix du menu eux-mêmes, ni le taux de couverture chiffré qui lui était opposé.",
-    "reponseCourte": "Le prix d’un repas est libre, et l’extrait de caisse que le service reproduit lui-même page 55 démontre l’inverse de ce qu’il en tire : les sept suppressions de 12:07 font exactement 76,90 €, soit la note de 2 Menus Demi Lune à 38,45 €, et les neuf suppressions de 12:23 font exactement 207,00 €, soit 4 menus à 51,75 €.",
+    "reponseCourte": "Le prix d’un repas est libre, et l’extrait de caisse que le service reproduit lui-même page 55 démontre l’inverse de ce qu’il en tire : les sept suppressions de 12:07 font exactement 76,90 €, soit la note de 2 Menus Demi Lune à 38,45 €, et les neuf de 12:23 font exactement 207,00 €, soit 4 menus à 51,75 €. Sur les trois exercices, 61 conversions au forfait sont rapprochées au centime d’une addition réelle, et elles couvrent moins de la moitié des Menus Demi Lune vendus hors catalogue : le motif J n’est pour autant chiffré nulle part.",
     "enjeu": "Motif de rejet n° J de la proposition de rectifications (p. 34 à 36)",
     "statut": "demonte"
   },
@@ -55,7 +55,8 @@
         {
           "label": "Menus justifiés au centime par une rafale de suppressions",
           "valeur": "149",
-          "sub": "soit 45 % (p. 54)",
+          "sub": "149 des 334 menus hors catalogue selon le service, soit 45 % (p. 54) ; notre propre comptage donne 151 unités de menu et 149 couverts sur 332",
+          "couleur": "teal",
           "highlight": true
         },
         {
@@ -1051,7 +1052,7 @@
         {
           "label": "Lignes à la carte supprimées",
           "valeur": "421",
-          "sub": "soit 7,0 lignes par note en moyenne, jusqu’à 19"
+          "sub": "soit 6,9 lignes par note en moyenne, jusqu’à 19"
         },
         {
           "label": "Recettes encaissées après conversion",
@@ -1330,7 +1331,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Enfin, ces ventes hors catalogue ne sont pas des écritures isolées : chacune des 61 conversions rapprochées correspond à une note dont **7,0 lignes à la carte en moyenne** (jusqu’à 19) ont été supprimées puis refondues en un forfait. C’est bien une addition détaillée qui est reconditionnée, pas un prix inventé."
+      "texte": "Enfin, ces ventes hors catalogue ne sont pas des écritures isolées : chacune des 61 conversions rapprochées correspond à une note dont **6,9 lignes à la carte en moyenne** (jusqu’à 19) ont été supprimées puis refondues en un forfait. C’est bien une addition détaillée qui est reconditionnée, pas un prix inventé."
     },
     {
       "kind": "titre",
@@ -1360,7 +1361,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le motif J reposait sur une prémisse implicite : qu’un prix de menu variable révélerait une comptabilité non sincère. Cette prémisse est fausse en droit, puisque le prix est libre (article L. 410-2 du code de commerce), et fausse en fait, puisque chaque prix personnalisé est le total d’une addition réelle rapporté au couvert."
+      "texte": "Le motif J reposait sur une prémisse implicite : qu’un prix de menu variable révélerait une comptabilité non sincère. Cette prémisse est fausse en droit, puisque le prix est libre (article L. 410-2 du code de commerce), et fausse en fait, puisque les prix personnalisés que nous avons pu rapprocher sont chacun le total d’une addition réelle rapporté au couvert."
     },
     {
       "kind": "paragraphe",
@@ -1372,7 +1373,7 @@
     },
     {
       "kind": "piecejointe",
-      "intro": "Liste exhaustive des conversions au forfait aboutissant à un Menu Demi Lune vendu hors prix de carte, reconstituée à partir des seules annexes de caisse remises au service (ANNEXE-C, détail des tickets, et ANNEXE-E, fichier des évènements). Pour chaque conversion : date, heure de la rafale, nombre et détail des lignes supprimées, note encaissée, total, composition et écart. Le classeur comporte également la vérification de la journée du 09/09/2022 reproduite p. 55 et le décompte des ventes hors catalogue par période de carte. Script reproductible : scripts/reponse1-menu-demi-lune-conversions.py.",
+      "intro": "Liste exhaustive des conversions au forfait aboutissant à un Menu Demi Lune vendu hors prix de carte, au sens strict retenu ici : une rafale de suppressions dont la somme est égale au centime au total d’une note voisine, entièrement composée de lignes de menu. Ces 61 conversions portent 151 unités de Menu Demi Lune et 149 couverts, sur les 332 Menus Demi Lune vendus hors catalogue que l’annexe B dénombre, soit 45,5 % ; le service en compte 334 et retient 149, chiffre qui est en réalité celui des couverts. Les autres ventes hors catalogue sont des forfaits saisis directement, sans suppression préalable. La liste est reconstituée à partir des seules annexes de caisse remises au service (ANNEXE-C, détail des tickets, et ANNEXE-E, fichier des évènements). Pour chaque conversion : date, heure de la rafale, nombre et détail des lignes supprimées, note encaissée, total, composition et écart. Le classeur comporte également la vérification de la journée du 09/09/2022 reproduite p. 55 et le décompte des ventes hors catalogue par période de carte. Script reproductible : scripts/reponse1-menu-demi-lune-conversions.py.",
       "fichiers": [
         {
           "fichier": "pieces-reponse-1/R1-menu-demi-lune-conversions.xlsx",

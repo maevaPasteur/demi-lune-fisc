@@ -5,15 +5,15 @@
   "lettre": "I",
   "_bloc_calvados_encadrement": {
    "debut": 69,
-   "nb": 14,
+   "nb": 12,
    "source": "scripts/reponse1-calvados-encadrement.py"
   }
  },
  "entete": {
   "positionService": "Le service constate que la réponse ne traite que quatre types de boissons (Beaune, Calvados, eaux-de-vie et Martini) alors que la proposition de rectification en visait beaucoup d’autres, vendus à la dose comme à l’unité. Il concède seulement, sur le Beaune, qu’il « aurait effectivement dû rassembler ces types », puis oppose quatre tableaux d’articles restés selon lui sans explication. Sur le Calvados, il rappelle que la dose de flambage de 4 cl lui a été donnée par les dirigeants eux-mêmes et juge « très commode » de la ramener à 2 cl pour le seul alcool qui pose problème. Il en conclut, à trois reprises dans la même partie, qu’il maintient le rejet de comptabilité fondé sur la comptabilité matière et qu’il est fondé à reconstituer le chiffre d’affaires.",
-  "reponseCourte": "Sur les 226 cellules des quatre tableaux opposés, 12 seulement montrent des ventes supérieures aux achats, et la plus lourde est celle que le service concède ; son disponible ne ventile pas la totalité des achats du second fournisseur qu’il cite ; encadrée entre 2 et 3 cl par le stock lui-même, la dose de cuisine ferme le dernier déficit du bilan matière, qui reste excédentaire de 3 047,8 L.",
+  "reponseCourte": "Sur les 226 cellules des quatre tableaux opposés, 12 seulement montrent des ventes supérieures aux achats, et la plus lourde est celle que le service concède ; son « volume disponible » ne ventile pas la totalité des achats du second fournisseur qu’il cite lui même. Nous ne soutenons plus la dose de cuisine de 2 cl du mémoire de juillet, et nous ne lui substituons aucune autre valeur calculée : la dose de flambage reste celle que les dirigeants ont donnée. Le disponible que le service retient ne couvrirait la carte qu’à 2,60 cl par plat, ce qui mesure l’insuffisance de ce disponible, et le bilan matière reste excédentaire. La dose réelle par plat reste à confirmer.",
   "enjeu": "Comptabilité matière : le service en tire le maintien du rejet de comptabilité et la légitimité de la reconstitution de chiffre d’affaires.",
-  "statut": "demonte"
+  "statut": "a-etayer"
  },
  "sections": [
   {
@@ -35,16 +35,15 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Types de boissons traités",
+     "label": "Types de boissons que le service dit seuls traités",
      "valeur": "4",
      "sub": "« La réponse ne porte donc que sur 4 types de boissons » (p. 50)",
-     "highlight": true,
      "couleur": "red"
     },
     {
      "label": "Dose de flambage retenue",
      "valeur": "4 cl",
-     "sub": "information donnée au vérificateur par les dirigeants sur place (p. 49)",
+     "sub": "dose déclarée par les dirigeants (p. 49) et libellé de caisse « Calvados (4cl) » : c’est la dose que nous retenons",
      "couleur": "gold"
     },
     {
@@ -1483,7 +1482,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reprend le bilan matière global de la réponse : 10 622,0 L achetés sur trois exercices, 7 360,9 L consommés, 213,3 L de variation de stock, soit un excédent net de +3 047,8 L ; puis la reconstitution de consommation réelle qui porte la consommation à 9 079 L (85,5 % des achats) et laisse 1 543 L de perte normale résiduelle (14,5 %), pour un bilan ajusté d’environ 0 L. Il cite également la conclusion de la réponse : « Aucun des exemples du service ne révèle de vente cachée [...] Le grief de comptabilité non sincère sur ce fondement n’est pas établi » (p. 52)."
+   "texte": "Le service reprend le bilan matière global de la réponse : 10 622,0 L achetés sur trois exercices, 7 360,9 L consommés, 213,3 L de variation de stock, soit un excédent net de +3 047,8 L ; puis la reconstitution de consommation réelle qui porte la consommation à 9 079 L (85,5 % des achats) et laisse 1 543 L de perte normale résiduelle (14,5 %), chiffres du mémoire de juillet portés depuis à **8 398 L** et **2 224 L**, pour un bilan ajusté d’environ 0 L. Il cite également la conclusion de la réponse : « Aucun des exemples du service ne révèle de vente cachée [...] Le grief de comptabilité non sincère sur ce fondement n’est pas établi » (p. 52)."
   },
   {
    "kind": "paragraphe",
@@ -3609,7 +3608,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La partie I s’intitule « Consommation vendue supérieure aux achats ». Une seule configuration correspond à cet intitulé : une cellule où les **quantités vendues dépassent les quantités disponibles**. Les autres disent soit l’inverse, un produit acheté et non vendu, qui ne peut par construction révéler aucune recette dissimulée, soit rien du tout."
+   "texte": "La partie I s’intitule « Consommation vendue supérieure aux achats ». Une seule configuration correspond à cet intitulé : une cellule où les **quantités vendues dépassent les quantités disponibles**. Les autres cellules disent l’inverse, un produit acheté et non vendu en caisse : elles ne relèvent pas de l’intitulé de la partie I, et la société en rend compte poste par poste au titre du bilan matière (stock, cuisine, offerts, pertes)."
   },
   {
    "kind": "paragraphe",
@@ -5021,11 +5020,7 @@
   },
   {
    "kind": "titre",
-   "texte": "L’encadrement de la dose : entre 2 et 3 cl"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service reproche ailleurs à la réponse de « définir mathématiquement » ses taux. L’objection est prise au sérieux : **nous ne retenons pas une dose, nous l’encadrons**. Deux bornes suffisent, et aucune des deux n’est choisie par nous. La borne basse, **2 cl**, est la référence culinaire déjà versée au débat (un dessert flambé demande 7 à 8 cl d’alcool pour quatre personnes). La borne haute, **3 cl**, est le seuil au-delà duquel le stock ne suit plus."
+   "texte": "Ce que le disponible retenu par le service suffirait à couvrir"
   },
   {
    "kind": "paragraphe",
@@ -5033,7 +5028,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "L’encadrement de la dose : le bilan matière change de signe entre 2 et 3 cl (décompte de plats et volumes disponibles du service, p. 65)",
+   "titre": "À 4 cl, le disponible que le service retient est dépassé de 2 017 cl : ce que cela mesure (décompte de plats et volumes disponibles du service, p. 65)",
    "minWidth": 940,
    "colonnes": [
     {
@@ -5200,15 +5195,15 @@
   },
   {
    "kind": "note",
-   "texte": "Le décompte de 2 750 plats est celui du service (p. 65). Il diffère très légèrement du nôtre, 2 732 plats, reproduit dans le tableau précédent : le service y ajoute la crêpe Normandine et n’y compte pas les deux libellés « flambée » génériques, que nous retenons par prudence. L’écart, 18 plats sur 2 750, représente moins de 0,7 % et ne déplace la dose d’équilibre que de deux centièmes de centilitre : la démonstration ne dépend pas du décompte retenu."
+   "texte": "Le décompte de 2 750 plats est celui du service (p. 65). Il diffère très légèrement du nôtre, 2 732 plats, reproduit dans le tableau précédent : le service y ajoute la crêpe Normandine et n’y compte pas les deux libellés « flambée » génériques, que nous retenons par prudence. L’écart, 18 plats sur 2 750, représente moins de 0,7 % et ne déplace que de deux centièmes de centilitre la valeur que ce disponible suffirait à couvrir : la démonstration ne dépend pas du décompte retenu."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le résultat est un **encadrement au sens strict** : à 2 cl, 16,56 L du Calvados acheté resteraient inemployés, ce que l’inventaire dément puisque le stock de clôture ne dépasse jamais deux bouteilles ; à 3 cl, il en **manquerait** 10,94 L, ce qui est matériellement impossible. Le bilan change de signe à l’intérieur de l’intervalle : **la dose réelle est nécessairement comprise entre 2 et 3 cl**, et le point d’équilibre se situe à **2,60 cl**, soit à 60 % de l’intervalle. Ce chiffre n’est pas postulé : il est ce qui reste une fois le volume acheté, le stock et les ventes au verre connus."
+   "texte": "Ce tableau ne mesure pas une dose, il mesure le disponible que le service retient : à 2 cl, 16,56 L du Calvados acheté resteraient inemployés, ce que l’inventaire dément puisque le stock de clôture ne dépasse jamais deux bouteilles ; à 3 cl, il en **manquerait** 10,94 L. Le disponible que le service retient ne couvrirait la carte qu’à **2,60 cl** par plat ((7 300 - 144) / 2 750). Puisque la dose déclarée est de **4 cl** et qu’elle n’est pas contestée, c’est le disponible qui est incomplet, et son annexe n° 6 en donne la raison : la colonne « Achats Inter-M » y est vide pour ce produit."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Nous ne soutenons donc plus la dose de 2 cl** avancée le 10 juillet 2026. Elle laisserait 16,56 L sans emploi, que le service convertirait aussitôt en ventes non déclarées. L’encadrement est la seule lecture qui n’ouvre ni une impossibilité matérielle, ni un volume résiduel : quelle que soit la valeur retenue entre 2,5 et 2,7 cl, la conclusion est identique, **le Calvados acheté est intégralement consommé et il n’en reste rien à vendre**."
+   "texte": "**Nous ne soutenons donc plus la dose de 2 cl** avancée le 10 juillet 2026, et nous ne lui substituons aucune autre valeur : la dose de flambage reste celle que les dirigeants ont donnée, 4 cl. La dose de 2 cl laisserait 16,56 L sans emploi, que le service convertirait aussitôt en ventes non déclarées."
   },
   {
    "kind": "titre",
@@ -5372,27 +5367,21 @@
    "texte": "Enfin, la lecture inverse ne tient pas davantage. Pour lire les 2 017 cl de surconsommation retenus par le service comme des ventes non enregistrées, il faudrait retrouver **504 verres de Calvados sur trois exercices**, quand la caisse en enregistre **36**, soit 14,0 fois le débit réel du produit. Sur la même période, l’établissement a acheté 1 227,74 € HT de Calvados et en a vendu 215,00 € TTC au verre : c’est un ingrédient, pas une ligne de recette."
   },
   {
-   "kind": "interne",
-   "audience": "restaurant",
-   "titre": "Trois points à confirmer avant l’entretien",
-   "texte": "1. La dose réelle par plat : camembert rôti, assiette du père Grégoire et galette Frelée d’un côté, crêpes Grappins, Basilic et Normandine de l’autre. C’est le seul paramètre libre de la démonstration, et le camembert rôti pèse à lui seul 81 % du volume. 2. La crêpe Normandine est-elle bien flambée au Calvados ? Le décompte du service le suppose, sur 125,5 portions. 3. Se souvient-on d’avoir acheté du Calvados, du whisky ou une autre eau-de-vie à Intermarché ? La question ne conditionne pas la démonstration, qui tient par le stock, mais une réponse positive rendrait le débat sur la dose sans objet."
-  },
-  {
    "kind": "titre",
-   "texte": "Le même encadrement ferme le seul déficit du bilan matière",
+   "texte": "Le seul déficit du bilan matière est celui du Calvados, et il a la même cause",
    "numero": "2.6"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le bilan matière complet, produit par produit, ne laisse subsister qu’un seul déficit de famille : **45,1 L manquants sur les eaux-de-vie et digestifs**. Nous ne le contournons pas, nous le fermons par la même méthode que le Calvados, et pour la même raison : ce déficit est celui du Calvados, et de lui seul. Hors Calvados, la famille est **excédentaire de 3,4 L** (20,3 L achetés, 12,7 L consommés et 4,2 L en stock)."
+   "texte": "Le bilan matière complet, produit par produit, ne laisse subsister qu’un seul déficit de famille : **45,1 L manquants sur les eaux-de-vie et digestifs**. Nous ne le contournons pas : ce déficit est celui du Calvados, et de lui seul. Hors Calvados, la famille est **excédentaire de 3,4 L** (20,3 L achetés, 12,7 L consommés et 4,2 L en stock)."
   },
   {
    "kind": "paragraphe",
-   "texte": "La dose de cuisine est le seul paramètre libre. Le tableau ci-dessous la fait varier et laisse le stock arbitrer. À 4 cl, la famille aurait consommé 45,1 L de plus qu’elle n’a acheté, ce qui est matériellement impossible. À 2 cl, elle laisserait 14,4 L inemployés, que l’inventaire dément. **Le bilan change de signe à l’intérieur du même intervalle de 2 à 3 cl**, et le point d’équilibre de la famille se situe à **2,48 cl**. Ce chiffre n’est pas choisi : il est ce qui reste une fois les achats facturés, l’inventaire et les ventes au verre connus."
+   "texte": "La dose de cuisine est le seul paramètre dont la valeur ne soit pas établie par une pièce. Le tableau ci-dessous la fait varier, non pour la déterminer, mais pour mesurer ce que les achats retenus suffiraient à couvrir. À la dose déclarée de 4 cl, la famille aurait consommé 45,1 L de plus qu’elle n’a acheté ; les achats retenus ne la couvriraient qu’à **2,48 cl** par plat. Nous n’en déduisons pas que la dose serait de 2,48 cl : nous en déduisons que la base d’achats est incomplète, et le 2.4 en donne la raison, les 78 factures du second fournisseur n’y figurent pas plus que dans le disponible du service."
   },
   {
    "kind": "tableau",
-   "titre": "Eaux-de-vie et digestifs : le bilan de la famille change de signe entre 2 et 3 cl (achats facturés, consommation de caisse et de cuisine, inventaire)",
+   "titre": "Eaux-de-vie et digestifs : le bilan de la famille selon l’hypothèse de dose en cuisine (achats facturés, consommation de caisse et de cuisine, inventaire)",
    "minWidth": 860,
    "colonnes": [
     {
@@ -5448,7 +5437,7 @@
     ],
     [
      {
-      "v": "3 cl : borne haute de l’encadrement"
+      "v": "3 cl : hypothèse de dose en cuisine"
      },
      {
       "v": "3,00 cl",
@@ -5474,7 +5463,7 @@
     ],
     [
      {
-      "v": "Dose d’équilibre de la famille (calculée)"
+      "v": "Dose que le disponible du service suffirait à couvrir"
      },
      {
       "v": "2,48 cl",
@@ -5499,7 +5488,7 @@
     ],
     [
      {
-      "v": "2 cl : borne basse de l’encadrement"
+      "v": "2 cl : la dose du mémoire du 10 juillet 2026, que nous ne soutenons plus"
      },
      {
       "v": "2,00 cl",
@@ -5527,7 +5516,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La conséquence est double. Une fois la dose ramenée dans son encadrement, le bilan matière ne comporte plus aucun déficit de famille. Et la dose qui ferme la famille entière est la même que celle qui ferme le seul Calvados : la correction n’a donc rien de sélectif, elle est imposée par le stock, et non choisie pour l’alcool qui pose problème."
+   "texte": "La conséquence est double. Le déficit de la famille tient entièrement au Calvados, donc au seul produit dont les achats du second fournisseur manquent à la base. Et la valeur que les achats retenus suffiraient à couvrir est la même pour la famille entière que pour le seul Calvados : ce que nous constatons n’a donc rien de sélectif, c’est l’insuffisance d’une base d’achats, et non une dose choisie pour l’alcool qui pose problème."
   },
   {
    "kind": "titre",
@@ -5777,7 +5766,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reproche à la réponse de « globaliser » pour lisser les incohérences (p. 52). Le reproche inverse la logique du bilan matière. Un litre acheté est soit vendu, soit consommé sans vente, soit perdu ; et lorsque deux libellés se recouvrent, ce qui manque sur l’un se retrouve sur l’autre. Un écart isolé sur un libellé ne prouve donc rien tant qu’il n’a pas été rapproché du libellé voisin. C’est ce que le service reconnaît lui-même en admettant qu’il aurait dû rassembler les types de Beaune."
+   "texte": "Le service reproche à la réponse de « globaliser » pour lisser les incohérences (p. 52). Le reproche inverse la logique du bilan matière. Un litre acheté est soit vendu, soit encore en stock à la clôture, soit consommé sans vente, soit perdu ; et lorsque deux libellés se recouvrent, ce qui manque sur l’un se retrouve sur l’autre. Un écart isolé sur un libellé ne se lit donc pas seul : il doit être rapproché du libellé voisin, ce que le service reconnaît lui-même en admettant qu’il aurait dû rassembler les types de Beaune."
   },
   {
    "kind": "paragraphe",
@@ -5848,7 +5837,7 @@
       "align": "right"
      },
      {
-      "v": "1 765,2 L",
+      "v": "1 469,2 L",
       "align": "right"
      },
      {
@@ -5856,12 +5845,12 @@
       "align": "right"
      },
      {
-      "v": "+656,4 L",
+      "v": "+952,4 L",
       "align": "right",
       "badge": "ok"
      },
      {
-      "v": "+26,5 %",
+      "v": "+38,5 %",
       "align": "right"
      }
     ],
@@ -6058,7 +6047,7 @@
       "fw": 700
      },
      {
-      "v": "7 360,9 L",
+      "v": "7 064,9 L",
       "align": "right",
       "fw": 700
      },
@@ -6068,13 +6057,13 @@
       "fw": 700
      },
      {
-      "v": "+3 047,8 L",
+      "v": "+3 343,8 L",
       "align": "right",
       "fw": 700,
       "badge": "ok"
      },
      {
-      "v": "+28,7 %",
+      "v": "+31,5 %",
       "align": "right",
       "fw": 700
      }
@@ -6082,8 +6071,12 @@
    ]
   },
   {
+   "kind": "note",
+   "texte": "Ce bilan est établi sur la consommation calculée, alcool de cuisine compris à 794,6 L. Plafonné aux achats facturés (744,6 L), l’excédent passe à **3 393,8 L**, soit **31,9 %** des achats : c’est la valeur reprise dans la cascade des 10 622 L."
+  },
+  {
    "kind": "paragraphe",
-   "texte": "Toutes familles confondues, l’établissement a **acheté 3 047,8 L de plus qu’il n’a servi**, soit 28,7 % de ses achats. Une comptabilité matière ne peut pas être présentée comme révélant une consommation supérieure aux achats lorsque, mesurée sur l’ensemble, elle se ferme largement à l’excédent."
+   "texte": "Toutes familles confondues, l’établissement a acheté **3 343,8 L** de plus qu’il n’a servi, soit **31,5 %** de ses achats, et **3 393,8 L** après plafonnement de l’alcool de cuisine aux achats facturés. Cet excédent n’efface pas les écarts constatés ligne à ligne ; il établit en revanche qu’aucun volume n’est disponible, sur l’ensemble, pour alimenter une reconstitution de recettes."
   },
   {
    "kind": "paragraphe",
@@ -6106,17 +6099,15 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Il ne reste, au terme de ces contrôles, aucune quantité mesurée démontrant qu’il aurait été vendu plus qu’il n’a été acheté. Le bilan matière complet, caisse contre factures contre inventaire, laisse au contraire **3 047,8 L d’achats non servis**, et son unique déficit de famille se referme à l’intérieur de l’encadrement de dose que le stock impose. La comptabilité matière ne peut donc, à elle seule, justifier le rejet de la comptabilité ni la reconstitution de chiffre d’affaires qui en découle, elle-même amplifiée par le coefficient appliqué à la cuisine."
+   "texte": "Il ne reste, au terme de ces contrôles, aucune quantité mesurée démontrant qu’il aurait été vendu plus qu’il n’a été acheté. Le bilan matière complet, caisse contre factures contre inventaire, laisse au contraire **3 343,8 L d’achats non servis**, et son unique déficit de famille est celui du seul Calvados, le produit même dont les achats du second fournisseur ne figurent ni dans le disponible du service ni dans notre base de factures. La comptabilité matière ne peut donc, à elle seule, justifier le rejet de la comptabilité ni la reconstitution de chiffre d’affaires qui en découle, elle-même amplifiée par le coefficient appliqué à la cuisine."
   },
   {
-   "kind": "interne",
-   "audience": "avocat",
-   "titre": "Points à sécuriser avant l’entretien et, le cas échéant, devant la commission",
-   "texte": "1. Intermarché : la société ne détient pas les 78 factures. La démonstration du 2.4 repose sur trois éléments vérifiables par le service lui-même (les 21 colonnes de son annexe n° 5, la colonne « Achats Inter-M » vide sur la ligne Calvados de son annexe n° 6, le taux moyen de TVA de 9,7 % sur ses propres montants) et sur la charge de la preuve. Ne jamais annoncer une production de pièces que nous ne maîtrisons pas. Si l’exploitante retrouve des relevés bancaires ou des tickets de la période, demander la communication de l’annexe n° 5 en original et faire constater ligne à ligne les produits achetés. 2. Le taux de TVA des factures Intermarché a été lu sur la transcription de l’annexe ; sur les 78 lignes, 67 se recoupent exactement (HT + TVA = TTC) et seules celles-là ont été retenues. Faire confirmer la lecture sur l’annexe papier avant toute audience. 3. Notre propre bilan matière est bâti sur les 199 factures Franche-Comté Boissons Services. Trois libellés y sont sous-évalués à l’achat pour 353,2 L (Chablis, Gewurztraminer, demi-bouteilles de Béthanie) : le rattachement doit être repris avant tout débat d’expert, mais la correction joue en notre faveur et nous conservons volontairement le chiffre bas. 4. Le seul paramètre libre de la démonstration reste la dose de cuisine réelle, plat par plat. L’encadrement entre 2 et 3 cl la rend indifférente, mais une confirmation de l’exploitante sur le camembert rôti, qui pèse 81 % du volume, la verrouillerait."
+   "kind": "paragraphe",
+   "texte": "Deux éléments de fait ne sont pas encore au dossier, et nous le disons plutôt que de les supposer. D’une part la dose d’alcool effectivement mise dans chaque plat, et en particulier dans le camembert rôti, qui représente à lui seul l’essentiel du volume discuté : elle procède de la recette de l’établissement et sera précisée par une déclaration de la gérance, non par un calcul. D’autre part les factures du second fournisseur que le service cite lui même, que la société ne détient pas et dont elle demande la communication : leur absence conduit à sous-estimer ses achats, donc le volume disponible opposé aux ventes, et elle joue contre nous dans le sens du grief."
   },
   {
    "kind": "piecejointe",
-   "intro": "Contrôles reproductibles de la partie I. Le premier fichier recalcule les 203 pourcentages des quatre tableaux du service, établit le bilan matière par famille et par produit, et sépare la dose de Calvados servie au verre de la dose utilisée en cuisine (script scripts/reponse1-conso-achats-controles.py). Le second classe les 226 cellules des quatre tableaux selon le sens de l’écart, encadre la dose de cuisine des eaux-de-vie et chiffre poste par poste l’hypothèse d’extension des corrections de dose (script scripts/reponse1-conso-achats-encadrements.py).",
+   "intro": "Contrôles reproductibles de la partie I. Le premier fichier recalcule les 203 pourcentages des quatre tableaux du service, établit le bilan matière par famille et par produit, et sépare la dose de Calvados servie au verre de la dose utilisée en cuisine (script scripts/reponse1-conso-achats-controles.py). Le second isole, parmi les 226 cellules des quatre tableaux, les douze où les quantités vendues excèdent les quantités disponibles, et en donne le détail ligne à ligne, encadre la dose de cuisine des eaux-de-vie et chiffre poste par poste l’hypothèse d’extension des corrections de dose (script scripts/reponse1-conso-achats-encadrements.py).",
    "fichiers": [
     {
      "fichier": "pieces-reponse-1/R1-conso-achats-controles.xlsx",

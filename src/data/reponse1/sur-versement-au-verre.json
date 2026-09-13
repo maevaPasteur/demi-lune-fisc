@@ -11,9 +11,9 @@
  },
  "entete": {
   "positionService": "Le service refuse en bloc les taux de sur-versement de la littérature : « le service ne peut légitimement pas les admettre. Ils sont affirmés sans le moindre élément pour les soutenir » (p. 80), et il y voit un calcul construit à l’envers pour absorber exactement les volumes manquants. Il oppose au vin un argument physique : un sur-versement moyen de 17,60 % (720 L / 4 091 L) conduirait à des verres de 17,64 cl, à des pichets de 58,80 cl et à des bouteilles de 88,20 cl, ce qui est impossible pour des contenants normés, donc tout le sur-dosage devrait se reporter sur le seul verre, à un taux qui le rendrait « impossible physiquement ». Il ajoute que le sur-dosage altérerait le goût des cocktails et rendrait leur confection impossible, que la volatilité des taux d’un alcool à l’autre est « surprenante », et que les taux de disparition varient trop d’un exercice et d’une boisson à l’autre pour venir d’un sur-versement. Il conclut que ces écarts traduisent une dissimulation de recettes, et rappelle que les articles vendus à l’unité, où le sur-dosage n’explique rien, présentent les mêmes écarts.",
-  "reponseCourte": "Le verre de 17,64 cl, le pichet de 58,80 cl et la bouteille de 88,20 cl sortent du calcul du service lui-même, qui applique un taux moyen à des contenants dont le sur-versement est nul par construction ; séparé assiette par assiette le sur-versement est de 494 L, le stock en autoriserait jusqu’à quatre fois plus, et le tableau par lequel il conclut à la dissimulation comporte 25 lignes que sa propre formule ne peut pas produire.",
-  "enjeu": "Le sur-versement au verre, soit 720 L d’alcool sur trois exercices, c’est-à-dire autant de verres que la reconstitution du service compte en trop.",
-  "statut": "demonte"
+  "reponseCourte": "Le verre de 17,64 cl, le pichet de 58,80 cl et la bouteille de 88,20 cl sortent du calcul du service lui-même, qui applique un taux moyen à des contenants dont le sur-versement est nul par construction, et le tableau par lequel il conclut à la dissimulation comporte 25 lignes que sa propre formule ne peut pas produire. Nous corrigeons notre chiffre de 720 L à 494 L et plafonnons au stock les 8 lignes où le taux publié le dépasse, ce qui borne le sur-versement entre 440 L et 494 L, soit une fraction minoritaire de l’écart que le stock permet de borner.",
+  "enjeu": "Le sur-versement au verre, soit 720 L d’alcool sur trois exercices dans le mémoire du 10 juillet 2026, ramenés à 493,9 L après séparation par régime de service, c’est-à-dire autant de verres que la reconstitution du service compte en trop.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -413,14 +413,14 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Base servie à la main",
+     "label": "Base retenue par le service pour son taux moyen",
      "valeur": "4 091 L",
-     "sub": "3 exercices, p. 78 et 79"
+     "sub": "4 091 L (p. 78 et 79) : verre, pichet et bouteille confondus ; la base réellement versée à la main est de 1 699,3 L"
     },
     {
      "label": "Sur-versement revendiqué",
-     "valeur": "720 L",
-     "sub": "pichet pré-mesuré exclu",
+     "valeur": "493,9 L",
+     "sub": "après séparation par régime de service ; 720 L au 10/07/2026",
      "highlight": true,
      "couleur": "teal"
     },
@@ -477,19 +477,19 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Verre de vin qui en résulterait",
+     "label": "Selon le service : verre de vin qui en résulterait",
      "valeur": "17,64 cl",
      "sub": "15 cl x 1,1760, p. 80",
      "couleur": "red"
     },
     {
-     "label": "Pichet de 50 cl qui en résulterait",
+     "label": "Selon le service : pichet de 50 cl qui en résulterait",
      "valeur": "58,80 cl",
      "sub": "« peu probable » selon le service",
      "couleur": "red"
     },
     {
-     "label": "Bouteille de 75 cl qui en résulterait",
+     "label": "Selon le service : bouteille de 75 cl qui en résulterait",
      "valeur": "88,20 cl",
      "sub": "« impossible » selon le service",
      "couleur": "red"
@@ -1119,7 +1119,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service n’indique pas davantage d’où viennent ses propres doses. Les 15 cl du verre, les 50 et 75 cl du pichet et les 4 cl du spiritueux sont recopiés de la carte, sans la moindre constatation matérielle sur place : ni doseur relevé, ni verre mesuré, ni contrôle du service. Une dose théorique posée sans vérification n’a pas une valeur probante supérieure à une dose mesurée et publiée."
+   "texte": "Le service n’indique pas davantage d’où viennent ses propres doses. Les 15 cl du verre, les 50 et 75 cl du pichet et les 4 cl du spiritueux sont recopiés de la carte, sans la moindre constatation matérielle sur place : ni doseur relevé, ni verre mesuré, ni contrôle du service. Une dose théorique posée sans vérification n’a pas une valeur probante supérieure à une dose mesurée et publiée. Il en va autrement des doses de cuisine et de celle du crémant, dont il écrit lui-même qu’elles lui ont été confirmées par les dirigeants (p. 62, 65 à 68)."
   },
   {
    "kind": "paragraphe",
@@ -1127,7 +1127,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le courrier tient par ailleurs la caisse pour non probante lorsqu’il s’agit de rejeter la comptabilité, et pour exacte au centilitre lorsqu’il s’agit d’en tirer les doses, les quantités vendues et le rapport liquides sur solides. Les deux lectures ne peuvent pas être vraies en même temps."
+   "texte": "Le courrier tient la caisse pour non probante lorsqu’il s’agit de rejeter la comptabilité, et l’utilise comme mesure lorsqu’il en tire les doses, les quantités vendues et le rapport liquides sur solides. Nous ne lui demandons pas de renoncer à l’une de ces deux lectures : nous demandons qu’il dise, pour chaque paramètre qu’il y puise, sur quelle vérification il se fonde, puisqu’il refuse la même vérification à la société."
   },
   {
    "kind": "titre",
@@ -1417,7 +1417,7 @@
      "valeur": "493,9 L",
      "sub": "au lieu de 720 L, soit 12,07 % de la base de 4 091 L",
      "highlight": true,
-     "couleur": "gold"
+     "couleur": "teal"
     }
    ]
   },
@@ -1581,7 +1581,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Un verre annoncé à 15 cl et servi à **18,5 cl** : c’est exactement l’ordre de grandeur mesuré par Kerr et coll. sur 480 boissons (6,18 oz, soit 18,3 cl). Un verre à vin de restaurant contient 25 à 35 cl. Il n’y a là aucune difficulté physique, et le service n’en démontre aucune."
+   "texte": "Un verre annoncé à 15 cl et servi à **18,54 cl**. C’est davantage que les 17,64 cl que le service juge « extrêmement improbable dans la profession », et nous l’assumons : Kerr et coll. n’ont pas posé un taux, ils ont mesuré un volume, 6,18 oz, soit **18,28 cl**, sur 480 boissons servies dans 80 établissements. Notre chiffre est à 1,4 % de cette mesure. Un verre à vin de restaurant contient 25 à 35 cl : il n’y a là aucune difficulté physique, et le service n’en démontre aucune. Ces 18,54 cl sont le contenu du verre, qui est ce que Kerr a mesuré. La bouteille en délivre davantage : sur 4 611 des 5 557 verres de vin nommé, une larme de 2 cl est offerte au préalable dans un autre verre, soit 1,66 cl de plus en moyenne, et **20,2 cl prélevés pour 15 cl vendus**. Les deux gestes sont distincts et ils se cumulent."
   },
   {
    "kind": "alerte",
@@ -1596,7 +1596,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service soupçonne un calcul construit à l’envers, des taux qui « semblent évaluer mathématiquement […] de sorte qu’il ne puisse plus y avoir de matière pour augmenter les chiffres d’affaires reconstitués » (p. 80). Ce soupçon peut se vérifier, et il se vérifie par le stock. Un litre acheté est soit vendu, soit consommé sans vente, soit perdu : le sur-versement est donc borné par le bilan matière, sans qu’il soit besoin de le postuler."
+   "texte": "Le service soupçonne un calcul construit à l’envers, des taux qui « semblent évaluer mathématiquement […] de sorte qu’il ne puisse plus y avoir de matière pour augmenter les chiffres d’affaires reconstitués » (p. 80). Ce soupçon peut se vérifier, et il se vérifie par le stock. Un litre acheté est soit vendu, soit encore en stock à la clôture, soit consommé sans vente, soit perdu : le sur-versement est donc borné par le bilan matière, sans qu’il soit besoin de le postuler."
   },
   {
    "kind": "paragraphe",
@@ -1604,11 +1604,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Sur l’ensemble des vins et alcools servis au verre, le disponible au service est de **6 355,0 L** pour **4 319,4 L** vendus aux doses de la carte, soit un écart de **2 035,6 L**. Rapporté à la base versée à la main (1 699,3 L), le stock autorise un sur-versement allant jusqu’à **119,8 %**. Nous en retenons **29,06 %**. Il n’y a donc aucune impossibilité matérielle, et une marge considérable subsiste."
+   "texte": "Sur l’ensemble des vins et alcools versés à la main, le disponible au service est de **5 534,4 L** pour **3 729,9 L** vendus aux doses de la carte, soit un écart de **1 804,5 L**. Rapporté à la base versée à la main (1 699,3 L), le stock autorise un sur-versement allant jusqu’à **106,2 %**. Nous en retenons **29,06 %**. Ce total ne retient que les 46 boissons effectivement versées à la main ; les onze boissons servies uniquement au pichet ou à la bouteille en sont exclues, bien qu’elles portent elles aussi un écart de bilan matière. Il n’y a donc aucune impossibilité matérielle, et une marge considérable subsiste."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le même calcul écarte l’hypothèse du rétro-calcul. Si les taux avaient été choisis pour absorber les volumes manquants, ils les absorberaient. Ils en absorbent **24,3 %** : 493,9 L sur 2 035,6 L. Les trois quarts de l’écart restent expliqués ailleurs (pertes, dégustation, cuisine, offerts, freinte), poste par poste et sur leurs pages respectives."
+   "texte": "Le même calcul écarte l’hypothèse du rétro-calcul. Si les taux avaient été choisis pour absorber les volumes manquants, ils les absorberaient. Ils en absorbent **27,4 %** : 493,9 L sur **1 804,5 L**, écart mesuré sur les 46 boissons que le stock permet de borner. Les 72,6 % restants sont expliqués ailleurs (pertes, dégustation, cuisine, offerts, freinte), poste par poste et sur leurs pages respectives."
   },
   {
    "kind": "tableau",
@@ -1902,22 +1902,22 @@
     ],
     [
      {
-      "v": "Ensemble des vins et alcools au verre"
+      "v": "Ensemble des 46 boissons versées à la main"
      },
      {
-      "v": "6 355,0 L",
+      "v": "5 534,4 L",
       "align": "right"
      },
      {
-      "v": "4 319,4 L",
+      "v": "3 729,9 L",
       "align": "right"
      },
      {
-      "v": "2 035,6 L",
+      "v": "1 804,5 L",
       "align": "right"
      },
      {
-      "v": "0,0 % à 119,8 %",
+      "v": "0,0 % à 106,2 %",
       "align": "right",
       "badge": "ok"
      },
@@ -2137,11 +2137,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le poids de ces lignes n’est pas marginal. Sur les **9615 unités** que le tableau déclare disparues au total des trois exercices, **1242 unités, soit 12,9 %**, figurent sur des lignes où **aucune vente n’est enregistrée sur l’exercice**. Ce sont, pour l’essentiel, des bières en bouteille et des sodas : un article livré et jamais scanné à la vente n’est pas un article détourné, c’est un article dont le libellé de facture n’a pas été rattaché au bouton de caisse correspondant."
+   "texte": "Le poids de ces lignes n’est pas marginal. Sur les **9 615 unités** que le tableau déclare disparues au total des trois exercices, **1 242 unités, soit 12,9 %**, figurent sur des lignes où **aucune vente n’est enregistrée sur l’exercice**. Ce sont, pour l’essentiel, des bières en bouteille et des sodas : un article livré et jamais scanné à la vente n’est pas un article détourné, c’est un article dont le libellé de facture n’a pas été rattaché au bouton de caisse correspondant."
   },
   {
    "kind": "paragraphe",
-   "texte": "La conséquence porte sur la conclusion même de la partie. Le service tire de la volatilité des taux de ce tableau que « le sur-versement ne peut pas être la seule explication » et qu’il faut y voir une dissimulation. Un tableau qui produit simultanément des taux négatifs, des disparitions totales sans la moindre vente et des taux qui ne se recalculent pas sur ses propres colonnes ne mesure pas des disparitions : il mesure d’abord le défaut d’appariement entre le référentiel des factures et celui de la caisse. Il ne peut donc pas fonder une accusation."
+   "texte": "La conséquence porte sur la conclusion même de la partie. Le service tire de la volatilité des taux de ce tableau que « le sur-versement ne peut pas être la seule explication » et qu’il faut y voir une dissimulation. Un tableau qui produit simultanément des taux négatifs, des disparitions totales sans la moindre vente et des taux qui ne se recalculent pas sur ses propres colonnes ne mesure pas des disparitions : il mesure d’abord le défaut d’appariement entre le référentiel des factures et celui de la caisse. Il ne peut donc pas, à lui seul, établir des disparitions de volumes, et le service n’en produit aucune autre mesure."
   },
   {
    "kind": "note",
@@ -2169,7 +2169,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le verre de 17,64 cl, le pichet de 58,80 cl et la bouteille de 88,20 cl n’existent que dans le calcul du service. Séparées, les assiettes donnent un verre de 18,5 cl, conforme à la mesure publiée, un pichet inchangé et une bouteille inchangée. L’argument d’impossibilité physique tombe en entier, et avec lui le report de tout le sur-dosage sur le seul verre."
+   "texte": "Le verre de 17,64 cl, le pichet de 58,80 cl et la bouteille de 88,20 cl n’existent que dans le calcul du service. Séparées, les assiettes donnent un verre de **18,54 cl**, à 1,4 % de la mesure publiée (18,28 cl), un pichet inchangé et une bouteille inchangée. Ces centilitres sont le contenu du verre : la bouteille en délivre **20,2 cl pour 15 cl vendus**, la larme de dégustation étant versée au préalable dans un autre verre. L’argument d’impossibilité physique tombe en entier, et avec lui le report de tout le sur-dosage sur le seul verre."
   },
   {
    "kind": "paragraphe",

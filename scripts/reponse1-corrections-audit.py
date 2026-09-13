@@ -25,18 +25,26 @@ REMPL = [
     ("suppressions-de-notes", "17 042,16 €", "17 333,18 €", "N1"),
     ("suppressions-de-notes", "17 042 €", "17 333 €", "N1"),
     ("suppressions-de-notes", "1,34 % du CA TTC", "1,36 % du CA TTC", "N1"),
-    # --- N2 : liqueur de poire. Les factures portent 24 bouteilles de 70 cl
-    # de liqueur Golden Eight (2 + 11 + 11), soit 1 680 cl. Les « 25 bouteilles »
-    # ajoutaient une eau-de-vie Poire William 42°, qui n'est pas la liqueur du
-    # baba : c'est la confusion de produit que nous reprochons au service.
-    ("alcool-de-cuisine", "1 750 cl", "1 680 cl", "N2"),
-    ("recon-6-alcool-plats-menus", "1 750 cl", "1 680 cl", "N2"),
-    ("recon-6-alcool-plats-menus", "140 cl au lieu de 1 750", "140 cl au lieu de 1 680", "N2"),
+    # --- N2 : liqueur de poire. CORRECTION DE LA CORRECTION.
+    # Ce bloc ramenait 1 750 cl a 1 680 cl en supposant que la 25e bouteille
+    # etait une eau-de-vie Poire William 42 degres. Verification faite sur les
+    # factures FCBS elles-memes : c'est faux. La 25e bouteille porte le code
+    # article 591050, celui de la liqueur Golden Eight, sur la facture 508974
+    # du 15/03/2024, avec une accise de 0,70 L a 25 degres ; seule sa
+    # designation est tronquee a l'impression, ce qui avait induit l'erreur.
+    # Les eaux-de-vie de poire sont les codes 520131 (40 degres) et 520127
+    # (42 degres), 140 cl au total, jamais comptes dans les 25 bouteilles.
+    # Le service retient lui aussi 25 bouteilles (annexe n. 6, ligne
+    # « Liqueur Golden 8 70 cl », 2 + 12 + 11).
+    # Les entrees ci-dessous retablissent donc 1 750 cl.
+    ("alcool-de-cuisine", "1 680 cl", "1 750 cl", "N2"),
+    ("recon-6-alcool-plats-menus", "1 680 cl", "1 750 cl", "N2"),
+    ("recon-6-alcool-plats-menus", "140 cl au lieu de 1 680", "140 cl au lieu de 1 750", "N2"),
     ("recon-6-alcool-plats-menus",
-     "**25 bouteilles de 70 cl** de liqueur Golden Eight sont facturées, soit 17,5 L, quand nous "
-     "chiffrons 4,1 L, situés sur les exercices 2 et 3, où 23 bouteilles ont été achetées",
      "**24 bouteilles de 70 cl** de liqueur Golden Eight sont facturées, soit 16,8 L, quand nous "
-     "chiffrons 4,1 L, situés sur les exercices 2 et 3, où 22 bouteilles ont été achetées", "N2"),
+     "chiffrons 4,1 L, situés sur les exercices 2 et 3, où 22 bouteilles ont été achetées",
+     "**25 bouteilles de 70 cl** de liqueur Golden Eight sont facturées, soit 17,5 L, quand nous "
+     "chiffrons 4,1 L, situés sur les exercices 2 et 3, où 23 bouteilles ont été achetées", "N2"),
     # --- Marc : ne retenir que le Marc de Bourgogne, ingredient du baba.
     # Les 980 cl additionnaient 280 cl de Marc de Bourgogne (4 bouteilles) et
     # 700 cl de Marc du Jura, produit distinct. L'argument de la fraction

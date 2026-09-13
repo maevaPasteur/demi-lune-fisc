@@ -11,7 +11,7 @@
  },
  "entete": {
   "positionService": "Le service ne conteste pas la description de la fonction « table virtuelle », mais il reproche à la démonstration de ne pas envisager le double service : si une même table est utilisée deux fois pendant un service, « le taux de remplissage peut largement être augmenté ». Il maintient surtout que la justification de toutes les opérations « DEL » n’est pas apportée et que, comme en partie A, « seule une infime partie de ces suppressions est expliquée ». Le fichier « tpévenement.xls » ne permettant selon lui « aucune traçabilité effective comme prévu par la législation », il juge « totalement impossible » de vérifier que chaque suppression a bien donné lieu à un ré-enregistrement dans une autre note, et renvoie à l’extrait de la journée du 09 septembre 2022.",
-  "reponseCourte": "Sur les 659 journées des trois exercices, sans exception, les numéros de la caisse forment la suite 1, 2, 3 … n des additions du jour : ce sont des rangs de note et non des tables, et le double service, loin d’être ignoré, est déjà compté dans les couverts.",
+  "reponseCourte": "Sur les 659 journées des trois exercices, sans exception, les numéros portés par les annexes C forment la suite 1, 2, 3 … n des additions du jour : ce sont des rangs de note et non des tables. Les 3 281 tickets clôturés à 0,00 € de l’annexe H sont, à 99,9 %, l’enveloppe vide d’une note encaissée le même jour sous le même numéro, et le double service, loin d’être ignoré, est déjà compté dans les couverts.",
   "enjeu": "Motif « trop de tables » du rejet de comptabilité (renvoi aux pages 11, 18 et 19 de la proposition de rectifications)",
   "statut": "demonte"
  },
@@ -567,7 +567,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Un parc de tables ne se comporte pas ainsi. Il faudrait admettre qu’un restaurant de 14 tables occupe chaque jour ses tables dans l’ordre exact 1, 2, 3 … sans jamais en sauter une, puis qu’il en fasse apparaître jusqu’à 43 de plus les jours de forte affluence, toujours dans l’ordre, avant de tout remettre à zéro le lendemain matin. La seule lecture cohérente est celle d’un **compteur d’additions quotidien**."
+   "texte": "Un parc de tables ne se comporte pas ainsi. Il faudrait admettre qu’un restaurant de 14 tables occupe chaque jour ses tables dans l’ordre exact 1, 2, 3 … sans jamais en sauter une, puis qu’il en fasse apparaître jusqu’à 43 de plus les jours de forte affluence, toujours dans l’ordre, avant de tout remettre à zéro le lendemain matin. La lecture qui rend compte de l’ensemble de ces observations est celle d’un **compteur d’additions quotidien** ; le service n’en propose aucune autre."
   },
   {
    "kind": "kpis",
@@ -747,7 +747,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La démonstration qui précède porte sur les **annexes C**, c’est-à-dire sur les notes qui contiennent des articles. Nous le disons sans détour, parce que le service le verra : l’**annexe H**, qui liste tous les tickets, en compte 19 903, soit 3 296 de plus, dont **3 281 clôturés à 0,00 € sans aucune ligne d’article**. Sur cette base élargie, l’identité entre le numéro le plus élevé et le nombre de tickets ne se vérifie plus que 22 jours sur 659. Il faut donc dire ce que sont ces tickets."
+   "texte": "La démonstration qui précède porte sur les **annexes C**, c’est-à-dire sur les notes qui contiennent des articles. Nous le disons sans détour, parce que le service le verra : l’**annexe H**, qui liste tous les tickets, en compte 19 903, soit 3 296 de plus que les 16 607 notes détaillées de l’annexe C, dont **3 281 clôturés à 0,00 € sans aucune ligne d’article**. Sur cette base élargie, l’identité entre le numéro le plus élevé et le nombre de tickets ne se vérifie plus que 22 jours sur 659. Il faut donc dire ce que sont ces tickets."
   },
   {
    "kind": "paragraphe",
@@ -837,11 +837,15 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Trois tickets sur 3 281 et sur trois exercices, tous au premier exercice. Deux d’entre eux tombent sur des journées que la page consacrée aux [articles à prix 0 €](/reponse-1/articles-a-zero-euro) documente déjà : ce sont les notes intégralement offertes, dont le détail est reproduit ligne à ligne. Il ne subsiste donc, au terme de ce contrôle, **aucun ticket clôturé à zéro dont la contrepartie ne soit pas identifiée**."
+   "texte": "Trois tickets sur 3 281 et sur trois exercices, tous au premier exercice. Deux d’entre eux tombent sur des journées que la page consacrée aux [articles à prix 0 €](/reponse-1/articles-a-zero-euro) documente déjà : ce sont les deux seuls repas intégralement offerts des trois exercices, le 29 avril 2022 à 13h15 (ticket n° 15, Z n° 2950, 7 lignes) et le 28 décembre 2022 à 20h05 (ticket n° 17, Z n° 3123, 6 lignes), dont le détail est reproduit ligne à ligne. Le troisième, le 23 mars 2023 à 20h18, ne porte **aucune ligne dans le détail des tickets** : c’est une table ouverte puis refermée sans commande. Il ne subsiste donc, au terme de ce contrôle, aucun ticket clôturé à zéro dont la contrepartie ne soit pas identifiée."
   },
   {
    "kind": "paragraphe",
-   "texte": "Ce constat referme le grief plutôt qu’il ne l’ouvre. Si des recettes avaient été logées dans ces tickets, ils seraient orphelins : une note encaissée en espèces puis vidée ne laisserait pas, le même jour et sous le même numéro, une seconde note régulièrement encaissée et déclarée. C’est pourtant ce que montrent 99,9 % des cas."
+   "texte": "Ce constat ferme la variante du ticket clôturé à zéro, celle que le service ouvrirait en découvrant l’annexe H. Si des recettes y avaient été logées, ces tickets seraient orphelins : une note encaissée en espèces puis vidée ne laisserait pas, le même jour et sous le même numéro, une seconde note régulièrement encaissée et déclarée. C’est pourtant ce que montrent 99,9 % des cas, et les trois exceptions sont nommées une à une."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il faut dire aussi ce que ce contrôle ne suppose pas, et ce qu’il ne couvre pas. Il ne suppose pas que la caisse soit exhaustive en recettes : l’identité relevée sur les 659 journées porte sur la **forme de la numérotation**, pas sur le niveau du chiffre d’affaires, et un rang de note reste un rang de note que la caisse ait ou non tout enregistré. Il ne couvre pas, en revanche, l’hypothèse d’articles retirés d’une note ensuite encaissée à un total réduit : celle-là ne laisse derrière elle **aucun ticket clôturé à zéro**, et elle ne se lit donc ni dans l’annexe H, ni dans le décompte qui précède. Nous préférons l’écrire que laisser le service le relever. Cette hypothèse ne concerne toutefois pas le grief F : elle porterait sur le montant d’une note, jamais sur le nombre de tables, puisque le rang de note resterait inchangé. Elle relève de la [partie A, les suppressions de notes](/reponse-1/suppressions-de-notes)."
   },
   {
    "kind": "titre",
@@ -1223,11 +1227,6 @@
      "label": "Services au-delà de 100 % des places",
      "valeur": "89",
      "sub": "7,0 % : la rotation de table, déjà comptée"
-    },
-    {
-     "label": "Occupation la plus forte observée",
-     "valeur": "163 %",
-     "sub": "un service de midi en terrasse"
     }
    ]
   },
@@ -1298,7 +1297,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service ne tire enfin de son objection **aucun chiffre**. Il ne dit ni combien de tables auraient tourné, ni sur combien de journées, ni de combien le taux de 58 % devrait être relevé, ni surtout quel couvert supplémentaire en résulterait. Une observation qui ne se traduit par aucune quantité ne peut pas fonder une rectification, dont il appartient à l’administration d’établir le bien fondé."
+   "texte": "Le service ne tire enfin de son objection **aucun chiffre**. Il ne dit ni combien de tables auraient tourné, ni sur combien de journées, ni de combien le taux de 58 % devrait être relevé, ni surtout quel couvert supplémentaire en résulterait. En l’état, cette observation ne soutient aucun montant de rectification."
   },
   {
    "kind": "titre",

@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service renvoie d’abord à sa partie « L- Reconstitution du chiffre d’affaires » et objecte que « le crémant est utilisé pour de nombreux articles », ce qui permettrait de terminer une bouteille ouverte dans le service même. Il rappelle ensuite les quantités disponibles qu’il a retenues (275, 325 puis 322 bouteilles de 75 cl, soit 206,25, 243,75 et 241,50 litres) et calcule que, pour le seul premier exercice, « 93,20 litres sur les 206,25 litres disponibles seraient jetés, soit 45,18 % de pertes, ce qui est considérable et non-vivable économiquement pour une quelconque société ». Il produit un tableau selon lequel, sur les trois exercices, la consommation de caisse majorée du sur-versement dépasserait le volume disponible. Il ajoute que la longue expérience professionnelle des dirigeants est « de nature à minimiser les pertes » et que, sur une petite coupe servie à 12 centilitres, une sur-dose de 23,60 % conduirait « à remplir le verre d’une façon exagérée, voire à dépasser sa capacité ». Conclusion : « le service ne voit aucune raison de modifier sa reconstitution ».",
-  "reponseCourte": "Le tableau « Consommation > Disponible » de la page 85 mesure la contradiction d’un calcul qui cumulait deux maxima, non une impossibilité matérielle : corrigé, le bilan du crémant boucle et la perte retenue devient la différence exacte entre les achats du service et les ventes de sa caisse.",
+  "reponseCourte": "Le tableau « Consommation > Disponible » de la page 85 mesure la contradiction d’un calcul qui cumulait deux maxima, non une impossibilité matérielle, et l’objection tirée de la capacité de la petite coupe est retenue. Corrigé, le bilan du crémant boucle et la perte revendiquée revient de 346,9 L à 272,0 L, différence exacte entre les achats du service et les ventes de sa caisse.",
   "enjeu": "Crémant : 272,0 L de perte retenue",
-  "statut": "demonte"
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -359,7 +359,7 @@
     {
      "label": "Perte de crémant demandée par la défense",
      "valeur": "346,9 L",
-     "sub": "86,7 L de sur-versement + 260,2 L jeté, sur trois ans (p. 84)",
+     "sub": "346,9 L au 10/07/2026, ramenés à 272,0 L au chapitre 2 de cette page",
      "couleur": "teal"
     },
     {
@@ -372,7 +372,6 @@
      "label": "Taux de perte opposé par le service",
      "valeur": "45,18 %",
      "sub": "93,20 L jetés sur 206,25 L disponibles, exercice 1 (p. 84)",
-     "highlight": true,
      "couleur": "red"
     },
     {
@@ -382,13 +381,13 @@
      "couleur": "red"
     },
     {
-     "label": "Sur-dose jugée impossible",
+     "label": "Sur-dose que le service juge impossible",
      "valeur": "23,60 %",
      "sub": "« remplir le verre d’une façon exagérée, voire à dépasser sa capacité » (p. 85)",
      "couleur": "red"
     },
     {
-     "label": "Suite donnée",
+     "label": "Suite donnée par le service",
      "valeur": "Aucune modification",
      "sub": "la reconstitution « demeurera dans ses montants les mêmes » (p. 85)",
      "couleur": "red"
@@ -404,7 +403,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Cette partie reprend, presque mot pour mot, la partie « L » du même courrier. La démonstration complète, chiffrée jour par jour sur les 647 journées de service des trois exercices, figure à la page [3.1.3 « Tout le crémant réputé vendu »](/reponse-1/recon-3-cremant-vendu). Nous n’en reprenons ici que le résultat et les trois arguments propres à cette partie."
+   "texte": "Cette partie reprend, presque mot pour mot, la partie « L » du même courrier. La démonstration complète, chiffrée jour par jour sur les 647 journées de service des trois exercices, est exposée dans [le point 3, « Tout le crémant réputé vendu »](/reponse-1/recon-3-cremant-vendu). Nous n’en reprenons ici que le résultat et les trois arguments propres à cette partie."
   },
   {
    "kind": "titre",
@@ -412,7 +411,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous retenons les volumes disponibles du service (275, 325 et 322 bouteilles) et **ses propres doses** (tableau p. 62 : cocktails 6 cl, verre 12 cl). L’écart entre ce qui était disponible et ce que la caisse enregistre ressort à 272,0 L sur trois exercices, soit 42,0 cl par jour de service. Le sur-versement compatible avec le stock est compris entre 0 % et 13,6 % : **l’objection du service tirée de la capacité de la petite coupe est retenue**, elle ne change pas la conclusion."
+   "texte": "Nous retenons les volumes disponibles du service (275, 325 et 322 bouteilles) et **ses propres doses** (tableau p. 62 : cocktails 6 cl, verre 12 cl), en lieu et place de celles de notre mémoire du 10 juillet 2026, reproduites plus haut (La Vouivre 8 cl, KITTYKIR 9 cl, Père Grégoire 1 cl, Kir Princier 10 cl). Ce paquet de doses est pris en bloc, tel que le service l’a construit, et il joue contre nous : recalculé jour par jour sur les 647 journées de service, il retire 80,4 L à l’écart au titre du Père Grégoire et 18,1 L au titre du verre et du Kir Princier, contre 71,7 L ajoutés au titre de La Vouivre et du KITTYKIR, soit une **concession nette de 26,8 L d’écart et de 11,0 L de crémant jeté** par rapport à ce mémoire. Nous l’assumons : la dose employée ici est celle du service, elle ne peut pas nous être opposée. L’écart entre ce qui était disponible et ce que la caisse enregistre ressort à 272,0 L sur trois exercices, soit 42,0 cl par jour de service. Le sur-versement compatible avec le stock est compris entre 0 % et 13,6 % : **l’objection du service tirée de la capacité de la petite coupe est retenue**, elle ne change pas la conclusion."
   },
   {
    "kind": "paragraphe",
@@ -751,7 +750,7 @@
     {
      "label": "Crémant jeté, 3 exercices",
      "valeur": "233,8 L à 248,8 L",
-     "sub": "quel que soit le taux retenu dans la fourchette",
+     "sub": "aux deux bornes de 0 % et de +23,6 % ; le balayage complet va de 233,1 L à 263,9 L",
      "highlight": true,
      "couleur": "teal"
     }

@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service ne discute aucun des segments chiffrés de la cascade. Il répond globalement que Maître THIVEND avait « déjà évoqué les offerts, les pertes, les consommations du personnel ainsi que les sur-versements » et que « tout au long des parties précédentes, le service s’est attaché à contredire chacun des arguments qui ont été avancés », en ajoutant qu’il « proposait plus de pertes, d’offerts et de consommation du personnel que la réponse le demande ». Sur les sur-versements, il refuse de les admettre : ils seraient « affirmés sans le moindre élément pour les soutenir », « évalu[és] mathématiquement » pour qu’il ne reste « plus y avoir de matière pour augmenter les chiffres d’affaires reconstitués », et leurs taux échelonnés « de 20 à 50 % » seraient « tout simplement improbable[s] dans une exploitation normale ». Conclusion soulignée : « Il n’y a donc pas lieu que le service modifie sa reconstitution ».",
-  "reponseCourte": "Sur les deux pages consacrées à notre méthode, le service ne reprend aucun des volumes de la cascade et n’ouvre aucune des neuf pièces qui la recalculent, alors que le bilan matière boucle au litre près et ne laisse aucun volume vendable.",
-  "enjeu": "La démonstration d’ensemble de la réponse du 10/07/2026 : les 10 622 L d’alcool achetés sont justifiés poste par poste à 85,5 %, ce qui ne laisse aucun volume disponible pour des ventes dissimulées.",
-  "statut": "demonte"
+  "reponseCourte": "Sur les deux pages consacrées à notre méthode, le service ne reprend aucun des volumes de la cascade et n’ouvre aucune des neuf pièces qui la recalculent. Trois de ses objections portent ailleurs dans le courrier et nous les intégrons : crémant de 347 L à 272 L, sur-versement de 720 L à 494 L, alcool de cuisine de 794 L à 745 L. Nous en ajoutons trois que nous avons trouvées nous-mêmes : freinte de bière de 129 L à 120 L, retrait des 296 L de contenance comptés deux fois sur le panaché, le Monaco et le Picon bière, et poste des offerts ramené de 40 L à 14 L. Le volume attribué à un poste identifié passe ainsi de 85,5 % à 79,1 % des achats, et le bilan matière boucle sans laisser de volume vendable.",
+  "enjeu": "La démonstration d’ensemble de la réponse du 10/07/2026 : les 10 622 L d’alcool achetés sont justifiés poste par poste à 85,5 % dans le mémoire du 10 juillet 2026, et à 79,1 % après les six corrections que nous portons depuis, ce qui ne laisse aucun volume disponible pour des ventes dissimulées.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -248,13 +248,13 @@
     {
      "label": "Part justifiée poste par poste",
      "valeur": "85,5 %",
-     "sub": "conclusion du mémoire du 10/07/2026 reproduite p. 76, corrigée plus bas dans cette page",
+     "sub": "valeur du mémoire du 10/07/2026 reproduite p. 76 ; 79,1 % après nos six corrections, exposées plus bas dans cette page",
      "couleur": "teal"
     },
     {
      "label": "Perte pure résiduelle",
      "valeur": "14,5 %",
-     "sub": "soit 1 543 L (p. 76), valeur corrigée plus bas dans cette page",
+     "sub": "soit 1 543 L, mémoire du 10/07/2026 ; 20,9 % et 2 224 L après nos six corrections",
      "couleur": "teal"
     },
     {
@@ -276,13 +276,13 @@
      "couleur": "red"
     },
     {
-     "label": "Amplitude des sur-versements contestée",
+     "label": "Amplitude des sur-versements que le service juge improbable",
      "valeur": "20 à 50 %",
      "sub": "« improbable dans une exploitation normale » (p. 77)",
      "couleur": "gold"
     },
     {
-     "label": "Suite donnée",
+     "label": "Suite donnée par le service",
      "valeur": "Aucune modification",
      "sub": "la reconstitution « demeurera dans ses montants les mêmes » (p. 77)",
      "couleur": "red"
@@ -381,7 +381,7 @@
       "to": "/reponse-1/perte-de-biere"
      },
      {
-      "v": "129 L",
+      "v": "120 L",
       "align": "right"
      },
      {
@@ -441,7 +441,7 @@
       "to": "/reponse-1/recon-8-abattements"
      },
      {
-      "v": "183 L",
+      "v": "157 L",
       "align": "right"
      },
      {
@@ -529,14 +529,14 @@
   },
   {
    "kind": "barreComposition",
-   "titre": "Où passent les 10 622 L d’alcool achetés, après les trois corrections que nous portons",
+   "titre": "Où passent les 10 622 L d’alcool achetés, après les six corrections que nous portons",
    "sousTitre": "Chaque segment est mesuré en caisse, calculé sur des quantités de caisse, ou estimé à un taux publié. Le dernier segment est le solde : il n’est pas choisi.",
    "unite": "L",
    "total": 10622,
    "segments": [
     {
      "label": "Vendu au verre",
-     "valeur": 5569,
+     "valeur": 5273,
      "categorie": "mesure"
     },
     {
@@ -566,7 +566,7 @@
     },
     {
      "label": "Freinte technique de la bière",
-     "valeur": 122,
+     "valeur": 120,
      "categorie": "estime"
     },
     {
@@ -575,8 +575,8 @@
      "categorie": "estime"
     },
     {
-     "label": "Apéritifs offerts",
-     "valeur": 40,
+     "label": "Offerts non enregistrés en caisse",
+     "valeur": 14,
      "categorie": "estime"
     },
     {
@@ -586,7 +586,7 @@
     },
     {
      "label": "Perte pure (résidu)",
-     "valeur": 1900,
+     "valeur": 2224,
      "categorie": "residuel"
     }
    ],
@@ -620,14 +620,14 @@
       "v": "Vendu au verre"
      },
      {
-      "v": "5 569 L",
+      "v": "5 273 L",
       "align": "right"
      },
      {
       "v": "mesuré"
      },
      {
-      "v": "Détail des tickets, annexes C1 à C3"
+      "v": "Détail des tickets, annexes C1 à C3, hors panaché, Monaco et Picon bière, dont l’alcool est porté par la ligne cocktails"
      },
      {
       "v": "Doses figées",
@@ -734,14 +734,14 @@
       "v": "Freinte technique de la bière"
      },
      {
-      "v": "122 L",
+      "v": "120 L",
       "align": "right"
      },
      {
       "v": "estimé"
      },
      {
-      "v": "10 % de la bière réellement sortie du fût (1 219,2 L lus en caisse), soit 121,9 L arrondis"
+      "v": "10 % de la bière réellement sortie du fût (1 205,0 L lus en caisse, Picon à 4 cl et 8 cl)"
      },
      {
       "v": "Perte de bière",
@@ -769,17 +769,17 @@
     ],
     [
      {
-      "v": "Apéritifs offerts"
+      "v": "Offerts non enregistrés en caisse"
      },
      {
-      "v": "40 L",
+      "v": "14 L",
       "align": "right"
      },
      {
       "v": "estimé"
      },
      {
-      "v": "Un apéritif de 6 cl par jour de service"
+      "v": "Un apéritif de 6 cl par jour de service, déduction faite des 25,75 L d’alcool déjà enregistrés à 0,00 € dans la caisse"
      },
      {
       "v": "Abattements",
@@ -798,7 +798,7 @@
       "v": "mesuré"
      },
      {
-      "v": "Inventaire de clôture"
+      "v": "Inventaire au 31/03/2025, limité aux boissons dont les achats entrent dans les 10 622 L ; l’inventaire porte 301,9 L d’alcools et vins au total"
      },
      {
       "v": "Variation de stock",
@@ -811,7 +811,7 @@
       "fw": 700
      },
      {
-      "v": "8 722 L",
+      "v": "8 398 L",
       "align": "right",
       "fw": 700
      },
@@ -830,7 +830,7 @@
       "v": "Perte pure (casse, évaporation, fonds de verre, rinçage)"
      },
      {
-      "v": "1 900 L",
+      "v": "2 224 L",
       "align": "right"
      },
      {
@@ -866,12 +866,16 @@
    ]
   },
   {
+   "kind": "note",
+   "texte": "Aucun litre ne figure dans deux postes. Le panaché, le Monaco et le Picon bière ne sont portés que par le poste des cocktails ; les offerts enregistrés à 0,00 € ne sont portés que par les postes de vente ; les 173 L de supplément d’alcool de cuisine demandés au service ne sont pas un poste de la cascade mais une demande, et ne s’y ajoutent pas."
+  },
+  {
    "kind": "kpis",
    "items": [
     {
      "label": "Mesuré en caisse ou à l’inventaire",
-     "valeur": "5 908 L",
-     "sub": "55,6 % des achats"
+     "valeur": "5 612 L",
+     "sub": "52,8 % des achats"
     },
     {
      "label": "Calculé sur des quantités de caisse",
@@ -880,13 +884,19 @@
     },
     {
      "label": "Estimé à un taux publié",
-     "valeur": "799 L",
-     "sub": "7,5 % des achats"
+     "valeur": "771 L",
+     "sub": "7,3 % des achats"
     },
     {
      "label": "Résidu de perte pure",
-     "valeur": "1 900 L",
-     "sub": "17,9 % des achats",
+     "valeur": "2 224 L",
+     "sub": "20,9 % des achats",
+     "couleur": "teal"
+    },
+    {
+     "label": "Volume disponible pour une vente non enregistrée",
+     "valeur": "0 L",
+     "sub": "le bilan matière boucle : une fois tous les postes chiffrés, il ne reste aucun litre à vendre",
      "highlight": true,
      "couleur": "teal"
     }
@@ -894,19 +904,23 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Les trois quarts du bilan reposent sur la caisse.** 5 908 L sont lus directement dans la caisse ou dans l’inventaire et 2 015 L sont calculés à partir de quantités lues en caisse, soit 74,6 % des achats. Les postes estimés à partir d’un taux publié ne pèsent que 799 L, soit 7,5 % des achats. L’objection selon laquelle notre méthode serait une construction d’hypothèses ne correspond pas à ce qu’elle contient."
+   "texte": "**Près des trois quarts du bilan reposent sur la caisse.** 5 612 L sont lus directement dans la caisse ou dans l’inventaire et 2 015 L sont calculés à partir de quantités lues en caisse, soit 71,8 % des achats. Les postes estimés à partir d’un taux publié ne pèsent que 771 L, soit 7,3 % des achats. L’objection selon laquelle notre méthode serait une construction d’hypothèses ne correspond pas à ce qu’elle contient."
   },
   {
    "kind": "titre",
-   "texte": "Trois corrections que nous apportons contre nous-mêmes"
+   "texte": "Six corrections que nous apportons contre nous-mêmes"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service a formulé trois objections qui portent, et nous les intégrons. Sur le [crémant](/reponse-1/recon-3-cremant-vendu), il a montré page 63 que le sur-versement maximal et le fond de bouteille ne pouvaient pas être cumulés : le volume n’est plus déduit d’un taux mais **borné par le stock lui-même**, jour par jour, avec ses propres doses, et le poste tombe de 347 L à **272 L**. Sur le [sur-versement au verre](/reponse-1/sur-versement-au-verre), notre ligne « vin au verre » incluait des pichets et des bouteilles, dont le sur-versement est nul par construction : séparé assiette par assiette, le poste tombe de 720 L à **494 L**. Sur l’[alcool de cuisine](/reponse-1/recon-5-alcool-cuisine), le rapprochement avec les factures montre que le Calvados et le Grand Marnier ne pouvaient pas être retenus au volume calculé : plafonné aux achats, le poste tombe de 795 L à **745 L**. Sur ces 745 L réellement partis en cuisine, le service en retranche déjà une part dans sa propre reconstitution : nous ne lui en demandons que **173 L de plus**."
+   "texte": "Le service a formulé trois objections qui portent, et nous les intégrons. Nous en ajoutons trois que nous avons trouvées nous-mêmes en reprenant notre propre pipeline de calcul. Sur le [crémant](/reponse-1/recon-3-cremant-vendu), il a montré page 63 que le sur-versement maximal et le fond de bouteille ne pouvaient pas être cumulés : le volume n’est plus déduit d’un taux mais **borné par le stock lui-même**, jour par jour, avec ses propres doses, et le poste tombe de 347 L à **272 L**. Sur le [sur-versement au verre](/reponse-1/sur-versement-au-verre), notre ligne « vin au verre » incluait des pichets et des bouteilles, dont le sur-versement est nul par construction : séparé assiette par assiette, le poste tombe de 720 L à **494 L**. Sur l’[alcool de cuisine](/reponse-1/recon-5-alcool-cuisine), le rapprochement avec les factures montre que le Calvados et le Grand Marnier ne pouvaient pas être retenus au volume calculé : plafonné aux achats, le poste tombe de 794 L à **745 L**. Sur ces 745 L réellement partis en cuisine, le service en retranche déjà une part dans sa propre reconstitution : nous ne lui en demandons que **173 L de plus**. Sur la [perte de bière](/reponse-1/perte-de-biere), notre assiette incluait la contenance des verres, limonade, grenadine et Picon compris : ramenée à la bière réellement sortie du fût, 1 205,0 L lus en caisse, la freinte tombe de 129 L à **120 L**. Sur le poste « vendu au verre », le panaché, le Monaco et le Picon bière étaient comptés pour la contenance entière du verre alors que leur alcool est déjà porté par le poste « vendu en cocktails » : **296 L étaient comptés deux fois**, et nous les retirons. Sur les offerts, les 25,8 L d’alcool sonnés à 0,00 € figurent déjà dans les ventes de la caisse : le poste tombe de 40 L à **14 L**."
   },
   {
    "kind": "paragraphe",
-   "texte": "Ces trois corrections jouent contre nous et nous les portons quand même, parce qu’un bilan matière n’a de valeur que s’il est rectifié dès qu’il est pris en défaut. Le volume attribué à un poste identifié passe de 9 079 L à **8 722 L** (82,1 %) et la perte pure de 1 543 L à **1 900 L**, soit **17,9 %** des achats. **Elles ne libèrent aucun litre pour une vente dissimulée** : un litre qui cesse d’être « justifié poste par poste » devient de la perte non ventilée, il ne devient pas une recette. Dans les deux cas, il n’a pas été vendu, et la reconstitution, qui suppose des doses exactes et zéro perte, le compte comme s’il l’avait été."
+   "texte": "Ces six corrections jouent contre nous et nous les portons quand même, parce qu’un bilan matière n’a de valeur que s’il est rectifié dès qu’il est pris en défaut. Le volume attribué à un poste identifié passe de 9 079 L à **8 398 L** (**79,1 %**) et la perte pure de 1 543 L à **2 224 L**, soit **20,9 %** des achats. Leur somme fait exactement les **681 L** d’écart avec le mémoire du 10 juillet 2026 : 75 + 226 + 49 + 9 + 296 + 26. **Elles ne libèrent aucun litre pour une vente dissimulée** : un litre qui cesse d’être « justifié poste par poste » devient de la perte non ventilée, il ne devient pas une recette. Dans les deux cas, il n’a pas été vendu, et la reconstitution, qui suppose des doses exactes et zéro perte, le compte comme s’il l’avait été. **Aucun litre ne figure dans deux postes** : le panaché, le Monaco et le Picon bière ne sont portés que par le poste des cocktails, les offerts enregistrés à 0,00 € ne sont portés que par les postes de vente, et les 173 L de supplément d’alcool de cuisine demandés au service ne sont pas un poste de la cascade mais une demande."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les 10 622 L sont eux-mêmes un plancher : 353,2 L d’achats facturés (Chablis 86,2 L, Gewurztraminer 96,0 L, Arbois Béthanie 171,0 L) ne sont pas rattachés à un libellé du bilan, alors que les ventes correspondantes y figurent. Les y ajouter porterait les achats à **10 975 L** et le résidu de perte pure à **2 578 L, soit 23,5 %** : là encore, aucun litre vendable n’est libéré."
   },
   {
    "kind": "titre",
@@ -1021,11 +1035,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Notre résidu se compare à la démarque du secteur sur la même base.** Beverage Metrics et Stock-Taker retiennent 25 % **du volume acheté**, qui est exactement notre dénominateur. Notre résidu de **1 900 L, soit 17,9 % des achats**, se situe **en dessous** de cette référence, alors qu’il est une grandeur plus étroite : les taux publiés couvrent tout ce qui est acheté sans être facturé, sur-versement, offerts et consommation du personnel compris, tandis que le nôtre ne couvre que ce qui reste **une fois tous ces postes déjà chiffrés à part**."
+   "texte": "**Notre résidu se compare à la démarque du secteur sur la même base.** Beverage Metrics et Stock-Taker retiennent 25 % **du volume acheté**, qui est exactement notre dénominateur. Notre résidu de **2 224 L, soit 20,9 % des achats**, se situe **en dessous** de cette référence, alors qu’il est une grandeur plus étroite : les taux publiés couvrent tout ce qui est acheté sans être facturé, sur-versement, offerts et consommation du personnel compris, tandis que le nôtre ne couvre que ce qui reste **une fois tous ces postes déjà chiffrés à part**."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Sur la base des sources, la comparaison est directe.** Rapportée au volume acheté, la perte d’exploitation totale de l’établissement (sur-versement, dégustation, crémant, freinte bière, consommation du chef, offerts et perte pure) représente **3 048 L, soit 28,7 % des achats d’alcool**, contre 25 % de moyenne sectorielle retenue sur cette même base par deux sociétés d’audit d’inventaire. L’écart tient au mode de service : l’établissement sert sans doseur, ce que la source française identifie précisément comme le facteur qui « peut forcer la tolérance au-delà » du seuil."
+   "texte": "**Sur la base des sources, la comparaison est directe.** Rapportée au volume acheté, la perte d’exploitation totale de l’établissement (sur-versement, dégustation, crémant, freinte bière, consommation du chef, offerts et perte pure) représente **3 393 L, soit 31,9 % des achats d’alcool**, contre 25 % de moyenne sectorielle retenue sur cette même base par deux sociétés d’audit d’inventaire. L’écart de 6,9 points tient au mode de service : l’établissement sert sans doseur, ce que la source française identifie précisément comme le facteur qui « peut forcer la tolérance au-delà » du seuil. Le repère de 25 % couvre d’ailleurs, dans les sources, tout ce qui est acheté sans être facturé, sur-versement et offerts compris ; rapporté au seul poste de même nature, notre résidu de perte pure, il reste en dessous, à 20,9 %."
   },
   {
    "kind": "paragraphe",
@@ -1063,7 +1077,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Il n’y a pas deux décotes, il y a **une partition** : 9 079 L et 1 543 L sont les deux parts complémentaires des 10 622 L achetés, et leur somme fait exactement le total. Rien n’est retranché deux fois. Le seul terme qui « fait correspondre » les volumes est le résidu, et il n’est pas choisi : il est ce qui reste une fois les autres postes chiffrés."
+   "texte": "Il n’y a pas deux décotes, il y a **une partition** : 9 079 L et 1 543 L sont les deux parts complémentaires des 10 622 L achetés, et leur somme fait exactement le total. Rien n’est retranché deux fois. Le seul terme qui « fait correspondre » les volumes est le résidu, et il n’est pas choisi : il est ce qui reste une fois les autres postes chiffrés. Après les corrections que nous portons, la partition est de **8 398 L** et **2 224 L**, et leur somme fait toujours exactement le total."
   },
   {
    "kind": "alerte",
@@ -1084,15 +1098,19 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le bilan corrigé boucle : 10 622 L achetés, 8 722 L attribués à des postes identifiés dont 7 923 L mesurés ou calculés sur la caisse, et 1 900 L de perte pure, en dessous de la démarque de 25 % du volume acheté retenue par les auditeurs d’inventaire de bar. Il ne reste **aucun volume de boisson disponible** pour alimenter les ventes dissimulées que la reconstitution suppose, ni, par voie de conséquence, le chiffre d’affaires cuisine qui en est extrapolé."
+   "texte": "Le bilan corrigé boucle : 10 622 L achetés, 8 398 L attribués à des postes identifiés dont 7 627 L mesurés ou calculés sur la caisse, et 2 224 L de perte pure, en dessous de la démarque de 25 % du volume acheté retenue par les auditeurs d’inventaire de bar. Il ne reste **aucun volume de boisson disponible** pour alimenter les ventes dissimulées que la reconstitution suppose, ni, par voie de conséquence, le chiffre d’affaires cuisine qui en est extrapolé."
   },
   {
    "kind": "piecejointe",
-   "intro": "La cascade est reproductible par le script scripts/reponse1-cascade.py, qui repart des fichiers du dossier (bilan matière de l’alcool, crémant borné par le stock) :",
+   "intro": "La cascade est reproductible par le script scripts/reponse1-cascade-valeurs.py, seul producteur de la cascade, et contrôlable par scripts/reponse1-cascade-controle.py :",
    "fichiers": [
     {
      "fichier": "pieces-reponse-1/R1-cascade-bilan-matiere.xlsx",
-     "label": "Bilan matière des 10 622 L : poste par poste, en litres, avec la nature du chiffre (mesuré, calculé, estimé), sa source et la pièce détaillée correspondante (XLSX, 3 onglets)"
+     "label": "Bilan matière des 10 622 L : poste par poste, en litres, avec la nature du chiffre (mesuré, calculé, estimé), sa source et la pièce détaillée correspondante (XLSX, 4 onglets)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cascade-doubles-comptages.csv",
+     "label": "Les deux doubles comptages retirés de la cascade, article par article et produit par produit (CSV)"
     }
    ]
   }

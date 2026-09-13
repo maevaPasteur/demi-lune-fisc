@@ -6,9 +6,9 @@
   },
   "entete": {
     "positionService": "Le service revendique son rapport liquides/solides : il « provient directement des données de la caisse informatique qui reflète des données d’exploitation qui peuvent être considérées comme significatives, en terme de volume d’informations et surtout exhaustives » (p. 92). Il écarte le « gonflement des liquides » en jugeant les sur-versements de Maître THIVEND « totalement incohérente », puis assume la part de 75 % du rehaussement imputable à la cuisine : « Il est normal que les rehaussements proposés correspondent à 75 % puisqu’il s’agit d’une conséquence directe du rapport » (p. 92). Il reproche enfin à Maître THIVEND de « compte[r] ainsi deux fois le chiffre d’affaires liquides reconstitués » (p. 92). Il conclut en opposant au coefficient sur achat revendu de 3,85 avancé par Maître THIVEND, ramené à 3,2725 après le taux de perte/offerts/consommation du personnel de 15 %, ses propres coefficients reconstitués de 3,40, 3,14 et 3,05 : « il apparaît que le service n’a nullement exagéré le chiffre d’affaires reconstitué » (p. 93).",
-    "reponseCourte": "Le service tire son coefficient d’une caisse qu’il qualifie d’« exhaustive » en page 92 et dont il met en cause « la qualité et l’inaltérabilité » en page 93 : lue jusqu’au bout, cette caisse donne un chiffre d’affaires cuisine de 959 561 €, et non les 1 314 482 € extrapolés. Le raisonnement par lequel la partie T se conclut, 3,85 x (1-0,15) = 3,2725, est exact et la société le concède, mais il compare des coefficients globaux et ne dit rien de la répartition entre liquides et cuisine, qui est l’objet du litige.",
+    "reponseCourte": "Le service applique à un chiffre d’affaires liquides corrigé un coefficient mesuré avant correction : sous sa propre hypothèse, ce coefficient restitue la cuisine déjà enregistrée, 959 561 €, et non 1 314 482 €. Le raisonnement par lequel la partie T se conclut, 3,85 x (1-0,15) = 3,2725, est exact et la société le concède, mais il compare des coefficients globaux et ne dit rien de la répartition entre liquides et cuisine, qui est l’objet du litige.",
     "enjeu": "Le chiffre d’affaires cuisine n’est pas reconstitué mais extrapolé du chiffre d’affaires liquides par un coefficient. Il représente 1 314 482 € sur 1 750 040 € de total reconstitué, et 354 921 € de « cuisine fantôme » sur 471 826 € de redressement total, soit 75 % du rappel.",
-    "statut": "demonte"
+    "statut": "partiel"
   },
   "sections": [
     {
@@ -280,7 +280,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "De là le chiffrage de la « cuisine fantôme » : « Puisque le coefficient vaut « CA solides réel ÷ CA liquides réel », le CA cuisine reconstitué est, par construction, égal au CA cuisine réellement encaissé multiplié par le facteur de gonflement des boissons » (p. 90). Sur trois exercices, « cette cuisine fantôme atteint 354 921 €, soit 75 % du redressement total (471 826 €) » (p. 91)."
+      "texte": "De là le chiffrage de la « cuisine fantôme » : « Puisque le coefficient vaut « CA solides réel ÷ CA liquides réel », le CA cuisine reconstitué est, par construction, égal au CA cuisine réellement encaissé multiplié par le facteur de gonflement des boissons » (p. 90). Sur trois exercices, « cette cuisine fantôme atteint 354 921 €, soit 75 % du redressement total (471 826 €) » (p. 91). Le passage reproduit se poursuit ainsi : « Or la cuisine réelle est enregistrée plat par plat dans la caisse (annexes C-1 à C-3) : le service ne produit aucune preuve de repas supplémentaires, ni couverts en plus, ni achats alimentaires supplémentaires. Une cuisine ne sort pas plus de 100 000 € de plats par an » (p. 91)."
     },
     {
       "kind": "tableau",
@@ -629,30 +629,29 @@
           "couleur": "gold"
         },
         {
-          "label": "Coefficient « moyen de l’exploitation » recalculé",
+          "label": "Repère opposé par le service (3,85 × 0,85)",
           "valeur": "3,2725",
           "sub": "3,85 x (1-0,15), calcul du service (p. 93)",
-          "highlight": true,
           "couleur": "red"
         },
         {
           "label": "Coefficients reconstitués du service",
           "valeur": "3,40 / 3,14 / 3,05",
           "sub": "par exercice, comparés au repère de 3,2725 (p. 93)",
-          "highlight": true,
           "couleur": "red"
         },
         {
-          "label": "Part du rehaussement assumée comme venant du rapport",
+          "label": "Part du rehaussement que le service rattache lui-même au rapport",
           "valeur": "75 %",
           "sub": "« conséquence directe du rapport » liquides/solides (p. 92)",
           "couleur": "red"
         },
         {
-          "label": "Cuisine fantôme chiffrée dans le passage reproduit",
+          "label": "Cuisine jamais mesurée, obtenue par extrapolation",
           "valeur": "354 921 €",
-          "sub": "sur 471 826 € de redressement total, trois exercices (p. 90 et 91)",
-          "couleur": "teal"
+          "sub": "354 921 € sur 471 826 € de redressement, soit 75,2 %",
+          "couleur": "teal",
+          "highlight": true
         }
       ]
     },
@@ -666,7 +665,7 @@
       "kind": "chapitre",
       "source": "nous",
       "numero": 2,
-      "titre": "Notre réponse : le service valide sa méthode par une caisse qu’il déclare lui même non probante",
+      "titre": "Notre réponse : le rapport est mesuré avant correction, puis appliqué après correction",
       "sousTitre": "Le rapport liquides/solides est tiré des annexes du service ; appliqué à un chiffre d’affaires liquides reconstitué, il transporte sur la cuisine, à hauteur d’environ trois euros par euro, toute sur évaluation des boissons."
     },
     {
@@ -675,7 +674,7 @@
     },
     {
       "kind": "titre",
-      "texte": "La même caisse, deux qualités opposées, à une page d’intervalle",
+      "texte": "Le rapport est lu dans la caisse, avant la correction que le service lui applique",
       "numero": "2.1"
     },
     {
@@ -684,11 +683,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Ces deux qualifications portent sur le même fichier, produit par le même logiciel, sur les mêmes trois exercices. Une base de données ne peut pas être exhaustive lorsqu’elle sert à établir le coefficient qui produit les trois quarts du rappel, et altérée lorsqu’il s’agit d’écarter le chiffre d’affaires qu’elle enregistre. Le service doit choisir : s’il retient l’exhaustivité, la ventilation liquides/solides qu’il lit dans la caisse vaut aussi pour les montants qu’elle contient ; s’il retient l’altération, le rapport de 2,94 est tiré d’une source qu’il tient pour non probante."
+      "texte": "Le rapport liquides/solides n’est pas un repère de la profession : c’est une mesure faite sur les ventes enregistrées de l’établissement, avant toute correction. Or le service retient un chiffre d’affaires liquides supérieur à celui qu’il y lit, sans articuler aucune constatation propre à la cuisine. Sous sa propre hypothèse, le rapport vrai entre cuisine et boissons n’est donc plus 2,94 mais **1,98** en 2022-2023, **2,29** en 2023-2024 et **2,35** en 2024-2025 ; appliqué au chiffre d’affaires liquides qu’il retient, il restitue exactement la cuisine déjà enregistrée, **959 561 €**."
     },
     {
       "kind": "paragraphe",
-      "texte": "Cette contradiction n’est pas un argument de forme. Le rapport liquides/solides n’est pas un repère de la profession : c’est une mesure, faite sur les ventes enregistrées du restaurant. Sa valeur probante ne peut donc pas être supérieure à celle de la source dont il est extrait."
+      "texte": "Le rapport dépend donc entièrement du couple de montants sur lequel il est pris. Corriger l’un des deux termes sans toucher à l’autre change nécessairement sa valeur : c’est cette conséquence que la reconstitution n’a pas tirée."
     },
     {
       "kind": "titre",
@@ -817,12 +816,12 @@
     },
     {
       "kind": "titre",
-      "texte": "Si la caisse est significative pour le rapport, elle l’est aussi pour le chiffre d’affaires cuisine",
+      "texte": "La cuisine est enregistrée plat par plat : elle était mesurable, elle n’avait pas à être extrapolée",
       "numero": "2.3"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le rapport et le chiffre d’affaires cuisine sont lus dans le même fichier, à la même ligne de total. Retenir le premier comme « exhaustif » et écarter le second suppose qu’une caisse puisse enregistrer fidèlement la proportion des plats sans en enregistrer fidèlement le montant. Le chiffre d’affaires cuisine était donc directement mesurable : il n’avait pas à être extrapolé."
+      "texte": "Le rapport et le chiffre d’affaires cuisine sont lus dans le même fichier, à la même ligne de total, et le service ne conteste la cuisine ni dans son volume, ni dans ses couverts, ni dans ses achats alimentaires. Le chiffre d’affaires cuisine était donc directement mesurable : il n’avait pas à être extrapolé."
     },
     {
       "kind": "tableau",
@@ -962,6 +961,14 @@
     },
     {
       "kind": "titre",
+      "texte": "Une précision sur la formule du mémoire du 10/07/2026"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le mémoire du 10/07/2026 a écrit qu’une cuisine ne sort pas plus de 100 000 € de plats par an. La formule visait le supplément, non le total : le chiffre d’affaires cuisine réellement encaissé est de 300 747 €, 329 362 € et 329 452 €, il est lu plat par plat dans les annexes C, et la société ne l’a jamais contesté. Ce que la méthode du service ajoute à ce chiffre mesuré, et qui n’est adossé à aucun couvert ni à aucun achat alimentaire, est de 354 921 € sur trois exercices, soit **118 307 € par exercice**."
+    },
+    {
+      "kind": "titre",
       "texte": "Le bras de levier : ce que coûte un euro de boisson sur évalué",
       "numero": "2.4"
     },
@@ -1067,7 +1074,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Reste à savoir ce que cette vérification démontre. Le repère de 3,2725 n’est pas une donnée observée : c’est le coefficient réalisé sur l’alcool revendu, 3,854864, multiplié par une part d’achats revendus que le service fixe à 85 %. Or cette part est mesurable, et elle est mesurée sur les volumes : 6 567 litres revendus au verre et en cocktails sur les 10 622 litres achetés, soit 61,82 %. La même identité donne alors **3,854864 x 0,6182452 = 2,383251**. Le test peut donc être refait à construction inchangée, en remplaçant la seule part supposée par la part mesurée."
+      "texte": "Reste à savoir ce que cette vérification démontre. Le repère de 3,2725 n’est pas une donnée observée : c’est le coefficient réalisé sur l’alcool revendu, 4,037205, multiplié par une part d’achats revendus que le service fixe à 85 %. Or cette part est calculée poste par poste dans la cascade des 10 622 litres : 6 271 litres revendus au verre et en cocktails, soit 59,03 %. La même identité donne alors **4,037205 x 0,5903220 = 2,383251**. Refait avec cette part, le test ne tranche pas le litige, il en mesure l’enjeu."
     },
     {
       "kind": "tableau",
@@ -1268,11 +1275,11 @@
     },
     {
       "kind": "note",
-      "texte": "Les deux repères s’obtiennent par la même opération : coefficient sur achat revendu de 3,854864 multiplié par la part des achats revendue, 85 % pour le service, 61,82 % pour la mesure. Les colonnes « CA au repère » appliquent ce coefficient au coût des matières de chaque exercice, exactement comme la page 93 le fait implicitement. Recalcul complet à l’onglet 4 de la pièce jointe."
+      "texte": "Les deux repères s’obtiennent par la même opération : coefficient sur achat revendu de 4,037205 multiplié par la part des achats revendue, 85 % retenus par le service, 59,03 % calculés poste par poste dans la cascade. Les colonnes « CA au repère » appliquent ce coefficient au coût des matières de chaque exercice, exactement comme la page 93 le fait implicitement. Recalcul complet à l’onglet 4 de la pièce jointe."
     },
     {
       "kind": "paragraphe",
-      "texte": "Conduit avec la part mesurée, le test dit l’inverse de ce que le service en tire : le chiffre d’affaires **déclaré** se tient à 27 019 € de son repère, soit 2,1 % en dessous, tandis que le chiffre d’affaires **reconstitué** le dépasse de 444 807 €, soit 34,1 % au dessus. L’écart entre les deux lectures est exactement le rapport des deux parts, 0,85 / 0,6182452 = 1,375. La page 93 ne mesure donc pas la modération de la reconstitution : elle reconduit, sous forme de coefficient, le taux de perte de 15 % qui est déjà l’un des paramètres de cette reconstitution. Un repère bâti sur un paramètre de la méthode ne peut servir à valider le résultat de cette méthode."
+      "texte": "Refait avec la part calculée poste par poste, le test déplace le repère : le chiffre d’affaires **déclaré** se tient à 27 019 € de son repère, soit 2,1 % en dessous, tandis que le chiffre d’affaires **reconstitué** le dépasse de 444 807 €, soit 34,1 % au dessus. L’écart entre les deux lectures est exactement le rapport des deux parts, 0,85 / 0,5903220 = 1,440. La page 93 ne mesure donc pas la modération de la reconstitution : elle reconduit, sous forme de coefficient, le taux de perte de 15 % qui est déjà l’un des paramètres de cette reconstitution. Un repère bâti sur un paramètre de la méthode ne peut servir à valider le résultat de cette méthode."
     },
     {
       "kind": "paragraphe",
@@ -1285,7 +1292,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le Conseil d’État juge qu’un ratio calculé à partir du nombre de ventes et appliqué sans tenir compte « des volumes respectifs d’un verre et d’une bouteille ni de la nature des boissons vendues » vicie la reconstitution dans son principe ([CE, 3e ch., 5 octobre 2016, n° 389822](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2016-10-05/389822)). Il juge également que l’administration comme le contribuable peuvent se référer « aux données de l’activité d’exercices antérieurs ou postérieurs, pourvu que les conditions d’exploitation n’aient pas varié ou qu’elles puissent être ajustées » ([CE, 9e et 10e ch. réunies, 22 juillet 2020, n° 424052](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-07-22/424052))."
+      "texte": "Le Conseil d’État a censuré une cour qui avait écarté la critique d’imprécision d’une reconstitution, « alors que le ratio [...], calculé en pourcentage du nombre de ventes, avait été appliqué à la variation des stocks de l’entreprise sans tenir compte des volumes respectifs d’un verre et d’une bouteille ni de la nature des boissons vendues » : la cour « a donné aux faits qu’elle a relevés une qualification juridique inexacte » ([CE, 3e ch., 5 octobre 2016, n° 389822](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20161005-389822), point 3). Cassation avec renvoi : le contribuable l’emporte, parce qu’un ratio tiré d’un dénombrement ne peut pas être appliqué à une autre grandeur sans que l’administration justifie ce transport. Statuant sur la reconstitution des recettes d’une brasserie, le Conseil d’État juge par ailleurs qu’en l’absence de données fiables permettant de déterminer les conditions d’exploitation des exercices vérifiés, il est « loisible tant à l’administration fiscale dans le cadre des opérations de reconstitution de chiffre d’affaires qu’au contribuable pour critiquer la reconstitution ainsi opérée, de se référer aux données de l’activité d’exercices antérieurs ou postérieurs, pourvu que les conditions d’exploitation, établies par tout moyen, de ces exercices n’aient pas varié » ([CE, 9e et 10e ch. réunies, 22 juillet 2020, n° 424052](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20200722-424052), point 4). La décision porte sur les données d’autres exercices, et nous ne lui faisons pas dire davantage ; la symétrie qu’elle pose vaut cependant ici : le service puise dans la caisse le coefficient et les prix moyens de sa reconstitution, et la société est recevable à s’y référer pour la critiquer."
     },
     {
       "kind": "paragraphe",
@@ -1300,7 +1307,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service justifie son coefficient par l’exhaustivité de la caisse et refuse, dans le même courrier, de reconnaître cette exhaustivité aux montants que la caisse enregistre. Retenue jusqu’au bout, sa propre qualification impose de lire le chiffre d’affaires cuisine là où il figure : 959 561 € sur trois exercices, au lieu des 1 314 482 € extrapolés."
+      "texte": "Le service applique à un chiffre d’affaires liquides corrigé un rapport mesuré sur le chiffre d’affaires liquides non corrigé. Le calcul refait avec le rapport que sa propre hypothèse implique restitue la cuisine enregistrée, 959 561 € sur trois exercices, au lieu des 1 314 482 € extrapolés."
     },
     {
       "kind": "paragraphe",
@@ -1308,7 +1315,31 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La comparaison de coefficients par laquelle la partie T se referme n’y fait pas obstacle. Elle est exacte dans son calcul et la société le concède, la reconstitution demeurant 42 207 € en dessous du repère de 3,2725 sur les trois exercices. Mais ce repère n’est que le coefficient réalisé sur l’alcool revendu multiplié par une part d’achats revendus fixée à 85 % par le service ; avec la part mesurée de 61,82 %, il tombe à 2,383251 et le chiffre d’affaires reconstitué le dépasse alors de 444 807 €. Surtout, ce test porte sur un coefficient global : il ne valide à aucun titre le partage entre liquides et cuisine, seul objet de la présente partie."
+      "texte": "La comparaison de coefficients par laquelle la partie T se referme n’y fait pas obstacle. Elle est exacte dans son calcul et la société le concède, la reconstitution demeurant 42 207 € en dessous du repère de 3,2725 sur les trois exercices. Mais ce repère n’est que le coefficient réalisé sur l’alcool revendu multiplié par une part d’achats revendus fixée à 85 % par le service ; avec la part de 59,03 % calculée poste par poste dans la cascade, il tombe à 2,383251 et le chiffre d’affaires reconstitué le dépasse alors de 444 807 €. Surtout, ce test porte sur un coefficient global : il ne valide à aucun titre le partage entre liquides et cuisine, seul objet de la présente partie."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Cuisine réellement enregistrée en caisse",
+          "valeur": "959 561 €",
+          "sub": "trois exercices, lus au bas des annexes D et recontrôlés sur les annexes C",
+          "couleur": "teal"
+        },
+        {
+          "label": "Cuisine extrapolée par le service",
+          "valeur": "1 314 482 €",
+          "sub": "proposition de rectifications p. 52, coefficient liquides/solides appliqué",
+          "couleur": "red"
+        },
+        {
+          "label": "Écart à abandonner",
+          "valeur": "354 921 €",
+          "sub": "soit 75,2 % du rehaussement de 471 826 €",
+          "highlight": true,
+          "couleur": "teal"
+        }
+      ]
     },
     {
       "kind": "piecejointe",

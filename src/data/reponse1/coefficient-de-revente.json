@@ -6,9 +6,9 @@
   },
   "entete": {
     "positionService": "Le service ne discute pas le détail des calculs produits par Maître THIVEND : il en retourne le résultat contre la société. Il juge d’abord le taux de 36 % d’alcool jamais revendu « fortement exagéré » pour des exploitants expérimentés, puis fixé « de manière arbitraire sans aucun fondement » (p. 58). Il applique ensuite au coefficient sur achat revendu de Maître THIVEND (3,85 globalisé sur 3 exercices) son propre taux de perte, offerts et consommation du personnel de 15 %, et obtient 3,85 x (1-0,15) = 3,2725 (p. 59, repris p. 93). Comme sa reconstitution aboutit à des coefficients de 3,40, 3,14 et 3,05 selon les exercices, il en déduit qu’il « n’a nullement exagéré le chiffre d’affaires reconstitué » et que la méthode de l’avocat « conforte le service » dans la légitimité du rejet de comptabilité.",
-    "reponseCourte": "Le calcul 3,85 x (1-0,15) est arithmétiquement exact et la société le concède : il revient à supposer que 85 % des achats d’alcool sont revendus. La cascade des 10 622 litres mesure cette part à 61,82 %, ce qui ramène le repère de 3,2725 à 2,383251, soit exactement le niveau des coefficients déclarés de 2,30, 2,39 et 2,31.",
+    "reponseCourte": "Le calcul 3,85 x (1-0,15) est arithmétiquement exact et la société le concède : sur le cumul des trois exercices, la reconstitution reste 42 207 € en dessous du repère de 3,2725 qu’il produit, et le test de la page 93 n’est pas pris en défaut sur son propre terrain. Il suppose en revanche que 85 % des achats d’alcool sont revendus, quand la cascade des 10 622 litres établit cette part, poste par poste, à 59,03 % : le repère tombe alors à 2,383251, soit le niveau des coefficients déclarés de 2,30, 2,39 et 2,31.",
     "enjeu": "Le service transforme la démonstration de la défense en preuve à charge : le coefficient sert désormais à justifier le rejet de comptabilité et à valider le niveau de la reconstitution.",
-    "statut": "demonte"
+    "statut": "partiel"
   },
   "sections": [
     {
@@ -30,21 +30,18 @@
           "label": "Taux substitué par le service",
           "valeur": "15 %",
           "sub": "« Taux de perte/offerts/consommation du personnel » retenu dans sa propre méthode (p. 93)",
-          "couleur": "red",
-          "highlight": true
+          "couleur": "red"
         },
         {
-          "label": "Coefficient recalculé",
+          "label": "Repère opposé par le service (3,85 × 0,85)",
           "valeur": "3,2725",
           "sub": "3,85 x (1-0,15), calcul du service (p. 59 et 93)",
-          "couleur": "red",
-          "highlight": true
+          "couleur": "red"
         },
         {
-          "label": "Coefficients de sa reconstitution",
+          "label": "Coefficients de la reconstitution du service",
           "valeur": "3,40 / 3,14 / 3,05",
-          "sub": "Exercices 2022-2023, 2023-2024, 2024-2025 (p. 59 et 93)",
-          "couleur": "red"
+          "sub": "Exercices 2022-2023, 2023-2024, 2024-2025 (p. 59 et 93)"
         },
         {
           "label": "Taux de non revendu contesté",
@@ -331,7 +328,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La « **Réponse du service** » s’ouvre en bas de la page 58 par un constat de méthode : « **Il est intéressant de constater que Maître THIVEND parvient à considérer que les coefficients constatés sur les déclarations de résultat apparaissent normaux qu’à partir du moment où un taux de perte global de 36 % est appliqué.** » Le service requalifie ainsi les 36 % en un « taux de perte global » unique, alors que la réponse les décomposait en neuf postes distincts dont la casse et l’évaporation ne représentent que 1 543 L."
+      "texte": "La « **Réponse du service** » s’ouvre en bas de la page 58 par un constat de méthode : « **Il est intéressant de constater que Maître THIVEND parvient à considérer que les coefficients constatés sur les déclarations de résultat apparaissent normaux qu’à partir du moment où un taux de perte global de 36 % est appliqué.** » Le service requalifie ainsi les 36 % en un « taux de perte global » unique, alors que la réponse les décomposait en neuf postes distincts dont la casse et l’évaporation ne représentaient, dans ce décompte, que 1 543 L."
     },
     {
       "kind": "paragraphe",
@@ -511,7 +508,7 @@
       "source": "nous",
       "numero": 2,
       "titre": "Notre réponse : l’opération du service est exacte, mais son repère n’est que l’image de son taux de 15 %",
-      "sousTitre": "3,85 x (1-0,15) revient à supposer 85 % des achats revendus ; avec la part revendue mesurée de 61,82 %, la même opération donne 2,383251, c’est à dire le niveau même des coefficients déclarés."
+      "sousTitre": "3,85 x (1-0,15) revient à supposer 85 % des achats revendus ; avec la part revendue établie poste par poste à 59,03 %, la même opération donne 2,383251, c’est à dire le niveau même des coefficients déclarés."
     },
     {
       "kind": "paragraphe",
@@ -524,7 +521,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Une première lecture opposait au service que son abattement de 15 % devait porter sur le dénominateur, le coût des achats effectivement revendus, et non sur le résultat. Cette objection est fausse et la société la retire. Le coefficient rapporté à la **totalité** des achats est, par construction, le produit du coefficient sur achat revendu par la part des achats réellement revendue. Sur les données de la société, l’identité se vérifie au sixième chiffre : **3,854864 x 0,6182452 = 2,383251**, et 2,383251 est bien, directement, 257 210 € de chiffre d’affaires alcool encaissé rapportés aux 107 924 € d’alcool acheté. Passer d’un coefficient sur achat revendu à un coefficient sur la totalité des achats se fait donc en multipliant par une part, exactement ce que fait le service en écrivant 3,85 x (1-0,15)."
+      "texte": "Une première lecture opposait au service que son abattement de 15 % devait porter sur le dénominateur, le coût des achats effectivement revendus, et non sur le résultat. Cette objection est fausse et la société la retire. Le coefficient rapporté à la **totalité** des achats est, par construction, le produit du coefficient sur achat revendu par la part des achats réellement revendue. Sur les données de la société, l’identité se vérifie au sixième chiffre : **4,037205 x 0,5903220 = 2,383251**, et 2,383251 est bien, directement, 257 210 € de chiffre d’affaires alcool encaissé rapportés aux 107 924 € d’alcool acheté. Passer d’un coefficient sur achat revendu à un coefficient sur la totalité des achats se fait donc en multipliant par une part, exactement ce que fait le service en écrivant 3,85 x (1-0,15)."
     },
     {
       "kind": "paragraphe",
@@ -541,7 +538,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le repère de 3,2725 n’est pas une donnée observée. C’est le coefficient réalisé par la société sur l’alcool qu’elle revend, 3,854864, multiplié par une part d’achats revendus que le service fixe à 85 %. Le seul terme en litige est donc cette part. Elle n’est pas une hypothèse pour la société : la cascade des 10 622 litres, poste par poste, en dénombre 6 567 revendus au verre et en cocktails, soit 61,82 %. Appliquée à la même identité, cette part mesurée donne 2,383251."
+      "texte": "Le repère de 3,2725 n’est pas une donnée observée. C’est le coefficient réalisé par la société sur l’alcool qu’elle revend, **4,037205**, multiplié par une part d’achats revendus que le service fixe à 85 %. Le seul terme en litige est donc cette part. La cascade des 10 622 litres attribue **6 271 L** à la revente au verre et en cocktails, soit **59,03 %**. Cette part est calculée poste par poste : elle intègre les corrections de volumes que le service conteste, et elle ne vaut donc que si ces corrections sont admises. Appliquée à la même identité, elle donne 2,383251."
     },
     {
       "kind": "tableau",
@@ -599,28 +596,28 @@
             "align": "right"
           },
           {
-            "v": "3,854864",
+            "v": "4,037205",
             "align": "right"
           },
           {
-            "v": "3,276635",
+            "v": "3,431624",
             "align": "right"
           },
           {
-            "v": "353 627 €",
+            "v": "370 355 €",
             "align": "right"
           }
         ],
         [
           {
-            "v": "Part revendue mesurée : 6 567 L sur 10 622 L"
+            "v": "Part revendue de la cascade : 6 271 L sur 10 622 L"
           },
           {
-            "v": "61,82 % (mesurés)",
+            "v": "59,03 % (calculés poste par poste)",
             "align": "right"
           },
           {
-            "v": "3,854864",
+            "v": "4,037205",
             "align": "right"
           },
           {
@@ -634,10 +631,10 @@
         ],
         [
           {
-            "v": "Écart entre le repère du service et la mesure"
+            "v": "Écart entre le repère du service et notre calcul"
           },
           {
-            "v": "+ 23,18 points",
+            "v": "+ 25,97 points",
             "align": "right"
           },
           {
@@ -657,11 +654,11 @@
     },
     {
       "kind": "note",
-      "texte": "Les trois lignes appliquent la même identité : coefficient sur la totalité des achats = coefficient sur achat revendu x part revendue. Seule la part change. La dernière colonne convertit le coefficient en chiffre d’affaires alcool, pour les 107 924 € d’alcool acheté sur les trois exercices ; la ligne mesurée y retrouve les 257 210 € effectivement encaissés, relevés dans les annexes D du service."
+      "texte": "Les trois lignes appliquent la même identité : coefficient sur la totalité des achats = coefficient sur achat revendu x part revendue. Seule la part change. La dernière colonne convertit le coefficient en chiffre d’affaires alcool, pour les 107 924 € d’alcool acheté sur les trois exercices ; la troisième ligne y retrouve les 257 210 € effectivement encaissés, relevés dans les annexes D du service."
     },
     {
       "kind": "paragraphe",
-      "texte": "La distance entre 3,2725 et 2,383251 se lit alors sans ambiguïté : elle vaut 0,85 / 0,6182452, soit 1,375. Le repère du service est **37 % au dessus** du coefficient réellement constaté, et ces 37 % sont exactement l’écart entre la part qu’il suppose revendue et celle qui est mesurée. La comparaison de la page 93 ne teste donc pas la reconstitution : elle reconduit, sous forme de coefficient, le taux de 15 % qui est déjà l’un des paramètres de cette reconstitution."
+      "texte": "La distance entre 3,2725 et 2,383251 se lit alors sans ambiguïté : elle vaut 0,85 / 0,5903220, soit 1,440. Le repère du service est **44 % au dessus** du coefficient réellement constaté, et ces 44 % sont exactement l’écart entre la part qu’il suppose revendue et celle que nos volumes établissent poste par poste. La comparaison de la page 93 ne teste donc pas la reconstitution : elle reconduit, sous forme de coefficient, le taux de 15 % qui est déjà l’un des paramètres de cette reconstitution."
     },
     {
       "kind": "titre",
@@ -670,7 +667,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le test peut être refait sans rien changer à sa construction, en remplaçant la seule part supposée revendue par la part mesurée. Le résultat s’inverse : le chiffre d’affaires déclaré se situe à **27 019 € du repère**, soit 2,1 % en dessous, tandis que le chiffre d’affaires reconstitué le dépasse de **444 807 €**, soit 34,1 % au dessus."
+      "texte": "Refait avec la part que nos volumes établissent, ce test ne tranche pas le litige : il en mesure l’enjeu. Il montre que le repère de la page 93 varie du simple au tiers selon le taux de perte retenu, et qu’il reconduit donc le paramètre même qu’il prétend valider. Le chiffre d’affaires déclaré se situe alors à **27 019 € du repère**, soit 2,1 % en dessous, tandis que le chiffre d’affaires reconstitué le dépasse de **444 807 €**, soit 34,1 % au dessus."
     },
     {
       "kind": "tableau",
@@ -933,7 +930,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "À titre indicatif, réparti au prorata des achats d’alcool facturés de chaque exercice, le coefficient sur achat revendu ressort à 3,75, 3,97 et 3,84. Cette ventilation est une répartition, non une mesure : c’est précisément ce qui interdit de traiter le 3,85 comme un repère annuel."
+      "texte": "À titre indicatif, réparti au prorata des achats d’alcool facturés de chaque exercice, le coefficient sur achat revendu ressort à 3,93, 4,15 et 4,03. Cette ventilation est une répartition, non une mesure : c’est précisément ce qui interdit de traiter le 3,85 comme un repère annuel."
     },
     {
       "kind": "tableau",
@@ -978,11 +975,11 @@
             "align": "right"
           },
           {
-            "v": "61,8 %",
+            "v": "59,0 %",
             "align": "right"
           },
           {
-            "v": "21 827 €",
+            "v": "20 841 €",
             "align": "right"
           },
           {
@@ -990,7 +987,7 @@
             "align": "right"
           },
           {
-            "v": "3,75",
+            "v": "3,93",
             "align": "right"
           },
           {
@@ -1007,11 +1004,11 @@
             "align": "right"
           },
           {
-            "v": "61,8 %",
+            "v": "59,0 %",
             "align": "right"
           },
           {
-            "v": "22 421 €",
+            "v": "21 408 €",
             "align": "right"
           },
           {
@@ -1019,7 +1016,7 @@
             "align": "right"
           },
           {
-            "v": "3,97",
+            "v": "4,15",
             "align": "right"
           },
           {
@@ -1036,11 +1033,11 @@
             "align": "right"
           },
           {
-            "v": "61,8 %",
+            "v": "59,0 %",
             "align": "right"
           },
           {
-            "v": "22 476 €",
+            "v": "21 461 €",
             "align": "right"
           },
           {
@@ -1048,7 +1045,7 @@
             "align": "right"
           },
           {
-            "v": "3,84",
+            "v": "4,03",
             "align": "right"
           },
           {
@@ -1065,11 +1062,11 @@
             "align": "right"
           },
           {
-            "v": "61,8 %",
+            "v": "59,0 %",
             "align": "right"
           },
           {
-            "v": "66 723 €",
+            "v": "63 710 €",
             "align": "right"
           },
           {
@@ -1077,7 +1074,7 @@
             "align": "right"
           },
           {
-            "v": "3,85",
+            "v": "4,04",
             "align": "right"
           },
           {
@@ -1103,11 +1100,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service écrit que la réponse fixe son taux « de manière arbitraire sans aucun fondement » (p. 58). Les 36 % ne sont pas un taux global de perte : ils se décomposent en neuf postes chiffrés séparément, dont la casse et l’évaporation ne représentent que 1 543 litres. À l’inverse, l’origine du taux de 15 % retenu par le service n’est indiquée nulle part dans le courrier : ni référence professionnelle, ni relevé, ni calcul."
+      "texte": "Le service écrit que la réponse fixe son taux « de manière arbitraire sans aucun fondement » (p. 58). Les 36 % ne sont pas un taux global de perte : ils se décomposent en neuf postes chiffrés séparément, dont la casse et l’évaporation ne représentent, après les corrections que nous portons, que **2 224 litres**, soit **20,9 % des achats** (page [M, la cascade des 10 622 L](/reponse-1/cascade-10622-litres)). À l’inverse, l’origine du taux de 15 % retenu par le service n’est indiquée nulle part dans le courrier : ni référence professionnelle, ni relevé, ni calcul."
     },
     {
       "kind": "paragraphe",
-      "texte": "Il appartient à l’administration d’établir le bien fondé des rectifications qu’elle propose. Le Conseil d’État juge qu’un ratio appliqué sans tenir compte « des volumes respectifs d’un verre et d’une bouteille ni de la nature des boissons vendues » vicie la reconstitution dans son principe ([CE, 3e ch., 5 octobre 2016, n° 389822](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2016-10-05/389822)). Il juge aussi que l’administration comme le contribuable peuvent se référer « aux données de l’activité d’exercices antérieurs ou postérieurs, pourvu que les conditions d’exploitation n’aient pas varié ou qu’elles puissent être ajustées » ([CE, 9e et 10e ch. réunies, 22 juillet 2020, n° 424052](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2020-07-22/424052)). La société est donc recevable à opposer, comme elle le fait, une méthode assise sur ses propres données."
+      "texte": "Il appartient à l’administration d’établir le bien fondé des rectifications qu’elle propose. Le Conseil d’État a censuré une cour qui avait écarté la critique d’imprécision d’une reconstitution, « **alors que le ratio […], calculé en pourcentage du nombre de ventes, avait été appliqué à la variation des stocks de l’entreprise sans tenir compte des volumes respectifs d’un verre et d’une bouteille ni de la nature des boissons vendues** » : la cour « **a donné aux faits qu’elle a relevés une qualification juridique inexacte** » ([CE, 3e ch., 5 octobre 2016, n° 389822](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20161005-389822), point 3). Cassation avec renvoi. Le vice tient d’abord à la dissociation que relève le juge : un ratio établi en nombre de ventes appliqué à une variation de stocks. Le Conseil d’État juge par ailleurs qu’« **en l’absence de données fiables permettant de déterminer les conditions d’exploitation d’exercices vérifiés**, il est loisible tant à l’administration […] qu’au contribuable […] de se référer aux données de l’activité d’exercices antérieurs ou postérieurs, pourvu que les conditions d’exploitation, établies par tout moyen, de ces exercices n’aient pas varié ou qu’elles puissent être ajustées pour tenir compte de leur évolution » ([CE, 9e et 10e ch. réunies, 22 juillet 2020, n° 424052](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20200722-424052), point 4). La décision porte sur les données d’autres exercices, et nous ne lui faisons pas dire davantage ; mais la symétrie qu’elle pose vaut ici : la société est recevable à opposer, comme elle le fait, une méthode assise sur ses propres données."
     },
     {
       "kind": "chapitre",
@@ -1122,11 +1119,35 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Ce qui tombe ensuite : 3,2725 n’est pas une norme, c’est le coefficient réalisé sur l’alcool revendu multiplié par une part d’achats revendus fixée à 85 % par le service et par lui seul. La part mesurée est de 61,82 %, et le même calcul donne alors 2,383251. Conduit avec cette part, le test de la page 93 place le chiffre d’affaires **déclaré** à 2,1 % de son repère et le chiffre d’affaires **reconstitué** 34,1 % au dessus, soit 444 807 €. La comparaison ne démontre donc pas la modération de la reconstitution : elle mesure l’écart entre le taux de perte que le service retient et celui que les volumes établissent."
+      "texte": "Ce qui tombe ensuite : 3,2725 n’est pas une norme, c’est le coefficient réalisé sur l’alcool revendu multiplié par une part d’achats revendus fixée à 85 % par le service et par lui seul. La part calculée poste par poste est de 59,03 %, et le même calcul donne alors 2,383251, un repère que celui du service dépasse de 44 %. Conduit avec cette part, le test de la page 93 place le chiffre d’affaires **déclaré** à 2,1 % de son repère et le chiffre d’affaires **reconstitué** 34,1 % au dessus, soit 444 807 €. La comparaison ne démontre donc pas la modération de la reconstitution : elle mesure l’écart entre le taux de perte que le service retient et celui que nos volumes établissent."
     },
     {
       "kind": "paragraphe",
       "texte": "Même en s’en tenant au calcul du service, l’exercice 2022-2023 est reconstitué **23 147 € au dessus** du repère de 3,2725. Et en tout état de cause, la comparaison ne peut servir à conforter le rejet de comptabilité « à la hauteur de ce qui a été établi » : les coefficients de 3,40, 3,14 et 3,05 ne sont pas des données observées dans l’entreprise, ce sont des produits de la reconstitution elle même, et un repère bâti sur l’un des paramètres de cette reconstitution ne peut en valider le résultat."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Part des achats d’alcool réellement revendue",
+          "valeur": "59,03 %",
+          "sub": "calculée poste par poste sur la cascade des 10 622 L, soit 6 271 L",
+          "couleur": "teal"
+        },
+        {
+          "label": "Le même calcul, avec cette part",
+          "valeur": "4,037205 × 0,5903220 = 2,383251",
+          "sub": "257 210 € de chiffre d’affaires alcool encaissé pour 107 924 € d’alcool acheté",
+          "couleur": "teal",
+          "highlight": true
+        },
+        {
+          "label": "Coefficients déclarés",
+          "valeur": "2,30 / 2,39 / 2,31",
+          "sub": "Exercices 2022-2023, 2023-2024, 2024-2025, relevés par le service p. 56",
+          "couleur": "teal"
+        }
+      ]
     },
     {
       "kind": "piecejointe",

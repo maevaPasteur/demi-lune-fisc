@@ -6,7 +6,7 @@
   },
   "entete": {
     "positionService": "Le service « prend note » des quatre lignes aux montants importants (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) qui auraient été supprimées, mais estime que la réponse « n’apporte aucun éclaircissement sur les quantités inférieures à 1 », sauf « sur une infime quantité ». Il ajoute que le numéro d’identification unique de chaque note ne figure que dans les fichiers Règlement, Ticket ligne, Ticket et TVA, et qu’il est différent dans le fichier « tpvevenement.xls ». Il en déduit qu’« il n’y a aucune traçabilité certaine pour les suppressions » et que le motif de rejet est « parfaitement légitime ».",
-    "reponseCourte": "Les quantités inférieures à 1 sont des parts d’addition partagée : sur les trois exercices, 5 009 articles fractionnés sur 5 120 (97,8 %) se recomposent exactement en quantités entières et 99,7 % des notes concernées sont encaissées, de sorte qu’aucune minoration de recettes n’est établie.",
+    "reponseCourte": "Le motif D est abandonné au profit du motif A : le service ne discute plus aucune quantité et renvoie aux suppressions. Les quantités inférieures à 1 sont des parts d’addition partagée, 5 009 articles fractionnés sur 5 120 se recomposant exactement en quantités entières et 99,7 % des notes concernées étant encaissées ; les quatre lignes à montant élevé sont des fautes de frappe corrigées le jour même, et aucune minoration de recettes n’est chiffrée.",
     "enjeu": "Motif de rejet n° D de la proposition de rectifications (p. 18 à 20)",
     "statut": "demonte"
   },
@@ -441,7 +441,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service reproduit aussi le commentaire qui accompagne ces tableaux dans notre réponse : « Ces fractions sont marginales et tracées : seules 167 notes (environ 1 % des 16 610 notes) portent une fraction autre que 0,50, et plus de 99 % d’entre elles se réconcilient au centime (somme des lignes = total encaissé du ticket). Loin d’occulter du chiffre d’affaires, ces quantités tracent intégralement l’encaissement : c’est l’inverse d’une dissimulation » (p. 28). Il mentionne enfin la pièce jointe citée en réponse, « 08-rf-quantites-anormales.xlsx » (p. 28)."
+      "texte": "Le service reproduit aussi le commentaire qui accompagne ces tableaux dans notre réponse : « Ces fractions sont marginales et tracées : seules 167 notes (environ 1 % des 16 610 notes) portent une fraction autre que 0,50, et plus de 99 % d’entre elles se réconcilient au centime (somme des lignes = total encaissé du ticket). Loin d’occulter du chiffre d’affaires, ces quantités tracent intégralement l’encaissement : c’est l’inverse d’une dissimulation » (p. 28). Il mentionne enfin la pièce jointe citée en réponse, « 08-rf-quantites-anormales.xlsx » (p. 28). Le dénominateur de 16 610 notes que cet extrait reprend est celui du mémoire de juillet : le recomptage exhaustif des annexes C-1 à C-3 en donne 16 607, chiffre retenu dans toute la suite de cette page."
     },
     {
       "kind": "paragraphe",
@@ -548,7 +548,7 @@
         {
           "label": "Fractions autres que 0,50",
           "valeur": "167 notes",
-          "sub": "environ 1 % des 16 610 notes (p. 28)"
+          "sub": "environ 1 % des 16 607 notes recomptées (tableau de cette page)"
         },
         {
           "label": "Fichiers porteurs du numéro unique",
@@ -557,11 +557,10 @@
           "couleur": "blue"
         },
         {
-          "label": "Fichier écarté par le service",
-          "valeur": "tpvevenement.xls",
-          "sub": "« aucune traçabilité certaine pour les suppressions » (p. 29)",
-          "highlight": true,
-          "couleur": "red"
+          "label": "Notes recomposées à partir des seuls fichiers du service",
+          "valeur": "1 862",
+          "sub": "regroupées en 791 tables sur les annexes C-1 à C-3 et F-1 à F-3",
+          "couleur": "teal"
         }
       ]
     },
@@ -823,11 +822,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La démonstration se lit sur pièces. Les trois tables ci-dessous sont tirées des annexes C, aux dates indiquées, et figurent in extenso dans l’onglet « Exemples » de la pièce jointe. La première est **l’exemple choisi par le service lui-même** dans la proposition de rectifications : la table du 14 avril 2022 dont il affirmait ne pas retrouver l’autre moitié."
+      "texte": "La démonstration se lit sur pièces. Les trois tables ci-dessous sont tirées des annexes C, aux dates indiquées. Chacune figure ligne à ligne dans la pièce jointe : les tables du 14 avril 2022 et du 20 août 2023 dans l’onglet « Exemples », la table du 29 avril 2022 dans les onglets « Tables partagées » et « Détail articles », où elle porte l’horodatage 12:03 et les trois notes n° 4, n° 5 et n° 6 pour 63,50 €. La première est **l’exemple choisi par le service lui-même** dans la proposition de rectifications : la table du 14 avril 2022 dont il affirmait ne pas retrouver l’autre moitié."
     },
     {
       "kind": "tableau",
-      "titre": "Exemple 1 : 14 avril 2022, notes n° 13 (12h43) et n° 14 (12h44), 26,45 € chacune, réglées par carte bancaire",
+      "titre": "Exemple 1 : 14 avril 2022, notes n° 13 (12h43) et n° 14 (12h44), 26,45 € chacune, réglées par carte bancaire, deux des six notes que la pièce jointe regroupe pour cette journée (n° 11 à n° 16, 152,10 € au total)",
       "minWidth": 720,
       "colonnes": [
         {
@@ -1452,17 +1451,17 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Une quantité fractionnaire ne relève d’aucune de ces catégories. Les opérations sont enregistrées, chronologiquement, avec leur détail article par article, leur prix de carte et leur règlement. Le Conseil d’État juge de longue date, à propos d’un restaurant, que des lacunes documentaires ponctuelles ne suffisent pas et exige des « irrégularités graves et répétées » pour écarter la comptabilité ([CE, 9e et 7e sous-sect., 22 janvier 1992, n° 57816](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000007631618)). Il a également jugé, pour un restaurant dont la comptabilité était régulière, que « les incertitudes et l’imprécision qui affectent la reconstitution » interdisent d’en déduire l’insincérité des écritures ([CE, 7e et 9e sous-sect., 10 mars 1976, n° 79933](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000007615352)), décision à laquelle le BOFiP renvoie lui-même au § 150."
+      "texte": "Une quantité fractionnaire ne relève d’aucune de ces catégories. Les opérations sont enregistrées, chronologiquement, avec leur détail article par article, leur prix de carte et leur règlement. Le Conseil d’État a jugé, pour un restaurant dont la comptabilité était régulière, qu’« en raison tant des incertitudes et de l’imprécision qui affectent la reconstitution d’un taux de bénéfice brut que de la faiblesse de l’écart constaté en l’espèce entre le taux ressortant de la comptabilité et le taux théorique, la comptabilité produite ne peut qu’être tenue pour sincère » ([CE, 7 / 9 ssr, 10 mars 1976, n° 79933](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19760310-79933), considérants non numérotés), décision à laquelle le BOFiP renvoie lui-même au § 150. Le ministre succombe et le restaurateur est regardé comme prouvant l’exagération de l’évaluation. La motivation est cumulative : elle joint à l’imprécision de la reconstitution la faiblesse de l’écart constaté. Ici, l’écart n’est pas seulement faible, il est nul, puisque le service ne chiffre sous ce motif aucune recette minorée."
     },
     {
       "kind": "paragraphe",
-      "texte": "Enfin, la charge de la preuve n’est pas déplacée. Aux termes de l’article L. 192, alinéa 2, du livre des procédures fiscales, « la charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » ([LPF, art. L. 192](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037993633)). Le Conseil d’État en tire la conséquence qu’« en l’absence d’avis rendu par la commission départementale [...] et lorsque le contribuable n’a pas accepté les rehaussements qui lui avaient été notifiés dans le cadre de la procédure contradictoire, il incombe à l’administration d’apporter la preuve du bien-fondé des suppléments d’impôt » ([CE, 9e ch., 5 janvier 2023, n° 452595, pt 2](https://www.legifrance.gouv.fr/juri/id/CETATEXT000046949615)). Affirmer que le motif de rejet est « parfaitement légitime » ne satisfait pas à cette exigence : il appartient au service d’identifier la recette qui aurait été minorée par une quantité fractionnaire. Il n’en désigne aucune."
+      "texte": "Enfin, la charge de la preuve n’est pas déplacée. Aux termes de l’article L. 192, alinéa 2, du livre des procédures fiscales, « la charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » ([LPF, art. L. 192](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037993633)). Le Conseil d’État en tire la conséquence qu’« en l’absence d’avis rendu par la commission départementale [...] et lorsque le contribuable n’a pas accepté les rehaussements qui lui avaient été notifiés dans le cadre de la procédure contradictoire, il incombe à l’administration d’apporter la preuve du bien-fondé des suppléments d’impôt » ([CE, 9e ch., 5 janvier 2023, n° 452595, pt 2](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20230105-452595)). Affirmer que le motif de rejet est « parfaitement légitime » ne satisfait pas à cette exigence. Le service ne désigne aucune recette qui aurait été minorée par une quantité fractionnaire, alors que la démonstration de la société reconstitue au centime le total de chacune des tables citées."
     },
     {
       "kind": "alerte",
       "couleur": "teal",
       "titre": "Le test proposé au service",
-      "texte": "Si les quantités fractionnaires cachaient des recettes, les fractions ne se refermeraient pas. Il suffit au service de rejouer le script fourni sur les fichiers qu’il détient : il obtiendra les mêmes 5 009 recompositions entières sur 5 120."
+      "texte": "Si les quantités fractionnaires cachaient des recettes, les fractions ne se refermeraient pas. Le décompte est reproductible : la méthode, les colonnes lues et les fenêtres de regroupement sont décrites dans la pièce jointe, et le script de production `scripts/reponse1-quantites-fractionnaires.py` sera remis au service sur simple demande. Appliqué aux annexes C-1 à C-3 et F-1 à F-3 qu’il détient, il redonne les mêmes 5 009 recompositions entières sur 5 120."
     },
     {
       "kind": "chapitre",
@@ -1481,7 +1480,7 @@
     },
     {
       "kind": "piecejointe",
-      "intro": "Le décompte ci-dessus est intégralement reproductible. La pièce jointe restitue, pour les trois exercices, chacune des 791 tables partagées : date, heure, numéros des notes jumelles, total par note, total de la table, puis le détail article par article avec la quantité portée sur chaque note et la colonne montrant que la somme des fractions est un nombre entier. L’onglet « Exemples » restitue ligne à ligne les trois tables citées. Script de production : scripts/reponse1-quantites-fractionnaires.py, sources ANNEXE-C1 à C-3 et ANNEXE-F1 à F-3.",
+      "intro": "Le décompte ci-dessus est intégralement reproductible. La pièce jointe restitue, pour les trois exercices, chacune des 791 tables partagées : date, heure, numéros des notes jumelles, total par note, total de la table, puis le détail article par article avec la quantité portée sur chaque note et la colonne montrant que la somme des fractions est un nombre entier. L’onglet « Exemples » restitue ligne à ligne trois tables complètes : celle du 14 avril 2022 (six notes, n° 11 à n° 16, 152,10 €), celle du 20 août 2023 (notes n° 8 à n° 10) et celle du 12 avril 2024 (notes n° 19 et n° 20, 213,20 €), retenue comme la plus grosse table à deux notes des trois exercices. La table du 29 avril 2022 citée plus haut figure, elle, aux onglets « Tables partagées » et « Détail articles », à l’horodatage 12:03. Script de production : scripts/reponse1-quantites-fractionnaires.py, remis au service sur simple demande ; sources ANNEXE-C1 à C-3 et ANNEXE-F1 à F-3.",
       "fichiers": [
         {
           "fichier": "pieces-reponse-1/R1-quantites-fractionnaires.xlsx",

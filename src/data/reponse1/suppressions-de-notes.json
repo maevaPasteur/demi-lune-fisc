@@ -11,7 +11,7 @@
  },
  "entete": {
   "positionService": "Le service maintient intégralement son grief. Il relève que le fichier « tpvenement » comporte 21 302 lignes « DEL » et que la réponse n’en documente que 944 (134 + 748 + 62 lignes dans les trois onglets du fichier « 01-cas suppressions.xlsx »), soit « une infime partie ». Il ajoute que la colonne « id » de ce fichier n’est reprise dans aucun des fichiers Règlement, Ticket ligne, Ticket et TVA remis au titre de l’article L. 47 A-II du LPF, de sorte qu’un rapprochement fondé sur les seules heures et les seuls montants ne peut, au regard du BOI-TVA-DECLA-30-10-30, emporter la certitude exigée. Deux contre-exemples détaillés (09/09/2022 et 21/03/2024) le conduisent à conclure que la comptabilité est « impropre à justifier de la réalité du volume d’affaires » et que le rejet ouvre droit à reconstitution de recettes.",
-  "reponseCourte": "Le service écarte le rapprochement par l’heure et le montant puis l’adopte lui-même page 13, et les sept lignes qu’il imprime page 7 totalisent au centime près les 76,90 € de la note qu’il reproduit page 8 : le premier motif de rejet ne tient pas.",
+  "reponseCourte": "Le premier motif de rejet ne tient sur aucun de ses appuis : le service écarte le rapprochement par l’heure et le montant puis l’adopte lui-même page 13, les sept lignes qu’il imprime page 7 totalisent au centime les 76,90 € de la note reproduite page 8, et sur les 21 302 suppressions des trois exercices 98,3 % portent un montant qui est un prix de carte, 75,1 % se retrouvent au centime sur une ligne de note du même ticket Z, et le totalisateur perpétuel ne laisse aucun ticket manquant sur 16 605.",
   "enjeu": "Pilier n° 1 du rejet de comptabilité et fondement invoqué pour la reconstitution de recettes.",
   "statut": "demonte"
  },
@@ -38,7 +38,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reproduit ensuite les trois chiffres mis en avant par la réponse : **21 302 lignes supprimées (DEL)** sur trois exercices, **430 763 €** de montant brandi (TTC, présenté comme recettes effacées) et **9 €** de suppression médiane, « l’ordre de grandeur d’un seul article » (p. 3). Il reprend enfin le tableau des quatre plus grosses suppressions, présentées par la réponse comme des fautes de frappe sur la quantité."
+   "texte": "Le service reproduit ensuite les trois chiffres mis en avant par la réponse : **21 302 lignes supprimées (DEL)** sur trois exercices, **430 763 €** de montant brandi (TTC, présenté comme recettes effacées) et **9 €** de suppression médiane, « l’ordre de grandeur d’un seul article » (p. 3) ; la médiane exacte est de **8,70 €**, recalculée ligne à ligne sur les annexes E. Il reprend enfin le tableau des quatre plus grosses suppressions, présentées par la réponse comme des fautes de frappe sur la quantité."
   },
   {
    "kind": "tableau",
@@ -227,20 +227,19 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Lignes « DEL » dans tpvenement",
+     "label": "Lignes « DEL » opposées par le service",
      "valeur": "21 302",
-     "sub": "chiffre repris de la réponse (p. 5)",
-     "highlight": true,
+     "sub": "21 302 lignes du fichier « tpvevenement.xls » (p. 5) ; 98,3 % d’entre elles valent un prix de la carte ou un multiple entier (voir plus bas)",
      "couleur": "red"
     },
     {
-     "label": "Lignes documentées par les 3 onglets",
+     "label": "Lignes que le service dit documentées par nos trois onglets",
      "valeur": "944",
      "sub": "134 + 748 + 62 (p. 5)",
      "couleur": "gold"
     },
     {
-     "label": "Fichiers reprenant la colonne « id »",
+     "label": "Clé commune entre les fichiers, selon le service",
      "valeur": "0 sur 4",
      "sub": "Règlement, Ticket ligne, Ticket, TVA (p. 5)",
      "couleur": "red"
@@ -644,10 +643,9 @@
      "couleur": "blue"
     },
     {
-     "label": "Opérations « DEL » attendues dans « ticket ligne »",
+     "label": "Lignes que la logique prêtée à la réponse ferait attendre, selon le service",
      "valeur": "67",
      "sub": "selon la logique que le service prête à la réponse (p. 12)",
-     "highlight": true,
      "couleur": "red"
     }
    ]
@@ -1177,13 +1175,13 @@
      "couleur": "gold"
     },
     {
-     "label": "Articles à droite sans « DEL » à gauche",
+     "label": "Exemples cités par le service : articles à droite sans « DEL » à gauche",
      "valeur": "3 cités",
      "sub": "truite 18,60 €, salade verte 2,90 €, menu galette 19,50 € (p. 17)",
      "couleur": "red"
     },
     {
-     "label": "Ids « DEL » absents des notes encaissées",
+     "label": "Exemples cités par le service : ids « DEL » absents des notes encaissées",
      "valeur": "3 cités",
      "sub": "52 830 (20,10 €), 52 833 (8,00 €), 52 834 (10,00 €) (p. 17)",
      "couleur": "red"
@@ -1244,7 +1242,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Une méthode ne peut pas être impropre à établir la régularité et propre à établir l’irrégularité. Ou bien le rapprochement par l’horaire est recevable, et il faut alors examiner au fond les rapprochements que nous produisons ; ou bien il ne l’est pas, et le tableau des pages 13 à 15, seule pièce à charge de toute la partie A, tombe avec lui."
+   "texte": "Le service applique donc à sa propre démonstration la méthode qu’il refuse à la nôtre. Nous ne lui demandons pas d’y renoncer : nous demandons que le même critère serve dans les deux sens, et que les rapprochements produits par la société soient examinés au fond, comme l’a été le tableau des pages 13 à 15."
   },
   {
    "kind": "paragraphe",
@@ -1462,7 +1460,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service écrivait page 8 : « Vos arguments semblent donc avoir un semblant de véracité. » L’addition qu’il n’a pas faite transforme le semblant en démonstration. Ses propres pièces, choisies par lui, établissent le lien qu’il déclare impossible à établir."
+   "texte": "Le service écrivait page 8 : « Vos arguments semblent donc avoir un semblant de véracité. » L’addition qu’il n’a pas faite transforme le semblant en démonstration. Ses propres pièces, choisies par lui, établissent le lien qu’il déclare impossible à établir. Ce qu’il a fait sur deux extraits, nous l’avons fait sur la totalité du fichier : **75,1 % des 21 302 lignes « DEL », soit 15 991 lignes, se retrouvent au centime sur une ligne de note du même ticket Z**. Nous ne prétendons pas davantage : les 5 311 lignes restantes ne sont pas appariées par ce seul critère, et c’est la raison pour laquelle la démonstration ne repose pas sur ce rapprochement seul, mais aussi sur la forme des montants, sur le totalisateur perpétuel et sur le canal d’encaissement."
   },
   {
    "kind": "titre",
@@ -1471,7 +1469,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le débat sur le volume ne se tranche pas par des exemples, il se tranche par une mesure portant sur la totalité du fichier. Sur les trois exercices, les 21 302 lignes « DEL » ne prennent que **398 valeurs différentes**. Or les 16 605 notes encaissées présentent, elles, **2 592 totaux distincts**. Une population de 21 302 recettes effacées ne peut pas tenir dans 398 valeurs."
+   "texte": "La thèse du service, telle qu’il la formule page 19 de la proposition, est celle d’une **table** supprimée qui « ne figure plus en chiffre d’affaires ». Le débat sur le volume ne se tranche pas par des exemples, il se tranche par une mesure portant sur la totalité du fichier. Mesurée ainsi, la population des lignes « DEL » n’a pas cette forme : sur les trois exercices, les 21 302 lignes ne prennent que **398 valeurs différentes**, quand les **16 605 notes encaissées de l’annexe F** présentent, elles, **2 592 totaux distincts**. Une population de 21 302 recettes effacées ne peut pas tenir dans 398 valeurs."
   },
   {
    "kind": "paragraphe",
@@ -1480,6 +1478,13 @@
   {
    "kind": "kpis",
    "items": [
+    {
+     "label": "Lignes égales à un prix de la carte ou à un multiple entier",
+     "valeur": "98,3 %",
+     "sub": "20 944 lignes sur 21 302",
+     "highlight": true,
+     "couleur": "teal"
+    },
     {
      "label": "Valeurs distinctes prises par les 21 302 lignes « DEL »",
      "valeur": "398",
@@ -1628,7 +1633,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Une recette effacée aurait la forme d’une note : 30,40 €, 76,90 €, 123,70 €, une valeur prise dans le nuage des 2 592 totaux. Les lignes « DEL » n’ont pas cette forme : elles ont celle du prix d’un plat ou d’un verre, répétée des centaines de fois. Ce sont des articles retirés d’une table, pas des notes escamotées, et cette mesure porte sur les 21 302 lignes, non sur un échantillon de 944."
+   "texte": "Une recette effacée au sens de la thèse du service, c’est-à-dire une table entière retirée du chiffre d’affaires, aurait la forme d’une note : 30,40 €, 76,90 €, 123,70 €, une valeur prise dans le nuage des 2 592 totaux. Les lignes « DEL » n’ont pas cette forme : elles ont celle du prix d’un plat ou d’un verre, répétée des centaines de fois. Ce sont des articles retirés d’une table, pas des notes escamotées, et cette mesure porte sur les 21 302 lignes, non sur un échantillon de 944."
   },
   {
    "kind": "titre",
@@ -1803,11 +1808,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le raisonnement se referme donc dans les deux sens. Une recette logée dans un ticket clôturé à zéro laisserait ce ticket **orphelin** : il n’y aurait pas, le même jour et sous le même numéro, une seconde note régulièrement encaissée et déclarée. C’est pourtant ce que montrent 99,9 % des cas, et les trois exceptions sont nommées."
+   "texte": "Ce contrôle ferme la variante du ticket clôturé à zéro : une recette qui y serait logée laisserait le ticket **orphelin**, sans jumeau encaissé le même jour sous le même numéro. C’est pourtant ce que montrent 99,9 % des cas, et les trois exceptions sont nommées."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service soutient à la fois que le logiciel est soumis aux obligations d’inaltérabilité de l’article 286, I, 3° bis du CGI (p. 6) et qu’il aurait permis de faire disparaître 430 763,15 € de recettes. Si tel était le cas, le compteur que la doctrine rend inaltérable et non purgeable devrait porter la trace de l’écart. Il n’en porte aucune, sur 16 605 tickets et trois exercices."
+   "texte": "Le compteur que la doctrine invoquée par le service page 6 rend inaltérable et non purgeable devrait porter la trace d’un retrait de recettes de 430 763,15 €. Il n’en porte aucune, sur 16 605 tickets et trois exercices."
   },
   {
    "kind": "titre",
@@ -1828,7 +1833,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service ne dit nulle part avoir demandé un export complémentaire portant l’identifiant de table ou de note, alors que la même procédure le lui permettait et que l’éditeur du logiciel était identifié. Une donnée qui n’a pas été demandée ne peut pas être opposée comme manquante, encore moins servir de motif de rejet."
+   "texte": "Le service n’indique pas avoir demandé un export complémentaire portant l’identifiant de table ou de note, alors que la même procédure le lui permettait et que l’éditeur du logiciel était identifié. La société demeure à sa disposition pour le produire."
   },
   {
    "kind": "paragraphe",
@@ -1866,11 +1871,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Dans la procédure de rectification contradictoire, lorsque le contribuable n’a pas accepté les rehaussements, « il incombe à l’administration d’apporter la preuve du bien-fondé des suppléments d’impôt » ([CE, 9e ch., 5 janvier 2023, n° 452595, pt 2](https://www.legifrance.gouv.fr/juri/id/CETATEXT000046949615)). Et aux termes de l’article L. 192, alinéa 2, du livre des procédures fiscales, « la charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » ([LPF, art. L. 192](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037993633))."
+   "texte": "Dans la procédure de rectification contradictoire, lorsque le contribuable n’a pas accepté les rehaussements, « il incombe à l’administration d’apporter la preuve du bien-fondé des suppléments d’impôt » ([CE, 9e ch., 5 janvier 2023, n° 452595, pt 2](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20230105-452595)). Et aux termes de l’article L. 192, alinéa 2, du livre des procédures fiscales, « la charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » ([LPF, art. L. 192](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037993633))."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le rejet d’une comptabilité suppose au surplus des irrégularités d’une gravité particulière. Le Conseil d’État écarte le rejet lorsque « l’administration ne démontre pas que les irrégularités relevées dans la comptabilité […] soient de nature à retirer à celle-ci toute valeur probante » ([CE, 9e et 7e sous-sect., 5 octobre 1990, n° 63817](https://www.legifrance.gouv.fr/juri/id/CETATEXT000007630108)) ; statuant sur le cas d’un restaurant, il exige des « irrégularités graves et répétées » ([CE, 9e et 7e sous-sect., 22 janvier 1992, n° 57816](https://www.legifrance.gouv.fr/ceta/id/CETATEXT000007631618))."
+   "texte": "Le rejet d’une comptabilité suppose au surplus des irrégularités d’une gravité particulière. Le Conseil d’État écarte le rejet lorsque « l’administration ne démontre pas que les irrégularités relevées dans la comptabilité […] soient de nature à retirer à celle-ci toute valeur probante » ([CE, 9e et 7e sous-sect., 5 octobre 1990, n° 63817](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19901005-63817)) : le contribuable y obtient la décharge, faute pour l’administration d’avoir établi ce défaut de valeur probante. La doctrine administrative retient la même exigence et s’impose au service en application de l’article L. 80 A du LPF : la notion de graves irrégularités y vise des erreurs, omissions ou inexactitudes « graves et répétées » ([BOI-CF-IOR-10-20, § 290](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912))."
   },
   {
    "kind": "paragraphe",
@@ -2292,7 +2297,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Sur les trois exercices, **98,64 % des règlements sont bancarisés** : carte bancaire 91,22 %, chèques-vacances 3,73 %, titres restaurant 2,62 %, chèques 1,07 %. Les espèces représentent **1,36 % des règlements**, soit **17 333,18 € sur trois ans**, 1,34 % du chiffre d’affaires TTC. Tous ces flux sont tracés par un tiers (banque, ANCV, émetteur de titres) et se retrouvent au crédit des comptes bancaires."
+   "texte": "Sur les trois exercices, **98,64 % des règlements sont bancarisés** : carte bancaire 91,22 %, chèques-vacances 3,73 %, titres restaurant 2,62 %, chèques 1,07 %. Les espèces représentent **1,36 % des règlements**, soit **17 333,18 € sur trois ans** pour 1 278 149,46 € encaissés, et la même proportion du chiffre d’affaires TTC déclaré. Tous ces flux sont tracés par un tiers (banque, ANCV, émetteur de titres) et se retrouvent au crédit des comptes bancaires."
   },
   {
    "kind": "kpis",
@@ -2307,20 +2312,20 @@
     {
      "label": "Espèces encaissées en trois ans",
      "valeur": "17 333 €",
-     "sub": "1,34 % du chiffre d’affaires TTC",
+     "sub": "1,36 % des règlements encaissés (17 333,18 € sur 1 278 149,46 €)",
      "couleur": "blue"
     },
     {
-     "label": "Montant brandi au titre des suppressions",
-     "valeur": "430 763 €",
-     "sub": "soit 25 fois la totalité des espèces",
-     "couleur": "red"
+     "label": "Ce qu’il faudrait d’espèces pour encaisser les suppressions",
+     "valeur": "24,8 fois",
+     "sub": "430 763 € de lignes « DEL » contre 17 333,18 € d’espèces sur trois exercices",
+     "couleur": "teal"
     }
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Le montant que le service met en avant, 430 763,15 €, représente **25 fois la totalité des espèces passées par la caisse en trois ans**. Une dissimulation de cet ordre supposerait un flux d’espèces qui n’existe ni dans la caisse, ni sur les comptes, et dont le service ne fait état nulle part."
+   "texte": "Le montant que le service met en avant, 430 763,15 €, représente **24,8 fois** les espèces **enregistrées en caisse** en trois ans. Ce rapport ne prouve pas à lui seul l’absence de dissimulation, puisqu’une recette dissimulée ne figurerait précisément pas dans ce dénominateur, qui est lu dans le fichier dont le service conteste l’exhaustivité. Mais une dissimulation de cet ordre supposerait un flux d’espèces dont ni la caisse, ni les comptes bancaires ne portent trace, et dont le service ne fait état nulle part : les règlements enregistrés sont tracés à 98,64 % par un tiers, banque, ANCV ou émetteur de titres, et le courrier n’indique nulle part par quel canal les sommes réputées effacées auraient transité."
   },
   {
    "kind": "paragraphe",
@@ -2360,6 +2365,10 @@
     {
      "fichier": "pieces-reponse-1/R1-tickets-a-zero.xlsx",
      "label": "Les tickets clôturés à 0,00 € et leur jumeau encaissé (XLSX)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-sincerite-encaissements.xlsx",
+     "label": "Sincérité des encaissements : CA de caisse, modes de règlement et rapport entre la discordance soutenue et les espèces réellement encaissées (XLSX, 4 onglets)"
     }
    ]
   }

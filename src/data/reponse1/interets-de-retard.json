@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Sous le titre « D- Intérêts de retard » (p. 95), le service ne discute pas les intérêts de retard pour eux-mêmes : il les traite comme la conséquence automatique du sort réservé aux rappels. Il affirme que « tout au long de la présente réponse, le service s’est attaché à démontrer que les arguments de Maître THIVEND n’apportaient aucun élément pertinent susceptible de modifier les montants de chiffres d’affaires ressortant de la méthode de reconstitution employée », que « en ce sens, les chiffres d’affaires reconstitués n’ont pas été impactés et demeurent les mêmes que ceux qui figuraient dans la proposition de rectifications », et il en tire que « tous les rappels et rehaussements demeurant inchangés, les intérêts de retard demeurent également identiques par rapport à la proposition de rectifications ». Le courrier se clôt sur la phrase : « Les conséquences financières en matière d’Impôt sur les Sociétés et de TVA demeurent inchangées. »",
-  "reponseCourte": "Le service et nous appliquons la même règle, les intérêts suivent les droits : refaite intégralement, la liquidation des 7 268 € se vérifie et le décompte est même d’un mois plus favorable que la doctrine ne l’autorise, de sorte que ce poste tombera avec la reconstitution sans qu’aucun moyen propre ait à être élevé.",
+  "reponseCourte": "Le service et nous appliquons la même règle, les intérêts suivent les droits : refaite intégralement, la liquidation des 7 268 € se vérifie, de sorte que ce poste tombera avec la reconstitution sans qu’aucun moyen propre ait à être élevé.",
   "enjeu": "Le dernier point du courrier, et sa conclusion générale : le service y acte que rien n’a bougé, ni les chiffres d’affaires reconstitués, ni les rappels, ni les intérêts, ni les conséquences financières en IS et en TVA.",
-  "statut": "demonte"
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -42,11 +42,10 @@
      "label": "Position du service",
      "valeur": "Inchangés",
      "sub": "« les intérêts de retard demeurent également identiques par rapport à la proposition de rectifications » (p. 95)",
-     "couleur": "red",
-     "highlight": true
+     "couleur": "red"
     },
     {
-     "label": "Chiffres d’affaires reconstitués",
+     "label": "Chiffres d’affaires reconstitués, selon le service",
      "valeur": "Non impactés",
      "sub": "« n’ont pas été impactés et demeurent les mêmes que ceux qui figuraient dans la proposition de rectifications » (p. 95)",
      "couleur": "red"
@@ -55,8 +54,7 @@
      "label": "Conséquences financières",
      "valeur": "IS et TVA inchangées",
      "sub": "Phrase de clôture du courrier (p. 95)",
-     "couleur": "red",
-     "highlight": true
+     "couleur": "red"
     }
    ]
   },
@@ -153,7 +151,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Deux points méritent d’être relevés, et ils jouent en faveur du service : nous les signalons pour que le débat porte sur ce qui compte. En matière de taxes sur le chiffre d’affaires, la doctrine admet que l’intérêt soit décompté « à partir du premier jour de l’exercice suivant celui sur lequel portent lesdites rectifications » ([BOI-CF-INF-10-10-20](https://bofip.impots.gouv.fr/bofip/1458-PGP.html), § 100). Le service a retenu le 1er mai plutôt que le 1er avril pour les deux premiers exercices : son décompte est donc conforme, et même d’un mois plus favorable à la société que ce que la doctrine autorise."
+   "texte": "Deux précisions de doctrine méritent d’être relevées, et elles jouent en faveur du service : nous les signalons pour que le débat porte sur ce qui compte. En matière de taxes sur le chiffre d’affaires, la doctrine admet, « par mesure de tempérament », que l’intérêt soit décompté « à partir du premier jour de l’exercice suivant celui sur lequel portent lesdites rectifications », mais seulement « lorsqu’il n’est pas possible d’imputer les rappels à un mois ou à un trimestre déterminé ou que cette imputation est trop complexe » ([BOI-CF-INF-10-10-20](https://bofip.impots.gouv.fr/bofip/1458-PGP.html), § 100). Le point de départ retenu par le service pour les deux premiers exercices n’appelle de notre part aucun moyen propre."
   },
   {
    "kind": "paragraphe",
@@ -335,16 +333,10 @@
      "highlight": true
     },
     {
-     "label": "Taux appliqué",
-     "valeur": "0,20 % / mois",
-     "sub": "article 1727, III du CGI : conforme",
-     "couleur": "teal"
-    },
-    {
-     "label": "Arrêt du décompte",
-     "valeur": "31/05/2026",
-     "sub": "dernier jour du mois de la proposition, article 1727, IV, 4 du CGI : conforme",
-     "couleur": "teal"
+     "label": "Contrôles de liquidation passés",
+     "valeur": "2 sur 3",
+     "sub": "taux de 0,20 % par mois (art. 1727, III du CGI) et arrêt du décompte au 31/05/2026 (art. 1727, IV, 4) ; reste l’assiette de l’impôt sur les sociétés",
+     "couleur": "blue"
     },
     {
      "label": "Assiette IS à expliciter",
