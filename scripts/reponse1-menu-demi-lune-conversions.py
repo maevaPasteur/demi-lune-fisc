@@ -152,6 +152,10 @@ for ex in EXOS:
                         "detail_suppr": " + ".join(eur(m) for m, _ in sorted(ms)),
                         "note": no, "heure_note": n["h"], "total_note": round(n["tot"], 2),
                         "couverts": round(dl[0][1], 2), "prix_menu": round(dl[0][2], 2),
+                        # unites = somme des quantites de TOUTES les lignes
+                        # "Menu Demi Lune" de la note ; la colonne "couverts"
+                        # ne retient que la quantite de la premiere d'entre elles.
+                        "unites": round(sum(x[1] for x in dl), 2),
                         "composition": composition(n),
                         "ecart": round(s - n["tot"], 2),
                     })
@@ -165,8 +169,15 @@ NB_ECART_NUL = sum(1 for c in conversions if abs(c["ecart"]) < 0.005)
 
 TOTAL_CONV = len(conversions)
 TOTAL_EUR = round(sum(c["total_note"] for c in conversions), 2)
+TOTAL_SUPPR_EUR = round(sum(c["somme_suppr"] for c in conversions), 2)
 TOTAL_COUVERTS = round(sum(c["couverts"] for c in conversions), 2)
+TOTAL_UNITES = round(sum(c["unites"] for c in conversions), 2)
+TOTAL_LIGNES = sum(c["nb_suppr"] for c in conversions)
+TOTAL_ECART = round(sum(c["ecart"] for c in conversions), 2)
 ECART_MAX = max(abs(c["ecart"]) for c in conversions)
+# Notes ou le forfait a ete saisi en plusieurs lignes "Menu Demi Lune" :
+# c'est de la seule que vient l'ecart entre unites de menu et couverts.
+NOTES_MULTILIGNES = [c for c in conversions if abs(c["unites"] - c["couverts"]) > 0.001]
 
 # ---------------------------------------------------------------------------
 # 2. Verification de l'extrait du service (journee du 09/09/2022)
@@ -200,6 +211,9 @@ for p in calc["menus_par_periode"]:
             "nb_prix": m["nb_prix_custom"], "eur_hors": m["eur_hors_catalogue"],
             "pmin": min(px) if px else 0, "pmax": max(px) if px else 0,
         })
+
+TQC = sum(p["q_cat"] for p in periodes)
+TQH = sum(p["q_hors"] for p in periodes)
 
 # ---------------------------------------------------------------------------
 # 4. Ecriture du classeur
@@ -240,31 +254,58 @@ wb = openpyxl.Workbook()
 ws = wb.active
 ws.title = "Conversions au forfait"
 titre(ws, "Menu Demi Lune : conversions au forfait identifiees dans la caisse "
-          f"({TOTAL_CONV} notes, {eur(TOTAL_EUR)} encaisses). Ecart maximal constate : {eur(ECART_MAX)}.", 12)
+          f"({TOTAL_CONV} notes, {TOTAL_UNITES:g} unites de Menu Demi Lune, "
+          f"{TOTAL_COUVERTS:g} couverts, {eur(TOTAL_EUR)} encaisses). "
+          f"Ecart maximal constate : {eur(ECART_MAX)}.", 13)
 ws.append(["Somme des lignes supprimees (evenements DEL, annexe E) = total de la note encaissee "
            "(annexe C). Rapprochement : meme journee, meme minute de rafale, ecart < 0,05 €."])
-ws.merge_cells(start_row=ws.max_row, start_column=1, end_row=ws.max_row, end_column=12)
+ws.merge_cells(start_row=ws.max_row, start_column=1, end_row=ws.max_row, end_column=13)
 entetes(ws, ["Exercice", "Date", "Heure rafale", "Nb lignes supprimees",
              "Somme lignes supprimees (€)", "Detail des lignes supprimees",
              "Note n°", "Heure note", "Total note (€)", "Couverts",
-             "Composition de la note", "Ecart (€)"])
+             "Unites de Menu Demi Lune", "Composition de la note", "Ecart (€)"])
 for c in conversions:
     ws.append([c["exercice"], c["date"], c["heure_rafale"], c["nb_suppr"], c["somme_suppr"],
                c["detail_suppr"], c["note"], c["heure_note"], c["total_note"],
-               c["couverts"], c["composition"], c["ecart"]])
+               c["couverts"], c["unites"], c["composition"], c["ecart"]])
     for cell in ws[ws.max_row]:
         cell.border = THIN
         if isinstance(cell.value, (int, float)):
             cell.alignment = RA
     ws.cell(ws.max_row, 6).alignment = WRAP
-    ws.cell(ws.max_row, 11).alignment = WRAP
-ws.append(["TOTAL", "", "", sum(c["nb_suppr"] for c in conversions), TOTAL_EUR, "", "", "",
-           TOTAL_EUR, TOTAL_COUVERTS, "", 0])
+    ws.cell(ws.max_row, 12).alignment = WRAP
+ws.append(["TOTAL", "", "", TOTAL_LIGNES, TOTAL_SUPPR_EUR, "", "", "",
+           TOTAL_EUR, TOTAL_COUVERTS, TOTAL_UNITES, "", TOTAL_ECART])
 for cell in ws[ws.max_row]:
     cell.font = BOLD
     cell.fill = FILLT
     cell.border = THIN
-largeurs(ws, (11, 12, 12, 14, 18, 46, 9, 11, 14, 10, 60, 10))
+ws.cell(ws.max_row, 13).number_format = "0.00"
+ws.append([])
+_dates = ", ".join(f"{c['date']} (note {c['note']})" for c in NOTES_MULTILIGNES)
+ws.append(["Lecture des deux colonnes de quantite : la colonne « Couverts » ne retient que la "
+           "quantite de la PREMIERE ligne « Menu Demi Lune » de la note ; la colonne « Unites de "
+           f"Menu Demi Lune » somme toutes ces lignes. Les deux totaux different de "
+           f"{TOTAL_UNITES - TOTAL_COUVERTS:g} unite(s), du seul fait des "
+           f"{len(NOTES_MULTILIGNES)} note(s) ou le forfait a ete saisi en deux lignes a des prix "
+           f"differents : {_dates}. Total general : {TOTAL_UNITES:g} unites de Menu Demi Lune "
+           f"pour {TOTAL_COUVERTS:g} couverts."])
+ws.merge_cells(start_row=ws.max_row, start_column=1, end_row=ws.max_row, end_column=13)
+ws.cell(ws.max_row, 1).alignment = WRAP
+ws.append(["Lecture de la colonne « Ecart » : somme des lignes supprimees "
+           f"({eur(TOTAL_SUPPR_EUR)}) moins total des notes encaissees ({eur(TOTAL_EUR)}), soit "
+           f"{eur(TOTAL_ECART)} cumules sur les {TOTAL_CONV} conversions. Cet ecart provient d'une "
+           "seule note, ou la division du total par le nombre de couverts ne tombe pas juste au "
+           "centime."])
+ws.merge_cells(start_row=ws.max_row, start_column=1, end_row=ws.max_row, end_column=13)
+ws.cell(ws.max_row, 1).alignment = WRAP
+ws.append([f"Taux de couverture : ces {TOTAL_UNITES:g} unites de Menu Demi Lune se rapportent aux "
+           f"{TQH} Menus Demi Lune vendus hors catalogue que denombre l'onglet "
+           f"« Dispersion par periode », soit "
+           f"{100.0 * TOTAL_UNITES / TQH:.1f} %".replace(".", ",") + "."])
+ws.merge_cells(start_row=ws.max_row, start_column=1, end_row=ws.max_row, end_column=13)
+ws.cell(ws.max_row, 1).alignment = WRAP
+largeurs(ws, (11, 12, 12, 14, 18, 46, 9, 11, 14, 10, 16, 60, 10))
 ws.freeze_panes = "A4"
 
 # --- onglet 2 : l'extrait produit par le service
@@ -300,8 +341,6 @@ for p in periodes:
                 f"{p['pmin']:.2f} a {p['pmax']:.2f}".replace(".", ",")])
     for cell in ws3[ws3.max_row]:
         cell.border = THIN
-TQC = sum(p["q_cat"] for p in periodes)
-TQH = sum(p["q_hors"] for p in periodes)
 ws3.append(["Total", "", "", "", PRIX_CATALOGUE, TQC, TQH,
             f"{100.0 * TQH / (TQC + TQH):.1f} %".replace(".", ","), ""])
 for cell in ws3[ws3.max_row]:
@@ -316,6 +355,9 @@ wb.save(OUT)
 print(f"Conversions au forfait detectees : {TOTAL_CONV}")
 print(f"Notes contenant un Menu Demi Lune hors catalogue : {notes_hors_catalogue}")
 print(f"Total encaisse sur ces conversions : {eur(TOTAL_EUR)}  couverts : {TOTAL_COUVERTS}")
+print(f"Unites de Menu Demi Lune portees par ces conversions : {TOTAL_UNITES:g} "
+      f"(couverts : {TOTAL_COUVERTS:g})")
+print(f"Somme des lignes supprimees : {eur(TOTAL_SUPPR_EUR)}   ecart cumule : {eur(TOTAL_ECART)}")
 print(f"Ecart maximal somme(DEL) - total note : {eur(ECART_MAX)}")
 print(f"Ecart strictement nul : {NB_ECART_NUL} / {TOTAL_CONV}")
 print(f"Ventes au prix catalogue : {TQC}   hors catalogue : {TQH} "

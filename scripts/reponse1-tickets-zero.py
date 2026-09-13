@@ -48,6 +48,8 @@ def lire():
             tickets.append({"exo": e, "date": str(sh.cell_value(r, 0))[:10],
                             "heure": str(sh.cell_value(r, 1)), "no": no, "ttc": ttc})
     detail = collections.defaultdict(set)
+    lignes = collections.defaultdict(list)   # (exo, date, no) -> lignes d'articles
+    z_jour = {}                              # (exo, date)     -> n° de cloture Z
     for i, e in enumerate(EXOS, 1):
         sh = xlrd.open_workbook(CAISSE + f"ANNEXE-C{i}_detail-tickets_{e}.xls").sheet_by_index(0)
         for r in range(1, sh.nrows):
@@ -58,12 +60,22 @@ def lire():
                 no = int(float(sh.cell_value(r, 2)))
             except (ValueError, TypeError):
                 continue
-            detail[(e, str(sh.cell_value(r, 0))[:10])].add(no)
-    return tickets, detail
+            date = str(sh.cell_value(r, 0))[:10]
+            detail[(e, date)].add(no)
+            try:
+                pu = float(sh.cell_value(r, 13))
+            except (ValueError, TypeError):
+                pu = None
+            lignes[(e, date, no)].append({"lib": str(sh.cell_value(r, 10)).strip(), "pu": pu})
+            try:
+                z_jour[(e, date)] = int(float(sh.cell_value(r, 4)))
+            except (ValueError, TypeError):
+                pass
+    return tickets, detail, lignes, z_jour
 
 
 def analyse():
-    tickets, detail = lire()
+    tickets, detail, lignes, z_jour = lire()
     par_jour = collections.defaultdict(list)
     for t in tickets:
         par_jour[(t["exo"], t["date"])].append(t)
@@ -86,7 +98,37 @@ def analyse():
         "detail_lignes": sum(len(v) for v in detail.values()),
         "par_exo": {e: sum(1 for t in zero if t["exo"] == e) for e in EXOS},
         "zero_liste": zero, "par_jour": par_jour,
+        "orphelins_detail": [contexte_orphelin(t, detail, lignes, z_jour) for t in orphelins],
     }
+
+
+def contexte_orphelin(t, detail, lignes, z_jour):
+    """Ce que l'annexe C dit du ticket orphelin : cloture Z, lignes, explication.
+
+    Chaque valeur est relue dans les annexes, aucune n'est saisie a la main :
+    la piece doit porter la meme explication que la page, et rester verifiable
+    ligne a ligne par le service sur les fichiers qu'il detient."""
+    cle = (t["exo"], t["date"])
+    lg = lignes.get((t["exo"], t["date"], t["no"]), [])
+    z = z_jour.get(cle)
+    nos = sorted(detail.get(cle, []))
+    if lg:
+        offert = all(l["pu"] is not None and abs(l["pu"]) < 1e-9 for l in lg)
+        art = ", ".join(l["lib"] for l in lg)
+        expl = ("Repas integralement offert. Le ticket porte " + str(len(lg)) +
+                " lignes d'articles, toutes au prix de 0,00 € dans l'annexe C : "
+                "rien n'a ete encaisse, donc rien n'a ete efface. Le detail est "
+                "reproduit ligne a ligne a la page « Articles a prix 0 € »."
+                if offert else
+                "Le ticket porte " + str(len(lg)) + " lignes d'articles a l'annexe C.")
+    else:
+        art = ""
+        plage = (f"n° {nos[0]} a n° {nos[-1]}" if nos else "aucun")
+        expl = ("Aucune ligne dans le detail des tickets (annexe C) : table ouverte "
+                "puis refermee sans commande. La journee n'y porte que les tickets " +
+                plage + (f" (cloture Z n° {z})." if z else "."))
+    return {"exo": t["exo"], "date": t["date"], "heure": t["heure"], "no": t["no"],
+            "z": z, "nb_lignes": len(lg), "articles": art, "explication": expl}
 
 
 def xlsx(a):
@@ -157,13 +199,24 @@ def xlsx(a):
     ws3 = wb.create_sheet("Orphelins")
     ws3.append(["Les seuls tickets a 0,00 € sans jumeau encaisse, sur trois exercices"])
     ws3["A1"].font = Font(bold=True, size=13)
+    ws3.append(["Les trois sont expliques un a un, et l'explication est relue dans l'annexe C : "
+                "numero de cloture Z, nombre de lignes d'articles, libelles. Deux sont des repas "
+                "integralement offerts, dont toutes les lignes sont a 0,00 € ; le troisieme ne "
+                "porte aucune ligne au detail des tickets."])
+    ws3["A2"].font = Font(italic=True, size=9, color="64748B")
     ws3.append([])
-    ws3.append([])
-    entetes(ws3, ["Exercice", "Date", "Heure", "N° de ticket"])
-    for t in a["orphelins"]:
-        ws3.append([t["exo"], t["date"], t["heure"], t["no"]])
-    for i, w in enumerate([13, 13, 9, 13], 1):
+    entetes(ws3, ["Exercice", "Date", "Heure", "N° de ticket", "Cloture Z",
+                  "Lignes au detail (annexe C)", "Articles", "Explication"])
+    for o in a["orphelins_detail"]:
+        ws3.append([o["exo"], o["date"], o["heure"], o["no"], o["z"] if o["z"] else "",
+                    o["nb_lignes"], o["articles"], o["explication"]])
+        for c in range(1, 9):
+            cell = ws3.cell(row=ws3.max_row, column=c)
+            cell.border = bord
+            cell.alignment = Alignment(vertical="top", wrap_text=(c >= 7))
+    for i, w in enumerate([13, 13, 9, 13, 11, 14, 46, 78], 1):
         ws3.column_dimensions[get_column_letter(i)].width = w
+    ws3.freeze_panes = "A5"
 
     os.makedirs(PIECES, exist_ok=True)
     wb.save(PIECES + "R1-tickets-a-zero.xlsx")

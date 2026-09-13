@@ -307,7 +307,8 @@
   "sv_cocktails_l": 217.02,
   "sv_total_l": 493.86,
   "taux_sur_base_totale": 0.1207,
-  "taux_sur_base_main": 0.2906
+  "taux_sur_base_main": 0.2906,
+  "perimetre": "57 boissons, toutes assiettes confondues. Le total publie dans la reponse est celui de « total_borne » : les 46 boissons versees a la main."
  },
  "boissons": [
   {
@@ -5725,5 +5726,25 @@
     }
    ]
   }
- ]
+ ],
+ "total_borne": {
+  "boissons": 46,
+  "boissons_hors_perimetre": 11,
+  "achats_l": 5938.5,
+  "disponible_service_l": 5534.38,
+  "vendu_nominal_l": 3729.9,
+  "verre_l": 1182.6,
+  "pichet_l": 1427.04,
+  "bouteille_l": 475.13,
+  "cocktails_l": 516.72,
+  "ecart_l": 1804.48,
+  "base_main_l": 1699.32,
+  "retenu_l": 493.92,
+  "plafonne_l": 475.36,
+  "taux_max_compatible": 1.0619,
+  "taux_retenu_sur_base_main": 0.2907,
+  "taux_effectif_sur_vendu": 0.1274,
+  "part_de_l_ecart_couverte": 0.2737,
+  "rapport_ecart_sur_retenu": 3.65
+ }
 }

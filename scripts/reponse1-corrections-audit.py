@@ -172,7 +172,9 @@ def main():
     restes = []
     for f in glob.glob(DATA + "/*.json"):
         t = open(f, encoding="utf-8").read()
-        for mot in ("17 042", "1 750 cl", "198,15 L", "26,1 fois", "1 609 verres"):
+        # « 1 750 cl » est desormais la valeur EXACTE (bloc N2 inverse) : c est
+        # « 1 680 cl » qui ne doit plus subsister.
+        for mot in ("17 042", "1 680 cl", "198,15 L", "26,1 fois", "1 609 verres"):
             if mot in t:
                 restes.append(f"{os.path.basename(f)} contient encore « {mot} »")
     print("CONTRÔLE :", "aucune valeur fausse résiduelle" if not restes else restes)

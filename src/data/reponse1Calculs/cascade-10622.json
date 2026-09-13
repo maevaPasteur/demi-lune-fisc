@@ -26,8 +26,8 @@
   {
    "cle": "cuisine",
    "libelle": "Cuisine et alcool des menus",
-   "litres": 744.62,
-   "litres_arrondi": 745,
+   "litres": 741.14,
+   "litres_arrondi": 741,
    "nature": "calcul",
    "source": "Plats et menus vendus en caisse x dose, plafonnés aux achats facturés",
    "page": "Alcool de cuisine",
@@ -104,33 +104,33 @@
    "slug": "recon-9-variation-de-stock"
   }
  ],
- "attribue_l": 8397.4,
- "attribue_arrondi_l": 8398,
- "attribue_pct": 79.06,
- "residu_l": 2224.6,
- "residu_arrondi_l": 2224,
- "residu_pct": 20.94,
+ "attribue_l": 8393.92,
+ "attribue_arrondi_l": 8394,
+ "attribue_pct": 79.02,
+ "residu_l": 2228.08,
+ "residu_arrondi_l": 2228,
+ "residu_pct": 20.98,
  "nature": {
   "mesure": {
    "litres": 5611.77,
    "litres_arrondi": 5612
   },
   "calcul": {
-   "litres": 2014.24,
-   "litres_arrondi": 2015
+   "litres": 2010.76,
+   "litres_arrondi": 2011
   },
   "estime": {
    "litres": 771.39,
    "litres_arrondi": 771
   },
   "residu": {
-   "litres": 2224.6,
-   "litres_arrondi": 2224
+   "litres": 2228.08,
+   "litres_arrondi": 2228
   }
  },
- "part_caisse_l": 7626.01,
- "part_caisse_arrondi_l": 7627,
- "part_caisse_pct": 71.8,
+ "part_caisse_l": 7622.53,
+ "part_caisse_arrondi_l": 7623,
+ "part_caisse_pct": 71.77,
  "revendu_l": 6270.4,
  "revendu_arrondi_l": 6271,
  "part_revendue_pct": 59.0322,
@@ -159,7 +159,7 @@
  },
  "cuisine": {
   "calcule_l": 794.62,
-  "plafonne_l": 744.62,
+  "plafonne_l": 741.14,
   "carte_l": 566.31,
   "menus_l": 228.31,
   "supplement_demande_au_service_l": 173.38,
@@ -365,8 +365,8 @@
   },
   {
    "alcool": "Marc de Bourgogne",
-   "litres": 5.58,
-   "euros": 725.4,
+   "litres": 2.1,
+   "euros": 273.0,
    "base": "130.00 €/L"
   },
   {
@@ -391,24 +391,24 @@
   {
    "cle": "B",
    "libelle": "Postes itemisés, cuisine et alcool des menus compris",
-   "litres": 1913.87,
-   "litres_arrondi": 1914,
-   "pct_achats": 18.02,
-   "euros": 142706.71,
-   "pct_du_forfait_en_volume": 120.1,
-   "pct_du_forfait_en_euros": 185.7,
-   "ecart_euros_au_forfait": 65843.53
+   "litres": 1910.39,
+   "litres_arrondi": 1910,
+   "pct_achats": 17.99,
+   "euros": 142254.31,
+   "pct_du_forfait_en_volume": 119.9,
+   "pct_du_forfait_en_euros": 185.1,
+   "ecart_euros_au_forfait": 65391.13
   },
   {
    "cle": "C",
    "libelle": "Perte d’exploitation totale, hors cuisine et menus (postes itemisés et résidu de perte pure)",
-   "litres": 3393.85,
-   "litres_arrondi": 3393,
-   "pct_achats": 31.95,
-   "euros": 166995.35,
-   "pct_du_forfait_en_volume": 213.0,
-   "pct_du_forfait_en_euros": 217.3,
-   "ecart_euros_au_forfait": 90132.17
+   "litres": 3397.33,
+   "litres_arrondi": 3397,
+   "pct_achats": 31.98,
+   "euros": 167131.25,
+   "pct_du_forfait_en_volume": 213.2,
+   "pct_du_forfait_en_euros": 217.4,
+   "ecart_euros_au_forfait": 90268.07
   },
   {
    "cle": "D",
@@ -416,10 +416,10 @@
    "litres": 4138.47,
    "litres_arrondi": 4138,
    "pct_achats": 38.96,
-   "euros": 229576.16,
+   "euros": 229259.65,
    "pct_du_forfait_en_volume": 259.7,
-   "pct_du_forfait_en_euros": 298.7,
-   "ecart_euros_au_forfait": 152712.98
+   "pct_du_forfait_en_euros": 298.3,
+   "ecart_euros_au_forfait": 152396.47
   }
  ]
 }

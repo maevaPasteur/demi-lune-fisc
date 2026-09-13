@@ -19,8 +19,8 @@ et la contrainte physique :  U(a) + bouteilles vendues entieres <= disponible.
 Sources (lecture seule, reproductible) :
   public/documents/caisse-enregistreuse/ANNEXE-C{1,2,3}_detail-tickets_{exo}.xls
 Sorties :
-  src/data/reponse1/_cremant-fourchette.json
-  public/documents/pieces-reponse-1/R1-cremant-fourchette.xlsx
+  src/data/reponse1Calculs/cremant-fourchette.json
+  public/documents/pieces-reponse-1/R1-cremant-bilan-matiere.xlsx
   public/documents/pieces-reponse-1/R1-cremant-jour-par-jour-{exo}.csv
 """
 import os, json, math, csv, collections
@@ -47,8 +47,10 @@ DOSES_SERVICE = {
     "Kir Princier": 12,          # kir royal : meme verre que le cremant au verre
 }
 # Postes que le service a OMIS de son propre tableau p. 62 (donc absents de ses
-# 11 808 cl) : ils augmentent la consommation reelle, jamais l'inverse.
-OMIS_PAR_LE_SERVICE = ["Kir Princier", "VOUIVRE"]
+# 11 808 cl) : ils augmentent la consommation reelle, jamais l'inverse. Le tableau
+# de la page 62 ne compte que six lignes : le libelle « Crement / Jura VERRE » n'y
+# figure pas davantage, le cremant du Jura n'y apparaissant qu'en bouteille.
+OMIS_PAR_LE_SERVICE = ["Kir Princier", "VOUIVRE", "Crément / Jura VERRE"]
 
 # Bouteilles vendues scellees : sorties du stock, mais jamais ouvertes au service.
 BOUTEILLES_ENTIERES = ["Crémant du Jura", "Crément du Jura", "Crémant Rosé"]
@@ -235,11 +237,13 @@ def ecrire_xlsx(res):
     ws4 = wb.create_sheet("Libelles et doses")
     ws4.append(["Libelles de caisse retenus comme contenant du cremant, et dose appliquee"])
     ws4["A1"].font = Font(bold=True, size=13)
-    ws4.append(["Les doses sont celles que le service applique lui-meme dans son tableau p. 62. "
-                "Les libelles Kir Princier et VOUIVRE ne figurent pas dans ce tableau : ils sont "
-                "ajoutes ici, ce qui augmente la consommation reconnue et reduit d'autant "
-                "l'ecart reproche. Les Kir Bourgogne et Kir Pamplemousse (vin tranquille) sont "
-                "exclus, comme le service les exclut."])
+    ws4.append(["Les doses sont celles que le service applique lui-meme dans son tableau p. 62, "
+                "qui ne compte que six lignes. Trois libelles n'y figurent pas : le Kir Princier, "
+                "le libelle VOUIVRE et le libelle « Crement / Jura VERRE », le cremant du Jura "
+                "n'apparaissant chez le service qu'en bouteille de 75 cl. Ils sont ajoutes ici, "
+                "ce qui augmente la consommation reconnue et reduit d'autant l'ecart reproche. "
+                "Les Kir Bourgogne et Kir Pamplemousse (vin tranquille) sont exclus, comme le "
+                "service les exclut."])
     ws4["A2"].font = Font(italic=True, size=9, color="64748B")
     ws4.append([])
     cols4 = ["Exercice", "Libelle de caisse", "Dose de cremant (cl)", "Quantite vendue",

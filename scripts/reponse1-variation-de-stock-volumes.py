@@ -461,9 +461,10 @@ notes = [
                                      "« boissons » : elle exclut les biscuits, le sucre, les "
                                      "pailles et les consommables inscrits sur les memes pages. "
                                      "Elle porte en outre une colonne de fiabilite : %s lignes sur "
-                                     "273 (%s EUR) y sont marquees « a verifier ». Les totaux en "
+                                     "%s (%s EUR) y sont marquees « a verifier ». Les totaux en "
                                      "euros retenus ici sont ceux du document, non ceux du CSV."
                                      % (sum(a_verifier[d]["n"] for d in DATES),
+                                        sum(len(i["lignes"]) for i in INVENTAIRES),
                                         fr(sum(a_verifier[d]["eur"] for d in DATES)))),
     ("Convention de signe", "Variation de stock = stock initial moins stock final (SI - SF), "
                             "convention du plan comptable et de l'identite « achats + variation de "

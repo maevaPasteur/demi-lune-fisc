@@ -59,12 +59,26 @@ CANON = {
     "Bordeaux Superieur / bouton MOUTON CADET (Chateau Grand Renom)": "Bordeaux Supérieur",
 }
 # Reference -> libelles d'inventaire (stocks de cloture)
+#
+# Une liste VIDE signifie : reference recherchee dans les trois inventaires et
+# absente sous tout libelle identifiable. Les deux vins BLANCS ont ete cherches
+# par libelle (Beaune, Nuits, Germain, Lupe Cholet) puis par prix unitaire
+# d'achat (9,95 EUR le Hautes Cotes de Beaune blanc, 12,22 EUR le Hautes Cotes
+# de Nuits blanc) : aucune ligne d'inventaire ne leur correspond.
 INVNOMS = {
     "Hautes Cotes de Beaune ROUGE (Domaine Germain)":
         ["Haute Côte de Beaune 75cl", "Hautes Côtes de Beaune 75cl"],
+    "Hautes Cotes de Beaune BLANC (Domaine Germain)": [],
+    "Hautes Cotes de NUITS blanc (Lupe Cholet)": [],
     "Bordeaux Superieur / bouton MOUTON CADET (Chateau Grand Renom)":
         ["Bordeaux Supérieur 75cl"],
 }
+
+# Mention portee dans la colonne "Stock de cloture" quand la reference ne figure
+# a aucune ligne de l'inventaire de cette cloture. Ne jamais ecrire 0 dans ce
+# cas : un zero inventorie (ligne presente, quantite nulle) et une reference
+# absente de l'etat ne disent pas la meme chose.
+ABSENT = "non inventorié (aucune ligne à ce libellé)"
 
 # Tableaux imprimes en page 75 (transcription fidele, en centilitres)
 P75 = {
@@ -162,11 +176,14 @@ for it in IT["items"]:
 # Stocks de cloture
 # ---------------------------------------------------------------------------
 IDATA = json.load(open(INV, encoding="utf-8"))
+# stocks[ref][exercice] = nombre de bouteilles inventoriees, ou None si la
+# reference ne figure a AUCUNE ligne de l'inventaire de cette cloture.
 stocks = {ref: {} for ref in CODES}
 for inv in IDATA["inventaires"]:
     for ref, noms in INVNOMS.items():
-        q = sum((l["quantite"] or 0) for l in inv["lignes"] if l["produit"] in noms)
-        stocks[ref][inv["exercice"]] = q
+        trouvees = [l for l in inv["lignes"] if l["produit"] in noms]
+        stocks[ref][inv["exercice"]] = (
+            sum((l["quantite"] or 0) for l in trouvees) if trouvees else None)
 
 wb = openpyxl.Workbook()
 
@@ -196,7 +213,7 @@ for ref in CODES:
         verdict = "NON" if acl >= v else ("NON (voir confusion Nuits / Beaune)"
                                           if "BLANC" in ref else "a examiner")
         vals = [ref, e, fr(a, 0), fr(acl, 0),
-                "" if st is None else fr(st, 0), fr(v, 0), fr(acl - v, 0), verdict]
+                ABSENT if st is None else fr(st, 0), fr(v, 0), fr(acl - v, 0), verdict]
         for j, val in enumerate(vals, start=1):
             cell = ws.cell(row=r, column=j, value=val)
             cell.alignment = GAUCHE if j in (1, 8) else CENTRE
@@ -222,6 +239,17 @@ ws.cell(row=r, column=7, value=fr(ab - vb, 0)).alignment = CENTRE
 ws.cell(row=r, column=8, value="NON : les achats couvrent %s fois les ventes"
         % fr(ab / vb, 1)).alignment = GAUCHE
 ws.cell(row=r, column=8).fill = VERT
+
+r += 2
+ws.cell(row=r, column=1, value=(
+    "Lecture de la colonne « Stock de clôture » : un chiffre est la quantité "
+    "portée à l'inventaire physique de la clôture ; la mention « %s » signifie "
+    "que la référence ne figure à aucune ligne de cet inventaire, ce qui n'est "
+    "pas un stock nul. Les deux vins blancs (Hautes Côtes de Beaune blanc, "
+    "Hautes Côtes de Nuits blanc) ont été cherchés aux trois clôtures par "
+    "libellé et par prix unitaire d'achat (9,95 € et 12,22 €) : ils n'y "
+    "figurent sous aucun libellé." % ABSENT)).alignment = GAUCHE
+ws.cell(row=r, column=1).font = GRAS
 ws.column_dimensions["A"].width = 52
 for c in "BCDEFGH":
     ws.column_dimensions[c].width = 20
@@ -365,7 +393,16 @@ notes = [
                       "15 cl, pichet 50 cl, bouteille 75 cl (memes reperes que ceux "
                       "retenus par le service en annexe n°7)."),
     ("Stocks", "public/documents/inventaires/inventaires.json (inventaires physiques "
-               "de cloture des 31/03/2023, 31/03/2024 et 31/03/2025)."),
+               "de cloture des 31/03/2023, 31/03/2024 et 31/03/2025). La colonne "
+               "\"Stock de cloture\" distingue deux situations que rien ne doit "
+               "confondre : une quantite inventoriee, meme nulle, et une reference "
+               "qui ne figure a aucune ligne de l'etat, portee \"" + ABSENT + "\". "
+               "Le Hautes Cotes de Beaune rouge n'est ainsi inventorie qu'aux "
+               "clotures du 31/03/2023 et du 31/03/2025 ; l'etat du 31/03/2024 ne "
+               "le mentionne pas. Les deux vins BLANCS ont ete cherches aux trois "
+               "clotures par libelle puis par prix unitaire d'achat (9,95 EUR le "
+               "Hautes Cotes de Beaune blanc, 12,22 EUR le Hautes Cotes de Nuits "
+               "blanc) : ils n'y figurent sous aucun libelle."),
     ("Tableaux p. 75", "Transcription fidele des trois tableaux du courrier, puis "
                        "addition des lignes et recalcul des ecarts et des pourcentages."),
     ("Genere par", "scripts/reponse1-rapprochement-caisse-factures.py"),

@@ -103,6 +103,62 @@ for b in J("consoTotaleParBoisson.json")["boissons"]:
     if al:
         achats[b["nom_canonique"]] = {e: al.get(e, 0.0) * 100 for e in EXOS}
 
+# --------------------------------------------------------------------------
+# relecture des achats PAR CODE ARTICLE pour deux produits ou le rapprochement
+# automatique du dossier est pris en defaut (src/data/factures-fournisseur.json)
+# --------------------------------------------------------------------------
+FACT = json.load(open(BASE + "src/data/factures-fournisseur.json", encoding="utf-8"))["factures"]
+
+
+def _periode(df):
+    j, m, a = df.split("/")
+    iso = f"{a}-{m}-{j}"
+    if iso < "2022-04-01":
+        return None
+    if iso <= "2023-03-31":
+        return "2022-2023"
+    if iso <= "2024-03-31":
+        return "2023-2024"
+    if iso <= "2025-03-31":
+        return "2024-2025"
+    return None
+
+
+def _unites(code):
+    """Unites facturees par exercice pour un code article (lignes non livrees exclues)."""
+    q = {e: 0.0 for e in EXOS}
+    for f in FACT:
+        p = _periode(f["dateFacture"])
+        if not p:
+            continue
+        for ln in f.get("lignes", []):
+            if ln.get("montantHT") is None:
+                continue
+            if str(ln.get("code") or "") == code:
+                q[p] += ln.get("quantite") or 0
+    return q
+
+
+# Liqueur de Poire : la ligne du 15/03/2024 (facture n° 508974) porte une designation
+# tronquee, « LIQUEUR GOLDEN EIGHT 70 CL 25° », sans la mention « liqueur de poire
+# William » ; le rapprochement par libelle l'avait donc perdue. Relue par le code
+# article 591050 : 2 + 12 + 11 = 25 bouteilles de 70 cl, soit 1 750 cl et non 1 680.
+# Le service en compte lui aussi 25 dans son annexe n° 6.
+achats["Liqueur de Poire"] = {e: _unites("591050")[e] * 70.0 for e in EXOS}
+
+# Marc de Bourgogne : la ligne du cumul additionnait deux produits distincts, le marc
+# de Bourgogne Jacoulot 45° (code 550252, 4 bouteilles, 280 cl) et le marc du Jura
+# Tissot 50° (code 520096, 10 bouteilles, 700 cl), soit 980 cl de « marc » au total.
+# Seul le premier entre dans le baba ; le second est vendu au verre.
+achats["Marc de Bourgogne"] = {e: _unites("550252")[e] * 70.0 for e in EXOS}
+
+# Plafonds retenus sur les trois exercices pris ensemble (cl). Le marc de Bourgogne
+# est plafonne non pas aux 280 cl factures mais aux 210 cl effectivement sortis du
+# stock (280 cl achetes moins la bouteille inventoriee au 31/03/2025) : nous ne
+# savons pas lequel des deux marcs entre dans le baba, et nous ne demandons donc
+# pas au-dela de ce que le stock de marc de Bourgogne a pu fournir.
+PLAFOND_3ANS = {"Marc de Bourgogne": 210.0}
+
 # "volume disponible" imprime par le service (cl), p. 65 a 67
 dispo_service = {
     "Calvados": {"2022-2023": 3100, "2023-2024": 2200, "2024-2025": 2000},
@@ -188,8 +244,8 @@ NOTE_DEJA = {
     "Ravelin": "part cuisine du volume unique des BIB (162,32 / 162,57 / 155,54 L), p. 69 ; nulle sur l’exercice 1, où le ravelin est acheté en bouteilles et non en BIB",
     "Bailey's": "aucun retranchement identifié dans la réponse du service",
     "Grand Marnier": "aucun retranchement identifié ; demande plafonnée aux achats facturés",
-    "Marc de Bourgogne": "aucun retranchement identifié ; achats facturés 9,8 L contre 70 cl retenus par le service",
-    "Liqueur de Poire": "aucun retranchement identifié ; achats facturés 16,8 L contre 140 cl retenus par le service",
+    "Marc de Bourgogne": "aucun retranchement identifié ; 4 bouteilles facturées sur 3 exercices, 280 cl (code article 550252, Jacoulot 45°) contre 70 cl retenus par le service ; demande plafonnée à 210 cl, volume sorti du stock, et non aux 5,58 L calculés",
+    "Liqueur de Poire": "aucun retranchement identifié ; 25 bouteilles facturées sur 3 exercices, 1 750 cl (code article 591050) contre 140 cl retenus par le service",
 }
 
 alcools = sorted(set(list(carte) + list(menus)), key=lambda a: -(sum(carte.get(a, {}).values()) + sum(menus.get(a, {}).values())))
@@ -199,7 +255,15 @@ for a in alcools:
     m = menus.get(a, {e: 0.0 for e in EXOS})
     ac = achats.get(a, {e: 0.0 for e in EXOS})
     dem = {e: c[e] + m[e] for e in EXOS}
-    plaf = {e: min(dem[e], ac[e]) for e in EXOS}
+    if a in PLAFOND_3ANS:
+        # plafond global aux trois exercices : on impute dans l'ordre des exercices
+        reste_plaf = PLAFOND_3ANS[a]
+        plaf = {}
+        for e in EXOS:
+            plaf[e] = min(dem[e], reste_plaf)
+            reste_plaf -= plaf[e]
+    else:
+        plaf = {e: min(dem[e], ac[e]) for e in EXOS}
     dj = DEJA.get(a, {e: 0.0 for e in EXOS})
     deja = sum(dj.values())
     reste = sum(max(0.0, plaf[e] - dj[e]) for e in EXOS)
@@ -330,6 +394,8 @@ for s in solde:
         [None] + ["#,##0.00"] * 10 + [None],
         fill=(lambda j: BAD if j == 12 else None) if dep else (lambda j: OK if j == 12 else None))
     r += 1
+ws.cell(r + 1, 1, "Liqueur de Poire : achats relus par code article 591050, 2 + 12 + 11 = 25 bouteilles de 70 cl, soit 17,5 L. La ligne du 15/03/2024 (facture n° 508974) porte une désignation tronquée, « LIQUEUR GOLDEN EIGHT 70 CL 25° », sans la mention « liqueur de poire William » : le rapprochement par libellé l’avait perdue. Le service en compte 25 lui aussi (annexe n° 6).")
+ws.cell(r + 2, 1, "Marc de Bourgogne : 4 bouteilles de 70 cl, 280 cl (code article 550252, Jacoulot 45°). Les 980 cl du cumul du dossier additionnaient deux produits distincts, ces 280 cl et 700 cl de marc du Jura Tissot 50° (code 520096, 10 bouteilles), qui est vendu au verre et n’entre pas dans ce tableau.")
 
 # --- feuille 5
 ws = sheet(wb, "5-Solde demandé", "5. Volume réellement demandé après plafonnement aux achats facturés et déduction de ce que le service retranche déjà (litres, 3 exercices)",
@@ -351,6 +417,8 @@ put(ws, r, ["TOTAL", round(sum(sum(s["demande"].values()) for s in solde) / 100,
     [None] + ["#,##0.00"] * 4 + [None])
 for j in range(1, 7):
     ws.cell(r, j).font = Font(bold=True)
+ws.cell(r + 2, 1, "Plafonnement : exercice par exercice pour tous les alcools, aux achats facturés. Le marc de bourgogne fait exception : il est plafonné sur les trois exercices pris ensemble aux 210 cl sortis du stock (280 cl facturés moins la bouteille inventoriée au 31/03/2025), parce que nous ne savons pas lequel des deux marcs achetés entre dans le baba.")
+ws.cell(r + 3, 1, "La colonne « demande initiale » n’est pas modifiée par ces plafonnements : elle reste le produit du nombre de plats par la dose, 119,1 L pour le Calvados en face de 73,0 L retenus, 5,58 L pour le marc de bourgogne en face de 2,10 L retenus.")
 
 os.makedirs(OUT, exist_ok=True)
 wb.save(OUT + "R1-alcool-cuisine-controles.xlsx")

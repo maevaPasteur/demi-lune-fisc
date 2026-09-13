@@ -13,25 +13,34 @@ Ce script :
     PAR EXERCICE et PAR VIN NOMME (ce que le service reprochait de ne pas avoir) ;
  2. recontrole l'arithmetique des calculs du service de la page 64 / 86 ;
  3. dresse le releve des postes de perte auxquels le service oppose, dans le meme
-    courrier, le meme et unique taux de 15 % (controle du double emploi).
+    courrier, le meme et unique taux de 15 % (controle du double emploi) ;
+ 4. partitionne le decompte selon le CONDITIONNEMENT D'ACHAT reel du vin, lu dans
+    le champ "unite_achat" de src/data/calculsBoissons/consoTotaleParBoisson.json :
+    deux des douze vins nommes (Bourgogne Aligote maison, Cotes du Rhone rouge
+    maison de Chusclan) sont achetes en BIB de 10 L, les dix autres en bouteille
+    bouchee de 75 cl. Les degustations portant sur les deux BIB sont couvertes par
+    l'abattement "vins au BIB" du service et sont RETIREES de la demande.
 
 Regle appliquee, identique a celle du memoire du 10/07/2026 :
   une degustation de 2 cl par VIN NOMME et par NOTE (date + n. ticket),
   quelle que soit la quantite. Generiques "Verre de vin" / "Pichet vin" (cubis,
   type non precise) et bouteilles EXCLUS.
 
-Source : public/documents/caisse-enregistreuse/ANNEXE-C{1,2,3}_detail-tickets_*.xls
-  col 0 = date ticket, col 2 = n. ticket, col 10 = libelle, col 11 = quantite.
+Sources : public/documents/caisse-enregistreuse/ANNEXE-C{1,2,3}_detail-tickets_*.xls
+  col 0 = date ticket, col 2 = n. ticket, col 10 = libelle, col 11 = quantite ;
+  src/data/calculsBoissons/consoTotaleParBoisson.json, champ "unite_achat".
 Sortie : public/documents/pieces-reponse-1/R1-degustations-par-note.xlsx
 Lecture seule, reproductible.
 """
 import os
+import json
 import collections
 import xlrd
 
 ICI = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.normpath(os.path.join(ICI, ".."))
 CAISSE = os.path.join(ROOT, "public/documents/caisse-enregistreuse/")
+CONSO = os.path.join(ROOT, "src/data/calculsBoissons/consoTotaleParBoisson.json")
 PIECES = os.path.join(ROOT, "public/documents/pieces-reponse-1/")
 OUT = os.path.join(PIECES, "R1-degustations-par-note.xlsx")
 
@@ -61,6 +70,60 @@ TASTE = {
     "Beaujolais Moulin à": "Moulin à Vent", "PICHET MOULIN A VENT": "Moulin à Vent",
     "pichet Saint Joseph": "Saint Joseph",
 }
+
+# Vin nomme (libelle de la carte) -> nom canonique dans consoTotaleParBoisson.json,
+# d'ou est lu le champ "unite_achat" (conditionnement d'achat reel du vin).
+# Les deux Hautes Cotes de Beaune, rouge et blanc, sont l'un et l'autre en
+# bouteille de 75 cl : le libelle de caisse ne distingue pas la couleur.
+VIN_SOURCE = {
+    "Savagnin": "Arbois Savagnin",
+    "Arbois Trousseau": "Arbois Trousseau",
+    "Saint Véran": "Saint Véran",
+    "Aligoté": "Bourgogne Aligoté maison",
+    "Chusclan": "Côtes du Rhône rouge maison (Chusclan)",
+    "HC de Beaune": "Hautes Côtes de Beaune rouge",
+    "Moulin à Vent": "Moulin à Vent",
+    "Mâcon": "Macon",
+    "Gewurztraminer": "Gewurztraminer",
+    "Arbois Chardonnay": "Arbois Chardonnay",
+    "Chablis": "Chablis",
+    "Saint Joseph": "Saint Joseph Rouge",
+}
+BIB = "BIB 10 L"
+BOUT = "Bouteille bouchée 75 cl"
+ORDRE_COND = [BOUT, BIB]
+LIB_SOUS_TOTAL = {
+    BOUT: "Sous-total bouteilles bouchées (volume demandé)",
+    BIB: "Sous-total BIB de 10 L (retiré de la demande)",
+}
+
+
+def conditionnements():
+    """Vin nomme -> conditionnement d'achat, lu dans consoTotaleParBoisson.json."""
+    src = {b["nom_canonique"]: b for b in
+           json.load(open(CONSO, encoding="utf-8"))["boissons"]}
+    out = {}
+    for vin, canon in VIN_SOURCE.items():
+        unite = str(src[canon]["unite_achat"]).strip()
+        if unite.upper().startswith("BIB"):
+            out[vin] = BIB
+        else:
+            assert "75" in unite, (vin, unite)
+            out[vin] = BOUT
+    assert set(out) == set(TASTE.values()), "mapping conditionnement incomplet"
+    return out
+
+
+COND = conditionnements()
+
+
+def fmt_l(x):
+    return f"{x:.2f}".replace(".", ",") + " L"
+
+
+def fmt_n(n):
+    return f"{n:,}".replace(",", "\u202f")
+
 
 # --- Calculs du service a recontroler (p. 64 et p. 86, termes identiques) -----
 # (categorie, exercice, base annoncee, unite de la base, resultat annonce en L)
@@ -212,82 +275,139 @@ def ecrire_xlsx(par_exo_vin, par_exo, par_vin, notes_exo, n_lignes):
           "2 cl offerts une seule fois par vin nommé et par note (date + n° de ticket). "
           "Génériques « Verre de vin » / « Pichet vin » (cubis) et bouteilles exclus. "
           "Source : ANNEXE-C1/C2/C3 (détail des tickets).")
-    cols = ["Vin nommé"]
+    cols = ["Vin nommé", "Conditionnement d’achat"]
     for e in EXOS:
         cols += [f"{LIB_EXO[e]} : notes", f"{LIB_EXO[e]} : litres"]
     cols += ["3 exercices : notes", "3 exercices : litres"]
+    ncol = len(cols)
+    lcols = {c for c in range(4, ncol + 1) if c % 2 == 0}  # colonnes en litres
     hrow = ws.max_row + 1
     entete(ws, cols, hrow)
+
+    def styler(r, fill=None, gras=False):
+        for c in range(1, ncol + 1):
+            cell = ws.cell(row=r, column=c)
+            cell.border = bd
+            if c > 2:
+                cell.alignment = right
+            if c in lcols:
+                cell.number_format = '#,##0.00 "L"'
+            if fill is not None:
+                cell.fill = fill
+            if gras:
+                cell.font = bold
+
+    par_cond = collections.Counter()
+    par_exo_cond = collections.Counter()
     for vin in vins:
-        row = [vin]
+        par_cond[COND[vin]] += par_vin[vin]
         for e in EXOS:
-            n = par_exo_vin[(e, vin)]
+            par_exo_cond[(e, COND[vin])] += par_exo_vin[(e, vin)]
+
+    for cond in ORDRE_COND:
+        for vin in [v for v in vins if COND[v] == cond]:
+            row = [vin, cond]
+            for e in EXOS:
+                n = par_exo_vin[(e, vin)]
+                row += [n, litres(n)]
+            row += [par_vin[vin], litres(par_vin[vin])]
+            ws.append(row)
+            styler(ws.max_row)
+        row = [LIB_SOUS_TOTAL[cond], cond]
+        for e in EXOS:
+            n = par_exo_cond[(e, cond)]
             row += [n, litres(n)]
-        row += [par_vin[vin], litres(par_vin[vin])]
+        row += [par_cond[cond], litres(par_cond[cond])]
         ws.append(row)
-        for c in range(1, len(cols) + 1):
-            ws.cell(row=ws.max_row, column=c).border = bd
-            if c > 1:
-                ws.cell(row=ws.max_row, column=c).alignment = right
-            if c % 2 == 1 and c > 1:
-                ws.cell(row=ws.max_row, column=c).number_format = '#,##0.00 "L"'
-    row = ["TOTAL"]
+        styler(ws.max_row, fill=sub, gras=True)
+
+    row = ["TOTAL", "Les douze vins nommés"]
     for e in EXOS:
         row += [par_exo[e], litres(par_exo[e])]
     tot = sum(par_vin.values())
     row += [tot, litres(tot)]
     ws.append(row)
-    for c in range(1, len(cols) + 1):
-        cell = ws.cell(row=ws.max_row, column=c)
-        cell.font = bold
-        cell.fill = sub
-        cell.border = bd
-        if c > 1:
-            cell.alignment = right
-        if c % 2 == 1 and c > 1:
-            cell.number_format = '#,##0.00 "L"'
+    styler(ws.max_row, fill=sub, gras=True)
+
+    n_bib, n_bout = par_cond[BIB], par_cond[BOUT]
     ws.append([])
     ws.append(["Lignes de vin nommé lues en caisse (verre / pichet)", n_lignes])
     ws.append(["Notes (additions) distinctes concernées, 3 exercices",
                sum(len(s) for s in notes_exo.values())])
     ws.append(["Dose retenue par dégustation", "2 cl"])
-    for i, w in enumerate([22] + [13] * 8, 1):
+    ws.append(["Vins achetés en BIB de 10 L (Aligoté, Chusclan)",
+               f"{fmt_n(n_bib)} dégustations, soit {fmt_l(litres(n_bib))} : volume RETIRÉ de la "
+               "demande, couvert par l’abattement « vins au BIB » (198 L) du service"])
+    ws.append(["Vins achetés en bouteille bouchée de 75 cl (les dix autres)",
+               f"{fmt_n(n_bout)} dégustations, soit {fmt_l(litres(n_bout))} : volume DEMANDÉ"])
+    ws.append(["Volume demandé au titre de la dégustation offerte",
+               f"{fmt_l(litres(n_bout))} sur les {fmt_l(litres(tot))} comptés"])
+    ws.append(["Source du conditionnement",
+               "Champ « unite_achat » de src/data/calculsBoissons/consoTotaleParBoisson.json, "
+               "renseigné d’après les factures du fournisseur."])
+    ws.append(["Fait de service restant à attester",
+               "Le décompte relève un geste de service et lui applique 2 cl. Que cette larme "
+               "soit versée dans un verre distinct, et s’ajoute donc à la dose vendue au lieu "
+               "de s’imputer sur elle, est un point de pratique que la société doit attester : "
+               "la présente pièce ne l’établit pas."])
+    for r in range(ws.max_row - 4, ws.max_row + 1):
+        ws.cell(row=r, column=2).alignment = Alignment(vertical="top", wrap_text=True)
+    for i, w in enumerate([34, 24] + [13] * 8, 1):
         ws.column_dimensions[get_column_letter(i)].width = w
-    ws.freeze_panes = ws.cell(row=hrow + 1, column=2)
+    ws.freeze_panes = ws.cell(row=hrow + 1, column=3)
 
     # ---- Feuille 2 : comparaison avec le service ---------------------------
     ws2 = wb.create_sheet("Comparaison service")
     titre(ws2, "Le volume offert, ramené à l’exercice",
           "Le service objecte (p. 86) que les 125,80 litres sont « une globalisation sur 3 ans ». "
           "Voici le même décompte, exercice par exercice.")
+    ncol2 = 7
     entete(ws2, ["Exercice", "Dégustations (notes × vin)", "Volume offert (L)",
+                 "dont vins achetés en BIB de 10 L (L), retirés de la demande",
+                 "dont vins en bouteille bouchée de 75 cl (L), volume demandé",
                  "Abattement 15 % BIB annoncé par le service (L)",
                  "Abattement 15 % bouteilles annoncé par le service (L)"], ws2.max_row + 1)
     bib = {"Exercice 1": 67.99, "Exercice 2": 66.12, "Exercice 3": 64.04}
     bout = {"Exercice 1": 175.35, "Exercice 2": 173.08, "Exercice 3": 153.11}
     for i, e in enumerate(EXOS, 1):
         k = f"Exercice {i}"
-        ws2.append([LIB_EXO[e], par_exo[e], litres(par_exo[e]), bib[k], bout[k]])
-        for c in range(1, 6):
+        ws2.append([LIB_EXO[e], par_exo[e], litres(par_exo[e]),
+                    litres(par_exo_cond[(e, BIB)]), litres(par_exo_cond[(e, BOUT)]),
+                    bib[k], bout[k]])
+        for c in range(1, ncol2 + 1):
             ws2.cell(row=ws2.max_row, column=c).border = bd
             if c > 1:
                 ws2.cell(row=ws2.max_row, column=c).alignment = right
     ws2.append(["Cumul 3 exercices", tot, litres(tot),
+                litres(par_cond[BIB]), litres(par_cond[BOUT]),
                 round(sum(bib.values()), 2), round(sum(bout.values()), 2)])
-    for c in range(1, 6):
+    for c in range(1, ncol2 + 1):
         ws2.cell(row=ws2.max_row, column=c).font = bold
         ws2.cell(row=ws2.max_row, column=c).fill = sub
         ws2.cell(row=ws2.max_row, column=c).border = bd
     ws2.append([])
     ws2.append(["Périmètre du décompte de dégustation",
-                "Vins nommés servis au verre ou au pichet, versés depuis une bouteille."])
+                "Vins nommés servis au verre ou au pichet. Dix d’entre eux sont achetés en "
+                "bouteille bouchée de 75 cl ; deux, le Bourgogne Aligoté maison et le Côtes du "
+                "Rhône rouge maison de Chusclan, sont achetés en BIB de 10 L."])
     ws2.append(["Périmètre exclu du décompte",
-                "Génériques « Verre de vin » / « Pichet vin » (cubis, c’est-à-dire le BIB) "
+                "Génériques « Verre de vin » / « Pichet vin » (cubis, type non précisé) "
                 "et bouteilles vendues entières."])
-    ws2.append(["Conséquence",
-                "L’abattement de 15 % « vins au BIB » (198 L) porte exactement sur le "
-                "périmètre que le décompte exclut : les deux volumes ne se recouvrent pas."])
-    for i, w in enumerate([24, 22, 18, 30, 30], 1):
+    ws2.append(["Conséquence, part couverte par l’abattement « vins au BIB »",
+                f"Les {fmt_n(par_cond[BIB])} dégustations d’Aligoté et de Chusclan, soit "
+                f"{fmt_l(litres(par_cond[BIB]))}, relèvent du périmètre auquel le service "
+                "applique son abattement de 198 L : elles sont retirées de la demande."])
+    ws2.append(["Conséquence, part non couverte",
+                f"Les {fmt_l(litres(par_cond[BOUT]))} restants portent sur des vins en "
+                "bouteille bouchée. Le service leur oppose son second abattement de 15 %, "
+                "celui dont il affecte par ailleurs l’intégralité aux offerts, aux pertes et "
+                "à la consommation du personnel (onglet « Double emploi 15 % »)."])
+    ws2.append(["Volume demandé au titre de la dégustation offerte",
+                f"{fmt_l(litres(par_cond[BOUT]))} sur les {fmt_l(litres(tot))} comptés."])
+    for r in range(ws2.max_row - 4, ws2.max_row + 1):
+        ws2.cell(row=r, column=1).alignment = Alignment(vertical="top", wrap_text=True)
+        ws2.cell(row=r, column=2).alignment = Alignment(vertical="top", wrap_text=True)
+    for i, w in enumerate([30, 26, 18, 26, 26, 30, 30], 1):
         ws2.column_dimensions[get_column_letter(i)].width = w
 
     # ---- Feuille 3 : controle arithmetique --------------------------------
@@ -363,6 +483,14 @@ def main():
         print(f"  {LIB_EXO[e]:26s} {par_exo[e]:5d} deg.  {litres(par_exo[e]):7.2f} L  "
               f"({len(notes_exo[e])} notes)")
     print(f"  {'TOTAL 3 exercices':26s} {tot:5d} deg.  {litres(tot):7.2f} L")
+    print("-" * 60)
+    n_bib = sum(n for v, n in par_vin.items() if COND[v] == BIB)
+    n_bout = tot - n_bib
+    print("  Partition par conditionnement d'achat (unite_achat) :")
+    print(f"    {'BIB 10 L (Aligote, Chusclan)':34s} {n_bib:5d} deg.  {litres(n_bib):7.2f} L"
+          "  retire de la demande")
+    print(f"    {'Bouteille bouchee 75 cl (10 vins)':34s} {n_bout:5d} deg.  "
+          f"{litres(n_bout):7.2f} L  DEMANDE")
     print("-" * 60)
     print("  Controle arithmetique des calculs du service :")
     for (cat, exo, base, unite, annonce) in CALCULS_SERVICE:

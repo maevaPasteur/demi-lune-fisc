@@ -87,10 +87,36 @@ VARIATION_SERVICE = {"2022-2023": -800.83, "2023-2024": -1029.67, "2024-2025": -
 
 # Erreurs de frappe de la retranscription informatique, rectifiees au vu de
 # l'etat d'origine (page 11 du PDF 2023, que le service reproduit lui-meme p. 33).
+# Elles sont desormais corrigees dans le CSV publie.
 CORRECTIONS_2023 = [
     ("Clan Campbell 70cl", 17.56, 12.56),
     ("Creme de Mure 100cl", 8.22, 8.27),
     ("Creme de Cerise 100cl", 16.78, 15.76),
+]
+
+# Erreurs de frappe de la page 10 du PDF 2023 (onglet "SANS ALCOOL"), egalement
+# rectifiees dans le CSV publie.
+CORRECTIONS_2023_SANS_ALCOOL = [
+    ("Vittel 50cl", "ligne inexistante sur l'etat d'origine, doublon de la ligne "
+                    "San Pellegrino 50cl (33 unites a 0,88 EUR, 29,04 EUR) : supprimee",
+     -29.04),
+    ("Infusion verveine", "1 unite a 8,80 EUR portee sur l'etat d'origine, "
+                          "transcrite a 0 : retablie", 8.80),
+    ("Orangina 33cl", "33 unites a 0,59 EUR sur l'etat d'origine, transcrites "
+                      "13 a 1,59 EUR : quantite et prix unitaire retablis, "
+                      "valeur inchangee (19,47 EUR)", 0.0),
+    ("Peppermint infusion", "prix unitaire 3,44 EUR sur l'etat d'origine, "
+                            "transcrit 6,42 EUR ; quantite nulle, valeur "
+                            "inchangee (0 EUR)", 0.0),
+]
+
+# Lignes d'alimentation portees sur la page 10 du PDF 2023 mais hors du perimetre
+# "boissons" du CSV. Transcription verifiable sur cette page.
+ALIMENTATION_P10_2023 = [
+    ("sucre morceaux", 0.00),
+    ("petites galettes st michel", 70.12),
+    ("petites madeleines st michel", 36.76),
+    ("mix crackers", 23.15),
 ]
 
 # --------------------------------------------------------------------------- #
@@ -177,6 +203,7 @@ def lire(date):
                     "quantite": nb(r["quantite"]),
                     "pu": nb(r["prix_unitaire_ht"]),
                     "valeur": nb(r["valeur_ht"]),
+                    "fiabilite": (r.get("fiabilite") or "").strip(),
                     "page": (r.get("page") or "").strip(),
                     "contenance": contenance(r["produit"].strip()),
                 }
@@ -302,13 +329,15 @@ notice = [
     ["Resultat", f"Sur les {nb_lignes_comp} articles reproduits par le service : quantites identiques "
                  f"sur {qte_identiques} lignes, valeurs identiques au centime sur {val_identiques} lignes. "
                  f"Ecart de valeur cumule : {ecart_total:+.2f} EUR sur un total de {total_origine:.2f} EUR."],
-    ["Lecture des ecarts", "Les rares ecarts sont des erreurs de frappe de la retranscription "
-                           "informatique ; l'etat d'origine, joint en PDF, fait foi. Ils ne "
-                           "proviennent d'aucune modification de l'inventaire physique."],
-    ["Feuilles", "Comparatif p.33 ; Cloture 31-03-2023 ; Cloture 31-03-2024 ; Cloture 31-03-2025 ; Recapitulatif."],
+    ["Lecture des ecarts", "L'etat d'origine, joint en PDF, fait foi. Les ecarts que presentait la "
+                           "retranscription informatique etaient des erreurs de frappe, rectifiees "
+                           "et recapitulees dans la feuille « Corrections et reserves » ; elles ne "
+                           "provenaient d'aucune modification de l'inventaire physique."],
+    ["Feuilles", ""],
     ["Unites", "Quantites en bouteilles ou unites ; prix unitaires et valeurs en euros HT."],
     ["Script", "scripts/reponse1-inventaires-comparatif.py (reproductible)."],
 ]
+LIGNE_FEUILLES = next(i for i, l in enumerate(notice, start=1) if l[0] == "Feuilles")
 for r, ligne in enumerate(notice, start=1):
     for c, v in enumerate(ligne, start=1):
         cell = ws.cell(row=r, column=c, value=v)
@@ -316,6 +345,7 @@ for r, ligne in enumerate(notice, start=1):
         if c == 1:
             cell.font = Font(bold=True)
 ws.cell(row=1, column=1).font = Font(bold=True, size=14)
+WS_NOTICE = ws
 largeurs(ws, [22, 110])
 
 # --- Feuille 1 : comparatif ------------------------------------------------ #
@@ -480,22 +510,68 @@ ws = wb.create_sheet("Corrections et reserves")
 entete(ws, ["Objet", "Detail", "Incidence (EUR HT)"])
 r = 2
 somme_corr = round(sum(bon - saisi for _, saisi, bon in CORRECTIONS_2023), 2)
+somme_corr_sa = round(sum(inc for _, _, inc in CORRECTIONS_2023_SANS_ALCOOL), 2)
+
+# Comptages recalcules sur les CSV publies, sans valeur saisie a la main.
+nb_lignes_total = sum(len(INVENTAIRES[d]) for d, _ in CLOTURES)
+lignes_av = [(d, l) for d, _ in CLOTURES for l in INVENTAIRES[d]
+             if (l.get("fiabilite") or "") == "a_verifier"]
+nb_av = len(lignes_av)
+val_av = round(sum(l["valeur"] or 0 for _, l in lignes_av), 2)
+lignes_recon = [(d, l) for d, l in lignes_av if l["quantite"] is None]
+val_recon = round(sum(l["valeur"] or 0 for _, l in lignes_recon), 2)
+val_recon_alcool = round(sum(l["valeur"] or 0 for _, l in lignes_recon
+                             if l["categorie"] == "alcool"), 2)
+
+# Totaux de la transcription 2023 apres rectification.
+tot_sa_2023 = round(sum(l["valeur"] or 0 for l in INVENTAIRES["2023-03-31"]
+                        if l["categorie"] == "boisson_sans_alcool"), 2)
+tot_alc_2023 = round(sum(l["valeur"] or 0 for l in INVENTAIRES["2023-03-31"]
+                         if l["categorie"] == "alcool"), 2)
+tot_alim_2023 = round(sum(v for _, v in ALIMENTATION_P10_2023), 2)
+
 lignes_cr = [
-    ("Erreurs de frappe rectifiees (cloture 31/03/2023)",
+    ("Erreurs de frappe rectifiees, page 11 du PDF 2023 (alcools et vins)",
      " ; ".join(f"{lib} : {saisi:.2f} saisi au lieu de {bon:.2f}"
-                for lib, saisi, bon in CORRECTIONS_2023),
+                for lib, saisi, bon in CORRECTIONS_2023)
+     + ". Le CSV publie porte desormais les valeurs de l'etat d'origine.",
      somme_corr),
+    ("Erreurs de frappe rectifiees, page 10 du PDF 2023 (boissons sans alcool)",
+     " ; ".join(f"{lib} : {det}" for lib, det, _ in CORRECTIONS_2023_SANS_ALCOOL)
+     + ". Le CSV publie porte desormais les valeurs de l'etat d'origine.",
+     somme_corr_sa),
     ("Total alcools et vins au 31/03/2023, apres rectification",
-     "3 056,26 EUR transcrits, 3 050,29 EUR portes sur l'etat d'origine (page 11 du PDF 2023, "
-     "reproduite par le service p. 33 de sa reponse). C'est l'etat d'origine qui fait foi.",
-     3050.29),
+     f"Transcription rectifiee : {tot_alc_2023:.2f} EUR, soit exactement le total "
+     "porte en pied de la page 11 du PDF 2023, page que le service reproduit "
+     "lui-meme p. 33 de sa reponse. La transcription anterieure indiquait "
+     "3 056,26 EUR. C'est l'etat d'origine qui fait foi.",
+     tot_alc_2023),
+    ("Total boissons sans alcool au 31/03/2023, apres rectification",
+     f"Transcription rectifiee des boissons : {tot_sa_2023:.2f} EUR. La page 10 "
+     "du PDF porte en outre "
+     + ", ".join(f"{lib} ({v:.2f} EUR)" for lib, v in ALIMENTATION_P10_2023)
+     + f", soit {tot_alim_2023:.2f} EUR d'alimentation hors perimetre du CSV. "
+     f"La somme des deux, {tot_sa_2023 + tot_alim_2023:.2f} EUR, est exactement "
+     "le total imprime au bas de la page 10.",
+     round(tot_sa_2023 + tot_alim_2023, 2)),
     ("Colonne de fiabilite de la transcription",
-     f"{sum(1 for d, _ in CLOTURES for l in INVENTAIRES[d] if False) or 27} lignes sur 273 sont "
-     "marquees « a verifier » dans les CSV publies (1 929,34 EUR), dont trois lignes de "
-     "reconciliation au 31/03/2025 qui ne designent aucun produit (413,00 EUR). Ces reserves "
-     "portent sur la TRANSCRIPTION, pas sur les etats d'origine, dont les totaux dates figurent "
-     "dans la feuille precedente.",
-     1929.34),
+     f"{nb_av} lignes sur {nb_lignes_total} sont marquees « a verifier » dans les "
+     f"CSV publies ({val_av:.2f} EUR). Ces reserves portent sur la TRANSCRIPTION, "
+     "pas sur les etats d'origine, dont les totaux dates figurent dans la feuille "
+     "precedente.",
+     val_av),
+    ("Lignes de reconciliation du 31/03/2025, non identifiees",
+     f"{len(lignes_recon)} des lignes ci-dessus, toutes au 31/03/2025, ne designent "
+     f"aucun produit : ce sont des reliquats de valeur ({val_recon:.2f} EUR, dont "
+     f"{val_recon_alcool:.2f} EUR en alcools et vins) qui ferment la transcription "
+     "sur les totaux dates de l'etat d'origine. Consequence a enoncer clairement : "
+     "tant que ces lignes ne sont pas rattachees a un article, le stock d'alcools "
+     "exprime EN LITRES au 31/03/2025 qui se deduit du CSV est un MINORANT. Les "
+     "bouteilles correspondant a ces 318,41 EUR existent et sont comprises dans le "
+     "total date de l'etat, mais leur contenance ne peut pas etre imputee faute de "
+     "libelle. Toute reconstitution de volumes appuyee sur ce stock joue donc "
+     "contre le contribuable, jamais en sa faveur.",
+     val_recon),
     ("Perimetre du CSV",
      "Les CSV retiennent les seules boissons : ils excluent les biscuits, le sucre, les pailles "
      "et les consommables inscrits sur les memes pages d'inventaire. Leurs totaux ne sont donc "
@@ -512,6 +588,14 @@ for lab, det, inc in lignes_cr:
             cell.number_format = "# ##0.00"
     r += 1
 largeurs(ws, [44, 100, 20])
+
+# Le libelle des feuilles est ecrit en dernier, a partir du classeur reel :
+# le nombre d'onglets annonce est ainsi toujours celui du fichier.
+autres = [n for n in wb.sheetnames if n != "Notice"]
+WS_NOTICE.cell(row=LIGNE_FEUILLES, column=2,
+               value=f"{len(wb.sheetnames)} onglets : Notice ; "
+                     + " ; ".join(autres) + ".").alignment = Alignment(
+    vertical="top", wrap_text=True)
 
 os.makedirs(os.path.dirname(OUT), exist_ok=True)
 wb.save(OUT)

@@ -17,8 +17,15 @@ Chaque ligne est une rubrique « Réponse du service » du courrier, avec :
       * "calcul de cohérence"      : le service compare le volume disponible aux
                                      quantités de caisse pour montrer une impossibilité ;
       * "concession"               : le service admet que le grief est sans effet sur la base ;
-  - et surtout : le service oppose-t-il un VOLUME ALTERNATIF au poste, c'est-à-dire
-    dit-il combien de litres sont réellement partis dans ce poste ? (colonne « oui/non »)
+  - et surtout : le service oppose-t-il un VOLUME MESURÉ au poste, c'est-à-dire
+    dit-il, relevé à l'appui, combien de litres sont réellement partis dans ce poste ?
+    (colonne « oui/non »)
+
+Citer un volume et mesurer un volume sont deux choses distinctes, et le relevé les
+sépare : le courrier cite bien des litres, 2 132,01 L au total, mais chacun d'eux est
+le produit d'un taux forfaitaire du service (15 %, 5 %) ou d'une de ses propres
+colonnes, et aucun n'est un relevé de ce qui est réellement parti dans le poste. Le
+troisième bloc de l'onglet « Releve » en donne le détail, ligne à ligne, avec sa page.
 
 Aucun chiffre n'est calculé ici : le fichier est un relevé de lecture du courrier,
 chaque ligne portant sa page. Il est produit pour être vérifié page par page.
@@ -31,7 +38,7 @@ ROOT = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)),
 SORTIE = os.path.join(ROOT, "public/documents/pieces-reponse-1/R1-releve-reponses-service.xlsx")
 
 # (repère, page(s), poste du bilan matière, nature des chiffres opposés,
-#  volume alternatif opposé ?, conclusion telle qu'elle figure au courrier)
+#  volume mesuré opposé ?, conclusion telle qu'elle figure au courrier)
 LIGNES = [
     ("L", "59", "Chapeau du bloc : aucun poste",
      "aucun chiffre", "sans objet",
@@ -114,6 +121,55 @@ LIGNES = [
      "d'une conséquence directe du rapport. »"),
 ]
 
+# Repères qui ne comportent AUCUNE rubrique « Réponse du service » dans le courrier :
+# ils comptent parmi les lignes du relevé, jamais au dénominateur des rubriques.
+SANS_RUBRIQUE = {"L"}
+
+# Les volumes que le courrier CITE, un à un, avec leur page et leur origine. Ils
+# existent : le relevé ne soutient pas que le service n'écrit aucun litre. Il soutient
+# qu'aucun de ces litres n'est un volume mesuré dans le poste auquel il est opposé.
+VOLUMES_CITES = [
+    ("198 L", "64", "Point 4, dégustation offerte",
+     "Son taux de 15 % offert/perte/personnel appliqué aux BIB",
+     "Produit d'un forfait de sa propre méthode, appliqué à un volume d'achat. Ne dit "
+     "rien du nombre de dégustations réellement servies."),
+    ("500 L", "64", "Point 4, dégustation offerte",
+     "Le même taux de 15 % appliqué aux bouteilles",
+     "« environ 500 litres » au courrier : chiffre arrondi par le service lui-même, et "
+     "produit du même forfait."),
+    ("93 L", "68 à 70", "Point 6, alcool cuit dans les plats des menus",
+     "Repère D, Calvados déjà retranché par sa méthode",
+     "Retranchement que le service opère déjà dans sa reconstitution : c'est son propre "
+     "chiffre, repris pour soutenir un double emploi, non une mesure de l'alcool cuit."),
+    ("111 L", "68 à 70", "Point 6, alcool cuit dans les plats des menus",
+     "Repère E, vin jaune déjà retranché par sa méthode", "Idem."),
+    ("15 L", "68 à 70", "Point 6, alcool cuit dans les plats des menus",
+     "Repère G, porto déjà retranché par sa méthode", "Idem."),
+    ("240 L", "68 à 70", "Point 6, alcool cuit dans les plats des menus",
+     "Repère Q, macvin déjà retranché par sa méthode", "Idem."),
+    ("796,43 L", "68 à 70", "Point 6, alcool cuit dans les plats des menus",
+     "Volume unique des BIB porté par sa propre colonne",
+     "Volume d'achat lu dans sa propre colonne, non un volume cuisiné."),
+    ("33,28 L", "68 à 70", "Point 6, alcool cuit dans les plats des menus",
+     "Crèmes, même colonne", "Idem."),
+    ("83,84 L", "70 et 71", "Point 7, consommation du personnel",
+     "5 % de son propre volume de référence",
+     "« 5 % de ce volume correspondent donc à 83,84 litres » : le produit d'un forfait, "
+     "non un relevé de ce que le personnel a consommé."),
+    ("61,46 L", "70 et 71", "Point 7, consommation du personnel",
+     "Le même forfait de 5 % sur l'autre assiette", "Idem."),
+]
+# L'addition est refaite ici a partir des libelles eux-memes : la piece ne peut pas
+# afficher un total que ses propres lignes ne donnent pas.
+TOTAL_CITE_L = round(sum(float(v[0].replace(" L", "").replace(",", "."))
+                         for v in VOLUMES_CITES), 2)
+assert TOTAL_CITE_L == 2132.01, TOTAL_CITE_L
+
+# Volumes cités au point 3 (crémant, p. 62 et 63) : 93,20 L et 206,25 L. Ils ne sont
+# PAS comptés ci-dessus, et la raison est écrite dans le relevé : ce sont nos propres
+# chiffres, que le service reprend pour un calcul de cohérence (45,18 % de pertes),
+# non des volumes qu'il oppose au poste.
+
 # Formules de non-modification relevées dans le courrier, page par page.
 # « le service ne voit aucune raison de modifier sa reconstitution » : 14 occurrences.
 PAGES_FORMULE_1 = [60, 61, 63, 64, 68, 70, 71, 73, 74, 75, 85, 86, 88, 89]
@@ -139,13 +195,16 @@ def main():
     ws.append(["Ce que la reponse du 04/09/2026 examine, et ce qu'elle n'examine pas "
                "(bloc reconstitution, pages 59 a 92)"])
     ws["A1"].font = Font(bold=True, size=13)
-    ws.append(["Une ligne par rubrique du courrier. La derniere colonne est la seule qui compte "
-               "dans un bilan matiere : le service dit-il, pour ce poste, combien de litres sont "
-               "reellement partis ? Chaque ligne porte sa page : le releve est verifiable."])
+    ws.append(["Une ligne par rubrique du courrier. La colonne « Volume mesure oppose ? » est "
+               "la seule qui compte dans un bilan matiere : le service dit-il, pour ce poste, "
+               "combien de litres sont reellement partis, releve a l'appui ? Le courrier cite "
+               "bien des litres, et le troisieme bloc ci-dessous les aligne un a un : ils sont "
+               "tous produits par ses propres taux ou par ses propres colonnes. Chaque ligne "
+               "porte sa page : le releve est verifiable."])
     ws["A2"].font = Font(italic=True, size=9, color="64748B")
     ws.append([])
     cols = ["Repere", "Page(s) du courrier", "Poste du bilan matiere",
-            "Nature des chiffres opposes", "Volume alternatif oppose ?",
+            "Nature des chiffres opposes", "Volume mesure oppose ?",
             "Conclusion telle qu'elle figure au courrier"]
     ws.append(cols)
     for c in range(1, len(cols) + 1):
@@ -160,18 +219,82 @@ def main():
             ws.cell(row=r, column=c).alignment = haut
     n = len(LIGNES)
     nb_non = sum(1 for l in LIGNES if l[4] == "non")
-    ws.append(["TOTAL", f"{n} rubriques", "",
+    # Denominateur : les rubriques « Reponse du service » du bloc, soit les lignes du
+    # releve moins celles qui n'en comportent pas (repere L, chapeau de la page 59).
+    nb_rubriques = n - sum(1 for l in LIGNES if l[0] in SANS_RUBRIQUE)
+    nb_concession = sum(1 for l in LIGNES if l[3] == "concession")
+    ws.append(["TOTAL", f"{n} lignes relevees", "",
                f"aucun chiffre : {sum(1 for l in LIGNES if l[3] == 'aucun chiffre')} / "
                f"abattement de sa methode : {sum(1 for l in LIGNES if l[3] == 'abattement de sa methode' or l[3] == 'abattement de sa méthode')} / "
                f"calcul de coherence : {sum(1 for l in LIGNES if l[3] == 'calcul de coherence' or l[3] == 'calcul de cohérence')} / "
                f"concession : {sum(1 for l in LIGNES if l[3] == 'concession')}",
-               f"non : {nb_non} sur {n}", ""])
+               f"non : {nb_non} sur {nb_rubriques}",
+               f"{n} lignes relevees, dont {n - nb_rubriques} repere sans rubrique "
+               f"« Reponse du service » (L, chapeau de la page 59) : le denominateur est "
+               f"donc de {nb_rubriques} rubriques, dont {nb_concession} concession "
+               f"(point 10), sans objet au regard d'un volume."])
     r = ws.max_row
     for c in range(1, len(cols) + 1):
         ws.cell(row=r, column=c).font = Font(bold=True)
         ws.cell(row=r, column=c).fill = surligne
         ws.cell(row=r, column=c).border = bord
         ws.cell(row=r, column=c).alignment = haut
+    # ----- Ce que le service CITE, et ce qu'il MESURE -------------------------
+    # Le relevé ne peut pas conclure « aucun volume » quand sa propre colonne de
+    # conclusion en aligne : il distingue donc ce qui est cité de ce qui est mesuré,
+    # et il fait l'addition lui-même.
+    ws.append([])
+    ws.append(["Ce que le service CITE, et ce qu'il MESURE : les volumes ecrits dans le "
+               "courrier, un a un"])
+    ws.cell(row=ws.max_row, column=1).font = Font(bold=True, size=12)
+    ws.append(["Le courrier n'est pas muet en litres. Il en ecrit dix, pour un total de "
+               "2 132,01 L. Aucun n'est un volume mesure dans le poste auquel il est "
+               "oppose : chacun est le produit d'un taux forfaitaire du service ou la "
+               "lecture d'une de ses propres colonnes. C'est la distinction que porte la "
+               "colonne « Volume mesure oppose ? » de l'onglet ci-dessus."])
+    ws.cell(row=ws.max_row, column=1).font = Font(italic=True, size=9, color="64748B")
+    sous = ["Volume cite", "Page(s)", "Rubrique du courrier", "D'ou vient ce chiffre",
+            "Volume mesure dans le poste ?", "Pourquoi ce n'est pas une mesure"]
+    ws.append(sous)
+    r = ws.max_row
+    for c in range(1, len(sous) + 1):
+        cell = ws.cell(row=r, column=c)
+        cell.font, cell.fill, cell.border = blanc, tete, bord
+        cell.alignment = Alignment(horizontal="center", vertical="center", wrap_text=True)
+    for vol, page, rub, origine, motif in VOLUMES_CITES:
+        ws.append([vol, page, rub, origine, "non", motif])
+        r = ws.max_row
+        for c in range(1, len(sous) + 1):
+            ws.cell(row=r, column=c).border = bord
+            ws.cell(row=r, column=c).alignment = haut
+    ws.append(["%s L" % ("%.2f" % TOTAL_CITE_L).replace(".", ",").replace("2132", "2 132"),
+               "p. 64 a 71", "%d volumes cites" % len(VOLUMES_CITES),
+               "Taux forfaitaires et colonnes du service", "non",
+               "Total des volumes ecrits par le courrier sur le bloc reconstitution. Le "
+               "releve ne soutient donc pas que le service ne cite aucun litre : il "
+               "soutient qu'aucun de ces litres ne mesure ce qui est reellement parti "
+               "dans le poste, et qu'aucun n'est donc opposable comme volume."])
+    r = ws.max_row
+    for c in range(1, len(sous) + 1):
+        ws.cell(row=r, column=c).font = Font(bold=True)
+        ws.cell(row=r, column=c).fill = surligne
+        ws.cell(row=r, column=c).border = bord
+        ws.cell(row=r, column=c).alignment = haut
+    ws.append([])
+    ws.append(["Deux volumes cites au point 3 (cremant, p. 62 et 63), 93,20 L et "
+               "206,25 L, ne figurent pas dans cette addition : ce sont les chiffres de "
+               "la societe, que le service reprend pour un calcul de coherence "
+               "(45,18 % de pertes), non des volumes qu'il oppose au poste. Ils sont "
+               "rapportes tels quels a la ligne 3 de l'onglet ci-dessus."])
+    ws.cell(row=ws.max_row, column=1).alignment = haut
+    ws.append(["Lecture d'ensemble. Sur les %d rubriques « Reponse du service » du bloc, "
+               "%d n'opposent aucun volume mesure au poste discute ; la %s est une "
+               "concession (point 10, ventes sans achat), sans objet au regard d'un "
+               "volume. Le repere L, chapeau de la page 59, ne comporte pas de rubrique "
+               "et ne compte donc pas au denominateur, ce qui porte le releve a %d lignes."
+               % (nb_rubriques, nb_non, "derniere", n)])
+    ws.cell(row=ws.max_row, column=1).alignment = haut
+
     for i, w in enumerate([10, 20, 34, 26, 22, 82], 1):
         ws.column_dimensions[get_column_letter(i)].width = w
     ws.freeze_panes = "A5"
@@ -210,7 +333,10 @@ def main():
 
     wb.save(SORTIE)
     print("écrit :", SORTIE)
-    print(f"{n} rubriques relevées, {nb_non} sans volume alternatif opposé.")
+    print(f"{n} lignes relevées, {nb_rubriques} rubriques « Réponse du service », "
+          f"{nb_non} sans volume mesuré opposé.")
+    print(f"{len(VOLUMES_CITES)} volumes cités par le courrier, "
+          f"{TOTAL_CITE_L:.2f} L au total, aucun mesuré dans le poste.")
     print(f"{total} conclusions de non-modification, pages 60 à 89.")
 
 

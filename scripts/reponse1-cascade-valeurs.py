@@ -91,6 +91,15 @@ FORMATS_MIXTES = ["Panaché 25cl", "Monaco 25cl", "Demi+Picon 25cl", "Pinte+Pico
 LIBELLES_MIXTES = ["Panaché", "Monaco", "Picon bière", "Pinte Picon"]
 
 # Alcool de cuisine et alcool des menus, plafonne aux achats factures.
+# Le marc de Bourgogne fait exception : il est plafonne sur les trois exercices
+# pris ensemble aux 210 cl sortis du stock (280 cl factures sous le code 550252,
+# Jacoulot 45 degres, moins la bouteille inventoriee au 31/03/2025), et non aux
+# 5,58 L calcules. Le marc du Jura (code 520096) est un autre produit ; tant que
+# la gerante n'a pas dit lequel des deux entre dans le baba, la demande reste
+# bornee aux achats du produit nomme. Concession assumee de 3,48 L.
+# La premiere colonne (le calcule) n'est jamais modifiee par un plafonnement :
+# elle reste le produit du nombre de plats par la dose, comme 119,07 L de
+# Calvados en face de 73,00 L retenus.
 # Producteur : scripts/reponse1-alcool-cuisine.py, feuille « 5-Solde demande »
 # de R1-alcool-cuisine-controles.xlsx. Repris ici en dur parce que ce script
 # ecrit au niveau module et ne peut donc pas etre importe ; la fonction
@@ -104,7 +113,7 @@ CUISINE_PLAFONNE = [
     ("Crème de Cassis", 18.67, 18.67),
     ("Bailey's", 15.28, 15.28),
     ("Grand Marnier", 7.42, 5.96),
-    ("Marc de Bourgogne", 5.58, 5.58),
+    ("Marc de Bourgogne", 5.58, 2.10),
     ("Liqueur de Poire", 4.07, 4.07),
 ]
 

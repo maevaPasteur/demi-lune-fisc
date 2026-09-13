@@ -226,6 +226,8 @@ GRAS = Font(bold=True)
 EURO = '#,##0 "€"'
 NB3 = '#,##0.000'
 PCT = '0.0 %'
+PCT2 = '0.00 %'   # part revendue : la piece doit porter 59,03 %, comme la page.
+NB6 = '#,##0.000000'   # coefficients : la piece doit porter 4,037205 et 2,383251.
 
 
 def entete(ws, cols, largeurs):
@@ -328,8 +330,8 @@ ws.append(["GLOBALISE 3 ans", ACHAT_COUT, PART_REVENDUE, COUT_REVENDU, CA_ALCOOL
            COEF_REVENDU, COEF_ACHATS_TOTAUX])
 gras_ligne(ws)
 fmt(ws, [2, 4, 5], EURO)
-fmt(ws, [3], PCT)
-fmt(ws, [6, 7], NB3)
+fmt(ws, [3], PCT2)
+fmt(ws, [6, 7], NB6)
 ws.append([])
 ws.append(["Le volume d'alcool non revendu (cascade de 10 622 L) n'est etabli que "
            "de facon globale sur les trois exercices : la ventilation par exercice "
@@ -354,27 +356,29 @@ ws.append(["Le meme calcul sans l'arrondi du courrier (%s au lieu de 3,85)"
            PART_SERVICE, COEF_REVENDU, A_COEF_EXACT, A_COEF_EXACT * ACHAT_COUT])
 ws.append(["Part revendue MESUREE (cascade des 10 622 L : %s L revendus au verre et "
            "en cocktails, apres retrait des 296 L de contenance comptes deux fois)"
-           % CASC["revendu_arrondi_l"],
+           % "{:,}".format(CASC["revendu_arrondi_l"]).replace(",", " "),
            PART_REVENDUE, COEF_REVENDU, MES_COEF, MES_COEF * ACHAT_COUT])
 ws.append(["Ecart entre le repere du service et la mesure", PART_SERVICE - PART_REVENDUE,
            "", A_COEF - MES_COEF, (A_COEF - MES_COEF) * ACHAT_COUT])
 gras_ligne(ws)
 for r in range(ws.max_row - 3, ws.max_row + 1):
-    ws.cell(row=r, column=2).number_format = PCT
+    ws.cell(row=r, column=2).number_format = PCT2
     for c in (3, 4):
-        ws.cell(row=r, column=c).number_format = NB3
+        ws.cell(row=r, column=c).number_format = NB6
     ws.cell(row=r, column=5).number_format = EURO
 
 ws.append([])
 ws.append(["Controle d'identite : le coefficient sur la totalite des achats est, par "
            "construction, le produit du coefficient sur achat revendu par la part des "
-           "achats effectivement revendue. Sur les donnees mesurees : %.6f x %.7f = "
-           "%.6f, soit exactement le coefficient sur la totalite des achats de la "
-           "ligne GLOBALISE ci-dessus (%.6f). L'operation du service, 3,85 x (1-0,15), "
+           "achats effectivement revendue. Sur les donnees mesurees : %s x %s = "
+           "%s, soit exactement le coefficient sur la totalite des achats de la "
+           "ligne GLOBALISE ci-dessus (%s). L'operation du service, 3,85 x (1-0,15), "
            "est donc exacte dans sa FORME : elle applique la meme identite avec une "
            "part revendue de 85 %%. Tout l'ecart entre 3,2725 et 2,383251 tient a "
            "cette part supposee, non a l'arithmetique."
-           % (COEF_REVENDU, PART_REVENDUE, IDENTITE, COEF_ACHATS_TOTAUX)])
+           % tuple(("%.*f" % (d, v)).replace(".", ",")
+                   for d, v in ((6, COEF_REVENDU), (7, PART_REVENDUE),
+                                (6, IDENTITE), (6, COEF_ACHATS_TOTAUX)))])
 
 # ---- 4. Confrontation aux coefficients reconstitues ------------------------ #
 ws = wb.create_sheet("4 Confrontation")
@@ -446,8 +450,13 @@ for l in [
      "Proposition de rectifications p. 34-35, tableau reproduit p. 56 de la reponse du 04/09/2026"],
     ["Coefficient sur achat revendu 3,85 et taux de perte de 15 %",
      "Reponse du 04/09/2026, p. 59, repris p. 93"],
-    ["Achats d'alcool 10 622 L / 107 924 € et cascade des volumes",
+    ["Cout des achats d'alcool 107 924 €",
      "src/data/boissonsPageData.json (scripts/rendu-final-*.py), factures fournisseur"],
+    ["Achats d'alcool 10 622 L et part revendue au verre et en cocktails "
+     "(6 271 L, soit 59,03 %)",
+     "src/data/reponse1Calculs/cascade-10622.json, produit par "
+     "scripts/reponse1-cascade-valeurs.py : source unique de la cascade, apres retrait "
+     "des 296 L de contenance des articles mixtes comptes deux fois"],
     ["Repartition des achats d'alcool par exercice",
      "src/data/calculsBoissons/achatsBoissonsParPeriode.json (factures FCBS, "
      "categories biere, vin/cidre, spiritueux/liqueur)"],

@@ -16,15 +16,24 @@ l'article L. 47 A, II du LPF :
 Sorties :
   public/documents/pieces-reponse-1/R1-suppressions-rapprochements.xlsx
 
-Onglets :
-  1. Synthese                  : les chiffres clés de la réfutation
+Onglets (huit, comme l'annonce la page « Les suppressions de notes ») :
+  1. Synthese                  : les chiffres clés de la réfutation, dont le
+                                 rapprochement des 21 302 DEL avec le fichier
+                                 des tickets (journée + ticket Z, puis montant
+                                 au centime) et le catalogue des prix pratiqués
   2. 09-09-2022 rafales        : chaque rafale de DEL face aux notes encaissées
   3. 09-09-2022 DEL detail     : les 67 DEL de la journée, article par article
   4. 09-09-2022 notes          : les 25 notes encaissées de la journée
-  5. 21-03-2024 DEL detail     : les 24 DEL de la journée
+  5. 21-03-2024 DEL detail     : les DEL de la journée
   6. 21-03-2024 partage        : les notes n°13 et n°14 et le partage des quantités
   7. Chainage grand total      : contrôle du totalisateur perpétuel NF525
-  8. DEL vs prix carte         : les 21 302 DEL confrontées aux prix de la carte
+  8. DEL vs prix carte         : les 21 302 DEL confrontées aux prix de la carte,
+                                 avec la ligne TOTAL
+
+Le rapprochement DEL / tickets est délibérément publié en SYNTHÈSE, par
+exercice, et non ligne à ligne : un détail ligne à ligne reviendrait à remettre
+au service le relevé nominatif des 5 311 lignes que ce seul critère n'apparie
+pas.
 """
 import os
 import collections
@@ -68,6 +77,9 @@ prix_ex = {}          # exercice -> {centimes: {libellés}}
 lignes_ex = {}        # exercice -> {date: [ (no, heure, ttc, lib, qte, pu) ]}
 notes_ex = {}         # exercice -> {date: {no: {heure, ttc, id, regl:[(mode,montant)]}}}
 del_ex = {}           # exercice -> [ (date, heure, montant, id, z) ]
+zindex_ex = {}        # exercice -> {(date, no_z): {montants des lignes en centimes}}
+tickets_c = set()     # (date, n° de note) présentes dans l'annexe C
+ttc_c = {}            # (date, n° de note) -> total TTC de la note (annexe C)
 
 for i, ex in enumerate(EXOS, 1):
     prix = collections.defaultdict(set)
@@ -86,6 +98,21 @@ for i, ex in enumerate(EXOS, 1):
         lignes[d].append((int(r[2]), str(r[1])[:5], e(ttc), lib, q, e(pu)))
     prix_ex[ex] = prix
     lignes_ex[ex] = lignes
+
+    # Index (journée, n° de ticket Z) -> montants TTC des lignes de note.
+    # Sert au rapprochement du fichier des événements avec celui des tickets.
+    idx = collections.defaultdict(set)
+    for r in rows(annexe("C", i, "detail-tickets", ex)):
+        d = str(r[0])[:10]
+        if not d.startswith("20"):
+            continue
+        try:
+            idx[(d, int(float(r[4])))].add(c(r[16] or 0))
+            tickets_c.add((d, int(float(r[2]))))
+            ttc_c[(d, int(float(r[2])))] = e(r[5])
+        except (ValueError, TypeError):
+            continue
+    zindex_ex[ex] = idx
 
     notes = collections.defaultdict(dict)
     for r in rows(annexe("F", i, "reglements", ex)):
@@ -136,6 +163,64 @@ TOT_EXACT = sum(v[0] for v in classe.values())
 TOT_MULT = sum(v[1] for v in classe.values())
 TOT_AUTRE = sum(v[2] for v in classe.values())
 NB_VALEURS = len(valeurs)
+TOT_CARTE = TOT_EXACT + TOT_MULT
+PCT_CARTE = 100 * TOT_CARTE / TOTAL_DEL
+
+# Catalogue des prix unitaires effectivement pratiqués : par exercice, puis
+# nombre de prix distincts sur les trois exercices réunis.
+PRIX_PAR_EX = [(ex, len(prix_ex[ex])) for ex in EXOS]
+PRIX_UNION = len(set().union(*[set(prix_ex[ex]) for ex in EXOS]))
+
+# Montant et médiane des suppressions (le service retient « 9 EUR » p. 3).
+MONTANTS_DEL = sorted(m for ex in EXOS for _d, _h, m, _i, _z in del_ex[ex])
+TOTAL_DEL_EUR = round(sum(MONTANTS_DEL), 2)
+MEDIANE_DEL = (MONTANTS_DEL[len(MONTANTS_DEL) // 2] if len(MONTANTS_DEL) % 2
+               else round((MONTANTS_DEL[len(MONTANTS_DEL) // 2 - 1]
+                           + MONTANTS_DEL[len(MONTANTS_DEL) // 2]) / 2, 2))
+
+
+# ------------------ 1 bis. Rapprochement des DEL avec le fichier des tickets
+# Deux critères successifs, appliqués aux 21 302 lignes :
+#   a) la ligne « DEL » se rattache-t-elle à une journée et à un numéro de
+#      ticket Z présents dans le fichier des tickets (annexe C) ?
+#   b) son montant se retrouve-t-il au centime sur une ligne de note du même
+#      ticket Z ?
+# Le second critère n'apparie pas tout : ce qui n'est pas apparié par lui est
+# porté ici en nombre, exercice par exercice, sans relevé nominatif.
+rappro = []
+for ex in EXOS:
+    idx = zindex_ex[ex]
+    n_jz = n_m = 0
+    for d, _h, m, _id, z in del_ex[ex]:
+        k = (d, z)
+        if k in idx:
+            n_jz += 1
+            if c(m) in idx[k]:
+                n_m += 1
+    n = len(del_ex[ex])
+    rappro.append((ex, n, n_jz, round(100 * n_jz / n, 1), n_m,
+                   round(100 * n_m / n, 1), n - n_m))
+
+RAP_JZ = sum(r[2] for r in rappro)
+RAP_M = sum(r[4] for r in rappro)
+RAP_RESTE = TOTAL_DEL - RAP_M
+PCT_RAP_JZ = 100 * RAP_JZ / TOTAL_DEL
+PCT_RAP_M = 100 * RAP_M / TOTAL_DEL
+
+
+# ---------------------------------- 1 ter. Canal d'encaissement des règlements
+# (le rapport « X fois les espèces » cité par la page se lit ici)
+regl_modes = collections.Counter()
+for ex in EXOS:
+    for d, ns in notes_ex[ex].items():
+        for no, nt in ns.items():
+            for md, mt in nt["regl"]:
+                regl_modes[md] += mt
+REGL_TOTAL = round(sum(regl_modes.values()), 2)
+ESPECES = round(regl_modes.get("ESP", 0), 2)
+PCT_ESPECES = 100 * ESPECES / REGL_TOTAL
+PCT_BANCARISE = 100 - PCT_ESPECES
+RAPPORT_DEL_ESP = TOTAL_DEL_EUR / ESPECES
 
 # Totaux de notes distincts (pour comparaison : population « note » vs « article »)
 totaux_notes = collections.Counter()
@@ -205,11 +290,14 @@ par_total_a = collections.defaultdict(list)
 for no, n in notes_a.items():
     par_total_a[c(n["ttc"])].append(no)
 
+# Aucune cellule n'est laissee vide sous une colonne interrogative : la reponse
+# est portee en toutes lettres (OUI / NON), et les deux colonnes qui decrivent
+# la note rapprochee portent « sans objet » lorsqu'il n'y en a pas.
 lignes_rafales = []
 for h in sorted(rafales_a):
     lot = rafales_a[h]
-    s = round(sum(m for m, _, _ in lot), 2)
-    match = par_total_a.get(c(s), [])
+    somme = round(sum(m for m, _, _ in lot), 2)
+    match = par_total_a.get(c(somme), [])
     if match:
         no = match[0]
         n = notes_a[no]
@@ -217,12 +305,16 @@ for h in sorted(rafales_a):
         cible = (f"note n°{no} encaissee a {n['heure']} pour {n['ttc']:.2f} EUR "
                  f"(id reglement {n['id']}, {'/'.join(md for md, _ in n['regl'])})")
     else:
-        libelle = ""
-        cible = ""
-    lignes_rafales.append((h, len(lot), s, "OUI" if match else "", cible, libelle))
+        libelle = "sans objet"
+        cible = "sans objet"
+    montants = " + ".join(f"{m:.2f}" for m, _, _ in sorted(lot))
+    au_prix = sum(1 for m, _, _ in lot if c(m) in pu_jour_a)
+    lignes_rafales.append((h, len(lot), montants, somme,
+                           "OUI" if match else "NON", cible, libelle,
+                           f"{au_prix} sur {len(lot)}"))
 
 NB_RAFALES_A = len(rafales_a)
-NB_RAFALES_A_OK = sum(1 for l in lignes_rafales if l[3] == "OUI")
+NB_RAFALES_A_OK = sum(1 for l in lignes_rafales if l[4] == "OUI")
 
 detail_a = []
 for d, h, m, _id, z in dels_a:
@@ -319,6 +411,17 @@ CONTROLE_P17 = [("TRUITE JURASSIENNE", 18.60), ("Salade Verte", 2.90),
 freq_p17 = [(lib, m, valeurs.get(c(m), 0)) for lib, m in CONTROLE_P17]
 
 
+# ---------------------------------- 5. Ecart entre l'annexe C et l'annexe F
+# La page retient 16 605 notes (annexe F, les notes encaissees). L'annexe C en
+# porte deux de plus. Elles sont identifiees ici, avec leur total TTC.
+notes_f = {(d, no) for ex in EXOS for d, ns in notes_ex[ex].items() for no in ns}
+ecart_cf = sorted(tickets_c - notes_f)
+ECART_CF = (", ".join(f"{d} note n°{no} cloturee a {ttc_c[(d, no)]:.2f} EUR"
+                      for d, no in ecart_cf)
+            or "aucun")
+ECART_FC = sorted(notes_f - tickets_c)
+
+
 # ------------------------------------------------------------------- ecriture
 os.makedirs(SORTIE, exist_ok=True)
 wb = openpyxl.Workbook()
@@ -353,16 +456,63 @@ synth = [
     ("Script", "scripts/reponse1-suppressions.py (100 % recalculé, aucune saisie manuelle)"),
     ("", ""),
     ("Lignes « DEL » sur les trois exercices", TOTAL_DEL),
+    ("Montant total de ces lignes (EUR)", TOTAL_DEL_EUR),
+    ("Suppression médiane (EUR)", MEDIANE_DEL),
     ("Valeurs distinctes prises par ces lignes", NB_VALEURS),
     ("dont montant = un prix unitaire de la carte", TOT_EXACT),
     ("dont montant = quantité entière x un prix de la carte", TOT_MULT),
     ("dont ni l'un ni l'autre", TOT_AUTRE),
-    ("Part expliquée par un prix de la carte", f"{100 * (TOT_EXACT + TOT_MULT) / TOTAL_DEL:.1f} %"),
+    ("Lignes égales à un prix de la carte ou à un multiple entier", TOT_CARTE),
+    ("Part expliquée par un prix de la carte", f"{PCT_CARTE:.1f} %"),
     ("", ""),
-    ("Notes encaissées sur les trois exercices", nb_notes),
+    ("Prix unitaires distincts pratiqués, trois exercices réunis", PRIX_UNION),
+    ("   dont exercice " + PRIX_PAR_EX[0][0], PRIX_PAR_EX[0][1]),
+    ("   dont exercice " + PRIX_PAR_EX[1][0], PRIX_PAR_EX[1][1]),
+    ("   dont exercice " + PRIX_PAR_EX[2][0], PRIX_PAR_EX[2][1]),
+    ("Lecture du catalogue", f"Les {PRIX_UNION} prix unitaires distincts sont le catalogue "
+                             f"des trois exercices réunis ; le classement ci-dessus est fait "
+                             f"exercice par exercice, chaque ligne « DEL » étant confrontée au "
+                             f"seul catalogue de son propre exercice "
+                             f"({PRIX_PAR_EX[0][1]}, {PRIX_PAR_EX[1][1]} puis "
+                             f"{PRIX_PAR_EX[2][1]} prix)."),
+    ("", ""),
+    ("RAPPROCHEMENT AVEC LE FICHIER DES TICKETS (annexe C)", ""),
+    ("Lignes « DEL » rattachées à une journée et à un n° de ticket Z du fichier des tickets",
+     f"{RAP_JZ} sur {TOTAL_DEL}, soit {PCT_RAP_JZ:.1f} %"),
+    ("dont montant retrouvé au centime sur une ligne de note du même ticket Z",
+     f"{RAP_M} sur {TOTAL_DEL}, soit {PCT_RAP_M:.1f} %"),
+    ("Lignes non appariées par ce seul critère du montant",
+     f"{RAP_RESTE} sur {TOTAL_DEL}, soit {100 - PCT_RAP_M:.1f} %"),
+    ("   exercice " + rappro[0][0], f"{rappro[0][4]} appariées sur {rappro[0][1]} ({rappro[0][5]:.1f} %), "
+                                    f"{rappro[0][6]} non appariées"),
+    ("   exercice " + rappro[1][0], f"{rappro[1][4]} appariées sur {rappro[1][1]} ({rappro[1][5]:.1f} %), "
+                                    f"{rappro[1][6]} non appariées"),
+    ("   exercice " + rappro[2][0], f"{rappro[2][4]} appariées sur {rappro[2][1]} ({rappro[2][5]:.1f} %), "
+                                    f"{rappro[2][6]} non appariées"),
+    ("Portée de ce rapprochement", "Le rapprochement est publié en synthèse, exercice par "
+                                   "exercice, et non ligne à ligne. Le critère du montant au "
+                                   "centime sur le même ticket Z est un critère unique et "
+                                   "volontairement strict : il n'apparie ni les lignes déplacées "
+                                   "vers une autre table, ni celles refacturées au forfait, ni "
+                                   "celles dont la quantité a été corrigée. La démonstration ne "
+                                   "repose donc pas sur lui seul, mais aussi sur la forme des "
+                                   "montants, sur le totalisateur perpétuel et sur le canal "
+                                   "d'encaissement."),
+    ("", ""),
+    ("Notes encaissées sur les trois exercices (annexe F)", nb_notes),
+    ("Notes présentes dans le fichier des tickets (annexe C)", len(tickets_c)),
+    ("Écart entre les deux annexes", f"{len(tickets_c) - nb_notes} note(s) : {ECART_CF}"),
     ("Totaux de notes distincts", len(totaux_notes)),
-    ("Lecture", "Les DEL forment une population d'ARTICLES (398 valeurs, celles de la carte), "
-                "pas une population de NOTES (2 592 totaux distincts)."),
+    ("Lecture", f"Les DEL forment une population d'ARTICLES ({NB_VALEURS} valeurs, celles de "
+                f"la carte), pas une population de NOTES ({len(totaux_notes)} totaux distincts)."),
+    ("", ""),
+    ("CANAL D'ENCAISSEMENT (annexe F)", ""),
+    ("Total des règlements encaissés, trois exercices (EUR)", REGL_TOTAL),
+    ("dont espèces (EUR)", ESPECES),
+    ("Part des espèces", f"{PCT_ESPECES:.2f} %"),
+    ("Part tracée par un tiers (banque, ANCV, émetteur de titres)", f"{PCT_BANCARISE:.2f} %"),
+    ("Rapport entre le montant des lignes « DEL » et les espèces encaissées",
+     f"{TOTAL_DEL_EUR:.2f} / {ESPECES:.2f} = {RAPPORT_DEL_ESP:.2f} fois"),
     ("", ""),
     ("Tickets contrôlés au grand total perpétuel", sum(x[1] for x in chainage)),
     ("Ruptures du totalisateur perpétuel", sum(x[5] for x in chainage)),
@@ -396,10 +546,12 @@ for r in range(1, ws.max_row + 1):
     ws.cell(r, 2).alignment = Alignment(wrap_text=True, vertical="top")
 
 feuille("09-09-2022 rafales",
-        ["Heure", "Nb DEL", "Somme des DEL (EUR)",
-         "Somme = total exact d'une note ?", "Note encaissée correspondante",
-         "Composition de cette note"],
-        lignes_rafales, [10, 9, 20, 26, 52, 70])
+        ["Heure", "Nb DEL", "Montants des DEL de la rafale (EUR)",
+         "Somme des DEL (EUR)",
+         "Somme = total exact d'une note encaissée ? (OUI / NON)",
+         "Note encaissée correspondante", "Composition de cette note",
+         "DEL de la rafale égales à un prix pratiqué ce jour-là"],
+        lignes_rafales, [10, 9, 46, 20, 30, 52, 70, 26])
 
 feuille("09-09-2022 DEL detail",
         ["Heure", "Montant (EUR)", "id tpvenement", "n° Z", "Nature du montant",
@@ -431,10 +583,19 @@ feuille("Chainage grand total",
          "Ruptures de chaînage", "Lignes DEL de l'exercice"],
         chainage, [14, 10, 22, 40, 14, 20, 22])
 
-feuille("DEL vs prix carte",
+ws_carte = feuille("DEL vs prix carte",
         ["Exercice", "DEL = prix unitaire exact", "DEL = quantité x prix",
          "DEL ni l'un ni l'autre", "Total DEL"],
-        detail_classe, [14, 26, 24, 22, 12])
+        detail_classe + [("TOTAL", TOT_EXACT, TOT_MULT, TOT_AUTRE, TOTAL_DEL)],
+        [14, 26, 24, 22, 12])
+for col in range(1, 6):
+    ws_carte.cell(ws_carte.max_row, col).font = GRAS
+ws_carte.append([f"{TOT_CARTE} lignes sur {TOTAL_DEL} valent un prix de la carte "
+                 f"ou un multiple entier de ce prix, soit {PCT_CARTE:.1f} % "
+                 f"({100 * TOT_EXACT / TOTAL_DEL:.1f} % un prix unitaire exact, "
+                 f"{100 * TOT_MULT / TOTAL_DEL:.1f} % une quantité entière x un prix). "
+                 f"Les {TOT_AUTRE} lignes restantes font {100 * TOT_AUTRE / TOTAL_DEL:.1f} %."])
+ws_carte.cell(ws_carte.max_row, 1).font = GRAS
 
 top = sorted(valeurs.items(), key=lambda kv: -kv[1])[:60]
 ws2 = wb["DEL vs prix carte"]
@@ -446,7 +607,23 @@ for v, n in top:
     libs = set()
     for ex in EXOS:
         libs |= prix_ex[ex].get(v, set())
-    ws2.append([v / 100, n, ", ".join(sorted(libs)[:6])])
+    if libs:
+        lecture = ", ".join(sorted(libs)[:6])
+    else:
+        # Aucun prix unitaire a ce montant : on porte la decomposition en
+        # quantite entiere x prix de la carte, plutot qu'une cellule vide.
+        lecture = "aucun prix unitaire a ce montant"
+        for k in range(2, 25):
+            if v % k:
+                continue
+            sous = set()
+            for ex in EXOS:
+                sous |= prix_ex[ex].get(v // k, set())
+            if sous:
+                lecture = (f"{k} x {v // k / 100:.2f} EUR : "
+                           + ", ".join(sorted(sous)[:5]))
+                break
+    ws2.append([v / 100, n, lecture])
 
 chemin = os.path.join(SORTIE, "R1-suppressions-rapprochements.xlsx")
 wb.save(chemin)
@@ -456,6 +633,15 @@ print(f"DEL total : {TOTAL_DEL} | valeurs distinctes : {NB_VALEURS}")
 print(f"  prix exact {TOT_EXACT} ({100*TOT_EXACT/TOTAL_DEL:.1f} %)"
       f" | multiple {TOT_MULT} ({100*TOT_MULT/TOTAL_DEL:.1f} %)"
       f" | autre {TOT_AUTRE} ({100*TOT_AUTRE/TOTAL_DEL:.1f} %)")
+print(f"Rapprochement tickets : jour+Z {RAP_JZ}/{TOTAL_DEL} ({PCT_RAP_JZ:.1f} %)"
+      f" | montant au centime {RAP_M}/{TOTAL_DEL} ({PCT_RAP_M:.1f} %)"
+      f" | non appariees {RAP_RESTE}")
+print(f"Prix unitaires distincts : {PRIX_UNION} (union) | par exercice "
+      f"{[n for _, n in PRIX_PAR_EX]}")
+print(f"Montant DEL : {TOTAL_DEL_EUR} EUR | mediane {MEDIANE_DEL} EUR")
+print(f"Reglements : {REGL_TOTAL} EUR dont especes {ESPECES} EUR "
+      f"({PCT_ESPECES:.2f} %), bancarise {PCT_BANCARISE:.2f} % | "
+      f"rapport DEL/especes {RAPPORT_DEL_ESP:.3f}")
 print(f"Notes : {nb_notes} | totaux distincts : {len(totaux_notes)}")
 print(f"Chainage : {sum(x[5] for x in chainage)} rupture(s) sur "
       f"{sum(x[1] for x in chainage)} tickets")

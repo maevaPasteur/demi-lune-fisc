@@ -208,6 +208,20 @@ DEJA = {
 # Achats relus par code article 591050 : 2, 12 puis 11 bouteilles de 70 cl.
 achats_l["Liqueur de Poire"] = {e: ACHATS_UNITES["Liqueur de Poire"][0][0][e] * 70.0 for e in EXOS}
 
+# Correction : la ligne « Marc de Bourgogne » du cumul du dossier portait 980 cl, qui est
+# un total de famille. Elle additionnait deux produits distincts, le marc de Bourgogne
+# Jacoulot 45° (code article 550252, 4 bouteilles de 70 cl, 280 cl) et le marc du Jura
+# Tissot 50° (code article 520096, 10 bouteilles, 700 cl). Seul le premier est en cause
+# ici ; le second est vendu au verre. Achats relus par code article.
+achats_l["Marc de Bourgogne"] = {e: ACHATS_UNITES["Marc de Bourgogne"][0][0][e] * 70.0 for e in EXOS}
+
+# Plafonds retenus sur les trois exercices pris ensemble (cl). Le marc de Bourgogne n'est
+# pas plafonne aux 280 cl factures mais aux 210 cl effectivement sortis du stock (280 cl
+# achetes moins la bouteille inventoriee au 31/03/2025) : nous ne savons pas lequel des
+# deux marcs entre dans le baba, et nous ne demandons donc rien au-dela de ce que le stock
+# de marc de Bourgogne a pu fournir. La colonne « cuisine calculee » n'en est pas modifiee.
+PLAFOND_3ANS = {"Marc de Bourgogne": 210.0}
+
 ALCOOLS = ["Ravelin", "Macvin", "Arbois Vin Jaune", "Calvados", "Porto", "Crème de Cassis",
            "Bailey's", "Grand Marnier", "Marc de Bourgogne", "Liqueur de Poire"]
 
@@ -227,11 +241,22 @@ for a in ALCOOLS:
     calc = {e: c[e] + m[e] for e in EXOS}
     plafond = {e: ac[e] for e in EXOS}                       # regle retenue : achats factures FCBS
     plaf_svc = {e: ds[e] for e in EXOS} if ds else dict(ac)   # variante : colonne du service
-    phys = {e: min(calc[e], plafond[e]) for e in EXOS}
+    if a in PLAFOND_3ANS:
+        # plafond global aux trois exercices : impute dans l'ordre des exercices
+        reste_plaf = PLAFOND_3ANS[a]
+        phys = {}
+        for e in EXOS:
+            phys[e] = min(calc[e], reste_plaf)
+            reste_plaf -= phys[e]
+    else:
+        phys = {e: min(calc[e], plafond[e]) for e in EXOS}
     dj = DEJA.get(a, {e: 0.0 for e in EXOS})
     sup = {e: max(0.0, phys[e] - dj[e]) for e in EXOS}
     phys_svc = {e: min(calc[e], plaf_svc[e]) for e in EXOS}
     phys_min = {e: min(calc[e], plafond[e], plaf_svc[e]) for e in EXOS}
+    if a in PLAFOND_3ANS:   # le plafond global prime sur les deux variantes
+        phys_svc = dict(phys)
+        phys_min = dict(phys)
     lignes_solde.append({"alcool": a, "carte": c, "menus": m, "calc": calc, "achats": ac,
                          "dispo": ds, "plafond": plafond, "phys": phys, "deja": dj, "sup": sup,
                          "phys_svc": phys_svc, "phys_min": phys_min})
@@ -348,6 +373,8 @@ def main():
         r += 1
     ws.cell(r + 1, 1, "Coefficient maximal = (volume disponible - volume sorti autrement) / volume de cuisine calcule aux doses retenues. Au-dela, le stock ne suit plus.")
     ws.cell(r + 2, 1, "Volume disponible : colonne du service (p. 65 a 67) pour le Calvados, le vin jaune, le porto et le macvin ; achats factures FCBS pour les six autres.")
+    ws.cell(r + 3, 1, "Marc de Bourgogne : 280 cl, soit les 4 bouteilles du code article 550252 (Jacoulot 45 degres). Les 980 cl du cumul du dossier etaient un total de famille : ils y ajoutaient 700 cl de marc du Jura Tissot 50 degres (code 520096, 10 bouteilles), qui est un autre produit, vendu au verre.")
+    ws.cell(r + 4, 1, "Liqueur de Poire : 1 750 cl, soit les 25 bouteilles du code article 591050, la ligne du 15/03/2024 (facture n. 508974) portant une designation tronquee que le rapprochement par libelle avait perdue.")
 
     # --- 3. bilan matiere ----------------------------------------------------
     ws = sheet(wb, "3-Bilan matiere", "3. Bilan matiere par alcool et par exercice (centilitres)",
@@ -366,6 +393,8 @@ def main():
                         round(dsp - v - ck - x["calc"][e])],
                 [None, None] + ["#,##0"] * 8)
             r += 1
+    ws.cell(r + 1, 1, "Marc de Bourgogne : achats du seul code article 550252 (Jacoulot 45 degres), 70 + 140 + 70 cl. Le marc du Jura Tissot 50 degres (code 520096, 700 cl) est un produit distinct, vendu au verre, et ne figure pas dans ce bilan. Le reste negatif de l exercice 1 est precisement le motif du plafonnement retenu a la feuille 4 : nous ramenons la demande a 210 cl sur les trois exercices.")
+    ws.cell(r + 2, 1, "Liqueur de Poire : achats du code article 591050, 140 + 840 + 770 cl, soit 25 bouteilles de 70 cl.")
 
     # --- 4. les deux grandeurs ----------------------------------------------
     ws = sheet(wb, "4-Cuisine et supplement", "4. Deux grandeurs distinctes : le volume physiquement parti en cuisine, et le supplement demande au service (litres, 3 exercices)",
@@ -382,7 +411,7 @@ def main():
         "Ravelin": "aucun BIB de ravelin sur l exercice 1 : le retranchement opere sur le volume unique des BIB ne peut pas le couvrir",
         "Bailey's": "aucun retranchement identifie dans la reponse du service",
         "Grand Marnier": "aucun retranchement identifie ; plafonne aux achats factures",
-        "Marc de Bourgogne": "aucun retranchement identifie ; 14 bouteilles de marc facturees sur 3 exercices",
+        "Marc de Bourgogne": "aucun retranchement identifie ; 4 bouteilles de marc de Bourgogne Jacoulot 45 degres facturees sur 3 exercices, soit 280 cl (code article 550252) ; demande plafonnee a 210 cl, volume sorti du stock, et non aux 5,58 L calcules. Le marc du Jura Tissot 50 degres (code 520096, 10 bouteilles, 700 cl) est un autre produit, vendu au verre",
         "Liqueur de Poire": "aucun retranchement identifie ; 25 bouteilles facturees sur 3 exercices",
     }
     r = 4
@@ -401,6 +430,8 @@ def main():
                 round(TOT_SUP / 100, 2), ""],
         [None] + ["#,##0.00"] * 5 + [None], bold=True)
     ws.cell(r + 2, 1, "A = volume qui a quitte le stock : c est la grandeur du bilan matiere. B = ce que nous demandons au service en plus de ce qu il retranche deja.")
+    ws.cell(r + 4, 1, "La colonne « cuisine calculee » n est jamais modifiee par un plafonnement : elle reste le produit du nombre de plats par la dose. Le Calvados y garde 119,1 L en face de 73,0 L retenus, le marc de Bourgogne 5,58 L en face de 2,10 L retenus.")
+    ws.cell(r + 5, 1, "Le plafonnement joue exercice par exercice, sauf pour le marc de Bourgogne, plafonne sur les trois exercices pris ensemble aux 210 cl sortis du stock (280 cl factures moins la bouteille inventoriee au 31/03/2025), faute de savoir lequel des deux marcs achetes entre dans le baba.")
     ws.cell(r + 3, 1, "Sensibilite du plafond : achats factures FCBS %.1f L ; colonne « volume disponible » du service %.1f L ; le plus faible des deux %.1f L."
             % (sum(sum(x["phys"].values()) for x in lignes_solde) / 100,
                sum(sum(x["phys_svc"].values()) for x in lignes_solde) / 100,

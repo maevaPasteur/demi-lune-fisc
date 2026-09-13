@@ -366,6 +366,18 @@ def main():
         "boissons": boissons,
     }
 
+    # --- Total du perimetre publie -----------------------------------------
+    # Attention : « regimes_total » agrege les 57 boissons du fichier, y compris
+    # celles qui ne sont jamais versees a la main (pichet ou bouteille seuls).
+    # Le total publie dans la reponse ne porte que sur les boissons effectivement
+    # versees a la main, seules bornables par un taux de sur-versement. C'est ce
+    # perimetre, et lui seul, que la feuille « Fourchette 3 exercices » restitue.
+    res["total_borne"] = total_borne(res["boissons"])
+    res["regimes_total"]["perimetre"] = (
+        "57 boissons, toutes assiettes confondues. Le total publie dans la reponse "
+        "est celui de « total_borne » : les 46 boissons versees a la main."
+    )
+
     os.makedirs(DATA, exist_ok=True)
     with open(os.path.join(DATA, "sur-versement-fourchette.json"), "w", encoding="utf-8") as f:
         json.dump(res, f, ensure_ascii=False, indent=1)
@@ -415,6 +427,40 @@ def main():
 
 def fr(x, dec=2):
     return f"{x:,.{dec}f}".replace(",", " ").replace(".", ",")
+
+
+def total_borne(boissons):
+    """Totaux du perimetre publie : les boissons reellement versees a la main.
+
+    Une boisson servie uniquement au pichet ou a la bouteille n'a pas de base
+    versee a la main : aucun taux de sur-versement ne peut lui etre applique,
+    elle sort donc du perimetre borne. Additionner les colonnes de la feuille
+    « Fourchette par boisson », qui les conserve, donne un autre total.
+    """
+    B = [b for b in boissons if b["cumul"]["base_main_l"] > 0]
+    s = lambda cle: round(sum(b["cumul"][cle] for b in B), 2)
+    ecart, base = s("ecart_l"), s("base_main_l")
+    retenu, plafonne, vendu = s("retenu_l"), s("plafonne_l"), s("vendu_nominal_l")
+    return {
+        "boissons": len(B),
+        "boissons_hors_perimetre": len(boissons) - len(B),
+        "achats_l": s("achats_l"),
+        "disponible_service_l": s("disponible_service_l"),
+        "vendu_nominal_l": vendu,
+        "verre_l": s("verre_l"),
+        "pichet_l": s("pichet_l"),
+        "bouteille_l": s("bouteille_l"),
+        "cocktails_l": s("cocktails_l"),
+        "ecart_l": ecart,
+        "base_main_l": base,
+        "retenu_l": retenu,
+        "plafonne_l": plafonne,
+        "taux_max_compatible": round(ecart / base, 4) if base else 0.0,
+        "taux_retenu_sur_base_main": round(retenu / base, 4) if base else 0.0,
+        "taux_effectif_sur_vendu": round(plafonne / vendu, 4) if vendu else 0.0,
+        "part_de_l_ecart_couverte": round(retenu / ecart, 4) if ecart else 0.0,
+        "rapport_ecart_sur_retenu": round(ecart / retenu, 2) if retenu else 0.0,
+    }
 
 
 def ecrire_xlsx(res):
@@ -553,6 +599,30 @@ def ecrire_xlsx(res):
                 for c in range(1, len(cols2) + 1):
                     ws2.cell(row=r, column=c).fill = alerte
         ws2.append([])
+    # Total de la feuille, et mise en garde sur son perimetre : additionner ces
+    # colonnes ne donne pas le total publie, parce que la feuille conserve les
+    # boissons servies uniquement au pichet ou a la bouteille.
+    lg = [l for b in res["boissons"] for l in b["lignes"]]
+    som = lambda cle: round(sum(l[cle] for l in lg), 2)
+    tb = res["total_borne"]
+    ws2.append([f"TOTAL de la feuille : {len(lg)} lignes, {len(res['boissons'])} boissons",
+                "", "", som("achats_l"), som("stock_ouverture_l"), som("stock_cloture_l"),
+                som("disponible_l"), som("cuisine_l"), som("disponible_service_l"),
+                som("vendu_nominal_l"), som("verre_l"), som("pichet_l"), som("bouteille_l"),
+                som("cocktails_l"), som("base_main_l"), som("ecart_l"), "0,0 %", "", "",
+                som("surversement_retenu_l"), ""])
+    r = ligne_bordee(ws2, 4)
+    for c in range(1, len(cols2) + 1):
+        ws2.cell(row=r, column=c).font = Font(bold=True)
+        ws2.cell(row=r, column=c).fill = surligne
+    ws2.append([f"Ce total n'est pas celui que la reponse publie : il englobe "
+                f"{tb['boissons_hors_perimetre']} boissons jamais versees a la main "
+                f"(pichet ou bouteille seuls), auxquelles aucun taux de sur-versement "
+                f"ne s'applique. Le total du perimetre publie est celui de la feuille "
+                f"« Fourchette 3 exercices » : {fr(tb['disponible_service_l'], 1)} L "
+                f"disponibles au service, {fr(tb['vendu_nominal_l'], 1)} L vendus aux doses "
+                f"de la carte, soit {fr(tb['ecart_l'], 1)} L d'ecart."])
+    ws2.cell(row=ws2.max_row, column=1).font = Font(italic=True, size=9, color="64748B")
     largeurs(ws2, [30, 16, 14] + [16] * 13 + [18, 24, 22, 20, 13])
     ws2.freeze_panes = "D5"
 
@@ -600,6 +670,32 @@ def ecrire_xlsx(res):
         if statut != "compatible":
             for cc in range(1, len(cols4) + 1):
                 ws4.cell(row=r, column=cc).fill = alerte
+    # Total du perimetre publie : c'est cette ligne, et elle seule, que la
+    # reponse reprend.
+    ws4.append([f"TOTAL : {tb['boissons']} boissons versees a la main", "",
+                tb["achats_l"], tb["disponible_service_l"], tb["vendu_nominal_l"],
+                tb["verre_l"], tb["pichet_l"], tb["bouteille_l"], tb["cocktails_l"],
+                tb["ecart_l"], tb["base_main_l"], "0,0 %",
+                f"{fr(tb['taux_max_compatible'] * 100, 1)} %",
+                f"{fr(tb['taux_retenu_sur_base_main'] * 100, 1)} %",
+                tb["retenu_l"], tb["plafonne_l"],
+                f"{fr(tb['taux_effectif_sur_vendu'] * 100, 1)} %",
+                "perimetre publie dans la reponse"])
+    r = ligne_bordee(ws4, 3)
+    for cc in range(1, len(cols4) + 1):
+        ws4.cell(row=r, column=cc).font = Font(bold=True)
+        ws4.cell(row=r, column=cc).fill = surligne
+    ws4.append([f"Lecture du total : {fr(tb['ecart_l'], 1)} L d'ecart pour "
+                f"{fr(tb['base_main_l'], 1)} L verses a la main, soit une borne haute de "
+                f"{fr(tb['taux_max_compatible'] * 100, 1)} %. Le sur-versement retenu, "
+                f"{fr(tb['retenu_l'], 1)} L, n'en couvre que "
+                f"{fr(tb['part_de_l_ecart_couverte'] * 100, 1)} %, soit un rapport de "
+                f"{fr(tb['rapport_ecart_sur_retenu'], 2)} : les taux retenus n'absorbent "
+                f"pas l'ecart, ils en expliquent une part. Les "
+                f"{tb['boissons_hors_perimetre']} boissons servies uniquement au pichet ou "
+                f"a la bouteille sont hors de ce total : elles portent elles aussi un ecart "
+                f"de bilan matiere, mais aucun sur-versement ne leur est applique."])
+    ws4.cell(row=ws4.max_row, column=1).font = Font(italic=True, size=9, color="64748B")
     largeurs(ws4, [32, 16, 18, 20, 22, 14, 14, 16, 16, 14, 20, 14, 26, 16, 24, 24, 22, 34])
     ws4.freeze_panes = "C5"
 
