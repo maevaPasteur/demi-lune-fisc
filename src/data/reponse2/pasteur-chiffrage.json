@@ -1,7 +1,16 @@
 {
  "meta": {
   "slug": "pasteur-chiffrage",
-  "source": "Proposition personnelle PASTEUR du 19/10/2026"
+  "source": "Proposition personnelle M. Thierry PASTEUR du 19/10/2026",
+  "limites": [
+   "Le supplément notifié (196 945 €) est le montant du SERVICE, lu sur une proposition du 19/10/2026 scannée sans couche texte : la défense le reprend, elle ne le recalcule pas.",
+   "La ventilation interne (IR au barème, majoration, intérêts, prélèvements sociaux) n'est pas reconstituable : l'IR au barème dépend du revenu global du foyer et du quotient familial, absents du dossier (pas de déclaration 2042). La ligne « solde » est obtenue par différence et n'égale pas 17,2 % de la base.",
+   "Seuls la cascade base RCM → × 1,25 → assiette IR et les totaux notifiés sont certains ; le taux effectif en découle."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "Le supplément de 196 945 € notifié à M. PASTEUR est le décalque de la reconstitution (base distribuée 235 913 €, soit sa moitié). Taux effectif global 83,5 % ; hors majoration de 40 %, 67,3 %. La ventilation interne du service n'est pas reconstituable faute du revenu du foyer : son détail doit être réclamé.",
+  "statut": "a-etayer"
  },
  "sections": [
   {
@@ -13,7 +22,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Décomposition du supplément notifié à M. Thierry PASTEUR",
+   "titre": "Ce qui est certain : base, assiette et supplément notifié à M. Thierry PASTEUR",
    "colonnes": [
     {
      "label": "Élément"
@@ -59,7 +68,7 @@
     ],
     [
      {
-      "v": "Assiette ajoutée au revenu (× 1,25)"
+      "v": "Assiette IR ajoutée au revenu (× 1,25)"
      },
      {
       "v": "120 771 €",
@@ -80,6 +89,111 @@
     ],
     [
      {
+      "v": "Supplément d'impôt NOTIFIÉ par le service"
+     },
+     {
+      "v": "83 391 €",
+      "align": "right"
+     },
+     {
+      "v": "56 724 €",
+      "align": "right"
+     },
+     {
+      "v": "56 830 €",
+      "align": "right"
+     },
+     {
+      "v": "196 945 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Taux effectif (supplément ÷ base RCM)"
+     },
+     {
+      "v": "86,3 %",
+      "align": "right"
+     },
+     {
+      "v": "81,7 %",
+      "align": "right"
+     },
+     {
+      "v": "81,3 %",
+      "align": "right"
+     },
+     {
+      "v": "83,5 %",
+      "align": "right"
+     }
+    ]
+   ],
+   "minWidth": 640
+  },
+  {
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 720 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"89\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Base RCM</text><text x=\"89\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">96 617 €</text><text x=\"89\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">2023, par foyer</text><rect x=\"285\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"360\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Assiette IR</text><text x=\"360\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">120 771 €</text><text x=\"360\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">× 1,25</text><rect x=\"556\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"631\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Supplément notifié</text><text x=\"631\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">83 391 €</text><text x=\"631\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">liquidation du service</text><line x1=\"164\" y1=\"59\" x2=\"201\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54 L 210 59 L 201 64 Z\" fill=\"#cbb98f\"/><text x=\"182\" y=\"51\" text-anchor=\"middle\" font-size=\"10\" fill=\"#cbb98f\" font-weight=\"600\">× 1,25</text><line x1=\"435\" y1=\"59\" x2=\"472\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 472 54 L 481 59 L 472 64 Z\" fill=\"#cbb98f\"/><text x=\"453\" y=\"51\" text-anchor=\"middle\" font-size=\"10\" fill=\"#cbb98f\" font-weight=\"600\">barème + PS + 1729</text></svg>",
+   "titre": "Où se situe le supplément dans la cascade (année 2023)",
+   "legende": "La base RCM (discordance TTC ÷ 2) et l'assiette IR (× 1,25) sont recalculées par formule dans la pièce jointe. Le supplément est le montant notifié par le service ; sa liquidation interne reste celle du service (voir ventilation ci-dessous)."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse",
+   "sousTitre": ""
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ce qui est **certain** : la base distribuée (235 913 €) est la moitié des discordances TTC de la reconstitution, et l'assiette d'impôt en est le produit par 1,25. Le supplément notifié (**196 945 €**) est en revanche le chiffre du **service**, porté sur une proposition scannée : nous le reprenons sans pouvoir le reconstituer, faute du revenu global du foyer et du détail de liquidation. Chacun de ces euros n'existe que parce que la reconstitution « société » existe."
+  },
+  {
+   "kind": "titre",
+   "texte": "Le poids réel : un prélèvement de 83,5 % sur des sommes non établies",
+   "numero": "2.1"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Rapporté à la base distribuée, le prélèvement total atteint **86,3 % en 2023, 81,7 % en 2024 et 81,3 % en 2025**, soit **83,5 %** sur l'ensemble. Ce ratio additionne l'impôt, les prélèvements sociaux, la majoration de 40 % et les intérêts : apprécié **hors la majoration de 40 %** que nous contestons, il revient à **67,3 %**. Appliqué à des sommes dont l'existence même n'est pas établie, il nourrit, à titre subsidiaire, l'argument du caractère confiscatoire."
+  },
+  {
+   "kind": "titre",
+   "texte": "La ventilation du service n'est pas reconstituable",
+   "numero": "2.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service décompose le supplément en IR au barème, majoration de 40 %, intérêts et prélèvements sociaux. Cette ventilation, reproduite ci-dessous **telle que notifiée**, ne se reconstitue pas : la majoration de 40 % affichée **n'égale pas** 40 % de l'IR indiqué (sa base est le droit éludé net, non fourni), et la ligne « solde » **n'égale pas** 17,2 % de la base RCM (16 618 € attendus en 2023). Ce défaut de ventilation vérifiable est lui-même un **défaut de motivation** : nous en demandons le détail, foyer par foyer et année par année."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Ventilation notifiée par le service (non reconstituable en l'état)",
+   "colonnes": [
+    {
+     "label": "Composante"
+    },
+    {
+     "label": "2023",
+     "align": "right"
+    },
+    {
+     "label": "2024",
+     "align": "right"
+    },
+    {
+     "label": "2025",
+     "align": "right"
+    },
+    {
+     "label": "Total",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
       "v": "IR au barème"
      },
      {
@@ -95,7 +209,7 @@
       "align": "right"
      },
      {
-      "v": "",
+      "v": "96 182 €",
       "align": "right"
      }
     ],
@@ -137,13 +251,34 @@
       "align": "right"
      },
      {
-      "v": "",
+      "v": "3 329 €",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Supplément d'impôt total"
+      "v": "Solde : prélèvements sociaux + ajustements"
+     },
+     {
+      "v": "24 196 €",
+      "align": "right"
+     },
+     {
+      "v": "16 732 €",
+      "align": "right"
+     },
+     {
+      "v": "18 214 €",
+      "align": "right"
+     },
+     {
+      "v": "59 142 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "= Supplément notifié"
      },
      {
       "v": "83 391 €",
@@ -161,65 +296,18 @@
       "v": "196 945 €",
       "align": "right"
      }
-    ],
-    [
-     {
-      "v": "Nombre de parts"
-     },
-     {
-      "v": "1,50",
-      "align": "right"
-     },
-     {
-      "v": "1,50",
-      "align": "right"
-     },
-     {
-      "v": "1,90",
-      "align": "right"
-     },
-     {
-      "v": "",
-      "align": "right"
-     }
     ]
    ],
    "minWidth": 640
   },
   {
-   "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 760 320\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"250\" x2=\"744\" y2=\"250\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"57.400000000000006\" y=\"154.10165209153524\" width=\"70\" height=\"95.89834790846476\" rx=\"3\" fill=\"#a0740d\"/><text x=\"92.4\" y=\"149.10165209153524\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">40 693 €</text><text x=\"92.4\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">IR au barème</text><rect x=\"202.20000000000002\" y=\"115.74278425416568\" width=\"70\" height=\"38.35886783736956\" rx=\"3\" fill=\"#b4452e\"/><text x=\"237.20000000000002\" y=\"110.74278425416568\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+16 277 €</text><text x=\"237.20000000000002\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">majoration 40</text><text x=\"237.20000000000002\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">%</text><rect x=\"347.0\" y=\"110.49928232271961\" width=\"70\" height=\"5.243501931446076\" rx=\"3\" fill=\"#b4452e\"/><text x=\"382.0\" y=\"105.49928232271961\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+2 225 €</text><text x=\"382.0\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">intérêts</text><rect x=\"491.80000000000007\" y=\"53.47826086956519\" width=\"70\" height=\"57.02102145315442\" rx=\"3\" fill=\"#b4452e\"/><text x=\"526.8000000000001\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+24 196 €</text><text x=\"526.8000000000001\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">prélèv.</text><text x=\"526.8000000000001\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">sociaux et</text><text x=\"526.8000000000001\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">ajustements</text><rect x=\"636.6\" y=\"53.47826086956519\" width=\"70\" height=\"196.5217391304348\" rx=\"3\" fill=\"#6a4d0f\"/><text x=\"671.6\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#2a2015\">83 391 €</text><text x=\"671.6\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">Supplément</text><text x=\"671.6\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">PASTEUR 2023</text></svg>",
-   "titre": "Comment se construit le supplément de M. Thierry PASTEUR (année 2023)",
-   "legende": "Recalcul reproductible dans la pièce jointe (IR au barème sur l'assiette majorée, puis majoration de 40 %, intérêts et prélèvements sociaux)."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Notre réponse",
-   "sousTitre": ""
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le chiffrage est **vérifié** : il correspond, année par année, à l'imposition au barème de l'assiette distribuée majorée de 25 %, augmentée de la majoration de 40 %, des intérêts et des prélèvements sociaux. Il n'appelle pas de correction arithmétique interne, mais il est **entièrement dérivé** : chacun de ces euros n'existe que parce que la reconstitution « société » existe. M. PASTEUR bénéficie d'un quotient familial (1,5 à 1,9 part), mais la distribution, du fait de son ampleur, le propulse dans les tranches hautes du barème : son taux effectif est le plus élevé des deux foyers."
-  },
-  {
-   "kind": "titre",
-   "texte": "Le poids réel : un prélèvement de 84 % sur des sommes non établies",
-   "numero": "2.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Rapporté à la somme prétendument distribuée, l'impôt personnel atteint un taux effectif considérable : **86,3 % en 2023, 81,7 % en 2024 et 81,3 % en 2025**, soit 83,5 % en moyenne. Ce niveau résulte de l'empilement du barème (tranches hautes), du coefficient de 1,25, de la majoration de 40 % et des prélèvements sociaux. Appliqué à des sommes dont l'existence même n'est pas établie, il nourrit l'argument du caractère confiscatoire (4.3)."
-  },
-  {
    "kind": "titre",
    "texte": "Les leviers propres au foyer",
-   "numero": "2.2"
+   "numero": "2.3"
   },
   {
    "kind": "paragraphe",
-   "texte": "Ils s'ajoutent à la contestation du principe : **décharge de la majoration de 40 %** faute de motivation individualisée (4.4) et contestation de la **clé de répartition de 50 %** faute d'appréhension établie (4.2). Le recalcul des prélèvements sociaux sans le coefficient de 1,25 a été vérifié : il est sans objet ici (4.3)."
+   "texte": "Ils s'ajoutent à la contestation du principe : **décharge de la majoration de 40 %** faute de motivation individualisée, contestation de la **clé de répartition de 50 %** faute d'appréhension établie, et demande du **détail de l'assiette sociale** pour vérifier l'exclusion du coefficient de 1,25 (réserve QPC n° 2017-643/650)."
   },
   {
    "kind": "kpis",
@@ -227,13 +315,13 @@
     {
      "label": "Supplément total notifié",
      "valeur": "196 945 €",
-     "sub": "sur trois années (M. Thierry PASTEUR)",
+     "sub": "sur trois années (M. Thierry PASTEUR) — montant du service",
      "couleur": "red"
     },
     {
-     "label": "Taux effectif moyen",
-     "valeur": "84 %",
-     "sub": "sur la somme réputée distribuée",
+     "label": "Taux effectif global",
+     "valeur": "83,5 %",
+     "sub": "hors majoration de 40 % : 67,3 %",
      "couleur": "red"
     },
     {
@@ -250,25 +338,25 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Le chiffrage n’est qu’une application des barèmes : il n’est pas discutable. »** L’arithmétique des barèmes n’est pas contestée ; c’est sa **base** qui l’est. Chaque euro imposé est, à l’euro près, le chiffre d’affaires reconstitué réparti par moitié : si la reconstitution tombe, le supplément de **196 945 €** revient à **0 €**."
+   "texte": "**« Le chiffrage n'est qu'une application des barèmes : il n'est pas discutable. »** L'arithmétique n'est pas le débat ; c'est la **base** qui l'est. Chaque euro imposé est, à l'euro près, le chiffre d'affaires reconstitué réparti par moitié : si la reconstitution tombe, le supplément de **196 945 €** revient à **0 €**. Et puisque le service ne fournit pas le détail de sa liquidation, il ne peut pas davantage opposer que ce chiffrage serait acquis."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« La répartition par moitié résulte de la cogérance. »** Aucun flux bancaire, aucun mouvement de compte courant d’associé, aucun enrichissement personnel n’est tracé au foyer de M. PASTEUR. Un prélèvement effectif de l’ordre de **84 %** sur des sommes dont la réalité n’est pas établie présente un caractère confiscatoire."
+   "texte": "**« La répartition par moitié résulte de la cogérance. »** Aucun flux bancaire, aucun mouvement de compte courant d'associé, aucun enrichissement personnel n'est tracé au foyer de M. Thierry PASTEUR. En présence de deux co-maîtres, il appartient au service de prouver la part réellement appréhendée par chaque foyer, non de la déduire du capital."
   },
   {
    "kind": "piecejointe",
-   "intro": "Recalcul du supplément d'impôt de M. Thierry PASTEUR, année par année, à partir des bases distribuées et des taux notifiés, avec le détail IR au barème / majoration de 40 % / intérêts / prélèvements sociaux et le taux effectif.",
+   "intro": "Recalcul par formule de la base RCM (discordance TTC ÷ 2), de l'assiette IR (× 1,25) et du taux effectif de M. Thierry PASTEUR (avec et sans la majoration de 40 %). Les montants notifiés par le service sont les entrées ; ils ne sont pas recalculés.",
    "fichiers": [
     {
-     "fichier": "pieces-reponse-2/R2-chiffrage-pasteur.xlsx",
-     "label": "Chiffrage M. Thierry PASTEUR : recalcul année par année (XLSX)"
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "Chiffrage de la taxation personnelle : base, × 1,25, montants notifiés, taux effectif par foyer (XLSX à formules)"
     }
    ]
   },
   {
    "kind": "note",
-   "texte": "Sources : proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026, « CONSEQUENCES FINANCIERES », pages de détail de l'impôt sur le revenu et des prélèvements sociaux (années 2023, 2024, 2025)."
+   "texte": "Sources : proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026, « CONSEQUENCES FINANCIERES » (années 2023, 2024, 2025). Les montants et la ventilation sont ceux notifiés par le service, sur un document scanné ; la base RCM et l'assiette × 1,25 sont recalculées à partir des discordances TTC de la reconstitution du 18/05/2026."
   }
  ]
 }

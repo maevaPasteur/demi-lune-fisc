@@ -1,7 +1,16 @@
 {
  "meta": {
   "slug": "majoration-25-pourcent",
-  "source": "Propositions du 19/10/2026, art. 158-7-2° du CGI"
+  "source": "Propositions du 19/10/2026, art. 158-7-2° du CGI",
+  "limites": [
+   "L'assiette des contributions sociales réellement retenue par le service n'a pu être vérifiée : les propositions du 19/10/2026 sont scannées et aucune liquidation sociale détaillée n'est au dossier. Nous demandons sa production ; si le coefficient de 1,25 y a été inclus, une réduction est due (QPC 2017-643/650).",
+   "Le taux effectif inclut, à titre d'illustration de la charge totale, la majoration de 40 % et les intérêts ; l'appréciation du caractère confiscatoire se fait hors sanction (67,3 % PASTEUR, 58,8 % BEHEM).",
+   "Aucun seuil chiffré de confiscation n'est fixé par la jurisprudence ; des taux de 68,9 % à 73,6 % sur le 1,25 appliqué à des distributions ont été jugés conformes (QPC n° 2019-793). Le moyen confiscatoire est donc subsidiaire."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "Sur l'impôt sur le revenu, le coefficient de 1,25 est en l'état valide : la réduction ne viendra pas de là mais de la chute de la distribution. Deux leviers restent ouverts : vérifier que le 1,25 a bien été exclu de l'assiette sociale (QPC 2017-643/650), et, à titre subsidiaire, la charge totale (jusqu'à 83,5 %) rapportée à des sommes non établies.",
+  "statut": "a-etayer"
  },
  "sections": [
   {
@@ -13,7 +22,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "La majoration d'assiette de 25 %, par foyer",
+   "titre": "La majoration d'assiette de 25 %, par foyer (3 ans)",
    "colonnes": [
     {
      "label": "Base"
@@ -116,7 +125,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La majoration de 25 % est une **règle d'assiette** : elle ne s'applique que s'il existe une distribution à majorer. Sans distribution établie (4.1), il n'y a aucune assiette, donc aucune majoration. Elle tombe avec la reconstitution."
+   "texte": "La majoration de 25 % est une **règle d'assiette** : elle ne s'applique que s'il existe une distribution à majorer. Sans distribution établie, il n'y a aucune assiette, donc aucune majoration. Elle tombe avec la reconstitution : à elle seule, cette page ne dégage pas de réduction autonome sur l'impôt sur le revenu."
   },
   {
    "kind": "titre",
@@ -125,138 +134,39 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Appliqué à l'**impôt sur le revenu**, le coefficient 1,25 a été jugé conforme à la Constitution et à la Convention européenne des droits de l'homme ; le Conseil constitutionnel l'analyse comme une majoration d'**assiette**, non comme une sanction. Le contester frontalement sur l'IR serait voué à l'échec, et l'invoquer à tort affaiblirait le dossier. La faille n'est pas là."
+   "texte": "Appliqué à l'**impôt sur le revenu**, le coefficient 1,25 a été jugé conforme à la Constitution : le Conseil constitutionnel l'analyse comme une majoration d'**assiette**, non comme une sanction (QPC n° 2017-643/650 du 7 juillet 2017 ; conformité réaffirmée par la QPC n° 2019-793 du 28 juin 2019). Le contester frontalement sur l'IR serait voué à l'échec et affaiblirait le dossier. La faille n'est pas là."
   },
   {
    "kind": "titre",
-   "texte": "Le levier habituel (assiette sociale sans le 1,25) a été vérifié : il est ici sans objet",
+   "texte": "Un levier à instruire : l'exclusion du 1,25 de l'assiette sociale",
    "numero": "3.3"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le Conseil constitutionnel a jugé (décision n° 2017-643/650 QPC du 7 juillet 2017) que le coefficient de 1,25 **ne peut pas servir de base aux contributions sociales** (CSG, CRDS, prélèvement de solidarité). Nous avons **vérifié, foyer par foyer et année par année**, l'assiette sociale retenue par le service : elle exclut le coefficient de 1,25 sur les trois années et les deux foyers. Ce chef de réduction, souvent mobilisable, **ne l'est donc pas ici** : il faut le dire, pour ne pas exposer le dossier à une objection facile."
+   "texte": "Le Conseil constitutionnel a jugé, par une **réserve d'interprétation** (décision n° 2017-643/650 QPC, considérant 17), que les textes « ne sauraient, sans méconnaître le principe d'égalité devant les charges publiques, être interprétés comme permettant l'application du coefficient multiplicateur de 1,25 pour l'établissement des contributions sociales » assises sur les revenus réputés distribués. Autrement dit, l'assiette de la CSG, de la CRDS et du prélèvement de solidarité doit rester la **base RCM sans le 1,25**."
   },
   {
-   "kind": "tableau",
-   "titre": "Contrôle de l'assiette des prélèvements sociaux (doit exclure le 1,25)",
-   "colonnes": [
-    {
-     "label": "Foyer / année"
-    },
-    {
-     "label": "Base RCM",
-     "align": "right"
-    },
-    {
-     "label": "Assiette IR (× 1,25)",
-     "align": "right"
-    },
-    {
-     "label": "Assiette sociale retenue",
-     "align": "right"
-    },
-    {
-     "label": "Conforme QPC"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "BEHEM 2023"
-     },
-     {
-      "v": "96 617 €",
-      "align": "right"
-     },
-     {
-      "v": "120 771 €",
-      "align": "right"
-     },
-     {
-      "v": "86 407 €",
-      "align": "right"
-     },
-     {
-      "v": "oui (sans 1,25)"
-     }
-    ],
-    [
-     {
-      "v": "BEHEM 2024"
-     },
-     {
-      "v": "69 432 €",
-      "align": "right"
-     },
-     {
-      "v": "86 790 €",
-      "align": "right"
-     },
-     {
-      "v": "66 088 €",
-      "align": "right"
-     },
-     {
-      "v": "oui (sans 1,25)"
-     }
-    ],
-    [
-     {
-      "v": "BEHEM 2025"
-     },
-     {
-      "v": "69 864 €",
-      "align": "right"
-     },
-     {
-      "v": "87 330 €",
-      "align": "right"
-     },
-     {
-      "v": "62 538 €",
-      "align": "right"
-     },
-     {
-      "v": "oui (sans 1,25)"
-     }
-    ],
-    [
-     {
-      "v": "PASTEUR 2025"
-     },
-     {
-      "v": "69 864 €",
-      "align": "right"
-     },
-     {
-      "v": "87 330 €",
-      "align": "right"
-     },
-     {
-      "v": "69 865 €",
-      "align": "right"
-     },
-     {
-      "v": "oui (sans 1,25)"
-     }
-    ]
-   ],
-   "minWidth": 680
+   "kind": "paragraphe",
+   "texte": "Nous **ne pouvons pas vérifier**, sur les propositions du 19 octobre (scannées, sans liquidation sociale détaillée), si le service a bien exclu le coefficient de l'assiette sociale. Nous demandons donc la production de l'avis de mise en recouvrement et du détail de liquidation des contributions sociales, foyer par foyer et année par année. **Si le 1,25 y a été inclus** (assiette sociale = assiette IR majorée au lieu de la base RCM), une réduction est due à ce seul titre : l'écart est de 25 % de la base sociale, soit jusqu'à 20 421 € d'assiette sociale en trop pour 2023 (part TVA incluse dans la base). Faute de pièce, ce chef reste **ouvert, à instruire**, et non acquis."
   },
   {
    "kind": "titre",
-   "texte": "Le vrai angle : l'effet confiscatoire de l'addition",
+   "texte": "Un angle subsidiaire : la charge totale rapportée à des sommes non établies",
    "numero": "3.4"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le cumul du coefficient 1,25 (assiette) et de la majoration de 40 % de l'article 1729 (sanction) n'est pas, en soi, prohibé : ces mesures sont de natures différentes, et le principe *non bis in idem* ne joue qu'entre deux sanctions. Le point exploitable n'est pas le cumul mais son **résultat** : rapporté à la somme réputée distribuée, le prélèvement total atteint **73 % chez Mme BEHEM et 84 % chez M. PASTEUR** (voir 4.5 et 4.6). Une charge de cette ampleur, assise sur des sommes dont l'existence même n'est pas établie, pose la question du caractère **confiscatoire** au regard du droit de propriété (article 1er du premier protocole additionnel à la Convention européenne des droits de l'homme) et de l'égalité devant les charges publiques."
+   "texte": "Rapporté à la somme réputée distribuée, le **prélèvement total** (IR au barème + coefficient 1,25 + prélèvements sociaux + majoration de 40 % + intérêts) atteint **83,5 % chez M. PASTEUR et 73,2 % chez Mme BEHEM**. Ce ratio mêle toutefois l'impôt et des sanctions que la défense conteste par ailleurs ; pour ne pas présupposer le maintien de ce que l'on conteste, il faut l'apprécier **hors majoration de 40 %** : la charge revient alors à **67,3 % (M. PASTEUR) et 58,8 % (Mme BEHEM)**."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La jurisprudence ne fixe **aucun seuil chiffré** de confiscation : l'avis du Conseil d'État du 21 mars 2013 évoque un **taux marginal maximal de l'ordre des deux tiers** (prélèvements sociaux inclus) comme zone de risque, et le Conseil constitutionnel a censuré des taux de 75 % à 82 % (décision n° 2012-662 DC du 29 décembre 2012). Mais des taux marginaux de **68,9 % à 73,6 %**, incluant le coefficient de 1,25 sur des revenus distribués, ont été jugés **conformes** (QPC n° 2019-793). Le moyen confiscatoire est donc **subsidiaire** : il n'est sérieux, hors sanction, que pour le foyer PASTEUR (67,3 %, au-delà des deux tiers) et perd l'essentiel de sa force si la majoration de 40 % est, comme nous le demandons, déchargée. Le vrai levier demeure la chute de la distribution."
   },
   {
    "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 720 300\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"46\" y1=\"20\" x2=\"46\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"246\" x2=\"704\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"133.0\" x2=\"704\" y2=\"133.0\" stroke=\"#5b5b5b\" stroke-width=\"1\" stroke-dasharray=\"5 4\"/><rect x=\"78.25\" y=\"73.33599999999998\" width=\"46\" height=\"172.66400000000002\" rx=\"3\" fill=\"#a0740d\"/><text x=\"101.25\" y=\"68.33599999999998\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">76 %</text><rect x=\"132.25\" y=\"50.96199999999999\" width=\"46\" height=\"195.038\" rx=\"3\" fill=\"#b4452e\"/><text x=\"155.25\" y=\"45.96199999999999\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">86 %</text><text x=\"128.25\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2023</text><rect x=\"242.75\" y=\"89.382\" width=\"46\" height=\"156.618\" rx=\"3\" fill=\"#a0740d\"/><text x=\"265.75\" y=\"84.382\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">69 %</text><rect x=\"296.75\" y=\"61.357999999999976\" width=\"46\" height=\"184.64200000000002\" rx=\"3\" fill=\"#b4452e\"/><text x=\"319.75\" y=\"56.357999999999976\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">82 %</text><text x=\"292.75\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2024</text><rect x=\"407.25\" y=\"81.924\" width=\"46\" height=\"164.076\" rx=\"3\" fill=\"#a0740d\"/><text x=\"430.25\" y=\"76.924\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">73 %</text><rect x=\"461.25\" y=\"62.262\" width=\"46\" height=\"183.738\" rx=\"3\" fill=\"#b4452e\"/><text x=\"484.25\" y=\"57.262\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">81 %</text><text x=\"457.25\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2025</text><rect x=\"571.75\" y=\"80.56800000000001\" width=\"46\" height=\"165.432\" rx=\"3\" fill=\"#a0740d\"/><text x=\"594.75\" y=\"75.56800000000001\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">73 %</text><rect x=\"625.75\" y=\"57.29000000000002\" width=\"46\" height=\"188.70999999999998\" rx=\"3\" fill=\"#b4452e\"/><text x=\"648.75\" y=\"52.29000000000002\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">84 %</text><text x=\"621.75\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">Moyenne</text><rect x=\"46\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#a0740d\"/><text x=\"64\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Mme BEHEM</text><rect x=\"226\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#b4452e\"/><text x=\"244\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">M. PASTEUR</text></svg>",
+   "svg": "<svg viewBox=\"0 0 720 300\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"46\" y1=\"20\" x2=\"46\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"246\" x2=\"704\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"94.5\" x2=\"704\" y2=\"94.5\" stroke=\"#5b5b5b\" stroke-width=\"1\" stroke-dasharray=\"5 4\"/><text x=\"700\" y=\"90.5\" text-anchor=\"end\" font-size=\"9.5\" fill=\"#5b5b5b\">seuil des deux tiers (≈ 66,7 %) — avis CE 21/03/2013</text><rect x=\"78.25\" y=\"72.4\" width=\"46\" height=\"173.6\" rx=\"3\" fill=\"#a0740d\"/><text x=\"101.25\" y=\"67.4\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">76,4 %</text><rect x=\"132.25\" y=\"49.9\" width=\"46\" height=\"196.1\" rx=\"3\" fill=\"#b4452e\"/><text x=\"155.25\" y=\"44.9\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">86,3 %</text><text x=\"128\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2023</text><rect x=\"242.75\" y=\"88.6\" width=\"46\" height=\"157.4\" rx=\"3\" fill=\"#a0740d\"/><text x=\"265.75\" y=\"83.6\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">69,3 %</text><rect x=\"296.75\" y=\"60.4\" width=\"46\" height=\"185.6\" rx=\"3\" fill=\"#b4452e\"/><text x=\"319.75\" y=\"55.4\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">81,7 %</text><text x=\"293\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2024</text><rect x=\"407.25\" y=\"81.1\" width=\"46\" height=\"164.9\" rx=\"3\" fill=\"#a0740d\"/><text x=\"430.25\" y=\"76.1\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">72,6 %</text><rect x=\"461.25\" y=\"61.3\" width=\"46\" height=\"184.7\" rx=\"3\" fill=\"#b4452e\"/><text x=\"484.25\" y=\"56.3\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">81,3 %</text><text x=\"457\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2025</text><rect x=\"571.75\" y=\"79.7\" width=\"46\" height=\"166.3\" rx=\"3\" fill=\"#a0740d\"/><text x=\"594.75\" y=\"74.7\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">73,2 %</text><rect x=\"625.75\" y=\"56.3\" width=\"46\" height=\"189.7\" rx=\"3\" fill=\"#b4452e\"/><text x=\"648.75\" y=\"51.3\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"700\" fill=\"#2a2015\">83,5 %</text><text x=\"622\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">Global</text><rect x=\"46\" y=\"277\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#a0740d\"/><text x=\"64\" y=\"287\" font-size=\"11.5\" fill=\"#5b5b5b\">Mme BEHEM</text><rect x=\"200\" y=\"277\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#b4452e\"/><text x=\"218\" y=\"287\" font-size=\"11.5\" fill=\"#5b5b5b\">M. PASTEUR</text></svg>",
    "titre": "Taux effectif du prélèvement sur la somme distribuée (par foyer)",
-   "legende": "Rapport entre le supplément d'impôt notifié et la somme réputée distribuée, par année et par foyer (détail en 4.5 et 4.6). La ligne pointillée marque le seuil de 50 %."
+   "legende": "Charge totale (IR + 1,25 + prélèvements sociaux + majoration de 40 % + intérêts) rapportée à la base distribuée. Hors majoration de 40 % : 67,3 % (PASTEUR) et 58,8 % (BEHEM). La ligne pointillée marque le seuil des deux tiers (≈ 66,7 %, avis CE du 21/03/2013)."
   },
   {
    "kind": "kpis",
@@ -268,32 +178,32 @@
      "couleur": "red"
     },
     {
-     "label": "Assiette sociale avec le 1,25",
-     "valeur": "non",
-     "sub": "vérifié conforme à la QPC 2017-643/650 : pas de réduction à ce titre",
+     "label": "1,25 dans l'assiette sociale ?",
+     "valeur": "à vérifier",
+     "sub": "pièce non produite ; si inclus, réduction due (QPC 2017-643/650)",
      "couleur": "gold"
     },
     {
-     "label": "Prélèvement total sur la somme distribuée",
-     "valeur": "73 % à 84 %",
-     "sub": "question du caractère confiscatoire",
+     "label": "Charge totale sur la somme distribuée",
+     "valeur": "73,2 % à 83,5 %",
+     "sub": "hors majoration de 40 % : 58,8 % à 67,3 %",
      "couleur": "red"
     }
    ]
   },
   {
    "kind": "piecejointe",
-   "intro": "Reconstitution de l'assiette IR (base RCM × 1,25) et contrôle, par foyer et par année, de l'assiette des prélèvements sociaux (vérification de l'exclusion du coefficient 1,25).",
+   "intro": "Reconstitution par formule de la base RCM, de l'assiette IR (× 1,25) et du supplément d'assiette, par foyer et par année, et calcul du taux effectif (avec et sans la majoration de 40 %). La règle QPC sur l'assiette sociale est rappelée en méthode.",
    "fichiers": [
     {
-     "fichier": "pieces-reponse-2/R2-distributions-et-majoration.xlsx",
-     "label": "Distributions et majoration de 25 % : assiette IR et contrôle de l'assiette sociale (XLSX)"
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "Assiette IR (× 1,25) et taux effectif par foyer, avec et sans majoration de 40 % (XLSX à formules)"
     }
    ]
   },
   {
    "kind": "note",
-   "texte": "Sources : propositions du 19/10/2026, art. 158-7-2°, 200 A, 1600-0 C/D/E, 235 ter du CGI ; Conseil constitutionnel, décision n° 2017-643/650 QPC du 07/07/2017 ; art. 1er du premier protocole additionnel à la CEDH."
+   "texte": "Sources : propositions du 19/10/2026, art. 158-7-2°, 200 A, 1600-0 C/D/E, 235 ter du CGI ; Conseil constitutionnel, décision n° 2017-643/650 QPC du 07/07/2017 (cons. 17, réserve d'interprétation) et n° 2012-662 DC du 29/12/2012 ; QPC n° 2019-793 du 28/06/2019 ; avis du Conseil d'État du 21/03/2013 (prélèvements confiscatoires) ; art. 1er du premier protocole additionnel à la CEDH."
   }
  ]
 }

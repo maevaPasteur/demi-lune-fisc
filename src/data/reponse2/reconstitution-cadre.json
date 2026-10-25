@@ -1,7 +1,17 @@
 {
  "meta": {
   "slug": "reconstitution-cadre",
-  "source": "Propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION »"
+  "source": "Propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » (reprise du 18/05/2026) ; réponse de la DDFiP du Jura du 04/09/2026",
+  "limites": [
+   "Le retrait des 354 921 € de cuisine extrapolée suppose établie, dans les pages dédiées aux liquides (sur-versement, crémant, dégustation, freinte, cuisine, menus), la sur-évaluation du CA liquides reconstitué : à CA liquides exact, l'extrapolation tiendrait.",
+   "L'effet de levier 3,94 / 4,02 / 4,10 n'est un bénéfice pour la défense que si les corrections de volumes de boissons sont admises ; il n'est pas, à lui seul, une preuve de sur-évaluation.",
+   "Le total reconstitué post-corrections n'est pas chiffré ici : il dépend des volumes arrêtés dans les pages liquides. La formule « repasser sous le chiffre d'affaires déclaré » n'est donc pas quantifiée sur la présente page.",
+   "La faiblesse du coefficient de revente déclaré (≈ 2,30) n'est opposée qu'au moyen de la part réellement revendue (60,77 %) et de l'alignement boisson/nourriture ; aucun référentiel professionnel externe n'est produit."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "Le service lit le coefficient cuisine/boissons dans la caisse (rapport 2,936 / 3,024 / 3,105), puis l'applique à un CA liquides reconstitué supérieur à celui qu'il y lit, sans aucune constatation propre à la cuisine : il en résulte 354 921 € de cuisine extrapolée, soit 75,2 % du rehaussement de 471 826 €, sur une cuisine pourtant enregistrée plat par plat. La défense concède l'arithmétique du service (le reconstitué reste 42 207 € sous son propre repère de 3,2725 sur trois ans) ; ce qui est contesté est la valeur de preuve d'un repère bâti sur un paramètre de la reconstitution.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -13,72 +23,181 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Elle procède en deux temps : (1) les volumes de boissons disponibles (achats ± variation de stock) sont divisés par des **doses figées** pour reconstituer un chiffre d'affaires « liquides » ; (2) le chiffre d'affaires « cuisine » (« solides ») est obtenu en multipliant ce CA liquides par un **coefficient** de 2,94 (2022-2023), 3,02 (2023-2024) puis 3,10 (2024-2025)."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Le vice central : un coefficient circulaire et un effet de levier",
-   "sousTitre": ""
+   "texte": "Elle procède en deux temps : (1) les volumes de boissons disponibles (achats ± variation de stock) sont divisés par des **doses figées** pour reconstituer un chiffre d'affaires « liquides » ; (2) le chiffre d'affaires « cuisine » (« solides ») est obtenu en multipliant ce CA liquides par un **coefficient** de 2,94 (2022-2023), 3,02 (2023-2024) puis 3,10 (2024-2025). Le service ne reconstitue donc jamais directement la cuisine : il la déduit des boissons."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le coefficient appliqué n'est pas un repère de la profession : c'est, au centième près, le **ratio solides/liquides de la propre caisse du restaurant** (2,936 ; 3,024 ; 3,105). Le service lit donc dans la caisse le partage cuisine/boissons pour fixer son coefficient, mais rejette cette même caisse pour les montants, auxquels il substitue un CA liquides gonflé de 32 % à 48 %. **On ne peut pas tenir la caisse pour fiable sur le ratio et fausse sur les sommes.**"
-  },
-  {
-   "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 570 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">1 € de boisson</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">surévalué</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">CA liquides</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">× (1 + coefficient)</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">× ~4</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">1 € liquide + ~3 € cuisine</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">=</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">redressement total</text><text x=\"481.0\" y=\"84\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">≈ 4 €</text></svg>",
-   "titre": "L'effet de levier : chaque euro de boisson surévalué pèse près de 4 € au total",
-   "legende": "Total reconstitué = CA liquides × (1 + coefficient). Le facteur exact est 3,94 / 4,02 / 4,10 selon l'exercice."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Conséquence arithmétique : comme le CA cuisine reconstitué est égal au CA cuisine réel multiplié par le facteur de gonflement des boissons, le service ajoute une **« cuisine fantôme »** strictement proportionnelle au gonflement des liquides — environ **354 921 €** sur trois ans, soit près des trois quarts du redressement total (471 826 €), sans produire le moindre couvert ni achat alimentaire supplémentaire, alors que la cuisine est enregistrée plat par plat dans la caisse."
+   "texte": "Le reproche de fond qui justifie, selon le service, le rejet de comptabilité puis la reconstitution, est distinct : le **coefficient de revente déclaré** ressort à 2,303 (2022-2023), 2,388 (2023-2024) et 2,310 (2024-2025), jugés « **manifestement très bas et en dehors des usages habituels de la profession** » (proposition p. 34). Le service situe l'usage « vers 3 et plus » et reconstitue le chiffre d'affaires jusqu'à ce que le coefficient atteigne 3,40 / 3,14 / 3,05. Le coefficient de 2,94 / 3,02 / 3,10, lui, n'est jamais présenté par le service comme un usage de profession : dans ses annexes D il l'intitule « **RAPPORT POUR 1 € DE CA LIQUIDE = … C-A SOLIDE** », soit un ratio interne lu dans la caisse."
   },
   {
    "kind": "kpis",
    "items": [
     {
-     "label": "Origine du coefficient",
-     "valeur": "la caisse",
-     "sub": "2,936 / 3,024 / 3,105 = ratio solides/liquides du restaurant lui-même",
-     "couleur": "gold"
-    },
-    {
-     "label": "« Cuisine fantôme » (3 ans)",
-     "valeur": "354 921 €",
-     "sub": "≈ 75 % du redressement, jamais mesurée",
+     "label": "Coefficients de revente déclarés",
+     "valeur": "2,30 / 2,39 / 2,31",
+     "sub": "jugés « manifestement très bas » (proposition p. 34, reproduite p. 56)",
      "couleur": "red"
     },
     {
-     "label": "Effet de levier",
-     "valeur": "× ~4",
-     "sub": "chaque litre rendu à son usage réel retranche ~4 fois sa valeur",
+     "label": "Coefficient « cuisine = boissons × … »",
+     "valeur": "2,94 / 3,02 / 3,10",
+     "sub": "intitulé « RAPPORT POUR 1 € DE CA LIQUIDE » au bas des annexes D : un ratio de caisse",
+     "couleur": "gold"
+    },
+    {
+     "label": "Rehaussement total (3 ans)",
+     "valeur": "471 826 €",
+     "sub": "1 750 040 € reconstitués − 1 278 214 € déclarés",
      "couleur": "red"
     }
    ]
   },
   {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse : deux critiques distinctes, et une concession assumée",
+   "sousTitre": "La première critique vise la cuisine extrapolée, sans dépendre du coefficient ; la seconde mesure la sensibilité de la méthode au CA liquides. La concession porte sur l'arithmétique du repère de 3,2725, non sur sa valeur de preuve."
+  },
+  {
    "kind": "paragraphe",
-   "texte": "Conséquence pour la défense : les sur-estimations de boissons démontrées poste par poste dans les pages suivantes de ce bloc (sur-versement, crémant jeté, dégustation, freinte bière, cuisine, menus, consommation du personnel) ne se corrigent pas à l'unité. Chaque litre rendu à sa vraie destination retranche près de quatre fois sa valeur au total reconstitué : c'est ce qui fait **repasser le total, coefficient compris, sous le chiffre d'affaires déclaré**."
+   "texte": "Les trois grandeurs porteuses du débat sont d'abord posées sur la page, à partir des annexes D du service et de sa reconstitution (proposition p. 52). Elles sont recalculées par formule dans la pièce jointe."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le socle chiffré : ce que la caisse enregistre, ce que le service reconstitue",
+   "minWidth": 900,
+   "colonnes": [
+    { "label": "Exercice" },
+    { "label": "CA liquides réel (annexe D)", "align": "right" },
+    { "label": "CA liquides reconstitué", "align": "right" },
+    { "label": "Gonflement des liquides", "align": "right" },
+    { "label": "Cuisine réelle (annexe D)", "align": "right" },
+    { "label": "Cuisine extrapolée (p. 52)", "align": "right" },
+    { "label": "Cuisine extrapolée en trop", "align": "right" }
+   ],
+   "lignes": [
+    [ {"v":"2022-2023"}, {"v":"102 425 €","align":"right"}, {"v":"151 590 €","align":"right"}, {"v":"+ 48,0 %","align":"right"}, {"v":"300 747 €","align":"right"}, {"v":"445 675 €","align":"right"}, {"v":"144 928 €","align":"right"} ],
+    [ {"v":"2023-2024"}, {"v":"108 919 €","align":"right"}, {"v":"143 662 €","align":"right"}, {"v":"+ 31,9 %","align":"right"}, {"v":"329 362 €","align":"right"}, {"v":"433 860 €","align":"right"}, {"v":"104 498 €","align":"right"} ],
+    [ {"v":"2024-2025"}, {"v":"106 113 €","align":"right"}, {"v":"140 306 €","align":"right"}, {"v":"+ 32,2 %","align":"right"}, {"v":"329 452 €","align":"right"}, {"v":"434 947 €","align":"right"}, {"v":"105 495 €","align":"right"} ],
+    [ {"v":"Total 3 ans"}, {"v":"317 458 €","align":"right"}, {"v":"435 558 €","align":"right"}, {"v":"","align":"right"}, {"v":"959 561 €","align":"right"}, {"v":"1 314 482 €","align":"right"}, {"v":"354 921 €","align":"right","badge":"ko"} ]
+   ]
   },
   {
    "kind": "titre",
-   "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas",
+   "texte": "Première critique : 354 921 € de cuisine extrapolée sans aucune constatation propre à la cuisine",
    "numero": "2.1"
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Le coefficient est un usage de la profession. »** Non : il coïncide, au centième près, avec le ratio mesuré dans la caisse du restaurant (2,936 ; 3,024 ; 3,105). Ce n'est pas un repère externe, c'est la structure interne de la caisse — celle-là même que le service dit rejeter."
+   "texte": "Le coefficient de 2,94 / 3,02 / 3,10 est le rapport cuisine/boissons mesuré dans la caisse, sur un **couple de montants réels** : 102 425 € de liquides et 300 747 € de cuisine en 2022-2023. Le service applique ensuite ce rapport à un CA liquides **supérieur** de 48 % à celui qu'il a lui-même relevé, sans articuler la moindre constatation sur la cuisine : ni couvert supplémentaire, ni commande non enregistrée, ni achat alimentaire en excès. La cuisine, elle, est enregistrée plat par plat dans les annexes C ; le service ne la conteste ni dans son volume, ni dans ses couverts. Elle était donc directement mesurable, et n'avait pas à être déduite des boissons."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« La cuisine a nécessairement suivi les boissons. »** Rien ne l'établit : le service ne relève aucun couvert supplémentaire, aucun achat alimentaire en excès. La cuisine est enregistrée plat par plat dans la caisse ; elle pouvait être mesurée directement plutôt qu'extrapolée."
+   "texte": "Cette critique ne dépend d'aucun effet d'amplification : elle confronte la cuisine **enregistrée** (959 561 € sur trois exercices) à la cuisine **extrapolée** (1 314 482 €). L'écart de **354 921 €**, soit **75,2 % du rehaussement de 471 826 €**, ne repose sur aucune pièce propre à la cuisine. Le service l'assume d'ailleurs comme une conséquence mécanique de sa méthode : « il est normal que les rehaussements proposés correspondent à 75 % puisqu'il s'agit d'une conséquence directe du rapport » (p. 92). La normalité arithmétique d'un résultat ne lui tient pas lieu de preuve."
+  },
+  {
+   "kind": "titre",
+   "texte": "Seconde critique : la sensibilité de la méthode au CA liquides",
+   "numero": "2.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le total reconstitué s'écrit « CA liquides × (1 + coefficient) ». Une variation du CA liquides ne se répercute donc pas à l'unité sur le total : elle est multipliée par un facteur de **3,94 / 4,02 / 4,10** selon l'exercice. C'est la traduction exacte de la méthode du service, et non un double compte, comme il l'objecte (p. 92) : L + L × r = L × (1 + r). Il en résulte que les corrections de volumes établies poste par poste (sur-versement au verre, crémant jeté, dégustation, freinte de la bière, alcool de cuisine, alcool des menus) sont, chacune, amplifiées d'environ quatre fois sur le total reconstitué."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Cette seconde critique est **conditionnelle** et doit être présentée comme telle : le levier ne joue en faveur de la défense que dans la mesure où la sur-évaluation des liquides est établie dans les pages qui lui sont consacrées. À CA liquides exact, le facteur 1 + coefficient s'appliquerait à une base exacte et ne produirait aucune réduction. Le levier mesure donc l'enjeu des corrections de liquides ; il ne les démontre pas."
+  },
+  {
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 570 128\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"24\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">1 € de CA liquides</text><text x=\"89\" y=\"78\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">+ 1 € d'écart</text><text x=\"89\" y=\"94\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">(si sur-évalué)</text><line x1=\"164\" y1=\"63\" x2=\"201\" y2=\"63\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 58 L 210 63 L 201 68 Z\" fill=\"#cbb98f\"/><rect x=\"210\" y=\"24\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"285\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">× (1 + coefficient)</text><text x=\"285\" y=\"78\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">coefficient ≈ 3</text><text x=\"285\" y=\"94\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">1 € liquide + ≈ 3 € cuisine</text><line x1=\"360\" y1=\"63\" x2=\"397\" y2=\"63\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 58 L 406 63 L 397 68 Z\" fill=\"#cbb98f\"/><text x=\"383\" y=\"55\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">=</text><rect x=\"406\" y=\"24\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"481\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">effet sur le total</text><text x=\"481\" y=\"78\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#2a2015\">3,94 / 4,02 / 4,10</text><text x=\"481\" y=\"94\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= 1 + coefficient</text></svg>",
+   "titre": "Un euro de CA liquides sur-évalué pèse 3,94 à 4,10 € sur le total reconstitué",
+   "legende": "Total reconstitué = CA liquides × (1 + coefficient). Le facteur exact est 3,94 / 4,02 / 4,10 selon l'exercice ; le coefficient lui-même vaut environ 3, non 4. Le levier porte sur l'euro de CA liquides, non sur le litre (dont la valeur varie de 32,50 € à 172,50 €/L selon la boisson)."
+  },
+  {
+   "kind": "titre",
+   "texte": "Le vrai reproche : le coefficient de revente déclaré de 2,30",
+   "numero": "2.3"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le fondement du rejet de comptabilité n'est pas le rapport cuisine/boissons, mais le coefficient de revente déclaré de 2,30 / 2,39 / 2,31, jugé anormalement bas. Il appelle une réponse directe. Ce coefficient est bas parce que, sur les 10 622 litres d'alcool achetés sur trois exercices, **60,77 % seulement (6 455 L) sont revendus au verre et en cocktails** : le reste part en cuisine, en sur-versement, en pertes, en dégustation et en consommation du personnel, sans générer de recette. Rapporté au seul alcool effectivement revendu, le coefficient ressort à **≈ 3,92**, au-dessus du seuil de 3 que le service présente comme la norme. Le coefficient global est par ailleurs tiré vers le bas de façon symétrique par la boisson **et** par la nourriture, qui se situent au même niveau (coefficients déclarés d'alcool rapportés à la totalité des achats : 2,32 / 2,45 / 2,38) : ce n'est donc pas la boisson qui dissimulerait une recette."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Cette réponse a une limite, qui est assumée : elle ne vaut que si la part non revendue (≈ 39 %) est réelle, ce que les pages de volumes établissent poste par poste, et aucun référentiel professionnel externe n'est produit pour démontrer qu'un coefficient global de 2,30 serait, en soi, normal dans la profession. Le grief ne peut donc être renversé par cette seule page ; il est ramené à une question de volumes, et non de recette occulte."
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que la défense concède : l'arithmétique du repère de 3,2725",
+   "numero": "2.4"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service tire du coefficient sur achat revendu de 3,85 (chiffre de la défense) un repère de 3,85 × (1 − 0,15) = **3,2725**, qu'il oppose à ses coefficients reconstitués de 3,40 / 3,14 / 3,05 pour conclure qu'il « n'a nullement exagéré » (p. 93). L'opération est exacte et la défense la concède : rapporté aux 547 669 € de matières des trois exercices, ce repère appelle 1 792 247 € de chiffre d'affaires, alors que la reconstitution s'arrête à 1 750 040 €, soit **42 207 € en dessous**. Sur son propre terrain, et sur trois ans cumulés, la page 93 n'est pas prise en défaut."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ce qui tombe n'est donc pas l'arithmétique, mais la valeur de preuve du repère. Le 3,2725 n'est pas une donnée observée : c'est le coefficient réalisé sur l'alcool revendu (≈ 3,92) multiplié par une part d'achats revendus que le service fixe à **85 %**, alors que la part mesurée poste par poste est de **60,77 %**. Le repère reconduit ainsi, sous forme de coefficient, le taux de perte de 15 % qui est déjà l'un des paramètres de la reconstitution : un repère bâti sur un paramètre de la méthode ne peut servir à valider le résultat de cette méthode. Et en tout état de cause, un coefficient global ne dit rien de la **répartition** entre liquides et cuisine, seul objet des 354 921 €."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Cuisine extrapolée en trop (3 ans)",
+     "valeur": "354 921 €",
+     "sub": "1 314 482 € extrapolés − 959 561 € enregistrés = 75,2 % du rehaussement",
+     "couleur": "teal",
+     "highlight": true
+    },
+    {
+     "label": "Part réellement revendue",
+     "valeur": "60,77 %",
+     "sub": "6 455 L sur 10 622 L achetés ; coefficient sur achat revendu ≈ 3,92",
+     "couleur": "teal"
+    },
+    {
+     "label": "Concession sur 3 ans",
+     "valeur": "− 42 207 €",
+     "sub": "le reconstitué reste sous le repère de 3,2725 du service : arithmétique concédée",
+     "couleur": "gold"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**« Le rapport provient de la caisse, exhaustive : la méthode est donc valable. »** Le rapport de 2,94 a été mesuré sur un couple de montants réels (102 425 € de liquides, 300 747 € de cuisine). L'appliquer à un CA liquides majoré de 48 % ne le mesure plus : les conditions dans lesquelles il a été constaté ne sont plus réunies. Le Conseil d'État censure précisément le transport d'un ratio établi sur une base vers une autre grandeur sans justification ([CE, 3e ch., 5 octobre 2016, n° 389822](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20161005-389822), point 3)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**« 75 % du rehaussement est une conséquence directe du rapport. »** C'est exact, et c'est la difficulté : aucun couvert, aucun achat alimentaire, aucune commande de cuisine non enregistrée n'est produit à l'appui des 354 921 €, alors que la cuisine réelle est portée plat par plat dans les annexes C."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**« La reconstitution n'est pas exagérée : 3,2725 dépasse deux des trois coefficients reconstitués. »** Le calcul est concédé (le reconstitué reste 42 207 € sous le repère sur trois ans). Mais 3,2725 n'est que le coefficient sur achat revendu multiplié par une part supposée de 85 % ; avec la part mesurée de 60,77 %, le repère tombe à 2,383251 et le reconstitué le dépasse de 444 807 €. Surtout, un coefficient global ne valide pas le partage entre liquides et cuisine."
   },
   {
    "kind": "note",
-   "texte": "Sources : propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » ; proposition du 18/05/2026, p. 37 à 53 (coefficient p. 52) ; réponse de la DDFiP du Jura du 04/09/2026, parties L à T."
+   "texte": "Sources : propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » ; proposition du 18/05/2026, p. 34-35 (coefficients déclarés), p. 52 (coefficient de reconstitution) ; réponse de la DDFiP du Jura du 04/09/2026, p. 90 à 94. Annexes D1 à D3 (CA liquides et cuisine réels, « RAPPORT POUR 1 € DE CA LIQUIDE »). Bilan matière des 10 622 L : R1-cascade-bilan-matiere.xlsx."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Recalcul intégral par formules, à partir des annexes D du service et du bilan matière de la cascade (sources, formules et méthode dans chaque classeur) :",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-extrapolation-cuisine.xlsx",
+     "label": "Rapport liquides/solides mesuré sur la caisse, cuisine extrapolée vs enregistrée, cuisine en trop de 354 921 €, part de 75,2 % du rehaussement et bras de levier 3,94 / 4,02 / 4,10 (onglets Sources, Rapport, Extrapolation, Méthode, à formules vivantes)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-coefficient-revente.xlsx",
+     "label": "Part revendue de 60,77 % dérivée du bilan matière des 10 622 L, coefficient sur achat revendu ≈ 3,92 et coefficient sur la totalité des achats 2,383251 = 257 209,96 € / 107 924 €, confrontation au repère de 3,2725 (onglets Sources, Cascade, Coefficient, Confrontation, Méthode)"
+    }
+   ]
   }
  ]
 }

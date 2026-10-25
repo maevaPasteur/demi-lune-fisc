@@ -2,7 +2,13 @@
  "meta": {
   "slug": "consommation-superieure-achats",
   "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
-  "grief": "Consommation vendue supérieure aux achats"
+  "grief": "Consommation vendue supérieure aux achats",
+  "limites": [
+   "Le bilan boucle au niveau famille mais non produit par produit : 12 des 65 produits presentent une consommation superieure aux achats (708,3 L cumules, dont le Cubis 426,9 L). Onze se rattachent a un regroupement de libelles ou a un plancher d'achats etabli sur les factures ; seul le Calvados (dose de cuisine) reste discute au fond.",
+   "La dose reellement mise en cuisine (camembert roti, assiette du pere Gregoire) n'est pas au dossier : elle releve de la recette de l'etablissement et sera precisee par declaration de la gerance, non par un calcul. La defense ne deduit aucune dose d'un bilan matiere (pas de 'dose d'equilibre').",
+   "Les 78 factures Intermarche ne sont pas detenues par la societe : la colonne 'Achats Inter-M' vide pour le Calvados ne peut etre tranchee que par le service, qui les a ventilees lui-meme (annexe n 5). La grille produit de cette annexe n'etant pas versee, les developpements qui en dependaient ont ete retires.",
+   "Le stock d'ouverture du Calvados au 31/03/2022 (1 bouteille) est emprunte aux annexes n 1 et n 6 du service ; la societe ne le detient pas."
+  ]
  },
  "sections": [
   {
@@ -3584,7 +3590,7 @@
    "source": "nous",
    "numero": 2,
    "titre": "Notre réponse",
-   "sousTitre": "Dans la colonne que le service calcule lui-même, quatre pourcentages sur 203 sont négatifs, et chacune des douze cellules où les quantités vendues dépassent les disponibles reçoit sa cause. Sur le Calvados, seul produit pour lequel le grief est vraiment soutenu, la comptabilité se referme sans qu’aucune dose n’intervienne."
+   "sousTitre": "Dans la colonne que le service calcule lui-même, quatre pourcentages sur 203 sont négatifs, réels mais mineurs, et chacune des douze cellules où les quantités vendues dépassent les disponibles reçoit sa cause. Au niveau produit, douze boissons consomment plus qu’elles n’achètent : onze se rattachent à un regroupement de libellés ou à un plancher d’achats, le Calvados seul restant discuté, et son écart est une demande de cuisine, non une recette de boisson."
   },
   {
    "kind": "titre",
@@ -3601,7 +3607,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "En lisant les deux colonnes de quantités plutôt que celle des taux, on en trouve **douze**, sur les 226 cellules renseignées. Les huit autres sont des cellules où le pourcentage imprimé a été calculé sur d’autres quantités que celles affichées à côté de lui, ce que le 2.4 établit. Les quatre tableaux comptent 228 cellules, dont deux entièrement vides dans le courrier, la ligne MACON de l’exercice clos au 31/03/2023 et la ligne Champagne Sandrin de l’exercice clos au 31/03/2025."
+   "texte": "En lisant les deux colonnes de quantites plutot que celle des taux, on en trouve **douze**, sur les 226 cellules renseignees que la pièce classe par le sens de l'ecart. Les huit autres sont des cellules ou le pourcentage imprime a ete calcule sur d'autres quantites que celles affichees a cote de lui, ce que le 2.4 etablit. Les quatre tableaux comptent 228 cellules, dont deux entierement vides dans le courrier, la ligne MACON de l'exercice clos au 31/03/2023 et la ligne Champagne Sandrin de l'exercice clos au 31/03/2025."
   },
   {
    "kind": "paragraphe",
@@ -3661,7 +3667,7 @@
       "align": "right"
      },
      {
-      "v": "Matériellement impossible : 12 950 cl valent 173 bouteilles, et l’établissement n’a acheté que 25 bouteilles de ce vin en trois ans. Le service cote d’ailleurs cette cellule à 0,00 % de disparition"
+      "v": "Matériellement impossible : 12 950 cl valent 173 bouteilles, et l’établissement n’a acheté que 24 bouteilles de ce vin (18 L facturés, Lupé-Cholet) en trois ans. Le service cote d’ailleurs cette cellule à 0,00 % de disparition"
      }
     ],
     [
@@ -3984,8 +3990,8 @@
     },
     {
      "label": "Achats de Hautes Côtes de Nuits sur la période",
-     "valeur": "25 bt",
-     "sub": "contre 173 bouteilles portées en vente sur la même ligne",
+     "valeur": "24 bt",
+     "sub": "18 L au bilan (24 bouteilles Lupé-Cholet facturées) contre 173 bouteilles portées en vente (12 950 cl) sur la même ligne",
      "couleur": "gold"
     }
    ]
@@ -4130,7 +4136,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les quatre tableaux appliquent une formule unique : volumes disparus = (quantités disponibles moins quantités vendues) divisé par quantités disponibles. Nous avons recalculé les **203 pourcentages** imprimés à partir des deux colonnes affichées en face de chacun, en admettant un écart de six dixièmes de point pour absorber les arrondis. **170 se retrouvent, 16 portent sur des lignes entièrement à zéro et 17 ne se reproduisent pas.** Le détail cellule par cellule figure en pièce jointe."
+   "texte": "Nous avons recalcule les **203 pourcentages** imprimes a partir des deux colonnes affichees en face de chacun, en admettant un ecart de six dixiemes de point pour absorber les arrondis. **170 se retrouvent a l'identique, 16 portent sur des lignes entierement a zero (rapport indefini), et 17 sont imprimes sur d'autres quantites que celles affichees en regard** ; de ces 17, huit sont de veritables ecarts de calcul et neuf des rapports indefinis (zero au denominateur ou colonne vendue vide). Le detail cellule par cellule figure en piece jointe."
   },
   {
    "kind": "tableau",
@@ -4942,7 +4948,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Cette observation ne déplace aucun pourcentage, puisque les deux colonnes d’une même ligne sont dans la même unité. Elle établit autre chose : la colonne d’unité du tableau n’a pas été contrôlée ligne par ligne. Lues en centilitres, ces lignes donneraient moins de deux bouteilles disponibles par exercice pour un vin livré par cartons entiers. Nous en tirons la même règle pour nous-mêmes : les totaux de disponible cités dans cette page, 895 662 cl et 16 250 unités, excluent ces quatre lignes, les deux lignes de total et la ligne CAFE, qui est en grammes."
+   "texte": "Nous en tirons la meme regle pour nous-memes. La piece classe chaque cellule par le sens de l'ecart : **190 cellules montrent un disponible superieur au vendu, 24 sont a egalite ou vides, et 12 seulement montrent des ventes superieures au disponible**, soit 13 570 cl sur 897 122 cl disponibles dans les trois tableaux en centilitres et 1 044 unites sur 17 658 disponibles dans le tableau des articles vendus a l'unite."
   },
   {
    "kind": "paragraphe",
@@ -5262,11 +5268,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le bouclage se ferme. **73,0 L sont entrés, 73,0 L sont sortis du stock**, et la caisse enregistre au verre **36 doses pour 215,00 € TTC**. Il n’existe, pour ce produit, aucun litre consommé qui n’ait été acheté : ce qui est sorti du stock est exactement ce qui y était entré, et l’inventaire le constate à chaque clôture. Ce bouclage ne clôt pas à lui seul la discussion ; il en pose la borne, et il la pose sans faire intervenir un seul paramètre estimé."
+   "texte": "Le bouclage de stock se ferme : **73,0 L sont entrés, 73,0 L sont sortis du stock**, et la caisse enregistre au verre **36 doses pour 215,00 € TTC**. Ce bouclage repond a une question, le mouvement de stock, et il la repond sans aucun parametre estime : ce qui est sorti du stock est exactement ce qui y etait entre. Mais il ne repond pas, a lui seul, a la question du titre. A la dose de 4 cl que le service retient, les recettes qui emploient du Calvados (verre et cuisine) en demandent **110,7 L** sur trois exercices, soit **37,7 L de plus** que les 73,0 L achetes et stockes. Cet ecart est reel ; le 2.6 au 2.9 etablissent qu'il tient a la dose appliquee en cuisine, et non a une vente de boisson non declaree, puisque le Calvados vendu au verre, seule forme sous laquelle il constitue une recette de boisson, ne pese que **1,44 L**."
   },
   {
    "kind": "paragraphe",
-   "texte": "Il faut en tirer la conséquence que le titre de la partie I appelle. Le Calvados vendu au verre, **seule forme sous laquelle il constitue une recette de boisson**, représente 36 doses sur trois exercices, soit 1,44 L à la dose de 4 cl que le service retient, pour 73,0 L achetés. Le solde est incorporé à des plats, où il est un coût de matière première entrant dans un prix déjà facturé et déjà enregistré en caisse, et non une recette de boisson non déclarée. À aucun des trois exercices la consommation enregistrée sous un bouton de boisson n’a dépassé les achats, ni même approché."
+   "texte": "Il faut en tirer la consequence que le titre de la partie I appelle. Le Calvados vendu au verre, **seule forme sous laquelle il constitue une recette de boisson**, represente 36 doses sur trois exercices, soit 1,44 L a la dose de 4 cl que le service retient, pour 73,0 L achetes. Les 109,3 L restants sont la demande des plats a cette meme dose : un cout de matiere premiere entrant dans un prix deja facture et deja enregistre en caisse, et non une recette de boisson non declaree. La consommation enregistree sous un bouton de **boisson** n'a, a aucun exercice, depasse les achats ni meme approche ; ce qui depasse les achats est une demande de **cuisine**, examinee au 2.6."
   },
   {
    "kind": "kpis",
@@ -5280,21 +5286,21 @@
     {
      "label": "Sorti du stock sur la période",
      "valeur": "73,0 L",
-     "sub": "stock d’ouverture et de clôture d’une bouteille : le bouclage se ferme",
+     "sub": "stock d’ouverture et de clôture d’une bouteille : le mouvement de stock se boucle",
      "couleur": "blue"
     },
     {
      "label": "Vendu au verre",
      "valeur": "36 doses",
-     "sub": "215,00 € TTC sur trois exercices",
+     "sub": "215,00 € TTC sur trois exercices ; seule forme de recette de boisson",
      "highlight": true,
      "couleur": "teal"
     },
     {
-     "label": "Litres consommés sans avoir été achetés",
-     "valeur": "0",
-     "sub": "factures, inventaires et caisse se recoupent",
-     "couleur": "teal"
+     "label": "Demande des recettes à la dose de 4 cl",
+     "valeur": "110,7 L",
+     "sub": "dont 1,44 L vendus au verre (recette) et 109,3 L en cuisine ; pour 73,0 L achetés",
+     "couleur": "gold"
     }
    ]
   },
@@ -5722,35 +5728,27 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La proposition de rectifications décrit elle-même la source du disponible, page 12 : « à partir des factures d’achats des fournisseurs de boissons (**Franche Comté Boissons Service et Intermarché**), le service a pu établir pour chaque type de boissons, et chaque facture, les quantités achetées. Ce sont les annexes n° 2, n° 3 n° 4 et n° 5 qui compilent toutes ces informations. L’annexe n° 6 récapitule les achats par type de boissons et grâce aux stocks, établit donc les quantités disponibles, également par type de boissons. » Le disponible n’est donc pas une mesure : c’est le produit d’une ventilation, et il ne vaut que ce que valent les colonnes de cette ventilation. Deux défauts s’y lisent, et le premier ne dépend d’aucune pièce que la société ne détiendrait pas."
+   "texte": "La proposition de rectifications décrit elle-même la source du disponible, page 12 : « à partir des factures d’achats des fournisseurs de boissons (**Franche Comté Boissons Service et Intermarché**), le service a pu établir pour chaque type de boissons, et chaque facture, les quantités achetées. Ce sont les annexes n° 2, n° 3 n° 4 et n° 5 qui compilent toutes ces informations. L’annexe n° 6 récapitule les achats par type de boissons et grâce aux stocks, établit donc les quantités disponibles, également par type de boissons. » Le disponible n’est donc pas une mesure : c’est le produit d’une ventilation, et il ne vaut que ce que valent les colonnes de cette ventilation. Son défaut se lit sans détenir aucune pièce que la société n’aurait pas : la colonne du second fournisseur y est vide pour le Calvados."
   },
   {
    "kind": "titre",
-   "texte": "Premier défaut : une contenance de 70 cl pour un produit facturé et inventorié en 75 cl"
+   "texte": "Le disponible du Calvados repose sur une colonne « Achats Inter-M » laissée vide"
   },
   {
    "kind": "paragraphe",
-   "texte": "L’annexe n° 1 porte, produit par produit, une colonne « Volume En centilitre » qui sert à convertir des bouteilles en volume. Le **Porto** y est retenu à **70,00 cl**, et les annexes n° 2 et n° 6 reprennent le même libellé, « Porto Sandman 70 cl ». Or les **173 bouteilles** de porto achetées sur la période sont toutes des **bouteilles de 75 cl** : Porto Sandeman rouge, Porto Offley Ruby, Porto Sandeman blanc, sous cinq désignations de facture différentes. Les trois inventaires de clôture les portent également en 75 cl. L’écart est de 5 cl par bouteille, soit **865 cl** retranchés du disponible avant toute comparaison. Le Porto est précisément l’une des lignes que le service oppose page 51, et il la crédite de 90,87 %, 93,25 % puis 92,81 % de « volumes disparus »."
-  },
-  {
-   "kind": "titre",
-   "texte": "Second défaut : la grille des achats du second fournisseur n’a pas de case pour les eaux-de-vie"
+   "texte": "Les deux fournisseurs ne sont pas traites de la meme facon. Pour Franche-Comte Boissons Services, les annexes n 2, n 3 et n 4 ouvrent une colonne par reference et le Calvados y a la sienne. Pour Intermarche, le disponible repose sur l'annexe n 5, que la societe ne detient pas : elle n'en connait que les montants des 78 factures, par l'OCR de la proposition. La grille produit de cette annexe n'etant pas versee, nous n'avancons ici aucun decompte de colonnes ni de lignes : nous ne retenons que ce qui est etabli."
   },
   {
    "kind": "paragraphe",
-   "texte": "Les deux fournisseurs ne sont pas traités de la même façon. Pour Franche-Comté Boissons Services, les annexes n° 2, n° 3 et n° 4 ouvrent une colonne par référence, environ cent trente, et le Calvados y a la sienne. Pour Intermarché, l’annexe n° 5 ventile les **78 factures** sur une grille de **21 colonnes**, et de vingt et une seulement : 1664 33 cl, 1664 25 cl, 1er Prix Crème cassis 100 cl, IDS Crème cassis 100 cl, Vedrenne Crème cassis 100 cl, Perrault Crème Dabot 70 cl, H Guyot Crème cassis 100 cl, Perrier 33 cl, Volvic Juicy 100 cl, Volvic Zest Citron 100 cl, Volvic Citron 33 cl, Transition Pur Jus 100 cl, Sirop Menthe 50 cl, Sirop Pulco 70 cl, IGP Terre Mid RS Grai, IGPOC Rosé Grenache, IGPOC Cambras Orme Cins, IGPOC Syrah Rosé Exp, Vieux Pape Rosé 500 cl, Vin Jaune 62,50 cl, Pontarlier 100 cl. La grille s’arrête là : **aucune colonne « autres », aucune colonne « divers »**, et les colonnes sont en quantités, sans montant par produit."
+   "texte": "Ce qui est etabli, sur la seule piece disponible, est que ce magasin n'etait pas un fournisseur de boissons sans alcool. Les **78 factures Intermarche** totalisent **9 834,17 € HT** ; sur les 67 dont les trois montants se recoupent exactement a l'OCR (HT + TVA = TTC), le **taux moyen de TVA ressort a 9,69 %** (mediane 9,53 %, maximum 14,24 %), tres au-dessus des 5,5 % applicables aux boissons non alcoolisees. Des alcools ont donc ete achetes dans ce magasin. Reste a savoir si le Calvados en fait partie."
   },
   {
    "kind": "paragraphe",
-   "texte": "Aucune de ces 21 colonnes ne correspond à un Calvados, un whisky, une vodka, un cognac, un rhum, un Grand Marnier, un Get, un génépi, un Baileys, un marc ou une eau-de-vie de fruit. La grille n’est pourtant pas fermée aux alcools : elle comporte quatre colonnes de crème de cassis, deux de bière, cinq de vins rosés, une de vin jaune et une de Pontarlier, qui est un anis. Ce magasin n’est donc pas, pour cet établissement, un fournisseur de boissons sans alcool : c’est la grille, et elle seule, qui s’arrête avant les eaux-de-vie."
+   "texte": "Le point decisif ne depend pas de cette grille. La colonne « Achats Inter-M » de l'annexe n 6, qui alimente le disponible, est **vide pour le Calvados** sur les trois exercices (tableau ci-dessous) : son disponible se reduit donc au seul achat Franche-Comte Boissons Services corrige du stock. Deux lectures sont possibles, et une seule peut etre tranchee par celui qui detient les factures : soit aucun Calvados n'a ete achete chez Intermarche, soit la ventilation du service ne l'y a pas repris."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le croisement des deux annexes le confirme exactement. Sur les **152 lignes d’articles** que l’annexe n° 6 récapitule, la colonne « Achats Inter-M » n’est renseignée que pour **onze articles**, les trois exercices confondus, et chacune des valeurs lisibles s’y retrouve **à l’unité près** dans les totaux de l’annexe n° 5 : la ligne « 1664 33 cl » porte la somme des colonnes 1664 33 cl et 1664 25 cl (210, 120 puis 36), la ligne « Crème Cassis 100 cl » la somme des quatre colonnes de crème de cassis (14, 20 puis 47), la ligne « BIB 5 L Provence Rosé » la somme des cinq colonnes de rosé (8, 8 puis 22), et ainsi de suite pour le Perrier, le Pontarlier, le vin jaune, le sirop Pulco et le jus Granini. Deux cellules seulement sont illisibles sur le scan, et elles portent l’une et l’autre sur un produit qui possède une colonne. **Aucun produit dépourvu de colonne dans l’annexe n° 5 ne porte jamais le moindre achat Intermarché dans l’annexe n° 6.**"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce n’est donc pas la lecture des factures qui commande le contenu du disponible : c’est la présence ou l’absence d’une colonne. Les **trente-deux lignes d’eaux-de-vie, de spiritueux et de liqueurs** de l’annexe n° 6 ont toutes, sur les trois exercices, une colonne « Achats Inter-M » vide, sans une seule exception. Le Calvados est de celles-là, et son disponible se réduit exactement à l’achat Franche-Comté Boissons Services corrigé du stock."
+   "texte": "Tant que cette verification n'est pas faite, le disponible du Calvados oppose par le service reste un minorant possible : un ecart calcule a partir d'un minorant d'achats ne peut pas, a lui seul, fonder le rejet d'une comptabilite."
   },
   {
    "kind": "tableau",
@@ -5911,10 +5909,6 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La ventilation perd d’ailleurs du volume en chemin, y compris pour des produits qui ont une colonne. La Volvic Juicy, la Volvic Zest Citron, la Volvic Citron 33 cl et le sirop de menthe portent, dans l’annexe n° 5, des achats que l’annexe n° 6 ne reprend sur aucune ligne : les colonnes de l’annexe n° 5 totalisent 265, 216 puis 306 unités quand l’annexe n° 6 n’en reprend que 238, 166 puis 174, soit **209 unités** ventilées par le service qui n’atteignent jamais son disponible. La grille ne s’arrête donc pas seulement avant les eaux-de-vie, elle ne se déverse pas entièrement."
-  },
-  {
-   "kind": "paragraphe",
    "texte": "Il faut enfin mesurer l’enjeu. La surconsommation de Calvados que le service retient sur trois exercices est de **2 017 cl, soit 20,2 L**. Au prix des factures de la période, 16,82 € le litre, elle représente **339 € HT**. Vingt bouteilles achetées au supermarché en trois ans, environ sept par an, effacent le grief en entier."
   },
   {
@@ -5925,7 +5919,7 @@
    "kind": "alerte",
    "couleur": "orange",
    "titre": "Une vérification que le service est seul à pouvoir faire",
-   "texte": "Les 78 factures Intermarché sont entre les mains du service, qui les a ventilées lui-même sur les 21 colonnes de son annexe n° 5. Il lui suffit de les rouvrir pour dire si elles comportent des eaux-de-vie. La société, qui ne les a pas, ne peut ni le confirmer ni le démentir."
+   "texte": "Les 78 factures Intermarché sont entre les mains du service, qui les a ventilées lui-même dans son annexe n° 5. Il lui suffit de les rouvrir pour dire si elles comportent des eaux-de-vie. La société, qui ne les a pas, ne peut ni le confirmer ni le démentir."
   },
   {
    "kind": "titre",
@@ -6179,7 +6173,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le rapprochement complet a été fait, produit par produit, en reliant chaque libellé de **caisse** à sa **facture** fournisseur et à l’**inventaire**. Agrégé par famille, il ne laisse subsister qu’un seul déficit, celui des eaux-de-vie, dont le 2.5 et le 2.7 viennent d’établir qu’il tient entièrement au Calvados et à la dose appliquée en cuisine. Le tableau conserve délibérément la dose de 4 cl retenue par le service, c’est-à-dire l’hypothèse qui **minore** notre excédent, et **il n’applique aucune décote** : ce sont les achats facturés bruts, la consommation calculée et la variation d’inventaire, rien d’autre."
+   "texte": "Agrege par famille, il ne laisse subsister qu'un seul deficit, celui des eaux-de-vie, qui tient au Calvados et a la dose de cuisine (2.5 a 2.9). Mais le service reproche precisement a la reponse de « globaliser » : il faut donc descendre au produit, et le faire franchement. Produit par produit, **douze boissons sur soixante-cinq consomment plus qu'elles n'achetent**, pour **718,1 L cumules** ; le tableau ci-apres les reprend une a une. Trois autres produits sont en deficit de bilan par la seule variation d'inventaire, sans consommation superieure aux achats. Le tableau conserve la dose de 4 cl retenue par le service, celle qui **minore** notre excedent, et **il n'applique aucune decote**."
   },
   {
    "kind": "tableau",
@@ -6420,7 +6414,7 @@
       "align": "right"
      },
      {
-      "v": "133,2 L",
+      "v": "123,4 L",
       "align": "right"
      },
      {
@@ -6428,11 +6422,11 @@
       "align": "right"
      },
      {
-      "v": "-45,1 L",
+      "v": "-35,3 L",
       "align": "right"
      },
      {
-      "v": "-48,3 %",
+      "v": "-37,8 %",
       "align": "right"
      }
     ],
@@ -6445,7 +6439,7 @@
       "align": "right"
      },
      {
-      "v": "7 360,9 L",
+      "v": "7 351,1 L",
       "align": "right"
      },
      {
@@ -6453,11 +6447,11 @@
       "align": "right"
      },
      {
-      "v": "+3 047,8 L",
+      "v": "+3 057,6 L",
       "align": "right"
      },
      {
-      "v": "+28,7 %",
+      "v": "+28,8 %",
       "align": "right"
      }
     ]
@@ -6465,15 +6459,423 @@
   },
   {
    "kind": "note",
-   "texte": "Ce bilan est établi sur la consommation calculée, alcool de cuisine compris et Calvados compté à la dose de 4 cl retenue par le service. Ce sont exactement les 10 622,0 L d’achats, 7 360,9 L de consommation, 213,3 L de variation de stock et 3 047,8 L de bilan net que le service reproduit lui-même page 51."
+   "texte": "Ce bilan est etabli sur la consommation calculee, alcool de cuisine compris et Calvados compte a la dose de 4 cl retenue par le service, mais a sa consommation itemisee et verifiee de **110,7 L** (1,44 L au verre, 109,26 L en cuisine), et non aux 120,5 L non reconcilies de la feuille R1. Le service reproduit page 51 un bilan de 10 622,0 L d'achats, 7 360,9 L de consommation et 3 047,8 L nets ; la correction de la ligne Calvados ramene la consommation a 7 351,1 L et porte l'excedent a **3 057,6 L**, soit une difference de 9,8 L qui joue en faveur de la societe."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les 15 produits en déficit de bilan, un par un : nature du déficit et traitement (consommation Calvados itemisée à 110,7 L)",
+   "minWidth": 1300,
+   "colonnes": [
+    {
+     "label": "Produit"
+    },
+    {
+     "label": "Achats (L)",
+     "align": "right"
+    },
+    {
+     "label": "Conso (L)",
+     "align": "right"
+    },
+    {
+     "label": "Conso − achats (L)",
+     "align": "right"
+    },
+    {
+     "label": "Nature"
+    },
+    {
+     "label": "Traitement établi sur pièces"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Cubis de vin (couleur non précisée)"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "426,9",
+      "align": "right"
+     },
+     {
+      "v": "+426,9",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Regroupement : bouton pichet/BIB ; achats sous les vins « maison » en BIB (rosé, Aligoté, Chusclan), tous largement excédentaires. Même traitement que le « Mouton Cadet »"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Béthanie"
+     },
+     {
+      "v": "214,5",
+      "align": "right"
+     },
+     {
+      "v": "309,9",
+      "align": "right"
+     },
+     {
+      "v": "+95,4",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Plancher : 385,5 L facturés (demi-bouteilles 37,5 cl sous libellé distinct) contre 214,5 retenus ; achats réels supérieurs à la consommation"
+     }
+    ],
+    [
+     {
+      "v": "Gewurztraminer"
+     },
+     {
+      "v": "6,0",
+      "align": "right"
+     },
+     {
+      "v": "78,9",
+      "align": "right"
+     },
+     {
+      "v": "+72,9",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Plancher : 102,0 L facturés (millésimes distincts) contre 6,0 retenus"
+     }
+    ],
+    [
+     {
+      "v": "Chablis"
+     },
+     {
+      "v": "18,0",
+      "align": "right"
+     },
+     {
+      "v": "73,7",
+      "align": "right"
+     },
+     {
+      "v": "+55,7",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Plancher : 104,2 L facturés contre 18,0 retenus"
+     }
+    ],
+    [
+     {
+      "v": "Calvados"
+     },
+     {
+      "v": "73,0",
+      "align": "right"
+     },
+     {
+      "v": "110,7",
+      "align": "right"
+     },
+     {
+      "v": "+37,7",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Dose de cuisine (2.5 à 2.9) : charge de matière d’un plat déjà facturé, pas une recette de boisson. Seul point non clos par une pièce"
+     }
+    ],
+    [
+     {
+      "v": "Miraval Rosé"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "6,0",
+      "align": "right"
+     },
+     {
+      "v": "+6,0",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Regroupement : bouton rosé ; achats sous les autres rosés (excédentaires)"
+     }
+    ],
+    [
+     {
+      "v": "Hautes Côtes de Beaune blanc"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "4,5",
+      "align": "right"
+     },
+     {
+      "v": "+4,5",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Servi sur le stock de HC de Nuits blanc"
+     }
+    ],
+    [
+     {
+      "v": "Liqueur de Cerise"
+     },
+     {
+      "v": "12,7",
+      "align": "right"
+     },
+     {
+      "v": "16,1",
+      "align": "right"
+     },
+     {
+      "v": "+3,4",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Famille des liqueurs excédentaire de 132,5 L ; proche du Guignolet (liqueur de cerise)"
+     }
+    ],
+    [
+     {
+      "v": "Marc du Jura"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "2,4",
+      "align": "right"
+     },
+     {
+      "v": "+2,4",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Achats sous Marc de Bourgogne (+3,3 L)"
+     }
+    ],
+    [
+     {
+      "v": "Eau de Vie de Poire"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "1,7",
+      "align": "right"
+     },
+     {
+      "v": "+1,7",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Achats sous Liqueur de Poire (+11,4 L) et Mirabelle"
+     }
+    ],
+    [
+     {
+      "v": "Get 31"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,9",
+      "align": "right"
+     },
+     {
+      "v": "+0,9",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Achats sous Get 27 (+8,0 L)"
+     }
+    ],
+    [
+     {
+      "v": "Eau de Vie Framboise"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,8",
+      "align": "right"
+     },
+     {
+      "v": "+0,8",
+      "align": "right"
+     },
+     {
+      "v": "conso > achats"
+     },
+     {
+      "v": "Achats sous Mirabelle (+3,8 L)"
+     }
+    ],
+    [
+     {
+      "v": "Guignolet"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "inventaire seul"
+     },
+     {
+      "v": "Déficit de bilan par le seul inventaire (1,4 L) : aucune consommation sans achat"
+     }
+    ],
+    [
+     {
+      "v": "Grand Marnier"
+     },
+     {
+      "v": "8,4",
+      "align": "right"
+     },
+     {
+      "v": "8,1",
+      "align": "right"
+     },
+     {
+      "v": "-0,3",
+      "align": "right"
+     },
+     {
+      "v": "inventaire"
+     },
+     {
+      "v": "Consommation inférieure aux achats ; déficit par la variation d’inventaire"
+     }
+    ],
+    [
+     {
+      "v": "Martini Blanc"
+     },
+     {
+      "v": "13,0",
+      "align": "right"
+     },
+     {
+      "v": "12,6",
+      "align": "right"
+     },
+     {
+      "v": "-0,4",
+      "align": "right"
+     },
+     {
+      "v": "inventaire"
+     },
+     {
+      "v": "Consommation inférieure aux achats ; frontière d’exercice (déjà traité en 2.1)"
+     }
+    ],
+    [
+     {
+      "v": "Total des 15 produits en déficit de bilan",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": "+708,3",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "12 produits « conso > achats »",
+      "fw": 700
+     },
+     {
+      "v": "dont 11 rattachés à un regroupement ou à un plancher d’achats ; le Calvados seul reste discuté au fond",
+      "fw": 700
+     }
+    ]
+   ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Le seul déficit de famille est celui des eaux-de-vie, et il est celui du Calvados. Hors Calvados, la famille est **excédentaire de 3,4 L** : 20,3 L achetés, 12,7 L consommés et 4,2 L en stock. Toutes familles confondues, l’établissement a acheté **3 047,8 L de plus qu’il n’a servi**, soit **28,7 %** de ses achats. Cet excédent n’efface pas les écarts constatés ligne à ligne ; il établit en revanche qu’aucun volume n’est disponible, sur l’ensemble, pour alimenter une reconstitution de recettes."
+   "texte": "Le cas le plus lourd est le **Cubis de vin**, porté par la feuille produit à **426,9 L consommés pour 0 L acheté**. Il appelle exactement le traitement que le service a lui-même admis pour le Beaune : un **bouton de caisse n’est pas un libellé de facture**. « Cubis de vin » est la touche sous laquelle sont enregistrés les vins servis au pichet et au verre tirés des **bag-in-box**, dont les achats sont facturés, eux, sous les références « maison » (Côtes de Provence rosé maison, Bourgogne Aligoté maison, Côtes du Rhône rouge maison), toutes très excédentaires et regroupées sous la famille des vins tranquilles. Le rapprochement caisse, facture, inventaire rattache ce bouton à ces références ; il n’existe pas de cubis acheté hors facture. C’est la même confusion de libellé que celle que le service concède page 48 sur le Beaune."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service objecte que la réponse ferait « correspondre mathématiquement le volume disponible avec celui consommé » au moyen d’une première réduction de 10 622 litres à 9 079 litres puis d’une décote de 14,50 %, « totalement incohérente économiquement » (p. 52). Le tableau ci-dessus répond au reproche sur son terrain : **il ne comporte ni l’une ni l’autre**. Il ne retranche rien, il compare des achats facturés à une consommation mesurée, et il laisse un excédent de 3 047,8 L. Le taux de 14,50 % et les trois taux de 5 % retenus pour les offerts, la consommation du personnel et la perte, que le service conteste aux pages 52 et 53, sont chiffrés et documentés dans les parties de la présente réponse qui leur sont consacrées."
+   "texte": "Le tableau ci-dessus répond au reproche de « globalisation » sur son propre terrain, au niveau du produit. Sur les quinze déficits de bilan, **trois** (Guignolet, Grand Marnier, Martini Blanc) ne sont pas des consommations supérieures aux achats : ils tiennent à la seule variation d’inventaire, la consommation y restant inférieure ou égale aux achats. Les **douze** autres totalisent **708,3 L** de consommation au-delà des achats, mais onze se rattachent soit à un **regroupement de libellés** (Cubis, Miraval, Hautes Côtes de Beaune blanc, Marc du Jura, Eau-de-vie de Poire, Get 31, Eau-de-vie Framboise, Liqueur de Cerise), soit à un **plancher d’achats** établi sur les factures (Chablis, Gewurztraminer, Arbois Béthanie, pour 353,2 L d’achats facturés que le bilan ne reprend pas). Ne reste, au fond, que le **Calvados**, dont le 2.5 au 2.9 établissent que son déficit est une demande de cuisine et non une recette de boisson."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le seul deficit de famille est celui des eaux-de-vie, et il tient au Calvados. Hors Calvados, la famille est **excedentaire de 3,4 L** : 20,3 L achetes, 12,7 L consommes, 4,2 L en stock. Toutes familles confondues, l'etablissement a achete **3 057,6 L de plus qu'il n'a servi**, soit **28,8 %** de ses achats. Cet excedent n'efface pas les douze deficits produit, qui recoivent chacun leur cause ci-dessus ; il etablit en revanche qu'aucun volume net n'est disponible, sur l'ensemble, pour alimenter une reconstitution de recettes."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service objecte que la réponse ferait « correspondre mathématiquement le volume disponible avec celui consommé » au moyen d’une première réduction de 10 622 litres à 9 079 litres puis d’une décote de 14,50 %, « totalement incohérente économiquement » (p. 52). Le tableau ci-dessus répond au reproche sur son terrain : **il ne comporte ni l’une ni l’autre**. Il ne retranche rien, il compare des achats facturés à une consommation mesurée, et il laisse un excédent de 3 057,6 L. Le taux de 14,50 % et les trois taux de 5 % retenus pour les offerts, la consommation du personnel et la perte, que le service conteste aux pages 52 et 53, sont chiffrés et documentés dans les parties de la présente réponse qui leur sont consacrées."
   },
   {
    "kind": "paragraphe",
@@ -6515,11 +6917,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Sur la comptabilité matière elle-même.** Le même document énumère les comptabilités qui ne peuvent pas être rejetées globalement, et le dernier cas de la liste décrit la situation que le 2.10 établit : « ne peut être rejetée globalement une comptabilité : [...] dont les résultats sont corroborés par les indications tirées de la reconstitution d’une comptabilité-matières et les explications fournies au sujet de la casse, de la perte ou du vol de certains articles » (§ 110, quatrième tiret). C’est l’objet même du 2.10 : le rapprochement produit par produit des factures, de la caisse et des inventaires laisse 3 047,8 L d’excédent, et les postes de perte, d’offert et de consommation sans vente sont chiffrés un par un."
+   "texte": "**Sur la comptabilité matière elle-même.** Le même document énumère les comptabilités qui ne peuvent pas être rejetées globalement, et le dernier cas de la liste décrit la situation que le 2.10 établit : « ne peut être rejetée globalement une comptabilité : [...] dont les résultats sont corroborés par les indications tirées de la reconstitution d’une comptabilité-matières et les explications fournies au sujet de la casse, de la perte ou du vol de certains articles » (§ 110, quatrième tiret). C’est l’objet même du 2.10 : le rapprochement produit par produit des factures, de la caisse et des inventaires laisse 3 057,6 L d’excédent, et les postes de perte, d’offert et de consommation sans vente sont chiffrés un par un."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Sur l’exhaustivité du relevé d’achats.** La même doctrine pose la condition à laquelle un dépouillement d’achats peut être opposé au contribuable : « Un dépouillement exhaustif des achats d’un exercice parait pouvoir être utilement opposé au contribuable si, après l’application d’une méthode complète et précise, il conduit à constater l’existence de discordances importantes de chiffres d’affaires » (§ 140). Le disponible opposé ici ne remplit ni l’une ni l’autre condition : il n’est pas exhaustif, puisque sur les trente-deux lignes d’eaux-de-vie, de spiritueux et de liqueurs de l’annexe n° 6 la colonne du second fournisseur est vide sans exception, et que 209 unités ventilées à l’annexe n° 5 n’atteignent jamais l’annexe n° 6 ; et il n’est pas précis, puisqu’il convertit en 70 cl des bouteilles facturées et inventoriées en 75 cl."
+   "texte": "**Sur l’exhaustivité du relevé d’achats.** La même doctrine pose la condition à laquelle un dépouillement d’achats peut être opposé au contribuable : « Un dépouillement exhaustif des achats d’un exercice parait pouvoir être utilement opposé au contribuable si, après l’application d’une méthode complète et précise, il conduit à constater l’existence de discordances importantes de chiffres d’affaires » (§ 140). Le disponible opposé ici ne remplit pas la condition d’exhaustivité : la colonne du second fournisseur (Intermarché) est **vide pour le Calvados** sur les trois exercices, alors que les 78 factures de ce magasin, que le service détient et a ventilées lui-même dans son annexe n° 5, totalisent **9 834,17 € HT** à un **taux moyen de TVA de 9,69 %**, bien au-dessus des 5,5 % applicables aux boissons sans alcool. Tant que le service n’a pas dit si ces factures comportent du Calvados, le relevé d’achats qu’il oppose n’est pas établi comme complet, et il convertit par ailleurs en 70 cl le Porto qu’il facture et inventorie en 75 cl, sans que la contenance retenue soit justifiée."
   },
   {
    "kind": "paragraphe",
@@ -6538,7 +6940,7 @@
    "source": "nous",
    "numero": 3,
    "titre": "Ce que cela fait tomber",
-   "sousTitre": "Trois fois répétée, la conclusion de la partie I ne repose plus sur aucune quantité mesurée."
+   "sousTitre": "Trois fois répétée, la conclusion de la partie I ne repose, en fait de ventes supérieures aux achats, que sur quatre écarts mineurs et sur une estimation de dose de cuisine que le service produit lui-même."
   },
   {
    "kind": "paragraphe",
@@ -6554,7 +6956,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Sur le Calvados, enfin, qui ne figure sur aucune de ces lignes et qui porte pourtant tout le grief, la comptabilité se referme sur elle-même : **73,0 L achetés et livrés, 73,0 L sortis du stock, 36 doses vendues au verre pour 215,00 € TTC**, achats et stocks identiques à ceux que le service retient. Il n’y a pas un litre consommé qui n’ait été acheté. Ce qui dépasse les achats est une estimation de cuisine, et c’est le service qui la produit : il retranche 93 L d’un volume qu’il chiffre à 73 L, avec une dose qu’il annonce à 4 cl et dont sa propre colonne donne 3,39, qu’il a lui-même abaissée de 5 à 4 pour ce seul alcool parce que l’incohérence était trop importante, et dont il écrit page 66 qu’il serait « en droit d’estimer » qu’elle est « totalement erronée »."
+   "texte": "Sur le Calvados, enfin, qui ne figure sur aucune de ces lignes et qui porte pourtant tout le grief, le mouvement de stock se boucle : **73,0 L achetes et livres, 73,0 L sortis du stock, 36 doses vendues au verre pour 215,00 € TTC**, achats et stocks identiques a ceux que le service retient. Ce qui depasse les 73,0 L achetes n'est pas une vente : c'est la demande des plats a la dose de 4 cl, soit 110,7 L recettes comprises, dont 109,3 L de cuisine. Et c'est le service qui produit cet ecart : il retranche 93 L d'un volume qu'il chiffre a 73 L, avec une dose qu'il annonce a 4 cl et dont sa propre colonne donne 3,39, qu'il a lui-meme abaissee de 5 a 4 pour ce seul alcool parce que l'incoherence etait trop importante, et dont il ecrit page 66 qu'il serait « en droit d'estimer » qu'elle est « totalement erronee »."
   },
   {
    "kind": "paragraphe",
@@ -6570,29 +6972,37 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**« La société n’a répondu que sur quatre boissons sur les 203 pourcentages imprimés. »** Les 203 pourcentages ne sont pas 203 anomalies : après le regroupement des libellés — que le service concède —, le titre « consommation vendue supérieure aux achats » n’est vérifié dans aucune cellule, aucune ne reste sans cause établie, et les 4 lignes négatives s’expliquent par des unités mélangées (bouteilles sous un intitulé en centilitres, colonne CAFE divisée par trois sans qu’aucune tasse ne disparaisse)."
+   "texte": "Les 203 pourcentages ne sont pas 203 anomalies : apres le regroupement des libelles, que le service concede, le titre « consommation vendue superieure aux achats » n'est verifie, dans la colonne que le service calcule lui-meme, que par **quatre pourcentages negatifs**. Ces quatre-la ne sont pas un artefact d'unites melangees : ce sont des **calculs exacts du service**, de veritables depassements, mais mineurs, le Martini Blanc en 2023 et en 2025, la Vittel Evian 50 cl en 2024 et le Cidre Brut 75 cl en 2025, et chacun recoit sa cause sur piece (frontiere d'exercice, stock de cloture laisse vide dans l'annexe n 1). La ligne CAFE, elle, est bien un probleme d'unite, mais elle est **positive** (43,52 %, 76,84 %, 80,96 %) : elle ne figure pas parmi les quatre negatives. En lisant les colonnes de quantites on trouve douze cellules ou les ventes depassent le disponible : six sont dementies par les pourcentages que le service imprime lui-meme, quatre se reconstituent sur pieces, une se lit dans ses chiffres de l'exercice precedent, et la derniere, la Haute Cote de Nuits, porte en vente cent soixante-treize bouteilles d'un vin dont vingt-quatre ont ete achetees en trois ans."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Le Calvados prouve une vente sans achat. »** Sur la période, 73,0 L ont été achetés et livrés, 73,0 L sont sortis du stock, 36 doses ont été vendues au verre : **0 litre** consommé sans avoir été acheté. Le service retranche pourtant 93 L d’un volume disponible de 73 L — une impossibilité matérielle qui vient d’une contenance de 70 cl appliquée à un produit facturé et inventorié au litre."
+   "texte": "Sur la periode, 73,0 L ont ete achetes et livres, 73,0 L sont sortis du stock, et seules **36 doses, soit 1,44 L**, ont ete vendues au verre, pour 215,00 € TTC. Le surplus de demande, 109,3 L a la dose de 4 cl, part en cuisine : c'est une charge de matiere d'un plat deja facture, pas une recette de boisson. Le service retranche d'ailleurs 93 L d'un volume disponible de 73 L, une impossibilite materielle, et retient une dose de flambage dont sa propre colonne donne 3,39 cl."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Les taux de perte, d’offert et de consommation du personnel retenus sont hors norme. »** Le bilan matière complet, produit par produit, est équilibré ou excédentaire ; le service n’établit, au terme de ce bilan, aucun litre consommé sans avoir été acheté. Un taux ne peut être « hors norme » que mesuré contre une consommation réelle, que le bilan matière contredit."
+   "texte": "Le bilan matiere complet laisse, toutes familles confondues, un excedent de **3 057,6 L (28,8 % des achats)**. Produit par produit, douze boissons consomment plus qu'elles n'achetent : onze se rattachent a un regroupement de libelles ou a des achats factures non repris au bilan (2.10), la douzieme est le Calvados de cuisine. Au terme de ce bilan, aucun **volume net** n'est disponible pour alimenter une reconstitution de recettes ; un taux de perte, d'offert ou de consommation du personnel ne peut donc etre « hors norme » qu'au regard d'une consommation que ce bilan contredit."
   },
   {
    "kind": "piecejointe",
-   "intro": "Contrôles reproductibles de la partie I. Le premier fichier boucle le Calvados sur les seules factures, inventaires et données de caisse, sans faire intervenir aucune dose ; il donne la cause de chacune des douze cellules où les quantités vendues dépassent les quantités disponibles ; il reprend le bloc des cidres, où le pourcentage imprimé désigne lui-même le décalage de la colonne des ventes ; il confronte la ligne CAFE aux tasses réellement enregistrées ; il établit l’unité réelle de chaque ligne du tableau des vins et le détail des millésimes de l’Arbois Béthanie ; et il chiffre poste par poste l’hypothèse d’extension des corrections de dose (script scripts/reponse1-conso-achats-bouclage.py). Le second recalcule les 203 pourcentages des quatre tableaux du service et établit le bilan matière par famille et par produit (script scripts/reponse1-conso-achats-controles.py).",
+   "intro": "Contrôles reproductibles de la partie I. La pièce principale, à formules, recompose le bilan matière **produit par produit** à partir des achats facturés, de la consommation mesurée et des inventaires : bilan net et sens de l’écart par formule, sous-totaux par famille, consommation du Calvados itemisée par libellé de caisse (110,7 L : 1,44 L au verre, 109,26 L en cuisine, aucune « dose d’équilibre » déduite d’un bilan), et traitement des quinze produits déficitaires un par un. Les trois pièces R1 restent versées en complément : bouclage de stock du Calvados, cause des douze cellules, bloc des cidres, ligne CAFE, et classement des cellules par sens de l’écart.",
    "fichiers": [
     {
+     "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
+     "label": "R2 — Bilan matière produit par produit (à formules), Calvados itemisé, 15 produits déficitaires"
+    },
+    {
      "fichier": "pieces-reponse-1/R1-conso-achats-bouclage.xlsx",
-     "label": "Bouclage du Calvados, cause des douze cellules, bloc des cidres, unité des lignes, ligne CAFE et postes de doses"
+     "label": "R1 — Bouclage du Calvados, cause des douze cellules, bloc des cidres, ligne CAFE"
     },
     {
      "fichier": "pieces-reponse-1/R1-conso-achats-controles.xlsx",
-     "label": "Contrôles arithmétiques et bilan matière (partie I)"
+     "label": "R1 — Contrôles arithmétiques et classement des cellules par sens de l’écart"
     }
    ]
   }
- ]
+ ],
+ "entete": {
+  "reponseCourte": "Le titre « consommation vendue superieure aux achats » n'est verifie, sur les 203 pourcentages du service, que par quatre ecarts negatifs, reels mais mineurs (Martini, Vittel 50 cl, Cidre Brut), chacun avec sa cause. Au niveau produit, 12 boissons sur 65 consomment plus qu'elles n'achetent (708 L, dont le Cubis 426,9 L) : onze se rattachent a un regroupement de libelles ou a des achats factures non repris au bilan ; seul le Calvados reste discute, et son ecart est une estimation de dose de cuisine, non une recette. Globalement, l'etablissement a achete 3 057,6 L de plus qu'il n'a servi (28,8 % des achats).",
+  "statut": "partiel"
+ }
 }

@@ -1,7 +1,19 @@
 {
  "meta": {
   "slug": "ventes-sans-achat",
-  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)"
+  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
+  "limites": [
+   "Faute d’inventaire d’ouverture au 01/04/2022, aucun bilan matière fermé ne peut être établi avec certitude pour l’exercice 2022-2023 : la démonstration repose sur la comparaison des achats facturés et des ventes de caisse, et sur les inventaires de clôture produits.",
+   "Le bilan matière du Bordeaux Supérieur (bouton « MOUTON CADET ») laisse, au 31/03/2023, une bouteille (75 cl, soit 30,00 € HT au prix de vente) sortie sans vente enregistrée : 11 achetées moins 9 vendues font 2 bouteilles attendues, l’inventaire n’en porte qu’une. Nous l’assumons comme sortie non tracée (casse, offert, consommation ou vente non enregistrée) sans pouvoir la documenter.",
+   "375 cl de Hautes Côtes de Beaune blanc ont été tirés au pichet et enregistrés sous le bouton « PICHET C. DE BEAUNE B » au-delà des achats portés sous ce code : c’est un défaut de paramétrage du bouton, que nous ne contestons pas ; il est couvert en volume par le sur-stock de Hautes Côtes de Nuits blanc, mais aucune pièce primaire ne relie formellement les deux.",
+   "La comparaison « achats facturés supérieurs aux ventes » n’exclut pas, à elle seule, des achats réglés en espèces hors facture : si la comptabilité est écartée pour graves irrégularités, l’article L. 192, second alinéa, du livre des procédures fiscales renverse la charge de la preuve sur le contribuable.",
+   "Les volumes de caisse des exercices 2023-2024 et 2024-2025 reposent sur l’extraction de la réponse n°1 ; les annexes primaires de caisse C-2/D-2 et C-3/D-3 doivent être produites pour rendre la démonstration intégralement vérifiable (seules les annexes 2022-2023 sont jointes).",
+   "Ce grief ne porte aucun montant (le service le reconnaît) : même entièrement écarté, il ne réduit le redressement d’aucun euro ; sa neutralisation est défensive (elle retire un motif de rejet de la comptabilité), et non chiffrable."
+  ]
+ },
+ "entete": {
+  "statut": "partiel",
+  "reponseCourte": "Le service reconnaît que ce grief ne fonde aucun euro de rehaussement (p. 74), et ses trois tableaux de la page 75 ne résistent pas à la vérification : 12 950 cl de vin blanc là où la caisse en enregistre 150, exercices 2 et 3 identiques au centilitre près, volumes imprimés sous un exercice qui sont ceux d’un autre. Mais le bilan matière laisse une bouteille de Bordeaux (75 cl) sortie sans vente enregistrée et 375 cl de blanc tirés sous un bouton mal paramétré : nous les assumons comme défauts de caisse, sans chiffre d’affaires occulté démontré, tout en reconnaissant que la comparaison achats/ventes n’exclut pas à elle seule des achats hors facture (L. 192 al. 2 LPF)."
  },
  "sections": [
   {
@@ -22,15 +34,19 @@
   },
   {
    "kind": "paragraphe",
+   "texte": "La proposition initiale du 18/05/2026 tirait de ces « ventes sans achat » l’hypothèse d’un approvisionnement occulte : relevant « 12 950 centilitres » de Hautes Côtes de Beaune blanc prétendument vendus sur le seul exercice clos le 31/03/2024 sans qu’« en matière d’achats, le service [soit] parvenu à identifier l’achat d’une seule bouteille de ce type », elle en concluait que « les achats comptabilisés ne sont probablement pas ceux qui correspondent aux achats réels » (Proposition, p. 32). C’est donc bien l’existence d’achats hors facture, et la recette occulte qui en découlerait, que le grief met en cause."
+  },
+  {
+   "kind": "paragraphe",
    "texte": "Il reproduit ensuite la réponse de Maître THIVEND : « **Faux, et c’est prouvé, facture à l’appui.** Un bouton de caisse n’est pas un libellé de facture : notre rapprochement caisse, facture, inventaire rattache **chaque bouton à la référence réellement achetée**. Le bouton « Mouton Cadet » est le **Bordeaux Supérieur (Château Grand Renom)**, facturé **9 bouteilles**, vendu 9. Le bouton « Hautes Côtes de Nuits » est le **HC de Nuits blanc (Lupé Cholet)**, facturé **24 bouteilles pour 3 vendues**. Les volumes que le vérificateur range sous « Côtes de Nuits » sont en réalité les **Hautes Côtes de BEAUNE (Domaine Germain)**, facturées par centaines de bouteilles : c’est une confusion d’appellation (Nuits ≠ Beaune). **Zéro vente sans achat : chaque vente est adossée à une facture.** » (p. 74)."
   },
   {
    "kind": "paragraphe",
-   "texte": "Sous ce texte, le courrier reprend la mention de la défense : « Rapprochement OFFICIEL caisse, facture fournisseur, inventaire (déjà établi). Chaque bouton de caisse pointe vers sa référence facturée : le libellé du bouton n’est qu’un nom d’écran » (p. 74). Il reproduit ensuite, tel quel, le tableau de rapprochement produit par la défense."
+   "texte": "Sous ce texte, le courrier reprend la mention de la défense : « Rapprochement OFFICIEL caisse, facture fournisseur, inventaire (déjà établi). Chaque bouton de caisse pointe vers sa référence facturée : le libellé du bouton n’est qu’un nom d’écran » (p. 74). Il reproduit ensuite, tel quel, le tableau de rapprochement produit par la défense dans son mémoire du 10/07/2026."
   },
   {
    "kind": "tableau",
-   "titre": "Tableau reproduit p. 74 : rapprochement bouton de caisse, référence réelle, fournisseur, quantités facturées",
+   "titre": "Tableau reproduit p. 74 : rapprochement bouton de caisse, référence réelle, fournisseur, quantités (chiffres du mémoire du 10/07/2026 ; rectifiés au chapitre 2)",
    "minWidth": 820,
    "colonnes": [
     {
@@ -115,7 +131,7 @@
       "v": ""
      },
      {
-      "v": "Chaque vente est adossée à une facture (rapprochement des 3 sources) : aucune vente sans achat ; la « Côte de Nuits » du service est en réalité la Côte de Beaune"
+      "v": "Chaque vente est adossée à une facture (rapprochement des 3 sources) : la « Côte de Nuits » du service est en réalité la Côte de Beaune"
      }
     ]
    ]
@@ -424,7 +440,7 @@
   },
   {
    "kind": "note",
-   "texte": "Les tableaux des exercices 2 et 3 sont identiques, ligne à ligne, dans le courrier : mêmes volumes disponibles, mêmes volumes de caisse, même écart et même pourcentage. Les valeurs sont reproduites ici sans correction, y compris la ligne « Haute côte de Beaune BLANC » qui porte 0 centilitre disponible pour 12 950 centilitres enregistrés en caisse."
+   "texte": "Les tableaux des exercices 2 et 3 sont identiques, ligne à ligne, dans le courrier : mêmes volumes disponibles, mêmes volumes de caisse, même écart et même pourcentage. Les valeurs sont reproduites ici sans correction, y compris la ligne « Haute côte de Beaune BLANC » qui porte 0 centilitre disponible pour 12 950 centilitres enregistrés en caisse — alors que la Proposition du 18/05/2026 (p. 32) limitait expressément ce volume au « seul » exercice clos le 31/03/2024."
   },
   {
    "kind": "paragraphe",
@@ -459,10 +475,10 @@
      "couleur": "blue"
     },
     {
-     "label": "Rapprochement de la défense",
-     "valeur": "3 sources",
-     "sub": "caisse, facture fournisseur, inventaire ; 9 bouteilles facturées pour 9 vendues (Mouton Cadet), 24 pour 3 (HC de Nuits blanc), environ 245 bouteilles pour environ 585 services (HC de Beaune) (p. 74)",
-     "couleur": "gold"
+     "label": "Hypothèse avancée par le service",
+     "valeur": "Achats occultes",
+     "sub": "« les achats comptabilisés ne sont probablement pas ceux qui correspondent aux achats réels » (Proposition, p. 32)",
+     "couleur": "red"
     },
     {
      "label": "Suite donnée par le service",
@@ -476,8 +492,8 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Notre réponse : un grief sans montant, et des tableaux qui ne correspondent pas aux exercices annoncés",
-   "sousTitre": "Le service reconnaît que ces quantités ne fondent aucun rehaussement ; le rapprochement facture par facture établit qu’aucune vente n’est dépourvue d’achat, et les volumes de la page 75 ne sont pas ceux des exercices sous lesquels ils sont imprimés."
+   "titre": "Notre réponse : un grief sans montant, des tableaux faux, et deux écarts que nous assumons",
+   "sousTitre": "Le service reconnaît que ces quantités ne fondent aucun rehaussement. Le rapprochement facture par facture montre que, sur les trois références visées, les achats facturés dépassent les ventes ; les tableaux de la page 75 impriment sous un exercice les volumes d’un autre ; mais le bilan matière laisse une bouteille de Bordeaux et 375 cl de blanc que nous traitons honnêtement comme des défauts de caisse, non comme un chiffre d’affaires occulté."
   },
   {
    "kind": "titre",
@@ -486,33 +502,25 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La réponse du service est explicite : « **Dans la méthode de reconstitution, les ventes sans achats n’ont pas entraîné de chiffre d’affaires reconstitué. En effet, dans ladite méthode, ces quantités permettent uniquement de montrer des incohérences** » (p. 74). Aucune base d’imposition ne repose donc sur ce grief, et le service ne prétend pas le contraire."
+   "texte": "La réponse du service est explicite : « **Dans la méthode de reconstitution, les ventes sans achats n’ont pas entraîné de chiffre d’affaires reconstitué. En effet, dans ladite méthode, ces quantités permettent uniquement de montrer des incohérences** » (p. 74). Aucune base d’imposition ne repose donc sur ce grief, et le service ne prétend pas le contraire. Les montants reconstitués que portaient certaines annexes de la proposition du 18/05/2026 relèvent de la méthode de reconstitution (coefficient de revente, disponible contre vendu) et sont discutés sous les griefs correspondants, non ici : sous le point 10, le service écrit lui-même qu’il n’y a « pas de chiffre d’affaires reconstitué »."
   },
   {
    "kind": "paragraphe",
-   "texte": "Il ne lui reste qu’une fonction : servir de motif au rejet de la comptabilité. Or un motif de rejet doit être établi, et il est ici réduit à trois lignes de tableau portant sur trois références de vin, à comparer aux 21 302 événements et aux trois exercices sur lesquels porte la vérification. Une « incohérence » qui ne produit aucun euro et qui repose sur un rattachement de libellé ne peut pas soutenir à elle seule le caractère non probant d’une comptabilité."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Cette conséquence est d’autant plus nette que la charge de la preuve n’est pas déplacée : aux termes de l’article **L. 192 du livre des procédures fiscales**, il appartient à l’administration d’établir le bien-fondé de ses rectifications lorsqu’elle ne se prévaut pas d’un avis conforme de la commission. Le grief du point 10 ne peut donc pas être maintenu au seul motif que la réponse ne l’aurait pas réfuté."
+   "texte": "Il ne lui reste qu’une fonction : servir de motif au rejet de la comptabilité. Or un motif de rejet doit être établi, et il est ici réduit à trois lignes de tableau portant sur trois références de vin, sur l’ensemble des articles et des trois exercices vérifiés. Sur le terrain de la charge de la preuve, l’article **L. 192 du livre des procédures fiscales** fait peser sur l’administration l’établissement du bien-fondé de ses rectifications lorsqu’elle ne se prévaut pas d’un avis conforme de la commission ; nous ne dissimulons pas que le **second alinéa** du même article renverse cette charge sur le contribuable lorsque la comptabilité est écartée pour graves irrégularités, hypothèse que le service revendique. C’est précisément pourquoi la réponse qui suit ne se limite pas à opposer la charge de la preuve : elle traite au fond chacune des incohérences invoquées."
   },
   {
    "kind": "titre",
-   "texte": "Le rapprochement bouton de caisse et référence facturée, exercice par exercice",
+   "texte": "Le rapprochement bouton de caisse, référence facturée et stock, exercice par exercice",
    "numero": "2.2"
   },
   {
    "kind": "paragraphe",
-   "texte": "Un bouton de caisse est un nom d’écran, choisi pour tenir sur une touche et compris du personnel de salle ; il n’a pas à reproduire la désignation portée sur la facture du fournisseur. Le rattachement se fait par le **code article** du fournisseur, et non par le libellé, la même référence étant facturée sous des désignations abrégées ou millésimées différentes (« HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018 », « … 2021 », « … PINOT NOIR 2022 »)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Les 199 factures du fournisseur Franche-Comté Boissons Services ont été relues ligne à ligne et rattachées à l’exercice par la date de facture. Le résultat, pour les trois références visées par le grief, est le suivant. Le service se plaçant sur le terrain de l’exercice par exercice, le tableau est présenté de la même façon."
+   "texte": "Un bouton de caisse est un nom d’écran, choisi pour tenir sur une touche et compris du personnel de salle ; il ne reproduit pas la désignation portée sur la facture du fournisseur. Le rattachement se fait par le **code article** du fournisseur, la même référence étant facturée sous des désignations abrégées ou millésimées différentes (« HTES COTES DE BEAUNE RGE 75 CL DOMAINE GERMAIN 2018 », « … 2021 », « … PINOT NOIR 2022 »). Les 199 factures du fournisseur Franche-Comté Boissons Services ont été relues ligne à ligne et rattachées à l’exercice par la date de facture. Le résultat, exercice par exercice, est le suivant ; nous y ajoutons le stock de clôture inventorié, de façon à présenter le bilan matière et non la seule comparaison des flux."
   },
   {
    "kind": "tableau",
-   "titre": "Achats facturés et ventes enregistrées en caisse, référence par référence et exercice par exercice (centilitres)",
-   "minWidth": 900,
+   "titre": "Bilan matière par référence et par exercice : achats facturés, ventes de caisse, et stock inventorié (centilitres)",
+   "minWidth": 940,
    "colonnes": [
     {
      "label": "Référence facturée (code fournisseur)"
@@ -521,23 +529,22 @@
      "label": "Exercice"
     },
     {
-     "label": "Achats facturés",
+     "label": "Achats facturés (cl)",
      "align": "right"
     },
     {
-     "label": "Achats en cl",
+     "label": "Ventes caisse (cl)",
      "align": "right"
     },
     {
-     "label": "Ventes en caisse",
+     "label": "Achats − ventes (cl)",
      "align": "right"
     },
     {
-     "label": "Achats moins ventes",
-     "align": "right"
+     "label": "Stock de clôture inventorié"
     },
     {
-     "label": "Vente sans achat"
+     "label": "Observation"
     }
    ],
    "lignes": [
@@ -549,24 +556,23 @@
       "v": "2022-2023"
      },
      {
-      "v": "11 bouteilles",
+      "v": "825",
       "align": "right"
      },
      {
-      "v": "825 cl",
+      "v": "675",
       "align": "right"
      },
      {
-      "v": "675 cl",
+      "v": "+ 150",
       "align": "right"
      },
      {
-      "v": "+ 150 cl",
-      "align": "right"
+      "v": "1 bouteille (75 cl)"
      },
      {
-      "v": "Non",
-      "badge": "ok"
+      "v": "11 achetées, 9 vendues : 2 bouteilles attendues en stock, 1 inventoriée → 1 bouteille (75 cl) sortie sans vente enregistrée",
+      "badge": "ko"
      }
     ],
     [
@@ -577,23 +583,22 @@
       "v": "2022-2023"
      },
      {
-      "v": "24 bouteilles",
+      "v": "1 800",
       "align": "right"
      },
      {
-      "v": "1 800 cl",
+      "v": "225",
       "align": "right"
      },
      {
-      "v": "225 cl",
+      "v": "+ 1 575",
       "align": "right"
      },
      {
-      "v": "+ 1 575 cl",
-      "align": "right"
+      "v": "non inventorié (aucune ligne à ce libellé)"
      },
      {
-      "v": "Non",
+      "v": "24 bouteilles facturées pour 3 vendues : achats = 8 × ventes",
       "badge": "ok"
      }
     ],
@@ -605,23 +610,23 @@
       "v": "2022-2023"
      },
      {
-      "v": "1 bouteille",
+      "v": "75",
       "align": "right"
      },
      {
-      "v": "75 cl",
+      "v": "300",
       "align": "right"
      },
      {
-      "v": "300 cl",
+      "v": "− 225",
       "align": "right"
      },
      {
-      "v": "- 225 cl",
-      "align": "right"
+      "v": "non inventorié (aucune ligne à ce libellé)"
      },
      {
-      "v": "Non : servi sur le stock de Hautes Côtes de Nuits blanc"
+      "v": "6 pichets de 50 cl tirés sous le bouton « C. DE BEAUNE B » pour 1 seule bouteille achetée sous ce code (voir 2.4)",
+      "badge": "ko"
      }
     ],
     [
@@ -632,23 +637,23 @@
       "v": "2023-2024"
      },
      {
-      "v": "0 bouteille",
+      "v": "0",
       "align": "right"
      },
      {
-      "v": "0 cl",
+      "v": "150",
       "align": "right"
      },
      {
-      "v": "150 cl",
+      "v": "− 150",
       "align": "right"
      },
      {
-      "v": "- 150 cl",
-      "align": "right"
+      "v": "non inventorié (aucune ligne à ce libellé)"
      },
      {
-      "v": "Non : servi sur le stock de Hautes Côtes de Nuits blanc"
+      "v": "3 pichets de 50 cl sous le même bouton, aucun achat sous ce code (voir 2.4)",
+      "badge": "ko"
      }
     ],
     [
@@ -659,23 +664,22 @@
       "v": "2024-2025"
      },
      {
-      "v": "0 bouteille",
+      "v": "0",
       "align": "right"
      },
      {
-      "v": "0 cl",
+      "v": "0",
       "align": "right"
      },
      {
-      "v": "0 cl",
+      "v": "0",
       "align": "right"
      },
      {
-      "v": "0 cl",
-      "align": "right"
+      "v": "non inventorié (aucune ligne à ce libellé)"
      },
      {
-      "v": "Non",
+      "v": "aucune vente, aucun achat",
       "badge": "ok"
      }
     ],
@@ -687,23 +691,22 @@
       "v": "2022-2023"
      },
      {
-      "v": "110 bouteilles",
+      "v": "8 250",
       "align": "right"
      },
      {
-      "v": "8 250 cl",
+      "v": "7 218",
       "align": "right"
      },
      {
-      "v": "7 218 cl",
+      "v": "+ 1 032",
       "align": "right"
      },
      {
-      "v": "+ 1 032 cl",
-      "align": "right"
+      "v": "6 bouteilles (450 cl)"
      },
      {
-      "v": "Non",
+      "v": "110 bouteilles facturées : achats supérieurs aux ventes",
       "badge": "ok"
      }
     ],
@@ -715,23 +718,22 @@
       "v": "2023-2024"
      },
      {
-      "v": "85 bouteilles",
+      "v": "6 375",
       "align": "right"
      },
      {
-      "v": "6 375 cl",
+      "v": "5 310",
       "align": "right"
      },
      {
-      "v": "5 310 cl",
+      "v": "+ 1 065",
       "align": "right"
      },
      {
-      "v": "+ 1 065 cl",
-      "align": "right"
+      "v": "non inventorié (aucune ligne à ce libellé)"
      },
      {
-      "v": "Non",
+      "v": "85 bouteilles facturées : achats supérieurs aux ventes",
       "badge": "ok"
      }
     ],
@@ -743,23 +745,22 @@
       "v": "2024-2025"
      },
      {
-      "v": "74 bouteilles",
+      "v": "5 550",
       "align": "right"
      },
      {
-      "v": "5 550 cl",
+      "v": "4 683",
       "align": "right"
      },
      {
-      "v": "4 683 cl",
+      "v": "+ 867",
       "align": "right"
      },
      {
-      "v": "+ 867 cl",
-      "align": "right"
+      "v": "8 bouteilles (600 cl)"
      },
      {
-      "v": "Non",
+      "v": "74 bouteilles facturées : achats supérieurs aux ventes",
       "badge": "ok"
      }
     ],
@@ -771,35 +772,40 @@
       "v": "**cumul**"
      },
      {
-      "v": "**25 bouteilles**",
+      "v": "**1 875**",
       "align": "right"
      },
      {
-      "v": "**1 875 cl**",
+      "v": "**675**",
       "align": "right"
      },
      {
-      "v": "**675 cl**",
+      "v": "**+ 1 200**",
       "align": "right"
      },
      {
-      "v": "**+ 1 200 cl**",
-      "align": "right"
+      "v": "**—**"
      },
      {
-      "v": "**Non : 2,8 fois plus d’achats que de ventes**",
+      "v": "**achats = 2,8 × ventes (concession de paramétrage, voir 2.4)**",
       "badge": "ok"
      }
     ]
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Sur chacun des trois exercices et pour chacune des trois références visées par le grief, le Bordeaux Supérieur, le Hautes Côtes de Nuits blanc et le Hautes Côtes de Beaune rouge, les achats facturés **dépassent** les ventes enregistrées. Les deux lignes du tableau où l’inverse apparaît portent sur une quatrième référence, le Hautes Côtes de Beaune blanc : les **225 cl** de l’exercice 2022-2023 et les **150 cl** de l’exercice 2023-2024 servis au-delà des bouteilles facturées sous ce code l’ont été sur le stock de Hautes Côtes de Nuits blanc, comme la colonne de droite du tableau l’indique. Le bouton « BORD. MOUTON CADET » correspond au Bordeaux Supérieur du Château Grand Renom, facturé **11 bouteilles** sur l’exercice 2022-2023 pour 9 vendues, une bouteille restant d’ailleurs en stock au 31/03/2023. Le bouton « H. COTES DE NUITS » correspond au Hautes Côtes de Nuits blanc de Lupé Cholet, facturé **24 bouteilles** pour 3 vendues."
+   "kind": "note",
+   "texte": "Ventes de caisse du Hautes Côtes de Beaune rouge : la ligne « Bouteille » comporte des demi-bouteilles (37,5 cl). La caisse enregistre 42,5 unités-bouteille en 2022-2023 et 22,5 en 2024-2025, d’où 42,5 × 75 = 3 187,5 cl (arrondi à 3 188) et 22,5 × 75 = 1 687,5 cl (arrondi à 1 688), additionnés aux verres (15 cl) et aux pichets (50 cl) pour donner 7 218 cl et 4 683 cl. Le « + 38 cl » qu’un tableau de synthèse antérieur laissait apparaître sur cette ligne provient de l’arrondi de 42,5 à 42 bouteilles (0,5 bouteille × 75 cl = 37,5 ≈ 38 cl) : les volumes 7 218 cl et 4 683 cl sont exacts et se dérivent format par format."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "orange",
+   "titre": "Ce que nous assumons : une bouteille de Bordeaux sortie sans vente enregistrée",
+   "texte": "Sur le Bordeaux Supérieur (bouton « MOUTON CADET »), 11 bouteilles ont été facturées en 2022-2023 et 9 vendues : 2 bouteilles devraient figurer au stock de clôture, l’inventaire du 31/03/2023 n’en porte qu’une. Une bouteille (75 cl) a donc quitté le stock sans vente enregistrée. Ce n’est pas une « vente sans achat » au sens du grief — le sens est inverse, il y a plus d’achats que de ventes — mais une sortie non tracée (casse, offert, consommation ou, à la limite, vente non enregistrée) que nous ne pouvons pas documenter. Son exposition maximale, si elle était requalifiée en vente, est de 30,00 € HT (prix de vente 36,00 € TTC, ANNEXE-B1). Faute d’inventaire d’ouverture au 01/04/2022, le bilan matière ne peut être bouclé plus finement pour cet exercice."
   },
   {
    "kind": "note",
-   "texte": "Notre mémoire du 10/07/2026 retenait 9 bouteilles facturées de Bordeaux Supérieur et environ 245 bouteilles de Hautes Côtes de Beaune rouge sur trois ans. Le rattachement par code article, plus complet que le rattachement par libellé, porte ces quantités à 11 bouteilles et à 269 bouteilles : deux bouteilles de Bordeaux Supérieur facturées le 01/07/2022 et plusieurs lots de Hautes Côtes de Beaune figurent sur les factures sous une désignation abrégée ou sous un autre millésime. La correction va dans le sens de la démonstration : les achats sont plus élevés encore que ce qui avait été indiqué."
+   "texte": "Notre mémoire du 10/07/2026 retenait 9 bouteilles facturées de Bordeaux Supérieur et environ 245 bouteilles de Hautes Côtes de Beaune rouge sur trois ans. Le rattachement par code article, plus complet que le rattachement par libellé, porte ces quantités à 11 bouteilles et à 269 bouteilles : deux bouteilles de Bordeaux Supérieur facturées le 01/07/2022 et plusieurs lots de Hautes Côtes de Beaune figurent sur les factures sous une désignation abrégée ou un autre millésime. La correction augmente les achats constatés ; elle ne change pas le sens de la démonstration, et c’est la raison pour laquelle deux chiffres (9 puis 11 ; 245 puis 269) coexistent entre le chapitre 1 (ce que le courrier reproduit) et le chapitre 2 (le compte rectifié)."
   },
   {
    "kind": "titre",
@@ -808,7 +814,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les additions imprimées sont exactes : sur les exercices 2 et 3, 5 310 + 0 + 12 950 font bien 18 260, l’écart de 11 960 cl et le taux de 65,49 % se déduisent des deux colonnes. La difficulté est ailleurs : les volumes de caisse portés dans ces tableaux ne sont pas ceux des exercices annoncés."
+   "texte": "Les additions imprimées sont exactes : sur les exercices 2 et 3, 5 310 + 0 + 12 950 font bien 18 260, et 11 960 / 18 260 égale 65,498 %, que le service arrondit à 65,49 %. La difficulté est ailleurs : les volumes de caisse portés dans ces tableaux ne sont pas ceux des exercices annoncés."
   },
   {
    "kind": "tableau",
@@ -886,15 +892,15 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les tableaux des exercices 2 et 3 sont **identiques ligne à ligne**, jusqu’au centilitre et jusqu’au pourcentage. Deux exercices distincts ne peuvent pas produire les mêmes achats et les mêmes ventes au centilitre près, et les annexes de caisse montrent qu’ils ne les produisent pas : 5 310 cl en 2023-2024, 4 683 cl en 2024-2025. Le volume réel de l’exercice 2022-2023, soit **7 218 cl**, le plus élevé des trois, ne figure dans aucun des trois tableaux."
+   "texte": "Les tableaux des exercices 2 et 3 sont **identiques ligne à ligne**, jusqu’au centilitre et jusqu’au pourcentage. Deux exercices distincts ne produisent pas les mêmes achats et les mêmes ventes au centilitre près, et les volumes de caisse montrent qu’ils ne les produisent pas : 5 310 cl en 2023-2024, 4 683 cl en 2024-2025. Le volume réel de l’exercice 2022-2023, soit **7 218 cl**, le plus élevé des trois, ne figure dans aucun des trois tableaux."
   },
   {
    "kind": "paragraphe",
-   "texte": "La ligne « Haute côte de Beaune BLANC » porte **12 950 cl** de ventes en caisse sur les exercices 2 et 3. Ce volume ne correspond à aucune donnée de caisse : ce vin n’a été vendu qu’au pichet de 50 cl, soit **150 cl** sur l’exercice 2023-2024 (trois pichets) et **aucun** sur l’exercice 2024-2025. Le volume imprimé est 86 fois supérieur au volume enregistré, et il est le seul responsable de l’écart de 11 960 cl et du taux de 65,49 % dont le service tire son « incohérence »."
+   "texte": "La ligne « Haute côte de Beaune BLANC » porte **12 950 cl** de ventes en caisse sur les exercices 2 et 3. Ce volume n’est pas reproductible depuis les données de caisse : ce vin n’a été vendu qu’au pichet de 50 cl, soit **150 cl** sur l’exercice 2023-2024 (trois pichets) et **aucun** sur l’exercice 2024-2025. Le service le reconnaît d’ailleurs à demi-mot, puisque sa proposition du 18/05/2026 (p. 32) limitait ce volume au « seul » exercice clos le 31/03/2024 : le reporter une seconde fois sur l’exercice 2024-2025 contredit son propre texte. Ce sont ces 12 950 cl, et eux seuls, qui produisent l’écart de 11 960 cl et le taux de 65,49 %."
   },
   {
    "kind": "paragraphe",
-   "texte": "La même ligne porte par ailleurs **0 cl** de volume disponible, alors que 24 bouteilles de Hautes Côtes de Nuits blanc et une bouteille de Hautes Côtes de Beaune blanc ont été facturées, soit 1 875 cl. Un disponible à zéro en face d’une consommation non nulle produit mécaniquement un écart de 100 %, quel que soit le produit : ce n’est pas un constat, c’est une conséquence de la façon dont la ligne a été remplie."
+   "texte": "La même ligne porte par ailleurs **0 cl** de volume disponible, alors que 24 bouteilles de Hautes Côtes de Nuits blanc et une bouteille de Hautes Côtes de Beaune blanc ont été facturées, soit 1 875 cl. Un disponible porté à zéro en face d’une consommation non nulle produit mécaniquement un écart de 100 %, quel que soit le produit : ce n’est pas un constat, c’est une conséquence de la façon dont la ligne a été remplie."
   },
   {
    "kind": "paragraphe",
@@ -902,24 +908,43 @@
   },
   {
    "kind": "titre",
-   "texte": "La confusion d’appellation Nuits et Beaune, et ce qu’elle pèse",
+   "texte": "La confusion d’appellation Nuits et Beaune, et ce que nous concédons sur le paramétrage de caisse",
    "numero": "2.4"
   },
   {
    "kind": "paragraphe",
-   "texte": "Les Bourgogne Hautes Côtes de Nuits et les Bourgogne Hautes Côtes de Beaune sont deux appellations distinctes, produites sur deux ensembles de communes différents. Le restaurant a acheté du **Hautes Côtes de Nuits blanc** (Lupé Cholet, 24 bouteilles) et du **Hautes Côtes de Beaune rouge** (Domaine Germain, 269 bouteilles sur trois ans) : ce sont deux vins différents, et le grief initial les avait rangés sous une même ligne « Hautes Côtes de Nuits »."
+   "texte": "Les Bourgogne Hautes Côtes de Nuits et les Bourgogne Hautes Côtes de Beaune sont deux appellations distinctes, produites sur deux ensembles de communes différents. Le restaurant a acheté du **Hautes Côtes de Nuits blanc** (Lupé Cholet, 24 bouteilles) et du **Hautes Côtes de Beaune rouge** (Domaine Germain, 269 bouteilles sur trois ans) : ce sont deux vins différents. Le grief initial les avait rangés sous une même ligne « Hautes Côtes de Nuits », et le service en a lui-même tiré la conséquence en page 75, où l’appellation « Hautes Côtes de Nuits » disparaît des trois tableaux, remplacée par « Haute côte de Beaune ROUGE » et « Haute côte de Beaune BLANC ». Sur ce point, la distinction d’appellation tient et vide de sa substance la ligne « Côtes de Nuits » du grief d’origine."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le courrier du 04/09/2026 en tire lui-même la conséquence sans le dire : l’appellation « Hautes Côtes de Nuits », qui figurait dans l’énoncé du grief en page 74, **disparaît des trois tableaux de la page 75**, remplacée par « Haute côte de Beaune ROUGE » et « Haute côte de Beaune BLANC ». Le libellé a donc été corrigé, mais l’écart qui en découlait a été maintenu."
+   "texte": "Mais nous ne tirons pas de cette distinction d’appellation une couverture pour les ventes de vin blanc. Les **boutons** de caisse, eux, n’ont pas été paramétrés par appellation : les pichets de blanc tirés sur le stock de Hautes Côtes de Nuits blanc ont été enregistrés sous le bouton « PICHET C. DE BEAUNE B ». C’est un **défaut de paramétrage du bouton**, que nous reconnaissons. Il explique que, sur ce code, **450 cl** de pichets aient été vendus (300 cl en 2022-2023, 150 cl en 2023-2024) pour **75 cl achetés**, soit **375 cl au-delà des achats** sous ce code."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "orange",
+   "titre": "Ce que nous assumons : 375 cl de blanc tirés sous un bouton mal nommé",
+   "texte": "Ces 375 cl n’ont pas été tirés de nulle part : les 24 bouteilles de Hautes Côtes de Nuits blanc (1 800 cl), dont 3 seulement ont été vendues en bouteille, fournissaient largement le volume. Regroupés, les deux vins blancs totalisent 1 875 cl facturés pour 675 cl vendus, soit des achats 2,8 fois supérieurs aux ventes. La recette de ces pichets a été **enregistrée** en caisse (environ 225 € TTC, 187,50 € HT au prix du pichet) : il n’y a pas de chiffre d’affaires occulté. Ce que nous concédons, c’est le défaut d’étiquetage du bouton — une vente de Nuits blanc sonnée sous un libellé « Beaune blanc » — et non une sortie de marchandise sans achat correspondant. Aucune pièce primaire ne relie toutefois formellement ces pichets au stock de Nuits blanc : l’explication repose sur le rapprochement des volumes, non sur une fiche de bar."
   },
   {
    "kind": "paragraphe",
-   "texte": "Chiffrée, la confusion s’annule. En regroupant les deux vins blancs concernés, les achats facturés représentent **1 875 cl** pour **675 cl** vendus sur les trois exercices, soit **2,8 fois plus d’achats que de ventes**. Il n’existe donc, sur ces références, ni vente sans achat ni écart à expliquer."
+   "texte": "Quant au Bordeaux Mouton Cadet, nommément visé dans l’énoncé du grief comme exemple de boisson « vendue sans aucun achat correspondant », il apparaît dans les trois tableaux de la page 75 pour **0 cl de disponible et 0 cl de ventes**. L’exemple qui fondait le grief ne porte donc, dans les propres tableaux du service, aucun volume ; la seule anomalie réelle sur cette référence est, à l’inverse, la bouteille manquante au stock, que nous avons signalée au 2.2."
+  },
+  {
+   "kind": "titre",
+   "texte": "L’hypothèse d’achats occultes, traitée de front",
+   "numero": "2.5"
   },
   {
    "kind": "paragraphe",
-   "texte": "Quant au Bordeaux Mouton Cadet, nommément visé dans l’énoncé du grief comme exemple de boisson « vendue sans aucun achat correspondant », il apparaît dans les trois tableaux de la page 75 pour **0 cl de disponible et 0 cl de ventes**. Il ne subsiste rien de cet exemple : le service n’oppose plus aucun volume à la référence qui fondait le grief."
+   "texte": "Le cœur du grief, tel que la proposition du 18/05/2026 le formule (p. 32), est que des ventes sans achat correspondant révéleraient des achats réglés hors facture, et donc une recette occulte. Nous le traitons directement, sans nous abriter derrière la seule charge de la preuve."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Premièrement, la direction des écarts contredit la thèse de l’approvisionnement occulte. Un circuit d’achats hors facture ferait apparaître des **ventes supérieures aux achats facturés** : on vend plus qu’on ne peut justifier avoir acheté. Or sur le Hautes Côtes de Beaune rouge (269 bouteilles sur trois ans), le Hautes Côtes de Nuits blanc et le Bordeaux Supérieur, les achats facturés **dépassent** les ventes de caisse à chaque exercice. Le seul code où les ventes excèdent les achats est le « Beaune blanc », et l’excédent (375 cl) est couvert, en volume, par le sur-stock de Nuits blanc : il traduit un défaut de bouton, non un achat caché."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Deuxièmement, nous ne prétendons pas qu’une comparaison achats/ventes **démontre** l’absence de tout achat hors facture : un achat réglé en espèces et non facturé n’apparaîtrait ni dans les factures, ni, revendu au comptant sans ticket, dans la caisse. Seule une vérification auprès des fournisseurs pourrait l’exclure positivement, et elle n’est pas au pouvoir du contribuable. C’est la limite que nous assumons : si la comptabilité est écartée pour graves irrégularités, l’article L. 192, second alinéa, du livre des procédures fiscales fait peser cette preuve négative sur le restaurant. Mais le service, lui, n’apporte aucun indice positif d’un tel circuit : il ne désigne ni fournisseur, ni livraison sans facture, ni recette non enregistrée, et il reconnaît que le point 10 ne produit aucun chiffre d’affaires reconstitué."
   },
   {
    "kind": "kpis",
@@ -932,16 +957,15 @@
      "couleur": "teal"
     },
     {
-     "label": "Ventes sans achat établies",
-     "valeur": "0",
-     "sub": "sur les trois références et les trois exercices, achats facturés supérieurs aux ventes de caisse",
-     "highlight": true,
+     "label": "Sens des écarts sur les 3 références principales",
+     "valeur": "Achats > ventes",
+     "sub": "l’inverse d’un circuit d’achats occultes, qui ferait ventes > achats",
      "couleur": "teal"
     },
     {
-     "label": "Ligne blanc de la page 75",
+     "label": "Ligne « blanc » de la page 75",
      "valeur": "12 950 cl",
-     "sub": "contre 150 cl réellement enregistrés en 2023-2024 et 0 cl en 2024-2025",
+     "sub": "contre 150 cl réellement enregistrés en 2023-2024 et 0 cl en 2024-2025 ; le service la limite lui-même à un seul exercice (p. 32)",
      "couleur": "red"
     },
     {
@@ -951,15 +975,15 @@
      "couleur": "red"
     },
     {
-     "label": "Bordeaux Mouton Cadet",
-     "valeur": "0 cl / 0 cl",
-     "sub": "la référence citée dans le grief est à zéro dans les trois tableaux ; 11 bouteilles facturées pour 9 vendues",
-     "couleur": "blue"
+     "label": "Bouteille de Bordeaux assumée",
+     "valeur": "1 btl / 75 cl",
+     "sub": "11 facturées − 9 vendues = 2 attendues, 1 inventoriée : sortie non tracée (30 € HT au plus)",
+     "couleur": "gold"
     },
     {
-     "label": "Vins blancs regroupés",
-     "valeur": "2,8 ×",
-     "sub": "1 875 cl facturés pour 675 cl vendus sur trois exercices",
+     "label": "Beaune blanc tiré sous bouton mal nommé",
+     "valeur": "375 cl",
+     "sub": "défaut de paramétrage assumé ; recette enregistrée, couverte par le sur-stock de Nuits blanc",
      "couleur": "gold"
     }
    ]
@@ -968,16 +992,20 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 3,
-   "titre": "Ce que cela fait tomber",
-   "sousTitre": "Un grief sans incidence sur la base, dont la démonstration repose sur des volumes qui ne sont pas ceux des exercices visés."
+   "titre": "Ce que cela fait tomber, et ce qui demeure",
+   "sousTitre": "Un grief sans incidence sur la base imposable, dont la démonstration chiffrée repose sur des volumes qui ne sont pas ceux des exercices visés ; deux écarts mineurs demeurent, assumés comme défauts de caisse."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service admet que les « ventes sans achat » ne fondent aucun chiffre d’affaires reconstitué. Il ne subsiste donc, sous ce point, qu’un élément de motivation du rejet de comptabilité, et cet élément ne résiste pas à la vérification : sur les trois références visées, les achats facturés dépassent les ventes de caisse sur chacun des trois exercices."
+   "texte": "Le service admet que les « ventes sans achat » ne fondent aucun chiffre d’affaires reconstitué. Ce grief ne réduit donc le redressement d’aucun euro, et son éventuelle neutralisation n’en réduirait aucun non plus : l’enjeu n’est pas chiffrable, il est celui de la motivation du rejet de comptabilité. Sur ce terrain, l’élément de démonstration produit par le service ne résiste pas à la vérification sur l’essentiel, mais laisse subsister deux écarts mineurs que nous ne masquons pas."
   },
   {
    "kind": "paragraphe",
-   "texte": "Les tableaux de la page 75 ne peuvent pas y suppléer. Le volume de caisse imprimé sous l’exercice 1 est celui de l’exercice 2024-2025, celui imprimé sous l’exercice 3 est celui de l’exercice 2023-2024, et la ligne qui produit à elle seule l’écart de 11 960 cl porte 12 950 cl là où la caisse en enregistre 150. L’« incohérence » invoquée est celle des tableaux, pas celle de la comptabilité."
+   "texte": "Ce qui tombe : les trois tableaux de la page 75. Le volume de caisse imprimé sous l’exercice 1 est celui de l’exercice 2024-2025 ; celui imprimé sous l’exercice 3 est celui de l’exercice 2023-2024 repris une seconde fois ; le volume réel de 2022-2023 (7 218 cl), le plus élevé, ne figure nulle part ; et la ligne qui produit à elle seule l’écart de 11 960 cl porte 12 950 cl de vin blanc là où la caisse en enregistre 150, un volume que le service limite lui-même à un seul exercice avant de le reporter sur deux. L’« incohérence » invoquée est celle des tableaux, pas celle de la comptabilité."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ce qui demeure, et que nous assumons : une bouteille de Bordeaux Supérieur (75 cl, 30 € HT au plus) sortie du stock sans vente enregistrée au 31/03/2023, et 375 cl de pichets de blanc tirés sous un bouton mal paramétré. Ni l’un ni l’autre n’est une « vente sans achat » au sens du grief : le premier est une sortie non tracée, le second une recette enregistrée sous un mauvais libellé, couverte en volume par le sur-stock de Nuits blanc. Ni l’un ni l’autre ne révèle une recette occulte, et le service n’en chiffre aucune. Ce sont des défauts de tenue de caisse, réels mais sans portée sur la base imposable."
   },
   {
    "kind": "titre",
@@ -985,27 +1013,31 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Dans la méthode de reconstitution, les ventes sans achats n’ont pas entraîné de chiffre d’affaires reconstitué ; ces quantités permettent uniquement de montrer des incohérences. »** Le service reconnaît ainsi que le grief ne porte aucun montant. Réduit à un motif de rejet de la comptabilité, il ne tient pas davantage : trois lignes de tableau portant sur trois références de vin, à comparer aux 21 302 événements et aux trois exercices vérifiés, ne peuvent fonder le caractère non probant d’une comptabilité, d’autant que la charge d’établir le bien-fondé des rectifications incombe à l’administration en l’absence d’avis conforme d’une commission (art. L. 192 du livre des procédures fiscales)."
+   "texte": "**« Dans la méthode de reconstitution, les ventes sans achats n’ont pas entraîné de chiffre d’affaires reconstitué ; ces quantités permettent uniquement de montrer des incohérences. »** Le service reconnaît ainsi que le grief ne porte aucun montant. Réduit à un motif de rejet de la comptabilité, il doit être établi ; la charge en incombe en principe à l’administration (art. L. 192 du LPF), étant admis que le second alinéa la renverse si la comptabilité est écartée pour graves irrégularités. C’est pourquoi nous avons traité chaque incohérence au fond plutôt que de nous en tenir à la charge de la preuve."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Reprises exercice par exercice, en globalisant vins rouges et blancs, les incohérences demeurent, avec un écart de 11 960 cl, soit 65,49 %. »** Les volumes de caisse imprimés à la page 75 ne sont pas ceux des exercices sous lesquels ils figurent : les 4 683 cl portés sous l’exercice 1 sont ceux de 2024-2025, les 5 310 cl portés sous l’exercice 3 sont ceux de 2023-2024 repris une seconde fois, et le volume réel de 2022-2023, 7 218 cl, le plus élevé des trois, ne figure nulle part. Les tableaux des exercices 2 et 3 sont identiques au centilitre et au pourcentage près, ce que deux exercices distincts ne peuvent produire."
+   "texte": "**« Reprises exercice par exercice, en globalisant vins rouges et blancs, les incohérences demeurent, avec un écart de 11 960 cl, soit 65,49 %. »** Les volumes de caisse imprimés à la page 75 ne sont pas ceux des exercices sous lesquels ils figurent : les 4 683 cl portés sous l’exercice 1 sont ceux de 2024-2025, les 5 310 cl portés sous l’exercice 3 sont ceux de 2023-2024 repris une seconde fois, et le volume réel de 2022-2023, 7 218 cl, ne figure nulle part. Les tableaux des exercices 2 et 3 sont identiques au centilitre et au pourcentage près, ce que deux exercices distincts ne peuvent produire."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« La ligne Haute côte de Beaune BLANC fait apparaître 12 950 cl enregistrés pour 0 cl disponible. »** Ce vin n’a été vendu qu’au pichet de 50 cl, soit 150 cl sur l’exercice 2023-2024 et aucun sur l’exercice 2024-2025 : les 12 950 cl imprimés sont 86 fois le volume enregistré, et ils sont l’unique cause de l’écart de 11 960 cl. Un disponible porté à zéro en face d’une consommation non nulle produit mécaniquement un écart de 100 %, quel que soit le produit : c’est une conséquence du remplissage de la ligne, non un constat."
+   "texte": "**« La ligne Haute côte de Beaune BLANC fait apparaître 12 950 cl enregistrés pour 0 cl disponible. »** Ce vin n’a été vendu qu’au pichet de 50 cl, soit 150 cl sur l’exercice 2023-2024 et aucun sur l’exercice 2024-2025 ; les 12 950 cl ne sont pas reproductibles depuis la caisse et le service les limite lui-même à un seul exercice (p. 32) avant de les reporter sur deux. Un disponible porté à zéro en face d’une consommation non nulle produit mécaniquement un écart de 100 %, quel que soit le produit."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Le rejet de la comptabilité reste fondé sur ces incohérences. »** Regroupés, les deux vins blancs concernés totalisent 1 875 cl facturés pour 675 cl vendus sur trois exercices, soit 2,8 fois plus d’achats que de ventes, et le Bordeaux Mouton Cadet, nommément visé dans le grief, apparaît à 0 cl disponible et 0 cl vendu dans les trois tableaux, alors que 11 bouteilles ont été facturées pour 9 vendues. Sur les trois références visées et les trois exercices, les achats facturés dépassent les ventes de caisse : aucune vente n’est dépourvue d’achat."
+   "texte": "**« Ces ventes sans achat révèlent des achats hors facture et une recette occulte. »** La direction des écarts dit le contraire : sur les trois références principales, les achats facturés dépassent les ventes, soit l’inverse de ce que produirait un approvisionnement occulte. Le seul excédent de ventes (375 cl de blanc) est couvert par le sur-stock de Nuits blanc et sa recette est enregistrée. Nous ne pouvons pas exclure positivement tout achat hors facture — seule une vérification des fournisseurs le permettrait — mais le service n’apporte, lui, aucun indice d’un tel circuit et reconnaît que le point ne produit aucun rappel."
   },
   {
    "kind": "piecejointe",
-   "intro": "Le rapprochement ci-dessus est intégralement reproductible. La pièce jointe donne, pour chacune des références, le détail des lignes de facture (numéro, date, code article, désignation, quantité, montant), le détail des boutons de caisse avec leur format de service et leur contenance, les stocks de clôture, ainsi que le contrôle ligne à ligne des trois tableaux de la page 75. Script de production : scripts/reponse1-rapprochement-caisse-factures.py, sources : les 199 factures du fournisseur et les annexes C et D de la caisse.",
+   "intro": "Le rapprochement et le bilan matière ci-dessus sont intégralement reproductibles. La pièce R2 est un classeur à formules : l’onglet « Sources » donne les données brutes (achats facturés par code article, ventes de caisse par format et contenance, stocks inventoriés, prix de vente de l’annexe B1) ; l’onglet « Calcul » recompose par formule les achats et ventes en centilitres, le bilan par vin (achats − ventes), le bilan matière fermé du Bordeaux Supérieur (ouverture + achats − ventes = clôture, écart avec l’inventaire), la valorisation en euros et le contrôle ligne à ligne des trois tableaux de la page 75 ; l’onglet « Méthode » explicite chaque étape, y compris l’origine du « + 38 cl » (demi-bouteilles) et la limite tenant à l’absence d’inventaire d’ouverture au 01/04/2022. La pièce R1 est conservée en complément.",
    "fichiers": [
     {
+     "fichier": "pieces-reponse-2/R2-ventes-sans-achat.xlsx",
+     "label": "R2 - Bilan matière par vin (achats − ventes − stock) et contrôle des tableaux p. 75, à formules"
+    },
+    {
      "fichier": "pieces-reponse-1/R1-rapprochement-caisse-factures.xlsx",
-     "label": "R1 - Rapprochement caisse, factures fournisseur et inventaire, par exercice"
+     "label": "R1 - Rapprochement caisse, factures fournisseur et inventaire, par exercice (complément)"
     }
    ]
   }

@@ -1,7 +1,15 @@
 {
  "meta": {
   "slug": "cadre-19-octobre",
-  "source": "Propositions de rectification personnelles du 19/10/2026 (PASTEUR & BEHEM)"
+  "source": "Propositions de rectification personnelles du 19/10/2026 (PASTEUR & BEHEM)",
+  "limites": [
+   "Les suppléments personnels (196 945 € PASTEUR, 172 703 € BEHEM, soit 369 648 €) sont les montants NOTIFIÉS par le service sur deux propositions du 19/10/2026 scannées sans couche texte : la défense les reprend tels quels, elle ne les recalcule pas.",
+   "L'abandon de l'amende de 100 % (art. 1759) n'a pas été formellement écrit par le service ; il résulte en droit de la désignation régulière du 16/06/2026, mais reste à sécuriser."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "Deux propositions personnelles reprennent à l'identique la reconstitution « société » du 18/05 et y greffent une liquidation nouvelle (RCM ×1,25, barème, prélèvements sociaux, majorations) : 369 648 € notifiés aux deux foyers, qui s'ajoutent aux 213 148 € maintenus sur la société, soit une exposition réelle de 582 796 €.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -13,27 +21,27 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Chaque courrier comporte trois parties : un **rappel intégral** du rejet de comptabilité et de la méthode de reconstitution de la proposition « société » du 18 mai 2026 ; la **taxation des distributions** entre les mains du foyer, en revenus de capitaux mobiliers (art. 109 du CGI) ; et le **chiffrage personnel** de l'impôt sur le revenu, des prélèvements sociaux et des majorations, année par année (2023, 2024, 2025)."
+   "texte": "Chaque courrier comporte trois parties : un **rappel intégral** du rejet de comptabilité et de la méthode de reconstitution de la proposition « société » du 18 mai 2026 ; la **taxation des distributions** entre les mains du foyer, en revenus de capitaux mobiliers (art. 109-1 du CGI) ; et le **chiffrage personnel** de l'impôt sur le revenu, des prélèvements sociaux et des majorations, année par année (2023, 2024, 2025)."
   },
   {
    "kind": "kpis",
    "items": [
     {
-     "label": "Exposition personnelle notifiée",
-     "valeur": "369 648 €",
-     "sub": "M. PASTEUR 196 945 € + Mme BEHEM 172 703 €",
+     "label": "Exposition réelle après désignation",
+     "valeur": "582 796 €",
+     "sub": "société 213 148 € + associés 369 648 €",
      "couleur": "red"
     },
     {
-     "label": "Fait réellement nouveau",
-     "valeur": "0",
-     "sub": "les griefs et la reconstitution sont recopiés à l'identique du 18/05/2026",
+     "label": "Suppléments personnels notifiés",
+     "valeur": "369 648 €",
+     "sub": "M. PASTEUR 196 945 € + Mme BEHEM 172 703 € (montants du service, 19/10)",
      "couleur": "gold"
     },
     {
      "label": "Amende de 100 % (art. 1759)",
-     "valeur": "abandonnée",
-     "sub": "remplacée par la taxation personnelle après désignation du 16/06/2026",
+     "valeur": "écartée",
+     "sub": "par la désignation du 16/06/2026 ; abandon non encore prononcé par le service",
      "couleur": "teal"
     }
    ]
@@ -47,21 +55,25 @@
   },
   {
    "kind": "titre",
-   "texte": "La taxation personnelle est entièrement dérivée",
+   "texte": "Base distribuée et impôt personnel : deux grandeurs à ne pas confondre",
    "numero": "2.1"
   },
   {
    "kind": "paragraphe",
-   "texte": "Les sommes imposées aux deux associés ne sont pas des flux constatés : ce sont, à l'euro près, les recettes réputées dissimulées par la **reconstitution**, réparties par moitié. **Pas de recette occultée établie, pas de distribution, pas d'impôt personnel.** Chaque grief de rejet et chaque poste de la reconstitution sont réfutés, de façon autonome et complète, dans les blocs 2 et 3 de la présente réponse."
+   "texte": "La **base distribuée** n'est pas un flux constaté : c'est, à l'euro près, le produit de la reconstitution, réparti par moitié. Les discordances TTC de la reconstitution (193 234,55 / 138 863,57 / 139 727,76 €, soit 471 825,88 €) donnent, divisées par deux, une base de revenus de capitaux mobiliers de **235 913 € par foyer** — somme **égale** pour chacun. L'**impôt** notifié, lui, est **inégal** (196 945 € pour M. PASTEUR, 172 703 € pour Mme BEHEM) : à base identique, seul l'impôt sur le revenu au barème diffère, selon le revenu propre et le quotient familial de chaque foyer. Confondre la base (égale) et l'impôt (inégal) serait une erreur ; la cascade complète est dérivée dans la pièce jointe."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le principe demeure : **pas de recette occultée établie, pas de distribution, pas d'impôt personnel.** Chaque grief de rejet et chaque poste de la reconstitution sont réfutés, de façon autonome, aux blocs consacrés au rejet de la comptabilité et à la méthode de reconstitution."
   },
   {
    "kind": "titre",
-   "texte": "Le service n'a pas examiné notre défense",
+   "texte": "La reconstitution est reprise à l'identique ; seule la liquidation est nouvelle",
    "numero": "2.2"
   },
   {
    "kind": "paragraphe",
-   "texte": "Les propositions du 19 octobre reproduisent les arguments de la proposition du 18 mai 2026. Elles n'intègrent ni nos observations du 8 juillet 2026, ni les éléments développés dans la propre réponse du service du 4 septembre 2026. Aucun de nos chiffrages (sur-versement, dégustation, freinte, correspondance des libellés, cuisine) n'y est discuté. Le débat contradictoire impose pourtant un **examen effectif** des pièces produites."
+   "texte": "Les propositions du 19 octobre **recopient** la reconstitution de la proposition du 18 mai 2026 : mêmes griefs, mêmes montants reconstitués. Ce qui est **nouveau**, ce n'est pas l'assiette mais sa **liquidation personnelle** : coefficient de 1,25 (art. 158-7-2° du CGI), impôt au barème selon le quotient familial de chaque foyer, prélèvements sociaux de 17,2 %, majoration de 40 % (art. 1729) recalculée par personne. Aucune de nos observations du 10 juillet 2026 n'y est discutée, ni les éléments de la propre réponse du service du 4 septembre 2026 : le débat contradictoire impose pourtant un **examen effectif** des pièces produites."
   },
   {
    "kind": "titre",
@@ -70,22 +82,36 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service présume que chaque co-gérant a appréhendé la moitié des sommes, sans produire le moindre relevé bancaire, compte courant d'associé mouvementé ou enrichissement personnel. La reconstitution est exclusivement théorique (stocks + achats + doses). Cette absence de traçage pèse directement sur la **répartition par moitié** et sur la **preuve du caractère délibéré** (bloc 4)."
+   "texte": "Le service répartit la distribution par moitié entre les deux co-gérants sans produire le moindre relevé bancaire, compte courant d'associé mouvementé ou enrichissement personnel : la reconstitution est exclusivement théorique (stocks + achats + doses). Cette absence pèse sur la **clé de répartition de 50 %** et sur la **preuve du caractère délibéré**, contestées dans la procédure personnelle des bénéficiaires."
   },
   {
    "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 760 140\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"30\" y1=\"70\" x2=\"730\" y2=\"70\" stroke=\"#cbb98f\" stroke-width=\"2\"/><circle cx=\"30.0\" cy=\"70\" r=\"7\" fill=\"#b4452e\"/><text x=\"30.0\" y=\"54\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">18/05/26</text><text x=\"30.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Proposition</text><text x=\"30.0\" y=\"104\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">société</text><circle cx=\"170.0\" cy=\"70\" r=\"7\" fill=\"#0f7c6c\"/><text x=\"170.0\" y=\"54\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">16/06/26</text><text x=\"170.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Désignation</text><text x=\"170.0\" y=\"104\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">117</text><circle cx=\"310.0\" cy=\"70\" r=\"7\" fill=\"#a0740d\"/><text x=\"310.0\" y=\"54\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">08/07/26</text><text x=\"310.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\"></text><text x=\"310.0\" y=\"104\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Observations</text><circle cx=\"450.0\" cy=\"70\" r=\"7\" fill=\"#a0740d\"/><text x=\"450.0\" y=\"54\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">04/09/26</text><text x=\"450.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Réponse du</text><text x=\"450.0\" y=\"104\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">fisc</text><circle cx=\"590.0\" cy=\"70\" r=\"7\" fill=\"#a0740d\"/><text x=\"590.0\" y=\"54\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">01/10/26</text><text x=\"590.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Courrier</text><text x=\"590.0\" y=\"104\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">avocat</text><circle cx=\"730.0\" cy=\"70\" r=\"7\" fill=\"#b4452e\"/><text x=\"730.0\" y=\"54\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">19/10/26</text><text x=\"730.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\"></text><text x=\"730.0\" y=\"104\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Propositions</text><text x=\"730.0\" y=\"116\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">perso.</text></svg>",
+   "svg": "<svg viewBox=\"0 0 760 130\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"40\" y1=\"64\" x2=\"720\" y2=\"64\" stroke=\"#cbb98f\" stroke-width=\"2\"/><circle cx=\"40\" cy=\"64\" r=\"7\" fill=\"#b4452e\"/><text x=\"40\" y=\"48\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">18/05/26</text><text x=\"40\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Proposition</text><text x=\"40\" y=\"98\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">société</text><circle cx=\"215\" cy=\"64\" r=\"7\" fill=\"#0f7c6c\"/><text x=\"215\" y=\"48\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">16/06/26</text><text x=\"215\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Désignation</text><text x=\"215\" y=\"98\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">art. 117</text><circle cx=\"390\" cy=\"64\" r=\"7\" fill=\"#a0740d\"/><text x=\"390\" y=\"48\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">10/07/26</text><text x=\"390\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Observations</text><text x=\"390\" y=\"98\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Me Thivend</text><circle cx=\"565\" cy=\"64\" r=\"7\" fill=\"#a0740d\"/><text x=\"565\" y=\"48\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">04/09/26</text><text x=\"565\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Réponse</text><text x=\"565\" y=\"98\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">du fisc</text><circle cx=\"720\" cy=\"64\" r=\"7\" fill=\"#b4452e\"/><text x=\"720\" y=\"48\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#2a2015\">19/10/26</text><text x=\"720\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Propositions</text><text x=\"720\" y=\"98\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">perso.</text></svg>",
    "titre": "La chronologie de la procédure"
   },
   {
    "kind": "alerte",
    "couleur": "blue",
    "titre": "Comment lire la Réponse 2",
-   "texte": "Chaque page se suffit à elle-même : la position du service y est exposée, puis réfutée avec ses pièces et ses calculs. Le bloc 2 traite, dans l'ordre du courrier, les griefs du rejet de comptabilité ; le bloc 3, les postes de la reconstitution ; le bloc 4, ce qui est propre au 19 octobre (distributions, désignation, majorations, chiffrage de chaque associé)."
+   "texte": "Chaque page se suffit à elle-même : la position du service y est exposée, puis réfutée avec ses pièces et ses calculs. Les blocs « rejet de la comptabilité » et « méthode de reconstitution » traitent l'assiette ; les pages « distributions », « désignation », « majoration de 25 % » et les chiffrages PASTEUR et BEHEM traitent ce qui est propre au 19 octobre."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Cascade chiffrée des deux foyers (base RCM = discordances TTC ÷ 2, puis × 1,25, puis suppléments notifiés et taux effectif) et reconstitution des totaux de l'exposition (213 148 € société, 369 648 € associés, 582 796 € au total, 684 974 € avant désignation). Chaque résultat est une formule traçable.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "Chiffrage de la taxation personnelle : base RCM, × 1,25, montants notifiés, taux effectif par foyer (XLSX à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-exposition.xlsx",
+     "label": "Reconstitution de l'exposition : 213 148 / 369 648 / 582 796 / 684 974 € (XLSX à formules)"
+    }
+   ]
   },
   {
    "kind": "note",
-   "texte": "Sources : propositions de rectification personnelles du 19/10/2026 (M. PASTEUR et Mme BEHEM) ; proposition de rectification du 18/05/2026 ; réponse de la DDFiP du Jura du 04/09/2026."
+   "texte": "Sources : propositions de rectification personnelles du 19/10/2026 (M. PASTEUR et Mme BEHEM) ; proposition de rectification du 18/05/2026 (reconstitution, p. 52 ; pénalités, digest 07) ; réponse de la DDFiP du Jura du 04/09/2026. Les montants personnels (196 945 € / 172 703 €) sont ceux notifiés par le service."
   }
  ]
 }

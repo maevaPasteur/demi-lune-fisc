@@ -71,11 +71,11 @@ export const points: Point[] = [
   {
     slug: 'cadre-19-octobre', bloc: 'offensive',
     refCourrier: C19 + ' (PASTEUR & BEHEM)',
-    titre: 'Deux propositions personnelles, aucun fait nouveau',
+    titre: 'Deux propositions personnelles, une liquidation nouvelle sur la même reconstitution',
     positionService: '',
     reponseCourte:
-      'Ces deux courriers recopient une reconstitution déjà réfutée et n’examinent pas notre défense ; toute la taxation personnelle est dérivée et tombe avec la reconstitution.',
-    enjeu: 'Impôts personnels ≈ 369 648 € (PASTEUR 196 945 € + BEHEM 172 703 €)',
+      'Les deux courriers recopient à l’identique la reconstitution du 18/05 et y greffent une liquidation personnelle nouvelle (RCM ×1,25, barème, prélèvements sociaux, majorations) ; toute cette taxation est dérivée et tombe avec la reconstitution.',
+    enjeu: 'Exposition réelle 582 796 € (société 213 148 € + associés 369 648 €)',
     statut: 'partiel',
   },
   // ----------------------------------------------------------- BLOC 2 --
@@ -148,8 +148,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' — Prix des menus', titre: 'L’instabilité des prix des menus',
     positionService: '',
     reponseCourte:
-      'Le prix catalogue (45 €) est stable ; les prix variables sont des forfaits « sans détail » (factures globales), tous horodatés et portés au CA.',
-    statut: 'demonte',
+      'Le prix catalogue (45 €) est unique ; le prix est libre (art. L. 410-2 c. com.) et aucune recette n’est alléguée manquante. La variabilité est la conversion de tablées au forfait, démontrée au centime sur les annexes du service pour 2022-2023 (16 notes, 1 492,80 €). Le rattachement reste partiel au-delà (45,5 % des ventes hors catalogue ; 2 rafales sur 14 au 09/09/2022) et la traçabilité des suppressions relève du grief A.',
+    statut: 'partiel',
   },
   {
     slug: 'coefficient-de-revente', bloc: 'rejet',
@@ -181,8 +181,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' — Perte de bière', titre: 'La perte de bière (mousse et tirage)',
     positionService: '',
     reponseCourte:
-      'La freinte technique du fût (mousse, purge, nettoyage, fond de fût) dépasse les 15 % que le service admet lui-même ; la bière n’est pas vendue à 85 %.',
-    statut: 'demonte',
+      'Au titre de la seule freinte, aucun dégrèvement : la perte technique défendable (39 L en 2024-2025) est inférieure au 1er abattement déjà appliqué par le service (95 L du volume disponible). La page démonte le motif du refus (cumul réel 27,75 % et non 30 %, aucun des deux 15 % n’étant une perte pure) et fixe l’assiette (1 213 L) pour le bilan matière.',
+    statut: 'partiel',
   },
   {
     slug: 'perte-de-cremant', bloc: 'reconstitution',
@@ -197,8 +197,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' — Dégustation', titre: 'La dégustation offerte',
     positionService: '',
     reponseCourte:
-      'Comptée note par note (2 cl par vin nommé et par note) : du vin offert et jamais vendu, lu dans la caisse, que la reconstitution convertit à tort en verres vendus.',
-    statut: 'demonte',
+      'Une ligne de vin nommé prouve une vente, non une larme offerte : sur 3 exercices la caisse ne trace que 7 lignes à 0 € (1,85 L), des verres/pichets entiers. Les 97,42 L sont une hypothèse (6 292 ventes × 2 cl, dose jamais mesurée) dont 75,96 L dépendent d’une attestation de salle non produite.',
+    statut: 'a-etayer',
   },
   {
     slug: 'alcool-de-cuisine', bloc: 'reconstitution',
@@ -229,8 +229,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' — Ventes sans achat', titre: 'Les « ventes sans achat »',
     positionService: '',
     reponseCourte:
-      'Les produits vendus sans achat identifié prouvent un défaut de paramétrage de la caisse, pas une recette occultée : c’est l’inverse d’une dissimulation.',
-    statut: 'demonte',
+      'Le service reconnaît que ce grief ne fonde aucun euro, et ses tableaux p. 75 sont faux (12 950 cl de blanc pour 150 enregistrés, exercices 2 et 3 identiques). Restent une bouteille de Bordeaux et 375 cl de blanc que nous assumons comme défauts de caisse, sans CA occulté démontré ; la comparaison achats/ventes n’exclut pas à elle seule des achats hors facture (L. 192 al. 2 LPF).',
+    statut: 'partiel',
   },
   {
     slug: 'abattements-et-pertes', bloc: 'reconstitution',
@@ -255,8 +255,8 @@ export const points: Point[] = [
     titre: '4.1 — Le principe : des distributions sans existence propre',
     positionService: '',
     reponseCourte:
-      'Pas de recette occultée établie, pas de distribution : la somme distribuée est le décalque du CA reconstitué et disparaît avec lui.',
-    enjeu: 'Base des RCM imposés', statut: 'partiel',
+      'La distribution n’a aucune source autonome : elle est le décalque du CA reconstitué (235 913 € par foyer). Si la reconstitution tombe, elle disparaît ; si elle est réduite, la base distribuée baisse d’autant (moyen subsidiaire chiffré).',
+    enjeu: 'Base des RCM imposés (235 913 € par foyer)', statut: 'partiel',
   },
   {
     slug: 'designation-117-maitre-affaire', bloc: 'taxation', numero: '4.2',
@@ -264,8 +264,8 @@ export const points: Point[] = [
     titre: '4.2 — La désignation (art. 117) et le « maître de l’affaire »',
     positionService: '',
     reponseCourte:
-      'La désignation régulière (par avocat) écarte le 1759 mais ne vaut pas reconnaissance ; la maîtrise étant partagée entre deux foyers distincts, la présomption tombe et la clé 50/50 n’est pas démontrée (CAA Versailles n° 21VE01600).',
-    statut: 'a-etayer',
+      'La désignation régulière (par avocat) écarte l’amende de 1759 (471 826 €) sans valoir reconnaissance. Deux concubins = deux foyers distincts (art. 6) et, au mieux, deux co-maîtres : le service doit prouver la part de chacun (CE n° 388887 ; CAA Versailles n° 21VE01600), non la déduire du capital. Soulevé à titre conservatoire.',
+    statut: 'partiel',
   },
   {
     slug: 'majoration-25-pourcent', bloc: 'taxation', numero: '4.3',
@@ -273,8 +273,8 @@ export const points: Point[] = [
     titre: '4.3 — La majoration d’assiette de 25 %',
     positionService: '',
     reponseCourte:
-      'Elle tombe avec la distribution ; valide pour l’IR, elle a bien été exclue de l’assiette sociale (vérifié, conforme à la QPC 2017-643/650). Le prélèvement total atteint 73 % à 84 % : effet confiscatoire.',
-    statut: 'partiel',
+      'Sur l’IR le coefficient de 1,25 est valide : la réduction viendra de la chute de la distribution. L’exclusion du 1,25 de l’assiette sociale (QPC 2017-643/650) reste à vérifier, pièce non produite. Le caractère confiscatoire (hors sanction : 59 % à 67 %) est subsidiaire et fragile.',
+    statut: 'a-etayer',
   },
   {
     slug: 'manquement-delibere-personnel', bloc: 'taxation', numero: '4.4',
@@ -291,8 +291,8 @@ export const points: Point[] = [
     titre: '4.5 — Le chiffrage de M. Thierry PASTEUR',
     positionService: '',
     reponseCourte:
-      'Supplément vérifié de 196 945 € sur trois ans, soit un taux effectif de l’ordre de 84 % sur la somme réputée distribuée. Entièrement dérivé de la reconstitution.',
-    enjeu: '196 945 €', statut: 'partiel',
+      'Supplément de 196 945 € notifié par le service (non recalculable faute du revenu du foyer), décalque de la reconstitution. Taux effectif global 83,5 % ; hors majoration de 40 %, 67,3 %. Tombe avec la reconstitution.',
+    enjeu: '196 945 €', statut: 'a-etayer',
   },
   {
     slug: 'behem-chiffrage', bloc: 'taxation', numero: '4.6',
@@ -300,8 +300,8 @@ export const points: Point[] = [
     titre: '4.6 — Le chiffrage de Mme Ghislaine BEHEM',
     positionService: '',
     reponseCourte:
-      'Supplément vérifié de 172 703 € sur trois ans, soit un taux effectif de l’ordre de 73 %. Base distribuée identique à celle de M. PASTEUR (50/50).',
-    enjeu: '172 703 €', statut: 'partiel',
+      'Supplément de 172 703 € notifié par le service (2024 illisible sur le PDF scanné), décalque de la reconstitution. Taux effectif global 73,2 % ; hors majoration de 40 %, 58,8 %. Tombe avec la reconstitution.',
+    enjeu: '172 703 €', statut: 'a-etayer',
   },
   {
     slug: 'synthese-et-demande', bloc: 'taxation', numero: '4.7',
@@ -309,8 +309,8 @@ export const points: Point[] = [
     titre: '4.7 — Exposition réelle et demandes',
     positionService: '',
     reponseCourte:
-      'Exposition réelle ≈ 582 796 € (société 213 148 € + associés 369 648 €), entièrement suspendue au sort de la reconstitution. Demandes : Commission départementale et décharge.',
-    enjeu: 'Total en jeu ≈ 582 796 €', statut: 'a-etayer',
+      'Exposition réelle 582 796 € (société 213 148 € + associés 369 648 €), et non 684 974 €, entièrement suspendue à la reconstitution. Commission sur les seules questions de fait de la reconstitution ; décharge contentieuse pour les RCM, l’IR et les pénalités.',
+    enjeu: 'Total en jeu 582 796 €', statut: 'partiel',
   },
 ]
 

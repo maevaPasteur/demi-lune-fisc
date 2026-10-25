@@ -1,7 +1,17 @@
 {
  "meta": {
   "slug": "alcool-de-cuisine",
-  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)"
+  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
+  "limites": [
+   "Les repères D, E, G et Q du service ne se recalculent pas sur ses propres colonnes (écart cumulé de 8 752 cl, soit 87,5 L) ; nous les retenons tels qu’il les imprime pour la comparaison « déjà retranché », sans pouvoir les reconstituer.",
+   "Le prix de vente au verre n’est sourçable que sur l’exercice 2022-2023 (annexe B1) ; les annexes B des exercices 2023-2024 et 2024-2025 ne figurent pas au dossier. L’effet en euros est établi à ce prix.",
+   "Le Grand Marnier (5,96 L) n’a pas de prix de vente au verre dans l’annexe B1 : son effet en euros n’est pas chiffré.",
+   "La conversion en euros porte sur le CA liquides reconstitué (TTC), avant le coefficient liquides/solides et la TVA appliqués par le service ; son exactitude par exercice suppose la communication des annexes 7-1 à 7-3."
+  ]
+ },
+ "entete": {
+  "statut": "partiel",
+  "reponseCourte": "Après plafonnement aux achats facturés et déduction de ce que le service retranche déjà, il reste 72,7 L d’alcool cuit à la carte à retrancher (vin jaune, porto, Bailey’s de carte, Grand Marnier), soit environ 5 113 € de CA liquides TTC hors Grand Marnier. Le ravelin, le macvin, le calvados et la crème de cassis sont déjà couverts par le service (supplément nul). Les plats des menus sont chiffrés séparément, sans double comptage."
  },
  "sections": [
   {
@@ -9,205 +19,21 @@
    "source": "fisc",
    "numero": 1,
    "titre": "Ce que soutient l’administration",
-   "sousTitre": "La proposition de rectification personnelle du 19/10/2026 notifiée à M. Thierry PASTEUR et à Mme Ghislaine BEHEM reprend à l’identique ce grief de la proposition « société » du 18/05/2026 ; le service en avait précisé la portée dans sa réponse aux observations du 04/09/2026, partie « R- Dégustation Offerte (goûter du vin) », p. 87 et 88."
-  },
-  {
-   "kind": "titre",
-   "texte": "Un intitulé qui ne correspond pas au contenu",
-   "numero": "1.1"
+   "sousTitre": "La proposition de rectification personnelle du 19/10/2026 notifiée à M. Thierry PASTEUR et à Mme Ghislaine BEHEM reprend à l’identique le grief R (« Dégustation Offerte »), dont le contenu porte en réalité sur l’alcool de cuisine ; le service en a précisé la portée dans sa réponse du 04/09/2026, p. 87 et 88."
   },
   {
    "kind": "paragraphe",
-   "texte": "La partie R est intitulée « R- Dégustation Offerte (goûter du vin) », avec le renvoi « (Pages 37-44 de la proposition de rectifications) », soit exactement l’intitulé de la partie Q qui la précède (p. 85 et 86). Son contenu porte cependant sur un autre sujet : l’alcool de cuisine, c’est-à-dire les tableaux des 566 L et des 228 L. Nous le relevons pour la lecture du dossier, sans en tirer d’autre conséquence."
-  },
-  {
-   "kind": "titre",
-   "texte": "Ce que le courrier reproduit de notre réponse",
-   "numero": "1.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le courrier écrit d’abord : « Maître THIVEND revient, encore sur cette question. Il reprend les mêmes tableaux que précédemment dans sa réponse que aboutir à » (p. 87), puis reproduit notre méthode : « **2. Le calcul.** On multiplie chaque dose par le **nombre de plats réellement vendus** (caisse, annexe C) sur les trois exercices, puis on agrège **alcool par alcool**. On obtient le volume d’alcool parti en cuisine », suivie du tableau de résultat « 3. Le résultat : alcool de cuisine par produit (3 exercices) »."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Tableau de notre réponse reproduit p. 87 : alcool de cuisine par produit, 3 exercices",
-   "minWidth": 560,
-   "colonnes": [
-    {
-     "label": "Alcool"
-    },
-    {
-     "label": "Litres",
-     "align": "right"
-    },
-    {
-     "label": "Coût d’achat",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Ravelin"
-     },
-     {
-      "v": "152 L",
-      "align": "right"
-     },
-     {
-      "v": "450 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Macvin"
-     },
-     {
-      "v": "123 L",
-      "align": "right"
-     },
-     {
-      "v": "2 235 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Arbois Vin Jaune"
-     },
-     {
-      "v": "113 L",
-      "align": "right"
-     },
-     {
-      "v": "4 032 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Calvados"
-     },
-     {
-      "v": "106 L",
-      "align": "right"
-     },
-     {
-      "v": "1 792 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Porto"
-     },
-     {
-      "v": "60 L",
-      "align": "right"
-     },
-     {
-      "v": "651 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Grand Marnier"
-     },
-     {
-      "v": "7 L",
-      "align": "right"
-     },
-     {
-      "v": "230 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Crème de Cassis"
-     },
-     {
-      "v": "3 L",
-      "align": "right"
-     },
-     {
-      "v": "26 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Bailey’s"
-     },
-     {
-      "v": "1 L",
-      "align": "right"
-     },
-     {
-      "v": "18 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Total alcool de cuisine",
-      "fw": 700
-     },
-     {
-      "v": "566 L",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "9 434 €",
-      "align": "right",
-      "fw": 700
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "note",
-   "texte": "Contrairement à la reproduction de la page 65, où le total de 566 L était imprimé dans la colonne « Coût d’achat », le tableau de la page 87 le porte bien dans la colonne des litres et ajoute le coût d’achat total de 9 434 €."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le courrier reproduit ensuite l’encadré consacré aux menus : « Un menu se vend **au forfait** : le client choisit une entrée, un plat et un dessert. Certains de ces plats contiennent de l’alcool **de cuisine** (sauce au porto, fondue au Ravelin, baba au macvin, coupe au cassis…), **jamais un verre d’alcool servi**. Pour le chiffrer sans le surévaluer, on procède **plat par plat** : dose du plat × probabilité que le client le choisisse (lue dans la caisse) = **dose moyenne par menu vendu** ; multipliée par le **nombre de menus réellement vendus** sur la période. Total sur 3 exercices : **228 L** » (p. 87)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Il reprend enfin notre conclusion : « En appliquant les doses confirmées par les dirigeants à toute la carte, la **cuisine à la carte** consomme **566 L** d’alcool, et les **menus au forfait 228 L** de plus (pondérés par la probabilité de choix). Au total, **794 L** d’alcool acheté part dans les plats sur trois ans, jamais dans un verre vendu. Le service n’en déduit qu’une fraction : le reste est compté à tort comme des verres vendus » (p. 87). Le courrier observe au passage que « Il re-donne ses tableaux sur 5 périodes différentes (P1 à P5), rajoute un graphique et conclut », et cite les pièces 53-rf-alcool-cuisine-doses-plats.xlsx et 54-boissons-4-menus-par-periode.xlsx."
-  },
-  {
-   "kind": "note",
-   "texte": "Ce total de 794 L est celui du mémoire du 10 juillet 2026. Recalculé au centilitre, il vaut 794,6 L, et 741,1 L une fois plafonné aux achats facturés, le marc de Bourgogne ramené aux 210 cl sortis du stock : c’est cette dernière valeur qui entre au bilan matière."
-  },
-  {
-   "kind": "titre",
-   "texte": "La réponse du service",
-   "numero": "1.3"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service annonce d’emblée qu’il n’examinera pas ces chiffres : « Compte tenu que Maître THIVEND se contente de rappeler ses tableaux évoqués dans la partie “Reconstitution du Chiffre d’affaires”, sans apporter un quelconque élément complémentaire, le service va se limiter à rappeler ses conclusions pour les différents alcools des tableaux cités » (p. 88)."
+   "texte": "Le service annonce qu’il n’examinera pas nos chiffres : « Compte tenu que Maître THIVEND se contente de rappeler ses tableaux […] sans apporter un quelconque élément complémentaire, le service va se limiter à rappeler ses conclusions pour les différents alcools des tableaux cités » (p. 88). Il oppose, alcool par alcool, un volume qu’il dit avoir « déjà retenu », « bien au-delà » du volume réclamé, et conclut qu’« il ne voit aucune raison de modifier sa reconstitution »."
   },
   {
    "kind": "tableau",
    "titre": "Les conclusions que le service rappelle, p. 88",
-   "minWidth": 800,
    "colonnes": [
     {
      "label": "Alcool"
     },
     {
      "label": "Ce que le service dit avoir déjà retenu",
-     "align": "right"
-    },
-    {
-     "label": "Volume demandé par notre réponse",
      "align": "right"
     },
     {
@@ -224,10 +50,6 @@
       "align": "right"
      },
      {
-      "v": "12 L",
-      "align": "right"
-     },
-     {
       "v": "« bien au-delà de celles réclamées »"
      }
     ],
@@ -237,10 +59,6 @@
      },
      {
       "v": "111 L (arrondi)",
-      "align": "right"
-     },
-     {
-      "v": "11 L",
       "align": "right"
      },
      {
@@ -256,10 +74,6 @@
       "align": "right"
      },
      {
-      "v": "10 L",
-      "align": "right"
-     },
-     {
       "v": "« bien au-delà de celles réclamées »"
      }
     ],
@@ -269,10 +83,6 @@
      },
      {
       "v": "240 L (arrondi)",
-      "align": "right"
-     },
-     {
-      "v": "54 L",
       "align": "right"
      },
      {
@@ -288,10 +98,6 @@
       "align": "right"
      },
      {
-      "v": "100 L",
-      "align": "right"
-     },
-     {
       "v": "« le service va donc bien au-delà des 100 litres réclamés »"
      }
     ],
@@ -304,11 +110,76 @@
       "align": "right"
      },
      {
-      "v": "16 L",
+      "v": "« bien au-delà des 16 litres réclamés »"
+     }
+    ]
+   ],
+   "minWidth": 700
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Un périmètre net, sans double comptage",
+   "sousTitre": "Cette page ne porte que l’alcool cuit dans les plats vendus à la carte. L’alcool cuit dans les plats des menus au forfait est chiffré séparément, dans la page « Alcool cuit dans les plats des menus ». Les deux périmètres sont disjoints et s’additionnent."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Pour que la discussion soit vérifiable et qu’aucun litre ne soit compté deux fois, nous séparons strictement deux assiettes : l’alcool cuit dans les plats de la carte (objet de cette page) et l’alcool cuit dans les plats servis à l’intérieur d’un menu (objet de la page voisine). Le tableau ci-dessous donne, alcool par alcool, le supplément qui reste à retrancher une fois déduit ce que le service retranche déjà lui-même, réparti entre ces deux assiettes."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Répartition carte / menus du supplément qui reste à retrancher (litres, 3 exercices)",
+   "colonnes": [
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "À la carte (cette page)",
+     "align": "right"
+    },
+    {
+     "label": "Dans les menus (page voisine)",
+     "align": "right"
+    },
+    {
+     "label": "Total",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "12,9",
       "align": "right"
      },
      {
-      "v": "« bien au-delà des 16 litres réclamés »"
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "12,9",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "52,9",
+      "align": "right"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "52,9",
+      "align": "right"
      }
     ],
     [
@@ -316,31 +187,50 @@
       "v": "Bailey’s"
      },
      {
-      "v": "1 400 cl d’achats",
+      "v": "0,9",
       "align": "right"
      },
      {
-      "v": "14 L",
+      "v": "14,4",
       "align": "right"
      },
      {
-      "v": "« ce volume correspond à la totalité des achats disponibles »"
+      "v": "15,3",
+      "align": "right"
      }
     ],
     [
      {
-      "v": "Marc de bourgogne"
+      "v": "Grand Marnier"
      },
      {
-      "v": "70 cl d’achats",
+      "v": "6,0",
       "align": "right"
      },
      {
-      "v": "6 L",
+      "v": "0,0",
       "align": "right"
      },
      {
-      "v": "« près de 6 fois supérieur à celui disponible »"
+      "v": "6,0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Marc de Bourgogne"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "2,1",
+      "align": "right"
+     },
+     {
+      "v": "2,1",
+      "align": "right"
      }
     ],
     [
@@ -348,513 +238,98 @@
       "v": "Liqueur de poire"
      },
      {
-      "v": "140 cl d’achats",
+      "v": "0,0",
       "align": "right"
      },
      {
-      "v": "4 L",
+      "v": "4,1",
       "align": "right"
      },
      {
-      "v": "« près de 3 fois supérieur à celui disponible »"
+      "v": "4,1",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Ravelin, macvin, calvados, crème de cassis"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     },
+     {
+      "v": "0,0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total",
+      "fw": 700
+     },
+     {
+      "v": "72,7",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "20,5",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "93,2",
+      "align": "right",
+      "fw": 700
      }
     ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Pour les quatre repères D, E, G et Q, le service précise qu’il raisonne, « comme auparavant dans la présente réponse », en « volume globalisé sur trois ans conformément à la logique de Maître THIVEND », et qu’« il s’agit de quantités totales retranchée de la reconstitution de chiffre d’affaires sur 3 ans bien au-delà de celles réclamées par Maître THIVEND » (p. 88)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Pour le Bailey’s, le marc de bourgogne et la liqueur de poire, le courrier oppose la même formule : « Le service ne peut l’admettre » pour le premier, « Le service ne peut donc l’admettre » pour les deux autres (p. 88). Il ajoute, pour le seul Bailey’s, que « au regard des données de la caisse, les articles enregistrés susceptibles d’utiliser cet alcool (confection de Dessert ou verre), sur trois ans, n’entraînerait qu’une consommation de 236 centilitres », en renvoyant aux annexes 7-1, 7-2 et 7-3 de la proposition de rectifications. La même page 70 chiffre de la même manière le marc de bourgogne, « 20 centilitres (8 + 4 + 8) », et la liqueur de poire, « 480 centilitres (216+48+8+84+44+80) »."
-  },
-  {
-   "kind": "alerte",
-   "couleur": "red",
-   "titre": "Aucun montant modifié",
-   "texte": "« Par conséquent, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 88, phrase soulignée dans le courrier)."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Le reproche vise une modification de doses que la réponse n’a pas faite",
-   "sousTitre": "Les trois doses que nous appliquons à la cuisine sont celles que le service imprime lui-même dans ses propres tableaux."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La partie R ne développe aucun motif : elle renvoie aux conclusions des points 5 et 6 de la même réponse. Le seul motif de fond que le courrier oppose à l’alcool de cuisine tient donc dans un paragraphe de la page 68 : « Pour toutes les doses des alcools nécessaires à la cuisine, le service n’a fait que suivre les recommandations des dirigeants. Il est naturel que Maître THIVEND tente d’en modifier les volumes pour minimiser l’impact sur les montants de chiffre d’affaires. Toutefois, ces modifications doivent être étayées et justifiées de manière pertinente, ce qui n’est pas le cas. »"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce reproche suppose que la réponse ait modifié une dose. Elle n’en a modifié aucune. Le calcul des 794,6 L n’emploie que trois doses, et le service imprime les trois : **1 cl** pour une sauce ou un plat en sauce, **4 cl** pour un baba, un flambage, un dessert ou une assiette, **10 cl** pour une fondue. Ces valeurs ne sont pas les nôtres : elles sont, comme le courrier l’écrit, celles que les dirigeants ont données au vérificateur après l’entrevue du 30 mars 2026, et que le service a reprises."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Les trois doses de cuisine, et l’endroit où le service les imprime",
-   "minWidth": 940,
-   "colonnes": [
-    {
-     "label": "Préparation"
-    },
-    {
-     "label": "Dose que le service imprime",
-     "align": "right"
-    },
-    {
-     "label": "Dose que nous appliquons",
-     "align": "right"
-    },
-    {
-     "label": "Écart",
-     "align": "right"
-    },
-    {
-     "label": "Où il l’écrit"
-    }
    ],
-   "lignes": [
-    [
-     {
-      "v": "Sauce et plat en sauce"
-     },
-     {
-      "v": "1 cl",
-      "align": "right"
-     },
-     {
-      "v": "1 cl",
-      "align": "right"
-     },
-     {
-      "v": "aucun",
-      "align": "right",
-      "badge": "ok"
-     },
-     {
-      "v": "p. 67 : « les sauces en cuisse pour des plats spécifiques (1cl) » ; en-tête du tableau du porto, « dose de 1cl » ; en-tête du tableau du vin jaune, p. 66, « 1cl / 10 cl »"
-     }
-    ],
-    [
-     {
-      "v": "Fondue"
-     },
-     {
-      "v": "10 cl",
-      "align": "right"
-     },
-     {
-      "v": "10 cl",
-      "align": "right"
-     },
-     {
-      "v": "aucun",
-      "align": "right",
-      "badge": "ok"
-     },
-     {
-      "v": "p. 66, en-tête du tableau du vin jaune : « Nombre de plats (nécessitant une dose) 1cl / 10 cl », la seconde valeur visant les fondues"
-     }
-    ],
-    [
-     {
-      "v": "Baba, flambage, dessert, assiette"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "aucun",
-      "align": "right",
-      "badge": "ok"
-     },
-     {
-      "v": "p. 65, en-tête du tableau du Calvados : « Volume consommé (à raison de 4 cl par plat) » ; p. 67 : « 4 cl, pour la préparation des plats/desserts ( en cuisine ) » et en-tête du tableau du macvin, « dose de 4 cl »"
-     }
-    ]
-   ]
+   "minWidth": 760
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le relevé complet figure à l’onglet « 5-Doses » de la pièce jointe : trente-trois libellés de caisse, trente-quatre couples article et alcool, dix-sept à 1 cl, treize à 4 cl et quatre à 10 cl, sans aucune autre valeur ; et, pour les menus, trente et une options alcoolisées portant les trois mêmes doses. Ce qui sépare les deux chiffrages n’est donc pas la dose. C’est le nombre de plats auxquels elle s’applique, et, sur les tableaux du service, le rapport entre les deux colonnes qu’il imprime."
+   "kind": "note",
+   "texte": "Les deux colonnes sont disjointes : aucun litre ne figure à la fois « à la carte » et « dans les menus ». Le Bailey’s apparaît dans les deux pages pour des portions distinctes, 0,9 L de dessert IVRESSE vendu à la carte et 14,4 L de desserts servis dans les menus : jamais le même litre. Le détail exercice par exercice, et le contrôle d’absence de recouvrement, figurent à l’onglet « Perimetre » de la pièce R2-alcool-plats-menus.xlsx."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 3,
-   "titre": "Sur les lignes dont l’annexe donne le détail, le calcul du service est le nôtre",
-   "sousTitre": "Annexes 7-1 à 7-3 de la proposition : même dose de 4 cl, mêmes articles de caisse, et la même pondération des plats de menu par la probabilité de choix."
+   "titre": "Les doses sont celles du service, fourchettes comprises",
+   "sousTitre": "Les trois doses appliquées à la cuisine viennent du courriel des dirigeants du 30/03/2026 que le service reproduit page 37 de sa proposition et dont il écrit page 68 qu’il « n’a fait que suivre les recommandations des dirigeants »."
   },
   {
    "kind": "paragraphe",
-   "texte": "Les tableaux des pages 65 à 67 n’exposent aucune formule, mais les annexes 7-1, 7-2 et 7-3 de la proposition de rectifications, qui les portent, en donnent le détail pour le Calvados et pour le macvin. Nous les avons rouvertes. Le Calvados est l’alcool que le service a lui-même choisi pour illustrer son propos : « L’exemple de cet alcool permet de se faire une idée assez précise des incohérences » (p. 65). Ses trois lignes se décomposent exactement."
+   "texte": "Le seul motif de fond opposé à l’alcool de cuisine tient page 68 : « Il est naturel que Maître THIVEND tente d’en modifier les volumes […]. Toutefois, ces modifications doivent être étayées et justifiées de manière pertinente, ce qui n’est pas le cas. » Ce reproche suppose une dose modifiée. Il n’y en a pas : le calcul n’emploie que 1 cl (sauce), 4 cl (baba, flambage, dessert, assiette) et 10 cl (fondue), et le service imprime les trois dans ses propres tableaux (p. 65 à 67)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Deux lignes du courriel ne sont pas des doses fermes mais des fourchettes, et nous le disons : la fondue est donnée à « 9 ou 10 cl », les plats flambés à « environ 4 à 5 cl ». Sur chacune, nous retenons la valeur que le service retient lui-même : 10 cl pour la fondue (en-tête du repère E, p. 66), 4 cl pour le Calvados (repère D, p. 65). Ces fourchettes sont sans effet sur le supplément de cette page : le ravelin, le macvin et le calvados y ont un supplément nul, et la seule ligne qui subsiste et dépende d’une fondue, le vin jaune, est chiffrée à 10 cl, c’est-à-dire à la valeur du service."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "orange",
+   "titre": "La dose du service n’est pas « 4 cl partout »",
+   "texte": "Contrairement à ce que pourrait laisser croire une lecture rapide, le service n’applique pas 4 cl partout : au macvin de cuisine (repère Q), il retient 5 cl sur les exercices 1 et 2, et 4 cl seulement sur l’exercice 3 (annexe n° 7, proposition p. 48). Nous appliquons 4 cl. Le service retranche donc, sur le macvin, davantage que nous ne demandons : loin de nous nuire, cet écart confirme que le supplément de macvin est nul."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 4,
+   "titre": "L’écart ne porte pas sur la dose, mais sur les articles comptés",
+   "sousTitre": "Sur le Calvados, que le service choisit lui-même pour « se faire une idée assez précise des incohérences », sa liste retient deux articles de carte quand la carte en porte sept."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les cinq articles de Calvados que le service n’a pas retenus représentent 565 portions sur trois exercices, soit 22,56 L versés en cuisine et jamais déduits. C’est là, et non dans la dose, que se loge l’écart entre ses 93,2 L et nos 119,1 L calculés."
   },
   {
    "kind": "tableau",
-   "titre": "Le repère D du Calvados, reconstitué depuis les annexes 7-1 à 7-3",
-   "minWidth": 1000,
-   "colonnes": [
-    {
-     "label": "Exercice"
-    },
-    {
-     "label": "Articles de carte retenus par le service",
-     "align": "right"
-    },
-    {
-     "label": "Menus Végétariens",
-     "align": "right"
-    },
-    {
-     "label": "Part affectée au plat au Calvados",
-     "align": "right"
-    },
-    {
-     "label": "Dose",
-     "align": "right"
-    },
-    {
-     "label": "Volume reconstitué",
-     "align": "right"
-    },
-    {
-     "label": "Volume imprimé p. 65",
-     "align": "right"
-    },
-    {
-     "label": "Nombre de plats imprimé p. 65",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Exercice 1"
-     },
-     {
-      "v": "512 + 222 = 734",
-      "align": "right"
-     },
-     {
-      "v": "263",
-      "align": "right"
-     },
-     {
-      "v": "35,58 %",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "3 310 cl",
-      "align": "right"
-     },
-     {
-      "v": "3 310 cl",
-      "align": "right",
-      "badge": "ok"
-     },
-     {
-      "v": "997 = 734 + 263",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Exercice 2"
-     },
-     {
-      "v": "475 + 210 = 685",
-      "align": "right"
-     },
-     {
-      "v": "195",
-      "align": "right"
-     },
-     {
-      "v": "33,60 %",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "3 002 cl",
-      "align": "right"
-     },
-     {
-      "v": "3 002 cl",
-      "align": "right",
-      "badge": "ok"
-     },
-     {
-      "v": "880 = 685 + 195",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Exercice 3"
-     },
-     {
-      "v": "465 + 216 = 681",
-      "align": "right"
-     },
-     {
-      "v": "192",
-      "align": "right"
-     },
-     {
-      "v": "36,61 %",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "3 005 cl",
-      "align": "right"
-     },
-     {
-      "v": "3 005 cl",
-      "align": "right",
-      "badge": "ok"
-     },
-     {
-      "v": "873 = 681 + 192",
-      "align": "right"
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Les deux articles de carte que le service retient sont le « Camembert Rôti » et l’« Assiette du Père Grégoire ». Ses quantités sont les nôtres : notre lecture de la caisse donne 512, 474 et 465 camemberts et 222, 210 et 216 assiettes, soit, à une unité près sur un seul exercice, les nombres de son annexe. Sa dose est de 4 cl sur les trois lignes. Et il affecte au plat contenant du Calvados 35,58 %, 33,60 % puis 36,61 % des menus Végétariens vendus, en indiquant que « Le Menu Végétarien comprend un plat nécessitant l’utilisation de calvados. Pour déterminer le volume utilisé à cet usage, le service se basera sur les données de la caisse informatique (Hors menu). »"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le macvin de l’exercice 3, seule autre ligne dont l’annexe soit exploitable, obéit à la même règle : 561 babas et 547 assiettes à 4 cl, puis 803 menus Franc-Comtois affectés à 38,74 % au plat et à 53,84 % au dessert, toujours à 4 cl. Total 7 405 cl, pour 7 406 cl imprimés p. 67, et 2 714 articles, exactement le nombre de plats qu’imprime la même ligne. Là encore, les 561 babas et les 547 assiettes sont, au libellé près, nos deux articles de carte du macvin sur cet exercice, aux mêmes quantités."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le porto obéit à la même règle, et son annexe 7-1 donne la ligne complète de l’exercice 1 : sauce Forestière 33, entrecôte Forestière 238, sauce Morille 37, entrecôte Morille 17, puis « Menu Demi-Lune » 153, affecté à 47,83 %, soit 73 en net. Dose de 1 cl partout, total 398 cl, et 33 + 238 + 37 + 17 + 153 = 478, le nombre de plats imprimé p. 67. La note du service y précise : « Le Menu Demi-Lune comprend une entrée nécessitant l’utilisation de porto pour la sauce Forestière [...] le service se basera sur les données de la caisse informatique (Hors menu). Ont notamment été enregistrées : 170,50 Feuilleté Forestier 47,83 % ; 186,00 Salade de Chèvre Chaud 52,17 % »."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Annexe 7-3 de la proposition, macvin, exercice 3",
-   "minWidth": 880,
-   "colonnes": [
-    {
-     "label": "Poste de l’annexe du service"
-    },
-    {
-     "label": "Nombre d’articles",
-     "align": "right"
-    },
-    {
-     "label": "Dose",
-     "align": "right"
-    },
-    {
-     "label": "Probabilité de choix appliquée par le service",
-     "align": "right"
-    },
-    {
-     "label": "Volume",
-     "align": "right"
-    },
-    {
-     "label": "Nos propres quantités de caisse"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Baba au Macvin"
-     },
-     {
-      "v": "561",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "",
-      "align": "right"
-     },
-     {
-      "v": "2 244 cl",
-      "align": "right"
-     },
-     {
-      "v": "libellé « Baba » : 561"
-     }
-    ],
-    [
-     {
-      "v": "Saucisse flambée au Macvin"
-     },
-     {
-      "v": "547",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "",
-      "align": "right"
-     },
-     {
-      "v": "2 188 cl",
-      "align": "right"
-     },
-     {
-      "v": "libellé « ASSIETTE FRANC-COMTO » : 547"
-     }
-    ],
-    [
-     {
-      "v": "Menu Franc-Comtois, plat (Poulet/Assiette)"
-     },
-     {
-      "v": "803",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "38,74 %",
-      "align": "right"
-     },
-     {
-      "v": "1 244 cl",
-      "align": "right"
-     },
-     {
-      "v": "menus au forfait, non sonnés à l’article"
-     }
-    ],
-    [
-     {
-      "v": "Menu Franc-Comtois, dessert (Baba/Crème brûlée)"
-     },
-     {
-      "v": "803",
-      "align": "right"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "53,84 %",
-      "align": "right"
-     },
-     {
-      "v": "1 729 cl",
-      "align": "right"
-     },
-     {
-      "v": "menus au forfait, non sonnés à l’article"
-     }
-    ],
-    [
-     {
-      "v": "Total de l’annexe",
-      "fw": 700
-     },
-     {
-      "v": "2 714",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "7 405 cl",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": ""
-     }
-    ],
-    [
-     {
-      "v": "Ce que le tableau de la p. 67 imprime",
-      "fw": 700
-     },
-     {
-      "v": "2 714",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "7 406 cl",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": ""
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Trois conséquences, et il faut les énoncer exactement. **La dose du service est de 4 cl partout, sans exception** : c’est la nôtre, et le débat ne porte sur aucune dose. **La pondération d’un plat de menu par la probabilité que le client le choisisse est la méthode du service lui-même**, appliquée dans ses annexes à quatre reprises au moins ; c’est pourtant cette méthode que le courrier décrit p. 68, quand notre réponse l’emploie, comme une tentative de « maximiser les quantités totales d’alcool cuit dans les menus ». **Et la colonne « Nombre de plats » imprime un compte brut**, carte plus menus non pondérés, quand la colonne voisine applique la dose à un compte net, carte plus menus pondérés."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "De là une précision que nous devons à la rigueur : le rapport des deux colonnes imprimées, 3,32 cl puis 3,41 cl puis 3,44 cl sur le Calvados, **n’est pas une dose**, et nous ne prétendons pas qu’il en soit une. C’est le quotient de deux colonnes qui ne décrivent pas la même population. Nous n’en déduisons aucune dose, ni contre le service ni en notre faveur : une dose a une origine, ici la déclaration des dirigeants, et un rapport de colonnes n’en est pas une."
-  },
-  {
-   "kind": "titre",
-   "texte": "Ce que le service n’a pas compté : le périmètre des articles",
-   "numero": "3.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "L’écart réel se situe donc ailleurs, et le Calvados le montre au litre près. Le service écrit avoir « identifié des articles consommant des alcools » ; sur le Calvados, sa liste en compte deux. La carte en porte sept. Les cinq qu’il n’a pas retenus représentent 563 portions sur trois exercices, soit **22,5 L** de Calvados versés en cuisine et jamais déduits."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Calvados : les articles de la carte, et ceux que le service retient (portions, 3 exercices)",
-   "minWidth": 760,
+   "titre": "Calvados : les cinq articles de carte non retenus par le service (portions et volume à 4 cl, 3 exercices)",
    "colonnes": [
     {
      "label": "Article de caisse"
@@ -874,40 +349,6 @@
    "lignes": [
     [
      {
-      "v": "CAMEMBERT ROTI"
-     },
-     {
-      "v": "1 452",
-      "align": "right"
-     },
-     {
-      "v": "58,1 L",
-      "align": "right"
-     },
-     {
-      "v": "oui",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "ASSIETTE PERE GREGOI"
-     },
-     {
-      "v": "648",
-      "align": "right"
-     },
-     {
-      "v": "25,9 L",
-      "align": "right"
-     },
-     {
-      "v": "oui",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
       "v": "FRELEE"
      },
      {
@@ -915,7 +356,7 @@
       "align": "right"
      },
      {
-      "v": "13,8 L",
+      "v": "13,84 L",
       "align": "right"
      },
      {
@@ -932,7 +373,7 @@
       "align": "right"
      },
      {
-      "v": "3,3 L",
+      "v": "3,32 L",
       "align": "right"
      },
      {
@@ -949,7 +390,7 @@
       "align": "right"
      },
      {
-      "v": "2,7 L",
+      "v": "2,68 L",
       "align": "right"
      },
      {
@@ -966,7 +407,7 @@
       "align": "right"
      },
      {
-      "v": "2,3 L",
+      "v": "2,26 L",
       "align": "right"
      },
      {
@@ -983,7 +424,7 @@
       "align": "right"
      },
      {
-      "v": "0,5 L",
+      "v": "0,46 L",
       "align": "right"
      },
      {
@@ -993,764 +434,65 @@
     ],
     [
      {
-      "v": "Total carte",
+      "v": "Total non retenu",
       "fw": 700
      },
      {
-      "v": "2 664",
+      "v": "565",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "106,5 L",
+      "v": "22,56 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "dont 22,5 L non retenus"
+      "v": ""
      }
     ]
-   ]
+   ],
+   "minWidth": 720
   },
   {
    "kind": "note",
-   "texte": "Les deux libellés « Crêpe Flambée » et « Flambée » désignent un flambage au Grand Marnier ou au Calvados ; le dossier les répartit par moitié entre les deux alcools, convention qui joue contre nous."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le porto en donne la mesure la plus nette. La liste du service en compte quatre articles, les deux sauces et les deux entrecôtes. La carte en porte treize : s’y ajoutent les croûtes aux morilles, le poulet aux morilles, le mâchon gourmet, le feuilleté forestier, la paysanne, la frelée, la cancoine et la galette forestière, tous servis avec une sauce au porto. Sur le seul exercice 1, ces huit articles représentent 1 306 portions que sa colonne ne compte pas, à la dose d’un centilitre qu’il retient lui-même."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "C’est là, et non dans la dose, que se loge la différence entre ses 15,4 L de porto et nos 70,7 L, comme entre ses 93,2 L de Calvados et nos 119,1 L. Le débat n’est donc pas de savoir combien de centilitres sont versés dans une sauce : les deux parties retiennent le même chiffre. Il est de savoir quels plats en contiennent, et la carte le dit."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 4,
-   "titre": "Les quatre repères rappelés p. 88 sont le cumul de colonnes qui ne se recalculent pas",
-   "sousTitre": "93 L, 111 L, 15 L et 240 L : onze des douze lignes qui les composent ne se retrouvent pas sur les colonnes voisines."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Les quatre repères que la partie R rappelle, D 93 L, E 111 L, G 15 L et Q 240 L, sont la somme des colonnes « volume consommé » des tableaux des pages 65 à 67. Nous avons multiplié, ligne à ligne, le nombre de plats que ces tableaux impriment par la dose qu’ils annoncent en en-tête. Sur onze des douze lignes, le produit n’est pas le volume imprimé."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Contrôle des quatre tableaux sur leurs propres colonnes (3 exercices, centilitres)",
-   "minWidth": 880,
-   "colonnes": [
-    {
-     "label": "Alcool, repère et page"
-    },
-    {
-     "label": "Nombre de plats imprimé x dose annoncée",
-     "align": "right"
-    },
-    {
-     "label": "Volume imprimé",
-     "align": "right"
-    },
-    {
-     "label": "Écart",
-     "align": "right"
-    },
-    {
-     "label": "Repère rappelé p. 88",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Calvados, repère D, p. 65"
-     },
-     {
-      "v": "2 750 x 4 cl = 11 000",
-      "align": "right"
-     },
-     {
-      "v": "9 317",
-      "align": "right"
-     },
-     {
-      "v": "- 1 683",
-      "align": "right"
-     },
-     {
-      "v": "93 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Vin jaune, repère E, p. 66"
-     },
-     {
-      "v": "4 704 x 1 cl + 657 x 10 cl = 11 274",
-      "align": "right"
-     },
-     {
-      "v": "11 158",
-      "align": "right"
-     },
-     {
-      "v": "- 116",
-      "align": "right"
-     },
-     {
-      "v": "111 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Porto, repère G, p. 67"
-     },
-     {
-      "v": "2 006 x 1 cl = 2 006",
-      "align": "right"
-     },
-     {
-      "v": "1 537",
-      "align": "right"
-     },
-     {
-      "v": "- 469",
-      "align": "right"
-     },
-     {
-      "v": "15 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Macvin, repère Q, p. 67"
-     },
-     {
-      "v": "7 624 x 4 cl = 30 496",
-      "align": "right"
-     },
-     {
-      "v": "24 012",
-      "align": "right"
-     },
-     {
-      "v": "- 6 484",
-      "align": "right"
-     },
-     {
-      "v": "240 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Total",
-      "fw": 700
-     },
-     {
-      "v": "54 776",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "46 024",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "- 8 752",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "459 L",
-      "align": "right",
-      "fw": 700
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "L’écart entre les deux colonnes est de **8 752 cl, soit 87,5 L**, et il ne se répartit pas régulièrement : le rapport des deux colonnes vaut 3,32 cl puis 3,41 cl puis 3,44 cl sur le Calvados, où l’en-tête annonce 4 cl, et 0,83 cl puis 0,78 cl puis 0,71 cl sur le porto, où l’en-tête annonce 1 cl. Une ligne sur douze se recalcule exactement, le vin jaune de l’exercice 1, et une autre part dans l’autre sens : le vin jaune de l’exercice 3, où le service imprime 3 748 cl quand ses propres colonnes en donnent 3 638, soit 110 cl de plus. La convention n’est donc pas la même d’un tableau à l’autre, et le courrier n’en énonce aucune."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Cet écart n’est pas un volume que le service aurait oublié de retrancher, et nous ne le présentons pas ainsi : les annexes montrent qu’il vient de ce que les deux colonnes ne portent pas sur la même population, la première brute et la seconde nette des probabilités de choix. Il reste que **le lecteur du courrier ne peut refaire aucun des quatre cumuls à partir de ce que le courrier imprime** : ni la règle, ni la liste des articles retenus, ni les proportions appliquées aux menus n’y figurent, et ce sont ces quatre cumuls qui fondent les repères rappelés p. 88. La doctrine que l’administration s’applique à elle-même l’exige pourtant : « Dans tous les cas, les méthodes de reconstitution des bases d’imposition suivies par le service doivent être clairement et complètement exposées dans la proposition de rectification » ([BOI-CF-IOR-10-20, § 200](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912), doctrine opposable sur le fondement de l’article L. 80 A du livre des procédures fiscales)."
+   "texte": "Les libellés « Crêpe Flambée » et « Flambée » désignent un flambage au Grand Marnier ou au Calvados ; le dossier les répartit par moitié entre les deux alcools (2 cl chacun), convention qui joue contre nous. La FRELEE est comptée au Calvados (plat flambé, 4 cl) et, pour une sauce, au porto (1 cl) : ce sont deux préparations distinctes du même libellé, non un même litre compté deux fois. Le porto en donne une mesure de même nature : sur le seul exercice 1, huit articles de sauce au porto que le service ne retient pas représentent 1 307,5 portions à 1 cl."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 5,
-   "titre": "Le « volume disponible » est un nombre de bouteilles entrées en stock",
-   "sousTitre": "Les douze cases des pages 65 à 67 sont des multiples exacts des contenances de l’annexe n° 1."
+   "titre": "Le « volume disponible » du service est une entrée de stock, pas un emploi",
+   "sousTitre": "La colonne « Volume Disponible » des pages 65 à 67 est le volume entré dans l’établissement, achats augmentés de la variation de stock ; rien n’en a été retranché pour la cuisine, les pertes ou les offerts."
   },
   {
    "kind": "paragraphe",
-   "texte": "Toute la démonstration des pages 65 à 67 repose sur une colonne « Volume Disponible (en centilitres) » que le courrier ne définit jamais. Elle se retrouve pourtant sans difficulté. L’annexe n° 1 de la proposition porte, pour chaque article, une contenance et les stocks aux quatre 31 mars ; l’annexe n° 6 porte les achats par fournisseur. Chacune des douze cases est le produit d’un nombre entier de contenants par la contenance de l’annexe n° 1."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Les douze cases de la colonne « volume disponible », décomposées",
-   "minWidth": 900,
-   "colonnes": [
-    {
-     "label": "Alcool"
-    },
-    {
-     "label": "Contenance de l’annexe n° 1",
-     "align": "right"
-    },
-    {
-     "label": "Exercice 1",
-     "align": "right"
-    },
-    {
-     "label": "Exercice 2",
-     "align": "right"
-    },
-    {
-     "label": "Exercice 3",
-     "align": "right"
-    },
-    {
-     "label": "Volumes imprimés"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Calvados, p. 65"
-     },
-     {
-      "v": "100 cl",
-      "align": "right"
-     },
-     {
-      "v": "31 x 100 = 3 100",
-      "align": "right"
-     },
-     {
-      "v": "22 x 100 = 2 200",
-      "align": "right"
-     },
-     {
-      "v": "20 x 100 = 2 000",
-      "align": "right"
-     },
-     {
-      "v": "3 100 / 2 200 / 2 000",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "Vin jaune, p. 66"
-     },
-     {
-      "v": "62 cl",
-      "align": "right"
-     },
-     {
-      "v": "119,5 x 62 = 7 409",
-      "align": "right"
-     },
-     {
-      "v": "109 x 62 = 6 758",
-      "align": "right"
-     },
-     {
-      "v": "127 x 62 = 7 874",
-      "align": "right"
-     },
-     {
-      "v": "7 409 / 6 758 / 7 874",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "Porto, p. 67"
-     },
-     {
-      "v": "70 cl",
-      "align": "right"
-     },
-     {
-      "v": "39 x 70 = 2 730",
-      "align": "right"
-     },
-     {
-      "v": "68 x 70 = 4 760",
-      "align": "right"
-     },
-     {
-      "v": "64 x 70 = 4 480",
-      "align": "right"
-     },
-     {
-      "v": "2 730 / 4 760 / 4 480",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "Macvin, p. 67"
-     },
-     {
-      "v": "75 cl",
-      "align": "right"
-     },
-     {
-      "v": "320 x 75 = 24 000",
-      "align": "right"
-     },
-     {
-      "v": "378 x 75 = 28 350",
-      "align": "right"
-     },
-     {
-      "v": "362 x 75 = 27 150",
-      "align": "right"
-     },
-     {
-      "v": "24 000 / 28 350 / 27 150",
-      "badge": "ok"
-     }
-    ]
-   ]
+   "texte": "Les douze cases de cette colonne sont, à l’arrondi d’une bouteille près, des multiples des contenances de l’annexe n° 1. Le Calvados se contrôle jusqu’aux pièces : 22 + 2 − 2 = 22 bouteilles de 1 litre sur l’exercice 2 et 19 + 2 − 1 = 20 sur l’exercice 3, soit 2 200 cl et 2 000 cl, exactement les volumes imprimés. Opposer ce volume d’entrée à un volume de cuisine revient à comparer une entrée de stock à un emploi de ce stock : sur l’exercice 2, le service retranche 3 002 cl de Calvados d’un « disponible » qu’il fixe à 2 200 cl."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le Calvados permet de remonter jusqu’aux pièces. Les factures du fournisseur portent 32, 22 puis 19 bouteilles de 1 litre ; les inventaires physiques portent 2, 2 puis 1 bouteille aux trois clôtures. Achats augmentés du stock d’ouverture et diminués du stock de clôture : 22 + 2 - 2 = 22 bouteilles sur l’exercice 2, et 19 + 2 - 1 = 20 sur l’exercice 3, soit 2 200 cl et 2 000 cl, exactement les nombres imprimés, sans aucun paramètre libre. Aucun inventaire n’ayant été dressé au 31 mars 2022, l’exercice 1 ne se contrôle pas de la même façon ; une bouteille en stock à l’ouverture suffit à retrouver les 3 100 cl."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**La colonne « volume disponible » est donc le volume entré dans l’établissement, achats augmentés de la variation de stock.** Rien n’en a été retranché pour la cuisine, pour les pertes, pour les offerts ni pour la consommation du personnel. L’opposer à un volume de cuisine, c’est comparer une entrée de stock à un emploi de ce stock, et le tableau de la page 65 le montre de lui-même : sur l’exercice 2, le service retranche 3 002 cl de Calvados pour la cuisine d’un « volume disponible » qu’il fixe à 2 200 cl."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ses propres annexes en tirent d’ailleurs la conséquence, et l’impriment. Sous la ligne du Calvados, l’annexe 7-1 porte « Volumes disponibles (net autre consommation) : -210 », l’annexe 7-2 « -802 », l’annexe 7-3 « -1 005 », les trois accompagnées de la mention « TROP DE VENTE PAR RAPPORT A ACHAT ». Autrement dit, la méthode du service aboutit d’elle-même, sur cet alcool, à un stock négatif sur les trois exercices. C’est la raison pour laquelle nous plafonnons notre propre demande aux 73,0 L facturés, et non l’inverse."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Une précision de même nature vaut pour le porto, dont le repère G est rappelé p. 88. La contenance que l’annexe n° 1 lui attribue est de 70 cl, et les trois volumes de la page 67 sont bien des multiples exacts de 70 cl, soit 39, 68 et 64 contenants. Les 173 bouteilles de porto que portent les factures du fournisseur Franche-Comté Boissons Services sur la période sont toutes des bouteilles de 75 cl."
+   "texte": "Deux précisions de lecture, que nous portons nous-mêmes. D’abord, la reconstitution du « disponible » par le stock ne retombe pas toujours au centilitre sur le volume imprimé : le vin jaune de l’exercice 3 ressort à 7 564 cl recalculé contre 7 874 imprimés, le macvin de l’exercice 3 à 27 600 contre 27 150 ; ces cases sont des approximations à une ou deux bouteilles près, non des tautologies exactes. Ensuite, la contenance de 70 cl que l’annexe n° 1 attribue au porto est erronée : les 173 bouteilles de porto facturées sont des bouteilles de 75 cl, et les volumes de la page 67 correspondent à 39, 69 et 64 contenants, non 68. Ni l’une ni l’autre de ces imprécisions ne modifie le supplément demandé ci-après, plafonné aux achats réels."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 6,
-   "titre": "Les trois volumes opposés p. 88 sont démentis par les propres annexes du service",
-   "sousTitre": "Bailey’s, liqueur de poire et marc de bourgogne : ce que portent les annexes 7-1, 7-2 et 7-3 de la proposition, et ce que portent les factures."
+   "titre": "Le supplément qui reste à retrancher à la carte : la dérivation complète",
+   "sousTitre": "Pour chaque alcool et chaque exercice : demande plafonnée aux achats facturés, moins ce que le service retranche déjà, planché à zéro. Le résultat est la part « à la carte ». La part « menus » est reportée dans la page voisine."
   },
   {
    "kind": "paragraphe",
-   "texte": "Les trois refus de la page 88 ne reposent que sur une comparaison de volumes : 14 L demandés contre 1 400 cl « disponibles » pour le Bailey’s, 6 L contre 70 cl pour le marc de bourgogne, 4 L contre 140 cl pour la liqueur de poire. Aucun autre motif n’est donné. Ces trois volumes se vérifient à deux sources : les annexes 7-1, 7-2 et 7-3 de la proposition de rectifications, où le service inscrit lui-même, produit par produit et exercice par exercice, une colonne « Quantités Disponibles (Bouteilles) » et une colonne « Volume Disponible (Centilitres) » ; et les factures du fournisseur, relues par code article. Les deux sources disent la même chose, et elles contredisent la page 88."
+   "texte": "Nous ne présentons plus un solde global dont le lecteur ne pourrait pas refaire le calcul. Le supplément est établi exercice par exercice et planché à zéro : un litre retranché sur un exercice ne neutralise pas un litre cuit sur un autre, les bases étant arrêtées exercice par exercice. Le tableau ci-dessous en donne le cumul sur trois exercices ; le détail des trois exercices figure à l’onglet « Calcul » de la pièce R2-alcool-cuisine.xlsx, par formule."
   },
   {
    "kind": "tableau",
-   "titre": "Le volume disponible selon les annexes du service, et selon les factures (centilitres)",
-   "minWidth": 1060,
-   "colonnes": [
-    {
-     "label": "Produit"
-    },
-    {
-     "label": "Annexe 7-1, exercice 1",
-     "align": "right"
-    },
-    {
-     "label": "Annexe 7-2, exercice 2",
-     "align": "right"
-    },
-    {
-     "label": "Annexe 7-3, exercice 3",
-     "align": "right"
-    },
-    {
-     "label": "Total des trois annexes",
-     "align": "right"
-    },
-    {
-     "label": "Volume opposé p. 88 et 70",
-     "align": "right"
-    },
-    {
-     "label": "Achats facturés 3 exercices",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Bailey’s"
-     },
-     {
-      "v": "280 (4 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "1 050 (15 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "840 (12 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "2 170",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "1 400",
-      "align": "right",
-      "badge": "ko"
-     },
-     {
-      "v": "2 240 (32 bouteilles)",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Liqueur de poire"
-     },
-     {
-      "v": "263 (3,75 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "700 (10 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "910 (13 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "1 873",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "140",
-      "align": "right",
-      "badge": "ko"
-     },
-     {
-      "v": "1 750 (25 bouteilles)",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Marc de bourgogne"
-     },
-     {
-      "v": "0",
-      "align": "right"
-     },
-     {
-      "v": "70 (1 bouteille)",
-      "align": "right"
-     },
-     {
-      "v": "0",
-      "align": "right"
-     },
-     {
-      "v": "70",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "70",
-      "align": "right"
-     },
-     {
-      "v": "280 (4 bouteilles)",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Marc du Jura, produit distinct"
-     },
-     {
-      "v": "560 (8 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "70 (1 bouteille)",
-      "align": "right"
-     },
-     {
-      "v": "210 (3 bouteilles)",
-      "align": "right"
-     },
-     {
-      "v": "840",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "non visé",
-      "align": "right"
-     },
-     {
-      "v": "700 (10 bouteilles)",
-      "align": "right",
-      "fw": 700
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "note",
-   "texte": "Annexes lues sur les pages 171, 185 et 199 de la proposition de rectifications (Proposition_3_Annexes_Boissons.pdf). Factures relues par code article : Bailey’s 510133, liqueur de poire 591050, marc de Bourgogne Jacoulot 45° 550252, marc du Jura Tissot 520096. Le détail facture par facture figure à l’onglet « 2-Factures » de la pièce jointe, la confrontation aux annexes à l’onglet « 7-Annexes 7-1 a 7-3 »."
-  },
-  {
-   "kind": "titre",
-   "texte": "Le Bailey’s : le troisième terme de sa propre addition",
-   "numero": "6.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le courrier écrit : « ce volume correspond à la totalité des achats disponibles (280 + 1050 + 70 = 1 400 centilitres) ». Les deux premiers termes sont exactement les volumes de ses annexes 7-1 et 7-2, 280 cl pour quatre bouteilles et 1 050 cl pour quinze. **Le troisième ne l’est pas** : l’annexe 7-3 porte, pour le troisième exercice, « 12 » bouteilles et « 840 » centilitres de Bailey’s, et non 70. Son propre total est donc de 2 170 cl, et les factures en portent 2 240, soit trente-deux bouteilles. L’affirmation selon laquelle 14 L « correspond à la totalité des achats disponibles » est démentie par l’annexe que le courrier invoque à la phrase suivante."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service oppose au Bailey’s une seconde objection : ses annexes ne porteraient, sur trois ans, qu’une consommation de 236 cl. Ses six termes se reconstituent depuis la caisse, et cinq d’entre eux au centilitre. Vingt, quatre-vingts et trente-deux centilitres sont les 5, 20 et 8 Bailey’s **vendus au verre** sur les trois exercices, à 4 cl. Vingt-huit et seize sont le dessert IVRESSE de la carte, 7 et 4 parts, à la même dose. Le sixième terme, soixante, vaut 12 cl de plus que les 48 cl que la caisse porte à l’IVRESSE de l’exercice 2."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Ce que contiennent les 236 cl du service (centilitres, 3 exercices)",
-   "minWidth": 820,
-   "colonnes": [
-    {
-     "label": "Article de caisse"
-    },
-    {
-     "label": "Nature"
-    },
-    {
-     "label": "Dose",
-     "align": "right"
-    },
-    {
-     "label": "Exercice 1",
-     "align": "right"
-    },
-    {
-     "label": "Exercice 2",
-     "align": "right"
-    },
-    {
-     "label": "Exercice 3",
-     "align": "right"
-    },
-    {
-     "label": "3 exercices",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Baileys et BAILEYS"
-     },
-     {
-      "v": "servi dans un verre et vendu comme tel"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "20",
-      "align": "right"
-     },
-     {
-      "v": "80",
-      "align": "right"
-     },
-     {
-      "v": "32",
-      "align": "right"
-     },
-     {
-      "v": "132",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "IVRESSE"
-     },
-     {
-      "v": "dessert de la carte"
-     },
-     {
-      "v": "4 cl",
-      "align": "right"
-     },
-     {
-      "v": "28",
-      "align": "right"
-     },
-     {
-      "v": "48",
-      "align": "right"
-     },
-     {
-      "v": "16",
-      "align": "right"
-     },
-     {
-      "v": "92",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Total reconstitué",
-      "fw": 700
-     },
-     {
-      "v": ""
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "48",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "128",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "48",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "224",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Nombre imprimé p. 88 (20+16+80+32+28+60)",
-      "fw": 700
-     },
-     {
-      "v": ""
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "236",
-      "align": "right",
-      "fw": 700
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ces 236 cl ne s’opposent donc pas aux 15,3 L que nous portons au Bailey’s. **Plus de la moitié, 132 cl, est du Bailey’s servi dans un verre et facturé comme tel**, que nous ne réclamons à aucun titre. Le reste, une centaine de centilitres, est le seul dessert de la carte, et c’est très exactement ce que nous y portons nous-mêmes, 92 cl. Ce que ce compte ne peut pas contenir, par construction, c’est le dessert servi à l’intérieur d’un menu au forfait, qui n’est pas sonné à l’article : le service le sait, puisque ses annexes traitent les plats de menu à part, par pondération. Il reste que sur 2 240 cl facturés, sa caisse n’en identifie que 236, et que le solde a bien été versé quelque part."
-  },
-  {
-   "kind": "titre",
-   "texte": "La liqueur de poire : 140 cl opposés, 1 873 cl dans ses annexes",
-   "numero": "6.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le courrier oppose « un volume près de 3 fois supérieur à celui disponible (140 centilitres) ». Ses trois annexes portent, sous la désignation « Liqueur Golden 8 70 cl » et l’article « Liqueur de Poire », 3,75 bouteilles et 263 cl, puis 10 bouteilles et 700 cl, puis 13 bouteilles et 910 cl : **1 873 cl**. Les factures, elles, portent 25 bouteilles de 70 cl, soit 1 750 cl, dont la ligne du 15 mars 2024, facture n° 508974, que sa désignation tronquée « LIQUEUR GOLDEN EIGHT 70 CL 25° » rend seulement plus difficile à retrouver. Le motif tombe en entier : les 4 L demandés représentent 23 % des achats de la période, et 21 % du disponible que le service a lui-même inscrit."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La page 70 le confirme d’une seconde manière, sans que nous ayons rien à y ajouter. Le service y écrit qu’« au regard des données de la caisse, les articles enregistrés susceptibles d’utiliser cet alcool (confection de verre), sur trois ans, n’entraînerait qu’une consommation de 480 centilitres (216+48+8+84+44+80) ». Le retranchement demandé est de 4 L, soit 400 cl. **Les 480 cl qu’il tire lui-même de sa caisse lui sont supérieurs**, et ils ne peuvent pas davantage sortir des 140 cl qu’il dit disponibles."
-  },
-  {
-   "kind": "titre",
-   "texte": "Le marc de bourgogne : une question de colonne, non de volume",
-   "numero": "6.3"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Les 70 cl opposés au marc de bourgogne sont bien le total de ses annexes : zéro bouteille à l’exercice 1, une à l’exercice 2, zéro à l’exercice 3. Mais les factures portent quatre bouteilles de marc de Bourgogne Jacoulot 45°, code article 550252, une en 2022, deux en 2023 et une en 2024. Dans le même temps, ses annexes portent douze bouteilles de « Marc Du Jura » quand les factures en portent dix, code 520096, Tissot. **Treize bouteilles de marc chez lui, quatorze dans les factures** : l’écart ne tient pas à un volume manquant, il tient à la ligne sur laquelle chaque bouteille a été portée. Les deux marcs réunis représentent, dans ses propres annexes, 910 cl."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Notre demande est de 2,1 L, soit 210 cl, et non des 6 L que le courrier lui oppose : nous l’avons nous-mêmes ramenée aux 210 cl sortis du stock, faute de savoir lequel des deux marcs entre dans le baba. Le motif « près de 6 fois supérieur à celui disponible » ne peut donc plus être opposé à ce qui est effectivement demandé. Quant aux « 20 centilitres (8 + 4 + 8) » que le service tire de ses annexes, ils se reconstituent exactement : ce sont les 2, 1 et 2 verres de « Vieux Marc Bourgogne » sonnés sur les trois exercices, à 4 cl. Cinq verres en trois ans, et un article de caisse distinct du « Marc du Jura (4cl) », sonné 25, 17 et 18 fois : **le service sépare donc lui-même les deux produits dans sa caisse**, comme les factures les séparent par le code, la maison et le prix."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 7,
-   "titre": "Deux grandeurs qu’il ne faut pas confondre",
-   "sousTitre": "Le volume physiquement parti en cuisine, 741 L, et le supplément que nous demandons au service, 170 L, ne sont pas la même chose."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service oppose à nos tableaux qu’il retranche « bien au-delà » des volumes réclamés. La comparaison mêle deux grandeurs distinctes, et il faut les séparer pour que le débat ait un sens."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La première est le **volume physiquement parti en cuisine**. C’est une quantité de matière : de l’alcool acheté, versé dans un plat, qui ne revient pas au stock et n’est jamais disponible pour un verre vendu. Calculée plat par plat sur les quantités lues en caisse, aux doses confirmées par les dirigeants, puis plafonnée aux achats facturés, elle s’élève à **741 L** sur trois exercices. C’est cette grandeur, et elle seule, qui entre dans le bilan matière."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La seconde est le **supplément demandé au service**, c’est-à-dire ce qu’il resterait à retrancher de sa reconstitution une fois déduit ce qu’il en retranche déjà lui-même au titre des repères D, E, G et Q, du volume unique des BIB et de la part « desserts » des crèmes. Elle s’élève à **170 L**. Un litre déjà retranché ne peut pas être demandé une seconde fois : c’est la seule raison pour laquelle 741 et 170 diffèrent."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Les deux grandeurs, alcool par alcool (litres, 3 exercices)",
-   "minWidth": 940,
+   "titre": "Dérivation du supplément à la carte, alcool par alcool (litres, 3 exercices)",
    "colonnes": [
     {
      "label": "Alcool"
     },
     {
-     "label": "Calculé (plats vendus x dose)",
-     "align": "right"
-    },
-    {
-     "label": "A. Volume parti en cuisine (plafonné aux factures)",
+     "label": "Demande plafonnée aux achats",
      "align": "right"
     },
     {
@@ -1758,134 +500,66 @@
      "align": "right"
     },
     {
-     "label": "B. Supplément demandé",
+     "label": "Supplément (planché à 0)",
+     "align": "right"
+    },
+    {
+     "label": "Dont à la carte",
+     "align": "right"
+    },
+    {
+     "label": "Dont menus (page voisine)",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Ravelin"
+      "v": "Vin jaune (repère E)"
      },
      {
-      "v": "251,8",
+      "v": "124,48",
       "align": "right"
      },
      {
-      "v": "251,8",
+      "v": "111,58",
       "align": "right"
      },
      {
-      "v": "318,1",
+      "v": "12,90",
       "align": "right"
      },
      {
-      "v": "76,7",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Macvin"
-     },
-     {
-      "v": "177,5",
+      "v": "12,90",
       "align": "right"
      },
      {
-      "v": "177,5",
-      "align": "right"
-     },
-     {
-      "v": "240,1",
-      "align": "right"
-     },
-     {
-      "v": "0,0",
+      "v": "0,00",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Arbois vin jaune"
+      "v": "Porto (repère G)"
      },
      {
-      "v": "124,5",
+      "v": "68,27",
       "align": "right"
      },
      {
-      "v": "124,5",
+      "v": "15,37",
       "align": "right"
      },
      {
-      "v": "111,6",
+      "v": "52,90",
       "align": "right"
      },
      {
-      "v": "12,9",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Calvados"
-     },
-     {
-      "v": "119,1",
+      "v": "52,90",
       "align": "right"
      },
      {
-      "v": "73,0",
-      "align": "right"
-     },
-     {
-      "v": "93,2",
-      "align": "right"
-     },
-     {
-      "v": "0,0",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Porto"
-     },
-     {
-      "v": "70,7",
-      "align": "right"
-     },
-     {
-      "v": "68,3",
-      "align": "right"
-     },
-     {
-      "v": "15,4",
-      "align": "right"
-     },
-     {
-      "v": "52,9",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Crème de cassis"
-     },
-     {
-      "v": "18,7",
-      "align": "right"
-     },
-     {
-      "v": "18,7",
-      "align": "right"
-     },
-     {
-      "v": "33,3",
-      "align": "right"
-     },
-     {
-      "v": "0,0",
+      "v": "0,00",
       "align": "right"
      }
     ],
@@ -1894,19 +568,23 @@
       "v": "Bailey’s"
      },
      {
-      "v": "15,3",
+      "v": "15,28",
       "align": "right"
      },
      {
-      "v": "15,3",
+      "v": "0,00",
       "align": "right"
      },
      {
-      "v": "0,0",
+      "v": "15,28",
       "align": "right"
      },
      {
-      "v": "15,3",
+      "v": "0,92",
+      "align": "right"
+     },
+     {
+      "v": "14,36",
       "align": "right"
      }
     ],
@@ -1915,40 +593,48 @@
       "v": "Grand Marnier"
      },
      {
-      "v": "7,4",
+      "v": "5,96",
       "align": "right"
      },
      {
-      "v": "6,0",
+      "v": "0,00",
       "align": "right"
      },
      {
-      "v": "0,0",
+      "v": "5,96",
       "align": "right"
      },
      {
-      "v": "6,0",
+      "v": "5,96",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Marc de bourgogne"
+      "v": "Marc de Bourgogne"
      },
      {
-      "v": "5,6",
+      "v": "2,10",
       "align": "right"
      },
      {
-      "v": "2,1",
+      "v": "0,00",
       "align": "right"
      },
      {
-      "v": "0,0",
+      "v": "2,10",
       "align": "right"
      },
      {
-      "v": "2,1",
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "2,10",
       "align": "right"
      }
     ],
@@ -1957,19 +643,123 @@
       "v": "Liqueur de poire"
      },
      {
-      "v": "4,1",
+      "v": "4,07",
       "align": "right"
      },
      {
-      "v": "4,1",
+      "v": "0,00",
       "align": "right"
      },
      {
-      "v": "0,0",
+      "v": "4,07",
       "align": "right"
      },
      {
-      "v": "4,1",
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "4,07",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Ravelin"
+     },
+     {
+      "v": "251,80",
+      "align": "right"
+     },
+     {
+      "v": "480,43",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Macvin (repère Q)"
+     },
+     {
+      "v": "177,51",
+      "align": "right"
+     },
+     {
+      "v": "240,12",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Calvados (repère D)"
+     },
+     {
+      "v": "73,00",
+      "align": "right"
+     },
+     {
+      "v": "93,17",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Crème de cassis"
+     },
+     {
+      "v": "18,67",
+      "align": "right"
+     },
+     {
+      "v": "33,28",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
+      "align": "right"
+     },
+     {
+      "v": "0,00",
       "align": "right"
      }
     ],
@@ -1979,93 +769,230 @@
       "fw": 700
      },
      {
-      "v": "794,6",
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "93,21",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "741,1",
+      "v": "72,68",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "811,6",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "169,9",
+      "v": "20,53",
       "align": "right",
       "fw": 700
      }
     ]
-   ]
+   ],
+   "minWidth": 1000
   },
   {
    "kind": "note",
-   "texte": "Colonne « déjà retranché » : repères D, E, G et Q lus dans les tableaux des pages 65 à 67, part « cuisine » du volume unique des BIB et part « desserts » du volume unique des crèmes citées p. 69. Son total, 811,6 L, n’est pas comparable ligne à ligne au nôtre : 318,1 L y sont retranchés d’un ensemble de sept références de BIB qui, sur l’exercice 1, ne contient aucun litre de ravelin, et 93,2 L de Calvados y sont retranchés alors que le service n’inscrit que 73,0 L disponibles. Les totaux sont calculés sur les valeurs non arrondies : la somme des lignes affichées donne 794,7 / 741,3 / 811,7 / 170,0."
+   "texte": "Demande = nombre de plats vendus en caisse (ANNEXE-C/D) × dose du courriel du 30/03/2026, plafonnée aux achats facturés (fournisseur FCBS, par code article) lorsqu’elle les dépasse : Calvados (73,0 L), porto exercice 1, Grand Marnier, et marc de Bourgogne ramené à 210 cl sortis du stock. « Déjà retranché » : repères D, E, G et Q lus dans les tableaux du service (p. 65 à 67), part « cuisine » du volume unique des BIB pour le ravelin, part « desserts » du volume unique des crèmes pour la crème de cassis. Les repères D, E, G et Q ne se recalculent pas sur les propres colonnes du service (écart cumulé de 8 752 cl) ; nous les retenons tels qu’il les imprime, ce qui joue en sa faveur dans la comparaison."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 7,
+   "titre": "Le ravelin : supplément nul, et nous l’écrivons",
+   "sousTitre": "Le service déclare avoir retranché 796,43 L de ravelin. Vérification faite sur son annexe 7-1, cette prémisse tient pour l’alcool cuit, et nous abandonnons toute demande de ce chef."
   },
   {
    "kind": "paragraphe",
-   "texte": "Trois corrections de notre propre chiffrage figurent dans ce tableau, et nous les portons. Le **Calvados** est plafonné aux achats facturés, 73,0 L au lieu des 119,1 L calculés, parce que nous n’entendons rien demander au-delà des factures que nous détenons. Le **Grand Marnier** l’est de même, 6,0 L au lieu de 7,4 L. Le **marc de bourgogne** l’est à son tour, **2,1 L au lieu des 5,58 L calculés** : 280 cl seulement ont été facturés sur trois exercices, dont 210 cl sont sortis du stock, et nous ne savons pas lequel des deux marcs entre dans le baba. Ces trois plafonnements retirent **53,5 L** à notre chiffrage, dont 3,5 L sur le seul marc, et ils jouent contre nous."
+   "texte": "Les 796,43 L additionnent 480,43 L de « cuisine » et 316,00 L de « kirs ». Seuls les 480,43 L de la ligne « cuisine » sont opposables à une demande portant sur de l’alcool cuit ; mais ils suffisent. Nous avions un temps soutenu que le ravelin n’était pas retranché sur l’exercice 1, faute d’achat en BIB. Cette lecture est fausse : l’annexe 7-1 (p. 51) porte, parmi les huit lignes du volume unique des vins en BIB de l’exercice 1, « Ravelin Blanc 75 cl : 25 bouteilles, 1 875 cl », et son détail de retranchement reprend mot pour mot notre propre ligne « Fondue Jurassienne 372 × 10 cl = 3 720 ». Sur cet exercice, le service retranche 16 232 cl de ce volume là où nous chiffrons 7 670 cl : il retranche davantage que nous ne demandons."
   },
   {
    "kind": "paragraphe",
-   "texte": "La colonne « calculé », elle, reste inchangée : elle est le produit d’un nombre de plats par une dose, et le plafonnement d’une demande aux achats détenus ne modifie pas ce produit. C’est la raison pour laquelle le marc y reste à 5,58 L en face de 2,1 L demandés, exactement comme le Calvados y reste à 119,1 L en face de 73,0 L."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Une colonne de notre propre pièce doit être lue dans le même esprit, et nous la produisons plutôt que de la taire. Dans R1-alcool-cuisine-encadrement.xlsx, onglet « 2-Encadrement doses », la ligne du Calvados porte un coefficient maximal admissible de 0,60 et une dose correspondante de 2,40 cl. **Ce n’est pas une dose**, et nous ne substituons aucune dose à celle des dirigeants : c’est le rapport entre le volume que le service inscrit comme disponible et le volume que la carte consomme à 4 cl. Un bilan matière ne dit jamais ce qui a été versé dans une poêle ; il dit seulement jusqu’où un stock peut aller. La conséquence que nous en tirons est donc la seule qui soit permise : nous ne demandons pas au-delà des factures que nous détenons, et c’est le sens des 73,0 L retenus ci-dessus."
-  },
-  {
-   "kind": "kpis",
-   "items": [
-    {
-     "label": "Alcool parti en cuisine, plafonné aux factures",
-     "valeur": "741,1 L",
-     "sub": "sur 794,6 L calculés plat par plat, 3 exercices",
-     "couleur": "teal",
-     "highlight": true
-    },
-    {
-     "label": "Supplément encore demandé au service",
-     "valeur": "169,9 L",
-     "sub": "après déduction des 811,6 L qu’il retranche déjà lui-même"
-    },
-    {
-     "label": "Calvados de cuisine hors du périmètre du service",
-     "valeur": "22,5 L",
-     "sub": "cinq articles de la carte que sa liste ne retient pas"
-    },
-    {
-     "label": "Retiré de notre propre chiffrage",
-     "valeur": "53,5 L",
-     "sub": "Calvados, Grand Marnier et marc de bourgogne plafonnés aux achats facturés"
-    }
-   ]
+   "texte": "Exercice par exercice, le volume de ravelin cuit (76,7 / 86,8 / 88,3 L) est donc inférieur à ce que le service retranche déjà (162,32 / 162,57 / 155,54 L). Le supplément de ravelin est nul sur les trois exercices. Nous retirons les 76,7 L que nous demandions encore à ce titre. Ce retrait, à lui seul, ramène notre demande antérieure de 169,9 L à 93,2 L."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 8,
-   "titre": "La déclaration des dirigeants, étudiée et retenue dans un seul sens",
-   "sousTitre": "Doctrine opposable par l’article L. 80 A du LPF : BOI-CF-IOR-10-20, § 200, second tiret."
+   "titre": "La conversion en euros : la baisse de redressement demandée",
+   "sousTitre": "Le grief porte sur un chiffre d’affaires en euros. Nous chiffrons donc l’effet du supplément à la carte sur le CA liquides reconstitué, au prix de vente au verre que porte l’annexe B."
   },
   {
    "kind": "paragraphe",
-   "texte": "L’administration a publié la manière dont une reconstitution doit être conduite. Le [BOI-CF-IOR-10-20, § 200](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912), publié le 12 septembre 2012 et toujours en vigueur dans cette version, figure au titre « A. Présentation d’une comptabilité comportant des infractions graves et répétées », c’est-à-dire à l’hypothèse même du présent contrôle. Son second tiret énonce : « les renseignements donnés par les contribuables doivent être soigneusement étudiés et retenus s’ils sont jugés acceptables par le vérificateur »."
+   "texte": "La reconstitution du service est, selon sa propre description (proposition p. 38), un volume disponible multiplié par un prix de vente moyen au centilitre. Retrancher un litre d’un alcool réduit donc le CA liquides reconstitué de son volume, en centilitres, multiplié par le prix du verre rapporté au centilitre. Nous appliquons les prix de vente lus dans l’annexe B1 (exercice 2022-2023), seule annexe de prix figurant au dossier."
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le service a fait cela, et il l’écrit : « Pour toutes les doses des alcools nécessaires à la cuisine, le service n’a fait que suivre les recommandations des dirigeants » (p. 68). Les doses de 1, 4 et 10 cl qui fondent ses quatre tableaux et les quatre repères rappelés p. 88 viennent de là, et de nulle part ailleurs. La déclaration du 30 mars 2026 a donc été étudiée et jugée acceptable."
+   "kind": "tableau",
+   "titre": "Effet du supplément à la carte sur le CA liquides reconstitué (TTC, 3 exercices)",
+   "colonnes": [
+    {
+     "label": "Alcool"
+    },
+    {
+     "label": "Supplément à la carte",
+     "align": "right"
+    },
+    {
+     "label": "Verre",
+     "align": "right"
+    },
+    {
+     "label": "Prix du verre (annexe B1)",
+     "align": "right"
+    },
+    {
+     "label": "CA liquides TTC",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Porto"
+     },
+     {
+      "v": "52,90 L",
+      "align": "right"
+     },
+     {
+      "v": "6 cl",
+      "align": "right"
+     },
+     {
+      "v": "4,20 €",
+      "align": "right"
+     },
+     {
+      "v": "3 703 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Vin jaune"
+     },
+     {
+      "v": "12,90 L",
+      "align": "right"
+     },
+     {
+      "v": "12 cl",
+      "align": "right"
+     },
+     {
+      "v": "12,00 €",
+      "align": "right"
+     },
+     {
+      "v": "1 290 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Bailey’s (dessert IVRESSE)"
+     },
+     {
+      "v": "0,92 L",
+      "align": "right"
+     },
+     {
+      "v": "4 cl",
+      "align": "right"
+     },
+     {
+      "v": "5,20 €",
+      "align": "right"
+     },
+     {
+      "v": "120 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Grand Marnier"
+     },
+     {
+      "v": "5,96 L",
+      "align": "right"
+     },
+     {
+      "v": "—",
+      "align": "right"
+     },
+     {
+      "v": "prix du verre absent de B1",
+      "align": "right"
+     },
+     {
+      "v": "non chiffré",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total (hors Grand Marnier)",
+      "fw": 700
+     },
+     {
+      "v": "66,72 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "5 113 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ],
+   "minWidth": 900
   },
   {
-   "kind": "paragraphe",
-   "texte": "Dans le même paragraphe, le courrier ajoute que « ces modifications doivent être étayées et justifiées de manière pertinente, ce qui n’est pas le cas ». **Il n’y a pas de modification.** Les doses appliquées à la carte et aux menus sont, au centilitre, celles que le service imprime, et l’annexe 7-3 le vérifie sur la seule ligne qu’elle documente. Ce que la partie R refuse n’est donc pas une dose nouvelle, c’est l’application de sa propre dose au nombre de plats que sa propre caisse enregistre. Nous n’en tirons pas un dilemme : nous constatons qu’aucune exigence de preuve supplémentaire ne peut peser sur un élément qui n’a pas changé."
+   "kind": "note",
+   "texte": "CA = litres × 100 × (prix du verre ÷ centilitres du verre). Prix de l’annexe B1_prix-vente-quantité (2022-2023). Il s’agit de l’effet au niveau du CA liquides TTC, avant le coefficient liquides/solides et la TVA que le service applique ensuite ; son exactitude par exercice suppose la communication des annexes 7-1 à 7-3 (prix unitaire réellement appliqué) et des annexes B des exercices 2023-2024 et 2024-2025, absentes du dossier. Le Grand Marnier n’a pas de prix de vente au verre dans l’annexe B1 : son effet n’est pas chiffré. Calcul par formule à l’onglet « Euros » de la pièce R2-alcool-cuisine.xlsx."
   },
   {
-   "kind": "paragraphe",
-   "texte": "Une phrase de la page 66 doit être relevée pour la même raison : « Le service serait même en droit d’estimer que les volumes de doses fournies par les dirigeants ont été maximisées, donc sont totalement erronés, et aboutissent à minorer les montants des chiffres d’affaires reconstitués, situation qui serait susceptible d’arranger la société. » Le service qualifie ainsi les doses qui fondent sa propre déduction de cuisine, et il les conserve. Nous ne lui demandons pas de choisir entre les deux phrases. Nous relevons que la doctrine qu’il s’applique l’oblige à étudier soigneusement ces renseignements, et qu’un renseignement soigneusement étudié ne peut pas être à la fois le fondement d’un chiffre et « totalement erroné » sans que le courrier dise lequel des deux il retient."
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Supplément d’alcool de cuisine à la carte",
+     "valeur": "72,7 L",
+     "sub": "vin jaune, porto, Bailey’s de carte, Grand Marnier, après plafonnement et déduction",
+     "couleur": "teal",
+     "highlight": true
+    },
+    {
+     "label": "Effet sur le CA liquides reconstitué (hors Grand Marnier)",
+     "valeur": "≈ 5 113 € TTC",
+     "sub": "aux prix de vente au verre de l’annexe B1 (2022-2023)",
+     "couleur": "gold"
+    },
+    {
+     "label": "Ravelin, macvin, calvados, crème de cassis",
+     "valeur": "supplément nul",
+     "sub": "le service en retranche déjà davantage ; le ravelin est abandonné",
+     "couleur": "blue"
+    },
+    {
+     "label": "Dans les menus, page voisine",
+     "valeur": "20,5 L",
+     "sub": "Bailey’s, liqueur de poire, marc ; périmètre disjoint, aucun double comptage"
+    }
+   ]
   },
   {
    "kind": "chapitre",
@@ -2076,19 +1003,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service ne peut pas reprocher à la réponse de « se contenter de rappeler ses tableaux [...] sans apporter un quelconque élément complémentaire ». Ces tableaux étaient accompagnés du détail dose par dose et plat par plat, transmis sur la clé USB et cité par le courrier lui-même, 53-rf-alcool-cuisine-doses-plats.xlsx et 54-boissons-4-menus-par-periode.xlsx, et ils sont repris ici sous une forme recalculable, facture par facture et article par article. En face, ses propres tableaux ne comportent ni source, ni formule, ni annexe produite pour huit de leurs douze lignes, et ne se recalculent pas sur leurs propres colonnes."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Les trois refus opposés au Bailey’s, au marc de bourgogne et à la liqueur de poire tombent en entier, parce que leur unique motif est une comparaison avec un volume qui n’est pas celui des trois exercices : 1 400 cl contre 2 240 cl facturés, 70 cl contre 280 cl, 140 cl contre 1 750 cl. Sur la liqueur de poire, le volume opposé est contredit par les annexes du service lui-même. Sur le marc, notre demande est en outre ramenée de 5,58 L à 2,1 L, en deçà des achats. Le motif tiré des 236 cl du Bailey’s tombe également : plus de la moitié de ce nombre est du Bailey’s vendu au verre, et le solde est, au centilitre près, le dessert de carte que nous chiffrons nous-mêmes."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Sur les quatre repères D, E, G et Q, la partie R n’ajoute aucun motif : elle affirme que le service retranche « bien au-delà » de ce qui est réclamé. C’est vrai du Calvados, du macvin et de la crème de cassis, et nous ne demandons plus rien sur ces trois lignes. Ce n’est pas vrai du vin jaune, du porto et du ravelin, où **169,9 L** restent à retrancher, et aucune page du courrier n’oppose à ces trois lignes autre chose que des tableaux qui ne se recalculent pas et une colonne de volumes entrés en stock."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La charge d’établir le bien-fondé de la reconstitution appartient enfin à l’administration. L’hypothèse dans laquelle la preuve incombe au contribuable parce que la comptabilité comporte de graves irrégularités suppose, selon la doctrine que le service s’applique, que « l’imposition a été établie conformément à l’avis de la commission départementale ou nationale » ([BOI-CF-IOR-10-20, § 280](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)) : aucune commission n’a été saisie à ce jour. Une partie qui annonce qu’elle « va se limiter à rappeler ses conclusions » ne satisfait pas à cette charge, et ne motive pas le maintien intégral des montants."
+   "texte": "Sur les quatre repères D, E, G et Q, la partie R n’ajoute aucun motif : elle affirme retrancher « bien au-delà » du réclamé. C’est vrai du Calvados, du macvin et de la crème de cassis, et nous ne demandons plus rien sur ces lignes. Ce n’est pas vrai du vin jaune ni du porto, où 65,8 L restent à retrancher à la carte, et le service n’oppose à ces lignes que des tableaux qui ne se recalculent pas et une colonne de volumes entrés en stock. La charge d’établir le bien-fondé de la reconstitution incombe à l’administration, faute d’avis conforme d’une commission (BOI-CF-IOR-10-20, § 280) : une partie qui annonce qu’elle « va se limiter à rappeler ses conclusions » n’y satisfait pas."
   },
   {
    "kind": "titre",
@@ -2096,35 +1011,31 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Le service retranche déjà, pour le Calvados, le vin jaune, le porto et le macvin, 93 L, 111 L, 15 L et 240 L, bien au delà des 12 L, 11 L, 10 L et 54 L réclamés. »** Ces quatre repères sont le cumul de colonnes qui ne se recalculent pas : sur onze des douze lignes qui les composent, le produit du nombre de plats imprimé par la dose annoncée ne donne pas le volume imprimé, pour un écart de 8 752 cl. Surtout, ils ne couvrent pas les trois lignes sur lesquelles un supplément reste dû : nous ne demandons plus rien sur le Calvados, le macvin et la crème de cassis, et les 169,9 L qui subsistent portent sur le vin jaune, le porto et le ravelin, où le service ne retranche que 15,4 L de porto en face des 70,7 L consommés à la carte."
+   "texte": "« Le service retranche déjà, pour le Calvados, le vin jaune, le porto et le macvin, 93 L, 111 L, 15 L et 240 L, bien au-delà du réclamé. » C’est exact pour le Calvados et le macvin, dont le supplément est nul. Ce ne l’est pas pour le porto : le service ne retranche que 15,4 L en face des 68,3 L réellement cuits à la carte et plafonnés aux achats, d’où 52,9 L restant dus. Et ces quatre repères sont le cumul de colonnes qui ne se recalculent pas sur leurs propres lignes, pour un écart de 8 752 cl."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Pour le Bailey’s, 14 L correspondent à la totalité des 1 400 cl d’achats disponibles. »** L’annexe 7-3 que le courrier invoque à la phrase suivante porte, pour le troisième exercice, 12 bouteilles et 840 cl, et non la bouteille et les 70 cl additionnés par le service : son propre disponible cumulé est donc de 2 170 cl, soit 31 bouteilles, et les factures en portent 2 240, soit 32. Les 15,3 L demandés représentent 70 % de ce disponible, non sa totalité."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**« Pour le marc de bourgogne et la liqueur de poire, le volume demandé dépasse l’achat disponible, 70 cl et 140 cl. »** Les trois annexes du service portent 1 873 cl de liqueur de poire sous la désignation « Liqueur Golden 8 70 cl », et sa propre lecture de caisse en relève 480 cl, plus de trois fois les 140 cl qu’il déclare disponibles deux lignes plus haut : le motif se retourne. Pour le marc, nous ramenons nous-mêmes la demande à 2,1 L, soit les 210 cl sortis du stock sur trois exercices, en deçà des 280 cl facturés ; le motif « près de 6 fois supérieur » ne vise plus ce qui est demandé."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**« Le service va se limiter à rappeler ses conclusions, Maître THIVEND n’apportant aucun élément complémentaire. »** Le seul motif de fond, porté à la page 68, reproche une modification de doses que la réponse n’a pas faite : les trois doses appliquées à la cuisine, 1 cl, 4 cl et 10 cl, sont celles que le service imprime lui même dans ses tableaux, et sur la seule ligne que l’annexe 7-3 documente son calcul est le nôtre. Un maintien intégral annoncé comme un simple rappel ne satisfait pas à la charge d’établir le bien-fondé de la reconstitution, qui incombe à l’administration faute d’avis conforme d’une commission (BOI-CF-IOR-10-20, § 280)."
+   "texte": "« Il y a une modification de doses non étayée. » Il n’y en a aucune : 1, 4 et 10 cl sont les doses que le service imprime, et sur la seule ligne que l’annexe 7-3 documente, son calcul est le nôtre. Sur les deux fourchettes du courriel, nous retenons la valeur qu’il retient lui-même."
   },
   {
    "kind": "piecejointe",
-   "intro": "Achats facture par facture pour les trois produits refusés p. 88, reconstitution des nombres de caisse que le service tire de ses propres annexes, contrôle du « volume disponible » sur le Calvados, décomposition de l’annexe 7-3 et relevé des doses. Fichiers recalculables, produits par les scripts scripts/reponse1-alcool-cuisine-assiettes.py, scripts/reponse1-alcool-cuisine-encadrement.py et scripts/reponse1-alcool-cuisine.py.",
+   "intro": "Dérivation complète du supplément à la carte, exercice par exercice et par formule : demande plafonnée aux achats, déduction de ce que le service retranche déjà, planchée à zéro, séparation carte / menus, et conversion en euros aux prix de l’annexe B1. La pièce R2 est recalculable (formules) ; les pièces R1 sont conservées en complément.",
    "fichiers": [
     {
-     "fichier": "pieces-reponse-1/R1-alcool-cuisine-assiettes.xlsx",
-     "label": "R1 · Assiettes d’achats refusées p. 88, nombres de caisse du service et annexe 7-3"
-    },
-    {
-     "fichier": "pieces-reponse-1/R1-alcool-cuisine-encadrement.xlsx",
-     "label": "R1 · Encadrement des doses, volume disponible reconstitué et achats facture par facture"
+     "fichier": "pieces-reponse-2/R2-alcool-cuisine.xlsx",
+     "label": "R2 · Supplément à la carte : sources, calcul par formule, conversion en euros, méthode"
     },
     {
      "fichier": "pieces-reponse-1/R1-alcool-cuisine-controles.xlsx",
      "label": "R1 · Contrôle des tableaux du service et alcool de cuisine plat par plat"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-alcool-cuisine-encadrement.xlsx",
+     "label": "R1 · Volume disponible reconstitué et achats facture par facture"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-alcool-cuisine-reperes.xlsx",
+     "label": "R1 · Doses du courriel du 30/03/2026, fourchettes et repères des annexes 7"
     }
    ]
   }

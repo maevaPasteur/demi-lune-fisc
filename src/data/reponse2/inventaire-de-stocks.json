@@ -2,7 +2,17 @@
  "meta": {
   "slug": "inventaire-de-stocks",
   "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
-  "grief": "Inventaire de stocks"
+  "grief": "Inventaire de stocks",
+  "limites": [
+   "La date matérielle du relevé des boissons n'est établie par pièce tierce que pour partie : au 31/03/2023 un listing fournisseur dont la colonne de comptage s'intitule « Inventaire 2023 » et dont aucune date de facture n'est postérieure à la clôture ; au 31/03/2024 une fiche client Franche-Comté Boissons Service éditée le 7 mars 2024, prix compris. Les cinq feuilles de comptage du 31/03/2025 ne portent aucune date et ne s'appuient sur aucune pièce tierce : pour cet exercice, seule l'arithmétique (chaîne des totaux + compte 310200) relie les feuilles à l'état daté. Les trois pages récapitulatives étant dactylographiées, leur date est un texte saisi ; une attestation du cabinet AGC que ces trois états figuraient au dossier remis avant le 18/05/2026 reste à produire.",
+   "Le mémoire de Me THIVEND du 10/07/2026, reproduit p. 31 du courrier, porte pour les boissons des ventilations sans alcool / alcools qui ne coïncident pas toutes avec les pages récapitulatives datées : la seule divergence dont la cause est documentée est le total alcools 2023 (3 056,26 € de recopie → 3 050,29 € sur l'état d'origine). La divergence 2024 sur le sans alcool (603,61 € au mémoire contre 870,59 € sur la page datée, soit 266,98 €) n'est pas expliquée à ce jour ; la société n'adopte, comme valeurs opposables, que celles des pages datées (3 777,99 € / 4 807,66 € / 4 534,25 €).",
+   "Les fenêtres de prix fournisseur (§ 3.4), le cas « Norbert 1 L, 01/03/2024, 2,53 € » et les contenances ajoutées en 2023 et 2025 reposent sur les factures FCBS, qui ne sont pas jointes aux pièces de ce grief ; leur production est nécessaire pour étayer ces points au-delà de la lecture des trois inventaires.",
+   "L'exercice 2022-2023 (variation de stock de −800,83 € retenue par le service) n'est pas vérifiable par la chaîne, le stock au 31/03/2022 n'étant pas repris dans nos états ; le signe de la variation 2024-2025 porté au compte est inverse de la convention, point relevé pour mémoire."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "Le motif de rejet repose sur une mention, la contenance, qu'aucun texte n'exige : seules l'existence et la valeur sont requises, et elles figurent pour chaque produit. Les totaux des feuilles de comptage se retrouvent au centime sur les pages récapitulatives datées (six rapprochements nuls sur six), puis dans le compte de stock 310200 dont le service tire sa reconstitution : la variation 2023-2024, −1 029,67 €, est exactement la différence entre deux inventaires datés. Aucun euro de rectification n'est rattaché au grief. Reste honnêtement non établie, par pièce, la date du relevé des boissons pour l'exercice 2024-2025.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -31,7 +41,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le courrier restitue enfin les arguments de la défense : les trois inventaires physiques de clôture existent et ont été établis à la date de clôture de chaque exercice (31/03/2023 : 101 lignes ; 31/03/2024 : 90 lignes ; 31/03/2025 : 82 lignes) ; sur les 273 lignes des trois clôtures, 270 (98,9 %) sont des lignes de produit complètes, les 3 restantes (toutes au 31/03/2025) étant des reliquats de valeur (91,97 €, 226,44 € et 94,59 €) ; le stock boissons total reste compris entre 3 674,17 € et 4 536,41 € HT (stock moyen 4 247,93 €), ce qui exclut un déstockage caché ; la contenance n’est pas une mention exigée par R. 123-177 et figure sur les factures (exemple du « Saint Véran : 25 bouteilles, 436,50 € HT » au 31/03/2023, contenance 75 cl portée sur la facture) ; l’administration a elle-même reporté puis converti ces contenances dans ses annexes 6-1 à 6-3 et 7-1 à 7-3."
+   "texte": "Le courrier restitue enfin les arguments de la défense : les trois inventaires physiques de clôture existent et ont été établis à la date de clôture de chaque exercice (31/03/2023 : 101 lignes ; 31/03/2024 : 90 lignes ; 31/03/2025 : 82 lignes) ; sur les 273 lignes des trois clôtures, 270 (98,9 %) sont des lignes de produit complètes, les 3 restantes (toutes au 31/03/2025) étant des reliquats de valeur (91,97 €, 226,44 € et 94,59 €) ; la contenance n’est pas une mention exigée par R. 123-177 et figure sur les factures (exemple du « Saint Véran : 25 bouteilles, 436,50 € HT » au 31/03/2023, contenance 75 cl portée sur la facture) ; l’administration a elle-même reporté puis converti ces contenances dans ses annexes 6-1 à 6-3 et 7-1 à 7-3."
   },
   {
    "kind": "tableau",
@@ -123,6 +133,10 @@
      }
     ]
    ]
+  },
+  {
+   "kind": "note",
+   "texte": "Ce tableau reproduit la ventilation du mémoire du 10/07/2026 telle que le courrier la cite p. 31. Elle n’est pas la valeur opposable : les montants arrêtés sont ceux des pages récapitulatives datées, établis et vérifiés au chapitre 3 (3 777,99 € au 31/03/2023, 4 807,66 € au 31/03/2024, 4 534,25 € au 31/03/2025). L’écart tient à deux choses, dites au chapitre 3 : au 31/03/2023, le total alcools du mémoire (3 056,26 €) procédait d’une recopie, l’état d’origine portant 3 050,29 € ; au 31/03/2024, la ventilation du mémoire (sans alcool 603,61 €, alcools 3 932,80 €) diffère de la page datée (870,59 € et 3 937,07 €) sans que la société l’adopte, le total opposable restant celui que la comptabilité a enregistré, 4 807,66 €."
   },
   {
    "kind": "chapitre",
@@ -1008,10 +1022,10 @@
       "v": "31/03/2025"
      },
      {
-      "v": "pages 11 et 12, feuilles de boissons sans alcool : 473,41 + 287,33"
+      "v": "pages 11 et 12, feuilles de boissons sans alcool : 478,41 + 287,33"
      },
      {
-      "v": "760,74 €",
+      "v": "765,74 €",
       "align": "right"
      },
      {
@@ -1019,16 +1033,16 @@
       "align": "right"
      },
      {
-      "v": "5,00 €",
+      "v": "0,00 €",
       "align": "right",
-      "badge": "ko"
+      "badge": "ok"
      }
     ]
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Cinq de ces six rapprochements sont **nuls au centime**. La société signale le sixième plutôt que de le taire : au 31/03/2025, la ligne « sans alcool » de la page récapitulative porte 5,00 € de plus que la somme des deux feuilles de comptage correspondantes. L’écart ne porte que sur les boissons sans alcool, il est de 5,00 € sur un stock de boissons de 4 534,25 €, et il ne modifie aucun volume d’alcool."
+   "texte": "Les six rapprochements sont **nuls au centime**. La ligne « sans alcool » du 31/03/2025 mérite une précision, car une version antérieure de notre transcription portait 473,41 € en pied de la feuille de la page 11, d’où un faux écart de 5,00 € que la société avait d’abord signalé. La re-sommation des vingt lignes entourées de cette feuille (32,70 + 27,12 + 50,40 + 30,42 + 15,63 + 32,10 + 13,89 + 21,50 + 9,68 + 6,11 + 11,22 + 9,28 + 4,32 + 12,72 + 4,64 + 77,88 + 41,61 + 19,20 + 29,93 + 28,06) donne **478,41 € au centime**, chiffre que le pied manuscrit porte effectivement. Rectifiée, la somme des deux feuilles sans alcool, 478,41 + 287,33, fait **765,74 €**, soit exactement la page récapitulative datée : le sixième rapprochement est lui aussi nul, et il n’y a pas d’anomalie à signaler."
   },
   {
    "kind": "paragraphe",
@@ -1160,12 +1174,71 @@
    "texte": "Ce rapprochement décide la question de la date. Pour que la variation de 1 029,67 € que le service a portée en comptabilité matière soit exactement la différence entre deux inventaires de clôture, il faut que ces inventaires aient existé **avant l’écriture**, qu’ils aient été arrêtés à la date de chaque clôture, et que leurs totaux soient exacts. Les trois conditions sont ainsi établies par le chiffre du service lui-même, et non par une affirmation de la société. Une pièce dont la comptabilité matière du service reprend le résultat au centime n’est pas une pièce impropre à justifier la valeur du stock à la clôture, qui est ce résultat."
   },
   {
+   "kind": "paragraphe",
+   "texte": "Une seule valeur de stock est donc opposable par clôture, celle de la page récapitulative datée, et c’est elle qui sert partout dans le présent mémoire. Le tableau ci-dessous la confronte à la ventilation du mémoire du 10/07/2026 que le courrier reproduit page 31, pour lever toute ambiguïté : la société retient les montants des pages datées, vérifiés au centime sur les feuilles de comptage, et écarte ceux du mémoire là où ils divergent."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Valeur opposable par clôture : page récapitulative datée (retenue) et ventilation du mémoire p. 31 (écartée là où elle diverge)",
+   "minWidth": 920,
+   "colonnes": [
+    {
+     "label": "Clôture"
+    },
+    {
+     "label": "Sans alcool (page datée)",
+     "align": "right"
+    },
+    {
+     "label": "Alcools et vins (page datée)",
+     "align": "right"
+    },
+    {
+     "label": "Stock boissons retenu (page datée)",
+     "align": "right"
+    },
+    {
+     "label": "Rappel mémoire p. 31",
+     "align": "right"
+    },
+    {
+     "label": "Cause de la divergence"
+    }
+   ],
+   "lignes": [
+    [
+     {"v": "31/03/2023"},
+     {"v": "727,70 €", "align": "right"},
+     {"v": "3 050,29 €", "align": "right"},
+     {"v": "3 777,99 €", "align": "right", "badge": "ok"},
+     {"v": "3 674,17 €", "align": "right"},
+     {"v": "alcools du mémoire 3 056,26 € = recopie ; état d’origine 3 050,29 € (pied imprimé p. 12)"}
+    ],
+    [
+     {"v": "31/03/2024"},
+     {"v": "870,59 €", "align": "right"},
+     {"v": "3 937,07 €", "align": "right"},
+     {"v": "4 807,66 €", "align": "right", "badge": "ok"},
+     {"v": "4 536,41 €", "align": "right"},
+     {"v": "ventilation du mémoire (603,61 € / 3 932,80 €) non adoptée ; report manuscrit daté p. 7 = 4 807,66 €, montant enregistré"}
+    ],
+    [
+     {"v": "31/03/2025"},
+     {"v": "765,74 €", "align": "right"},
+     {"v": "3 768,51 €", "align": "right"},
+     {"v": "4 534,25 €", "align": "right", "badge": "ok"},
+     {"v": "4 533,22 €", "align": "right"},
+     {"v": "ventilation du mémoire (760,74 € / 3 772,48 €) non adoptée ; page datée 765,74 € / 3 768,51 €"}
+    ]
+   ]
+  },
+  {
    "kind": "kpis",
    "items": [
     {
      "label": "Rapprochements des feuilles de comptage aux pages datées",
-     "valeur": "5 nuls sur 6",
-     "sub": "le sixième, 5,00 € sur les boissons sans alcool au 31/03/2025, est signalé par la société",
+     "valeur": "6 nuls sur 6",
+     "sub": "chaque total de feuille de comptage se retrouve au centime sur la page récapitulative datée",
      "highlight": true,
      "couleur": "teal"
     },
@@ -2025,11 +2098,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Ces réserves portent sur la **transcription**, non sur les états d’origine. La relecture page à page a été faite, et elle a corrigé six erreurs de saisie sur la clôture 2023 : une ligne « Vittel 50 cl » qui n’existe pas sur l’état et doublonnait la ligne « San pelegrino 50cl » qui la suit, une infusion verveine transcrite à zéro au lieu d’une unité, deux quantités ou prix unitaires inexacts à valeur constante, et les trois prix de la page des alcools rappelés ci-dessus. **Aucune ne portait sur une quantité d’alcool.** Une fois rectifiées, la transcription tombe exactement sur les totaux imprimés des états datés : 3 050,29 € pour la page des alcools, et 727,70 € pour celle des boissons une fois réintégrées les quatre lignes d’épicerie que cette page porte et que la transcription, limitée aux boissons, laisse de côté, soit 130,03 € de galettes, de madeleines, de crackers et de sucre."
+   "texte": "Ces réserves portent sur la **transcription**, non sur les états d’origine. La relecture page à page a été faite, et elle a corrigé six erreurs de saisie sur la clôture 2023 : une ligne « Vittel 50 cl » qui n’existe pas sur l’état et doublonnait la ligne « San pelegrino 50cl » qui la suit, une infusion verveine transcrite à zéro au lieu d’une unité, deux quantités ou prix unitaires inexacts à valeur constante, et les trois prix de la page des alcools rappelés ci-dessus. **Aucune ne portait sur une quantité d’alcool.** La même relecture a rectifié la lecture du pied de la feuille sans alcool du 31/03/2025 : notre transcription y portait 473,41 € au lieu de 478,41 € (re-sommation des vingt lignes entourées = 478,41 €), seule lecture qui faisait naguère apparaître un faux écart de 5,00 €, désormais résorbé. Une fois rectifiées, la transcription tombe exactement sur les totaux imprimés des états datés : 3 050,29 € pour la page des alcools 2023, et 727,70 € pour celle des boissons sans alcool 2023 une fois réintégrées les quatre lignes d’épicerie que cette page porte et que la transcription, limitée aux boissons, laisse de côté, soit 130,03 € de galettes, de madeleines, de crackers et de sucre."
   },
   {
    "kind": "paragraphe",
-   "texte": "Trois réserves doivent être précisées sur la clôture 2025 ; les trois lignes en cause figurent parmi les vingt-sept déjà marquées « à vérifier ». La première a été dite : la ligne « sans alcool » de la page récapitulative porte 5,00 € de plus que les deux feuilles de comptage correspondantes. Les deux autres sont des lectures du manuscrit de la page 10, que la relecture rectifie. Notre transcription y porte « Hautes Côtes de Beaune, 8 à 14,40 €, 115,41 € », dont l’arithmétique ne ferme pas : le manuscrit se lit « à 12,49 € = 112,41 € », la quantité étant rognée au bord du scan ; **112,41 divisé par 12,49 donne exactement 9**, et 12,49 € est le prix net porté par les factures du fournisseur des 28 février et 21 mars 2025. La bonne lecture est donc de neuf bouteilles à 12,49 €. Notre transcription porte de même « Passoa, 2 à 9,89 €, 19,67 € » quand le manuscrit porte « 29,67 », soit **trois bouteilles** à 9,89 €. Ces deux rectifications sont absorbées par le reliquat de réconciliation de la même feuille, dont le total, 1 686,48 €, est inchangé."
+   "texte": "Deux autres lectures du manuscrit de la page 10 doivent être précisées sur la clôture 2025 ; elles figurent parmi les vingt-sept lignes déjà marquées « à vérifier ». Notre transcription y porte « Hautes Côtes de Beaune, 8 à 14,40 €, 115,41 € », dont l’arithmétique ne ferme pas : le manuscrit se lit « à 12,49 € = 112,41 € », la quantité étant rognée au bord du scan ; **112,41 divisé par 12,49 donne exactement 9**, soit neuf bouteilles à 12,49 €. Notre transcription porte de même « Passoa, 2 à 9,89 €, 19,67 € » quand le manuscrit porte « 29,67 », soit **trois bouteilles** à 9,89 €. Ces deux rectifications sont absorbées par le reliquat de réconciliation de la même feuille, dont le total, 1 686,48 €, est inchangé."
   },
   {
    "kind": "paragraphe",
@@ -2102,7 +2175,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "L’objection de date ne tient pas davantage, et elle se vérifie sur les pièces plutôt que par une affirmation. Ce qui a été produit après la proposition n’est pas un inventaire refait : sur les vingt et un articles que le service a lui-même choisis, les quantités, les prix unitaires et les valeurs sont identiques, pour un écart cumulé nul. Le dossier d’inventaire du 31/03/2023 contient un listing fournisseur dont la colonne de comptage est intitulée « Inventaire 2023 » et dont aucune date de facture n’est postérieure à la clôture ; les feuilles de comptage du 31/03/2024 sont celles d’une fiche client que le fournisseur a imprimée le 7 mars 2024, prix unitaires compris. Et les totaux de ces états se retrouvent, cinq fois sur six au centime, sur les pages récapitulatives datées, puis dans le compte de stock dont le service a tiré sa reconstitution : la variation de l’exercice 2023-2024, moins 1 029,67 €, est exactement la différence entre deux inventaires datés qu’il déclare non conformes."
+   "texte": "L’objection de date ne tient pas davantage, et elle se vérifie sur les pièces plutôt que par une affirmation. Ce qui a été produit après la proposition n’est pas un inventaire refait : sur les vingt et un articles que le service a lui-même choisis, les quantités, les prix unitaires et les valeurs sont identiques, pour un écart cumulé nul. Le dossier d’inventaire du 31/03/2023 contient un listing fournisseur dont la colonne de comptage est intitulée « Inventaire 2023 » et dont aucune date de facture n’est postérieure à la clôture ; les feuilles de comptage du 31/03/2024 sont celles d’une fiche client que le fournisseur a imprimée le 7 mars 2024, prix unitaires compris. Et les totaux de ces états se retrouvent, six fois sur six au centime, sur les pages récapitulatives datées, puis dans le compte de stock dont le service a tiré sa reconstitution : la variation de l’exercice 2023-2024, moins 1 029,67 €, est exactement la différence entre deux inventaires datés qu’il déclare non conformes. La société ne prétend pas pour autant tout dater par pièce tierce : les cinq feuilles de comptage du 31/03/2025 ne portent aucune date, et c’est l’arithmétique, non un document, qui les relie à l’état daté de cette clôture."
   },
   {
    "kind": "paragraphe",
@@ -2110,7 +2183,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Deux réserves subsistent, que la société énonce elle-même et qui ne portent sur aucun des points débattus : 27 lignes de sa transcription sur 272, pour 1 929,34 €, restent marquées « à vérifier », dont trois reliquats de réconciliation au 31/03/2025 pour 413,00 € ; et la ligne « sans alcool » de la page récapitulative du 31/03/2025 porte 5,00 € de plus que les deux feuilles de comptage correspondantes. Ni l’une ni l’autre ne touche à un volume d’alcool, et la société les signale plutôt que de les laisser opposer. Les feuilles de comptage elles-mêmes sont jointes au présent mémoire, dans les trois PDF d’inventaire d’origine."
+   "texte": "Une réserve subsiste, que la société énonce elle-même et qui ne porte sur aucun des points débattus : 27 lignes de sa transcription sur 272, pour 1 929,34 €, restent marquées « à vérifier », dont trois reliquats de réconciliation au 31/03/2025 pour 413,00 €. Elle ne touche à aucun volume d’alcool, elle concerne la recopie informatique et non les états d’origine, et la société la signale plutôt que de la laisser opposer. Deux limites honnêtes demeurent par ailleurs, qui appellent des pièces complémentaires et non une correction de calcul : la date matérielle du relevé des boissons n’est établie par pièce tierce ni pour la clôture 2025, non datée, ni pour les pages récapitulatives dactylographiées, ce qui justifie la production d’une attestation du cabinet AGC ; et la ventilation du mémoire du 10/07/2026 (p. 31) diffère des pages datées pour 2024 sans que cette divergence soit entièrement expliquée, seules les valeurs des pages datées étant opposées. Les feuilles de comptage elles-mêmes sont jointes au présent mémoire, dans les trois PDF d’inventaire d’origine."
   },
   {
    "kind": "titre",
@@ -2118,7 +2191,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Les inventaires n’ont été mis au net qu’après la proposition : la comptabilité était donc irrégulière à la date du contrôle. »** La valeur des stocks n’a pas été reconstituée après coup : elle se lit sur les supports datés (feuilles de comptage puis page récapitulative datée du 31 mars de chaque exercice). Cinq des six rapprochements entre ces supports sont exactement nuls, et la variation 2023-2024 tirée de nos inventaires datés coïncide à **0,00 €** avec celle que le service a lui-même portée en comptabilité matière. Une mise au propre de présentation postérieure à la proposition ne transforme pas en irrégularité ce que les pièces datent au centime."
+   "texte": "**« Les inventaires n’ont été mis au net qu’après la proposition : la comptabilité était donc irrégulière à la date du contrôle. »** La valeur des stocks n’a pas été reconstituée après coup : elle se lit sur les supports datés (feuilles de comptage puis page récapitulative datée du 31 mars de chaque exercice). Les six rapprochements entre ces supports sont exactement nuls, et la variation 2023-2024 tirée de nos inventaires datés coïncide à **0,00 €** avec celle que le service a lui-même portée en comptabilité matière. Une mise au propre de présentation postérieure à la proposition ne transforme pas en irrégularité ce que les pièces datent au centime. La société reconnaît toutefois que, pour la seule clôture 2025, les feuilles de comptage ne sont pas datées et que la date y est établie par l’arithmétique et non par une pièce tierce ; sur ce point précis, elle propose de produire une attestation du cabinet AGC."
   },
   {
    "kind": "paragraphe",
@@ -2130,8 +2203,12 @@
   },
   {
    "kind": "piecejointe",
-   "intro": "Les trois inventaires d’origine scannés, tels que remis au vérificateur, la première page de chacun portant le récapitulatif daté et les suivantes les feuilles de comptage ; la chaîne des totaux, feuille par feuille, jusqu’au compte de stock ; le comparatif article par article de l’état d’origine et de l’état complété ; et la vérification de la variation de stock en euros et en litres.",
+   "intro": "La chaîne des totaux reconstruite par formules à partir des trois inventaires scannés (pièce R2, à jour de la lecture 478,41 € du pied de la feuille sans alcool 2025) ; les trois inventaires d’origine scannés, tels que remis au vérificateur, la première page de chacun portant le récapitulatif daté et les suivantes les feuilles de comptage ; le comparatif article par article de l’état d’origine et de l’état complété, et la vérification de la variation de stock en euros et en litres (pièces R1, versées en complément).",
    "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-inventaire-de-stocks-chaine.xlsx",
+     "label": "R2 - Inventaires : la chaîne des totaux à FORMULES (onglets Sources / Pages datées / Calcul / Méthode), feuilles de comptage → pages datées → variation de stock, 6 rapprochements nuls sur 6 (XLSX)"
+    },
     {
      "fichier": "pieces-reponse-1/R1-inventaires-chaine-des-totaux.xlsx",
      "label": "R1 - Inventaires : la chaîne des totaux, des feuilles de comptage au compte de stock, avec ses onze contrôles (XLSX)"

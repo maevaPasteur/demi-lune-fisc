@@ -1,7 +1,15 @@
 {
  "meta": {
   "slug": "distributions-principe",
-  "source": "Propositions du 19/10/2026, « En matière de distributions »"
+  "source": "Propositions du 19/10/2026, « En matière de distributions »",
+  "limites": [
+   "La distribution est présumée par l'art. 109-1 du CGI dès qu'un bénéfice reconstitué est maintenu : la défense ne peut pas exiger du service une preuve bancaire ; elle doit faire tomber la reconstitution elle-même, ou en obtenir la réduction.",
+   "La désignation des bénéficiaires du 16/06/2026 identifie les deux foyers pour écarter l'amende de 1759 ; le service peut y voir un indice d'appréhension. Elle est opposée sous toutes réserves, sans reconnaissance du principe ni du quantum."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "La distribution n'existe que par la reconstitution : elle en est le décalque (235 913 € par foyer = moitié des discordances TTC). À titre principal, si la reconstitution tombe la distribution disparaît ; à titre subsidiaire, toute réduction de la reconstitution réduit la base distribuée dans la même proportion.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -9,17 +17,17 @@
    "source": "fisc",
    "numero": 1,
    "titre": "Ce que soutient l'administration",
-   "sousTitre": "Sur le fondement des articles 108 à 111 et 109-1 du CGI et des « conditions d'exploitation », le service qualifie les recettes réputées dissimulées de revenus distribués et les répartit par moitié entre les deux co-gérants, puis les impose en revenus de capitaux mobiliers (RCM)."
+   "sousTitre": "Sur le fondement des articles 108 à 111 et spécialement 109-1-1° du CGI, le service répute distribués les bénéfices reconstitués non mis en réserve ni incorporés au capital, les répartit par moitié entre les deux co-gérants et les impose en revenus de capitaux mobiliers (RCM)."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le raisonnement du service tient en trois pas : il part des dissimulations de recettes TTC constatées par sa reconstitution (193 235 € / 138 864 € / 139 728 €) ; il en retranche la TVA pour obtenir un hors taxe (172 814 € / 124 010 € / 125 076 €) ; il partage ce hors taxe, augmenté de la moitié de la TVA, par moitié entre M. PASTEUR et Mme BEHEM. Chaque foyer se voit ainsi attribuer une base de RCM de 96 617 € (2023), 69 432 € (2024) et 69 864 € (2025)."
+   "texte": "Le raisonnement du service tient en trois pas : il part des dissimulations de recettes TTC constatées par sa reconstitution (193 235 € / 138 864 € / 139 728 €) ; il les divise par deux entre les deux foyers ; il obtient ainsi une base de RCM de **96 617 € (2023), 69 432 € (2024) et 69 864 € (2025)** par foyer, qu'il majore ensuite du coefficient de 1,25 pour l'imposition au barème. La base distribuée par foyer est donc, à l'arrondi près, la **moitié de la discordance TTC** (96 617 € = 193 234,55 € ÷ 2)."
   },
   {
    "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 962 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Dissimulation TTC</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">193 235 €</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">reconstitution</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">− TVA</text><text x=\"285.0\" y=\"84\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">− 20 421 €</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">= HT</text><text x=\"481.0\" y=\"84\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">172 814 €</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">÷2</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">base RCM /foyer</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">96 617 €</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">HT/2 + TVA/2</text><line x1=\"752\" y1=\"59.0\" x2=\"789\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 789 54.0 L 798 59.0 L 789 64.0 Z\" fill=\"#cbb98f\"/><text x=\"775.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">× 1,25</text><rect x=\"798\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"873.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">assiette IR</text><text x=\"873.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">120 771 €</text><text x=\"873.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">× 1,25</text></svg>",
+   "svg": "<svg viewBox=\"0 0 720 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Dissimulation TTC</text><text x=\"89\" y=\"80\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">193 235 €</text><text x=\"89\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">reconstitution 2023</text><rect x=\"285\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"360\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Base RCM / foyer</text><text x=\"360\" y=\"80\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">96 617 €</text><text x=\"360\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= TTC ÷ 2</text><rect x=\"556\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"631\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Assiette IR</text><text x=\"631\" y=\"80\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">120 771 €</text><text x=\"631\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">× 1,25</text><line x1=\"164\" y1=\"59\" x2=\"201\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54 L 210 59 L 201 64 Z\" fill=\"#cbb98f\"/><text x=\"182\" y=\"51\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">÷ 2</text><line x1=\"435\" y1=\"59\" x2=\"472\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 472 54 L 481 59 L 472 64 Z\" fill=\"#cbb98f\"/><text x=\"453\" y=\"51\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">× 1,25</text></svg>",
    "titre": "La construction de la base distribuée, pas à pas (exemple 2023, par foyer)",
-   "legende": "Chaque étape est reprise des propositions du 19/10/2026 et recalculée dans la pièce jointe (contrôles arithmétiques inclus)."
+   "legende": "La base RCM par foyer est la discordance TTC divisée par deux ; l'assiette d'impôt est cette base majorée de 25 %. Chaque étape est recalculée par formule dans la pièce jointe."
   },
   {
    "kind": "chapitre",
@@ -35,7 +43,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La distribution n'est pas un flux constaté : c'est, à l'euro près, le produit de la reconstitution. Le service le reconnaît implicitement puisqu'il la calcule en reprenant exactement ses propres montants reconstitués, sans y ajouter le moindre élément nouveau. Il n'existe, dans les deux propositions personnelles, **aucune pièce bancaire, aucun compte courant d'associé mouvementé, aucun relevé, aucun constat d'enrichissement** : la seule source de la « distribution » est le tableau de reconstitution de la proposition « société »."
+   "texte": "La distribution n'a **aucune source autonome** : elle est, à l'euro près, le produit de la reconstitution, repris sans le moindre élément nouveau. Le service n'invoque ni pièce bancaire, ni compte courant d'associé mouvementé, ni enrichissement : la seule source de la « distribution » est le tableau de reconstitution de la proposition « société ». Nous ne lui demandons pas une telle preuve — l'article 109-1-1° présume distribués les bénéfices non mis en réserve — mais nous contestons le **bénéfice reconstitué** d'où tout procède : sans bénéfice occulte établi, il n'y a rien à réputer distribué."
   },
   {
    "kind": "titre",
@@ -44,13 +52,107 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les rappels de la société (IS, TVA, majorations) et la totalité de la taxation personnelle (RCM, majoration d'assiette de 25 %, majoration de 40 %, intérêts) procèdent d'un seul et même fait générateur : le chiffre d'affaires reconstitué. Ce fait générateur est contesté dans son principe même, poste par poste, aux blocs « rejet de la comptabilité » et « méthode de reconstitution » de la présente réponse. S'il tombe, tout l'édifice tombe avec lui."
+   "texte": "Les rappels de la société (IS, TVA, majorations) et la totalité de la taxation personnelle (RCM, majoration d'assiette de 25 %, majoration de 40 %, intérêts) procèdent d'un seul et même fait générateur : le chiffre d'affaires reconstitué. Ce fait générateur est contesté dans son principe même, poste par poste, aux blocs « rejet de la comptabilité » et « méthode de reconstitution ». **S'il tombe, tout l'édifice tombe (582 796 €).**"
   },
   {
    "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 780 430\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"220.0\" y=\"16\" width=\"340\" height=\"64\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#a0740d\" stroke-width=\"1.5\"/><text x=\"390.0\" y=\"38\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Reconstitution du CA (méthode contestée)</text><text x=\"390.0\" y=\"74\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stocks + achats + doses figées × coefficient</text><line x1=\"390.0\" y1=\"80\" x2=\"390.0\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"200\" y1=\"104\" x2=\"580\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"200\" y1=\"104\" x2=\"191\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 191 99 L 200 104 L 191 109 Z\" fill=\"#cbb98f\"/><path d=\"M 195 113 L 200 122 L 205 113 Z\" fill=\"#cbb98f\"/><line x1=\"200\" y1=\"104\" x2=\"200\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"580\" y1=\"104\" x2=\"580\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 113 L 580 122 L 585 113 Z\" fill=\"#cbb98f\"/><rect x=\"120\" y=\"122\" width=\"160\" height=\"60\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"200.0\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Société</text><text x=\"200.0\" y=\"166\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">213 148 €</text><text x=\"200.0\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">IS + TVA + 1729</text><rect x=\"465.0\" y=\"122\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Dissimulation réputée</text><line x1=\"580\" y1=\"168\" x2=\"580\" y2=\"180\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 176 L 580 184 L 585 176 Z\" fill=\"#cbb98f\"/><rect x=\"465.0\" y=\"180\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"202\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Distribution (art. 109-1)</text><line x1=\"580\" y1=\"226\" x2=\"580\" y2=\"238\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 234 L 580 242 L 585 234 Z\" fill=\"#cbb98f\"/><rect x=\"465.0\" y=\"238\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"260\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">RCM par foyer, × 1,25</text><line x1=\"580\" y1=\"284\" x2=\"580\" y2=\"296\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 292 L 580 300 L 585 292 Z\" fill=\"#cbb98f\"/><rect x=\"465.0\" y=\"296\" width=\"230\" height=\"58\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"318\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">IR + PS + 40 % + intérêts</text><text x=\"580.0\" y=\"340\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">369 648 €</text><rect x=\"190.0\" y=\"374\" width=\"400\" height=\"44\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"390.0\" y=\"396\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\"></text><text x=\"390.0\" y=\"402\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0f7c6c\">Racine annulée  ⇒  582 796 € tombent (société + associés)</text></svg>",
+   "svg": "<svg viewBox=\"0 0 780 430\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"220\" y=\"16\" width=\"340\" height=\"64\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#a0740d\" stroke-width=\"1.5\"/><text x=\"390\" y=\"38\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Reconstitution du CA (méthode contestée)</text><text x=\"390\" y=\"74\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stocks + achats + doses figées × coefficient</text><line x1=\"390\" y1=\"80\" x2=\"390\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"200\" y1=\"104\" x2=\"580\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 195 113 L 200 122 L 205 113 Z\" fill=\"#cbb98f\"/><line x1=\"200\" y1=\"104\" x2=\"200\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"580\" y1=\"104\" x2=\"580\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 113 L 580 122 L 585 113 Z\" fill=\"#cbb98f\"/><rect x=\"120\" y=\"122\" width=\"160\" height=\"60\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"200\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Société</text><text x=\"200\" y=\"166\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">213 148 €</text><text x=\"200\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">IS + TVA + 1729</text><rect x=\"465\" y=\"122\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Dissimulation réputée</text><line x1=\"580\" y1=\"168\" x2=\"580\" y2=\"180\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 176 L 580 184 L 585 176 Z\" fill=\"#cbb98f\"/><rect x=\"465\" y=\"180\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"202\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Distribution (art. 109-1)</text><line x1=\"580\" y1=\"226\" x2=\"580\" y2=\"238\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 234 L 580 242 L 585 234 Z\" fill=\"#cbb98f\"/><rect x=\"465\" y=\"238\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"260\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">RCM par foyer, × 1,25</text><line x1=\"580\" y1=\"284\" x2=\"580\" y2=\"296\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 292 L 580 300 L 585 292 Z\" fill=\"#cbb98f\"/><rect x=\"465\" y=\"296\" width=\"230\" height=\"58\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"318\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">IR + PS + 40 % + intérêts</text><text x=\"580\" y=\"340\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">369 648 €</text><rect x=\"150\" y=\"374\" width=\"480\" height=\"44\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"390\" y=\"402\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"#0f7c6c\">Racine annulée  ⇒  582 796 € tombent (société + associés)</text></svg>",
    "titre": "Un seul fait générateur commande 582 796 € de rappels",
-   "legende": "Les blocs « rejet » et « reconstitution » de la présente réponse démontrent, pièce à l'appui, que la reconstitution n'est pas probante (coefficient circulaire, doses figées, pertes ignorées)."
+   "legende": "Scénario principal : la reconstitution n'étant pas probante (coefficient, doses figées, pertes ignorées), elle est écartée et la distribution disparaît. À défaut, le moyen subsidiaire ci-dessous chiffre la réduction au prorata."
+  },
+  {
+   "kind": "titre",
+   "texte": "Moyen subsidiaire : une réduction de la reconstitution réduit la base distribuée d'autant",
+   "numero": "2.3"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Si le juge ne devait réduire la reconstitution que **partiellement**, la base distribuée baisserait dans la **même proportion**, car elle en est la stricte moitié : base distribuée par foyer = 235 913 € × (1 − taux de réduction). L'impôt personnel baisserait **au moins** d'autant, la progressivité du barème jouant en outre à la baisse. Nous demandons donc, à titre subsidiaire, que la réduction obtenue sur la reconstitution soit répercutée sur la base RCM de chaque foyer."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Base distribuée résiduelle par foyer selon la réduction obtenue (3 ans)",
+   "colonnes": [
+    {
+     "label": "Réduction de la reconstitution"
+    },
+    {
+     "label": "Base distribuée / foyer",
+     "align": "right"
+    },
+    {
+     "label": "Assiette IR (× 1,25)",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Aucune (maintien intégral)"
+     },
+     {
+      "v": "235 913 €",
+      "align": "right"
+     },
+     {
+      "v": "294 891 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "− 25 %"
+     },
+     {
+      "v": "176 935 €",
+      "align": "right"
+     },
+     {
+      "v": "221 168 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "− 50 %"
+     },
+     {
+      "v": "117 957 €",
+      "align": "right"
+     },
+     {
+      "v": "147 446 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "− 75 %"
+     },
+     {
+      "v": "58 978 €",
+      "align": "right"
+     },
+     {
+      "v": "73 723 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Annulation totale"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     }
+    ]
+   ],
+   "minWidth": 620
   },
   {
    "kind": "kpis",
@@ -58,19 +160,19 @@
     {
      "label": "Base RCM imposée par foyer (3 ans)",
      "valeur": "235 913 €",
-     "sub": "96 617 + 69 432 + 69 864",
+     "sub": "96 617 + 69 432 + 69 864 = moitié des discordances TTC",
      "couleur": "red"
     },
     {
-     "label": "Flux bancaire tracé par le service",
-     "valeur": "0 €",
-     "sub": "aucun relevé, aucun compte courant d'associé, aucun enrichissement",
+     "label": "Source autonome de la distribution",
+     "valeur": "aucune",
+     "sub": "rien d'autre que le CA reconstitué, contesté à la racine",
      "couleur": "gold"
     },
     {
      "label": "Si la reconstitution tombe",
      "valeur": "0 €",
-     "sub": "plus de recette occultée = plus de distribution",
+     "sub": "plus de bénéfice occulte = plus de distribution",
      "couleur": "teal"
     }
    ]
@@ -78,33 +180,29 @@
   {
    "kind": "titre",
    "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas",
-   "numero": "2.3"
+   "numero": "2.4"
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Les écarts matière prouvent des recettes occultes, indépendamment des doses. »** C'est faux : la prétendue « consommation supérieure aux achats » est un artefact d'étiquetage (Beaune rouge lu comme blanc, Calvados de cuisine, eaux-de-vie achetées sous des libellés voisins), et le bilan matière global est **excédentaire de 3 048 litres**. Aucun produit identifiable ne manque."
+   "texte": "**« La désignation des bénéficiaires vaut reconnaissance de la distribution. »** La désignation du 16/06/2026 a été faite par la société, dans le délai de l'article 117, pour écarter l'amende de l'article 1759 ; elle identifie les bénéficiaires mais **n'établit ni l'existence ni le montant** des distributions, que les intéressés contestent dans leur propre procédure, **sous toutes réserves**. Le service pourra y voir un indice d'appréhension : raison de plus pour maintenir la contestation sur la racine (le bénéfice reconstitué) et, subsidiairement, sur la clé de répartition."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« La désignation des bénéficiaires vaut reconnaissance de la distribution. »** Non : la désignation, faite par la société pour écarter l'amende de l'article 1759, n'emporte pas reconnaissance de l'existence ni du montant des distributions, que les bénéficiaires conservent le droit de contester dans leur propre procédure (voir 4.2)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**« La charge de la preuve pèse sur le contribuable. »** Elle ne se renverse qu'après un rejet de comptabilité régulier (art. L. 192 du LPF). Or le rejet est lui-même contesté (bloc « rejet de la comptabilité »), et le levier de procédure L. 52 est à instruire ; tant que le rejet n'est pas acquis, c'est à l'administration d'établir le bien-fondé de la reconstitution."
+   "texte": "**« La charge de la preuve pèse sur le contribuable. »** La présomption de distribution de l'article 109-1 ne s'attache qu'à un **rehaussement du résultat maintenu**. Or ce rehaussement procède d'un rejet de comptabilité **lui-même contesté** (bloc « rejet de la comptabilité ») et d'un levier de procédure (durée du contrôle, art. L. 52 du LPF) à instruire : tant que le bénéfice reconstitué n'est pas acquis, il n'y a pas de base à réputer distribuée."
   },
   {
    "kind": "piecejointe",
-   "intro": "Cascade des distributions entièrement recalculée à partir des montants notifiés (TTC → TVA → HT → part par co-gérant → base RCM → assiette IR), avec chaînage aux dissimulations de la reconstitution et contrôles arithmétiques. Chaque cellule est reproductible depuis les propositions du 19/10/2026.",
+   "intro": "Cascade des distributions recalculée par formule à partir des discordances TTC de la reconstitution (TTC ÷ 2 → base RCM → × 1,25 → assiette IR), par foyer et par année, avec le taux effectif de chaque foyer. Résultats traçables et reproductibles.",
    "fichiers": [
     {
-     "fichier": "pieces-reponse-2/R2-distributions-et-majoration.xlsx",
-     "label": "Distributions et majoration de 25 % : cascade TTC → base RCM → assiette IR, par foyer et par année (XLSX)"
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "Cascade des distributions et taux effectif par foyer (XLSX à formules)"
     }
    ]
   },
   {
    "kind": "note",
-   "texte": "Sources : propositions du 19/10/2026, « En matière de distributions » (art. 108, 109-1, 110, 111, 156 du CGI) ; dissimulations TTC/HT reprises de la reconstitution (proposition du 18/05/2026, p. 52) ; art. L. 192 du LPF."
+   "texte": "Sources : propositions du 19/10/2026, « En matière de distributions » (art. 108, 109-1, 110, 111 du CGI) ; dissimulations TTC reprises de la reconstitution (proposition du 18/05/2026, p. 52) ; art. L. 52 et L. 192 du LPF."
   }
  ]
 }

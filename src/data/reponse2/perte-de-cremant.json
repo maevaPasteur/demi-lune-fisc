@@ -1,7 +1,18 @@
 {
  "meta": {
   "slug": "perte-de-cremant",
-  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)"
+  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
+  "limites": [
+   "Le fond jeté de 248,1 L repose sur une hypothèse non mesurée : la bouteille d’effervescent entamée n’est pas reportée au lendemain. Cette hypothèse borne le fond par le haut ; avec report intégral, le premier exercice ne demanderait que 148 bouteilles au lieu de 260 et le fond perdu tomberait à environ 1,4 L. Le dossier ne porte aucune mesure de fin de service, ni du côté du service ni du nôtre ; la charge d’établir le report, pour fonder un rehaussement, pèse sur l’administration.",
+   "Le calcul est tenu au principal sur le périmètre strict du service (4 libellés p. 62 : 643 journées, 372,9 L, 828 bouteilles, 248,1 L jetés). Trois libellés de crémant présents en caisse mais hors tableau p. 62 (Kir Princier, VOUIVRE, Crémant/Jura au verre) sont volontairement écartés du principal ; les intégrer réduirait l’écart inexpliqué de 45,0 L à 23,2 L mais ferait ouvrir, au premier exercice, 266 bouteilles pour 264 ouvrables (dépassement de 1,5 L). Le périmètre strict retenu ne connaît pas ce dépassement.",
+   "Les bouteilles de crémant vendues scellées (11, 10 et 13) sont lues sur la reconstitution du service elle-même (annexe C) ; une variation d’une bouteille d’un exercice à l’autre est sans effet sur la conclusion.",
+   "Le chiffrage en euros est donné au prix de vente de la coupe retenu par le service (annexe C), à titre de plancher : le service n’isole aucun montant de crémant, et le prix d’achat du crémant ne figure dans aucune des pièces produites, de sorte qu’aucun raisonnement en coût d’achat n’est tenu.",
+   "Le solde de 45,0 L (périmètre strict) n’est pas expliqué par le bilan matière : un bilan ne donne qu’un plafond. Il correspond à 60 bouteilles que le stock recense comme ouvrables mais que la caisse ne demande pas d’ouvrir."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "Aux seules doses et aux seuls libellés que le service retient page 62, et sur ses propres volumes, le décompte bouteille par bouteille de 643 journées de caisse montre que 248,1 L de fond de bouteille — sans aucun sur-versement — expliquent 84,6 % de l’écart de 293,1 L que le service impute à des recettes occultes ; il ne reste que 45,0 L. Le cumul « sur-versement + fond » du 10/07/2026 et le taux de +23,6 % (impossible au stock et au verre) sont abandonnés. La réduction de redressement est d’au moins 7 819 € HT sur trois ans. Le chiffrage repose toutefois sur une hypothèse non mesurée — le non-report de la bouteille entamée — qui le borne par le haut.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -395,48 +406,52 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Notre réponse : le fond de bouteille se compte, il ne se postule pas",
-   "sousTitre": "Aux doses du service et sur ses propres volumes, 647 journées de caisse suffisent à expliquer l’écart. Le cumul de deux maxima que la page 85 dénonce est abandonné."
+   "titre": "Notre réponse : le fond de bouteille se compte sur la caisse du service",
+   "sousTitre": "Sur les seules doses et libellés que le service a retenus page 62, et sur ses propres volumes disponibles, le décompte bouteille par bouteille de 643 journées de caisse explique l’essentiel de l’écart sans appliquer le moindre sur-versement. Le cumul de deux maxima que la page 85 dénonce est abandonné."
   },
   {
    "kind": "paragraphe",
-   "texte": "Cette partie est le prolongement de la partie « L » du même courrier. Nous reprenons ici le bilan matière du crémant, exercice par exercice, ainsi que ce qui est propre aux pages 84 et 85 : la matérialité du fond de bouteille, l’argument tiré de l’expérience professionnelle des dirigeants, et le caractère prétendument « non-vivable » de la perte."
+   "texte": "Cette partie prolonge la partie « L » du même courrier. Nous reprenons le bilan matière du crémant, exercice par exercice, et ce qui est propre aux pages 84 et 85 : la matérialité du fond de bouteille, l’argument tiré de l’expérience des dirigeants, le taux de 45,18 % et le caractère prétendument « non-vivable » de la perte. Tout le calcul qui suit est intégralement reproductible, par formule, dans la pièce « R2-cremant-jour-par-jour.xlsx » jointe."
   },
   {
    "kind": "titre",
-   "texte": "Ce que nous abandonnons, et ce que nous maintenons"
+   "texte": "Ce que nous abandonnons, et ce que nous retenons"
   },
   {
    "kind": "paragraphe",
-   "texte": "**L’objection de la page 85 porte, et nous en tirons la conséquence.** Le mémoire du 10 juillet 2026 appliquait d’abord un sur-versement de +23,6 % au crémant versé, puis y ajoutait la totalité du fond de bouteille : il additionnait deux maxima, et la somme dépassait le volume acheté. Nous abandonnons ce cumul. La perte de crémant revendiquée passe de **346,9 L à 272,0 L** sur les trois exercices."
+   "texte": "**L’objection de la page 85 porte, et nous en tirons la conséquence.** Le mémoire du 10 juillet 2026 appliquait d’abord un sur-versement de +23,6 % au crémant versé, puis y ajoutait la totalité du fond de bouteille : il additionnait deux maxima, et la somme dépassait le volume acheté. **Nous abandonnons ce cumul, et nous abandonnons tout sur-versement.** Le crémant n’est plus réputé versé qu’à la dose exacte du service, sans aucune majoration. La perte matière revendiquée n’est plus que le fond de bouteille mécaniquement perdu, soit **248,1 L** sur trois exercices, au lieu des 346,9 L du mémoire."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Nous abandonnons aussi nos propres doses.** Tout ce qui suit est calculé avec celles que le service a fixées dans son tableau de la page 62 : 6 cl de crémant dans La Vouivre, dans le Père Grégoire et dans le KITTYKIR, 12 cl dans la coupe. Ce paquet est pris en bloc, tel qu’il l’a construit, et il joue contre nous. Le seul passage du Père Grégoire de 1 cl à 6 cl reconnaît **80,4 L** de crémant vendu en plus, et celui de la coupe et du Kir Princier de 10 cl à 12 cl en reconnaît **18,1 L**, contre 71,7 L en sens inverse au titre de La Vouivre et du KITTYKIR. Le solde est une **concession nette de 26,8 L d’écart et de 11,0 L de crémant jeté** par rapport au mémoire. Nous l’assumons : la dose employée ici est la sienne, elle ne peut pas nous être opposée."
+   "texte": "**Nous abandonnons aussi nos propres doses et notre propre périmètre.** Tout ce qui suit est calculé avec les six lignes du tableau « DONNÉES ISSUES LOGICIEL DE CAISSE » de la page 62 : 6 cl de crémant dans La Vouivre, dans le Père Grégoire et dans le KITTYKIR, 12 cl dans la coupe de crémant. C’est le périmètre strict du service, repris tel quel dans la pièce « R1-cremant-perimetre-du-service » : **643 journées, 372,9 L versés, 828 bouteilles ouvertes, 248,1 L de fond jeté.** Aucune de ces valeurs ne dépend d’une dose ou d’un libellé que nous aurions choisi."
   },
   {
    "kind": "titre",
-   "texte": "Une précision de méthode sur l’origine des doses"
+   "texte": "Une précision de méthode sur l’origine des doses et du périmètre"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service n’a pas mesuré la dose de crémant. Il la tient des dirigeants, et il l’écrit deux fois, aux pages 63 et 85 : « la dose vendue s’établissant à 12 centilitres (conformément aux dires des dirigeants) ». Il procède de la même manière pour la cuisine : « Pour toutes les doses des alcools nécessaires à la cuisine, le service n’a fait que suivre les recommandations des dirigeants » (p. 68). Nous ne le lui reprochons pas, et nous adoptons sa dose. Nous relevons seulement l’état du dossier : sur le crémant, il ne contient aucune mesure faite par le service, ni sur la dose versée, ni sur ce que devient une bouteille entamée en fin de service."
+   "texte": "Le service n’a pas mesuré la dose de crémant. Il la tient des dirigeants, et il l’écrit deux fois, aux pages 63 et 85 : « la dose vendue s’établissant à 12 centilitres (conformément aux dires des dirigeants) ». Il procède de même pour la cuisine : « Pour toutes les doses des alcools nécessaires à la cuisine, le service n’a fait que suivre les recommandations des dirigeants » (p. 68). Nous ne le lui reprochons pas et nous adoptons sa dose. Nous relevons seulement l’état du dossier : sur le crémant, il ne contient aucune mesure faite par le service, ni sur la dose versée, ni sur ce que devient une bouteille entamée en fin de service."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Une transparence s’impose sur le périmètre, car elle joue contre nous.** La caisse comporte, outre les six lignes du tableau p. 62, trois libellés qui contiennent eux aussi du crémant et que ce tableau ne liste pas : le « Kir Princier » (12 cl), le libellé « VOUIVRE » distinct de « La Vouivre » (6 cl) et le « Crémant / Jura au verre » (12 cl). Les intégrer augmenterait la consommation reconnue de **21,1 L** et ferait passer le versé à 394,0 L, les journées à 647 et le fond jeté à 248,8 L, ce qui réduirait l’écart inexpliqué. **Nous ne les retenons pas au principal**, pour nous tenir strictement aux libellés que le service a lui-même arrêtés ; nous les signalons seulement, plus loin, comme une sensibilité favorable que nous nous abstenons de faire valoir. Le détail libellé par libellé figure dans la pièce jointe."
   },
   {
    "kind": "titre",
-   "texte": "Ce que 647 journées de caisse disent du crémant"
+   "texte": "Ce que 643 journées de caisse disent du crémant"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le crémant n’est pas, dans cet établissement, un produit de volume. Sur les **647 journées** au cours desquelles la caisse enregistre au moins une vente en contenant, le besoin de la journée est en moyenne de **60,9 cl**, soit 0,81 bouteille de 75 cl, et la journée médiane en demande 54,0 cl. Le maximum atteint en trois exercices est de 192 cl, soit deux bouteilles et demie."
+   "texte": "Le crémant n’est pas, dans cet établissement, un produit de volume. Sur les **643 journées** où la caisse enregistre au moins une vente des quatre articles du service, le besoin de la journée est en moyenne de **58,0 cl**, soit 0,77 bouteille de 75 cl, et la journée médiane en demande 54,0 cl. Le maximum atteint en trois exercices est de **192 cl, soit trois bouteilles ouvertes** (192 cl de contenu obligent à ouvrir une troisième bouteille)."
   },
   {
    "kind": "paragraphe",
-   "texte": "Une bouteille d’effervescent s’ouvre à la demande, pour une coupe ou pour un cocktail. Le besoin d’une journée n’étant pas un multiple de 75 cl, il reste un fond au moment de fermer. Sur **445 journées, soit 68,8 %**, une seule bouteille couvre la journée entière. Sur **194 journées, soit 30,0 %**, tout le crémant de la journée tient dans une demi-bouteille. Sur **41 journées**, il se résume à une coupe au plus : 12 cl versés d’une bouteille de 75."
+   "texte": "Une bouteille d’effervescent s’ouvre à la demande, pour une coupe ou pour un cocktail. Le besoin d’une journée n’étant pas un multiple de 75 cl, il reste un fond au moment de fermer. Sur **464 journées, soit 72,2 %**, une seule bouteille couvre la journée entière. Sur **206 journées, soit 32,0 %**, tout le crémant de la journée tient dans une demi-bouteille. Sur **43 journées**, il se résume à une coupe au plus : 12 cl versés d’une bouteille de 75."
   },
   {
    "kind": "tableau",
-   "titre": "Les 647 journées de service, classées par le besoin de crémant de la journée (doses du service, p. 62)",
+   "titre": "Les 643 journées de service, classées par le besoin de crémant de la journée (doses et libellés du service, p. 62)",
    "minWidth": 820,
    "colonnes": [
     {
@@ -465,19 +480,19 @@
       "v": "Une coupe ou moins (jusqu’à 12 cl)"
      },
      {
-      "v": "41",
+      "v": "43",
       "align": "right"
      },
      {
-      "v": "6,3 %",
+      "v": "6,7 %",
       "align": "right"
      },
      {
-      "v": "3,9 L",
+      "v": "4,1 L",
       "align": "right"
      },
      {
-      "v": "26,9 L",
+      "v": "28,1 L",
       "align": "right"
      }
     ],
@@ -486,19 +501,19 @@
       "v": "De 12 cl à une demi-bouteille (37,5 cl)"
      },
      {
-      "v": "153",
+      "v": "163",
       "align": "right"
      },
      {
-      "v": "23,6 %",
+      "v": "25,3 %",
       "align": "right"
      },
      {
-      "v": "41,4 L",
+      "v": "44,4 L",
       "align": "right"
      },
      {
-      "v": "73,3 L",
+      "v": "77,9 L",
       "align": "right"
      }
     ],
@@ -507,19 +522,19 @@
       "v": "D’une demi-bouteille à une bouteille"
      },
      {
-      "v": "251",
+      "v": "258",
       "align": "right"
      },
      {
-      "v": "38,8 %",
+      "v": "40,1 %",
       "align": "right"
      },
      {
-      "v": "140,3 L",
+      "v": "144,1 L",
       "align": "right"
      },
      {
-      "v": "47,9 L",
+      "v": "49,4 L",
       "align": "right"
      }
     ],
@@ -528,19 +543,19 @@
       "v": "De une à deux bouteilles"
      },
      {
-      "v": "194",
+      "v": "173",
       "align": "right"
      },
      {
-      "v": "30,0 %",
+      "v": "26,9 %",
       "align": "right"
      },
      {
-      "v": "194,7 L",
+      "v": "170,0 L",
       "align": "right"
      },
      {
-      "v": "96,3 L",
+      "v": "89,5 L",
       "align": "right"
      }
     ],
@@ -549,19 +564,19 @@
       "v": "Plus de deux bouteilles"
      },
      {
-      "v": "8",
+      "v": "6",
       "align": "right"
      },
      {
-      "v": "1,2 %",
+      "v": "1,0 %",
       "align": "right"
      },
      {
-      "v": "13,6 L",
+      "v": "10,3 L",
       "align": "right"
      },
      {
-      "v": "4,4 L",
+      "v": "3,2 L",
       "align": "right"
      }
     ],
@@ -571,7 +586,7 @@
       "fw": 700
      },
      {
-      "v": "647",
+      "v": "643",
       "align": "right",
       "fw": 700
      },
@@ -581,12 +596,12 @@
       "fw": 700
      },
      {
-      "v": "394,0 L",
+      "v": "372,9 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "248,8 L",
+      "v": "248,1 L",
       "align": "right",
       "fw": 700
      }
@@ -595,30 +610,30 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le total de la dernière colonne, **248,8 L**, ne suppose ni sur-versement, ni casse, ni erreur de service : la dose versée est celle du service, et la seule opération appliquée est celle qu’impose le contenant, puisqu’on ne sert pas une coupe sans ouvrir la bouteille entière. **Une seule hypothèse y est faite, et c’est exactement celle que le service conteste** : la bouteille entamée n’est pas reportée au lendemain. Tout le débat tient dans cette phrase, et rien d’autre dans ce calcul n’est estimé. Les 194 journées qui n’atteignent pas la demi-bouteille produisent à elles seules **100,2 L, soit 40,3 %** de ce total."
+   "texte": "Le total de la dernière colonne, **248,1 L**, ne suppose ni sur-versement, ni casse, ni erreur de service : la dose versée est celle du service, et la seule opération appliquée est celle qu’impose le contenant, puisqu’on ne sert pas une coupe sans ouvrir la bouteille entière. **Une seule hypothèse y est faite, et c’est exactement celle que le service conteste** : la bouteille entamée n’est pas reportée au lendemain. Cette hypothèse n’est pas mesurée, pas plus par nous que par le service ; nous la posons en toutes lettres plus bas et nous en montrons la sensibilité. Rien d’autre, dans ce calcul, n’est estimé. Les 206 journées qui n’atteignent pas la demi-bouteille produisent à elles seules **106,0 L**, soit 42,7 % de ce total."
   },
   {
    "kind": "kpis",
    "items": [
     {
      "label": "Besoin moyen d’une journée de service",
-     "valeur": "60,9 cl",
-     "sub": "soit 0,81 bouteille de 75 cl ; médiane 54,0 cl"
+     "valeur": "58,0 cl",
+     "sub": "soit 0,77 bouteille de 75 cl ; médiane 54,0 cl"
     },
     {
      "label": "Journées couvertes par une seule bouteille",
-     "valeur": "445 sur 647",
-     "sub": "68,8 % des journées de service"
+     "valeur": "464 sur 643",
+     "sub": "72,2 % des journées de service"
     },
     {
      "label": "Journées sous la demi-bouteille",
-     "valeur": "194 sur 647",
-     "sub": "30,0 % des journées, 100,2 L de fonds à elles seules"
+     "valeur": "206 sur 643",
+     "sub": "32,0 % des journées, 106,0 L de fonds à elles seules"
     },
     {
-     "label": "Fonds de bouteille, sans aucun sur-versement",
-     "valeur": "248,8 L",
-     "sub": "857 bouteilles ouvertes sur trois exercices",
+     "label": "Fond de bouteille, sans aucun sur-versement",
+     "valeur": "248,1 L",
+     "sub": "828 bouteilles ouvertes sur trois exercices, doses et libellés du service",
      "highlight": true,
      "couleur": "teal"
     }
@@ -626,34 +641,38 @@
   },
   {
    "kind": "titre",
-   "texte": "L’écart que le service nous oppose, et ce qui en reste sans aucun paramètre"
+   "texte": "L’hypothèse qui porte tout le calcul : la bouteille entamée est-elle jetée ou reportée ?"
   },
   {
    "kind": "paragraphe",
-   "texte": "L’écart se lit sur les volumes du service. Des 275, 325 et 322 bouteilles qu’il retient comme disponibles, il faut d’abord retirer celles qui ont été vendues scellées, qui sortent du stock sans être ouvertes au service : 11, 10 et 13 sur les trois exercices. Restent **198,00 L, 236,25 L et 231,75 L disponibles au service**, soit 666,00 L. La caisse, à ses doses, enregistre 116,3 L, 142,6 L et 135,1 L versés, soit 394,0 L. L’écart est de 81,7 L, 93,7 L et 96,7 L, soit **272,0 L sur trois exercices**, ou 42,0 cl par journée de service. C’est ce volume, et lui seul, que le service impute à des recettes non déclarées."
+   "texte": "Il faut le dire sans détour : **le volume de 248,1 L dépend d’une seule hypothèse, qui n’est pas mesurée.** Nous supposons qu’une bouteille d’effervescent ouverte un soir n’est pas resservie le lendemain, parce qu’elle est éventée. Le service suppose l’inverse, page 62 : les dirigeants « sont susceptibles de savoir parfaitement conserver cette boisson d’un jour à l’autre ». Ni l’une ni l’autre de ces deux conventions n’est étayée par un constat sur place, un relevé de fin de service ou un inventaire de bouteilles entamées."
   },
   {
    "kind": "paragraphe",
-   "texte": "Appliqué aux mêmes journées **sans aucun sur-versement**, le décompte bouteille par bouteille fait sortir 857 bouteilles du stock, soit 642,75 L, et laisse 248,8 L de fonds. Il explique donc **91,5 % de l’écart** sans le moindre taux et sans la moindre estimation. Il reste 23,25 L, soit 5,9 % du crémant versé. Nous ne prétendons pas mesurer une dose par un bilan matière, ce qui serait exactement le reproche que le service nous adresse page 63 : un bilan ne donne qu’un plafond. Nous constatons seulement que ce qui subsiste après le décompte des bouteilles est un très petit volume, et que le plafond que le stock impose au sur-versement est de 0 % au premier exercice, de +8,6 % au deuxième et de +13,6 % au troisième."
+   "texte": "Cette hypothèse borne le fond perdu **par le haut**. Si la bouteille entamée était intégralement reportée au lendemain, on n’ouvrirait une bouteille neuve que lorsque le fond précédent est épuisé : le premier exercice ne demanderait plus que **148 bouteilles au lieu de 260**, et le fond perdu sur les trois exercices tomberait de 248,1 L à environ **1,4 L**. La réalité d’un service se situe entre ces deux bornes, et le dossier n’en porte aucune mesure. Nous retenons la borne haute parce qu’elle correspond à ce qu’est un effervescent — plat le lendemain — mais nous ne prétendons pas qu’elle soit prouvée ; nous soutenons que **la charge de la mesure pèse sur le service**, qui impute l’écart à des recettes et refuse d’établir ce que devient une bouteille ouverte."
   },
   {
    "kind": "titre",
-   "texte": "L’objection tirée de la capacité de la petite coupe est retenue"
+   "texte": "L’écart que le service nous oppose, et ce qu’il en reste sans aucun paramètre"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service écrit qu’à 12 cl dans une petite coupe, « une sur-dose de 23,60 % conduirait à remplir le verre d’une façon exagérée, voire à dépasser sa capacité » (p. 85). Nous ne discutons pas. Le taux de +23,6 % ne tient d’ailleurs pas au stock : il exigerait **720,8 L de crémant pour 666,0 L disponibles**, ce que la page 85 relève à juste titre. Le sur-versement que le stock autorise réellement est de 0 % au premier exercice, +8,6 % au deuxième et +13,6 % au troisième, soit au plus une coupe de 13,6 cl. Le tableau ci-dessous retient, pour chaque exercice, ce maximum compatible."
+   "texte": "L’écart se lit sur les volumes du service. Des 275, 325 et 322 bouteilles qu’il retient comme disponibles (p. 84), il faut d’abord retirer celles qu’il reconstitue lui-même comme vendues scellées à l’annexe C — ventes « Crémant du Jura, bouteille » —, qui sortent du stock sans être ouvertes au service : 11, 10 et 13. Restent **198,00 L, 236,25 L et 231,75 L ouvrables au service**, soit 666,0 L. La caisse, aux doses du service, enregistre 110,5 L, 135,1 L et 127,3 L versés, soit 372,9 L. L’écart que le service impute à des recettes non déclarées est donc de **293,1 L** sur trois exercices."
   },
   {
    "kind": "tableau",
-   "titre": "Le point d’équilibre : le sur-versement maximal que le stock autorise, et ce qu’il reste",
-   "minWidth": 880,
+   "titre": "Bilan matière du crémant, aux seules doses et libellés du service (0 %, sans sur-versement)",
+   "minWidth": 900,
    "colonnes": [
     {
      "label": "Exercice"
     },
     {
-     "label": "Sur-versement retenu",
+     "label": "Disponible au verre",
+     "align": "right"
+    },
+    {
+     "label": "Versé en caisse",
      "align": "right"
     },
     {
@@ -665,19 +684,15 @@
      "align": "right"
     },
     {
-     "label": "Disponible",
+     "label": "Fond jeté",
      "align": "right"
     },
     {
-     "label": "Jeté",
+     "label": "Écart (disponible − versé)",
      "align": "right"
     },
     {
-     "label": "Sur-versé",
-     "align": "right"
-    },
-    {
-     "label": "Écart au stock",
+     "label": "Reste après fonds",
      "align": "right"
     }
    ],
@@ -687,31 +702,31 @@
       "v": "2022-2023"
      },
      {
-      "v": "0 %",
+      "v": "198,00 L",
       "align": "right"
      },
      {
-      "v": "266",
+      "v": "110,5 L",
       "align": "right"
      },
      {
-      "v": "199,5 L",
+      "v": "260",
       "align": "right"
      },
      {
-      "v": "198,0 L",
+      "v": "195,00 L",
       "align": "right"
      },
      {
-      "v": "83,2 L",
+      "v": "84,5 L",
       "align": "right"
      },
      {
-      "v": "0,0 L",
+      "v": "87,5 L",
       "align": "right"
      },
      {
-      "v": "+1,5 L",
+      "v": "+3,0 L",
       "align": "right"
      }
     ],
@@ -720,31 +735,31 @@
       "v": "2023-2024"
      },
      {
-      "v": "+8,6 %",
+      "v": "236,25 L",
       "align": "right"
      },
      {
-      "v": "315",
+      "v": "135,1 L",
       "align": "right"
      },
      {
-      "v": "236,2 L",
+      "v": "286",
       "align": "right"
      },
      {
-      "v": "236,2 L",
+      "v": "214,50 L",
       "align": "right"
      },
      {
-      "v": "81,4 L",
+      "v": "79,4 L",
       "align": "right"
      },
      {
-      "v": "12,3 L",
+      "v": "101,1 L",
       "align": "right"
      },
      {
-      "v": "0,0 L",
+      "v": "+21,8 L",
       "align": "right"
      }
     ],
@@ -753,50 +768,37 @@
       "v": "2024-2025"
      },
      {
-      "v": "+13,6 %",
+      "v": "231,75 L",
       "align": "right"
      },
      {
-      "v": "304",
+      "v": "127,3 L",
       "align": "right"
      },
      {
-      "v": "228,0 L",
+      "v": "282",
       "align": "right"
      },
      {
-      "v": "231,8 L",
+      "v": "211,50 L",
       "align": "right"
      },
      {
-      "v": "74,5 L",
+      "v": "84,2 L",
       "align": "right"
      },
      {
-      "v": "18,4 L",
+      "v": "104,5 L",
       "align": "right"
      },
      {
-      "v": "-3,8 L",
+      "v": "+20,2 L",
       "align": "right"
      }
     ],
     [
      {
       "v": "Total 3 exercices",
-      "fw": 700
-     },
-     {
-      "v": ""
-     },
-     {
-      "v": "885",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "663,8 L",
-      "align": "right",
       "fw": 700
      },
      {
@@ -805,57 +807,69 @@
       "fw": 700
      },
      {
-      "v": "239,1 L",
+      "v": "372,9 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "30,6 L",
+      "v": "828",
       "align": "right",
       "fw": 700
      },
      {
-      "v": ""
+      "v": "621,0 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "248,1 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "293,1 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "+45,0 L",
+      "align": "right",
+      "fw": 700
      }
     ]
    ]
   },
   {
-   "kind": "kpis",
-   "items": [
-    {
-     "label": "Perte de crémant retenue",
-     "valeur": "272,0 L",
-     "sub": "au lieu de 346,9 L : 239,1 L de fonds de bouteille et 30,6 L de sur-versement",
-     "highlight": true,
-     "couleur": "teal"
-    },
-    {
-     "label": "Sur-versement retenu",
-     "valeur": "0 % à 13,6 %",
-     "sub": "borné par le stock, jamais +23,6 %"
-    },
-    {
-     "label": "Coût du crémant jeté",
-     "valeur": "869 € / an",
-     "sub": "au prix d’achat facturé, 0,204 % du chiffre d’affaires"
-    },
-    {
-     "label": "Volume restant pour une vente occulte",
-     "valeur": "2,2 L sur 666,0 L",
-     "sub": "soit 0,3 % : le bilan matière est bouclé",
-     "highlight": true,
-     "couleur": "teal"
-    }
-   ]
+   "kind": "paragraphe",
+   "texte": "Pour servir ces 372,9 L aux doses du service, il faut ouvrir **828 bouteilles**, soit 621,0 L tirés du stock, dont **248,1 L de fond** restent au moment de fermer. Ces 248,1 L expliquent **84,6 % de l’écart de 293,1 L** sans appliquer le moindre taux et sans la moindre estimation. Il reste **45,0 L**, soit 60 bouteilles que le stock recense comme ouvrables mais que la caisse ne demande jamais d’ouvrir. Nous ne prétendons pas mesurer une dose par un bilan matière, ce qui serait exactement le reproche que le service nous adresse page 63 : un bilan ne donne qu’un plafond. Nous constatons seulement que, sur les volumes et les doses du service, l’écart qu’il impute à des ventes occultes est d’abord un phénomène de contenant, et que le solde qui subsisterait après les fonds est sans commune mesure avec le redressement notifié."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le fond de bouteille est, lui, très peu sensible au taux retenu : **248,8 L** si l’on ne sur-verse pas, **233,8 L** au taux maximal de +23,6 %, et il ne descend jamais au-dessous de **229,7 L** sur l’ensemble du balayage de 0 % à 23,6 % par pas d’un dixième de point. La raison est mécanique : verser davantage fait ouvrir une bouteille de plus, qui laisse à son tour un fond. Ce balayage n’est pas continu, et il faut le dire : quarante et une journées demandent exactement 66 cl, et elles basculent toutes ensemble d’une bouteille à deux entre 13,6 % et 13,7 %, ce qui fait passer le jeté de 229,7 L à 263,8 L d’un pas à l’autre. C’est pourquoi nous ne raisonnons pas sur une fourchette continue mais sur les deux seuls taux qui ont un sens ici : zéro, et le maximum que le stock autorise."
+   "texte": "**Le premier exercice boucle ici sans artifice.** Aux libellés du service, il faut 260 bouteilles pour 264 ouvrables : le stock est tenu, avec 3,0 L de marge, sans avoir à supposer le moindre report. Ce n’est que si l’on ajoutait les trois libellés hors tableau — ce que nous nous refusons à faire — que le premier exercice ouvrirait 266 bouteilles pour 264 ouvrables, soit un dépassement de 1,5 L entièrement imputable à cet ajout. Le périmètre strict que nous retenons ne connaît pas ce dépassement."
+  },
+  {
+   "kind": "titre",
+   "texte": "La sensibilité favorable que nous ne faisons pas valoir"
   },
   {
    "kind": "paragraphe",
-   "texte": "Un point doit être signalé plutôt que laissé à découvrir. **Au premier exercice, le modèle sans aucun report exige 266 bouteilles** alors que le service en retient 275, dont 11 vendues scellées, soit 264 ouvrables au service : il en manque deux, c’est-à-dire 1,50 L sur 198,00 L, soit 0,8 %. L’explication tient en une phrase : il suffit que deux fonds de bouteille aient été réutilisés le lendemain sur les 217 journées de l’exercice. Notre modèle n’en autorise aucun, ce qui est l’hypothèse la plus défavorable au redevable : avec un report intégral, le premier exercice n’aurait demandé que 156 bouteilles au lieu de 266."
+   "texte": "Si l’on intégrait les trois libellés de crémant que la caisse comporte aussi (Kir Princier, VOUIVRE, Crémant/Jura au verre), la consommation reconnue monterait de 21,1 L, l’écart tomberait à **272,0 L**, le fond jeté à **248,8 L** et le reste inexpliqué à **23,2 L**, soit **91,5 %** de l’écart expliqué par les seuls fonds. Nous signalons cette borne par souci de complétude et de loyauté, mais **nous raisonnons au principal sur le périmètre le moins favorable au redevable**, celui des seuls libellés du service, qui laisse 45,0 L de reste. La conclusion est la même dans les deux cas : le fond de bouteille, à lui seul, de l’ordre de 248 L, est le poste dominant de l’écart, quel que soit le périmètre retenu."
+  },
+  {
+   "kind": "titre",
+   "texte": "L’objection tirée de la capacité de la petite coupe est retenue"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service écrit qu’à 12 cl dans une petite coupe, « une sur-dose de 23,60 % conduirait à remplir le verre d’une façon exagérée, voire à dépasser sa capacité » (p. 85). Nous ne discutons pas, et c’est pourquoi nous **n’appliquons aucun sur-versement**. Ce taux ne tient d’ailleurs pas davantage au stock : appliqué jour par jour, le +23,6 % obligerait à ouvrir 961 bouteilles, soit **720,8 L tirés du stock pour 666,0 L ouvrables** — matériellement impossible, comme la page 85 le relève à juste titre. L’abandon du sur-versement n’est donc pas une concession tactique : c’est la seule lecture compatible avec la contenance du verre invoquée par le service comme avec son propre stock."
+  },
+  {
+   "kind": "titre",
+   "texte": "Le taux de 45,18 %"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service rapporte 93,20 L jetés à 206,25 L disponibles (p. 84) pour obtenir un taux de perte de 45,18 %. Les deux termes sont viciés. Le numérateur, 93,20 L, est issu du scénario à +23,6 % que nous abandonnons et que le service tient lui-même pour impossible. Le dénominateur, 206,25 L, comprend les bouteilles vendues scellées, qui ne sont jamais ouvertes au service. Rapporté au volume réellement ouvert au premier exercice, 195,0 L, le fond de bouteille représente **43,3 %**, et ce chiffre n’a rien d’une anomalie : il est la conséquence directe de ce que montre le tableau des journées, le besoin moyen d’une journée de cet exercice étant de **51,4 cl** pour une bouteille de 75. Un établissement qui vend le crémant par coupes et par cocktails, à moins d’une bouteille par jour, jette nécessairement une part élevée de chaque bouteille ouverte : c’est une propriété du contenant, non un taux de perte économique."
   },
   {
    "kind": "titre",
@@ -863,11 +877,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service oppose que « les dirigeants possèdent une longue expérience professionnelle qui est de nature à minimiser les pertes » et que proposer un tel taux de perte « compte tenu de cette expérience est totalement incohérent » (p. 85). Page 62, il ajoute qu’ils « sont susceptibles de savoir parfaitement conserver cette boisson d’un jour à l’autre ». Aucun constat sur place, aucun relevé, aucune mesure, aucun terme de comparaison n’est produit à l’appui de l’une ou l’autre de ces phrases."
+   "texte": "Le service oppose que « les dirigeants possèdent une longue expérience professionnelle qui est de nature à minimiser les pertes » et que proposer un tel taux « compte tenu de cette expérience est totalement incohérent » (p. 85). Page 62, il ajoute qu’ils « sont susceptibles de savoir parfaitement conserver cette boisson d’un jour à l’autre ». Aucun constat sur place, aucun relevé, aucune mesure, aucun terme de comparaison n’est produit à l’appui de l’une ou l’autre de ces phrases."
   },
   {
    "kind": "paragraphe",
-   "texte": "L’expérience d’un exploitant agit sur la dose versée, sur le contenant, sur le moment où l’on ouvre la bouteille. Elle n’agit pas sur la donnée qui produit ici la perte, et cette donnée est lue dans la caisse du service lui-même : 41 journées où la demande de la journée est d’une coupe au plus, 194 où elle n’atteint pas la demi-bouteille, 445 où une seule bouteille suffit. **Aucune conduite professionnelle ne permet de servir 12 cl de crémant sans en ouvrir 75.**"
+   "texte": "L’expérience d’un exploitant agit sur la dose versée, sur le contenant, sur le moment où l’on ouvre la bouteille. Si elle agit aussi sur le report d’un jour à l’autre, alors c’est au service de l’établir, puisque c’est lui qui impute l’écart à des recettes : c’est précisément la mesure manquante que nous avons signalée plus haut. En l’état, l’expérience des dirigeants n’agit pas sur la donnée qui produit l’écart, et cette donnée est lue dans la caisse du service : 43 journées où la demande est d’une coupe au plus, 206 où elle n’atteint pas la demi-bouteille, 464 où une seule bouteille suffit. **Aucune conduite professionnelle ne permet de servir 12 cl de crémant sans en ouvrir 75.**"
   },
   {
    "kind": "paragraphe",
@@ -875,7 +889,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le même document valide, au paragraphe 110, la forme exacte de la démonstration que nous produisons : ne peut être rejetée globalement une comptabilité « dont les résultats sont corroborés par les indications tirées de la reconstitution d’une comptabilité-matières et les explications fournies au sujet de la casse, de la perte ou du vol de certains articles ». C’est très précisément ce qui précède : un bilan matière sur les volumes du service, et l’explication de la perte, journée par journée, sur sa propre caisse. Enfin, le dernier alinéa de l’article L. 57 du livre des procédures fiscales dispose que « lorsque l’administration rejette les observations du contribuable sa réponse doit également être motivée », et le paragraphe 20 de [BOI-CF-IOR-10-50-30](https://bofip.impots.gouv.fr/bofip/12989-PGP.html/identifiant%3DBOI-CF-IOR-10-50-30-20210519) précise que le service « motive clairement le rejet des observations présentées, que ce rejet soit total ou partiel »."
+   "texte": "Le même document valide, au paragraphe 110, la forme exacte de la démonstration que nous produisons : ne peut être rejetée globalement une comptabilité « dont les résultats sont corroborés par les indications tirées de la reconstitution d’une comptabilité-matières et les explications fournies au sujet de la casse, de la perte ou du vol de certains articles ». C’est précisément ce qui précède : un bilan matière sur les volumes du service, et l’explication de la perte, journée par journée, sur sa propre caisse. Enfin, le dernier alinéa de l’article L. 57 du livre des procédures fiscales dispose que « lorsque l’administration rejette les observations du contribuable sa réponse doit également être motivée », et le paragraphe 20 de [BOI-CF-IOR-10-50-30](https://bofip.impots.gouv.fr/bofip/12989-PGP.html/identifiant%3DBOI-CF-IOR-10-50-30-20210519) précise que le service « motive clairement le rejet des observations présentées, que ce rejet soit total ou partiel »."
   },
   {
    "kind": "titre",
@@ -883,34 +897,34 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service qualifie la perte de « considérable et non-vivable économiquement pour une quelconque société » (p. 84). C’est une affirmation économique, et il ne la chiffre pas. Au prix d’achat réellement facturé par le fournisseur, qui monte en moyenne de 7,39 € la bouteille au premier exercice à 9,02 € au troisième, les 239,1 L jetés coûtent **2 607 € HT sur trois exercices, soit 869 € par an**."
+   "texte": "Le service qualifie la perte de « considérable et non-vivable économiquement pour une quelconque société » (p. 84), mais ne la chiffre pas, et il n’isole aucun montant de crémant dans sa reconstitution. Nous ne disposons pas, dans les pièces produites, du prix d’**achat** du crémant : aucun raisonnement en coût d’achat n’est donc tenu ici. En revanche, l’enjeu du grief est un chiffre d’affaires, et le service valorise lui-même le crémant à son **prix de vente**, relevé à l’annexe C : la coupe de 12 cl est vendue 3,85 € en 2022-2023, 4,79 € en 2023-2024 et 4,99 € en 2024-2025 (TTC, TVA 20 %)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Appliqué à ces prix, le volume que nous expliquons comme fond jeté — et qui, pour le service, aurait été vendu — représente une **réduction de redressement d’environ 7 819 € HT sur trois ans, soit 2 606 € par an**. Ce montant est un **plancher** : il valorise tout le fond au prix de la coupe, alors que le service répartit le crémant disponible entre des cocktails (La Vouivre, KITTYKIR) vendus plus cher au centilitre ; la réduction réelle du rehaussement crémant est donc au moins égale à ce montant. Le détail du calcul figure dans l’onglet « Chiffrage » de la pièce jointe."
   },
   {
    "kind": "tableau",
-   "titre": "Ce que coûte le fond de bouteille, au prix d’achat réellement facturé",
-   "minWidth": 860,
+   "titre": "Réduction de redressement, au prix de vente de la coupe retenu par le service (annexe C)",
+   "minWidth": 820,
    "colonnes": [
     {
      "label": "Exercice"
     },
     {
-     "label": "Crémant jeté",
+     "label": "Fond jeté (expliqué, non vendu)",
      "align": "right"
     },
     {
-     "label": "Prix d’achat de la bouteille de 75 cl",
+     "label": "Prix de vente de la coupe de 12 cl (TTC)",
      "align": "right"
     },
     {
-     "label": "Coût du jeté",
+     "label": "Prix de vente HT par litre",
      "align": "right"
     },
     {
-     "label": "Part du chiffre d’affaires déclaré",
-     "align": "right"
-    },
-    {
-     "label": "Coupes vendues qui paient le fond du soir",
+     "label": "Réduction de redressement (CA HT)",
      "align": "right"
     }
    ],
@@ -920,23 +934,19 @@
       "v": "2022-2023"
      },
      {
-      "v": "83,2 L",
+      "v": "84,5 L",
       "align": "right"
      },
      {
-      "v": "7,39 € HT",
+      "v": "3,85 €",
       "align": "right"
      },
      {
-      "v": "819 € HT",
+      "v": "26,74 €",
       "align": "right"
      },
      {
-      "v": "0,203 %",
-      "align": "right"
-     },
-     {
-      "v": "1,86",
+      "v": "2 258 € HT",
       "align": "right"
      }
     ],
@@ -945,23 +955,19 @@
       "v": "2023-2024"
      },
      {
-      "v": "81,4 L",
+      "v": "79,4 L",
       "align": "right"
      },
      {
-      "v": "8,22 € HT",
+      "v": "4,79 €",
       "align": "right"
      },
      {
-      "v": "892 € HT",
+      "v": "33,26 €",
       "align": "right"
      },
      {
-      "v": "0,203 %",
-      "align": "right"
-     },
-     {
-      "v": "1,57",
+      "v": "2 642 € HT",
       "align": "right"
      }
     ],
@@ -970,23 +976,19 @@
       "v": "2024-2025"
      },
      {
-      "v": "74,5 L",
+      "v": "84,2 L",
       "align": "right"
      },
      {
-      "v": "9,02 € HT",
+      "v": "4,99 €",
       "align": "right"
      },
      {
-      "v": "896 € HT",
+      "v": "34,65 €",
       "align": "right"
      },
      {
-      "v": "0,206 %",
-      "align": "right"
-     },
-     {
-      "v": "1,51",
+      "v": "2 919 € HT",
       "align": "right"
      }
     ],
@@ -996,43 +998,56 @@
       "fw": 700
      },
      {
-      "v": "239,1 L",
+      "v": "248,1 L",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "8,25 € HT",
+      "v": "—",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "2 607 € HT",
+      "v": "—",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "0,204 %",
+      "v": "7 819 € HT",
       "align": "right",
       "fw": 700
-     },
-     {
-      "v": "",
-      "align": "right"
      }
     ]
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Rapporté au chiffre d’affaires déclaré, le crémant jeté représente **0,204 %**, un cinquième de point. Rapporté aux achats de boissons facturés, 1,9 %. Rapporté à la journée, **4,03 € par journée de service**. Et la marge de **moins de deux coupes** vendues au tarif de la carte, à la dose de 12 cl du service, paie le fond jeté du soir : 1,86 coupe au premier exercice, 1,51 au troisième. C’est ce qu’un restaurateur accepte de perdre pour servir une coupe fraîche plutôt qu’une coupe plate."
-  },
-  {
-   "kind": "titre",
-   "texte": "Le taux de 45,18 %"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service rapporte 93,20 L jetés à 206,25 L disponibles (p. 84). Le numérateur vient du scénario à +23,6 % que nous abandonnons. Le dénominateur, lui, comprend les bouteilles vendues scellées, qui ne sont jamais ouvertes au service. Rapporté au volume réellement ouvert au premier exercice, 199,5 L, le fond de bouteille représente **41,7 %**, et ce chiffre n’a rien d’une anomalie : il est la conséquence directe de ce que montre le tableau des journées, puisque le besoin moyen d’une journée de cet exercice est de 53,6 cl pour une bouteille de 75."
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Perte matière retenue (fond de bouteille)",
+     "valeur": "248,1 L",
+     "sub": "au lieu de 346,9 L ; aucun sur-versement, doses et libellés du service",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Sur-versement retenu",
+     "valeur": "0 %",
+     "sub": "abandonné ; +23,6 % impossible au stock (720,8 L pour 666,0 L)"
+    },
+    {
+     "label": "Part de l’écart expliquée sans aucun taux",
+     "valeur": "84,6 %",
+     "sub": "248,1 L de fond sur 293,1 L d’écart (91,5 % si l’on ajoute les 3 libellés)"
+    },
+    {
+     "label": "Réduction de redressement (plancher)",
+     "valeur": "≈ 7 819 € HT",
+     "sub": "sur 3 ans, au prix de vente de la coupe ; soit 2 606 €/an",
+     "highlight": true,
+     "couleur": "teal"
+    }
+   ]
   },
   {
    "kind": "titre",
@@ -1040,38 +1055,42 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Le crémant entre dans de nombreux articles et des dirigeants expérimentés savent conserver une bouteille d’un jour à l’autre : un tel taux de perte est incohérent. »** L’expérience d’un exploitant agit sur la dose versée, sur le contenant, sur le moment où l’on ouvre la bouteille ; elle n’agit pas sur la donnée qui produit la perte, et cette donnée est lue dans la caisse du service : sur 647 journées, le besoin moyen est de 60,9 cl, soit 0,81 bouteille de 75 cl, 445 journées sont couvertes par une seule bouteille et 194 n’atteignent pas la demi-bouteille. Aucune conduite professionnelle ne permet de servir 12 cl de crémant sans en ouvrir 75. Le service n’oppose à cela aucun constat sur place, aucun relevé, aucune mesure."
+   "texte": "**« Le crémant entre dans de nombreux articles et des dirigeants expérimentés savent conserver une bouteille d’un jour à l’autre : un tel taux de perte est incohérent. »** C’est l’objection sérieuse, et elle porte sur notre seule hypothèse : le non-report. Mais elle est symétrique de la nôtre et tout aussi dépourvue de mesure. Or c’est le service qui impute l’écart à des recettes : il lui revient d’établir, par un relevé ou un constat, qu’une bouteille ouverte est effectivement resservie le lendemain. À défaut, la donnée qui produit l’écart demeure celle, non contestée, de sa propre caisse : 464 journées couvertes par une seule bouteille, 206 sous la demi-bouteille, un besoin moyen de 58,0 cl. Aucune conduite professionnelle ne permet de servir 12 cl sans en ouvrir 75."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Jeter 45,18 % du crémant disponible serait considérable et économiquement non-vivable. »** Le taux de 45,18 % rapporte 93,20 L, tirés d’un scénario à +23,6 % que nous abandonnons, à 206,25 L qui comprennent des bouteilles vendues scellées, jamais ouvertes au service. Et l’affirmation n’est pas chiffrée par le service : au prix d’achat facturé, le fond de bouteille jeté coûte 869 € par an, soit 0,204 % du chiffre d’affaires déclaré, et la marge de moins de deux coupes vendues paie le fond jeté du soir."
+   "texte": "**« Jeter 45,18 % du crémant disponible serait considérable et économiquement non-vivable. »** Le taux de 45,18 % rapporte 93,20 L, tirés d’un scénario à +23,6 % que le service tient lui-même pour impossible, à 206,25 L qui comprennent des bouteilles vendues scellées. Rapporté au volume réellement ouvert, le fond représente 43,3 %, propriété mécanique d’un produit vendu à moins d’une bouteille par jour. Et l’affirmation n’est pas chiffrée par le service : au prix de vente de la coupe qu’il retient, l’enjeu du poste est de l’ordre de 2 606 € HT par an."
   },
   {
    "kind": "paragraphe",
-   "texte": "**« À 12 cl dans une petite coupe, une sur-dose de 23,60 % déborderait le verre, ce qui rend ce taux impossible. »** Nous ne discutons pas : le taux de +23,6 % ne tient d’ailleurs pas au stock, qui exigerait 720,8 L de crémant pour 666,0 L disponibles. Le sur-versement que le stock autorise réellement n’est que de 0 % au premier exercice, +8,6 % au deuxième et +13,6 % au troisième. Surtout, le fond de bouteille se compte sans aucun taux : aux doses du service, 248,8 L de fonds expliquent 91,5 % de l’écart, ne laissant que 2,2 L sur 666,0 L, soit 0,3 %, pour une vente occulte. La perte retenue passe ainsi de 346,9 L à 272,0 L."
+   "texte": "**« À 12 cl dans une petite coupe, une sur-dose de 23,60 % déborderait le verre. »** Nous en convenons et nous n’appliquons aucun sur-versement. Le fond de bouteille se compte sans aucun taux : aux seules doses et aux seuls libellés du service, 248,1 L de fond expliquent 84,6 % de l’écart, et il ne reste que 45,0 L — 60 bouteilles jamais ouvertes — là où le service lit des recettes dissimulées."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 3,
    "titre": "Ce que cela fait tomber",
-   "sousTitre": "Le constat d’impossibilité matérielle disparaît avec le cumul qui le produisait, et le volume retenu devient vérifiable journée par journée."
+   "sousTitre": "Le constat d’impossibilité matérielle disparaît avec le cumul qui le produisait, et le volume retenu devient vérifiable journée par journée, aux seules doses du service."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le tableau de la page 85 mesurait la contradiction d’un calcul qui cumulait deux maxima, non une impossibilité matérielle. Le cumul abandonné et les doses du service adoptées, le bilan du crémant boucle : **885 bouteilles ouvertes sur trois exercices, 663,8 L sortis du stock pour 666,0 L ouvrables au service**, à 1,50 L près au premier exercice. Aucun volume de crémant ne reste disponible pour alimenter une reconstitution de recettes."
+   "texte": "Le tableau de la page 85 mesurait la contradiction d’un calcul qui cumulait deux maxima, non une impossibilité matérielle. Le cumul abandonné, le sur-versement retiré et le périmètre ramené aux seuls libellés du service, le bilan du crémant tient sur les trois exercices : **828 bouteilles ouvertes, 621,0 L tirés du stock pour 666,0 L ouvrables au service, le premier exercice compris, avec 3,0 L de marge.** L’écart que le service impute à des recettes n’est, pour 84,6 % au moins, que le fond de bouteille qu’impose un produit vendu à la coupe."
   },
   {
    "kind": "paragraphe",
-   "texte": "Il reste au service ce que nous lui accordons, et rien de plus : **74,9 L de moins** que ce que réclamait le mémoire du 10 juillet 2026, doses comprises. Sur le principe même de la perte, en revanche, il n’oppose à une mesure faite sur 647 journées de sa propre caisse qu’une qualité personnelle des dirigeants, sans le moindre constat, et un taux de perte calculé sur un dénominateur qui comprend des bouteilles jamais ouvertes."
+   "texte": "Il reste au service ce que nous lui accordons, et rien de plus. Sur le principe même de la perte, il n’oppose à une mesure faite sur 643 journées de sa propre caisse qu’une qualité personnelle des dirigeants, sans le moindre constat, et un taux de perte calculé sur un numérateur qu’il juge lui-même impossible et un dénominateur qui comprend des bouteilles jamais ouvertes. La seule hypothèse qui porte notre chiffrage — le non-report de la bouteille entamée — n’est pas prouvée, mais elle n’est pas davantage réfutée ; la charge d’établir le contraire, pour fonder un rehaussement, pèse sur l’administration."
   },
   {
    "kind": "piecejointe",
-   "intro": "Le calcul est intégralement reproductible à partir des annexes de caisse (lecture seule) par le script scripts/reponse1-cremant-fourchette.py. La répartition des 647 journées se lit directement dans la colonne « Crémant vendu (cl) » des trois fichiers jour par jour :",
+   "intro": "Tout le calcul est reproductible par formule dans la pièce ci-dessous, construite à partir des annexes de caisse (lecture seule). Elle recompute, par SOMME.SI et arrondi supérieur, le crémant versé, les bouteilles ouvertes et le fond jeté de chaque journée, au périmètre strict du service (onglet « Calcul ») comme au périmètre élargi divulgué, ainsi que le chiffrage en euros ; la répartition des journées se lit directement dans la colonne « Crémant servi (cl) » des fichiers jour par jour :",
    "fichiers": [
     {
-     "fichier": "pieces-reponse-1/R1-cremant-bilan-matiere.xlsx",
-     "label": "Bilan matière, fourchette et point d’équilibre (XLSX, 4 onglets)"
+     "fichier": "pieces-reponse-2/R2-cremant-jour-par-jour.xlsx",
+     "label": "Bilan matière du crémant à formules : sources jour par jour, calcul strict et élargi, libellés et doses, chiffrage (XLSX, 6 onglets)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cremant-perimetre-du-service.csv",
+     "label": "Périmètre strict du service (4 libellés p. 62), journée par journée (CSV)"
     },
     {
      "fichier": "pieces-reponse-1/R1-cremant-jour-par-jour-2022-2023.csv",

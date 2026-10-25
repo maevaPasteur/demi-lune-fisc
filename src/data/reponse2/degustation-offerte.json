@@ -1,7 +1,19 @@
 {
  "meta": {
   "slug": "degustation-offerte",
-  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)"
+  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
+  "limites": [
+   "La dose de 2 cl est une convention déclarée par la société, jamais mesurée : tout volume calculé « couples × 2 cl » est une hypothèse. À 1 cl la part examinée tombe à 48,71 L, à 3 cl elle monte à 146,13 L.",
+   "La caisse ne trace, sur trois exercices, que 7 lignes de vin nommé à prix nul (1,85 L), et ce sont des verres ou des pichets entiers, non des larmes de 2 cl. Aucune des 6 292 ventes de vin nommé ne porte la trace d'une dégustation offerte : le poste est une reconstitution d'un geste de service, non une lecture de la caisse.",
+   "Sur les 97,42 L examinés (borne haute), 75,96 L (78 %, part vendue au verre) dépendent entièrement d'une attestation de salle décrivant le geste, qui n'est pas produite. Sans elle, cette part n'est pas établie.",
+   "Seule l'annexe C1 (2022-2023) est jointe au dossier : le dénombrement par exercice, les 6 292 couples et la partition verre/pichet reposent, pour les exercices 2 et 3, sur la pièce R1 (lecture des annexes C2 et C3 non jointes) et ne sont pas re-vérifiables ici.",
+   "L'incidence exacte en euros n'est pas chiffrée : le poste retranche un volume en amont de l'abattement de 15 % et du coefficient d'extrapolation (environ × 3) du service, dont le détail au litre n'est pas sourçable sur les pièces produites.",
+   "La part vendue au verre (75,96 L) ne doit pas être cumulée avec le grief « sur-versement » sur les mêmes verres sans cette même attestation."
+  ]
+ },
+ "entete": {
+  "reponseCourte": "Le poste « dégustation offerte » n'est pas lu dans la caisse : une ligne de vin nommé y prouve une vente facturée, non une larme gratuite. Sur trois exercices, la caisse ne porte que 7 lignes de vin nommé à 0 € (1,85 L), et ce sont des verres ou pichets entiers, non des larmes de 2 cl. Le volume de 97,42 L est une hypothèse (6 292 ventes × une dose conventionnelle de 2 cl jamais mesurée) dont 75,96 L (78 %) dépendent d'une attestation de salle non produite. Le motif de rejet du service (un forfait de 15 % déjà affecté à six autres postes) ne tient pas, mais la démonstration du poste reste, pour l'essentiel, à étayer.",
+  "statut": "a-etayer"
  },
  "sections": [
   {
@@ -36,29 +48,28 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Dégustations comptées note par note (annexe C)",
+     "label": "Couples « note × vin nommé » relevés",
      "valeur": "6 292",
-     "sub": "1 par vin nommé et par note (annexe C)",
-     "highlight": true,
-     "couleur": "teal"
-    },
-    {
-     "label": "Dose",
-     "valeur": "2 cl",
-     "sub": "une larme pour faire goûter",
+     "sub": "selon le décompte présenté par Maître THIVEND (annexes C1/C2/C3)",
      "couleur": "blue"
     },
     {
-     "label": "Total offert",
+     "label": "Dose postulée",
+     "valeur": "2 cl",
+     "sub": "convention déclarée par la société, jamais mesurée",
+     "couleur": "blue"
+    },
+    {
+     "label": "Volume postulé offert",
      "valeur": "125,8 L",
-     "sub": "vin offert, jamais vendu",
-     "couleur": "teal"
+     "sub": "6 292 × 2 cl ; chiffre théorique, non tracé en caisse",
+     "couleur": "gold"
     }
    ]
   },
   {
    "kind": "note",
-   "texte": "Précision de méthode : la dose de 2 cl est une dose conventionnelle déclarée par la société, jamais mesurée, appliquée uniformément aux 6 292 dégustations comptées. Ce qui est mesuré ici est le nombre de lignes de vin nommé relevées dans le détail des tickets, pas le volume."
+   "texte": "Précision de méthode, posée dès l'abord. La dose de 2 cl est une dose conventionnelle déclarée par la société, jamais mesurée, et le chiffre de 6 292 est un nombre de lignes de vin nommé relevées dans le détail des tickets. Or une ligne de vin nommé est une vente facturée : elle ne porte, par elle-même, aucune trace d'une larme offerte. La formule « lu dans la caisse » (p. 85) ne vaut donc que pour la vente ; l'offre de dégustation, elle, est inférée sur la totalité de ces ventes. Le chapitre 2 en tire les conséquences."
   },
   {
    "kind": "tableau",
@@ -316,12 +327,138 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
+   "titre": "La caisse enregistre des ventes, non le geste de dégustation",
+   "sousTitre": "Qu'un vin nommé figure sur une note prouve qu'il a été facturé, non qu'une larme de 2 cl a été offerte. Sur trois exercices, la caisse ne porte que sept lignes de vin nommé à prix nul, soit 1,85 L, et ce sont des verres ou des pichets entiers."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le décompte repris de Maître THIVEND compte, pour chaque note, les vins nommés servis au verre ou au pichet, et leur applique une larme de 2 cl. Mais une ligne de vin nommé enregistrée en caisse est une ligne de **vente** : elle porte une quantité, un prix et une TVA, et établit qu'un verre ou un pichet a été facturé au client. Elle n'établit pas qu'une dégustation gratuite a précédé ce service. Le geste de faire goûter, lui, n'est ni un article, ni une remise, ni un offert enregistré : le service écrit à ce sujet que les données de caisse « ne les gèrent pas » (p. 72). Postuler une dégustation offerte derrière chacune des **6 292** ventes de vin nommé, c'est inférer un geste gratuit, non le lire."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La seule trace directe qu'une mise à disposition gratuite laisse en caisse est une ligne portée à prix nul. Sur les trois exercices, la pièce qui relève ces lignes n'en recense que **sept**, pour **10 unités** et **1,85 L** au total. Encore ne s'agit-il pas de larmes de 2 cl : ce sont des **verres et des pichets entiers** enregistrés à 0 €, c'est-à-dire des offerts d'un tout autre ordre. La caisse n'enregistre donc, en trois ans, quasiment aucune mise à disposition gratuite de vin nommé, et aucune dégustation de 2 cl."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le seul exercice dont l'annexe de détail est jointe au dossier, l'annexe C1 (2022-2023), confirme ce constat : sur ses 33 222 lignes, aucune ligne de vin nommé au verre ou au pichet n'est portée à 0 €. La seule ligne de vin nommé à prix nul y est une bouteille (référence 2025, « H.C.B BEAUNE BTL »), que le décompte exclut. Les sept lignes relevées sur l'ensemble des trois exercices sont ainsi toutes situées sur les exercices 2 et 3, dont les annexes C2 et C3 ne sont pas jointes : elles ne sont pas re-vérifiables ici et reposent sur la pièce R1."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Ce que la caisse établit, et ce qu'elle n'établit pas",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Grandeur relevée en caisse"
+    },
+    {
+     "label": "Valeur",
+     "align": "right"
+    },
+    {
+     "label": "Ce qu'elle prouve"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Lignes de vin nommé au verre/pichet, facturées (3 ex.)"
+     },
+     {
+      "v": "6 326",
+      "align": "right"
+     },
+     {
+      "v": "Des ventes de vin nommé (décompte R1, annexes C1/C2/C3)"
+     }
+    ],
+    [
+     {
+      "v": "Couples « note × vin nommé » retenus"
+     },
+     {
+      "v": "6 292",
+      "align": "right"
+     },
+     {
+      "v": "Le nombre de ventes auxquelles le décompte attache une larme postulée"
+     }
+    ],
+    [
+     {
+      "v": "Lignes de vin nommé au verre/pichet à prix nul (3 ex.)"
+     },
+     {
+      "v": "7 · 1,85 L",
+      "align": "right"
+     },
+     {
+      "v": "La seule mise à disposition gratuite tracée ; verres/pichets entiers, non des larmes"
+     }
+    ],
+    [
+     {
+      "v": "dont sur l'exercice 2022-2023 (annexe C1, vérifié)"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "Aucune ligne de vin nommé au verre/pichet à 0 € sur l'exercice joint"
+     }
+    ],
+    [
+     {
+      "v": "Larmes de 2 cl tracées en caisse",
+      "fw": 700
+     },
+     {
+      "v": "aucune",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "Le geste ne laisse aucune trace ; la caisse « ne les gère pas » (p. 72)",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il faut donc dire la chose exactement. Le volume de dégustation n'est pas « lu dans la caisse » : il est **inféré** de la totalité des ventes de vin nommé, au moyen d'une règle (une larme par vin nommé et par note) et d'une dose (2 cl) que la caisse ne porte ni l'une ni l'autre. Ce qui est tracé, ce sont 1,85 L. Le reste, jusqu'au volume examiné ci-après, est une reconstitution de la pratique de service de la maison, et il vaut ce que vaut la preuve de cette pratique. Le présent mémoire fonde donc sa demande sur ce qui est tracé et sur ce qui pourra être attesté, et signale comme non prouvé tout le surplus."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "orange",
+   "titre": "Une vente n'est pas un offert",
+   "texte": "La caisse enregistre 6 292 ventes de vin nommé au verre ou au pichet. Elle n'enregistre, sur trois ans, que 7 lignes de vin nommé à 0 € (1,85 L), et ce sont des verres ou des pichets entiers, non des larmes de 2 cl. Le poste « dégustation offerte » n'est donc pas une lecture de la caisse : c'est la reconstitution d'un geste de service, qui reste à établir par une attestation de salle."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 3,
+   "titre": "La dose de 2 cl est une hypothèse, non une mesure",
+   "sousTitre": "Le volume tout entier est indexé sur un chiffre choisi par le contribuable, qu'aucun relevé n'ancre."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La dose de 2 cl appliquée à chaque geste est, de l'aveu même du décompte, « une dose conventionnelle déclarée par la société, jamais mesurée ». Aucun relevé, aucune constatation faite sur place, aucun procès-verbal ne la fixe. Elle n'est pas davantage une donnée que le service aurait validée : le courrier ne retient un « 2 cl » que pour le Pontarlier et les apéritifs, jamais pour une larme de dégustation de vin."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La conséquence est arithmétique : le volume varie du simple au double selon la dose retenue. À 1 cl, les **97,42 L** examinés tombent à **48,71 L** ; à 3 cl, ils montent à **146,13 L**. Tant que la dose n'est pas mesurée ni fixée par une consigne écrite, le volume reste une hypothèse, et il est présenté comme tel dans tout ce qui suit."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 4,
    "titre": "Le décompte, refait exercice par exercice",
    "sousTitre": "Réponse directe à l’objection tirée de la « globalisation sur 3 ans » (p. 86)."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service ouvre sa réponse en rappelant que « les quantités proposées par Maître THIVEND, à savoir 125,80 litres, sont une globalisation sur 3 ans » (p. 86). L’objection est recevable et appelle une réponse simple : voici le même décompte ventilé par exercice, obtenu par relecture des annexes C1, C2 et C3 au moyen d’un script reproductible. La règle est inchangée : 2 cl une seule fois par vin nommé et par note, génériques et bouteilles exclus."
+   "texte": "Le service objecte (p. 86) que les 125,80 litres sont « une globalisation sur 3 ans ». L'objection est recevable et appelle une réponse simple : voici le même dénombrement ventilé par exercice, obtenu par relecture des annexes C1, C2 et C3. On rappelle qu'il s'agit de dénombrer des lignes de vente de vin nommé, auxquelles le décompte attache une larme postulée de 2 cl ; la règle de dénombrement est inchangée (une fois par vin nommé et par note, génériques et bouteilles vendues entières exclus)."
   },
   {
    "kind": "tableau",
@@ -968,14 +1105,14 @@
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 3,
+   "numero": 5,
    "titre": "Du volume compté au volume demandé : deux retraits que nous opérons nous-mêmes",
    "sousTitre": "Sur les 125,84 L comptés, 28,42 L sortent de la demande : 21,84 L de vins au BIB et 6,58 L de bouteilles vendues entières. Il reste 97,42 L."
   },
   {
    "kind": "titre",
    "texte": "Premier retrait : les deux vins conditionnés en BIB de 10 L",
-   "numero": "3.1"
+   "numero": "5.1"
   },
   {
    "kind": "paragraphe",
@@ -992,7 +1129,7 @@
   {
    "kind": "titre",
    "texte": "Second retrait : les notes où le vin nommé n’a été vendu qu’en bouteille",
-   "numero": "3.2"
+   "numero": "5.2"
   },
   {
    "kind": "paragraphe",
@@ -1106,164 +1243,13 @@
    ]
   },
   {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 4,
-   "titre": "Les objections de fait de la page 64, prises une à une",
-   "sousTitre": "Trois affirmations sont opposées au geste. Deux se vérifient sur la caisse et ne tiennent pas. La troisième est la seule question qui reste."
-  },
-  {
-   "kind": "titre",
-   "texte": "« Le client ne consomme pas la totalité de l’échantillon versé »",
-   "numero": "4.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce premier tiret ne porte pas sur le volume tiré de la bouteille, mais sur le volume avalé par le client. Une reconstitution de chiffre d’affaires ne mesure pas ce qui est bu : elle mesure ce qui sort du stock et qui aurait pu être vendu. Un échantillon versé puis laissé dans le verre n’a pas davantage été vendu que s’il avait été bu, et il ne retourne pas dans la bouteille. Pris seul, ce tiret ne réduit donc aucun volume : il déplace la perte, il ne la supprime pas. Ce n’est pas lui qui porte l’objection du service."
-  },
-  {
-   "kind": "titre",
-   "texte": "« Tous les clients, et donc toutes les notes, ne consomment pas tous du vin »",
-   "numero": "4.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Cette seconde affirmation repose sur une lecture inexacte de la méthode. Le décompte ne part pas des notes, il part des **lignes de vin nommé réellement enregistrées en caisse** : une note sans vin nommé n’y entre jamais. C’est vérifiable ligne à ligne sur les annexes C, et le résultat est l’inverse de ce que le service suppose."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Les notes retenues par le décompte, rapportées à la totalité des notes du fichier de caisse",
-   "minWidth": 760,
-   "colonnes": [
-    {
-     "label": "Exercice"
-    },
-    {
-     "label": "Notes du fichier de caisse",
-     "align": "right"
-    },
-    {
-     "label": "Notes retenues",
-     "align": "right"
-    },
-    {
-     "label": "Notes écartées",
-     "align": "right"
-    },
-    {
-     "label": "Part retenue",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Exercice 1 (2022-2023)"
-     },
-     {
-      "v": "5 662",
-      "align": "right"
-     },
-     {
-      "v": "1 531",
-      "align": "right"
-     },
-     {
-      "v": "4 131",
-      "align": "right"
-     },
-     {
-      "v": "27,0 %",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Exercice 2 (2023-2024)"
-     },
-     {
-      "v": "5 531",
-      "align": "right"
-     },
-     {
-      "v": "1 962",
-      "align": "right"
-     },
-     {
-      "v": "3 569",
-      "align": "right"
-     },
-     {
-      "v": "35,5 %",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Exercice 3 (2024-2025)"
-     },
-     {
-      "v": "5 420",
-      "align": "right"
-     },
-     {
-      "v": "1 964",
-      "align": "right"
-     },
-     {
-      "v": "3 456",
-      "align": "right"
-     },
-     {
-      "v": "36,2 %",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Cumul des 3 exercices",
-      "fw": 700
-     },
-     {
-      "v": "16 613",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "5 457",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "11 156",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "32,8 %",
-      "align": "right",
-      "fw": 700
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Sur les **16 613 notes** que comptent les trois annexes C, le décompte n’en retient que **5 457**, soit moins d’une sur trois : **11 156 notes sont écartées**, précisément parce qu’aucun vin nommé n’y figure. Le reproche de « partir du principe que du vin est consommé pour chaque note » ne correspond pas à ce qui a été fait."
-  },
-  {
-   "kind": "titre",
-   "texte": "« Le client conserve son verre, qui est finalement rempli à hauteur du solde de la dose vendue »",
-   "numero": "4.3"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Reste la seule objection qui porte. Si la larme est versée dans un verre distinct avant le service, et que le verre vendu est ensuite rempli à sa dose entière, elle s’ajoute au vin facturé. Si elle est versée dans le verre du client, que le serveur complète ensuite, elle est déjà comprise dans le contenu de ce verre. Le chapitre suivant mesure exactement jusqu’où cette objection peut aller ; le chapitre 10 dit ce qu’il faut produire pour la clore."
+   "kind": "note",
+   "texte": "Une seule valeur de demande est retenue : **97,42 L**. Le volume intermédiaire de 104,00 L (125,84 − 21,84) n'est qu'une étape de la soustraction, et non un second « volume demandé » ; la pièce R1 « par note » qui l'affichait comme tel est corrigée sur ce point par la pièce R2 jointe, qui reconstitue la chaîne par formule de 125,84 L à 97,42 L."
   },
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 5,
+   "numero": 6,
    "titre": "Ce que la caisse et la carte établissent du contenant : le verre, et le pichet",
    "sousTitre": "L’objection de la page 64 décrit un verre rempli jusqu’à une dose. Sur 1 073 des 4 871 dégustations demandées, il n’y a pas de verre vendu."
   },
@@ -1759,7 +1745,162 @@
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 6,
+   "numero": 7,
+   "titre": "Les objections de fait de la page 64, prises une à une",
+   "sousTitre": "Trois affirmations sont opposées au geste. Deux se vérifient sur la caisse et ne tiennent pas. La troisième est la seule question qui reste."
+  },
+  {
+   "kind": "titre",
+   "texte": "« Le client ne consomme pas la totalité de l’échantillon versé »",
+   "numero": "7.1"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ce premier tiret ne porte pas sur le volume tiré de la bouteille, mais sur le volume avalé par le client. Une reconstitution de chiffre d’affaires ne mesure pas ce qui est bu : elle mesure ce qui sort du stock et qui aurait pu être vendu. Un échantillon versé puis laissé dans le verre n’a pas davantage été vendu que s’il avait été bu, et il ne retourne pas dans la bouteille. Pris seul, ce tiret ne réduit donc aucun volume : il déplace la perte, il ne la supprime pas. Ce n’est pas lui qui porte l’objection du service."
+  },
+  {
+   "kind": "titre",
+   "texte": "« Tous les clients, et donc toutes les notes, ne consomment pas tous du vin »",
+   "numero": "7.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Cette seconde affirmation repose sur une lecture inexacte de la méthode. Le décompte ne part pas des notes, il part des **lignes de vin nommé réellement enregistrées en caisse** : une note sans vin nommé n’y entre jamais. C’est vérifiable ligne à ligne sur les annexes C, et le résultat est l’inverse de ce que le service suppose."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les notes retenues par le décompte, rapportées à la totalité des notes du fichier de caisse",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Notes du fichier de caisse",
+     "align": "right"
+    },
+    {
+     "label": "Notes retenues",
+     "align": "right"
+    },
+    {
+     "label": "Notes écartées",
+     "align": "right"
+    },
+    {
+     "label": "Part retenue",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Exercice 1 (2022-2023)"
+     },
+     {
+      "v": "5 662",
+      "align": "right"
+     },
+     {
+      "v": "1 531",
+      "align": "right"
+     },
+     {
+      "v": "4 131",
+      "align": "right"
+     },
+     {
+      "v": "27,0 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Exercice 2 (2023-2024)"
+     },
+     {
+      "v": "5 531",
+      "align": "right"
+     },
+     {
+      "v": "1 962",
+      "align": "right"
+     },
+     {
+      "v": "3 569",
+      "align": "right"
+     },
+     {
+      "v": "35,5 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Exercice 3 (2024-2025)"
+     },
+     {
+      "v": "5 420",
+      "align": "right"
+     },
+     {
+      "v": "1 964",
+      "align": "right"
+     },
+     {
+      "v": "3 456",
+      "align": "right"
+     },
+     {
+      "v": "36,2 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Cumul des 3 exercices",
+      "fw": 700
+     },
+     {
+      "v": "16 613",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "5 457",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "11 156",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "32,8 %",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Sur les **16 613 notes** que comptent les trois annexes C, le décompte n’en retient que **5 457**, soit moins d’une sur trois : **11 156 notes sont écartées**, précisément parce qu’aucun vin nommé n’y figure. Le reproche de « partir du principe que du vin est consommé pour chaque note » ne correspond pas à ce qui a été fait."
+  },
+  {
+   "kind": "titre",
+   "texte": "« Le client conserve son verre, qui est finalement rempli à hauteur du solde de la dose vendue »",
+   "numero": "7.3"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Reste la seule objection qui porte. Si la larme est versée dans un verre distinct avant le service, et que le verre vendu est ensuite rempli à sa dose entière, elle s’ajoute au vin facturé. Si elle est versée dans le verre du client, que le serveur complète ensuite, elle est déjà comprise dans le contenu de ce verre. Le chapitre suivant mesure exactement jusqu’où cette objection peut aller ; le chapitre 10 dit ce qu’il faut produire pour la clore."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 8,
    "titre": "Un abattement forfaitaire ne se substitue pas à un décompte réel",
    "sousTitre": "Le service ne conteste aucun chiffre du décompte : il oppose un taux moyen, dont il a lui-même affecté la totalité à trois autres postes."
   },
@@ -1778,7 +1919,7 @@
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 7,
+   "numero": 9,
    "titre": "Le même taux de 15 % est opposé à six postes de perte différents",
    "sousTitre": "Le service a lui-même affecté l’intégralité de son forfait à trois postes nommément désignés et chiffrés."
   },
@@ -1920,14 +2061,14 @@
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 8,
+   "numero": 10,
    "titre": "À qui il revient d’établir le bien-fondé de la reconstitution, et selon quelle règle",
    "sousTitre": "La charge de la preuve n’a pas basculé, et l’administration s’est donné pour règle d’étudier soigneusement les renseignements du contribuable. Elle l’applique quand cela sert sa reconstitution."
   },
   {
    "kind": "titre",
    "texte": "La charge de la preuve",
-   "numero": "8.1"
+   "numero": "10.1"
   },
   {
    "kind": "paragraphe",
@@ -1944,7 +2085,7 @@
   {
    "kind": "titre",
    "texte": "La règle que l’administration s’est donnée pour ses propres reconstitutions",
-   "numero": "8.2"
+   "numero": "10.2"
   },
   {
    "kind": "paragraphe",
@@ -1965,7 +2106,7 @@
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 9,
+   "numero": 11,
    "titre": "Le geste n’est pas contesté dans son principe : ce qui est discuté, c’est le récipient",
    "sousTitre": "Le courrier décrit lui-même la dégustation comme une situation courante, et n’oppose au décompte qu’une généralité."
   },
@@ -1984,7 +2125,7 @@
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 10,
+   "numero": 12,
    "titre": "Ce qui reste à établir, et ce que cela vaut",
    "sousTitre": "Une seule question de fait demeure, elle porte sur 75,96 des 97,42 litres demandés."
   },
@@ -2073,11 +2214,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La même question commande un second poste, et il faut le dire plutôt que de le laisser découvrir. Les lignes au verre de ces vins totalisent **4 681,5 unités**, soit **702,23 L** à la dose de carte de 15 cl. Au taux de **23,6 %** retenu au titre du sur-versement au verre, ce service suppose **165,73 L** versés en plus, auxquels s’ajouterait la dégustation servie sur ces mêmes notes, **75,96 L** : la bouteille délivrerait alors **943,91 L** pour **702,23 L** facturés, soit **20,16 centilitres tirés pour 15 centilitres vendus**. Or ces deux demandes ne s’additionnent que dans une seule des deux lectures du geste. La mesure invoquée au titre du sur-versement porte sur le **contenu du verre servi** : si la larme est versée dans ce verre, elle est comprise dans ce contenu et non en plus. Elle ne s’y ajoute que si elle a été versée ailleurs, dans un verre distinct. C’est une raison de plus de faire attester la pratique avant de maintenir les deux postes ensemble sur les mêmes verres."
+   "texte": "Cette même question commande la façon dont le poste s'articule avec le grief voisin du « sur-versement », qui porte lui aussi sur le vin servi au verre. Si la larme est versée dans le verre du client, elle est comprise dans le contenu de ce verre, et le volume de dégustation ne s'ajoute pas à celui du sur-versement : il s'y confond. Il ne s'y ajoute que si elle a été versée dans un verre distinct. Les deux postes ne peuvent donc être additionnés sur les mêmes verres sans la description écrite du geste. Par prudence, le présent mémoire ne cumule aucun volume de sur-versement avec les 75,96 L examinés ici, et c'est une raison de plus de faire attester la pratique avant de maintenir, le cas échéant, les deux postes ensemble."
   },
   {
    "kind": "paragraphe",
-   "texte": "Tant que cette description n’est pas produite, **75,96 L** reposent sur une pratique déclarée et non sur une mesure, et le statut de la page reste à étayer. Les **21,46 L** servis au pichet ne dépendent pas de cette réponse ; les **21,84 L** de vins au BIB et les **6,58 L** de bouteilles vendues entières sont abandonnés quelle qu’elle soit."
+   "texte": "Tant que cette description n'est pas produite, **75,96 L** reposent sur une pratique de service déclarée et non sur une mesure, et le statut de la page reste **à étayer**. Les **21,46 L** servis au pichet ne dépendent pas de cette réponse ; les **21,84 L** de vins au BIB et les **6,58 L** de bouteilles vendues entières sont abandonnés quelle qu'elle soit. Au regard de la seule caisse, **1,85 L** (sept lignes à prix nul) sont aujourd'hui tracés : les 97,42 L examinés sont la borne haute d'une demande qui suppose, pour sa part au verre, la production de cette attestation."
   },
   {
    "kind": "titre",
@@ -2089,7 +2230,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Le service retranche déjà, par exercice, un forfait de 15 % — 198 litres sur les vins au BIB et 500 litres sur les bouteilles bouchées —, près de quatre fois supérieur aux 125,80 litres demandés. »** Ce forfait a été affecté par le service lui-même aux offerts, aux pertes et à la consommation du personnel : il ne peut pas couvrir en outre un geste distinct qu’il n’a jamais mesuré et dont il ne conteste pas l’existence. Sa première branche, les 198 litres, porte au surplus sur les vins au BIB, un périmètre que le décompte ne recoupe qu’à hauteur de 21,84 litres, que nous retirons nous-mêmes de la demande. Sur les 125,84 litres comptés, nous n’en demandons que 97,42."
+   "texte": "**« Le service retranche déjà, par exercice, un forfait de 15 % (198 litres sur les vins au BIB et 500 litres sur les bouteilles bouchées), près de quatre fois supérieur aux 125,80 litres demandés. »** Ce forfait a été affecté par le service lui-même aux offerts, aux pertes et à la consommation du personnel : il ne peut pas couvrir en outre un geste distinct qu’il n’a jamais mesuré et dont il ne conteste pas l’existence. Sa première branche, les 198 litres, porte au surplus sur les vins au BIB, un périmètre que le décompte ne recoupe qu’à hauteur de 21,84 litres, que nous retirons nous-mêmes de la demande. Sur les 125,84 litres comptés, nous n’en demandons que 97,42."
   },
   {
    "kind": "paragraphe",
@@ -2102,7 +2243,7 @@
   {
    "kind": "chapitre",
    "source": "nous",
-   "numero": 11,
+   "numero": 13,
    "titre": "Ce que cela fait tomber",
    "sousTitre": "Des quatre motifs opposés au poste, trois tombent ; le quatrième ne porte plus que sur une partie du volume."
   },
@@ -2124,41 +2265,49 @@
     {
      "label": "Lignes du décompte recalculées par le service",
      "valeur": "aucune",
-     "sub": "sur 12 lignes de vin nommé, 6 326 lignes de caisse et 6 292 dégustations",
+     "sub": "sur 12 lignes de vin nommé et 6 326 lignes de caisse",
      "highlight": true,
      "couleur": "teal"
     },
     {
-     "label": "Volume demandé, après nos deux retraits de périmètre",
+     "label": "Volume tracé en caisse à prix nul",
+     "valeur": "1,85 L",
+     "sub": "7 lignes sur 3 exercices ; verres/pichets entiers, non des larmes",
+     "couleur": "blue"
+    },
+    {
+     "label": "Volume hypothétique de la demande (borne haute)",
      "valeur": "97,42 L",
-     "sub": "dont 21,46 L que l’objection de la page 64 n’atteint pas",
-     "couleur": "teal"
+     "sub": "dont 75,96 L suspendus à une attestation de salle non produite",
+     "couleur": "gold"
     },
     {
      "label": "Notes écartées par le décompte, faute de vin nommé",
      "valeur": "11 156",
      "sub": "sur 16 613 notes des annexes C1, C2 et C3",
      "couleur": "blue"
-    },
-    {
-     "label": "Postes auxquels le service oppose le même forfait de 15 %",
-     "valeur": "6",
-     "sub": "Freinte de la bière, offerts, pertes, consommation du personnel, dégustation, coefficient",
-     "couleur": "gold"
     }
    ]
   },
   {
    "kind": "piecejointe",
-   "intro": "Deux pièces, produites par des scripts reproductibles et lues sur les annexes C1, C2 et C3. La première refait le décompte par exercice et par vin nommé, recontrôle les calculs du service et relève les postes auxquels le même taux de 15 % est opposé dans le courrier. La seconde identifie, référence de caisse par référence de caisse et prix par prix, le format réellement vendu, en l’appariant à la carte des vins : elle porte les deux retraits de périmètre, la partition verre et pichet du volume demandé, et le rapport entre les notes retenues et la totalité des notes du fichier de caisse.",
+   "intro": "La pièce maîtresse R2 ci-dessous est à formules. Elle distingue ce qui est tracé en caisse (les sept lignes à prix nul, 1,85 L) de ce qui est postulé (le volume calculé « couples × 2 cl »), recompute la chaîne de la demande de 125,84 L à 97,42 L, recontrôle les abattements de 15 % du service (198,31 L au BIB, 501,54 L en bouteilles) et partage le volume demandé entre la part au pichet, hors de portée de l'objection de la page 64, et la part au verre, qui reste à étayer. Les trois pièces R1 la complètent : le relevé des lignes de vin nommé à prix nul (sept lignes, 1,85 L), le décompte par exercice et par vin, le relevé du double emploi du taux de 15 %, et l'appariement référence de caisse / carte des vins qui porte les deux retraits de périmètre.",
    "fichiers": [
     {
+     "fichier": "pieces-reponse-2/R2-degustation-tracee.xlsx",
+     "label": "R2 : tracé vs postulé, chaîne de la demande et recontrôle des abattements, à formules (onglets Sources / Calcul / Méthode)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-degustation-verre-et-pichet.xlsx",
+     "label": "R1 (complément) : lignes de vin nommé à prix nul (7 lignes, 1,85 L) et partition verre/pichet"
+    },
+    {
      "fichier": "pieces-reponse-1/R1-degustations-par-note.xlsx",
-     "label": "R1 : dégustations par exercice et par vin, contrôle du double emploi des 15 % (scripts/reponse1-degustations.py)"
+     "label": "R1 (complément) : dégustations par exercice et par vin, relevé du double emploi du taux de 15 %"
     },
     {
      "fichier": "pieces-reponse-1/R1-degustation-contenants.xlsx",
-     "label": "R1 : format vendu, carte et caisse, portée de l’objection de la page 64 (scripts/reponse1-degustation-contenants.py)"
+     "label": "R1 (complément) : format vendu, carte et caisse, portée de l'objection de la page 64"
     }
    ]
   }
