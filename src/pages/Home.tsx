@@ -448,16 +448,11 @@ export default function Home() {
       {/* B - Parcourir le dossier */}
       <Stack gap="lg">
         <Title order={2}>Parcourir le dossier</Title>
-        <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg">
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="lg">
           <AccesCard
             to="/reponse-2"
             titre="Réponse"
-            desc="La contre-analyse des propositions personnelles du 19/10/2026 : griefs repris, reconstitution et taxation personnelle des associés."
-          />
-          <AccesCard
-            to="/reponse-1"
-            titre="Réponse 1"
-            desc="La contre-analyse, point par point, de la réponse du fisc du 04/09/2026 aux observations du 08/07."
+            desc="La contre-analyse complète et à jour : rejet de comptabilité, méthode de reconstitution et taxation personnelle des associés, point par point, pièces et calculs à l'appui."
           />
           <AccesCard
             to="/documents"
