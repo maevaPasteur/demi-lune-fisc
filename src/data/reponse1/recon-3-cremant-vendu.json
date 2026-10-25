@@ -6,7 +6,7 @@
  },
  "entete": {
   "positionService": "Le service refuse toute perte sur le crémant. Il oppose que le crémant entre dans la composition de nombreux articles (donc qu’une bouteille ouverte se termine dans le service), que les dirigeants savent conserver cette boisson « de par leur longue expérience professionnelle », et que les pertes annoncées sont exagérées : 93,20 L jetés sur 206,25 L disponibles au premier exercice représenteraient « 45,18 % de pertes, ce qui est considérable et non-vivable économiquement ». Il ajoute que, en cumulant les bouteilles éventées et un sur-versement de 23,60 % appliqué aux 118,08 L lus dans la caisse, il faudrait 239,05 L de crémant pour 206,25 L réellement disponibles, et que le même constat se répète aux exercices 2 (+6,95 %) et 3 (+7,48 %). Il conclut qu’avec une dose vendue de 12 cl dans une petite coupe, une sur-dose de 23,60 % conduirait à « remplir le verre d’une façon exagérée », et qu’il n’y a « aucune raison de modifier sa reconstitution ».",
-  "reponseCourte": "Le service a raison de refuser le cumul du sur-versement maximal et du fond de bouteille, et nous ramenons en conséquence la perte de crémant de 346,9 L à 272,0 L. Corrigé avec ses propres volumes et ses propres doses, le bilan matière du crémant boucle exercice par exercice et ne laisse aucun volume vendable.",
+  "reponseCourte": "Le service a raison de refuser le cumul du sur-versement maximal et du fond de bouteille, et nous ramenons en conséquence la perte de crémant de 346,9 L à 272,0 L. Mais son propre tableau de la page 62, lu au jour près au lieu de l’être à l’année, impose d’ouvrir 828 bouteilles là où sa lecture annuelle en suffit à 499 : 246,75 L de fonds de bouteille sortent de ses seules données, à sa seule dose, sans aucun sur-versement. Corrigé, le bilan matière du crémant boucle exercice par exercice et ne laisse que 2,2 L sur 666,0 L.",
   "enjeu": "Crémant : 272,0 L sur trois exercices",
   "statut": "partiel"
  },
@@ -496,8 +496,8 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Notre réponse : le bilan matière tranche, et il ne laisse aucun volume vendable",
-   "sousTitre": "Le service a raison sur un point : le sur-versement et le fond de bouteille ne peuvent pas être cumulés à leur maximum. Une fois le bilan matière imposé, l’écart qu’il relève s’explique intégralement, et il ne reste rien à vendre."
+   "titre": "Notre réponse : le bilan matière tranche, et son propre tableau le dit",
+   "sousTitre": "Le service a raison sur un point : le sur-versement et le fond de bouteille ne peuvent pas être cumulés à leur maximum. Mais son tableau de la page 62, lu au jour près, produit à lui seul 246,75 L de fonds de bouteille, et une fois le bilan matière imposé il ne subsiste que 2,2 L sur 666,0 pour une vente non enregistrée."
   },
   {
    "kind": "paragraphe",
@@ -510,6 +510,846 @@
   {
    "kind": "paragraphe",
    "texte": "Le crémant acheté ne peut aller que dans trois directions : il est vendu en bouteille scellée, il est versé au client, ou il est perdu. D’où l’égalité, exercice par exercice : **crémant disponible = bouteilles vendues scellées + crémant réellement versé + fonds de bouteille perdus**. Le sur-versement et le fond de bouteille ne s’additionnent donc pas librement : plus le premier est élevé, moins il reste de volume pour le second. Le taux de sur-versement du crémant n’a pas à être transposé d’une étude : **il est borné par le stock lui-même**, et c’est ce que nous faisons ci-dessous."
+  },
+  {
+   "kind": "titre",
+   "texte": "Ses volumes disponibles, vérifiés avant d’être retenus"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Tout le raisonnement du service repose sur trois nombres : 275, 325 puis 322 bouteilles de 75 cl. Nous ne les avons pas pris sur parole. Ils se lisent, ligne « Crémant Du Jura 75 cl », dans ses annexes 6-1, 6-2 et 6-3 jointes à la proposition de rectifications du 18 mai 2026, et il y expose son calcul en colonnes : achats chez son fournisseur, stock d’ouverture, stock de clôture, disponible. Nous avons refait ce calcul avec nos factures et nos inventaires."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les quantités disponibles du service (ses annexes 6-1 à 6-3), confrontées à nos factures et à nos inventaires",
+   "minWidth": 980,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Achats portés par le service",
+     "align": "right"
+    },
+    {
+     "label": "Bouteilles facturées à nos factures",
+     "align": "right"
+    },
+    {
+     "label": "Stock d’ouverture (lui)",
+     "align": "right"
+    },
+    {
+     "label": "Stock de clôture (lui)",
+     "align": "right"
+    },
+    {
+     "label": "Nos inventaires à la même date",
+     "align": "right"
+    },
+    {
+     "label": "Disponible qu’il retient",
+     "align": "right"
+    },
+    {
+     "label": "Son calcul"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "270",
+      "align": "right"
+     },
+     {
+      "v": "264",
+      "align": "right"
+     },
+     {
+      "v": "13 au 31/03/2022",
+      "align": "right"
+     },
+     {
+      "v": "8 au 31/03/2023",
+      "align": "right"
+     },
+     {
+      "v": "8",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "275",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "270 + 13 − 8 = 275"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "336",
+      "align": "right"
+     },
+     {
+      "v": "324",
+      "align": "right"
+     },
+     {
+      "v": "8 au 31/03/2023",
+      "align": "right"
+     },
+     {
+      "v": "19 au 31/03/2024",
+      "align": "right"
+     },
+     {
+      "v": "19",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "325",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "336 + 8 − 19 = 325"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "312",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "312",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "19 au 31/03/2024",
+      "align": "right"
+     },
+     {
+      "v": "9 au 31/03/2025",
+      "align": "right"
+     },
+     {
+      "v": "9",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "322",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "312 + 19 − 9 = 322"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Ses trois stocks de clôture sont exactement les nôtres** : 8 bouteilles au 31 mars 2023, 19 au 31 mars 2024, 9 au 31 mars 2025. Et au troisième exercice, **ses achats sont aussi exactement les nôtres** : 312 bouteilles, d’où 312 + 19 − 9 = 322, son chiffre à la bouteille près. Le contrôle croisé porte donc sur toute la chaîne : nos relevés de factures, la convention d’exercice du 1er avril au 31 mars, et les inventaires annuels. Aux deux premiers exercices, il porte 270 et 336 bouteilles d’achat là où nos factures en valorisent 264 et 324. **Nous retenons ses chiffres**, c’est-à-dire les plus défavorables, puisqu’ils augmentent d’autant le volume que nous avons à justifier."
+  },
+  {
+   "kind": "note",
+   "texte": "Deux points se lisent dans ses propres annexes. Le premier : la colonne « Inter-M » est **vide** pour le crémant sur les trois exercices, de sorte que le débat sur les achats faits en grande surface, qui affecte d’autres boissons, est ici sans objet. Le second : le crémant a un fournisseur unique et une seule référence d’achat, « CREMANT JURA BLANC 75 CL FRUITIERE VINICOLE ARBOIS », code article 600716, facturé par Franche-Comté Boissons Services. Aucun magnum, aucune demi-bouteille, aucun autre conditionnement. La bouteille de 75 cl n’est donc pas une convention de calcul : c’est le seul contenant acheté."
+  },
+  {
+   "kind": "titre",
+   "texte": "Son propre tableau, lu au jour près"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le tableau de la page 62 n’est pas construit pour la réponse : c’est la reproduction de son annexe jointe à la proposition du 18 mai 2026, rubrique « b) INGREDIENT : CREMANT », mêmes références, mêmes prix, mêmes quantités, mêmes doses, même total de 11 808 centilitres. Nous discutons donc bien la pièce sur laquelle la rectification est fondée. Or le service conduit son test au niveau de l’année : « Dans ce cas, la lecture des données de caisse permet d’affirmer que 118,08 litres ont été utilisés pour la confection des articles vendus » (p. 63), puis il compare ce total annuel au volume de l’exercice. Ces 118,08 litres comprennent 7,50 litres de bouteilles vendues scellées : 110,58 litres sont servis au verre, et notre recomptage ligne à ligne de l’annexe C en retrouve 110,54, soit quatre centilitres d’écart sur les 1 601 articles que son tableau dénombre. Or 110,58 litres ne tiennent dans 148 bouteilles que si une bouteille ouverte peut attendre, sans limite de temps, la coupe suivante. Une bouteille ne s’ouvre pas à l’année : elle s’ouvre un soir, pour un client. C’est à ce niveau, et à lui seul, que la contrainte physique existe, et c’est ce niveau que la lecture annuelle efface."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Nous avons donc repris son tableau de la page 62 **sans rien y ajouter** : ses quatre libellés servis au verre, ses doses de 6 et de 12 centilitres, ses quantités disponibles, ses deux lignes de bouteilles vendues scellées, et **aucun sur-versement**, le serveur versant la dose exacte du service. Une seule hypothèse est ajoutée, celle qui fait l’objet du litige : une bouteille ouverte n’est pas reportée d’un service au suivant. Puis nous avons compté, journée de service par journée de service, le nombre de bouteilles de 75 cl qu’il faut ouvrir pour honorer les articles que sa propre caisse enregistre ce jour-là."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le périmètre de la page 62, lu à l’année puis au jour : bouteilles à ouvrir",
+   "minWidth": 880,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Crémant servi",
+     "align": "right"
+    },
+    {
+     "label": "Bouteilles, lecture annuelle",
+     "align": "right"
+    },
+    {
+     "label": "Bouteilles, lecture jour par jour",
+     "align": "right"
+    },
+    {
+     "label": "Bouteilles en plus",
+     "align": "right"
+    },
+    {
+     "label": "Volume correspondant",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "110,54 L",
+      "align": "right"
+     },
+     {
+      "v": "148",
+      "align": "right"
+     },
+     {
+      "v": "260",
+      "align": "right"
+     },
+     {
+      "v": "112",
+      "align": "right"
+     },
+     {
+      "v": "84,00 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "135,09 L",
+      "align": "right"
+     },
+     {
+      "v": "181",
+      "align": "right"
+     },
+     {
+      "v": "286",
+      "align": "right"
+     },
+     {
+      "v": "105",
+      "align": "right"
+     },
+     {
+      "v": "78,75 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "127,26 L",
+      "align": "right"
+     },
+     {
+      "v": "170",
+      "align": "right"
+     },
+     {
+      "v": "282",
+      "align": "right"
+     },
+     {
+      "v": "112",
+      "align": "right"
+     },
+     {
+      "v": "84,00 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 exercices",
+      "fw": 700
+     },
+     {
+      "v": "372,89 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "499",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "828",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "329",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "246,75 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Bouteilles que sa lecture annuelle suffit à ouvrir",
+     "valeur": "499",
+     "sub": "372,89 L servis sur trois exercices"
+    },
+    {
+     "label": "Bouteilles que sa propre caisse impose d’ouvrir",
+     "valeur": "828",
+     "sub": "compté journée de service par journée de service"
+    },
+    {
+     "label": "Écart, converti en volume",
+     "valeur": "246,75 L",
+     "sub": "le seul fractionnement des bouteilles, à la dose exacte du service",
+     "highlight": true,
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le fractionnement mobilise donc **329 bouteilles de plus que sa lecture annuelle, soit 246,75 litres**. Ce volume ne vient d’aucune étude, d’aucune moyenne de profession, d’aucun taux : il vient de ses six lignes de caisse, de ses doses et de la contenance d’une bouteille. Il repose sur une seule hypothèse, et c’est celle que le service conteste : une bouteille ouverte n’est pas reportée au service suivant. Nous la calculons plus bas, au lieu de la postuler. Lu à l’année, son périmètre laisserait 1,36 litre au fond de la toute dernière bouteille ; lu au jour, il en laisse 248,11. La différence entre les deux, ce sont ces 246,75 litres. Le bilan complet, dans son seul périmètre, est le suivant."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le bilan matière du crémant dans le seul périmètre de la page 62, sans aucun sur-versement",
+   "minWidth": 980,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Disponible retenu par le service",
+     "align": "right"
+    },
+    {
+     "label": "Bouteilles vendues scellées",
+     "align": "right"
+    },
+    {
+     "label": "Disponible pour le service",
+     "align": "right"
+    },
+    {
+     "label": "Bouteilles ouvertes",
+     "align": "right"
+    },
+    {
+     "label": "Sorti du stock",
+     "align": "right"
+    },
+    {
+     "label": "Servi au verre",
+     "align": "right"
+    },
+    {
+     "label": "Solde de bouteille perdu",
+     "align": "right"
+    },
+    {
+     "label": "Reste",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "206,25 L",
+      "align": "right"
+     },
+     {
+      "v": "10",
+      "align": "right"
+     },
+     {
+      "v": "198,75 L",
+      "align": "right"
+     },
+     {
+      "v": "260",
+      "align": "right"
+     },
+     {
+      "v": "195,00 L",
+      "align": "right"
+     },
+     {
+      "v": "110,54 L",
+      "align": "right"
+     },
+     {
+      "v": "84,46 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "3,75 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "243,75 L",
+      "align": "right"
+     },
+     {
+      "v": "10",
+      "align": "right"
+     },
+     {
+      "v": "236,25 L",
+      "align": "right"
+     },
+     {
+      "v": "286",
+      "align": "right"
+     },
+     {
+      "v": "214,50 L",
+      "align": "right"
+     },
+     {
+      "v": "135,09 L",
+      "align": "right"
+     },
+     {
+      "v": "79,41 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "21,75 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "241,50 L",
+      "align": "right"
+     },
+     {
+      "v": "13",
+      "align": "right"
+     },
+     {
+      "v": "231,75 L",
+      "align": "right"
+     },
+     {
+      "v": "282",
+      "align": "right"
+     },
+     {
+      "v": "211,50 L",
+      "align": "right"
+     },
+     {
+      "v": "127,26 L",
+      "align": "right"
+     },
+     {
+      "v": "84,24 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "20,25 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 exercices",
+      "fw": 700
+     },
+     {
+      "v": "691,50 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "33",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "666,75 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "828",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "621,00 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "372,89 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "248,11 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "45,75 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Les deux lignes de bouteilles du tableau de la page 62 totalisent 10 bouteilles vendues scellées au premier exercice. La caisse en porte une onzième, sous le libellé « Crémant Rosé », que nous laissons ici de côté pour rester dans son périmètre exact : l’y ajouter réduirait d’autant le volume que nous avons à expliquer."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Dans son seul périmètre, l’écart entre le crémant disponible pour le service et le crémant servi au verre est de 293,86 litres sur trois exercices. Le fractionnement des bouteilles en explique **248,11 litres**, soit 84,4 %, et il ne reste que 45,75 litres pour toute autre destination, dont 3,75 seulement au premier exercice."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Une conséquence mérite d’être relevée. Le service écrit page 62 que 93,20 litres jetés sur 206,25 litres feraient « 45,18 % de pertes, ce qui est considérable et non-vivable économiquement pour une quelconque société ». Or son propre tableau, lu au jour près et sans le moindre sur-versement, laisse 84,46 litres au fond des bouteilles du premier exercice, soit **41,0 % des 206,25 litres qu’il retient comme disponibles**. Ce taux n’est pas une hypothèse de la défense : il sort de ses six lignes, de ses doses et de ses volumes."
+  },
+  {
+   "kind": "titre",
+   "texte": "Sa première objection est déjà accordée, et elle vaut 1 052 bouteilles"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "« Tout d’abord, le crémant est utilisé pour de nombreux articles, ce qui permet de pouvoir consommer plus facilement une bouteille qui aurait été ouverte pour un service, sans besoin d’attendre le lendemain pour la terminer » (p. 62). L’objection est exacte, et le calcul l’intègre entièrement : le besoin d’une journée additionne les quatre articles avant d’en déduire le nombre de bouteilles à ouvrir. Une même bouteille sert donc, le même soir, à La Vouivre, au Père Grégoire, au KITTYKIR et au verre de crémant."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ce que cette mutualisation vaut se mesure. Si chaque article devait ouvrir sa propre bouteille, il en faudrait 1 880 sur trois exercices ; en les partageant dans la journée, il en faut 828. L’objection du service lui est donc accordée à hauteur de **1 052 bouteilles, soit 789,00 litres**, avant même que nous n’invoquions la moindre perte. Ce qu’elle ne peut pas faire, c’est supprimer le solde du soir : elle le réduit, et la réduction est déjà opérée."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Ce que vaut, en bouteilles, le fait qu’un même crémant serve à plusieurs articles",
+   "minWidth": 820,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Une bouteille par article et par jour",
+     "align": "right"
+    },
+    {
+     "label": "Bouteille partagée dans la journée (retenu)",
+     "align": "right"
+    },
+    {
+     "label": "Bouteilles économisées",
+     "align": "right"
+    },
+    {
+     "label": "Volume économisé",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "585",
+      "align": "right"
+     },
+     {
+      "v": "260",
+      "align": "right"
+     },
+     {
+      "v": "325",
+      "align": "right"
+     },
+     {
+      "v": "243,75 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "638",
+      "align": "right"
+     },
+     {
+      "v": "286",
+      "align": "right"
+     },
+     {
+      "v": "352",
+      "align": "right"
+     },
+     {
+      "v": "264,00 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "657",
+      "align": "right"
+     },
+     {
+      "v": "282",
+      "align": "right"
+     },
+     {
+      "v": "375",
+      "align": "right"
+     },
+     {
+      "v": "281,25 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 exercices",
+      "fw": 700
+     },
+     {
+      "v": "1 880",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "828",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "1 052",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "789,00 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Sa seconde objection, prise au mot et calculée"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "« Ensuite, de par leur longue expérience professionnelle, que la réponse occulte totalement, les dirigeants sont susceptibles de savoir parfaitement conserver cette boisson d’un jour à l’autre » (p. 62). C’est le seul point réellement en litige, et nous ne le contournons pas : notre décompte repose sur la prémisse inverse, un effervescent ouvert n’est plus servable au service suivant. Le service, lui, n’apporte au soutien de la sienne ni constat sur place, ni relevé, ni mesure : l’expérience des dirigeants en tient lieu."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Plutôt que de discuter cette prémisse, nous l’avons calculée. Le décompte a été refait en autorisant une bouteille ouverte à servir **deux journées de service consécutives**, ce qui est très exactement ce que le service décrit lorsqu’il parle de conserver la boisson « d’un jour à l’autre », puis trois journées, puis cinq, puis sept. Le procédé est transparent : les journées de service sont groupées par blocs, et chaque bloc n’ouvre que les bouteilles nécessaires à son besoin total. Tout le reste est inchangé, y compris l’absence de sur-versement."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le solde de bouteille perdu selon la durée de conservation admise (périmètre de la page 62, sans sur-versement)",
+   "minWidth": 940,
+   "colonnes": [
+    {
+     "label": "Hypothèse de conservation"
+    },
+    {
+     "label": "2022-2023",
+     "align": "right"
+    },
+    {
+     "label": "2023-2024",
+     "align": "right"
+    },
+    {
+     "label": "2024-2025",
+     "align": "right"
+    },
+    {
+     "label": "Total 3 exercices",
+     "align": "right"
+    },
+    {
+     "label": "Crémant alors inemployé dans son stock",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Aucun report d’un service à l’autre (retenu)"
+     },
+     {
+      "v": "84,46 L",
+      "align": "right"
+     },
+     {
+      "v": "79,41 L",
+      "align": "right"
+     },
+     {
+      "v": "84,24 L",
+      "align": "right"
+     },
+     {
+      "v": "248,11 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "45,75 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Report d’un jour à l’autre (sa phrase, p. 62)"
+     },
+     {
+      "v": "38,71 L",
+      "align": "right"
+     },
+     {
+      "v": "41,16 L",
+      "align": "right"
+     },
+     {
+      "v": "34,74 L",
+      "align": "right"
+     },
+     {
+      "v": "114,61 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "179,25 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Report sur trois journées de service"
+     },
+     {
+      "v": "28,21 L",
+      "align": "right"
+     },
+     {
+      "v": "26,91 L",
+      "align": "right"
+     },
+     {
+      "v": "24,99 L",
+      "align": "right"
+     },
+     {
+      "v": "80,11 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "213,75 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Report sur sept journées de service"
+     },
+     {
+      "v": "12,46 L",
+      "align": "right"
+     },
+     {
+      "v": "8,91 L",
+      "align": "right"
+     },
+     {
+      "v": "12,24 L",
+      "align": "right"
+     },
+     {
+      "v": "33,61 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "260,25 L",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le tableau établit un point sur l’hypothèse que le service formule lui-même : **conserver la boisson d’un jour à l’autre ne rend pas la perte nulle.** Elle laisse encore 114,61 litres au fond des bouteilles sur trois exercices, là où sa reconstitution n’en accorde pas un centilitre. Sa propre objection ne fait donc pas tomber la perte de crémant, elle en change l’ampleur. Il faudrait, pour qu’elle disparaisse, qu’une bouteille entamée se conserve indéfiniment, ce que le service n’écrit pas et ce qu’aucun effervescent ne permet. Il faut ajouter que la conservation lui coûte ailleurs ce qu’elle lui rapporte ici : à un jour de report, 179,25 litres de son propre stock ne sont plus employés à rien, et ce volume vient s’ajouter à ce qu’il lui faudrait alors imputer à des ventes non enregistrées."
+  },
+  {
+   "kind": "titre",
+   "texte": "Du périmètre de sa page 62 au périmètre complet de la caisse"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Tout ce qui précède se tient dans le seul périmètre de sa page 62, et il s’y suffit. Le reste de ce chapitre ouvre le périmètre à la totalité des libellés de caisse contenant du crémant, ce qui change deux nombres et joue **contre nous** : la consommation reconnue en caisse passe de 372,89 à 394,0 litres, le disponible au service recule de 666,75 à 666,00 litres, la caisse portant cette onzième bouteille vendue scellée, et l’écart à expliquer revient de 293,86 à **272,0 litres**. C’est sur ce périmètre complet, le plus défavorable des deux, que nous chiffrons la perte que nous revendiquons."
   },
   {
    "kind": "titre",
@@ -1225,12 +2065,16 @@
    ]
   },
   {
+   "kind": "paragraphe",
+   "texte": "Ce que ces 647 journées contiennent est décrit en détail dans [la partie « P, Perte de crémant »](/reponse-1/perte-de-cremant), sur la caisse du service et à ses doses : un besoin moyen de 60,9 cl par journée de service, soit 0,81 bouteille ; 445 journées sur 647 couvertes par une seule bouteille ; 194 journées sous la demi-bouteille, qui produisent à elles seules 100,2 L de fonds de bouteille ; et 41 journées où tout le crémant du jour tient dans une coupe. Aucune conduite professionnelle ne permet de servir 12 cl de crémant sans en ouvrir 75."
+  },
+  {
    "kind": "titre",
-   "texte": "Le repère décisif : il ne dépend d’aucun paramètre"
+   "texte": "Le repère qui ne dépend d’aucun taux"
   },
   {
    "kind": "paragraphe",
-   "texte": "Une bouteille de crémant s’ouvre à la demande, pour une coupe ou pour un cocktail. Si le besoin de la journée n’est pas un multiple exact de 75 cl, le solde du soir est perdu. Ce solde vaut, en moyenne, **la moitié d’une bouteille, soit 37,5 cl par jour de service**. Ce repère ne suppose ni taux de sur-versement, ni estimation, ni hypothèse de comportement : c’est une propriété arithmétique du fractionnement d’un contenant."
+   "texte": "Une bouteille de crémant s’ouvre à la demande, pour une coupe ou pour un cocktail. Si le besoin de la journée n’est pas un multiple exact de 75 cl, le solde du soir est perdu. Ce solde vaut, en moyenne, **la moitié d’une bouteille, soit 37,5 cl par jour de service**. Ce repère ne suppose ni taux de sur-versement, ni estimation, ni mesure : c’est une propriété arithmétique du fractionnement d’un contenant, dès lors que le solde du soir n’est pas reporté au service suivant."
   },
   {
    "kind": "paragraphe",
@@ -1238,7 +2082,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Le repère sans paramètre : une demi-bouteille par jour de service (37,5 cl), comparé à l’écart constaté",
+   "titre": "Le repère sans taux : une demi-bouteille par jour de service (37,5 cl), comparé à l’écart constaté",
    "minWidth": 700,
    "colonnes": [
     {
@@ -1332,11 +2176,11 @@
   },
   {
    "kind": "titre",
-   "texte": "La fourchette de sur-versement que le stock autorise"
+   "texte": "Ce que le stock autorise comme sur-versement"
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous avons refait le calcul **jour par jour**, sur les 647 journées de service des trois exercices, pour chaque taux de sur-versement entre 0 % et +23,6 %. Pour chaque taux : volume versé, nombre de bouteilles de 75 cl ouvertes ce jour-là (arrondi supérieur), solde perdu le soir, et confrontation au stock disponible. Un scénario n’est retenu que si le crémant ainsi ouvert **tient dans le stock**."
+   "texte": "Reste à savoir quel sur-versement le stock autorise. Nous avons refait le décompte **jour par jour**, sur les 647 journées de service des trois exercices, pour un taux de sur-versement donné : volume versé, nombre de bouteilles de 75 cl ouvertes ce jour-là, solde perdu le soir, et confrontation au stock disponible. Un scénario n’est retenu que si le crémant ainsi ouvert **tient dans le stock**."
   },
   {
    "kind": "paragraphe",
@@ -1675,7 +2519,7 @@
     {
      "label": "Crémant jeté, 3 exercices",
      "valeur": "233,8 L à 248,8 L",
-     "sub": "aux deux bornes de 0 % et de +23,6 % ; le balayage complet ci-dessous va de 233,1 L à 263,9 L",
+     "sub": "aux deux bornes de 0 % et de +23,6 %",
      "highlight": true,
      "couleur": "teal"
     }
@@ -1683,648 +2527,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le résultat mérite d’être lu deux fois : **le crémant jeté ne dépend presque pas du taux de sur-versement**. Il vaut 233,8 L sur trois ans dans un cas, 248,8 L dans l’autre, soit 6,0 % d’amplitude entre les deux bornes. La raison est mécanique : verser davantage fait ouvrir une bouteille de plus, et cette bouteille supplémentaire laisse à son tour un fond. Le poste « fond de bouteille » est donc **robuste** : il ne repose sur aucune hypothèse de service."
+   "texte": "Le résultat mérite d’être lu deux fois : **le crémant jeté ne dépend presque pas du taux de sur-versement**. Il vaut 248,8 L sur trois ans si l’on ne sur-verse pas, 233,8 L au taux maximal de +23,6 %, et il ne descend jamais au-dessous de 229,7 L sur l’ensemble des taux intermédiaires. La raison est mécanique : verser davantage fait ouvrir une bouteille de plus, et cette bouteille supplémentaire laisse à son tour un fond. Une précision s’impose toutefois, et il vaut mieux la donner que la laisser trouver : la grandeur ne varie pas continûment avec le taux. Quarante et une journées demandent exactement 66 cl et basculent toutes ensemble d’une bouteille à deux entre 13,6 % et 13,7 %, ce qui fait passer le jeté de 229,7 L à 263,8 L d’un pas au suivant. Nous ne raisonnons donc pas sur une fourchette continue, mais sur les deux seuls taux qui ont un sens ici : zéro, et le maximum que le stock autorise."
   },
   {
    "kind": "paragraphe",
-   "texte": "Ce qui varie, c’est le **total non vendu** : 248,8 L à la borne basse contre 326,8 L à la borne haute. Et c’est précisément là que le stock tranche : la borne haute exige 720,8 L de crémant pour 666,0 L disponibles, ce qui est **matériellement impossible sur les trois exercices**. L’objection du service est donc retenue, et le balayage complet ci-dessous montre où se situe la limite."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Fourchette de sur-versement : chaque taux confronté au stock réellement disponible",
-   "minWidth": 900,
-   "colonnes": [
-    {
-     "label": "Exercice"
-    },
-    {
-     "label": "Sur-versement",
-     "align": "right"
-    },
-    {
-     "label": "Crémant versé",
-     "align": "right"
-    },
-    {
-     "label": "Bouteilles ouvertes",
-     "align": "right"
-    },
-    {
-     "label": "Sorti du stock",
-     "align": "right"
-    },
-    {
-     "label": "Jeté en fin de journée",
-     "align": "right"
-    },
-    {
-     "label": "Reste disponible",
-     "align": "right"
-    },
-    {
-     "label": "Verdict"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "+0,0 %",
-      "align": "right"
-     },
-     {
-      "v": "116,3 L",
-      "align": "right"
-     },
-     {
-      "v": "266",
-      "align": "right"
-     },
-     {
-      "v": "199,5 L",
-      "align": "right"
-     },
-     {
-      "v": "83,2 L",
-      "align": "right"
-     },
-     {
-      "v": "-1,5 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "+5,0 %",
-      "align": "right"
-     },
-     {
-      "v": "122,1 L",
-      "align": "right"
-     },
-     {
-      "v": "281",
-      "align": "right"
-     },
-     {
-      "v": "210,8 L",
-      "align": "right"
-     },
-     {
-      "v": "88,6 L",
-      "align": "right"
-     },
-     {
-      "v": "-12,8 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "+10,0 %",
-      "align": "right"
-     },
-     {
-      "v": "127,9 L",
-      "align": "right"
-     },
-     {
-      "v": "281",
-      "align": "right"
-     },
-     {
-      "v": "210,8 L",
-      "align": "right"
-     },
-     {
-      "v": "82,8 L",
-      "align": "right"
-     },
-     {
-      "v": "-12,8 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "+15,0 %",
-      "align": "right"
-     },
-     {
-      "v": "133,7 L",
-      "align": "right"
-     },
-     {
-      "v": "301",
-      "align": "right"
-     },
-     {
-      "v": "225,8 L",
-      "align": "right"
-     },
-     {
-      "v": "92,0 L",
-      "align": "right"
-     },
-     {
-      "v": "-27,8 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "+20,0 %",
-      "align": "right"
-     },
-     {
-      "v": "139,6 L",
-      "align": "right"
-     },
-     {
-      "v": "303",
-      "align": "right"
-     },
-     {
-      "v": "227,2 L",
-      "align": "right"
-     },
-     {
-      "v": "87,7 L",
-      "align": "right"
-     },
-     {
-      "v": "-29,2 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "+23,6 %",
-      "align": "right"
-     },
-     {
-      "v": "143,7 L",
-      "align": "right"
-     },
-     {
-      "v": "303",
-      "align": "right"
-     },
-     {
-      "v": "227,2 L",
-      "align": "right"
-     },
-     {
-      "v": "83,5 L",
-      "align": "right"
-     },
-     {
-      "v": "-29,2 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "+0,0 %",
-      "align": "right"
-     },
-     {
-      "v": "142,6 L",
-      "align": "right"
-     },
-     {
-      "v": "300",
-      "align": "right"
-     },
-     {
-      "v": "225,0 L",
-      "align": "right"
-     },
-     {
-      "v": "82,4 L",
-      "align": "right"
-     },
-     {
-      "v": "11,2 L",
-      "align": "right"
-     },
-     {
-      "v": "compatible",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "+5,0 %",
-      "align": "right"
-     },
-     {
-      "v": "149,7 L",
-      "align": "right"
-     },
-     {
-      "v": "315",
-      "align": "right"
-     },
-     {
-      "v": "236,2 L",
-      "align": "right"
-     },
-     {
-      "v": "86,5 L",
-      "align": "right"
-     },
-     {
-      "v": "0,0 L",
-      "align": "right"
-     },
-     {
-      "v": "compatible",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "+10,0 %",
-      "align": "right"
-     },
-     {
-      "v": "156,8 L",
-      "align": "right"
-     },
-     {
-      "v": "318",
-      "align": "right"
-     },
-     {
-      "v": "238,5 L",
-      "align": "right"
-     },
-     {
-      "v": "81,7 L",
-      "align": "right"
-     },
-     {
-      "v": "-2,2 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "+15,0 %",
-      "align": "right"
-     },
-     {
-      "v": "164,0 L",
-      "align": "right"
-     },
-     {
-      "v": "328",
-      "align": "right"
-     },
-     {
-      "v": "246,0 L",
-      "align": "right"
-     },
-     {
-      "v": "82,0 L",
-      "align": "right"
-     },
-     {
-      "v": "-9,8 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "+20,0 %",
-      "align": "right"
-     },
-     {
-      "v": "171,1 L",
-      "align": "right"
-     },
-     {
-      "v": "333",
-      "align": "right"
-     },
-     {
-      "v": "249,8 L",
-      "align": "right"
-     },
-     {
-      "v": "78,6 L",
-      "align": "right"
-     },
-     {
-      "v": "-13,5 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "+23,6 %",
-      "align": "right"
-     },
-     {
-      "v": "176,2 L",
-      "align": "right"
-     },
-     {
-      "v": "334",
-      "align": "right"
-     },
-     {
-      "v": "250,5 L",
-      "align": "right"
-     },
-     {
-      "v": "74,3 L",
-      "align": "right"
-     },
-     {
-      "v": "-14,2 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "+0,0 %",
-      "align": "right"
-     },
-     {
-      "v": "135,1 L",
-      "align": "right"
-     },
-     {
-      "v": "291",
-      "align": "right"
-     },
-     {
-      "v": "218,2 L",
-      "align": "right"
-     },
-     {
-      "v": "83,2 L",
-      "align": "right"
-     },
-     {
-      "v": "13,5 L",
-      "align": "right"
-     },
-     {
-      "v": "compatible",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "+5,0 %",
-      "align": "right"
-     },
-     {
-      "v": "141,8 L",
-      "align": "right"
-     },
-     {
-      "v": "303",
-      "align": "right"
-     },
-     {
-      "v": "227,2 L",
-      "align": "right"
-     },
-     {
-      "v": "85,4 L",
-      "align": "right"
-     },
-     {
-      "v": "4,5 L",
-      "align": "right"
-     },
-     {
-      "v": "compatible",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "+10,0 %",
-      "align": "right"
-     },
-     {
-      "v": "148,6 L",
-      "align": "right"
-     },
-     {
-      "v": "304",
-      "align": "right"
-     },
-     {
-      "v": "228,0 L",
-      "align": "right"
-     },
-     {
-      "v": "79,4 L",
-      "align": "right"
-     },
-     {
-      "v": "3,8 L",
-      "align": "right"
-     },
-     {
-      "v": "compatible",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "+15,0 %",
-      "align": "right"
-     },
-     {
-      "v": "155,4 L",
-      "align": "right"
-     },
-     {
-      "v": "320",
-      "align": "right"
-     },
-     {
-      "v": "240,0 L",
-      "align": "right"
-     },
-     {
-      "v": "84,6 L",
-      "align": "right"
-     },
-     {
-      "v": "-8,2 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "+20,0 %",
-      "align": "right"
-     },
-     {
-      "v": "162,1 L",
-      "align": "right"
-     },
-     {
-      "v": "324",
-      "align": "right"
-     },
-     {
-      "v": "243,0 L",
-      "align": "right"
-     },
-     {
-      "v": "80,9 L",
-      "align": "right"
-     },
-     {
-      "v": "-11,2 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "+23,6 %",
-      "align": "right"
-     },
-     {
-      "v": "167,0 L",
-      "align": "right"
-     },
-     {
-      "v": "324",
-      "align": "right"
-     },
-     {
-      "v": "243,0 L",
-      "align": "right"
-     },
-     {
-      "v": "76,0 L",
-      "align": "right"
-     },
-     {
-      "v": "-11,2 L",
-      "align": "right"
-     },
-     {
-      "v": "impossible",
-      "badge": "ko"
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le résultat est net : **le sur-versement du crémant se situe entre 0 % et 13,6 %**, jamais à +23,6 %. Sur le premier exercice, aucun taux positif n’est même compatible. L’objection du service tirée de la capacité de la petite coupe (page 63) est donc **fondée, et elle ne nous coûte rien** : le fond de bouteille suffit à expliquer l’écart."
+   "texte": "Ce qui varie, c’est le **total non vendu** : 248,8 L à la borne basse contre 326,8 L à la borne haute. Et c’est là que le stock tranche : la borne haute exige 720,8 L de crémant pour 666,0 L disponibles, ce qui est **matériellement impossible sur les trois exercices**. L’objection du service tirée de la capacité de la petite coupe est donc retenue. Le sur-versement que le stock autorise réellement est de 0 % au premier exercice, de +8,6 % au deuxième et de +13,6 % au troisième, soit au plus une coupe de 13,6 cl."
   },
   {
    "kind": "titre",
@@ -2332,7 +2539,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "En retenant, pour chaque exercice, le sur-versement maximal que le stock autorise, le bilan boucle : 885 bouteilles ouvertes sur trois ans, soit 663,8 L sorties du stock pour 666,0 L disponibles. **Au deuxième exercice le bilan tombe juste, au centilitre.** Au troisième, 3,8 L restent inemployés. Au premier, le modèle dépasse de 1,5 L le stock retenu par le service, soit deux bouteilles sur 217 jours de service : l’ordre de grandeur de l’arrondi de sa propre variation de stock. Il n’existe, dans aucun des trois exercices, de volume de crémant disponible pour une vente non enregistrée."
+   "texte": "En retenant, pour chaque exercice, le sur-versement maximal que le stock autorise, le bilan boucle : 885 bouteilles ouvertes sur trois ans, soit 663,8 L sortis du stock pour 666,0 L disponibles. **Au deuxième exercice le bilan tombe juste, au centilitre.** Au troisième, 3,8 L restent inemployés. Au premier, le modèle exige 266 bouteilles alors que le service en retient 275, dont 11 vendues scellées, soit 264 ouvrables au service : il en manque deux, c’est-à-dire 1,5 L sur 198,0 L, soit 0,8 %. Nous le signalons plutôt que de le laisser découvrir, et l’explication tient en une phrase : il suffit que deux fonds de bouteille aient été réutilisés le lendemain sur les 217 journées de l’exercice. Notre modèle n’en autorise aucun, ce qui est l’hypothèse la plus défavorable au redevable."
   },
   {
    "kind": "tableau",
@@ -2532,12 +2739,56 @@
     },
     {
      "label": "Volume restant pour une vente occulte",
-     "valeur": "0 L",
-     "sub": "le bilan matière est bouclé",
+     "valeur": "2,2 L sur 666,0 L",
+     "sub": "soit 0,3 % : le bilan matière est bouclé",
      "highlight": true,
      "couleur": "teal"
     }
    ]
+  },
+  {
+   "kind": "titre",
+   "texte": "D’où vient la dose de 12 centilitres"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Nous avons adopté les doses du service. Il reste à dire d’où elles viennent, et c’est lui qui l’écrit. Page 63 : « la dose vendue s’établissant à 12 centilitres (conformément aux dires des dirigeants) une sur-dose de 23,60 % conduirait à remplir le verre d’une façon exagérée ». Page 85, vingt-deux pages plus loin, la même phrase, allongée : « la dose vendue s’établissant à 12 centilitres (conformément aux dires des dirigeants) une sur-dose de 23,60 % conduirait à remplir le verre d’une façon exagérée, voire à dépasser sa capacité ». Page 67, deux fois dans la même page : « la dose d’un centilitre fournie par les dirigeants lors des opérations sur place ». Page 68 : « Pour toutes les doses des alcools nécessaires à la cuisine, le service n’a fait que suivre les recommandations des dirigeants »."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service ne produit, pour le crémant, aucun constat, aucun relevé, aucune mesure de la contenance de la « petite coupe », aucune référence professionnelle nommée, et il ne date ni ne réfère cette déclaration nulle part dans ce courrier. Le même courrier écrit pourtant, page 66 : « Le service serait même en droit d’estimer que les volumes de doses fournies par les dirigeants ont été maximisées, donc sont totalement erronés, et aboutissent à minorer les montants des chiffres d’affaires reconstitués, situation qui serait susceptible d’arranger la société ». Aucune conséquence n’en est tirée : les doses sont maintenues, et la reconstitution « demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications » (p. 63)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Sa proposition de rectifications du 18 mai 2026 désignait d’ailleurs une autre source, et il faut la lire pour savoir ce qui est au dossier. Page 46, à la rubrique « Ingrédient : CREMANT » : « Pour cette famille d’articles, la société utilise du crémant (**conformément aux recettes obtenues des dirigeants ou de la carte des boissons**) respectivement pour : Le cocktail La vouivre (6 cl), Le cocktail Le Père Grégoire (6 cl), le KITTYKIR (6 cl), Le verre de crémant (12 cl) ». Page 37, la dose de 12 cl figure sous la rubrique des verres proposés à la vente, à côté des menus et des cartes auxquels la page 36 dit que le vérificateur « a pu, d’abord, avoir accès »."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Pour les trois cocktails à 6 cl, la même proposition indique page 37 comment la dose a été arrêtée : « Lors de l’entrevue du 06 mars 2026, le vérificateur a pu demander les recettes précises des différents cocktails proposés à la vente. Un compte rendu rappelant leurs dosages respectifs a été adressé aux dirigeants, les invitant à préciser ou corriger les éléments évoqués. **Aucune réponse sur ce point n’ayant été adressée au service, le vérificateur ne peut que considérer que ces dosages sont confirmés.** » La dose de 6 cl procède donc d’un document que le service a lui-même rédigé et qu’un silence a validé."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Nous n’en faisons pas une contradiction, parce que le service peut répondre que la carte et les dirigeants disent la même chose. Nous relevons l’état du dossier, qui n’est pas discutable : ni en mai ni en septembre la dose de crémant ne procède d’une mesure faite par le service, et la seule source qu’il ait jamais désignée est un document de l’entreprise ou une parole de ses dirigeants."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Nous n’en tirons, nous non plus, aucune conséquence chiffrée, et nous ne demandons pas que la dose de 12 centilitres soit écartée : nous l’appliquons, et elle nous coûte. Nous demandons seulement que la même exigence vaille dans les deux sens. Page 60, nos mesures sont écartées ainsi : « La réponse, en elle-même, n’apporte aucune preuve qu’il puisse y avoir des sur-dosages. Il s’agit d’une simple affirmation gratuite. » Page 68 : « ces modifications doivent être étayées et justifiées de manière pertinente, ce qui n’est pas le cas. » Le présent chapitre y répond par un décompte ligne à ligne du détail des tickets, reproductible à partir des annexes de caisse par un script joint, et non par une affirmation."
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que la doctrine impose à une reconstitution"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La doctrine administrative, opposable sur le fondement de l’article L. 80 A du livre des procédures fiscales, encadre la reconstitution des recettes : « Pour être pertinentes et emporter, le cas échéant, la conviction de la commission départementale ou nationale, ou du juge, les reconstitutions opérées doivent demeurer dans des limites réalistes au regard des conditions effectives d’exploitation », et « les reconstitutions du bénéfice brut doivent être effectuées à partir des conditions concrètes de fonctionnement de l’entreprise et non d’éléments prédéterminés ou étrangers à la gestion propre de celle-ci » ([BOI-CF-IOR-10-20, § 200](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)). Le même paragraphe ajoute que « les renseignements donnés par les contribuables doivent être soigneusement étudiés et retenus s’ils sont jugés acceptables par le vérificateur »."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Réputer vendu tout le crémant acheté revient à retenir un taux de perte nul. Ce taux ne procède d’aucune constatation propre à l’établissement : il résulte de la seule égalité posée entre les achats et les ventes, et la page 62 ne l’adosse qu’à l’expérience professionnelle des dirigeants. L’administration admet pourtant, dans sa propre doctrine, que la gestion des stocks « ne fournit pas des renseignements entièrement exacts, compte tenu notamment, des pertes de substance (vols, coulage) ou de qualité (détérioration) » ([BOI-BIC-PDSTK-20-10, § 310](https://bofip.impots.gouv.fr/bofip/1493-PGP.html/identifiant=BOI-BIC-PDSTK-20-10-20120912)). Nous ne demandons pas pour autant un abattement de principe : nous opposons au taux de perte nul un décompte tiré de sa propre caisse et de ses propres doses."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Sur la charge de la preuve, enfin, et sans en tirer plus que le texte ne donne. La doctrine administrative énonce qu’« en cas de comptabilité irrégulière, la charge de la preuve incombe à celle des parties qui ne se conforme pas à l’avis rendu par la commission ou par le comité consultatif » ([BOI-CF-IOR-10, § 40](https://bofip.impots.gouv.fr/bofip/4006-PGP.html/identifiant=BOI-CF-IOR-10-20160706)). Le basculement est donc indexé sur l’avis de la commission départementale, non sur le rejet de la comptabilité. Au stade de la présente réponse aux observations, aucune commission n’a été saisie et aucun avis n’a été rendu : l’exception du deuxième alinéa de l’article L. 192 du livre des procédures fiscales, qui suppose cumulativement que « la comptabilité comporte de graves irrégularités » et que « l’imposition a été établie conformément à l’avis de la commission ou du comité », ne peut par hypothèse être remplie. Le troisième alinéa du même article, qui vise le contribuable « à défaut de comptabilité ou de pièces en tenant lieu », est étranger au dossier : la comptabilité a été présentée et vérifiée. Le rejet de la comptabilité ne dispense donc pas le service d’établir le bien-fondé du taux de perte nul qu’il retient sur le crémant."
   },
   {
    "kind": "titre",
@@ -2549,7 +2800,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**Deuxième indice : la valeur.** Le service écrit qu’un tel taux de perte serait « considérable et non-vivable économiquement pour une quelconque société » (p. 62). Au prix d’achat réellement facturé par la Fruitière vinicole d’Arbois, le crémant jeté représente 2 608 € HT sur trois exercices, soit environ 869 € par an. Sur des achats de crémant de 7 427,38 € HT et des achats d’alcool de 107 924 € HT, cette perte est parfaitement supportable : elle est de l’ordre d’une demi-bouteille par jour de service."
+   "texte": "**Deuxième indice : la valeur.** Le service écrit qu’un tel taux de perte serait « considérable et non-vivable économiquement pour une quelconque société » (p. 62). Le calcul se fait avec ses propres chiffres. Au premier exercice, les quatre articles au verre de son tableau de la page 62, à ses propres prix moyens de caisse, ont produit 622 × 5,17 € + 503 × 4,76 € + 234 × 5,16 € + 242 × 3,85 € = **7 749,16 € de recettes**, soit 6 457,63 € hors taxes au taux de 20 % applicable aux boissons alcooliques. Le fond de bouteille du même exercice coûte **819 € d’achat**, c’est-à-dire **12,7 % de cette recette**. Sur les trois exercices, le crémant jeté représente 2 608 € HT d’achat, soit 869 € par an et 4,03 € par jour de service, moins que le prix d’une seule Vouivre vendue. C’est le coût normal d’un produit servi à la coupe depuis un contenant de 75 cl, et non une perte qui rendrait une exploitation non vivable."
   },
   {
    "kind": "tableau",
@@ -2560,7 +2811,7 @@
      "label": "Exercice"
     },
     {
-     "label": "Bouteilles achetées",
+     "label": "Bouteilles facturées",
      "align": "right"
     },
     {
@@ -2712,6 +2963,10 @@
    ]
   },
   {
+   "kind": "note",
+   "texte": "Prix unitaires calculés sur les seules lignes valorisées des factures de Franche-Comté Boissons Services, fournisseur unique du crémant du Jura de la Fruitière vinicole d’Arbois : 264, 324 et 312 bouteilles facturées pour 1 949,88 €, 2 663,46 € et 2 814,04 € HT. Douze bouteilles livrées en 2022-2023 n’ont pas été facturées, ce qui abaisserait encore le coût unitaire réel : l’aléa joue contre nous et nous ne le retenons pas."
+  },
+  {
    "kind": "paragraphe",
    "texte": "**Troisième indice : le canal d’encaissement.** Une coupe vendue hors caisse suppose un encaissement en espèces. Le taux de bancarisation de l’établissement, recalculé sur les annexes de règlements, est de 98,64 % : les espèces ne laissent aucune place à un tel volume, et aucun excédent d’espèces n’a été constaté."
   },
@@ -2736,16 +2991,28 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le tableau de la page 85 (« Consommation > Disponible » sur les trois exercices) est la conséquence arithmétique du cumul de deux maxima. Le cumul supprimé, le bilan boucle sur les trois exercices et **le service n’oppose plus rien** : ni chiffre, ni source, ni contre-calcul. Ses trois autres objections sont des affirmations non chiffrées (le crémant entre dans plusieurs articles, les dirigeants ont de l’expérience, les pertes sont exagérées) ; la dernière, la capacité du verre, nous l’avons intégrée."
+   "texte": "Le tableau de la page 85 (« Consommation > Disponible » sur les trois exercices) est la conséquence arithmétique du cumul de deux maxima. Le cumul supprimé, le bilan boucle sur les trois exercices. Ses autres objections ont été reprises une à une, et aucune ne rétablit un volume vendable : celle tirée de la variété des articles à base de crémant est accordée, chiffrée et déjà intégrée pour 1 052 bouteilles ; celle tirée de la conservation d’un jour à l’autre, calculée sur ses propres données, laisse encore 114,61 litres de fonds de bouteille et 179,25 litres de son stock sans emploi ; celle tirée de la capacité de la petite coupe est retenue, et c’est elle qui borne le sur-versement. Restent l’expérience professionnelle des dirigeants et l’exagération alléguée, qui ne sont assorties d’aucun chiffre ni d’aucune constatation."
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous ramenons en conséquence la perte de crémant revendiquée de 346,9 L à **272,0 L sur trois exercices**, dont environ 239,1 L de fonds de bouteille et 30,6 L de sur-versement. Ce chiffre n’est plus une estimation : c’est la différence, au centilitre, entre le crémant disponible retenu par le service et le crémant vendu selon ses propres doses. Il ne reste, dans le crémant, aucun volume susceptible d’alimenter une reconstitution de recettes."
+   "texte": "Ce que le grief pèse se lit dans la même annexe. Au premier exercice, les 20 625 centilitres de crémant y sont réputés vendus en totalité, le service porte en bas de tableau un taux de « Volumes Disparus » de **42,75 %**, et il en tire un chiffre d’affaires reconstitué de **13 947,18 € toutes taxes comprises, soit 11 622,65 € hors taxes**, pour le seul crémant et pour le seul premier exercice. C’est ce chiffre que les 248,11 litres de fonds de bouteille, lus dans sa propre caisse, privent de fondement."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Nous ramenons en conséquence la perte de crémant revendiquée de 346,9 L à **272,0 L sur trois exercices**, dont 239,1 L de fonds de bouteille et 30,6 L de sur-versement. Ce chiffre n’est plus une estimation : c’est la différence, au centilitre, entre le crémant disponible retenu par le service et le crémant vendu selon ses propres doses. Au point d’équilibre, il ne subsiste que 2,2 litres sur 666,0, soit 0,3 %, pour alimenter une reconstitution de recettes."
   },
   {
    "kind": "piecejointe",
-   "intro": "Le calcul est intégralement reproductible à partir des annexes de caisse (lecture seule) par le script scripts/reponse1-cremant-fourchette.py :",
+   "intro": "Les deux calculs sont intégralement reproductibles à partir des annexes de caisse (lecture seule) : le périmètre de la page 62 lu jour par jour par le script scripts/reponse1-cremant-perimetre-service.py, le bilan matière complet et le point d’équilibre par le script scripts/reponse1-cremant-fourchette.py.",
    "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-cremant-perimetre-du-service.xlsx",
+     "label": "Le tableau de la page 62 lu au jour près : périmètre, lecture annuelle contre lecture journalière, mutualisation entre articles, bilan matière et effet d’une conservation d’un jour à l’autre (XLSX, 5 onglets)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cremant-perimetre-du-service.csv",
+     "label": "Crémant à ouvrir chaque jour dans le seul périmètre de la page 62, trois exercices (CSV)"
+    },
     {
      "fichier": "pieces-reponse-1/R1-cremant-bilan-matiere.xlsx",
      "label": "Bilan matière, fourchette et point d’équilibre (XLSX, 4 onglets)"
