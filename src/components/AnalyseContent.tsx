@@ -791,6 +791,26 @@ function CasSuppressionsView({ section }: { section: Extract<Section, { kind: 'c
 }
 
 function SectionView({ section }: { section: Section }) {
+  // Schéma vectoriel (SVG) rédigé dans la donnée. Hors de l'union typée Section
+  // (cast volontaire) pour ne pas toucher au type partagé.
+  if ((section as { kind: string }).kind === 'schema') {
+    const s = section as unknown as { titre?: string; svg: string; legende?: string }
+    return (
+      <Paper withBorder radius="lg" p={{ base: 'md', sm: 'lg' }} bg="white">
+        {s.titre && (
+          <Text fw={700} mb="sm" ff="heading" fz={{ base: 16, sm: 18 }} c="dark.8">
+            {s.titre}
+          </Text>
+        )}
+        <div style={{ width: '100%', overflowX: 'auto' }} dangerouslySetInnerHTML={{ __html: s.svg }} />
+        {s.legende && (
+          <Text size="xs" c="dimmed" mt="sm">
+            {s.legende}
+          </Text>
+        )}
+      </Paper>
+    )
+  }
   switch (section.kind) {
     case 'joursPartages':
       return <JoursPartagesView section={section} />

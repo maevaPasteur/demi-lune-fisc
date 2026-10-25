@@ -9,52 +9,60 @@
    "source": "fisc",
    "numero": 1,
    "titre": "Ce que le service a chiffré",
-   "sousTitre": "Supplément d'impôt (impôt sur le revenu + prélèvements sociaux + majorations + intérêts) notifié à Mme Ghislaine BEHEM, année par année."
+   "sousTitre": "Supplément d'impôt (impôt sur le revenu + prélèvements sociaux + majoration de 40 % + intérêts) notifié à Mme Ghislaine BEHEM, année par année."
   },
   {
    "kind": "tableau",
-   "titre": "Supplément d'impôt notifié à Mme Ghislaine BEHEM",
+   "titre": "Décomposition du supplément notifié à Mme Ghislaine BEHEM",
    "colonnes": [
     {
-     "label": "Année"
+     "label": "Élément"
     },
     {
-     "label": "Base RCM par foyer",
+     "label": "2023",
      "align": "right"
     },
     {
-     "label": "Assiette IR (× 1,25)",
+     "label": "2024",
      "align": "right"
     },
     {
-     "label": "Supplément d'impôt",
+     "label": "2025",
+     "align": "right"
+    },
+    {
+     "label": "Total",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "2023"
+      "v": "Base RCM distribuée"
      },
      {
       "v": "96 617 €",
       "align": "right"
      },
      {
-      "v": "120 771 €",
+      "v": "69 432 €",
       "align": "right"
      },
      {
-      "v": "73 859 €",
+      "v": "69 864 €",
+      "align": "right"
+     },
+     {
+      "v": "235 913 €",
       "align": "right"
      }
     ],
     [
      {
-      "v": "2024"
+      "v": "Assiette ajoutée au revenu (× 1,25)"
      },
      {
-      "v": "69 432 €",
+      "v": "120 771 €",
       "align": "right"
      },
      {
@@ -62,69 +70,127 @@
       "align": "right"
      },
      {
-      "v": "48 124 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "2025"
-     },
-     {
-      "v": "69 864 €",
-      "align": "right"
-     },
-     {
       "v": "87 330 €",
       "align": "right"
      },
      {
-      "v": "50 720 €",
+      "v": "294 891 €",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Total"
+      "v": "IR au barème"
      },
      {
-      "v": "235 913 €",
+      "v": "36 215 €",
       "align": "right"
      },
      {
-      "v": "294 891 €",
+      "v": "voir pièce jointe",
+      "align": "right"
+     },
+     {
+      "v": "25 336 €",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % (art. 1729)"
+     },
+     {
+      "v": "14 356 €",
+      "align": "right"
+     },
+     {
+      "v": "9 820 €",
+      "align": "right"
+     },
+     {
+      "v": "9 756 €",
+      "align": "right"
+     },
+     {
+      "v": "33 932 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts de retard (art. 1727)"
+     },
+     {
+      "v": "1 974 €",
+      "align": "right"
+     },
+     {
+      "v": "voir pièce jointe",
+      "align": "right"
+     },
+     {
+      "v": "195 €",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Supplément d'impôt total"
+     },
+     {
+      "v": "73 859 €",
+      "align": "right"
+     },
+     {
+      "v": "48 124 €",
+      "align": "right"
+     },
+     {
+      "v": "50 720 €",
       "align": "right"
      },
      {
       "v": "172 703 €",
       "align": "right"
      }
+    ],
+    [
+     {
+      "v": "Nombre de parts"
+     },
+     {
+      "v": "1,00",
+      "align": "right"
+     },
+     {
+      "v": "1,00",
+      "align": "right"
+     },
+     {
+      "v": "1,00",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     }
     ]
    ],
-   "minWidth": 600
+   "minWidth": 640
   },
   {
-   "kind": "kpis",
-   "items": [
-    {
-     "label": "Supplément total notifié",
-     "valeur": "172 703 €",
-     "sub": "sur trois années (2023-2025)",
-     "couleur": "red"
-    },
-    {
-     "label": "Origine",
-     "valeur": "distributions",
-     "sub": "intégralement dérivé de la reconstitution société",
-     "couleur": "gold"
-    },
-    {
-     "label": "Si la reconstitution tombe",
-     "valeur": "0 €",
-     "sub": "plus de distribution, plus d'impôt personnel",
-     "couleur": "teal"
-    }
-   ]
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 760 320\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"250\" x2=\"744\" y2=\"250\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"57.400000000000006\" y=\"153.6402499003683\" width=\"70\" height=\"96.3597500996317\" rx=\"3\" fill=\"#a0740d\"/><text x=\"92.4\" y=\"148.6402499003683\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">36 215 €</text><text x=\"92.4\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">IR au barème</text><rect x=\"202.20000000000002\" y=\"115.44224983326043\" width=\"70\" height=\"38.19800006710787\" rx=\"3\" fill=\"#b4452e\"/><text x=\"237.20000000000002\" y=\"110.44224983326043\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+14 356 €</text><text x=\"237.20000000000002\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">majoration 40</text><text x=\"237.20000000000002\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">%</text><rect x=\"347.0\" y=\"110.18989178558203\" width=\"70\" height=\"5.252358047678399\" rx=\"3\" fill=\"#b4452e\"/><text x=\"382.0\" y=\"105.18989178558203\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+1 974 €</text><text x=\"382.0\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">intérêts</text><rect x=\"491.80000000000007\" y=\"53.47826086956519\" width=\"70\" height=\"56.711630916016844\" rx=\"3\" fill=\"#b4452e\"/><text x=\"526.8000000000001\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+21 314 €</text><text x=\"526.8000000000001\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">prélèv.</text><text x=\"526.8000000000001\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">sociaux et</text><text x=\"526.8000000000001\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">ajustements</text><rect x=\"636.6\" y=\"53.47826086956519\" width=\"70\" height=\"196.5217391304348\" rx=\"3\" fill=\"#6a4d0f\"/><text x=\"671.6\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#2a2015\">73 859 €</text><text x=\"671.6\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">Supplément</text><text x=\"671.6\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">BEHEM 2023</text></svg>",
+   "titre": "Comment se construit le supplément de Mme Ghislaine BEHEM (année 2023)",
+   "legende": "Recalcul reproductible dans la pièce jointe (IR au barème sur l'assiette majorée, puis majoration de 40 %, intérêts et prélèvements sociaux)."
   },
   {
    "kind": "chapitre",
@@ -135,15 +201,52 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le chiffrage est **vérifié** : il correspond, année par année, à l'imposition au barème de l'assiette distribuée majorée de 25 %, augmentée de la CSG/CRDS, du prélèvement de solidarité, de la majoration de 40 % et des intérêts. Il n'appelle pas de correction arithmétique interne, mais il est **entièrement dérivé** : chacun de ces euros n'existe que parce que la reconstitution « société » existe. Il disparaît avec elle."
+   "texte": "Le chiffrage est **vérifié** : il correspond, année par année, à l'imposition au barème de l'assiette distribuée majorée de 25 %, augmentée de la majoration de 40 %, des intérêts et des prélèvements sociaux. Il n'appelle pas de correction arithmétique interne, mais il est **entièrement dérivé** : chacun de ces euros n'existe que parce que la reconstitution « société » existe. Pour Mme BEHEM, la base des prélèvements sociaux 2023 ressort à 86 407 € (sans le coefficient de 1,25), conforme à la réserve du Conseil constitutionnel."
+  },
+  {
+   "kind": "titre",
+   "texte": "Le poids réel : un prélèvement de 73 % sur des sommes non établies",
+   "numero": "2.1"
   },
   {
    "kind": "paragraphe",
-   "texte": "Les leviers propres au foyer s'ajoutent à la contestation du principe : vérification que les **prélèvements sociaux** n'ont pas été assis sur l'assiette majorée de 25 % (4.3), **décharge de la majoration de 40 %** faute de motivation individualisée (4.4), et contestation de la **clé de répartition de 50 %** faute d'appréhension établie (4.2). Pour Mme BEHEM, la base des prélèvements sociaux 2023 ressort à 86 407 € (sans le coefficient de 1,25), ce qui paraît conforme à la réserve du Conseil constitutionnel."
+   "texte": "Rapporté à la somme prétendument distribuée, l'impôt personnel atteint un taux effectif considérable : **76,4 % en 2023, 69,3 % en 2024 et 72,6 % en 2025**, soit 73,2 % en moyenne. Ce niveau résulte de l'empilement du barème (tranches hautes), du coefficient de 1,25, de la majoration de 40 % et des prélèvements sociaux. Appliqué à des sommes dont l'existence même n'est pas établie, il nourrit l'argument du caractère confiscatoire (4.3)."
+  },
+  {
+   "kind": "titre",
+   "texte": "Les leviers propres au foyer",
+   "numero": "2.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ils s'ajoutent à la contestation du principe : **décharge de la majoration de 40 %** faute de motivation individualisée (4.4) et contestation de la **clé de répartition de 50 %** faute d'appréhension établie (4.2). Le recalcul des prélèvements sociaux sans le coefficient de 1,25 a été vérifié : il est sans objet ici (4.3)."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Supplément total notifié",
+     "valeur": "172 703 €",
+     "sub": "sur trois années (Mme Ghislaine BEHEM)",
+     "couleur": "red"
+    },
+    {
+     "label": "Taux effectif moyen",
+     "valeur": "73 %",
+     "sub": "sur la somme réputée distribuée",
+     "couleur": "red"
+    },
+    {
+     "label": "Si la reconstitution tombe",
+     "valeur": "0 €",
+     "sub": "plus de distribution, plus d'impôt personnel",
+     "couleur": "teal"
+    }
+   ]
   },
   {
    "kind": "piecejointe",
-   "intro": "Recalcul du supplément d'impôt de Mme Ghislaine BEHEM, année par année, à partir des bases distribuées et des taux notifiés, avec le détail IR / prélèvements sociaux / majoration de 40 % / intérêts.",
+   "intro": "Recalcul du supplément d'impôt de Mme Ghislaine BEHEM, année par année, à partir des bases distribuées et des taux notifiés, avec le détail IR au barème / majoration de 40 % / intérêts / prélèvements sociaux et le taux effectif.",
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",

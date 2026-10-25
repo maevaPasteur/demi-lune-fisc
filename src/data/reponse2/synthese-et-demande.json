@@ -83,46 +83,124 @@
    "minWidth": 640
   },
   {
-   "kind": "kpis",
-   "items": [
-    {
-     "label": "Initialement notifié",
-     "valeur": "684 974 €",
-     "sub": "dont amende 1759 de 471 826 €",
-     "couleur": "gold"
-    },
-    {
-     "label": "Exposition actuelle",
-     "valeur": "582 796 €",
-     "sub": "société 213 148 € + associés 369 648 €",
-     "couleur": "red"
-    },
-    {
-     "label": "Suspendu à la reconstitution",
-     "valeur": "100 %",
-     "sub": "société et personnel tombent si la reconstitution est écartée",
-     "couleur": "teal"
-    }
-   ]
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 780 430\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"220.0\" y=\"16\" width=\"340\" height=\"64\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#a0740d\" stroke-width=\"1.5\"/><text x=\"390.0\" y=\"38\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Reconstitution du CA (méthode contestée)</text><text x=\"390.0\" y=\"74\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stocks + achats + doses figées × coefficient</text><line x1=\"390.0\" y1=\"80\" x2=\"390.0\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"200\" y1=\"104\" x2=\"580\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"200\" y1=\"104\" x2=\"191\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 191 99 L 200 104 L 191 109 Z\" fill=\"#cbb98f\"/><path d=\"M 195 113 L 200 122 L 205 113 Z\" fill=\"#cbb98f\"/><line x1=\"200\" y1=\"104\" x2=\"200\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"580\" y1=\"104\" x2=\"580\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 113 L 580 122 L 585 113 Z\" fill=\"#cbb98f\"/><rect x=\"120\" y=\"122\" width=\"160\" height=\"60\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"200.0\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Société</text><text x=\"200.0\" y=\"166\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">213 148 €</text><text x=\"200.0\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">IS + TVA + 1729</text><rect x=\"465.0\" y=\"122\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Dissimulation réputée</text><line x1=\"580\" y1=\"168\" x2=\"580\" y2=\"180\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 176 L 580 184 L 585 176 Z\" fill=\"#cbb98f\"/><rect x=\"465.0\" y=\"180\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"202\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Distribution (art. 109-1)</text><line x1=\"580\" y1=\"226\" x2=\"580\" y2=\"238\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 234 L 580 242 L 585 234 Z\" fill=\"#cbb98f\"/><rect x=\"465.0\" y=\"238\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"260\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">RCM par foyer, × 1,25</text><line x1=\"580\" y1=\"284\" x2=\"580\" y2=\"296\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 292 L 580 300 L 585 292 Z\" fill=\"#cbb98f\"/><rect x=\"465.0\" y=\"296\" width=\"230\" height=\"58\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580.0\" y=\"318\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">IR + PS + 40 % + intérêts</text><text x=\"580.0\" y=\"340\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">369 648 €</text><rect x=\"190.0\" y=\"374\" width=\"400\" height=\"44\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"390.0\" y=\"396\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\"></text><text x=\"390.0\" y=\"402\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"700\" fill=\"#0f7c6c\">Racine annulée  ⇒  582 796 € tombent</text></svg>",
+   "titre": "Rappel : tout dépend de la reconstitution"
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Les scénarios",
+   "titre": "Les scénarios et leurs fourchettes",
    "sousTitre": ""
   },
   {
    "kind": "paragraphe",
-   "texte": "**Scénario 1 — la reconstitution est écartée (procédure L. 52 ou vice de méthode).** Il n'y a plus de recette occultée : les rappels société, les distributions et toute la taxation personnelle tombent. Exposition résiduelle : les seuls accessoires éventuels. C'est l'objectif principal."
+   "texte": "Comme le total reconstitué vaut « CA liquides × (1 + coefficient) », toute réduction du CA liquides se répercute avec un effet de levier d'environ 4 sur le total, et à l'identique sur la part distribuée et l'impôt personnel. On peut donc borner l'exposition résiduelle selon l'ampleur de la réduction obtenue sur la reconstitution."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Exposition résiduelle selon l'issue (fourchette)",
+   "colonnes": [
+    {
+     "label": "Issue sur la reconstitution"
+    },
+    {
+     "label": "Société",
+     "align": "right"
+    },
+    {
+     "label": "Associés",
+     "align": "right"
+    },
+    {
+     "label": "Total résiduel",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Annulation (L. 52 ou vice de méthode)"
+     },
+     {
+      "v": "≈ 0 €",
+      "align": "right"
+     },
+     {
+      "v": "≈ 0 €",
+      "align": "right"
+     },
+     {
+      "v": "≈ 0 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Réduction de 75 %"
+     },
+     {
+      "v": "53 287 €",
+      "align": "right"
+     },
+     {
+      "v": "92 412 €",
+      "align": "right"
+     },
+     {
+      "v": "145 699 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Réduction de 50 %"
+     },
+     {
+      "v": "106 574 €",
+      "align": "right"
+     },
+     {
+      "v": "184 824 €",
+      "align": "right"
+     },
+     {
+      "v": "291 398 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Maintien + réductions personnelles (40 % / clé 50/50)"
+     },
+     {
+      "v": "213 148 €",
+      "align": "right"
+     },
+     {
+      "v": "partiel",
+      "align": "right"
+     },
+     {
+      "v": "< 582 796 €",
+      "align": "right"
+     }
+    ]
+   ],
+   "minWidth": 640
   },
   {
    "kind": "paragraphe",
-   "texte": "**Scénario 2 — la reconstitution est réduite.** Chaque euro de boisson rendu à son usage réel retranche près de quatre euros au total reconstitué (effet de levier du coefficient) : la réduction est démultipliée et se répercute à l'identique sur les distributions et l'impôt personnel."
+   "texte": "**Scénario 1 — la reconstitution est écartée** (durée du contrôle L. 52, ou vice de méthode) : plus de recette occultée, les rappels société, les distributions et toute la taxation personnelle tombent. C'est l'objectif principal, et il fait tout disparaître d'un coup."
   },
   {
    "kind": "paragraphe",
-   "texte": "**Scénario 3 — la reconstitution est maintenue.** Restent exploitables, au niveau personnel : le recalcul des prélèvements sociaux sans le coefficient de 1,25 (4.3), la décharge de la majoration de 40 % faute de motivation individualisée (4.4), et la contestation de la clé de 50 % (4.2)."
+   "texte": "**Scénario 2 — la reconstitution est réduite** : la réduction est démultipliée par l'effet de levier du coefficient et se répercute sur les trois niveaux (société, Pasteur, Behem)."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Scénario 3 — la reconstitution est maintenue** : restent exploitables, au niveau personnel, la **décharge de la majoration de 40 %** faute de motivation individualisée (4.4) et la contestation de la **clé de 50 %** faute d'appréhension établie (4.2). Le levier des prélèvements sociaux sans le 1,25 a été vérifié : il est ici sans objet (4.3)."
   },
   {
    "kind": "chapitre",
@@ -133,11 +211,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "1. La **saisine de la Commission départementale des impôts directs et des taxes sur le chiffre d'affaires**, afin qu'un examen indépendant et objectif porte sur l'ensemble des pièces produites — demande déjà formulée et restée sans réponse utile."
+   "texte": "1. La **saisine de la Commission départementale des impôts directs et des taxes sur le chiffre d'affaires**, pour un examen indépendant et objectif de l'ensemble des pièces — demande déjà formulée et restée sans réponse utile."
   },
   {
    "kind": "paragraphe",
-   "texte": "2. La **décharge** des rectifications notifiées, à titre principal par l'écartement de la reconstitution, à titre subsidiaire par les réductions ci-dessus."
+   "texte": "2. La **décharge** des rectifications, à titre principal par l'écartement de la reconstitution, à titre subsidiaire par les réductions ci-dessus."
   },
   {
    "kind": "paragraphe",
@@ -145,7 +223,7 @@
   },
   {
    "kind": "piecejointe",
-   "intro": "Tableau d'exposition consolidée (société + associés) et chiffrage des trois scénarios, reproductible depuis les montants notifiés.",
+   "intro": "Tableau d'exposition consolidée (société + associés) et chiffrage des trois scénarios avec fourchettes, reproductible depuis les montants notifiés.",
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-exposition-et-scenarios.xlsx",
@@ -155,7 +233,7 @@
   },
   {
    "kind": "note",
-   "texte": "Sources : propositions du 19/10/2026 (société et associés) ; proposition du 18/05/2026 ; réponse de la DDFiP du Jura du 04/09/2026 ; art. L. 52, L. 59, L. 195 A du LPF ; art. 109, 117, 158-7-2°, 1727, 1729, 1759 du CGI."
+   "texte": "Sources : propositions du 19/10/2026 (société et associés) ; proposition du 18/05/2026 ; réponse de la DDFiP du Jura du 04/09/2026 ; art. L. 52, L. 59, L. 192, L. 195 A du LPF ; art. 109, 117, 158-7-2°, 1727, 1729, 1759 du CGI."
   }
  ]
 }

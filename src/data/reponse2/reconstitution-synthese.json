@@ -16,33 +16,10 @@
    "texte": "Elle procède en deux temps : (1) les volumes de boissons disponibles (achats ± variation de stock) sont divisés par des **doses figées** pour reconstituer un chiffre d'affaires « liquides » ; (2) le chiffre d'affaires « cuisine » (« solides ») est obtenu en multipliant ce CA liquides par un **coefficient** de 2,94 (2022-2023), 3,02 (2023-2024) puis 3,10 (2024-2025)."
   },
   {
-   "kind": "kpis",
-   "items": [
-    {
-     "label": "Part « cuisine » du redressement",
-     "valeur": "≈ 75 %",
-     "sub": "jamais mesurée : entièrement extrapolée des boissons",
-     "couleur": "red"
-    },
-    {
-     "label": "Effet de levier du coefficient",
-     "valeur": "× ~4",
-     "sub": "1 € de boisson surévalué = ~4 € de redressement total (1 + coefficient)",
-     "couleur": "red"
-    },
-    {
-     "label": "Origine du coefficient",
-     "valeur": "la caisse",
-     "sub": "2,94 / 3,02 / 3,10 = ratio solides/liquides de la caisse du restaurant lui-même",
-     "couleur": "gold"
-    }
-   ]
-  },
-  {
    "kind": "chapitre",
    "source": "nous",
    "numero": 2,
-   "titre": "Le vice central : un coefficient circulaire",
+   "titre": "Le vice central : un coefficient circulaire et un effet de levier",
    "sousTitre": ""
   },
   {
@@ -50,18 +27,47 @@
    "texte": "Le coefficient appliqué n'est pas un repère de la profession : c'est, au centième près, le **ratio solides/liquides de la propre caisse du restaurant** (2,936 ; 3,024 ; 3,105). Le service lit donc dans la caisse le partage cuisine/boissons pour fixer son coefficient, mais rejette cette même caisse pour les montants, auxquels il substitue un CA liquides gonflé de 32 % à 48 %. **On ne peut pas tenir la caisse pour fiable sur le ratio et fausse sur les sommes.**"
   },
   {
-   "kind": "paragraphe",
-   "texte": "Conséquence arithmétique : comme le CA cuisine reconstitué est égal au CA cuisine réel multiplié par le facteur de gonflement des boissons, le service ajoute une **« cuisine fantôme »** strictement proportionnelle au gonflement des liquides — environ **354 921 €** sur trois ans, soit près des trois quarts du redressement, sans produire le moindre couvert ni achat alimentaire supplémentaire."
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 570 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">1 € de boisson</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">surévalué</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">CA liquides</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">× (1 + coefficient)</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">× ~4</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">1 € liquide + ~3 € cuisine</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">=</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">redressement total</text><text x=\"481.0\" y=\"84\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">≈ 4 €</text></svg>",
+   "titre": "L'effet de levier : chaque euro de boisson surévalué pèse près de 4 € au total",
+   "legende": "Total reconstitué = CA liquides × (1 + coefficient). Le facteur exact est 3,94 / 4,02 / 4,10 selon l'exercice."
   },
   {
    "kind": "paragraphe",
-   "texte": "Et parce que le total reconstitué vaut « CA liquides × (1 + coefficient) », chaque litre rendu à sa vraie destination (sur-versement, cuisine, pertes, dégustation) retranche près de **quatre fois** sa valeur au total. Une fois les boissons rendues à leur usage réel, le total reconstitué repasse **sous le chiffre d'affaires déclaré**."
+   "texte": "Conséquence arithmétique : comme le CA cuisine reconstitué est égal au CA cuisine réel multiplié par le facteur de gonflement des boissons, le service ajoute une **« cuisine fantôme »** strictement proportionnelle au gonflement des liquides — environ **354 921 €** sur trois ans, soit près des trois quarts du redressement total (471 826 €), sans produire le moindre couvert ni achat alimentaire supplémentaire, alors que la cuisine est enregistrée plat par plat dans la caisse (annexes C)."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Origine du coefficient",
+     "valeur": "la caisse",
+     "sub": "2,936 / 3,024 / 3,105 = ratio solides/liquides du restaurant lui-même",
+     "couleur": "gold"
+    },
+    {
+     "label": "« Cuisine fantôme » (3 ans)",
+     "valeur": "354 921 €",
+     "sub": "≈ 75 % du redressement, jamais mesurée",
+     "couleur": "red"
+    },
+    {
+     "label": "Effet de levier",
+     "valeur": "× ~4",
+     "sub": "chaque litre rendu à son usage réel retranche ~4 fois sa valeur",
+     "couleur": "red"
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Conséquence pour la défense : les sur-estimations de boissons démontrées poste par poste en Réponse 1 (sur-versement, crémant jeté, dégustation, freinte bière, cuisine, menus, consommation du chef) ne se corrigent pas à l'unité. Chaque litre rendu à sa vraie destination retranche près de quatre fois sa valeur au total reconstitué : c'est ce qui fait **repasser le total, coefficient compris, sous le chiffre d'affaires déclaré**."
   },
   {
    "kind": "alerte",
    "couleur": "teal",
-   "titre": "Démonstration complète en Réponse 1",
-   "texte": "Le cadre général, les onze points chiffrés (doses figées, perte de bière, crémant, dégustation, alcool de cuisine, menus, consommation du personnel, abattements, variation de stock, ventes sans achat, coefficient liquide → solide), la méthode « cascade des 10 622 L » et chacun de ses postes sont détaillés et recalculés dans la Réponse 1."
+   "titre": "Démonstration complète et pièces recalculées en Réponse 1",
+   "texte": "Le cadre général, les onze points chiffrés, la méthode « cascade des 10 622 L » et chacun de ses postes sont détaillés et recalculés dans la Réponse 1."
   },
   {
    "kind": "tableau",
@@ -116,7 +122,7 @@
   },
   {
    "kind": "note",
-   "texte": "Sources : propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » ; proposition du 18/05/2026, p. 37 à 53 ; réponse de la DDFiP du Jura du 04/09/2026, parties L à T. Contre-analyse détaillée et pièces recalculées : onglet Réponse 1."
+   "texte": "Sources : propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » ; proposition du 18/05/2026, p. 37 à 53 (coefficient p. 52) ; réponse de la DDFiP du Jura du 04/09/2026, parties L à T. Contre-analyse détaillée : onglet Réponse 1."
   }
  ]
 }
