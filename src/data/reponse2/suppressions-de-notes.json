@@ -3,12 +3,9 @@
   "slug": "suppressions-de-notes",
   "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
   "limites": [
-   "Seules les annexes de caisse de l’exercice 2022-2023 (C1, E1, F1, G1, H1) figurent au dossier. Toute la démonstration chiffrée porte sur cet exercice (193 005,09 € sur les 430 763,15 € du grief). Les montants des exercices 2023-2024 (140 686,55 €) et 2024-2025 (97 071,51 €) sont repris tels quels des chiffres du service et n’ont pu être vérifiés faute des annexes E2/E3, C2/C3, F2/F3, G2/G3, H2/H3.",
-   "Deux des quatre plus grosses suppressions (44 955 € le 21/06/2023 ; 4 455 € le 15/08/2024) relèvent d’exercices absents : elles ne sont ni re-tracées ni réfutées ici, seulement présumées de même nature que les deux lignes aberrantes vérifiées.",
-   "Le rapprochement par date + heure + montant + ticket Z n’est pas univoque (en moyenne 1,86 note de même total par Z en 2022-2023) : il vaut comme indice de vraisemblance, non comme preuve ligne à ligne. La certitude réclamée par le service suppose un export porteur de l’identifiant de table/note, que la société peut produire ou faire attester inexistant par l’éditeur.",
-   "La coïncidence « ticket à 0 € / jumeau encaissé de même numéro » (1 187 sur 1 190 en 2022-2023) est cohérente avec un transfert de table mais reste un artefact de numérotation quotidienne : elle écarte l’hypothèse d’un ticket-zéro orphelin, elle ne prouve pas à elle seule le ré-encaissement.",
-   "Le contrôle du totalisateur perpétuel (0 rupture, écart nul) et la part d’espèces (0,94 %) ne sont établis que pour 2022-2023 (annexes G1, F1) ; les exercices suivants appellent les annexes G2/G3 et F2/F3.",
-   "Le mécanisme des « articles déplacés » (62 lignes) et de la soirée du 21/03/2024 est décrit à partir des extraits reproduits par le service, non recalculé sur annexe : sa vérification complète suppose l’annexe E2."
+   "Le rapprochement par date + heure + montant + ticket Z n’est pas univoque à l’échelle d’un exercice (les totaux de note se répètent : 5 658 notes pour 1 637 totaux distincts en 2022-2023, et proportions voisines sur les deux autres exercices) : il vaut comme indice de vraisemblance, non comme preuve ligne à ligne. Il devient presque univoque à l’intérieur d’un seul ticket Z (moins de 15 % des notes y partagent leur total). La certitude ligne à ligne réclamée par le service suppose un export porteur de l’identifiant de table/note, que la société peut produire ou faire attester inexistant par l’éditeur.",
+   "La coïncidence « ticket à 0 € / jumeau encaissé de même numéro » (3 278 sur 3 281 tickets à zéro sur les trois exercices) est cohérente avec un transfert de table mais reste un artefact de numérotation quotidienne : elle écarte l’hypothèse d’un ticket-zéro orphelin, elle ne prouve pas à elle seule le ré-encaissement.",
+   "Le fichier « 01-cas suppressions.xlsx » produit par la société (944 lignes) a été constitué pour illustrer les mécanismes par l’exemple, non pour recenser les 21 302 lignes : la réponse au volume est apportée en euros (points 2.1 à 2.4), non par un inventaire ligne à ligne, dont la charge incombe de toute façon à l’administration."
   ]
  },
  "sections": [
@@ -34,7 +31,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reproduit ensuite les trois chiffres mis en avant par la réponse : **21 302 lignes supprimées (DEL)** sur trois exercices, **430 763,15 €** de montant brandi (TTC, présenté comme recettes effacées) et **9 €** de suppression médiane, « l’ordre de grandeur d’un seul article » (p. 3). Sur le seul exercice dont les annexes de caisse figurent au dossier (2022-2023, annexes C/E/F/G/H), la médiane recalculée ligne à ligne vaut **8,00 €** et la moyenne **24,08 €**, cette dernière tirée vers le haut par deux lignes aberrantes examinées plus bas. Il reprend enfin le tableau des quatre plus grosses suppressions, présentées par la réponse comme des fautes de frappe sur la quantité."
+   "texte": "Le service reproduit ensuite les trois chiffres mis en avant par la réponse : **21 302 lignes supprimées (DEL)** sur trois exercices, **430 763,15 €** de montant brandi (TTC, présenté comme recettes effacées) et **9 €** de suppression médiane, « l’ordre de grandeur d’un seul article » (p. 3). Les annexes de caisse des trois exercices (C/E/F/G/H pour 1, 2 et 3) figurant désormais au dossier, la médiane recalculée ligne à ligne vaut **8,00 € en 2022-2023, 8,90 € en 2023-2024 et 8,90 € en 2024-2025**, et la moyenne **24,08 € / 20,26 € / 15,30 €**, cette dernière tirée vers le haut par les lignes aberrantes examinées plus bas. Il reprend enfin le tableau des quatre plus grosses suppressions, présentées par la réponse comme des fautes de frappe sur la quantité."
   },
   {
    "kind": "tableau",
@@ -1221,39 +1218,39 @@
    "source": "nous",
    "numero": 2,
    "titre": "Notre réponse",
-   "sousTitre": "Le grief est un montant. Sur le seul exercice dont les annexes de caisse figurent au dossier (2022-2023, 193 005,09 €), 45,9 % de ce montant tient en deux lignes aberrantes qu’aucune recette ne peut recouvrir, et le solde a la forme de prix d’articles, non de notes. Le compteur perpétuel inaltérable de la caisse ne porte, sur cet exercice, aucune rupture."
+   "sousTitre": "Le grief est un montant : 430 763,15 € de lignes « DEL » sur trois exercices. Les annexes de caisse des trois exercices figurent désormais au dossier et ont été recalculées à la formule. Sur chacun, le montant se défait de la même manière : 99,6 à 99,7 % a la forme d’un prix de la carte ou de son multiple, les plus grosses lignes sont des fautes de frappe sur la quantité qu’aucune recette ne peut recouvrir, et le totalisateur perpétuel inaltérable progresse sans une seule rupture sur les 16 605 tickets des trois exercices."
   },
   {
    "kind": "titre",
-   "texte": "Le grief est un montant : nous y répondons en euros, sur l’exercice vérifiable",
+   "texte": "Le grief est un montant : nous y répondons en euros, sur les trois exercices",
    "numero": "2.1"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le reproche porte sur un montant : **430 763,15 € TTC** de lignes « DEL » sur trois exercices, que la proposition présente comme des recettes effacées (p. 20). Ce montant se décompose, selon le tableau du service, en **193 005,09 € pour 2022-2023, 140 686,55 € pour 2023-2024 et 97 071,51 € pour 2024-2025** (8 014 + 6 943 + 6 345 = 21 302 lignes). Seules les annexes de caisse de l’exercice **2022-2023** (C1, E1, F1, G1, H1) ont été versées au dossier ; la démonstration chiffrée qui suit porte donc sur ces **193 005,09 €**, intégralement recalculés à la formule à partir de ces annexes. Les 237 758,06 € des deux autres exercices appellent la production des annexes E2/E3, C2/C3, F2/F3, G2/G3 et H2/H3 correspondantes, faute desquelles ils ne peuvent être ni vérifiés ni réfutés."
+   "texte": "Le reproche porte sur un montant : **430 763,15 € TTC** de lignes « DEL » sur trois exercices, que la proposition présente comme des recettes effacées (p. 20). Ce montant se décompose, selon le tableau du service, en **193 005,09 € pour 2022-2023, 140 686,55 € pour 2023-2024 et 97 071,51 € pour 2024-2025** (8 014 + 6 943 + 6 345 = 21 302 lignes). Les annexes de caisse des **trois** exercices ayant été versées au titre de l’article L. 47 A, II du LPF (E/C/F/G/H pour 1, 2 et 3), l’intégralité des 430 763,15 € a été recalculée ligne à ligne à la formule. Le décompte officiel figure d’ailleurs dans chaque annexe E, en pied de fichier (ligne « Nb lignes / DEL ») : 8 014 lignes pour 193 005,09 €, 6 943 pour 140 686,55 €, 6 345 pour 97 071,51 €."
   },
   {
    "kind": "paragraphe",
-   "texte": "La réponse au volume ne se fait pas en nombre de lignes mais en euros, poste par poste. Confrontées au catalogue des **258 prix unitaires TTC effectivement pratiqués en 2022-2023** (annexe C1, colonne « Uprice_wt »), les 8 014 lignes « DEL » de l’exercice se ventilent ainsi."
+   "texte": "La réponse au volume ne se fait pas en nombre de lignes mais en euros, poste par poste. Confrontées, exercice par exercice, au catalogue des prix unitaires TTC effectivement pratiqués (annexes C1, C2, C3, colonne « Uprice_wt » : respectivement **258, 238 et 267 prix distincts**), les 21 302 lignes « DEL » se ventilent ainsi. Chaque cellule indique le nombre de lignes, le montant et sa part dans le montant de l’exercice."
   },
   {
    "kind": "tableau",
-   "titre": "Ventilation en euros des 193 005,09 € de lignes « DEL » (exercice 2022-2023, annexe E1 contre catalogue C1)",
-   "minWidth": 720,
+   "titre": "Ventilation en euros des lignes « DEL », par exercice (annexes E1/E2/E3 contre catalogues C1/C2/C3)",
+   "minWidth": 860,
    "colonnes": [
     {
      "label": "Catégorie"
     },
     {
-     "label": "Lignes",
+     "label": "2022-2023",
      "align": "right"
     },
     {
-     "label": "Montant",
+     "label": "2023-2024",
      "align": "right"
     },
     {
-     "label": "Part du montant",
+     "label": "2024-2025",
      "align": "right"
     }
    ],
@@ -1263,15 +1260,15 @@
       "v": "= un prix unitaire de la carte"
      },
      {
-      "v": "7 033",
+      "v": "7 033 l. · 80 411,45 € · 41,7 %",
       "align": "right"
      },
      {
-      "v": "80 411,45 €",
+      "v": "6 167 l. · 73 641,60 € · 52,3 %",
       "align": "right"
      },
      {
-      "v": "41,7 %",
+      "v": "5 641 l. · 69 674,70 € · 71,8 %",
       "align": "right"
      }
     ],
@@ -1280,51 +1277,52 @@
       "v": "= une quantité entière × un prix de la carte"
      },
      {
-      "v": "849",
+      "v": "849 l. · 112 067,30 € · 58,1 %",
       "align": "right"
      },
      {
-      "v": "112 067,30 €",
+      "v": "643 l. · 66 585,15 € · 47,3 %",
       "align": "right"
      },
      {
-      "v": "58,1 %",
+      "v": "615 l. · 26 987,65 € · 27,8 %",
       "align": "right"
      }
     ],
     [
      {
-      "v": "dont 2 lignes aberrantes ≥ 1 000 € (fautes de frappe)"
+      "v": "dont lignes aberrantes ≥ 1 000 € (fautes de frappe)"
      },
      {
-      "v": "2",
-      "align": "right"
-     },
-     {
-      "v": "88 593,10 €",
+      "v": "2 l. · 88 593,10 € · 45,9 %",
       "align": "right",
       "badge": "ko"
      },
      {
-      "v": "45,9 %",
+      "v": "1 l. · 44 955,00 € · 32,0 %",
+      "align": "right",
+      "badge": "ko"
+     },
+     {
+      "v": "1 l. · 4 455,00 € · 4,6 %",
       "align": "right",
       "badge": "ko"
      }
     ],
     [
      {
-      "v": "dont 847 autres lignes « multiple entier »"
+      "v": "dont autres lignes « multiple entier »"
      },
      {
-      "v": "847",
+      "v": "847 l. · 23 474,20 € · 12,2 %",
       "align": "right"
      },
      {
-      "v": "23 474,20 €",
+      "v": "642 l. · 21 630,15 € · 15,4 %",
       "align": "right"
      },
      {
-      "v": "12,2 %",
+      "v": "614 l. · 22 532,65 € · 23,2 %",
       "align": "right"
      }
     ],
@@ -1333,35 +1331,35 @@
       "v": "sans correspondance de prix"
      },
      {
-      "v": "132",
+      "v": "132 l. · 526,34 € · 0,3 %",
       "align": "right"
      },
      {
-      "v": "526,34 €",
+      "v": "133 l. · 459,80 € · 0,3 %",
       "align": "right"
      },
      {
-      "v": "0,3 %",
+      "v": "89 l. · 409,16 € · 0,4 %",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Total 2022-2023",
+      "v": "Total",
       "fw": 700
      },
      {
-      "v": "8 014",
+      "v": "8 014 l. · 193 005,09 € · 100 %",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "193 005,09 €",
+      "v": "6 943 l. · 140 686,55 € · 100 %",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "100 %",
+      "v": "6 345 l. · 97 071,51 € · 100 %",
       "align": "right",
       "fw": 700
      }
@@ -1372,22 +1370,22 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Montant « DEL » vérifié (exercice 2022-2023)",
-     "valeur": "193 005,09 €",
-     "sub": "8 014 lignes recalculées sur l’annexe E1 (pied de totalisation écarté)",
+     "label": "Montant « DEL » recalculé à la formule (3 exercices)",
+     "valeur": "430 763,15 €",
+     "sub": "21 302 lignes, recalculées sur les annexes E1/E2/E3 (pieds de totalisation écartés)",
      "couleur": "blue"
     },
     {
-     "label": "Part du montant concentrée dans 2 lignes aberrantes",
-     "valeur": "45,9 %",
-     "sub": "88 593,10 € sur 193 005,09 € : 68 993,10 € (26/07/2022) et 19 600,00 € (07/08/2022)",
+     "label": "Part valant un prix de la carte ou son multiple",
+     "valeur": "99,6 à 99,7 %",
+     "sub": "192 478,75 € / 140 226,75 € / 96 662,35 € ; 1 395,30 € seulement sans correspondance sur les trois exercices",
      "highlight": true,
      "couleur": "teal"
     },
     {
-     "label": "Part du montant valant un prix de carte ou son multiple",
-     "valeur": "99,7 %",
-     "sub": "192 478,75 € sur 193 005,09 € ; 526,34 € seulement sans correspondance",
+     "label": "Part concentrée dans les 4 lignes aberrantes",
+     "valeur": "32,0 %",
+     "sub": "138 003,10 € sur 430 763,15 € : des quantités saisies par erreur, immédiatement supprimées",
      "couleur": "teal"
     }
    ]
@@ -1399,29 +1397,37 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service range les quatre plus grosses suppressions dans les « fautes de frappe sur la quantité » et chiffre leur part à « 32 % » du total (p. 3) ; la somme exacte des quatre vaut **137 003 €, soit 31,8 %**. Deux de ces quatre lignes relèvent de l’exercice vérifiable 2022-2023 et peuvent être confrontées aux encaissements réels ; les deux autres (44 955 € le 21/06/2023, 4 455 € le 15/08/2024) relèvent d’exercices dont les annexes manquent et ne peuvent être re-tracées ici."
+   "texte": "Le service range les quatre plus grosses suppressions dans les « fautes de frappe sur la quantité » et chiffre leur part à « 32 % » du total (p. 3). Les quatre lignes existent bien, et chacune est désormais re-traçable sur l’annexe E de son exercice : leur somme exacte vaut **138 003,10 €, soit 32,0 %** du grief. Les deux plus grosses relèvent de 2022-2023, la troisième de 2023-2024 (annexe E2), la quatrième de 2024-2025 (annexe E3). Confrontées aux encaissements réels du jour (annexes F1/F2/F3) et à la plus grosse note de chaque exercice, elles sont matériellement impossibles comme recettes."
   },
   {
    "kind": "tableau",
-   "titre": "Les deux grosses lignes de 2022-2023 confrontées aux encaissements réels du jour (annexes E1 et F1)",
-   "minWidth": 720,
+   "titre": "Les quatre plus grosses lignes « DEL » confrontées aux encaissements réels (annexes E1/E2/E3 et F1/F2/F3)",
+   "minWidth": 820,
    "colonnes": [
     {
      "label": "Mesure"
     },
     {
-     "label": "26/07/2022, 18:51 (Z 3015)",
+     "label": "26/07/2022 (Z 3015)",
      "align": "right"
     },
     {
-     "label": "07/08/2022, 18:29 (Z 3026)",
+     "label": "07/08/2022 (Z 3026)",
+     "align": "right"
+    },
+    {
+     "label": "21/06/2023 (Z 3216)",
+     "align": "right"
+    },
+    {
+     "label": "15/08/2024 (Z 3474)",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Montant de la ligne « DEL » supprimée"
+      "v": "Montant de la ligne « DEL »"
      },
      {
       "v": "68 993,10 €",
@@ -1432,37 +1438,42 @@
       "v": "19 600,00 €",
       "align": "right",
       "badge": "ko"
+     },
+     {
+      "v": "44 955,00 €",
+      "align": "right",
+      "badge": "ko"
+     },
+     {
+      "v": "4 455,00 €",
+      "align": "right",
+      "badge": "ko"
      }
     ],
     [
      {
-      "v": "Décomposition apparente"
+      "v": "Décomposition (prix de carte × quantité)"
      },
      {
       "v": "≈ 27,40 € × 2 518",
       "align": "right"
      },
      {
-      "v": "100,00 € × 196",
+      "v": "100,00 € × 196 (Menu du jour)",
+      "align": "right"
+     },
+     {
+      "v": "45,00 € × 999 (Menu « Demi Lune »)",
+      "align": "right"
+     },
+     {
+      "v": "55,00 € × 81 (Menu « Demi Lune »)",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Notes réellement encaissées ce jour-là"
-     },
-     {
-      "v": "32",
-      "align": "right"
-     },
-     {
-      "v": "31",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Chiffre d’affaires réellement encaissé ce jour"
+      "v": "Chiffre d’affaires encaissé ce jour-là"
      },
      {
       "v": "2 563,40 €",
@@ -1470,6 +1481,14 @@
      },
      {
       "v": "2 209,60 €",
+      "align": "right"
+     },
+     {
+      "v": "1 686,40 €",
+      "align": "right"
+     },
+     {
+      "v": "2 302,50 €",
       "align": "right"
      }
     ],
@@ -1484,11 +1503,19 @@
      {
       "v": "131,20 €",
       "align": "right"
+     },
+     {
+      "v": "97,90 €",
+      "align": "right"
+     },
+     {
+      "v": "191,30 €",
+      "align": "right"
      }
     ],
     [
      {
-      "v": "Plus grosse note de tout l’exercice 2022-2023"
+      "v": "Plus grosse note de tout l’exercice"
      },
      {
       "v": "513,30 €",
@@ -1496,6 +1523,14 @@
      },
      {
       "v": "513,30 €",
+      "align": "right"
+     },
+     {
+      "v": "1 184,10 €",
+      "align": "right"
+     },
+     {
+      "v": "667,80 €",
       "align": "right"
      }
     ],
@@ -1510,6 +1545,16 @@
      },
      {
       "v": "8,9 fois",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "26,7 fois",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "1,9 fois",
       "align": "right",
       "badge": "ok"
      }
@@ -1527,23 +1572,27 @@
       "v": "38,2 fois",
       "align": "right",
       "badge": "ok"
+     },
+     {
+      "v": "38,0 fois",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "23,3 fois",
+      "align": "right",
+      "badge": "ok"
      }
     ]
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Une recette de 68 993 € ou de 19 600 € est matériellement impossible dans un restaurant dont la plus grosse note de l’année entière s’élève à **513,30 €** et dont la journée concernée n’a encaissé, en tout, que 2 563,40 € et 2 209,60 €. Ces deux lignes sont ce que la réponse décrit : une quantité saisie par erreur (≈ 2 518 unités d’un article à 27,40 € ; 196 fois 100,00 €), immédiatement supprimée. Elles ne correspondent à aucun encaissement — il n’existe nulle part, ni sur le ticket Z, ni dans le fichier des règlements, ni au crédit d’un compte, une somme de cet ordre. Or elles pèsent à elles seules **88 593,10 €, soit 45,9 % des 193 005,09 €** de l’exercice : près de la moitié du montant brandi pour 2022-2023 s’évapore avec deux fautes de frappe que le service qualifie lui-même ainsi."
+   "texte": "Aucune de ces quatre lignes ne correspond à un encaissement possible. Le 26/07/2022, 68 993,10 € seraient à comparer à une journée qui a encaissé 2 563,40 € et à une note maximale, sur l’année entière, de 513,30 €. Le 21/06/2023, les 44 955,00 € valent **999 fois un Menu « Demi Lune » à 45,00 €** un jour où le restaurant a encaissé 1 686,40 € ; le 15/08/2024, les 4 455,00 € valent **81 fois ce même menu à 55,00 €**. Le prix unitaire de chaque ligne est un prix réel de la carte ; c’est la **quantité** (2 518, 196, 999, 81) qui est aberrante, saisie par erreur puis immédiatement supprimée. Ces quatre lignes pèsent **138 003,10 €, soit 32,0 % des 430 763,15 €** : près du tiers du montant brandi s’évapore avec quatre fautes de frappe que le service qualifie lui-même ainsi."
   },
   {
    "kind": "paragraphe",
-   "texte": "On relèvera au passage que la décomposition « 27,40 € × 2 518 » reproduite par le service donne 68 993,20 €, soit 0,10 € de plus que la ligne réelle (68 993,10 €) : l’arithmétique même de la plus grosse suppression n’est pas exacte dans le courrier."
-  },
-  {
-   "kind": "alerte",
-   "couleur": "orange",
-   "titre": "Ce que nous ne pouvons pas encore re-tracer, et qui le sera",
-   "texte": "Les deux plus grosses suppressions des exercices 2023-2024 (44 955 €, le 21/06/2023) et 2024-2025 (4 455 €, le 15/08/2024) ne figurent pas dans les annexes versées. Par cohérence avec ce qui précède — aucune note de l’ordre de 45 000 € n’existe dans un tel établissement — il s’agit selon toute vraisemblance du même type d’erreur de quantité ; mais la démonstration ne sera complète qu’une fois produites les annexes E2/E3, C2/C3, F2/F3, G2/G3 et H2/H3. La société demeure à disposition pour les communiquer."
+   "texte": "On relèvera au passage que la décomposition « 27,40 € × 2 518 » reproduite par le service donne 68 993,20 €, soit 0,10 € de plus que la ligne réelle (68 993,10 €) : l’arithmétique même de la plus grosse suppression n’est pas exacte dans le courrier. Et la somme des quatre lignes vaut exactement 138 003,10 €, non « 137 003 € » : l’ordre de grandeur, « 32 % », est en revanche confirmé à la formule."
   },
   {
    "kind": "titre",
@@ -1552,35 +1601,43 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La thèse du service, telle qu’il la formule page 19 de la proposition, est celle d’une **table** supprimée qui « ne figure plus en chiffre d’affaires ». Une table effacée aurait la forme d’une note : un total pris dans le nuage des totaux de la carte (30,40 €, 76,90 €, 123,70 €…). Les lignes « DEL » n’ont pas cette forme. Sur l’exercice 2022-2023, les 8 014 lignes ne prennent que **272 valeurs distinctes**, quand les **5 658 notes encaissées de l’annexe F1** présentent **1 637 totaux distincts**. Et ces valeurs sont celles de la carte, répétées : 3,90 € revient **767 fois**, 18,60 € **160 fois**."
+   "texte": "La thèse du service, telle qu’il la formule page 19 de la proposition, est celle d’une **table** supprimée qui « ne figure plus en chiffre d’affaires ». Une table effacée aurait la forme d’une note : un total pris dans le nuage des totaux de la carte. Les lignes « DEL » n’ont pas cette forme, et sur les trois exercices. Le nombre de **valeurs distinctes** prises par les lignes « DEL » est de **272 en 2022-2023, 276 en 2023-2024 et 255 en 2024-2025**, quand les notes réellement encaissées (annexes F) présentent respectivement **1 637, 1 733 et 1 771 totaux distincts**. Les valeurs « DEL » sont celles de la carte, répétées : 3,90 € et 18,60 € reviennent chacun plusieurs centaines de fois dans chaque exercice."
   },
   {
    "kind": "paragraphe",
-   "texte": "Mesurée en euros sur la totalité de l’exercice, et une fois écartées les deux lignes aberrantes, la population a la physionomie d’articles retirés d’une table, non de recettes escamotées : **99,7 % du montant** (192 478,75 € sur 193 005,09 €) vaut exactement un prix unitaire de la carte ou une quantité entière de ce prix, et il ne reste que **526,34 €** sans correspondance, répartis sur 132 lignes de l’ordre d’un plat. La médiane d’une suppression est de **8,00 €** ; la moyenne de 24,08 € n’est élevée que du fait des deux fautes de frappe, et retombe à 13,03 € sans elles."
+   "texte": "Mesurée en euros et une fois écartées les lignes aberrantes, la population a, sur chaque exercice, la physionomie d’articles retirés d’une table, non de recettes escamotées : **99,7 % du montant en 2022-2023, 99,7 % en 2023-2024 et 99,6 % en 2024-2025** valent exactement un prix unitaire de la carte ou une quantité entière de ce prix. La **médiane** d’une suppression est de **8,00 € / 8,90 € / 8,90 €** selon l’exercice ; la moyenne (24,08 € / 20,26 € / 15,30 €) n’est élevée que du fait des lignes aberrantes et retombe à **13,03 € / 13,79 € / 14,60 €** sans elles, l’ordre de grandeur d’un plat ou d’un verre."
   },
   {
    "kind": "titre",
-   "texte": "Le totalisateur perpétuel de la caisse ne présente aucune rupture sur l’exercice vérifié",
+   "texte": "Le totalisateur perpétuel de la caisse ne présente aucune rupture, sur les trois exercices",
    "numero": "2.4"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le BOFiP que le service invoque impose au logiciel de calculer et de conserver, à chaque clôture, « des données cumulatives et récapitulatives, intègres et inaltérables », dont « le cumul du grand total de la période et le total perpétuel pour la période », compteur « ne se remettant jamais à zéro » et qui « ne [doit] donc jamais être purgé » ([BOI-TVA-DECLA-30-10-30, § 170](https://bofip.impots.gouv.fr/bofip/10691-PGP.html)). Ce compteur figure dans les fichiers remis : la colonne « tot_sum » des annexes G1 (journal TVA) et H1 (liste des tickets)."
+   "texte": "Le BOFiP que le service invoque impose au logiciel de calculer et de conserver, à chaque clôture, « des données cumulatives et récapitulatives, intègres et inaltérables », dont « le cumul du grand total de la période et le total perpétuel pour la période », compteur « ne se remettant jamais à zéro » et qui « ne [doit] donc jamais être purgé » ([BOI-TVA-DECLA-30-10-30, § 170](https://bofip.impots.gouv.fr/bofip/10691-PGP.html)). Ce compteur figure dans les fichiers remis : la colonne « tot_sum » des annexes G (journal TVA) et H (liste des tickets), désormais disponibles pour les trois exercices."
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous avons vérifié son chaînage sur l’exercice **2022-2023** : trié par valeur croissante, il part du report à nouveau **977 739,78 €** et atteint **1 381 110,20 €** au dernier ticket. Entre deux tickets consécutifs, il progresse exactement du montant TTC du ticket : sur **5 658 tickets, aucune rupture, aucun incrément négatif, aucun écart d’un centime** entre la progression totale (**403 370,42 €**) et la somme des tickets (**403 370,42 €**). Le contrôle est reproductible à la formule (pièce jointe R2, onglet « Chainage_G1 »)."
+   "texte": "Nous avons vérifié son chaînage sur chaque exercice. Trié par valeur croissante, le compteur part du report à nouveau et progresse, entre deux tickets consécutifs, exactement du montant TTC du ticket. Sur les **16 605 tickets** des trois exercices, **aucune rupture, aucun incrément négatif, aucun écart d’un centime** entre la progression du compteur et la somme des tickets. Le contrôle est reproductible à la formule (pièce jointe R2, onglets « Chainage_1/2/3 » et « Synthèse »)."
   },
   {
    "kind": "tableau",
-   "titre": "Contrôle du grand total perpétuel, exercice 2022-2023 (annexe G1)",
-   "minWidth": 640,
+   "titre": "Contrôle du grand total perpétuel, par exercice (annexes G1/G2/G3)",
+   "minWidth": 760,
    "colonnes": [
     {
      "label": "Mesure"
     },
     {
-     "label": "Valeur",
+     "label": "2022-2023",
+     "align": "right"
+    },
+    {
+     "label": "2023-2024",
+     "align": "right"
+    },
+    {
+     "label": "2024-2025",
      "align": "right"
     }
    ],
@@ -1592,6 +1649,14 @@
      {
       "v": "977 739,78 €",
       "align": "right"
+     },
+     {
+      "v": "1 381 110,20 €",
+      "align": "right"
+     },
+     {
+      "v": "1 819 103,12 €",
+      "align": "right"
      }
     ],
     [
@@ -1600,6 +1665,14 @@
      },
      {
       "v": "1 381 110,20 €",
+      "align": "right"
+     },
+     {
+      "v": "1 819 103,12 €",
+      "align": "right"
+     },
+     {
+      "v": "2 253 930,98 €",
       "align": "right"
      }
     ],
@@ -1610,14 +1683,30 @@
      {
       "v": "403 370,42 €",
       "align": "right"
+     },
+     {
+      "v": "437 992,92 €",
+      "align": "right"
+     },
+     {
+      "v": "434 827,86 €",
+      "align": "right"
      }
     ],
     [
      {
-      "v": "Somme des 5 658 tickets TTC"
+      "v": "Somme des tickets TTC"
      },
      {
       "v": "403 370,42 €",
+      "align": "right"
+     },
+     {
+      "v": "437 992,92 €",
+      "align": "right"
+     },
+     {
+      "v": "434 827,86 €",
       "align": "right"
      }
     ],
@@ -1629,11 +1718,48 @@
       "v": "0,00 €",
       "align": "right",
       "badge": "ok"
+     },
+     {
+      "v": "0,00 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "0,00 €",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Nombre de tickets"
+     },
+     {
+      "v": "5 658",
+      "align": "right"
+     },
+     {
+      "v": "5 529",
+      "align": "right"
+     },
+     {
+      "v": "5 418",
+      "align": "right"
      }
     ],
     [
      {
       "v": "Incréments négatifs (ruptures)"
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "badge": "ok"
      },
      {
       "v": "0",
@@ -1649,17 +1775,27 @@
       "v": "0",
       "align": "right",
       "badge": "ok"
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "badge": "ok"
      }
     ]
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Entre ce que la caisse a enregistré et ce qui a été porté en comptabilité, **rien n’a été retiré** sur l’exercice vérifié : les 8 014 suppressions de 2022-2023 n’ont pas fait bouger d’un centime le totalisateur. Le compteur que la doctrine invoquée par le service rend inaltérable et non purgeable devrait porter la trace d’un retrait de recettes s’il en existait un ; il n’en porte aucune, sur 5 658 tickets. Faute d’annexes G2/G3, le même contrôle reste à faire sur les deux exercices suivants (voir limites)."
+   "texte": "Le compteur est en outre **continu d’un exercice à l’autre** : le report à nouveau de 2023-2024 (1 381 110,20 €) est exactement le compteur de clôture de 2022-2023, et celui de 2024-2025 (1 819 103,12 €) celui de clôture de 2023-2024. Sur trois exercices et 16 605 tickets, la chaîne du totalisateur inaltérable et non purgeable ne porte **pas une seule rupture**. Entre ce que la caisse a enregistré et ce qui a été porté en comptabilité, rien n’a été retiré : les 21 302 suppressions n’ont pas fait bouger d’un centime ce compteur, qui devrait porter la trace d’un retrait de recettes s’il en existait un."
   },
   {
    "kind": "paragraphe",
-   "texte": "Une objection se présente, et nous la traitons : **le totalisateur ne s’incrémente qu’à l’émission d’un ticket**. Une table vidée de ses articles avant toute émission n’y entrerait pas. L’annexe H1 permet de compter ces cas sur 2022-2023 : **1 190 tickets clôturés à 0,00 €**. De ceux-là, **1 187 (99,7 %) portent un numéro que porte aussi, le même jour, un ticket encaissé**, et **3 seulement sont sans jumeau**. Cette coïncidence est cohérente avec le transfert ou le partage d’une addition — mais, le numéro de ticket étant un rang quotidien réattribué chaque jour, elle en est un indice, non une preuve à elle seule ; elle écarte seulement l’hypothèse d’un ticket-zéro massivement orphelin."
+   "texte": "Une objection se présente, et nous la traitons : **le totalisateur ne s’incrémente qu’à l’émission d’un ticket**. Une table vidée de ses articles avant toute émission n’y entrerait pas. Les annexes H permettent de compter ces cas : **1 190 tickets clôturés à 0,00 € en 2022-2023, 1 096 en 2023-2024 et 995 en 2024-2025**. De ceux-là, **1 187, 1 096 et 995 portent un numéro que porte aussi, le même jour, un ticket encaissé** ; il ne reste, sur les trois exercices, que **3 tickets à zéro sans jumeau** (tous en 2022-2023). Cette coïncidence est cohérente avec le transfert ou le partage d’une addition, mais le numéro de ticket étant un rang quotidien réattribué chaque jour, elle en est un indice, non une preuve à elle seule ; elle écarte seulement l’hypothèse d’un ticket-zéro massivement orphelin."
   },
   {
    "kind": "titre",
@@ -1672,7 +1808,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Mais nous ne surestimons pas ce critère, et c’est un point sur lequel notre réponse doit être précise. La clé « date + heure + montant + Z » **n’est pas un identifiant unique** : sur l’exercice 2022-2023, un même Z porte en moyenne **1,86 note** de total identique à une autre, et le total 76,90 € revient **7 fois** sur l’ensemble de l’exercice. Un rapprochement par ce seul critère est donc **un indice de vraisemblance, pas une preuve ligne à ligne**. Là où il devient concluant, c’est lorsqu’une rafale de suppressions se referme **à l’intérieur d’un seul ticket Z** sur l’unique note de ce Z qui porte ce total — ce qui est le cas des deux exemples que le service a lui-même imprimés."
+   "texte": "Mais nous ne surestimons pas ce critère, et c’est un point sur lequel notre réponse doit être précise. La clé « date + heure + montant + Z » **n’est pas un identifiant unique** : à l’échelle de l’exercice, les totaux de note se répètent (5 658 notes pour 1 637 totaux distincts en 2022-2023, 5 529 pour 1 733 en 2023-2024, 5 418 pour 1 771 en 2024-2025 ; le total 76,90 € revient 7 fois, 3 fois puis 4 fois). Un rapprochement par ce seul critère est donc **un indice de vraisemblance, pas une preuve ligne à ligne**. Il devient en revanche presque univoque **à l’intérieur d’un même ticket Z** : sur chaque exercice, seules **14,1 %, 14,7 % puis 13,8 % des notes** partagent leur total avec une autre note du même Z, et quand c’est le cas le groupe compte en moyenne **2,06 notes**. C’est pourquoi une rafale de suppressions qui se referme, dans un seul Z, sur l’unique note de ce Z portant ce total est concluante, comme dans les deux exemples que le service a lui-même imprimés."
   },
   {
    "kind": "paragraphe",
@@ -1834,11 +1970,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La page 13 imprime la rafale suivante, de 12h23 : neuf lignes « DEL » (ids 42087 à 42095) dont la somme fait **207,00 €**, en regard de la note n°8 (12:23, id 51158, CB), elle aussi **unique note à 207,00 € sur ce Z**. Deux rafales, deux totaux exacts, et dans chaque cas une seule note candidate sur le ticket Z concerné : c’est le mécanisme de la conversion au forfait. On notera que, contrairement à la formulation initiale, les sept montants de 12h07 ne sont pas « tous différents » — 7,20 € y figure deux fois (deux verres de Savagnin) — ce qui n’enlève rien à l’exactitude de la somme."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce que nous avons fait sur ces deux extraits, nous l’avons étendu à l’exercice sans en exagérer la portée : ces rapprochements de masse valent comme faisceau d’indices, non comme preuve de chaque ligne. La preuve propre de l’absence de retrait ne vient pas d’eux, mais du totalisateur perpétuel (point 2.4) et de la forme des montants (point 2.3), qui ne dépendent d’aucun appariement."
+   "texte": "La page 13 imprime la rafale suivante, de 12h23 : neuf lignes « DEL » (ids 42087 à 42095) dont la somme fait **207,00 €**, en regard de la note n°8 (12:23, id 51158, CB), elle aussi **unique note à 207,00 € sur ce Z**. Deux rafales, deux totaux exacts, et dans chaque cas une seule note candidate sur le ticket Z concerné : c’est le mécanisme de la conversion au forfait. La preuve propre de l’absence de retrait ne vient pas de ces appariements, mais du totalisateur perpétuel (point 2.4) et de la forme des montants (point 2.3), qui ne dépendent d’aucun appariement et valent sur les trois exercices."
   },
   {
    "kind": "titre",
@@ -1864,7 +1996,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le volume ne dit rien d’autre que le volume d’activité. 8 014 corrections rapportées à 5 658 notes et aux jours de service de l’exercice 2022-2023, c’est **1,4 correction par note** dans un restaurant qui sert deux services par jour, transfère des articles entre tables, partage des additions et corrige des erreurs de saisie en temps réel ; la suppression médiane vaut 8,00 €, l’ordre de grandeur d’un plat ou d’un verre. Ce raisonnement figurait dans la réponse du 10/07/2026, que le service reproduit page 18 sans y répondre."
+   "texte": "Le volume ne dit rien d’autre que le volume d’activité. Rapporté aux notes encaissées de chaque exercice, c’est **1,4 correction par note en 2022-2023, 1,3 en 2023-2024 et 1,2 en 2024-2025** (8 014 / 5 658, 6 943 / 5 529, 6 345 / 5 418), dans un restaurant qui sert deux services par jour, transfère des articles entre tables, partage des additions et corrige des erreurs de saisie en temps réel ; la suppression médiane vaut 8,00 à 8,90 €, l’ordre de grandeur d’un plat ou d’un verre. Ce raisonnement figurait dans la réponse du 10/07/2026, que le service reproduit page 18 sans y répondre."
   },
   {
    "kind": "titre",
@@ -1877,22 +2009,20 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le rejet d’une comptabilité suppose des irrégularités d’une gravité particulière. Le Conseil d’État écarte le rejet lorsque « l’administration ne démontre pas que les irrégularités relevées […] soient de nature à retirer à celle-ci toute valeur probante » ([CE, 5 octobre 1990, n° 63817](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19901005-63817)) ; la doctrine, opposable au titre de l’article L. 80 A du LPF, vise des erreurs, omissions ou inexactitudes « graves et répétées » ([BOI-CF-IOR-10-20, § 290](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)). Or, sur les quinze pages de la partie A, le service **ne désigne pas une seule suppression dont il établisse qu’elle correspond à une vente réellement encaissée et non déclarée**, ni n’indique combien de lignes il a auditées. Il caractérise une possibilité offerte par une fonctionnalité, non une minoration constatée. Le fichier « 01-cas suppressions.xlsx » avait été produit pour établir un mécanisme par l’exemple, non pour recenser les 21 302 lignes ; la mesure qui répond au volume est celle du point 2.1, en euros et sur la totalité de l’exercice vérifié."
+   "texte": "Le rejet d’une comptabilité suppose des irrégularités d’une gravité particulière. Le Conseil d’État écarte le rejet lorsque « l’administration ne démontre pas que les irrégularités relevées […] soient de nature à retirer à celle-ci toute valeur probante » ([CE, 5 octobre 1990, n° 63817](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19901005-63817)) ; la doctrine, opposable au titre de l’article L. 80 A du LPF, vise des erreurs, omissions ou inexactitudes « graves et répétées » ([BOI-CF-IOR-10-20, § 290](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)). Or, sur les quinze pages de la partie A, le service **ne désigne pas une seule suppression dont il établisse qu’elle correspond à une vente réellement encaissée et non déclarée**, ni n’indique combien de lignes il a auditées. Il caractérise une possibilité offerte par une fonctionnalité, non une minoration constatée. Le fichier « 01-cas suppressions.xlsx » avait été produit pour établir un mécanisme par l’exemple, non pour recenser les 21 302 lignes ; la mesure qui répond au volume est celle du point 2.1, en euros et sur la totalité des trois exercices."
   },
   {
    "kind": "titre",
-   "texte": "L’exemple du 21/03/2024 : ce que nous pouvons dire, et sa limite",
+   "texte": "L’exemple du 21/03/2024, désormais vérifié sur l’annexe E2",
    "numero": "2.9"
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reproche (p. 17) que les articles des notes n°13 et n°14 du 21/03/2024 ne se retrouvent pas tous en « DEL ». Les deux notes se partagent une seule table de **123,70 €** (35,11 € + 88,59 €), dont onze des douze articles sont divisés exactement au quart et aux trois quarts : c’est la signature de la fonction de partage, qui divise les quantités déjà enregistrées sans ressaisir la ligne — une ligne ainsi divisée ne produit aucune suppression, ce qui explique que la truite, la salade verte et le menu galette n’apparaissent pas à 20h16. Le seul article dont les parts s’écartent de ce partage (le Savagnin, 1,25 / 1,75 au lieu de 0,75 / 2,25) est précisément celui qui figure, à **8,30 €**, parmi les suppressions. Enfin, la chronologie joue contre la thèse d’un encaissement effacé : les notes sont réglées à **19h58 et 20h00**, les suppressions horodatées à **20h16** ; on n’efface pas une recette déjà portée au ticket Z."
+   "texte": "Le service reproche (p. 17) que les articles des notes n°13 et n°14 du 21/03/2024 ne se retrouvent pas tous en « DEL ». Cet exemple relève de l’exercice 2023-2024, dont les annexes C2 et E2 figurent désormais au dossier : nous l’avons recalculé. L’annexe C2 confirme les deux notes (**35,11 € + 88,59 € = 123,70 €**), partageant une seule table dont onze des douze articles sont divisés exactement au quart et aux trois quarts : c’est la signature de la fonction de partage, qui divise les quantités déjà enregistrées sans ressaisir la ligne, une ligne ainsi divisée ne produit aucune suppression, ce qui explique que la truite, la salade verte et le menu galette n’apparaissent pas à 20h16. Le seul article dont les parts s’écartent de ce partage (le Savagnin, 1,25 / 1,75 au lieu de 0,75 / 2,25) est précisément celui qui figure, à **8,30 €**, parmi les suppressions. Enfin, la chronologie joue contre la thèse d’un encaissement effacé : les notes sont réglées à **19h58 et 20h00**, les suppressions horodatées à **20h16** ; on n’efface pas une recette déjà portée au ticket Z."
   },
   {
-   "kind": "alerte",
-   "couleur": "orange",
-   "titre": "Limite assumée sur cet exemple",
-   "texte": "Cet exemple relève de l’exercice 2023-2024, dont les annexes (C2, E2) ne sont pas au dossier : la lecture ci-dessus est fondée sur les extraits que le service a lui-même reproduits (pages 16 et 17), non sur un recalcul de notre part. Le service relève par ailleurs, ce soir-là, huit lignes « DEL » à 20h16 et des « DEL » antérieures à 19h53 : sept des huit suppressions de 20h16 valent un prix de la carte, et seule la valeur 20,10 € est sans équivalent ; mais, faute des annexes 2023-2024, ces lignes ne peuvent être re-tracées une à une ici. La démonstration complète sur cette soirée suppose la production de l’annexe E2."
+   "kind": "paragraphe",
+   "texte": "L’annexe E2 confirme en outre l’extrait du service à l’identique : le 21/03/2024 à 20h16, **huit lignes « DEL » (ids 52827 à 52834, Z 3370)**, de montants 8,90 / 8,30 / 4,80 / 20,10 / 19,90 / 8,90 / 8,00 / 10,00 €. Sur ces huit valeurs, **sept sont exactement un prix du catalogue C2** ; seule **20,10 € est sans équivalent**. L’extrait reproduit par le service est donc authentique, et il confirme que cette rafale est faite d’articles de la carte, non d’une note escamotée."
   },
   {
    "kind": "titre",
@@ -1901,7 +2031,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Page 7, le service annonce traiter « un seul et unique exemple, parfaitement parlant, de chacune de vos parties d’argument », et en énumère trois : la conversion au forfait, le paiement séparé et les « articles déplacés vers la bonne table ». Les deux premières familles sont traitées (p. 7 à 17) ; la troisième ne l’est jamais : après la page 17, le courrier ouvre directement en page 18 la partie B. Aucun exemple, aucun extrait, aucun décompte n’est opposé aux **62 lignes de l’onglet « Articles déplacés »**, que le service inclut pourtant dans les 944 lignes qu’il qualifie d’« infime partie ». Sur ce point, et sous la même réserve de preuve (le mécanisme est décrit, non chiffré poste par poste), la réponse du 10/07/2026 demeure non contredite : un article saisi sur une table et servi à une autre est retiré de la première et ajouté à la seconde ; le retrait produit une ligne « DEL » sans qu’un euro de recette ne change de place."
+   "texte": "Page 7, le service annonce traiter « un seul et unique exemple, parfaitement parlant, de chacune de vos parties d’argument », et en énumère trois : la conversion au forfait, le paiement séparé et les « articles déplacés vers la bonne table ». Les deux premières familles sont traitées (p. 7 à 17) ; la troisième ne l’est jamais : après la page 17, le courrier ouvre directement en page 18 la partie B. Aucun exemple, aucun extrait, aucun décompte n’est opposé aux **62 lignes de l’onglet « Articles déplacés »**, que le service inclut pourtant dans les 944 lignes qu’il qualifie d’« infime partie ». Sur ce point, la réponse du 10/07/2026 demeure non contredite : un article saisi sur une table et servi à une autre est retiré de la première et ajouté à la seconde ; le retrait produit une ligne « DEL » sans qu’un euro de recette ne change de place."
   },
   {
    "kind": "titre",
@@ -1910,54 +2040,54 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La thèse du service suppose que les convives des tables supprimées ont payé. Il faut alors un canal. Sur l’exercice vérifié 2022-2023, le fichier des règlements (annexe F1) totalise **403 402,87 €**, dont **3 797,95 € d’espèces, soit 0,94 %** ; les **99,06 % restants sont bancarisés** (carte 369 284,19 €, chèques-vacances 13 889,01 €, titres restaurant 11 115,61 €, chèques 5 316,11 €), tous tracés par un tiers. Le montant « DEL » de l’exercice (193 005,09 €) représente **50,8 fois** les espèces réellement encaissées."
+   "texte": "La thèse du service suppose que les convives des tables supprimées ont payé. Il faut alors un canal. Les fichiers de règlements des trois exercices (annexes F1/F2/F3) totalisent respectivement **403 402,87 €, 439 600,30 € et 435 146,29 €**, dont une part d’espèces infime : **3 797,95 € (0,94 %), 8 191,48 € (1,86 %) et 5 343,75 € (1,23 %)**. Les **98 à 99 % restants sont bancarisés** (carte, chèques-vacances, titres restaurant, chèques), tous tracés par un tiers. Le montant « DEL » de chaque exercice représente **50,8 fois, 17,2 fois puis 18,2 fois** les espèces réellement encaissées."
   },
   {
    "kind": "kpis",
    "items": [
     {
-     "label": "Règlements bancarisés (2022-2023)",
-     "valeur": "99,06 %",
-     "sub": "CB, chèques-vacances, titres restaurant, chèques (annexe F1)",
+     "label": "Règlements bancarisés (3 exercices)",
+     "valeur": "98 à 99 %",
+     "sub": "99,06 % en 2022-2023, 98,14 % en 2023-2024, 98,77 % en 2024-2025 (annexes F)",
      "highlight": true,
      "couleur": "teal"
     },
     {
-     "label": "Espèces encaissées (2022-2023)",
-     "valeur": "3 797,95 €",
-     "sub": "0,94 % des 403 402,87 € de règlements",
+     "label": "Espèces encaissées (3 exercices)",
+     "valeur": "17 333,18 €",
+     "sub": "3 797,95 € + 8 191,48 € + 5 343,75 € sur 1 278 149,46 € de règlements",
      "couleur": "blue"
     },
     {
-     "label": "Montant « DEL » 2022-2023 / espèces encaissées",
-     "valeur": "50,8 fois",
-     "sub": "193 005,09 € contre 3 797,95 €",
+     "label": "Montant « DEL » / espèces encaissées",
+     "valeur": "50,8 à 17,2 fois",
+     "sub": "193 005,09 € / 3 797,95 € ; 140 686,55 € / 8 191,48 € ; 97 071,51 € / 5 343,75 €",
      "couleur": "teal"
     }
    ]
   },
   {
    "kind": "paragraphe",
-   "texte": "Ce rapport ne prouve pas à lui seul l’absence de dissimulation, puisqu’une recette dissimulée ne figurerait précisément pas dans ce dénominateur. Mais une dissimulation de cet ordre supposerait un flux d’espèces dont ni la caisse, ni les comptes bancaires ne portent trace, et dont le service — qui a lui-même reproduit le fichier des règlements page 8 — ne fait état nulle part. La proportion d’espèces des deux autres exercices appelle la production des annexes F2/F3."
+   "texte": "Ce rapport ne prouve pas à lui seul l’absence de dissimulation, puisqu’une recette dissimulée ne figurerait précisément pas dans ce dénominateur. Mais une dissimulation de cet ordre supposerait un flux d’espèces dont ni la caisse, ni les comptes bancaires ne portent trace, et dont le service, qui a lui-même reproduit le fichier des règlements page 8, ne fait état nulle part, sur aucun des trois exercices."
   },
   {
    "kind": "chapitre",
    "source": "nous",
    "numero": 3,
-   "titre": "Ce que cela fait tomber, et ce qui reste à produire",
-   "sousTitre": "Sur l’exercice vérifiable, le premier motif de rejet ne caractérise aucune recette dissimulée ; sur les deux autres, la démonstration suppose la production des annexes manquantes."
+   "titre": "Ce que cela fait tomber",
+   "sousTitre": "Sur les trois exercices désormais vérifiables, le premier motif de rejet ne caractérise aucune recette dissimulée : il ne peut fonder ni le rejet de comptabilité, ni la reconstitution de recettes, ni la part du redressement assise sur les 430 763,15 € de lignes « DEL »."
   },
   {
    "kind": "paragraphe",
-   "texte": "La partie A repose sur deux affirmations. La première, que le rapprochement par l’heure et le montant ne peut rien établir, est contredite par la page 13, où le service adopte cette méthode, et par les pages 7-8 et 13, où les lignes qu’il imprime totalisent au centime les notes qu’il reproduit (76,90 €, 207,00 €), chacune unique sur son ticket Z. Nous ne tirons pas de ces rapprochements plus qu’ils ne portent : ce sont des indices, que confortent deux mesures indépendantes de tout appariement."
+   "texte": "La partie A repose sur deux affirmations. La première, que le rapprochement par l’heure et le montant ne peut rien établir, est contredite par la page 13, où le service adopte cette méthode, et par les pages 7-8 et 13, où les lignes qu’il imprime totalisent au centime les notes qu’il reproduit (76,90 €, 207,00 €), chacune unique sur son ticket Z. Nous ne tirons pas de ces rapprochements plus qu’ils ne portent : ce sont des indices, que confortent deux mesures indépendantes de tout appariement et établies sur les trois exercices."
   },
   {
    "kind": "paragraphe",
-   "texte": "La seconde, que la société n’expliquerait qu’« une infime partie » des lignes, déplace une charge de la preuve qui incombe à l’administration : sur quinze pages, aucune suppression n’est identifiée comme une vente encaissée et non déclarée. Répondu en euros sur l’exercice vérifié, le montant se défait : **45,9 % des 193 005,09 € tiennent dans deux fautes de frappe** qu’aucune recette ne peut recouvrir (la plus grosse note de l’année vaut 513,30 €), **99,7 % du montant** a la forme d’un prix de la carte ou de son multiple, le **totalisateur perpétuel progresse sans une rupture** de la somme des 5 658 tickets, et **99,06 % des encaissements sont bancarisés**."
+   "texte": "La seconde, que la société n’expliquerait qu’« une infime partie » des lignes, déplace une charge de la preuve qui incombe à l’administration : sur quinze pages, aucune suppression n’est identifiée comme une vente encaissée et non déclarée. Répondu en euros sur les trois exercices, le montant se défait : **32,0 % des 430 763,15 € tiennent dans quatre fautes de frappe** qu’aucune recette ne peut recouvrir (la plus grosse note d’un exercice atteint 1 184,10 €), **99,6 à 99,7 % du montant** a la forme d’un prix de la carte ou de son multiple, le **totalisateur perpétuel progresse sans une seule rupture** de la somme des 16 605 tickets, et **98 à 99 % des encaissements sont bancarisés**."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le motif ne caractérise donc pas, sur l’exercice 2022-2023, les irrégularités graves et répétées qu’exige le rejet d’une comptabilité : il ne peut, pour cet exercice, fonder ni le rejet, ni la reconstitution de recettes, ni la part du redressement assise sur les 193 005,09 €. Pour les exercices 2023-2024 (140 686,55 €) et 2024-2025 (97 071,51 €), la même démonstration est à faire dès que seront versées les annexes E/C/F/G/H correspondantes ; en l’état, ces montants reposent sur des pièces que le dossier ne contient pas, ce qui fragilise d’autant le grief que le service en tire."
+   "texte": "Le motif ne caractérise donc, sur aucun des trois exercices, les irrégularités graves et répétées qu’exige le rejet d’une comptabilité : il ne peut fonder ni le rejet, ni la reconstitution de recettes, ni la part du redressement assise sur les 430 763,15 € de lignes « DEL ». La seule limite subsistante tient à la nature du rapprochement ligne à ligne, que la société peut lever en produisant l’export porteur de l’identifiant de table (ou l’attestation de l’éditeur qu’il n’existe pas) ; mais les deux preuves qui emportent la démonstration (le totalisateur perpétuel et la forme des montants) ne dépendent d’aucun appariement et valent, à la formule, sur les trois exercices."
   },
   {
    "kind": "titre",
@@ -1965,27 +2095,27 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "« **944 lignes documentées sur 21 302 : vous n’expliquez qu’une infime partie.** » L’objection confond un fichier d’exemples avec un inventaire. La réponse au volume est en euros et sur la totalité de l’exercice vérifié : 99,7 % des 193 005,09 € valent un prix de la carte ou son multiple, et 45,9 % tiennent dans deux fautes de frappe impossibles à encaisser. La charge d’établir qu’une suppression correspond à une recette dissimulée pèse, elle, sur l’administration, qui ne l’a fait pour aucune ligne."
+   "texte": "« **944 lignes documentées sur 21 302 : vous n’expliquez qu’une infime partie.** » L’objection confond un fichier d’exemples avec un inventaire. La réponse au volume est en euros et sur les trois exercices : 99,6 à 99,7 % des 430 763,15 € valent un prix de la carte ou son multiple, et 32,0 % tiennent dans quatre fautes de frappe impossibles à encaisser. La charge d’établir qu’une suppression correspond à une recette dissimulée pèse, elle, sur l’administration, qui ne l’a fait pour aucune ligne."
   },
   {
    "kind": "paragraphe",
-   "texte": "« **Sans identifiant commun, aucun rapprochement certain n’est possible.** » Le constat est exact, mais l’absence de colonne commune est le fait de l’éditeur, qu’aucune disposition n’oblige à produire une donnée que la caisse n’exporte pas. Le rapprochement par date, heure, montant et ticket Z n’est pas une certitude ligne à ligne — nous ne le présentons pas comme telle — mais un indice, que le service pratique lui-même page 13. La certitude réclamée suppose l’export porteur de l’identifiant, que le service n’a pas demandé et que la société peut produire."
+   "texte": "« **Sans identifiant commun, aucun rapprochement certain n’est possible.** » Le constat est exact, mais l’absence de colonne commune est le fait de l’éditeur, qu’aucune disposition n’oblige à produire une donnée que la caisse n’exporte pas. Le rapprochement par date, heure, montant et ticket Z n’est pas une certitude ligne à ligne, nous ne le présentons pas comme telle, mais un indice, que le service pratique lui-même page 13. La certitude réclamée suppose l’export porteur de l’identifiant, que le service n’a pas demandé et que la société peut produire."
   },
   {
    "kind": "paragraphe",
-   "texte": "« **Un lien par les seules heures et montants ne peut, au regard du BOFiP, emporter la certitude exigée.** » Le même BOFiP impose un totalisateur perpétuel inaltérable et non purgeable. Sur l’exercice 2022-2023, ce compteur progresse de la somme exacte des 5 658 tickets (403 370,42 €), sans un écart d’un centime ni une rupture : une recette retirée y laisserait une trace, il n’en porte aucune. Le rapprochement n’est donc pas le seul appui : il s’ajoute à la forme des montants et au totalisateur, qui ne dépendent d’aucun appariement."
+   "texte": "« **Un lien par les seules heures et montants ne peut, au regard du BOFiP, emporter la certitude exigée.** » Le même BOFiP impose un totalisateur perpétuel inaltérable et non purgeable. Sur les trois exercices, ce compteur progresse de la somme exacte des 16 605 tickets, sans un écart d’un centime ni une rupture, et reste continu d’un exercice à l’autre : une recette retirée y laisserait une trace, il n’en porte aucune. Le rapprochement n’est donc pas le seul appui : il s’ajoute à la forme des montants et au totalisateur, qui ne dépendent d’aucun appariement."
   },
   {
    "kind": "paragraphe",
-   "texte": "« **Les deux plus grosses lignes sont des recettes effacées.** » Elles valent 68 993,10 € et 19 600,00 € un jour où le restaurant a encaissé 2 563,40 € et 2 209,60 €, et où sa plus grosse note de l’année entière atteint 513,30 €. Aucune recette de cet ordre n’existe nulle part ; ce sont les fautes de frappe sur la quantité que la réponse décrit, et le service qualifie ainsi."
+   "texte": "« **Les plus grosses lignes sont des recettes effacées.** » Elles valent 68 993,10 €, 19 600,00 €, 44 955,00 € et 4 455,00 €, des jours où le restaurant a encaissé 2 563,40 €, 2 209,60 €, 1 686,40 € et 2 302,50 €, et où sa plus grosse note de l’année atteint au plus 1 184,10 €. Chaque prix unitaire est un prix réel de la carte (Menu « Demi Lune » à 45 € puis 55 €, Menu du jour à 100 €) ; c’est la quantité (999, 196, 81, 2 518) qui est aberrante. Ce sont les fautes de frappe sur la quantité que la réponse décrit, et le service qualifie ainsi."
   },
   {
    "kind": "piecejointe",
-   "intro": "Pièce recalculée à la formule à partir des seules annexes de caisse de l’exercice 2022-2023 remises au titre de l’article L. 47 A, II du LPF (annexes C1, E1, F1, G1, H1), seules présentes au dossier. Neuf onglets : méthode, agrégats (ventilation en euros par catégorie, médiane, moyenne, valeurs distinctes), re-traçage des deux lignes ≥ 1 000 €, mesure d’univocité de la clé date/heure/montant/Z, contrôle du totalisateur perpétuel (annexe G1), règlements par mode (annexe F1), tickets clôturés à 0,00 € (annexe H1), catalogue des prix (annexe C1) et détail des 8 014 lignes « DEL ».",
+   "intro": "Pièce recalculée à la formule à partir des annexes de caisse des TROIS exercices remises au titre de l’article L. 47 A, II du LPF (E1/E2/E3, C1/C2/C3, F1/F2/F3, G1/G2/G3, H1/H2/H3), désormais toutes présentes au dossier. Dix-sept onglets : une Méthode, une Synthèse dont tous les agrégats des trois exercices sont des formules SUMIF/COUNTIF recalculées sous LibreOffice (ventilation en euros par catégorie, médiane implicite, lignes aberrantes, règlements par mode et part d’espèces, totalisateur perpétuel et son chaînage, tickets à 0,00 € et jumeaux), puis, par exercice, les onglets sources Catalogue, DEL (avec flag « prix de la carte » par formule), Règlements, Chainage et TicketsZero.",
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
-     "label": "Suppressions « DEL » 2022-2023 : ventilation en euros, re-traçage des grosses lignes, univocité, totalisateur perpétuel et modes de règlement — tout à la formule (XLSX, 9 onglets)"
+     "label": "Suppressions « DEL » des 3 exercices : ventilation en euros, re-traçage des 4 grosses lignes, totalisateur perpétuel, modes de règlement et tickets à zéro, tout à la formule, recalculé sous LibreOffice (XLSX, 17 onglets)"
     },
     {
      "fichier": "pieces-reponse-1/R1-suppressions-rapprochements.xlsx",
@@ -1999,7 +2129,7 @@
   }
  ],
  "entete": {
-  "reponseCourte": "Le grief est un montant. Sur le seul exercice dont les annexes de caisse figurent au dossier (2022-2023, 193 005,09 €), 45,9 % du montant tient dans deux fautes de frappe qu’aucune recette ne peut recouvrir, 99,7 % a la forme d’un prix de la carte, et le totalisateur perpétuel inaltérable progresse sans une rupture de la somme des 5 658 tickets. Le rapprochement par l’heure et le montant est un indice, non une preuve ligne à ligne. Les 237 758,06 € des deux autres exercices restent à vérifier faute d’annexes.",
-  "statut": "partiel"
+  "reponseCourte": "Le grief est un montant : 430 763,15 € de lignes « DEL » sur trois exercices, désormais tous recalculés à la formule sur les annexes de caisse. Sur chacun, 99,6 à 99,7 % du montant a la forme d’un prix de la carte, 32,0 % tient dans quatre fautes de frappe sur la quantité qu’aucune recette ne peut recouvrir, et le totalisateur perpétuel inaltérable progresse sans une seule rupture de la somme des 16 605 tickets, en restant continu d’un exercice à l’autre. 98 à 99 % des encaissements sont bancarisés. Le motif ne caractérise aucune recette dissimulée et ne peut fonder le rejet de comptabilité.",
+  "statut": "demonte"
  }
 }

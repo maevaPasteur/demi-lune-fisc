@@ -6883,6 +6883,55 @@
   },
   {
    "kind": "titre",
+   "texte": "Les avoirs fournisseur que le service n’a pas déduits de ses achats"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le disponible du service est bâti sur les achats bruts du compte 601200, sans en retrancher les avoirs émis par le fournisseur. Les factures Franche-Comté Boissons Services comportent six avoirs autonomes (notes de crédit). Trois portent sur du volume de boisson et auraient dû venir en diminution des achats : un avoir de Cidre Brut (n° 520312, 16/07/2024), un avoir de Grand Marnier (n° 526876, 25/09/2024) et un avoir de BIB Bourgogne Aligoté (n° 532782, 11/12/2024). Ensemble, ils représentent 204,65 € HT et 34,6 litres de boisson que le service a laissés dans son disponible."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les avoirs de boisson que le service n’a pas déduits (exercice 2024-2025)",
+   "minWidth": 720,
+   "colonnes": [
+    {"label": "N° avoir / date"},
+    {"label": "Produit"},
+    {"label": "Montant HT", "align": "right"},
+    {"label": "Volume de boisson", "align": "right"}
+   ],
+   "lignes": [
+    [
+     {"v": "520312 / 16/07/2024"},
+     {"v": "Cidre Brut Bolée Armoriq 75 cl (30 unités)"},
+     {"v": "83,40 €", "align": "right"},
+     {"v": "22,5 L", "align": "right"}
+    ],
+    [
+     {"v": "526876 / 25/09/2024"},
+     {"v": "Grand Marnier Cordon Rouge 70 cl (3 unités)"},
+     {"v": "66,96 €", "align": "right"},
+     {"v": "2,1 L", "align": "right"}
+    ],
+    [
+     {"v": "532782 / 11/12/2024"},
+     {"v": "BIB Bourgogne Aligoté 10 L (1 unité)"},
+     {"v": "54,29 €", "align": "right"},
+     {"v": "10,0 L", "align": "right"}
+    ],
+    [
+     {"v": "Total avoirs de boisson"},
+     {"v": "trois notes de crédit"},
+     {"v": "204,65 €", "align": "right", "badge": "ok"},
+     {"v": "34,6 L", "align": "right", "badge": "ok"}
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Les trois autres avoirs sont hors champ des boissons (un Chardonnay non listé, un article d’épicerie) ou une reprise d’emballage (un fût Affligem en consigne), sans volume de boisson. Les quarante retours portés en quantités négatives sur les factures étaient, eux, déjà déduits des achats. L’effet est modeste et circonscrit à l’exercice 2024-2025 ; il n’en reste pas moins que le disponible opposé par le service, et les « volumes disparus » qui s’en déduisent, sont construits sur des achats surévalués de 34,6 L. La pièce R2-avoirs-fournisseur.xlsx en donne le détail, recalculé par formule."
+  },
+  {
+   "kind": "titre",
    "texte": "Ce que le service n’établit pas",
    "numero": "2.11"
   },
@@ -6988,15 +7037,23 @@
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
-     "label": "R2 — Bilan matière produit par produit (à formules), Calvados itemisé, 15 produits déficitaires"
+     "label": "R2 - Bilan matière produit par produit (à formules), Calvados itemisé, 15 produits déficitaires"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-avoirs-fournisseur.xlsx",
+     "label": "R2 - Avoirs fournisseur non déduits par le service : 204,65 € HT et 34,6 L de boisson (3 avoirs), effet sur le disponible, recalculés par formule"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-correspondance-libelles.xlsx",
+     "label": "R2 - Correspondance des libellés : confusions de code, codes fantômes (7 bières), boutons mutualisés et Cubis, qui expliquent les écarts sans dissimulation"
     },
     {
      "fichier": "pieces-reponse-1/R1-conso-achats-bouclage.xlsx",
-     "label": "R1 — Bouclage du Calvados, cause des douze cellules, bloc des cidres, ligne CAFE"
+     "label": "R1 - Bouclage du Calvados, cause des douze cellules, bloc des cidres, ligne CAFE"
     },
     {
      "fichier": "pieces-reponse-1/R1-conso-achats-controles.xlsx",
-     "label": "R1 — Contrôles arithmétiques et classement des cellules par sens de l’écart"
+     "label": "R1 - Contrôles arithmétiques et classement des cellules par sens de l’écart"
     }
    ]
   }

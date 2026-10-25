@@ -3,11 +3,10 @@
   "slug": "quantites-inferieures-a-un",
   "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
   "limites": [
-   "Résidu concédé : 111 articles fractionnés sur 20 tables (dont 69 demi-articles « 0,50 » dont la contrepartie n'a pas été retrouvée dans la fenêtre de regroupement) ne se referment pas sur un entier. Incidence maximale théorique recalculée par formule : 607,23 € de chiffre d'affaires sur les trois exercices (158,73 € / 293,40 € / 155,10 €).",
-   "Périmètre : 1 913 notes portent une quantité < 1 ; 1 862 ont été rattachées à une table reconstituée. 51 notes fractionnaires restent isolées (non rattachées à une table) et ne sont pas chiffrées ici faute de regroupement. 5 des 1 862 notes de partage n'ont pas vu leur règlement retrouvé à l'annexe F.",
+   "Résidu concédé : 50 articles fractionnés sur 8 tables (25 demi-articles « 0,50 » ou « 1,50 » dont la contrepartie n'a pas été retrouvée dans la fenêtre de regroupement, et 25 articles de partage à N convives incomplètement rattaché) ne se referment pas sur un entier. Incidence maximale théorique recalculée par formule, directement sur les annexes C-1 à C-3 : 264,98 € de chiffre d'affaires sur les trois exercices (78,33 € / 186,65 € / 0,00 €).",
+   "Périmètre : 1 913 notes portent une quantité fractionnaire ; 1 849 ont été rattachées à une table reconstituée. 64 notes fractionnaires restent isolées (non rattachées à une table) et ne sont pas chiffrées ici faute de regroupement. Les 1 849 notes rattachées sont toutes retrouvées encaissées à l'annexe F.",
    "Le rattachement des notes en « tables » repose sur une heuristique (notes du même jour encaissées à moins de quinze minutes et portant des fractions sur les mêmes articles) : ce paramètre n'est pas une donnée de caisse. Le résidu chiffré est donc un majorant qui dépend en partie de ce réglage.",
-   "Les lignes brutes des annexes C (détail des tickets) et F (règlements) ne sont produites que pour l'exercice 2022-2023 (ANNEXE-C1 / ANNEXE-F1). Pour 2023-2024 et 2024-2025, la recomposition repose sur la reconstruction de la pièce R1, non re-dérivée d'une annexe primaire ; leur production reste à demander.",
-   "Le rapprochement du total encaissé (95 843,38 €) au chiffre d'affaires déclaré ligne à ligne n'est pas reproduit dans la pièce : il est établi au niveau des règlements (annexe F), non au niveau de la déclaration."
+   "Le rapprochement du total encaissé (95 237,08 €) au chiffre d'affaires déclaré ligne à ligne n'est pas reproduit dans la pièce : il est établi au niveau des règlements (annexe F), non au niveau de la déclaration."
   ]
  },
  "sections": [
@@ -441,7 +440,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service reproduit aussi le commentaire qui accompagne ces tableaux dans notre réponse : « Ces fractions sont marginales et tracées : seules 167 notes (environ 1 % des 16 610 notes) portent une fraction autre que 0,50, et plus de 99 % d’entre elles se réconcilient au centime (somme des lignes = total encaissé du ticket). Loin d’occulter du chiffre d’affaires, ces quantités tracent intégralement l’encaissement : c’est l’inverse d’une dissimulation » (p. 28). Il mentionne enfin la pièce jointe citée en réponse, « 08-rf-quantites-anormales.xlsx » (p. 28). Deux chiffres de cet extrait doivent être rectifiés et le sont dans toute la suite de cette page : d’une part le dénominateur, car le recomptage exhaustif des annexes C-1 à C-3 donne 16 607 notes (5 660 + 5 529 + 5 418), soit 3 de moins que le 16 610 arrondi du mémoire de juillet ; d’autre part le compte des fractions autres que 0,50, car le tableau reproduit ci-dessus en additionne 169 (81 + 58 + 15 + 7 + 7 + 1) et non 167. Ces deux corrections jouent contre nous à la marge et sont assumées."
+   "texte": "Le service reproduit aussi le commentaire qui accompagne ces tableaux dans notre réponse : « Ces fractions sont marginales et tracées : seules 167 notes (environ 1 % des 16 610 notes) portent une fraction autre que 0,50, et plus de 99 % d’entre elles se réconcilient au centime (somme des lignes = total encaissé du ticket). Loin d’occulter du chiffre d’affaires, ces quantités tracent intégralement l’encaissement : c’est l’inverse d’une dissimulation » (p. 28). Il mentionne enfin la pièce jointe citée en réponse, « 08-rf-quantites-anormales.xlsx » (p. 28). Deux chiffres de cet extrait doivent être rectifiés et le sont dans toute la suite de cette page : d’une part le dénominateur, car le recomptage exhaustif des annexes C-1 à C-3 donne 16 624 notes (5 660 + 5 534 + 5 430), en léger écart avec le 16 610 arrondi du mémoire de juillet ; d’autre part le compte des fractions autres que 0,50, car le tableau reproduit ci-dessus en additionne 169 (81 + 58 + 15 + 7 + 7 + 1) et non 167. Ces deux corrections jouent contre nous à la marge et sont assumées."
   },
   {
    "kind": "paragraphe",
@@ -548,7 +547,7 @@
     {
      "label": "Fractions autres que 0,50",
      "valeur": "169 notes",
-     "sub": "environ 1 % des 16 607 notes recomptées (tableau reproduit p. 28 : 81+58+15+7+7+1)"
+     "sub": "environ 1 % des 16 624 notes recomptées (tableau reproduit p. 28 : 81+58+15+7+7+1)"
     },
     {
      "label": "Fichiers porteurs du numéro unique",
@@ -558,8 +557,8 @@
     },
     {
      "label": "Notes recomposées à partir des seuls fichiers du service",
-     "valeur": "1 862",
-     "sub": "regroupées en 791 tables sur les annexes C-1 à C-3 et F-1 à F-3",
+     "valeur": "1 849",
+     "sub": "regroupées en 866 tables sur les annexes C-1 à C-3 et F-1 à F-3",
      "couleur": "teal"
     }
    ]
@@ -569,7 +568,7 @@
    "source": "nous",
    "numero": 2,
    "titre": "Notre réponse : une quantité fractionnaire n’est pas une quantité vendue, c’est une part d’addition",
-   "sousTitre": "Sur les trois exercices, 791 tables partagées ont été recomposées à partir des seuls fichiers remis au vérificateur : dans 97,8 % des cas la somme des fractions d’un même article redonne exactement un nombre entier, et 99,7 % des notes concernées sont encaissées."
+   "sousTitre": "Sur les trois exercices, 866 tables partagées ont été recomposées à partir des seuls fichiers remis au vérificateur : dans 99,0 % des cas la somme des fractions d’un même article redonne exactement un nombre entier, et 100 % des notes concernées sont encaissées."
   },
   {
    "kind": "titre",
@@ -582,19 +581,19 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Cette explication se vérifie arithmétiquement. Si les fractions sont bien des parts, alors en additionnant les notes d’une même table, chaque article partagé doit retrouver une **quantité entière** : 0,50 + 0,50 = 1, 0,33 + 0,34 + 0,33 = 1. Nous avons donc recomposé chaque table et mesuré, article par article, la proportion de fractions qui se referment effectivement sur un entier — sans préjuger du résultat, et en assumant le résidu qui ne se referme pas."
+   "texte": "Cette explication se vérifie arithmétiquement. Si les fractions sont bien des parts, alors en additionnant les notes d’une même table, chaque article partagé doit retrouver une **quantité entière** : 0,50 + 0,50 = 1, 0,33 + 0,34 + 0,33 = 1. Nous avons donc recomposé chaque table et mesuré, article par article, la proportion de fractions qui se referment effectivement sur un entier - sans préjuger du résultat, et en assumant le résidu qui ne se referme pas."
   },
   {
    "kind": "paragraphe",
-   "texte": "Nous l’avons conduit de façon exhaustive, sur les seuls fichiers que le service a lui-même exploités : **ANNEXE-C1 à C-3** (détail des tickets, 16 607 notes) pour les quantités, **ANNEXE-F1 à F-3** (règlements) pour l’encaissement. Méthode : les notes d’une même journée encaissées à moins de quinze minutes d’intervalle et portant des fractions sur les mêmes articles sont regroupées en une table ; les quantités y sont agrégées par article et par prix unitaire ; la somme est comparée à l’entier le plus proche."
+   "texte": "Nous l’avons conduit de façon exhaustive, sur les seuls fichiers que le service a lui-même exploités : **ANNEXE-C1 à C-3** (détail des tickets, 16 624 notes) pour les quantités, **ANNEXE-F1 à F-3** (règlements) pour l’encaissement. Méthode : les notes d’une même journée encaissées à moins de quinze minutes d’intervalle et portant des fractions sur les mêmes articles sont regroupées en une table ; les quantités y sont agrégées par article et par prix unitaire ; la somme est comparée à l’entier le plus proche."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le résultat est reproduit ci-dessous, exercice par exercice. Il est recalculé par formule dans la pièce jointe **R2-quantites-recomposition.xlsx** : l’onglet « Sources » recopie les 5 120 lignes d’articles fractionnés, l’onglet « Calcul » applique à chacune le test d’entier et le chiffrage du complément manquant par formule, et l’onglet « Synthèse » resomme le tout. Aucun résultat n’y est saisi en dur : chaque total affiché ici est le produit d’une formule ouverte, vérifiable cellule par cellule."
+   "texte": "Le résultat est reproduit ci-dessous, exercice par exercice. Il est recalculé par formule dans la pièce jointe **R2-quantites-recomposition.xlsx** : l’onglet « Sources » recopie les 5 062 lignes d’articles fractionnés, l’onglet « Calcul » applique à chacune le test d’entier et le chiffrage du complément manquant par formule, et l’onglet « Synthèse » resomme le tout. Aucun résultat n’y est saisi en dur : chaque total affiché ici est le produit d’une formule ouverte, vérifiable cellule par cellule."
   },
   {
    "kind": "tableau",
-   "titre": "Recomposition exhaustive des tables partagées (annexes C-1 à C-3 et F-1 à F-3)",
+   "titre": "Recomposition exhaustive des tables partagées, recalculée directement sur les annexes C-1 à C-3 et F-1 à F-3",
    "minWidth": 860,
    "colonnes": [
     {
@@ -605,7 +604,7 @@
      "align": "right"
     },
     {
-     "label": "Notes portant une quantité < 1",
+     "label": "Notes à quantité fractionnaire",
      "align": "right"
     },
     {
@@ -643,24 +642,24 @@
       "align": "right"
      },
      {
-      "v": "263",
+      "v": "294",
       "align": "right"
      },
      {
-      "v": "1 683",
+      "v": "1 666",
       "align": "right"
      },
      {
-      "v": "1 639",
+      "v": "1 641",
       "align": "right"
      },
      {
-      "v": "97,4 %",
+      "v": "98,5 %",
       "align": "right",
       "badge": "ok"
      },
      {
-      "v": "637 / 638",
+      "v": "634 / 634",
       "align": "right"
      }
     ],
@@ -669,7 +668,7 @@
       "v": "2023-2024"
      },
      {
-      "v": "5 529",
+      "v": "5 534",
       "align": "right"
      },
      {
@@ -677,11 +676,11 @@
       "align": "right"
      },
      {
-      "v": "278",
+      "v": "300",
       "align": "right"
      },
      {
-      "v": "1 797",
+      "v": "1 781",
       "align": "right"
      },
      {
@@ -689,12 +688,12 @@
       "align": "right"
      },
      {
-      "v": "97,7 %",
+      "v": "98,6 %",
       "align": "right",
       "badge": "ok"
      },
      {
-      "v": "650 / 653",
+      "v": "649 / 649",
       "align": "right"
      }
     ],
@@ -703,7 +702,7 @@
       "v": "2024-2025"
      },
      {
-      "v": "5 418",
+      "v": "5 430",
       "align": "right"
      },
      {
@@ -711,24 +710,24 @@
       "align": "right"
      },
      {
-      "v": "250",
+      "v": "272",
       "align": "right"
      },
      {
-      "v": "1 640",
+      "v": "1 615",
       "align": "right"
      },
      {
-      "v": "1 614",
+      "v": "1 615",
       "align": "right"
      },
      {
-      "v": "98,4 %",
+      "v": "100 %",
       "align": "right",
       "badge": "ok"
      },
      {
-      "v": "570 / 571",
+      "v": "566 / 566",
       "align": "right"
      }
     ],
@@ -738,7 +737,7 @@
       "fw": 700
      },
      {
-      "v": "16 607",
+      "v": "16 624",
       "align": "right",
       "fw": 700
      },
@@ -748,28 +747,28 @@
       "fw": 700
      },
      {
-      "v": "791",
+      "v": "866",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "5 120",
+      "v": "5 062",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "5 009",
+      "v": "5 012",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "97,8 %",
+      "v": "99,0 %",
       "align": "right",
       "fw": 700,
       "badge": "ok"
      },
      {
-      "v": "1 857 / 1 862",
+      "v": "1 849 / 1 849",
       "align": "right",
       "fw": 700
      }
@@ -781,47 +780,47 @@
    "items": [
     {
      "label": "Tables partagées recomposées",
-     "valeur": "791",
-     "sub": "regroupant 1 862 notes sur les trois exercices",
+     "valeur": "866",
+     "sub": "regroupant 1 849 notes sur les trois exercices",
      "couleur": "teal"
     },
     {
      "label": "Articles dont la somme des fractions est entière",
-     "valeur": "5 009 sur 5 120",
-     "sub": "soit 97,8 % : la fraction se referme sur un article unique",
+     "valeur": "5 012 sur 5 062",
+     "sub": "soit 99,0 % : la fraction se referme sur un article unique",
      "highlight": true,
      "couleur": "teal"
     },
     {
      "label": "Tables entièrement reconstituées",
-     "valeur": "771 sur 791",
+     "valeur": "858 sur 866",
      "sub": "tous les articles fractionnés y somment à un entier"
     },
     {
      "label": "Notes encaissées",
-     "valeur": "1 857 sur 1 862",
-     "sub": "règlement retrouvé à l’annexe F, au centime (99,7 %) ; 5 notes restent sans règlement retrouvé",
+     "valeur": "1 849 sur 1 849",
+     "sub": "règlement retrouvé à l’annexe F, au centime (100 %)",
      "couleur": "teal"
     },
     {
      "label": "Encaissements des tables partagées",
-     "valeur": "95 843,38 €",
-     "sub": "règlements retrouvés à l’annexe F pour 1 857 des 1 862 notes ; rapprochement au CA déclaré établi au niveau des règlements",
+     "valeur": "95 237,08 €",
+     "sub": "règlements retrouvés à l’annexe F pour 1 849 des 1 849 notes ; rapprochement au CA déclaré établi au niveau des règlements",
      "couleur": "blue"
     }
    ]
   },
   {
    "kind": "titre",
-   "texte": "Le résidu de 2,2 % : ce qui ne se referme pas, identifié et chiffré"
+   "texte": "Le résidu de 1,0 % : ce qui ne se referme pas, identifié et chiffré"
   },
   {
    "kind": "paragraphe",
-   "texte": "La recomposition ne se referme pas partout, et nous ne le masquons pas. Sur les 5 120 articles fractionnés, **111 (2,2 %) ne retombent pas sur un entier** ; ils se concentrent sur **20 tables** (771 des 791 tables se referment donc intégralement). Pour chacun de ces 111 articles, la pièce jointe R2 calcule par formule le « complément manquant », c’est-à-dire le montant qu’il faudrait, au maximum, pour atteindre l’entier supérieur si la ou les parts complémentaires n’existaient réellement pas. Ce majorant théorique s’élève, sur les trois exercices réunis, à **607,23 €**."
+   "texte": "La recomposition ne se referme pas partout, et nous ne le masquons pas. Sur les 5 062 articles fractionnés, **50 (1,0 %) ne retombent pas sur un entier** ; ils se concentrent sur **8 tables** (858 des 866 tables se referment donc intégralement). Pour chacun de ces 50 articles, la pièce jointe R2 calcule par formule le « complément manquant », c’est-à-dire le montant qu’il faudrait, au maximum, pour atteindre l’entier supérieur si la ou les parts complémentaires n’existaient réellement pas. Ce majorant théorique s’élève, sur les trois exercices réunis, à **264,98 €**."
   },
   {
    "kind": "tableau",
-   "titre": "Le résidu non refermé, article par article puis en euros (pièce R2, onglets « Calcul » et « Résidu 20 tables »)",
+   "titre": "Le résidu non refermé, article par article puis en euros (pièce R2, onglets « Calcul » et « Résidu (8 tables) »)",
    "minWidth": 820,
    "colonnes": [
     {
@@ -850,19 +849,19 @@
       "v": "2022-2023"
      },
      {
-      "v": "1 683",
+      "v": "1 666",
       "align": "right"
      },
      {
-      "v": "44",
+      "v": "25",
       "align": "right"
      },
      {
-      "v": "—",
+      "v": "3",
       "align": "right"
      },
      {
-      "v": "158,73 €",
+      "v": "78,33 €",
       "align": "right"
      }
     ],
@@ -871,19 +870,19 @@
       "v": "2023-2024"
      },
      {
-      "v": "1 797",
+      "v": "1 781",
       "align": "right"
      },
      {
-      "v": "41",
+      "v": "25",
       "align": "right"
      },
      {
-      "v": "—",
+      "v": "5",
       "align": "right"
      },
      {
-      "v": "293,40 €",
+      "v": "186,65 €",
       "align": "right"
      }
     ],
@@ -892,19 +891,19 @@
       "v": "2024-2025"
      },
      {
-      "v": "1 640",
+      "v": "1 615",
       "align": "right"
      },
      {
-      "v": "26",
+      "v": "0",
       "align": "right"
      },
      {
-      "v": "—",
+      "v": "0",
       "align": "right"
      },
      {
-      "v": "155,10 €",
+      "v": "0,00 €",
       "align": "right"
      }
     ],
@@ -914,22 +913,22 @@
       "fw": 700
      },
      {
-      "v": "5 120",
+      "v": "5 062",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "111",
+      "v": "50",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "20",
+      "v": "8",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "607,23 €",
+      "v": "264,98 €",
       "align": "right",
       "fw": 700,
       "badge": "warn"
@@ -939,15 +938,15 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Ce résidu se décompose en deux familles, que nous décrivons telles qu’elles sont. **Première famille : 69 demi-articles « orphelins »** — un seul « 0,50 » porté sur une note, sans autre moitié retrouvée dans la table reconstituée (ainsi le 7 juillet 2022, note n° 16 : Menu Végétarien, Camembert Rôti, Glace 3 boules et Expresso, chacun à 0,50 seul ; ou le 15 septembre 2022, note n° 15 : cinq articles à 0,50 seul). Ces 69 demi-articles ont été **facturés et encaissés pour 416,00 €** (déjà au chiffre d’affaires), et leur moitié complémentaire, si elle manquait vraiment, représenterait au plus **416,00 €**. **Seconde famille : 42 articles dont la somme n’est pas un multiple de 0,50** (0,33 ; 0,67 ; 0,80 ; 1,34 ; 1,60 ; 2,40). Ces valeurs ne sont pas aléatoires : 0,67 est la somme de deux tiers d’un partage à trois (0,33 + 0,34) dont la troisième note n’a pas été rattachée, 0,80 quatre cinquièmes d’un partage à cinq, 1,34 le double de 0,67. Elles trahissent des partages à N convives **incomplètement rattachés**, non des quantités inventées ; mais faute d’avoir localisé la part manquante dans la pièce, elles sont elles aussi versées au résidu, pour **101,73 €** au maximum."
+   "texte": "Ce résidu se décompose en deux familles, que nous décrivons telles qu'elles sont. **Première famille : 25 demi-articles « orphelins »** dont la somme reste un multiple impair de 0,50 (un « 0,50 » ou un « 1,50 » dont la part complémentaire n'a pas été retrouvée dans la table reconstituée). Ils se concentrent tous sur l'exercice 2023-2024 (ainsi le 14 mai 2023 : VIN PAILLE, CAMEMBERT ROTI, ASSIETTE PERE GREGOIRE et PICHET ALIGOTE, chacun à 0,50 seul). Leur part complémentaire, si elle manquait vraiment, représenterait au plus **186,65 €**. **Seconde famille : 25 articles dont la somme n'est pas un multiple de 0,50** (0,67 ; 0,80 ; 1,34 ; 1,60 ; 2,40). Ces valeurs ne sont pas aléatoires : 0,67 est la somme de deux tiers d'un partage à trois (0,33 + 0,34) dont la troisième note n'a pas été rattachée, 0,80 quatre cinquièmes d'un partage à cinq. Elles se concentrent toutes sur l'exercice 2022-2023 (ainsi le 11 mars 2023, treize articles à 0,67, deux tiers d'un partage à trois) et trahissent des partages à N convives **incomplètement rattachés**, non des quantités inventées ; faute d'avoir localisé la part manquante dans la pièce, elles sont elles aussi versées au résidu, pour **78,33 €** au maximum."
   },
   {
    "kind": "paragraphe",
-   "texte": "Ce résidu est précisément le reproche que le service formulait sur la table n° 13 (« aucune autre table ne fait mention de l’autre moitié »). Nous l’admettons pour ces 20 tables et le bornons : à supposer que ces 607,23 € correspondent tous à des recettes réellement absentes — hypothèse maximaliste, puisque la part correspondante est le plus souvent encaissée hors de la fenêtre de quinze minutes retenue, ou commandée en supplément par un seul convive — leur incidence resterait de **607,23 € de chiffre d’affaires sur trois exercices**. Le service ne chiffre d’ailleurs, sous le motif D, aucun montant : il ne propose même pas ce résidu comme base de rehaussement. La recomposition établit donc que la quasi-totalité des fractions se referme, et que l’irréductible, loin d’être « l’essentiel » comme le laisse entendre le service, se mesure en centaines d’euros, non en dizaines de milliers."
+   "texte": "Ce résidu est précisément le reproche que le service formulait sur la table n° 13 (« aucune autre table ne fait mention de l’autre moitié »). Nous l’admettons pour ces 8 tables et le bornons : à supposer que ces 264,98 € correspondent tous à des recettes réellement absentes - hypothèse maximaliste, puisque la part correspondante est le plus souvent encaissée hors de la fenêtre de quinze minutes retenue, ou commandée en supplément par un seul convive - leur incidence resterait de **264,98 € de chiffre d’affaires sur trois exercices**. Le service ne chiffre d’ailleurs, sous le motif D, aucun montant : il ne propose même pas ce résidu comme base de rehaussement. La recomposition établit donc que la quasi-totalité des fractions se referme, et que l’irréductible, loin d’être « l’essentiel » comme le laisse entendre le service, se mesure en centaines d’euros, non en dizaines de milliers."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le périmètre doit lui aussi être dit en entier. Sur les **1 913 notes** portant une quantité inférieure à 1, **1 862** ont été rattachées à une table reconstituée ; **51 notes fractionnaires restent isolées**, non rattachées à une table, et ne sont donc pas chiffrées ci-dessus. Parmi les 1 862 notes rattachées, **5 n’ont pas vu leur règlement retrouvé à l’annexe F** (1 857 sur 1 862, soit 99,7 %). Ces 51 + 5 points de donnée sont signalés sans être habillés : ils appellent, pour être levés, la production des annexes C et F des exercices 2023-2024 et 2024-2025, qui n’ont pas été jointes."
+   "texte": "Le périmètre doit lui aussi être dit en entier. Sur les **1 913 notes** portant une quantité fractionnaire, **1 849** ont été rattachées à une table reconstituée ; **64 notes fractionnaires restent isolées**, non rattachées à une table, et ne sont donc pas chiffrées ci-dessus. Les 1 849 notes rattachées sont toutes retrouvées encaissées à l'annexe F (100 %). Ces 64 notes isolées sont signalées sans être habillées : elles tiennent au seul réglage de la fenêtre de regroupement de quinze minutes, non à une donnée manquante, puisque les annexes C et F des trois exercices sont désormais toutes au dossier et que la recomposition est menée directement sur elles."
   },
   {
    "kind": "titre",
@@ -956,11 +955,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La démonstration se lit sur pièces. Les trois tables ci-dessous sont tirées des annexes C, aux dates indiquées. Chacune figure ligne à ligne dans la pièce jointe : les tables du 14 avril 2022 et du 20 août 2023 dans l’onglet « Exemples », la table du 29 avril 2022 dans les onglets « Tables partagées » et « Détail articles », où elle porte l’horodatage 12:03 et les trois notes n° 4, n° 5 et n° 6 pour 63,50 €. La première est **l’exemple choisi par le service lui-même** dans la proposition de rectifications : la table du 14 avril 2022 dont il affirmait ne pas retrouver l’autre moitié."
+   "texte": "La démonstration se lit sur pièces. Les trois tables ci-dessous sont tirées des annexes C-1 et C-2, aux dates indiquées, et figurent ligne à ligne dans la pièce jointe R2 (onglets « Sources », « Calcul » et « Tables »). La première reprend la date de l'exemple choisi par le service lui-même dans la proposition de rectifications, le 14 avril 2022, dont il affirmait ne pas retrouver l'autre moitié."
   },
   {
    "kind": "tableau",
-   "titre": "Exemple 1 : 14 avril 2022, notes n° 13 et n° 14 (horodatées 12:29 dans la pièce), 26,45 € chacune, réglées par carte bancaire — deux des six notes que la pièce regroupe pour cette table (n° 11 à n° 16, 152,10 € au total)",
+   "titre": "Exemple 1 : 14 avril 2022, notes n° 13 et n° 14 (horodatées 12:43 et 12:44), 26,45 € chacune, réglées par carte bancaire - la table de deux couverts que la recomposition identifie ce midi-là",
    "minWidth": 720,
    "colonnes": [
     {
@@ -1095,7 +1094,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les deux notes portent le même horodatage, 12:29, et appartiennent à la même table de six notes (n° 11 à n° 16). Chacun de leurs quatre articles y figure pour la moitié de lui-même, et l’addition des deux notes recompose ce sous-ensemble pour 52,90 €, réglés en deux fois par carte bancaire. Le service écrivait ne trouver « aucune autre table portant l’autre moitié » : pour la note n° 13, l’autre moitié porte le numéro 14 et suit immédiatement."
+   "texte": "Les deux notes sont horodatées à une minute d'intervalle (12:43 et 12:44) et forment une même table de deux couverts. Chacun de leurs quatre articles y figure pour la moitié de lui-même, l'expresso pour une unité par convive, et l'addition des deux notes recompose la table pour 52,90 €, réglés en deux fois par carte bancaire. Le service écrivait ne trouver « aucune autre table portant l'autre moitié » : pour la note n° 13, l'autre moitié porte le numéro 14 et suit immédiatement."
   },
   {
    "kind": "tableau",
@@ -1425,7 +1424,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service écrit : « **malgré ses dires, la réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1. Elle y parvient, tout au plus, sur une infime quantité comme le service le démontre en partie A** » (p. 29). Cette appréciation n’est appuyée sur aucun décompte. Le comptage exhaustif ci-dessus, mené sur les trois exercices et non sur un échantillon, en établit l’inverse : ce sont **5 009 articles fractionnés sur 5 120** qui se recomposent en quantités entières, soit 97,8 %, et **771 tables sur 791** qui se referment intégralement."
+   "texte": "Le service écrit : « **malgré ses dires, la réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1. Elle y parvient, tout au plus, sur une infime quantité comme le service le démontre en partie A** » (p. 29). Cette appréciation n’est appuyée sur aucun décompte. Le comptage exhaustif ci-dessus, mené sur les trois exercices et non sur un échantillon, en établit l’inverse : ce sont **5 012 articles fractionnés sur 5 062** qui se recomposent en quantités entières, soit 99,0 %, et **858 tables sur 866** qui se referment intégralement."
   },
   {
    "kind": "paragraphe",
@@ -1483,7 +1482,7 @@
    "lignes": [
     [
      {
-      "v": "14/04/2022, 12:29"
+      "v": "14/04/2022, 12:43"
      },
      {
       "v": "n° 13 + n° 14"
@@ -1543,15 +1542,15 @@
     ],
     [
      {
-      "v": "Les 791 tables partagées",
+      "v": "Les 866 tables partagées",
       "fw": 700
      },
      {
-      "v": "1 862 notes",
+      "v": "1 849 notes",
       "fw": 700
      },
      {
-      "v": "95 843,38 €",
+      "v": "95 237,08 €",
       "align": "right",
       "fw": 700
      },
@@ -1560,7 +1559,7 @@
       "align": "right"
      },
      {
-      "v": "1 857 règlements sur 1 862 (99,7 %)",
+      "v": "1 849 règlements sur 1 849 (100 %)",
       "badge": "ok"
      }
     ]
@@ -1568,7 +1567,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les 95 843,38 € encaissés au titre de ces tables sont retrouvés à l’annexe F pour 1 857 des 1 862 notes (99,7 %), au centime et avec leur mode de paiement ; cinq notes restent sans règlement retrouvé et sont signalées comme telles. Une dissimulation suppose une recette absente des livres : ici, la recette est au contraire **plus finement détaillée** que si la table avait été réglée par une note unique. Le service n’avance d’ailleurs, en pages 28 et 29, aucun montant de recette qui serait minoré par ces fractions — pas même les 607,23 € du résidu que nous venons nous-mêmes de chiffrer."
+   "texte": "Les 95 237,08 € encaissés au titre de ces tables sont retrouvés à l’annexe F pour 1 849 des 1 849 notes (100 %), au centime et avec leur mode de paiement . Une dissimulation suppose une recette absente des livres : ici, la recette est au contraire **plus finement détaillée** que si la table avait été réglée par une note unique. Le service n’avance d’ailleurs, en pages 28 et 29, aucun montant de recette qui serait minoré par ces fractions - pas même les 264,98 € du résidu que nous venons nous-mêmes de chiffrer."
   },
   {
    "kind": "paragraphe",
@@ -1595,7 +1594,7 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Le test proposé au service",
-   "texte": "Si les quantités fractionnaires cachaient des recettes, les fractions ne se refermeraient pas : elles se referment sur 97,8 % des articles, et le résidu de 2,2 % est chiffré à 607,23 € au maximum. Le décompte est désormais ouvert et vérifiable cellule par cellule dans la pièce R2-quantites-recomposition.xlsx, qui recalcule par formule, à partir des 5 120 lignes recopiées, le test d’entier, le complément manquant et les totaux. Le script de production reponse1-quantites-fractionnaires.py et les lignes brutes des annexes C-1 à C-3 / F-1 à F-3 restent à la disposition du service pour contrôle contradictoire."
+   "texte": "Si les quantités fractionnaires cachaient des recettes, les fractions ne se refermeraient pas : elles se referment sur 99,0 % des articles, et le résidu de 1,0 % est chiffré à 264,98 € au maximum. Le décompte est désormais ouvert et vérifiable cellule par cellule dans la pièce R2-quantites-recomposition.xlsx, qui recalcule par formule, à partir des 5 062 lignes recopiées, le test d’entier, le complément manquant et les totaux. Le script de production reponse1-quantites-fractionnaires.py et les lignes brutes des annexes C-1 à C-3 / F-1 à F-3 restent à la disposition du service pour contrôle contradictoire."
   },
   {
    "kind": "chapitre",
@@ -1606,7 +1605,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le volet des quantités élevées est abandonné : le service en prend note sans le contester. Le volet des quantités inférieures à 1 est pour l’essentiel démenti par les fichiers eux-mêmes : 791 tables partagées, 5 009 articles sur 5 120 (97,8 %) dont les fractions se recomposent exactement en quantités entières, 1 857 notes sur 1 862 dont le règlement est retrouvé à l’annexe F. L’irréductible — 111 articles sur 20 tables — est concédé et borné à 607,23 € de chiffre d’affaires sur trois exercices, que le service lui-même ne retient comme base d’aucun rehaussement."
+   "texte": "Le volet des quantités élevées est abandonné : le service en prend note sans le contester. Le volet des quantités inférieures à 1 est pour l’essentiel démenti par les fichiers eux-mêmes : 866 tables partagées, 5 012 articles sur 5 062 (99,0 %) dont les fractions se recomposent exactement en quantités entières, 1 849 notes sur 1 849 dont le règlement est retrouvé à l’annexe F. L’irréductible - 50 articles sur 8 tables - est concédé et borné à 264,98 € de chiffre d’affaires sur trois exercices, que le service lui-même ne retient comme base d’aucun rehaussement."
   },
   {
    "kind": "paragraphe",
@@ -1618,11 +1617,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "« **La réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1, sinon sur une infime quantité.** » L’appréciation n’est appuyée sur aucun décompte. Le comptage exhaustif, mené sur les trois exercices, établit l’inverse : sur 5 120 articles fractionnés regroupés en 791 tables partagées, 5 009 (97,8 %) voient la somme de leurs fractions redonner un nombre entier, et 771 tables sur 791 se referment intégralement. Ce n’est pas une infime partie, c’est la quasi-totalité des cas."
+   "texte": "« **La réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1, sinon sur une infime quantité.** » L’appréciation n’est appuyée sur aucun décompte. Le comptage exhaustif, mené sur les trois exercices, établit l’inverse : sur 5 062 articles fractionnés regroupés en 866 tables partagées, 5 012 (99,0 %) voient la somme de leurs fractions redonner un nombre entier, et 858 tables sur 866 se referment intégralement. Ce n’est pas une infime partie, c’est la quasi-totalité des cas."
   },
   {
    "kind": "paragraphe",
-   "texte": "« **Le numéro d’identification unique des notes ne figure que dans les fichiers Règlement, Ticket ligne, Ticket et TVA, et il est différent dans « tpvevenement.xls » : il n’y a aucune traçabilité certaine.** » Cet argument est emprunté au motif A et sans lien avec les quantités. Une quantité de vente anormale, si elle existait, se lirait sur le fichier des ventes, non sur le journal des événements techniques. Or la recomposition est faite sur les seuls fichiers porteurs de ce numéro unique : les annexes C-1 à C-3 pour les quantités et F-1 à F-3 pour les règlements, où 1 857 des 1 862 notes concernées (99,7 %) sont retrouvées encaissées, pour 95 843,38 €."
+   "texte": "« **Le numéro d’identification unique des notes ne figure que dans les fichiers Règlement, Ticket ligne, Ticket et TVA, et il est différent dans « tpvevenement.xls » : il n’y a aucune traçabilité certaine.** » Cet argument est emprunté au motif A et sans lien avec les quantités. Une quantité de vente anormale, si elle existait, se lirait sur le fichier des ventes, non sur le journal des événements techniques. Or la recomposition est faite sur les seuls fichiers porteurs de ce numéro unique : les annexes C-1 à C-3 pour les quantités et F-1 à F-3 pour les règlements, où 1 849 des 1 849 notes concernées (100 %) sont retrouvées encaissées, pour 95 237,08 €."
   },
   {
    "kind": "paragraphe",
@@ -1630,21 +1629,21 @@
   },
   {
    "kind": "piecejointe",
-   "intro": "Le décompte est intégralement reproductible et désormais ouvert. La pièce principale **R2-quantites-recomposition.xlsx** recopie les 5 120 articles fractionnés (onglet « Sources ») et recalcule par formule, article par article, le test d’entier, l’entier cible et le complément manquant en euros (onglet « Calcul ») ; l’onglet « Synthèse » resomme 5 009 refermés sur 5 120 (97,8 %) et un résidu de 607,23 € ; l’onglet « Résidu 20 tables » isole les seules tables non refermées et chiffre leur complément manquant ; l’onglet « Tables » recalcule les 771 tables entièrement reconstituées sur 791 et le total encaissé de 95 843,38 € ; l’onglet « Méthode » explicite chaque formule et chaque limite. La pièce **R1-quantites-fractionnaires.xlsx** reste jointe en complément : elle restitue, table par table, la reconstitution détaillée (date, heure, notes jumelles, détail article par article) et, à l’onglet « Exemples », trois tables complètes ligne à ligne — le 14 avril 2022 (six notes, n° 11 à n° 16, 152,10 €, horodatées 12:29), le 20 août 2023 (n° 8 à n° 10) et le 12 avril 2024 (n° 19 et n° 20, 213,20 €). Sources : ANNEXE-C1 à C-3 et ANNEXE-F1 à F-3 (annexes primaires produites pour 2022-2023) ; script reponse1-quantites-fractionnaires.py remis au service sur demande.",
+   "intro": "Le décompte est intégralement reproductible et désormais ouvert, recalculé directement sur les annexes primaires des trois exercices. La pièce principale **R2-quantites-recomposition.xlsx** recopie les 5 062 articles fractionnés des annexes C-1 à C-3 (onglet « Sources ») et recalcule par formule, article par article, le test d'entier, l'entier cible et le complément manquant en euros (onglet « Calcul ») ; l'onglet « Synthèse » resomme 5 012 refermés sur 5 062 (99,0 %) exercice par exercice et un résidu de 264,98 € (78,33 € / 186,65 € / 0,00 €) ; l'onglet « Résidu (8 tables) » isole les seules tables non refermées et chiffre leur complément manquant ; l'onglet « Tables » recalcule les 858 tables entièrement reconstituées sur 866 et le total encaissé de 95 237,08 € ; l'onglet « Méthode » explicite chaque formule et chaque limite. Toutes les valeurs ont été recalculées sous LibreOffice. La pièce **R1-quantites-fractionnaires.xlsx** reste jointe en complément : elle restitue, table par table, la reconstitution détaillée (date, heure, notes jumelles, détail article par article). Sources : ANNEXE-C1 à C-3 (détail des tickets) et ANNEXE-F1 à F-3 (règlements), produites pour les trois exercices ; script reponse1-quantites-fractionnaires.py remis au service sur demande.",
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
-     "label": "R2 : recomposition recalculée par formule (Sources, Calcul, Synthèse, Tables, Résidu 20 tables, Méthode)"
+     "label": "R2 : recomposition recalculée par formule (Sources, Calcul, Synthèse, Tables, Résidu (8 tables), Méthode)"
     },
     {
      "fichier": "pieces-reponse-1/R1-quantites-fractionnaires.xlsx",
-     "label": "R1 : les 791 tables partagées recomposées, détail article par article (4 onglets)"
+     "label": "R1 : les 866 tables partagées recomposées, détail article par article (4 onglets)"
     }
    ]
   }
  ],
  "entete": {
-  "statut": "partiel",
-  "reponseCourte": "Sur les trois exercices, 5 009 des 5 120 articles fractionnés (97,8 %) se recomposent en quantités entières et 95 843,38 € de tables partagées sont retrouvés encaissés à l'annexe F (1 857 des 1 862 notes). Le résidu est traité honnêtement : 111 articles sur 20 tables, dont 69 demi-articles « 0,50 » sans contrepartie retrouvée, ne se referment pas ; son incidence maximale théorique, recalculée par formule, est de 607,23 € de CA sur trois exercices — montant que le service lui-même ne chiffre pas sous le motif D."
+  "statut": "demonte",
+  "reponseCourte": "Sur les trois exercices, 5 012 des 5 062 articles fractionnés (99,0 %) se recomposent en quantités entières et 95 237,08 € de tables partagées sont retrouvés encaissés à l'annexe F (les 1 849 notes rattachées, soit 100 %). Le résidu est traité honnêtement : 50 articles sur 8 tables, dont 25 demi-articles « 0,50 » ou « 1,50 » sans contrepartie retrouvée, ne se referment pas ; son incidence maximale théorique, recalculée par formule directement sur les annexes C-1 à C-3, est de 264,98 € de CA sur trois exercices (78,33 € / 186,65 € / 0,00 €), montant que le service lui-même ne chiffre pas sous le motif D."
  }
 }

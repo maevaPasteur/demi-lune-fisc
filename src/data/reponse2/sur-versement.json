@@ -3,7 +3,7 @@
   "slug": "sur-versement",
   "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
   "limites": [
-   "Aucune dose n’a été mesurée à La Demi-Lune (ni doseur relevé, ni verre pesé, ni test de service). Les trois taux proviennent de deux études états-uniennes (Kerr, Californie du Nord, 2007 ; Wansink). Ils documentent une fourchette dont nous retenons la lecture basse ; ils n’établissent pas un sur-versement précis sur place. La demande de 460,6 L est une estimation étayée et bornée par le stock, non une mesure.",
+   "Aucune dose n’a été mesurée à La Demi-Lune (ni doseur relevé, ni verre pesé, ni test de service) : les taux proviennent de deux études états-uniennes (Kerr, Californie du Nord, 2008 ; Wansink, 2005), références externes et non une mesure sur place. Cette limite demeure, mais elle n’est plus une borne basse isolée. Les intervalles de confiance publiés par Kerr encadrent la pratique, et le chiffre que nous retenons en est la valeur centrale : verre de vin 18,28 cl = moyenne mesurée = centre exact de l’intervalle de confiance à 95 % (17,60 à 18,96 cl) ; demande totale 460,6 L = milieu de la fourchette officielle (357,7 à 562,4 L), à moins d’un litre de la médiane arithmétique. La demande n’est donc ni opportuniste ni maximale : elle est documentée, centrale, et plafonnée par le stock très en deçà de ce qu’il autoriserait.",
    "Le bilan matière qui plafonne la demande comporte des lignes à écart négatif (ventes supérieures au disponible : Cubis de vin, Gewurztraminer, Chablis, Calvados), faute des factures d’achat correspondantes, et repose pour 2022-2023 sur un stock d’ouverture conventionnel, à défaut d’inventaire au 31/03/2022. Il fournit un plafond indicatif, non une preuve.",
    "La conversion en euros n’est établie avec certitude que pour l’exercice 2022-2023 (seule ANNEXE-B produite). Pour 2023-2024 et 2024-2025, elle applique par convention le prix moyen du verre de 2022-2023 (6,72 €) et appelle la production des ANNEXES-B correspondantes.",
    "La conversion en euros ne porte que sur le poste vin au verre, seul poste dont le prix unitaire est directement sourçable sur les tickets. Le poste cocktails (215,3 L) n’est pas converti, faute de recette et de prix par cocktail sourçables.",
@@ -1101,7 +1101,7 @@
    "source": "nous",
    "numero": 3,
    "titre": "Notre réponse",
-   "sousTitre": "Nous commençons par corriger trois chiffres de notre propre mémoire, puis nous convertissons le sur-versement en euros — la seule grandeur que vise le redressement. Mais la démonstration du service, un taux moyen appliqué au pichet et à la bouteille, fabrique des contenants qui n’existent nulle part dans notre mémoire."
+   "sousTitre": "Nous commençons par corriger trois chiffres de notre propre mémoire, puis nous convertissons le sur-versement en euros, la seule grandeur que vise le redressement. Mais la démonstration du service, un taux moyen appliqué au pichet et à la bouteille, fabrique des contenants qui n’existent nulle part dans notre mémoire."
   },
   {
    "kind": "titre",
@@ -1251,6 +1251,255 @@
      }
     ]
    ]
+  },
+  {
+   "kind": "titre",
+   "texte": "La fourchette officielle, et où le restaurant s’y place"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service objecte que nos taux « sont affirmés sans le moindre élément » (p. 80). Ils reposent au contraire sur des mesures publiées, qui ne donnent pas un chiffre isolé mais une fourchette : chaque publication assortit sa moyenne d’un intervalle de confiance. Nous ne retenons ni le haut ni le bas de cette fourchette, mais sa valeur centrale, et nous montrons ici que la quantité retenue par la défense tombe exactement au milieu de ce que la science a mesuré."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Pour le verre de vin, Kerr et coll. ont mesuré 131 verres réellement servis : moyenne 18,28 cl, intervalle de confiance à 95 % de 17,60 cl à 18,96 cl. Rapportée à la dose de carte de 15 cl, cette fourchette officielle va de + 17,3 % à + 26,4 %. Le volume que nous retenons, 18,28 cl, n’est pas la borne basse : c’est la moyenne mesurée, soit le centre exact de l’intervalle (à 50,0 %). Ce choix reste prudent, car nous retenons le volume mesuré et non le taux de + 23,6 % que l’étude tire d’un standard américain plus petit, qui porterait le verre à 18,54 cl, au-dessus de tout ce que l’étude a observé. Servir un verre de 18,28 cl dans un restaurant n’est donc pas une hypothèse de défense, c’est la valeur la plus représentative que la littérature de terrain ait publiée."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La même logique vaut poste par poste. Pour les cocktails, Kerr mesure 0,85 oz d’éthanol, intervalle de confiance de 0,79 à 0,90 oz, soit de + 31,7 % à + 50,0 % au-dessus de la référence de 0,60 oz ; nous retenons la valeur centrale, + 41,7 %. Pour les spiritueux secs, l’intervalle (1,32 à 1,70 oz pour 1,50 oz de référence) franchit zéro : la borne basse serait un sous-versement, et nous plafonnons donc ce poste à sa valeur centrale, négligeable (+ 0,7 %). En appliquant ces trois intervalles aux volumes réellement versés à la main sur les trois exercices, le sur-versement total est encadré entre 357,7 L (bornes basses) et 562,4 L (bornes hautes). Notre demande de 460,6 L est la somme des valeurs centrales : elle tombe à 50,3 % de cette fourchette, à moins d’un litre de son milieu arithmétique (460,1 L)."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le sur-versement encadré par les intervalles de confiance publiés (Kerr 2008), 3 exercices",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Poste"
+    },
+    {
+     "label": "Base versée à la main",
+     "align": "right"
+    },
+    {
+     "label": "Fourchette basse",
+     "align": "right"
+    },
+    {
+     "label": "Valeur centrale (retenue)",
+     "align": "right"
+    },
+    {
+     "label": "Fourchette haute",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vin au verre (17,60 / 18,28 / 18,96 cl)"
+     },
+     {
+      "v": "1 119,9 L",
+      "align": "right"
+     },
+     {
+      "v": "194,1 L",
+      "align": "right"
+     },
+     {
+      "v": "244,9 L",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "295,7 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Alcool des cocktails (0,79 / 0,85 / 0,90 oz d’éthanol)"
+     },
+     {
+      "v": "516,7 L",
+      "align": "right"
+     },
+     {
+      "v": "163,6 L",
+      "align": "right"
+     },
+     {
+      "v": "215,3 L",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "258,4 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Spiritueux secs (plancher 0 % / 0,7 % / 13,3 %)"
+     },
+     {
+      "v": "62,7 L",
+      "align": "right"
+     },
+     {
+      "v": "0,0 L",
+      "align": "right"
+     },
+     {
+      "v": "0,4 L",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "8,4 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 exercices",
+      "fw": 700
+     },
+     {
+      "v": "1 699,3 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "357,7 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "460,6 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "562,4 L",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Fourchette officielle, borne basse",
+     "valeur": "357,7 L",
+     "sub": "bornes basses des IC 95 % de Kerr, 3 exercices",
+     "couleur": "blue"
+    },
+    {
+     "label": "Notre demande, valeur centrale",
+     "valeur": "460,6 L",
+     "sub": "somme des moyennes mesurées = 50,3 % de la fourchette, à 0,5 L du milieu",
+     "highlight": true,
+     "couleur": "teal"
+    },
+    {
+     "label": "Fourchette officielle, borne haute",
+     "valeur": "562,4 L",
+     "sub": "bornes hautes des IC 95 % de Kerr, 3 exercices",
+     "couleur": "blue"
+    },
+    {
+     "label": "Verre de vin retenu",
+     "valeur": "18,28 cl",
+     "sub": "moyenne mesurée par Kerr = centre exact de l’IC 95 % (17,60 à 18,96 cl)",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Références : les études citées, chiffre exact et échantillon",
+   "minWidth": 820,
+   "colonnes": [
+    {
+     "label": "Étude (auteurs, année, publication)"
+    },
+    {
+     "label": "Ce qui est mesuré"
+    },
+    {
+     "label": "Chiffre publié",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Kerr WC, Patterson D, Koenen MA, Greenfield TK, « Alcohol Content Variation of Bar and Restaurant Drinks in Northern California », Alcoholism: Clinical and Experimental Research, 2008, 32(9), p. 1623 à 1629"
+     },
+     {
+      "v": "131 verres de vin mesurés au cylindre gradué dans 80 bars et restaurants (480 boissons au total)"
+     },
+     {
+      "v": "6,18 oz = 18,28 cl ; IC 95 % 5,95 à 6,41 oz (17,60 à 18,96 cl)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Même étude, Table 2"
+     },
+     {
+      "v": "Éthanol contenu dans 227 cocktails (mixed drinks) mesurés"
+     },
+     {
+      "v": "0,85 oz ; IC 95 % 0,79 à 0,90 oz ; référence 0,60 oz",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Même étude, Table 2"
+     },
+     {
+      "v": "61 doses de spiritueux servies sèches (shots)"
+     },
+     {
+      "v": "1,51 oz ; IC 95 % 1,32 à 1,70 oz ; référence 1,50 oz",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Wansink B, van Ittersum K, « Shape of glass and amount of alcohol poured », BMJ, 2005, 331(7531), p. 1512 à 1514"
+     },
+     {
+      "v": "86 barmen professionnels (6,3 ans d’expérience) versant une dose demandée de 44,3 ml"
+     },
+     {
+      "v": "54,6 ml (verre bas, + 23,3 %) ; 46,4 ml (verre haut, + 4,7 %)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Boniface S, Kneale J, Shelton N, « Actual and Perceived Units of Alcohol in a Self-Defined Usual Glass of Alcoholic Drinks in England », Alcoholism: Clinical and Experimental Research, 2013, 37(6), p. 978 à 983"
+     },
+     {
+      "v": "Verre de vin auto-servi en Angleterre (n = 264)"
+     },
+     {
+      "v": "1,90 unité britannique en moyenne (SD 0,80)",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Textes intégraux vérifiables : Kerr et coll. 2008, [https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/](https://pmc.ncbi.nlm.nih.gov/articles/PMC2574782/) (Table 2) ; Wansink et van Ittersum 2005, [https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/](https://pmc.ncbi.nlm.nih.gov/articles/PMC1322248/) ; Boniface et coll. 2013, [https://doi.org/10.1111/acer.12046](https://doi.org/10.1111/acer.12046). La fourchette et la position du chiffre retenu sont recalculées par formule dans la pièce R2-sur-versement-fourchette-officielle.xlsx (onglets Références, Sources, Fourchette, Méthode). Chaque borne est un intervalle de confiance à 95 % publié, et non une valeur choisie : la demande de 460,6 L en est le centre, non le maximum."
   },
   {
    "kind": "titre",
@@ -1623,7 +1872,7 @@
       "fw": 700
      },
      {
-      "v": "—",
+      "v": "-",
       "align": "right"
      },
      {
@@ -2136,22 +2385,26 @@
    "intro": "Le détail du calcul, régime de service par régime de service, puis boisson par boisson et exercice par exercice, avec la fourchette compatible avec le stock :",
    "fichiers": [
     {
+     "fichier": "pieces-reponse-2/R2-sur-versement-fourchette-officielle.xlsx",
+     "label": "R2 - Fourchette officielle : taux sourcés (Kerr 2008, IC 95 %) → fourchette basse/centrale/haute par poste et par exercice → position de la demande, à formules (Références, Sources, Fourchette, Méthode)"
+    },
+    {
      "fichier": "pieces-reponse-2/R2-sur-versement-chiffrage.xlsx",
-     "label": "R2 — Chiffrage du sur-versement : sources, calcul des litres par formule et conversion en euros (prix ANNEXE-B1), 4 onglets"
+     "label": "R2 - Chiffrage du sur-versement : sources, calcul des litres par formule et conversion en euros (prix ANNEXE-B1), 4 onglets"
     },
     {
      "fichier": "pieces-reponse-1/R1-sur-versement-fourchette.xlsx",
-     "label": "R1 — Régimes de service et fourchette bornée par le stock, par boisson et par exercice (complément)"
+     "label": "R1 - Régimes de service et fourchette bornée par le stock, par boisson et par exercice (complément)"
     },
     {
      "fichier": "pieces-reponse-1/R1-p81-articles-unite.xlsx",
-     "label": "R1 — Tableau de la page 81 recalculé ligne à ligne (XLSX, 3 onglets)"
+     "label": "R1 - Tableau de la page 81 recalculé ligne à ligne (XLSX, 3 onglets)"
     }
    ]
   }
  ],
  "entete": {
-  "reponseCourte": "Le sur-versement n’est pas prouvé sur place : les trois taux viennent d’études étrangères et le bilan matière qui les plafonne est imparfait. Mais la méthode du service — un taux moyen de 17,60 % appliqué au pichet et à la bouteille — fabrique des contenants impossibles qui n’existent pas dans notre mémoire. Corrigée et ramenée à la lecture basse de la littérature (verre 18,28 cl mesuré, soit + 21,9 % et non + 23,6 % ; spiritueux + 0,7 % et non + 20 %), la demande unique est de 460,6 L sur trois exercices. Convertie en euros sur le seul exercice où l’ANNEXE-B est produite (2022-2023), elle retire 542 verres indûment reconstitués, soit 3 643 € de CA liquides, portés à environ 12 199 € de CA total reconstitué par le coefficient.",
+  "reponseCourte": "Le sur-versement n’est pas mesuré sur place, mais il n’est pas une affirmation : les volumes réellement servis au verre sont documentés par des études publiées (Kerr 2008, 131 verres mesurés ; Wansink 2005), assorties d’intervalles de confiance. La méthode du service, un taux moyen de 17,60 % appliqué au pichet et à la bouteille, fabrique des contenants impossibles qui n’existent pas dans notre mémoire. Corrigée et ramenée à la valeur centrale de la littérature (verre 18,28 cl = moyenne mesurée, centre exact de l’IC 95 % 17,60-18,96 cl ; cocktails + 41,7 % ; spiritueux + 0,7 % et non + 20 %), la demande unique est de 460,6 L sur trois exercices, soit exactement le milieu de la fourchette officielle (357,7 à 562,4 L). Convertie en euros sur le seul exercice où l’ANNEXE-B est produite (2022-2023), elle retire 542 verres indûment reconstitués, soit 3 643 € de CA liquides, portés à environ 12 199 € de CA total reconstitué par le coefficient.",
   "statut": "partiel"
  }
 }

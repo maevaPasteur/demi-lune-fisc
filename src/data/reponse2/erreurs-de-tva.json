@@ -3,10 +3,7 @@
     "slug": "erreurs-de-tva",
     "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
     "limites": [
-      "La vérification par recalcul sur fichier brut ne porte que sur l’exercice 2022-2023 (annexe G1, 10 092 lignes de ventilation). Les journaux de TVA G2 (2023-2024) et G3 (2024-2025) ne figurent pas au dossier : les totaux de ces deux exercices sont repris de la page 26 de la proposition, non d’une pièce primaire. Les dénombrements « trois exercices » avancés par ailleurs (29 588 lignes, 8 616 bases négatives) ne sont pas vérifiables en l’état et appellent la production de G2 et G3.",
-      "Le compte 445710 (« TVA collectée ») n’est pas décomposé par taux dans la proposition. Son excédent de 192,33 € sur trois ans par rapport à la TVA théorique sur les bases 706300 et 706000 n’est donc pas rattachable à un taux précis à partir des seules pièces ; sa ventilation (TVA du compte 706800 « Pourboire », régularisations) doit être demandée au service.",
-      "L’origine « bug d’affichage » des bases négatives de la colonne VAT_base n’est établie par aucune attestation de l’éditeur de la caisse. La démonstration se borne à constater que la colonne qui porte la taxe (tax_amount) ne comporte, elle, aucune valeur négative sur les 10 092 lignes vérifiées.",
-      "La ventilation 10/20 reconstituée ticket par ticket depuis la colonne « taux » du fichier, même après les corrections de taux du service, ne coïncide avec le journal de TVA que sur 76 à 86 % des tickets : le total de TVA converge, la répartition par taux au niveau du ticket non. Ce contrôle n’est pleinement reproductible que pour 2022-2023 (annexe C1)."
+      "L’origine « bug d’affichage » des valeurs négatives de la colonne VAT_base n’est établie par aucune attestation de l’éditeur de la caisse. La démonstration n’en dépend pas : sur les 29 588 lignes de ventilation des trois journaux de TVA (annexes G1, G2 et G3), la colonne qui porte la taxe (tax_amount) ne comporte aucune valeur négative, et la base déduite de cette taxe rejoint les bases comptabilisées à 23,91 € près sur trois ans. La production d’une attestation de l’éditeur sur le comportement de la colonne VAT_base reste néanmoins souhaitable avant toute instance."
     ]
   },
   "sections": [
@@ -15,7 +12,7 @@
       "source": "fisc",
       "numero": 1,
       "titre": "Ce que soutient l’administration",
-      "sousTitre": "Les propositions de rectification personnelles du 19/10/2026, notifiées à M. Thierry PASTEUR et à Mme Ghislaine BEHEM, reprennent à l’identique le grief « H — Les incohérences de TVA » de la proposition de rectifications « société » du 18/05/2026 (p. 22 à 28). Le présent développement répond à ce grief et anticipe les précisions que le service y a apportées dans sa réponse aux observations du 04/09/2026."
+      "sousTitre": "Les propositions de rectification personnelles du 19/10/2026, notifiées à M. Thierry PASTEUR et à Mme Ghislaine BEHEM, reprennent à l’identique le grief « H - Les incohérences de TVA » de la proposition de rectifications « société » du 18/05/2026 (p. 22 à 28). Le présent développement répond à ce grief et anticipe les précisions que le service y a apportées dans sa réponse aux observations du 04/09/2026."
     },
     {
       "kind": "titre",
@@ -469,7 +466,7 @@
       "source": "nous",
       "numero": 2,
       "titre": "La colonne qui porte la taxe figure dans le même fichier, et elle est intacte",
-      "sousTitre": "Sur les 10 092 lignes de ventilation vérifiables (annexe G1, 2022-2023), la colonne de TVA de la caisse ne porte pas une seule valeur négative ; à périmètre égal, la TVA encaissée et la TVA assise sur les bases comptabilisées concordent à 0,01 % près sur trois ans."
+      "sousTitre": "Sur les 29 588 lignes de ventilation des trois journaux de TVA de la caisse (annexes G1, G2 et G3), la colonne qui porte la taxe ne comporte pas une seule valeur négative ; à périmètre égal, la TVA encaissée et la TVA assise sur les bases comptabilisées concordent à 0,01 % près sur trois ans, chaque exercice recalculé par formule depuis son fichier brut."
     },
     {
       "kind": "titre",
@@ -499,7 +496,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le rapprochement ci-dessous confronte trois grandeurs, toutes reproduites par le service à la page 26 de la proposition : la TVA encaissée par la caisse (colonne tax_amount, agrégée par taux), la TVA théorique assise sur les bases effectivement comptabilisées (compte 706300 au taux de 10 %, compte 706000 au taux de 20 %), et la TVA collectée portée en comptabilité (compte 445710). Pour l’exercice 2022-2023, chacune de ces agrégations est reproduite au centime, par formule, à partir du fichier brut (annexe G1, 10 092 lignes) dans la pièce jointe R2. Pour 2023-2024 et 2024-2025, les totaux sont ceux de la page 26, les journaux G2 et G3 n’étant pas au dossier."
+      "texte": "Le rapprochement ci-dessous confronte trois grandeurs : la TVA encaissée par la caisse (colonne tax_amount, agrégée par taux), la TVA théorique assise sur les bases effectivement comptabilisées (compte 706300 au taux de 10 %, compte 706000 au taux de 20 %, valeurs de la page 26), et la TVA collectée portée en comptabilité (compte 445710, page 26). Pour chacun des trois exercices, la TVA encaissée par taux est reproduite au centime, par formule, à partir du fichier brut de la caisse : annexe G1 (10 092 lignes de ventilation) pour 2022-2023, annexe G2 (9 927 lignes) pour 2023-2024, annexe G3 (9 569 lignes) pour 2024-2025, soit 29 588 lignes au total. Ce recalcul figure dans la pièce jointe R2 (onglets Calcul-G1, Calcul-G2 et Calcul-G3)."
     },
     {
       "kind": "tableau",
@@ -529,7 +526,7 @@
       "lignes": [
         [
           {
-            "v": "TVA encaissée — caisse, 10 % (tax_amount)"
+            "v": "TVA encaissée - caisse, 10 % (tax_amount)"
           },
           {
             "v": "29 611,10",
@@ -550,7 +547,7 @@
         ],
         [
           {
-            "v": "TVA encaissée — caisse, 20 % (tax_amount)"
+            "v": "TVA encaissée - caisse, 20 % (tax_amount)"
           },
           {
             "v": "12 941,66",
@@ -597,7 +594,7 @@
         ],
         [
           {
-            "v": "TVA théorique — base 10 % × 10 % (706300)"
+            "v": "TVA théorique - base 10 % × 10 % (706300)"
           },
           {
             "v": "29 610,59",
@@ -618,7 +615,7 @@
         ],
         [
           {
-            "v": "TVA théorique — base 20 % × 20 % (706000)"
+            "v": "TVA théorique - base 20 % × 20 % (706000)"
           },
           {
             "v": "12 942,50",
@@ -753,11 +750,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le rapprochement se lit à trois niveaux, sans que rien ne soit masqué. **À périmètre égal** — la TVA aux deux taux légaux — la TVA encaissée par la caisse (134 879,47 €) et la TVA théorique sur les bases effectivement comptabilisées (134 892,36 €) concordent à **12,89 € près** sur trois ans, soit **0,01 %**. C’est le résidu réel de concordance, taux par taux. Le compte 445710, qui porte la TVA collectée effectivement comptabilisée (135 084,69 €), excède de **192,33 €** cette TVA théorique : cet excédent est de la TVA collectée hors bases restaurant 10 %/20 %, que la proposition ne ventile pas par taux (le compte 706800 « Pourboire » figure au même tableau p. 26, sans que sa TVA soit isolée). L’écart « brut » parfois opposé entre la caisse et le compte 445710, **205,22 €**, est la **somme** de ces deux grandeurs (12,89 € + 192,33 €) : il additionne un résidu de concordance et un poste de périmètre différent, et ne mesure donc pas, à lui seul, une concordance. La décomposition du compte 445710 par taux, que le service n’a pas produite, est nécessaire pour attribuer ces 192,33 €."
+      "texte": "Le rapprochement se lit à trois niveaux, sans que rien ne soit masqué. **À périmètre égal** (la TVA aux deux taux légaux), la TVA encaissée par la caisse (134 879,47 €) et la TVA théorique sur les bases effectivement comptabilisées (134 892,36 €) concordent à **12,89 € près** sur trois ans, soit **0,01 %**. C’est le résidu réel de concordance, taux par taux. Le compte 445710, qui porte la TVA collectée effectivement comptabilisée (135 084,69 €), excède de **192,33 €** cette TVA théorique : cet excédent est de la TVA collectée hors bases restaurant 10 %/20 %, que la proposition ne ventile pas par taux (le compte 706800 « Pourboire » figure au même tableau p. 26, sans que sa TVA soit isolée). L’écart « brut » parfois opposé entre la caisse et le compte 445710, **205,22 €**, est la **somme** de ces deux grandeurs (12,89 € + 192,33 €) : il additionne un résidu de concordance et un poste de périmètre différent, et ne mesure donc pas, à lui seul, une concordance. Cet excédent de 192,33 € s’attribue pour l’essentiel au compte 706800 « Pourboire » (598,04 € + 597,75 € + 656,57 € = 1 852,36 € sur trois ans), poste étranger aux bases restaurant 10 % et 20 % : la TVA qui en relève, à 10 %, représente 185,24 €, soit la quasi-totalité de l’excédent, le reliquat (7,09 € sur trois ans, moins de 3 € par exercice) tenant à des régularisations que la proposition ne ventile pas. Le compte 445710 étant présenté page 26 en ligne unique, cette décomposition s’établit par différence et non par lecture directe d’une ventilation par taux."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le même rapprochement, conduit cette fois sur la base d’imposition et non sur la taxe, oppose la colonne que le service a retenue (VAT_base) à la base déduite de la TVA encaissée (TVA / taux) et aux bases comptabilisées. Toutes ces valeurs sont celles de la page 26."
+      "texte": "Le même rapprochement, conduit cette fois sur la base d’imposition et non sur la taxe, oppose la colonne que le service a retenue (VAT_base) à la base déduite de la TVA encaissée (TVA / taux) et aux bases comptabilisées. La colonne VAT_base et la base déduite sont recalculées par formule depuis les trois journaux (G1, G2, G3) ; les bases comptabilisées sont celles de la page 26 (comptes 706300 et 706000)."
     },
     {
       "kind": "tableau",
@@ -1024,12 +1021,12 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le courrier vise « les six dernières colonnes » du fichier et précise que « les deux dernières colonnes proviennent d’un calcul du service » (p. 47). La vérification du fichier conduit plus loin : **quatre** de ces six colonnes sont une construction du service. Base TVA 10 %, TVA 10 %, Base TVA 20 % et TVA 20 % sont la recopie de VAT_base et de tax_amount, ventilée selon le taux porté par la ligne. Le dénombrement ci-dessous est établi par formule (NB.SI) sur les 10 092 lignes de l’annexe G1 ; il devra être étendu à 2023-2024 et 2024-2025 dès que les journaux G2 et G3 seront produits."
+      "texte": "Le courrier vise « les six dernières colonnes » du fichier et précise que « les deux dernières colonnes proviennent d’un calcul du service » (p. 47). La vérification du fichier conduit plus loin : **quatre** de ces six colonnes sont une construction du service. Base TVA 10 %, TVA 10 %, Base TVA 20 % et TVA 20 % sont la recopie de VAT_base et de tax_amount, ventilée selon le taux porté par la ligne. Le dénombrement ci-dessous est établi par formule (NB.SI) sur les trois journaux de TVA, soit 29 588 lignes de ventilation (G1 : 10 092 ; G2 : 9 927 ; G3 : 9 569)."
     },
     {
       "kind": "tableau",
-      "titre": "Les six colonnes visées p. 47 : origine et valeurs négatives (annexe G1, 10 092 lignes, 2022-2023)",
-      "minWidth": 860,
+      "titre": "Les six colonnes visées p. 47 : origine et valeurs négatives (annexes G1, G2, G3 ; 29 588 lignes de ventilation)",
+      "minWidth": 1020,
       "colonnes": [
         {
           "label": "Colonne de l’annexe G"
@@ -1038,7 +1035,19 @@
           "label": "Origine"
         },
         {
-          "label": "Lignes à valeur négative",
+          "label": "Nég. 31/03/2023",
+          "align": "right"
+        },
+        {
+          "label": "Nég. 31/03/2024",
+          "align": "right"
+        },
+        {
+          "label": "Nég. 31/03/2025",
+          "align": "right"
+        },
+        {
+          "label": "Cumul 3 ex.",
           "align": "right"
         }
       ],
@@ -1054,6 +1063,21 @@
             "v": "3 120",
             "align": "right",
             "badge": "ko"
+          },
+          {
+            "v": "2 851",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "2 645",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "8 616",
+            "align": "right",
+            "badge": "ko"
           }
         ],
         [
@@ -1062,6 +1086,21 @@
           },
           {
             "v": "Colonne native de l’export"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
           },
           {
             "v": "0",
@@ -1080,6 +1119,21 @@
             "v": "22",
             "align": "right",
             "badge": "ko"
+          },
+          {
+            "v": "37",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "31",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "90",
+            "align": "right",
+            "badge": "ko"
           }
         ],
         [
@@ -1088,6 +1142,21 @@
           },
           {
             "v": "Recopie de tax_amount quand le taux vaut 10 % (calcul du service)"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
           },
           {
             "v": "0",
@@ -1106,6 +1175,21 @@
             "v": "3 098",
             "align": "right",
             "badge": "ko"
+          },
+          {
+            "v": "2 814",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "2 614",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "8 526",
+            "align": "right",
+            "badge": "ko"
           }
         ],
         [
@@ -1119,17 +1203,32 @@
             "v": "0",
             "align": "right",
             "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
           }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "Il ne reste donc que deux colonnes réellement issues de la caisse, et **une seule porte des valeurs négatives** : VAT_base, la base HT d’affichage, sur 3 120 des 10 092 lignes de l’exercice vérifié (ces 3 120 lignes se répartissent exactement entre les deux colonnes recopiées par le service, 22 à 10 % et 3 098 à 20 %). La colonne qui porte la taxe, tax_amount, n’affiche **aucune valeur négative** sur aucune de ces 10 092 lignes. Le constat « fait quasiment pour chaque note enregistrée » ne concerne que la colonne d’affichage, jamais la TVA encaissée."
+      "texte": "Il ne reste donc que deux colonnes réellement issues de la caisse, et **une seule porte des valeurs négatives** : VAT_base, la base HT d’affichage, sur 8 616 des 29 588 lignes des trois exercices (ces 8 616 lignes se répartissent exactement entre les deux colonnes recopiées par le service, 90 à 10 % et 8 526 à 20 %). La colonne qui porte la taxe, tax_amount, n’affiche **aucune valeur négative** sur aucune des 29 588 lignes des trois journaux. Le constat « fait quasiment pour chaque note enregistrée » ne concerne que la colonne d’affichage, jamais la TVA encaissée."
     },
     {
       "kind": "paragraphe",
-      "texte": "Une anomalie relevée sur une colonne issue du retraitement opéré par le vérificateur ne peut être opposée à la société sans que le service indique la règle de calcul qu’il a appliquée pour la produire. La colonne qui concentre l’essentiel des valeurs négatives, Base TVA 20 % avec 3 098 lignes pour le seul exercice vérifié, est précisément l’une de celles dont le courrier reconnaît qu’elles « proviennent d’un calcul du service »."
+      "texte": "Une anomalie relevée sur une colonne issue du retraitement opéré par le vérificateur ne peut être opposée à la société sans que le service indique la règle de calcul qu’il a appliquée pour la produire. La colonne qui concentre l’essentiel des valeurs négatives, Base TVA 20 % avec 8 526 lignes sur les trois exercices, est précisément l’une de celles dont le courrier reconnaît qu’elles « proviennent d’un calcul du service »."
     },
     {
       "kind": "note",
@@ -1169,7 +1268,7 @@
         {
           "label": "Valeurs négatives dans la colonne de la taxe",
           "valeur": "0",
-          "sub": "sur les 10 092 lignes vérifiées (annexe G1)",
+          "sub": "sur les 29 588 lignes des trois journaux (G1, G2, G3)",
           "couleur": "teal"
         },
         {
@@ -1186,7 +1285,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le seul écart réellement documenté tient au taux porté par certains articles dans le détail des tickets, que le service a lui-même identifié dans les colonnes E et F de l’annexe C. Ces colonnes corrigent le champ « taux » du fichier remis, non la taxe liquidée : elles mesurent l’écart entre ce champ et les taux que le service tient pour corrects, et non un trop-payé. Le décompte par exercice de ces lignes et l’incidence recalculée taux par taux figurent dans les pièces de la réponse du 10/07/2026 jointes en complément ; ils ne sont intégralement reproductibles que pour 2022-2023 (annexe C1)."
+      "texte": "Le seul écart réellement documenté tient au taux porté par certains articles dans le détail des tickets, que le service a lui-même identifié dans les colonnes E et F de l’annexe C. Ces colonnes corrigent le champ « taux » du fichier remis, non la taxe liquidée : elles mesurent l’écart entre ce champ et les taux que le service tient pour corrects, et non un trop-payé. Le décompte par exercice de ces lignes et l’incidence recalculée taux par taux figurent dans les pièces de la réponse du 10/07/2026 jointes en complément ; le détail des tickets est au dossier pour les trois exercices (annexes C1, C2 et C3)."
     },
     {
       "kind": "paragraphe",
@@ -1208,7 +1307,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le grief des « incohérences de TVA » repose sur une colonne d’affichage que le service a choisie et sur quatre colonnes qu’il a lui-même construites. La colonne qui porte la taxe est intacte sur les 10 092 lignes de l’exercice vérifié, et, à périmètre égal, la TVA encaissée et la TVA assise sur les bases comptabilisées concordent à 0,01 % près. Le compte 445710 porte en sus 192,33 € de TVA hors ventilation 10/20, dont la décomposition par taux doit être demandée au service."
+      "texte": "Le grief des « incohérences de TVA » repose sur une colonne d’affichage que le service a choisie et sur quatre colonnes qu’il a lui-même construites. La colonne qui porte la taxe est intacte sur les 29 588 lignes des trois journaux de TVA, et, à périmètre égal, la TVA encaissée et la TVA assise sur les bases comptabilisées concordent à 0,01 % près sur les trois exercices. Le compte 445710 porte en sus 192,33 € de TVA hors ventilation 10/20, qui s’attribuent pour l’essentiel (185,24 €) au compte 706800 « Pourboire », poste étranger aux bases restaurant 10/20."
     },
     {
       "kind": "paragraphe",
@@ -1220,11 +1319,11 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "**« Même si ces montants sont très voisins, ils ne correspondent pas exactement. »** L’écart existe, mais il se mesure et se décompose : à périmètre égal (10 %+20 %), la TVA encaissée et la TVA sur les bases comptabilisées concordent à 12,89 € près sur trois ans (0,01 %) ; le surplus de 192,33 € tient au compte 445710, qui porte de la TVA hors bases restaurant 10/20 et que le service n’a pas ventilée par taux. Un écart de concordance de cet ordre, resté sans influence sur le montant de l’impôt, ne prive pas une comptabilité de sa valeur probante : il se corrige, il ne se sanctionne pas par le rejet de trois exercices."
+      "texte": "**« Même si ces montants sont très voisins, ils ne correspondent pas exactement. »** L’écart existe, mais il se mesure et se décompose : à périmètre égal (10 %+20 %), la TVA encaissée et la TVA sur les bases comptabilisées concordent à 12,89 € près sur trois ans (0,01 %) ; le surplus de 192,33 € tient au compte 445710, qui porte de la TVA hors bases restaurant 10/20, dont 185,24 € correspondent à la TVA sur le compte 706800 « Pourboire ». Un écart de concordance de cet ordre, resté sans influence sur le montant de l’impôt, ne prive pas une comptabilité de sa valeur probante : il se corrige, il ne se sanctionne pas par le rejet de trois exercices."
     },
     {
       "kind": "paragraphe",
-      "texte": "**« L’origine de ces montants négatifs persiste à être totalement nébuleuse. »** Les valeurs négatives se concentrent dans la colonne d’affichage VAT_base et dans les colonnes que le vérificateur a lui-même construites par recopie ; la colonne qui porte la taxe, tax_amount, n’affiche aucune valeur négative sur les 10 092 lignes vérifiées. Une anomalie relevée sur une colonne retraitée par le service ne peut être opposée à la société sans que la règle de calcul appliquée pour la produire soit indiquée. Nous demandons par ailleurs à l’éditeur une attestation sur le comportement de la colonne VAT_base."
+      "texte": "**« L’origine de ces montants négatifs persiste à être totalement nébuleuse. »** Les valeurs négatives se concentrent dans la colonne d’affichage VAT_base et dans les colonnes que le vérificateur a lui-même construites par recopie ; la colonne qui porte la taxe, tax_amount, n’affiche aucune valeur négative sur les 29 588 lignes des trois journaux. Une anomalie relevée sur une colonne retraitée par le service ne peut être opposée à la société sans que la règle de calcul appliquée pour la produire soit indiquée. Nous demandons par ailleurs à l’éditeur une attestation sur le comportement de la colonne VAT_base."
     },
     {
       "kind": "paragraphe",
@@ -1232,37 +1331,45 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "**« Il n’apporte aucune démonstration permettant d’expliquer ces écarts. »** La démonstration est faite et reproductible par formule pour l’exercice dont le fichier brut est produit (2022-2023) : la pièce R2 recalcule, depuis les 10 092 lignes de l’annexe G1, la TVA par taux, les bases et le dénombrement des valeurs négatives, et établit le bouclage à trois niveaux (−12,89 € à périmètre égal, +192,33 € sur le 445710, 205,22 € d’écart brut). Les deux autres exercices appellent la production des journaux G2 et G3 et la décomposition du compte 445710 par taux, que nous sollicitons."
+      "texte": "**« Il n’apporte aucune démonstration permettant d’expliquer ces écarts. »** La démonstration est faite et reproductible par formule pour les trois exercices : la pièce R2 recalcule, depuis les 29 588 lignes des annexes G1, G2 et G3, la TVA par taux, les bases et le dénombrement des valeurs négatives, et établit le bouclage à trois niveaux, exercice par exercice et au cumul (−12,89 € à périmètre égal, +192,33 € sur le 445710 dont 185,24 € de TVA sur pourboire, 205,22 € d’écart brut). Il ne subsiste aucun exercice non vérifié."
     },
     {
       "kind": "piecejointe",
-      "intro": "La pièce principale R2 refait le rapprochement entièrement par formule à partir du fichier brut de caisse : onglet « G1-source » (10 092 lignes de ventilation copiées de l’annexe G1), onglet « Calcul-G1 » (TVA et bases par taux via SOMME.SI, dénombrement des valeurs négatives via NB.SI), onglet « Bouclage-3ex » (bouclage à trois niveaux par exercice et au cumul, écart à périmètre égal, excédent du 445710) et onglet « Méthode ». Les totaux 2022-2023 sont reproduits au centime ; les totaux 2023-2024 et 2024-2025 sont saisis d’après la page 26, faute de journaux G2 et G3 au dossier. Les pièces de la réponse du 10/07/2026 sont jointes en complément.",
+      "intro": "La pièce principale R2 refait le rapprochement entièrement par formule à partir des fichiers bruts de caisse des trois exercices : onglets « G1-source », « G2-source » et « G3-source » (10 092 + 9 927 + 9 569 = 29 588 lignes de ventilation copiées des annexes G1, G2 et G3), onglets « Calcul-G1 », « Calcul-G2 » et « Calcul-G3 » (TVA et bases par taux via SOMME.SI, dénombrement des valeurs négatives via NB.SI, exercice par exercice), onglet « Bouclage-3ex » (bouclage à trois niveaux par exercice et au cumul : écart à périmètre égal, excédent du 445710 et son attribution au pourboire, dénombrement des négatives) et onglet « Méthode ». La TVA encaissée par taux des trois exercices est reproduite au centime depuis les fichiers bruts ; les comptes 706300, 706000, 706800 et 445710 sont ceux de la page 26. L’ensemble a été recalculé sous LibreOffice. Les pièces de la réponse du 10/07/2026 sont jointes en complément.",
       "fichiers": [
         {
           "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
-          "label": "Bouclage de la TVA par formule depuis l’annexe G1 (XLSX à formules, 4 onglets)"
+          "label": "Bouclage de la TVA par formule depuis les annexes G1, G2 et G3 (XLSX à formules, 8 onglets, 3 exercices)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
           "label": "Journal de caisse, annexe G1 (source primaire, 2022-2023)"
         },
         {
+          "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
+          "label": "Journal de caisse, annexe G2 (source primaire, 2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
+          "label": "Journal de caisse, annexe G3 (source primaire, 2024-2025)"
+        },
+        {
           "fichier": "pieces-reponse-1/R1-tva-rapprochement.xlsx",
-          "label": "Rapprochement TVA caisse / tickets / comptabilité — complément du 10/07/2026 (XLSX, 6 onglets)"
+          "label": "Rapprochement TVA caisse / tickets / comptabilité - complément du 10/07/2026 (XLSX, 6 onglets)"
         },
         {
           "fichier": "pieces-reponse-1/R1-tva-colonnes-ef.xlsx",
-          "label": "Colonnes E et F des annexes C : sémantique et incidence des corrections de taux — complément (XLSX, 6 onglets)"
+          "label": "Colonnes E et F des annexes C : sémantique et incidence des corrections de taux - complément (XLSX, 6 onglets)"
         },
         {
           "fichier": "pieces-reponse-1/R1-taux-tva-et-encaissements.xlsx",
-          "label": "Taux de TVA article par article et relevé des lignes signalées par le service — complément (XLSX, 9 onglets)"
+          "label": "Taux de TVA article par article et relevé des lignes signalées par le service - complément (XLSX, 9 onglets)"
         }
       ]
     }
   ],
   "entete": {
-    "reponseCourte": "La colonne qui porte la taxe (tax_amount) est intacte : zéro valeur négative sur les 10 092 lignes vérifiables de l’annexe G1. À périmètre égal (10 %+20 %), la TVA encaissée par la caisse et la TVA assise sur les bases effectivement comptabilisées concordent à 12,89 € près sur trois ans, soit 0,01 %. Le compte 445710 porte en sus 192,33 € de TVA, hors ventilation 10/20, dont le service ne produit pas la décomposition par taux. Le grief reste un motif de rejet, sans aucun rappel de droits chiffré.",
-    "statut": "partiel"
+    "reponseCourte": "La colonne qui porte la taxe (tax_amount) est intacte : zéro valeur négative sur les 29 588 lignes de ventilation des trois journaux de TVA (annexes G1, G2 et G3), chaque exercice recalculé par formule depuis son fichier brut. À périmètre égal (10 %+20 %), la TVA encaissée par la caisse et la TVA assise sur les bases effectivement comptabilisées concordent à 12,89 € près sur trois ans, soit 0,01 %. Le compte 445710 porte en sus 192,33 € de TVA hors bases restaurant 10/20, dont 185,24 € s’attribuent au compte 706800 « Pourboire ». Le grief reste un motif de rejet, sans aucun rappel de droits chiffré.",
+    "statut": "demonte"
   }
 }
