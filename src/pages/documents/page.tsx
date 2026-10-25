@@ -27,6 +27,8 @@ import {
   documents,
   groupes,
   rapports,
+  contentieux,
+  piecesReponse2,
   piecesDefense,
   source,
   carnetManuscrit,
@@ -54,6 +56,8 @@ import SectionNav, {
 
 // Identifiants d'ancre des sections (partagés par le sommaire et le contenu).
 const ID_RAPPORT = 'rapport-finances-publiques'
+const ID_CONTENTIEUX = 'contentieux'
+const ID_REPONSE2 = 'pieces-reponse-2'
 const ID_PIECES_DEFENSE = 'pieces-defense'
 const ID_CARTES = 'carte-des-vins'
 const ID_FACTURES = 'factures-fournisseur'
@@ -64,7 +68,9 @@ const annexeId = (slug: string) => `annexe-${slug}`
 
 // Liste des sections pour le sommaire d'ancres.
 const sections: Section[] = [
+  { id: ID_CONTENTIEUX, label: 'Courriers du contentieux' },
   { id: ID_RAPPORT, label: 'Rapport des Finances Publiques' },
+  { id: ID_REPONSE2, label: 'Pièces Réponse 2' },
   { id: ID_PIECES_DEFENSE, label: 'Pièces de défense (analyses)' },
   ...groupes.map((g) => ({ id: annexeId(g.slug), label: `Annexe ${g.lettre}` })),
   { id: ID_CARTES, label: 'Carte des vins' },
@@ -444,6 +450,94 @@ function SectionPiecesDefense() {
   )
 }
 
+// --- Section « Courriers du contentieux » (PDF / Word) -----------------------
+function SectionContentieux() {
+  return (
+    <Paper id={ID_CONTENTIEUX} p={{ base: 'lg', sm: 'xl' }} radius="lg" style={{ scrollMarginTop: SCROLL_OFFSET }}>
+      <Stack gap="lg">
+        <Group gap="md" wrap="nowrap" align="center">
+          <Pastille>
+            <IconFileText size={24} color="var(--mantine-color-gold-8)" />
+          </Pastille>
+          <Title order={2} fz={{ base: 22, sm: 26 }}>
+            Courriers du contentieux
+          </Title>
+        </Group>
+        <Text c="dimmed" maw={760}>
+          Les échanges de la procédure contradictoire, du mémoire du 08/07/2026 aux propositions
+          de rectification personnelles du 19/10/2026.
+        </Text>
+        <NiveauBadge niveau="PDF / Word" />
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+          {contentieux.map((r) => (
+            <RapportCard key={r.id} doc={r} />
+          ))}
+        </SimpleGrid>
+      </Stack>
+    </Paper>
+  )
+}
+
+// --- Section « Pièces Réponse 2 » (analyses chiffrées, XLSX) ------------------
+function SectionReponse2() {
+  return (
+    <Paper
+      id={ID_REPONSE2}
+      p={{ base: 'lg', sm: 'xl' }}
+      radius="lg"
+      withBorder
+      style={{ scrollMarginTop: SCROLL_OFFSET, borderColor: 'var(--mantine-color-teal-4)' }}
+    >
+      <Stack gap="lg">
+        <Group gap="md" wrap="nowrap" align="center">
+          <Pastille gold={false}>
+            <IconClipboardList size={24} color="var(--mantine-color-teal-7)" />
+          </Pastille>
+          <Title order={2} fz={{ base: 22, sm: 26 }}>
+            Pièces Réponse 2 - taxation personnelle
+          </Title>
+        </Group>
+        <Text c="dimmed" maw={760}>
+          Recalculs de la taxation personnelle des associés, repris des propositions du
+          19/10/2026. Chaque chiffre est sourcé et reproductible.
+        </Text>
+        <NiveauBadge niveau="Analyse chiffrée" color="teal" />
+        <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
+          {piecesReponse2.map((d) => (
+            <Paper key={d.id} withBorder shadow="none" radius="lg" p="lg" bg="var(--mantine-color-gray-0)">
+              <Stack gap="md" h="100%" justify="space-between">
+                <Stack gap={6}>
+                  <Group justify="space-between" align="flex-start" wrap="nowrap">
+                    <Text fw={700}>{d.titre}</Text>
+                    <Badge variant="outline" color="gray" radius="sm" size="sm" style={{ flexShrink: 0 }}>
+                      {d.format}
+                    </Badge>
+                  </Group>
+                  <Text size="sm" c="dimmed">
+                    {d.description}
+                  </Text>
+                </Stack>
+                <Button
+                  component="a"
+                  href={fileUrl(d.fichier)}
+                  download
+                  variant="gradient"
+                  gradient={{ from: 'teal.5', to: 'teal.7', deg: 160 }}
+                  radius="md"
+                  size="sm"
+                  leftSection={<IconDownload size={16} />}
+                >
+                  Télécharger le classeur
+                </Button>
+              </Stack>
+            </Paper>
+          ))}
+        </SimpleGrid>
+      </Stack>
+    </Paper>
+  )
+}
+
 // --- Page ---------------------------------------------------------------------
 export default function Documents() {
   const [apercu, setApercu] = useState<Document | null>(null)
@@ -487,6 +581,9 @@ export default function Documents() {
         ))}
       </SimpleGrid>
 
+      {/* Courriers du contentieux (PDF / Word) - les plus récents */}
+      <SectionContentieux />
+
       {/* Rapport des Finances Publiques (PDF) - pièce maîtresse, en premier */}
       <Paper
         id={ID_RAPPORT}
@@ -518,6 +615,9 @@ export default function Documents() {
           </SimpleGrid>
         </Stack>
       </Paper>
+
+      {/* Pièces Réponse 2 - taxation personnelle (XLSX) */}
+      <SectionReponse2 />
 
       {/* Pièces de défense - analyses chiffrées (XLSX) */}
       <SectionPiecesDefense />

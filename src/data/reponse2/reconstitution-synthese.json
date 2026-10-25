@@ -1,0 +1,122 @@
+{
+ "meta": {
+  "slug": "reconstitution-synthese",
+  "source": "Propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION »"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que soutient l'administration",
+   "sousTitre": "La méthode de reconstitution est reprise sans changement de la proposition du 18/05/2026."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Elle procède en deux temps : (1) les volumes de boissons disponibles (achats ± variation de stock) sont divisés par des **doses figées** pour reconstituer un chiffre d'affaires « liquides » ; (2) le chiffre d'affaires « cuisine » (« solides ») est obtenu en multipliant ce CA liquides par un **coefficient** de 2,94 (2022-2023), 3,02 (2023-2024) puis 3,10 (2024-2025)."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Part « cuisine » du redressement",
+     "valeur": "≈ 75 %",
+     "sub": "jamais mesurée : entièrement extrapolée des boissons",
+     "couleur": "red"
+    },
+    {
+     "label": "Effet de levier du coefficient",
+     "valeur": "× ~4",
+     "sub": "1 € de boisson surévalué = ~4 € de redressement total (1 + coefficient)",
+     "couleur": "red"
+    },
+    {
+     "label": "Origine du coefficient",
+     "valeur": "la caisse",
+     "sub": "2,94 / 3,02 / 3,10 = ratio solides/liquides de la caisse du restaurant lui-même",
+     "couleur": "gold"
+    }
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Le vice central : un coefficient circulaire",
+   "sousTitre": ""
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le coefficient appliqué n'est pas un repère de la profession : c'est, au centième près, le **ratio solides/liquides de la propre caisse du restaurant** (2,936 ; 3,024 ; 3,105). Le service lit donc dans la caisse le partage cuisine/boissons pour fixer son coefficient, mais rejette cette même caisse pour les montants, auxquels il substitue un CA liquides gonflé de 32 % à 48 %. **On ne peut pas tenir la caisse pour fiable sur le ratio et fausse sur les sommes.**"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Conséquence arithmétique : comme le CA cuisine reconstitué est égal au CA cuisine réel multiplié par le facteur de gonflement des boissons, le service ajoute une **« cuisine fantôme »** strictement proportionnelle au gonflement des liquides — environ **354 921 €** sur trois ans, soit près des trois quarts du redressement, sans produire le moindre couvert ni achat alimentaire supplémentaire."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Et parce que le total reconstitué vaut « CA liquides × (1 + coefficient) », chaque litre rendu à sa vraie destination (sur-versement, cuisine, pertes, dégustation) retranche près de **quatre fois** sa valeur au total. Une fois les boissons rendues à leur usage réel, le total reconstitué repasse **sous le chiffre d'affaires déclaré**."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Démonstration complète en Réponse 1",
+   "texte": "Le cadre général, les onze points chiffrés (doses figées, perte de bière, crémant, dégustation, alcool de cuisine, menus, consommation du personnel, abattements, variation de stock, ventes sans achat, coefficient liquide → solide), la méthode « cascade des 10 622 L » et chacun de ses postes sont détaillés et recalculés dans la Réponse 1."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Renvois vers la contre-analyse de la reconstitution (Réponse 1)",
+   "colonnes": [
+    {
+     "label": "Point de la reconstitution"
+    },
+    {
+     "label": "Détail"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Cadre général et méthode « cascade »"
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/reconstitution-cadre-general"
+     }
+    ],
+    [
+     {
+      "v": "Doses figées (zéro sur-versement)"
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/recon-1-doses-figees"
+     }
+    ],
+    [
+     {
+      "v": "Le coefficient liquide → solide"
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/recon-11-coefficient-liquide-solide"
+     }
+    ],
+    [
+     {
+      "v": "L'extrapolation cuisine (cuisine fantôme)"
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/extrapolation-cuisine"
+     }
+    ]
+   ],
+   "minWidth": 520
+  },
+  {
+   "kind": "note",
+   "texte": "Sources : propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » ; proposition du 18/05/2026, p. 37 à 53 ; réponse de la DDFiP du Jura du 04/09/2026, parties L à T. Contre-analyse détaillée et pièces recalculées : onglet Réponse 1."
+  }
+ ]
+}

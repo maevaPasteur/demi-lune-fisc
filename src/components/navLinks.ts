@@ -1,15 +1,15 @@
 import {
-  IconChartBar,
   IconFiles,
-  IconGavel,
   IconLayoutDashboard,
   IconMessage2Exclamation,
-  IconScale,
   type Icon,
 } from '@tabler/icons-react'
 
-// Rubriques du dossier, partagées par le menu latéral et le menu mobile.
-// Les pages à venir sont listées mais désactivées (`ready: false`).
+// Rubriques du menu latéral et du menu mobile.
+// Menu volontairement réduit à trois entrées : Accueil, Réponse (dernière
+// contre-analyse en date = Réponse 2), Documents. Les onglets « Réponse 1 »,
+// « Rendu final », « Défense » et « Analyses » restent accessibles par URL
+// directe (et par les renvois internes), mais ne figurent plus au menu.
 export type NavLink = {
   to: string
   label: string
@@ -20,9 +20,6 @@ export type NavLink = {
 
 export const navLinks: NavLink[] = [
   { to: '/', label: 'Accueil', icon: IconLayoutDashboard, end: true, ready: true },
-  { to: '/reponse-1', label: 'Réponse 1', icon: IconMessage2Exclamation, ready: true },
-  { to: '/rendu-final', label: 'Rendu final', icon: IconScale, ready: true },
-  { to: '/defense', label: 'Défense', icon: IconGavel, ready: true },
-  { to: '/analyses', label: 'Analyses', icon: IconChartBar, ready: true },
+  { to: '/reponse-2', label: 'Réponse', icon: IconMessage2Exclamation, ready: true },
   { to: '/documents', label: 'Documents', icon: IconFiles, ready: true },
 ]

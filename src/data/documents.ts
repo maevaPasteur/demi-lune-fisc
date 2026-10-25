@@ -15,7 +15,7 @@ export interface Document {
   niveau: string
   periode: string // "2022-2023"
   fichier: string // chemin relatif sous public/documents (sous-dossier autorisé)
-  format: 'ODS' | 'XLS' | 'PDF'
+  format: 'ODS' | 'XLS' | 'PDF' | 'DOCX'
 }
 
 interface MetaAnnexe {
@@ -221,6 +221,152 @@ export const rapports: Document[] = [
     periode: '2022-2025',
     fichier: `${dossierRapports}/Proposition_4_Annexes_Finales.pdf`,
     format: 'PDF',
+  },
+]
+
+/**
+ * Courriers du contentieux (procédure contradictoire), au format PDF / Word,
+ * rangés dans public/documents/contentieux. Ordre chronologique.
+ */
+const dossierContentieux = 'contentieux'
+
+export const contentieux: Document[] = [
+  {
+    id: 'CT1',
+    annexe: 'CONTENTIEUX',
+    numero: 1,
+    titre: 'Observations du contribuable — 08/07/2026',
+    description:
+      'Mémoire en réponse à la proposition de rectification (59 annexes) : contestation, ' +
+      'point par point, du rejet de comptabilité et de la reconstitution.',
+    niveau: 'Document Word',
+    periode: '2022-2025',
+    fichier: `${dossierContentieux}/Contestation_du_contribuable_08-07-2026.docx`,
+    format: 'DOCX',
+  },
+  {
+    id: 'CT2',
+    annexe: 'CONTENTIEUX',
+    numero: 2,
+    titre: 'Réponse du fisc aux observations — 04/09/2026',
+    description:
+      'Réponse de la DDFiP du Jura (96 pages) aux observations du 08/07 : le service maintient ' +
+      "l'intégralité des rectifications. Contre-analyse dans l'onglet Réponse 1.",
+    niveau: 'Document PDF',
+    periode: '2022-2025',
+    fichier: `${dossierContentieux}/Reponse_fisc_aux_observations_04-09-2026.pdf`,
+    format: 'PDF',
+  },
+  {
+    id: 'CT3',
+    annexe: 'CONTENTIEUX',
+    numero: 3,
+    titre: 'Courrier de l’avocat — 28/09/2026',
+    description:
+      'Courrier de Me Thivend maintenant les observations et demandant la saisine de la ' +
+      'Commission départementale (projet).',
+    niveau: 'Document Word',
+    periode: '2022-2025',
+    fichier: `${dossierContentieux}/Courrier_avocat_28-09-2026.docx`,
+    format: 'DOCX',
+  },
+  {
+    id: 'CT4',
+    annexe: 'CONTENTIEUX',
+    numero: 4,
+    titre: 'Courrier de l’avocat — 01/10/2026',
+    description:
+      'Courrier de Me Thivend : le rejet du service n’a pas fait l’objet d’un examen effectif ; ' +
+      'demande expresse de saisine de la Commission départementale.',
+    niveau: 'Document PDF',
+    periode: '2022-2025',
+    fichier: `${dossierContentieux}/Courrier_avocat_01-10-2026.pdf`,
+    format: 'PDF',
+  },
+  {
+    id: 'CT5',
+    annexe: 'CONTENTIEUX',
+    numero: 5,
+    titre: 'Proposition personnelle — M. PASTEUR — 19/10/2026',
+    description:
+      'Proposition de rectification personnelle notifiée à M. Thierry PASTEUR : taxation des ' +
+      'distributions en RCM (contre-analyse dans l’onglet Réponse).',
+    niveau: 'Document PDF',
+    periode: '2023-2025',
+    fichier: `${dossierContentieux}/Proposition_personnelle_PASTEUR_19-10-2026.pdf`,
+    format: 'PDF',
+  },
+  {
+    id: 'CT6',
+    annexe: 'CONTENTIEUX',
+    numero: 6,
+    titre: 'Proposition personnelle — Mme BEHEM — 19/10/2026',
+    description:
+      'Proposition de rectification personnelle notifiée à Mme Ghislaine BEHEM : taxation des ' +
+      'distributions en RCM (contre-analyse dans l’onglet Réponse).',
+    niveau: 'Document PDF',
+    periode: '2023-2025',
+    fichier: `${dossierContentieux}/Proposition_personnelle_BEHEM_19-10-2026.pdf`,
+    format: 'PDF',
+  },
+]
+
+/**
+ * Pièces de la Réponse 2 - analyses chiffrées de la taxation personnelle.
+ * Chaque chiffre est repris des propositions du 19/10/2026 et recalculé.
+ */
+export const piecesReponse2: Document[] = [
+  {
+    id: 'PR2-1',
+    annexe: 'REPONSE2',
+    numero: 1,
+    titre: 'Distributions et majoration de 25 %',
+    description:
+      'Cascade TTC → TVA → HT → part par co-gérant → base RCM → assiette IR (× 1,25), par année, ' +
+      'avec contrôle de l’assiette des prélèvements sociaux (réserve QPC 2017-643/650).',
+    niveau: 'Analyse chiffrée',
+    periode: '2023-2025',
+    fichier: 'pieces-reponse-2/R2-distributions-et-majoration.xlsx',
+    format: 'XLS',
+  },
+  {
+    id: 'PR2-2',
+    annexe: 'REPONSE2',
+    numero: 2,
+    titre: 'Chiffrage M. Thierry PASTEUR',
+    description:
+      'Recalcul du supplément d’impôt (196 945 €) année par année : base RCM, assiette IR, ' +
+      'IR / prélèvements sociaux / majoration de 40 % / intérêts.',
+    niveau: 'Analyse chiffrée',
+    periode: '2023-2025',
+    fichier: 'pieces-reponse-2/R2-chiffrage-pasteur.xlsx',
+    format: 'XLS',
+  },
+  {
+    id: 'PR2-3',
+    annexe: 'REPONSE2',
+    numero: 3,
+    titre: 'Chiffrage Mme Ghislaine BEHEM',
+    description:
+      'Recalcul du supplément d’impôt (172 703 €) année par année, avec le point de contrôle ' +
+      'de l’assiette sociale 2023 (86 407 €, sans le coefficient 1,25).',
+    niveau: 'Analyse chiffrée',
+    periode: '2023-2025',
+    fichier: 'pieces-reponse-2/R2-chiffrage-behem.xlsx',
+    format: 'XLS',
+  },
+  {
+    id: 'PR2-4',
+    annexe: 'REPONSE2',
+    numero: 4,
+    titre: 'Exposition consolidée et scénarios',
+    description:
+      'Exposition totale actuelle (société 213 148 € + associés 369 648 € = 582 796 €) et ' +
+      'chiffrage des trois scénarios de réduction.',
+    niveau: 'Analyse chiffrée',
+    periode: '2022-2025',
+    fichier: 'pieces-reponse-2/R2-exposition-et-scenarios.xlsx',
+    format: 'XLS',
   },
 ]
 

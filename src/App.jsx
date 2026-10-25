@@ -11,10 +11,12 @@ import RenduFinal from './pages/rendu-final/page'
 import GriefDetail from './pages/rendu-final/[slug]/page'
 import Reponse1 from './pages/reponse-1/page'
 import Reponse1Detail from './pages/reponse-1/[slug]/page'
+import Reponse2 from './pages/reponse-2/page'
+import Reponse2Detail from './pages/reponse-2/[slug]/page'
 
-// Le routeur est en place : on n'expose pour l'instant que la page d'accueil.
-// Les futures pages (documents, analyses, chronologie…) s'ajoutent ici en
-// une ligne : <Route path="documents" element={<Documents />} />
+// Le menu n'expose que Accueil / Réponse (= Réponse 2) / Documents, mais toutes
+// les routes restent actives : les anciens onglets sont accessibles par URL et
+// par les renvois internes (la Réponse 2 pointe vers la Réponse 1).
 export default function App() {
   return (
     <Routes>
@@ -30,6 +32,8 @@ export default function App() {
         <Route path="rendu-final/:slug" element={<GriefDetail />} />
         <Route path="reponse-1" element={<Reponse1 />} />
         <Route path="reponse-1/:slug" element={<Reponse1Detail />} />
+        <Route path="reponse-2" element={<Reponse2 />} />
+        <Route path="reponse-2/:slug" element={<Reponse2Detail />} />
       </Route>
     </Routes>
   )

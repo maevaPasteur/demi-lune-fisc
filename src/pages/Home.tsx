@@ -17,14 +17,24 @@ import {
   IconCalendarStats,
   IconClockHour4,
   IconReceiptEuro,
+  IconInfoCircle,
+  IconBuildingBank,
+  IconUsers,
   type Icon,
 } from '@tabler/icons-react'
 import {
+  associes,
   cascade,
   controle,
   delai,
-  penalites,
+  societe,
+  totalActuel,
+  totalAssocies,
+  totalParAssocie,
   totalPenalites,
+  totalSociete,
+  amende1759,
+  type PostePenalite,
 } from '../data/dossier'
 import { formatEuro, joursRestants } from '../utils/format'
 import classes from './Penalites.module.css'
@@ -75,13 +85,7 @@ function StatCard({
           </ThemeIcon>
         </Group>
         <div>
-          <Text
-            ff="heading"
-            fz={valueFz}
-            fw={700}
-            c={highlight ? 'white' : undefined}
-            lh={1.15}
-          >
+          <Text ff="heading" fz={valueFz} fw={700} c={highlight ? 'white' : undefined} lh={1.15}>
             {value}
           </Text>
           <Text size="xs" mt={6} c={highlight ? 'gold.1' : 'dimmed'}>
@@ -97,9 +101,9 @@ function CartesStats() {
   return (
     <SimpleGrid cols={{ base: 1, sm: 2, lg: 3 }} spacing="lg">
       <StatCard
-        label="Total en jeu"
-        value={formatEuro(totalPenalites)}
-        sub="Sommes notifiées"
+        label="Exposition actuelle"
+        value={formatEuro(totalActuel)}
+        sub="Société + associés (après désignation)"
         icon={IconReceiptEuro}
         highlight
       />
@@ -120,72 +124,60 @@ function CartesStats() {
   )
 }
 
-// --- Détail chiffré (barres de proportion) -----------------------------------
-// Chaque poste est rattaché à une catégorie (couleur) : impôt sur les sociétés,
-// TVA, ou pénalité pour distributions occultes.
-type Categorie = 'is' | 'tva' | 'penalite'
-
-const CATEGORIES: Record<Categorie, { label: string; color: string }> = {
-  is: { label: 'Impôt sur les sociétés', color: 'var(--mantine-color-gold-6)' },
-  tva: { label: 'TVA', color: 'var(--mantine-color-blue-6)' },
-  penalite: { label: 'Pénalité distributions', color: '#b4452e' },
-}
-
-function categorie(poste: string): Categorie {
-  if (/tva/i.test(poste)) return 'tva'
-  if (/1759|distribution/i.test(poste)) return 'penalite'
-  return 'is'
-}
-
-function PuceLegende({ color, label }: { color: string; label: string }) {
+// --- Bandeau de rappel : montant initial et abandon du 1759 ------------------
+function RappelInitial() {
   return (
-    <Group gap={8} wrap="nowrap">
-      <Box
-        w={10}
-        h={10}
-        style={{ borderRadius: '50%', background: color, flexShrink: 0 }}
-      />
-      <Text size="sm" c="dimmed">
-        {label}
-      </Text>
-    </Group>
+    <Paper
+      p="lg"
+      radius="lg"
+      withBorder
+      style={{
+        background: 'var(--mantine-color-gold-0)',
+        borderColor: 'var(--mantine-color-gold-3)',
+      }}
+    >
+      <Group gap="sm" wrap="nowrap" align="flex-start">
+        <ThemeIcon size={34} radius="md" variant="light" color="gold">
+          <IconInfoCircle size={20} stroke={1.8} />
+        </ThemeIcon>
+        <Text size="sm" c="gray.8">
+          Initialement notifié <strong>{formatEuro(totalPenalites)}</strong>, dont{' '}
+          <strong>{formatEuro(amende1759)}</strong> d’amende de 100 % (art. 1759 CGI). Après la
+          désignation des bénéficiaires du 16 juin 2026 (art. 117 CGI), cette amende est{' '}
+          <strong>abandonnée</strong> et remplacée par la taxation personnelle des deux co-gérants
+          (propositions de rectification du 19 octobre 2026). L’ensemble reste suspendu au sort de la
+          reconstitution.
+        </Text>
+      </Group>
+    </Paper>
   )
 }
 
-function LignePenalite({
+// --- Détail chiffré (barres de proportion sur un total donné) ----------------
+function LigneMontant({
   poste,
   montant,
+  total,
+  color,
 }: {
   poste: string
   montant: number
+  total: number
+  color: string
 }) {
-  const { color } = CATEGORIES[categorie(poste)]
-  const part = totalPenalites > 0 ? (montant / totalPenalites) * 100 : 0
-
+  const part = total > 0 ? (montant / total) * 100 : 0
   return (
     <div className={`${classes.row} ${classes.line}`}>
       <Group gap={10} wrap="nowrap">
-        <Box
-          w={10}
-          h={10}
-          style={{ borderRadius: '50%', background: color, flexShrink: 0 }}
-        />
+        <Box w={10} h={10} style={{ borderRadius: '50%', background: color, flexShrink: 0 }} />
         <Text fw={500}>{poste}</Text>
       </Group>
-
       <div className={classes.part}>
-        <Progress
-          value={part}
-          color={color}
-          size="sm"
-          radius="xl"
-          style={{ flex: 1 }}
-        />
+        <Progress value={part} color={color} size="sm" radius="xl" style={{ flex: 1 }} />
         <Text size="sm" c="dimmed" w={56} ta="right" style={{ flexShrink: 0 }}>
           {part.toFixed(1)} %
         </Text>
       </div>
-
       <Text ff="heading" fw={700} ta="right">
         {formatEuro(montant)}
       </Text>
@@ -193,42 +185,42 @@ function LignePenalite({
   )
 }
 
-function TableauPenalites() {
+const COULEUR_IS = 'var(--mantine-color-gold-6)'
+const COULEUR_TVA = 'var(--mantine-color-blue-6)'
+const COULEUR_ASSOCIE = '#b4452e'
+
+function couleurSociete(poste: string): string {
+  return /tva/i.test(poste) ? COULEUR_TVA : COULEUR_IS
+}
+
+// --- Étage 1 : la société -----------------------------------------------------
+function BlocSociete() {
   return (
     <Paper p="xl">
       <Group justify="space-between" align="flex-start" wrap="wrap" gap="sm" mb="lg">
-        <Title order={3} fz={26}>
-          Détail des sommes notifiées
-        </Title>
-        <Text size="sm" c="dimmed">
-          Part de chaque poste dans le total en jeu
+        <Group gap="sm" wrap="nowrap">
+          <ThemeIcon size={36} radius="md" variant="light" color="gold">
+            <IconBuildingBank size={20} stroke={1.8} />
+          </ThemeIcon>
+          <div>
+            <Title order={3} fz={24}>
+              Niveau société — SARL LA DEMI-LUNE
+            </Title>
+            <Text size="sm" c="dimmed">
+              Droits et majorations maintenus (IS, TVA, 1729, intérêts)
+            </Text>
+          </div>
+        </Group>
+        <Text ff="heading" fw={700} fz={26} c="gold.7">
+          {formatEuro(totalSociete)}
         </Text>
       </Group>
 
-      {/* Légende des catégories */}
-      <Group gap="lg" wrap="wrap" mb="md">
-        {(Object.keys(CATEGORIES) as Categorie[]).map((key) => (
-          <PuceLegende
-            key={key}
-            color={CATEGORIES[key].color}
-            label={CATEGORIES[key].label}
-          />
-        ))}
-      </Group>
-
-      {/* En-têtes de colonnes */}
       <div className={`${classes.row} ${classes.head}`}>
         <Text size="xs" tt="uppercase" c="dimmed" fw={600} style={{ letterSpacing: '0.06em' }}>
           Poste
         </Text>
-        <Text
-          size="xs"
-          tt="uppercase"
-          c="dimmed"
-          fw={600}
-          className={classes.part}
-          style={{ letterSpacing: '0.06em' }}
-        >
+        <Text size="xs" tt="uppercase" c="dimmed" fw={600} className={classes.part} style={{ letterSpacing: '0.06em' }}>
           Part
         </Text>
         <Text size="xs" tt="uppercase" c="dimmed" fw={600} ta="right" style={{ letterSpacing: '0.06em' }}>
@@ -236,21 +228,98 @@ function TableauPenalites() {
         </Text>
       </div>
 
-      {/* Lignes */}
-      {penalites.map((ligne) => (
-        <LignePenalite key={ligne.poste} poste={ligne.poste} montant={ligne.montant} />
+      {societe.map((ligne: PostePenalite) => (
+        <LigneMontant
+          key={ligne.poste}
+          poste={ligne.poste}
+          montant={ligne.montant}
+          total={totalSociete}
+          color={couleurSociete(ligne.poste)}
+        />
       ))}
+    </Paper>
+  )
+}
 
-      {/* Total */}
-      <div className={`${classes.row} ${classes.line}`} style={{ marginTop: 8 }}>
-        <Title order={4} fz={20}>
-          Total en jeu
-        </Title>
-        <div className={classes.part} />
-        <Text ff="heading" fw={700} fz={26} c="gold.7" ta="right">
-          {formatEuro(totalPenalites)}
+// --- Étage 2 : les associés ---------------------------------------------------
+function BlocAssocies() {
+  return (
+    <Paper p="xl">
+      <Group justify="space-between" align="flex-start" wrap="wrap" gap="sm" mb="lg">
+        <Group gap="sm" wrap="nowrap">
+          <ThemeIcon size={36} radius="md" variant="light" color="red">
+            <IconUsers size={20} stroke={1.8} />
+          </ThemeIcon>
+          <div>
+            <Title order={3} fz={24}>
+              Niveau associés — taxation personnelle
+            </Title>
+            <Text size="sm" c="dimmed">
+              Distributions imposées en RCM (propositions du 19/10/2026)
+            </Text>
+          </div>
+        </Group>
+        <Text ff="heading" fw={700} fz={26} c="red.8">
+          {formatEuro(totalAssocies)}
+        </Text>
+      </Group>
+
+      <div className={`${classes.row} ${classes.head}`}>
+        <Text size="xs" tt="uppercase" c="dimmed" fw={600} style={{ letterSpacing: '0.06em' }}>
+          Associé (supplément d’impôt total)
+        </Text>
+        <Text size="xs" tt="uppercase" c="dimmed" fw={600} className={classes.part} style={{ letterSpacing: '0.06em' }}>
+          Part
+        </Text>
+        <Text size="xs" tt="uppercase" c="dimmed" fw={600} ta="right" style={{ letterSpacing: '0.06em' }}>
+          Montant
         </Text>
       </div>
+
+      {associes.map((a) => (
+        <LigneMontant
+          key={a.nom}
+          poste={`${a.nom}  (${a.annees.map((x) => x.annee).join(' · ')})`}
+          montant={totalParAssocie(a)}
+          total={totalAssocies}
+          color={COULEUR_ASSOCIE}
+        />
+      ))}
+
+      <Text size="xs" c="dimmed" mt="md" fs="italic">
+        Chaque supplément cumule l’impôt sur le revenu (barème, assiette majorée de 25 %), la
+        CSG/CRDS, le prélèvement de solidarité, la majoration de 40 % (art. 1729) et les intérêts.
+        Base distribuée identique pour les deux foyers (50 / 50). Détail et recalcul en Réponse 2.
+      </Text>
+    </Paper>
+  )
+}
+
+// --- Total consolidé ----------------------------------------------------------
+function TotalConsolide() {
+  return (
+    <Paper
+      p="xl"
+      radius="lg"
+      style={{
+        background:
+          'linear-gradient(135deg, var(--mantine-color-gold-7) 0%, var(--mantine-color-gold-9) 100%)',
+        border: 'none',
+      }}
+    >
+      <Group justify="space-between" align="center" wrap="wrap" gap="md">
+        <div>
+          <Text size="xs" tt="uppercase" c="gold.1" fw={600} style={{ letterSpacing: '0.08em' }}>
+            Exposition totale actuelle
+          </Text>
+          <Text c="gold.1" size="sm" mt={4}>
+            Société {formatEuro(totalSociete)} + associés {formatEuro(totalAssocies)}
+          </Text>
+        </div>
+        <Text ff="heading" fw={700} fz={{ base: 34, sm: 44 }} c="white" lh={1}>
+          {formatEuro(totalActuel)}
+        </Text>
+      </Group>
     </Paper>
   )
 }
@@ -258,7 +327,7 @@ function TableauPenalites() {
 // --- Compteur de délai --------------------------------------------------------
 function CompteurDelai() {
   const jours = joursRestants(delai.dateLimite)
-  const urgent = jours !== null && jours < 10
+  const urgent = jours !== null && jours < 15
 
   let badge: ReactNode
   if (jours === null) {
@@ -301,7 +370,7 @@ function Cascade() {
   return (
     <Paper p="xl">
       <Text size="xs" tt="uppercase" c="dimmed" fw={600} mb="md">
-        Cascade de la procédure
+        Déroulé de la procédure
       </Text>
       <Group gap="xs" wrap="wrap">
         {cascade.map((etape, index) => (
@@ -352,26 +421,27 @@ export default function Home() {
     <Stack gap={40}>
       {/* A - En-tête */}
       <Stack gap="xs">
-        <Text
-          fw={700}
-          size="sm"
-          c="gold.7"
-          tt="uppercase"
-          style={{ letterSpacing: '0.12em' }}
-        >
+        <Text fw={700} size="sm" c="gold.7" tt="uppercase" style={{ letterSpacing: '0.12em' }}>
           Synthèse du dossier
         </Text>
         <Title order={1} fz={{ base: 40, sm: 56 }} lh={1.05}>
           Accueil
         </Title>
-        <Text c="dimmed" size="lg" maw={680}>
-          Synthèse des arguments opposables au contrôle fiscal, classés par
-          puissance. Document de travail confidentiel.
+        <Text c="dimmed" size="lg" maw={720}>
+          Synthèse du contentieux après les propositions de rectification personnelles du 19 octobre
+          2026. Document de travail confidentiel.
         </Text>
       </Stack>
 
       <CartesStats />
-      <TableauPenalites />
+      <RappelInitial />
+
+      <Stack gap="lg">
+        <BlocSociete />
+        <BlocAssocies />
+        <TotalConsolide />
+      </Stack>
+
       <CompteurDelai />
       <Cascade />
 
@@ -380,19 +450,19 @@ export default function Home() {
         <Title order={2}>Parcourir le dossier</Title>
         <SimpleGrid cols={{ base: 1, md: 3 }} spacing="lg">
           <AccesCard
-            to="/defense"
-            titre="Défense"
-            desc="Les arguments opposables au contrôle, par front, reliés aux preuves et aux pièces."
+            to="/reponse-2"
+            titre="Réponse"
+            desc="La contre-analyse des propositions personnelles du 19/10/2026 : griefs repris, reconstitution et taxation personnelle des associés."
           />
           <AccesCard
-            to="/analyses"
-            titre="Analyses"
-            desc="Les preuves chiffrées, recalculées et vérifiées depuis la caisse certifiée."
+            to="/reponse-1"
+            titre="Réponse 1"
+            desc="La contre-analyse, point par point, de la réponse du fisc du 04/09/2026 aux observations du 08/07."
           />
           <AccesCard
             to="/documents"
             titre="Documents"
-            desc="Les annexes comptables et la proposition de rectification, avec aperçu et téléchargement."
+            desc="Les pièces du dossier : courriers du contentieux, annexes comptables et preuves chiffrées, avec aperçu et téléchargement."
           />
         </SimpleGrid>
       </Stack>

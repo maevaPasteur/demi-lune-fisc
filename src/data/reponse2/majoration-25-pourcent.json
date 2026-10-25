@@ -1,0 +1,136 @@
+{
+ "meta": {
+  "slug": "majoration-25-pourcent",
+  "source": "Propositions du 19/10/2026, art. 158-7-2° du CGI"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que soutient l'administration",
+   "sousTitre": "Le service majore de 25 % l'assiette des distributions (coefficient 1,25, art. 158-7-2° du CGI) avant imposition au barème de l'impôt sur le revenu."
+  },
+  {
+   "kind": "tableau",
+   "titre": "La majoration d'assiette de 25 %, par foyer",
+   "colonnes": [
+    {
+     "label": "Base"
+    },
+    {
+     "label": "2023",
+     "align": "right"
+    },
+    {
+     "label": "2024",
+     "align": "right"
+    },
+    {
+     "label": "2025",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Base RCM par foyer"
+     },
+     {
+      "v": "96 617 €",
+      "align": "right"
+     },
+     {
+      "v": "69 432 €",
+      "align": "right"
+     },
+     {
+      "v": "69 864 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "× 1,25 (art. 158-7-2°)"
+     },
+     {
+      "v": "120 771 €",
+      "align": "right"
+     },
+     {
+      "v": "86 790 €",
+      "align": "right"
+     },
+     {
+      "v": "87 330 €",
+      "align": "right"
+     }
+    ]
+   ],
+   "minWidth": 520
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse",
+   "sousTitre": ""
+  },
+  {
+   "kind": "titre",
+   "texte": "Elle suit d'abord le sort de la distribution",
+   "numero": "3.1"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La majoration de 25 % est une **règle d'assiette** : elle ne s'applique que s'il existe une distribution à majorer. Sans distribution établie (4.1), il n'y a aucune assiette, donc aucune majoration. Elle tombe avec la reconstitution."
+  },
+  {
+   "kind": "titre",
+   "texte": "Pour l'impôt sur le revenu, le coefficient est en principe valide",
+   "numero": "3.2"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il faut être exact : appliqué à l'**impôt sur le revenu**, le coefficient 1,25 a été jugé conforme à la Constitution et à la Convention européenne des droits de l'homme. Le contester frontalement sur l'IR serait voué à l'échec ; ce n'est pas là que se situe la faille."
+  },
+  {
+   "kind": "titre",
+   "texte": "Mais il ne peut pas servir d'assiette aux prélèvements sociaux",
+   "numero": "3.3"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le Conseil constitutionnel a jugé (décision n° 2017-643/650 QPC du 7 juillet 2017) que le coefficient de 1,25 **ne peut pas servir de base au calcul des contributions sociales** (CSG, CRDS, prélèvement de solidarité) assises sur les revenus distribués de l'article 109. Il convient donc de **vérifier, foyer par foyer et année par année, que la CSG/CRDS et le prélèvement de solidarité n'ont pas été calculés sur l'assiette majorée de 25 %.** Tout euro de contribution sociale assis sur le 1,25 doit être dégrevé."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "blue",
+   "titre": "Point de contrôle chiffrable",
+   "texte": "Sur la proposition de Mme BEHEM, la base des prélèvements sociaux 2023 ressort à 86 407 € — soit la distribution hors coefficient, ce qui paraît conforme à la réserve du Conseil constitutionnel. Le même contrôle doit être fait pour chaque année et pour M. PASTEUR : si, sur l'une des années, la base sociale a été majorée de 25 %, la réduction est acquise de droit."
+  },
+  {
+   "kind": "titre",
+   "texte": "Le cumul avec la majoration de 40 % n'est pas une double peine, mais l'addition est confiscatoire",
+   "numero": "3.4"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le cumul du coefficient 1,25 (assiette) et de la majoration de 40 % de l'article 1729 (sanction) n'est pas, en soi, prohibé : ces mesures sont de natures différentes, et le principe *non bis in idem* ne joue qu'entre deux sanctions. En revanche, l'**addition globale** — coefficient 1,25, barème, CSG/CRDS, prélèvement de solidarité, majoration de 40 % et intérêts — produit une charge dont le caractère **confiscatoire** peut être discuté au regard du droit de propriété (article 1er du premier protocole additionnel à la Convention européenne des droits de l'homme) et de l'égalité devant les charges publiques."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Reconstitution de l'assiette IR (base RCM × 1,25) et point de contrôle de l'assiette des prélèvements sociaux, par foyer et par année.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-distributions-et-majoration.xlsx",
+     "label": "Distributions et majoration de 25 % : assiette IR et contrôle de l'assiette sociale (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Sources : propositions du 19/10/2026, art. 158-7-2° du CGI, art. 200 A, 1600-0 C/D/E, 235 ter du CGI ; Conseil constitutionnel, décision n° 2017-643/650 QPC du 07/07/2017 (réserve sur les contributions sociales)."
+  }
+ ]
+}

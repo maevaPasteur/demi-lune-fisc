@@ -1,0 +1,159 @@
+{
+ "meta": {
+  "slug": "pasteur-chiffrage",
+  "source": "Proposition personnelle PASTEUR du 19/10/2026"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que le service a chiffré",
+   "sousTitre": "Supplément d'impôt (impôt sur le revenu + prélèvements sociaux + majorations + intérêts) notifié à M. Thierry PASTEUR, année par année."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Supplément d'impôt notifié à M. Thierry PASTEUR",
+   "colonnes": [
+    {
+     "label": "Année"
+    },
+    {
+     "label": "Base RCM par foyer",
+     "align": "right"
+    },
+    {
+     "label": "Assiette IR (× 1,25)",
+     "align": "right"
+    },
+    {
+     "label": "Supplément d'impôt",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2023"
+     },
+     {
+      "v": "96 617 €",
+      "align": "right"
+     },
+     {
+      "v": "120 771 €",
+      "align": "right"
+     },
+     {
+      "v": "83 391 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024"
+     },
+     {
+      "v": "69 432 €",
+      "align": "right"
+     },
+     {
+      "v": "86 790 €",
+      "align": "right"
+     },
+     {
+      "v": "56 724 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2025"
+     },
+     {
+      "v": "69 864 €",
+      "align": "right"
+     },
+     {
+      "v": "87 330 €",
+      "align": "right"
+     },
+     {
+      "v": "56 830 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total"
+     },
+     {
+      "v": "235 913 €",
+      "align": "right"
+     },
+     {
+      "v": "294 891 €",
+      "align": "right"
+     },
+     {
+      "v": "196 945 €",
+      "align": "right"
+     }
+    ]
+   ],
+   "minWidth": 600
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Supplément total notifié",
+     "valeur": "196 945 €",
+     "sub": "sur trois années (2023-2025)",
+     "couleur": "red"
+    },
+    {
+     "label": "Origine",
+     "valeur": "distributions",
+     "sub": "intégralement dérivé de la reconstitution société",
+     "couleur": "gold"
+    },
+    {
+     "label": "Si la reconstitution tombe",
+     "valeur": "0 €",
+     "sub": "plus de distribution, plus d'impôt personnel",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse",
+   "sousTitre": ""
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le chiffrage est **vérifié** : il correspond, année par année, à l'imposition au barème de l'assiette distribuée majorée de 25 %, augmentée de la CSG/CRDS, du prélèvement de solidarité, de la majoration de 40 % et des intérêts. Il n'appelle pas de correction arithmétique interne, mais il est **entièrement dérivé** : chacun de ces euros n'existe que parce que la reconstitution « société » existe. Il disparaît avec elle."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les leviers propres au foyer s'ajoutent à la contestation du principe : vérification que les **prélèvements sociaux** n'ont pas été assis sur l'assiette majorée de 25 % (4.3), **décharge de la majoration de 40 %** faute de motivation individualisée (4.4), et contestation de la **clé de répartition de 50 %** faute d'appréhension établie (4.2)."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Recalcul du supplément d'impôt de M. Thierry PASTEUR, année par année, à partir des bases distribuées et des taux notifiés, avec le détail IR / prélèvements sociaux / majoration de 40 % / intérêts.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-pasteur.xlsx",
+     "label": "Chiffrage M. Thierry PASTEUR : recalcul année par année (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Sources : proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026, « CONSEQUENCES FINANCIERES », pages de détail de l'impôt sur le revenu et des prélèvements sociaux (années 2023, 2024, 2025)."
+  }
+ ]
+}

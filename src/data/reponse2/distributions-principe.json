@@ -1,0 +1,197 @@
+{
+ "meta": {
+  "slug": "distributions-principe",
+  "source": "Propositions du 19/10/2026, « En matière de distributions »"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que soutient l'administration",
+   "sousTitre": "Sur le fondement de l'article 109-1 du CGI et des « conditions d'exploitation », le service qualifie les recettes réputées dissimulées de revenus distribués et les répartit par moitié entre les deux co-gérants."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le service part des dissimulations de recettes TTC constatées par la reconstitution (193 235 € / 138 864 € / 139 728 €), en retranche la TVA, et répartit le hors taxe par moitié entre M. PASTEUR et Mme BEHEM, auxquels il ajoute la moitié de la TVA. Il obtient ainsi, par foyer, les bases suivantes de revenus de capitaux mobiliers."
+  },
+  {
+   "kind": "tableau",
+   "titre": "La « cascade » des distributions, telle que le service la construit (par foyer)",
+   "colonnes": [
+    {
+     "label": "Élément"
+    },
+    {
+     "label": "2023",
+     "align": "right"
+    },
+    {
+     "label": "2024",
+     "align": "right"
+    },
+    {
+     "label": "2025",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Dissimulation TTC (reconstitution)"
+     },
+     {
+      "v": "193 235 €",
+      "align": "right"
+     },
+     {
+      "v": "138 864 €",
+      "align": "right"
+     },
+     {
+      "v": "139 728 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "− TVA incluse"
+     },
+     {
+      "v": "− 20 421 €",
+      "align": "right"
+     },
+     {
+      "v": "− 14 854 €",
+      "align": "right"
+     },
+     {
+      "v": "− 14 652 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "= Dissimulation HT"
+     },
+     {
+      "v": "172 814 €",
+      "align": "right"
+     },
+     {
+      "v": "124 010 €",
+      "align": "right"
+     },
+     {
+      "v": "125 076 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Part HT par co-gérant (÷ 2)"
+     },
+     {
+      "v": "86 407 €",
+      "align": "right"
+     },
+     {
+      "v": "62 005 €",
+      "align": "right"
+     },
+     {
+      "v": "62 538 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "+ Part TVA par co-gérant (÷ 2)"
+     },
+     {
+      "v": "10 210 €",
+      "align": "right"
+     },
+     {
+      "v": "7 427 €",
+      "align": "right"
+     },
+     {
+      "v": "7 326 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "= Base RCM par foyer"
+     },
+     {
+      "v": "96 617 €",
+      "align": "right"
+     },
+     {
+      "v": "69 432 €",
+      "align": "right"
+     },
+     {
+      "v": "69 864 €",
+      "align": "right"
+     }
+    ]
+   ],
+   "minWidth": 560
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Notre réponse : une distribution sans existence propre",
+   "sousTitre": ""
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Pas de recette occultée établie, pas de distribution.** La somme prétendument distribuée n'est pas un flux constaté : c'est, à l'euro près, le produit de la reconstitution du chiffre d'affaires. Le service le reconnaît implicitement puisqu'il la calcule en reprenant exactement ses propres montants reconstitués. La distribution n'a donc **aucune existence autonome** : elle est le reflet comptable d'un chiffre d'affaires théorique."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Il en résulte une conséquence procédurale simple : **tout ce qui est bâti sur la distribution tombe avec la reconstitution.** Les RCM, la majoration d'assiette de 25 %, la majoration de 40 % et les intérêts notifiés aux deux foyers sont des accessoires d'un redressement « société » contesté dans son principe même (Réponse 1). Il n'existe, à ce stade, aucun élément — relevé bancaire, compte courant d'associé, enrichissement — établissant qu'un euro a été effectivement appréhendé par l'un ou l'autre des foyers."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Nature de la distribution",
+     "valeur": "dérivée",
+     "sub": "reflet exact du CA reconstitué, aucun flux constaté",
+     "couleur": "gold"
+    },
+    {
+     "label": "Base RCM imposée (par foyer, 3 ans)",
+     "valeur": "235 913 €",
+     "sub": "96 617 + 69 432 + 69 864",
+     "couleur": "red"
+    },
+    {
+     "label": "Si la reconstitution tombe",
+     "valeur": "0 €",
+     "sub": "plus de recette occultée = plus de distribution",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Cascade des distributions entièrement recalculée à partir des montants notifiés (TTC → TVA → HT → part par co-gérant → base RCM), et chaînage avec les dissimulations retenues par la reconstitution. Chaque cellule est reproductible depuis les propositions du 19/10/2026.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-distributions-et-majoration.xlsx",
+     "label": "Distributions et majoration de 25 % : cascade TTC → base RCM → assiette IR, par foyer et par année (XLSX)"
+    }
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Sources : propositions du 19/10/2026, « En matière de distributions » (art. 108, 109-1, 110, 111 du CGI) ; dissimulations TTC/HT reprises de la reconstitution (proposition du 18/05/2026, p. 52). Les distributions suivent le sort de la reconstitution contestée en Réponse 1."
+  }
+ ]
+}

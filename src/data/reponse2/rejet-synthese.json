@@ -1,0 +1,180 @@
+{
+ "meta": {
+  "slug": "rejet-synthese",
+  "source": "Propositions du 19/10/2026, partie « REJET DE LA COMPTABILITE »"
+ },
+ "sections": [
+  {
+   "kind": "chapitre",
+   "source": "fisc",
+   "numero": 1,
+   "titre": "Ce que soutient l'administration",
+   "sousTitre": "La partie « REJET DE LA COMPTABILITE » des propositions du 19/10/2026 reprend, dans le même ordre et les mêmes termes, les griefs de la proposition du 18/05/2026."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Treize griefs y sont alignés : l'inventaire de stocks, les suppressions de notes (« DEL »), les quantités inférieures à 1, les articles à prix 0 €, les erreurs de TVA (en deux parties), les fichiers Événement et Règlement, le nombre d'articles, les chiffres d'affaires, la « consommation vendue supérieure aux achats », l'instabilité des prix des menus et le coefficient de revente."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Chaque grief est déjà réfuté, pièce à l'appui, dans la Réponse 1",
+   "texte": "La Réponse 1 répond, dans son ordre exact, à la réponse du fisc du 4 septembre 2026 — une version plus argumentée que le simple rappel du 19 octobre. Le tableau ci-dessous donne, pour chaque grief, l'argument décisif et le renvoi vers la contre-analyse complète."
+  },
+  {
+   "kind": "chapitre",
+   "source": "nous",
+   "numero": 2,
+   "titre": "Les treize griefs, l'argument décisif et le renvoi",
+   "sousTitre": ""
+  },
+  {
+   "kind": "tableau",
+   "titre": "Griefs de rejet repris le 19/10/2026 — dans l'ordre du courrier",
+   "colonnes": [
+    {
+     "label": "Grief du service"
+    },
+    {
+     "label": "L'argument décisif"
+    },
+    {
+     "label": "Détail"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Inventaire de stocks « incomplet »"
+     },
+     {
+      "v": "La contenance n'est pas une mention légale (R. 123-177 exige quantité + valeur, présentes) ; le service a lui-même reconstitué les volumes."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/inventaires-de-stocks"
+     }
+    ],
+    [
+     {
+      "v": "Suppressions de notes « DEL » (430 763 €)"
+     },
+     {
+      "v": "Aucune recette n'y disparaît : 4 fautes de frappe = 32 % du total, le reste = partages, re-saisies et forfaits ; médiane 9 €, 96,6 % pendant le service. Caisse certifiée NF 525."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/suppressions-de-notes"
+     }
+    ],
+    [
+     {
+      "v": "Quantités inférieures à 1"
+     },
+     {
+      "v": "Ce sont des partages d'addition (1/N convives) qui reconstituent au centime le total encaissé ; l'exemple « table 13 » du service a sa moitié sur la note 14."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/quantites-anormales"
+     }
+    ],
+    [
+     {
+      "v": "Articles à prix 0 €"
+     },
+     {
+      "v": "272 lignes sur 97 769 (0,28 %), encaissé 0,00 € : une ligne à prix nul ne peut par construction sortir aucune recette."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/articles-a-zero-euro"
+     }
+    ],
+    [
+     {
+      "v": "Erreurs de TVA (bases négatives)"
+     },
+     {
+      "v": "Une seule colonne d'affichage de l'éditeur est erronée ; la TVA réellement encaissée boucle avec le CA à 10,68 € près sur trois ans et colle à la comptabilité."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/incoherences-de-tva"
+     }
+    ],
+    [
+     {
+      "v": "Fichiers Événement et Règlement"
+     },
+     {
+      "v": "Même CA à l'euro près d'un export à l'autre ; l'écart ne porte que sur le comptage des parts partagées. L'Excel de travail n'est pas l'archive NF 525."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/fichiers-evenement-reglement"
+     }
+    ],
+    [
+     {
+      "v": "Nombre d'articles « fluctuant »"
+     },
+     {
+      "v": "1 739 « articles » d'écart = 0 € d'écart : la colonne « Qté » additionne des parts (0,5 ; 0,33), ce n'est pas une mesure de recettes."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/fichiers-evenement-reglement"
+     }
+    ],
+    [
+     {
+      "v": "Consommation vendue supérieure aux achats"
+     },
+     {
+      "v": "Artefacts de libellés : Beaune rouge lu comme « blanc », Calvados de cuisine, eaux-de-vie achetées sous des noms voisins. Bilan matière global excédentaire de 3 048 L."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/consommation-superieure-achats"
+     }
+    ],
+    [
+     {
+      "v": "Instabilité des prix du « menu Demi Lune »"
+     },
+     {
+      "v": "Le prix catalogue (45 €) est stable ; les prix variables sont des forfaits « sans détail » (factures globales), tous horodatés et portés au CA."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/prix-du-menu-demi-lune"
+     }
+    ],
+    [
+     {
+      "v": "Coefficient de revente « trop bas »"
+     },
+     {
+      "v": "Produit par produit la marge est normale (vins ×3,5 ; spiritueux ×7 à ×13) ; sur l'alcool réellement revendu ×3,85. Le « 3,05 » du service est fabriqué par sa propre reconstitution."
+     },
+     {
+      "v": "Réponse 1",
+      "href": "/demi-lune-fisc/reponse-1/coefficient-de-revente"
+     }
+    ]
+   ],
+   "minWidth": 760
+  },
+  {
+   "kind": "alerte",
+   "couleur": "red",
+   "titre": "Le rejet déplace le débat mais n'abandonne aucun grief",
+   "texte": "Dans sa réponse du 4 septembre, le service oppose surtout le volume (« seules 944 lignes DEL documentées sur 21 302 ») et l'absence d'identifiant commun entre fichiers. Ces deux objections sont traitées dans la Réponse 1 (suppressions de notes et fichiers Événement/Règlement) : la réconciliation est faite journée par journée et le chaînage du totalisateur de caisse est reproduit."
+  },
+  {
+   "kind": "note",
+   "texte": "Sources : propositions du 19/10/2026, partie « REJET DE LA COMPTABILITE » (griefs 1 à 18) ; proposition du 18/05/2026, p. 11 à 37 ; réponse de la DDFiP du Jura du 04/09/2026, parties A à K et U. Contre-analyse détaillée : onglet Réponse 1."
+  }
+ ]
+}
