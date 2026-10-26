@@ -1133,6 +1133,286 @@
       "texte": "La dernière colonne du tableau donne la réponse au grief. La somme des tickets de la première série vaut 403 370,42 €, 437 992,92 € et 434 827,86 € : ce sont, au centime, les trois montants que le service attribue aux annexes B. Les deux séries réunies valent 403 370,42 €, 438 281,12 € et 435 564,96 € : ce sont, au centime, les trois montants qu’il attribue aux annexes C. **L’écart entre ses annexes B et ses annexes C est la seconde série de compteurs, et rien d’autre.**"
     },
     {
+      "kind": "tableau",
+      "titre": "Étape 1 : le compteur de la caisse reconstitue, à lui seul, le chiffre d’affaires de l’annexe B (annexes H-1 à H-3, colonne « tot_sum »)",
+      "minWidth": 880,
+      "colonnes": [
+        {
+          "label": "Donnée lue, puis opération"
+        },
+        {
+          "label": "2022-2023",
+          "align": "right"
+        },
+        {
+          "label": "2023-2024",
+          "align": "right"
+        },
+        {
+          "label": "2024-2025",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Compteur à l’ouverture, ligne « A NOUVEAUX »"
+          },
+          {
+            "v": "977 739,78 €",
+            "align": "right"
+          },
+          {
+            "v": "1 381 110,20 €",
+            "align": "right"
+          },
+          {
+            "v": "1 819 103,12 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Compteur à la clôture (dernier ticket de la première série)"
+          },
+          {
+            "v": "1 381 110,20 €",
+            "align": "right"
+          },
+          {
+            "v": "1 819 103,12 €",
+            "align": "right"
+          },
+          {
+            "v": "2 253 930,98 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Écart entre cette clôture et l’ouverture de l’exercice suivant"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "fin de période",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Chiffre d’affaires = clôture − ouverture",
+            "fw": 700
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Chiffre d’affaires porté par l’annexe B (ligne TOTAL)"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Écart entre les deux",
+            "fw": 700
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "tableau",
+      "titre": "Étape 2 : de l’annexe B à l’annexe C, ticket par ticket (annexes B/C-1 à B/C-3 ; pièce R2, onglet « Calcul », ligne 18)",
+      "minWidth": 880,
+      "colonnes": [
+        {
+          "label": "Donnée lue, puis opération"
+        },
+        {
+          "label": "2022-2023",
+          "align": "right"
+        },
+        {
+          "label": "2023-2024",
+          "align": "right"
+        },
+        {
+          "label": "2024-2025",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Chiffre d’affaires de l’annexe B (première série de compteurs)"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "437 992,92 €",
+            "align": "right"
+          },
+          {
+            "v": "434 827,86 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "+ tickets de la seconde série (notes à 0 € et notes à remise)"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right"
+          },
+          {
+            "v": "288,20 €",
+            "align": "right"
+          },
+          {
+            "v": "737,10 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "= chiffre d’affaires de l’annexe C (Σ Tot_rem_Ttc)",
+            "fw": 700
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Tickets de la seconde série à montant non nul (qui expliquent l’écart)"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "12",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Groupes article de l’annexe B absents de l’annexe C"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Pièces de l’étape 1 et de l’étape 2. Les deux compteurs et leurs raccords (clôture = ouverture suivante, écart 0,00 €) se lisent sur la ligne « A NOUVEAUX » et la ligne « TOTAL » des annexes H, colonnes « tot_sum » (recettes) et « tot_tax_sum » (taxe). L’égalité du chiffre d’affaires entre annexe B, annexe C et compteur est reprise par formule dans la pièce R2, onglet « Calcul », ligne 18 (CA de l’annexe C par SOMME de Tot_rem_Ttc), à comparer à la ligne TOTAL des annexes B.",
+      "fichiers": [
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-H1_liste-tickets_2022-2023.xls",
+          "label": "Annexe H-1 : compteur perpétuel 2022-2023 (« A NOUVEAUX » 977 739,78 € ; clôture 1 381 110,20 €)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-H2_liste-tickets_2023-2024.xls",
+          "label": "Annexe H-2 : compteur perpétuel 2023-2024 (ouverture 1 381 110,20 € ; clôture 1 819 103,12 €)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-H3_liste-tickets_2024-2025.xls",
+          "label": "Annexe H-3 : compteur perpétuel 2024-2025 (ouverture 1 819 103,12 € ; clôture 2 253 930,98 €)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-compteur-perpetuel.xlsx",
+          "label": "R1 - Les deux compteurs de la caisse, ticket par ticket"
+        }
+      ]
+    },
+    {
       "kind": "paragraphe",
       "texte": "Les quatre montants se lisent alors sans difficulté. Chacun a une origine, une colonne et un fichier."
     },
@@ -1529,6 +1809,40 @@
       "texte": "Et ces 17 tickets ne sont pas apparus de nulle part : **ce sont exactement les tickets à montant non nul de la seconde série de compteurs**, celle que l’extraction de février ne reprenait pas. Cinq tickets sur l’exercice 2023-2024, pour 288,20 €, douze sur l’exercice 2024-2025, pour 737,10 €, aucun sur 2022-2023 où la seconde série est entièrement à 0 €. Ces deux montants sont, au centime, l’écart de chiffre d’affaires entre les annexes C et les annexes B. La boucle est fermée : l’écart entre les deux remises, l’écart entre les deux annexes et le total de la seconde série de compteurs sont un seul et même nombre. Le détail des 17 tickets et des 75 lignes est produit article par article dans la pièce jointe."
     },
     {
+      "kind": "piecejointe",
+      "intro": "Pièce du rapprochement ligne à ligne. Le rapprochement de l’annexe B et de l’annexe C (clé : date du ticket, numéro de ticket, référence du produit) est produit sur les deux jeux d’annexes primaires des trois exercices ; aucun groupe article de l’annexe B n’est absent de l’annexe C, et les 75 lignes que l’annexe C porte en plus (17 tickets, 1 025,30 €) sont détaillées dans la pièce R1 de réconciliation.",
+      "fichiers": [
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
+          "label": "Annexe B-1 : extraction transmise par courriel (février 2026)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : remise du 13/03/2026"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B2_prix-vente-quantite_2023-2024.xls",
+          "label": "Annexe B-2 : exercice 2023-2024"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+          "label": "Annexe C-2 : exercice 2023-2024 (13 lignes de plus que B-2, 288,20 €)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-B3_prix-vente-quantite_2024-2025.xls",
+          "label": "Annexe B-3 : exercice 2024-2025"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+          "label": "Annexe C-3 : exercice 2024-2025 (62 lignes de plus que B-3, 737,10 €)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-reconciliation-annexes.xlsx",
+          "label": "R1 - Réconciliation des annexes A, B, C, F, G et H, et détail des 75 lignes de C absentes de B"
+        }
+      ]
+    },
+    {
       "kind": "titre",
       "texte": "Les quantités de l’annexe C ne sont pas minorées : la colonne de contrôle du service le dit"
     },
@@ -1728,6 +2042,629 @@
     {
       "kind": "note",
       "texte": "Chaque ligne est lue sur la ligne TOTAL des annexes B-1 à B-3 et C-1 à C-3. Le résidu de la colonne C (0,04 € / 44,58 € / 131,08 €) et sa décomposition entre lignes à remise et arrondi sont recalculés par formule dans la pièce jointe R2 (onglet « Calcul » et onglet « Remises », qui liste les quatre et dix lignes à remise concernées)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Étape 3 : d’où vient l’écart de contrôle de l’annexe C (pièce R2, onglet « Calcul », lignes 18 à 24)",
+      "minWidth": 880,
+      "colonnes": [
+        {
+          "label": "Donnée lue, puis opération"
+        },
+        {
+          "label": "2022-2023",
+          "align": "right"
+        },
+        {
+          "label": "2023-2024",
+          "align": "right"
+        },
+        {
+          "label": "2024-2025",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Contrôle « prix unitaire × quantité » du service (SOMMEPROD)"
+          },
+          {
+            "v": "403 370,38 €",
+            "align": "right"
+          },
+          {
+            "v": "438 325,70 €",
+            "align": "right"
+          },
+          {
+            "v": "435 696,04 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Chiffre d’affaires de l’annexe C (Σ Tot_rem_Ttc)"
+          },
+          {
+            "v": "403 370,42 €",
+            "align": "right"
+          },
+          {
+            "v": "438 281,12 €",
+            "align": "right"
+          },
+          {
+            "v": "435 564,96 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Écart de contrôle = contrôle − chiffre d’affaires",
+            "fw": 700
+          },
+          {
+            "v": "− 0,04 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "44,58 €",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "131,08 €",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Nombre de lignes à remise (colonne « 15 Discount Rate » ≠ 0)"
+          },
+          {
+            "v": "0",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Résidu porté par ces lignes à remise"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right"
+          },
+          {
+            "v": "44,60 €",
+            "align": "right"
+          },
+          {
+            "v": "131,08 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Résidu d’arrondi (écart − remises)"
+          },
+          {
+            "v": "− 0,04 €",
+            "align": "right"
+          },
+          {
+            "v": "− 0,02 €",
+            "align": "right"
+          },
+          {
+            "v": "0,00 €",
+            "align": "right",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les quatorze lignes à remise qui portent l’intégralité de l’écart de contrôle (pièce R2, onglet « Remises », lignes 4 à 17)",
+      "minWidth": 940,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Date"
+        },
+        {
+          "label": "Ticket",
+          "align": "right"
+        },
+        {
+          "label": "Article"
+        },
+        {
+          "label": "Prix unitaire × quantité",
+          "align": "right"
+        },
+        {
+          "label": "Net encaissé",
+          "align": "right"
+        },
+        {
+          "label": "Remise = résidu",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "17/06/2023"
+          },
+          {
+            "v": "6",
+            "align": "right"
+          },
+          {
+            "v": "Entrecôte Morilles"
+          },
+          {
+            "v": "69,60 €",
+            "align": "right"
+          },
+          {
+            "v": "60,00 €",
+            "align": "right"
+          },
+          {
+            "v": "9,60 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "15/07/2023"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "Menu Bourguignon (− 50 %)"
+          },
+          {
+            "v": "34,00 €",
+            "align": "right"
+          },
+          {
+            "v": "17,00 €",
+            "align": "right"
+          },
+          {
+            "v": "17,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "15/07/2023"
+          },
+          {
+            "v": "18",
+            "align": "right"
+          },
+          {
+            "v": "Menu Franc-Comtois (− 50 %)"
+          },
+          {
+            "v": "34,00 €",
+            "align": "right"
+          },
+          {
+            "v": "17,00 €",
+            "align": "right"
+          },
+          {
+            "v": "17,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2023-2024"
+          },
+          {
+            "v": "27/09/2023"
+          },
+          {
+            "v": "19",
+            "align": "right"
+          },
+          {
+            "v": "Camembert Rôti"
+          },
+          {
+            "v": "18,60 €",
+            "align": "right"
+          },
+          {
+            "v": "17,60 €",
+            "align": "right"
+          },
+          {
+            "v": "1,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Sous-total 2023-2024",
+            "fw": 700
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "4 lignes",
+            "fw": 700
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "44,60 € (− 0,02 € d’arrondi = 44,58 €)",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "27/04/2024"
+          },
+          {
+            "v": "20",
+            "align": "right"
+          },
+          {
+            "v": "Menu Bourguignon"
+          },
+          {
+            "v": "34,00 €",
+            "align": "right"
+          },
+          {
+            "v": "25,00 €",
+            "align": "right"
+          },
+          {
+            "v": "9,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "14/06/2024"
+          },
+          {
+            "v": "21",
+            "align": "right"
+          },
+          {
+            "v": "Menu Bambin"
+          },
+          {
+            "v": "13,80 €",
+            "align": "right"
+          },
+          {
+            "v": "12,93 €",
+            "align": "right"
+          },
+          {
+            "v": "0,87 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "15/06/2024"
+          },
+          {
+            "v": "10",
+            "align": "right"
+          },
+          {
+            "v": "Menu « Demi Lune »"
+          },
+          {
+            "v": "90,00 €",
+            "align": "right"
+          },
+          {
+            "v": "51,10 €",
+            "align": "right"
+          },
+          {
+            "v": "38,90 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "15/06/2024"
+          },
+          {
+            "v": "14",
+            "align": "right"
+          },
+          {
+            "v": "Café Viennois"
+          },
+          {
+            "v": "5,50 €",
+            "align": "right"
+          },
+          {
+            "v": "2,80 €",
+            "align": "right"
+          },
+          {
+            "v": "2,70 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "15/06/2024"
+          },
+          {
+            "v": "31",
+            "align": "right"
+          },
+          {
+            "v": "Menu « Demi Lune »"
+          },
+          {
+            "v": "135,00 €",
+            "align": "right"
+          },
+          {
+            "v": "130,50 €",
+            "align": "right"
+          },
+          {
+            "v": "4,50 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "15/06/2024"
+          },
+          {
+            "v": "35",
+            "align": "right"
+          },
+          {
+            "v": "Menu « Demi Lune »"
+          },
+          {
+            "v": "135,00 €",
+            "align": "right"
+          },
+          {
+            "v": "120,30 €",
+            "align": "right"
+          },
+          {
+            "v": "14,70 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "27/06/2024"
+          },
+          {
+            "v": "5",
+            "align": "right"
+          },
+          {
+            "v": "Menu Franc-Comtois"
+          },
+          {
+            "v": "102,00 €",
+            "align": "right"
+          },
+          {
+            "v": "75,00 €",
+            "align": "right"
+          },
+          {
+            "v": "27,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "27/06/2024"
+          },
+          {
+            "v": "25",
+            "align": "right"
+          },
+          {
+            "v": "Menu Végétarien"
+          },
+          {
+            "v": "79,50 €",
+            "align": "right"
+          },
+          {
+            "v": "67,50 €",
+            "align": "right"
+          },
+          {
+            "v": "12,00 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "30/08/2024"
+          },
+          {
+            "v": "31",
+            "align": "right"
+          },
+          {
+            "v": "Menu Franc-Comtois"
+          },
+          {
+            "v": "74,04 €",
+            "align": "right"
+          },
+          {
+            "v": "74,03 €",
+            "align": "right"
+          },
+          {
+            "v": "0,01 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "2024-2025"
+          },
+          {
+            "v": "21/12/2024"
+          },
+          {
+            "v": "17",
+            "align": "right"
+          },
+          {
+            "v": "Menu « Demi Lune »"
+          },
+          {
+            "v": "90,00 €",
+            "align": "right"
+          },
+          {
+            "v": "68,60 €",
+            "align": "right"
+          },
+          {
+            "v": "21,40 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Sous-total 2024-2025",
+            "fw": 700
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "10 lignes",
+            "fw": 700
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": ""
+          },
+          {
+            "v": "131,08 €",
+            "align": "right",
+            "badge": "ok",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Pièce de l’étape 3. La décomposition de l’écart de contrôle est recalculée par formule dans la pièce R2, onglet « Calcul », lignes 18 à 24 (chiffre d’affaires, contrôle prix × quantité, écart, nombre de lignes à remise, résidu porté par ces lignes, résidu d’arrondi) ; les quatorze lignes à remise elles mêmes sont listées nominativement à l’onglet « Remises », lignes 4 à 17. Chaque ligne y est lue sur les annexes C-1 à C-3 (colonne « 14 Uprice_wt », « 12 Qte », « 15 Discount Rate » et « 17 Tot_rem Ttc »).",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-fichiers-EF-reconciliation.xlsx",
+          "label": "R2 - Réconciliation E/F/C, onglet « Calcul » (lignes 18 à 24) et onglet « Remises » (lignes 4 à 17), classeur à formules recalculé sous LibreOffice"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : détail des tickets 2022-2023 (écart de contrôle − 0,04 €, aucune remise)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+          "label": "Annexe C-2 : détail des tickets 2023-2024 (écart 44,58 €, 4 lignes à remise)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+          "label": "Annexe C-3 : détail des tickets 2024-2025 (écart 131,08 €, 10 lignes à remise)"
+        }
+      ]
     },
     {
       "kind": "paragraphe",
@@ -2112,12 +3049,52 @@
       "texte": "Le sens des écarts confirme qu’il s’agit d’un champ d’affichage et non d’une base d’imposition : les lignes signalées se répartissent presque également dans les deux sens, 15 824 dans un sens et 16 223 dans l’autre. Une manipulation destinée à réduire l’impôt ne produirait pas un partage à parts égales. Surtout, la TVA effectivement liquidée ne se lit pas dans cette colonne de ligne mais au niveau du ticket et du journal de TVA. Le contrôle le vérifie ticket par ticket : reconstituée avec la colonne « taux » du fichier, la ventilation 10 % / 20 % ne retrouve celle du journal de TVA que dans 20,4 % des tickets sur les trois exercices, contre 82,1 % une fois les corrections du service appliquées. Ces colonnes réparent l’export, elles ne redressent pas la société."
     },
     {
+      "kind": "piecejointe",
+      "intro": "Pièce de la correction de TVA. Le décompte des lignes signalées (colonne E), le total de la colonne F « Correction TVA Sur Taux » par exercice (− 3 289,55 / − 3 358,48 / − 2 776,71 €) et la TVA reconstituée ligne à ligne, ramenée à 19,68 € de la TVA reversée, sont recalculés par formule dans la pièce R2, onglet « Calcul », lignes 26 à 37.",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-fichiers-EF-reconciliation.xlsx",
+          "label": "R2 - Réconciliation E/F/C, onglet « Calcul » (lignes 26 à 37 : colonnes E et F, TVA ligne à ligne, écart 19,68 € avec la TVA reversée)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-tva-colonnes-ef.xlsx",
+          "label": "R1 - Colonnes E et F des annexes C-1 à C-3 : sémantique et incidence réelle"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C-1 : colonnes E et F ajoutées par le service (total F − 3 289,55 €)"
+        }
+      ]
+    },
+    {
       "kind": "titre",
       "texte": "La clé d’identification : deux compteurs distincts, et une structure qui est celle de l’éditeur"
     },
     {
       "kind": "paragraphe",
       "texte": "Le service relève, page 39, que la colonne « id » du fichier « tpvevenement » ne porte pas les mêmes valeurs que celle des quatre autres fichiers. Le constat est exact, et nous ne le discutons pas : dans les annexes E, la colonne « id » est un compteur d’événements, qui s’incrémente à chaque événement enregistré par la caisse ; dans les annexes C, F et H, elle est un compteur de notes. Ce sont deux séquences distinctes, comme le sont les deux objets qu’elles numérotent. Le lien que le fichier porte entre les deux est celui que la caisse enregistre : la date, le numéro de ticket Z et l’horodatage à la minute. C’est d’ailleurs avec ces seules colonnes que le service a lui même identifié, compté et valorisé 8 014, 6 943 et 6 345 événements « DEL », pour 193 005,09 €, 140 686,55 € et 97 071,51 € (proposition, p. 23)."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Pièce du journal des événements. Le nombre et le montant des événements « DEL » (8 014 / 6 943 / 6 345 ; 193 005,09 / 140 686,55 / 97 071,51 €), que le service a lui même identifiés avec la seule date, le numéro de ticket Z et l’horodatage, sont recomptés par formule dans la pièce R2, onglet « Calcul », lignes 5 à 7 (NB.SI et SOMME.SI sur la colonne typEven des annexes E).",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-fichiers-EF-reconciliation.xlsx",
+          "label": "R2 - Réconciliation E/F/C, onglet « Calcul » (lignes 5 à 7 : comptage et montant des DEL par exercice)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+          "label": "Annexe E-1 : journal des événements de caisse 2022-2023 (8 014 DEL, 193 005,09 €)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
+          "label": "Annexe E-2 : journal des événements 2023-2024 (6 943 DEL, 140 686,55 €)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
+          "label": "Annexe E-3 : journal des événements 2024-2025 (6 345 DEL, 97 071,51 €)"
+        }
+      ]
     },
     {
       "kind": "paragraphe",

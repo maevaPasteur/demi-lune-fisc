@@ -1231,11 +1231,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La réponse au volume ne se fait pas en nombre de lignes mais en euros, poste par poste. Confrontées, exercice par exercice, au catalogue des prix unitaires TTC effectivement pratiqués (annexes C1, C2, C3, colonne « Uprice_wt » : respectivement **258, 238 et 267 prix distincts**), les 21 302 lignes « DEL » se ventilent ainsi. Chaque cellule indique le nombre de lignes, le montant et sa part dans le montant de l’exercice."
+   "texte": "La réponse au volume ne se fait pas en nombre de lignes mais en euros, poste par poste. Confrontées, exercice par exercice, au catalogue des prix unitaires TTC effectivement pratiqués (annexes C1, C2, C3, colonne « Uprice_wt » : respectivement **258, 238 et 267 prix distincts**, repris aux onglets « Catalogue_1 », « Catalogue_2 » et « Catalogue_3 » de la pièce R2 jointe plus bas), les 21 302 lignes « DEL » se ventilent ainsi. Chaque cellule indique le nombre de lignes, le montant et sa part dans le montant de l’exercice, et chacune est une formule COUNTIF/SUMIF de l’onglet « Synthèse » de la pièce R2 (lignes 3 à 13)."
   },
   {
    "kind": "tableau",
-   "titre": "Ventilation en euros des lignes « DEL », par exercice (annexes E1/E2/E3 contre catalogues C1/C2/C3)",
+   "titre": "Ventilation en euros des lignes « DEL », par exercice (pièce R2, onglet « Synthèse » lignes 3 à 13 ; sources : onglets « DEL_1/2/3 » colonnes « montant » et « categorie », catalogues « Catalogue_1/2/3 »)",
    "minWidth": 860,
    "colonnes": [
     {
@@ -1391,6 +1391,16 @@
    ]
   },
   {
+   "kind": "piecejointe",
+   "intro": "La ventilation ci-dessus est recalculée à la formule, et reproductible : onglet « Synthèse » de la pièce R2 (lignes 3 à 13), dont chaque cellule est une formule COUNTIF/SUMIF portant sur la colonne « categorie » (colonne J) et la colonne « montant » (colonne E) des onglets « DEL_1 » (lignes 2 à 8015), « DEL_2 » (lignes 2 à 6944) et « DEL_3 » (lignes 2 à 6346). Le classement « carte » est posé par la formule flag_carte =SI(COUNTIF(catalogue ; montant)>0 ; 1 ; 0), le catalogue des prix TTC distincts figurant aux onglets « Catalogue_1/2/3 ». Agrégats de contrôle : 192 478,75 € / 140 226,75 € / 96 662,35 € valent un prix de la carte ou son multiple (onglet « Synthèse », ligne 13), soit 99,6 à 99,7 % de chaque exercice.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
+     "label": "Onglet « Synthèse » (lignes 3 à 13) et onglets « DEL_1/2/3 » (colonnes « montant » et « categorie ») : ventilation en euros des 21 302 lignes « DEL » sur les 3 exercices, à la formule, recalculée sous LibreOffice"
+    }
+   ]
+  },
+  {
    "kind": "titre",
    "texte": "Les grosses suppressions ne sont pas des recettes : elles ne tiennent dans aucun encaissement",
    "numero": "2.2"
@@ -1401,7 +1411,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Les quatre plus grosses lignes « DEL » confrontées aux encaissements réels (annexes E1/E2/E3 et F1/F2/F3)",
+   "titre": "Les quatre plus grosses lignes « DEL » confrontées aux encaissements réels (pièce R2 : onglet « DEL_1 » lignes 3339 et 3808, « DEL_2 » ligne 2160, « DEL_3 » ligne 3167 ; CA du jour aux onglets « Reglements_1/2/3 »)",
    "minWidth": 820,
    "colonnes": [
     {
@@ -1595,6 +1605,16 @@
    "texte": "On relèvera au passage que la décomposition « 27,40 € × 2 518 » reproduite par le service donne 68 993,20 €, soit 0,10 € de plus que la ligne réelle (68 993,10 €) : l’arithmétique même de la plus grosse suppression n’est pas exacte dans le courrier. Et la somme des quatre lignes vaut exactement 138 003,10 €, non « 137 003 € » : l’ordre de grandeur, « 32 % », est en revanche confirmé à la formule."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Chaque grosse ligne est isolée à sa ligne exacte dans la pièce R2, avec sa décomposition portée par les colonnes « diviseur » et « quotient » : onglet « DEL_1 » ligne 3339 (26/07/2022, 18:51, Z 3015, id 40259, 68 993,10 €) et ligne 3808 (07/08/2022, 18:29, Z 3026, id 40765, 19 600,00 €) ; onglet « DEL_2 » ligne 2160 (21/06/2023, 17:06, Z 3216, id 47751, 44 955,00 € = 45,00 € × 999) ; onglet « DEL_3 » ligne 3167 (15/08/2024, 11:16, Z 3474, id 56476, 4 455,00 € = 55,00 € × 81). La colonne « aberrante » (flag montant ≥ 1 000 €) les agrège à l’onglet « Synthèse » lignes 11 et 12 : 2 + 1 + 1 = 4 lignes, 138 003,10 € = 32,0 % du grief. Le chiffre d’affaires encaissé chaque jour et la plus grosse note de l’exercice sont tirés des onglets « Reglements_1/2/3 ».",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
+     "label": "Onglets « DEL_1 » (lignes 3339 et 3808), « DEL_2 » (ligne 2160), « DEL_3 » (ligne 3167) et « Synthèse » (lignes 11-12) : les 4 fautes de frappe sur la quantité, décomposées prix de la carte × quantité"
+    }
+   ]
+  },
+  {
    "kind": "titre",
    "texte": "Ce que sont les lignes : des articles, pas des notes",
    "numero": "2.3"
@@ -1622,7 +1642,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Contrôle du grand total perpétuel, par exercice (annexes G1/G2/G3)",
+   "titre": "Contrôle du grand total perpétuel, par exercice (pièce R2 : onglets « Chainage_1/2/3 » ; agrégats à l’onglet « Synthèse » lignes 23 à 30)",
    "minWidth": 760,
    "colonnes": [
     {
@@ -1794,8 +1814,32 @@
    "texte": "Le compteur est en outre **continu d’un exercice à l’autre** : le report à nouveau de 2023-2024 (1 381 110,20 €) est exactement le compteur de clôture de 2022-2023, et celui de 2024-2025 (1 819 103,12 €) celui de clôture de 2023-2024. Sur trois exercices et 16 605 tickets, la chaîne du totalisateur inaltérable et non purgeable ne porte **pas une seule rupture**. Entre ce que la caisse a enregistré et ce qui a été porté en comptabilité, rien n’a été retiré : les 21 302 suppressions n’ont pas fait bouger d’un centime ce compteur, qui devrait porter la trace d’un retrait de recettes s’il en existait un."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Contrôle reproductible ticket par ticket, onglets « Chainage_1/2/3 » de la pièce R2 (une ligne par ticket, triées par compteur croissant) : colonne « tot_sum » (A) le totalisateur perpétuel, colonne « tot_ttc » (E) le ticket, colonne « incr » (F) l’écart entre deux compteurs successifs, colonne « ecart » (G) la différence incr - tot_ttc et colonne « rupture » (H) le drapeau d’incrément négatif. Plages : « Chainage_1 » lignes 3 à 5660 (5 658 tickets), « Chainage_2 » lignes 3 à 5531 (5 529), « Chainage_3 » lignes 3 à 5420 (5 418). L’onglet « Synthèse » (lignes 23 à 30) agrège : progression du compteur = somme des tickets au centime (écart 0,00 €), 0 rupture, 0 incrément différent du TTC, le compteur passant de 977 739,78 € à 2 253 930,98 € sur les 16 605 tickets.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
+     "label": "Onglets « Chainage_1 » (lignes 3 à 5660), « Chainage_2 » (3 à 5531), « Chainage_3 » (3 à 5420) et « Synthèse » (lignes 23 à 30) : le totalisateur perpétuel inaltérable, 0 rupture sur 16 605 tickets"
+    }
+   ]
+  },
+  {
    "kind": "paragraphe",
    "texte": "Une objection se présente, et nous la traitons : **le totalisateur ne s’incrémente qu’à l’émission d’un ticket**. Une table vidée de ses articles avant toute émission n’y entrerait pas. Les annexes H permettent de compter ces cas : **1 190 tickets clôturés à 0,00 € en 2022-2023, 1 096 en 2023-2024 et 995 en 2024-2025**. De ceux-là, **1 187, 1 096 et 995 portent un numéro que porte aussi, le même jour, un ticket encaissé** ; il ne reste, sur les trois exercices, que **3 tickets à zéro sans jumeau** (tous en 2022-2023). Cette coïncidence est cohérente avec le transfert ou le partage d’une addition, mais le numéro de ticket étant un rang quotidien réattribué chaque jour, elle en est un indice, non une preuve à elle seule ; elle écarte seulement l’hypothèse d’un ticket-zéro massivement orphelin."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Les tickets clôturés à 0,00 € et la présence, le même jour, d’un ticket encaissé de même numéro (« jumeau ») sont recensés aux onglets « TicketsZero_1/2/3 » de la pièce R2 (colonne « tot_ttc » = 0, colonne « jumeau_encaisse ») et agrégés à l’onglet « Synthèse » lignes 32 et 33 : 1 190 + 1 096 + 995 = 3 281 tickets à zéro, dont 3 278 avec jumeau, soit 3 orphelins (tous en 2022-2023). La pièce R1 jointe en détaille la liste intégrale, onglet « Tickets a zero » (3 281 lignes) et onglet « Orphelins » (les 3 sans jumeau).",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
+     "label": "Onglets « TicketsZero_1/2/3 » et « Synthèse » (lignes 32-33) : 3 281 tickets à 0,00 €, 3 278 avec jumeau encaissé de même numéro le même jour"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-tickets-a-zero.xlsx",
+     "label": "Complément R1 : liste détaillée des 3 281 tickets à 0,00 € (onglet « Tickets a zero ») et des 3 orphelins (onglet « Orphelins »)"
+    }
+   ]
   },
   {
    "kind": "titre",
@@ -1816,7 +1860,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Les sept lignes « DEL » du 09/09/2022 à 12h07 imprimées par le service page 7 (annexe E1)",
+   "titre": "Les sept lignes « DEL » du 09/09/2022 à 12h07 imprimées par le service page 7 (annexe E1 ; détaillées à la pièce R1, onglet « 09-09-2022 DEL detail »)",
    "minWidth": 620,
    "colonnes": [
     {
@@ -1973,6 +2017,16 @@
    "texte": "La page 13 imprime la rafale suivante, de 12h23 : neuf lignes « DEL » (ids 42087 à 42095) dont la somme fait **207,00 €**, en regard de la note n°8 (12:23, id 51158, CB), elle aussi **unique note à 207,00 € sur ce Z**. Deux rafales, deux totaux exacts, et dans chaque cas une seule note candidate sur le ticket Z concerné : c’est le mécanisme de la conversion au forfait. La preuve propre de l’absence de retrait ne vient pas de ces appariements, mais du totalisateur perpétuel (point 2.4) et de la forme des montants (point 2.3), qui ne dépendent d’aucun appariement et valent sur les trois exercices."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Les deux rafales du 09/09/2022 (12h07 → 76,90 € ; 12h23 → 207,00 €) et leur appariement aux notes n°3 (id 51162) et n°8 (id 51158) du ticket Z 3052 figurent dans la pièce R1 : onglet « 09-09-2022 rafales » (colonne « Somme des DEL » et colonne « Somme = total exact d’une note encaissée ? »), onglet « 09-09-2022 notes » (les 25 notes du Z 3052 et leur total, qui confirme qu’une seule porte 76,90 € et une seule 207,00 €) et onglet « 09-09-2022 DEL detail » (les 67 lignes « DEL » du jour, nature de chaque montant). L’honnêteté commande de rappeler, comme le fait cet onglet, que seules 2 des 14 rafales du jour totalisent exactement une note : le rapprochement par rafale est un indice, non une preuve ligne à ligne, et la preuve propre reste le totalisateur (point 2.4) et la forme des montants (point 2.3).",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-suppressions-rapprochements.xlsx",
+     "label": "Onglets « 09-09-2022 rafales », « 09-09-2022 notes » et « 09-09-2022 DEL detail » : rafales de suppressions, notes du Z 3052 et nature de chaque ligne « DEL »"
+    }
+   ]
+  },
+  {
    "kind": "titre",
    "texte": "L’absence d’identifiant commun est un fait de l’éditeur, pas du contribuable",
    "numero": "2.6"
@@ -2025,6 +2079,16 @@
    "texte": "L’annexe E2 confirme en outre l’extrait du service à l’identique : le 21/03/2024 à 20h16, **huit lignes « DEL » (ids 52827 à 52834, Z 3370)**, de montants 8,90 / 8,30 / 4,80 / 20,10 / 19,90 / 8,90 / 8,00 / 10,00 €. Sur ces huit valeurs, **sept sont exactement un prix du catalogue C2** ; seule **20,10 € est sans équivalent**. L’extrait reproduit par le service est donc authentique, et il confirme que cette rafale est faite d’articles de la carte, non d’une note escamotée."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Le partage des notes n°13 et n°14 du 21/03/2024 est décomposé article par article à la pièce R1, onglet « 21-03-2024 partage » : colonnes « Qté note n°13 » et « Qté note n°14 », colonne « Quart théorique » et colonne « Lecture du partage » qui montre que onze des douze articles sont divisés exactement au quart et aux trois quarts (donc sans ressaisie ni suppression), le seul Savagnin s’écartant du partage étant précisément celui qui reparaît en « DEL » à 8,30 €. Les huit lignes « DEL » de 20h16 (ids 52827 à 52834, Z 3370) et la nature de chaque montant figurent à l’onglet « 21-03-2024 DEL detail », qui confirme que sept des huit valeurs sont un prix du catalogue C2.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-suppressions-rapprochements.xlsx",
+     "label": "Onglets « 21-03-2024 partage » (division au quart / trois quarts des 12 articles) et « 21-03-2024 DEL detail » (les 8 lignes « DEL » ids 52827-52834, Z 3370)"
+    }
+   ]
+  },
+  {
    "kind": "titre",
    "texte": "Le troisième contre-exemple annoncé n’est jamais produit",
    "numero": "2.10"
@@ -2040,7 +2104,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La thèse du service suppose que les convives des tables supprimées ont payé. Il faut alors un canal. Les fichiers de règlements des trois exercices (annexes F1/F2/F3) totalisent respectivement **403 402,87 €, 439 600,30 € et 435 146,29 €**, dont une part d’espèces infime : **3 797,95 € (0,94 %), 8 191,48 € (1,86 %) et 5 343,75 € (1,23 %)**. Les **98 à 99 % restants sont bancarisés** (carte, chèques-vacances, titres restaurant, chèques), tous tracés par un tiers. Le montant « DEL » de chaque exercice représente **50,8 fois, 17,2 fois puis 18,2 fois** les espèces réellement encaissées."
+   "texte": "La thèse du service suppose que les convives des tables supprimées ont payé. Il faut alors un canal. Les fichiers de règlements des trois exercices (annexes F1/F2/F3, repris aux onglets « Reglements_1/2/3 » de la pièce R2 et agrégés à l’onglet « Synthèse » lignes 15 à 21) totalisent respectivement **403 402,87 €, 439 600,30 € et 435 146,29 €**, dont une part d’espèces infime : **3 797,95 € (0,94 %), 8 191,48 € (1,86 %) et 5 343,75 € (1,23 %)**. Les **98 à 99 % restants sont bancarisés** (carte, chèques-vacances, titres restaurant, chèques), tous tracés par un tiers. Le montant « DEL » de chaque exercice représente **50,8 fois, 17,2 fois puis 18,2 fois** les espèces réellement encaissées."
   },
   {
    "kind": "kpis",
@@ -2069,6 +2133,16 @@
   {
    "kind": "paragraphe",
    "texte": "Ce rapport ne prouve pas à lui seul l’absence de dissimulation, puisqu’une recette dissimulée ne figurerait précisément pas dans ce dénominateur. Mais une dissimulation de cet ordre supposerait un flux d’espèces dont ni la caisse, ni les comptes bancaires ne portent trace, et dont le service, qui a lui-même reproduit le fichier des règlements page 8, ne fait état nulle part, sur aucun des trois exercices."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Ventilation des règlements par mode et part d’espèces recalculées à la formule, onglets « Reglements_1/2/3 » de la pièce R2 (colonne « mode », colonne « montant ») et onglet « Synthèse » lignes 15 à 21 : CB 369 284,19 € / 399 262,70 € / 397 386,52 €, chèques-vacances, titres restaurant et chèques pour le reste, espèces 3 797,95 € (0,94 %) / 8 191,48 € (1,86 %) / 5 343,75 € (1,23 %). Le montant « DEL » de chaque exercice vaut 50,8 / 17,2 / 18,2 fois les espèces réellement encaissées (193 005,09 € / 3 797,95 € ; 140 686,55 € / 8 191,48 € ; 97 071,51 € / 5 343,75 €).",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
+     "label": "Onglets « Reglements_1/2/3 » et « Synthèse » (lignes 15 à 21) : règlements par mode et part d’espèces (environ 1 %) sur les 3 exercices"
+    }
+   ]
   },
   {
    "kind": "chapitre",
@@ -2111,7 +2185,7 @@
   },
   {
    "kind": "piecejointe",
-   "intro": "Pièce recalculée à la formule à partir des annexes de caisse des TROIS exercices remises au titre de l’article L. 47 A, II du LPF (E1/E2/E3, C1/C2/C3, F1/F2/F3, G1/G2/G3, H1/H2/H3), désormais toutes présentes au dossier. Dix-sept onglets : une Méthode, une Synthèse dont tous les agrégats des trois exercices sont des formules SUMIF/COUNTIF recalculées sous LibreOffice (ventilation en euros par catégorie, médiane implicite, lignes aberrantes, règlements par mode et part d’espèces, totalisateur perpétuel et son chaînage, tickets à 0,00 € et jumeaux), puis, par exercice, les onglets sources Catalogue, DEL (avec flag « prix de la carte » par formule), Règlements, Chainage et TicketsZero.",
+   "intro": "Récapitulatif des pièces de ce grief. La pièce maîtresse R2 est recalculée à la formule à partir des annexes de caisse des TROIS exercices remises au titre de l’article L. 47 A, II du LPF (E1/E2/E3, C1/C2/C3, F1/F2/F3, G1/G2/G3, H1/H2/H3), désormais toutes présentes au dossier. Dix-sept onglets : une Méthode, une Synthèse dont tous les agrégats des trois exercices sont des formules SUMIF/COUNTIF recalculées sous LibreOffice (onglet « Synthèse » : ventilation en euros par catégorie lignes 3 à 13, lignes aberrantes lignes 11-12, règlements par mode et part d’espèces lignes 15 à 21, totalisateur perpétuel et son chaînage lignes 23 à 30, tickets à 0,00 € et jumeaux lignes 32-33), puis, par exercice, les onglets sources Catalogue, DEL (avec flag « prix de la carte » par formule et colonnes diviseur/quotient), Reglements, Chainage et TicketsZero.",
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",

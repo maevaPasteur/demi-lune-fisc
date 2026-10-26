@@ -496,7 +496,115 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le rapprochement ci-dessous confronte trois grandeurs : la TVA encaissée par la caisse (colonne tax_amount, agrégée par taux), la TVA théorique assise sur les bases effectivement comptabilisées (compte 706300 au taux de 10 %, compte 706000 au taux de 20 %, valeurs de la page 26), et la TVA collectée portée en comptabilité (compte 445710, page 26). Pour chacun des trois exercices, la TVA encaissée par taux est reproduite au centime, par formule, à partir du fichier brut de la caisse : annexe G1 (10 092 lignes de ventilation) pour 2022-2023, annexe G2 (9 927 lignes) pour 2023-2024, annexe G3 (9 569 lignes) pour 2024-2025, soit 29 588 lignes au total. Ce recalcul figure dans la pièce jointe R2 (onglets Calcul-G1, Calcul-G2 et Calcul-G3)."
+      "texte": "Le mécanisme se lit sur un ticket. Reprenons celui que le service a lui-même reproduit (p. 46-47), le ticket n° 2 du 14/04/2022 à 11h54. La colonne retenue par le service y affiche un total de −9,10 €, impossible pour une vente de 20,90 €. La colonne de la taxe, elle, reste positive sur chacune des deux lignes et, divisée par le taux légal, restitue la base correcte. Les deux lignes se lisent telles quelles dans le fichier brut."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Notre lecture du ticket n° 2 (14/04/2022, 11h54) : la colonne de la taxe restitue la base et n’est jamais négative",
+      "minWidth": 880,
+      "colonnes": [
+        {
+          "label": "Ligne du ticket"
+        },
+        {
+          "label": "VAT_base (colonne retenue par le service)",
+          "align": "right"
+        },
+        {
+          "label": "tax_amount (colonne de la taxe)",
+          "align": "right"
+        },
+        {
+          "label": "Taux",
+          "align": "right"
+        },
+        {
+          "label": "Base correcte = tax_amount / taux",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Ligne à 10 %"
+          },
+          {
+            "v": "5,70 €",
+            "align": "right"
+          },
+          {
+            "v": "1,43 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "14,30 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ligne à 20 %"
+          },
+          {
+            "v": "−14,80 €",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "0,87 €",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "20 %",
+            "align": "right"
+          },
+          {
+            "v": "4,35 €",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total du ticket",
+            "fw": 700
+          },
+          {
+            "v": "−9,10 €",
+            "align": "right",
+            "fw": 700,
+            "badge": "ko"
+          },
+          {
+            "v": "2,30 €",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "18,65 €",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "La colonne retenue par le service tombe à −9,10 € ; la colonne de la taxe reste positive sur les deux lignes (1,43 € et 0,87 €) et redonne, taux par taux, la base réelle (14,30 € + 4,35 € = 18,65 €), laquelle recompose le HT (20,90 € − 2,30 € = 18,60 €) à cinq centimes d’arrondi de caisse près. Ces deux lignes sont lisibles telles quelles dans la pièce R2-tva-bouclage.xlsx, onglet « G1-source », lignes 3 et 4. Ce ticket n’a rien d’isolé : le même mécanisme se vérifie en masse ci-dessous, où la colonne de la taxe ne porte aucune valeur négative sur les 29 588 lignes des trois journaux."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le rapprochement ci-dessous confronte trois grandeurs : la TVA encaissée par la caisse (colonne tax_amount, agrégée par taux), la TVA théorique assise sur les bases effectivement comptabilisées (compte 706300 au taux de 10 %, compte 706000 au taux de 20 %, valeurs de la page 26), et la TVA collectée portée en comptabilité (compte 445710, page 26). Pour chacun des trois exercices, la TVA encaissée par taux est reproduite au centime, par formule, à partir du fichier brut de la caisse : annexe G1 (10 092 lignes de ventilation) pour 2022-2023, annexe G2 (9 927 lignes) pour 2023-2024, annexe G3 (9 569 lignes) pour 2024-2025, soit 29 588 lignes au total. Ce recalcul figure dans la pièce jointe R2-tva-bouclage.xlsx, onglets Calcul-G1, Calcul-G2 et Calcul-G3 (ligne 4, TVA encaissée par taux ; ligne 3, nombre de lignes de ventilation), récapitulé à l’onglet Bouclage-3ex, lignes 8 à 16."
     },
     {
       "kind": "tableau",
@@ -751,6 +859,146 @@
     {
       "kind": "paragraphe",
       "texte": "Le rapprochement se lit à trois niveaux, sans que rien ne soit masqué. **À périmètre égal** (la TVA aux deux taux légaux), la TVA encaissée par la caisse (134 879,47 €) et la TVA théorique sur les bases effectivement comptabilisées (134 892,36 €) concordent à **12,89 € près** sur trois ans, soit **0,01 %**. C’est le résidu réel de concordance, taux par taux. Le compte 445710, qui porte la TVA collectée effectivement comptabilisée (135 084,69 €), excède de **192,33 €** cette TVA théorique : cet excédent est de la TVA collectée hors bases restaurant 10 %/20 %, que la proposition ne ventile pas par taux (le compte 706800 « Pourboire » figure au même tableau p. 26, sans que sa TVA soit isolée). L’écart « brut » parfois opposé entre la caisse et le compte 445710, **205,22 €**, est la **somme** de ces deux grandeurs (12,89 € + 192,33 €) : il additionne un résidu de concordance et un poste de périmètre différent, et ne mesure donc pas, à lui seul, une concordance. Cet excédent de 192,33 € s’attribue pour l’essentiel au compte 706800 « Pourboire » (598,04 € + 597,75 € + 656,57 € = 1 852,36 € sur trois ans), poste étranger aux bases restaurant 10 % et 20 % : la TVA qui en relève, à 10 %, représente 185,24 €, soit la quasi-totalité de l’excédent, le reliquat (7,09 € sur trois ans, moins de 3 € par exercice) tenant à des régularisations que la proposition ne ventile pas. Le compte 445710 étant présenté page 26 en ligne unique, cette décomposition s’établit par différence et non par lecture directe d’une ventilation par taux."
+    },
+    {
+      "kind": "tableau",
+      "titre": "D’où vient exactement le résidu de 205,22 € : décomposition palier par palier (cumul trois exercices)",
+      "minWidth": 940,
+      "colonnes": [
+        {
+          "label": "Palier"
+        },
+        {
+          "label": "Opération"
+        },
+        {
+          "label": "Montant du palier (€)",
+          "align": "right"
+        },
+        {
+          "label": "Niveau atteint (€)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Départ : TVA encaissée par la caisse (10 %+20 %)"
+          },
+          {
+            "v": "somme tax_amount, G1 + G2 + G3"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "134 879,47",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "+ résidu d’arrondi à périmètre égal"
+          },
+          {
+            "v": "TVA théorique 10/20 − TVA encaissée"
+          },
+          {
+            "v": "+12,89",
+            "align": "right"
+          },
+          {
+            "v": "134 892,36",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "+ TVA sur pourboires (compte 706800)"
+          },
+          {
+            "v": "1 852,36 € × 10 %"
+          },
+          {
+            "v": "+185,24",
+            "align": "right"
+          },
+          {
+            "v": "135 077,60",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "+ régularisations non ventilées par la proposition"
+          },
+          {
+            "v": "par différence"
+          },
+          {
+            "v": "+7,09",
+            "align": "right"
+          },
+          {
+            "v": "135 084,69",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Arrivée : TVA collectée comptabilisée (445710)",
+            "fw": 700
+          },
+          {
+            "v": "p. 26, compte 445710"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "135 084,69",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Écart brut parcouru (445710 − TVA encaissée)",
+            "fw": 700
+          },
+          {
+            "v": "somme des trois paliers",
+            "fw": 700
+          },
+          {
+            "v": "+205,22",
+            "align": "right",
+            "fw": 700,
+            "badge": "ko"
+          },
+          {
+            "v": "",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le résidu de 205,22 € n’est donc pas un écart de taxe : c’est la distance qui sépare la TVA encaissée par la caisse (134 879,47 €) de la TVA collectée portée en comptabilité (445710, 135 084,69 €), et elle se décompose intégralement en trois paliers. **12,89 € d’arrondi à périmètre égal** (0,01 % de la taxe aux deux taux légaux) ; puis **192,33 € de TVA collectée hors bases restaurant 10/20**, dont **185,24 € de TVA sur le compte 706800 « Pourboire »** (1 852,36 € × 10 %) et 7,09 € de régularisations non ventilées sur trois ans, soit moins de 3 € par exercice. Aucun de ces trois paliers ne traduit une recette dissimulée : chacun est soit un arrondi, soit un poste de produit étranger à la ventilation 10/20 que le service a comparée."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Ce bouclage est entièrement refait par formule dans la pièce R2-tva-bouclage.xlsx. L’onglet « Bouclage-3ex » porte le départ (TVA encaissée, ligne 10), le résidu à périmètre égal (ligne 16), l’excédent du 445710 (ligne 19), son attribution au pourboire (ligne 20), le reliquat (ligne 21), l’écart brut (ligne 23) et sa ligne de contrôle (ligne 24) ; les comptes 706300, 706000, 706800 et 445710 de la page 26 figurent lignes 3 à 6. La TVA encaissée par taux de chaque exercice est tirée des onglets « Calcul-G1 », « Calcul-G2 » et « Calcul-G3 », ligne 4. L’ensemble a été recalculé sous LibreOffice.",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+          "label": "R2-tva-bouclage.xlsx, onglet Bouclage-3ex (lignes 3 à 24) et onglets Calcul-G1/G2/G3 (ligne 4)"
+        }
+      ]
     },
     {
       "kind": "paragraphe",
@@ -1225,6 +1473,28 @@
     {
       "kind": "paragraphe",
       "texte": "Il ne reste donc que deux colonnes réellement issues de la caisse, et **une seule porte des valeurs négatives** : VAT_base, la base HT d’affichage, sur 8 616 des 29 588 lignes des trois exercices (ces 8 616 lignes se répartissent exactement entre les deux colonnes recopiées par le service, 90 à 10 % et 8 526 à 20 %). La colonne qui porte la taxe, tax_amount, n’affiche **aucune valeur négative** sur aucune des 29 588 lignes des trois journaux. Le constat « fait quasiment pour chaque note enregistrée » ne concerne que la colonne d’affichage, jamais la TVA encaissée."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Ce dénombrement est reproductible par formule. Dans la pièce R2-tva-bouclage.xlsx, chaque onglet « Calcul-G1 », « Calcul-G2 » et « Calcul-G3 » compte les valeurs négatives par NB.SI : ligne 7 pour la colonne de la taxe (tax_amount), ligne 8 pour la base d’affichage (VAT_base), par taux et au total. L’onglet « Bouclage-3ex » récapitule les trois exercices : VAT_base négatif aux lignes 27 à 29 (total 8 616, dont 90 à 10 % et 8 526 à 20 %), tax_amount négatif à la ligne 30 (0), et le contrôle des 29 588 lignes de ventilation à la ligne 31. Les lignes brutes se lisent aux onglets « G1-source », « G2-source » et « G3-source ».",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+          "label": "R2-tva-bouclage.xlsx, onglets Calcul-G1/G2/G3 (lignes 7 et 8) et Bouclage-3ex (lignes 27 à 31)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
+          "label": "Journal de caisse, annexe G1 (source primaire, 2022-2023)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
+          "label": "Journal de caisse, annexe G2 (source primaire, 2023-2024)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
+          "label": "Journal de caisse, annexe G3 (source primaire, 2024-2025)"
+        }
+      ]
     },
     {
       "kind": "paragraphe",

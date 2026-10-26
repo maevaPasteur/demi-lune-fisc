@@ -3,14 +3,14 @@
     "slug": "instabilite-prix-menus",
     "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
     "limites": [
-      "Sur les 334 Menus Demi Lune vendus hors prix de carte que dénombre l'annexe B (64 + 123 + 147 unités sur les trois exercices), 151 unités / 149 couverts, soit 45,2 %, sont rattachées à une rafale de suppressions dont la somme égale au centime le total de la note re-saisie ; les quelque 183 ventes restantes (54,8 %) sont des forfaits saisis directement, sans rafale de suppression rapprochée, et leur détail d'origine n'est pas reconstitué. Le taux de rattachement décroît d'un exercice à l'autre (60,9 % en 2022-2023, 49,6 % en 2023-2024, 34,7 % en 2024-2025) : la conversion au forfait n'est qu'une des deux voies de saisie du prix négocié.",
+      "Sur les 334 Menus Demi Lune vendus hors prix de carte que dénombre l'annexe B (64 + 123 + 147 unités sur les trois exercices), 151 unités / 149 couverts, soit 45,2 %, sont rattachées à une rafale de suppressions dont la somme égale au centime le total de la note re-saisie ; les 183 ventes restantes (54,8 %) sont des forfaits saisis directement, sans rafale de suppression rapprochée, et leur détail d'origine n'est pas reconstitué. Le taux de rattachement décroît d'un exercice à l'autre (60,9 % en 2022-2023, 49,6 % en 2023-2024, 34,7 % en 2024-2025) : la conversion au forfait n'est qu'une des deux voies de saisie du prix négocié.",
       "Sur le jour-test du 09/09/2022 choisi par le service, 2 rafales DEL sur 14 (283,90 € sur 933,80 €, soit 30 %) correspondent à une note Demi Lune re-saisie ; les 12 autres rafales (649,90 €) sont des corrections de caisse qui relèvent du grief A (suppressions de notes), non du grief J (prix). Globalement, la pièce R1 ne retrouve au centime que 75,1 % des 21 302 suppressions DEL sur une ligne du même Z : la conversion au forfait n'est qu'une des causes des suppressions.",
       "La caisse n'enregistre aucun lien stocké entre un évènement « DEL » et la note re-saisie. Le compteur d'évènements est continu (36 681 à 60 019, 0 identifiant manquant selon R1 ; sur le 09/09/2022, les deux seuls « trous » 42098 et 42123 sont deux évènements « RPR » relevés sur l'annexe E1 qui partagent le même compteur, non des DEL manquantes), mais le rapprochement d'une suppression vers sa note de forfait est reconstruit par date, minute et montant, non par un pointeur. Sur ce point précis de traçabilité, le reproche du service n'est pas levé ; il relève du grief A."
     ]
   },
   "entete": {
     "statut": "demonte",
-    "reponseCourte": "Le prix d'un repas est libre (article L. 410-2 du code de commerce) et le service n'allègue aucune recette manquante : le grief J « instabilité des prix » est sans fondement juridique propre et n'est chiffré nulle part. La « multitude de prix » est la conversion de tablées au forfait, désormais re-dérivée au centime sur les annexes du service pour les trois exercices (61 notes, 6 728,50 € de lignes supprimées = 6 728,49 € encaissés, écart 0,01 €). Le prix catalogue du Menu Demi Lune est unique, 45,00 €, sur chacun des trois exercices (annexes B1, B2, B3). Le rattachement d'une suppression à chaque vente hors catalogue reste partiel (45,2 % des 334 ventes hors catalogue), et la traçabilité des suppressions, qui relève du grief A, n'est pas restaurée ici."
+    "reponseCourte": "Le prix d'un repas est libre (article L. 410-2 du code de commerce) et le service n'allègue aucune recette manquante : le grief J « instabilité des prix » est sans fondement juridique propre et n'est chiffré nulle part. Le prix catalogue du Menu Demi Lune est unique et stable, 45,00 €, sur chacun des trois exercices (annexes B1, B2, B3). La « multitude de prix » est la conversion de tablées au forfait, re-dérivée au centime sur les annexes du service pour les trois exercices : 61 notes, 421 lignes à la carte supprimées pour 6 728,50 €, égales à 6 728,49 € encaissés (écart 0,01 €, un seul arrondi de division). Le rattachement d'une suppression à chaque vente hors catalogue reste partiel (45,2 % des 334 ventes), et la traçabilité des suppressions, qui relève du grief A, n'est pas restaurée ici."
   },
   "sections": [
     {
@@ -85,87 +85,38 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le reste de la page 55 met côte à côte le « Fichier tpevenements.xls » (opérations « DEL » avec heure, montant, identifiant) et le « Fichier ticketligne.xls » (lignes des notes encaissées du jour). Les deux seules lignes « Menu Demi Lune » que le service y fait figurer sont reproduites ci-dessous ; la journée complète est reconstruite au § 2.2 à partir de l'annexe E1, plus exacte que l'extrait imprimé."
+      "texte": "Le reste de la page 55 met côte à côte le « Fichier tpevenements.xls » (opérations « DEL » avec heure, montant, identifiant) et le « Fichier ticketligne.xls » (lignes des notes encaissées du jour). Les deux seules lignes « Menu Demi Lune » que le service y fait figurer sont reproduites ci-dessous ; la journée complète est reconstruite au § 2.3.1 à partir de l'annexe E1, plus exacte que l'extrait imprimé."
     },
     {
       "kind": "tableau",
       "titre": "Lignes « Menu Demi Lune » du fichier ticketligne.xls reproduites p. 55 (journée du 09/09/2022)",
       "minWidth": 760,
       "colonnes": [
-        {
-          "label": "Note"
-        },
-        {
-          "label": "Heure"
-        },
-        {
-          "label": "Libellé"
-        },
-        {
-          "label": "Qté",
-          "align": "right"
-        },
-        {
-          "label": "PU TTC",
-          "align": "right"
-        },
-        {
-          "label": "Total TTC",
-          "align": "right"
-        }
+        { "label": "Note" },
+        { "label": "Heure" },
+        { "label": "Libellé" },
+        { "label": "Qté", "align": "right" },
+        { "label": "PU TTC", "align": "right" },
+        { "label": "Total TTC", "align": "right" }
       ],
       "lignes": [
         [
-          {
-            "v": "n° 3"
-          },
-          {
-            "v": "12:08"
-          },
-          {
-            "v": "Menu « Demi Lune »"
-          },
-          {
-            "v": "2,00",
-            "align": "right"
-          },
-          {
-            "v": "38,45 €",
-            "align": "right"
-          },
-          {
-            "v": "76,90 €",
-            "align": "right"
-          }
+          { "v": "n° 3" },
+          { "v": "12:08" },
+          { "v": "Menu « Demi Lune »" },
+          { "v": "2,00", "align": "right" },
+          { "v": "38,45 €", "align": "right" },
+          { "v": "76,90 €", "align": "right" }
         ],
         [
-          {
-            "v": "n° 8"
-          },
-          {
-            "v": "12:23"
-          },
-          {
-            "v": "Menu « Demi Lune »"
-          },
-          {
-            "v": "4,00",
-            "align": "right"
-          },
-          {
-            "v": "51,75 €",
-            "align": "right"
-          },
-          {
-            "v": "207,00 €",
-            "align": "right"
-          }
+          { "v": "n° 8" },
+          { "v": "12:23" },
+          { "v": "Menu « Demi Lune »" },
+          { "v": "4,00", "align": "right" },
+          { "v": "51,75 €", "align": "right" },
+          { "v": "207,00 €", "align": "right" }
         ]
       ]
-    },
-    {
-      "kind": "note",
-      "texte": "L'extrait du service comporte aussi, à gauche, la liste des opérations « DEL » du jour et, à droite, les autres ventes (plats, boissons, desserts). Nous le reconstituons intégralement et sans erreur de lecture au § 2.2, directement sur l'annexe E1 (évènements) et l'annexe C1 (tickets) remises au service."
     },
     {
       "kind": "paragraphe",
@@ -176,7 +127,7 @@
       "source": "nous",
       "numero": 2,
       "titre": "Un prix négocié n'est pas une anomalie",
-      "sousTitre": "Le prix est libre, aucune recette n'est alléguée manquante, et la conversion au forfait se vérifie au centime sur les annexes du service pour les trois exercices vérifiés."
+      "sousTitre": "Trois faits, chacun démontré sur la page et appuyé sur les annexes du service des trois exercices : le prix catalogue est unique et stable à 45,00 € ; la « multitude de prix » est une conversion au forfait qui conserve le total au centime ; le rattachement d'une suppression à chaque vente négociée est partiel, et nous le disons."
     },
     {
       "kind": "titre",
@@ -197,639 +148,291 @@
     },
     {
       "kind": "titre",
-      "texte": "Le jour-test du service : ce que l'extrait du 09/09/2022 établit vraiment",
+      "texte": "Premier fait : le prix catalogue est unique et stable à 45,00 € sur les trois exercices",
       "numero": "2.2"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le service consacre la page 55 à un extrait de la journée du 09 septembre 2022, présenté pour établir qu'« il est totalement impossible d'avoir la certitude que toutes les suppressions ont conduit à un ré-enregistrement dans une autre note ». Nous reconstituons cette journée entière sur l'annexe E1 (évènements) et l'annexe C1 (tickets). Le constat doit être énoncé sans l'embellir."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Ce jour-là, l'annexe E1 recense **67 opérations « DEL » pour 933,80 €**, groupées en **14 rafales**. **Deux** de ces rafales correspondent exactement à une note « Menu Demi Lune » re-saisie : la rafale de 12:07 (7 lignes, **76,90 €**) égale la note n° 3 de 12:08, « 2 × Menu Demi Lune à 38,45 € », et la rafale de 12:23 (9 lignes, **207,00 €**) égale la note n° 8 de 12:23, « 4 × Menu Demi Lune à 51,75 € ». Ces deux rafales totalisent **283,90 €, soit 30 % du montant supprimé du jour et 16 lignes sur 67**."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les **12 autres rafales (649,90 €, 51 lignes)** ne se rattachent, ce jour-là, à aucune note re-saisie au forfait : ce sont des corrections de caisse ordinaires (articles saisis puis retirés, tables fusionnées, erreurs de saisie). Elles ne relèvent pas du grief J, qui porte sur les prix, mais du grief A, qui porte sur les suppressions, et c'est à ce titre qu'elles sont traitées dans la partie A. L'extrait ne « démontre » donc pas que toutes les suppressions sont des conversions au forfait ; il démontre que celles qui en sont le sont au centime."
+      "texte": "Avant d'expliquer les prix variables, il faut établir ce qui ne varie pas. Le prix de carte du Menu Demi Lune (référence article « 0196 ») est **unique** et **identique sur les trois exercices** : **45,00 €**. Nous le re-dérivons directement des annexes de prix B1, B2 et B3 remises au service, ligne de vente par ligne de vente, sans aucun report manuel : la quantité vendue à 45,00 € est obtenue par SUMIF, les ventes hors de ce prix par solde, la fourchette par MINIFS et MAXIFS. Sur chacun des trois exercices, 45,00 € est le seul prix récurrent et, de très loin, le plus fréquent."
     },
     {
       "kind": "tableau",
-      "titre": "Journée du 09/09/2022 reconstituée sur l'annexe E1 : les 14 rafales « DEL » (pièce R2, onglet « Calc-0909 », par formule)",
-      "minWidth": 720,
+      "titre": "Prix catalogue du Menu Demi Lune, re-dérivé des annexes B1, B2, B3 (pièce R2, onglets « Calc-prix » ; quantités)",
+      "minWidth": 820,
       "colonnes": [
-        {
-          "label": "Rafale (heure)"
-        },
-        {
-          "label": "Lignes",
-          "align": "right"
-        },
-        {
-          "label": "Somme « DEL »",
-          "align": "right"
-        },
-        {
-          "label": "Note Demi Lune re-saisie"
-        },
-        {
-          "label": "Rattaché",
-          "align": "right"
-        }
+        { "label": "Donnée re-dérivée" },
+        { "label": "2022-2023", "align": "right" },
+        { "label": "2023-2024", "align": "right" },
+        { "label": "2024-2025", "align": "right" },
+        { "label": "Source (onglet R2)" }
       ],
       "lignes": [
         [
-          {
-            "v": "11:09"
-          },
-          {
-            "v": "4",
-            "align": "right"
-          },
-          {
-            "v": "46,40 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
+          { "v": "Prix catalogue (seul prix récurrent)" },
+          { "v": "45,00 €", "align": "right", "badge": "ok" },
+          { "v": "45,00 €", "align": "right", "badge": "ok" },
+          { "v": "45,00 €", "align": "right", "badge": "ok" },
+          { "v": "Calc-prix, ligne « Prix catalogue »" }
         ],
         [
-          {
-            "v": "11:28"
-          },
-          {
-            "v": "2",
-            "align": "right"
-          },
-          {
-            "v": "21,60 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
+          { "v": "Quantité vendue à 45,00 € (SUMIF)" },
+          { "v": "92,5", "align": "right" },
+          { "v": "192,8", "align": "right" },
+          { "v": "235", "align": "right" },
+          { "v": "Calc-prix, ligne 5 ; Src-B" }
         ],
         [
-          {
-            "v": "11:29"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "7,80 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
+          { "v": "Quantité vendue hors catalogue (≠ 45,00 €)" },
+          { "v": "64", "align": "right" },
+          { "v": "123", "align": "right" },
+          { "v": "147", "align": "right" },
+          { "v": "Calc-prix, ligne 7 (par solde)" }
         ],
         [
-          {
-            "v": "11:30"
-          },
-          {
-            "v": "4",
-            "align": "right"
-          },
-          {
-            "v": "44,80 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
+          { "v": "Plage des prix hors catalogue (MINIFS-MAXIFS)" },
+          { "v": "15,20 € à 85,00 €", "align": "right" },
+          { "v": "19,35 € à 90,00 €", "align": "right" },
+          { "v": "13,00 € à 67,25 €", "align": "right" },
+          { "v": "Calc-prix, lignes 8-9" }
         ],
         [
-          {
-            "v": "11:42"
-          },
-          {
-            "v": "4",
-            "align": "right"
-          },
-          {
-            "v": "35,90 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "11:58"
-          },
-          {
-            "v": "3",
-            "align": "right"
-          },
-          {
-            "v": "50,20 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "12:07"
-          },
-          {
-            "v": "7",
-            "align": "right"
-          },
-          {
-            "v": "76,90 €",
-            "align": "right"
-          },
-          {
-            "v": "Note n° 3 (12:08), 2 × 38,45 €",
-            "badge": "ok"
-          },
-          {
-            "v": "76,90 €",
-            "align": "right",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "12:23"
-          },
-          {
-            "v": "9",
-            "align": "right"
-          },
-          {
-            "v": "207,00 €",
-            "align": "right"
-          },
-          {
-            "v": "Note n° 8 (12:23), 4 × 51,75 €",
-            "badge": "ok"
-          },
-          {
-            "v": "207,00 €",
-            "align": "right",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "12:35"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "3,40 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "12:36"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "2,20 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "18:52"
-          },
-          {
-            "v": "15",
-            "align": "right"
-          },
-          {
-            "v": "236,60 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "20:09"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "4,40 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "20:16"
-          },
-          {
-            "v": "8",
-            "align": "right"
-          },
-          {
-            "v": "114,90 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "20:17"
-          },
-          {
-            "v": "7",
-            "align": "right"
-          },
-          {
-            "v": "81,70 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Total"
-          },
-          {
-            "v": "67",
-            "align": "right"
-          },
-          {
-            "v": "933,80 €",
-            "align": "right"
-          },
-          {
-            "v": "2 rafales rattachées (30 %)"
-          },
-          {
-            "v": "283,90 €",
-            "align": "right",
-            "badge": "ok"
-          }
+          { "v": "Total hors catalogue, 3 exercices" },
+          { "v": "", "align": "right" },
+          { "v": "", "align": "right" },
+          { "v": "334", "align": "right", "badge": "ok" },
+          { "v": "64 + 123 + 147 = 334 (= p. 54)" }
         ]
       ]
     },
     {
       "kind": "note",
-      "texte": "Les deux seuls « trous » dans la numérotation des identifiants « DEL » du jour, 42098 et 42123, correspondent sur l'annexe E1 à deux évènements « RPR » (non-DEL) qui partagent le même compteur : il n'y a aucune suppression manquante. La vérification des deux rafales rattachées (76,90 € et 207,00 €) est refaite par formule dans la pièce R2."
+      "texte": "Le total hors catalogue re-dérivé, **64 + 123 + 147 = 334 unités**, coïncide exactement avec le chiffre de 334 repris par le service p. 54. Les rares quantités fractionnaires (0,5 ou 0,67 : un même menu partagé entre deux couverts, d'où une quantité au catalogue non entière comme 92,5 ou 192,8) se trouvent toutes au prix catalogue de 45,00 €, jamais dans les ventes hors catalogue. La « multitude de prix » reprochée ne porte donc jamais sur le prix de carte, qui ne bouge pas, mais sur les seules ventes converties au forfait, traitées au § 2.3."
     },
     {
-      "kind": "paragraphe",
-      "texte": "Le point utile au grief J est que les deux prix que le service relève comme « instables », **38,45 €** et **51,75 €** le couvert, sont exactement le total de chaque addition rapporté au nombre de couverts : 76,90 € ÷ 2 = 38,45 € et 207,00 € ÷ 4 = 51,75 €, **au centime**, non « à l'euro près ». La « multitude de prix » est donc produite par la conversion au forfait, pas par un prix inventé."
+      "kind": "piecejointe",
+      "intro": "La stabilité du prix catalogue à 45,00 € sur les trois exercices est entièrement re-dérivable sur la pièce R2. Onglets de calcul : « Calc-prix-2022-2023 », « Calc-prix-2023-2024 », « Calc-prix-2024-2025 » (lignes 3 à 10 de chacun : prix catalogue, quantité à 45,00 € par SUMIF, quantité hors catalogue par solde, plage par MINIFS/MAXIFS). Onglets sources, lignes brutes copiées de l'annexe B : « Src-B1-DemiLune » (lignes 3 à 97), « Src-B2-DemiLune » (lignes 3 à 186), « Src-B3-DemiLune » (lignes 3 à 224).",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-menus-prix.xlsx",
+          "label": "R2, onglets Calc-prix et Src-B1/B2/B3 : prix catalogue unique 45,00 € re-dérivé sur les trois exercices (à formules)"
+        }
+      ]
     },
     {
       "kind": "titre",
-      "texte": "La conversion au forfait ne perd aucune recette : re-dérivation sur les trois exercices",
+      "texte": "Deuxième fait : la « multitude de prix » est une conversion au forfait qui conserve le total au centime",
       "numero": "2.3"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le rapprochement a été refait sur les trois exercices à partir des seuls fichiers remis au service (annexe C, détail des tickets ; annexe E, fichier des évènements). Il identifie **61 conversions au forfait** aboutissant à un ou plusieurs menus re-saisis, représentant **421 lignes à la carte supprimées** et **6 728,49 € encaissés**. Chaque rafale « DEL » est sommée par formule (onglet « Src-E » de la pièce R2) et comparée au total de la note correspondante (onglet « Src-C »), exercice par exercice."
+      "texte": "La variabilité reprochée tient à un seul mécanisme de caisse. Une tablée demande une facture au forfait, « sans le détail » : un montant unique libellé « menu » pour toute la table. La caisse ne sachant pas replier une addition détaillée en forfait, le serveur **supprime les lignes saisies à la carte** (évènements « DEL »), puis **re-saisit un Menu Demi Lune** dont le prix est le total réellement consommé, le cas échéant réparti sur les couverts. L'invariant n'est pas le prix par couvert : c'est la **conservation du total**. La somme des lignes supprimées égale, au centime, le total de la note re-saisie, elle-même intégralement encaissée."
     },
     {
       "kind": "paragraphe",
-      "texte": "Deux corrections s'imposent sur ce total, pour ne rien revendiquer de faux. D'une part, l'égalité n'est pas exacte au centime sur l'ensemble : la somme des lignes supprimées vaut **6 728,50 €** et le total des notes encaissées **6 728,49 €**, soit un écart de **0,01 €** provenant d'une seule note (18/09/2024, 85,90 € supprimés pour 85,89 € encaissés, arrondi de division par les couverts). D'autre part, ces 61 notes ne sont pas toutes composées du seul Menu Demi Lune : 6 d'entre elles contiennent aussi des lignes d'un autre menu (Bourguignon, Franc-Comtois, Formule Express, Menu du jour) pour **452,20 €**. Le Menu Demi Lune proprement dit représente **6 276,29 € et 151 unités** ; le reste est de la recette d'autres menus, également encaissée."
+      "texte": "Voici ce mécanisme décomposé sur une note réelle, la note n° 7 du 22/12/2023, étape par étape. Elle illustre à la fois la conservation du total et le fait, assumé plus bas, que certaines notes-forfait absorbent aussi la ligne d'un autre menu."
     },
     {
       "kind": "tableau",
-      "titre": "Les 61 conversions au forfait, par exercice (re-dérivées par formules dans la pièce R2, onglets « Calc-conv »)",
+      "titre": "Une conversion décomposée : note n° 7 du 22/12/2023 (donnée source → opération → résultat)",
       "minWidth": 820,
       "colonnes": [
-        {
-          "label": "Exercice"
-        },
-        {
-          "label": "Notes",
-          "align": "right"
-        },
-        {
-          "label": "Lignes supprimées",
-          "align": "right"
-        },
-        {
-          "label": "Somme suppressions",
-          "align": "right"
-        },
-        {
-          "label": "Total encaissé",
-          "align": "right"
-        },
-        {
-          "label": "Écart",
-          "align": "right"
-        },
-        {
-          "label": "Source"
-        }
+        { "label": "Étape" },
+        { "label": "Détail" },
+        { "label": "Montant", "align": "right" },
+        { "label": "Source (pièce R2)" }
       ],
       "lignes": [
         [
-          {
-            "v": "2022-2023"
-          },
-          {
-            "v": "16",
-            "align": "right"
-          },
-          {
-            "v": "102",
-            "align": "right"
-          },
-          {
-            "v": "1 492,80 €",
-            "align": "right"
-          },
-          {
-            "v": "1 492,80 €",
-            "align": "right"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "Primaire (annexes E1 + C1)",
-            "badge": "ok"
-          }
+          { "v": "1. Rafale « DEL » de 13:31 (19 lignes à la carte supprimées)" },
+          { "v": "plats et boissons saisis à la carte puis retirés pour créer la facture au forfait" },
+          { "v": "433,30 €", "align": "right" },
+          { "v": "Src-E2-DEL-conv (date 22/12/2023, heure 13:31), somme par SUMIFS" }
         ],
         [
-          {
-            "v": "2023-2024"
-          },
-          {
-            "v": "22",
-            "align": "right"
-          },
-          {
-            "v": "172",
-            "align": "right"
-          },
-          {
-            "v": "2 651,00 €",
-            "align": "right"
-          },
-          {
-            "v": "2 651,00 €",
-            "align": "right"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "Primaire (annexes E2 + C2)",
-            "badge": "ok"
-          }
+          { "v": "2. Note n° 7 re-saisie au forfait (13:31)" },
+          { "v": "8 × Menu Demi Lune à 49,00 € = 392,00 € ; 1 × Menu Franc-Comtois à 41,30 €" },
+          { "v": "433,30 €", "align": "right" },
+          { "v": "Src-C2-notes-conv, lignes 22 et 23" }
         ],
         [
-          {
-            "v": "2024-2025"
-          },
-          {
-            "v": "23",
-            "align": "right"
-          },
-          {
-            "v": "147",
-            "align": "right"
-          },
-          {
-            "v": "2 584,70 €",
-            "align": "right"
-          },
-          {
-            "v": "2 584,69 €",
-            "align": "right"
-          },
-          {
-            "v": "0,01 €",
-            "align": "right"
-          },
-          {
-            "v": "Primaire (annexes E3 + C3)",
-            "badge": "ok"
-          }
+          { "v": "3. Écart (total encaissé − somme supprimée)" },
+          { "v": "la recette consommée est intégralement réencaissée" },
+          { "v": "0,00 €", "align": "right", "badge": "ok" },
+          { "v": "Calc-conv-2023-2024, ligne 22" }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Le jour-test du service : ce que l'extrait du 09/09/2022 établit vraiment",
+      "numero": "2.3.1"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service consacre la page 55 à un extrait de la journée du 09 septembre 2022, choisie par lui, pour établir qu'« il est totalement impossible d'avoir la certitude que toutes les suppressions ont conduit à un ré-enregistrement ». Nous reconstituons cette journée entière sur l'annexe E1 (évènements) et l'annexe C1 (tickets), et le constat doit être énoncé sans l'embellir. Ce jour-là, l'annexe E1 recense **67 opérations « DEL » pour 933,80 €**, groupées en **14 rafales**. **Deux** de ces rafales correspondent exactement à une note « Menu Demi Lune » re-saisie ; les douze autres sont des corrections de caisse ordinaires."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Journée du 09/09/2022 reconstituée sur l'annexe E1 : les 14 rafales « DEL » (pièce R2, onglet « Calc-0909 », lignes 4 à 17 ; par formule)",
+      "minWidth": 720,
+      "colonnes": [
+        { "label": "Rafale (heure)" },
+        { "label": "Lignes", "align": "right" },
+        { "label": "Somme « DEL »", "align": "right" },
+        { "label": "Note Demi Lune re-saisie" },
+        { "label": "Rattaché", "align": "right" }
+      ],
+      "lignes": [
+        [ { "v": "11:09" }, { "v": "4", "align": "right" }, { "v": "46,40 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "11:28" }, { "v": "2", "align": "right" }, { "v": "21,60 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "11:29" }, { "v": "1", "align": "right" }, { "v": "7,80 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "11:30" }, { "v": "4", "align": "right" }, { "v": "44,80 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "11:42" }, { "v": "4", "align": "right" }, { "v": "35,90 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "11:58" }, { "v": "3", "align": "right" }, { "v": "50,20 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "12:07" }, { "v": "7", "align": "right" }, { "v": "76,90 €", "align": "right" }, { "v": "Note n° 3 (12:08), 2 × 38,45 €", "badge": "ok" }, { "v": "76,90 €", "align": "right", "badge": "ok" } ],
+        [ { "v": "12:23" }, { "v": "9", "align": "right" }, { "v": "207,00 €", "align": "right" }, { "v": "Note n° 8 (12:23), 4 × 51,75 €", "badge": "ok" }, { "v": "207,00 €", "align": "right", "badge": "ok" } ],
+        [ { "v": "12:35" }, { "v": "1", "align": "right" }, { "v": "3,40 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "12:36" }, { "v": "1", "align": "right" }, { "v": "2,20 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "18:52" }, { "v": "15", "align": "right" }, { "v": "236,60 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "20:09" }, { "v": "1", "align": "right" }, { "v": "4,40 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "20:16" }, { "v": "8", "align": "right" }, { "v": "114,90 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "20:17" }, { "v": "7", "align": "right" }, { "v": "81,70 €", "align": "right" }, { "v": "-" }, { "v": "0,00 €", "align": "right" } ],
+        [ { "v": "Total" }, { "v": "67", "align": "right" }, { "v": "933,80 €", "align": "right" }, { "v": "2 rafales rattachées (30 %)" }, { "v": "283,90 €", "align": "right", "badge": "ok" } ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Les deux rafales rattachées (12:07 = 76,90 € et 12:23 = 207,00 €) totalisent **283,90 €, soit 30 % du montant supprimé du jour et 16 lignes sur 67**. Les **12 autres rafales (649,90 €, 51 lignes)** ne se rattachent, ce jour-là, à aucune note re-saisie au forfait : ce sont des corrections de caisse ordinaires (articles saisis puis retirés, tables fusionnées, erreurs). Elles ne relèvent pas du grief J, qui porte sur les prix, mais du grief A, qui porte sur les suppressions, et c'est à ce titre qu'elles y sont traitées. L'extrait ne « démontre » donc pas que toutes les suppressions sont des conversions au forfait ; il démontre que celles qui en sont le sont au centime."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le point utile au grief J est que les deux prix que le service relève comme « instables », **38,45 €** et **51,75 €** le couvert, sont exactement le total de chaque addition rapporté au nombre de couverts : **76,90 € ÷ 2 = 38,45 €** et **207,00 € ÷ 4 = 51,75 €**, au centime, non « à l'euro près ». La « multitude de prix » est produite par la conversion au forfait, pas par un prix inventé. Les deux seuls « trous » dans la numérotation des identifiants « DEL » du jour, 42098 et 42123, correspondent sur l'annexe E1 à deux évènements « RPR » (non-DEL) qui partagent le même compteur : il n'y a aucune suppression manquante."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Le jour-test du 09/09/2022 est intégralement reconstruit sur la pièce R2. Onglet « Calc-0909 » : les 14 rafales (lignes 4 à 17), total 933,80 €, montant rattaché 283,90 € par SUMIFS (ligne 18), taux 30 % (ligne 19). Onglets sources : « Src-E1-DEL-0909 » (lignes 3 à 69 : les 67 opérations DEL du jour, avec heure, montant et identifiant), « Src-C1-notes-0909 » (lignes 3 à 27 : les 25 notes encaissées du jour, dont les notes n° 3 et n° 8).",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-menus-prix.xlsx",
+          "label": "R2, onglets Calc-0909, Src-E1-DEL-0909, Src-C1-notes-0909 : le test du service du 09/09/2022 (à formules)"
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "La re-dérivation sur les trois exercices : 61 conversions, le total conservé au centime",
+      "numero": "2.3.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le même rapprochement est refait sur les trois exercices, à partir des seuls fichiers remis au service : annexe C (détail des tickets) et annexe E (fichier des évènements). Pour chaque rafale « DEL » retenue, la pièce R2 somme les lignes supprimées par SUMIFS (onglets « Src-E ») et la compare au total de la note re-saisie, également par SUMIFS (onglets « Src-C »), exercice par exercice. Le résultat : **61 conversions**, **421 lignes à la carte supprimées pour 6 728,50 €**, égales à **6 728,49 € encaissés**."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les 61 conversions au forfait, par exercice (pièce R2, onglets « Calc-conv » ; somme des suppressions = total encaissé)",
+      "minWidth": 860,
+      "colonnes": [
+        { "label": "Exercice" },
+        { "label": "Notes", "align": "right" },
+        { "label": "Lignes supprimées", "align": "right" },
+        { "label": "Somme suppressions", "align": "right" },
+        { "label": "Total encaissé", "align": "right" },
+        { "label": "Écart", "align": "right" },
+        { "label": "Source (onglet R2)" }
+      ],
+      "lignes": [
+        [
+          { "v": "2022-2023" },
+          { "v": "16", "align": "right" },
+          { "v": "102", "align": "right" },
+          { "v": "1 492,80 €", "align": "right" },
+          { "v": "1 492,80 €", "align": "right" },
+          { "v": "0,00 €", "align": "right", "badge": "ok" },
+          { "v": "Calc-conv-2022-2023, lignes 4 à 19" }
         ],
         [
-          {
-            "v": "Total"
-          },
-          {
-            "v": "61",
-            "align": "right"
-          },
-          {
-            "v": "421",
-            "align": "right"
-          },
-          {
-            "v": "6 728,50 €",
-            "align": "right"
-          },
-          {
-            "v": "6 728,49 €",
-            "align": "right"
-          },
-          {
-            "v": "0,01 €",
-            "align": "right"
-          },
-          {
-            "v": "-"
-          }
+          { "v": "2023-2024" },
+          { "v": "22", "align": "right" },
+          { "v": "172", "align": "right" },
+          { "v": "2 651,00 €", "align": "right" },
+          { "v": "2 651,00 €", "align": "right" },
+          { "v": "0,00 €", "align": "right", "badge": "ok" },
+          { "v": "Calc-conv-2023-2024, lignes 4 à 25" }
+        ],
+        [
+          { "v": "2024-2025" },
+          { "v": "23", "align": "right" },
+          { "v": "147", "align": "right" },
+          { "v": "2 584,70 €", "align": "right" },
+          { "v": "2 584,69 €", "align": "right" },
+          { "v": "0,01 €", "align": "right" },
+          { "v": "Calc-conv-2024-2025, lignes 4 à 26" }
+        ],
+        [
+          { "v": "Total" },
+          { "v": "61", "align": "right" },
+          { "v": "421", "align": "right" },
+          { "v": "6 728,50 €", "align": "right" },
+          { "v": "6 728,49 €", "align": "right" },
+          { "v": "0,01 €", "align": "right" },
+          { "v": "Récap, ligne « TOTAL »" }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "Chacune des trois colonnes est re-dérivée ligne à ligne : la somme des suppressions et le total encaissé coïncident à **1 492,80 € = 1 492,80 €** en 2022-2023 (16 notes), à **2 651,00 € = 2 651,00 €** en 2023-2024 (22 notes) et à **2 584,70 € ≈ 2 584,69 €** en 2024-2025 (23 notes, écart 0,01 € d'arrondi). Les unités de Menu Demi Lune re-saisies s'élèvent respectivement à **39, 61 et 51 unités** (39 + 61 + 51 = 151), pour **38, 61 et 50 couverts** (149 couverts au total). Le détail de chaque conversion figure dans la pièce R2."
+      "texte": "Un seul centime d'écart, et il est expliqué. La somme des lignes supprimées vaut **6 728,50 €** et le total encaissé **6 728,49 €**, soit **0,01 €** : il provient d'une unique note, celle du **18/09/2024 (note n° 29, 85,90 € supprimés pour 85,89 € encaissés)**, où la division du total par trois couverts à 28,63 € laisse un centime d'arrondi (3 × 28,63 € = 85,89 €). Aucun autre écart sur les 61 notes : les trois sommes par exercice coïncident à **1 492,80 € = 1 492,80 €**, **2 651,00 € = 2 651,00 €** et **2 584,70 € ≈ 2 584,69 €**. Les unités de Menu Demi Lune re-saisies sont de **39, 61 et 51 (total 151)**, pour **38, 61 et 50 couverts (149 au total)**, ce qui explique l'écart entre les 151 unités de notre recomptage et les 149 du service (p. 54)."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Trois conversions datées, une par exercice, montrent l'invariant à l'œuvre et ses nuances : le prix par couvert n'est pas toujours « total ÷ couverts », mais le total, lui, est toujours conservé."
     },
     {
       "kind": "tableau",
-      "titre": "Trois conversions datées, une par exercice (re-dérivées sur les annexes E et C)",
-      "minWidth": 820,
+      "titre": "Trois conversions datées, une par exercice (re-dérivées sur les annexes E et C ; pièce R2, onglets « Calc-conv » et « Src-C »)",
+      "minWidth": 860,
       "colonnes": [
-        {
-          "label": "Date et rafale"
-        },
-        {
-          "label": "Lignes",
-          "align": "right"
-        },
-        {
-          "label": "Somme suppressions",
-          "align": "right"
-        },
-        {
-          "label": "Note encaissée"
-        },
-        {
-          "label": "Total",
-          "align": "right"
-        },
-        {
-          "label": "Écart",
-          "align": "right"
-        }
+        { "label": "Date et rafale" },
+        { "label": "Lignes", "align": "right" },
+        { "label": "Somme suppressions", "align": "right" },
+        { "label": "Note encaissée (détail)" },
+        { "label": "Total", "align": "right" },
+        { "label": "Écart", "align": "right" }
       ],
       "lignes": [
         [
-          {
-            "v": "22/03/2023, 20:36 (2022-2023)"
-          },
-          {
-            "v": "12",
-            "align": "right"
-          },
-          {
-            "v": "194,30 €",
-            "align": "right"
-          },
-          {
-            "v": "Note n° 12 (20:37) : 2 × Demi Lune à 64,00 € + 1 × à 66,30 €"
-          },
-          {
-            "v": "194,30 €",
-            "align": "right"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right",
-            "badge": "ok"
-          }
+          { "v": "22/03/2023, 20:36 (2022-2023)" },
+          { "v": "12", "align": "right" },
+          { "v": "194,30 €", "align": "right" },
+          { "v": "Note n° 12 (20:37) : 2 × Demi Lune à 64,00 € + 1 × à 66,30 € (Src-C1, l. 18-19)" },
+          { "v": "194,30 €", "align": "right" },
+          { "v": "0,00 €", "align": "right", "badge": "ok" }
         ],
         [
-          {
-            "v": "22/12/2023, 13:31 (2023-2024)"
-          },
-          {
-            "v": "19",
-            "align": "right"
-          },
-          {
-            "v": "433,30 €",
-            "align": "right"
-          },
-          {
-            "v": "Note n° 7 (13:31) : 8 × Demi Lune à 49,00 € + 1 × Franc-Comtois à 41,30 €"
-          },
-          {
-            "v": "433,30 €",
-            "align": "right"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right",
-            "badge": "ok"
-          }
+          { "v": "22/12/2023, 13:31 (2023-2024)" },
+          { "v": "19", "align": "right" },
+          { "v": "433,30 €", "align": "right" },
+          { "v": "Note n° 7 (13:31) : 8 × Demi Lune à 49,00 € + 1 × Franc-Comtois à 41,30 € (Src-C2, l. 22-23)" },
+          { "v": "433,30 €", "align": "right" },
+          { "v": "0,00 €", "align": "right", "badge": "ok" }
         ],
         [
-          {
-            "v": "19/09/2024, 20:15 (2024-2025)"
-          },
-          {
-            "v": "19",
-            "align": "right"
-          },
-          {
-            "v": "320,40 €",
-            "align": "right"
-          },
-          {
-            "v": "Note n° 31 (20:14) : Menu Demi Lune re-saisi au total consommé"
-          },
-          {
-            "v": "320,40 €",
-            "align": "right"
-          },
-          {
-            "v": "0,00 €",
-            "align": "right",
-            "badge": "ok"
-          }
+          { "v": "19/09/2024, 20:15 (2024-2025)" },
+          { "v": "19", "align": "right" },
+          { "v": "320,40 €", "align": "right" },
+          { "v": "Note n° 31 (20:14) : 3 × Demi Lune à 50,00 € + 4 × Menu du jour à 42,60 € (Src-C3, l. 18-19)" },
+          { "v": "320,40 €", "align": "right" },
+          { "v": "0,00 €", "align": "right", "badge": "ok" }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "Le mécanisme invariant est la **conservation du total** : le total de la note re-saisie égale, au centime, la somme des lignes supprimées. Le prix affiché par couvert en découle, mais il n'est pas toujours « total ÷ couverts » : la note du 22/03/2023 porte deux prix unitaires différents pour le même menu (2 × 64,00 € + 1 × 66,30 € pour 194,30 € à 3 couverts, alors que 194,30 ÷ 3 = 64,77 €). La répartition entre couverts peut donc être manuelle ; ce qui reste exact, c'est que la recette consommée est intégralement réencaissée."
+      "texte": "La note du **22/03/2023** porte **deux prix unitaires différents pour le même menu** : 2 × 64,00 € + 1 × 66,30 € = 194,30 € à 3 couverts, alors que 194,30 ÷ 3 = 64,77 €. La répartition entre couverts est donc parfois manuelle, et c'est aussi le cas du **11/12/2024 (note n° 18 : 3 × 50,00 € + 1 × 52,10 € = 202,10 €, Src-C3, lignes 26-27)**. Ce qui reste exact dans tous les cas est la conservation du total : la recette consommée est intégralement réencaissée. Le prix par couvert « instable » n'est qu'un sous-produit de cette répartition, jamais une recette perdue."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Honnêteté sur la composition : **6 des 61 notes** ne sont pas composées du seul Menu Demi Lune ; elles contiennent aussi la ligne d'un autre menu (Bourguignon le 13/12/2023 pour 88,00 € ; Franc-Comtois le 22/12/2023 pour 41,30 € et le 24/04/2024 pour 48,20 € ; Formule Express le 01/03/2024 pour 47,00 € ; Menu du jour le 19/09/2024 pour 170,40 € et le 11/10/2024 pour 57,30 €), soit **452,20 €** au total. Le Menu Demi Lune proprement dit représente donc **6 276,29 € et 151 unités** (6 728,49 € − 452,20 €) ; le reste est de la recette d'autres menus, elle aussi encaissée. La conservation du total vaut pour la note entière, quel que soit le menu."
     },
     {
       "kind": "kpis",
@@ -842,14 +445,14 @@
         {
           "label": "Somme suppressions = total encaissé",
           "valeur": "6 728,50 € = 6 728,49 €",
-          "sub": "écart 0,01 € (un seul arrondi de division)",
+          "sub": "écart 0,01 € (un seul arrondi, note du 18/09/2024)",
           "highlight": true,
           "couleur": "teal"
         },
         {
           "label": "Prix catalogue (annexes B1, B2, B3)",
           "valeur": "45,00 €",
-          "sub": "unique sur chacun des trois exercices"
+          "sub": "unique et stable sur chacun des trois exercices"
         },
         {
           "label": "Dont recette d'autres menus",
@@ -859,310 +462,69 @@
       ]
     },
     {
+      "kind": "piecejointe",
+      "intro": "Les 61 conversions sont re-dérivées ligne à ligne sur la pièce R2, un onglet de calcul par exercice, chaque résultat par formule SUMIFS. Onglets de calcul : « Calc-conv-2022-2023 » (lignes 4 à 19, 16 notes), « Calc-conv-2023-2024 » (lignes 4 à 25, 22 notes), « Calc-conv-2024-2025 » (lignes 4 à 26, 23 notes), chacun avec sa colonne « Somme DEL », « Total note » et « Écart ». Onglets sources (lignes brutes des annexes) : « Src-E1/E2/E3-DEL-conv » (lignes DEL des rafales) et « Src-C1/C2/C3-notes-conv » (lignes des notes re-saisies ; la note n° 7 du 22/12/2023 est aux lignes 22-23 de Src-C2, la note n° 31 du 19/09/2024 aux lignes 18-19 de Src-C3, la note n° 18 du 11/12/2024 aux lignes 26-27 de Src-C3). La synthèse figure à l'onglet « Récap » (conversions lignes 4 à 7).",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-menus-prix.xlsx",
+          "label": "R2, onglets Calc-conv-* et Src-E/C des trois exercices : 61 conversions, 6 728,50 € = 6 728,49 € (à formules)"
+        }
+      ]
+    },
+    {
       "kind": "titre",
-      "texte": "La dispersion des prix, mesurée sur l'annexe B des trois exercices",
+      "texte": "Troisième fait : le taux de rattachement est partiel, et nous le disons",
       "numero": "2.4"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le prix catalogue du Menu Demi Lune est **unique** : **45,00 €**. Les annexes B1, B2 et B3 le confirment ligne à ligne (pièce R2, onglets « Calc-prix ») : sur chacun des trois exercices, 45,00 € est le seul prix récurrent et de très loin le plus fréquent (92, 192 puis 235 unités au prix catalogue), et les ventes hors de ce prix se font dans une fourchette de **13,00 € à 90,00 €**. La « multitude de prix » ne porte donc pas sur le prix de carte, mais sur les seules ventes converties au forfait."
+      "texte": "Rapprocher chaque vente hors catalogue d'une rafale de suppressions n'est possible que pour une partie des ventes, et il faut l'énoncer franchement. Sur les **334 unités hors catalogue**, **151** sont rattachées au centime à une rafale « DEL » (les 61 conversions ci-dessus), soit **45,2 %**. Les **183 restantes (54,8 %)** sont des forfaits saisis directement, sans suppression préalable rapprochée : leur prix est tout aussi libre et leur recette tout aussi encaissée, mais leur détail d'origine n'est pas reconstituable à partir des annexes. Cela ne traduit aucune perte de recette ; cela signifie qu'une part croissante des prix négociés a été saisie directement en forfait, sans passer par la suppression-puis-ré-enregistrement."
     },
     {
       "kind": "tableau",
-      "titre": "Menu Demi Lune : ventes hors prix de carte par période de carte (re-dérivées des annexes B1, B2, B3 ; en quantités)",
-      "minWidth": 820,
-      "colonnes": [
-        {
-          "label": "Période"
-        },
-        {
-          "label": "Exercice",
-          "align": "center"
-        },
-        {
-          "label": "Prix catalogue",
-          "align": "right"
-        },
-        {
-          "label": "Ventes hors catalogue",
-          "align": "right"
-        },
-        {
-          "label": "Plage hors catalogue",
-          "align": "right"
-        },
-        {
-          "label": "Source"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "P1 (01/04/2022 au 22/07/2022)"
-          },
-          {
-            "v": "2022-2023",
-            "align": "center"
-          },
-          {
-            "v": "45,00 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "28",
-            "align": "right"
-          },
-          {
-            "v": "15,20 € à 85,00 €",
-            "align": "right"
-          },
-          {
-            "v": "Primaire (B1)",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "P2 (23/07/2022 au 31/03/2023)"
-          },
-          {
-            "v": "2022-2023",
-            "align": "center"
-          },
-          {
-            "v": "45,00 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "36",
-            "align": "right"
-          },
-          {
-            "v": "15,90 € à 66,30 €",
-            "align": "right"
-          },
-          {
-            "v": "Primaire (B1)",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "P3 (01/04/2023 au 16/04/2023)"
-          },
-          {
-            "v": "2023-2024",
-            "align": "center"
-          },
-          {
-            "v": "45,00 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "1",
-            "align": "right"
-          },
-          {
-            "v": "25,00 €",
-            "align": "right"
-          },
-          {
-            "v": "Primaire (B2)",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "P4 (17/04/2023 au 31/03/2024)"
-          },
-          {
-            "v": "2023-2024",
-            "align": "center"
-          },
-          {
-            "v": "45,00 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "122",
-            "align": "right"
-          },
-          {
-            "v": "19,35 € à 90,00 €",
-            "align": "right"
-          },
-          {
-            "v": "Primaire (B2)",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "P5 (01/04/2024 au 31/03/2025)"
-          },
-          {
-            "v": "2024-2025",
-            "align": "center"
-          },
-          {
-            "v": "45,00 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "147",
-            "align": "right"
-          },
-          {
-            "v": "13,00 € à 67,25 €",
-            "align": "right"
-          },
-          {
-            "v": "Primaire (B3)",
-            "badge": "ok"
-          }
-        ],
-        [
-          {
-            "v": "Total (3 exercices)"
-          },
-          {
-            "v": "",
-            "align": "center"
-          },
-          {
-            "v": "45,00 € (unique)",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "334",
-            "align": "right"
-          },
-          {
-            "v": "13,00 € à 90,00 €",
-            "align": "right"
-          },
-          {
-            "v": "Primaire (B1+B2+B3)",
-            "badge": "ok"
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "note",
-      "texte": "Décompte en quantités (somme des Qté de l'annexe B), re-dérivé par formule pour les trois exercices : 64 unités hors catalogue en 2022-2023, 123 en 2023-2024, 147 en 2024-2025, soit **334 au total**. Ce total re-dérivé coïncide exactement avec le chiffre de 334 repris par le service p. 54. Les rares quantités fractionnaires (0,5 ou 0,67 : menus partagés entre deux couverts) se trouvent toutes au prix catalogue de 45,00 €, jamais dans les ventes hors catalogue."
-    },
-    {
-      "kind": "titre",
-      "texte": "Le taux de rattachement, exercice par exercice",
-      "numero": "2.5"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Rapprocher chaque vente hors catalogue d'une rafale de suppressions est possible pour une partie seulement des ventes. Sur les **334 unités hors catalogue**, **151** sont rattachées au centime à une rafale « DEL » (les 61 conversions re-dérivées ci-dessus), soit **45,2 %**. Les autres sont des forfaits saisis directement, sans suppression préalable rapprochée : leur prix est tout aussi libre et leur recette tout aussi encaissée, mais leur détail d'origine n'est pas reconstituable à partir des annexes."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Taux de rattachement des Menus Demi Lune hors catalogue à une rafale de suppressions, par exercice (pièce R2, onglet « Récap »)",
+      "titre": "Taux de rattachement des Menus Demi Lune hors catalogue à une rafale de suppressions, par exercice (pièce R2, onglet « Récap », lignes 10 à 14)",
       "minWidth": 760,
       "colonnes": [
-        {
-          "label": "Exercice"
-        },
-        {
-          "label": "Unités hors catalogue",
-          "align": "right"
-        },
-        {
-          "label": "Unités rattachées (conversions)",
-          "align": "right"
-        },
-        {
-          "label": "Taux de rattachement",
-          "align": "right"
-        }
+        { "label": "Exercice" },
+        { "label": "Unités hors catalogue", "align": "right" },
+        { "label": "Unités rattachées (conversions)", "align": "right" },
+        { "label": "Saisies directement (non rattachées)", "align": "right" },
+        { "label": "Taux de rattachement", "align": "right" }
       ],
       "lignes": [
         [
-          {
-            "v": "2022-2023"
-          },
-          {
-            "v": "64",
-            "align": "right"
-          },
-          {
-            "v": "39",
-            "align": "right"
-          },
-          {
-            "v": "60,9 %",
-            "align": "right",
-            "badge": "ok"
-          }
+          { "v": "2022-2023" },
+          { "v": "64", "align": "right" },
+          { "v": "39", "align": "right" },
+          { "v": "25", "align": "right" },
+          { "v": "60,9 %", "align": "right", "badge": "ok" }
         ],
         [
-          {
-            "v": "2023-2024"
-          },
-          {
-            "v": "123",
-            "align": "right"
-          },
-          {
-            "v": "61",
-            "align": "right"
-          },
-          {
-            "v": "49,6 %",
-            "align": "right"
-          }
+          { "v": "2023-2024" },
+          { "v": "123", "align": "right" },
+          { "v": "61", "align": "right" },
+          { "v": "62", "align": "right" },
+          { "v": "49,6 %", "align": "right" }
         ],
         [
-          {
-            "v": "2024-2025"
-          },
-          {
-            "v": "147",
-            "align": "right"
-          },
-          {
-            "v": "51",
-            "align": "right"
-          },
-          {
-            "v": "34,7 %",
-            "align": "right"
-          }
+          { "v": "2024-2025" },
+          { "v": "147", "align": "right" },
+          { "v": "51", "align": "right" },
+          { "v": "96", "align": "right" },
+          { "v": "34,7 %", "align": "right" }
         ],
         [
-          {
-            "v": "Total"
-          },
-          {
-            "v": "334",
-            "align": "right"
-          },
-          {
-            "v": "151",
-            "align": "right"
-          },
-          {
-            "v": "45,2 %",
-            "align": "right"
-          }
+          { "v": "Total" },
+          { "v": "334", "align": "right" },
+          { "v": "151", "align": "right" },
+          { "v": "183", "align": "right" },
+          { "v": "45,2 %", "align": "right" }
         ]
       ]
     },
     {
       "kind": "paragraphe",
-      "texte": "Le taux décroît d'un exercice à l'autre (60,9 %, 49,6 %, 34,7 %). Cela ne traduit aucune perte de recette : cela signifie seulement qu'au fil du temps une part croissante des prix négociés a été saisie directement en forfait, sans passer par la suppression-puis-ré-enregistrement. Le fait vérifiable et constant reste celui du § 2.3 : partout où une rafale précède la note, la somme supprimée égale au centime le total encaissé."
+      "texte": "Le taux décroît d'un exercice à l'autre (60,9 %, puis 49,6 %, puis 34,7 %). Le fait vérifiable et constant reste celui du § 2.3 : partout où une rafale précède la note, la somme supprimée égale au centime le total encaissé. Pour les 183 forfaits saisis directement, nous ne revendiquons pas de rattachement : nous soutenons seulement que leur prix est libre (§ 2.1) et que leur recette est portée au chiffre d'affaires, ce que le service ne conteste nulle part."
     },
     {
       "kind": "paragraphe",
@@ -1170,7 +532,17 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Sur la traçabilité, enfin : le fichier des évènements porte bien un identifiant unique et continu (36 681 à 60 019, sans saut réel). Mais la caisse n'enregistre aucun lien stocké entre une suppression et la note re-saisie ; le rapprochement est reconstruit par la date, la minute et le montant. Sur ce point précis soulevé par le service, la conversion au forfait est démontrée là où les montants coïncident, mais la traçabilité « effective » exigée n'est pas, à elle seule, restaurée, et ce reproche relève du grief A et y est traité."
+      "texte": "Sur la traçabilité, enfin : le fichier des évènements porte bien un identifiant unique et continu (36 681 à 60 019, sans saut réel). Mais la caisse n'enregistre aucun lien stocké entre une suppression et la note re-saisie ; le rapprochement est reconstruit par la date, la minute et le montant. Sur ce point précis soulevé par le service, la conversion au forfait est démontrée là où les montants coïncident, mais la traçabilité « effective » exigée n'est pas, à elle seule, restaurée, et ce reproche relève du grief A, où il est traité."
+    },
+    {
+      "kind": "piecejointe",
+      "intro": "Le taux de rattachement par exercice est re-dérivé par formule à l'onglet « Récap » de la pièce R2 (lignes 10 à 14 : prix catalogue, unités au catalogue, unités hors catalogue, unités rattachées et taux, pour chaque exercice et au total). Les unités rattachées renvoient aux onglets « Calc-conv-* » (39, 61, 51) et les unités hors catalogue aux onglets « Calc-prix-* » (64, 123, 147).",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-menus-prix.xlsx",
+          "label": "R2, onglet Récap : taux de rattachement 60,9 % / 49,6 % / 34,7 % (45,2 % au total), par formule"
+        }
+      ]
     },
     {
       "kind": "alerte",
@@ -1187,7 +559,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le motif J reposait sur une prémisse implicite : qu'un prix de menu variable révélerait une comptabilité non sincère. Cette prémisse est fausse en droit, le prix étant libre (article L. 410-2 du code de commerce) et aucune recette n'étant alléguée manquante ; et elle est factuellement expliquée, la variabilité étant produite par la conversion de tablées au forfait, désormais démontrée au centime sur les annexes du service pour les **trois exercices** (61 notes, 6 728,50 € de suppressions = 6 728,49 € encaissés, écart 0,01 €), avec un prix catalogue unique de 45,00 € confirmé sur B1, B2 et B3."
+      "texte": "Le motif J reposait sur une prémisse implicite : qu'un prix de menu variable révélerait une comptabilité non sincère. Cette prémisse est fausse en droit, le prix étant libre (article L. 410-2 du code de commerce) et aucune recette n'étant alléguée manquante ; et elle est factuellement expliquée, la variabilité étant produite par la conversion de tablées au forfait, démontrée au centime sur les annexes du service pour les **trois exercices** (61 notes, 6 728,50 € de suppressions = 6 728,49 € encaissés, écart 0,01 €), avec un prix catalogue unique et stable de 45,00 € confirmé sur B1, B2 et B3."
     },
     {
       "kind": "paragraphe",
@@ -1203,19 +575,23 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "**« Aucune explication pertinente sur la justification de toutes les opérations « DEL ». »** Exact pour une partie des suppressions, et sans incidence sur le grief J : celui-ci porte sur les prix, non sur les suppressions. Sur les prix, le prix catalogue du Menu Demi Lune est unique (45,00 € sur les trois exercices) et la « multitude de prix » est la conversion au forfait, chaque note re-saisie égalant au centime la somme des lignes supprimées. La justification de « toutes » les suppressions est une question du grief A."
+      "texte": "**« Aucune explication pertinente sur la justification de toutes les opérations « DEL ». »** Exact pour une partie des suppressions, et sans incidence sur le grief J : celui-ci porte sur les prix, non sur les suppressions. Sur les prix, le prix catalogue du Menu Demi Lune est unique et stable (45,00 € sur les trois exercices, § 2.2) et la « multitude de prix » est la conversion au forfait, chaque note re-saisie égalant au centime la somme des lignes supprimées (§ 2.3). La justification de « toutes » les suppressions est une question du grief A."
     },
     {
       "kind": "paragraphe",
-      "texte": "**« Il est totalement impossible d'avoir la certitude que toutes les suppressions ont conduit à un ré-enregistrement. »** C'est vrai au sens strict : la caisse ne stocke pas de lien suppression → note, et sur le 09/09/2022 seules 2 rafales sur 14 (283,90 € sur 933,80 €) se rattachent à une note Demi Lune re-saisie. Mais là où elles se rattachent, elles le font au centime (76,90 € et 207,00 €), et sur les trois exercices les 61 conversions coïncident à 6 728,50 € = 6 728,49 € près de zéro. L'incertitude résiduelle sur les autres suppressions ne transforme pas une recette encaissée en recette dissimulée."
+      "texte": "**« Il est totalement impossible d'avoir la certitude que toutes les suppressions ont conduit à un ré-enregistrement. »** C'est vrai au sens strict : la caisse ne stocke pas de lien suppression → note, et sur le 09/09/2022 seules 2 rafales sur 14 (283,90 € sur 933,80 €) se rattachent à une note Demi Lune re-saisie. Mais là où elles se rattachent, elles le font au centime (76,90 € et 207,00 €), et sur les trois exercices les 61 conversions coïncident à 6 728,50 € = 6 728,49 € (écart 0,01 €). L'incertitude résiduelle sur les autres suppressions ne transforme pas une recette encaissée en recette dissimulée."
     },
     {
       "kind": "paragraphe",
       "texte": "**« Seule une infime partie de ces suppressions est expliquée. »** Une recette encaissée, enregistrée et déclarée n'est pas une recette dissimulée : le prix d'un repas est libre et le service n'allègue nulle part qu'une recette aurait échappé au chiffre d'affaires. Le motif J ne débouche d'ailleurs sur aucun chiffre, ni rappel de recettes, ni incidence sur la reconstitution : il n'ajoute qu'un motif de rejet à la liste, sans effet propre sur le montant du redressement."
     },
     {
+      "kind": "titre",
+      "texte": "Récapitulatif des pièces"
+    },
+    {
       "kind": "piecejointe",
-      "intro": "Pièce à formules couvrant les trois exercices. Onglet « Calc-0909 » : le test du 09/09/2022 reconstruit intégralement sur l'annexe E1 (67 opérations « DEL », 933,80 €, 14 rafales, 2 rattachées pour 283,90 €) et sur l'annexe C1. Onglets « Calc-conv-2022-2023 », « Calc-conv-2023-2024 » et « Calc-conv-2024-2025 » : les 61 conversions au forfait (16, 22 puis 23 notes) re-dérivées ligne à ligne, somme des suppressions = total encaissé (6 728,50 € = 6 728,49 €, écart 0,01 €), à partir des annexes E1/E2/E3 et C1/C2/C3. Onglets « Calc-prix-2022-2023/2023-2024/2024-2025 » : la dispersion des prix sur les annexes B1, B2 et B3 (prix catalogue unique 45,00 € sur chaque exercice ; 64, 123 puis 147 unités hors catalogue, soit 334 ; plage 13,00 € à 90,00 €). Onglet « Récap » : synthèse des trois exercices et taux de rattachement par exercice (60,9 %, 49,6 %, 34,7 % ; 45,2 % au total). Chaque résultat est obtenu par formule (SUMIF, SUMIFS, COUNTIF, MINIFS/MAXIFS) à partir des lignes brutes copiées des annexes, recalculé sous LibreOffice.",
+      "intro": "Pièce unique à formules couvrant les trois exercices, toute valeur de résultat obtenue par SUMIF/SUMIFS/COUNTIF/MINIFS/MAXIFS à partir des lignes brutes copiées des annexes B, C et E remises au service, recalculée sous LibreOffice. Onglet « Calc-0909 » (lignes 4 à 17) : le test du 09/09/2022 (67 opérations DEL, 933,80 €, 14 rafales, 2 rattachées pour 283,90 €), sources Src-E1-DEL-0909 et Src-C1-notes-0909. Onglets « Calc-conv-2022-2023/2023-2024/2024-2025 » : les 61 conversions (16, 22 puis 23 notes), somme des suppressions = total encaissé (6 728,50 € = 6 728,49 €, écart 0,01 €), sources Src-E1/E2/E3-DEL-conv et Src-C1/C2/C3-notes-conv. Onglets « Calc-prix-2022-2023/2023-2024/2024-2025 » : prix catalogue unique 45,00 € et dispersion hors catalogue (64, 123 puis 147 unités, soit 334 ; plage 13,00 € à 90,00 €), sources Src-B1/B2/B3-DemiLune. Onglet « Récap » : synthèse des trois exercices et taux de rattachement (60,9 %, 49,6 %, 34,7 % ; 45,2 % au total).",
       "fichiers": [
         {
           "fichier": "pieces-reponse-2/R2-menus-prix.xlsx",

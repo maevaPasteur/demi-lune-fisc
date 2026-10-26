@@ -885,7 +885,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Cette chaîne se lit entièrement sur les états d’origine, c’est-à-dire sur les documents dont le vérificateur a obtenu copie lors de ses interventions sur place, avant d’adresser sa proposition. Elle ne fait intervenir aucune pièce établie en 2026. Elle consiste à additionner les totaux que les feuilles de comptage portent en pied, et à comparer la somme au montant imprimé sur la page récapitulative datée."
+   "texte": "Cette chaîne se lit entièrement sur les états d’origine, c’est-à-dire sur les documents dont le vérificateur a obtenu copie lors de ses interventions sur place, avant d’adresser sa proposition. Elle ne fait intervenir aucune pièce établie en 2026. Elle consiste à additionner les totaux que les feuilles de comptage portent en pied, et à comparer la somme au montant imprimé sur la page récapitulative datée. Chaque nombre du tableau ci-dessous est reproduit, à sa source et par formule, dans la pièce **R2-inventaire-de-stocks-chaine.xlsx** : les quatorze sous-totaux lus en pied figurent à l’**onglet « Sources », lignes 5 à 20** (chaque ligne nommant la feuille et la page du PDF d’où elle est lue), et leur regroupement par clôture et par famille est calculé à l’**onglet « Calcul », bloc A, lignes 6 à 11**, par une formule SOMME.SI confrontée à la page datée, la case F12 affichant « 6 / 6 »."
   },
   {
    "kind": "tableau",
@@ -1046,7 +1046,17 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Au 31/03/2024, le rapprochement est même redondant, et c’est ce qui le rend décisif. La somme des sous-totaux manuscrits des six feuilles, 870,59 € et 3 937,07 €, est **déjà portée à la main au bas de la dernière feuille**, sous la forme « Total Sans Alcool = 870,59 / Avec Alcool = 3937,07 », puis « 4807,66 ». Ce sont ces trois nombres que la page récapitulative datée « INVENTAIRE H.T. AU 31 MARS 2024 » reprend, et c’est le dernier, 4 807,66 €, que la comptabilité a enregistré. La page imprime par ailleurs « Total : 4 807.60 € » là où ses deux lignes font 4 807,66 € : la société signale cette coquille d’impression, qui n’affecte ni le report manuscrit ni l’écriture comptable."
+   "texte": "Au 31/03/2024, le rapprochement est même redondant, et c’est ce qui le rend décisif. La somme des sous-totaux manuscrits des six feuilles, 870,59 € et 3 937,07 €, est **déjà portée à la main au bas de la dernière feuille**, sous la forme « Total Sans Alcool = 870,59 / Avec Alcool = 3937,07 », puis « 4807,66 ». Ce sont ces trois nombres que la page récapitulative datée « INVENTAIRE H.T. AU 31 MARS 2024 » reprend, et c’est le dernier, 4 807,66 €, que la comptabilité a enregistré. La page imprime par ailleurs « Total : 4 807.60 € » là où ses deux lignes font 4 807,66 € : la société signale cette coquille d’impression de 0,06 €, qui n’affecte ni le report manuscrit ni l’écriture comptable."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "La chaîne des totaux que ce chapitre déroule est reconstruite par formule, feuille de comptage par feuille de comptage, dans la pièce ci-dessous. L’onglet « Sources » (lignes 5 à 20) porte les quatorze sous-totaux lus en pied, chacun rattaché à sa page de PDF ; l’onglet « Pages_datees » porte les totaux des trois pages récapitulatives et calcule le stock boissons de chaque clôture (3 777,99 € / 4 807,66 € / 4 534,25 €) ; l’onglet « Calcul », bloc A, lignes 6 à 11, confronte par SOMME.SI chaque somme de feuilles à la page datée et conclut « 6 / 6 » en case F12. La re-sommation des vingt lignes de la feuille sans alcool 2025 (478,41 €) est consignée à l’onglet « Methode », cellule A10.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-inventaire-de-stocks-chaine.xlsx",
+     "label": "R2 - Chaîne des totaux à formules : feuilles de comptage (onglet Sources, l. 5-20) → pages datées (onglet Pages_datees) → rapprochement 6 nuls sur 6 (onglet Calcul, bloc A, l. 6-11, F12) (XLSX)"
+    }
+   ]
   },
   {
    "kind": "titre",
@@ -1059,7 +1069,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Il suffit alors de faire la soustraction sur les pages récapitulatives datées. Entre le 31/03/2023 et le 31/03/2024, le stock boissons passe de 3 777,99 € à 4 807,66 € : stock initial moins stock final égale **moins 1 029,67 €**. C’est, **au centime près**, la variation que le service a portée dans sa comptabilité matière pour l’exercice 2023-2024. Entre le 31/03/2024 et le 31/03/2025, l’écart entre les deux pages datées est de **273,41 €**, qui est également, au centime, le montant retenu par le service ; le signe porté au compte est en revanche l’inverse de celui qu’appelle la convention rappelée ci-dessus, point relevé pour mémoire et dont la société ne tire aucune demande."
+   "texte": "Il suffit alors de faire la soustraction sur les pages récapitulatives datées. Entre le 31/03/2023 et le 31/03/2024, le stock boissons passe de 3 777,99 € à 4 807,66 € : stock initial moins stock final égale **moins 1 029,67 €**. C’est, **au centime près**, la variation que le service a portée dans sa comptabilité matière pour l’exercice 2023-2024. Entre le 31/03/2024 et le 31/03/2025, l’écart entre les deux pages datées est de **273,41 €**, qui est également, au centime, le montant retenu par le service ; le signe porté au compte est en revanche l’inverse de celui qu’appelle la convention rappelée ci-dessus, point relevé pour mémoire et dont la société ne tire aucune demande. Cette soustraction est posée par formule dans la pièce **R2-inventaire-de-stocks-chaine.xlsx**, à l’**onglet « Calcul », bloc B, lignes 17 à 19** : la variation y est calculée (stock initial moins stock final) puis confrontée au montant du service, l’écart de la ligne 18 (2023-2024) s’affichant à 0,00 €."
   },
   {
    "kind": "tableau",
@@ -1174,8 +1184,18 @@
    "texte": "Ce rapprochement décide la question de la date. Pour que la variation de 1 029,67 € que le service a portée en comptabilité matière soit exactement la différence entre deux inventaires de clôture, il faut que ces inventaires aient existé **avant l’écriture**, qu’ils aient été arrêtés à la date de chaque clôture, et que leurs totaux soient exacts. Les trois conditions sont ainsi établies par le chiffre du service lui-même, et non par une affirmation de la société. Une pièce dont la comptabilité matière du service reprend le résultat au centime n’est pas une pièce impropre à justifier la valeur du stock à la clôture, qui est ce résultat."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Le passage des inventaires datés au compte de stock 310200 est posé par formule à l’onglet « Calcul », bloc B (lignes 17 à 19) de la même pièce : chaque variation y est calculée à partir des stocks des pages datées, puis confrontée au montant retenu par le service (annexes 7-1 à 7-3, ligne « 312000 STOCK BOISSONS DEMI LUNE », et tableau consolidé p. 34-35 de la proposition). L’exercice 2022-2023 y est porté « non calculable » (stock au 31/03/2022 non repris) et le signe inversé de 2024-2025 y est signalé en colonne G.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-inventaire-de-stocks-chaine.xlsx",
+     "label": "R2 - Chaîne des totaux à formules : variation de stock inventaires datés → compte 310200 (onglet Calcul, bloc B, l. 17-19 ; 2023-2024 écart 0,00 €) (XLSX)"
+    }
+   ]
+  },
+  {
    "kind": "paragraphe",
-   "texte": "Une seule valeur de stock est donc opposable par clôture, celle de la page récapitulative datée, et c’est elle qui sert partout dans le présent mémoire. Le tableau ci-dessous la confronte à la ventilation du mémoire du 10/07/2026 que le courrier reproduit page 31, pour lever toute ambiguïté : la société retient les montants des pages datées, vérifiés au centime sur les feuilles de comptage, et écarte ceux du mémoire là où ils divergent."
+   "texte": "Une seule valeur de stock est donc opposable par clôture, celle de la page récapitulative datée, et c’est elle qui sert partout dans le présent mémoire. Le tableau ci-dessous la confronte à la ventilation du mémoire du 10/07/2026 que le courrier reproduit page 31, pour lever toute ambiguïté : la société retient les montants des pages datées, vérifiés au centime sur les feuilles de comptage, et écarte ceux du mémoire là où ils divergent. Cette confrontation est posée par formule dans la pièce **R2-inventaire-3-exercices.xlsx**, à l’**onglet « Calcul », lignes 4 à 6** : le stock opposable y est la somme sans alcool plus alcools (colonne D), l’écart avec le total imprimé de la page 2024 y vaut 0,06 € (colonne F, la coquille d’impression), et l’écart avec la ventilation du mémoire p. 31 y est isolé en colonne H."
   },
   {
    "kind": "tableau",
@@ -1230,6 +1250,16 @@
      {"v": "4 533,22 €", "align": "right"},
      {"v": "ventilation du mémoire (760,74 € / 3 772,48 €) non adoptée ; page datée 765,74 € / 3 768,51 €"}
     ]
+   ]
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "La valeur opposable par clôture et son écart avec la ventilation du mémoire p. 31 sont recalculés par formule dans la pièce ci-dessous. L’onglet « Sources » juxtapose les deux jeux de chiffres (pages datées et mémoire p. 31) ; l’onglet « Calcul », lignes 4 à 6, somme les sous-lignes des pages datées (colonne D : 3 777,99 € / 4 807,66 € / 4 534,25 €), chiffre la coquille d’impression de 0,06 € du 31/03/2024 (colonne F) et l’écart avec le mémoire (colonne H) ; l’onglet « Methode » en donne le détail, cause de divergence par année comprise.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-inventaire-3-exercices.xlsx",
+     "label": "R2 - Inventaire boissons des 3 exercices : stock opposable par somme des sous-lignes et écart avec la ventilation du mémoire p. 31, par formule (onglet Calcul, l. 4-6) (XLSX)"
+    }
    ]
   },
   {

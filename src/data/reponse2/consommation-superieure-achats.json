@@ -4028,7 +4028,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Haute Côte de Beaune : ce que change le regroupement que le service admet",
+   "titre": "Haute Côte de Beaune : ce que change le regroupement que le service admet (pièce R2-correspondance-libelles.xlsx, onglet « Confusions-de-code », lignes 6 à 8)",
    "minWidth": 640,
    "colonnes": [
     {
@@ -4128,6 +4128,311 @@
   {
    "kind": "paragraphe",
    "texte": "Le tableau que le service oppose à la page 48 le confirme lui-même. Sur la ligne « H. COTES DE NUITS », exercice clos au 31/03/2024, il imprime **0 quantité disponible, 12 950 quantités vendues et 0,00 % de volumes disparus**. La ligne qui portait à elle seule 129,5 L de ventes sans achat est cotée à zéro pour cent dans le tableau censé démontrer l’existence de ces disparitions."
+  },
+  {
+   "kind": "titre",
+   "texte": "Les « ventes sans achat » et les « 100 % disparues » sont des confusions de code, pas des bouteilles évaporées"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Avant de descendre au bilan produit, il faut lever l’équivoque qui alimente les écarts les plus spectaculaires. Un bouton de caisse est un nom d’écran ; un libellé de facture est une référence fournisseur. Le rattachement de l’un à l’autre se fait par le **code article**, pas par le mot imprimé. Trois mécanismes de paramétrage expliquent, sans la moindre dissimulation, les cellules que le service lit soit comme des ventes sans achat, soit comme des achats « 100 % disparus » : la **confusion de code** (un bouton générique frappé sur une référence voisine), le **code fantôme** (une référence achetée mais jamais reliée à un bouton de vente), et le **bouton mutualisé** (une même touche encaisse plusieurs références). La pièce R2-correspondance-libelles.xlsx les établit un par un, code article à l’appui."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Confusions de code : le libellé visé par le service et la référence réellement achetée (pièce R2-correspondance-libelles.xlsx, onglet « Confusions-de-code », lignes 5 à 8)",
+   "minWidth": 1120,
+   "colonnes": [
+    {
+     "label": "Libellé / bouton visé par le service"
+    },
+    {
+     "label": "Référence réellement achetée (code article)"
+    },
+    {
+     "label": "Achats facturés"
+    },
+    {
+     "label": "Stock inventorié"
+    },
+    {
+     "label": "Verdict"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Bordeaux « Mouton Cadet »"
+     },
+     {
+      "v": "Bordeaux Supérieur, Château Grand Renom (Antoine Moueix), code 661236"
+     },
+     {
+      "v": "11 bt en 2022-2023"
+     },
+     {
+      "v": "1 bt au 31/03/2023"
+     },
+     {
+      "v": "Aucun « Mouton Cadet » n’est acheté sous ce nom : le bouton générique est frappé sur le Bordeaux réellement en cave. Confusion de code"
+     }
+    ],
+    [
+     {
+      "v": "« Hautes Côtes de Nuits »"
+     },
+     {
+      "v": "Hautes Côtes de Nuits BLANC, Lupé-Cholet 2017, code 601416"
+     },
+     {
+      "v": "24 bt en 2022-2023, 0 ensuite"
+     },
+     {
+      "v": "écoulé"
+     },
+     {
+      "v": "Vin blanc, acheté le seul exercice 2022-2023. Distinct de la Beaune rouge : confusion Nuits / Beaune et blanc / rouge"
+     }
+    ],
+    [
+     {
+      "v": "« Hautes Côtes de Beaune rouge »"
+     },
+     {
+      "v": "Hautes Côtes de Beaune rouge, Domaine Germain, codes 601667 / 601346 / 630253 / 601199"
+     },
+     {
+      "v": "269 bt sur 3 ans"
+     },
+     {
+      "v": "6 bt (2023), 8 bt (2025)"
+     },
+     {
+      "v": "Vin acheté par centaines et stocké. C’est lui que le service range à tort sous « Nuits »"
+     }
+    ],
+    [
+     {
+      "v": "« Hautes Côtes de Beaune blanc »"
+     },
+     {
+      "v": "Hautes Côtes de Beaune blanc, Domaine Germain, code 600425"
+     },
+     {
+      "v": "1 bt (2022-2023)"
+     },
+     {
+      "v": "absent"
+     },
+     {
+      "v": "450 cl servis au pichet sous un bouton mal paramétré, couverts par le sur-stock de Nuits blanc"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Ces quatre lignes portent l’écart le plus lourd de toute la comptabilité matière : les **12 950 cl** inscrits en vente de « Hautes Côtes de Nuits » pour l’exercice clos au 31/03/2024. Douze mille neuf cent cinquante centilitres valent **173 bouteilles** ; or le code 601416 (Nuits blanc, Lupé-Cholet) n’a reçu que **24 bouteilles** d’achat, sur le seul premier exercice. Le volume réellement servi est du **rouge** Domaine Germain, enregistré au verre et au pichet sous une touche voisine. C’est la confusion même que le service concède page 48 pour le Beaune, et il cote d’ailleurs cette cellule à 0,00 % de disparition."
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le deuxième mécanisme explique les lignes que le service lit comme « 100 % achetées non vendues ». Dix références de boisson (huit bières, une eau, un cidre) portent dans ses annexes un « volume disponible » - par exemple la 1664 en 33 cl, cotée **234, puis 120, puis 36 unités disponibles** sur les trois exercices (annexes du service, p. 29, 35 et 41) - alors que la caisse n’en enregistre **aucune vente** et qu’aucune n’apparaît aux inventaires physiques des 31 mars 2023, 2024 et 2025. Ce ne sont pas des bouteilles évaporées : ce sont des **codes créés mais jamais reliés à un bouton de vente**. Les seules bières réellement stockées et vendues, la Rouget de Lisle (Blanche et Ambrée) et le fût Affligem, figurent aux trois inventaires avec des écarts de simple rotation."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les codes de boisson jamais paramétrés : absents des trois inventaires et vendus zéro en caisse (onglet « Codes-fantomes », lignes 5 à 14)",
+   "minWidth": 820,
+   "colonnes": [
+    {
+     "label": "Produit (libellé du service)"
+    },
+    {
+     "label": "Présent aux 3 inventaires",
+     "align": "center"
+    },
+    {
+     "label": "Vendu en caisse",
+     "align": "right"
+    },
+    {
+     "label": "Nature"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "1664 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "Heineken 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "Heineken 50 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "Grimbergen Blanche 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "White Mort Subite 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "White Rabbit 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "Hefeweizen 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "Bleue du Mont Blanc 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Bière, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "Carola Bleue 50 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Eau, code jamais paramétré"
+     }
+    ],
+    [
+     {
+      "v": "Cidre Sassy 33 cl"
+     },
+     {
+      "v": "non",
+      "align": "center"
+     },
+     {
+      "v": "0 cl",
+      "align": "right"
+     },
+     {
+      "v": "Cidre, code jamais paramétré"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Le troisième mécanisme est celui du **bouton mutualisé**, et il porte le cas le plus lourd du bilan produit, le « Cubis de vin », crédité de **426,9 L consommés pour 0 L acheté** sous ce libellé. « Cubis » n’est pas un vin : c’est la touche sous laquelle sont sonnés les vins maison tirés au pichet depuis les bag-in-box. Leurs achats sont facturés sous les trois références maison - Bourgogne Aligoté, Côtes de Provence rosé (Cap des Pins) et Côtes du Rhône rouge (Chusclan) - qui cumulent à elles seules **+846,6 L d’excédent** au bilan (pièce R2-conso-achats-bilan.xlsx, onglet « Sources », lignes 6, 9 et 12). Réattribués à ces trois vins, les 426,9 L sont absorbés et ces vins restent excédentaires. Les boutons génériques encaissent ainsi **3 134 € HT** de volume déjà présent dans le chiffre d’affaires déclaré, mais non ventilé par référence (onglet « Cubis-et-boutons », lignes 5 à 10)."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Correspondance des libellés de caisse et des références d’achat : confusions de code (Mouton Cadet, Hautes Côtes de Nuits blanc), codes fantômes (huit bières, une eau, un cidre) et boutons mutualisés (Cubis). Chaque rattachement est établi par le code article du fournisseur.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-correspondance-libelles.xlsx",
+     "label": "R2 - Correspondance des libellés : onglet « Confusions-de-code » (l. 5 à 8), onglet « Codes-fantomes » (l. 5 à 14, huit bières « 100 % disparues »), onglet « Cubis-et-boutons » (l. 5 à 10, Cubis réattribué aux vins maison)"
+    }
+   ]
   },
   {
    "kind": "titre",
@@ -5305,6 +5610,20 @@
    ]
   },
   {
+   "kind": "piecejointe",
+   "intro": "Bouclage physique du Calvados et consommation itemisée (verre et cuisine à la dose de 4 cl retenue par le service), recomposés par formule.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
+     "label": "R2 - onglet « Calvados », lignes 5 à 20 : consommation itemisée (110,7 L, dont 1,44 L au verre et 109,26 L en cuisine), bilan net et écart conso-achats par formule, aucune dose d’équilibre déduite"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-conso-achats-bouclage.xlsx",
+     "label": "R1 - onglet « Calvados factures » : 65 lignes de factures Franche-Comté Boissons Services, 73 bt / 1 227,74 € HT"
+    }
+   ]
+  },
+  {
    "kind": "titre",
    "texte": "Le service retranche 93 L d’un volume disponible de 73 L",
    "numero": "2.6"
@@ -5508,7 +5827,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Calvados : dose servie et dose en cuisine, plat par plat (trois exercices, données de caisse)",
+   "titre": "Calvados : dose servie et dose en cuisine, plat par plat (trois exercices, données de caisse) (pièce R2-conso-achats-bilan.xlsx, onglet « Calvados », lignes 5 à 16)",
    "minWidth": 880,
    "colonnes": [
     {
@@ -6173,11 +6492,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Agrege par famille, il ne laisse subsister qu'un seul deficit, celui des eaux-de-vie, qui tient au Calvados et a la dose de cuisine (2.5 a 2.9). Mais le service reproche precisement a la reponse de « globaliser » : il faut donc descendre au produit, et le faire franchement. Produit par produit, **douze boissons sur soixante-cinq consomment plus qu'elles n'achetent**, pour **718,1 L cumules** ; le tableau ci-apres les reprend une a une. Trois autres produits sont en deficit de bilan par la seule variation d'inventaire, sans consommation superieure aux achats. Le tableau conserve la dose de 4 cl retenue par le service, celle qui **minore** notre excedent, et **il n'applique aucune decote**."
+   "texte": "Agrege par famille, il ne laisse subsister qu'un seul deficit, celui des eaux-de-vie, qui tient au Calvados et a la dose de cuisine (2.5 a 2.9). Mais le service reproche precisement a la reponse de « globaliser » : il faut donc descendre au produit, et le faire franchement. Produit par produit, **douze boissons sur soixante-cinq consomment plus qu'elles n'achetent**, pour **708,3 L cumules** ; le tableau ci-apres les reprend une a une. Trois autres produits sont en deficit de bilan par la seule variation d'inventaire, sans consommation superieure aux achats. Le tableau conserve la dose de 4 cl retenue par le service, celle qui **minore** notre excedent, et **il n'applique aucune decote**."
   },
   {
    "kind": "tableau",
-   "titre": "Bilan matière par famille : achats (factures), consommation (caisse et cuisine), inventaire",
+   "titre": "Bilan matière par famille : achats (factures), consommation (caisse et cuisine), inventaire (pièce R2-conso-achats-bilan.xlsx, onglet « Bilan famille », lignes 4 à 13)",
    "minWidth": 960,
    "colonnes": [
     {
@@ -6463,7 +6782,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Les 15 produits en déficit de bilan, un par un : nature du déficit et traitement (consommation Calvados itemisée à 110,7 L)",
+   "titre": "Les 15 produits en déficit de bilan, un par un : nature du déficit et traitement (consommation Calvados itemisée à 110,7 L) (onglet « Produits deficitaires », lignes 5 à 19)",
    "minWidth": 1300,
    "colonnes": [
     {
@@ -6863,7 +7182,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le cas le plus lourd est le **Cubis de vin**, porté par la feuille produit à **426,9 L consommés pour 0 L acheté**. Il appelle exactement le traitement que le service a lui-même admis pour le Beaune : un **bouton de caisse n’est pas un libellé de facture**. « Cubis de vin » est la touche sous laquelle sont enregistrés les vins servis au pichet et au verre tirés des **bag-in-box**, dont les achats sont facturés, eux, sous les références « maison » (Côtes de Provence rosé maison, Bourgogne Aligoté maison, Côtes du Rhône rouge maison), toutes très excédentaires et regroupées sous la famille des vins tranquilles. Le rapprochement caisse, facture, inventaire rattache ce bouton à ces références ; il n’existe pas de cubis acheté hors facture. C’est la même confusion de libellé que celle que le service concède page 48 sur le Beaune."
+   "texte": "Le cas le plus lourd est le **Cubis de vin**, porté par la feuille produit à **426,9 L consommés pour 0 L acheté**. Il appelle exactement le traitement que le service a lui-même admis pour le Beaune : un **bouton de caisse n’est pas un libellé de facture**. « Cubis de vin » est la touche sous laquelle sont enregistrés les vins servis au pichet et au verre tirés des **bag-in-box**, dont les achats sont facturés, eux, sous les références « maison » (Côtes de Provence rosé maison, Bourgogne Aligoté maison, Côtes du Rhône rouge maison), toutes très excédentaires et regroupées sous la famille des vins tranquilles. Le rapprochement caisse, facture, inventaire rattache ce bouton à ces références ; il n’existe pas de cubis acheté hors facture. C’est la même confusion de libellé que celle que le service concède page 48 sur le Beaune. Le détail du rattachement, code article à l’appui, figure en pièce R2-correspondance-libelles.xlsx, onglet « Cubis-et-boutons », lignes 5 à 10."
   },
   {
    "kind": "paragraphe",
@@ -6874,12 +7193,22 @@
    "texte": "Le seul deficit de famille est celui des eaux-de-vie, et il tient au Calvados. Hors Calvados, la famille est **excedentaire de 3,4 L** : 20,3 L achetes, 12,7 L consommes, 4,2 L en stock. Toutes familles confondues, l'etablissement a achete **3 057,6 L de plus qu'il n'a servi**, soit **28,8 %** de ses achats. Cet excedent n'efface pas les douze deficits produit, qui recoivent chacun leur cause ci-dessus ; il etablit en revanche qu'aucun volume net n'est disponible, sur l'ensemble, pour alimenter une reconstitution de recettes."
   },
   {
+   "kind": "piecejointe",
+   "intro": "Bilan matière produit par produit, sous-totaux par famille et traitement des quinze déficits, recomposés par formule (achats facturés moins consommation mesurée moins variation d’inventaire), sans aucune décote.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
+     "label": "R2 - onglets « Bilan produit » (l. 5 à 70), « Bilan famille » (l. 4 à 15), « Produits deficitaires » (l. 5 à 20) et « Achats non rattaches » (l. 5 à 8) : bilan net et sens de l’écart par formule, aucun résultat en dur"
+    }
+   ]
+  },
+  {
    "kind": "paragraphe",
    "texte": "Le service objecte que la réponse ferait « correspondre mathématiquement le volume disponible avec celui consommé » au moyen d’une première réduction de 10 622 litres à 9 079 litres puis d’une décote de 14,50 %, « totalement incohérente économiquement » (p. 52). Le tableau ci-dessus répond au reproche sur son terrain : **il ne comporte ni l’une ni l’autre**. Il ne retranche rien, il compare des achats facturés à une consommation mesurée, et il laisse un excédent de 3 057,6 L. Le taux de 14,50 % et les trois taux de 5 % retenus pour les offerts, la consommation du personnel et la perte, que le service conteste aux pages 52 et 53, sont chiffrés et documentés dans les parties de la présente réponse qui leur sont consacrées."
   },
   {
    "kind": "paragraphe",
-   "texte": "Une réserve doit être portée, parce qu’elle joue contre nos propres chiffres. Ce bilan est bâti sur les **199 factures Franche-Comté Boissons Services**, les seules dont la société dispose : les factures du second fournisseur n’y figurent pas davantage que dans le disponible du service. Et trois libellés y sont sous-évalués à l’achat, parce que les millésimes sont facturés sous des désignations distinctes et que les demi-bouteilles ne sont pas rattachées au produit : le Chablis (104,2 L facturés pour 18,0 L retenus), le Gewurztraminer (102,0 L pour 6,0 L) et l’Arbois Béthanie (385,5 L pour 214,5 L), soit **353,2 L d’achats facturés absents du bilan**. Nous les laissons de côté par prudence : les reprendre ne ferait qu’augmenter l’excédent."
+   "texte": "Une réserve doit être portée, parce qu’elle joue contre nos propres chiffres. Ce bilan est bâti sur les **199 factures Franche-Comté Boissons Services**, les seules dont la société dispose : les factures du second fournisseur n’y figurent pas davantage que dans le disponible du service. Et trois libellés y sont sous-évalués à l’achat, parce que les millésimes sont facturés sous des désignations distinctes et que les demi-bouteilles ne sont pas rattachées au produit : le Chablis (104,2 L facturés pour 18,0 L retenus), le Gewurztraminer (102,0 L pour 6,0 L) et l’Arbois Béthanie (385,5 L pour 214,5 L), soit **353,2 L d’achats facturés absents du bilan (pièce R2-conso-achats-bilan.xlsx, onglet « Achats non rattaches », lignes 5 à 8)**. Nous les laissons de côté par prudence : les reprendre ne ferait qu’augmenter l’excédent."
   },
   {
    "kind": "titre",
@@ -6894,41 +7223,103 @@
    "titre": "Les avoirs de boisson que le service n’a pas déduits (exercice 2024-2025)",
    "minWidth": 720,
    "colonnes": [
-    {"label": "N° avoir / date"},
-    {"label": "Produit"},
-    {"label": "Montant HT", "align": "right"},
-    {"label": "Volume de boisson", "align": "right"}
+    {
+     "label": "N° avoir / date"
+    },
+    {
+     "label": "Produit"
+    },
+    {
+     "label": "Montant HT",
+     "align": "right"
+    },
+    {
+     "label": "Volume de boisson",
+     "align": "right"
+    }
    ],
    "lignes": [
     [
-     {"v": "520312 / 16/07/2024"},
-     {"v": "Cidre Brut Bolée Armoriq 75 cl (30 unités)"},
-     {"v": "83,40 €", "align": "right"},
-     {"v": "22,5 L", "align": "right"}
+     {
+      "v": "520312 / 16/07/2024"
+     },
+     {
+      "v": "Cidre Brut Bolée Armoriq 75 cl (30 unités)"
+     },
+     {
+      "v": "83,40 €",
+      "align": "right"
+     },
+     {
+      "v": "22,5 L",
+      "align": "right"
+     }
     ],
     [
-     {"v": "526876 / 25/09/2024"},
-     {"v": "Grand Marnier Cordon Rouge 70 cl (3 unités)"},
-     {"v": "66,96 €", "align": "right"},
-     {"v": "2,1 L", "align": "right"}
+     {
+      "v": "526876 / 25/09/2024"
+     },
+     {
+      "v": "Grand Marnier Cordon Rouge 70 cl (3 unités)"
+     },
+     {
+      "v": "66,96 €",
+      "align": "right"
+     },
+     {
+      "v": "2,1 L",
+      "align": "right"
+     }
     ],
     [
-     {"v": "532782 / 11/12/2024"},
-     {"v": "BIB Bourgogne Aligoté 10 L (1 unité)"},
-     {"v": "54,29 €", "align": "right"},
-     {"v": "10,0 L", "align": "right"}
+     {
+      "v": "532782 / 11/12/2024"
+     },
+     {
+      "v": "BIB Bourgogne Aligoté 10 L (1 unité)"
+     },
+     {
+      "v": "54,29 €",
+      "align": "right"
+     },
+     {
+      "v": "10,0 L",
+      "align": "right"
+     }
     ],
     [
-     {"v": "Total avoirs de boisson"},
-     {"v": "trois notes de crédit"},
-     {"v": "204,65 €", "align": "right", "badge": "ok"},
-     {"v": "34,6 L", "align": "right", "badge": "ok"}
+     {
+      "v": "Total avoirs de boisson"
+     },
+     {
+      "v": "trois notes de crédit"
+     },
+     {
+      "v": "204,65 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "34,6 L",
+      "align": "right",
+      "badge": "ok"
+     }
     ]
    ]
   },
   {
    "kind": "note",
    "texte": "Les trois autres avoirs sont hors champ des boissons (un Chardonnay non listé, un article d’épicerie) ou une reprise d’emballage (un fût Affligem en consigne), sans volume de boisson. Les quarante retours portés en quantités négatives sur les factures étaient, eux, déjà déduits des achats. L’effet est modeste et circonscrit à l’exercice 2024-2025 ; il n’en reste pas moins que le disponible opposé par le service, et les « volumes disparus » qui s’en déduisent, sont construits sur des achats surévalués de 34,6 L. La pièce R2-avoirs-fournisseur.xlsx en donne le détail, recalculé par formule."
+  },
+  {
+   "kind": "piecejointe",
+   "intro": "Les trois avoirs de boisson non déduits par le service, totalisés par formule.",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-avoirs-fournisseur.xlsx",
+     "label": "R2 - onglet « Calcul », lignes 4 à 7 (204,65 € HT, 34,6 L) ; onglet « Sources », lignes 5 à 10 (les 6 avoirs autonomes, dont 3 de boisson)"
+    }
+   ]
   },
   {
    "kind": "titre",
@@ -6997,7 +7388,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Entendu littéralement, le titre n’est vérifié nulle part. Sur les **203 pourcentages** que le service imprime, **quatre seulement sont négatifs**, et chacun des quatre reçoit une cause établie sur une facture, un inventaire ou un ticket. En lisant les colonnes de quantités on en trouve douze : six sont démenties par les pourcentages que le service imprime lui-même, quatre se reconstituent exactement sur pièces, une se lit dans ses chiffres de l’exercice précédent, et la dernière, qui pèse à elle seule 95 % du dépassement, est matériellement impossible, puisqu’elle porte en vente cent soixante-treize bouteilles d’un vin dont vingt-cinq ont été achetées en trois ans."
+   "texte": "Entendu littéralement, le titre n’est vérifié nulle part. Sur les **203 pourcentages** que le service imprime, **quatre seulement sont négatifs**, et chacun des quatre reçoit une cause établie sur une facture, un inventaire ou un ticket. En lisant les colonnes de quantités on en trouve douze : six sont démenties par les pourcentages que le service imprime lui-même, quatre se reconstituent exactement sur pièces, une se lit dans ses chiffres de l’exercice précédent, et la dernière, qui pèse à elle seule 95 % du dépassement, est matériellement impossible, puisqu’elle porte en vente cent soixante-treize bouteilles d’un vin dont vingt-quatre ont été achetées en trois ans."
   },
   {
    "kind": "paragraphe",
@@ -7045,7 +7436,7 @@
     },
     {
      "fichier": "pieces-reponse-2/R2-correspondance-libelles.xlsx",
-     "label": "R2 - Correspondance des libellés : confusions de code, codes fantômes (7 bières), boutons mutualisés et Cubis, qui expliquent les écarts sans dissimulation"
+     "label": "R2 - Correspondance des libellés : confusions de code, codes fantômes (8 bières), boutons mutualisés et Cubis, qui expliquent les écarts sans dissimulation"
     },
     {
      "fichier": "pieces-reponse-1/R1-conso-achats-bouclage.xlsx",
