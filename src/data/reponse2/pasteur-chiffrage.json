@@ -1,31 +1,1939 @@
 {
  "meta": {
   "slug": "pasteur-chiffrage",
-  "source": "Proposition personnelle M. Thierry PASTEUR du 19/10/2026",
+  "source": "Proposition personnelle de M. Thierry PASTEUR du 19/10/2026, p. 59-79",
   "limites": [
-   "Le supplément notifié (196 945 €) est le montant du SERVICE, lu sur une proposition du 19/10/2026 scannée sans couche texte : la défense le reprend, elle ne le recalcule pas.",
-   "La ventilation interne (IR au barème, majoration, intérêts, prélèvements sociaux) n'est pas reconstituable : l'IR au barème dépend du revenu global du foyer et du quotient familial, absents du dossier (pas de déclaration 2042). La ligne « solde » est obtenue par différence et n'égale pas 17,2 % de la base.",
-   "Seuls la cascade base RCM → × 1,25 → assiette IR et les totaux notifiés sont certains ; le taux effectif en découle."
+   "Les revenus « avant contrôle » (21 237 / 25 125 / 23 540 €) et le quotient (1,5 part) sont ceux imprimés par le service ; les déclarations 2042 ne sont pas au dossier.",
+   "Les réductions et crédits d'impôt (forfait scolarité, emploi à domicile, PFU déjà versé) ne sont pas modélisés : ils n'affectent pas la variation d'impôt, et les scénarios les tiennent constants.",
+   "L'exercice de l'option pour le barème (2OP) est déduit des feuilles du service, non vérifié sur les déclarations.",
+   "Le taux de PS de 18,6 % en 2025 est signalé, son applicabilité aux revenus réputés distribués par voie de rôle reste à confirmer par l'avocat."
   ]
  },
  "entete": {
-  "reponseCourte": "Le supplément de 196 945 € notifié à M. PASTEUR est le décalque de la reconstitution (base distribuée 235 913 €, soit sa moitié). Taux effectif global 83,5 % ; hors majoration de 40 %, 67,3 %. La ventilation interne du service n'est pas reconstituable faute du revenu du foyer : son détail doit être réclamé.",
-  "statut": "a-etayer"
+  "reponseCourte": "Le supplément de 196 945 € se recalcule à l'euro près à partir de la reconstitution société (base 235 913 € = TTC ÷ 2, × 1,25, barème avec quotient plafonné, PS sans le 1,25, intérêts 0,20 %, 40 %) : il n'a aucune autonomie et tombe avec elle (0 / 39 056 / 85 683 / 138 735 € selon que la reconstitution est annulée ou réduite de 75 / 50 / 25 %) ; la majoration de 40 % du foyer, 54 914 € (IR 38 292 € + PS 16 622 €), est motivée par un texte écrit pour l'IS et la TVA de la société et doit être déchargée.",
+  "statut": "partiel"
  },
  "sections": [
   {
    "kind": "chapitre",
-   "source": "fisc",
-   "numero": 1,
-   "titre": "Ce que le service a chiffré",
-   "sousTitre": "Supplément d'impôt (impôt sur le revenu + prélèvements sociaux + majoration de 40 % + intérêts) notifié à M. Thierry PASTEUR, année par année."
+   "source": "neutre",
+   "titre": "Le chiffrage personnel de M. Thierry PASTEUR : 196 945 € recalculés ligne à ligne",
+   "sousTitre": "Chaque ligne du service se recalcule à l'euro près (barème, plafonnement, 1,25, prélèvements sociaux, intérêts, 40 %) : le quantum n'a pas d'existence propre, il est la moitié de la reconstitution société passée au barème, et la majoration de 40 % du foyer (54 914 €) n'est motivée que par un texte écrit pour l'IS et la TVA de la société."
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "**1. Année 2023 : supplément de 83 391 €** (p. 59-63 et 67-70). Base RCM 96 617 € (= 193 235 € TTC ÷ 2, soit 86 407 € HT + 10 210 € de TVA), assiette × 1,25 = 120 771 €, revenu imposable porté de 21 237 € à 142 008 €, IR 40 693 €, intérêts 2 225 €, majoration 16 277 €, prélèvements sociaux 16 618 € + 931 € + 6 647 €.",
+    "**2. Année 2024 : supplément de 56 724 €** (p. 71-74). Base 69 432 €, assiette 86 790 €, revenu imposable de 25 125 € à 111 915 €, IR 27 669 €, intérêts 885 €, majoration 11 068 €, PS 11 942 € + 383 € + 4 777 €.",
+    "**3. Année 2025 : supplément de 56 830 €** (p. 75-79). Base 69 864 €, assiette 87 330 €, revenu imposable de 23 540 € à 110 870 €, IR 27 367 €, intérêts 219 €, majoration 10 947 €, PS 12 995 € (au taux de 18,6 %) + 104 € + 5 198 €.",
+    "**4. Intérêts de retard (art. 1727 CGI)** : 0,20 % par mois « à compter du 1er janvier 2018 », « sur le montant des sommes mises à la charge du contribuable » (p. 63) : 3 329 € sur l'IR et 1 418 € sur les PS, soit 4 747 €.",
+    "**5. Majoration de 40 % pour manquement délibéré (art. 1729 CGI)** (p. 64-65) : « en votre qualité de co-gérant [...] vous aviez toute latitude de pouvoir dissimuler une partie du chiffre d'affaires » ; « la pénalité pour manquement délibéré sera appliquée aux rappels de droits (à l'impôt sur les Sociétés) [...] (à la TVA) » ; code (03) appliqué à l'IR (38 292 €) et aux PS (16 622 €), soit 54 914 €."
+   ],
+   "titre": "Ce que reproche le fisc, en résumé"
+  },
+  {
+   "kind": "titre",
+   "numero": "1",
+   "texte": "Année 2023 : « Montant total des rappels (TOTAL IR + TOTAL PS) : 83 391 € »"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 59-63 et p. 67-70",
+   "resume": [
+    "Base RCM 96 617 € = 193 234,55 € TTC ÷ 2 (part HT 86 407 € + part TVA 10 210 €), majorée à 120 771 € (× 1,25, art. 158-7-2°) et ajoutée au revenu imposable, qui passe de 21 237 € à 142 008 € (1,5 part).",
+    "IR au barème : 40 693 € de droits supplémentaires, intérêts 2 225 € (5,60 %, 28 mois), majoration de 40 % 16 277 € (code 03 « manquement délibéré ») : TOTAL IR 59 195 €.",
+    "Prélèvements sociaux : 16 618 € (17,2 % de 96 617 €), intérêts 931 €, majoration de 40 % 6 647 € : TOTAL PS 24 196 €.",
+    "Supplément mis en recouvrement : 83 391 € ; CSG déductible supplémentaire 6 570 € « à déclarer au titre des revenus de 2026 »."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Pages 59 à 63, « B - CORRECTIONS ET REHAUSSEMENTS DE VOTRE FOYER FISCAL », « I - REVENUS DE CAPITAUX MOBILIERS - ANNEES 2023, 2024 et 2025 ».** « La proposition de rectifications (modèle n° 3924), adressée à la société LA DEMI LUNE, demandait, conformément aux dispositions de l'article 117 du Code Général des Impôts, la désignation des bénéficiaires des sommes réputées constituées des omissions de chiffre d'affaires. Par courrier du 16 juin 2026, Maître Pierre-Emmanuel THIVEND a répondu en désignant comme bénéficiaires : Monsieur Thierry PASTEUR, Madame Ghislaine BEHEM. À la connaissance du service, le capital de la société est détenu à hauteur de : Monsieur Thierry PASTEUR 50 % ; Madame Ghislaine BEHEM 50 %. De plus, ils sont co-gérants et bien qu'ils aient constitué un foyer fiscal chacun de leur côté, les deux demeurent à un même domicile, dans une maison individuelle située au 21 Rue Etienne Dusard à Dole (39 100). » (p. 59)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Quant aux dissimulations de recettes TTC constatées à l'issue de la méthode de reconstitution utilisée, elles s'établissent respectivement à (montants arrondis) : 193 235 € sur l'exercice clos au 31 mars 2023 ; 138 864 € sur l'exercice clos au 31 mars 2024 ; 139 728 € sur l'exercice clos au 31 mars 2025. Correspondant aux montants Hors Taxe ci-dessous : [bas de page coupé au scan] » (p. 59). « La répartition de ces dissimulations de recettes TVA entre les deux co-gérants doit donc aboutir à distribuer, en sus, à chacun les sommes arrondies suivantes : 10 210 € sur l'année 2023 ; 7 427 € sur l'année 2024 ; 7 326 € sur l'année 2025. » (p. 60)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Conditions d'exploitation » (p. 60) : visites du 29/01/2026 et du 06/03/2026, questionnaire du 11/03/2026 ; « Madame Ghislaine BEHEM [...] est la seule en charge de la gestion de la caisse pour les opérations d'encaissement des notes/additions » ; « Monsieur Thierry PASTEUR, il s'occupe de toute la conception culinaire. Il s'occupe donc de toutes les relations avec les fournisseurs [...] Monsieur Thierry PASTEUR s'occupe de tout ce qui est relatif à la gestion des modes de paiement et notamment des relations bancaires et donc de toutes les remises en banque. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "P. 61 : citation des articles 108, 12, 109 (1° et 2°), 111 a à e, 8 et 156 du CGI. P. 62 : « le service est amené à considérer, qu'en vertu : de l'article 109-1-2°, des conditions d'exploitation, mais aussi du fait que les associés ont été désignés par la lettre du 16 juin 2026 bénéficiaires des dissimulations de recettes constatés et que ces désinvestissements Hors Taxe constatés sont des revenus distribués au bénéfice du foyer fiscal, soit : 10 210 € sur l'année 2023 ; 7 427 € sur l'année 2024 ; 7 326 € sur l'année 2025. » « sachant que vous êtes l'un des co-gérants de la société LA DEMI-LUNE, qu'il a été démontré votre implication et votre participation active et directe à la gestion quotidienne de l'ensemble des tâches relatives à l'activité de la société, vous aviez toute latitude à pouvoir appréhender la partie des désinvestissements pour laquelle vous avez été désigné comme bénéficiaire »."
+    },
+    {
+     "kind": "tableau",
+     "titre": "Tableau p. 62 (tel qu'imprimé)",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": ""
+      },
+      {
+       "label": "Revenus de l'année 2023",
+       "align": "right"
+      },
+      {
+       "label": "Revenus de l'année 2024",
+       "align": "right"
+      },
+      {
+       "label": "Revenus de l'année 2025",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Distributions occultes (arrondies)"
+       },
+       {
+        "v": "86 407 €",
+        "align": "right"
+       },
+       {
+        "v": "62 005 €",
+        "align": "right"
+       },
+       {
+        "v": "62 538 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "[part TVA]"
+       },
+       {
+        "v": "10 210 €",
+        "align": "right"
+       },
+       {
+        "v": "7 427 €",
+        "align": "right"
+       },
+       {
+        "v": "7 326 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "[total]"
+       },
+       {
+        "v": "96 617 €",
+        "align": "right"
+       },
+       {
+        "v": "69 432 €",
+        "align": "right"
+       },
+       {
+        "v": "69 864 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« II. IMPOT SUR LE REVENU AU TAUX FORFAITAIRE ET CONTRIBUTIONS » (p. 62) : « Les revenus distribués doivent, en principe, être soumis à l'impôt sur le revenu pour leur montant brut effectivement perçu (C.G.I., article 200 A, 1-A-1°). [...] Le revenu brut ainsi déterminé est soumis à l'impôt sur le revenu au taux forfaitaire de 12,80 % (C.G.I., art. 200 A, 1 ; BOI-RPPM-RCM-20-15 au I § 40 et suivants). » P. 63 : « conformément à l'article 235-ter du Code Général des Impôts, un prélèvement solidarité de 7,50 % est instauré sur les revenus et doit être appliqué. En conséquence, les Revenus de Capitaux Mobiliers de la présente proposition de rectifications seront soumis à la CSG et au Prélèvement Solidarité. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Majoration de 1,25 sur les années 2023, 2024 et 2025 : L'article 39 de la loi n° 2020-1721 du 29 décembre 2020 de finances pour 2021 prévoit la majoration de 25 % de l'assiette des distributions occultes ou irrégulières mentionnées à l'article 109 du code général des impôts (CGI), aux c à e de l'article 111 du C.G.I. et à l'article 123 bis du C.G.I., lorsqu'elles sont imposées au prélèvement forfaitaire unique (PFU). Cela est prévu par l'article 158-7-2° du C.G.I. Cette mesure s'applique aux impositions établies à compter des revenus de l'année 2020. [...] En conséquence, les distributions considérées comme perçues par votre foyer fiscal apparaîtront dans vos revenus imposables à hauteur de respectivement (arrondis) : 96 617 € x 1,25 = 120 771 € pour l'année 2023 ; 69 432 € x 1,25 = 86 790 € pour l'année 2024 ; 69 864 € x 1,25 = 87 330 € pour l'année 2025. » (p. 63)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« III - CONSEQUENCES FINANCIERES. Revenus imposables - En matière d'impôt sur le Revenu. Revenu Imposable - Année 2023 - 1,50 Part - Pour cette année 2023, vous trouverez en pages 67 à 70, les nouvelles conséquences financières ainsi que le détail de vos nouveaux revenus imposables. » (p. 65 ; même renvoi pour 2024, p. 71 à 74, et 2025, p. 75 à 80, « 1,5[?] Part »)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition personnelle du 19/10/2026, p. 67-70, imprimé « CONSEQUENCES FINANCIERES », contrôle n° 2600933, période d'imposition du 01/01 au 31/12/2023.** Le service reproduit en premier lieu le revenu global : « REVENU NET IMPOSABLE : avant contrôle 21 237 ; après contrôle 142 008 ; variation 120 771 » ; « NOMBRE DE PARTS : 1,5 ; 1,5 ; 0,00 ». Puis les droits : « IMPOT SUR LE REVENU : avant contrôle −964 ; après contrôle 39 729 ; variation 40 693 »."
+    },
+    {
+     "kind": "tableau",
+     "titre": "Tableau « CONSEQUENCES FINANCIERES DES RAPPELS NOTIFIES », année 2023 (tel qu'imprimé)",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Ligne du service"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "IMPOT DU"
+       },
+       {
+        "v": "40 693 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "INTERETS DE RETARD : « 110/2026 | IR | (28*0.20) = 5,60% »"
+       },
+       {
+        "v": "2 225 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "MAJORATIONS (1729, 1729-0A, 1732 et 1758) : base de calcul IR 40 693, code (03)"
+       },
+       {
+        "v": "16 277 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL IR"
+       },
+       {
+        "v": "59 195 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "PRELEVEMENTS SOCIAUX"
+       },
+       {
+        "v": "16 618 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "INTERETS DE RETARD (PS)"
+       },
+       {
+        "v": "931 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "MAJORATIONS (1729, 1732 et 1758) (PS)"
+       },
+       {
+        "v": "6 647 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL PS"
+       },
+       {
+        "v": "24 196 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Montant total des rappels (TOTAL IR + TOTAL PS)"
+       },
+       {
+        "v": "83 391 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL IR/PS MIS EN RECOUVREMENT DANS LE ROLE"
+       },
+       {
+        "v": "83 391 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Pour information : CODES PENALITES UTILISES : (03) MANQUEMENT DELIBERE (40%) ». « Ce document présente les conséquences financières suite à cette imposition supplémentaire et est indépendant d'éventuels versements déjà effectués »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Feuille « DETAIL IMPOSITION » (p. 67 + 2).** « ANNEE DE NAISSANCE DU DECLARANT 1964 ; SITUATION DE FAMILLE C ; ENFANTS MAJEURS CELIBATAIRES 1 ; NOMBRE DE PARTS 1,50 ». « Revenus des associés et gérants 18 123 » ; « Revenus de capitaux mobiliers déclarés » 104 152 ; « Revenus de capitaux mobiliers imposables (7) » 125 304 ; « Revenu imposable 142 008 » ; « Impôt sur les revenus soumis au barème (14) * 40 693 » ; « Intérêt de retard (21) Taux 5,60 % Nat. : 4 Montant + 2 225 » ; « Majoration et/ou amende (21) Taux 40,00 % Nature : 4 Montant + 16 277 (articles 1729, 1729 0 A, 1732, 1736, 1758, 1766 du CGI) »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Page de solde.** « Prélèvements sociaux au taux de 17,2 % dus (53) » CSG-CRDS 13 646 ; PSOL 10 550 ; « Solde des prélèvements sociaux 2023 (53) : 24 196 » ; « Revenu fiscal de référence (25) 145 010 » ; « SUPPLEMENT D'IMPOT ... = 83 391 ». « Montant recalculé de la CSG déductible sur revenus du patrimoine : 6 570 ; il correspond à une augmentation de cette CSG déductible de 6 570 ; variation (49) à déclarer au titre des revenus de 2026 »."
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Ce qui est vérifié.** Tout le chiffrage du foyer se déduit de deux nombres du service : la discordance TTC de la reconstitution société et la clé de 50 %. La pièce R2-pasteur-chiffrage.xlsx reproduit chaque ligne par formule : toutes se recalculent à l'euro (écarts : 54 € d'intérêts 2023 en faveur du contribuable ; 1 € d'arrondi en 2024 ; 1 € de base PS en 2025). L'arithmétique n'est donc pas le terrain : la **base**, la **clé** et la **pénalité** le sont."
+  },
+  {
+   "kind": "schema",
+   "titre": "D'où vient chaque euro de 2023 (pièce R2-pasteur-chiffrage.xlsx, onglets Sources et Controle)",
+   "legende": "Base = 193 234,55 € ÷ 2 (CANON 96 617 €). Assiette = base × 1,25. L'IR est obtenu au barème 2023 sur 142 008 € avec 1,5 part, le plafonnement du quotient familial (1 759 € par demi-part) jouant à plein : 42 452 − 1 759 = 40 693 €. Les PS sont assis sur la base sans le 1,25 (réserve du Conseil constitutionnel respectée).",
+   "svg": "<svg viewBox=\"0 0 962 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Discordance TTC société</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">193 235 €</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">reconstitution, p. 59</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><text x=\"187.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">÷ 2</text><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Base RCM du foyer</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">96 617 €</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">÷ 2 (clé de 50 %)</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">× 1,25</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Assiette IR</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">120 771 €</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">× 1,25</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">barème, 17,2 %</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">IR + PS (droits)</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">57 311 €</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">40 693 + 16 618</text><line x1=\"752\" y1=\"59.0\" x2=\"789\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 789 54.0 L 798 59.0 L 789 64.0 Z\" fill=\"#cbb98f\"/><text x=\"775.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">+ 22 924 + 3 156</text><rect x=\"798\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"873.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Supplément notifié</text><text x=\"873.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">83 391 €</text><text x=\"873.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">+ 40 % + intérêts</text></svg>"
   },
   {
    "kind": "tableau",
-   "titre": "Ce qui est certain : base, assiette et supplément notifié à M. Thierry PASTEUR",
+   "titre": "Contrôle ligne à ligne, année 2023 (pièce R2-pasteur-chiffrage.xlsx, onglet « Controle ligne a ligne », colonne B)",
+   "minWidth": 900,
    "colonnes": [
     {
-     "label": "Élément"
+     "label": "Ligne du service"
+    },
+    {
+     "label": "Service",
+     "align": "right"
+    },
+    {
+     "label": "Recalcul (formule)",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    },
+    {
+     "label": "Règle appliquée",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Base RCM = discordance TTC ÷ 2"
+     },
+     {
+      "v": "96 617 €",
+      "align": "right"
+     },
+     {
+      "v": "96 617 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "193 234,55 € ÷ 2 (prop. 18/05/2026 p. 52) ; = 86 407 HT + 10 210 TVA",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Assiette IR = base × 1,25"
+     },
+     {
+      "v": "120 771 €",
+      "align": "right"
+     },
+     {
+      "v": "120 771 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "art. 158-7-2° CGI ; = variation du revenu imposable",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR au barème sur 142 008 € (1,5 part)"
+     },
+     {
+      "v": "40 693 €",
+      "align": "right"
+     },
+     {
+      "v": "40 693 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "barème 2023 ; IR 1 part 42 452 € ; avec QF 34 566 € ; plafonnement de la demi-part à 1 759 € : IR = 42 452 − 1 759",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % sur IR"
+     },
+     {
+      "v": "16 277 €",
+      "align": "right"
+     },
+     {
+      "v": "16 277 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,4 × 40 693 (art. 1729 a)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts IR"
+     },
+     {
+      "v": "2 225 €",
+      "align": "right"
+     },
+     {
+      "v": "2 279 €",
+      "align": "right"
+     },
+     {
+      "v": "+54 € (en faveur du contribuable)",
+      "align": "right"
+     },
+     {
+      "v": "0,20 % × 28 mois (01/07/2024 → 31/10/2026) = 5,60 % ; assis sur 39 729 € (IR après contrôle) et non 40 693 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Prélèvements sociaux"
+     },
+     {
+      "v": "16 618 €",
+      "align": "right"
+     },
+     {
+      "v": "16 618 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "17,2 % × 96 617 € (base SANS le 1,25)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts PS"
+     },
+     {
+      "v": "931 €",
+      "align": "right"
+     },
+     {
+      "v": "931 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,20 % × 28 mois",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % sur PS"
+     },
+     {
+      "v": "6 647 €",
+      "align": "right"
+     },
+     {
+      "v": "6 647 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,4 × 16 618",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Supplément"
+     },
+     {
+      "v": "83 391 €",
+      "align": "right"
+     },
+     {
+      "v": "83 391 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "TOTAL IR + TOTAL PS",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le barème est vérifié année par année : IR 1 part, IR avec quotient familial, plafonnement (onglet « Barèmes »)",
+   "minWidth": 860,
+   "colonnes": [
+    {
+     "label": "Année"
+    },
+    {
+     "label": "Revenu imposable après contrôle",
+     "align": "right"
+    },
+    {
+     "label": "IR à 1 part",
+     "align": "right"
+    },
+    {
+     "label": "IR avec 1,5 part (brut)",
+     "align": "right"
+    },
+    {
+     "label": "Plafond de la demi-part",
+     "align": "right"
+    },
+    {
+     "label": "IR retenu = 1 part − plafond",
+     "align": "right"
+    },
+    {
+     "label": "IR du service",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2023"
+     },
+     {
+      "v": "142 008 €",
+      "align": "right"
+     },
+     {
+      "v": "42 452 €",
+      "align": "right"
+     },
+     {
+      "v": "34 566 €",
+      "align": "right"
+     },
+     {
+      "v": "1 759 €",
+      "align": "right"
+     },
+     {
+      "v": "40 693 €",
+      "align": "right"
+     },
+     {
+      "v": "40 693 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024"
+     },
+     {
+      "v": "111 915 €",
+      "align": "right"
+     },
+     {
+      "v": "29 830 €",
+      "align": "right"
+     },
+     {
+      "v": "23 323 €",
+      "align": "right"
+     },
+     {
+      "v": "1 791 €",
+      "align": "right"
+     },
+     {
+      "v": "28 039 €",
+      "align": "right"
+     },
+     {
+      "v": "28 039 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2025"
+     },
+     {
+      "v": "110 870 €",
+      "align": "right"
+     },
+     {
+      "v": "29 257 €",
+      "align": "right"
+     },
+     {
+      "v": "22 917 €",
+      "align": "right"
+     },
+     {
+      "v": "1 807 €",
+      "align": "right"
+     },
+     {
+      "v": "27 450 €",
+      "align": "right"
+     },
+     {
+      "v": "27 450 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Barèmes vérifiés (art. 197 I-1 CGI) : 0 % jusqu'à 11 294 € ; 11 % jusqu'à 28 797 € ; 30 % jusqu'à 82 341 € ; 41 % jusqu'à 177 106 € ; 45 % au-delà (LF 2024) ; 0 % jusqu'à 11 497 € ; 11 % jusqu'à 29 315 € ; 30 % jusqu'à 83 823 € ; 41 % jusqu'à 180 294 € ; 45 % au-delà (LF 2025) ; 0 % jusqu'à 11 600 € ; 11 % jusqu'à 29 579 € ; 30 % jusqu'à 84 577 € ; 41 % jusqu'à 181 917 € ; 45 % au-delà (LF 2026). Plafonds de la demi-part (art. 197 I-2) : 1 759 / 1 791 / 1 807 € (BOI-IR-LIQ-20-20-20 § 40). Le quotient familial de 1,5 part (enfant majeur rattaché) ne procure donc que 1 759 à 1 807 € d'économie : la distribution est taxée quasi intégralement à 1 part, dans la tranche à 41 %."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Supplément 2023",
+     "valeur": "83 391 €",
+     "sub": "= 86,3 % de la base de 96 617 €",
+     "couleur": "red",
+     "highlight": true
+    },
+    {
+     "label": "IR sur la distribution",
+     "valeur": "42,1 %",
+     "sub": "40 693 ÷ 96 617 : tranche à 41 % atteinte",
+     "couleur": "red"
+    },
+    {
+     "label": "Revenu imposable multiplié",
+     "valeur": "× 6,7",
+     "sub": "21 237 € → 142 008 € ; gérance déclarée 18 123 €",
+     "couleur": "gold"
+    },
+    {
+     "label": "Si la reconstitution tombe",
+     "valeur": "0 €",
+     "sub": "aucune base, aucun supplément",
+     "couleur": "teal",
+     "highlight": true
+    }
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 1",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-pasteur-chiffrage.xlsx",
+     "label": "R2 - Chiffrage PASTEUR : tableau du service (p. 59-79) reproduit, contrôle ligne à ligne par formule (barème 197, plafonnement QF, 1,25, PS, 1727, 1729), décomposition droits / majorations / intérêts et scénarios CANON 25 / 50 / 75 % (XLSX à formules, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-distributions-et-majoration.xlsx",
+     "label": "R2 - Cascade TTC → HT ÷ 2 + TVA ÷ 2 → base RCM → × 1,25 par co-gérant, contrôle QPC de l'assiette sociale (XLSX)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "R2 - Taxation des deux foyers : base RCM = TTC ÷ 2, × 1,25, suppléments notifiés PASTEUR 196 945 € et BEHEM 172 703 €, taux effectifs 83,5 % / 73,2 % et hors majoration IR 67,3 % / 58,8 % (XLSX à formules)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026 (PDF scanné, 222 p. ; chiffrage p. 59-79)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "2",
+   "texte": "Année 2024 : « Montant total des rappels (TOTAL IR + TOTAL PS) : 56 724 € »"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 71-74",
+   "resume": [
+    "Base RCM 69 432 € = 138 863,57 € TTC ÷ 2 (part HT 62 005 € + part TVA 7 427 €), majorée à 86 790 € (× 1,25, art. 158-7-2°) et ajoutée au revenu imposable, qui passe de 25 125 € à 111 915 € (1,5 part).",
+    "IR au barème : 27 669 € de droits supplémentaires, intérêts 885 € (3,20 %, 16 mois), majoration de 40 % 11 068 € (code 03 « manquement délibéré ») : TOTAL IR 39 622 €.",
+    "Prélèvements sociaux : 11 942 € (17,2 % de 69 432 €), intérêts 383 €, majoration de 40 % 4 777 € : TOTAL PS 17 102 €.",
+    "Supplément mis en recouvrement : 56 724 € ; CSG déductible supplémentaire 4 721 € à déclarer sur 2026."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition personnelle du 19/10/2026, p. 71-74, imprimé « CONSEQUENCES FINANCIERES », contrôle n° 2600933, période d'imposition du 01/01 au 31/12/2024.** Le service reproduit en premier lieu le revenu global : « REVENU NET IMPOSABLE : avant contrôle 25 125 ; après contrôle 111 915 ; variation 86 790 » ; « NOMBRE DE PARTS : 1,5 ; 1,5 ; 0,00 ». Puis les droits : « IMPOT SUR LE REVENU : avant contrôle 36 ; après contrôle 27 705 ; variation 27 669 »."
+    },
+    {
+     "kind": "tableau",
+     "titre": "Tableau « CONSEQUENCES FINANCIERES DES RAPPELS NOTIFIES », année 2024 (tel qu'imprimé)",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Ligne du service"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "IMPOT DU"
+       },
+       {
+        "v": "27 669 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "INTERETS DE RETARD : « 110/2026 | IR | (16*0.20) = 3,20% »"
+       },
+       {
+        "v": "885 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "MAJORATIONS (1729, 1729-0A, 1732 et 1758) : base de calcul IR 27 669, code (03)"
+       },
+       {
+        "v": "11 068 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL IR"
+       },
+       {
+        "v": "39 622 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "PRELEVEMENTS SOCIAUX"
+       },
+       {
+        "v": "11 942 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "INTERETS DE RETARD (PS)"
+       },
+       {
+        "v": "383 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "MAJORATIONS (1729, 1732 et 1758) (PS)"
+       },
+       {
+        "v": "4 777 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL PS"
+       },
+       {
+        "v": "17 102 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Montant total des rappels (TOTAL IR + TOTAL PS)"
+       },
+       {
+        "v": "56 724 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL IR/PS MIS EN RECOUVREMENT DANS LE ROLE"
+       },
+       {
+        "v": "56 724 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Pour information : CODES PENALITES UTILISES : (03) MANQUEMENT DELIBERE (40%) ». « Ce document présente les conséquences financières suite à cette imposition supplémentaire et est indépendant d'éventuels versements déjà effectués »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Feuille « DETAIL IMPOSITION » (p. 71 + 2).** « ANNEE DE NAISSANCE DU DECLARANT 1964 ; SITUATION DE FAMILLE C ; ENFANTS MAJEURS CELIBATAIRES 1 ; NOMBRE DE PARTS 1,50 ». « Revenus des associés et gérants 22 151 » ; « Revenus de capitaux mobiliers déclarés » 76 975 ; « Revenus de capitaux mobiliers imposables (7) » 91 331 ; « Revenu imposable 111 915 » ; « Impôt sur les revenus soumis au barème (14) * 28 039 » ; « Intérêt de retard (21) Taux 3,20 % Nat. : 4 Montant + 885 » ; « Majoration et/ou amende (21) Taux 40,00 % Nature : 4 Montant + 11 068 (articles 1729, 1729 0 A, 1732, 1736, 1758, 1766 du CGI) »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Page de solde.** « Prélèvements sociaux au taux de 17,2 % dus (53) » CSG-CRDS 9 645 ; PSOL 7 457 ; « Solde des prélèvements sociaux 2024 (53) : 17 102 » ; « Revenu fiscal de référence (25) 114 917 » ; « SUPPLEMENT D'IMPOT ... = 56 724 ». « Montant recalculé de la CSG déductible sur revenus du patrimoine : 4 721 ; il correspond à une augmentation de cette CSG déductible de 4 721 ; variation (49) à déclarer au titre des revenus de 2026 »."
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Contrôle ligne à ligne, année 2024 (pièce R2-pasteur-chiffrage.xlsx, onglet « Controle ligne a ligne », colonne C)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Ligne du service"
+    },
+    {
+     "label": "Service",
+     "align": "right"
+    },
+    {
+     "label": "Recalcul (formule)",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    },
+    {
+     "label": "Règle appliquée",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Base RCM = discordance TTC ÷ 2"
+     },
+     {
+      "v": "69 432 €",
+      "align": "right"
+     },
+     {
+      "v": "69 432 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "138 863,57 € ÷ 2 (prop. 18/05/2026 p. 52) ; = 62 005 HT + 7 427 TVA",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Assiette IR = base × 1,25"
+     },
+     {
+      "v": "86 790 €",
+      "align": "right"
+     },
+     {
+      "v": "86 790 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "art. 158-7-2° CGI ; = variation du revenu imposable",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR au barème sur 111 915 € (1,5 part)"
+     },
+     {
+      "v": "28 039 €",
+      "align": "right"
+     },
+     {
+      "v": "28 039 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "barème 2024 ; IR 1 part 29 830 € ; avec QF 23 323 € ; plafonnement de la demi-part à 1 791 € : IR = 29 830 − 1 791",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % sur IR"
+     },
+     {
+      "v": "11 068 €",
+      "align": "right"
+     },
+     {
+      "v": "11 068 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,4 × 27 669 (art. 1729 a)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts IR"
+     },
+     {
+      "v": "885 €",
+      "align": "right"
+     },
+     {
+      "v": "885 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,20 % × 16 mois (01/07/2025 → 31/10/2026) = 3,20 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Prélèvements sociaux"
+     },
+     {
+      "v": "11 942 €",
+      "align": "right"
+     },
+     {
+      "v": "11 942 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "17,2 % × 69 432 € (base SANS le 1,25)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts PS"
+     },
+     {
+      "v": "383 €",
+      "align": "right"
+     },
+     {
+      "v": "382 €",
+      "align": "right"
+     },
+     {
+      "v": "−1 € (arrondis CSG / PSOL)",
+      "align": "right"
+     },
+     {
+      "v": "0,20 % × 16 mois",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % sur PS"
+     },
+     {
+      "v": "4 777 €",
+      "align": "right"
+     },
+     {
+      "v": "4 777 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,4 × 11 942",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Supplément"
+     },
+     {
+      "v": "56 724 €",
+      "align": "right"
+     },
+     {
+      "v": "56 724 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "TOTAL IR + TOTAL PS",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Supplément 2024",
+     "valeur": "56 724 €",
+     "sub": "= 81,7 % de 69 432 €",
+     "couleur": "red",
+     "highlight": true
+    },
+    {
+     "label": "IR sur la distribution",
+     "valeur": "39,9 %",
+     "sub": "27 669 ÷ 69 432",
+     "couleur": "red"
+    },
+    {
+     "label": "Revenu imposable multiplié",
+     "valeur": "× 4,5",
+     "sub": "25 125 € → 111 915 € ; gérance 22 151 €",
+     "couleur": "gold"
+    },
+    {
+     "label": "Écarts de recalcul",
+     "valeur": "1 €",
+     "sub": "383 € d'intérêts PS contre 382 € (arrondis séparés CSG / PSOL)",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 2",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-pasteur-chiffrage.xlsx",
+     "label": "R2 - Chiffrage PASTEUR : tableau du service (p. 59-79) reproduit, contrôle ligne à ligne par formule (barème 197, plafonnement QF, 1,25, PS, 1727, 1729), décomposition droits / majorations / intérêts et scénarios CANON 25 / 50 / 75 % (XLSX à formules, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026 (PDF scanné, 222 p. ; chiffrage p. 59-79)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "3",
+   "texte": "Année 2025 : « Montant total des rappels (TOTAL IR + TOTAL PS) : 56 830 € »"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 75-79",
+   "resume": [
+    "Base RCM 69 864 € = 139 727,76 € TTC ÷ 2 (part HT 62 538 € + part TVA 7 326 €), majorée à 87 330 € (× 1,25, art. 158-7-2°) et ajoutée au revenu imposable, qui passe de 23 540 € à 110 870 € (1,5 part).",
+    "IR au barème : 27 367 € de droits supplémentaires, intérêts 219 € (0,80 %, 4 mois), majoration de 40 % 10 947 € (code 03 « manquement délibéré ») : TOTAL IR 38 533 €.",
+    "Prélèvements sociaux : 12 995 € (18,6 % de 69 865 €), intérêts 104 €, majoration de 40 % 5 198 € : TOTAL PS 18 297 €.",
+    "Supplément mis en recouvrement : 56 830 € ; revenu fiscal de référence 113 872 €."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition personnelle du 19/10/2026, p. 75-79, imprimé « CONSEQUENCES FINANCIERES », contrôle n° 2600933, période d'imposition du 01/01 au 31/12/2025.** Le service reproduit en premier lieu le revenu global : « REVENU NET IMPOSABLE : avant contrôle 23 540 ; après contrôle 110 870 ; variation 87 330 » ; « NOMBRE DE PARTS : 1,5 ; 1,5 ; 0,00 ». Puis les droits : « IMPOT SUR LE REVENU : avant contrôle 77 ; après contrôle 27 444 ; variation 27 367 »."
+    },
+    {
+     "kind": "tableau",
+     "titre": "Tableau « CONSEQUENCES FINANCIERES DES RAPPELS NOTIFIES », année 2025 (tel qu'imprimé)",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Ligne du service"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "IMPOT DU"
+       },
+       {
+        "v": "27 367 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "INTERETS DE RETARD : « 110/2026 | IR | (4*0.20) = 0,80% »"
+       },
+       {
+        "v": "219 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "MAJORATIONS (1729, 1729-0A, 1732 et 1758) : base de calcul IR 27 367, code (03)"
+       },
+       {
+        "v": "10 947 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL IR"
+       },
+       {
+        "v": "38 533 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "PRELEVEMENTS SOCIAUX"
+       },
+       {
+        "v": "12 995 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "INTERETS DE RETARD (PS)"
+       },
+       {
+        "v": "104 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "MAJORATIONS (1729, 1732 et 1758) (PS)"
+       },
+       {
+        "v": "5 198 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL PS"
+       },
+       {
+        "v": "18 297 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Montant total des rappels (TOTAL IR + TOTAL PS)"
+       },
+       {
+        "v": "56 830 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL IR/PS MIS EN RECOUVREMENT DANS LE ROLE"
+       },
+       {
+        "v": "56 830 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Pour information : CODES PENALITES UTILISES : (03) MANQUEMENT DELIBERE (40%) ». « Ce document présente les conséquences financières suite à cette imposition supplémentaire et est indépendant d'éventuels versements déjà effectués »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Feuille « DETAIL IMPOSITION » (p. 75 + 2).** « ANNEE DE NAISSANCE DU DECLARANT 1964 ; SITUATION DE FAMILLE C ; ENFANTS MAJEURS CELIBATAIRES 1 ; NOMBRE DE PARTS 1,50 ». « Revenus des associés et gérants 21 360 » ; « Revenus de capitaux mobiliers déclarés » 77 414 ; « Revenus de capitaux mobiliers imposables (7) » 91 878 ; « Revenu imposable 110 870 » ; « Impôt sur les revenus soumis au barème (14) * 27 450 » ; « Intérêt de retard (21) Taux 0,80 % Nat. : 4 Montant + 219 » ; « Majoration et/ou amende (21) Taux 40,00 % Nature : 4 Montant + 10 947 (articles 1729, 1729 0 A, 1732, 1736, 1758, 1766 du CGI) »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Page de solde.** « Prélèvements sociaux au taux de 18,6 % dus (53) » CSG-CRDS 10 919 ; PSOL 7 378 ; « Solde des prélèvements sociaux 2025 (53) : 18 297 » ; « Revenu fiscal de référence (25) 113 872 » ; « SUPPLEMENT D'IMPOT ... = 56 830 ». Pour 2025 la feuille de détail imprime « Revenus de capitaux mobiliers (44) : 69 865 ; BASE IMPOSABLE 69 865 ; Taux de l'imposition : 11,10 % ; 7,50 % » (p. 77) et « Taux moyen d'imposition 24,76 % » (p. 78)."
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Contrôle ligne à ligne, année 2025 (pièce R2-pasteur-chiffrage.xlsx, onglet « Controle ligne a ligne », colonne D)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Ligne du service"
+    },
+    {
+     "label": "Service",
+     "align": "right"
+    },
+    {
+     "label": "Recalcul (formule)",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    },
+    {
+     "label": "Règle appliquée",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Base RCM = discordance TTC ÷ 2"
+     },
+     {
+      "v": "69 864 €",
+      "align": "right"
+     },
+     {
+      "v": "69 864 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "139 727,76 € ÷ 2 (prop. 18/05/2026 p. 52) ; = 62 538 HT + 7 326 TVA",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Assiette IR = base × 1,25"
+     },
+     {
+      "v": "87 330 €",
+      "align": "right"
+     },
+     {
+      "v": "87 330 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "art. 158-7-2° CGI ; = variation du revenu imposable",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR au barème sur 110 870 € (1,5 part)"
+     },
+     {
+      "v": "27 450 €",
+      "align": "right"
+     },
+     {
+      "v": "27 450 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "barème 2025 ; IR 1 part 29 257 € ; avec QF 22 917 € ; plafonnement de la demi-part à 1 807 € : IR = 29 257 − 1 807",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % sur IR"
+     },
+     {
+      "v": "10 947 €",
+      "align": "right"
+     },
+     {
+      "v": "10 947 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,4 × 27 367 (art. 1729 a)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts IR"
+     },
+     {
+      "v": "219 €",
+      "align": "right"
+     },
+     {
+      "v": "219 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,20 % × 4 mois (01/07/2026 → 31/10/2026) = 0,80 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Prélèvements sociaux"
+     },
+     {
+      "v": "12 995 €",
+      "align": "right"
+     },
+     {
+      "v": "12 995 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "18,6 % × 69 865 € (base SANS le 1,25) ; 17,2 % donneraient 12 017 € (écart 978 €)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts PS"
+     },
+     {
+      "v": "104 €",
+      "align": "right"
+     },
+     {
+      "v": "104 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,20 % × 4 mois",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % sur PS"
+     },
+     {
+      "v": "5 198 €",
+      "align": "right"
+     },
+     {
+      "v": "5 198 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "0,4 × 12 995",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Supplément"
+     },
+     {
+      "v": "56 830 €",
+      "align": "right"
+     },
+     {
+      "v": "56 830 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "TOTAL IR + TOTAL PS",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "orange",
+   "titre": "2025 : prélèvements sociaux à 18,6 % et non 17,2 %",
+   "texte": "La feuille de 2025 applique « CSG-CRDS 11,10 % » + « prélèvement de solidarité 7,50 % » (p. 75 et 77), soit 18,6 %, contre 17,2 % en 2023 et 2024. Différence : 12 995 − 12 017 = 978 € de droits, 1 377 € avec la majoration de 40 % et les intérêts. Le service n'énonce nulle part le fondement de ce taux (p. 62-63 ne citent que l'article 235 ter). Il s'agit de la hausse de la CSG sur les revenus du patrimoine prévue par l'article 12 de la LFSS pour 2026, présentée comme applicable aux revenus 2025 : son application à des revenus réputés distribués par voie de rôle doit être vérifiée par l'avocat et, à tout le moins, le fondement doit être réclamé (motivation, art. L. 57 LPF). La base retenue est de 69 865 € (p. 77) contre 69 864 € p. 62 : 1 € sans incidence (0,19 €)."
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Supplément 2025",
+     "valeur": "56 830 €",
+     "sub": "= 81,3 % de 69 864 €",
+     "couleur": "red",
+     "highlight": true
+    },
+    {
+     "label": "Taux de PS appliqué",
+     "valeur": "18,6 %",
+     "sub": "contre 17,2 % en 2023-2024 : +978 € de droits, +1 377 € au total",
+     "couleur": "orange"
+    },
+    {
+     "label": "Intérêts courus",
+     "valeur": "4 mois",
+     "sub": "01/07/2026 → 31/10/2026 : 0,80 %",
+     "couleur": "gold"
+    },
+    {
+     "label": "Revenu imposable multiplié",
+     "valeur": "× 4,7",
+     "sub": "23 540 € → 110 870 € ; gérance 21 360 €",
+     "couleur": "gold"
+    }
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 3",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-pasteur-chiffrage.xlsx",
+     "label": "R2 - Chiffrage PASTEUR : tableau du service (p. 59-79) reproduit, contrôle ligne à ligne par formule (barème 197, plafonnement QF, 1,25, PS, 1727, 1729), décomposition droits / majorations / intérêts et scénarios CANON 25 / 50 / 75 % (XLSX à formules, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026 (PDF scanné, 222 p. ; chiffrage p. 59-79)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "4",
+   "texte": "« Intérêts de retard » (art. 1727 CGI) : 4 747 € sur trois ans"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 63 ; p. 67, 71, 75",
+   "resume": [
+    "« Le taux de l'intérêt de retard est de 0,20 % par mois à compter du 1er janvier 2018. Il s'applique sur le montant des sommes mises à la charge du contribuable ou dont le versement a été différé. »",
+    "Décompte imprimé : « (28*0.20) = 05.60 % » en 2023, « (16*0.20) = 03.20 % » en 2024, « (4*0.20) = 00.80 % » en 2025, avec la mention « 110/2026 » (mois d'arrêt : octobre 2026).",
+    "Montants : IR 2 225 + 885 + 219 = 3 329 € ; PS 931 + 383 + 104 = 1 418 € ; total 4 747 €."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**P. 63, « C - CONSEQUENCES FINANCIERES DE VOTRE FOYER FISCAL, I - Intérêts de retard ».** « L'article 1727 du Code Général des Impôts prévoit que toute somme, dont l'établissement ou le recouvrement incombe à la direction générale des impôts, qui n'a pas été acquittée dans le délai légal donne lieu au versement d'un intérêt de retard. À cet intérêt s'ajoutent, le cas échéant, les sanctions prévues au présent code. Le taux de l'intérêt de retard est de 0,20 % par mois à compter du 01er janvier 2018. Il s'applique sur le montant des sommes mises à la charge du contribuable ou dont le versement a été différé. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Lignes « INTERET DE RETARD » des tableaux de conséquences financières",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Année"
+      },
+      {
+       "label": "Mention imprimée (IR)",
+       "align": "right"
+      },
+      {
+       "label": "Intérêts IR",
+       "align": "right"
+      },
+      {
+       "label": "Intérêts PS",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "2023"
+       },
+       {
+        "v": "« 110/2026 | IR | (28*0.20) = 05.60% »",
+        "align": "right"
+       },
+       {
+        "v": "2 225 €",
+        "align": "right"
+       },
+       {
+        "v": "931 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2024"
+       },
+       {
+        "v": "« 110/2026 | IR | (16*0.20) = 03.20% »",
+        "align": "right"
+       },
+       {
+        "v": "885 €",
+        "align": "right"
+       },
+       {
+        "v": "383 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2025"
+       },
+       {
+        "v": "« 110/2026 | IR | (4*0.20) = 00.80% »",
+        "align": "right"
+       },
+       {
+        "v": "219 €",
+        "align": "right"
+       },
+       {
+        "v": "104 €",
+        "align": "right"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Vérification du décompte (onglet « Controle ligne a ligne », lignes « Intérêts »)",
+   "minWidth": 980,
+   "colonnes": [
+    {
+     "label": "Année"
+    },
+    {
+     "label": "Point de départ (1er juillet N+1)",
+     "align": "right"
+    },
+    {
+     "label": "Arrêt (mois de la proposition)",
+     "align": "right"
+    },
+    {
+     "label": "Mois",
+     "align": "right"
+    },
+    {
+     "label": "Taux",
+     "align": "right"
+    },
+    {
+     "label": "Base IR retenue",
+     "align": "right"
+    },
+    {
+     "label": "Intérêts IR service",
+     "align": "right"
+    },
+    {
+     "label": "Recalcul sur la variation d'IR",
+     "align": "right"
+    },
+    {
+     "label": "Intérêts PS",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2023"
+     },
+     {
+      "v": "01/07/2024",
+      "align": "right"
+     },
+     {
+      "v": "31/10/2026",
+      "align": "right"
+     },
+     {
+      "v": "28",
+      "align": "right"
+     },
+     {
+      "v": "5,60 %",
+      "align": "right"
+     },
+     {
+      "v": "39 729 € (IR après contrôle)",
+      "align": "right"
+     },
+     {
+      "v": "2 225 €",
+      "align": "right"
+     },
+     {
+      "v": "2 279 € (sur 40 693 €)",
+      "align": "right"
+     },
+     {
+      "v": "931 € = 16 618 × 5,6 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024"
+     },
+     {
+      "v": "01/07/2025",
+      "align": "right"
+     },
+     {
+      "v": "31/10/2026",
+      "align": "right"
+     },
+     {
+      "v": "16",
+      "align": "right"
+     },
+     {
+      "v": "3,20 %",
+      "align": "right"
+     },
+     {
+      "v": "27 669 € (variation)",
+      "align": "right"
+     },
+     {
+      "v": "885 €",
+      "align": "right"
+     },
+     {
+      "v": "885 €",
+      "align": "right"
+     },
+     {
+      "v": "383 € (382 € calculé)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2025"
+     },
+     {
+      "v": "01/07/2026",
+      "align": "right"
+     },
+     {
+      "v": "31/10/2026",
+      "align": "right"
+     },
+     {
+      "v": "4",
+      "align": "right"
+     },
+     {
+      "v": "0,80 %",
+      "align": "right"
+     },
+     {
+      "v": "27 367 € (variation)",
+      "align": "right"
+     },
+     {
+      "v": "219 €",
+      "align": "right"
+     },
+     {
+      "v": "219 €",
+      "align": "right"
+     },
+     {
+      "v": "104 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "Taux, point de départ et point d'arrêt sont conformes : 0,20 % par mois (art. 1727 III CGI, depuis le 01/01/2018), départ au 1er juillet de l'année suivant celle de l'imposition (BOI-CF-INF-10-10-20 § 70), arrêt au dernier jour du mois de la proposition de rectification (§ 130) ; proposition du 19/10/2026, donc 31/10/2026.",
+    "L'intérêt est assis sur les seuls droits, jamais sur la majoration (BOI-CF-INF-10-10-20 § 40) : vérifié (931 = 16 618 × 5,6 % ; 2 225 ≈ 39 729 × 5,6 %).",
+    "En 2023 le service a pris pour base l'IR après contrôle (39 729 €) et non la variation (40 693 €) : 54 € en faveur du contribuable, non revendiqué.",
+    "Aucun moyen autonome : les intérêts suivent le sort des droits (si la base tombe de 25 / 50 / 75 %, ils tombent à 3 397 / 2 066 / 946 € ; onglet « Scenarios CANON »). Ils ne sont pas une sanction : ils subsistent si la majoration de 40 % est déchargée (BOI-CF-INF-30-20 § 240 : décharge des majorations avec substitution des intérêts)."
+   ],
+   "titre": "Ce qu'il faut en retenir"
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 4",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-pasteur-chiffrage.xlsx",
+     "label": "R2 - Chiffrage PASTEUR : tableau du service (p. 59-79) reproduit, contrôle ligne à ligne par formule (barème 197, plafonnement QF, 1,25, PS, 1727, 1729), décomposition droits / majorations / intérêts et scénarios CANON 25 / 50 / 75 % (XLSX à formules, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026 (PDF scanné, 222 p. ; chiffrage p. 59-79)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "5",
+   "texte": "« Manquements délibérés » : majoration de 40 % (art. 1729 CGI) sur l'IR et sur les prélèvements sociaux, 54 914 €"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 64-65 ; p. 67-68, 71-72, 75-76",
+   "resume": [
+    "Titre p. 64 : « II - Manquements délibérés - Impôt sur les Société et TVA - Exercices clos au 31 mars 2022 et 31 mars 2023 ». Rappel de l'article 1729 ; « le manquement délibéré [...] est établi lorsqu'il est démontré que celui-ci avait la connaissance exacte des faits ou de la situation qui motivent les rehaussements ».",
+    "Quatre rubriques : « Conditions d'exploitation » (« en votre qualité de co-gérant [...] vous aviez toute latitude de pouvoir dissimuler une partie du chiffre d'affaires »), « Anomalies et caractère non probant de la comptabilité » (liste de neuf anomalies de la caisse), « Importance des minorations » (« discordances HT [...] 96 617 € / 69 432 € / 69 864 € »), « Répétition de l'infraction ».",
+    "Conclusion p. 65 : « la pénalité pour manquement délibéré sera appliquée : aux rappels de droits (à l'impôt sur les Sociétés) [...] aux rappels de droits (à la TVA) [...]. En conséquence, la majoration de 40 % prévue à l'article 1729 [...] sera donc appliquée consécutivement aux discordances constatées, l'absence de déclaration des sommes en question ne pouvant que résulter d'une volonté manifeste d'éluder l'impôt. »",
+    "Application dans les tableaux : code (03) « MANQUEMENT DELIBERE (40 %) » sur l'IR (16 277 + 11 068 + 10 947 = 38 292 €) et sur les prélèvements sociaux (6 647 + 4 777 + 5 198 = 16 622 €)."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**P. 64.** « II- Manquements délibérés - Impôt sur les Société et TVA. Exercices clos au 31 mars 2022 et 31 mars 2023. Pénalité de l'article 1729 du Code Général des Impôts (C.G.I.). L'article 1729 du Code Général des impôts dispose que lorsque la déclaration d'une personne physique ou morale fait apparaître une base d'imposition, ou des éléments servant à la liquidation de l'impôt, insuffisants, inexacts ou incomplets, le montant des droits mis à la charge du contribuable est assorti de l'intérêt de retard visé à l'article 1727 et d'une majoration de 40 % si le manquement délibéré de l'intéressé est établi. Le manquement délibéré d'un professionnel ou d'un particulier est établi lorsqu'il est démontré que celui-ci avait la connaissance exacte des faits ou de la situation qui motivent les rehaussements. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Conditions d'exploitation : Comme décrit ci-dessus, en votre qualité de co-gérant et de vos prérogatives dans l'exploitation de la société, vous aviez toute latitude de pouvoir dissimuler une partie du chiffre d'affaires. Anomalies et caractère non probant de la comptabilité : De nombreuses irrégularités relevées au cours de la vérification résultent de manquement délibéré. Le service a relevé, lors du contrôle sur place, de nombreuses anomalies et incohérences significatives et largement décrites en partie « REJET DE COMPTABILITE », puis détaillées dans toutes les annexes jointes à la présente proposition de rectifications ou remis en main propre lors de la restitution de fichier du 30 mars 2026. Sommairement résumées, celles-ci sont ainsi respectivement : Variabilité des données dans les fichiers de la caisse informatique ; En terme de montant de chiffre d'affaires ; En terme de montant de TVA, que ce soit en base et de taux appliqué sur les articles ; En terme de quantités d'articles qui y apparaissent ; En terme de fluctuation des prix de vente suivant les articles ; Importance des écarts constatés entre les quantités vendues et les quantités disponible ; Absence de trace, dans les données de la caisse, des offerts, des remises ; Absence de l'identification des produits supprimés et suivi de ces suppressions ; Faiblesse du coefficient de revente. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Importance des minorations : Les discordances HT relevée sur ces périodes sont significatives : 96 617 € sur l'année 2023 ; 69 432 € sur l'année 2024 ; 69 864 € sur l'année 2025. Répétition de l'infraction : [...] » (p. 64 ; la p. 66 est blanche)."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**P. 65.** « En définitive, comme le démontrent les paragraphes susvisés, l'ensemble des constatations faites et en raison du caractère répétitif, intentionnel et impossible à ignorer, de l'infraction précitée, la pénalité pour manquement délibéré sera appliquée : aux rappels de droits (à l'impôt sur les Sociétés) suite à rectifications du chiffre d'affaires sur tous les exercices clos visés par le contrôle ; aux rappels de droits (à la TVA) suite à rectifications du chiffre d'affaires sur tous les exercices clos visés par le contrôle. En conséquence, la majoration de 40 % prévue à l'article 1729 du Code général des Impôts, sera donc appliquée consécutivement aux discordances constatées, l'absence de déclaration des sommes en question ne pouvant que résulter d'une volonté manifeste d'éluder l'impôt. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Lignes « MAJORATIONS » des tableaux (code 03)",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Année"
+      },
+      {
+       "label": "Base IR",
+       "align": "right"
+      },
+      {
+       "label": "Majoration IR",
+       "align": "right"
+      },
+      {
+       "label": "Base PS",
+       "align": "right"
+      },
+      {
+       "label": "Majoration PS",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "2023"
+       },
+       {
+        "v": "40 693 €",
+        "align": "right"
+       },
+       {
+        "v": "16 277 €",
+        "align": "right"
+       },
+       {
+        "v": "16 618 €",
+        "align": "right"
+       },
+       {
+        "v": "6 647 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2024"
+       },
+       {
+        "v": "27 669 €",
+        "align": "right"
+       },
+       {
+        "v": "11 068 €",
+        "align": "right"
+       },
+       {
+        "v": "11 942 €",
+        "align": "right"
+       },
+       {
+        "v": "4 777 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2025"
+       },
+       {
+        "v": "27 367 €",
+        "align": "right"
+       },
+       {
+        "v": "10 947 €",
+        "align": "right"
+       },
+       {
+        "v": "12 995 €",
+        "align": "right"
+       },
+       {
+        "v": "5 198 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total"
+       },
+       {
+        "v": "95 729 €",
+        "align": "right"
+       },
+       {
+        "v": "38 292 €",
+        "align": "right"
+       },
+       {
+        "v": "41 555 €",
+        "align": "right"
+       },
+       {
+        "v": "16 622 €",
+        "align": "right"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "red",
+   "titre": "La motivation de la pénalité du foyer est celle de la société : elle ne vise ni l'impôt sur le revenu, ni les prélèvements sociaux, ni le contribuable",
+   "texte": "Le texte des p. 64-65 est titré « Impôt sur les Société et TVA - Exercices clos au 31 mars 2022 et 31 mars 2023 » et conclut que la pénalité « sera appliquée aux rappels de droits (à l'impôt sur les Sociétés) [...] (à la TVA) ». Or la proposition personnelle ne rappelle ni IS ni TVA : elle applique le code (03) à l'IR et aux prélèvements sociaux de M. PASTEUR, sans qu'une ligne ne le dise, ne le fonde ni ne l'explique. Les « discordances HT » citées (96 617 €...) sont en réalité des montants incluant la TVA (86 407 € HT + 10 210 € de TVA, p. 62). Les années visées (31/03/2022) ne sont pas celles du foyer (2023, 2024, 2025). L'article L. 80 D LPF impose une motivation écrite énonçant « les considérations de droit et de fait » de la sanction, « pour chaque année d'imposition » (BOI-CF-INF-30-20 § 10, 20 et 240) : à défaut, « la procédure est irrégulière et le juge prononce la décharge des majorations et amendes », les intérêts de retard leur étant substitués (§ 240, CE 22/02/1989 n° 70252 ; CE 11/04/2001 n° 175082). Enjeu : 54 914 € (IR 38 292 € + PS 16 622 €)."
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "**Charge de la preuve.** « La preuve de la mauvaise foi et des manœuvres frauduleuses incombe à l'administration » (art. L. 195 A LPF) ; les insuffisances « sont présumées involontaires » et « il appartient au service de réunir tous éléments d'information ou d'appréciation utiles » (BOI-CF-INF-10-20-20 § 30). La pénalité de l'article 1729 frappe « la déclaration » du contribuable : celle de M. PASTEUR (revenus de gérance 18 123 / 22 151 / 21 360 €, dividendes déclarés 7 534 / 7 543 / 7 549 €, p. 69-78) n'est critiquée en rien ; ce qui lui est reproché, c'est de ne pas avoir déclaré des sommes dont l'existence même résulte d'une reconstitution contestée.",
+    "**Le seul fait propre au foyer est une qualité.** « En votre qualité de co-gérant [...] vous aviez toute latitude de pouvoir dissimuler » (p. 64) : une latitude n'est pas un acte. Le montant et la répétition du rehaussement ne caractérisent pas l'intention (CE 2019 n° 412536). Le service, p. 60, décrit lui-même Mme BEHEM comme « la seule en charge de la gestion de la caisse » et M. PASTEUR comme en charge « de toute la conception culinaire » : rien, dans ses propres constatations, ne rattache à M. PASTEUR une manipulation de caisse ni une appréhension de fonds.",
+    "**Aucune appréhension tracée.** Ni flux bancaire, ni compte courant d'associé, ni enrichissement : la proposition n'en cite aucun. Le service déduit la part de 50 % de la détention du capital (p. 59) et ajoute que les deux gérants « demeurent à un même domicile », ce qui est un argument de train de vie et non une preuve de perception. Entre deux co-dirigeants, la répartition par moitié ne se présume pas : le service doit établir la part réellement appréhendée par chacun (CAA Versailles 23/05/2023 n° 21VE01600 ; CE n° 388887).",
+    "**Incohérence des 40 % sur les prélèvements sociaux.** La majoration frappe aussi 41 555 € de PS (16 622 €) : les p. 64-65 n'en disent pas un mot. Même si une pénalité IR était admise, celle sur les PS est dépourvue de toute motivation propre."
+   ],
+   "titre": "Sur le fond, le manquement délibéré n'est pas établi dans la personne de M. PASTEUR"
+  },
+  {
+   "kind": "schema",
+   "titre": "De quoi est fait le supplément de 196 945 € (onglet « Decomposition »)",
+   "legende": "Droits 137 284 € (IR 95 729 + PS 41 555) ; majorations de 40 % 54 914 € (IR 38 292 + PS 16 622) ; intérêts 4 747 € (IR 3 329 + PS 1 418). La majoration sur les PS (16 622 €) et les intérêts sur les PS (1 418 €) étaient masqués dans la ligne « solde » des lectures précédentes.",
+   "svg": "<svg viewBox=\"0 0 760 320\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"250\" x2=\"744\" y2=\"250\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"57.400000000000006\" y=\"113.01104148476674\" width=\"70\" height=\"136.98895851523326\" rx=\"3\" fill=\"#a0740d\"/><text x=\"92.4\" y=\"108.01104148476674\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">137 284 €</text><text x=\"92.4\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Droits IR + PS</text><rect x=\"202.20000000000002\" y=\"74.80133606049799\" width=\"70\" height=\"38.20970542426875\" rx=\"3\" fill=\"#b4452e\"/><text x=\"237.20000000000002\" y=\"69.80133606049799\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+38 292 €</text><text x=\"237.20000000000002\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Majorations 40</text><text x=\"237.20000000000002\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">% IR</text><rect x=\"347.0\" y=\"58.21505893832639\" width=\"70\" height=\"16.586277122171595\" rx=\"3\" fill=\"#b4452e\"/><text x=\"382.0\" y=\"53.21505893832639\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+16 622 €</text><text x=\"382.0\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Majorations 40</text><text x=\"382.0\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">% PS</text><rect x=\"491.80000000000007\" y=\"53.47826086956519\" width=\"70\" height=\"4.736798068761203\" rx=\"3\" fill=\"#b4452e\"/><text x=\"526.8000000000001\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+4 747 €</text><text x=\"526.8000000000001\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Intérêts IR +</text><text x=\"526.8000000000001\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">PS</text><rect x=\"636.6\" y=\"53.47826086956519\" width=\"70\" height=\"196.5217391304348\" rx=\"3\" fill=\"#6a4d0f\"/><text x=\"671.6\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#2a2015\">196 945 €</text><text x=\"671.6\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">Supplément</text><text x=\"671.6\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">notifié</text></svg>"
+  },
+  {
+   "kind": "tableau",
+   "titre": "Taux effectifs sur la base distribuée de 235 913 € (onglet « Decomposition », lignes 15-19)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Taux"
     },
     {
      "label": "2023",
@@ -40,77 +1948,18 @@
      "align": "right"
     },
     {
-     "label": "Total",
+     "label": "3 ans",
+     "align": "right"
+    },
+    {
+     "label": "Ce qu'il mesure",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Base RCM distribuée"
-     },
-     {
-      "v": "96 617 €",
-      "align": "right"
-     },
-     {
-      "v": "69 432 €",
-      "align": "right"
-     },
-     {
-      "v": "69 864 €",
-      "align": "right"
-     },
-     {
-      "v": "235 913 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Assiette IR ajoutée au revenu (× 1,25)"
-     },
-     {
-      "v": "120 771 €",
-      "align": "right"
-     },
-     {
-      "v": "86 790 €",
-      "align": "right"
-     },
-     {
-      "v": "87 330 €",
-      "align": "right"
-     },
-     {
-      "v": "294 891 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Supplément d'impôt NOTIFIÉ par le service"
-     },
-     {
-      "v": "83 391 €",
-      "align": "right"
-     },
-     {
-      "v": "56 724 €",
-      "align": "right"
-     },
-     {
-      "v": "56 830 €",
-      "align": "right"
-     },
-     {
-      "v": "196 945 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Taux effectif (supplément ÷ base RCM)"
+      "v": "Supplément ÷ base"
      },
      {
       "v": "86,3 %",
@@ -127,236 +1976,424 @@
      {
       "v": "83,5 %",
       "align": "right"
+     },
+     {
+      "v": "prélèvement total, sanctions et intérêts compris (CANON)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Hors majoration portée sur l'IR (38 292 €)"
+     },
+     {
+      "v": "69,5 %",
+      "align": "right"
+     },
+     {
+      "v": "65,8 %",
+      "align": "right"
+     },
+     {
+      "v": "65,7 %",
+      "align": "right"
+     },
+     {
+      "v": "67,3 %",
+      "align": "right"
+     },
+     {
+      "v": "lecture CANON des pages de taxation (ne retire que la majoration IR)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Hors toutes majorations (54 914 €)"
+     },
+     {
+      "v": "62,6 %",
+      "align": "right"
+     },
+     {
+      "v": "58,9 %",
+      "align": "right"
+     },
+     {
+      "v": "58,2 %",
+      "align": "right"
+     },
+     {
+      "v": "60,2 %",
+      "align": "right"
+     },
+     {
+      "v": "ce qui reste si la pénalité est déchargée (intérêts compris)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Droits seuls (IR + PS) ÷ base"
+     },
+     {
+      "v": "59,3 %",
+      "align": "right"
+     },
+     {
+      "v": "57,1 %",
+      "align": "right"
+     },
+     {
+      "v": "57,8 %",
+      "align": "right"
+     },
+     {
+      "v": "58,2 %",
+      "align": "right"
+     },
+     {
+      "v": "impôt stricto sensu sur une somme dont la perception n'est pas établie",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR ÷ base"
+     },
+     {
+      "v": "42,1 %",
+      "align": "right"
+     },
+     {
+      "v": "39,9 %",
+      "align": "right"
+     },
+     {
+      "v": "39,2 %",
+      "align": "right"
+     },
+     {
+      "v": "40,6 %",
+      "align": "right"
+     },
+     {
+      "v": "effet du 1,25 et de la tranche à 41 %, quotient familial plafonné",
+      "align": "right"
      }
     ]
-   ],
-   "minWidth": 640
+   ]
   },
   {
-   "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 720 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"89\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Base RCM</text><text x=\"89\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">96 617 €</text><text x=\"89\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">2023, par foyer</text><rect x=\"285\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"360\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Assiette IR</text><text x=\"360\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">120 771 €</text><text x=\"360\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">× 1,25</text><rect x=\"556\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"631\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Supplément notifié</text><text x=\"631\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">83 391 €</text><text x=\"631\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">liquidation du service</text><line x1=\"164\" y1=\"59\" x2=\"201\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54 L 210 59 L 201 64 Z\" fill=\"#cbb98f\"/><text x=\"182\" y=\"51\" text-anchor=\"middle\" font-size=\"10\" fill=\"#cbb98f\" font-weight=\"600\">× 1,25</text><line x1=\"435\" y1=\"59\" x2=\"472\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 472 54 L 481 59 L 472 64 Z\" fill=\"#cbb98f\"/><text x=\"453\" y=\"51\" text-anchor=\"middle\" font-size=\"10\" fill=\"#cbb98f\" font-weight=\"600\">barème + PS + 1729</text></svg>",
-   "titre": "Où se situe le supplément dans la cascade (année 2023)",
-   "legende": "La base RCM (discordance TTC ÷ 2) et l'assiette IR (× 1,25) sont recalculées par formule dans la pièce jointe. Le supplément est le montant notifié par le service ; sa liquidation interne reste celle du service (voir ventilation ci-dessous)."
+   "kind": "note",
+   "texte": "Le caractère confiscatoire, s'il est invoqué, doit l'être sur les droits seuls (58,2 %), jamais sur un ratio qui inclut la sanction dont on demande la décharge. Comparaison avec l'autre foyer, à base identique : BEHEM 172 703 € (73,2 % ; 58,8 % hors majoration IR) ; l'écart de 24 242 € ne vient que de l'IR au barème propre à chaque foyer (revenu et quotient familial)."
   },
   {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Notre réponse",
-   "sousTitre": ""
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce qui est **certain** : la base distribuée (235 913 €) est la moitié des discordances TTC de la reconstitution, et l'assiette d'impôt en est le produit par 1,25. Le supplément notifié (**196 945 €**) est en revanche le chiffre du **service**, porté sur une proposition scannée : nous le reprenons sans pouvoir le reconstituer, faute du revenu global du foyer et du détail de liquidation. Chacun de ces euros n'existe que parce que la reconstitution « société » existe."
+   "kind": "documents",
+   "titre": "Documents du point 5",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-pasteur-chiffrage.xlsx",
+     "label": "R2 - Chiffrage PASTEUR : tableau du service (p. 59-79) reproduit, contrôle ligne à ligne par formule (barème 197, plafonnement QF, 1,25, PS, 1727, 1729), décomposition droits / majorations / intérêts et scénarios CANON 25 / 50 / 75 % (XLSX à formules, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "R2 - Taxation des deux foyers : base RCM = TTC ÷ 2, × 1,25, suppléments notifiés PASTEUR 196 945 € et BEHEM 172 703 €, taux effectifs 83,5 % / 73,2 % et hors majoration IR 67,3 % / 58,8 % (XLSX à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-manquement-delibere-personnel-enjeu-40.xlsx",
+     "label": "R2 - Enjeu de la majoration de 40 % au niveau des foyers (XLSX)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026 (PDF scanné, 222 p. ; chiffrage p. 59-79)"
+    }
+   ]
   },
   {
    "kind": "titre",
-   "texte": "Le poids réel : un prélèvement de 83,5 % sur des sommes non établies",
-   "numero": "2.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Rapporté à la base distribuée, le prélèvement total atteint **86,3 % en 2023, 81,7 % en 2024 et 81,3 % en 2025**, soit **83,5 %** sur l'ensemble. Ce ratio additionne l'impôt, les prélèvements sociaux, la majoration de 40 % et les intérêts : apprécié **hors la majoration de 40 %** que nous contestons, il revient à **67,3 %**. Appliqué à des sommes dont l'existence même n'est pas établie, il nourrit, à titre subsidiaire, l'argument du caractère confiscatoire."
-  },
-  {
-   "kind": "titre",
-   "texte": "La ventilation du service n'est pas reconstituable",
-   "numero": "2.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service décompose le supplément en IR au barème, majoration de 40 %, intérêts et prélèvements sociaux. Cette ventilation, reproduite ci-dessous **telle que notifiée**, ne se reconstitue pas : la majoration de 40 % affichée **n'égale pas** 40 % de l'IR indiqué (sa base est le droit éludé net, non fourni), et la ligne « solde » **n'égale pas** 17,2 % de la base RCM (16 618 € attendus en 2023). Ce défaut de ventilation vérifiable est lui-même un **défaut de motivation** : nous en demandons le détail, foyer par foyer et année par année."
+   "texte": "Ce que cela fait tomber"
   },
   {
    "kind": "tableau",
-   "titre": "Ventilation notifiée par le service (non reconstituable en l'état)",
+   "titre": "Chiffrage du foyer PASTEUR selon l'issue sur la reconstitution (onglet « Scenarios CANON » : IR recalculé au barème de l'année sur revenu avant contrôle + assiette réduite, PS, intérêts et 40 % recalculés)",
+   "minWidth": 980,
    "colonnes": [
     {
-     "label": "Composante"
+     "label": "Issue"
     },
     {
-     "label": "2023",
+     "label": "Base distribuée (3 ans)",
      "align": "right"
     },
     {
-     "label": "2024",
+     "label": "IR",
      "align": "right"
     },
     {
-     "label": "2025",
+     "label": "PS",
      "align": "right"
     },
     {
-     "label": "Total",
+     "label": "Intérêts",
+     "align": "right"
+    },
+    {
+     "label": "Majorations 40 %",
+     "align": "right"
+    },
+    {
+     "label": "Supplément",
+     "align": "right"
+    },
+    {
+     "label": "Supplément hors majoration",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "IR au barème"
+      "v": "Reconstitution annulée (L. 52, méthode viciée)"
      },
      {
-      "v": "40 693 €",
+      "v": "0 €",
       "align": "right"
      },
      {
-      "v": "28 039 €",
+      "v": "0 €",
       "align": "right"
      },
      {
-      "v": "27 450 €",
+      "v": "0 €",
       "align": "right"
      },
      {
-      "v": "96 182 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Majoration 40 % (art. 1729)"
-     },
-     {
-      "v": "16 277 €",
+      "v": "0 €",
       "align": "right"
      },
      {
-      "v": "11 068 €",
+      "v": "0 €",
       "align": "right"
      },
      {
-      "v": "10 947 €",
+      "v": "0 €",
       "align": "right"
      },
      {
-      "v": "38 292 €",
+      "v": "0 €",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Intérêts de retard (art. 1727)"
+      "v": "Reconstitution réduite de 75 %"
      },
      {
-      "v": "2 225 €",
+      "v": "58 978 €",
       "align": "right"
      },
      {
-      "v": "885 €",
+      "v": "16 833 €",
       "align": "right"
      },
      {
-      "v": "219 €",
+      "v": "10 389 €",
       "align": "right"
      },
      {
-      "v": "3 329 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Solde : prélèvements sociaux + ajustements"
-     },
-     {
-      "v": "24 196 €",
+      "v": "946 €",
       "align": "right"
      },
      {
-      "v": "16 732 €",
+      "v": "10 888 €",
       "align": "right"
      },
      {
-      "v": "18 214 €",
+      "v": "39 056 €",
       "align": "right"
      },
      {
-      "v": "59 142 €",
+      "v": "28 168 €",
       "align": "right"
      }
     ],
     [
      {
-      "v": "= Supplément notifié"
+      "v": "Reconstitution réduite de 50 %"
      },
      {
-      "v": "83 391 €",
+      "v": "117 957 €",
       "align": "right"
      },
      {
-      "v": "56 724 €",
+      "v": "38 949 €",
       "align": "right"
      },
      {
-      "v": "56 830 €",
+      "v": "20 777 €",
+      "align": "right"
+     },
+     {
+      "v": "2 066 €",
+      "align": "right"
+     },
+     {
+      "v": "23 891 €",
+      "align": "right"
+     },
+     {
+      "v": "85 683 €",
+      "align": "right"
+     },
+     {
+      "v": "61 792 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Reconstitution réduite de 25 %"
+     },
+     {
+      "v": "176 935 €",
+      "align": "right"
+     },
+     {
+      "v": "65 503 €",
+      "align": "right"
+     },
+     {
+      "v": "31 167 €",
+      "align": "right"
+     },
+     {
+      "v": "3 397 €",
+      "align": "right"
+     },
+     {
+      "v": "38 668 €",
+      "align": "right"
+     },
+     {
+      "v": "138 735 €",
+      "align": "right"
+     },
+     {
+      "v": "100 067 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Maintien intégral (chiffres du service)"
+     },
+     {
+      "v": "235 913 €",
+      "align": "right"
+     },
+     {
+      "v": "95 729 €",
+      "align": "right"
+     },
+     {
+      "v": "41 555 €",
+      "align": "right"
+     },
+     {
+      "v": "4 747 €",
+      "align": "right"
+     },
+     {
+      "v": "54 914 €",
       "align": "right"
      },
      {
       "v": "196 945 €",
       "align": "right"
+     },
+     {
+      "v": "142 031 €",
+      "align": "right"
      }
     ]
-   ],
-   "minWidth": 640
+   ]
   },
   {
-   "kind": "titre",
-   "texte": "Les leviers propres au foyer",
-   "numero": "2.3"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ils s'ajoutent à la contestation du principe : **décharge de la majoration de 40 %** faute de motivation individualisée, contestation de la **clé de répartition de 50 %** faute d'appréhension établie, et demande du **détail de l'assiette sociale** pour vérifier l'exclusion du coefficient de 1,25 (réserve QPC n° 2017-643/650)."
-  },
-  {
-   "kind": "kpis",
+   "kind": "liste",
    "items": [
-    {
-     "label": "Supplément total notifié",
-     "valeur": "196 945 €",
-     "sub": "sur trois années (M. Thierry PASTEUR) - montant du service",
-     "couleur": "red"
-    },
-    {
-     "label": "Taux effectif global",
-     "valeur": "83,5 %",
-     "sub": "hors majoration de 40 % : 67,3 %",
-     "couleur": "red"
-    },
-    {
-     "label": "Si la reconstitution tombe",
-     "valeur": "0 €",
-     "sub": "plus de distribution, plus d'impôt personnel",
-     "couleur": "teal"
-    }
+    "**Si la reconstitution société tombe (nullité L. 52 ou méthode radicalement viciée) : 196 945 € à 0 €.** Aucune ligne du chiffrage n'a d'existence propre : base = TTC ÷ 2, tout le reste en découle par formule.",
+    "**Décharge de la majoration de 40 % du foyer : 54 914 €** (IR 38 292 € + PS 16 622 €), par défaut de motivation (L. 80 D LPF) et, au fond, faute de preuve d'un manquement délibéré personnel (L. 195 A LPF). Les intérêts (4 747 €) subsistent.",
+    "**Clé de 50 % non prouvée** : toute part inférieure réduit base, IR, PS, intérêts et majoration dans la même proportion, avec effet de tranche favorable (à 25 % de base en moins, le supplément tombe de 29,6 %, de 196 945 à 138 735 €).",
+    "**Réduction partielle de la reconstitution** : effet plus que proportionnel sur le foyer grâce au barème (−50 % de base = −56,5 % de supplément : 85 683 €).",
+    "**Prélèvements sociaux 2025 à 18,6 %** : 1 377 € si le taux de 17,2 % devait s'appliquer (à vérifier, point 3).",
+    "**À conserver quoi qu'il arrive** : CSG déductible supplémentaire de 6 570 € (2023) et 4 721 € (2024), « à déclarer au titre des revenus de 2026 » (p. 70, 74) : réduction d'impôt future si les PS sont maintenus et payés."
    ]
   },
   {
    "kind": "titre",
-   "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas"
+   "texte": "Ce que le service pourrait encore opposer"
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« Le chiffrage n'est qu'une application des barèmes : il n'est pas discutable. »** L'arithmétique n'est pas le débat ; c'est la **base** qui l'est. Chaque euro imposé est, à l'euro près, le chiffre d'affaires reconstitué réparti par moitié : si la reconstitution tombe, le supplément de **196 945 €** revient à **0 €**. Et puisque le service ne fournit pas le détail de sa liquidation, il ne peut pas davantage opposer que ce chiffrage serait acquis."
+   "kind": "liste",
+   "items": [
+    "**« Le chiffrage n'est qu'une application mécanique des barèmes. »** Exact, et démontré par nous (pièce, 0 € d'écart sur 27 lignes) : c'est précisément pourquoi il n'a aucune autonomie. Le débat porte sur la base (471 826 € TTC de reconstitution), sur la clé (50 % posée d'après le capital) et sur la pénalité (54 914 € motivés pour l'IS et la TVA).",
+    "**« La majoration est motivée par renvoi à la partie REJET DE COMPTABILITE. »** Le renvoi vise une comptabilité de société et des rappels d'IS et de TVA ; la sanction frappe ici l'IR et les PS d'une personne physique pour trois années (2023-2025) que le titre ne vise même pas (« exercices clos au 31 mars 2022 et 31 mars 2023 »). La motivation doit être propre à chaque impôt et à chaque année (BOI-CF-INF-30-20 § 240).",
+    "**« Les 50 % découlent du capital et de la cogérance. »** Le capital donne un droit aux bénéfices distribués, pas la preuve d'une appréhension de recettes occultes. Le service lui-même attribue la caisse et l'encaissement à Mme BEHEM seule (p. 60). Réponse chiffrée : chaque point de clé en moins vaut 2 359 € de base et environ 1 969 € de supplément (196 945 ÷ 100).",
+    "**« Le 1,25 est légal. »** Oui (art. 158-7-2°, LF 2021 art. 39), et correctement exclu de l'assiette des PS (réserve CC 2017-643/650 QPC § 17 : vérifié, 16 618 = 17,2 % × 96 617). Il explique 58 978 € d'assiette sur 3 ans ; nous ne le contestons pas en lui-même, nous contestons la base qu'il majore.",
+    "**« Le taux de 18,6 % en 2025 résulte de la LFSS 2026. »** Alors que le service le dise : la proposition ne cite que l'article 235 ter et le taux de 7,5 %, jamais la CSG à 10,6 %. Montant en jeu : 1 377 €.",
+    "**« Le caractère confiscatoire ne s'apprécie pas sanctions comprises. »** Nous l'accordons : le taux pertinent est celui des droits, 58,2 % de sommes dont la perception n'est pas établie, après un impôt sur les sociétés déjà réclamé sur les mêmes recettes (97 510 € + 40 % + intérêts au niveau société)."
+   ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« La répartition par moitié résulte de la cogérance. »** Aucun flux bancaire, aucun mouvement de compte courant d'associé, aucun enrichissement personnel n'est tracé au foyer de M. Thierry PASTEUR. En présence de deux co-maîtres, il appartient au service de prouver la part réellement appréhendée par chaque foyer, non de la déduire du capital."
+   "kind": "titre",
+   "texte": "Points de vigilance pour la réunion"
   },
   {
-   "kind": "piecejointe",
-   "intro": "Recalcul par formule de la base RCM (discordance TTC ÷ 2), de l'assiette IR (× 1,25) et du taux effectif de M. Thierry PASTEUR (avec et sans la majoration de 40 %). Les montants notifiés par le service sont les entrées ; ils ne sont pas recalculés.",
+   "kind": "liste",
+   "items": [
+    "**Option pour le barème (case 2OP).** Le service taxe au barème avec le 1,25 ; les feuilles montrent que les dividendes déjà déclarés (7 534 € en 2023) étaient eux-mêmes au barème avec abattement de 40 % et restitution du PFU de 964 € : l'option globale semble avoir été exercée chaque année. Si elle ne l'avait pas été, les revenus rectifiés resteraient au PFU de 12,8 % (RM Klinkert n° 3778, JO AN 24/10/2023), soit 12,8 % × 294 891 = 37 746 € d'IR au lieu de 95 729 €. À vérifier sur les 2042 de 2023, 2024 et 2025 avant la réunion ; l'option est irrévocable.",
+    "**Déclarations 2042 et avis d'imposition d'origine** : à produire pour confirmer les revenus avant contrôle (21 237 / 25 125 / 23 540 €) et le quotient (1,5 part, enfant majeur rattaché) ; la p. 65 imprime « 1,5[?] Part » pour 2025 alors que les tableaux retiennent 1,5 : lever l'ambiguïté.",
+    "**Prélèvements sociaux 2025 à 18,6 %** : vérifier l'applicabilité de l'article 12 de la LFSS 2026 aux revenus réputés distribués recouvrés par rôle (L. 136-6 CSS) ; sinon demander le retour à 17,2 % (1 377 €).",
+    "**Intérêts 2023** : base 39 729 € au lieu de 40 693 € (54 € en faveur du contribuable) : ne pas soulever.",
+    "**Le gain principal n'est pas sur cette page** : 196 945 € tombent avec la reconstitution ; en cas de maintien même partiel, la décharge de la majoration (54 914 €) et la clé de répartition sont les seuls leviers propres au foyer, la contestation de l'arithmétique étant sans objet.",
+    "**Désignation du 16/06/2026** : elle a éteint l'amende de 100 % (471 826 €) mais ouvre la procédure personnelle ; elle a été faite « sous toutes réserves » et ne vaut pas reconnaissance d'une appréhension : le rappeler en ouverture.",
+    "**Commission départementale** : la question de l'appréhension et de la clé est une question de fait (L. 59 A LPF) ; celle de la motivation de la pénalité est une question de droit, à réserver au contentieux."
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Toutes les pièces de la page",
    "fichiers": [
     {
+     "fichier": "pieces-reponse-2/R2-pasteur-chiffrage.xlsx",
+     "label": "R2 - Chiffrage PASTEUR : tableau du service (p. 59-79) reproduit, contrôle ligne à ligne par formule (barème 197, plafonnement QF, 1,25, PS, 1727, 1729), décomposition droits / majorations / intérêts et scénarios CANON 25 / 50 / 75 % (XLSX à formules, recalculé LibreOffice)"
+    },
+    {
      "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
-     "label": "Chiffrage de la taxation personnelle : base, × 1,25, montants notifiés, taux effectif par foyer (XLSX à formules)"
+     "label": "R2 - Taxation des deux foyers : base RCM = TTC ÷ 2, × 1,25, suppléments notifiés PASTEUR 196 945 € et BEHEM 172 703 €, taux effectifs 83,5 % / 73,2 % et hors majoration IR 67,3 % / 58,8 % (XLSX à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-distributions-et-majoration.xlsx",
+     "label": "R2 - Cascade TTC → HT ÷ 2 + TVA ÷ 2 → base RCM → × 1,25 par co-gérant, contrôle QPC de l'assiette sociale (XLSX)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-exposition-et-scenarios.xlsx",
+     "label": "R2 - Exposition totale 582 796 € (société 213 148 € + foyers 369 648 €) et rappel initial 684 974 € (XLSX)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-manquement-delibere-personnel-enjeu-40.xlsx",
+     "label": "R2 - Enjeu de la majoration de 40 % au niveau des foyers (XLSX)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026 (PDF scanné, 222 p. ; chiffrage p. 59-79)"
     }
    ]
   },
   {
    "kind": "note",
-   "texte": "Sources : proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026, « CONSEQUENCES FINANCIERES » (années 2023, 2024, 2025). Les montants et la ventilation sont ceux notifiés par le service, sur un document scanné ; la base RCM et l'assiette × 1,25 sont recalculées à partir des discordances TTC de la reconstitution du 18/05/2026."
+   "texte": "Sources : proposition de rectification personnelle de M. Thierry PASTEUR du 19/10/2026 (PDF scanné, lecture OCR et visuelle), p. 59-65 (distributions, 1,25, intérêts, manquement délibéré) et p. 67-79 (conséquences financières 2023, 2024, 2025). Droit vérifié : art. 158-7-2°, 197 I-1 et I-2, 200 A, 1727, 1729 CGI ; L. 136-6 CSS ; L. 57, L. 80 D, L. 195 A LPF ; CC 2017-643/650 QPC ; BOI-RPPM-RCM-20-10-20-10 § 120-150 ; BOI-CF-INF-10-10-20 § 40, 70, 130 ; BOI-CF-INF-10-20-20 § 20-30 ; BOI-CF-INF-30-20 § 10, 20, 240 ; BOI-IR-LIQ-20-20-20 § 40 ; RM Klinkert n° 3778 (JO AN 24/10/2023) ; LF 2021 art. 39 ; LFSS 2026 art. 12."
   }
  ]
 }
