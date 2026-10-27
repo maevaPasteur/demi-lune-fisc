@@ -3,85 +3,1691 @@
   "slug": "synthese-et-demande",
   "source": "Synthèse de la Réponse 2",
   "limites": [
-   "La part associés (369 648 € = PASTEUR 196 945 € + BEHEM 172 703 €) repose sur les montants NOTIFIÉS par le service dans des propositions du 19/10/2026 scannées sans couche texte ; leur ventilation interne n'est pas reconstituable (voir pages chiffrage).",
-   "Les montants résiduels des scénarios sont des approximations proportionnelles : la base distribuée baisse linéairement avec la reconstitution, mais l'IS (tranche à 15 % jusqu'à 42 500 €) et l'IR (barème progressif) ne baissent pas strictement au prorata. Chiffres donnés à titre indicatif, précédés de « ≈ ».",
-   "La Commission départementale (art. L. 59 A du LPF) n'est compétente que sur les questions de fait de la reconstitution (résultat IS/BIC et chiffre d'affaires/TVA) ; la qualification en revenus distribués, l'IR des associés et les pénalités relèvent de la voie contentieuse."
+   "Les suppléments personnels (196 945 € + 172 703 € = 369 648 €) et leurs ventilations sont les montants notifiés par le service sur des propositions scannées (OCR relu) ; ils sont repris, non recalculés.",
+   "Les scénarios de réduction sont proportionnels : exacts sur la base distribuée, approximatifs sur l'impôt (IS à 15 % jusqu'à 42 500 €, barème progressif) ; montants précédés de « ≈ ».",
+   "Le total de ≈ 96 149 € TTC des postes liquides chiffrés additionne quatre postes aux périmètres disjoints, calculés par la mécanique du service ; la dégustation et les cocktails ne sont pas convertis en euros ; trois postes dépendent d'attestations ou d'une mesure à produire.",
+   "La commission (L. 59 A) n'est compétente que sur les questions de fait de la reconstitution ; revenus distribués, IR des foyers et pénalités relèvent de la voie contentieuse.",
+   "Légifrance et Juricaf étant inaccessibles depuis l'environnement de rédaction, les textes sont vérifiés par la doctrine BOFiP et par leur reproduction dans les décisions citées."
   ]
  },
  "entete": {
-  "reponseCourte": "Après la désignation du 16/06/2026, l'exposition réelle est de 582 796 € (société 213 148 € + associés 369 648 €), et non 684 974 €. Tout dépend de la reconstitution : si elle tombe, tout tombe ; si elle est réduite, l'exposition baisse d'autant. Nous demandons la Commission sur les seules questions de fait de la reconstitution, et la décharge contentieuse pour le reste.",
+  "reponseCourte": "Les dix motifs du rejet ne désignent aucune recette occultée et la reconstitution extrapole 75,2 % de son rehaussement : nous demandons l'abandon des 582 796 € (société 213 148 €, foyers 369 648 €), la constatation de l'abandon de l'amende de 100 % (471 826 €), subsidiairement la réduction poste par poste répercutée sur la base de chaque foyer (176 935 / 117 957 / 58 978 € à 25 / 50 / 75 %), en tout état de cause la décharge des majorations de 40 % (162 532 €) et le retrait de la part TVA (49 926 €) de la base distribuée, avec saisine de la commission sur les seules questions de fait.",
   "statut": "partiel"
  },
  "sections": [
   {
    "kind": "chapitre",
-   "source": "nous",
+   "source": "neutre",
    "numero": 1,
-   "titre": "L'exposition réelle, après la désignation",
-   "sousTitre": ""
+   "titre": "Synthèse et demande : ce que l'ensemble de la réponse fait tomber",
+   "sousTitre": "Récapitulatif grief par grief des réponses aux propositions du 18/05/2026 (société) et du 19/10/2026 (M. PASTEUR, Mme BEHEM), exposition chiffrée, scénarios et demandes."
   },
   {
-   "kind": "paragraphe",
-   "texte": "La désignation des bénéficiaires du 16 juin 2026 écarte en droit l'amende de 100 % (article 1759, 471 826 €), remplacée par la taxation personnelle des deux associés ; le service n'en a toutefois pas formellement prononcé l'abandon. L'exposition se lit désormais en deux étages. Elle agrège trois contribuables distincts : la SARL, qui ne répond que de 213 148 €, et les deux foyers."
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Rappel initial (18/05/2026)",
+     "valeur": "684 974 €",
+     "sub": "société 213 148 € + amende de 100 % 471 826 €",
+     "couleur": "gold"
+    },
+    {
+     "label": "Exposition réelle après désignation",
+     "valeur": "582 796 €",
+     "sub": "société 213 148 € + foyers 369 648 € (196 945 + 172 703)",
+     "couleur": "red"
+    },
+    {
+     "label": "Si la reconstitution tombe",
+     "valeur": "0 €",
+     "sub": "aucune imposition n'a d'autre assiette que la discordance reconstituée",
+     "couleur": "teal"
+    },
+    {
+     "label": "Majorations de 40 % (sanction détachable)",
+     "valeur": "162 532 €",
+     "sub": "société 58 823 € + PASTEUR 54 914 € + BEHEM 48 795 € = 27,9 % de 582 796 €",
+     "couleur": "red"
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Rejet de la comptabilité** (18/05 p. 14-35 ; 04/09 p. 3-58 et 93) : dix motifs maintenus (inventaires, suppressions « DEL », quantités, articles à 0 €, TVA, fichiers Événement et Règlement, tables « virtuelles », consommation supérieure aux achats, prix des menus, coefficient) ; conclusion p. 35 : « la totalité de ces manquements et anomalies conduit le service à procéder à une reconstitution de chiffre d'affaires ».",
+    "**Reconstitution du chiffre d'affaires** (18/05 p. 36-53 ; 04/09 p. 59-93) : CA reconstitué 597 265,42 / 577 522,00 / 575 252,68 € TTC ; discordances TTC 193 234,55 / 138 863,57 / 139 727,76 € = 471 825,88 € ; onze corrections demandées toutes refusées ; « le service n'a nullement exagéré le chiffre d'affaires reconstitué » (p. 93) ; rappels IS 97 510 €, TVA 49 547 € « inchangés » (p. 94-95).",
+    "**Distributions** (19/10 p. 59-62) : les dissimulations TTC sont réputées distribuées (art. 109-1-1° pour la part HT, 109-1-2° pour la part TVA « en sus ») et réparties par moitié : 96 617 / 69 432 / 69 864 € par foyer, soit 235 913 € sur trois ans.",
+    "**Désignation des bénéficiaires** (04/09 p. 95 ; 19/10 p. 59-60) : le courrier du 16/06/2026 désigne M. PASTEUR et Mme BEHEM ; capital 50 / 50, co-gérants, même domicile ; « toute latitude à pouvoir appréhender » ; une proposition est adressée à chacun. L'amende de 100 % (art. 1759, 471 826 €) n'est plus réclamée mais son abandon n'est pas écrit.",
+    "**Majorations d'assiette et liquidation personnelle** (19/10 p. 62-63, 65-80) : coefficient de 1,25 (art. 158-7-2°) : assiette 120 771 / 86 790 / 87 330 € = 294 891 € par foyer ; IR au barème (« taux forfaitaire de 12,80 % » annoncé p. 62), CSG et prélèvement de solidarité ; suppléments notifiés 196 945 € (PASTEUR) et 172 703 € (BEHEM).",
+    "**Pénalités** (18/05 p. 57-58 ; 04/09 p. 94-95 ; 19/10 p. 63-65) : majoration de 40 % pour manquement délibéré (art. 1729) sur l'IS, la TVA, l'IR et les prélèvements sociaux : 58 823 € (société) + 54 914 € (PASTEUR) + 48 795 € (BEHEM) ; intérêts de retard (art. 1727) 16 143 € ; « la volonté de dissimulation a bien été établie » (04/09 p. 94)."
+   ],
+   "titre": "Ce que le service maintient, en résumé"
+  },
+  {
+   "kind": "titre",
+   "texte": "Le rejet de la comptabilité : dix motifs, aucun euro de recette occultée désigné",
+   "numero": "1"
+  },
+  {
+   "kind": "reproche",
+   "page": "18/05 p. 14-35 ; 04/09 p. 3-58, 93",
+   "resume": [
+    "Les motifs du rejet sont maintenus dans la réponse du 04/09/2026 (parties A à K ; les factures sans détail, partie B, sont traitées avec les prix des menus) : suppressions « DEL » (21 302 lignes, 430 763,15 €), articles à 0 € (272 lignes), quantités anormales, inventaires non conformes, fichiers Événement et Règlement, tables « virtuelles », TVA, consommation vendue supérieure aux achats, instabilité des prix du Menu Demi Lune, coefficient de revente « faible ».",
+    "Le service en déduit (18/05 p. 35) une comptabilité « non probante et non sincère » et le droit de reconstituer le chiffre d'affaires.",
+    "Le 04/09 (p. 93), il ajoute que la méthode de la défense « conforte le service dans son opinion de considérer que le rejet de comptabilité est tout à fait légitime » et liste trois motifs « absents » de la réponse (documentation de la caisse, taux de TVA par article, encaissements par mode de règlement)."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition du 18/05/2026, XVIII, conclusion du rejet de comptabilité (p. 35).** « En conclusion, la totalité de ces manquements et anomalies conduit le service à procéder à une reconstitution de chiffre d'affaires, les éléments présentés ne permettant manifestement pas d'appréhender l'intégralité de l'activité de la société. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du 04/09/2026, p. 93.** « En fait, la méthode de Maître THIVEND conforte le service dans son opinion de considérer que le rejet de comptabilité est tout à fait légitime et que cela l'autorisait à procéder à une reconstitution de chiffre d'affaires à la hauteur de ce qui a été établi. » Puis « U- Motifs de rejet de comptabilité absents dans la réponse » : a) documentation de la caisse informatique ; b) erreurs d'application de taux de TVA (annexes C-1 à C-3) ; c) différentiel d'encaissements entre comptabilité et données de caisse, « même si les écarts ne semblent pas significatifs »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Motivation de la majoration de 40 % reprise du rejet (18/05 p. 57-58 ; 19/10 p. 64).** « Variabilité des données dans les fichiers de la caisse informatique (montant de CA ; montant de TVA en base et taux appliqué ; quantités d'articles ; fluctuation des prix de vente) ; importance des écarts entre quantités vendues et quantités disponibles ; absence de trace des offerts et des remises dans la caisse ; absence d'identification des produits supprimés et de suivi de ces suppressions ; faiblesse du coefficient de revente. »"
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Suppressions « DEL »** : 21 302 lignes = 430 763,15 € ; 99,7 / 99,7 / 99,6 % ont la forme d'un prix de la carte ou de son multiple ; 4 fautes de frappe = 138 003,10 € (32,0 %) impossibles à encaisser (27,40 € × 2 518 ; 45 € × 999) ; totalisateur perpétuel 977 739,78 → 2 253 930,98 € sans une rupture sur 16 605 tickets ; 89 exemples datés vérifiés 89 sur 89 ; espèces 0,94 / 1,86 / 1,23 %. Les lignes « DEL » sont les traces de correction que le BOI-TVA-DECLA-30-10-30 invoqué par le service impose. Statut : démonté.",
+    "**Articles à 0 €** : 272 lignes sur 97 769 (0,28 %), 0,00 € encaissé, reconnues « non significatives » par le service. Démonté.",
+    "**Quantités inférieures à 1** : 5 012 des 5 062 articles fractionnés (99,0 %) se referment sur un entier, 1 849 notes sur 1 849 encaissées ; le chiffrage de 62 487,87 € compte le prix entier d'articles payés une fois ; résidu concédé 50 articles / 8 tables / 264,98 €. Démonté.",
+    "**Inventaires de stocks** : aucun texte n'exige la contenance (R. 123-177 c. com.) ; 6 rapprochements nuls sur 6 ; le service reprend lui-même nos inventaires au centime (variation 2023-2024 : −1 029,67 € = son compte 310200). Partiel (date du relevé 2025 à attester).",
+    "**Fichiers Événement et Règlement** : les quatre montants « fluctuants » sont quatre lectures des mêmes compteurs ; l'annexe C retombe sur son propre CA à −0,04 / 44,58 / 131,08 € ; TVA 135 065,01 € contre 135 084,69 € (19,68 €). Démonté.",
+    "**Tables « virtuelles »** : le numéro est un rang d'addition quotidien (659 journées sur 659, suite 1..n), 0 numéro de terrasse 101-125 ; aucun couvert ni recette rattaché. Démonté.",
+    "**TVA** : 0 montant de taxe négatif sur 29 588 lignes ; écart −12,89 € à périmètre égal ; excédent 192,33 € du 445710 = TVA sur pourboires (185,24 €). Démonté.",
+    "**Consommation supérieure aux achats** : 4 écarts mineurs sur 203 pourcentages, 12 produits sur 65 (708,3 L) expliqués par regroupements de libellés ; bilan global +3 057,6 L achetés non servis (28,8 %) ; Calvados : dose de cuisine, pas une recette. Partiel.",
+    "**Prix des menus** : prix de carte unique 45,00 € stable (B1/B2/B3) ; 61 conversions au forfait : 6 728,50 € supprimés = 6 728,49 € encaissés ; prix libre (art. L. 410-2 c. com.) ; grief jamais chiffré par le service. Démonté.",
+    "**Coefficient de revente** : le repère 3,85 × (1 − 0,15) = 3,2725 suppose 85 % d'alcool revendu ; la part mesurée est 60,77 % (6 455 L sur 10 622 L) et donne 2,383251, le niveau des coefficients déclarés ; le tableau p. 34 ne s'additionne pas (+2 000,00 € et +20,00 €). Partiel.",
+    "**Motifs « absents » (04/09 p. 93)** : le certificat de conformité de la caisse (01/12/2018) a été transmis le 13/01/2026 (18/05 p. 3) ; les écarts de TVA par article sont sans incidence sur la taxe due (−18,76 € sur 135 084,69 €) ; les encaissements par mode de règlement se reconstituent au centime (annexes F et G), le service lui-même les juge « pas significatifs »."
+   ],
+   "titre": "Ce que la réponse établit, motif par motif"
   },
   {
    "kind": "tableau",
-   "titre": "Exposition totale actuelle",
+   "titre": "Les dix motifs du rejet : euros rattachés par le service, résultat de la réponse",
    "colonnes": [
     {
-     "label": "Niveau"
+     "label": "Motif"
     },
     {
-     "label": "Détail"
+     "label": "Montant rattaché par le service",
+     "align": "right"
     },
     {
-     "label": "Montant",
+     "label": "Résultat de la réponse"
+    },
+    {
+     "label": "Statut"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Suppressions « DEL »"
+     },
+     {
+      "v": "430 763,15 € (lignes, pas un rappel)",
+      "align": "right"
+     },
+     {
+      "v": "99,6 à 99,7 % = prix de carte ; 32,0 % = 4 fautes de frappe ; totalisateur continu"
+     },
+     {
+      "v": "démonté"
+     }
+    ],
+    [
+     {
+      "v": "Articles à 0 €"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "272 / 97 769 = 0,28 % ; « non significatif » (service)"
+     },
+     {
+      "v": "démonté"
+     }
+    ],
+    [
+     {
+      "v": "Quantités < 1"
+     },
+     {
+      "v": "62 487,87 € (hors rehaussement)",
+      "align": "right"
+     },
+     {
+      "v": "99,0 % refermées, 1 849 / 1 849 encaissées ; résidu 264,98 €"
+     },
+     {
+      "v": "démonté"
+     }
+    ],
+    [
+     {
+      "v": "Inventaires"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "6 / 6 rapprochements nuls ; repris au centime par le service"
+     },
+     {
+      "v": "partiel"
+     }
+    ],
+    [
+     {
+      "v": "Fichiers E / F"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "4 lectures d'un même compteur ; annexe C exacte à 0,04 / 44,58 / 131,08 €"
+     },
+     {
+      "v": "démonté"
+     }
+    ],
+    [
+     {
+      "v": "Tables virtuelles"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "rang d'addition 1..n, 659 journées sur 659"
+     },
+     {
+      "v": "démonté"
+     }
+    ],
+    [
+     {
+      "v": "TVA"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "0 taxe négative / 29 588 lignes ; 192,33 € = pourboires"
+     },
+     {
+      "v": "démonté"
+     }
+    ],
+    [
+     {
+      "v": "Conso > achats"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "+3 057,6 L achetés non servis ; 12 produits = libellés"
+     },
+     {
+      "v": "partiel"
+     }
+    ],
+    [
+     {
+      "v": "Prix des menus"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "45,00 € stable ; 6 728,50 € = 6 728,49 €"
+     },
+     {
+      "v": "démonté"
+     }
+    ],
+    [
+     {
+      "v": "Coefficient"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "repère non mesuré (85 %) ; 60,77 % → 2,383251"
+     },
+     {
+      "v": "partiel"
+     }
+    ]
+   ],
+   "minWidth": 640
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Droit.** Le rejet d'une comptabilité suppose des irrégularités « ayant un caractère de gravité indiscutable » et « une comptabilité ne doit pas être écartée si elle n'est entachée que d'irrégularités insuffisantes » (BOI-CF-IOR-10-20, § 90 ; § 60 : rejet « à bon escient et avec la plus grande circonspection ») ; la seule insuffisance du coefficient par rapport à la branche ne suffit pas (§ 130). En procédure contradictoire, et tant que la commission n'a pas rendu d'avis conforme sur une comptabilité gravement irrégulière, la charge de la preuve pèse sur l'administration (art. L. 192 LPF, al. 1 ; BOI-CTX-DG-20-20-10 § 160 et 190) et, devant le juge, la preuve des « graves irrégularités » lui incombe en tout état de cause (L. 192 al. 3 ; § 170)."
+  },
+  {
+   "kind": "alerte",
+   "couleur": "gold",
+   "titre": "Le levier de procédure qui dépend du rejet (art. L. 52 LPF)",
+   "texte": "Les interventions sur place ont duré du 12/01/2026 au 12/05/2026, soit quatre mois (18/05 p. 1 et 6-7). Pour une entreprise sous les seuils de l'art. 302 septies A du CGI (CA déclaré 403 370 à 438 281 €), la vérification sur place ne peut excéder trois mois « sous peine de nullité de l'imposition » (L. 52 I ; BOI-CF-PGR-20-30 § 50-60 et § 210 : « nullité absolue et inconditionnelle »). Le passage à six mois notifié le 30/03/2026 (18/05 p. 6) n'est possible qu'« en cas de graves irrégularités privant de valeur probante la comptabilité » (L. 52 II 4° ; § 100 et 140). Les FEC ont été remis dès le 12/01/2026 (pas de suspension au titre de L. 47 A I, § 175) et l'option L. 47 A II a été retournée avec les fichiers le 13/03/2026, reçue le 16/03 (prorogation au plus de trois jours, § 180). Si le rejet tombe, la durée légale est dépassée et l'imposition est nulle ; ce moyen, de légalité externe, se soulève au stade contentieux (réclamation puis tribunal), il n'a pas à figurer dans les observations."
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
+     "label": "R2 : suppressions « DEL », 17 onglets à formules (ventilation en euros, 4 grosses lignes, totalisateur, tickets à zéro)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-cas-suppressions-89-exemples.xlsx",
+     "label": "R2 : les 89 exemples datés (3 familles), vérifiés par formule"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-articles-zero-euro.xlsx",
+     "label": "R2 : 272 articles à 0 € sur 97 769, décompte par exercice"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
+     "label": "R2 : 5 062 articles fractionnés, test d'entier, résidu 8 tables"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-inventaire-de-stocks-chaine.xlsx",
+     "label": "R2 : chaîne des inventaires, 6 rapprochements"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-fichiers-EF-reconciliation.xlsx",
+     "label": "R2 : réconciliation des annexes B, C, F, G au centime"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-tables-virtuelles-numeros.xlsx",
+     "label": "R2 : rang d'addition 1..n sur 659 journées"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+     "label": "R2 : bouclage TVA par formule depuis G1, G2, G3 (29 588 lignes)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
+     "label": "R2 : bilan matière produit par produit"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-menus-prix.xlsx",
+     "label": "R2 : prix du Menu Demi Lune, 61 conversions, 27 onglets"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-coefficient-revente.xlsx",
+     "label": "R2 : cascade 10 622 L, part revendue 60,77 %, coefficient 2,383251"
+    }
+   ],
+   "titre": "Pièces du bloc « rejet »"
+  },
+  {
+   "kind": "titre",
+   "texte": "La reconstitution : 75,2 % de cuisine jamais mesurée et des liquides sur-évalués",
+   "numero": "2"
+  },
+  {
+   "kind": "reproche",
+   "page": "18/05 p. 36-53 ; 04/09 p. 59-93",
+   "resume": [
+    "La méthode part des achats de liquides (stocks + factures), applique des doses figées (vin 15 cl, pichet 50 cl), retranche trois forfaits de 5 % (remises, pertes, personnel) et multiplie le CA liquides par le rapport liquides/solides lu dans la caisse (2,94 / 3,02 / 3,10) pour obtenir la cuisine.",
+    "Onze corrections demandées le 10/07/2026 (doses, bière, crémant, dégustation, alcool de cuisine et des menus, personnel, abattements, variation de stock, ventes sans achat, coefficient) sont toutes refusées : CA reconstitué et rappels « demeurent inchangés ».",
+    "Test de la p. 93 : coefficient attendu 3,85 × (1 − 0,15) = 3,2725 contre 3,40 / 3,14 / 3,05 reconstitués : « le service n'a nullement exagéré le chiffre d'affaires reconstitué »."
+   ],
+   "detail": [
+    {
+     "kind": "tableau",
+     "titre": "Récapitulation du service par exercice (18/05 p. 52), TTC",
+     "colonnes": [
+      {
+       "label": "Poste"
+      },
+      {
+       "label": "2022-2023",
+       "align": "right"
+      },
+      {
+       "label": "2023-2024",
+       "align": "right"
+      },
+      {
+       "label": "2024-2025",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "CA liquides avant abattements"
+       },
+       {
+        "v": "178 341,42 €",
+        "align": "right"
+       },
+       {
+        "v": "169 014,34 €",
+        "align": "right"
+       },
+       {
+        "v": "165 065,33 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Remise 5 % + pertes 5 % + personnel 5 %"
+       },
+       {
+        "v": "3 × 8 917,07 €",
+        "align": "right"
+       },
+       {
+        "v": "3 × 8 450,72 €",
+        "align": "right"
+       },
+       {
+        "v": "3 × 8 253,27 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CA liquides après abattements"
+       },
+       {
+        "v": "151 590,21 €",
+        "align": "right"
+       },
+       {
+        "v": "143 662,19 €",
+        "align": "right"
+       },
+       {
+        "v": "140 305,53 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CA solides = liquides × rapport"
+       },
+       {
+        "v": "445 675,21 € (× 2,94)",
+        "align": "right"
+       },
+       {
+        "v": "433 859,81 € (× 3,02)",
+        "align": "right"
+       },
+       {
+        "v": "434 947,14 € (× 3,10)",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total général reconstitué"
+       },
+       {
+        "v": "597 265,42 €",
+        "align": "right"
+       },
+       {
+        "v": "577 522,00 €",
+        "align": "right"
+       },
+       {
+        "v": "575 252,68 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Discordance TTC"
+       },
+       {
+        "v": "193 234,55 €",
+        "align": "right"
+       },
+       {
+        "v": "138 863,57 €",
+        "align": "right"
+       },
+       {
+        "v": "139 727,76 €",
+        "align": "right"
+       }
+      ]
+     ],
+     "minWidth": 640
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du 04/09/2026, p. 92-93.** « Il est normal que les rehaussements proposés correspondent à 75 % puisqu'il s'agit d'une conséquence directe du rapport. » « Maître THIVEND compte ainsi deux fois le chiffre d'affaires liquides reconstitués. Or tel n'est pas le cas dans la méthode du service. » « Le coefficient moyen de l'exploitation de la société devrait être de : 3,85 x (1-0,15) = 3,2725. Sachant que la méthode de reconstitution du service aboutit à des coefficients reconstitués, suivant les exercices, à 3,40, 3,14 et 3,05, il apparaît que le service n'a nullement exagéré le chiffre d'affaires reconstitué. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du 04/09/2026, p. 94 (A- Rappels).** « Tout au long de la présente réponse, le service s'est attaché à démontrer que les arguments de Maître THIVEND n'apportaient aucun élément pertinent susceptible de modifier les montants de chiffres d'affaires ressortant de la méthode de reconstitution employée. [...] Tous les rappels et rehaussements demeurant inchangés, le profit sur le trésor demeure également identique. »"
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**La cuisine n'est jamais mesurée** : le rapport 2,94 / 3,02 / 3,10 est mesuré sur le couple réel (liquides de caisse, cuisine de caisse) puis appliqué à un CA liquides majoré ; il fabrique 1 314 482 − 959 561 = **354 921 € de cuisine « fantôme »**, soit **75,2 %** du rehaussement de 471 826 €, sans un couvert ni un achat alimentaire supplémentaire, alors que la cuisine réelle (959 561 €) est enregistrée plat par plat. Le service l'admet p. 92 (« conséquence directe du rapport »).",
+    "**Le levier existe, le service l'applique lui-même** : chaque euro de liquides retranché après abattements retire 3,94 / 4,02 / 4,10 € du total reconstitué ; le service chiffre son propre abattement de 5 % à 35 133,26 € = 8 917,07 € × 3,94 (04/09 p. 71-72), tout en qualifiant ce calcul de « double compte » p. 92.",
+    "**Le test de la p. 93 ne protège rien** : l'arithmétique 3,2725 est concédée (la reconstitution reste 42 207 € sous ce repère sur trois ans), mais 85 % d'achats revendus n'est pas mesuré ; le bilan matière des 10 622 L établit 60,77 % revendus (5 457 L au verre + 998 L en cocktails) et 2 055 L de casse pure (19,3 %) ; au même calcul le repère devient 2,383251 et le reconstitué le dépasse de 444 807 € (94,3 % de la base). Au repère même du service, 2022-2023 est déjà 23 147 € TTC au-dessus (597 265 contre 574 118 €).",
+    "**Sur-versement** : le verre de vin mesuré est de 18,28 cl (Kerr 2008, IC 95 % 17,60-18,96) et non 15 cl ; demande 460,6 L sur trois exercices (vin 244,9 + cocktails 215,3 + spiritueux 0,4), au centre de la fourchette publiée (50,3 %) et bornée par le stock (27,1 %) ; 1 633 verres comptés en trop ; 3 643 € de liquides = 12 199 € de total reconstitué pour 2022-2023, 10 973 € / 37 500 € sur trois exercices. Le service n'oppose aucune mesure. Partiel.",
+    "**Crémant** : sur 643 journées de caisse, 828 bouteilles, 248,1 L de fond jeté = 84,6 % de l'écart de 293,1 L (reste 45,0 L) ; 7 819 € HT de liquides, environ 30 103 € TTC de base distribuée par la mécanique du service. Partiel (non-report à attester).",
+    "**Alcool de cuisine et des menus** : 72,68 L cuits dans les plats de la carte (porto 52,90, vin jaune 12,90) ≈ 5 113 € de liquides = 17 466 € TTC reconstitués ; 20,53 L dans les desserts des menus (Bailey's 14,36 L) ≈ 2 737 € de liquides ≈ 11 080 € TTC ; périmètres disjoints ; le vice est celui que le Conseil d'État sanctionne quand un produit compris dans le prix du menu est compté comme vendu à l'unité (CE 03/11/2023 n° 460520). Partiel.",
+    "**Dégustation** : 97,42 L demandés (dose de 2 cl non mesurée ; 1,85 L tracés à 0 € en caisse) ; les quatre motifs de refus du service tombent (globalisation, BIB 198,31 L, « toutes les notes », 500 L en bouteilles) mais le poste reste suspendu à une attestation de salle. À étayer.",
+    "**Abattements de 5 + 5 + 5 %** : le forfait de 15 % (1 593 L) couvre la consommation sans vente documentée (1 158 L brut, 697,4 L net) : aucun dégrèvement n'est demandé à ce titre, mais le service ne peut plus opposer sa « générosité » six fois (bière, dégustation, coefficient) une fois qu'il l'a affectée aux offerts, pertes et personnel. 0 €, assumé.",
+    "**Bière** : le service retranche déjà 15 % du disponible ; freinte défendable 10 % de 1 213,3 L en deçà ; dégrèvement 0 €, assumé ; mais « 15 % + 15 % = 30 % » est une addition que ses annexes ne font pas (27,75 %).",
+    "**Variation de stock** (point 9 retiré, 0 €) et **ventes sans achat** (0 €, p. 74 du service) : les propres comptes du service établissent un stock plat (variation cumulée −2 103,91 € = 1,48 % de 141 720,38 € d'achats, 98,52 % consommés), et les deux exemples de « ventes sans achat » sont contredits par ses annexes (Bordeaux : 11 achetées, 9 vendues ; code 2091 = 256 pichets de rosé) ; reste une bouteille de Bordeaux (≤ 30 € HT) assumée."
+   ],
+   "titre": "Ce que la réponse établit, poste par poste"
+  },
+  {
+   "kind": "tableau",
+   "titre": "Postes de la reconstitution chiffrés en euros (mécanique du service : abattement 15 % puis rapport liquides/solides)",
+   "colonnes": [
+    {
+     "label": "Poste"
+    },
+    {
+     "label": "Volume",
+     "align": "right"
+    },
+    {
+     "label": "CA liquides",
+     "align": "right"
+    },
+    {
+     "label": "Total reconstitué TTC en trop",
+     "align": "right"
+    },
+    {
+     "label": "Statut"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Sur-versement (vin au verre seul converti)"
+     },
+     {
+      "v": "460,6 L (dont vin 244,9 L)",
+      "align": "right"
+     },
+     {
+      "v": "10 973 €",
+      "align": "right"
+     },
+     {
+      "v": "37 500 €",
+      "align": "right"
+     },
+     {
+      "v": "partiel (plancher)"
+     }
+    ],
+    [
+     {
+      "v": "Crémant jeté (fond de bouteille)"
+     },
+     {
+      "v": "248,1 L",
+      "align": "right"
+     },
+     {
+      "v": "7 819 € HT",
+      "align": "right"
+     },
+     {
+      "v": "≈ 30 103 €",
+      "align": "right"
+     },
+     {
+      "v": "partiel"
+     }
+    ],
+    [
+     {
+      "v": "Alcool de cuisine à la carte"
+     },
+     {
+      "v": "72,68 L",
+      "align": "right"
+     },
+     {
+      "v": "5 113 €",
+      "align": "right"
+     },
+     {
+      "v": "17 466 €",
+      "align": "right"
+     },
+     {
+      "v": "partiel"
+     }
+    ],
+    [
+     {
+      "v": "Alcool des plats de menus"
+     },
+     {
+      "v": "20,53 L",
+      "align": "right"
+     },
+     {
+      "v": "2 737 €",
+      "align": "right"
+     },
+     {
+      "v": "≈ 11 080 €",
+      "align": "right"
+     },
+     {
+      "v": "partiel"
+     }
+    ],
+    [
+     {
+      "v": "Dégustation offerte"
+     },
+     {
+      "v": "97,42 L",
+      "align": "right"
+     },
+     {
+      "v": "non chiffré",
+      "align": "right"
+     },
+     {
+      "v": "à demander au service",
+      "align": "right"
+     },
+     {
+      "v": "à étayer"
+     }
+    ],
+    [
+     {
+      "v": "Bière, variation de stock, ventes sans achat, abattements"
+     },
+     {
+      "v": "-",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "assumé"
+     }
+    ],
+    [
+     {
+      "v": "Somme des quatre postes chiffrés (périmètres disjoints)",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "≈ 96 149 € = 20,4 % de 471 826 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "plancher"
+     }
+    ],
+    [
+     {
+      "v": "Cuisine extrapolée sans mesure",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "354 921 € = 75,2 %",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "conditionné aux liquides"
+     }
+    ]
+   ],
+   "minWidth": 640
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "**Droit.** Une reconstitution doit partir « des conditions concrètes de fonctionnement de l'entreprise » et rester dans des « limites réalistes » ; les taux issus de statistiques professionnelles ne sont pas, à eux seuls, un fondement suffisant (BOI-CF-IOR-10-20 § 200). Le contribuable fait tomber une reconstitution en établissant qu'elle est « excessivement sommaire ou radicalement viciée dans son principe » ou en proposant « une méthode de reconstitution plus précise » (CE 10/07/2024 n° 470817 ; le juge doit examiner la méthode alternative). Une méthode qui compte comme vendus à l'unité des produits compris dans un menu est « radicalement viciée » (CE 03/11/2023 n° 460520). La cascade des 10 622 L (achats → vendu au verre, cocktails, cuisine, menus, pertes documentées) est cette méthode plus précise."
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-extrapolation-cuisine.xlsx",
+     "label": "R2 : rapport liquides/solides mesuré avant correction, appliqué après ; 354 921 €"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-sur-versement-chiffrage.xlsx",
+     "label": "R2 : 1 633 verres, 3 643 € / 12 199 €, 10 973 € / 37 500 €"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-sur-versement-fourchette-officielle.xlsx",
+     "label": "R2 : fourchette Kerr 2008 (IC 95 %), position de la demande 50,3 %"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-cremant-jour-par-jour.xlsx",
+     "label": "R2 : 643 journées, 828 bouteilles, 248,1 L, chiffrage"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-alcool-cuisine.xlsx",
+     "label": "R2 : 72,68 L, 5 113 €, 17 466 € TTC"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-alcool-plats-menus.xlsx",
+     "label": "R2 : 20,53 L, 2 737 €"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-degustation-tracee.xlsx",
+     "label": "R2 : 1,85 L tracés, 97,42 L demandés"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
+     "label": "R2 : itemisation nette 697,4 L contre forfait 1 593 L"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-biere-matiere.xlsx",
+     "label": "R2 : bilan matière bière, 1 213,3 L"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-variation-stock.xlsx",
+     "label": "R2 : variation de stock, −1 029,67 € = compte 310200"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-ventes-sans-achat.xlsx",
+     "label": "R2 : bilan par vin, code 2091, p. 75 du service"
+    }
+   ],
+   "titre": "Pièces du bloc « reconstitution »"
+  },
+  {
+   "kind": "titre",
+   "texte": "Les distributions : un décalque de la reconstitution, sans flux, dont la part TVA sort de la base",
+   "numero": "3"
+  },
+  {
+   "kind": "reproche",
+   "page": "19/10 p. 59-62",
+   "resume": [
+    "Les « dissimulations de recettes TTC » (193 235 / 138 864 / 139 728 €) sont réputées distribuées : part HT au titre de l'art. 109-1-1°, part TVA « en sus » (10 210 / 7 427 / 7 326 € par foyer) au titre de l'art. 109-1-2°.",
+    "Répartition par moitié entre les deux co-gérants : 86 407 + 10 210 = 96 617 € (2023), 69 432 € (2024), 69 864 € (2025) par foyer, soit 235 913 €.",
+    "Aucun relevé bancaire, compte courant d'associé ou enrichissement n'est cité : la base est le tableau de reconstitution de la proposition « société »."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition personnelle du 19/10/2026, p. 59-60.** « Quant aux dissimulations de recettes TTC constatées à l'issue de la méthode de reconstitution utilisée, elles s'établissent respectivement à (montants arrondis) : 193 235 € sur l'exercice clos au 31 mars 2023 ; 138 864 € sur l'exercice clos au 31 mars 2024 ; 139 728 € sur l'exercice clos au 31 mars 2025. » « La répartition de ces dissimulations de recettes TVA entre les deux co-gérants doit donc aboutir à distribuer, en sus, à chacun les sommes arrondies suivantes : 10 210 € sur l'année 2023 ; 7 427 € sur l'année 2024 ; 7 326 € sur l'année 2025. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**P. 62.** « Le service est amené à considérer, qu'en vertu : de l'article 109-1-2°, des conditions d'exploitation, mais aussi du fait que les associés ont été désignés par la lettre du 16 juin 2026 bénéficiaires des dissimulations de recettes constatés et que ces désinvestissements Hors Taxe constatés sont des revenus distribués au bénéfice du foyer fiscal [...] vous aviez toute latitude à pouvoir appréhender la partie des désinvestissements pour laquelle vous avez été désigné comme bénéficiaire. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Base par foyer (19/10 p. 62)",
+     "colonnes": [
+      {
+       "label": ""
+      },
+      {
+       "label": "2023",
+       "align": "right"
+      },
+      {
+       "label": "2024",
+       "align": "right"
+      },
+      {
+       "label": "2025",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Distributions occultes (arrondies)"
+       },
+       {
+        "v": "86 407 €",
+        "align": "right"
+       },
+       {
+        "v": "62 005 €",
+        "align": "right"
+       },
+       {
+        "v": "62 538 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Part TVA"
+       },
+       {
+        "v": "10 210 €",
+        "align": "right"
+       },
+       {
+        "v": "7 427 €",
+        "align": "right"
+       },
+       {
+        "v": "7 326 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Base RCM"
+       },
+       {
+        "v": "96 617 €",
+        "align": "right"
+       },
+       {
+        "v": "69 432 €",
+        "align": "right"
+       },
+       {
+        "v": "69 864 €",
+        "align": "right"
+       }
+      ]
+     ],
+     "minWidth": 640
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Aucune source autonome** : 235 913 € par foyer = 471 825,88 € ÷ 2, à l'arrondi près ; pas de distribution sans bénéfice reconstitué. Si la reconstitution tombe, les 369 648 € tombent avec les 213 148 € de la société ; si elle est réduite de 25 / 50 / 75 %, la base par foyer devient 176 935 / 117 957 / 58 978 €.",
+    "**La part TVA sort de la base en tout état de cause** : la TVA rappelée, déduite du bénéfice par la cascade (L. 77 LPF), ne fait pas partie des bénéfices du 109-1-1° ; elle ne peut être imposée au titre du 109-1-2° qu'« à condition que l'administration établisse que cette somme a été mise à [la] disposition » du bénéficiaire (CE 19/07/2024 n° 491690 ; BOI-RPPM-RCM-10-20-10 § 100). Aucune mise à disposition n'est établie : 24 963 € de base par foyer, 49 926 € pour les deux (31 204 € d'assiette par foyer après × 1,25).",
+    "**La présomption du 109-1-1° joue contre la société, pas contre l'associé** : vis-à-vis des bénéficiaires, l'administration doit prouver l'appréhension, sauf « seul maître de l'affaire » (CE plén. 22/02/2017 n° 388887 ; BOI-RPPM-RCM-10-20-20-40 § 360 : la désignation est « une simple information non-opposable aux personnes désignées »)."
+   ],
+   "titre": "Ce que la réponse établit"
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-distributions-base.xlsx",
+     "label": "R2 : HT + TVA = TTC, TTC ÷ 2 = base notifiée, part TVA 24 963 € par foyer"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "R2 : base RCM, × 1,25, taux effectifs 83,5 / 73,2 %"
+    }
+   ],
+   "titre": "Pièces du bloc « distributions »"
+  },
+  {
+   "kind": "titre",
+   "texte": "La désignation du 16/06/2026 et la clé de 50 / 50 : l'amende de 100 % tombe, la part de chaque foyer n'est pas prouvée",
+   "numero": "4"
+  },
+  {
+   "kind": "reproche",
+   "page": "04/09 p. 95 ; 19/10 p. 59-60",
+   "resume": [
+    "Le service prend acte du courrier du 16/06/2026 désignant Mme BEHEM et M. PASTEUR et annonce une proposition à chacun (04/09 p. 95).",
+    "Il répartit par moitié d'après le capital (50 / 50), la cogérance et le domicile commun, et décrit des rôles distincts : Mme BEHEM seule en charge de la caisse et des clôtures, M. PASTEUR de la cuisine, des fournisseurs et des remises en banque (19/10 p. 60).",
+    "L'amende de l'art. 1759 (471 826 €) n'est plus liquidée dans les propositions du 19/10, mais aucun courrier n'en prononce l'abandon."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du 04/09/2026, p. 95, C- Amende de 100 % sur distributions présumées.** « Sur l'application de l'amende de 100 %, le service a reçu un courrier adressé en date du 16 juin 2026 désignant respectivement Madame Ghislaine BEHEM et Monsieur Thierry PASTEUR comme bénéficiaires des sommes distribuées. Par conséquent, une proposition de rectifications sera adressée prochainement à chacune de ces personnes. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition du 19/10/2026, p. 59-60.** « À la connaissance du service, le capital de la société est détenu à hauteur de : Monsieur Thierry PASTEUR 50 % ; Madame Ghislaine BEHEM 50 %. De plus, ils sont co-gérants et bien qu'ils aient constitué un foyer fiscal chacun de leur côté, les deux demeurent à un même domicile. » « Elle est la seule en charge de la gestion de la caisse pour les opérations d'encaissement des notes/additions. [...] Quant à Monsieur Thierry PASTEUR, il s'occupe de toute la conception culinaire. [...] Monsieur Thierry PASTEUR s'occupe de tout ce qui est relatif à la gestion des modes de paiement et notamment des relations bancaires et donc de toutes les remises en banque. »"
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Amende de 100 % écartée** : la désignation, faite par l'avocat dans le délai de l'art. 117 (29 jours), identifie les bénéficiaires ; l'art. 1759 « ne sanctionne que le défaut de réponse sur la désignation des bénéficiaires (identité et adresse) » (BOI-RPPM-RCM-10-20-20-40 § 320 ; § 300 et 330, CE 09/04/2014 n° 358279) ; l'avocat est dispensé de mandat spécial (CE 13/04/2018 n° 401923). Enjeu : 471 826 €, à faire constater expressément.",
+    "**La désignation n'est pas un aveu** : elle est « une simple information non-opposable aux personnes désignées » (§ 360) ; si celles-ci contestent, « il appartient à l'administration de prouver » l'appréhension (§ 360-370). Le mémoire du 08/07/2026 conteste l'existence de toute distribution et le service le reproduit p. 95 sans en tirer d'aveu.",
+    "**Deux co-gérants, pas de maître unique** : la présomption d'appréhension est réservée au « seul maître de l'affaire » (CE plén. n° 388887) ; entre deux co-dirigeants égalitaires elle ne joue pas et la clé de 50 % doit être prouvée (CAA Versailles 23/05/2023 n° 21VE01600 ; CE 29/06/2020 n° 432815 et 433827) ; l'exception du couple suppose une imposition commune (époux, PACS, art. 6 CGI), inexistante entre concubins. Le service décrit lui-même deux rôles disjoints et attribue « toute latitude » aux deux : contradiction qui ruine la clé.",
+    "**Enjeu** : à défaut de preuve de la part appréhendée par chaque foyer, les suppléments de 196 945 € et 172 703 € ne sont établis entre les mains ni de l'un ni de l'autre (subsidiaire de la contestation de la distribution elle-même)."
+   ],
+   "titre": "Ce que la réponse établit"
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-designation-117-cle-50-50.xlsx",
+     "label": "R2 : chronologie de la désignation, clé 50 / 50, enjeux par foyer"
+    }
+   ],
+   "titre": "Pièces du bloc « désignation »"
+  },
+  {
+   "kind": "titre",
+   "texte": "La majoration d'assiette de 25 % et la liquidation personnelle : rien à gagner seul, tout suit la base",
+   "numero": "5"
+  },
+  {
+   "kind": "reproche",
+   "page": "19/10 p. 62-63, 65-80",
+   "resume": [
+    "Les RCM sont majorés de 25 % (coefficient 1,25, art. 158-7-2°) : 120 771 / 86 790 / 87 330 € = 294 891 € d'assiette par foyer (+58 978 €).",
+    "Le service annonce un impôt « au taux forfaitaire de 12,80 % » (p. 62) mais liquide au barème progressif dans les avis (p. 67-80) ; CSG 9,70 % et prélèvement de solidarité 7,50 % ; prélèvements 2025 à 18,6 %.",
+    "Suppléments notifiés : PASTEUR 83 391 / 56 724 / 56 830 = 196 945 € ; BEHEM 73 859 / 48 124 / 50 720 = 172 703 €."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition du 19/10/2026, p. 63.** « L'article 39 de la loi n° 2020-1721 du 29 décembre 2020 de finances pour 2021 prévoit la majoration de 25 % de l'assiette des distributions occultes ou irrégulières mentionnées à l'article 109 du code général des impôts [...] lorsqu'elles sont imposées au prélèvement forfaitaire unique (PFU). Cela est prévu par l'article 158-7-2° du C-G-I. [...] En conséquence, les distributions considérées comme perçues par votre foyer fiscal apparaîtront dans vos revenus imposables à hauteur de respectivement (arrondis) : 96 617 € x 1,25 = 120 771 € pour l'année 2023 ; 69 432 € x 1,25 = 86 790 € pour l'année 2024 ; 69 864 € x 1,25 = 87 330 € pour l'année 2025. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**P. 62.** « Le revenu brut ainsi déterminé est soumis à l'impôt sur le revenu au taux forfaitaire de 12,80 % (C-G-I, art. 200 A, 1 ; BOI-RPPM-RCM-20-15 au I & 40 et suivants). » **P. 63.** « Enfin, conformément à l'article 235-ter du Code Général des Impôts, un prélèvement solidarité de 7,50 % est instauré sur les revenus et doit être appliqué. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Ventilation notifiée à M. PASTEUR (avis p. 67-80, 3 ans)",
+     "colonnes": [
+      {
+       "label": "Composante"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "IR au barème"
+       },
+       {
+        "v": "95 729 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Prélèvements sociaux"
+       },
+       {
+        "v": "41 555 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration de 40 % (IR + PS)"
+       },
+       {
+        "v": "54 914 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêts de retard"
+       },
+       {
+        "v": "4 747 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Supplément notifié"
+       },
+       {
+        "v": "196 945 €",
+        "align": "right"
+       }
+      ]
+     ],
+     "minWidth": 640
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Le coefficient de 1,25 est légal sur l'impôt sur le revenu** (CC n° 2019-793 QPC du 28/06/2019 ; BOI-RPPM-RCM-20-10-20-10 § 120-160) : la réponse ne le conteste pas en soi. Il coûte 64 122 € aux deux foyers (45 802 € d'impôt + 18 320 € de majoration), qui tombent avec la base qu'il multiplie ; réduction de 25 / 50 / 75 % : supplément d'assiette ramené à 44 234 / 29 489 / 14 745 € par foyer.",
+    "**Prélèvements sociaux sans le 1,25** : vérifié sur les six foyers-années (réserve CC n° 2017-643/650 QPC, cons. 17, et n° 2016-610 QPC ; BOI précité § 130) : levier fermé, dit tel quel.",
+    "**PFU 12,80 % annoncé, barème liquidé** : incohérence de motivation (L. 57 et L. 80 D LPF) à faire préciser ; l'option pour le barème étant irrévocable (art. 200 A, 2 ; CE 05/04/2024 n° 490411), le retour au 12,8 % (57 983 € d'IR pour M. PASTEUR) ne se plaide que si aucune option 2OP ne figure sur les 2042 des foyers : à vérifier avant de l'invoquer.",
+    "**Autres écarts de liquidation** : « 1,9 part » p. 65 contre 1,50 liquidée pour M. PASTEUR en 2025 (2 023 € si 1,9 est exact) ; variations de revenu BEHEM 108 009 / 78 173 € au lieu de 120 771 / 87 330 € annoncés ; prélèvements 2025 à 18,6 % contre 9,70 + 7,50 % annoncés (978 € par foyer). Ces écarts établissent que la liquidation ne suit pas le texte notifié.",
+    "**Taux effectifs** : supplément ÷ base distribuée = 83,5 % (PASTEUR) et 73,2 % (BEHEM) ; hors majoration de 40 % : 67,3 % et 58,8 %. Le taux marginal 41 % × 1,25 + PS (68,45 %) reste sous les 73,6 % admis par le Conseil constitutionnel : le moyen confiscatoire n'est qu'un contexte."
+   ],
+   "titre": "Ce que la réponse établit"
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-majoration-25.xlsx",
+     "label": "R2 : coefficient 1,25, barème reproduit à l'euro, assiettes sociales 6 / 6 sans coefficient"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "R2 : base RCM, × 1,25, 58 978 €, taux effectifs"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-pasteur.xlsx",
+     "label": "R2 : chiffrage M. PASTEUR (196 945 €)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 : chiffrage Mme BEHEM (172 703 €)"
+    }
+   ],
+   "titre": "Pièces du bloc « majorations »"
+  },
+  {
+   "kind": "titre",
+   "texte": "Les pénalités : une majoration de 40 % motivée trois fois par copie, 162 532 € ; des intérêts qui suivent",
+   "numero": "6"
+  },
+  {
+   "kind": "reproche",
+   "page": "18/05 p. 57-58 ; 04/09 p. 94-95 ; 19/10 p. 63-65",
+   "resume": [
+    "Majoration de 40 % (art. 1729) sur l'IS et la TVA de la société (58 823 €) pour « caractère répétitif, intentionnel et impossible à ignorer » des minorations ; motifs = les anomalies du rejet de comptabilité.",
+    "La même motivation, mot pour mot, est reproduite dans les deux propositions personnelles sous le titre « Manquements délibérés - Impôt sur les Sociétés et TVA, exercices clos au 31 mars 2022 et 31 mars 2023 » et appliquée à l'IR et aux prélèvements sociaux : 54 914 € (PASTEUR), 48 795 € (BEHEM).",
+    "Intérêts de retard (art. 1727, 0,20 % par mois) : 4 661 + 2 607 € (société), 4 747 € (PASTEUR), 4 128 € (BEHEM) = 16 143 €, figés à la date des propositions.",
+    "Le 04/09 (p. 94-95) : « La volonté de dissimulation a bien été établie et aucun élément de la réponse n'apporte d'élément tangible susceptible de la remettre en cause. »"
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition du 19/10/2026, p. 64-65 (identique au 18/05 p. 57-58).** « Conditions d'exploitation : comme décrit ci-dessus, en votre qualité de co-gérant et de vos prérogatives dans l'exploitation de la société, vous aviez toute latitude de pouvoir dissimuler une partie du chiffre d'affaires. Anomalies et caractère non probant de la comptabilité : de nombreuses irrégularités relevées au cours de la vérification résultent de manquement délibéré. [...] Importance des minorations : les discordances HT relevée sur ces périodes sont significatives : 96 617 € sur l'année 2023 ; 69 432 € sur l'année 2024 ; 69 864 € sur l'année 2025. Répétition de l'infraction. [...] En conséquence, la majoration de 40 % prévue à l'article 1729 du Code général des Impôts, sera donc appliquée consécutivement aux discordances constatées, l'absence de déclaration des sommes en question ne pouvant que résulter d'une volonté manifeste d'éluder l'impôt. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du 04/09/2026, p. 94-95, B- Pénalités et amendes.** « Le service a également démontré à quel point les incohérences, relevées au stade de la proposition de rectifications, pouvaient amener à répliquer avec des arguments totalement inconcevables économiquement ou physiquement. La volonté de dissimulation a bien été établie et aucun élément de la réponse n'apporte d'élément tangible susceptible de la remettre en cause. [...] Il n'y a donc pas lieu que les pénalités et amendes proposés au stade de la proposition de rectifications soient modifiés d'une quelconque manière. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Majorations de 40 % notifiées",
+     "colonnes": [
+      {
+       "label": "Contribuable"
+      },
+      {
+       "label": "Base",
+       "align": "right"
+      },
+      {
+       "label": "Majoration",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Société, IS (p. 61-62)"
+       },
+       {
+        "v": "42 908 + 27 120 + 27 482 €",
+        "align": "right"
+       },
+       {
+        "v": "39 004 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Société, TVA (p. 63-65)"
+       },
+       {
+        "v": "20 041 + 14 854 + 14 652 €",
+        "align": "right"
+       },
+       {
+        "v": "19 819 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "M. PASTEUR, IR + PS"
+       },
+       {
+        "v": "avis 2023-2025",
+        "align": "right"
+       },
+       {
+        "v": "54 914 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Mme BEHEM, IR + PS"
+       },
+       {
+        "v": "avis 2023-2025",
+        "align": "right"
+       },
+       {
+        "v": "48 795 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "162 532 €",
+        "align": "right",
+        "fw": 700
+       }
+      ]
+     ],
+     "minWidth": 640
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Charge de la preuve** : la majoration est une sanction ; « l'administration établit » le manquement délibéré (L. 195 A LPF ; BOI-CTX-DG-20-20-10 § 140) ; les insuffisances sont présumées involontaires et chaque chef s'apprécie séparément (BOI-CF-INF-10-20-20 § 30-40) ; il faut prouver « d'une part, l'insuffisance [...] et, d'autre part, l'intention de l'intéressé d'éluder l'impôt » (CE 23/07/2024 n° 489235, où des omissions « répétitives » n'ont pas suffi). Le montant et la fréquence des opérations ne caractérisent pas « par eux-mêmes » l'intention (CE 07/06/2019 n° 412536).",
+    "**Les minorations sont extrapolées, non constatées** : 75,2 % du rehaussement est une cuisine calculée par un rapport ; « l'importance » et « la répétition » sont celles de la méthode, pas d'un acte. Aucune vente encaissée et effacée n'est désignée (99,7 % des « DEL » au prix de carte, totalisateur continu, espèces à 0,94 / 1,86 / 1,23 %).",
+    "**Motivation copiée, impôt visé erroné** : la pénalité personnelle vise « l'impôt sur les Sociétés et la TVA » et un « exercice clos au 31 mars 2022 » hors période alors qu'elle frappe l'IR et les PS de chaque foyer ; une motivation qui ne dit rien de ce que chaque personne savait et a voulu ne satisfait pas l'art. L. 80 D ; « toute latitude de pouvoir dissimuler » décrit un accès, pas un acte ; le service décrit lui-même des rôles disjoints (caisse / banque) et leur oppose une motivation identique.",
+    "**Effet** : 162 532 € de majorations (27,9 % de l'exposition) déchargeables indépendamment des droits ; 16 143 € d'intérêts qui suivent les droits (accessoires, art. 1727, sans motivation propre) et continuent de courir jusqu'au paiement."
+   ],
+   "titre": "Ce que la réponse établit"
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-manquement-delibere-personnel-majorations-foyers.xlsx",
+     "label": "R2 : majorations de 40 % des foyers, ROUND(base × 0,4) = montants notifiés, 54 914 / 48 795 €"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-manquement-delibere-personnel-enjeu-40.xlsx",
+     "label": "R2 : majoration société 58 823 € = droits × 40 %"
+    }
+   ],
+   "titre": "Pièces du bloc « pénalités »"
+  },
+  {
+   "kind": "titre",
+   "texte": "Tableau de synthèse grief par grief"
+  },
+  {
+   "kind": "tableau",
+   "titre": "Grief / position du service / notre démonstration / effet",
+   "colonnes": [
+    {
+     "label": "Grief"
+    },
+    {
+     "label": "Position du service"
+    },
+    {
+     "label": "Notre démonstration"
+    },
+    {
+     "label": "Effet"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Rejet de la comptabilité",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     }
+    ],
+    [
+     {
+      "v": "Suppressions « DEL »"
+     },
+     {
+      "v": "21 302 lignes, 430 763,15 € effacés"
+     },
+     {
+      "v": "99,6-99,7 % = prix de carte ; 32,0 % = 4 fautes de frappe ; totalisateur sans rupture"
+     },
+     {
+      "v": "motif tombe (démonté)"
+     }
+    ],
+    [
+     {
+      "v": "Articles à 0 €"
+     },
+     {
+      "v": "offerts non tracés"
+     },
+     {
+      "v": "272 / 97 769 = 0,28 %, 0,00 € ; « non significatif »"
+     },
+     {
+      "v": "motif tombe (démonté)"
+     }
+    ],
+    [
+     {
+      "v": "Quantités < 1"
+     },
+     {
+      "v": "62 487,87 € d'occultation"
+     },
+     {
+      "v": "99,0 % refermées, 1 849 / 1 849 encaissées ; résidu 264,98 €"
+     },
+     {
+      "v": "motif tombe (démonté)"
+     }
+    ],
+    [
+     {
+      "v": "Inventaires"
+     },
+     {
+      "v": "non conformes, non probants"
+     },
+     {
+      "v": "aucun texte n'exige la contenance ; 6 / 6 nuls ; repris au centime par le service"
+     },
+     {
+      "v": "motif tombe (partiel)"
+     }
+    ],
+    [
+     {
+      "v": "Fichiers E / F"
+     },
+     {
+      "v": "montants fluctuants"
+     },
+     {
+      "v": "4 lectures d'un compteur ; −0,04 / 44,58 / 131,08 €"
+     },
+     {
+      "v": "motif tombe (démonté)"
+     }
+    ],
+    [
+     {
+      "v": "Tables virtuelles"
+     },
+     {
+      "v": "trop de tables"
+     },
+     {
+      "v": "rang d'addition 1..n, 659 / 659 journées"
+     },
+     {
+      "v": "motif tombe (démonté)"
+     }
+    ],
+    [
+     {
+      "v": "TVA"
+     },
+     {
+      "v": "bases négatives, taux"
+     },
+     {
+      "v": "0 taxe négative ; 192,33 € = pourboires"
+     },
+     {
+      "v": "motif tombe (démonté)"
+     }
+    ],
+    [
+     {
+      "v": "Conso > achats"
+     },
+     {
+      "v": "ventes supérieures aux achats"
+     },
+     {
+      "v": "4 écarts mineurs sur 203 ; +3 057,6 L non servis"
+     },
+     {
+      "v": "motif tombe (partiel)"
+     }
+    ],
+    [
+     {
+      "v": "Prix des menus"
+     },
+     {
+      "v": "instabilité"
+     },
+     {
+      "v": "45,00 € stable ; 6 728,50 € = 6 728,49 €"
+     },
+     {
+      "v": "motif tombe (démonté)"
+     }
+    ],
+    [
+     {
+      "v": "Coefficient"
+     },
+     {
+      "v": "trop bas, 3,2725 attendu"
+     },
+     {
+      "v": "85 % non mesuré ; 60,77 % → 2,383251"
+     },
+     {
+      "v": "motif tombe (partiel)"
+     }
+    ],
+    [
+     {
+      "v": "Reconstitution",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     }
+    ],
+    [
+     {
+      "v": "Extrapolation cuisine"
+     },
+     {
+      "v": "rapport 2,94 / 3,02 / 3,10"
+     },
+     {
+      "v": "rapport mesuré avant, appliqué après correction"
+     },
+     {
+      "v": "354 921 € (75,2 %) conditionné"
+     }
+    ],
+    [
+     {
+      "v": "Sur-versement"
+     },
+     {
+      "v": "doses figées"
+     },
+     {
+      "v": "18,28 cl mesuré ; 460,6 L ; 1 633 verres"
+     },
+     {
+      "v": "37 500 € TTC (plancher)"
+     }
+    ],
+    [
+     {
+      "v": "Crémant"
+     },
+     {
+      "v": "tout réputé vendu"
+     },
+     {
+      "v": "248,1 L de fond sur 643 journées"
+     },
+     {
+      "v": "≈ 30 103 € TTC"
+     }
+    ],
+    [
+     {
+      "v": "Alcool de cuisine"
+     },
+     {
+      "v": "déjà retranché « bien au-delà »"
+     },
+     {
+      "v": "72,68 L non déduits"
+     },
+     {
+      "v": "17 466 € TTC"
+     }
+    ],
+    [
+     {
+      "v": "Alcool des menus"
+     },
+     {
+      "v": "modifications non étayées"
+     },
+     {
+      "v": "20,53 L de desserts de menu"
+     },
+     {
+      "v": "≈ 11 080 € TTC"
+     }
+    ],
+    [
+     {
+      "v": "Dégustation"
+     },
+     {
+      "v": "aucune"
+     },
+     {
+      "v": "97,42 L (2 cl), 1,85 L tracés"
+     },
+     {
+      "v": "à chiffrer par le service"
+     }
+    ],
+    [
+     {
+      "v": "Abattements 15 %"
+     },
+     {
+      "v": "forfait généreux"
+     },
+     {
+      "v": "forfait = plafond, 697,4 L net"
+     },
+     {
+      "v": "0 € (motifs opposés tombent)"
+     }
+    ],
+    [
+     {
+      "v": "Bière"
+     },
+     {
+      "v": "0 % de perte"
+     },
+     {
+      "v": "15 % du disponible déjà retranché"
+     },
+     {
+      "v": "0 € (assumé)"
+     }
+    ],
+    [
+     {
+      "v": "Variation de stock"
+     },
+     {
+      "v": "volume disponible"
+     },
+     {
+      "v": "−1 029,67 € = compte du service"
+     },
+     {
+      "v": "0 € (point retiré)"
+     }
+    ],
+    [
+     {
+      "v": "Ventes sans achat"
+     },
+     {
+      "v": "recettes occultées"
+     },
+     {
+      "v": "annexes du service contraires ; 1 bouteille"
+     },
+     {
+      "v": "0 € (p. 74 : aucun euro)"
+     }
+    ],
+    [
+     {
+      "v": "Repère 3,2725"
+     },
+     {
+      "v": "« nullement exagéré »"
+     },
+     {
+      "v": "2022-2023 : +23 147 € au repère même ; +444 807 € au repère mesuré"
+     },
+     {
+      "v": "justification tombe"
+     }
+    ],
+    [
+     {
+      "v": "Taxation personnelle",
+      "fw": 700
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     }
+    ],
+    [
+     {
+      "v": "Distributions (109-1)"
+     },
+     {
+      "v": "235 913 € par foyer"
+     },
+     {
+      "v": "décalque de la reconstitution ; part TVA sans mise à disposition prouvée"
+     },
+     {
+      "v": "369 648 € suivent ; 49 926 € de base en tout état de cause"
+     }
+    ],
+    [
+     {
+      "v": "Désignation (117)"
+     },
+     {
+      "v": "amende 1759 non abandonnée par écrit"
+     },
+     {
+      "v": "désignation régulière, information non opposable"
+     },
+     {
+      "v": "471 826 € écartés, à constater"
+     }
+    ],
+    [
+     {
+      "v": "Clé 50 / 50"
+     },
+     {
+      "v": "capital, cogérance, domicile"
+     },
+     {
+      "v": "pas de maître unique ; preuve par foyer absente"
+     },
+     {
+      "v": "196 945 / 172 703 € non établis (subsidiaire)"
+     }
+    ],
+    [
+     {
+      "v": "Coefficient 1,25"
+     },
+     {
+      "v": "158-7-2°"
+     },
+     {
+      "v": "légal ; PS vérifiés sans coefficient"
+     },
+     {
+      "v": "0 € seul ; 64 122 € suivent la base"
+     }
+    ],
+    [
+     {
+      "v": "Liquidation (PFU, parts, PS 2025)"
+     },
+     {
+      "v": "12,80 % annoncé, barème liquidé"
+     },
+     {
+      "v": "incohérences à faire préciser (L. 57, L. 80 D)"
+     },
+     {
+      "v": "57 983 € / 2 023 € / 978 € : à vérifier (2042)"
+     }
+    ],
+    [
+     {
+      "v": "Majoration 40 % (1729)"
+     },
+     {
+      "v": "répétitif, intentionnel"
+     },
+     {
+      "v": "preuve de l'intention absente (L. 195 A) ; motivation copiée"
+     },
+     {
+      "v": "162 532 € déchargeables"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts (1727)"
+     },
+     {
+      "v": "accessoires"
+     },
+     {
+      "v": "suivent les droits"
+     },
+     {
+      "v": "16 143 €, prorata"
+     }
+    ]
+   ],
+   "minWidth": 760
+  },
+  {
+   "kind": "titre",
+   "texte": "Les scénarios : de 684 974 € à 0 €"
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "La base distribuée est la stricte moitié des discordances TTC : toute réduction de la reconstitution se répercute proportionnellement sur la base (exact) et au moins proportionnellement sur l'impôt (l'IS à 15 % jusqu'à 42 500 € et le barème progressif ne baissent pas strictement au prorata) ; les montants de société et de foyers ci-dessous sont donc des ordres de grandeur, précédés de « ≈ »."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Exposition selon l'issue (R2-synthese-scenarios.xlsx, onglet Scenarios)",
+   "colonnes": [
+    {
+     "label": "Issue"
+    },
+    {
+     "label": "Base RCM / foyer",
+     "align": "right"
+    },
+    {
+     "label": "Société",
+     "align": "right"
+    },
+    {
+     "label": "Foyers",
+     "align": "right"
+    },
+    {
+     "label": "Total",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Société (maintenu)"
+      "v": "Maintien intégral"
      },
      {
-      "v": "IS 97 510 + int. 4 661 + 1729-IS 39 004 + TVA 49 547 + int. 2 607 + 1729-TVA 19 819"
+      "v": "235 913 €",
+      "align": "right"
      },
      {
       "v": "213 148 €",
       "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "M. Thierry PASTEUR"
      },
      {
-      "v": "Supplément notifié 2023-2025 (83 391 + 56 724 + 56 830)"
-     },
-     {
-      "v": "196 945 €",
+      "v": "369 648 €",
       "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Mme Ghislaine BEHEM"
-     },
-     {
-      "v": "Supplément notifié 2023-2025 (73 859 + 48 124 + 50 720)"
-     },
-     {
-      "v": "172 703 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Total"
-     },
-     {
-      "v": "Société + associés (= exposition réelle)"
      },
      {
       "v": "582 796 €",
@@ -90,93 +1696,32 @@
     ],
     [
      {
-      "v": "Rappel 18/05 (avant désignation)"
+      "v": "Réduction de 25 %"
      },
      {
-      "v": "Société 213 148 € + amende 1759 de 471 826 €"
-     },
-     {
-      "v": "684 974 €",
-      "align": "right"
-     }
-    ]
-   ],
-   "minWidth": 640
-  },
-  {
-   "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 780 430\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"220\" y=\"16\" width=\"340\" height=\"64\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#a0740d\" stroke-width=\"1.5\"/><text x=\"390\" y=\"38\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Reconstitution du CA (méthode contestée)</text><text x=\"390\" y=\"74\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stocks + achats + doses figées × coefficient</text><line x1=\"390\" y1=\"80\" x2=\"390\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"200\" y1=\"104\" x2=\"580\" y2=\"104\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 195 113 L 200 122 L 205 113 Z\" fill=\"#cbb98f\"/><line x1=\"200\" y1=\"104\" x2=\"200\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"580\" y1=\"104\" x2=\"580\" y2=\"118\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 113 L 580 122 L 585 113 Z\" fill=\"#cbb98f\"/><rect x=\"120\" y=\"122\" width=\"160\" height=\"60\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"200\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Société</text><text x=\"200\" y=\"166\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">213 148 €</text><text x=\"200\" y=\"176\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">IS + TVA + 1729</text><rect x=\"465\" y=\"122\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"144\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Dissimulation réputée</text><line x1=\"580\" y1=\"168\" x2=\"580\" y2=\"180\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 176 L 580 184 L 585 176 Z\" fill=\"#cbb98f\"/><rect x=\"465\" y=\"180\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"202\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Distribution (art. 109-1)</text><line x1=\"580\" y1=\"226\" x2=\"580\" y2=\"238\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 234 L 580 242 L 585 234 Z\" fill=\"#cbb98f\"/><rect x=\"465\" y=\"238\" width=\"230\" height=\"46\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"260\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">RCM par foyer, × 1,25</text><line x1=\"580\" y1=\"284\" x2=\"580\" y2=\"296\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 575 292 L 580 300 L 585 292 Z\" fill=\"#cbb98f\"/><rect x=\"465\" y=\"296\" width=\"230\" height=\"58\" rx=\"8\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"580\" y=\"318\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">IR + PS + 40 % + intérêts</text><text x=\"580\" y=\"340\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">369 648 €</text><rect x=\"150\" y=\"374\" width=\"480\" height=\"44\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"390\" y=\"402\" text-anchor=\"middle\" font-size=\"13\" font-weight=\"700\" fill=\"#0f7c6c\">Racine annulée  ⇒  582 796 € tombent (société + associés)</text></svg>",
-   "titre": "Rappel : tout dépend de la reconstitution"
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Les scénarios et leurs fourchettes",
-   "sousTitre": ""
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La base distribuée étant la **stricte moitié** des discordances TTC de la reconstitution, toute réduction de la reconstitution se répercute **proportionnellement** sur la base distribuée, et **au moins proportionnellement** sur l'impôt personnel (la progressivité du barème jouant à la baisse). Les montants résiduels ci-dessous sont donc des **approximations** : exactes sur la base, indicatives sur l'impôt (l'IS à 15 % jusqu'à 42 500 € et le barème de l'IR ne baissent pas strictement au prorata)."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Exposition résiduelle selon l'issue (fourchette indicative)",
-   "colonnes": [
-    {
-     "label": "Issue sur la reconstitution"
-    },
-    {
-     "label": "Société",
-     "align": "right"
-    },
-    {
-     "label": "Associés",
-     "align": "right"
-    },
-    {
-     "label": "Total résiduel",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Annulation (durée du contrôle L. 52 ou vice de méthode)"
-     },
-     {
-      "v": "≈ 0 €",
+      "v": "176 935 €",
       "align": "right"
      },
      {
-      "v": "≈ 0 €",
+      "v": "≈ 159 861 €",
       "align": "right"
      },
      {
-      "v": "≈ 0 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Réduction de 75 %"
-     },
-     {
-      "v": "≈ 53 287 €",
+      "v": "≈ 277 236 €",
       "align": "right"
      },
      {
-      "v": "≈ 92 412 €",
-      "align": "right"
-     },
-     {
-      "v": "≈ 145 699 €",
+      "v": "≈ 437 097 €",
       "align": "right"
      }
     ],
     [
      {
       "v": "Réduction de 50 %"
+     },
+     {
+      "v": "117 957 €",
+      "align": "right"
      },
      {
       "v": "≈ 106 574 €",
@@ -193,18 +1738,64 @@
     ],
     [
      {
-      "v": "Maintien + réductions personnelles (40 % / clé 50-50)"
+      "v": "Réduction de 75 %"
      },
      {
-      "v": "213 148 €",
+      "v": "58 978 €",
       "align": "right"
      },
      {
-      "v": "partiel",
+      "v": "≈ 53 287 €",
       "align": "right"
      },
      {
-      "v": "< 582 796 €",
+      "v": "≈ 92 412 €",
+      "align": "right"
+     },
+     {
+      "v": "≈ 145 699 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Annulation (rejet infondé, L. 52, méthode viciée)"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Maintien + décharge des 40 % seuls"
+     },
+     {
+      "v": "235 913 €",
+      "align": "right"
+     },
+     {
+      "v": "154 325 €",
+      "align": "right"
+     },
+     {
+      "v": "265 939 €",
+      "align": "right"
+     },
+     {
+      "v": "420 264 €",
       "align": "right"
      }
     ]
@@ -212,53 +1803,211 @@
    "minWidth": 640
   },
   {
-   "kind": "paragraphe",
-   "texte": "**Scénario 1 - la reconstitution est écartée** (durée du contrôle, art. L. 52 du LPF, ou vice de méthode) : plus de recette occultée, les rappels société, les distributions et toute la taxation personnelle tombent. C'est l'objectif principal."
+   "kind": "schema",
+   "titre": "Cascade des demandes : du rappel initial à l'annulation (en euros notifiés ; la base TVA est une base, pas un impôt)",
+   "svg": "<svg viewBox=\"0 0 760 320\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"250\" x2=\"744\" y2=\"250\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"40.6857142857143\" y=\"53.47826086956522\" width=\"62.05714285714286\" height=\"196.52173913043478\" rx=\"3\" fill=\"#a0740d\"/><text x=\"71.71428571428572\" y=\"48.47826086956522\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">684 974 €</text><text x=\"71.71428571428572\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Rappel initial</text><text x=\"71.71428571428572\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">18/05/2026</text><rect x=\"144.1142857142857\" y=\"53.47826086956522\" width=\"62.05714285714286\" height=\"135.36873821043795\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"175.14285714285714\" y=\"48.47826086956522\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">− 471 826 €</text><text x=\"175.14285714285714\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Amende 1759</text><text x=\"175.14285714285714\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">écartée</text><text x=\"175.14285714285714\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">(désignation)</text><rect x=\"247.54285714285712\" y=\"82.79353161103799\" width=\"62.05714285714286\" height=\"106.05346746896518\" rx=\"3\" fill=\"#b4452e\"/><text x=\"278.57142857142856\" y=\"77.79353161103799\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+369 648 €</text><text x=\"278.57142857142856\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Suppléments</text><text x=\"278.57142857142856\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">foyers</text><text x=\"278.57142857142856\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">19/10/2026</text><rect x=\"350.9714285714286\" y=\"82.79353161103799\" width=\"62.05714285714286\" height=\"46.63107111269599\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"382.0\" y=\"77.79353161103799\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">− 162 532 €</text><text x=\"382.0\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Majorations 40</text><text x=\"382.0\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">% déchargées</text><rect x=\"454.40000000000003\" y=\"129.42460272373398\" width=\"62.05714285714286\" height=\"14.32396608896994\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"485.42857142857144\" y=\"124.42460272373398\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">− 49 926 €</text><text x=\"485.42857142857144\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Base TVA hors</text><text x=\"485.42857142857144\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">distribution</text><rect x=\"557.8285714285713\" y=\"143.74856881270392\" width=\"62.05714285714286\" height=\"106.24397168486621\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"588.8571428571428\" y=\"138.74856881270392\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">− 370 312 €</text><text x=\"588.8571428571428\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\"></text><text x=\"588.8571428571428\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Reconstitution</text><text x=\"588.8571428571428\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">annulée</text><rect x=\"661.2571428571428\" y=\"250.0\" width=\"62.05714285714286\" height=\"0.0\" rx=\"3\" fill=\"#6a4d0f\"/><text x=\"692.2857142857142\" y=\"245.0\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#2a2015\">0 €</text><text x=\"692.2857142857142\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">Exposition</text><text x=\"692.2857142857142\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">résiduelle</text></svg>"
   },
   {
    "kind": "paragraphe",
-   "texte": "**Scénario 2 - la reconstitution est réduite** : la réduction se répercute sur les trois niveaux (société, PASTEUR, BEHEM), proportionnellement sur la base et au moins proportionnellement sur l'impôt."
+   "texte": "Lecture : 684 974 − 471 826 + 369 648 = 582 796 € (exposition réelle) ; 582 796 − 162 532 = 420 264 € si les seules majorations de 40 % sont déchargées ; la barre « base TVA » (49 926 €) est une réduction de base, son effet en impôt est inférieur ; la dernière barre solde ce qui reste à 0 € si la reconstitution tombe."
   },
   {
-   "kind": "paragraphe",
-   "texte": "**Scénario 3 - la reconstitution est maintenue** : restent exploitables, au niveau personnel, la **décharge de la majoration de 40 %** faute de motivation individualisée, la contestation de la **clé de 50 %** (deux co-maîtres : le service doit prouver la part de chacun) et la **vérification de l'assiette sociale** (exclusion du coefficient de 1,25, QPC n° 2017-643/650), dont la pièce n'a pas été produite."
+   "kind": "titre",
+   "texte": "Demande"
   },
   {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 3,
-   "titre": "Nos demandes",
-   "sousTitre": ""
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "1. La **saisine de la Commission départementale des impôts directs et des taxes sur le chiffre d'affaires** (art. L. 59 A du LPF), pour les seules **questions de fait** de la reconstitution : le montant du résultat imposable à l'impôt sur les sociétés et du chiffre d'affaires reconstitué, ainsi que les bases de TVA. La Commission n'étant **pas compétente** sur la qualification des sommes en revenus distribués (art. 109-1, question de droit), sur l'imposition des associés en RCM, ni sur les pénalités (art. 1729 et 1759), ces chefs sont réservés à la voie contentieuse."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "2. La **décharge** des rectifications par la voie contentieuse, à titre principal par l'écartement de la reconstitution, à titre subsidiaire par les réductions ci-dessus (majoration de 40 %, clé de 50 %, assiette sociale)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "3. À titre **conservatoire**, le **dépôt d'observations dans le délai de 30 jours** sur chacune des propositions personnelles du 19 octobre 2026, avec demande de prorogation. Il est précisé que la désignation des bénéficiaires du 16 juin 2026 a été faite **à titre conservatoire, sans reconnaissance** de l'existence ni du montant des distributions, à seule fin d'écarter l'amende de l'article 1759."
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Reconstitution par formule des totaux de l'exposition (société 213 148 €, associés 369 648 €, total 582 796 €, rappel 684 974 € avant désignation) à partir des composantes notifiées. Les scénarios de réduction sont des projections proportionnelles, à lire comme des approximations.",
-   "fichiers": [
-    {
-     "fichier": "pieces-reponse-2/R2-exposition.xlsx",
-     "label": "Reconstitution de l'exposition : 213 148 / 369 648 / 582 796 / 684 974 € (XLSX à formules)"
-    },
-    {
-     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
-     "label": "Base distribuée, × 1,25 et taux effectif par foyer (XLSX à formules)"
-    }
+   "kind": "liste",
+   "style": "numeros",
+   "items": [
+    "**À titre principal, l'abandon intégral** des rectifications fondées sur la reconstitution : rappels de la société (IS 97 510 €, TVA 49 547 €, intérêts et majorations : 213 148 €) et suppléments des deux foyers (196 945 € et 172 703 € : 369 648 €), soit 582 796 € ; le rejet de la comptabilité n'est pas fondé (dix motifs sans un euro de recette occultée désigné) et la méthode est radicalement viciée (75,2 % de cuisine extrapolée, produits des menus et de la cuisine comptés comme vendus au verre).",
+    "**Constatation écrite de l'abandon de l'amende de 100 %** (art. 1759, 471 826 €) consécutif à la désignation du 16/06/2026, et confirmation que le décompte de la société n'en porte plus trace.",
+    "**Subsidiairement, la réduction de la reconstitution** poste par poste, la cascade des 10 622 L étant proposée comme méthode plus précise (CE n° 470817) : retrait de la cuisine extrapolée (354 921 €) à proportion des liquides corrigés ; retrait des postes chiffrés (sur-versement 37 500 €, crémant ≈ 30 103 €, alcool de cuisine 17 466 €, alcool des menus ≈ 11 080 € : ≈ 96 149 € TTC, plancher) ; chiffrage par le service, sur sa propre mécanique, de la dégustation (97,42 L) ; à tout le moins 23 147 € pour 2022-2023 au repère même du service. Toute réduction se répercute sur la base distribuée de chaque foyer (176 935 / 117 957 / 58 978 € à 25 / 50 / 75 %).",
+    "**En tout état de cause, sur la taxation personnelle** : retrait de la part TVA de la base distribuée (24 963 € par foyer, 49 926 €), faute de mise à disposition établie (CE n° 491690) ; preuve par le service de la part appréhendée par chaque foyer, la clé de 50 / 50 n'étant pas présumée entre deux co-gérants (CE n° 388887 ; CAA Versailles n° 21VE01600) ; production du détail de liquidation (option barème ou PFU, parts, taux de prélèvements 2025).",
+    "**Dégrèvement des majorations de 40 %** (art. 1729) : 58 823 € (société), 54 914 € (M. PASTEUR), 48 795 € (Mme BEHEM), soit 162 532 €, le manquement délibéré de chaque intéressé n'étant pas établi (L. 195 A) et la motivation personnelle étant copiée (L. 80 D) ; réduction corrélative des intérêts de retard (16 143 €).",
+    "**Saisine de la commission départementale des impôts directs et des taxes sur le chiffre d'affaires** (art. L. 59 et L. 59 A LPF), déjà demandée par lettres recommandées des 28/09 et 01/10/2026 dans les 30 jours de la réponse du 04/09/2026 : sur les seules questions de fait de la reconstitution (montant du résultat et du chiffre d'affaires, bases de TVA), la commission n'étant pas compétente sur l'imposition des revenus distribués (BOI-CF-CMSS-20-10 § 350 ; CE 29/11/1982 n° 23683) ni sur les pénalités hors remise gracieuse (§ 140) : ces chefs relèvent de la voie contentieuse.",
+    "**Dans la procédure personnelle de chaque foyer** : observations dans les 30 jours de la réception des propositions du 19/10/2026, avec demande de prorogation de 30 jours déposée avant l'expiration du premier délai ; renvoi exprès aux observations de la société ; réserve de tous moyens, dont la durée de la vérification (art. L. 52 LPF, quatre mois sur place) à soulever au stade contentieux si le rejet est écarté ; demande de communication (art. L. 76 B) des annexes 7-1 à 7-3 complètes, des factures Franche Comté Boissons Services et de l'inventaire au 31/03/2022 détenus par le service.",
+    "**Après mise en recouvrement** : réclamation contentieuse avec demande de sursis de paiement (art. L. 277 LPF) pour les trois contribuables."
    ]
   },
   {
+   "kind": "titre",
+   "texte": "Ce que le service pourrait encore opposer"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**« Le rejet est une appréciation d'ensemble ; chaque motif pris isolément ne suffit pas à le renverser. »** → Les trois piliers que le service lui-même met en avant (suppressions, articles à 0 €, quantités et prix) sont chacun ramenés à 0 recette occultée et aux chiffres du service (430 763,15 € = prix de carte à 99,7 % ; 0,28 % ; 99,0 %) ; les sept autres motifs ne portent aucun euro. L'addition de motifs sans gravité ne fait pas une gravité « indiscutable » (BOI-CF-IOR-10-20 § 90).",
+    "**« Le coefficient reconstitué (3,40 / 3,14 / 3,05) reste sous le 3,2725 attendu. »** → Concédé sur l'arithmétique (−42 207 € sur trois ans) ; mais 85 % d'alcool revendu n'est mesuré nulle part, le bilan matière en établit 60,77 %, et le repère corrigé (2,383251) est dépassé de 444 807 €. Au repère même du service, 2022-2023 est déjà en excès de 23 147 €.",
+    "**« Vos corrections de liquides sont des hypothèses après contrôle. »** → Le crémant est décompté bouteille par bouteille sur 643 journées des annexes C du service ; l'alcool de cuisine et des menus reprend les doses que le service imprime p. 37 ; le verre de 18,28 cl est une mesure publiée avec intervalle de confiance ; le service n'oppose aucune mesure (BOI-CF-IOR-10-20 § 200 : conditions concrètes d'exploitation). Les pièces manquantes (attestations, constat) sont listées ci-dessous.",
+    "**« La commission a été saisie ; si elle nous suit, la preuve vous incombe. »** → Seulement si elle retient des « graves irrégularités » et que l'imposition suit son avis (L. 192 al. 2) ; la preuve de ces irrégularités reste à l'administration devant le juge (al. 3) ; et la cascade des 10 622 L est la « méthode plus précise » que le juge doit examiner (CE n° 470817).",
+    "**« La désignation du 16/06/2026 vaut reconnaissance des distributions. »** → Elle n'est « qu'une simple information non-opposable aux personnes désignées » (BOI-RPPM-RCM-10-20-20-40 § 360) ; l'art. 1759 ne porte que sur l'identité et l'adresse (§ 320) ; si les désignés contestent, l'administration doit prouver l'appréhension (§ 370). 0 € de flux établi.",
+    "**« Co-gérants à 50 / 50, même domicile : la moitié chacun. »** → Deux foyers distincts, reconnus p. 59 ; la présomption suppose un « seul » maître (CE n° 388887) ; entre co-dirigeants égalitaires la part doit être prouvée (CAA Versailles n° 21VE01600) ; le service décrit des rôles disjoints et attribue la même « latitude » aux deux.",
+    "**« La répétition sur trois exercices établit l'intention. »** → La répétition est celle d'une méthode appliquée trois fois ; le montant et la fréquence ne caractérisent pas par eux-mêmes l'intention (CE n° 412536) et des omissions répétitives n'ont pas suffi (CE n° 489235) ; la connaissance exacte des faits par chaque personne n'est pas démontrée (BOI-CF-INF-10-20-20 § 40).",
+    "**« La durée de six mois a été notifiée le 30/03/2026. »** → Cette extension n'existe qu'« en cas de graves irrégularités privant de valeur probante la comptabilité » (L. 52 II 4°) ; si le rejet tombe, le délai de trois mois (12/01 → 12/04/2026) est dépassé d'un mois et la nullité est « absolue et inconditionnelle » (BOI-CF-PGR-20-30 § 210) ; la prorogation L. 47 A II est de trois jours au plus (13/03 → 16/03), les FEC ayant été remis le 12/01.",
+    "**« Les arguments produits après le contrôle sont tardifs. »** → La phase contradictoire (art. L. 57 LPF) a précisément pour objet les observations et pièces du contribuable ; les analyses sont faites sur les fichiers de caisse que le service détient et a lui-même exploités (annexes A à H) ; aucune pièce n'a été créée."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Points de vigilance pour la réunion"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Pièces à produire avant toute séance de commission** (après avis conforme, la charge de la preuve peut basculer, L. 192 al. 2) : attestation de salle sur la dégustation (art. 202 CPC) ; attestation de la gérante sur le crémant (bouteille entamée jetée, pas de bouchon stoppeur) et sur les doses de cuisine ; attestation de M. PASTEUR et Mme BEHEM sur la consommation du personnel ; constat d'huissier ou pesée contradictoire d'un service de vin sans doseur (18,28 cl) ; attestation du cabinet AGC sur les inventaires remis avant le 18/05/2026 ; export de caisse porteur de l'identifiant de note, ou attestation de l'éditeur de son inexistence ; certificat de conformité de la caisse du 01/12/2018 ; cartes des vins des trois exercices ; factures FCBS et Intermarché ; déclarations 2042 des deux foyers (option 2OP, nombre de parts).",
+    "**Concessions à annoncer d'emblée** (le service les découvrira) : bière 0 €, variation de stock 0 € (point 9 retiré, l'ancien chiffrage de 2 162 € était faux), ventes sans achat 0 € (une bouteille de Bordeaux ≤ 30 € HT, 375 cl de blanc sous un bouton « Beaune »), abattements 0 € (le forfait de 15 % est un plafond), test de la p. 93 exact (−42 207 €), résidu de 50 articles / 264,98 €, 45,0 L de crémant inexpliqués, 12 produits à consommation > achats assumés comme défauts de paramétrage, crémant ramené de 346,9 L à 248,1 L depuis le 10/07.",
+    "**Ne pas cumuler** sur-versement et dégustation sur les mêmes verres tant que la salle n'a pas décrit un verre distinct ; tenir séparés les périmètres cuisine à la carte (72,68 L) et menus (20,53 L) ; le total de ≈ 96 149 € est un plancher aux périmètres disjoints, pas un dégrèvement acquis.",
+    "**Commission L. 59 A** : limiter la saisine aux questions de fait (CA, résultat, bases de TVA) ; présenter la cascade comme méthode alternative ; faire acter que les 85 % du repère ne sont pas mesurés ; la qualification en revenus distribués, l'IR des foyers et les pénalités restent contentieux (BOI-CF-CMSS-20-10 § 350).",
+    "**Asymétrie BEHEM** : le service n'a liquidé pour Mme BEHEM que la part HT (86 407 / 62 005 / 62 538 €) ; le moyen « TVA hors base » (24 963 € par foyer) se plaide pour M. PASTEUR sans souligner cette asymétrie. De même, « 1,9 part » et « PFU 12,80 % » sont des incohérences du service : vérifier la 2042 avant d'en faire un moyen chiffré (option barème irrévocable, CE n° 490411).",
+    "**Désignation** : ne jamais la qualifier de « conditionnelle » (une réponse évasive ou conditionnelle est assimilée à un refus, BOI-RPPM-RCM-10-20-20-40 § 450) ; dire qu'elle est régulière et inconditionnelle sur l'identité, et que les désignés contestent le bien-fondé dans leur procédure propre.",
+    "**Délais** : propositions du 19/10/2026 : 30 jours de la réception, prorogation de 30 jours à demander avant l'expiration, à défaut acceptation tacite ; saisine de la commission déjà faite (28/09 et 01/10/2026) ; intérêts de retard (art. 1727) continuant de courir ; sursis L. 277 à demander avec la réclamation.",
+    "**Références non relues en ligne** (Légifrance et Juricaf inaccessibles depuis l'environnement de rédaction) : textes des art. L. 52, L. 57, L. 59 A, L. 192, L. 195 A LPF et 109, 117, 158-7-2°, 1729, 1759 CGI vérifiés par la doctrine BOFiP et par leur reproduction dans les décisions (CE n° 508468, n° 470817) ; arrêts CE 1979-1988 cités par le service, CE 25/07/1980 n° 13170 et CAA Marseille n° 17MA00424 non retrouvés : en demander copie au service.",
+    "**Statut honnête de la page : partiel.** La demande principale dépend de la chute du rejet et de la méthode ; sur la reconstitution, trois postes (sur-versement, crémant, dégustation) reposent sur des mesures publiées ou des attestations à produire, et le chiffrage de 96 149 € est un ordre de grandeur calculé par la mécanique du service, non un recalcul de celui-ci."
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-synthese-scenarios.xlsx",
+     "label": "R2 : exposition, scénarios 25 / 50 / 75 %, majorations 162 532 €, part TVA 49 926 €, postes chiffrés 96 149 € (formules, recalculé)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-exposition.xlsx",
+     "label": "R2 : 213 148 / 369 648 / 582 796 / 684 974 € par formule"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "R2 : base RCM 235 913 €, × 1,25, taux effectifs"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-distributions-base.xlsx",
+     "label": "R2 : TTC ÷ 2, part TVA par foyer"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-designation-117-cle-50-50.xlsx",
+     "label": "R2 : désignation et clé 50 / 50"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-majoration-25.xlsx",
+     "label": "R2 : coefficient 1,25 et liquidation"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-manquement-delibere-personnel-majorations-foyers.xlsx",
+     "label": "R2 : majorations de 40 % des foyers"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-manquement-delibere-personnel-enjeu-40.xlsx",
+     "label": "R2 : majoration de 40 % société"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-suppressions-de-notes-rapprochement.xlsx",
+     "label": "R2 : suppressions « DEL »"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-articles-zero-euro.xlsx",
+     "label": "R2 : articles à 0 €"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
+     "label": "R2 : quantités fractionnaires"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-inventaire-de-stocks-chaine.xlsx",
+     "label": "R2 : inventaires"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-fichiers-EF-reconciliation.xlsx",
+     "label": "R2 : fichiers Événement et Règlement"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-tables-virtuelles-numeros.xlsx",
+     "label": "R2 : tables « virtuelles »"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+     "label": "R2 : TVA"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
+     "label": "R2 : consommation / achats"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-menus-prix.xlsx",
+     "label": "R2 : prix des menus"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-coefficient-revente.xlsx",
+     "label": "R2 : coefficient de revente"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-extrapolation-cuisine.xlsx",
+     "label": "R2 : extrapolation cuisine"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-sur-versement-chiffrage.xlsx",
+     "label": "R2 : sur-versement"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-cremant-jour-par-jour.xlsx",
+     "label": "R2 : crémant"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-alcool-cuisine.xlsx",
+     "label": "R2 : alcool de cuisine"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-alcool-plats-menus.xlsx",
+     "label": "R2 : alcool des menus"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-degustation-tracee.xlsx",
+     "label": "R2 : dégustation"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
+     "label": "R2 : abattements"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-biere-matiere.xlsx",
+     "label": "R2 : bière"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-variation-stock.xlsx",
+     "label": "R2 : variation de stock"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-ventes-sans-achat.xlsx",
+     "label": "R2 : ventes sans achat"
+    },
+    {
+     "fichier": "contentieux/Reponse_fisc_aux_observations_04-09-2026.pdf",
+     "label": "Réponse de la DDFiP du Jura du 04/09/2026 (scan)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition personnelle M. PASTEUR du 19/10/2026 (scan)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition personnelle Mme BEHEM du 19/10/2026 (scan)"
+    },
+    {
+     "fichier": "contentieux/Courrier_avocat_28-09-2026.docx",
+     "label": "Courrier de Me THIVEND du 28/09/2026 (demande de saisine de la commission)"
+    },
+    {
+     "fichier": "contentieux/Courrier_avocat_01-10-2026.pdf",
+     "label": "Courrier de Me THIVEND du 01/10/2026 (demande de saisine de la commission)"
+    }
+   ],
+   "titre": "Toutes les pièces de la page"
+  },
+  {
    "kind": "note",
-   "texte": "Sources : propositions du 19/10/2026 (société et associés) ; proposition du 18/05/2026 ; réponse de la DDFiP du Jura du 04/09/2026 ; art. L. 52, L. 59, L. 59 A, L. 192 du LPF ; art. 6, 109-1, 117, 158-7-2°, 1727, 1729, 1759 du CGI. Les intérêts de retard (art. 1727) sont figés aux montants du 18/05/2026 et continuent de courir."
+   "texte": "Sources : proposition de rectification du 18/05/2026 (p. 1-7, 14-35, 36-53, 57-65) ; réponse de la DDFiP du Jura du 04/09/2026 (p. 3-58, 59-93, 94-95) ; propositions personnelles du 19/10/2026 (p. 59-65, avis p. 67-80) ; courriers de Me THIVEND des 16/06, 08/07, 28/09 et 01/10/2026. Droit : art. L. 52, L. 57, L. 59, L. 59 A, L. 76 B, L. 77, L. 80 D, L. 192, L. 195 A, L. 277 LPF ; art. 6, 109, 110, 117, 158-7-2°, 200 A, 1727, 1729, 1759 CGI ; R. 123-177 c. com. ; BOI-CF-IOR-10-20 (§ 60, 90, 130, 200), BOI-CF-PGR-20-30 (§ 50-60, 100, 140, 175, 180, 210), BOI-CF-CMSS-20-10 (§ 140, 200, 350), BOI-CTX-DG-20-20-10 (§ 140, 160-170, 190), BOI-CF-INF-10-20-20 (§ 30-40), BOI-RPPM-RCM-10-20-10 (§ 60, 90, 100), BOI-RPPM-RCM-10-20-20-40 (§ 300, 320, 330, 360, 370, 450), BOI-RPPM-RCM-20-10-20-10 (§ 120-160) ; CE plén. 22/02/2017 n° 388887 ; CE 29/06/2020 n° 432815 et 433827 ; CE 19/07/2024 n° 491690 ; CE 10/07/2024 n° 470817 ; CE 03/11/2023 n° 460520 ; CE 23/07/2024 n° 489235 ; CE 07/06/2019 n° 412536 ; CE 09/04/2014 n° 358279 ; CE 13/04/2018 n° 401923 ; CE 05/04/2024 n° 490411 ; CE 29/11/1982 n° 23683 ; CAA Versailles 23/05/2023 n° 21VE01600 ; CC n° 2017-643/650 QPC, n° 2016-610 QPC, n° 2019-793 QPC. Les montants personnels sont ceux notifiés par le service (PDF scannés, OCR relu)."
   }
  ]
 }

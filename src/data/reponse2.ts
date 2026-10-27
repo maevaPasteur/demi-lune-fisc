@@ -309,7 +309,7 @@ export const points: Point[] = [
     titre: '4.7 - Exposition réelle et demandes',
     positionService: '',
     reponseCourte:
-      'Après la désignation du 16/06/2026, l\'exposition réelle est de 582 796 € (société 213 148 € + associés 369 648 €), et non 684 974 €. Tout dépend de la reconstitution : si elle tombe, tout tombe ; si elle est réduite, l\'exposition baisse d\'autant. Nous demandons la Commission sur les seules questions de fait de la reconstitution, et la décharge contentieuse pour le reste.',
+      'Les dix motifs du rejet ne désignent aucune recette occultée et la reconstitution extrapole 75,2 % de son rehaussement : nous demandons l\'abandon des 582 796 € (société 213 148 €, foyers 369 648 €), la constatation de l\'abandon de l\'amende de 100 % (471 826 €), subsidiairement la réduction poste par poste répercutée sur la base de chaque foyer (176 935 / 117 957 / 58 978 € à 25 / 50 / 75 %), en tout état de cause la décharge des majorations de 40 % (162 532 €) et le retrait de la part TVA (49 926 €) de la base distribuée, avec saisine de la commission sur les seules questions de fait.',
     enjeu: 'Total en jeu 582 796 €', statut: 'partiel',
   },
 ]
