@@ -229,7 +229,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' — Ventes sans achat', titre: 'Les « ventes sans achat »',
     positionService: '',
     reponseCourte:
-      'Le service reconnaît que ce grief ne fonde aucun euro, et ses tableaux p. 75 sont faux (12 950 cl de blanc pour 150 enregistrés, exercices 2 et 3 identiques). Restent une bouteille de Bordeaux et 375 cl de blanc que nous assumons comme défauts de caisse, sans CA occulté démontré ; la comparaison achats/ventes n’exclut pas à elle seule des achats hors facture (L. 192 al. 2 LPF).',
+      'Le service reconnaît que ce grief ne fonde aucun euro ; ses deux exemples ont leurs achats dans ses propres annexes (Bordeaux 11 achetées, Nuits blanc 42 disponibles) et les 12 950 cl de « Beaune blanc » sont 150 cl de Beaune blanc plus 256 pichets de rosé maison (code de caisse 2091 réaffecté le 05/05/2023) ; les tableaux p. 75 impriment sous l’exercice 1 les volumes de 2024-2025 et répètent 2023-2024 sous l’exercice 3. Restent une bouteille de Bordeaux (75 cl) et 375 cl de blanc sous bouton mal nommé, assumés.',
     statut: 'partiel',
   },
   {

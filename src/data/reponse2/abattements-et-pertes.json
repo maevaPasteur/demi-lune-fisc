@@ -1,348 +1,884 @@
 {
  "meta": {
   "slug": "abattements-et-pertes",
-  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
+  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026, p. 51-52 ; réponse du service du 04/09/2026, p. 70-73 et p. 89)",
   "limites": [
-   "La thèse du « plancher » est abandonnée : sur le périmètre honnête (hors cuisine et menus), la consommation sans vente documentée vaut 1 158 L, soit 72,7 % seulement du forfait de 1 593 L (15 % des 10 622 L achetés). Le forfait de 15 % est donc un plafond plus généreux que la consommation sans vente réellement établie.",
-   "Le sur-versement au verre (460,6 L) a été retiré de notre décompte : c’est du vin servi dans un verre facturé au client, déjà compris dans le chiffre d’affaires au verre reconstitué. L’itemisation nette de consommation sans vente tombe à 697,4 L, soit 43,8 % du forfait.",
-   "Le « dépassement à 119 % » (1 899 L) est retiré : il n’était atteint qu’en ajoutant 741 L d’alcool de cuisine et de menus qui correspondent à des plats et menus déjà vendus, donc déjà compris dans le chiffre d’affaires reconstitué (double emploi).",
-   "Le volume de 1 505 L (mémoire du 10/07/2026) est abandonné : il double-comptait la contenance d’articles mixtes de bière (295,99 L) et des offerts déjà enregistrés à 0 € dans les ventes (25,75 L), d’après R1-cascade-doubles-comptages.csv. Il n’est pas reproductible et ne figure plus en indicateur.",
-   "La valorisation en euros dépend d’une convention de prix de revente que nous ne pouvons pas démontrer pièce primaire à l’appui ; elle n’est donnée qu’à titre indicatif. La démonstration porte sur les volumes.",
-   "Valorisation de la consommation du chef alignée sur la pièce sourcée R1-consommation-personnel.xlsx : 8 109,83 € de CA équivalent déterminable (Macvin) ; le Picon (43,7 L) n’a jamais été vendu seul et n’a aucun prix de revente propre, son CA équivalent est non déterminable. La valeur de 14 575 € retenue dans la pièce de juillet (qui impliquait 101,92 €/L) est écartée.",
-   "Ce grief ne fonde aucune réduction du redressement par l’argument « abattement insuffisant » : la défense établit seulement que la comparaison « 13 fois / 3 fois » du service n’est pas homogène (elle mélange CA boissons et CA cuisine extrapolé) et que les 105 399,78 € correspondent à la totalité du 15 % du seul exercice 1.",
-   "Les annexes caisse primaires ne sont disponibles que pour l’exercice 2022-2023 ; la ventilation des litres sur 2023-2024 et 2024-2025 repose sur un prorata des jours d’ouverture (222 / 221 / 219 j). La démonstration en volume porte sur l’agrégat des trois exercices."
+   "La thèse du « plancher » est abandonnée : hors cuisine et menus, la consommation sans vente documentée vaut 1 158 L (72,7 % du forfait de 1 593 L) et 697,4 L nets (43,8 %) une fois retiré le sur-versement déjà facturé. Le forfait de 15 % est un plafond.",
+   "Les 1 505 L, 1 899 L (119 %), 28,7 % et 30,2 % du mémoire du 10/07/2026 ne sont plus revendiqués (doubles comptages et postes déjà vendus) ; la table de passage figure sur la page.",
+   "La valorisation en euros (30 525,83 € contre 76 863,18 €) dépend de prix de revente au litre non démontrables pièce primaire à l’appui : indicative. La démonstration porte sur les volumes.",
+   "Consommation du chef valorisée au seul CA déterminable (Macvin 8 109,83 €) ; le Picon (43,7 L) n’a pas de prix de revente propre. Le 14 575 € de juillet est écarté.",
+   "Ce point ne réduit pas le redressement par lui-même (0 €) ; il neutralise l’argument de « générosité » réemployé par le service sur la bière, la dégustation et le coefficient, et corrige des comparaisons non homogènes.",
+   "Annexes caisse primaires exploitées pour 2022-2023 ; ventilation 2023-2024 et 2024-2025 au prorata des jours d’ouverture (222 / 221 / 219 j).",
+   "L’arrêt CAA Paris du 17/03/2021 et les arrêts CAA Marseille cités par le service n’ont pas pu être relus en ligne pour cette page : à vérifier avant citation."
   ]
  },
  "entete": {
-  "reponseCourte": "Sur le périmètre honnête, hors cuisine et menus, la consommation sans vente que nous documentons (1 158 L, et 697,4 L une fois retiré le vin sur-versé déjà facturé) reste inférieure au forfait de 15 % (1 593 L) : le forfait est un plafond plus généreux, non un plancher. Ce grief ne réduit donc pas le redressement par ce biais. Reste exact que la comparaison du service (« 13 fois / 3 fois ») n’est pas homogène : les 105 399,78 € sont la totalité du 15 % du seul exercice 1, dont les trois quarts de CA cuisine extrapolé, non le 5 % d’offerts de trois exercices.",
+  "reponseCourte": "Ramené en litres, le forfait de 15 % (1 593 L) couvre et dépasse la consommation sans vente que nous documentons (1 158 L brut, 697,4 L net hors sur-versement déjà facturé), de sorte que ce point ne réduit pas le redressement ; ce qui tombe, c’est l’emploi que le service fait de ce forfait unique, opposé six fois dans huit pages, et ses comparaisons « 13 fois / 3 fois », qui mêlent 26 216,19 € de cuisine extrapolée par exercice à des chiffres de boissons.",
   "statut": "partiel"
  },
  "sections": [
   {
    "kind": "chapitre",
-   "source": "fisc",
+   "source": "neutre",
    "numero": 1,
-   "titre": "Ce que soutient l’administration",
-   "sousTitre": "La proposition de rectification personnelle du 19/10/2026 notifiée à M. Thierry PASTEUR et à Mme Ghislaine BEHEM reprend à l’identique ce grief de la proposition « société » du 18/05/2026 (abattements forfaitaires, pages 44-48) ; le service en avait précisé la portée dans sa réponse aux observations du 04/09/2026, page 89, partie « S- Dégustation Offerte (goûter du vin) »."
+   "titre": "Abattements forfaitaires de 5 % + 5 % + 5 % et consommation du personnel",
+   "sousTitre": "Points 7 et 8 de la reconstitution (réponse du service du 04/09/2026, p. 70 à 73), repris sans élément nouveau dans la partie S (p. 89) ; forfaits issus de la proposition du 18/05/2026 (p. 51-52), recopiés p. 52-53 des propositions personnelles du 19/10/2026."
   },
   {
-   "kind": "paragraphe",
-   "texte": "**Le titre de cette partie S est erroné.** Le courrier intitule la partie S « **S- Dégustation Offerte (goûter du vin)** » (p. 89), soit exactement le même intitulé que la partie Q (p. 85) et la partie R (p. 87), avec pour seule différence le renvoi à la proposition (« Pages 44-48 » pour S, « Pages 37-44 » pour Q et R). Le contenu de la partie S ne porte pourtant pas sur la dégustation offerte : il traite des **abattements forfaitaires de 5 % + 5 % + 5 %** (offerts, pertes, consommation du personnel). La page est donc identifiée ici par son contenu réel."
+   "kind": "liste",
+   "titre": "Ce que reproche le fisc, en résumé",
+   "style": "numeros",
+   "items": [
+    "**Point 7 (p. 70-71) : la consommation du personnel « tiendrait dans un forfait de 5 % du CA ».** Le service se dit « d’une grande générosité » : la loi interdirait aux salariés de boire de l’alcool au travail ; 5 % du vin disponible (83,84 L) et 5 % des autres alcools (61,46 L) de l’exercice 2022-2023 « aboutissent au volume souhaité par Maître THIVEND » ; en euros, le 5 % minore le CA TTC reconstitué de 35 133,26 €, soit 8,70 % du CA déclaré.",
+    "**Point 8 (p. 71-73) : les trois forfaits de 5 % (offerts, pertes, personnel) couvriraient tout le non-vendu.** Offerts : la caisse montre 0,28 % d’articles à 0 €, le 5 % serait donc généreux ; la défense valorise ses offerts à 8 010 €, contre 35 133,26 € × 3 = 105 399,78 €, « plus de 13 fois ». Pertes : des dirigeants expérimentés gaspillent peu ; 35 133,26 € = 8,70 % du CA déclaré. Personnel : la défense ne retiendrait que le Macvin et le Picon bière, valorisés 39 319 €, contre 105 399,78 €, « près de 3 fois » ; les DADS ne montrent que 3 507 €, 3 555 € et 3 957 € d’avantages en nature.",
+    "**Partie S (p. 89) : « Maître THIVEND revient, encore sur cette question »** sans « un quelconque élément complémentaire » ; le service « se limite à résumer ses conclusions » (offerts 13 fois, pertes 8,70 %, personnel 3 fois) et « ne voit aucune raison de modifier sa reconstitution »."
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "1",
+   "texte": "Point 7 : « Consommation du personnel plafonnée à 5 % » (réponse du 04/09/2026, p. 70-71)"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 70-71",
+   "resume": [
+    "Le forfait de 5 % « impacte toutes les boissons, y compris celles alcoolisées. Or, la loi interdit aux salariés des restaurants/bar de consommer de l’alcool lors de leur période de travail » : le service aurait donc fait preuve « d’une grande générosité ».",
+    "Sur l’exercice 2022-2023, 5 % du vin disponible (1 676,83 L) = 83,84 L et 5 % des autres alcools (1 229,23 L) = 61,46 L ; « le cumul de ces deux volumes [...] aboutit donc au volume souhaité par Maître THIVEND ».",
+    "En euros, le 5 % de consommation du personnel minore le CA TTC reconstitué de 35 133,26 €, « 8,70 % du chiffre d’affaires TTC déclaré [...] proportion [...] significative » : « aucune raison de modifier sa reconstitution »."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Position de la défense telle que le courrier la reproduit (encadré, p. 70).** « Service : La consommation du personnel tiendrait dans un forfait de 5 % du CA. Réponse : Le chef consomme du Picon et du Macvin jamais sonnés (72 L de Picon achetés, 0 vendu) ; les serveurs ~6 Coca/jour. La consommation alcool seule : 143 L, au-delà du forfait. Pièces : 56-consommation-personnel-et-offerts.xlsx »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du service (p. 70).** « Sur cet aspect, le service a fait preuve d’une grande générosité. En effet, celle-ci est immédiatement notable compte tenu que ce taux de 5 %, appliqué pour la consommation du personnel, impacte toutes les boissons, y compris celles alcoolisées. Or, la loi interdit aux salariés des restaurants/bar de consommer de l’alcool lors de leur période de travail. Pour montrer l’importance de la soustraction d’alcool opérée par le service en la matière, il suffit de se pencher uniquement sur le premier exercice (puisque cette logique se répète sur les autres), et au gré de la méthode de reconstitution utilisée, de cette manière : »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Le calcul du service, exercice clos le 31/03/2023 (p. 70-71)",
+     "minWidth": 760,
+     "colonnes": [
+      {
+       "label": "Volume d’alcool disponible retenu par le service"
+      },
+      {
+       "label": "Litres",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Vins rouges (169,50 + 65,25 + 103,50 + 46,70 + 72,55 + 6,75)"
+       },
+       {
+        "v": "464,25 L",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Vins blancs (213,00 + 150,75 + 89,25 + 72,00 + 35,25 + 31,50)"
+       },
+       {
+        "v": "591,75 L",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Vins rosés"
+       },
+       {
+        "v": "166,50 L",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Vin acheté en BIB et disponible « après retrait pour la consommation pour la cuisine et les KIRS »"
+       },
+       {
+        "v": "454,33 L",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "« L’ensemble du volume de vin disponible représente donc » (p. 71)",
+        "fw": 700
+       },
+       {
+        "v": "1 676,83 L",
+        "align": "right",
+        "fw": 700
+       }
+      ],
+      [
+       {
+        "v": "« 5 % de ce volume correspondent donc à »",
+        "fw": 700
+       },
+       {
+        "v": "83,84 L",
+        "align": "right",
+        "fw": 700
+       }
+      ],
+      [
+       {
+        "v": "Vin de paille 10 L ; vin jaune 36,92 L ; pontarlier 11 L ; crèmes 48 L ; crémant 206,25 L ; macvin 162,26 L ; bière 754,80 L"
+       },
+       {
+        "v": "1 229,23 L",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "« 5 % de ce volume correspondent donc à »",
+        "fw": 700
+       },
+       {
+        "v": "61,46 L",
+        "align": "right",
+        "fw": 700
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Le cumul de ces deux volumes (83,84 litres et 61,46 litres) aboutit donc au volume souhaité par Maître THIVEND. Pour être encore plus parlant, et sachant que cette logique vaut pour tous les exercices, en retenant une proportion de 5 % pour consommation du personnel, le service minore le montant du chiffre d’affaires TTC reconstitué à hauteur de 35 133,26 €. À titre d’information, ce montant équivaut à 8,70 % du chiffre d’affaires TTC déclaré par la société sur ce premier exercice. Une telle proportion est donc significative. En conclusion, pour ce point, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications. » (p. 71)"
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Notre réponse au point 7",
+   "style": "puces",
+   "items": [
+    "**Nous ne contestons pas que le forfait couvre la consommation du chef : le service compare un exercice à trois.** Son 5 % vaut 145,30 L (83,84 + 61,46) pour la seule année 2022-2023, soit 435,91 L sur trois exercices ; nos 143 L (Picon 43,7 L + Macvin 99,3 L) sont un total triennal, soit 47,95 / 47,74 / 47,31 L par exercice. Rebasé sur la même période, le forfait vaut 3,05 fois notre décompte : il est un plafond, nous ne soutenons pas l’inverse.",
+    "**Le « 35 133,26 € » n’est pas la contre-valeur de ces 145,30 L.** 35 133,26 € ÷ 145,30 L = 241,79 € le litre : aucune boisson de la carte n’approche ce prix. Le montant est 5 % d’un CA total de 702 665,20 € (35 133,26 ÷ 0,05) dont la part cuisine est obtenue par le coefficient 2,94 ; seul 8 917,07 € (5 % de 178 341,42 € de liquides, proposition p. 52) porte sur des boissons.",
+    "**« La loi interdit aux salariés de consommer de l’alcool » est inexact en droit.** L’article R. 4228-20 du code du travail dispose : « Aucune boisson alcoolisée autre que le vin, la bière, le cidre et le poiré n’est autorisée sur le lieu de travail » ; une limitation ou une interdiction ne peut résulter que du règlement intérieur ou d’une note de service, proportionnée au but recherché. Le courrier n’invoque aucune de ces pièces. Et à supposer une interdiction, elle ne ferait pas disparaître les litres achetés et non vendus : le bilan matière est une question de fait, non de licéité.",
+    "**Le service lui-même range M. Thierry PASTEUR parmi les salariés** (listes DADS 2022 et 2023, p. 73) : la consommation du chef est bien une consommation « du personnel » au sens de son propre forfait.",
+    "**Le 8,70 % ne mesure rien d’autre que le poids de la cuisine extrapolée.** 35 133,26 € rapportés au CA TTC déclaré de 404 030,87 € font 8,70 % parce que le numérateur contient 26 216,19 € de cuisine ; le même 5 % limité aux boissons (8 917,07 €) ne pèse que 2,21 % du CA déclaré."
+   ]
   },
   {
    "kind": "kpis",
    "items": [
     {
-     "label": "Abattements retenus par le service",
-     "valeur": "5 % + 5 % + 5 %",
-     "sub": "Offerts, pertes, consommation du personnel (p. 89)",
+     "label": "Forfait de 5 % du service, en volume (alcool, exercice 1)",
+     "valeur": "145,30 L",
+     "sub": "83,84 + 61,46 L (p. 71) ; × 3 exercices = 435,91 L",
      "couleur": "red"
     },
     {
-     "label": "Minoration du CA TTC par abattement",
-     "valeur": "35 133,26 €",
-     "sub": "Par exercice et par poste de 5 % (p. 89) ; dont 26 216,19 € de CA cuisine extrapolé par le coefficient de revente, 8 917,07 € seulement de boissons",
-     "couleur": "blue"
+     "label": "Consommation du chef documentée (3 exercices)",
+     "valeur": "143 L",
+     "sub": "Picon 43,7 L + Macvin 99,3 L ; 47,95 / 47,74 / 47,31 L par exercice",
+     "couleur": "teal"
     },
     {
-     "label": "Minoration avancée sur 3 exercices",
-     "valeur": "105 399,78 €",
-     "sub": "Chiffre du service (p. 89) ; il correspond en réalité à la totalité du 15 % du seul exercice 1. L’effet des trois abattements sur trois exercices est de 308 830,67 €, dont 76 863,18 € de CA boissons",
-     "couleur": "blue"
+     "label": "Prix au litre impliqué par le service",
+     "valeur": "241,79 €/L",
+     "sub": "35 133,26 € ÷ 145,30 L : le montant n’est pas de l’alcool",
+     "couleur": "gold"
     },
     {
-     "label": "Part du CA TTC déclaré (exercice 1)",
-     "valeur": "8,70 %",
-     "sub": "Ce que représentent les 35 133,26 € selon le service (p. 89)"
+     "label": "CA équivalent déterminable de la consommation du chef",
+     "valeur": "8 109,83 €",
+     "sub": "Macvin seul ; le Picon (43,7 L) n’a jamais été vendu seul, prix de revente non déterminable",
+     "couleur": "blue"
     }
    ]
   },
   {
-   "kind": "titre",
-   "texte": "Ce que le courrier retient de la position de Maître THIVEND",
-   "numero": "1.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service ouvre la partie en indiquant que « **Maître THIVEND revient, encore sur cette question. Il reprend les mêmes tableaux que précédemment dans sa réponse** » (p. 89), puis reproduit dans un encadré la conclusion de la défense."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Cette conclusion est citée en ces termes : « **Les forfaits de 5 %+5 %+5 % du service sous-estiment la consommation sans vente : itemisée, elle atteint déjà 1 505 L hors cuisine et menus, et en prenant en compte la perte d’exploitation totale (28,7 %), les éléments du dossier nécessitent la prise en compte de la réalité. Les abattements retenus peuvent se comprendre et s’admettre en absence de données fiables. Loin d’être généreux, les abattements sont des planchers. Et il convient de les apprécier au regard du dossier.** » (p. 89). Nous revenons au point 2.3 sur ce volume de 1 505 L, que nous ne reprenons pas : il double-comptait des volumes déjà enregistrés dans les ventes."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "L’encadré se termine par le renvoi à la seule pièce « **57-rf-offerts-remises-pertes.xlsx** » (p. 89)."
-  },
-  {
-   "kind": "titre",
-   "texte": "La réponse du service : un refus d’examiner, faute d’élément nouveau",
-   "numero": "1.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service refuse d’entrer dans le détail de l’itemisation : « **Compte tenu que Maître THIVEND se contente de rappeler ses tableaux évoqués dans la partie “Reconstitution du Chiffre d’affaires”, sans apporter un quelconque élément complémentaire, le service va se limiter à résumer ses conclusions en la matière** » (p. 89). Il traite trois postes : offerts, pertes, consommation du personnel."
-  },
-  {
-   "kind": "titre",
-   "texte": "Poste 1 : les offerts",
-   "numero": "1.3"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "« **Dans sa réponse et son fichier, Maître THIVEND limite ses offerts aux apéritifs et aux cafés. Il valorise le chiffre d’affaires correspondant à cet offert à 8 010 €, sur les 3 exercices (662 jours).** » (p. 89). Le service oppose : « **en retenant un taux de 5 % d’offerts [...] sur le premier exercice à hauteur de 35 133,26 € [...] multiplié par 3 (105 399,78 €), ce qui est plus de 13 fois ce que propose Maître THIVEND.** » (p. 89)."
-  },
-  {
-   "kind": "titre",
-   "texte": "Poste 2 : les pertes",
-   "numero": "1.4"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service ne compare à aucun chiffrage de la défense : « **avec une proportion de 5 % pour les pertes, le service minore le montant du chiffre d’affaires TTC reconstitué à hauteur de 35 133,26 €, pour un exercice.** » (p. 89), montant qu’il dit équivaloir à « **8,70 % du chiffre d’affaires TTC déclaré** » sur ce premier exercice, « **proportion [...] significative** »."
-  },
-  {
-   "kind": "titre",
-   "texte": "Poste 3 : les consommations du personnel",
-   "numero": "1.5"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "« **Maître THIVEND ne retient en consommation du personnel que le Macvin et le Picon bière. Dans son fichier, il valorise [...] le chiffre d’affaires perdus, sur les trois exercices (662 jours) à hauteur de 39 319 €** » (p. 89), auquel le service oppose le même 35 133,26 € par exercice, « **multiplié par 3 (105 399,78 €), ce qui est près de 3 fois ce que propose Maître THIVEND** » (p. 89)."
-  },
-  {
    "kind": "tableau",
-   "titre": "Les trois abattements de 5 %, tels que chiffrés par le service (p. 89)",
-   "minWidth": 860,
+   "titre": "Consommation du personnel : notre décompte par exercice (R1-consommation-personnel.xlsx, onglet 1, B5:G9)",
+   "minWidth": 900,
    "colonnes": [
     {
      "label": "Poste"
     },
     {
-     "label": "Taux retenu",
+     "label": "2022-2023",
      "align": "right"
     },
     {
-     "label": "Minoration du CA TTC reconstitué (exercice 1)",
+     "label": "2023-2024",
      "align": "right"
     },
     {
-     "label": "Sur 3 exercices",
+     "label": "2024-2025",
      "align": "right"
     },
     {
-     "label": "Chiffrage de la défense (3 exercices)",
+     "label": "3 exercices",
      "align": "right"
     },
     {
-     "label": "Rapport avancé par le service",
+     "label": "Coût d’achat",
+     "align": "right"
+    },
+    {
+     "label": "CA équivalent",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Offerts (apéritifs et cafés selon la défense)"
+      "v": "Picon, consommation du chef (72 L achetés, 0 vendu seul ; seul usage caisse = Picon bière 28,30 L)"
      },
      {
-      "v": "5 %",
+      "v": "14,65 L",
       "align": "right"
      },
      {
-      "v": "35 133,26 €",
+      "v": "14,59 L",
       "align": "right"
      },
      {
-      "v": "105 399,78 €",
+      "v": "14,46 L",
       "align": "right"
      },
      {
-      "v": "8 010 €",
+      "v": "43,7 L",
       "align": "right"
      },
      {
-      "v": "« plus de 13 fois »",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Pertes"
-     },
-     {
-      "v": "5 %",
+      "v": "453,61 €",
       "align": "right"
      },
      {
-      "v": "35 133,26 €",
-      "align": "right"
-     },
-     {
-      "v": "non indiqué dans le courrier",
-      "align": "right"
-     },
-     {
-      "v": "non indiqué dans le courrier",
-      "align": "right"
-     },
-     {
-      "v": "aucune comparaison, mais « 8,70 % du CA TTC déclaré »",
+      "v": "non déterminable",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Consommation du personnel (Macvin et Picon bière selon la défense)"
+      "v": "Macvin, consommation du chef (2 à 3 verres de 6 cl par jour d’ouverture, central 2,5)"
      },
      {
-      "v": "5 %",
+      "v": "33,30 L",
       "align": "right"
      },
      {
-      "v": "35 133,26 €",
+      "v": "33,15 L",
       "align": "right"
      },
      {
-      "v": "105 399,78 €",
+      "v": "32,85 L",
       "align": "right"
      },
      {
-      "v": "39 319 €",
+      "v": "99,3 L",
       "align": "right"
      },
      {
-      "v": "« près de 3 fois »",
+      "v": "1 802,29 €",
+      "align": "right"
+     },
+     {
+      "v": "8 109,83 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Sous-total alcool",
+      "fw": 700
+     },
+     {
+      "v": "47,95 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "47,74 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "47,31 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "143 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "2 255,90 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "8 109,83 €",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Coca, personnel de salle (6 canettes de 33 cl par jour, déclaration du 09/06/2026)"
+     },
+     {
+      "v": "439,56 L",
+      "align": "right"
+     },
+     {
+      "v": "437,58 L",
+      "align": "right"
+     },
+     {
+      "v": "433,62 L",
+      "align": "right"
+     },
+     {
+      "v": "1 310,76 L",
+      "align": "right"
+     },
+     {
+      "v": "2 582,20 €",
+      "align": "right"
+     },
+     {
+      "v": "15 493,18 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Jours d’ouverture (1 ticket Z par jour, annexe H)"
+     },
+     {
+      "v": "222 j",
+      "align": "right"
+     },
+     {
+      "v": "221 j",
+      "align": "right"
+     },
+     {
+      "v": "219 j",
+      "align": "right"
+     },
+     {
+      "v": "662 j",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
       "align": "right"
      }
     ]
    ]
   },
   {
-   "kind": "titre",
-   "texte": "La conclusion du service : aucune modification de la reconstitution",
-   "numero": "1.6"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "« **Par conséquent, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications.** » (p. 89)."
+   "kind": "note",
+   "texte": "Ventilation par exercice au prorata des jours d’ouverture (222 / 221 / 219 j) ; les volumes triennaux sont bornés par les achats (Picon : 72 L achetés moins 28,30 L de Picon bière vendus). Le Coca (1 310,76 L) est une boisson sans alcool : il n’entre pas dans la comparaison en litres d’alcool ci-dessus mais figurait dans le fichier 56 remis au service, qui a lui-même retenu que son forfait « impacte toutes les boissons »."
   },
   {
    "kind": "alerte",
-   "couleur": "red",
-   "titre": "Le raisonnement du service tient en une comparaison de montants",
-   "texte": "Le service ne conteste aucun poste itemisé. Il soutient que ses trois abattements de 5 %, valorisés à 35 133,26 € par exercice et par poste, sont d’un ordre de grandeur supérieur aux 8 010 € d’offerts et aux 39 319 € de consommation du personnel chiffrés par la défense, et en déduit que la reconstitution reste inchangée (p. 89)."
+   "couleur": "gray",
+   "titre": "Droit : ce que dit réellement le code du travail",
+   "texte": "Article R. 4228-20 du code du travail (version en vigueur depuis le 4 juillet 2014) : « Aucune boisson alcoolisée autre que le vin, la bière, le cidre et le poiré n’est autorisée sur le lieu de travail. » Le second alinéa permet seulement à l’employeur, lorsque la consommation « est susceptible de porter atteinte à la sécurité et la santé physique et mentale des travailleurs », de la limiter ou de l’interdire par le règlement intérieur ou une note de service, par des mesures « proportionnées au but recherché ». Il n’existe donc pas d’interdiction légale générale ; le service n’en cite d’ailleurs aucune."
   },
   {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Notre réponse",
-   "sousTitre": "Nous ne reprenons pas la thèse du « plancher » : ramené à une unité commune, le forfait de 15 % du service couvre, et au-delà, la consommation sans vente que nous pouvons réellement documenter. Ce grief n’appelle donc pas de réduction à ce titre. En revanche, la comparaison en euros par laquelle le service le rejette (« 13 fois / 3 fois ») n’est pas homogène."
+   "kind": "documents",
+   "titre": "Documents du point 7",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-consommation-personnel.xlsx",
+     "label": "R1 Consommation du personnel : décompte par exercice, forfait 5 % du service (1 exercice vs 3), changement d’assiette (241,79 €/L)"
+    }
+   ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "**2.1 - Honnêtement, le forfait est un plafond, non un plancher.** Le mémoire de juillet soutenait que la consommation sans vente itemisée « dépassait » les abattements. Vérifié poste par poste, cela ne tient pas sur le périmètre honnête, hors cuisine et hors alcool des menus. Les 15 % d’abattement valent **1 593 L** sur les 10 622 L d’alcool achetés. Nos postes itemisés hors cuisine et menus totalisent **1 158 L**, soit **72,7 % seulement** du forfait. Et le plus gros d’entre eux, le sur-versement au verre (460,6 L), est du vin parti dans un verre **facturé au client** : il figure déjà dans le chiffre d’affaires au verre reconstitué et ne peut être compté comme consommation sans vente. Retiré, l’itemisation nette tombe à **697,4 L, soit 43,8 % du forfait**. Le forfait de 15 % est donc plus généreux que la consommation sans vente que nous établissons."
+   "kind": "titre",
+   "numero": "2",
+   "texte": "Point 8 : « Les abattements 5 % + 5 % + 5 % suffiraient » (proposition p. 51-52 ; réponse du 04/09/2026, p. 71-73)"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 51-52 et p. 71-73",
+   "resume": [
+    "Proposition p. 51 : aucun offert n’étant enregistré en caisse et les remises étant impossibles à identifier, le vérificateur applique « à la fin de la méthode » 5 % du CA reconstitué pour les offerts/remises, 5 % pour les pertes, 5 % pour la consommation du personnel, plus 15 % sur le volume de bière.",
+    "Réponse p. 72 : « La réponse n’apporte aucun élément pertinent susceptible de considérer que les offerts, les pertes et les consommations du personnel pourraient être supérieurs aux 15 % retenus ». Offerts : si l’on suivait la caisse, « ce n’est pas 5 % qu’il faudrait prendre en compte [...] mais seulement ces 0,28 % » ; 8 010 € chez la défense contre 35 133,26 € × 3 = 105 399,78 €, « plus de 13 fois ».",
+    "Pertes (p. 72) : la « longue expérience professionnelle des dirigeants » minimise les pertes ; les achats sont réguliers, les stocks sans excès ; 35 133,26 € = 8,70 % du CA déclaré.",
+    "Consommation du personnel (p. 73) : « la loi interdit aux salariés [...] de consommer de l’alcool » ; la défense « ne retient [...] que le Macvin [et] le Picon bière » et valorise 39 319 €, contre 105 399,78 €, « près de 3 fois » ; les DADS ne portent que 3 507 € (2022, 8 salariés), 3 555 € (2023, 9 salariés) et 3 957 € (2024, 6 salariés) d’avantages en nature."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Proposition de rectification du 18/05/2026, p. 51, « IV- Les offerts, les remises, les gratuits et les pertes »** (reprise à l’identique p. 52-53 des propositions personnelles du 19/10/2026) : « Comme les dirigeants ont pu l’exposer, la société n’a enregistré aucun gratuit/offert dans les données de la caisse informatique. En matière de remises, les dirigeants ont expliqué qu’il pouvait moduler le prix lorsqu’un client souhaitait un plat “modifié” que ce soit en plus ou en moins, par exemple avec/sans une sauce ou tout autre hypothèse. Mais là encore, des données de la caisse, telles qu’elles ont été transmises, il est totalement impossible de pouvoir identifier, avec certitude, les produits qui ont pu faire l’objet de ce type de pratiques commerciales. C’est pour cela que le vérificateur, à la fin de la méthode de reconstitution, a décidé d’appliquer successivement : 5 % du chiffre d’affaires reconstitué pour représenter les offerts/remises qui ont bénéficié à la clientèle ; 5 % du chiffre d’affaires reconstitué pour représenter les pertes qui ont affecté l’exploitation de la société ; 5 % du chiffre d’affaires reconstitué pour tenir compte de la consommation du personnel. Enfin, en plus de toutes ces prises en compte par le vérificateur, il y a également une part de 15 % supplémentaire sur le volume de bière acheté et disponible qui a été retranchée. Cette proportion significative poursuivit plusieurs buts, et notamment de tenir compte, spécifiquement pour la bière : des pertes sur bière, de la consommation du personnel, des offerts. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Proposition p. 52, « Récapitulation par exercice » : les trois abattements tels qu’appliqués (montants TTC)",
+     "minWidth": 760,
+     "colonnes": [
+      {
+       "label": "Poste"
+      },
+      {
+       "label": "31/03/2023",
+       "align": "right"
+      },
+      {
+       "label": "31/03/2024",
+       "align": "right"
+      },
+      {
+       "label": "31/03/2025",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "C-A LIQUIDES avant remise, pertes et consommation du personnel"
+       },
+       {
+        "v": "178 341,42 €",
+        "align": "right"
+       },
+       {
+        "v": "169 014,34 €",
+        "align": "right"
+       },
+       {
+        "v": "165 065,33 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "REMISE 5,00 %"
+       },
+       {
+        "v": "8 917,07 €",
+        "align": "right"
+       },
+       {
+        "v": "8 450,72 €",
+        "align": "right"
+       },
+       {
+        "v": "8 253,27 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "PERTES 5,00 %"
+       },
+       {
+        "v": "8 917,07 €",
+        "align": "right"
+       },
+       {
+        "v": "8 450,72 €",
+        "align": "right"
+       },
+       {
+        "v": "8 253,27 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CONSOMMATION DU PERSONNEL 5,00 %"
+       },
+       {
+        "v": "8 917,07 €",
+        "align": "right"
+       },
+       {
+        "v": "8 450,72 €",
+        "align": "right"
+       },
+       {
+        "v": "8 253,27 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "C-A LIQUIDES après remise, pertes et consommation du personnel"
+       },
+       {
+        "v": "151 590,21 €",
+        "align": "right"
+       },
+       {
+        "v": "143 662,19 €",
+        "align": "right"
+       },
+       {
+        "v": "140 305,53 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CHIFFRE D’AFFAIRES SOLIDES (= C-A liquides × rapport)"
+       },
+       {
+        "v": "445 675,21 €",
+        "align": "right"
+       },
+       {
+        "v": "433 859,81 €",
+        "align": "right"
+       },
+       {
+        "v": "434 947,14 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "RAPPORT LIQUIDE/SOLIDES POUR 1 €"
+       },
+       {
+        "v": "2,94",
+        "align": "right"
+       },
+       {
+        "v": "3,02",
+        "align": "right"
+       },
+       {
+        "v": "3,10",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TOTAL GÉNÉRAL DU CA",
+        "fw": 700
+       },
+       {
+        "v": "597 265,42 €",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "577 522,00 €",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "575 252,68 €",
+        "align": "right",
+        "fw": 700
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Position de la défense telle que le courrier la reproduit (encadré, p. 71).** « Service : Trois forfaits de 5 % (offerts, pertes, personnel) couvriraient tout le non-vendu. Réponse : Ce sont des planchers. La somme des postes documentés non vendus comme boisson (sur-versement + crémant + dégustation + freinte bière + conso chef + offerts + casse résiduelle) atteint 28,7 % des achats. La jurisprudence (CAA Paris) admet elle-même en reconstitution de bar des pourcentages nettement plus élevés que ceux retenus par le service [...] » suivi d’un extrait d’arrêt (« tenu compte de la consommation du personnel, des offerts, de la perte et du vol en retranchant 22 % des achats bruts [...] CAA de PARIS, 2ème chambre, 17 Mars 2021 SARL Pub le St Jacques ») et du renvoi à la pièce « 57-rf-offerts-remises-pertes.xlsx »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du service, p. 72.** « La réponse n’apporte aucun élément pertinent susceptible de considérer que les offerts, les pertes et les consommations du personnel pourraient être supérieurs aux 15 % retenus par le service. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Les offerts (p. 72).** « Les données de caisse, aux dires des dirigeants, ne les gèrent pas. Toutefois, Maître THIVEND aborde les offerts dans une des parties de sa réponse. Il s’agit de celle qui évoque les articles à 0 € et dans laquelle ce nombre d’articles serait de 0,28 % sur 3 ans. Ainsi, si le service devait retenir une proportion ressortant des données d’exploitation (c’est-à-dire celles de la caisse informatique), ce n’est pas 5 % qu’il faudrait prendre en compte dans la méthode de reconstitution mais seulement ces 0,28 %. Le service a donc fait preuve d’une très grande générosité en la matière. La preuve en est qu’à la lecture du deuxième onglet de l’annexe du fichier “56-consommation-personnel-et-offerts.xlsx” de la réponse, Maître THIVEND : indique que les offerts ne portent que sur les apéritifs et les cafés ; valorise le chiffre d’affaires correspondant à cet offert à 8 010 € sur les 3 exercices (662 jours). Sachant que cette logique vaut pour tous les exercices, avec la proportion de 5 % pour l’offert, le service a minoré le montant du chiffre d’affaires TTC reconstitué, sur le premier exercice à hauteur de 35 133,26 € (montants à peu près équivalents sur les 3 exercices). Sur trois exercices, ce montant doit donc être multiplié par 3 (105 399,78 €), ce qui est plus de 13 fois ce que propose Maître THIVEND. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Les pertes (p. 72).** « Comme exposé précédemment dans cette réponse aux observations, la longue expérience professionnelle des dirigeants ne peut qu’entraîner une minimisation des pertes dans tous les aspects de l’exploitation. En fait, à la lecture des arguments de Maître THIVEND, les dirigeants paraissent être : des néophytes dans l’exploitation d’un restaurant ; des débutants qui gaspilleraient tout au long des exercices toutes leurs boissons. Or, la gestion des achats de boissons semble montrer le contraire. Les quantités livrées paraissent suivre, semaine après semaine, la consommation nécessaire à leur exploitation. Il n’y a pas de quantités soudaines et importantes pour se réapprovisionner. Elles sont régulières de semaine en semaine. Il est également important de noter que les stocks constatés sur place paraissent être gérés d’une manière à occuper l’espace disponible sans excès. Enfin, sachant que cette logique vaut pour tous les exercices, avec la proportion de 5 % pour les pertes, le service minore le montant du chiffre d’affaires TTC reconstitué à hauteur de 35 133,26 €. À titre d’information, ce montant équivaut à 8,70 % du chiffre d’affaires TTC déclaré par la société sur ce premier exercice. Une telle proportion est donc significative. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Consommations du personnel (p. 73).** « Il est déjà important de rappeler que le taux de 5 % appliqué pour la consommation du personnel, impacte toutes les boissons, y compris celles alcoolisées. Or, la loi interdit aux salariés des restaurants/bar de consommer de l’alcool lors de leur période de travail. En toute logique, le service ne devrait donc retenir aucune consommation du personnel sur les boissons alcoolisées. D’ailleurs, à la lecture du premier onglet de l’annexe du fichier “56-consommation-personnel-et-offerts.xlsx” de la réponse, Maître THIVEND ne retient en consommation du personnel que : le Macvin ; le Picon bière. Le service a donc fait preuve d’une très grande générosité en l’appliquant sur toutes les boissons alcoolisées. Dans ce même fichier, il valorise également le chiffre d’affaires perdus, sur les trois exercices (662 jours) à hauteur de 39 319 €. Sachant que cette logique vaut pour tous les exercices, avec la proportion de 5 % pour la consommation du personnel, service a minoré le montant du chiffre d’affaires TTC reconstitué, sur le premier exercice à hauteur de 35 133,26 € (montants à peu près équivalents sur les 3 exercices). Sur trois exercices, ce montant doit donc être multiplié par 3 (105 399,78 €), ce qui est près de 3 fois ce que propose Maître THIVEND. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Les DADS (p. 73).** « Enfin, sachant que la consommation du personnel constitue un avantage en nature, le service serait légitimement en droit, à la lecture des DADS déposées, de relever la présence, pour chacun des salariés, de divers montants dans la colonne adéquate. Or, le service, suivant les exercices, n’y a relevé que les éléments suivants : 3 507 € sur l’année 2022 (pour les 8 salariés [...]) ; 3 555 € sur l’année 2023 (pour les 9 salariés [...]) ; 3 957 € sur l’année 2024 (pour les 6 salariés [...]). En conclusion, pour ce point, le service est allé bien au-delà de ce que Maître THIVEND propose dans sa réponse. Ainsi, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications. » Le courrier énumère nominativement les salariés de chaque année (dont M. Thierry PASTEUR en 2022 et 2023 et Mme Ghislaine BEHEM en 2022) ; la liste n’est pas reproduite ici."
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "2.1",
+   "texte": "Ramené à une unité commune, le forfait de 15 % est un plafond : nous ne soutenons plus l’inverse"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Le forfait en litres.** 15 % des 10 622 L d’alcool achetés sur trois exercices = **1 593 L** (R2-abattements-net.xlsx, onglet Calcul B5 : =Sources!B14*Sources!B15).",
+    "**Ce que nous documentons, hors cuisine et hors alcool des menus : 1 158 L**, soit **72,7 %** du forfait (onglet Calcul B6, somme des postes de l’onglet Sources B5:B12).",
+    "**Le plus gros poste, le sur-versement au verre (460,6 L, 39,8 % du brut), est du vin parti dans un verre facturé au client** : il figure déjà dans le CA au verre reconstitué et ne peut pas être compté comme consommation sans vente. Retiré, la consommation sans vente nette tombe à **697,4 L = 43,8 % du forfait**, 6,6 % des achats (onglet Calcul B8).",
+    "**Marge du forfait au-delà du documenté : 895,9 L** (1 593,3 − 697,4 ; onglet Calcul B14), soit 2,28 fois notre décompte net. En CA boissons : forfait 76 863,18 € contre 30 525,83 € de consommation nette valorisée (indicatif), marge 46 337,35 € (onglet Calcul B15).",
+    "**Conséquence loyale :** ce point ne fonde aucune réduction par « abattement insuffisant ». Ce qui est contesté, c’est l’usage que le service fait du forfait (opposé six fois) et ses comparaisons en euros (13 fois / 3 fois), qui ne sont pas homogènes."
+   ]
   },
   {
    "kind": "kpis",
    "items": [
     {
-     "label": "Le forfait de 15 % en volume",
+     "label": "Forfait de 15 % en volume",
      "valeur": "1 593 L",
-     "sub": "15 % des 10 622 L d’alcool achetés sur les trois exercices",
-     "couleur": "blue"
+     "sub": "15 % des 10 622 L d’alcool achetés (3 exercices)",
+     "couleur": "red"
     },
     {
-     "label": "Consommation sans vente documentée, hors cuisine et menus",
+     "label": "Consommation sans vente documentée, brute",
      "valeur": "1 158 L",
-     "sub": "Soit 72,7 % du forfait : un plafond, non un plancher",
-     "couleur": "teal"
+     "sub": "72,7 % du forfait ; 10,9 % des achats",
+     "couleur": "gold"
     },
     {
-     "label": "Consommation sans vente nette, hors sur-versement déjà facturé",
+     "label": "Nette, hors sur-versement déjà facturé",
      "valeur": "697,4 L",
-     "sub": "Soit 43,8 % du forfait, et 6,6 % des 10 622 L achetés",
+     "sub": "43,8 % du forfait ; 6,6 % des achats",
      "highlight": true,
      "couleur": "teal"
+    },
+    {
+     "label": "Marge du forfait au-delà du documenté",
+     "valeur": "895,9 L",
+     "sub": "en CA boissons : 46 337,35 € (76 863,18 − 30 525,83)",
+     "couleur": "blue"
     }
    ]
   },
   {
+   "kind": "schema",
+   "titre": "Le forfait de 15 %, ramené en litres, couvre et dépasse la consommation sans vente documentée (3 exercices)",
+   "svg": "<svg viewBox=\"0 0 760 190\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><text x=\"280\" y=\"35\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5b5b5b\">Forfait du service : 15 % des 10 622 L</text><text x=\"280\" y=\"48\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5b5b5b\">achetés</text><rect x=\"290\" y=\"22\" width=\"380.0\" height=\"30\" rx=\"5\" fill=\"#b4452e\"/><text x=\"678.0\" y=\"41\" font-size=\"12.5\" font-weight=\"700\" fill=\"#2a2015\">1 593 L</text><text x=\"298\" y=\"41\" font-size=\"11.5\" font-weight=\"700\" fill=\"#ffffff\">100 %</text><text x=\"280\" y=\"83\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5b5b5b\">Consommation sans vente documentée (brute,</text><text x=\"280\" y=\"96\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5b5b5b\">hors cuisine et menus)</text><rect x=\"290\" y=\"70\" width=\"276.2\" height=\"30\" rx=\"5\" fill=\"#a0740d\"/><text x=\"574.2\" y=\"89\" font-size=\"12.5\" font-weight=\"700\" fill=\"#2a2015\">1 158 L</text><text x=\"298\" y=\"89\" font-size=\"11.5\" font-weight=\"700\" fill=\"#ffffff\">72,7 %</text><text x=\"280\" y=\"131\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5b5b5b\">Nette, hors sur-versement déjà facturé au</text><text x=\"280\" y=\"144\" text-anchor=\"end\" font-size=\"11.5\" fill=\"#5b5b5b\">client</text><rect x=\"290\" y=\"118\" width=\"166.3\" height=\"30\" rx=\"5\" fill=\"#0f7c6c\"/><text x=\"464.3\" y=\"137\" font-size=\"12.5\" font-weight=\"700\" fill=\"#2a2015\">697,4 L</text><text x=\"298\" y=\"137\" font-size=\"11.5\" font-weight=\"700\" fill=\"#ffffff\">43,8 %</text><line x1=\"670\" y1=\"14\" x2=\"670\" y2=\"154\" stroke=\"#5b5b5b\" stroke-width=\"1\" stroke-dasharray=\"5 4\"/><text x=\"670\" y=\"182\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">plafond du forfait</text></svg>",
+   "legende": "Sources : R2-abattements-net.xlsx, onglet Calcul B5:B8 (formules) ; achats 10 622 L (R1-abattements-double-emploi.xlsx, onglet 3, B23) ; sur-versement 460,6 L (R2-sur-versement-chiffrage.xlsx)."
+  },
+  {
    "kind": "tableau",
-   "titre": "Forfait du service et consommation sans vente, ramenés à la même unité (3 exercices)",
-   "minWidth": 760,
+   "titre": "Les postes de consommation sans vente, hors cuisine et menus (R2-abattements-net.xlsx, onglet Sources, lignes 5 à 12)",
+   "minWidth": 940,
    "colonnes": [
     {
-     "label": "Grandeur"
+     "label": "Poste"
     },
     {
-     "label": "Volume",
+     "label": "Litres (3 ex.)",
      "align": "right"
     },
     {
-     "label": "Part des achats (10 622 L)",
+     "label": "Déjà dans le CA reconstitué ?",
      "align": "right"
     },
     {
-     "label": "Part du forfait",
+     "label": "Euros retenus (indicatif)",
+     "align": "right"
+    },
+    {
+     "label": "Source",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Forfait de 15 % du service"
+      "v": "Consommation du chef (Picon 43,7 L + Macvin 99,3 L)"
      },
      {
-      "v": "1 593 L",
+      "v": "143,0 L",
       "align": "right"
      },
      {
-      "v": "15,0 %",
+      "v": "non",
       "align": "right"
      },
      {
-      "v": "100 %",
+      "v": "8 109,83 €",
       "align": "right"
+     },
+     {
+      "v": "R1-consommation-personnel o.1 ; Macvin seul valorisé"
      }
     ],
     [
      {
-      "v": "Consommation sans vente documentée, hors cuisine et menus"
+      "v": "Offerts non enregistrés en caisse (apéritifs), nets des 25,75 L déjà saisis à 0 €"
      },
      {
-      "v": "1 158 L",
+      "v": "14,0 L",
       "align": "right"
      },
      {
-      "v": "10,9 %",
+      "v": "non",
       "align": "right"
      },
      {
-      "v": "72,7 %",
+      "v": "1 281 €",
       "align": "right"
+     },
+     {
+      "v": "R1-abattements o.2 L6 ; 91,71 €/L"
      }
     ],
     [
      {
-      "v": "   dont sur-versement au verre, déjà facturé au client (retiré)"
+      "v": "Cafés offerts (3 par jour × 662 j, sans alcool)"
      },
      {
-      "v": "− 460,6 L",
+      "v": "0 L",
       "align": "right"
+     },
+     {
+      "v": "non",
+      "align": "right"
+     },
+     {
+      "v": "4 369 €",
+      "align": "right"
+     },
+     {
+      "v": "fichier 56, onglet 2"
+     }
+    ],
+    [
+     {
+      "v": "Sur-versement au verre (vin, cocktails, spiritueux)"
+     },
+     {
+      "v": "460,6 L",
+      "align": "right"
+     },
+     {
+      "v": "OUI : vin servi et facturé",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "R2-sur-versement-chiffrage ; retiré"
+     }
+    ],
+    [
+     {
+      "v": "Crémant non vendu (fond de bouteille jeté, sur-versement)"
+     },
+     {
+      "v": "272,0 L",
+      "align": "right"
+     },
+     {
+      "v": "non",
+      "align": "right"
+     },
+     {
+      "v": "8 841 €",
+      "align": "right"
+     },
+     {
+      "v": "R1-abattements o.2 L9 ; 32,50 €/L"
+     }
+    ],
+    [
+     {
+      "v": "Dégustation offerte (goûter du vin)"
+     },
+     {
+      "v": "125,8 L",
+      "align": "right"
+     },
+     {
+      "v": "non",
+      "align": "right"
+     },
+     {
+      "v": "6 045 €",
+      "align": "right"
+     },
+     {
+      "v": "R1-abattements o.2 L10 ; 48,04 €/L"
+     }
+    ],
+    [
+     {
+      "v": "Freinte technique de la bière pression"
+     },
+     {
+      "v": "120,5 L",
+      "align": "right"
+     },
+     {
+      "v": "non",
+      "align": "right"
+     },
+     {
+      "v": "1 880 €",
+      "align": "right"
+     },
+     {
+      "v": "R1-abattements o.2 L11 ; 15,60 €/L"
+     }
+    ],
+    [
+     {
+      "v": "Sur-versement requalifié (écart 483 → 460,6 L, non facturé)"
+     },
+     {
+      "v": "22,1 L",
+      "align": "right"
+     },
+     {
+      "v": "non",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     },
+     {
+      "v": "R2-abattements-net, Sources A12"
+     }
+    ],
+    [
+     {
+      "v": "Brut documenté (= 72,7 % du forfait)",
+      "fw": 700
+     },
+     {
+      "v": "1 158,0 L",
+      "align": "right",
+      "fw": 700
      },
      {
       "v": "",
       "align": "right"
      },
      {
-      "v": "",
-      "align": "right"
+      "v": "30 525,83 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "onglet Calcul B6 / D8"
      }
     ],
     [
      {
-      "v": "Consommation sans vente NETTE (hors cuisine, menus et sur-versement)",
+      "v": "Net, hors sur-versement (= 43,8 % du forfait)",
       "fw": 700
      },
      {
@@ -351,163 +887,1028 @@
       "fw": 700
      },
      {
-      "v": "6,6 %",
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "30 525,83 €",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "43,8 %",
-      "align": "right",
-      "fw": 700
+      "v": "onglet Calcul B8"
      }
     ]
    ]
   },
   {
    "kind": "note",
-   "texte": "Pour mémoire, et **non ajouté** à ce total : 741 L d’alcool de cuisine et d’alcool des menus. Ces litres correspondent à des plats et à des menus qui ont été **vendus**, donc déjà compris dans le chiffre d’affaires reconstitué ; les compter comme consommation sans vente ferait un double emploi. C’est seulement en les ajoutant que l’on atteignait le prétendu « 119 % du forfait » (1 899 L) du mémoire de juillet, chiffre que nous écartons."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**2.2 - La comparaison en euros du service n’est pas homogène.** Les 35 133,26 € que le service donne pour la minoration de chaque exercice (33 971,89 € et 33 838,41 € sur les deux suivants) s’obtiennent en multipliant l’abattement réellement pratiqué sur les liquides (8 917,07 €, proposition p. 52) par 1 plus le coefficient de revente de 2,94 : les trois quarts de la somme, **26 216,19 € par exercice**, sont du chiffre d’affaires **cuisine extrapolé**, non de l’alcool. Comparer ce montant aux 8 010 € et 39 319 € de la défense, qui ne portent que sur des boissons, revient à comparer deux grandeurs différentes. Sur les trois exercices, le forfait de 15 % ne retire que **76 863,18 €** de chiffre d’affaires boissons."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**2.3 - Le volume de 1 505 L du mémoire de juillet est abandonné.** Il double-comptait des litres déjà enregistrés dans les ventes : la contenance d’articles mixtes de bière (Picon bière, Panaché, Pinte Picon, Monaco), déjà comptée dans le « vendu au verre » (295,99 L), et des offerts déjà saisis à 0,00 € dans l’annexe D (25,75 L), soit 321,74 L (R1-cascade-doubles-comptages.csv). Notre décompte n’est plus construit à partir de ce total mais poste par poste (1 158 L, onglet 2 de la pièce). Nous ne revendiquons donc ni 1 505 L, ni 1 899 L."
+   "texte": "Sensibilité, à titre de contrôle : les pages consacrées au crémant et à la dégustation retiennent des volumes plus stricts (fond de crémant jeté 248,1 L au périmètre strict du service ; dégustation 97,42 L sous l’hypothèse 2 cl). Avec ces valeurs, le brut tombe à 1 105,7 L (69,4 % du forfait) et le net à 645,1 L (40,5 %) : la conclusion « plafond » est renforcée, pas fragilisée. Pour mémoire et non ajoutés : 741 L d’alcool de cuisine et des menus (plats et menus vendus, déjà dans le CA reconstitué : les ajouter ferait un double emploi, c’est ainsi qu’un « 119 % du forfait » avait été atteint en juillet) et le solde non ventilé du bilan matière (2 055 L, 19,3 % des achats), qui est une moyenne et non une mesure, n’est pas revendiqué ici."
   },
   {
    "kind": "tableau",
-   "titre": "Doubles comptages retirés du décompte de juillet (R1-cascade-doubles-comptages.csv)",
-   "minWidth": 620,
+   "titre": "Table de passage : du mémoire du 10/07/2026 (1 505 L) au décompte retenu (1 158 L)",
+   "minWidth": 860,
    "colonnes": [
     {
-     "label": "Volume déjà compté dans les ventes, retiré"
+     "label": "Poste"
     },
     {
-     "label": "Litres (3 exercices)",
+     "label": "Juillet 2026",
+     "align": "right"
+    },
+    {
+     "label": "Retenu",
+     "align": "right"
+    },
+    {
+     "label": "Pourquoi",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Contenance d’articles mixtes de bière, déjà comptée dans le « vendu au verre »"
+      "v": "Consommation du chef"
      },
      {
-      "v": "295,99 L",
+      "v": "143 L",
       "align": "right"
+     },
+     {
+      "v": "143 L",
+      "align": "right"
+     },
+     {
+      "v": "inchangé (borné par les achats de Picon)"
      }
     ],
     [
      {
-      "v": "Offerts déjà enregistrés à 0,00 € dans l’annexe D"
+      "v": "Apéritifs offerts"
      },
      {
-      "v": "25,75 L",
+      "v": "40 L",
       "align": "right"
+     },
+     {
+      "v": "14 L",
+      "align": "right"
+     },
+     {
+      "v": "25,75 L d’alcool déjà enregistrés à 0,00 € dans l’annexe D (R1-cascade-doubles-comptages.csv, § 2) : ils sont déjà dans les ventes"
      }
     ],
     [
      {
-      "v": "Total retiré du décompte de juillet",
+      "v": "Sur-versement"
+     },
+     {
+      "v": "720 L",
+      "align": "right"
+     },
+     {
+      "v": "482,7 L",
+      "align": "right"
+     },
+     {
+      "v": "recalé sur la fourchette officielle (IC 95 % Kerr 2008) : 460,6 L, plus 22,1 L d’écart requalifié"
+     }
+    ],
+    [
+     {
+      "v": "Crémant"
+     },
+     {
+      "v": "347 L",
+      "align": "right"
+     },
+     {
+      "v": "272 L",
+      "align": "right"
+     },
+     {
+      "v": "décompte par exercice 81,7 / 93,7 / 96,7 L (R1-abattements o.2, ligne 9)"
+     }
+    ],
+    [
+     {
+      "v": "Dégustation offerte"
+     },
+     {
+      "v": "126 L",
+      "align": "right"
+     },
+     {
+      "v": "125,8 L",
+      "align": "right"
+     },
+     {
+      "v": "décompte par exercice 35,4 / 45,1 / 45,3 L (R1-abattements o.2, ligne 10)"
+     }
+    ],
+    [
+     {
+      "v": "Freinte de bière"
+     },
+     {
+      "v": "129 L",
+      "align": "right"
+     },
+     {
+      "v": "120,5 L",
+      "align": "right"
+     },
+     {
+      "v": "10 % de la bière réellement servie (1 205,01 L), après retrait de 295,99 L de contenance d’articles mixtes comptée deux fois (csv § 1)"
+     }
+    ],
+    [
+     {
+      "v": "Total hors cuisine et menus",
       "fw": 700
      },
      {
-      "v": "321,74 L",
+      "v": "1 505 L",
       "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "1 158 L",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "− 347 L ; le 1 505 L, repris par le service p. 89, n’est plus revendiqué",
       "fw": 700
      }
     ]
    ]
   },
   {
+   "kind": "titre",
+   "numero": "2.2",
+   "texte": "Les comparaisons « 13 fois » et « 3 fois » opposent deux grandeurs de nature différente"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**35 133,26 € = 8 917,07 € × (1 + 2,94).** Le service multiplie l’abattement réellement pratiqué sur les liquides (5 % de 178 341,42 €, proposition p. 52) par un plus le coefficient de revente : 26 216,19 € sur 35 133,26 € (74,6 %) sont du chiffre d’affaires cuisine extrapolé. Les 8 010 € et 39 319 € de la défense ne portent que sur des boissons.",
+    "**105 399,78 € n’est pas « le 5 % d’offerts sur trois exercices ».** Un 5 % sur les trois exercices vaut 35 133,26 + 33 971,89 + 33 838,41 = **102 943,56 €** (le service multiplie l’exercice 1 par 3, écart 2 456,22 €). Et 105 399,78 € est exactement la **totalité** de l’abattement de 15 % du seul exercice 1 : 597 265,42 € ÷ 0,85 − 597 265,42 € = 702 665,20 − 597 265,42 = 105 399,78 €.",
+    "**Le forfait de 15 %, en CA boissons, ne retire que 76 863,18 € sur trois exercices** (26 751,21 + 25 352,16 + 24 759,81) ; son effet sur le CA total est de 308 830,67 €, dont 231 967,49 € de cuisine extrapolée (R1-abattements o.3, lignes 7 à 11).",
+    "**Le levier × 3,94 que le service récuse p. 92 est celui qu’il emploie p. 71-73 et 89.** Répondant au grief de « cuisine fantôme », le service écrit (p. 92) : « 1 € de chiffre d’affaires liquides reconstitués [...] engendre 1 € + 2,94 € = 3,94 € supplémentaires. Maître THIVEND compte ainsi deux fois le chiffre d’affaires liquides reconstitués. Or tel n’est pas le cas dans la méthode du service. » Pourtant ses propres chiffres sont obtenus par ce levier : 8 917,07 € × 3,94 = 35 133,26 € (p. 71, 72, 73, 89) et 26 751,21 € × 3,94 = 105 399,77 € (le « 105 399,78 € », p. 72, 73, 89). Le facteur (1 + coefficient) est donc bien celui par lequel chaque euro de boissons devient 3,94 € de rehaussement : le service le nie p. 92 et l’applique vingt pages plus tôt.",
+    "**Le même 5 % est donc présenté sous deux unités selon l’argument** : 145,30 L d’alcool quand il s’agit de montrer qu’il couvre le chef (p. 71), 35 133,26 € quand il s’agit d’écraser les 8 010 € d’offerts (p. 72). À unité constante (CA boissons), un 5 % vaut 8 917,07 € par exercice, 25 621,06 € sur trois : 3,2 fois les 8 010 € d’offerts, non 13."
+   ]
+  },
+  {
+   "kind": "schema",
+   "titre": "Comment le service fabrique le « 35 133,26 € » d’un abattement de 5 % (exercice 2022-2023)",
+   "svg": "<svg viewBox=\"0 0 766 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">CA liquides reconstitué</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">178 341,42 €</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">proposition p. 52, avant abattements</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><text x=\"187.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">× 5 %</text><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Un abattement de 5 %</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">8 917,07 €</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">sur les seuls liquides (p. 52)</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">× 2,94</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Cuisine extrapolée</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">26 216,19 €</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">8 917,07 € × 2,94 (coefficient)</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">+</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">« Minoration » affichée</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">35 133,26 €</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">8 917,07 € × (1 + 2,94)</text></svg>",
+   "legende": "Les trois quarts du montant (26 216,19 €, soit 74,6 %) sont du chiffre d’affaires cuisine obtenu par le coefficient, non de l’alcool offert, perdu ou consommé. Source : R1-abattements-double-emploi.xlsx, onglet 3, B6:B8 et B15 ; vérification 8 917,07 × 3,94 = 35 133,26 et 26 751,21 × 3,94 = 105 399,77. Ce facteur 3,94 est celui que le service qualifie p. 92 de « compter deux fois le chiffre d’affaires liquides »."
+  },
+  {
    "kind": "tableau",
-   "titre": "Comparaison en euros, à titre indicatif (CA boissons, 3 exercices)",
-   "minWidth": 680,
+   "titre": "Décomposition des montants avancés par le service (R1-abattements-double-emploi.xlsx, onglet 3, A5:E11)",
+   "minWidth": 860,
    "colonnes": [
     {
      "label": "Grandeur"
     },
     {
-     "label": "CA boissons",
+     "label": "2022-2023",
+     "align": "right"
+    },
+    {
+     "label": "2023-2024",
+     "align": "right"
+    },
+    {
+     "label": "2024-2025",
+     "align": "right"
+    },
+    {
+     "label": "3 exercices",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Ce que le forfait de 15 % retire au CA boissons reconstitué"
+      "v": "CA liquides avant abattements (proposition p. 52)"
+     },
+     {
+      "v": "178 341,42 €",
+      "align": "right"
+     },
+     {
+      "v": "169 014,34 €",
+      "align": "right"
+     },
+     {
+      "v": "165 065,33 €",
+      "align": "right"
+     },
+     {
+      "v": "512 421,09 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Un abattement de 5 % sur les liquides"
+     },
+     {
+      "v": "8 917,07 €",
+      "align": "right"
+     },
+     {
+      "v": "8 450,72 €",
+      "align": "right"
+     },
+     {
+      "v": "8 253,27 €",
+      "align": "right"
+     },
+     {
+      "v": "25 621,06 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Les trois abattements (15 %) sur les liquides"
+     },
+     {
+      "v": "26 751,21 €",
+      "align": "right"
+     },
+     {
+      "v": "25 352,16 €",
+      "align": "right"
+     },
+     {
+      "v": "24 759,81 €",
+      "align": "right"
      },
      {
       "v": "76 863,18 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Consommation sans vente nette, valorisée au prix de revente (indicatif)"
-     },
-     {
-      "v": "30 525,83 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Marge du forfait au-delà de la consommation sans vente établie",
-      "fw": 700
-     },
-     {
-      "v": "46 337,35 €",
       "align": "right",
       "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Coefficient liquides / solides"
+     },
+     {
+      "v": "2,94",
+      "align": "right"
+     },
+     {
+      "v": "3,02",
+      "align": "right"
+     },
+     {
+      "v": "3,10",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Effet d’un 5 % sur le CA total (× 1 + coefficient) : le « 35 133,26 € »"
+     },
+     {
+      "v": "35 133,26 €",
+      "align": "right"
+     },
+     {
+      "v": "33 971,89 €",
+      "align": "right"
+     },
+     {
+      "v": "33 838,41 €",
+      "align": "right"
+     },
+     {
+      "v": "102 943,56 €",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Effet des trois abattements (15 %) sur le CA total"
+     },
+     {
+      "v": "105 399,77 €",
+      "align": "right"
+     },
+     {
+      "v": "101 915,68 €",
+      "align": "right"
+     },
+     {
+      "v": "101 515,22 €",
+      "align": "right"
+     },
+     {
+      "v": "308 830,67 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "   dont cuisine obtenue par extrapolation"
+     },
+     {
+      "v": "78 648,56 €",
+      "align": "right"
+     },
+     {
+      "v": "76 563,52 €",
+      "align": "right"
+     },
+     {
+      "v": "76 755,41 €",
+      "align": "right"
+     },
+     {
+      "v": "231 967,49 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "CA TTC déclaré (proposition p. 52)"
+     },
+     {
+      "v": "404 030,87 €",
+      "align": "right"
+     },
+     {
+      "v": "438 658,43 €",
+      "align": "right"
+     },
+     {
+      "v": "435 524,92 €",
+      "align": "right"
+     },
+     {
+      "v": "1 278 214,22 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "35 133,26 € ÷ CA déclaré 2022-2023 : le « 8,70 % »"
+     },
+     {
+      "v": "8,70 %",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "8 917,07 € (le même 5 %, boissons seules) ÷ CA déclaré 2022-2023"
+     },
+     {
+      "v": "2,21 %",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
      }
     ]
    ]
   },
   {
-   "kind": "note",
-   "texte": "Cette comparaison en euros n’est donnée qu’à titre indicatif : elle dépend d’une convention de prix de revente que nous ne pouvons pas démontrer pièce primaire à l’appui, et la consommation du chef y est valorisée au seul CA équivalent déterminable (Macvin, 8 109,83 € ; le Picon, 43,7 L, n’a jamais été vendu seul et n’a aucun prix de revente propre). La démonstration porte sur les volumes, où elle est robuste, et non sur ces montants."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**2.4 - Le même abattement de 15 % est opposé à six postes.** L’abattement de 15 % (5 % offerts + 5 % pertes + 5 % consommation du personnel) est appliqué **une seule fois**, en fin de méthode (proposition p. 51 et 52). Le service l’oppose pourtant à six postes distincts dans huit pages de sa réponse : freinte de bière (p. 61 et 83), dégustation au verre (p. 64 et 86), offerts, pertes et consommation du personnel (p. 72, 73 et 89), coefficient de revente (p. 93). S’il couvre les trois postes des pages 72 et 73, il ne peut pas couvrir en outre les trois autres. C’est sur ce terrain, et non sur un prétendu dépassement du forfait, que les pages consacrées à la freinte de bière et à la dégustation obtiennent une réduction."
+   "kind": "schema",
+   "titre": "Par exercice : la totalité du forfait de 15 % sur les boissons pèse moins qu’un seul 5 % exprimé en CA total",
+   "svg": "<svg viewBox=\"0 0 720 300\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"46\" y1=\"20\" x2=\"46\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"246\" x2=\"704\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"105.66666666666669\" y=\"102.05301285714285\" width=\"46\" height=\"143.94698714285715\" rx=\"3\" fill=\"#a0740d\"/><text x=\"128.66666666666669\" y=\"97.05301285714285\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">26 751 €</text><rect x=\"159.66666666666669\" y=\"56.94960095238093\" width=\"46\" height=\"189.05039904761907\" rx=\"3\" fill=\"#b4452e\"/><text x=\"182.66666666666669\" y=\"51.94960095238093\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">35 133 €</text><text x=\"155.66666666666669\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2022-2023</text><rect x=\"325.00000000000006\" y=\"109.58123428571429\" width=\"46\" height=\"136.4187657142857\" rx=\"3\" fill=\"#a0740d\"/><text x=\"348.00000000000006\" y=\"104.58123428571429\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">25 352 €</text><rect x=\"379.00000000000006\" y=\"63.19887761904761\" width=\"46\" height=\"182.8011223809524\" rx=\"3\" fill=\"#b4452e\"/><text x=\"402.00000000000006\" y=\"58.19887761904761\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">33 972 €</text><text x=\"375.00000000000006\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2023-2024</text><rect x=\"544.3333333333334\" y=\"112.76864142857144\" width=\"46\" height=\"133.23135857142856\" rx=\"3\" fill=\"#a0740d\"/><text x=\"567.3333333333334\" y=\"107.76864142857144\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">24 760 €</text><rect x=\"598.3333333333334\" y=\"63.91712714285714\" width=\"46\" height=\"182.08287285714286\" rx=\"3\" fill=\"#b4452e\"/><text x=\"621.3333333333334\" y=\"58.91712714285714\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">33 838 €</text><text x=\"594.3333333333334\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2024-2025</text><rect x=\"46\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#a0740d\"/><text x=\"64\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">15 % sur le CA boissons</text><rect x=\"226\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#b4452e\"/><text x=\"244\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Un seul 5 % sur le CA total</text><text x=\"12\" y=\"133.0\" transform=\"rotate(-90 12 133.0)\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">euros TTC</text></svg>",
+   "legende": "Sources : proposition p. 52 (8 917,07 / 8 450,72 / 8 253,27 € par abattement de 5 % sur les liquides) ; réponse du 04/09 p. 72-73 et p. 89 (35 133,26 €) ; R1-abattements-double-emploi.xlsx, onglet 3, lignes 7 et 8."
   },
   {
    "kind": "titre",
-   "texte": "Ce que le service pourrait opposer, et pourquoi cela ne change rien"
+   "numero": "2.3",
+   "texte": "Offerts (0,28 %, 8 010 €) et personnel (39 319 €) : les chiffres que le service nous prête, et ce qu’ils sont"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Les 0,28 % d’articles à 0 € ne mesurent pas les offerts.** Le service écrit p. 17 de la proposition qu’« il n’existe aucune trace des transactions “offert/gratuit” dans les données de caisse » (motif de rejet), puis p. 72 que la caisse donnerait la « proportion ressortant des données d’exploitation », 0,28 %. Les deux affirmations s’excluent : on ne mesure pas avec la caisse ce que l’on soutient ne pas y être. Les 272 articles à 0 € (0,28 % de 97 769 lignes ; 120 / 120 / 32 par exercice) sont des lignes encaissées 0,00 €, dont 140 d’alcool.",
+    "**8 010 € d’offerts = apéritifs 3 641 € + cafés 4 369 €** (fichier 56, onglet 2 : 1 apéritif de 6 cl et 3 cafés par jour d’ouverture × 662 j). Le décompte retenu aujourd’hui est de 5 650 € (1 281 + 4 369) : les 25,75 L d’apéritifs déjà enregistrés à 0,00 € en caisse ont été retirés. Nous ne revendiquons pas 8 010 €.",
+    "**39 319 € n’était pas « le Macvin et le Picon bière » seuls.** Le fichier 56, onglet 1, comptait six lignes : Coca 15 496 €, limonade 2 574 €, jus de fruit 6 193 €, sirop 480 € (boissons sans alcool, 24 743 €) et Macvin 8 085 €, Picon 6 490 € (alcool, 14 575 €) ; total 39 318 € ≈ 39 319 €. Le service a lu le périmètre alcool (deux lignes) et comparé le total toutes boissons. La valorisation retenue aujourd’hui est de 8 109,83 € (Macvin seul) : le Picon n’a jamais été vendu seul et n’a aucun prix de revente propre.",
+    "**Les avantages en nature des DADS mesurent des repas, pas des boissons.** Dans les hôtels, cafés et restaurants, l’avantage nourriture est évalué forfaitairement à un minimum garanti par repas (BOI-BAREME-000014, version du 23/05/2022 : 1 MG = 3,76 € par repas, 2 MG = 7,52 € par jour en 2022). Les 3 507 € de 2022 représentent ainsi de l’ordre de 933 repas pour 8 salariés (3 507 ÷ 3,76 ; le MG ayant été revalorisé en cours d’année, le nombre exact est un peu inférieur) : aucune boisson n’y est valorisée, et le barème ne prévoit aucune ligne pour elles. Le service en tire pourtant un argument sur des volumes d’alcool."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Table de passage des chiffres cités par le service (p. 72-73 et p. 89)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Chiffre du service"
+    },
+    {
+     "label": "Ce qu’il contenait (fichier 56 remis le 10/07/2026)",
+     "align": "right"
+    },
+    {
+     "label": "Décompte retenu aujourd’hui",
+     "align": "right"
+    },
+    {
+     "label": "Pièce",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "8 010 € d’offerts"
+     },
+     {
+      "v": "apéritifs 3 641 € (39,7 L) + cafés 4 369 €"
+     },
+     {
+      "v": "5 650 € (14 L + cafés)",
+      "align": "right"
+     },
+     {
+      "v": "R1-abattements o.2 L6-L7 ; csv § 2"
+     }
+    ],
+    [
+     {
+      "v": "39 319 € de consommation du personnel"
+     },
+     {
+      "v": "softs 24 743 € + alcool 14 575 € (Macvin 8 085 €, Picon 6 490 €)"
+     },
+     {
+      "v": "8 109,83 € (Macvin ; Picon non déterminable)",
+      "align": "right"
+     },
+     {
+      "v": "R1-consommation-personnel o.1"
+     }
+    ],
+    [
+     {
+      "v": "« ne retient que le Macvin et le Picon bière »"
+     },
+     {
+      "v": "deux lignes d’alcool sur six ; quatre lignes de boissons sans alcool, dont 1 310,76 L de Coca"
+     },
+     {
+      "v": "143 L d’alcool (3 exercices)",
+      "align": "right"
+     },
+     {
+      "v": "R1-consommation-personnel o.1 et o.4"
+     }
+    ],
+    [
+     {
+      "v": "1 505 L de consommation sans vente"
+     },
+     {
+      "v": "six postes, dont sur-versement 720 L et crémant 347 L"
+     },
+     {
+      "v": "1 158 L brut ; 697,4 L net",
+      "align": "right"
+     },
+     {
+      "v": "R2-abattements-net, Calcul B6 et B8"
+     }
+    ],
+    [
+     {
+      "v": "28,7 % de « perte d’exploitation totale »"
+     },
+     {
+      "v": "postes documentés + solde non ventilé du bilan matière"
+     },
+     {
+      "v": "non revendiqué (le solde est une moyenne, non une mesure)",
+      "align": "right"
+     },
+     {
+      "v": "R1-abattements o.3 A45"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "2.4",
+   "texte": "Un seul forfait de 15 %, opposé six fois dans huit pages"
   },
   {
    "kind": "paragraphe",
-   "texte": "**« Chaque abattement de 5 %, valorisé à 35 133,26 € par exercice, représente plus de 13 fois les 8 010 € d’offerts et près de 3 fois les 39 319 € de consommation du personnel. »** Ce montant n’est pas homogène : les trois quarts, 26 216,19 € par exercice, sont du chiffre d’affaires cuisine extrapolé par le coefficient de revente, et non de l’alcool offert ou consommé. Sur trois exercices, le forfait ne retire que 76 863,18 € de chiffre d’affaires boissons. La comparaison n’oppose pas deux grandeurs de même nature."
+   "texte": "L’abattement de 15 % est appliqué **une seule fois**, en fin de méthode (proposition p. 51-52). Il vaut 1 593 L. Une fois les 697,4 L documentés absorbés, il en reste 895,9 L. Le service l’invoque pourtant, séparément, pour écarter six postes distincts, et le convertit lui-même en litres de vin (698 L sur trois exercices, p. 64 et 86) ou en « 30 % » sur la bière (p. 61 et 83) : la même enveloppe ne peut pas couvrir à la fois les offerts, les pertes et le personnel (p. 72-73), la freinte de bière, la dégustation et le coefficient de revente."
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« Sur trois exercices, le montant atteint 105 399,78 €, sans commune mesure avec ce que propose Maître THIVEND. »** Ces 105 399,78 € correspondent exactement à la **totalité** de l’abattement de 15 % du **seul exercice 1** (702 665,20 € moins 597 265,42 €), et non au 5 % d’offerts de trois exercices. L’effet réel des trois abattements sur les trois exercices est de 308 830,67 €, dont 231 967,49 € de cuisine extrapolée et 76 863,18 € de boissons : la grandeur mise en comparaison n’est pas celle qu’elle prétend être."
+   "kind": "tableau",
+   "titre": "Relevé des pages où le même 15 % est opposé (R1-abattements-double-emploi.xlsx, onglet 1)",
+   "minWidth": 980,
+   "colonnes": [
+    {
+     "label": "Page"
+    },
+    {
+     "label": "Poste auquel le 15 % est opposé",
+     "align": "right"
+    },
+    {
+     "label": "Ce que le service écrit",
+     "align": "right"
+    },
+    {
+     "label": "Volume ou montant qu’il y affecte",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "p. 61"
+     },
+     {
+      "v": "Freinte technique de la bière pression"
+     },
+     {
+      "v": "« applique, en fin de méthode, 15 % supplémentaires en taux de perte/offert/consommation du personnel. De ce fait, le service retient donc en fait, un taux total de 30 % sur la bière »"
+     },
+     {
+      "v": "15 % de la bière, en sus du 15 % bière",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 64"
+     },
+     {
+      "v": "Dégustation offerte au verre"
+     },
+     {
+      "v": "« le service a déjà retenu un taux offert/perte/consommation du personnel de 15 % » ; BIB 67,99 + 66,12 + 64,04 L ; bouteilles 175,35 + 173,08 + 153,11 L"
+     },
+     {
+      "v": "« 198 litres » + « 500 litres » de vin sur 3 exercices",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 70-71"
+     },
+     {
+      "v": "Consommation du personnel"
+     },
+     {
+      "v": "« 5 % de ce volume correspondent donc à 83,84 litres [...] 61,46 litres »"
+     },
+     {
+      "v": "145,30 L d’alcool (exercice 1)",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 72"
+     },
+     {
+      "v": "Offerts (apéritifs et cafés)"
+     },
+     {
+      "v": "« 35 133,26 € [...] multiplié par 3 (105 399,78 €), ce qui est plus de 13 fois »"
+     },
+     {
+      "v": "105 399,78 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 72"
+     },
+     {
+      "v": "Pertes"
+     },
+     {
+      "v": "« 35 133,26 € [...] 8,70 % du chiffre d’affaires TTC déclaré »"
+     },
+     {
+      "v": "35 133,26 € par exercice",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 73"
+     },
+     {
+      "v": "Consommation du personnel (reprise)"
+     },
+     {
+      "v": "« 35 133,26 € [...] multiplié par 3 (105 399,78 €), ce qui est près de 3 fois »"
+     },
+     {
+      "v": "105 399,78 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 83"
+     },
+     {
+      "v": "Freinte de bière (reprise)"
+     },
+     {
+      "v": "« en cumulant les deux taux [...] un taux de pertes, offerts, consommation du personnel de 30 % »"
+     },
+     {
+      "v": "30 % de la bière",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 86"
+     },
+     {
+      "v": "Dégustation (reprise)"
+     },
+     {
+      "v": "« Le total de 198 litres [...] cumul de 500 litres [...] près de 4 fois supérieur aux 125,80 litres »"
+     },
+     {
+      "v": "698 L de vin",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 89"
+     },
+     {
+      "v": "Offerts, pertes, personnel (reprise)"
+     },
+     {
+      "v": "« plus de 13 fois » ; « 8,70 % » ; « près de 3 fois »"
+     },
+     {
+      "v": "105 399,78 € par poste",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "p. 93"
+     },
+     {
+      "v": "Coefficient de revente"
+     },
+     {
+      "v": "« grâce aux taux de perte/offerts/consommation du personnel de 15 % [...] 3,85 × (1 − 0,15) = 3,2725 »"
+     },
+     {
+      "v": "15 % du coefficient",
+      "align": "right"
+     }
+    ]
+   ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« L’abattement équivaut à 8,70 % du chiffre d’affaires TTC déclaré, proportion significative. »** La proportion est forte parce que le montant inclut la cuisine extrapolée. Ramené au volume d’alcool, le forfait vaut 1 593 L ; la consommation sans vente que nous documentons n’en représente que 1 158 L, et 697,4 L nette. L’abattement couvre donc la consommation sans vente établie, et au-delà : nous ne soutenons pas le contraire."
+   "kind": "titre",
+   "numero": "2.5",
+   "texte": "Le droit applicable (références vérifiées)"
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« Maître THIVEND se contente de rappeler ses tableaux sans apporter d’élément complémentaire. »** Sur ce grief, le constat du service est exact quant au résultat : la consommation sans vente itemisée ne dépasse pas le forfait. Ce que la défense maintient, élément nouveau à l’appui, c’est que le même 15 % ne peut être opposé six fois et que les 105 399,78 € ne sont pas le 5 % d’offerts de trois exercices."
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Les forfaits doivent rester réalistes : BOI-CF-IOR-10-20, § 200** : « Pour être pertinentes et emporter, le cas échéant, la conviction de la commission départementale ou nationale, ou du juge, les reconstitutions opérées doivent demeurer dans des limites réalistes au regard des conditions effectives d’exploitation. » Notre itemisation est précisément la mesure de ces conditions effectives : elle établit que le forfait les couvre, et que le service ne peut donc pas le dépenser une seconde fois sur d’autres postes.",
+    "**Une méthode qui ignore une consommation réelle est « radicalement viciée » : CE, 3e et 8e ch., 3 novembre 2023, n° 460520** (restaurant « Les Flots Bleus », méthode des cafés ignorant les cafés compris dans les menus : décharge). Le principe vaut dans les deux sens : c’est pour l’éviter que les 741 L d’alcool de cuisine et de menus, déjà vendus, ne sont pas ajoutés à notre décompte, et c’est pour la même raison que le service ne peut écarter d’un trait, p. 89, un décompte poste par poste qu’il ne discute pas.",
+    "**Charge de la preuve, art. L. 192 du LPF (BOI-CF-IOR-10-20, § 270 à 290)** : lorsque la commission est saisie, l’administration supporte la charge de la preuve, sauf si la comptabilité comporte de « graves irrégularités » (erreurs, omissions ou inexactitudes graves et répétées, ou absence de pièces justificatives) et que l’imposition est conforme à l’avis de la commission ; la preuve de ces graves irrégularités incombe à l’administration devant le juge. Le niveau des forfaits relève de cette discussion : il n’appartient pas à la société de prouver des pertes supérieures au forfait pour obtenir que le forfait ne soit pas compté plusieurs fois.",
+    "**Consommation d’alcool au travail, art. R. 4228-20 du code du travail** : le vin, la bière, le cidre et le poiré sont autorisés sur le lieu de travail ; une interdiction ne peut résulter que du règlement intérieur ou d’une note de service, proportionnée. Le courrier n’en produit aucun.",
+    "**Avantage en nature nourriture, BOI-BAREME-000014** (version du 23/05/2022) : dans les hôtels, cafés, restaurants, 1 minimum garanti par repas (3,76 € en 2022), 2 par jour. Le barème valorise des repas ; il ne contient aucune évaluation des boissons consommées par le personnel. Les montants DADS cités p. 73 n’ont donc aucun rapport avec des volumes d’alcool.",
+    "**Utilisation des données d’un autre exercice, CE 22 juillet 2020, n° 424052** (bar-brasserie) : admise seulement si les conditions d’exploitation sont restées identiques ou peuvent être ajustées. Le service dispose ici des trois exercices (33 971,89 € et 33 838,41 € pour 2023-2024 et 2024-2025) et choisit pourtant de multiplier l’exercice 1 par trois."
+   ]
   },
   {
-   "kind": "piecejointe",
-   "intro": "Recalcul par formule de la comparaison forfait / consommation sans vente nette (itemisation hors double emploi), pièce auto-portante à trois onglets Sources / Calcul / Méthode :",
+   "kind": "alerte",
+   "couleur": "yellow",
+   "titre": "Arrêt CAA Paris du 17 mars 2021 (« SARL Pub le St Jacques », 22 % des achats) : à ne pas réemployer en l’état",
+   "texte": "Cet arrêt, cité dans le mémoire du 10/07/2026 et reproduit par le service p. 71, n’a pas pu être relu sur Légifrance pour cette page (deux décisions de la 2e chambre portent cette date, n° 19PA01891 et 19PA02762 ; le numéro et le passage exact restent à confirmer par l’avocat avant toute citation). Au surplus, la thèse qu’il servait (« les forfaits sont des planchers ») est abandonnée : la page n’en a plus besoin."
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 8",
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
-     "label": "R2 Abattements : itemisation nette (hors cuisine, menus et sur-versement) vs forfait de 15 %, par formule"
+     "label": "R2 Abattements : itemisation nette vs forfait de 15 %, par formule (onglets Sources / Calcul / Méthode)"
     },
     {
      "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",
-     "label": "R1 (complément) : le même 15 % opposé six fois ; relevé des citations p. 61 à 93"
+     "label": "R1 Abattements : le même 15 % opposé six fois ; itemisation par exercice ; décomposition du 35 133,26 €"
     },
     {
      "fichier": "pieces-reponse-1/R1-consommation-personnel.xlsx",
-     "label": "R1 (complément) : valorisation sourcée de la consommation du chef (Macvin 8 109,83 € ; Picon non déterminable)"
+     "label": "R1 Consommation du personnel : valorisation sourcée (Macvin 8 109,83 € ; Picon non déterminable)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cascade-doubles-comptages.csv",
+     "label": "R1 Doubles comptages retirés du décompte de juillet (bière 295,99 L ; offerts à 0 € 25,75 L)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "3",
+   "texte": "Partie S (p. 89) : la reprise « sans élément complémentaire », sous un titre qui n’est pas le sien"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 89",
+   "resume": [
+    "La partie est intitulée « S- Dégustation Offerte (goûter du vin) (Pages 44-48 de la proposition de rectifications) », même intitulé que les parties Q (p. 85) et R (p. 87) ; son contenu porte sur les abattements de 5 % + 5 % + 5 %.",
+    "« Maître THIVEND revient, encore sur cette question. Il reprend les mêmes tableaux » ; « sans apporter un quelconque élément complémentaire, le service va se limiter à résumer ses conclusions ».",
+    "Résumé du service : offerts 8 010 € contre 105 399,78 € (« plus de 13 fois ») ; pertes 35 133,26 € = 8,70 % du CA déclaré (« significative ») ; personnel 39 319 € contre 105 399,78 € (« près de 3 fois ») ; « aucune raison de modifier sa reconstitution »."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Position de la défense telle que reproduite (encadré, p. 89).** « Les forfaits de 5 %+5 %+5 % du service sous-estiment la consommation sans vente : itemisée, elle atteint déjà 1 505 L hors cuisine et menus, et en prenant en compte la perte d’exploitation totale (28,7 %), les éléments du dossier nécessitent la prise en compte de la réalité. Les abattements retenus peuvent se comprendre et s’admettre en absence de données fiables. Loin d’être généreux, les abattements sont des planchers. Et il convient de les apprécier au regard du dossier. Postes itemisés et comparaison aux forfaits / à la jurisprudence : 57-rf-offerts-remises-pertes.xlsx »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**Réponse du service (p. 89).** « Compte tenu que Maître THIVEND se contente de rappeler ses tableaux évoqués dans la partie “Reconstitution du Chiffre d’affaires”, sans apporter un quelconque élément complémentaire, le service va se limiter à résumer ses conclusions en la matière : Les offerts : Dans sa réponse et son fichier Maître THIVEND limite ses offerts aux apéritifs et aux cafés. Il valorise le chiffre d’affaires correspondant à cet offert à 8 010 € sur les 3 exercices (662 jours). Or le service, en retenant un taux de 5 % d’offerts dans sa méthode de reconstitution, a minoré le montant du chiffre d’affaires TTC reconstitué, sur le premier exercice à hauteur de 35 133,26 € (montants à peu près équivalents sur les 3 exercices). Ainsi, sur trois exercices, ce montant doit donc être multiplié par 3 (105 399,78 €), ce qui est plus de 13 fois ce que propose Maître THIVEND. Les pertes : Pour cet aspect, avec une proportion de 5 % pour les pertes, le service minore le montant du chiffre d’affaires TTC reconstitué à hauteur de 35 133,26 € pour un exercice. À titre d’information, ce montant équivaut à 8,70 % du chiffre d’affaires TTC déclaré par la société sur ce premier exercice. Une telle proportion est donc significative. Consommations du personnel : Maître THIVEND ne retient en consommation du personnel que le Macvin et le Picon bière. Dans son fichier, il valorise également le chiffre d’affaires perdus, sur les trois exercices (662 jours) à hauteur de 39 319 €. Avec la proportion de 5 % pour la consommation du personnel, service a minoré le montant du chiffre d’affaires TTC reconstitué, sur le premier exercice à hauteur de 35 133,26 € (montants à peu près équivalents sur les 3 exercices). Sur trois exercices, ce montant doit donc être multiplié par 3 (105 399,78 €), ce qui est près de 3 fois ce que propose Maître THIVEND. Par conséquent, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Les trois abattements de 5 %, tels que chiffrés par le service p. 89",
+     "minWidth": 900,
+     "colonnes": [
+      {
+       "label": "Poste"
+      },
+      {
+       "label": "Taux",
+       "align": "right"
+      },
+      {
+       "label": "Minoration du CA TTC reconstitué (exercice 1)",
+       "align": "right"
+      },
+      {
+       "label": "« Sur 3 exercices »",
+       "align": "right"
+      },
+      {
+       "label": "Chiffrage prêté à la défense",
+       "align": "right"
+      },
+      {
+       "label": "Rapport avancé",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Offerts (apéritifs et cafés)"
+       },
+       {
+        "v": "5 %",
+        "align": "right"
+       },
+       {
+        "v": "35 133,26 €",
+        "align": "right"
+       },
+       {
+        "v": "105 399,78 €",
+        "align": "right"
+       },
+       {
+        "v": "8 010 €",
+        "align": "right"
+       },
+       {
+        "v": "« plus de 13 fois »",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Pertes"
+       },
+       {
+        "v": "5 %",
+        "align": "right"
+       },
+       {
+        "v": "35 133,26 €",
+        "align": "right"
+       },
+       {
+        "v": "non indiqué",
+        "align": "right"
+       },
+       {
+        "v": "non indiqué",
+        "align": "right"
+       },
+       {
+        "v": "« 8,70 % du CA TTC déclaré »",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Consommation du personnel (Macvin et Picon bière)"
+       },
+       {
+        "v": "5 %",
+        "align": "right"
+       },
+       {
+        "v": "35 133,26 €",
+        "align": "right"
+       },
+       {
+        "v": "105 399,78 €",
+        "align": "right"
+       },
+       {
+        "v": "39 319 €",
+        "align": "right"
+       },
+       {
+        "v": "« près de 3 fois »",
+        "align": "right"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Notre réponse à la partie S",
+   "style": "puces",
+   "items": [
+    "**Le titre est erroné et la partie est une redite** : « S- Dégustation Offerte (goûter du vin) » est l’intitulé des parties Q et R ; le contenu reproduit les p. 72-73. La page est identifiée par son contenu, et la réponse est celle du point 8 ci-dessus.",
+    "**« Sans élément complémentaire » est exact sur un point, et nous le prenons à notre compte** : le décompte itemisé ne dépasse pas le forfait (1 158 L brut, 697,4 L net, contre 1 593 L). L’élément maintenu n’est pas un dépassement, c’est que le même forfait ne peut pas être opposé six fois et que les comparaisons en euros ne sont pas homogènes.",
+    "**« Plus de 13 fois »** : 105 399,78 € est la totalité du 15 % de l’exercice 1 (702 665,20 − 597 265,42), dont les trois quarts de cuisine extrapolée ; à unité constante, un 5 % boissons vaut 25 621,06 € sur trois exercices contre 8 010 € (3,2 fois), et le décompte retenu est de 5 650 €.",
+    "**« 8,70 % »** : 8 917,07 € de boissons sur 404 030,87 € = 2,21 % ; le reste du ratio est le coefficient 2,94.",
+    "**« Près de 3 fois »** : 39 319 € comprenait 24 743 € de boissons sans alcool ; le périmètre alcool était de 14 575 €, ramené à 8 109,83 € déterminables. Le service a bien, et de son propre aveu p. 71 (145,30 L pour un exercice), retenu davantage que les 143 L du chef : nous en convenons.",
+    "**Aucun des chiffres de la pièce 57 n’est discuté** (ni les litres, ni les postes) : le refus d’examen ne vaut pas réfutation, mais il ne nous donne pas non plus raison sur le « plancher », que nous n’invoquons plus."
+   ]
+  },
+  {
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "« 105 399,78 € »",
+     "valeur": "= 15 % de l’exercice 1",
+     "sub": "702 665,20 − 597 265,42 ; un seul 5 % sur 3 exercices = 102 943,56 €",
+     "couleur": "red"
+    },
+    {
+     "label": "Un 5 % à unité constante (CA boissons, 3 exercices)",
+     "valeur": "25 621,06 €",
+     "sub": "3,2 fois les 8 010 € d’offerts, non 13 ; décompte retenu 5 650 €",
+     "couleur": "gold"
+    },
+    {
+     "label": "« 8,70 % » ramené aux boissons",
+     "valeur": "2,21 %",
+     "sub": "8 917,07 € ÷ 404 030,87 € ; le reste est le coefficient 2,94",
+     "couleur": "blue"
+    },
+    {
+     "label": "Personnel : périmètre alcool des 39 319 €",
+     "valeur": "14 575 €",
+     "sub": "ramené à 8 109,83 € déterminables (Macvin) ; 24 743 € de softs dans le total",
+     "couleur": "teal"
+    }
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents de la partie S",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
+     "label": "R2 Abattements : itemisation nette vs forfait de 15 %, par formule"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",
+     "label": "R1 Abattements : décomposition du 35 133,26 € et du 105 399,78 € (onglet 3)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que cela fait tomber"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Aucun droit ni pénalité ne tombe directement par ce point** : le forfait de 15 % couvre la consommation sans vente documentée (697,4 L nets sur 1 593 L) et la page ne demande pas de l’augmenter. Le statut est « partiel » et le chiffrage de réduction est de 0 € à ce titre.",
+    "**Ce qui tombe, ce sont trois arguments du service réutilisés ailleurs** : la « générosité » du 15 % ne peut plus être opposée à la freinte de bière (p. 61 et 83), à la dégustation (p. 64 et 86) ni au coefficient (p. 93) une fois qu’elle a absorbé offerts, pertes et personnel ; les rapports « 13 fois » et « 3 fois » (unités mélangées) ; la dénégation p. 92 du levier × 3,94 (« tel n’est pas le cas dans la méthode du service »), alors que 35 133,26 € et 105 399,78 € en procèdent ; l’interdiction légale d’alcool au travail et l’argument DADS (inexacts en droit).",
+    "**Ordre de grandeur de l’enveloppe en jeu** : en CA boissons, le forfait vaut 76 863,18 € sur trois exercices ; en CA total après coefficient, 308 830,67 €. Toute discussion sur son emploi se mesure à cette échelle, non à 105 399,78 € « par poste »."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que le service pourrait encore opposer"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**« Votre propre décompte prouve que le forfait est généreux. »** → Oui : 1 158 L brut = 72,7 %, 697,4 L net = 43,8 % du forfait. La page le dit en premier. La conséquence est que l’enveloppe restante (895,9 L) ne peut pas être présentée six fois comme couvrant six postes différents.",
+    "**« Le 15 % couvre aussi la freinte de bière et la dégustation. »** → Le service convertit lui-même le 15 % en 698 L de vin (p. 64, 86) et en « 30 % » de bière (p. 61, 83) tout en l’affectant intégralement aux offerts, pertes et personnel (p. 72-73, 89) : 1 593 L ne peuvent pas valoir 1 593 L à chaque page.",
+    "**« 35 133,26 € par poste, c’est de l’argent, pas des litres. »** → 26 216,19 € sur 35 133,26 € sont du CA cuisine obtenu par le coefficient 2,94 ; à unité constante (boissons), un 5 % vaut 8 917,07 € par exercice et 25 621,06 € sur trois, soit 3,2 fois les 8 010 € d’offerts et 3,2 fois les 8 109,83 € de consommation du chef.",
+    "**« Le facteur 3,94 est un double compte de Maître THIVEND, pas notre méthode » (p. 92).** → 8 917,07 × 3,94 = 35 133,26 et 26 751,21 × 3,94 = 105 399,77 : les deux montants du service (p. 71-73, 89) ne s’obtiennent que par ce facteur. S’il est un double compte p. 92, il l’est aussi p. 72.",
+    "**« Les salariés ne peuvent pas boire d’alcool au travail. »** → R. 4228-20 du code du travail autorise le vin, la bière, le cidre et le poiré ; aucune note de service ni règlement intérieur n’est produit ; et une interdiction ne modifierait pas les litres achetés et non vendus.",
+    "**« Les DADS ne montrent pas d’avantage en nature boissons. »** → Le barème HCR (BOI-BAREME-000014) valorise un MG par repas (3,76 € en 2022) et rien d’autre ; 3 507 € ≈ 933 repas pour 8 salariés : ces montants ne décrivent aucune boisson.",
+    "**« Vous aviez dit 1 505 L et 28,7 % en juillet. »** → Exact, et ces chiffres sont abandonnés avec leur motif (table de passage ci-dessus : 25,75 L déjà à 0 € en caisse, sur-versement recalé à 460,6 L, 295,99 L de bière comptés deux fois). Le décompte retenu est inférieur, pas supérieur : la correction va contre nous et nous la portons.",
+    "**« Pourquoi retirer le sur-versement si vous l’avez compté en juillet ? »** → Parce qu’un verre sur-versé est un verre facturé : il est déjà dans le CA au verre reconstitué par le service. Le compter en consommation sans vente serait le double emploi que le CE sanctionne (n° 460520)."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Points de vigilance pour la réunion"
+  },
+  {
+   "kind": "liste",
+   "style": "puces",
+   "items": [
+    "**Ne pas rouvrir la thèse du « plancher »** : la pièce R1-abattements o.3 (A32) concède elle-même 72,7 % ; toute reprise des 1 505 L, 1 899 L, 28,7 % ou 30,2 % serait démentie par nos propres pièces.",
+    "**Consommation du chef** : 2 à 3 verres de Macvin (6 cl) et environ 1,7 Picon bière par jour d’ouverture (R1-consommation-personnel o.4) reposent sur une déclaration de l’exploitante du 09/06/2026 et sur la borne des achats (Picon 72 L, 0 vendu seul) ; une attestation signée de M. PASTEUR et de Mme BEHEM reste à produire. Arbitrer avec l’avocat le risque d’avantage en nature avant de chiffrer publiquement.",
+    "**Coca du personnel (1 310,76 L)** : déclaration, non mesure ; ne pas l’opposer en litres au forfait d’alcool.",
+    "**Prix de revente au litre** (91,71 ; 32,50 ; 48,04 ; 15,60 €/L) : conventions non démontrables pièce primaire à l’appui ; la comparaison en euros (30 525,83 € contre 76 863,18 €) reste indicative, la démonstration porte sur les litres.",
+    "**Ventilation par exercice** : annexes caisse primaires exploitées pour 2022-2023 ; 2023-2024 et 2024-2025 au prorata des jours (222 / 221 / 219 j) pour le chef et les offerts. Les agrégats triennaux sont robustes, les colonnes annuelles sont indicatives.",
+    "**Jurisprudence citée par les deux parties** : CAA Paris 17/03/2021 (défense, n° à confirmer : 19PA01891 ou 19PA02762) et CAA Marseille 03/10/2024 n° 22MA01609 et 04/10/2018 n° 17MA00424 (service, p. 61, « taux de perte global [...] avoisine les 10 % ») n’ont pas pu être relues ici : demander les copies ou les vérifier sur Légifrance avant la réunion.",
+    "**Solde du bilan matière** (2 055 L, 19,3 % des achats, non ventilé) : ne pas le présenter comme « perte documentée » ; il est traité sur le terrain de la part revendue (60,77 %) et du coefficient."
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Toutes les pièces de la page",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
+     "label": "R2 Abattements : itemisation nette vs forfait de 15 %, par formule (Sources / Calcul / Méthode)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",
+     "label": "R1 Abattements : le même 15 % opposé six fois ; itemisation par exercice ; forfait vs itemisation"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-consommation-personnel.xlsx",
+     "label": "R1 Consommation du personnel : décompte, forfait 5 % (1 exercice vs 3), changement d’assiette"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cascade-doubles-comptages.csv",
+     "label": "R1 Doubles comptages retirés (bière 295,99 L ; offerts à 0 € 25,75 L)"
     }
    ]
   }

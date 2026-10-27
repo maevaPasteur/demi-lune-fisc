@@ -1,588 +1,724 @@
 {
  "meta": {
   "slug": "quantites-inferieures-a-un",
-  "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
+  "source": "Proposition du 18/05/2026, motif D « Quantités anormales » (§ VI, p. 19 à 22) ; réponse du service du 04/09/2026 (p. 28 et 29) ; propositions personnelles du 19/10/2026 (§ 6, p. 20 à 23).",
   "limites": [
-   "Résidu concédé : 50 articles fractionnés sur 8 tables (25 demi-articles « 0,50 » ou « 1,50 » dont la contrepartie n’a pas été retrouvée dans la fenêtre de regroupement, et 25 articles de partage à N convives incomplètement rattaché) ne se referment pas sur un entier. Incidence maximale théorique recalculée par formule, directement sur les annexes C-1 à C-3 : 264,98 € de chiffre d’affaires sur les trois exercices (78,33 € / 186,65 € / 0,00 €).",
-   "Périmètre : 1 913 notes portent une quantité fractionnaire ; 1 849 ont été rattachées à une table reconstituée. 64 notes fractionnaires restent isolées (non rattachées à une table) et ne sont pas chiffrées ici faute de regroupement. Les 1 849 notes rattachées sont toutes retrouvées encaissées à l’annexe F.",
-   "Le rattachement des notes en « tables » repose sur une heuristique (notes du même jour encaissées à moins de quinze minutes et portant des fractions sur les mêmes articles) : ce paramètre n’est pas une donnée de caisse. Le résidu chiffré est donc un majorant qui dépend en partie de ce réglage.",
-   "Le rapprochement du total encaissé (95 237,08 €) au chiffre d’affaires déclaré ligne à ligne n’est pas reproduit dans la pièce : il est établi au niveau des règlements (annexe F), non au niveau de la déclaration."
+   "Résidu concédé : 50 articles fractionnés sur 8 tables (25 demi-articles orphelins, 25 partages à N incomplètement rattachés) ne se referment pas ; incidence maximale théorique, par formule sur les annexes C-1 à C-3 : 264,98 € de chiffre d’affaires sur trois exercices (78,33 / 186,65 / 0,00 €).",
+   "Périmètre : 1 913 notes à quantité fractionnaire, 1 849 rattachées à une table reconstituée ; 64 notes isolées (341 lignes, 2 054,20 € encaissés) ne sont pas recomposées.",
+   "Le regroupement en tables repose sur une règle (notes du même jour encaissées à moins de quinze minutes et portant des fractions sur les mêmes articles) qui n’est pas une donnée de caisse ; le résidu chiffré en dépend. La liaison des notes par la caisse est établie séparément par la note de clôture de l’annexe B (4 949 articles sur 5 012).",
+   "La lecture « quantité cumulée sur la note de clôture » de l’annexe B est une observation des fichiers du service, non documentée par l’éditeur du logiciel ; 14 articles refermés n’ont pas de note de clôture, 49 en ont une à une autre quantité entière.",
+   "Le rapprochement des 95 237,08 € encaissés est établi au niveau des règlements (annexe F), non de la déclaration ligne à ligne. Le chiffrage de 62 487,87 € du motif D n’entre pas dans le rehaussement de 471 826 € : son abandon retire un motif de rejet, il ne dégrève pas directement."
   ]
+ },
+ "entete": {
+  "statut": "demonte",
+  "reponseCourte": "Sur les fichiers du service, 5 012 des 5 062 articles fractionnés (99,0 %) se referment sur un entier, 1 849 notes sur 1 849 sont encaissées, la note de clôture de l’annexe B relie les parts pour 4 949 articles, « l’autre moitié » de la table 13 est imprimée p. 21 de la proposition, et le chiffrage de 62 487,87 € est une formule qui compte le prix entier d’articles payés une fois (95,7 % sur des lignes refermées) ; le résidu concédé est de 50 articles sur 8 tables, 264,98 € au maximum."
  },
  "sections": [
   {
    "kind": "chapitre",
-   "source": "fisc",
-   "numero": 1,
-   "titre": "Ce que soutient l’administration",
-   "sousTitre": "Grief repris à l’identique, dans les propositions de rectification personnelles du 19/10/2026 notifiées à M. Thierry PASTEUR et à Mme Ghislaine BEHEM, de la partie « D- Quantités anormales » de la proposition « société » du 18/05/2026 (p. 18 à 20). Les développements ci-dessous reprennent la position maintenue par le service dans sa réponse aux observations du 04/09/2026 (p. 28 et 29)."
+   "source": "neutre",
+   "titre": "Quantités inférieures à 1 : des parts d’addition, pas des ventes occultées",
+   "sousTitre": "Motif D « Quantités anormales » de la proposition du 18/05/2026 (p. 19 à 22), maintenu par la réponse du service du 04/09/2026 (p. 28 et 29) et recopié à l’identique au § 6 (p. 20 à 23) des propositions personnelles du 19/10/2026 : la position du service est reprise point par point, dans son ordre, et chaque point reçoit une réponse chiffrée sur ses propres fichiers."
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "**1. Quantités anormalement élevées** (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) : nous disons « fautes de frappe » ; « le service prend note des lignes aux montants importants qui auraient été supprimées » (p. 29).",
+    "**2. Quantités inférieures à 1** : après avoir reproduit nos deux tableaux (p. 28), le service répond que « la réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1. Elle y parvient, tout au plus, sur une infime quantité » (p. 29).",
+    "**3. La table n° 13 du 14/04/2022 et le chiffrage du motif D** (proposition p. 19 à 22, maintenue) : « aucune autre table ne fait mention de l’autre moitié de ces articles » ; « 0,16 ou 0,19 » ne seraient pas explicables ; un « chiffre d’affaires occulté » de 20 035,60 € / 22 397,96 € / 20 054,31 € (62 487,87 €).",
+    "**4. Le numéro d’identification unique** n’existe que dans quatre fichiers et « est différent » dans « tpvevenement.xls » : « il n’y a aucune traçabilité certaine » (p. 29).",
+    "**5. « Le motif de rejet exposé dans la proposition de rectifications est donc parfaitement légitime »** (p. 29) : maintien intégral du motif D, sans chiffrage nouveau ni exemple nouveau."
+   ],
+   "titre": "Ce que reproche le fisc, en résumé"
   },
   {
    "kind": "titre",
-   "texte": "Ce que le service retient de notre réponse",
-   "numero": "1.1"
+   "texte": "Quantités anormalement élevées : « le service prend note »",
+   "numero": "1"
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le service commence par résumer la réponse de Maître THIVEND : « Dans cette partie, Maître THIVEND revient sur les annexes C-1 à C-3 et précise : les quantités anormalement élevées qui sont des fautes de frappes compte tenu de l’importance des montants (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) ; les quantités inférieures à 1 qui sont des partages d’additions » (p. 28)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Il indique ensuite que la réponse « cite un exemple et récapitule ces quantités dans des tableaux » (p. 28), et reproduit ces deux tableaux : la répartition des quantités fractionnaires par type de partage sur les trois exercices, puis une note d’exemple ligne à ligne. Ces deux tableaux sont repris ci-dessous tels qu’ils figurent dans le courrier."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Tableau reproduit p. 28 : « Toutes les quantités fractionnaires = des partages à N convives (3 exercices) »",
-   "minWidth": 760,
-   "colonnes": [
-    {
-     "label": "Type de partage"
-    },
-    {
-     "label": "Fraction unitaire"
-    },
-    {
-     "label": "Fractions observées"
-    },
-    {
-     "label": "Lignes",
-     "align": "right"
-    },
-    {
-     "label": "Notes",
-     "align": "right"
-    }
+   "kind": "reproche",
+   "page": "Réponse du 04/09/2026, p. 28 et 29",
+   "resume": [
+    "Le service résume notre réponse : les quantités anormalement élevées « sont des fautes de frappes compte tenu de l’importance des montants (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) » (p. 28).",
+    "Sa réponse tient en une phrase : « Le service prend note des lignes aux montants importants qui auraient été supprimées (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) » (p. 29).",
+    "Le conditionnel (« auraient été ») est de lui : il enregistre l’explication sans la contester et n’avance aucun élément contraire."
    ],
-   "lignes": [
-    [
-     {
-      "v": "Partage à 2"
-     },
-     {
-      "v": "1/2"
-     },
-     {
-      "v": "0,5 ; 1,5 ; 2,5 ; 3,5 ; 4,5"
-     },
-     {
-      "v": "9 804",
-      "align": "right"
-     },
-     {
-      "v": "1 781",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Partage à 3"
-     },
-     {
-      "v": "1/3"
-     },
-     {
-      "v": "0,33 ; 0,34 ; 0,66 ; 0,67 ; 1,33 ; 1,67 ; 3,33"
-     },
-     {
-      "v": "502",
-      "align": "right"
-     },
-     {
-      "v": "81",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Partage à 4"
-     },
-     {
-      "v": "1/4"
-     },
-     {
-      "v": "0,25 ; 0,75 ; 1,25 ; 1,75 ; 2,25 ; 5,25 ; 6,75"
-     },
-     {
-      "v": "340",
-      "align": "right"
-     },
-     {
-      "v": "58",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Partage à 5"
-     },
-     {
-      "v": "1/5"
-     },
-     {
-      "v": "0,2 ; 0,4 ; 0,6 ; 0,8 ; 1,6 ; 2,4 ; 3,2"
-     },
-     {
-      "v": "208",
-      "align": "right"
-     },
-     {
-      "v": "15",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Partage à 6"
-     },
-     {
-      "v": "1/6"
-     },
-     {
-      "v": "0,16 ; 0,17 ; 0,83"
-     },
-     {
-      "v": "11",
-      "align": "right"
-     },
-     {
-      "v": "7",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Partage à 7"
-     },
-     {
-      "v": "1/7"
-     },
-     {
-      "v": "0,14 ; 0,15 ; 0,28 ; 0,29 ; 0,43"
-     },
-     {
-      "v": "159",
-      "align": "right"
-     },
-     {
-      "v": "7",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Partage à 12"
-     },
-     {
-      "v": "1/12"
-     },
-     {
-      "v": "0,42"
-     },
-     {
-      "v": "2",
-      "align": "right"
-     },
-     {
-      "v": "1",
-      "align": "right"
-     }
-    ]
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "« D- Quantités anormales (pages 18 à 20 de la proposition de rectifications). Dans cette partie, Maître THIVEND revient sur les annexes C-1 à C-3 et précise : les quantités anormalement élevées qui sont des fautes de frappes compte tenu de l’importance des montants (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) ; les quantités inférieures à 1 qui sont des partages d’additions. » (p. 28)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Réponse du service : Le service prend note des lignes aux montants importants qui auraient été supprimées (68 993,10 € / 44 955 € / 19 600 € / 4 455 €). » (p. 29)"
+    },
+    {
+     "kind": "note",
+     "texte": "Dans la proposition du 18/05/2026, le motif D ne vise ces montants que par les annexes C-1 à C-3 ; il ne les commente pas. Les quatre montants proviennent du journal des événements (annexe E, type « DEL »)."
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "Les quatre montants sont des **événements de suppression « DEL »** du journal de la caisse (annexes E-1 à E-3, colonne « typEven »), datés et horodatés ci-dessous ; ce ne sont pas des lignes de vente.",
+    "Aucune ligne de vente des annexes C-1 à C-3 ne porte l’un de ces montants : la plus grosse ligne de vente des trois exercices est de **967,10 €**, le plus gros ticket de **1 184,10 €**, la plus grande quantité de **19** (recomptage exhaustif des 97 769 lignes des annexes C).",
+    "À eux quatre, ils représentent **138 003,10 € = 32,0 %** des 430 763,15 € de suppressions (21 302 lignes) : quatre fautes de saisie pèsent un tiers du « montant supprimé » que le service met en avant au motif A.",
+    "Le service n’oppose rien : la phrase « prend note » clôt ce volet."
    ]
   },
   {
    "kind": "tableau",
-   "titre": "Second tableau reproduit p. 28 : la note d’exemple, article par article",
-   "minWidth": 680,
+   "titre": "Les quatre saisies à montant impossible, relevées dans le journal des événements du service (annexes E-1 à E-3)",
+   "minWidth": 820,
    "colonnes": [
     {
-     "label": "Article"
+     "label": "Date"
     },
     {
-     "label": "Quantité",
+     "label": "Heure"
+    },
+    {
+     "label": "N° Z"
+    },
+    {
+     "label": "Montant supprimé",
      "align": "right"
     },
     {
-     "label": "Prix unitaire",
+     "label": "Lecture (montant ÷ 18 € de plat moyen)",
      "align": "right"
     },
     {
-     "label": "Montant",
-     "align": "right"
+     "label": "Annexe"
+    },
+    {
+     "label": "Statut"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Gewurztraminer Le ve"
+      "v": "26/07/2022"
      },
      {
-      "v": "0,4",
+      "v": "18:51"
+     },
+     {
+      "v": "3015"
+     },
+     {
+      "v": "68 993,10 €",
       "align": "right"
      },
      {
-      "v": "7,00 €",
+      "v": "≈ 3 800 portions",
       "align": "right"
      },
      {
-      "v": "2,80 €",
-      "align": "right"
+      "v": "E-1"
+     },
+     {
+      "v": "DEL, jamais au CA",
+      "badge": "ok"
      }
     ],
     [
      {
-      "v": "Whisky L.J (4cl)"
+      "v": "07/08/2022"
      },
      {
-      "v": "0,2",
+      "v": "18:29"
+     },
+     {
+      "v": "3026"
+     },
+     {
+      "v": "19 600,00 €",
       "align": "right"
      },
      {
-      "v": "5,80 €",
+      "v": "≈ 1 100 portions",
       "align": "right"
      },
      {
-      "v": "1,16 €",
-      "align": "right"
+      "v": "E-1"
+     },
+     {
+      "v": "DEL, jamais au CA",
+      "badge": "ok"
      }
     ],
     [
      {
-      "v": "Sirop à l’eau"
+      "v": "21/06/2023"
      },
      {
-      "v": "0,2",
+      "v": "17:06"
+     },
+     {
+      "v": "3216"
+     },
+     {
+      "v": "44 955,00 €",
       "align": "right"
      },
      {
-      "v": "2,20 €",
+      "v": "≈ 2 500 portions",
       "align": "right"
      },
      {
-      "v": "0,44 €",
-      "align": "right"
+      "v": "E-2"
+     },
+     {
+      "v": "DEL, jamais au CA",
+      "badge": "ok"
      }
     ],
     [
      {
-      "v": "Pinte"
+      "v": "15/08/2024"
      },
      {
-      "v": "0,2",
+      "v": "11:16"
+     },
+     {
+      "v": "3474"
+     },
+     {
+      "v": "4 455,00 €",
       "align": "right"
      },
      {
-      "v": "7,80 €",
+      "v": "≈ 250 portions",
       "align": "right"
      },
      {
-      "v": "1,56 €",
-      "align": "right"
+      "v": "E-3"
+     },
+     {
+      "v": "DEL, jamais au CA",
+      "badge": "ok"
      }
     ],
     [
      {
-      "v": "MACHON GOURMET"
+      "v": "Total",
+      "fw": 700
      },
      {
-      "v": "0,4",
-      "align": "right"
+      "v": "",
+      "fw": 700
      },
      {
-      "v": "25,00 €",
-      "align": "right"
+      "v": "",
+      "fw": 700
      },
      {
-      "v": "10,00 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "POULET JURASSIENNE"
+      "v": "138 003,10 €",
+      "align": "right",
+      "fw": 700
      },
      {
-      "v": "0,2",
-      "align": "right"
+      "v": "= 32,0 % des 430 763,15 € supprimés",
+      "align": "right",
+      "fw": 700
      },
      {
-      "v": "18,60 €",
-      "align": "right"
+      "v": "",
+      "fw": 700
      },
      {
-      "v": "3,72 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Fondue Jurassienne"
-     },
-     {
-      "v": "0,4",
-      "align": "right"
-     },
-     {
-      "v": "16,90 €",
-      "align": "right"
-     },
-     {
-      "v": "6,76 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "POMMES FRITES"
-     },
-     {
-      "v": "0,4",
-      "align": "right"
-     },
-     {
-      "v": "3,90 €",
-      "align": "right"
-     },
-     {
-      "v": "1,56 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Assortiment charcute"
-     },
-     {
-      "v": "0,2",
-      "align": "right"
-     },
-     {
-      "v": "8,90 €",
-      "align": "right"
-     },
-     {
-      "v": "1,78 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Pichet 50cl vin"
-     },
-     {
-      "v": "0,2",
-      "align": "right"
-     },
-     {
-      "v": "9,80 €",
-      "align": "right"
-     },
-     {
-      "v": "1,96 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Crêpe sucrée"
-     },
-     {
-      "v": "0,4",
-      "align": "right"
-     },
-     {
-      "v": "2,90 €",
-      "align": "right"
-     },
-     {
-      "v": "1,16 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "TENDRESSE"
-     },
-     {
-      "v": "0,2",
-      "align": "right"
-     },
-     {
-      "v": "3,90 €",
-      "align": "right"
-     },
-     {
-      "v": "0,78 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Expresso"
-     },
-     {
-      "v": "0,8",
-      "align": "right"
-     },
-     {
-      "v": "2,20 €",
-      "align": "right"
-     },
-     {
-      "v": "1,76 €",
-      "align": "right"
+      "v": "",
+      "fw": 700
      }
     ]
    ]
   },
   {
    "kind": "note",
-   "texte": "Le tableau reproduit p. 28 comporte deux lignes supplémentaires dont le libellé d’article est tronqué à l’impression (« La » à 0,2 pour 8,50 € soit 1,70 €, et « Ré » à 0,2 pour 7,00 € soit 1,40 €) : elles ne sont pas restituées ici faute de libellé lisible avec certitude."
+   "texte": "La colonne « lecture » est un ordre de grandeur : l’événement DEL mémorise le montant et l’heure, pas l’article. Rapporté au prix d’un plat moyen (18 €), 68 993,10 € équivaut à près de 3 800 portions sur une seule note : impossible pour un restaurant de 31 tables. Les montants exacts correspondent à des produits prix × quantité tapés par erreur (27,40 € × 2 518 ; 45 € × 999 ; 100 € × 196 ; 55 € × 81)."
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le service reproduit aussi le commentaire qui accompagne ces tableaux dans notre réponse : « Ces fractions sont marginales et tracées : seules 167 notes (environ 1 % des 16 610 notes) portent une fraction autre que 0,50, et plus de 99 % d’entre elles se réconcilient au centime (somme des lignes = total encaissé du ticket). Loin d’occulter du chiffre d’affaires, ces quantités tracent intégralement l’encaissement : c’est l’inverse d’une dissimulation » (p. 28). Il mentionne enfin la pièce jointe citée en réponse, « 08-rf-quantites-anormales.xlsx » (p. 28). Deux chiffres de cet extrait doivent être rectifiés et le sont dans toute la suite de cette page : d’une part le dénominateur, car le recomptage exhaustif des annexes C-1 à C-3 donne 16 624 notes (5 660 + 5 534 + 5 430), en léger écart avec le 16 610 arrondi du mémoire de juillet ; d’autre part le compte des fractions autres que 0,50, car le tableau reproduit ci-dessus en additionne 169 (81 + 58 + 15 + 7 + 7 + 1) et non 167. Ces deux corrections jouent contre nous à la marge et sont assumées."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Puis il cite notre conclusion (p. 29) : « Les deux types de quantités “anormales” sont de natures opposées. Les quantités élevées sont de rares fautes de frappe, supprimées le jour même, jamais dans le CA. Les quantités inférieures à 1 sont des partages d’addition (1/N convives) qui reconstituent au centime le total encaissé : l’exemple “table 13” du service trouve sa moitié sur la note 14. Aucune de ces quantités ne révèle de recette dissimulée ; le grief “non probante” sur ce fondement n’est pas établi. »"
-  },
-  {
-   "kind": "titre",
-   "texte": "La « Réponse du service »",
-   "numero": "1.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service ne conteste pas l’explication donnée pour les quantités anormalement élevées : « Le service prend note des lignes aux montants importants qui auraient été supprimées (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) » (p. 29). Le conditionnel est de lui : il enregistre la déclaration sans admettre la suppression elle-même, et n’avance aucun élément contraire sur ces quatre montants."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Son premier argument porte sur l’autre volet, les quantités fractionnaires : « Toutefois, malgré ses dires, la réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1. Elle y parvient, tout au plus, sur une infime quantité comme le service le démontre en partie A- Suppression de notes » (p. 29). Autrement dit, il ne discute ni le tableau des partages à N convives, ni la note d’exemple, ni le taux de réconciliation au centime : il renvoie à sa propre partie A pour affirmer que la démonstration ne vaudrait que pour une part négligeable des cas."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Son second argument est un argument de traçabilité, présenté comme déjà exposé : « De plus, comme déjà rappelé plusieurs fois, il existe bien un numéro d’identification UNIQUE pour chaque note, et dans une colonne spécifique, un “numéro d’identification” mais seulement pour les fichiers » (p. 29), à savoir Règlement, Ticket ligne, Ticket et TVA. Le service souligne ensuite : « Ce numéro est différent dans le fichier “20220401’ AND ‘20250331 tpvevenement.xls” » (p. 29)."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Les fichiers cités p. 29 et le « numéro d’identification » selon le service",
-   "minWidth": 620,
-   "colonnes": [
+   "kind": "documents",
+   "fichiers": [
     {
-     "label": "Fichier remis"
+     "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+     "label": "Annexe E-1 (journal des événements 2022-2023)"
     },
     {
-     "label": "Numéro d’identification de la note"
+     "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
+     "label": "Annexe E-2 (2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
+     "label": "Annexe E-3 (2024-2025)"
+    },
+    {
+     "fichier": "contentieux/Reponse_fisc_aux_observations_04-09-2026.pdf",
+     "label": "Réponse du service du 04/09/2026 (p. 28 et 29)"
     }
    ],
-   "lignes": [
-    [
-     {
-      "v": "20220401’ AND ‘20250331 reglement.xls"
-     },
-     {
-      "v": "Numéro unique, dans une colonne spécifique",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "20220401’ AND ‘20250331 ticket ligne.xls"
-     },
-     {
-      "v": "Numéro unique, dans une colonne spécifique",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "20220401’ AND ‘20250331 ticket.xls"
-     },
-     {
-      "v": "Numéro unique, dans une colonne spécifique",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "20220401’ AND ‘20250331 tva.xls"
-     },
-     {
-      "v": "Numéro unique, dans une colonne spécifique",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "20220401’ AND ‘20250331 tpvevenement.xls"
-     },
-     {
-      "v": "Numéro « différent » : selon le service, aucun rapprochement certain",
-      "badge": "ko"
-     }
-    ]
-   ]
+   "intro": "Annexes E-1 à E-3 : lignes « DEL » des 26/07/2022 18:51 (Z 3015), 07/08/2022 18:29 (Z 3026), 21/06/2023 17:06 (Z 3216) et 15/08/2024 11:16 (Z 3474), colonne « amount »."
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le service en tire la conséquence suivante : « De ce fait, il n’y a aucune traçabilité certaine pour les suppressions apparaissant dans le fichier 20220401’ AND ‘20250331 tpvevenement.xls » (p. 29). C’est le même raisonnement que celui déjà employé aux parties A et B : puisque le fichier des événements ne partage pas l’identifiant des quatre autres fichiers, aucune ligne supprimée ne pourrait selon lui être rattachée avec certitude à une note encaissée."
+   "kind": "titre",
+   "texte": "Quantités inférieures à 1 : « aucun éclaircissement, tout au plus sur une infime quantité »",
+   "numero": "2"
   },
   {
-   "kind": "paragraphe",
-   "texte": "La partie s’achève par une phrase unique, soulignée dans le courrier : « Le motif de rejet exposé dans la proposition de rectifications est donc parfaitement légitime » (p. 29). Le service maintient donc intégralement le motif D des pages 18 à 20 de la proposition de rectifications, sans en modifier la portée ni en chiffrer l’incidence."
-  },
-  {
-   "kind": "kpis",
-   "items": [
+   "kind": "reproche",
+   "page": "Réponse du 04/09/2026, p. 28 et 29",
+   "resume": [
+    "Le service reproduit nos deux tableaux (répartition des fractions par type de partage ; note d’exemple article par article) et notre commentaire : « seules 167 notes (environ 1 % des 16 610 notes) portent une fraction autre que 0,50, et plus de 99 % d’entre elles se réconcilient au centime » (p. 28).",
+    "Il répond : « Toutefois, malgré ses dires, la réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1. Elle y parvient, tout au plus, sur une infime quantité comme le service le démontre en partie A- Suppression de notes » (p. 29).",
+    "Il ne discute ni le tableau des partages à N convives, ni la note d’exemple, ni le taux de réconciliation au centime : il renvoie à sa partie A (suppressions)."
+   ],
+   "detail": [
     {
-     "label": "Quantités élevées",
-     "valeur": "4 lignes",
-     "sub": "68 993,10 € / 44 955 € / 19 600 € / 4 455 € : le service « prend note » (p. 29)"
+     "kind": "paragraphe",
+     "texte": "« Il cite un exemple et récapitule ces quantités dans des tableaux de cette manière : » (p. 28), suivi des deux tableaux ci-dessous, reproduits tels quels."
     },
     {
-     "label": "Partages à 2 convives",
-     "valeur": "9 804 lignes",
-     "sub": "1 781 notes sur 3 exercices (tableau reproduit p. 28)"
+     "kind": "tableau",
+     "titre": "Tableau reproduit p. 28 : « Toutes les quantités fractionnaires = des partages à N convives (3 exercices) »",
+     "minWidth": 720,
+     "colonnes": [
+      {
+       "label": "Type de partage"
+      },
+      {
+       "label": "Fraction unitaire"
+      },
+      {
+       "label": "Fractions observées"
+      },
+      {
+       "label": "Lignes",
+       "align": "right"
+      },
+      {
+       "label": "Notes",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Partage à 2"
+       },
+       {
+        "v": "1/2"
+       },
+       {
+        "v": "0,5 ; 1,5 ; 2,5 ; 3,5 ; 4,5"
+       },
+       {
+        "v": "9 804",
+        "align": "right"
+       },
+       {
+        "v": "1 781",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Partage à 3"
+       },
+       {
+        "v": "1/3"
+       },
+       {
+        "v": "0,33 ; 0,34 ; 0,66 ; 0,67 ; 1,33 ; 1,67 ; 3,33"
+       },
+       {
+        "v": "502",
+        "align": "right"
+       },
+       {
+        "v": "81",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Partage à 4"
+       },
+       {
+        "v": "1/4"
+       },
+       {
+        "v": "0,25 ; 0,75 ; 1,25 ; 1,75 ; 2,25 ; 5,25 ; 6,75"
+       },
+       {
+        "v": "340",
+        "align": "right"
+       },
+       {
+        "v": "58",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Partage à 5"
+       },
+       {
+        "v": "1/5"
+       },
+       {
+        "v": "0,2 ; 0,4 ; 0,6 ; 0,8 ; 1,6 ; 2,4 ; 3,2"
+       },
+       {
+        "v": "208",
+        "align": "right"
+       },
+       {
+        "v": "15",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Partage à 6"
+       },
+       {
+        "v": "1/6"
+       },
+       {
+        "v": "0,16 ; 0,17 ; 0,83"
+       },
+       {
+        "v": "11",
+        "align": "right"
+       },
+       {
+        "v": "7",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Partage à 7"
+       },
+       {
+        "v": "1/7"
+       },
+       {
+        "v": "0,14 ; 0,15 ; 0,28 ; 0,29 ; 0,43"
+       },
+       {
+        "v": "159",
+        "align": "right"
+       },
+       {
+        "v": "7",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Partage à 12"
+       },
+       {
+        "v": "1/12"
+       },
+       {
+        "v": "0,42"
+       },
+       {
+        "v": "2",
+        "align": "right"
+       },
+       {
+        "v": "1",
+        "align": "right"
+       }
+      ]
+     ]
     },
     {
-     "label": "Fractions autres que 0,50",
-     "valeur": "169 notes",
-     "sub": "environ 1 % des 16 624 notes recomptées (tableau reproduit p. 28 : 81+58+15+7+7+1)"
+     "kind": "tableau",
+     "titre": "Second tableau reproduit p. 28 : la note d’exemple (04/03/2023, note n° 28, partage à 5, total 38,54 €), article par article",
+     "minWidth": 620,
+     "colonnes": [
+      {
+       "label": "Article"
+      },
+      {
+       "label": "Quantité",
+       "align": "right"
+      },
+      {
+       "label": "Prix unitaire",
+       "align": "right"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Gewurztraminer Le ve"
+       },
+       {
+        "v": "0,4",
+        "align": "right"
+       },
+       {
+        "v": "7,00 €",
+        "align": "right"
+       },
+       {
+        "v": "2,80 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Whisky L.J (4cl)"
+       },
+       {
+        "v": "0,2",
+        "align": "right"
+       },
+       {
+        "v": "5,80 €",
+        "align": "right"
+       },
+       {
+        "v": "1,16 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Sirop à l’eau"
+       },
+       {
+        "v": "0,2",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "0,44 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Pinte"
+       },
+       {
+        "v": "0,2",
+        "align": "right"
+       },
+       {
+        "v": "7,80 €",
+        "align": "right"
+       },
+       {
+        "v": "1,56 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "MACHON GOURMET"
+       },
+       {
+        "v": "0,4",
+        "align": "right"
+       },
+       {
+        "v": "25,00 €",
+        "align": "right"
+       },
+       {
+        "v": "10,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "POULET JURASSIENNE"
+       },
+       {
+        "v": "0,2",
+        "align": "right"
+       },
+       {
+        "v": "18,60 €",
+        "align": "right"
+       },
+       {
+        "v": "3,72 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Fondue Jurassienne"
+       },
+       {
+        "v": "0,4",
+        "align": "right"
+       },
+       {
+        "v": "16,90 €",
+        "align": "right"
+       },
+       {
+        "v": "6,76 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "POMMES FRITES"
+       },
+       {
+        "v": "0,4",
+        "align": "right"
+       },
+       {
+        "v": "3,90 €",
+        "align": "right"
+       },
+       {
+        "v": "1,56 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Assortiment charcute"
+       },
+       {
+        "v": "0,2",
+        "align": "right"
+       },
+       {
+        "v": "8,90 €",
+        "align": "right"
+       },
+       {
+        "v": "1,78 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Pichet 50cl vin"
+       },
+       {
+        "v": "0,2",
+        "align": "right"
+       },
+       {
+        "v": "9,80 €",
+        "align": "right"
+       },
+       {
+        "v": "1,96 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Crêpe sucrée"
+       },
+       {
+        "v": "0,4",
+        "align": "right"
+       },
+       {
+        "v": "2,90 €",
+        "align": "right"
+       },
+       {
+        "v": "1,16 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "TENDRESSE"
+       },
+       {
+        "v": "0,2",
+        "align": "right"
+       },
+       {
+        "v": "3,90 €",
+        "align": "right"
+       },
+       {
+        "v": "0,78 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Expresso"
+       },
+       {
+        "v": "0,8",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "1,76 €",
+        "align": "right"
+       }
+      ]
+     ]
     },
     {
-     "label": "Fichiers porteurs du numéro unique",
-     "valeur": "4 sur 5",
-     "sub": "Règlement, Ticket ligne, Ticket, TVA (p. 29)",
-     "couleur": "blue"
+     "kind": "note",
+     "texte": "Le second tableau comporte deux lignes supplémentaires dont le libellé est tronqué à l’impression (« La » à 0,2 pour 8,50 € soit 1,70 € ; « Ré » à 0,2 pour 7,00 € soit 1,40 €) : elles ne sont pas restituées faute de libellé lisible avec certitude. Les quinze lignes somment à 38,54 €, total exact de la note n° 28 du 04/03/2023 (annexe C-1, 20:13)."
     },
     {
-     "label": "Notes recomposées à partir des seuls fichiers du service",
-     "valeur": "1 849",
-     "sub": "regroupées en 866 tables sur les annexes C-1 à C-3 et F-1 à F-3",
-     "couleur": "teal"
+     "kind": "paragraphe",
+     "texte": "« Ces fractions sont marginales et tracées : seules 167 notes (environ 1 % des 16 610 notes) portent une fraction autre que 0,50, et plus de 99 % d’entre elles se réconcilient au centime (somme des lignes = total encaissé du ticket). Loin d’occulter du chiffre d’affaires, ces quantités tracent intégralement l’encaissement : c’est l’inverse d’une dissimulation. » (notre réponse, reproduite p. 28, pièce citée « 08-rf-quantites-anormales.xlsx »)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Il conclut : Les deux types de quantités “anormales” sont de natures opposées. Les quantités élevées sont de rares fautes de frappe, supprimées le jour même, jamais dans le CA. Les quantités inférieures à 1 sont des partages d’addition (1/N convives) qui reconstituent au centime le total encaissé : l’exemple “table 13” du service trouve sa moitié sur la note 14. Aucune de ces quantités ne révèle de recette dissimulée ; le grief “non probante” sur ce fondement n’est pas établi. » (p. 29)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Réponse du service : [...] Toutefois, malgré ses dires, la réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1. Elle y parvient, tout au plus, sur une infime quantité comme le service le démontre en partie A- Suppression de notes ». (p. 29)"
+    },
+    {
+     "kind": "note",
+     "texte": "Deux chiffres de notre extrait sont rectifiés dans toute la page : le dénominateur est de 16 624 notes (5 660 + 5 534 + 5 430, par identifiant unique) et non 16 610 ; les fractions autres que 0,50 concernent 169 notes (81 + 58 + 15 + 7 + 7 + 1) et non 167. Les deux corrections jouent contre nous à la marge et sont assumées."
     }
    ]
   },
   {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Notre réponse : une quantité fractionnaire n’est pas une quantité vendue, c’est une part d’addition",
-   "sousTitre": "La démonstration se lit en quatre temps, chacun appuyé sur la pièce R2-quantites-recomposition.xlsx citée à l’endroit exact où le chiffre est employé : (1) le mécanisme du partage, rejoué ligne à ligne sur une table datée ; (2) la recomposition exhaustive, 5 012 articles sur 5 062 (99,0 %) qui se referment sur un entier ; (3) l’encaissement, 1 849 notes sur 1 849 (100 %) retrouvées à l’annexe F ; (4) le résidu concédé et borné, 50 articles sur 8 tables, 264,98 € au maximum."
+   "kind": "paragraphe",
+   "texte": "**La réponse en une ligne.** Une quantité fractionnaire n’est pas une quantité servie : c’est la part d’un article unique dans une addition partagée entre N convives. La preuve est arithmétique et exhaustive : sur les trois exercices, **5 012 des 5 062 articles fractionnés (99,0 %)** se referment sur un nombre entier une fois les notes d’une même table réunies, et **1 849 notes sur 1 849** sont retrouvées encaissées à l’annexe F."
   },
   {
    "kind": "titre",
-   "texte": "Le mécanisme : la fraction est la part d’un article unique partagé entre N convives",
-   "numero": "2.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Lorsque des convives demandent à partager une addition, la caisse divise chaque article par le nombre de parts et édite autant de notes que de payeurs. Un partage à deux produit donc **0,50 et 0,50**, un partage à trois **0,33 / 0,34 / 0,33**, un partage à quatre **0,25 × 4**. Le chiffre inscrit sur la ligne n’est pas une quantité servie : c’est la part d’un article unique, servi une seule fois. La signature arithmétique est simple : si l’on additionne les parts d’un même article sur toutes les notes de la table, on doit retrouver un **nombre entier**."
+   "texte": "2.1 Le mécanisme : la fraction est la part d’un article unique"
   },
   {
    "kind": "tableau",
-   "titre": "Le mécanisme, fraction par fraction : la somme des parts redonne toujours l’unité servie",
-   "minWidth": 720,
+   "titre": "Le mécanisme, fraction par fraction : la somme des parts redonne toujours l’unité servie",
+   "minWidth": 700,
    "colonnes": [
     {
      "label": "Partage"
@@ -648,7 +784,7 @@
       "v": "à 4 convives"
      },
      {
-      "v": "0,25 ; 0,25 ; 0,25 ; 0,25"
+      "v": "0,25 × 4"
      },
      {
       "v": "0,25 × 4"
@@ -682,133 +818,23 @@
       "align": "right",
       "badge": "ok"
      }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La démonstration ne reste pas abstraite. Voici, rejoué ligne à ligne, l’exemple que le service a lui-même choisi dans la proposition de rectifications : le midi du **14 avril 2022**, la table réglée en deux notes n° 13 et n° 14, dont il affirmait ne pas retrouver « l’autre moitié ». Les trois lignes ci-dessous sont recopiées telles quelles de la pièce R2, onglet « Sources », lignes 8 à 10 (colonnes Article, Prix unitaire, Quantités note par note, Somme des fractions)."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Étape 1 - les articles partagés du 14/04/2022, notes n° 13 et n° 14 (pièce R2, onglet « Sources », lignes 8 à 10)",
-   "minWidth": 760,
-   "colonnes": [
-    {
-     "label": "Article"
-    },
-    {
-     "label": "Prix carte",
-     "align": "right"
-    },
-    {
-     "label": "Part sur n° 13"
-    },
-    {
-     "label": "Part sur n° 14"
-    },
-    {
-     "label": "Somme",
-     "align": "right"
-    },
-    {
-     "label": "Contrôle",
-     "align": "right"
-    }
-   ],
-   "lignes": [
+    ],
     [
      {
-      "v": "Cidre Bouché Brut"
+      "v": "à 7 convives"
      },
      {
-      "v": "14,00 €",
-      "align": "right"
+      "v": "0,14 × 6 + 0,16"
      },
      {
-      "v": "0,50"
-     },
-     {
-      "v": "0,50"
+      "v": "0,14 × 6 + 0,16"
      },
      {
       "v": "1,00",
       "align": "right"
      },
      {
-      "v": "entier",
-      "align": "right",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "FRELEE"
-     },
-     {
-      "v": "18,60 €",
-      "align": "right"
-     },
-     {
-      "v": "0,50"
-     },
-     {
-      "v": "0,50"
-     },
-     {
-      "v": "1,00",
-      "align": "right"
-     },
-     {
-      "v": "entier",
-      "align": "right",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "CABRICHOU"
-     },
-     {
-      "v": "15,90 €",
-      "align": "right"
-     },
-     {
-      "v": "0,50"
-     },
-     {
-      "v": "0,50"
-     },
-     {
-      "v": "1,00",
-      "align": "right"
-     },
-     {
-      "v": "entier",
-      "align": "right",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "Expresso (servi par convive, non fractionné)"
-     },
-     {
-      "v": "2,20 €",
-      "align": "right"
-     },
-     {
-      "v": "1,00"
-     },
-     {
-      "v": "1,00"
-     },
-     {
-      "v": "2,00",
-      "align": "right"
-     },
-     {
-      "v": "entier",
+      "v": "1 article",
       "align": "right",
       "badge": "ok"
      }
@@ -816,227 +842,37 @@
    ]
   },
   {
-   "kind": "note",
-   "texte": "Les trois premières lignes figurent à l’onglet « Sources » (lignes 8 à 10) parce qu’elles portent une fraction (0,50 + 0,50) ; l’expresso, servi à raison d’une unité par convive, n’est pas une quantité fractionnaire et ne figure donc pas parmi les 5 062 lignes de l’onglet « Sources ». Il est restitué ici pour que la table soit complète."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**Étape 2 : on reconstitue le montant payé par chaque convive.** Chaque note porte la moitié des trois articles partagés, plus son propre expresso. Le calcul se fait au prix de la carte, sans aucune donnée extérieure : la demi-part de chaque article vaut la moitié de son prix carte, et la somme redonne l’addition complète."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Étape 2 - reconstitution du règlement, note par note (prix carte des lignes 8 à 10 de l’onglet « Sources »)",
-   "minWidth": 760,
-   "colonnes": [
-    {
-     "label": "Poste"
-    },
-    {
-     "label": "Détail du calcul"
-    },
-    {
-     "label": "Résultat",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "Demi-part des 3 articles"
-     },
-     {
-      "v": "(14,00 + 18,60 + 15,90) ÷ 2 = 48,50 ÷ 2"
-     },
-     {
-      "v": "24,25 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Expresso du convive"
-     },
-     {
-      "v": "1,00 × 2,20"
-     },
-     {
-      "v": "2,20 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Total porté sur la note n° 13",
-      "fw": 700
-     },
-     {
-      "v": "24,25 + 2,20",
-      "fw": 700
-     },
-     {
-      "v": "26,45 €",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Total porté sur la note n° 14",
-      "fw": 700
-     },
-     {
-      "v": "24,25 + 2,20 (symétrique)",
-      "fw": 700
-     },
-     {
-      "v": "26,45 €",
-      "align": "right",
-      "fw": 700
-     }
-    ],
-    [
-     {
-      "v": "Total de la table",
-      "fw": 700
-     },
-     {
-      "v": "26,45 + 26,45",
-      "fw": 700
-     },
-     {
-      "v": "52,90 €",
-      "align": "right",
-      "fw": 700,
-      "badge": "ok"
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**Étape 3 : on vérifie l’encaissement.** La pièce R2, onglet « Tables », ligne 3, porte cette table (date 14/04/2022, notes n° 13 + n° 14, total 52,90 €, trois articles fractionnés, trois refermés sur un entier) et sa colonne « Règlements (annexe F) » indique **CB / CB** : les deux notes sont réglées par carte bancaire. L’expresso figure à l’unité sur chaque note et somme à 2,00 ; les trois articles partagés se referment chacun sur 1,00. Le service écrivait ne trouver « aucune autre table portant l’autre moitié » : pour la note n° 13, l’autre moitié porte le numéro 14, immédiatement consécutif, au même horodatage 12:43."
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Pièce de l’exemple, citée ligne par ligne : **R2-quantites-recomposition.xlsx**, onglet « Sources », lignes 8 à 10 (les trois articles partagés, prix carte et parts note par note), et onglet « Tables », ligne 3 (la table n° 13 + n° 14, total 52,90 €, mode de règlement CB / CB). Les deux notes sont immédiatement consécutives à l’onglet « Sources » : la table précédente (n° 11 + n° 12) occupe les lignes 2 à 7, la suivante (n° 15 + n° 16) débute à la ligne 11.",
-   "fichiers": [
-    {
-     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
-     "label": "R2 - onglet « Sources » lignes 8 à 10 et onglet « Tables » ligne 3 (table du 14/04/2022)"
-    }
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Conclusion du mécanisme : la quantité 0,50 n’est pas une demi-unité servie, c’est la demi-addition payée par l’un des deux convives. Les trois articles partagés se recomposent exactement à l’unité, les deux notes totalisent 52,90 €, et ce total est encaissé par carte. Aucune recette n’est absente : elle est au contraire détaillée plus finement que sur une note unique."
+   "kind": "schema",
+   "titre": "L’exemple choisi par le service, rejoué : 14/04/2022, notes n° 13 et n° 14 (annexe C-1, identifiants 46639 et 46638 ; annexe F-1)",
+   "svg": "<svg viewBox=\"0 0 766 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Note n° 13 (12:43)</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">26,45 €</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">3 × 0,5 article + 1 expresso</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><text x=\"187.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">+</text><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Note n° 14 (12:44)</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">26,45 €</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">3 × 0,5 article + 1 expresso</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">= entiers</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Table recomposée</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">52,90 €</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">3 × 1,00 article + 2 expressos</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">retrouvés</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Annexe F (règlements)</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">CB + CB</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">26,45 € + 26,45 € retrouvés</text></svg>",
+   "legende": "Chaque convive paie la moitié des trois articles partagés (14,00 + 18,60 + 15,90 = 48,50 € ÷ 2 = 24,25 €) plus son expresso (2,20 €) : 26,45 € par note, 52,90 € pour la table, deux règlements CB. Pièce R2-quantites-recomposition.xlsx, onglet « Sources » lignes 8 à 10 et onglet « Tables » ligne 3."
   },
   {
    "kind": "titre",
-   "texte": "La recomposition exhaustive sur les trois exercices : 5 012 articles sur 5 062 se referment (99,0 %)",
-   "numero": "2.2"
+   "texte": "2.2 La recomposition exhaustive : 5 012 articles sur 5 062 (99,0 %)"
   },
   {
-   "kind": "paragraphe",
-   "texte": "Ce qui vaut pour la table du 14 avril 2022 a été mesuré sur l’intégralité des trois exercices, sans échantillonnage, sur les seuls fichiers que le service a lui-même exploités : **ANNEXE-C1 à C-3** (détail des tickets, 16 624 notes) pour les quantités, **ANNEXE-F1 à F-3** (règlements) pour l’encaissement. La pièce R2 recopie à l’onglet « Sources » les 5 062 lignes d’articles fractionnés (lignes 2 à 5063), puis l’onglet « Calcul » applique à chacune, par formule, le test d’entier : aucun résultat n’y est saisi en dur."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Comment le test se calcule, pour un article (onglet « Calcul », colonnes F à J) : exemple du Cidre Bouché Brut, ligne 2",
-   "minWidth": 820,
-   "colonnes": [
-    {
-     "label": "Étape / colonne"
-    },
-    {
-     "label": "Formule de la pièce"
-    },
-    {
-     "label": "Résultat",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "F - somme des fractions"
-     },
-     {
-      "v": "report de l’onglet « Sources » (0,50 + 0,50)"
-     },
-     {
-      "v": "1,00",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "G - somme = entier ?"
-     },
-     {
-      "v": "=IF(ABS(F−ROUND(F;0))<0,02 ; 1 ; 0)"
-     },
-     {
-      "v": "1 (oui)",
-      "align": "right",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "H - entier cible"
-     },
-     {
-      "v": "=IF(G=1 ; F ; CEILING(F;1))"
-     },
-     {
-      "v": "1,00",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "I - complément manquant (€)"
-     },
-     {
-      "v": "=IF(G=1 ; 0 ; (H−F)×PU)"
-     },
-     {
-      "v": "0,00 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "J - montant reconstitué (€)"
-     },
-     {
-      "v": "=PU × F = 14,00 × 1,00"
-     },
-     {
-      "v": "14,00 €",
-      "align": "right"
-     }
-    ]
+   "kind": "liste",
+   "items": [
+    "Périmètre : les seuls fichiers du service, **annexes C-1 à C-3** (16 624 notes, dont 1 913 à quantité fractionnaire) pour les quantités, **annexes F-1 à F-3** pour l’encaissement ; aucun échantillon.",
+    "Règle : les notes d’un même jour sont réunies en « table » lorsqu’elles sont encaissées à moins de quinze minutes et portent des fractions sur les mêmes articles ; un article est « refermé » si la somme de ses fractions est à moins de 0,02 d’un entier (résultat stable de 0,001 à 0,05).",
+    "Tout est recalculé par formule dans la pièce R2-quantites-recomposition.xlsx : onglet « Sources » (5 062 lignes recopiées des annexes), « Calcul » (colonnes F à J : somme, test d’entier, entier cible, complément manquant, montant reconstitué), « Synthèse » (SUMIFS / COUNTIF, lignes 5 à 10), « Tables » (866 lignes), « Résidu (8 tables) »."
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Un article est réputé refermé lorsque la somme de ses fractions est à moins de 0,02 d’un entier (résultat stable de 0,001 à 0,05 de tolérance). L’onglet « Synthèse » (lignes 5 à 10) resomme ensuite ces colonnes par exercice, par SUMIFS et COUNTIF sur la plage Calcul!A2:A5063. Le résultat, exercice par exercice, est le suivant."
-  },
-  {
    "kind": "tableau",
-   "titre": "Recomposition exhaustive des tables partagées, recalculée sur les annexes C-1 à C-3 et F-1 à F-3 (onglet « Synthèse », lignes 5 à 8 ; onglet « Tables » pour les colonnes “tables” et “encaissées”)",
+   "titre": "Recomposition recalculée sur les annexes C-1 à C-3 et F-1 à F-3 (pièce R2-quantites-recomposition.xlsx, onglets « Synthèse » l. 5 à 8 et « Tables »)",
    "minWidth": 900,
    "colonnes": [
     {
      "label": "Exercice"
     },
     {
-     "label": "Notes de l’exercice",
+     "label": "Notes",
      "align": "right"
     },
     {
-     "label": "Notes à quantité fractionnaire",
+     "label": "Notes à fraction",
      "align": "right"
     },
     {
@@ -1086,7 +922,7 @@
       "align": "right"
      },
      {
-      "v": "98,5 %",
+      "v": "98,5 %",
       "align": "right",
       "badge": "ok"
      },
@@ -1120,7 +956,7 @@
       "align": "right"
      },
      {
-      "v": "98,6 %",
+      "v": "98,6 %",
       "align": "right",
       "badge": "ok"
      },
@@ -1154,7 +990,7 @@
       "align": "right"
      },
      {
-      "v": "100 %",
+      "v": "100 %",
       "align": "right",
       "badge": "ok"
      },
@@ -1194,10 +1030,10 @@
       "fw": 700
      },
      {
-      "v": "99,0 %",
+      "v": "99,0 %",
       "align": "right",
-      "fw": 700,
-      "badge": "ok"
+      "badge": "ok",
+      "fw": 700
      },
      {
       "v": "1 849 / 1 849",
@@ -1211,58 +1047,120 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Tables partagées recomposées",
-     "valeur": "866",
-     "sub": "regroupant 1 849 notes sur les trois exercices",
-     "couleur": "teal"
-    },
-    {
-     "label": "Articles dont la somme des fractions est entière",
+     "label": "Articles refermés sur un entier",
      "valeur": "5 012 sur 5 062",
-     "sub": "soit 99,0 % : la fraction se referme sur un article unique",
+     "sub": "99,0 % ; jamais sous 98,5 % sur un exercice",
      "highlight": true,
      "couleur": "teal"
     },
     {
      "label": "Tables entièrement reconstituées",
      "valeur": "858 sur 866",
-     "sub": "tous les articles fractionnés y somment à un entier"
+     "sub": "1 849 notes regroupées",
+     "couleur": "teal"
+    },
+    {
+     "label": "Notes encaissées (annexe F)",
+     "valeur": "1 849 sur 1 849",
+     "sub": "100 %, 95 237,08 € retrouvés avec leur mode de règlement",
+     "couleur": "teal"
     },
     {
      "label": "Résidu non refermé",
-     "valeur": "50 articles",
-     "sub": "sur 8 tables seulement ; borné à 264,98 € (voir §2.5)",
+     "valeur": "50 articles / 8 tables",
+     "sub": "264,98 € de complément maximal (voir 2.5)",
      "couleur": "amber"
     }
    ]
   },
   {
-   "kind": "piecejointe",
-   "intro": "Pièce du comptage, ouverte et recalculée cellule par cellule : **R2-quantites-recomposition.xlsx**, onglet « Calcul », colonnes F à J, lignes 2 à 5063 (test d’entier G, entier cible H, complément manquant I, montant reconstitué J pour chacun des 5 062 articles) ; onglet « Synthèse », lignes 5 à 10 (articles fractionnés, refermés, taux et résidu par exercice, par SUMIFS / COUNTIF sur Calcul!A2:A5063) ; onglet « Méthode » (définition de la note, du regroupement en tables et de la tolérance). Toutes les valeurs ont été recalculées sous LibreOffice.",
-   "fichiers": [
+   "kind": "tableau",
+   "titre": "Comment le test se calcule pour un article (onglet « Calcul », ligne 2 : Cidre Bouché Brut du 14/04/2022)",
+   "minWidth": 700,
+   "colonnes": [
     {
-     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
-     "label": "R2 - onglets « Calcul » (FàJ, l. 2à5063), « Synthèse » (l. 5à10) et « Méthode »"
+     "label": "Colonne"
+    },
+    {
+     "label": "Formule de la pièce"
+    },
+    {
+     "label": "Résultat",
+     "align": "right"
     }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "F - somme des fractions"
+     },
+     {
+      "v": "report de l’onglet « Sources » (0,50 + 0,50)"
+     },
+     {
+      "v": "1,00",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "G - somme = entier ?"
+     },
+     {
+      "v": "=IF(ABS(F−ROUND(F;0))<0,02 ; 1 ; 0)"
+     },
+     {
+      "v": "1 (oui)",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "H - entier cible"
+     },
+     {
+      "v": "=IF(G=1 ; F ; CEILING(F;1))"
+     },
+     {
+      "v": "1,00",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "I - complément manquant (€)"
+     },
+     {
+      "v": "=IF(G=1 ; 0 ; (H−F)×PU)"
+     },
+     {
+      "v": "0,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "J - montant reconstitué (€)"
+     },
+     {
+      "v": "=PU × F = 14,00 × 1,00"
+     },
+     {
+      "v": "14,00 €",
+      "align": "right"
+     }
+    ]
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Conclusion du comptage : sur les trois exercices, **5 012 articles fractionnés sur 5 062 (99,0 %)** voient la somme de leurs parts redonner un nombre entier, et **858 tables sur 866** se referment intégralement. Le taux ne descend jamais sous 98,5 % sur un exercice, et atteint 100 % en 2024-2025. Ce n’est pas une « infime quantité », c’est la quasi-totalité des cas."
-  },
-  {
    "kind": "titre",
-   "texte": "Deux autres tables datées, recomposées ligne à ligne",
-   "numero": "2.3"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le même exercice, répété sur un partage à trois parts égales et sur un partage à parts inégales, écarte l’idée d’une coïncidence. Les deux tables ci-dessous figurent à l’onglet « Sources » de la pièce R2 (lignes 54 à 58 pour la première, lignes 2524 à 2543 pour la seconde) et à l’onglet « Tables » (lignes 12 et 433)."
+   "texte": "2.3 Quatre tables datées, recomposées ligne à ligne"
   },
   {
    "kind": "tableau",
-   "titre": "Exemple 2 : 29 avril 2022, notes n° 4, n° 5 et n° 6 (12:03), partage à trois (pièce R2, onglet « Sources », lignes 54 à 58)",
-   "minWidth": 720,
+   "titre": "Exemple 2 : 29/04/2022, notes n° 4, n° 5 et n° 6 (12:03), partage à trois (pièce R2, onglet « Sources » l. 54 à 58 ; onglet « Tables » l. 12)",
+   "minWidth": 760,
    "colonnes": [
     {
      "label": "Article"
@@ -1289,7 +1187,7 @@
       "v": "PAYSANNE"
      },
      {
-      "v": "19,90 €",
+      "v": "19,90 €",
       "align": "right"
      },
      {
@@ -1310,7 +1208,7 @@
       "v": "Salade Régionale"
      },
      {
-      "v": "19,90 €",
+      "v": "19,90 €",
       "align": "right"
      },
      {
@@ -1331,7 +1229,7 @@
       "v": "CAMEMBERT ROTI"
      },
      {
-      "v": "17,60 €",
+      "v": "17,60 €",
       "align": "right"
      },
      {
@@ -1352,7 +1250,7 @@
       "v": "Coca (25cl)"
      },
      {
-      "v": "3,90 €",
+      "v": "3,90 €",
       "align": "right"
      },
      {
@@ -1373,7 +1271,7 @@
       "v": "Sirop à l’eau"
      },
      {
-      "v": "2,20 €",
+      "v": "2,20 €",
       "align": "right"
      },
      {
@@ -1395,35 +1293,32 @@
       "fw": 700
      },
      {
-      "v": "63,50 €",
+      "v": "63,50 €",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "20,97 € + 21,60 € + 20,93 €",
+      "v": "20,97 € + 21,60 € + 20,93 €",
       "fw": 700
      },
      {
-      "v": "63,50 €",
+      "v": "63,50 €",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "encaissé",
+      "v": "CB / CB / CB",
       "align": "right",
-      "badge": "ok"
+      "badge": "ok",
+      "fw": 700
      }
     ]
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Un tiers n’est pas un nombre décimal : la caisse écrit 0,33, puis 0,34 pour le dernier convive afin que la somme retombe juste. Les cinq articles se recomposent à l’unité, et la somme des cinq prix unitaires (19,90 + 19,90 + 17,60 + 3,90 + 2,20) donne **63,50 €**, exactement le total des trois notes. L’onglet « Tables », ligne 12, porte ce total de 63,50 € et le règlement CB / CB / CB."
-  },
-  {
    "kind": "tableau",
-   "titre": "Exemple 3 : 20 août 2023, notes n° 8, n° 9 et n° 10 (12:10), parts inégales (pièce R2, onglet « Sources », lignes 2524 à 2543)",
-   "minWidth": 720,
+   "titre": "Exemple 3 : 20/08/2023, notes n° 8, n° 9 et n° 10 (12:10), parts inégales, 20 articles fractionnés tous refermés (pièce R2, onglet « Sources » l. 2524 à 2543 ; onglet « Tables » l. 433)",
+   "minWidth": 760,
    "colonnes": [
     {
      "label": "Article"
@@ -1450,7 +1345,7 @@
       "v": "TRUITE JURASSIENNE"
      },
      {
-      "v": "18,60 €",
+      "v": "18,60 €",
       "align": "right"
      },
      {
@@ -1471,7 +1366,7 @@
       "v": "CABRICHOU"
      },
      {
-      "v": "16,90 €",
+      "v": "16,90 €",
       "align": "right"
      },
      {
@@ -1492,7 +1387,7 @@
       "v": "Saucisse de Morteau"
      },
      {
-      "v": "8,90 €",
+      "v": "8,90 €",
       "align": "right"
      },
      {
@@ -1513,7 +1408,7 @@
       "v": "La Vouivre"
      },
      {
-      "v": "5,90 €",
+      "v": "5,90 €",
       "align": "right"
      },
      {
@@ -1534,7 +1429,7 @@
       "v": "Expresso"
      },
      {
-      "v": "2,20 €",
+      "v": "2,20 €",
       "align": "right"
      },
      {
@@ -1557,176 +1452,42 @@
      },
      {
       "v": "",
-      "align": "right"
-     },
-     {
-      "v": "81,35 € + 40,73 € + 40,62 €",
-      "fw": 700
-     },
-     {
-      "v": "162,70 €",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "encaissé",
+      "v": "81,35 € + 40,73 € + 40,62 €",
+      "fw": 700
+     },
+     {
+      "v": "162,70 €",
       "align": "right",
-      "badge": "ok"
+      "fw": 700
+     },
+     {
+      "v": "CB / CB / CB",
+      "align": "right",
+      "badge": "ok",
+      "fw": 700
      }
     ]
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Ici la table est réglée en trois notes de poids différents : un convive paie la moitié, deux convives paient un quart chacun. Les vingt articles fractionnés de cette table somment tous à un nombre entier (onglet « Tables », ligne 433 : 20 articles, 20 refermés), et 81,35 € correspond exactement au double de chacune des deux autres notes. Aucune combinaison de hasard ne produit ce résultat sur vingt articles : c’est la trace d’un partage. Le règlement est CB / CB / CB."
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Pièces des deux exemples : **R2-quantites-recomposition.xlsx**, onglet « Sources », lignes 54 à 58 (table du 29/04/2022, partage à trois) et lignes 2524 à 2543 (table du 20/08/2023, parts inégales) ; onglet « Tables », ligne 12 (63,50 €, CB / CB / CB) et ligne 433 (162,70 €, 20 articles tous refermés, CB / CB / CB).",
-   "fichiers": [
-    {
-     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
-     "label": "R2 - onglet « Sources » (l. 54à58 et 2524à2543) et onglet « Tables » (l. 12 et 433)"
-    }
+   "kind": "liste",
+   "items": [
+    "**Exemple 4, celui que le service reproduit p. 28** : 04/03/2023, note n° 28 (20:13), partage à cinq : 15 articles en 0,2 / 0,4 / 0,8, somme des lignes **38,54 €** = total de la note **38,54 €** (annexe C-1).",
+    "**Exemple 5, partage à sept** : 10/03/2023, note n° 15 (20:22) : 23 articles en 0,14 / 0,28 / 0,42, somme des lignes **27,54 €** = total de la note (annexe C-1). Une fraction « inexplicable » de 0,14 est un septième.",
+    "Un tiers n’est pas un nombre décimal : la caisse écrit 0,33 puis 0,34 pour le dernier convive afin que la somme retombe juste ; 81,35 € est exactement le double de 40,73 € et 40,62 € arrondis. Aucune coïncidence ne produit cela sur vingt articles."
    ]
   },
   {
    "kind": "titre",
-   "texte": "Toutes les notes recomposées sont encaissées : 1 849 sur 1 849 (100 %, annexe F)",
-   "numero": "2.4"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Une dissimulation suppose une recette absente des livres. Ici, c’est l’inverse : chacune des notes rattachées à une table partagée est retrouvée encaissée à l’annexe F, par appariement de l’identifiant unique que le service lui-même met en avant. La colonne « Règlements (annexe F) » de l’onglet « Tables » (lignes 2 à 867) porte, pour chaque table, le mode de paiement retrouvé (CB, CHQ, espèces)."
+   "texte": "2.4 Le partage ne change pas le total, et le total est encaissé"
   },
   {
    "kind": "tableau",
-   "titre": "Encaissement des notes de partage, exercice par exercice (onglet « Tables », colonnes E et J, lignes 2 à 867)",
-   "minWidth": 720,
-   "colonnes": [
-    {
-     "label": "Exercice"
-    },
-    {
-     "label": "Tables partagées",
-     "align": "right"
-    },
-    {
-     "label": "Notes rattachées",
-     "align": "right"
-    },
-    {
-     "label": "Notes encaissées (annexe F)",
-     "align": "right"
-    },
-    {
-     "label": "Taux",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "294",
-      "align": "right"
-     },
-     {
-      "v": "634",
-      "align": "right"
-     },
-     {
-      "v": "634",
-      "align": "right"
-     },
-     {
-      "v": "100 %",
-      "align": "right",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "300",
-      "align": "right"
-     },
-     {
-      "v": "649",
-      "align": "right"
-     },
-     {
-      "v": "649",
-      "align": "right"
-     },
-     {
-      "v": "100 %",
-      "align": "right",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "272",
-      "align": "right"
-     },
-     {
-      "v": "566",
-      "align": "right"
-     },
-     {
-      "v": "566",
-      "align": "right"
-     },
-     {
-      "v": "100 %",
-      "align": "right",
-      "badge": "ok"
-     }
-    ],
-    [
-     {
-      "v": "3 exercices",
-      "fw": 700
-     },
-     {
-      "v": "866",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "1 849",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "1 849",
-      "align": "right",
-      "fw": 700
-     },
-     {
-      "v": "100 %",
-      "align": "right",
-      "fw": 700,
-      "badge": "ok"
-     }
-    ]
-   ]
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le partage ne change rien au total : le prix unitaire reste celui de la carte, la fraction ne s’applique qu’à la répartition entre payeurs, et le total de la table est identique à ce qu’il aurait été sur une note unique. Les trois tables datées plus haut le montrent, et leurs règlements sont retrouvés à l’annexe F."
-  },
-  {
-   "kind": "tableau",
-   "titre": "Le partage laisse le total de la table inchangé, et ce total est encaissé",
+   "titre": "Le partage laisse le total de la table inchangé, et ce total est retrouvé à l’annexe F (pièce R2, onglet « Tables », colonnes E, F et J, lignes 2 à 867)",
    "minWidth": 760,
    "colonnes": [
     {
@@ -1744,7 +1505,7 @@
      "align": "right"
     },
     {
-     "label": "Règlements retrouvés (annexe F)"
+     "label": "Règlements (annexe F)"
     }
    ],
    "lignes": [
@@ -1756,11 +1517,11 @@
       "v": "n° 13 + n° 14"
      },
      {
-      "v": "52,90 €",
+      "v": "52,90 €",
       "align": "right"
      },
      {
-      "v": "52,90 €",
+      "v": "52,90 €",
       "align": "right"
      },
      {
@@ -1776,11 +1537,11 @@
       "v": "n° 4 + n° 5 + n° 6"
      },
      {
-      "v": "63,50 €",
+      "v": "63,50 €",
       "align": "right"
      },
      {
-      "v": "63,50 €",
+      "v": "63,50 €",
       "align": "right"
      },
      {
@@ -1796,11 +1557,11 @@
       "v": "n° 8 + n° 9 + n° 10"
      },
      {
-      "v": "162,70 €",
+      "v": "162,70 €",
       "align": "right"
      },
      {
-      "v": "162,70 €",
+      "v": "162,70 €",
       "align": "right"
      },
      {
@@ -1818,48 +1579,39 @@
       "fw": 700
      },
      {
-      "v": "95 237,08 €",
+      "v": "95 237,08 €",
       "align": "right",
       "fw": 700
      },
      {
       "v": "",
-      "align": "right"
+      "align": "right",
+      "fw": 700
      },
      {
-      "v": "1 849 règlements sur 1 849 (100 %)",
-      "badge": "ok"
+      "v": "1 849 règlements sur 1 849 (100 %)",
+      "badge": "ok",
+      "fw": 700
      }
     ]
    ]
   },
   {
-   "kind": "piecejointe",
-   "intro": "Pièce de l’encaissement : **R2-quantites-recomposition.xlsx**, onglet « Tables », colonnes E (nombre de notes), F (total de la table) et J (règlements annexe F), lignes 2 à 867 : 866 tables, 1 849 notes, total encaissé de 95 237,08 €, mode de règlement renseigné pour chacune. Sources : ANNEXE-F1 à F-3 (règlements), produites pour les trois exercices.",
-   "fichiers": [
-    {
-     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
-     "label": "R2 - onglet « Tables », colonnes E, F et J, lignes 2 à 867"
-    }
+   "kind": "liste",
+   "items": [
+    "Le prix unitaire reste celui de la carte ; la fraction ne s’applique qu’à la répartition entre payeurs ; le total de la table est identique à celui d’une note unique.",
+    "Chacune des 1 849 notes rattachées est retrouvée à l’annexe F par l’identifiant unique que le service met lui-même en avant (634 / 634 ; 649 / 649 ; 566 / 566), avec son mode de règlement (CB, CHQ, espèces, TR).",
+    "Une dissimulation suppose une recette absente des livres ; ici la recette est détaillée plus finement que sur une note unique."
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Conclusion de l’encaissement : les 95 237,08 € encaissés au titre de ces tables sont retrouvés à l’annexe F pour 1 849 des 1 849 notes (100 %), avec leur mode de paiement. Le service n’avance, en pages 28 et 29, aucun montant de recette qui serait minoré par ces fractions, pas même les 264,98 € du résidu que nous chiffrons nous-mêmes ci-après."
-  },
-  {
    "kind": "titre",
-   "texte": "Le résidu concédé et borné : 50 articles sur 8 tables, 264,98 € au maximum",
-   "numero": "2.5"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "La recomposition ne se referme pas partout, et nous ne le masquons pas. Sur les 5 062 articles fractionnés, **50 (1,0 %) ne retombent pas sur un entier** ; ils se concentrent sur **8 tables** (858 des 866 tables se referment donc intégralement). Pour chacun de ces 50 articles, l’onglet « Calcul » de la pièce R2 calcule par formule (colonne I) le « complément manquant », c’est-à-dire le montant qu’il faudrait, au maximum, pour atteindre l’entier supérieur si la ou les parts complémentaires n’existaient réellement pas. Ce majorant théorique s’élève, sur les trois exercices réunis, à **264,98 €**."
+   "texte": "2.5 Le résidu, concédé et borné : 50 articles sur 8 tables, 264,98 € au maximum"
   },
   {
    "kind": "tableau",
-   "titre": "Le résidu non refermé, par exercice (onglet « Synthèse », lignes 7 et 10 ; onglet « Résidu (8 tables) »)",
-   "minWidth": 820,
+   "titre": "Le résidu non refermé, par exercice (pièce R2, onglet « Synthèse » l. 7 et 10 ; onglet « Résidu (8 tables) »)",
+   "minWidth": 760,
    "colonnes": [
     {
      "label": "Exercice"
@@ -1877,7 +1629,7 @@
      "align": "right"
     },
     {
-     "label": "Complément manquant maximal (€)",
+     "label": "Complément manquant maximal",
      "align": "right"
     }
    ],
@@ -1899,7 +1651,7 @@
       "align": "right"
      },
      {
-      "v": "78,33 €",
+      "v": "78,33 €",
       "align": "right"
      }
     ],
@@ -1920,7 +1672,7 @@
       "align": "right"
      },
      {
-      "v": "186,65 €",
+      "v": "186,65 €",
       "align": "right"
      }
     ],
@@ -1941,7 +1693,7 @@
       "align": "right"
      },
      {
-      "v": "0,00 €",
+      "v": "0,00 €",
       "align": "right"
      }
     ],
@@ -1966,18 +1718,18 @@
       "fw": 700
      },
      {
-      "v": "264,98 €",
+      "v": "264,98 €",
       "align": "right",
-      "fw": 700,
-      "badge": "warn"
+      "badge": "warn",
+      "fw": 700
      }
     ]
    ]
   },
   {
    "kind": "tableau",
-   "titre": "Les 8 tables porteuses du résidu, datées et chiffrées (onglet « Résidu (8 tables) », lignes 4 à 13)",
-   "minWidth": 820,
+   "titre": "Les 8 tables porteuses du résidu (onglet « Résidu (8 tables) », lignes 4 à 13)",
+   "minWidth": 760,
    "colonnes": [
     {
      "label": "Exercice"
@@ -1993,7 +1745,7 @@
      "align": "right"
     },
     {
-     "label": "Complément max (€)",
+     "label": "Complément max",
      "align": "right"
     }
    ],
@@ -2013,7 +1765,7 @@
       "align": "right"
      },
      {
-      "v": "12,51 €",
+      "v": "12,51 €",
       "align": "right"
      }
     ],
@@ -2032,7 +1784,7 @@
       "align": "right"
      },
      {
-      "v": "33,66 €",
+      "v": "33,66 €",
       "align": "right"
      }
     ],
@@ -2051,7 +1803,7 @@
       "align": "right"
      },
      {
-      "v": "32,16 €",
+      "v": "32,16 €",
       "align": "right"
      }
     ],
@@ -2070,7 +1822,7 @@
       "align": "right"
      },
      {
-      "v": "36,35 €",
+      "v": "36,35 €",
       "align": "right"
      }
     ],
@@ -2089,7 +1841,7 @@
       "align": "right"
      },
      {
-      "v": "28,40 €",
+      "v": "28,40 €",
       "align": "right"
      }
     ],
@@ -2108,7 +1860,7 @@
       "align": "right"
      },
      {
-      "v": "19,10 €",
+      "v": "19,10 €",
       "align": "right"
      }
     ],
@@ -2127,7 +1879,7 @@
       "align": "right"
      },
      {
-      "v": "45,30 €",
+      "v": "45,30 €",
       "align": "right"
      }
     ],
@@ -2146,20 +1898,22 @@
       "align": "right"
      },
      {
-      "v": "57,50 €",
+      "v": "57,50 €",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Total (8 tables)",
+      "v": "Total",
       "fw": 700
      },
      {
-      "v": ""
+      "v": "",
+      "fw": 700
      },
      {
-      "v": ""
+      "v": "",
+      "fw": 700
      },
      {
       "v": "50",
@@ -2167,140 +1921,34 @@
       "fw": 700
      },
      {
-      "v": "264,98 €",
+      "v": "264,98 €",
       "align": "right",
-      "fw": 700,
-      "badge": "warn"
+      "badge": "warn",
+      "fw": 700
      }
     ]
    ]
   },
   {
-   "kind": "note",
-   "texte": "L’onglet « Résidu (8 tables) » de la pièce R2 chiffre, pour chacune de ces 8 tables, le nombre d’articles non refermés (colonne D, par SUMPRODUCT sur Calcul) et leur complément manquant maximal (colonne E), dont le total (ligne 13) somme à 50 articles et 264,98 €. Le détail article par article de chaque table est lisible aux lignes correspondantes de l’onglet « Calcul » (colonne G = 0)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce résidu se décompose en deux familles, que nous décrivons telles qu’elles sont. **Première famille : 25 demi-articles “orphelins”** dont la somme reste un multiple impair de 0,50 (un « 0,50 » ou un « 1,50 » dont la part complémentaire n’a pas été retrouvée dans la table reconstituée). Ils se concentrent tous sur l’exercice 2023-2024 (ainsi le 14 mai 2023 : VIN PAILLE, CAMEMBERT ROTI, ASSIETTE PERE GREGOIRE et PICHET ALIGOTE, chacun à 0,50 seul). Leur part complémentaire, si elle manquait vraiment, représenterait au plus **186,65 €**. **Seconde famille : 25 articles dont la somme n’est pas un multiple de 0,50** (0,67 ; 0,80 ; 1,34 ; 1,60 ; 2,40). Ces valeurs ne sont pas aléatoires : 0,67 est la somme de deux tiers d’un partage à trois (0,33 + 0,34) dont la troisième note n’a pas été rattachée, 0,80 quatre cinquièmes d’un partage à cinq. Elles se concentrent toutes sur l’exercice 2022-2023 (ainsi le 11 mars 2023, treize articles à 0,67, deux tiers d’un partage à trois) et trahissent des partages à N convives **incomplètement rattachés**, non des quantités inventées ; faute d’avoir localisé la part manquante dans la pièce, elles sont elles aussi versées au résidu, pour **78,33 €** au maximum."
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Pièce du résidu : **R2-quantites-recomposition.xlsx**, onglet « Résidu (8 tables) », lignes 4 à 13 (les 8 tables datées, nombre d’articles non refermés par SUMPRODUCT en colonne D, complément manquant maximal en colonne E, total 50 articles / 264,98 € à la ligne 13) ; onglet « Calcul », colonne I, pour le complément manquant de chacun des 50 articles concernés (les lignes où la colonne G vaut 0) ; onglet « Synthèse », lignes 7 et 10, pour le résidu par exercice (25 / 25 / 0 et 78,33 € / 186,65 € / 0,00 €).",
-   "fichiers": [
-    {
-     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
-     "label": "R2 - onglet « Résidu (8 tables) » (l. 4à13) et onglet « Calcul » colonne I"
-    }
+   "kind": "liste",
+   "items": [
+    "**25 demi-articles « orphelins »** (0,50 ou 1,50 seuls, tous en 2023-2024, ainsi le 14/05/2023 : VIN PAILLE, CAMEMBERT ROTI, ASSIETTE PERE GREGOIRE, PICHET ALIGOTE à 0,50 seul) : 186,65 € au maximum.",
+    "**25 articles de partage à N incomplètement rattaché** (sommes 0,67 ; 0,80 ; 1,34 ; 1,60 ; 2,40, tous en 2022-2023, ainsi le 11/03/2023 : treize articles à 0,67 = deux tiers d’un partage à trois) : 78,33 € au maximum.",
+    "Le majorant suppose que la part complémentaire n’existe pas du tout ; il est calculé par formule (onglet « Calcul », colonne I) et il est de **264,98 € de chiffre d’affaires sur trois exercices**, contre 95 237,08 € encaissés sur les tables partagées.",
+    "Périmètre dit en entier : 64 notes fractionnaires (26 / 20 / 18) restent isolées, non rattachées à une table par la règle des quinze minutes, donc non chiffrées ici ; elles portent 341 lignes pour 2 054,20 € encaissés (pièce R2-quantites-chiffrage-service.xlsx, onglet « Synthèse », l. 20 et 23)."
    ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Ce résidu est précisément le reproche que le service formulait sur la table n° 13 (« aucune autre table ne fait mention de l’autre moitié »). Nous l’admettons pour ces 8 tables et le bornons : à supposer que ces 264,98 € correspondent tous à des recettes réellement absentes - hypothèse maximaliste, puisque la part correspondante est le plus souvent encaissée hors de la fenêtre de quinze minutes retenue, ou commandée en supplément par un seul convive - leur incidence resterait de **264,98 € de chiffre d’affaires sur trois exercices**. Le service ne chiffre d’ailleurs, sous le motif D, aucun montant : il ne propose même pas ce résidu comme base de rehaussement. L’irréductible, loin d’être « l’essentiel » comme le laisse entendre le service, se mesure en centaines d’euros, non en dizaines de milliers."
+   "kind": "liste",
+   "items": [
+    "L’appréciation n’est appuyée sur aucun décompte ; le renvoi à la partie A concerne les suppressions, pas les quantités.",
+    "Le comptage exhaustif établit l’inverse : 99,0 % des articles et 858 tables sur 866 se referment ; le taux ne descend jamais sous 98,5 % sur un exercice.",
+    "Le service n’oppose pas une seule fraction qui resterait inexpliquée par un partage à N convives ; une objection qui ne désigne aucun cas ne peut fonder un rejet."
+   ],
+   "titre": "Ce que vaut l’« infime quantité » du service"
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le périmètre doit lui aussi être dit en entier. Sur les **1 913 notes** portant une quantité fractionnaire, **1 849** ont été rattachées à une table reconstituée ; **64 notes fractionnaires restent isolées**, non rattachées à une table, et ne sont donc pas chiffrées ci-dessus. Les 1 849 notes rattachées sont toutes retrouvées encaissées à l’annexe F (100 %). Ces 64 notes isolées sont signalées sans être habillées : elles tiennent au seul réglage de la fenêtre de regroupement de quinze minutes, non à une donnée manquante, puisque les annexes C et F des trois exercices sont désormais toutes au dossier et que la recomposition est menée directement sur elles."
-  },
-  {
-   "kind": "titre",
-   "texte": "L’« infime quantité » représente en réalité la quasi-totalité des cas",
-   "numero": "2.6"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service écrit : « **malgré ses dires, la réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1. Elle y parvient, tout au plus, sur une infime quantité comme le service le démontre en partie A** » (p. 29). Cette appréciation n’est appuyée sur aucun décompte. Le comptage exhaustif ci-dessus (§2.2), mené sur les trois exercices et non sur un échantillon, en établit l’inverse : ce sont **5 012 articles fractionnés sur 5 062** qui se recomposent en quantités entières, soit 99,0 %, et **858 tables sur 866** qui se referment intégralement."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service ne discute par ailleurs aucun des éléments qu’il reproduit lui-même en page précédente : ni la ventilation des fractions par type de partage (partage à 2, à 3, à 4, à 5, à 6, à 7, à 12), ni la note d’exemple article par article, ni le taux de réconciliation au centime. Il n’oppose pas une seule fraction observée qui resterait inexpliquée par un partage à N convives. Une objection qui ne désigne aucun cas ne peut pas fonder un rejet de comptabilité."
-  },
-  {
-   "kind": "titre",
-   "texte": "Le grief D est abandonné au profit du grief A",
-   "numero": "2.7"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le motif D s’intitule « Quantités anormales » et vise, aux pages 18 à 20 de la proposition de rectifications, des quantités enregistrées dans les **ventes**. Or la réponse du service ne dit plus rien des quantités. Elle enchaîne sur le numéro d’identification unique des notes, sur son absence dans le fichier « tpvevenement.xls », et conclut qu’« **il n’y a aucune traçabilité certaine pour les suppressions** » (p. 29)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Les suppressions relèvent du motif A, que le service traite séparément et auquel il renvoie expressément. En reportant sur le motif D une démonstration faite ailleurs et sur un autre objet, il laisse le motif D **sans démonstration propre**. Une quantité de vente anormale, si elle existe, s’établit sur le fichier des ventes, pas sur un fichier de journalisation des événements techniques. La recomposition ci-dessus est précisément menée sur les annexes C-1 à C-3 et F-1 à F-3, les fichiers porteurs du numéro unique que le service met en avant."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce déplacement a une conséquence directe : la phrase de conclusion, « Le motif de rejet exposé dans la proposition de rectifications est donc parfaitement légitime » (p. 29), ne se rattache à aucun élément relatif aux quantités. Elle n’est ni chiffrée, ni appuyée sur un exemple nouveau, ni opposée à la démonstration produite."
-  },
-  {
-   "kind": "titre",
-   "texte": "Aucune minoration de recettes n’est établie, ni même alléguée",
-   "numero": "2.8"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Une quantité fractionnaire ne minore rien, et c’est arithmétiquement démontrable. Le prix unitaire reste celui de la carte ; la fraction ne s’applique qu’à la répartition entre payeurs ; le total de la table est donc identique à ce qu’il aurait été sur une note unique (§2.4). C’est ce que montre l’exemple du 29 avril 2022 : les cinq articles servis valent 63,50 € au tarif de la carte, et les trois notes jumelles totalisent 63,50 €, tous règlements retrouvés à l’annexe F."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Quant au premier volet du grief, il n’est plus soutenu : le service « prend note des lignes aux montants importants qui auraient été supprimées (68 993,10 € / 44 955 € / 19 600 € / 4 455 €) » (p. 29) sans opposer le moindre élément contraire. Ces quatre saisies, physiquement impossibles pour un restaurant de cette taille, ont été corrigées le jour même et n’ont jamais alimenté le chiffre d’affaires."
-  },
-  {
-   "kind": "titre",
-   "texte": "Sur le droit",
-   "numero": "2.9"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le rejet d’une comptabilité n’est pas une faculté discrétionnaire. La doctrine que le service applique le rappelle : « le rejet d’une comptabilité comme dénuée de sincérité ou comme non probante ne doit être opéré qu’à bon escient et avec la plus grande circonspection, lorsqu’il existe des motifs précis et sérieux permettant de la considérer comme non probante » ([BOI-CF-IOR-10-20, § 60](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)). Le même document précise, au § 90, qu’« une comptabilité ne doit pas être écartée si elle n’est entachée que d’irrégularités insuffisantes pour lui enlever toute valeur probante » et que « le défaut de valeur probante ne peut résulter que d’irrégularités ayant un caractère de gravité indiscutable » : balances inexactes, erreurs répétées de reports, enregistrement non chronologique, absence de pièces justificatives, fausses factures, caisse créditrice, enregistrement d’une partie seulement des opérations."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Une quantité fractionnaire ne relève d’aucune de ces catégories. Les opérations sont enregistrées, chronologiquement, avec leur détail article par article, leur prix de carte et leur règlement. Le Conseil d’État a jugé, pour un restaurant dont la comptabilité était régulière, qu’« en raison tant des incertitudes et de l’imprécision qui affectent la reconstitution d’un taux de bénéfice brut que de la faiblesse de l’écart constaté en l’espèce entre le taux ressortant de la comptabilité et le taux théorique, la comptabilité produite ne peut qu’être tenue pour sincère » ([CE, 7 / 9 ssr, 10 mars 1976, n° 79933](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19760310-79933)), décision à laquelle le BOFiP renvoie lui-même au § 150. La motivation est cumulative : elle joint à l’imprécision de la reconstitution la faiblesse de l’écart constaté. Ici, l’écart n’est pas seulement faible, il est nul, puisque le service ne chiffre sous ce motif aucune recette minorée."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Enfin, la charge de la preuve n’est pas déplacée. Aux termes de l’article L. 192, alinéa 2, du livre des procédures fiscales, « la charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » ([LPF, art. L. 192](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037993633)). Le Conseil d’État en tire la conséquence qu’« en l’absence d’avis rendu par la commission départementale [...] et lorsque le contribuable n’a pas accepté les rehaussements qui lui avaient été notifiés dans le cadre de la procédure contradictoire, il incombe à l’administration d’apporter la preuve du bien-fondé des suppléments d’impôt » ([CE, 9e ch., 5 janvier 2023, n° 452595, pt 2](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20230105-452595)). Affirmer que le motif de rejet est « parfaitement légitime » ne satisfait pas à cette exigence. Le service ne désigne aucune recette qui aurait été minorée par une quantité fractionnaire, alors que la démonstration de la société reconstitue au centime le total de chacune des tables citées."
-  },
-  {
-   "kind": "alerte",
-   "couleur": "teal",
-   "titre": "Le test proposé au service",
-   "texte": "Si les quantités fractionnaires cachaient des recettes, les fractions ne se refermeraient pas : elles se referment sur 99,0 % des articles (5 012 sur 5 062), et le résidu de 1,0 % est chiffré à 264,98 € au maximum. Le décompte est ouvert et vérifiable cellule par cellule dans la pièce R2-quantites-recomposition.xlsx : onglet « Sources » (5 062 lignes recopiées des annexes), onglet « Calcul » (test d’entier et complément manquant par formule), onglet « Synthèse » (totaux par exercice), onglet « Tables » (encaissement) et onglet « Résidu (8 tables) ». Le script de production reponse1-quantites-fractionnaires.py et les lignes brutes des annexes C-1 à C-3 / F-1 à F-3 restent à la disposition du service pour contrôle contradictoire."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 3,
-   "titre": "Ce que cela fait tomber",
-   "sousTitre": "Le motif de rejet D n’est plus soutenu par aucune démonstration chiffrée."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le volet des quantités élevées est abandonné : le service en prend note sans le contester. Le volet des quantités inférieures à 1 est pour l’essentiel démenti par les fichiers eux-mêmes : 866 tables partagées, 5 012 articles sur 5 062 (99,0 %) dont les fractions se recomposent exactement en quantités entières, 1 849 notes sur 1 849 dont le règlement est retrouvé à l’annexe F. L’irréductible - 50 articles sur 8 tables - est concédé et borné à 264,98 € de chiffre d’affaires sur trois exercices, que le service lui-même ne retient comme base d’aucun rehaussement."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Il ne reste, sous le motif D, qu’un argument de traçabilité emprunté au motif A et sans lien avec les quantités. Aucune recette minorée n’est identifiée, aucun montant n’est chiffré au titre de ce grief dans la réponse du 04/09/2026. Le motif D ne peut donc plus concourir au rejet de la comptabilité, et il ne justifie à lui seul aucun redressement."
-  },
-  {
-   "kind": "titre",
-   "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "« **La réponse n’apporte aucun éclaircissement sur les quantités inférieures à 1, sinon sur une infime quantité.** » L’appréciation n’est appuyée sur aucun décompte. Le comptage exhaustif, mené sur les trois exercices (§2.2, pièce R2 onglet « Synthèse » lignes 5 à 8), établit l’inverse : sur 5 062 articles fractionnés regroupés en 866 tables partagées, 5 012 (99,0 %) voient la somme de leurs fractions redonner un nombre entier, et 858 tables sur 866 se referment intégralement. Ce n’est pas une infime partie, c’est la quasi-totalité des cas."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "« **Le numéro d’identification unique des notes ne figure que dans les fichiers Règlement, Ticket ligne, Ticket et TVA, et il est différent dans “tpvevenement.xls” : il n’y a aucune traçabilité certaine.** » Cet argument est emprunté au motif A et sans lien avec les quantités. Une quantité de vente anormale, si elle existait, se lirait sur le fichier des ventes, non sur le journal des événements techniques. Or la recomposition est faite sur les seuls fichiers porteurs de ce numéro unique : les annexes C-1 à C-3 pour les quantités et F-1 à F-3 pour les règlements, où 1 849 des 1 849 notes concernées (100 %) sont retrouvées encaissées, pour 95 237,08 € (pièce R2 onglet « Tables », lignes 2 à 867)."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "« **Le motif de rejet exposé dans la proposition de rectifications est parfaitement légitime.** » L’affirmation n’est ni chiffrée, ni appuyée sur un exemple. Le service ne désigne aucune recette minorée par une quantité fractionnaire, alors qu’une fraction laisse le total de la table inchangé : les trois tables datées se recomposent au centime (52,90 €, 63,50 €, 162,70 €), intégralement encaissées. Quant aux quatre lignes à montant élevé (68 993,10 €, 44 955 €, 19 600 €, 4 455 €), le service « prend note » sans opposer le moindre élément contraire : ce sont des fautes de frappe corrigées le jour même, jamais entrées au chiffre d’affaires."
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Récapitulatif des pièces. Le décompte est intégralement reproductible et ouvert, recalculé directement sur les annexes primaires des trois exercices. La pièce principale **R2-quantites-recomposition.xlsx** recopie les 5 062 articles fractionnés des annexes C-1 à C-3 (onglet « Sources », lignes 2 à 5063) et recalcule par formule, article par article, le test d’entier, l’entier cible et le complément manquant en euros (onglet « Calcul », colonnes F à J) ; l’onglet « Synthèse » (lignes 5 à 10) resomme 5 012 refermés sur 5 062 (99,0 %) exercice par exercice et un résidu de 264,98 € (78,33 € / 186,65 € / 0,00 €) ; l’onglet « Tables » (lignes 2 à 867) recalcule les 858 tables entièrement reconstituées sur 866 et le total encaissé de 95 237,08 € ; l’onglet « Résidu (8 tables) » (lignes 4 à 13) isole les seules tables non refermées et chiffre leur complément manquant ; l’onglet « Méthode » explicite chaque formule et chaque limite. Toutes les valeurs ont été recalculées sous LibreOffice. La pièce **R1-quantites-fractionnaires.xlsx** reste jointe en complément : elle restitue, table par table, la reconstitution détaillée (date, heure, notes jumelles, détail article par article). Sources : ANNEXE-C1 à C-3 (détail des tickets) et ANNEXE-F1 à F-3 (règlements), produites pour les trois exercices ; script reponse1-quantites-fractionnaires.py remis au service sur demande.",
+   "kind": "documents",
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
@@ -2308,13 +1956,1859 @@
     },
     {
      "fichier": "pieces-reponse-1/R1-quantites-fractionnaires.xlsx",
-     "label": "R1 - les 866 tables partagées recomposées, détail article par article (4 onglets)"
+     "label": "R1 - les tables partagées, détail article par article (pièce de la réponse de juillet)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+     "label": "Annexe C-1 (détail des tickets 2022-2023, fichier du service)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+     "label": "Annexe C-2 (détail des tickets 2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+     "label": "Annexe C-3 (détail des tickets 2024-2025)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
+     "label": "Annexe F-1 (règlements 2022-2023)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F2_reglements_2023-2024.xls",
+     "label": "Annexe F-2 (règlements 2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F3_reglements_2024-2025.xls",
+     "label": "Annexe F-3 (règlements 2024-2025)"
+    }
+   ],
+   "intro": "Pièce principale : R2-quantites-recomposition.xlsx (onglet « Sources » l. 2 à 5063 ; « Calcul » col. F à J ; « Synthèse » l. 5 à 10 ; « Tables » l. 2 à 867 ; « Résidu (8 tables) » l. 4 à 13). Sources primaires : annexes C-1 à C-3 et F-1 à F-3 du service."
+  },
+  {
+   "kind": "titre",
+   "texte": "La table n° 13 du 14/04/2022, « l’autre moitié » introuvable et le chiffre d’affaires « occulté » de 62 487,87 €",
+   "numero": "3"
+  },
+  {
+   "kind": "reproche",
+   "page": "Proposition du 18/05/2026, p. 19 à 22 (§ 6, p. 20 à 23 des propositions du 19/10/2026) ; motif maintenu le 04/09/2026, p. 29",
+   "resume": [
+    "La gérante a répondu : « Parfois des clients souhaite partager une entrée ou un plat donc le prix est divisé par le nombre de client » (p. 20). Le service admet que cela « permet d’expliquer la présence de 1/2 article », mais « la présence d’une quantité d’articles différentes de l’unité (0,16 ou 0,19 par exemple) n’est pas explicable » et « il est très difficile de pouvoir établir cette politique avec certitude » (p. 20).",
+    "Table n° 13 du 14/04/2022 (0,50 cidre bouché ; 0,50 CABRICHOU ; 0,50 FRELEE) : « le service devrait retrouver une autre table avec ces mêmes quantités [...]. Or, malgré une lecture attentive, aucune autre table ne fait mention de l’autre moitié de ces articles spécifiques. Ce genre de situation se reproduit sur tous les exercices » (p. 21).",
+    "Annexes C-1 à C-3 : « un montant de chiffre d’affaires, occulté des données de la caisse informatique » de **20 035,60 €**, **22 397,96 €** et **20 054,31 €** (p. 22), soit 62 487,87 € sur trois exercices ; « le service est en droit de s’interroger sur le destin des autres parties d’article absentes [...], voire, même, envisager purement et simplement, l’occultation du chiffre d’affaires correspondant » ; « dans cette hypothèse [...] la comptabilité présentée ne peut donc pas être considérée comme probante »."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "« VI - LE LOGICIEL : ARTICLES AVEC DES QUANTITES INFERIEURES A L’UNITE / PRIX NON FIXE / REMISE. a) Situation constatée : [...] La gérante n’enregistre pas les offerts, les remises ou les gratuits sur le logiciel de caisse. Or, à la lecture des tableaux EXCEL transmis par le prestataire pour justifier du chiffre d’affaires, le vérificateur a constaté la présence de nombreux articles qui ne sont pas des nombres entiers. Par exemple, voici une reprise, ligne par ligne de la journée du 14 avril 2022 (Annexe B-1), du tableau de l’exercice clos au 31 mars 2023 qui montre ces articles : » (p. 19)"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Tableau de la p. 20 : « reprise, ligne par ligne, de la journée du 14 avril 2022 (Annexe B-1) » (14/04/2022, caisse 1)",
+     "minWidth": 760,
+     "colonnes": [
+      {
+       "label": "N° ticket"
+      },
+      {
+       "label": "Libellé"
+      },
+      {
+       "label": "Qté",
+       "align": "right"
+      },
+      {
+       "label": "Prix de vente TTC",
+       "align": "right"
+      },
+      {
+       "label": "Total TTC",
+       "align": "right"
+      },
+      {
+       "label": "Prix TTC × Qté",
+       "align": "right"
+      },
+      {
+       "label": "Écart",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "11"
+       },
+       {
+        "v": "Salade Verte aux Noi"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "5,90 €",
+        "align": "right"
+       },
+       {
+        "v": "2,95 €",
+        "align": "right"
+       },
+       {
+        "v": "2,95 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "11"
+       },
+       {
+        "v": "Croûtes Morilles"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "16,90 €",
+        "align": "right"
+       },
+       {
+        "v": "8,45 €",
+        "align": "right"
+       },
+       {
+        "v": "8,45 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "11"
+       },
+       {
+        "v": "Père Gregoire"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "4,90 €",
+        "align": "right"
+       },
+       {
+        "v": "2,45 €",
+        "align": "right"
+       },
+       {
+        "v": "2,45 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "11"
+       },
+       {
+        "v": "BARBEULENET"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "13,90 €",
+        "align": "right"
+       },
+       {
+        "v": "6,95 €",
+        "align": "right"
+       },
+       {
+        "v": "6,95 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "11"
+       },
+       {
+        "v": "SAUCE CHOCO/CAFE/CAR"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "1,80 €",
+        "align": "right"
+       },
+       {
+        "v": "0,90 €",
+        "align": "right"
+       },
+       {
+        "v": "0,90 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "11"
+       },
+       {
+        "v": "pression"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "3,90 €",
+        "align": "right"
+       },
+       {
+        "v": "1,95 €",
+        "align": "right"
+       },
+       {
+        "v": "1,95 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "13"
+       },
+       {
+        "v": "Cidre Bouché Brut"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "14,00 €",
+        "align": "right"
+       },
+       {
+        "v": "7,00 €",
+        "align": "right"
+       },
+       {
+        "v": "7,00 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "13"
+       },
+       {
+        "v": "CABRICHOU"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "15,90 €",
+        "align": "right"
+       },
+       {
+        "v": "7,95 €",
+        "align": "right"
+       },
+       {
+        "v": "7,95 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "13"
+       },
+       {
+        "v": "FRELEE"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "18,60 €",
+        "align": "right"
+       },
+       {
+        "v": "9,30 €",
+        "align": "right"
+       },
+       {
+        "v": "9,30 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Expresso"
+       },
+       {
+        "v": "1,50",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "3,30 €",
+        "align": "right"
+       },
+       {
+        "v": "3,30 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Salade Verte aux Noi"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "5,90 €",
+        "align": "right"
+       },
+       {
+        "v": "2,95 €",
+        "align": "right"
+       },
+       {
+        "v": "2,95 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Œuf"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "0,90 €",
+        "align": "right"
+       },
+       {
+        "v": "0,45 €",
+        "align": "right"
+       },
+       {
+        "v": "0,45 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Galette nature"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "2,90 €",
+        "align": "right"
+       },
+       {
+        "v": "1,45 €",
+        "align": "right"
+       },
+       {
+        "v": "1,45 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Savagnin verre"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "7,20 €",
+        "align": "right"
+       },
+       {
+        "v": "3,60 €",
+        "align": "right"
+       },
+       {
+        "v": "3,60 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Ratatouille"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "3,20 €",
+        "align": "right"
+       },
+       {
+        "v": "1,60 €",
+        "align": "right"
+       },
+       {
+        "v": "1,60 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Déca"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "1,10 €",
+        "align": "right"
+       },
+       {
+        "v": "1,10 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "15"
+       },
+       {
+        "v": "Complète"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "11,60 €",
+        "align": "right"
+       },
+       {
+        "v": "5,80 €",
+        "align": "right"
+       },
+       {
+        "v": "5,80 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Ces situations se retrouvent sur tous les exercices et pour tous type d’articles. A la lecture de la multiplicité des prix des articles, le vérificateur a également demandé quelle était la politique tarifaire de l’entreprise. A cette question, Madame Ghislaine BEHEM-PASTEUR a fait la réponse suivante : Nous n’utilisons pas de touche remise sur la caisse ; Il n’y a pas de carte de fidélité client ; Nous pouvons réduire le prix sur un plat choisi par un client si celui ci souhaite en modifier la recette [...] ; Nous pouvons également augmenter le prix d’un plat si le client souhaite un supplément [...] ; Parfois des clients souhaite partager une entrée ou un plat donc le prix est divisé par le nombre de client. » (p. 20)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« b) [...] Au sens de l’article L-13 du Livre des Procédures Fiscales, la comptabilité de la société est tenue au moyen de systèmes informatisés [...]. En ce sens, la société doit respecter des obligations d’inaltérabilité, de sécurisation, de conservation et d’archivage prévues aux termes des dispositions du 3° bis du I de l’article 286 du CGI, et commentées par la doctrine administrative (BOI-TVA-DECLA-30-10-30-19/05/2021). La société doit s’assurer du respect des obligations de conservation des pièces justificatives de ventes prévues à l’article L 102 B du Livre des Procédures Fiscales. » (p. 20)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« c) Conséquence : La réponse de la gérante permet d’expliquer la présence de 1/2 article. En revanche : la présence d’une quantité d’articles différentes de l’unité (0,16 ou 0,19 par exemple) n’est pas explicable par cette politique. La présence d’un 1/2 article pourrait s’expliquer par la politique tarifaire de la société comme décrite par la gérante. Mais, à la lecture des fichiers de caisse communiqués, il est très difficile de pouvoir établir cette politique avec certitude. Ainsi, pour visualiser cette problématique, voici un extrait des données de caisse (Annexe B-1) comprenant notamment des 1/2 articles : » (p. 20)"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Extrait de la p. 21 (annexe B-1, tables 10 à 17) : les lignes des tickets 13 et 14, telles qu’imprimées par le service",
+     "minWidth": 760,
+     "colonnes": [
+      {
+       "label": "N° ticket"
+      },
+      {
+       "label": "Libellé"
+      },
+      {
+       "label": "Qté",
+       "align": "right"
+      },
+      {
+       "label": "Prix de vente TTC",
+       "align": "right"
+      },
+      {
+       "label": "Total TTC",
+       "align": "right"
+      },
+      {
+       "label": "A - Prix TTC × Qté",
+       "align": "right"
+      },
+      {
+       "label": "B - Écart",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "13"
+       },
+       {
+        "v": "Expresso"
+       },
+       {
+        "v": "1,00",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "13"
+       },
+       {
+        "v": "Cidre Bouché Brut"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "14,00 €",
+        "align": "right"
+       },
+       {
+        "v": "7,00 €",
+        "align": "right"
+       },
+       {
+        "v": "7,00 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "13"
+       },
+       {
+        "v": "CABRICHOU"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "15,90 €",
+        "align": "right"
+       },
+       {
+        "v": "7,95 €",
+        "align": "right"
+       },
+       {
+        "v": "7,95 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "13"
+       },
+       {
+        "v": "FRELEE"
+       },
+       {
+        "v": "0,50",
+        "align": "right"
+       },
+       {
+        "v": "18,60 €",
+        "align": "right"
+       },
+       {
+        "v": "9,30 €",
+        "align": "right"
+       },
+       {
+        "v": "9,30 €",
+        "align": "right"
+       },
+       {
+        "v": "0,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "14"
+       },
+       {
+        "v": "Expresso"
+       },
+       {
+        "v": "2,00",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "2,20 €",
+        "align": "right"
+       },
+       {
+        "v": "4,40 €",
+        "align": "right"
+       },
+       {
+        "v": "-2,20 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "14"
+       },
+       {
+        "v": "Cidre Bouché Brut"
+       },
+       {
+        "v": "1,00",
+        "align": "right"
+       },
+       {
+        "v": "14,00 €",
+        "align": "right"
+       },
+       {
+        "v": "7,00 €",
+        "align": "right"
+       },
+       {
+        "v": "14,00 €",
+        "align": "right"
+       },
+       {
+        "v": "-7,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "14"
+       },
+       {
+        "v": "CABRICHOU"
+       },
+       {
+        "v": "1,00",
+        "align": "right"
+       },
+       {
+        "v": "15,90 €",
+        "align": "right"
+       },
+       {
+        "v": "7,95 €",
+        "align": "right"
+       },
+       {
+        "v": "15,90 €",
+        "align": "right"
+       },
+       {
+        "v": "-7,95 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "14"
+       },
+       {
+        "v": "FRELEE"
+       },
+       {
+        "v": "1,00",
+        "align": "right"
+       },
+       {
+        "v": "18,60 €",
+        "align": "right"
+       },
+       {
+        "v": "9,30 €",
+        "align": "right"
+       },
+       {
+        "v": "18,60 €",
+        "align": "right"
+       },
+       {
+        "v": "-9,30 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "note",
+     "texte": "L’extrait de la p. 21 couvre les tickets 10 à 17 (48 lignes) ; seules les lignes des tickets 13 et 14 sont reproduites ci-dessus, avec les sept colonnes imprimées par le service (dont ses colonnes A « Prix TTC × Qté » et B « Écart »). Les lignes du ticket 14 figurent dans le tableau du service immédiatement sous celles du ticket 13."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« Dans l’extrait servant d’exemple, sur la journée du 14 avril 2022, il y a 31 tables enregistrées dans la caisse. L’extrait ne porte que sur les tables 10 à 17. En effet, toutes les autres tables ne comprennent aucun article dont la quantité pourrait être inférieure à 1. Selon les affirmations de la gérante, pour ne citer que la table n° 13, qui comprend : 0,50 cidre bouché ; 0,50 CABRICHOU ; 0,50 FRELEE, le service devrait retrouver une autre table avec ces mêmes quantités, deux convives s’étant partagés ces articles. Or, malgré une lecture attentive, aucune autre table ne fait mention de l’autre moitié de ces articles spécifiques. Ce genre de situation se reproduit sur tous les exercices, et tout au long des exercices. » (p. 21)"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "« De plus, l’analyse conduite par le vérificateur sur les données de la caisse, et détaillée dans les annexes C-1 à C-3, remis sous forme de fichiers sur une clé USB le lundi 30 Mars 2026 [...], a permis de mettre évidence toute cette problématique. Elle met notamment en lumière un montant de chiffre d’affaires, occulté des données de la caisse informatique, dont les montants s’établissent respectivement à : 20 035,60 € sur l’exercice clos au 31/03/2023 ; 22 397,96 € sur l’exercice clos au 31/03/2023 ; 20 054,31 € sur l’exercice clos au 31/03/2023. Le service peut en déduire plusieurs hypothèses. Toutefois, en se conformant aux dires de la gérante, le service est en droit de s’interroger sur le destin des autres parties d’article absentes des données de caisse, voire, même, envisager purement et simplement, l’occultation du chiffre d’affaires correspondant des données de la caisse. Ce constat peut signifier qu’une partie du chiffre d’affaires a été occultée des données de la caisse. Dans cette hypothèse qui prend corps à la lecture des données de la caisse et desdites annexes, la comptabilité présentée ne peut donc pas être considérée comme probante. » (p. 22 ; le texte écrit trois fois « 31/03/2023 », il s’agit des trois exercices)"
+    },
+    {
+     "kind": "note",
+     "texte": "La réponse du 04/09/2026 ne reprend pas ces trois montants mais conclut que « le motif de rejet exposé dans la proposition de rectifications est donc parfaitement légitime » (p. 29) ; les propositions personnelles du 19/10/2026 recopient le motif, montants compris (§ 6, p. 20 à 23)."
     }
    ]
+  },
+  {
+   "kind": "titre",
+   "texte": "3.1 « L’autre moitié » est à la page 21 du service, quatre lignes plus bas"
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "Dans l’annexe C-1 (détail des tickets), la note n° 14 (identifiant 46638, 12:44) porte exactement les mêmes articles que la note n° 13 (identifiant 46639, 12:43) : 0,5 Cidre Bouché Brut, 1 Expresso, 0,5 FRELEE, 0,5 CABRICHOU, total **26,45 €** chacune, réglées CB / CB (annexe F-1).",
+    "Dans l’annexe B-1, celle que le service imprime p. 21, la note n° 14 porte **Cidre 1,00 / CABRICHOU 1,00 / FRELEE 1,00 / Expresso 2,00** avec un total TTC de 7,00 / 7,95 / 9,30 / 2,20 € : la caisse inscrit sur la note qui clôture la table la **quantité cumulée de la table** (0,50 + 0,50 = 1,00 ; 1 + 1 = 2 expressos).",
+    "La colonne « B - Écart » du service sur la note n° 14 vaut **-7,00 / -7,95 / -9,30 / -2,20 €** : c’est, au centime, ce que la note n° 13 a payé (7,00 / 7,95 / 9,30 / 2,20 €). Le service a donc calculé lui-même l’autre moitié et l’a imprimée sous la table 13.",
+    "Le même motif se lit sur les tickets 11 / 12 et 15 / 16 de son extrait : la seconde note porte les quantités entières (1,00 ; 2,00 ; 3,00) et des écarts négatifs égaux aux montants de la première."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les notes n° 13 et n° 14 dans les trois fichiers du service (annexe C-1 ; annexe B-1 ; annexe F-1)",
+   "minWidth": 860,
+   "colonnes": [
+    {
+     "label": "Article"
+    },
+    {
+     "label": "Prix carte",
+     "align": "right"
+    },
+    {
+     "label": "Annexe C-1, note 13 (12:43)"
+    },
+    {
+     "label": "Annexe C-1, note 14 (12:44)"
+    },
+    {
+     "label": "Annexe B-1, note 14 : Qté cumulée / écart",
+     "align": "right"
+    },
+    {
+     "label": "Somme",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Cidre Bouché Brut"
+     },
+     {
+      "v": "14,00 €",
+      "align": "right"
+     },
+     {
+      "v": "0,5 ; 7,00 €"
+     },
+     {
+      "v": "0,5 ; 7,00 €"
+     },
+     {
+      "v": "1,00 ; -7,00 €",
+      "align": "right"
+     },
+     {
+      "v": "1,00",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "FRELEE"
+     },
+     {
+      "v": "18,60 €",
+      "align": "right"
+     },
+     {
+      "v": "0,5 ; 9,30 €"
+     },
+     {
+      "v": "0,5 ; 9,30 €"
+     },
+     {
+      "v": "1,00 ; -9,30 €",
+      "align": "right"
+     },
+     {
+      "v": "1,00",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "CABRICHOU"
+     },
+     {
+      "v": "15,90 €",
+      "align": "right"
+     },
+     {
+      "v": "0,5 ; 7,95 €"
+     },
+     {
+      "v": "0,5 ; 7,95 €"
+     },
+     {
+      "v": "1,00 ; -7,95 €",
+      "align": "right"
+     },
+     {
+      "v": "1,00",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Expresso"
+     },
+     {
+      "v": "2,20 €",
+      "align": "right"
+     },
+     {
+      "v": "1 ; 2,20 €"
+     },
+     {
+      "v": "1 ; 2,20 €"
+     },
+     {
+      "v": "2,00 ; -2,20 €",
+      "align": "right"
+     },
+     {
+      "v": "2,00",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Total",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "26,45 € (CB)",
+      "fw": 700
+     },
+     {
+      "v": "26,45 € (CB)",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "52,90 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "3.2 La caisse trace elle-même la table : 4 949 articles refermés sur 5 012 portent cette note de clôture dans l’annexe B"
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "La lecture faite sur la note n° 14 est générale : dans les annexes B-1 à B-3, **7 149 lignes** (2 336 / 2 469 / 2 344) portent une quantité entière avec un écart négatif du service, en face de **5 967 lignes** à quantité fractionnaire (2 174 / 2 040 / 1 753) à écart nul.",
+    "Pour chacun des 5 062 articles de la recomposition, on a cherché dans l’annexe B, parmi les notes de la table, la ligne du même article à quantité entière et écart négatif : **4 949 des 5 012 articles refermés (98,7 %)** la portent, à la quantité entière exacte de la somme des fractions (1 618 / 1 641 ; 1 730 / 1 756 ; 1 601 / 1 615).",
+    "Les 63 autres : 49 ont une note de clôture à une autre quantité entière (tables de la règle des quinze minutes regroupant deux partages distincts, chacun clos à 1,00 par la caisse), 14 n’en ont pas.",
+    "Cette signature ne dépend d’aucune fenêtre de quinze minutes : elle est inscrite par la caisse dans le fichier du service. Le pied de page de l’annexe B, calculé par le service, totalise ces écarts à **-17 561,00 € / -20 011,12 € / -20 115,28 €** : le service a sommé lui-même les « autres moitiés » qu’il dit introuvables."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "La note de clôture dans l’annexe B du service, exercice par exercice (pièce R2-quantites-chiffrage-service.xlsx, onglets « Clôture annexe B » et « Synthèse clôture »)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Articles refermés (R2)",
+     "align": "right"
+    },
+    {
+     "label": "dont note de clôture à la quantité entière (annexe B)",
+     "align": "right"
+    },
+    {
+     "label": "Taux",
+     "align": "right"
+    },
+    {
+     "label": "Lignes fractionnaires (annexe B)",
+     "align": "right"
+    },
+    {
+     "label": "Lignes de clôture (annexe B)",
+     "align": "right"
+    },
+    {
+     "label": "Total des écarts, pied de page du service",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "1 641",
+      "align": "right"
+     },
+     {
+      "v": "1 618",
+      "align": "right"
+     },
+     {
+      "v": "98,6 %",
+      "align": "right"
+     },
+     {
+      "v": "2 174",
+      "align": "right"
+     },
+     {
+      "v": "2 336",
+      "align": "right"
+     },
+     {
+      "v": "-17 561,00 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "1 756",
+      "align": "right"
+     },
+     {
+      "v": "1 730",
+      "align": "right"
+     },
+     {
+      "v": "98,5 %",
+      "align": "right"
+     },
+     {
+      "v": "2 040",
+      "align": "right"
+     },
+     {
+      "v": "2 469",
+      "align": "right"
+     },
+     {
+      "v": "-20 011,12 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "1 615",
+      "align": "right"
+     },
+     {
+      "v": "1 601",
+      "align": "right"
+     },
+     {
+      "v": "99,1 %",
+      "align": "right"
+     },
+     {
+      "v": "1 753",
+      "align": "right"
+     },
+     {
+      "v": "2 344",
+      "align": "right"
+     },
+     {
+      "v": "-20 115,28 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "3 exercices",
+      "fw": 700
+     },
+     {
+      "v": "5 012",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "4 949",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "98,7 %",
+      "align": "right",
+      "badge": "ok",
+      "fw": 700
+     },
+     {
+      "v": "5 967",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "7 149",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "-57 687,40 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "3.3 Le chiffrage de 62 487,87 € : une formule qui crée l’occultation par construction"
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "Les trois montants de la p. 22 sont retrouvés **au centime** : ils sont la somme, sur les 11 026 lignes à quantité fractionnaire des annexes C-1 à C-3 (3 839 / 3 809 / 3 378), de la colonne D du service « Écart C − 17 », où C = « Prix TTC × Qté virgule neutralisée » = prix × quantité portée à l’entier supérieur, et 17 = montant encaissé de la ligne (pièce R2-quantites-chiffrage-service.xlsx, onglet « Synthèse », lignes 5 à 7 : écart 0,00 € sur chaque exercice ; règle vérifiée sur 11 023 lignes sur 11 026).",
+    "Autrement dit, le service pose que **chaque ligne à 0,50 aurait dû être payée 1,00**. Pour une paire 0,50 + 0,50, il compte PU/2 sur chaque note, soit **le prix entier d’un article servi une fois et payé une fois**. Pour un partage à 3, il compte 2 PU ; à N convives, (N − 1) × PU : plus le partage est finement tracé, plus la formule produit d’« occultation ».",
+    "Appliquée à la table 13 + 14, payée 52,90 €, la formule donne **48,50 €** d’« occultation » : exactement le prix de carte des trois articles partagés (14,00 + 18,60 + 15,90), payés une fois. Table du 29/04/2022 (63,50 € payés) : 127,00 €. Table du 20/08/2023 (162,70 € payés) : 279,80 €.",
+    "Ventilation du chiffrage par le sort réel des lignes : **59 820,15 € (95,7 %)** portent sur des lignes dont l’article se referme sur un entier et sur lesquelles **60 512,05 €** ont été encaissés ; 1 931,90 € sur les 64 notes isolées (2 054,20 € encaissés) ; 735,82 € sur le résidu de 8 tables (455,28 € encaissés), dont le complément réellement manquant est au plus 264,98 €."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le chiffrage de la p. 22, recomposé et ventilé (pièce R2-quantites-chiffrage-service.xlsx, onglet « Synthèse », lignes 5 à 23)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Indicateur"
+    },
+    {
+     "label": "2022-2023",
+     "align": "right"
+    },
+    {
+     "label": "2023-2024",
+     "align": "right"
+    },
+    {
+     "label": "2024-2025",
+     "align": "right"
+    },
+    {
+     "label": "3 exercices",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Montant « occulté » écrit par le service (p. 22)"
+     },
+     {
+      "v": "20 035,60 €",
+      "align": "right"
+     },
+     {
+      "v": "22 397,96 €",
+      "align": "right"
+     },
+     {
+      "v": "20 054,31 €",
+      "align": "right"
+     },
+     {
+      "v": "62 487,87 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Somme de la colonne D du service sur les lignes fractionnaires"
+     },
+     {
+      "v": "20 035,60 €",
+      "align": "right"
+     },
+     {
+      "v": "22 397,96 €",
+      "align": "right"
+     },
+     {
+      "v": "20 054,31 €",
+      "align": "right"
+     },
+     {
+      "v": "62 487,87 €",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Lignes fractionnaires (annexes C)"
+     },
+     {
+      "v": "3 839",
+      "align": "right"
+     },
+     {
+      "v": "3 809",
+      "align": "right"
+     },
+     {
+      "v": "3 378",
+      "align": "right"
+     },
+     {
+      "v": "11 026",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Montant réellement encaissé sur ces lignes"
+     },
+     {
+      "v": "19 141,70 €",
+      "align": "right"
+     },
+     {
+      "v": "22 305,44 €",
+      "align": "right"
+     },
+     {
+      "v": "21 574,39 €",
+      "align": "right"
+     },
+     {
+      "v": "63 021,53 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "dont lignes d’articles refermés (10 575 lignes)",
+      "fw": 700
+     },
+     {
+      "v": "18 905,71 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "21 389,58 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "19 524,86 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "59 820,15 €",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "dont lignes des 64 notes isolées (341 lignes)"
+     },
+     {
+      "v": "681,50 €",
+      "align": "right"
+     },
+     {
+      "v": "720,95 €",
+      "align": "right"
+     },
+     {
+      "v": "529,45 €",
+      "align": "right"
+     },
+     {
+      "v": "1 931,90 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "dont lignes du résidu de 8 tables (110 lignes)"
+     },
+     {
+      "v": "448,39 €",
+      "align": "right"
+     },
+     {
+      "v": "287,43 €",
+      "align": "right"
+     },
+     {
+      "v": "0,00 €",
+      "align": "right"
+     },
+     {
+      "v": "735,82 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Part du chiffrage assise sur des articles refermés et payés",
+      "fw": 700
+     },
+     {
+      "v": "94,4 %",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "95,5 %",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "97,4 %",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "95,7 %",
+      "align": "right",
+      "badge": "ok",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "schema",
+   "titre": "De 62 487,87 € « occultés » à 735,82 € de lignes non refermées, dont 264,98 € de complément manquant au maximum",
+   "svg": "<svg viewBox=\"0 0 760 320\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"250\" x2=\"744\" y2=\"250\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"75.5\" y=\"53.47826086956519\" width=\"70\" height=\"196.5217391304348\" rx=\"3\" fill=\"#a0740d\"/><text x=\"110.5\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">62 487,87 €</text><text x=\"110.5\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Chiffrage du</text><text x=\"110.5\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">service p. 22</text><rect x=\"256.5\" y=\"53.47826086956519\" width=\"70\" height=\"188.13187124226639\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"291.5\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">59 820,15 €</text><text x=\"291.5\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Lignes</text><text x=\"291.5\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">d’articles</text><text x=\"291.5\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">refermés,</text><rect x=\"437.5\" y=\"241.61013211183158\" width=\"70\" height=\"6.075744745757646\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"472.5\" y=\"236.61013211183158\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">1 931,90 €</text><text x=\"472.5\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">64 notes</text><text x=\"472.5\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">isolées,</text><text x=\"472.5\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">payées 2</text><rect x=\"618.5\" y=\"247.68587685758922\" width=\"70\" height=\"2.3141231424107787\" rx=\"3\" fill=\"#6a4d0f\"/><text x=\"653.5\" y=\"242.68587685758922\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#2a2015\">735,82 €</text><text x=\"653.5\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">Résidu 8</text><text x=\"653.5\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">tables</text><text x=\"653.5\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">(complément</text></svg>",
+   "legende": "Chaque barre est une somme de la colonne D du service (annexes C-1 à C-3) sur les lignes correspondantes, pièce R2-quantites-chiffrage-service.xlsx, onglet « Synthèse », lignes 14 à 17."
+  },
+  {
+   "kind": "titre",
+   "texte": "3.4 « 0,16 ou 0,19 » : le 0,19 n’existe pas, le 0,16 est un sixième"
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "Sur les 11 026 lignes fractionnaires des annexes C-1 à C-3, **aucune** ne porte la quantité 0,19 ; **2** portent 0,16 (avec 0,17 et 0,83 : 11 lignes, 7 notes, partage à six).",
+    "Les parts décimales observées sont au nombre de vingt, toutes égales à 1/N ou à ses multiples : 0,14 ; 0,15 ; 0,16 ; 0,17 ; 0,20 ; 0,25 ; 0,28 ; 0,29 ; 0,33 ; 0,34 ; 0,40 ; 0,42 ; 0,43 ; 0,50 ; 0,60 ; 0,66 ; 0,67 ; 0,75 ; 0,80 ; 0,83 (pièce R2-quantites-chiffrage-service.xlsx, onglet « Lignes C », colonne G).",
+    "La caisse arrondit les parts au centième : 1/3 s’écrit 0,33 puis 0,34, 1/6 s’écrit 0,16 puis 0,17, 1/7 s’écrit 0,14 puis 0,15 ou 0,16. Le « 0,19 » du service n’est pas une donnée des fichiers."
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-quantites-chiffrage-service.xlsx",
+     "label": "R2 - chiffrage du service recomposé ligne à ligne et note de clôture de l’annexe B (Lignes C, Synthèse, Exemples annexe B, Clôture annexe B, Synthèse clôture, Méthode)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
+     "label": "Annexe B-1 (prix de vente / quantité 2022-2023, fichier du service)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-B2_prix-vente-quantite_2023-2024.xls",
+     "label": "Annexe B-2 (2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-B3_prix-vente-quantite_2024-2025.xls",
+     "label": "Annexe B-3 (2024-2025)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+     "label": "Annexe C-1 (détail des tickets 2022-2023, fichier du service)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+     "label": "Annexe C-2 (détail des tickets 2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+     "label": "Annexe C-3 (détail des tickets 2024-2025)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
+     "label": "R2 - recomposition (onglet « Sources » l. 8 à 10, onglet « Tables » l. 3 pour la table 13 + 14)"
+    }
+   ],
+   "intro": "Pièce principale : R2-quantites-chiffrage-service.xlsx. Onglet « Lignes C » (11 026 lignes, colonnes C et D du service recopiées, recalcul par formule en M à O) ; « Synthèse » (SUMIFS, l. 5 à 23) ; « Exemples annexe B » (notes 13 / 14, 4 / 5 / 6, 8 / 9 / 10, 11 / 12 du 14/05/2023) ; « Clôture annexe B » (5 062 articles, signature par formule en M) ; « Synthèse clôture ». Recalculée sous LibreOffice."
+  },
+  {
+   "kind": "titre",
+   "texte": "Le numéro d’identification unique et le fichier « tpvevenement.xls » : « aucune traçabilité certaine »",
+   "numero": "4"
+  },
+  {
+   "kind": "reproche",
+   "page": "Réponse du 04/09/2026, p. 29",
+   "resume": [
+    "« De plus, comme déjà rappelé plusieurs fois, il existe bien un numéro d’identification UNIQUE pour chaque note, et dans une colonne spécifique, un “numéro d’identification” mais seulement pour les fichiers » Règlement, Ticket ligne, Ticket et TVA.",
+    "« Ce numéro est différent dans le fichier “20220401’ AND ‘20250331 tpvevenement.xls”. De ce fait, il n’y a aucune traçabilité certaine pour les suppressions apparaissant dans le fichier [...] tpvevenement.xls. »"
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "« De plus, comme déjà rappelé plusieurs fois, Il existe bien un numéro d’identification UNIQUE pour chaque note, et dans une colonne spécifique, un « numéro d’identification » mais seulement pour les fichiers : 20220401’ AND ‘20250331 reglement.xls ; 20220401’ AND ‘20250331 ticket ligne.xls ; 20220401’ AND ‘20250331 ticket.xls ; 20220401’ AND ‘20250331 tva.xls. Ce numéro est différent dans le fichier « 20220401’ AND ‘20250331 tpvevenement.xls ». De ce fait, il n’y a aucune traçabilité certaine pour les suppressions apparaissant dans le fichier 20220401’ AND ‘20250331 tpvevenement.xls. » (p. 29)"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Les fichiers cités p. 29 et le « numéro d’identification » selon le service",
+     "minWidth": 820,
+     "colonnes": [
+      {
+       "label": "Fichier remis"
+      },
+      {
+       "label": "Numéro d’identification de la note (selon le service)"
+      },
+      {
+       "label": "Usage dans cette page"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "20220401’ AND ‘20250331 reglement.xls"
+       },
+       {
+        "v": "Numéro unique, dans une colonne spécifique",
+        "badge": "ok"
+       },
+       {
+        "v": "Annexe F : encaissement des 1 849 notes (par identifiant)"
+       }
+      ],
+      [
+       {
+        "v": "20220401’ AND ‘20250331 ticket ligne.xls"
+       },
+       {
+        "v": "Numéro unique, dans une colonne spécifique",
+        "badge": "ok"
+       },
+       {
+        "v": "Annexe C : quantités, prix, montants des 5 062 articles (par identifiant)"
+       }
+      ],
+      [
+       {
+        "v": "20220401’ AND ‘20250331 ticket.xls"
+       },
+       {
+        "v": "Numéro unique, dans une colonne spécifique",
+        "badge": "ok"
+       },
+       {
+        "v": "Annexe H : totaux par note"
+       }
+      ],
+      [
+       {
+        "v": "20220401’ AND ‘20250331 tva.xls"
+       },
+       {
+        "v": "Numéro unique, dans une colonne spécifique",
+        "badge": "ok"
+       },
+       {
+        "v": "Non utilisé ici"
+       }
+      ],
+      [
+       {
+        "v": "20220401’ AND ‘20250331 tpvevenement.xls"
+       },
+       {
+        "v": "Numéro « différent » : « aucune traçabilité certaine »",
+        "badge": "ko"
+       },
+       {
+        "v": "Annexe E : journal des événements ; sert uniquement aux 4 suppressions du point 1"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "L’argument porte sur les **suppressions** (motif A) ; le motif D porte sur des **quantités de vente**. Une quantité se lit dans le fichier des ventes (annexe C), pas dans le journal des événements (annexe E).",
+    "La recomposition n’utilise que les fichiers porteurs du numéro unique : l’annexe C pour les 5 062 articles, l’annexe F pour l’encaissement, apparié **par cet identifiant** : 1 849 notes sur 1 849 retrouvées (pièce R2-quantites-recomposition.xlsx, onglet « Tables », colonne J).",
+    "La traçabilité de la table existe dans les fichiers du service eux-mêmes : la note de clôture de l’annexe B porte la quantité cumulée de la table et l’écart négatif égal aux parts déjà payées (4 949 articles sur 5 012, point 3.2). Le service l’a imprimée p. 21.",
+    "Le seul usage de « tpvevenement.xls » dans cette page est le point 1 : les quatre montants « DEL » dont le service « prend note ». Il ne reste donc, sous le motif D, aucun grief propre aux quantités."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Ce que chaque fichier établit pour les quantités fractionnaires",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Question"
+    },
+    {
+     "label": "Fichier porteur du numéro unique"
+    },
+    {
+     "label": "Résultat",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Les parts d’un article se referment-elles sur un entier ?"
+     },
+     {
+      "v": "Annexe C (ticket ligne)"
+     },
+     {
+      "v": "5 012 / 5 062 = 99,0 %",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Les notes sont-elles encaissées ?"
+     },
+     {
+      "v": "Annexe F (règlement), par identifiant"
+     },
+     {
+      "v": "1 849 / 1 849 = 100 %",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "La caisse relie-t-elle les notes d’une table ?"
+     },
+     {
+      "v": "Annexe B (prix de vente / quantité), note de clôture"
+     },
+     {
+      "v": "4 949 / 5 012 = 98,7 %",
+      "align": "right",
+      "badge": "ok"
+     }
+    ],
+    [
+     {
+      "v": "Le chiffrage du service repose-t-il sur des lignes payées ?"
+     },
+     {
+      "v": "Annexe C, colonne D du service"
+     },
+     {
+      "v": "59 820,15 € sur 62 487,87 € = 95,7 %",
+      "align": "right",
+      "badge": "ok"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
+     "label": "Annexe F-1 (règlements 2022-2023)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F2_reglements_2023-2024.xls",
+     "label": "Annexe F-2 (règlements 2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F3_reglements_2024-2025.xls",
+     "label": "Annexe F-3 (règlements 2024-2025)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+     "label": "Annexe E-1 (journal des événements 2022-2023)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
+     "label": "Annexe E-2 (2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
+     "label": "Annexe E-3 (2024-2025)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
+     "label": "R2 - recomposition, onglet « Tables » colonne J (règlements annexe F)"
+    }
+   ],
+   "intro": "Annexes F-1 à F-3 (colonne « Id ») et C-1 à C-3 (colonne « 9 Id ») partagent l’identifiant unique ; les annexes E-1 à E-3 n’interviennent que pour les quatre suppressions du point 1."
+  },
+  {
+   "kind": "titre",
+   "texte": "« Le motif de rejet exposé dans la proposition de rectifications est donc parfaitement légitime »",
+   "numero": "5"
+  },
+  {
+   "kind": "reproche",
+   "page": "Réponse du 04/09/2026, p. 29",
+   "resume": [
+    "Phrase unique, soulignée dans le courrier, qui clôt la partie D : le service maintient intégralement le motif D (p. 19 à 22 de la proposition), sans montant nouveau, sans exemple nouveau, sans discuter la recomposition produite.",
+    "Fondements invoqués par la proposition : LPF art. L. 13 ; CGI art. 286, I, 3° bis ; BOI-TVA-DECLA-30-10-30 ; LPF art. L. 102 B (p. 20)."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "« Le motif de rejet exposé dans la proposition de rectifications est donc parfaitement légitime. » (p. 29, souligné dans l’original)"
+    },
+    {
+     "kind": "note",
+     "texte": "Dans les propositions personnelles du 19/10/2026, le motif est recopié au § 6 (p. 20 à 23), montants de 20 035,60 € / 22 397,96 € / 20 054,31 € compris."
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "**Gravité requise.** « Le rejet d’une comptabilité comme dénuée de sincérité ou comme non probante ne doit être opéré qu’à bon escient et avec la plus grande circonspection, lorsqu’il existe des motifs précis et sérieux permettant de la considérer comme non probante » ([BOI-CF-IOR-10-20, 12/09/2012, § 60](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)).",
+    "**Irrégularités visées.** « Une comptabilité ne doit pas être écartée si elle n’est entachée que d’irrégularités insuffisantes pour lui enlever toute valeur probante » ; « le défaut de valeur probante ne peut résulter que d’irrégularités ayant un caractère de gravité indiscutable : balances inexactes, erreurs répétées de reports, enregistrement non chronologique des opérations, absence de pièces justificatives de recettes ou de dépenses, fausses factures, soldes de compte caisse fréquemment créditeurs, enregistrements d’une partie des opérations réalisées » (même BOFiP, § 90). Une part d’addition enregistrée avec son article, son prix de carte, son horodatage et son règlement n’entre dans aucune de ces catégories.",
+    "**Écart significatif exigé.** Le service « ne doit exciper d’une telle différence [...] que si celle-ci est suffisamment importante pour être significative » ; pour un restaurant, le Conseil d’État a jugé que la comptabilité « ne pouvait qu’être tenue pour sincère, en raison tant des incertitudes et de l’imprécision qui affectent la reconstitution d’un taux de bénéfice brut que de la faiblesse de l’écart constaté » ([CE, 10 mars 1976, req. n° 79933, cité au BOI-CF-IOR-10-20 § 150](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)). Ici l’écart réel est de 264,98 € au maximum sur 95 237,08 € encaissés en tables partagées (0,28 %), et le chiffrage de 62 487,87 € repose à 95,7 % sur des lignes payées.",
+    "**Charge de la preuve.** « La charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » ([LPF, art. L. 192, al. 2, en vigueur depuis le 01/01/2019](https://www.legifrance.gouv.fr/codes/id/LEGIARTI000037993633)). « En l’absence d’avis rendu par la commission départementale des impôts directs et des taxes sur le chiffre d’affaires, et lorsque le contribuable n’a pas accepté les rehaussements qui lui avaient été notifiés dans le cadre de la procédure contradictoire, il incombe à l’administration d’apporter la preuve du bien-fondé des suppléments d’impôt » ([CE, 9e ch., 5 janvier 2023, n° 452595, pt 2](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2023-01-05/452595)).",
+    "**Application.** Le service ne désigne aucune recette minorée par une quantité fractionnaire ; son seul chiffrage (62 487,87 €) est produit par une formule qui compte le prix entier d’articles payés une fois ; « l’autre moitié » qu’il dit introuvable est imprimée p. 21 de sa propre proposition. Affirmer que le motif est « parfaitement légitime » ne satisfait pas à la charge de la preuve de l’article L. 192."
+   ],
+   "titre": "Le droit applicable, texte par texte (références vérifiées)"
+  },
+  {
+   "kind": "alerte",
+   "couleur": "teal",
+   "titre": "Le test proposé au service",
+   "texte": "Si les quantités fractionnaires cachaient des recettes, les parts ne se refermeraient pas et la caisse ne cumulerait pas l’article à l’unité sur la note de clôture. Elles se referment sur 5 012 articles sur 5 062 (99,0 %) ; la note de clôture figure dans l’annexe B du service pour 4 949 d’entre eux ; les 1 849 notes sont encaissées à l’annexe F ; le résidu est de 50 articles sur 8 tables, 264,98 € au maximum. Le décompte est ouvert cellule par cellule dans R2-quantites-recomposition.xlsx et R2-quantites-chiffrage-service.xlsx, recalculés directement sur les annexes B, C et F du service."
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "contentieux/Reponse_fisc_aux_observations_04-09-2026.pdf",
+     "label": "Réponse du service du 04/09/2026 (p. 28 et 29)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition personnelle PASTEUR du 19/10/2026 (§ 6, p. 20 à 23)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition personnelle BEHEM du 19/10/2026 (§ 6, p. 20 à 23)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que cela fait tomber"
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "**Le motif de rejet D en entier** : le volet « quantités élevées » est abandonné (« prend note ») ; le volet « quantités inférieures à 1 » est démenti par les fichiers du service (99,0 % d’articles refermés, 100 % de notes encaissées, note de clôture de l’annexe B) ; l’argument de traçabilité relève du motif A.",
+    "**Le chiffrage de 62 487,87 €** (20 035,60 / 22 397,96 / 20 054,31 €) : retrouvé au centime, il est la somme d’une formule qui compte comme occulté le prix entier d’articles payés une fois ; 95,7 % de ce montant (59 820,15 €) porte sur des lignes refermées sur lesquelles 60 512,05 € ont été encaissés. Il ne peut fonder ni une « occultation », ni un rejet.",
+    "**Incidence en euros** : le motif D n’est assis sur aucun rappel propre ; les 62 487,87 € ne sont pas repris dans le rehaussement de 471 826 €, issu de la reconstitution. Son abandon retire l’un des motifs du rejet de comptabilité, préalable de toute la reconstitution extra-comptable (IS 97 510 €, TVA 49 547 €, majorations de 40 % 58 823 €, distributions 369 648 € notifiées aux deux foyers).",
+    "**Ce qui reste concédé** : 50 articles sur 8 tables, 264,98 € de complément manquant au maximum sur trois exercices ; 64 notes fractionnaires isolées (2 054,20 € encaissés) non rattachées à une table."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que le service pourrait encore opposer"
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "**« 264,98 € de résidu, c’est bien une occultation. »** → 8 tables sur 866, 50 articles sur 5 062 ; la part manquante est encaissée hors de la fenêtre de quinze minutes ou commandée par un seul convive ; même en retenant le majorant, l’écart est de 0,28 % des 95 237,08 € encaissés en tables partagées, et le service lui-même ne retient ce montant comme base d’aucun rehaussement.",
+    "**« La fenêtre de quinze minutes est un réglage de la défense. »** → La note de clôture de l’annexe B ne dépend d’aucun réglage : c’est la caisse qui inscrit la quantité cumulée, et le service qui calcule l’écart négatif (4 949 articles sur 5 012 ; -57 687,40 € d’écarts totalisés en pied de ses annexes B).",
+    "**« Les 64 notes isolées ne sont pas expliquées. »** → Elles portent 341 lignes et 2 054,20 € encaissés sur trois exercices ; le chiffrage du service y compte 1 931,90 € ; elles sont encaissées à l’annexe F comme les autres et ne constituent pas une « partie des opérations » non enregistrée au sens du § 90 du BOFiP.",
+    "**« L’annexe B n’est qu’une présentation ; la quantité 1,00 sur la note 14 est une anomalie de plus. »** → Si c’était une anomalie, l’écart ne serait pas, 4 949 fois, exactement égal aux parts payées par les autres notes ; et le service a imprimé p. 21 la note 14 avec ses écarts de -7,00 / -7,95 / -9,30 / -2,20 € sans les relier aux 7,00 / 7,95 / 9,30 / 2,20 € de la note 13.",
+    "**« Le chiffrage de la p. 22 mesure un risque, pas une recette. »** → Une formule qui produit 48,50 € d’« occultation » sur une table payée 52,90 € par carte bancaire ne mesure aucun risque : elle mesure sa propre construction (PU × entier supérieur − encaissé). Un « risque » n’est pas une irrégularité « de gravité indiscutable » (BOI-CF-IOR-10-20 § 90).",
+    "**« Il n’y a aucune traçabilité certaine. »** → Les annexes C et F portent l’identifiant unique ; 1 849 notes sur 1 849 y sont appariées ; les quantités ne se lisent pas dans tpvevenement.xls."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Points de vigilance pour la réunion"
+  },
+  {
+   "kind": "liste",
+   "items": [
+    "La lecture « quantité cumulée sur la note de clôture » est une observation des fichiers du service (annexe B), vérifiée sur 4 949 articles et imprimée p. 21 ; elle n’est pas documentée par l’éditeur du logiciel. Demander au service d’où provient la colonne « Qté » de son annexe B (export « ticket ligne ») et pourquoi ses écarts négatifs n’ont pas été rapprochés des notes précédentes.",
+    "Le regroupement en tables de la pièce R2-quantites-recomposition.xlsx reste une règle de quinze minutes ; dire qu’il sert à compter, et que la preuve de la liaison vient de l’annexe B.",
+    "Le résidu (8 tables, 264,98 €) et les 64 notes isolées sont concédés tels quels ; ne pas les minimiser, les chiffrer.",
+    "Le 62 487,87 € n’est pas dans le rappel de 471 826 € : l’enjeu du point est le rejet de comptabilité, pas un dégrèvement direct.",
+    "Pièces à avoir : R2-quantites-recomposition.xlsx, R2-quantites-chiffrage-service.xlsx (recalculées), les annexes B-1 à B-3, C-1 à C-3, F-1 à F-3 du service, la p. 21 de la proposition (tickets 13 et 14), la p. 28 et 29 de la réponse du 04/09/2026."
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-quantites-recomposition.xlsx",
+     "label": "R2-quantites-recomposition.xlsx : 5 062 articles, 866 tables, test d’entier par formule, résidu (8 tables), encaissement annexe F"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-quantites-chiffrage-service.xlsx",
+     "label": "R2-quantites-chiffrage-service.xlsx : 62 487,87 € recomposés ligne à ligne, ventilation, note de clôture de l’annexe B (5 062 articles)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-quantites-fractionnaires.xlsx",
+     "label": "R1-quantites-fractionnaires.xlsx : pièce de la réponse de juillet (tables partagées, détail article par article)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-B1_prix-vente-quantite_2022-2023.xls",
+     "label": "Annexe B-1 (prix de vente / quantité 2022-2023, fichier du service)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-B2_prix-vente-quantite_2023-2024.xls",
+     "label": "Annexe B-2 (2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-B3_prix-vente-quantite_2024-2025.xls",
+     "label": "Annexe B-3 (2024-2025)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+     "label": "Annexe C-1 (détail des tickets 2022-2023, fichier du service)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C2_detail-tickets_2023-2024.xls",
+     "label": "Annexe C-2 (détail des tickets 2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-C3_detail-tickets_2024-2025.xls",
+     "label": "Annexe C-3 (détail des tickets 2024-2025)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F1_reglements_2022-2023.xls",
+     "label": "Annexe F-1 (règlements 2022-2023)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F2_reglements_2023-2024.xls",
+     "label": "Annexe F-2 (règlements 2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-F3_reglements_2024-2025.xls",
+     "label": "Annexe F-3 (règlements 2024-2025)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-E1_tpvevenement_2022-2023.xls",
+     "label": "Annexe E-1 (journal des événements 2022-2023)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-E2_tpvevenement_2023-2024.xls",
+     "label": "Annexe E-2 (2023-2024)"
+    },
+    {
+     "fichier": "caisse-enregistreuse/ANNEXE-E3_tpvevenement_2024-2025.xls",
+     "label": "Annexe E-3 (2024-2025)"
+    },
+    {
+     "fichier": "contentieux/Reponse_fisc_aux_observations_04-09-2026.pdf",
+     "label": "Réponse du service du 04/09/2026 (p. 28 et 29)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_PASTEUR_19-10-2026.pdf",
+     "label": "Proposition personnelle PASTEUR du 19/10/2026 (§ 6, p. 20 à 23)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition personnelle BEHEM du 19/10/2026 (§ 6, p. 20 à 23)"
+    }
+   ],
+   "titre": "Toutes les pièces de la page",
+   "intro": "Toutes les valeurs de la page sont recalculées par formule dans les deux pièces R2 (LibreOffice) directement sur les annexes B, C et F du service ; les annexes du service sont jointes pour contrôle contradictoire."
   }
- ],
- "entete": {
-  "statut": "demonte",
-  "reponseCourte": "Sur les trois exercices, 5 012 des 5 062 articles fractionnés (99,0 %) se recomposent en quantités entières et 95 237,08 € de tables partagées sont retrouvés encaissés à l’annexe F (les 1 849 notes rattachées, soit 100 %). Le mécanisme est rejoué ligne à ligne sur la table n° 13 + n° 14 du 14/04/2022 (52,90 €, CB). Le résidu est traité honnêtement : 50 articles sur 8 tables ne se referment pas ; son incidence maximale théorique, recalculée par formule, est de 264,98 € de CA sur trois exercices (78,33 € / 186,65 € / 0,00 €), montant que le service lui-même ne chiffre pas sous le motif D."
- }
+ ]
 }

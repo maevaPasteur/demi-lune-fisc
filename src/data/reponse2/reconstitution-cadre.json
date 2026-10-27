@@ -1,145 +1,1534 @@
 {
  "meta": {
   "slug": "reconstitution-cadre",
-  "source": "Propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » (reprise du 18/05/2026) ; réponse de la DDFiP du Jura du 04/09/2026",
+  "source": "Propositions personnelles du 19/10/2026, partie « METHODE DE RECONSTITUTION » reprise sans changement de la proposition du 18/05/2026 (p. 36 à 53) ; réponse de la DDFiP du Jura du 04/09/2026, parties L à T (p. 59 à 93)",
   "limites": [
-   "Le retrait des 354 921 € de cuisine extrapolée suppose établie, dans les pages dédiées aux liquides (sur-versement, crémant, dégustation, freinte, cuisine, menus), la sur-évaluation du CA liquides reconstitué : à CA liquides exact, l'extrapolation tiendrait.",
-   "L'effet de levier 3,94 / 4,02 / 4,10 n'est un bénéfice pour la défense que si les corrections de volumes de boissons sont admises ; il n'est pas, à lui seul, une preuve de sur-évaluation.",
-   "Le total reconstitué post-corrections n'est pas chiffré ici : il dépend des volumes arrêtés dans les pages liquides. La formule « repasser sous le chiffre d'affaires déclaré » n'est donc pas quantifiée sur la présente page.",
-   "La faiblesse du coefficient de revente déclaré (≈ 2,30) n'est opposée qu'au moyen de la part réellement revendue (60,77 %) et de l'alignement boisson/nourriture ; aucun référentiel professionnel externe n'est produit."
+   "Le retrait des 354 921 € de cuisine extrapolée suppose établie la sur-évaluation du CA liquides reconstitué (+ 48,0 % / + 31,9 % / + 32,2 % par rapport à la caisse) : à CA liquides exact, l'extrapolation tiendrait. Le levier 3,94 / 4,02 / 4,10 mesure l'enjeu des corrections de liquides, il ne les démontre pas.",
+   "Le bilan matière des 10 622 L n'existe qu'en cumul triennal (pas d'inventaire d'ouverture au 31/03/2022, pas de cascade annuelle) ; la part revendue de 60,77 % ne vaut que si les postes non revendus sont admis.",
+   "Aucune dose n'a été mesurée sur place : le verre de 18,28 cl vient de la littérature (Kerr 2008, IC 95 % 17,60 à 18,96 cl), non d'un relevé à La Demi-Lune.",
+   "Aucun référentiel professionnel externe n'est produit pour un coefficient de revente global de 2,30 ; le grief est ramené à une question de volumes, non renversé par un usage opposable.",
+   "Le forfait de 15 % est concédé comme un plafond (itemisation 1 158 L = 72,7 % de 1 593 L) : aucun dégrèvement n'est demandé au titre des abattements eux-mêmes, ni au titre de la bière (0 €), ni de la variation de stock (point 9 retiré).",
+   "L'article L. 192 du LPF n'a pu être relu sur Légifrance (site inaccessible depuis l'environnement de travail) : il est cité par l'intermédiaire du BOI-CF-IOR-10-20 § 270 et 280 et de la décision CE n° 452595, tous deux relus."
   ]
  },
  "entete": {
-  "reponseCourte": "Le service lit le coefficient cuisine/boissons dans la caisse (rapport 2,936 / 3,024 / 3,105), puis l'applique à un CA liquides reconstitué supérieur à celui qu'il y lit, sans aucune constatation propre à la cuisine : il en résulte 354 921 € de cuisine extrapolée, soit 75,2 % du rehaussement de 471 826 €, sur une cuisine pourtant enregistrée plat par plat. La défense concède l'arithmétique du service (le reconstitué reste 42 207 € sous son propre repère de 3,2725 sur trois ans) ; ce qui est contesté est la valeur de preuve d'un repère bâti sur un paramètre de la reconstitution.",
+  "reponseCourte": "La méthode du service enchaîne cinq paramètres dont deux seulement sont lus dans l'exploitation (prix moyens, rapport liquides/solides) et trois sont posés de l'extérieur (doses de carte figées, forfaits de 5 + 5 + 5 %, extrapolation de la cuisine) : il en résulte 354 921 € de cuisine jamais mesurée, soit 75,2 % du rehaussement de 471 826 €, et un facteur de 3,94 à 4,10 qui multiplie chaque euro de liquides sur-évalué ; la défense concède l'arithmétique du repère de 3,2725 (− 42 207 € sur trois ans) mais pas sa valeur de preuve, le même calcul donnant 2,383251 avec la part revendue mesurée de 60,77 %.",
   "statut": "partiel"
  },
  "sections": [
   {
    "kind": "chapitre",
-   "source": "fisc",
-   "numero": 1,
-   "titre": "Ce que soutient l'administration",
-   "sousTitre": "La méthode de reconstitution, reprise sans changement de la proposition du 18/05/2026, est maintenue dans les propositions personnelles du 19/10/2026."
+   "source": "neutre",
+   "titre": "La méthode de reconstitution du chiffre d'affaires : doses figées, disponible, abattements, coefficient, rapprochement",
+   "sousTitre": "Pages 36 à 53 de la proposition du 18/05/2026, reprises à l'identique dans les propositions personnelles du 19/10/2026 et maintenues par la réponse du 04/09/2026 sans qu'un seul chiffre soit modifié."
   },
   {
-   "kind": "paragraphe",
-   "texte": "Elle procède en deux temps : (1) les volumes de boissons disponibles (achats ± variation de stock) sont divisés par des **doses figées** pour reconstituer un chiffre d'affaires « liquides » ; (2) le chiffre d'affaires « cuisine » (« solides ») est obtenu en multipliant ce CA liquides par un **coefficient** de 2,94 (2022-2023), 3,02 (2023-2024) puis 3,10 (2024-2025). Le service ne reconstitue donc jamais directement la cuisine : il la déduit des boissons."
+   "kind": "liste",
+   "titre": "Ce que reproche le fisc, en résumé",
+   "items": [
+    "1. Les doses : chaque boisson vendue l'a été exactement à la dose de la carte (vin 15 cl au verre, 50 et 75 cl au pichet, 4 cl les alcools forts, 12 cl le crémant et le vin jaune, 6 cl le macvin), les cocktails aux recettes « réputées confirmées », la cuisine aux doses du courriel des dirigeants (p. 36-37) ; maintenu p. 60, 77 et 92 : les sur-versements sont « une simple affirmation gratuite ».",
+    "2. Le volume disponible : achats de boissons (annexes 2 à 5) corrigés des stocks (annexes 6-1 à 6-3), convertis en centilitres, répartis entre articles selon les proportions de la caisse, divisés par la dose, multipliés par le prix moyen de caisse = CA liquides reconstitué (p. 36, 38-40, annexes 7-1 à 7-3) ; le repère (3) en tire des « volumes disparus » (p. 41) ; maintenu p. 74 : « la reconstitution ne s'est basée que des volumes en stocks ».",
+    "3. Les abattements : « à la fin de la méthode », 5 % du CA reconstitué pour les offerts et remises, 5 % pour les pertes, 5 % pour la consommation du personnel, plus 15 % du volume de bière (p. 51) ; maintenu p. 71-73 et 89 : le service aurait été « d'une très grande générosité », son 5 % valant 35 133,26 € sur le premier exercice.",
+    "4. Le coefficient : le CA « solides » (cuisine) n'est pas reconstitué, il est obtenu en multipliant le CA liquides après abattements par le « rapport liquide/solides pour 1 € » de 2,94, 3,02 puis 3,10 (p. 52) ; maintenu p. 76 et 92 : le rapport « provient directement des données de la caisse », ce qui « permet, à lui seul » de valider la méthode, et les 75 % du rehaussement en sont « une conséquence directe ».",
+    "5. Le rapprochement : total reconstitué 597 265,42 / 577 522,00 / 575 252,68 € TTC contre 404 030,87 / 438 658,43 / 435 524,92 € comptabilisés, soit une « discordance » de 193 234,55 / 138 863,57 / 139 727,76 € = 471 825,88 € (p. 52), qui porte le coefficient de revente de 2,303 / 2,388 / 2,310 à 3,404 / 3,144 / 3,051 (p. 34-35) ; maintenu p. 59 et 93 : avec 3,85 × (1 − 0,15) = 3,2725, « le service n'a nullement exagéré le chiffre d'affaires reconstitué »."
+   ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le reproche de fond qui justifie, selon le service, le rejet de comptabilité puis la reconstitution, est distinct : le **coefficient de revente déclaré** ressort à 2,303 (2022-2023), 2,388 (2023-2024) et 2,310 (2024-2025), jugés « **manifestement très bas et en dehors des usages habituels de la profession** » (proposition p. 34). Le service situe l'usage « vers 3 et plus » et reconstitue le chiffre d'affaires jusqu'à ce que le coefficient atteigne 3,40 / 3,14 / 3,05. Le coefficient de 2,94 / 3,02 / 3,10, lui, n'est jamais présenté par le service comme un usage de profession : dans ses annexes D il l'intitule « **RAPPORT POUR 1 € DE CA LIQUIDE = … C-A SOLIDE** », soit un ratio interne lu dans la caisse."
+   "kind": "titre",
+   "texte": "« Les doses pour les boissons vendues » : des doses de carte figées au centilitre",
+   "numero": "1"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 36-37 et 40 du 18/05/2026 ; p. 60, 77 et 92 du 04/09/2026",
+   "resume": [
+    "Le vérificateur tire les doses « des menus et cartes des plats et boissons » : vin au verre 15 cl, pichets 50 et 75 cl, crémant et vin jaune 12 cl, macvin et vin de paille 6 cl, alcools forts 4 cl (2 cl Pontarlier, pastis, baby whisky ; 6 cl porto et martini).",
+    "Les recettes de cocktails demandées le 06/03/2026 sont « réputées confirmées » faute de réponse ; les doses de cuisine viennent du courriel des dirigeants (entrevue du 30/03/2026) : 1 cl de vin jaune ou de porto par sauce, 4 à 5 cl par plat flambé ou baba, 9 à 10 cl par fondue.",
+    "Le nombre d'articles vendables = volume disponible ÷ dose, « arrondi toujours à l'inférieur » ; aucun sur-versement n'est admis.",
+    "Réponse du 04/09 : les sur-dosages « sont fixés arbitrairement », « la réponse n'apporte aucune preuve », un verre de 15 cl sur-versé serait « d'un volume équivalent à un pichet de 25 cl, ou presque »."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "Proposition du 18/05/2026, p. 36, e) Les doses pour les boissons vendues : « Afin de se faire une idée de l'exploitation, le vérificateur a pu, d'abord, avoir accès aux menus et cartes des plats et boissons qui sont ou ont été proposés à la clientèle du restaurant. Ces documents indiquant pour une grande partie des articles, les volumes vendus à la dose aux clients, il a été possible de s'en servir pour déterminer le nombre de doses disponibles pour la clientèle sur chacun des exercices. » Pour les vins : « la société propose comme article à la vente : vin au verre (doses de 15cl), vin au pichet de 50 cl, vin au pichet de 75 cl. Ainsi, pour ces produits, la société n'hésitera donc pas à ouvrir, par exemple, une bouteille de Saint-Véran de 75 cl, pour composer des verres de 15 cl, ou des pichets de 50 cl ou telle quelle. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Les doses retenues par le service (proposition p. 36-37)",
+     "minWidth": 760,
+     "colonnes": [
+      {
+       "label": "Famille"
+      },
+      {
+       "label": "Dose retenue"
+      },
+      {
+       "label": "Origine indiquée par le service"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Vin au verre / pichet / pichet-bouteille"
+       },
+       {
+        "v": "15 cl / 50 cl / 75 cl",
+        "align": "right"
+       },
+       {
+        "v": "Carte (p. 36)"
+       }
+      ],
+      [
+       {
+        "v": "Crémant, vin jaune (verre)"
+       },
+       {
+        "v": "12 cl",
+        "align": "right"
+       },
+       {
+        "v": "Carte des boissons (p. 37)"
+       }
+      ],
+      [
+       {
+        "v": "Macvin, vin de paille (verre)"
+       },
+       {
+        "v": "6 cl",
+        "align": "right"
+       },
+       {
+        "v": "Carte des boissons (p. 37)"
+       }
+      ],
+      [
+       {
+        "v": "Alcools forts et digestifs"
+       },
+       {
+        "v": "4 cl",
+        "align": "right"
+       },
+       {
+        "v": "Carte des boissons (p. 37) ; exceptions : 2 cl Pontarlier, pastis, Ricard, baby whisky ; 6 cl porto, martini blanc"
+       }
+      ],
+      [
+       {
+        "v": "Cocktails"
+       },
+       {
+        "v": "recettes de l'entrevue du 06/03/2026",
+        "align": "right"
+       },
+       {
+        "v": "« Aucune réponse sur ce point n'ayant été adressée au service, le vérificateur ne peut que considérer que ces dosages sont confirmés » (p. 37)"
+       }
+      ],
+      [
+       {
+        "v": "Cafés"
+       },
+       {
+        "v": "7 g / 14 g",
+        "align": "right"
+       },
+       {
+        "v": "« dose normée » (p. 37), norme non citée"
+       }
+      ],
+      [
+       {
+        "v": "Cuisine : sauces jurassienne, forestière, morilles"
+       },
+       {
+        "v": "1 cl / personne",
+        "align": "right"
+       },
+       {
+        "v": "Courriel des dirigeants, entrevue du 30/03/2026 (p. 37)"
+       }
+      ],
+      [
+       {
+        "v": "Cuisine : babas, coupes, crêpes flambées, plats flambés"
+       },
+       {
+        "v": "4 cl (4 à 5 cl)",
+        "align": "right"
+       },
+       {
+        "v": "Courriel des dirigeants (p. 37)"
+       }
+      ],
+      [
+       {
+        "v": "Cuisine : fondues"
+       },
+       {
+        "v": "9 ou 10 cl / personne",
+        "align": "right"
+       },
+       {
+        "v": "Courriel des dirigeants (p. 37)"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Proposition p. 39-40, colonnes 7 à 9 du tableau de reconstitution : « Dose des verres », « Nombre d'articles à la vente (= volume disponible ÷ volume d'une dose) », « Nombre d'articles arrondi TOUJOURS à l'inférieur (au profit de la société) ». Page 40 : « D'une manière générale, les doses inscrites dans cette colonne proviennent des informations des cartes de boissons et des précisions apportées par les dirigeants. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse du 04/09/2026, p. 60, point 1 « Doses figées au centilitre (zéro sur-versement) » : « Tout d'abord, dans son hypothèse, Maître THIVEND considère donc qu'il ne peut y avoir que des sur-dosages et que ces sur-dosages expliquent tout. Puis, encore une fois, dans le tableau joint en clé USB pour soutenir cette position, tous les sur-dosages sont fixés arbitrairement pour tenter de justifier qu'il n'y a pas de ventes dissimulées. La réponse, en elle-même, n'apporte aucune preuve qu'il puisse y avoir des sur-dosages. Il s'agit d'une simple affirmation gratuite. Enfin, pourquoi les sur-dosages seraient plus importants pour des articles plutôt que pour d'autres (confère colonne du sur-versement de la réponse). À la lecture de la réponse, pour ces types de boissons, le service ne voit aucune raison de modifier sa reconstitution qui demeurera dans ses montants les mêmes que ceux figurant dans la proposition de rectifications. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 77 (partie M) : « Quant aux sur-versements, le service ne peut légitimement pas les admettre. Ils sont affirmés sans le moindre élément pour les soutenir et surtout ils semblent évaluer mathématiquement (et correspondre à ce qui figure dans la méthode de reconstitution de chiffre d'affaires), de sorte qu'il ne puisse plus y avoir de matière pour augmenter les chiffres d'affaires reconstitués. Ce constat est d'autant plus vrai que les pourcentages de sur-versements peuvent s'échelonner, suivant le type de boisson, de 20 à 50 %. Or une telle variation est tout simplement improbable dans une exploitation normale. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 92 (partie T) : la logique de Maître THIVEND conduirait à « des sur-doses sur certains alcools (vin notamment) qui aboutissent à proposer des verres de vin de 15 cl d'un volume équivalent à un pichet de 25 cl, ou presque (sur-dose sur des bouteilles de 75 cl et pichet de 50 cl => impossible) » et, « en tant que professionnels grandement expérimentés, il paraît peu probable que les dirigeants puissent aboutir à de telle sur-consommation qui vont à l'encontre d'une quelconque réalité économique »."
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Nos arguments sur ce point",
+   "items": [
+    "Une dose de carte est un prix de vente, pas une mesure : le service n'a relevé aucun doseur, pesé aucun verre, fait aucun test de service. Sur les 82 doses qu'il emploie, 71 sont chiffrées et 7 n'ont aucune origine indiquée (vin blanc du filet de poulet et de la sauce vin jaune à 2 cl, vin blanc des fondues à 10 cl, crème de cassis à 4 cl, calvados du repère D) : pièce R1-doses-origines.xlsx, onglet Doses du service, colonne E.",
+    "La même dose n'est pas stable d'un document à l'autre : macvin de cuisine 5 cl dans la proposition p. 48 (exercice 2022-2023) et 4 cl dans les annexes finales et p. 67 (exercice 2024-2025) ; calvados annoncé « à raison de 4 cl par plat » p. 65 alors que la dose implicite volume ÷ nombre de plats imprimés ressort à 3,32 / 3,41 / 3,44 cl (onglet Calvados p.65) ; vin jaune au verre 12 cl dans le texte et 6 cl dans l'en-tête du tableau p. 66.",
+    "Le sur-versement n'est pas « fixé arbitrairement » : il est pris à la valeur centrale de la littérature publiée avant le contrôle. Verre de vin mesuré 18,28 cl (Kerr 2008, intervalle de confiance à 95 % de 17,60 à 18,96 cl) contre 15 cl de carte, soit + 21,9 % ; cocktails + 41,7 % ; spiritueux + 0,7 % seulement. Pichets et bouteilles sont comptés à 0 % : aucun « pichet de 25 cl » n'existe dans notre chiffrage, l'objection de la p. 92 vise un contenant que nous n'avons jamais produit.",
+    "La demande unique est de 460,6 L sur trois exercices (vin 244,9 L + cocktails 215,3 L + spiritueux 0,4 L), soit 50,3 % de la fourchette officielle 357,7 à 562,4 L : ni opportuniste ni maximale. La « variation de 20 à 50 % » reprochée p. 77 n'existe plus ; la disparité résiduelle entre vin et cocktails est celle des deux études, non la nôtre.",
+    "Effet sur la méthode : diviser le disponible par 15 cl au lieu de 18,28 cl surcompte le nombre de verres vendables. Sur le seul exercice où l'annexe B des prix est produite (2022-2023, 6,72 €/verre) : 81,3 L = 542 verres = 3 643 € de CA liquides, portés à 12 199 € de total reconstitué par 0,85 × 3,94 ; sur trois exercices, 10 973 € de liquides et 37 500 € de total.",
+    "Cuisine : les doses du courriel des dirigeants sont retenues par le service (« le service n'a fait que suivre les recommandations des dirigeants », p. 68) mais appliquées à une partie seulement des plats. Après plafonnement aux achats facturés et déduction de ce que le service retranche déjà, 72,68 L d'alcool cuit à la carte (≈ 5 113 € TTC de CA liquides) et 20,53 L dans les plats des menus (≈ 2 737 €) restent comptés comme vendus au verre, périmètres disjoints, 93,21 L en tout.",
+    "Droit : une dose de carte et un sur-versement nul sont des « éléments prédéterminés » au sens du BOI-CF-IOR-10-20 § 200, qui impose des reconstitutions « effectuées à partir des conditions concrètes de fonctionnement de l'entreprise et non d'éléments prédéterminés ou étrangers à la gestion propre de celle-ci ». Le Conseil d'État juge « radicalement viciée » une méthode qui ignore une donnée propre à l'établissement (cafés inclus dans les menus) alors même que le vérificateur appliquait déjà une réfaction de 5 % et déduisait la consommation du personnel (CE, 3e et 8e ch., 3 novembre 2023, n° 460520, points 9 et 10) : c'est exactement la situation de l'alcool cuit dans les plats des menus."
+   ]
   },
   {
    "kind": "kpis",
    "items": [
     {
-     "label": "Coefficients de revente déclarés",
-     "valeur": "2,30 / 2,39 / 2,31",
-     "sub": "jugés « manifestement très bas » (proposition p. 34, reproduite p. 56)",
-     "couleur": "red"
+     "label": "Verre de vin servi à la main",
+     "valeur": "18,28 cl",
+     "sub": "moyenne mesurée Kerr 2008, IC 95 % 17,60 à 18,96 cl ; carte : 15 cl (+ 21,9 %)",
+     "couleur": "teal"
     },
     {
-     "label": "Coefficient « cuisine = boissons × … »",
-     "valeur": "2,94 / 3,02 / 3,10",
-     "sub": "intitulé « RAPPORT POUR 1 € DE CA LIQUIDE » au bas des annexes D : un ratio de caisse",
+     "label": "Sur-versement demandé (3 ans)",
+     "valeur": "460,6 L",
+     "sub": "vin 244,9 + cocktails 215,3 + spiritueux 0,4 ; 50,3 % de la fourchette 357,7 à 562,4 L",
+     "couleur": "teal",
+     "highlight": true
+    },
+    {
+     "label": "Effet 2022-2023 (annexe B1)",
+     "valeur": "3 643 € → 12 199 €",
+     "sub": "542 verres en trop × 6,72 € ; × 0,85 × 3,94 sur le total reconstitué",
      "couleur": "gold"
     },
     {
-     "label": "Rehaussement total (3 ans)",
-     "valeur": "471 826 €",
-     "sub": "1 750 040 € reconstitués − 1 278 214 € déclarés",
+     "label": "Doses sans origine indiquée",
+     "valeur": "7 sur 82",
+     "sub": "R1-doses-origines.xlsx, onglet Doses du service ; cuisine : amplitude de 1 à 10 cl",
      "couleur": "red"
     }
    ]
   },
   {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Notre réponse : deux critiques distinctes, et une concession assumée",
-   "sousTitre": "La première critique vise la cuisine extrapolée, sans dépendre du coefficient ; la seconde mesure la sensibilité de la méthode au CA liquides. La concession porte sur l'arithmétique du repère de 3,2725, non sur sa valeur de preuve."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Les trois grandeurs porteuses du débat sont d'abord posées sur la page, à partir des annexes D du service et de sa reconstitution (proposition p. 52). Elles sont recalculées par formule dans la pièce jointe."
-  },
-  {
    "kind": "tableau",
-   "titre": "Le socle chiffré : ce que la caisse enregistre, ce que le service reconstitue",
+   "titre": "Ce que le service dit des doses, et ce que ses propres pages montrent",
    "minWidth": 900,
    "colonnes": [
-    { "label": "Exercice" },
-    { "label": "CA liquides réel (annexe D)", "align": "right" },
-    { "label": "CA liquides reconstitué", "align": "right" },
-    { "label": "Gonflement des liquides", "align": "right" },
-    { "label": "Cuisine réelle (annexe D)", "align": "right" },
-    { "label": "Cuisine extrapolée (p. 52)", "align": "right" },
-    { "label": "Cuisine extrapolée en trop", "align": "right" }
+    {
+     "label": "Dose"
+    },
+    {
+     "label": "Ce que le service écrit"
+    },
+    {
+     "label": "Ce que ses pages montrent"
+    },
+    {
+     "label": "Source"
+    }
    ],
    "lignes": [
-    [ {"v":"2022-2023"}, {"v":"102 425 €","align":"right"}, {"v":"151 590 €","align":"right"}, {"v":"+ 48,0 %","align":"right"}, {"v":"300 747 €","align":"right"}, {"v":"445 675 €","align":"right"}, {"v":"144 928 €","align":"right"} ],
-    [ {"v":"2023-2024"}, {"v":"108 919 €","align":"right"}, {"v":"143 662 €","align":"right"}, {"v":"+ 31,9 %","align":"right"}, {"v":"329 362 €","align":"right"}, {"v":"433 860 €","align":"right"}, {"v":"104 498 €","align":"right"} ],
-    [ {"v":"2024-2025"}, {"v":"106 113 €","align":"right"}, {"v":"140 306 €","align":"right"}, {"v":"+ 32,2 %","align":"right"}, {"v":"329 452 €","align":"right"}, {"v":"434 947 €","align":"right"}, {"v":"105 495 €","align":"right"} ],
-    [ {"v":"Total 3 ans"}, {"v":"317 458 €","align":"right"}, {"v":"435 558 €","align":"right"}, {"v":"","align":"right"}, {"v":"959 561 €","align":"right"}, {"v":"1 314 482 €","align":"right"}, {"v":"354 921 €","align":"right","badge":"ko"} ]
+    [
+     {
+      "v": "Calvados en cuisine"
+     },
+     {
+      "v": "« Volume consommé (à raison de 4 cl par plat) » (p. 65)"
+     },
+     {
+      "v": "3 310 cl ÷ 997 plats = 3,32 cl ; 3 002 ÷ 880 = 3,41 cl ; 3 005 ÷ 873 = 3,44 cl : la colonne « nombre de plats » n'est pas celle du calcul (827,58 plats pondérés)",
+      "badge": "ko"
+     },
+     {
+      "v": "R1-doses-origines, onglet Calvados p.65"
+     }
+    ],
+    [
+     {
+      "v": "Macvin en cuisine"
+     },
+     {
+      "v": "« 5 centilitres selon les dirigeants » (proposition p. 48)"
+     },
+     {
+      "v": "4 cl dans les annexes finales (exercice 2024-2025 : 2 244 cl ÷ 561 babas) et en en-tête p. 67",
+      "badge": "ko"
+     },
+     {
+      "v": "onglet Doses implicites annexes"
+     }
+    ],
+    [
+     {
+      "v": "Vin jaune au verre"
+     },
+     {
+      "v": "12 cl (p. 37 et p. 66, texte)"
+     },
+     {
+      "v": "6 cl dans l'en-tête du tableau de la p. 66",
+      "badge": "ko"
+     },
+     {
+      "v": "onglet Doses du service, ligne p. 66"
+     }
+    ],
+    [
+     {
+      "v": "Vin jaune de cuisine, exercices 2 et 3"
+     },
+     {
+      "v": "3 693 cl et 3 748 cl (p. 66)"
+     },
+     {
+      "v": "Non reproductibles à partir des nombres imprimés : 1 449 + 10 × 247 = 3 919 cl ; 1 748 + 10 × 189 = 3 638 cl",
+      "badge": "ko"
+     },
+     {
+      "v": "onglet Reproductibilite p.66-67"
+     }
+    ],
+    [
+     {
+      "v": "Vin au verre"
+     },
+     {
+      "v": "15 cl, « doses de 15cl » (p. 36)"
+     },
+     {
+      "v": "18,28 cl mesurés en service à la main (Kerr 2008) ; 0 % de sur-versement au pichet et à la bouteille",
+      "badge": "ok"
+     },
+     {
+      "v": "R2-sur-versement-fourchette-officielle"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-doses-origines.xlsx",
+     "label": "Les 82 doses retenues par le service avec l'origine qu'il leur donne (71 chiffrées, 7 sans origine indiquée), dose implicite du Calvados p. 65 (3,32 à 3,44 cl pour 4 cl annoncés), reproductibilité des repères E, G et Q (onglets Doses du service, Calvados p.65, Reproductibilite p.66-67, Doses implicites annexes, Sources)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-sur-versement-fourchette-officielle.xlsx",
+     "label": "Fourchette officielle du sur-versement (IC 95 % de Kerr 2008) : 357,7 à 562,4 L, demande de 460,6 L à 50,3 % de la fourchette, verre de vin 18,28 cl (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-sur-versement-chiffrage.xlsx",
+     "label": "Chiffrage du sur-versement en euros sur l'exercice 2022-2023 (annexe B1, 6,72 €/verre) : 81,3 L = 542 verres = 3 643 € de CA liquides, 12 199 € de total reconstitué (à formules)"
+    }
    ]
   },
   {
    "kind": "titre",
-   "texte": "Première critique : 354 921 € de cuisine extrapolée sans aucune constatation propre à la cuisine",
-   "numero": "2.1"
+   "texte": "« Les quantités disponibles » : achats + stock initial − stock final, divisés par la dose et multipliés par le prix moyen",
+   "numero": "2"
   },
   {
-   "kind": "paragraphe",
-   "texte": "Le coefficient de 2,94 / 3,02 / 3,10 est le rapport cuisine/boissons mesuré dans la caisse, sur un **couple de montants réels** : 102 425 € de liquides et 300 747 € de cuisine en 2022-2023. Le service applique ensuite ce rapport à un CA liquides **supérieur** de 48 % à celui qu'il a lui-même relevé, sans articuler la moindre constatation sur la cuisine : ni couvert supplémentaire, ni commande non enregistrée, ni achat alimentaire en excès. La cuisine, elle, est enregistrée plat par plat dans les annexes C ; le service ne la conteste ni dans son volume, ni dans ses couverts. Elle était donc directement mesurable, et n'avait pas à être déduite des boissons."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Cette critique ne dépend d'aucun effet d'amplification : elle confronte la cuisine **enregistrée** (959 561 € sur trois exercices) à la cuisine **extrapolée** (1 314 482 €). L'écart de **354 921 €**, soit **75,2 % du rehaussement de 471 826 €**, ne repose sur aucune pièce propre à la cuisine. Le service l'assume d'ailleurs comme une conséquence mécanique de sa méthode : « il est normal que les rehaussements proposés correspondent à 75 % puisqu'il s'agit d'une conséquence directe du rapport » (p. 92). La normalité arithmétique d'un résultat ne lui tient pas lieu de preuve."
-  },
-  {
-   "kind": "titre",
-   "texte": "Seconde critique : la sensibilité de la méthode au CA liquides",
-   "numero": "2.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le total reconstitué s'écrit « CA liquides × (1 + coefficient) ». Une variation du CA liquides ne se répercute donc pas à l'unité sur le total : elle est multipliée par un facteur de **3,94 / 4,02 / 4,10** selon l'exercice. C'est la traduction exacte de la méthode du service, et non un double compte, comme il l'objecte (p. 92) : L + L × r = L × (1 + r). Il en résulte que les corrections de volumes établies poste par poste (sur-versement au verre, crémant jeté, dégustation, freinte de la bière, alcool de cuisine, alcool des menus) sont, chacune, amplifiées d'environ quatre fois sur le total reconstitué."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Cette seconde critique est **conditionnelle** et doit être présentée comme telle : le levier ne joue en faveur de la défense que dans la mesure où la sur-évaluation des liquides est établie dans les pages qui lui sont consacrées. À CA liquides exact, le facteur 1 + coefficient s'appliquerait à une base exacte et ne produirait aucune réduction. Le levier mesure donc l'enjeu des corrections de liquides ; il ne les démontre pas."
+   "kind": "reproche",
+   "page": "p. 36 et 38-41 du 18/05/2026, annexes 6-1 à 6-3 et 7-1 à 7-3 ; p. 59-60 et 74 du 04/09/2026",
+   "resume": [
+    "Première étape : les inventaires de stocks de la société, « bien qu'ils ne puissent pas être considérés comme respectueux de toutes les règles comptables », donnent « une idée assez précise des quantités en stocks » du 01/04/2022 au 31/03/2025 ; deuxième étape : les factures Franche Comté Boissons Service et Intermarché ; troisième : les quantités disponibles par type de boisson (annexes 6-1 à 6-3).",
+    "Pour chaque famille, un tableau en 14 colonnes : quantités disponibles, volume en centilitres, proportions « prédéterminées par les données de caisse », volume par type d'article, dose, nombre d'articles, prix moyen, CA reconstitué TTC, TVA.",
+    "Repère (3) : « volumes disparus » = (disponible − vendu) ÷ disponible, comparés en partie XIV « Anomalies sur la comptabilité matière » ; repères A à T pour ne pas compter deux fois une matière (cuisine, cocktails).",
+    "Réponse du 04/09 p. 59 : le service reproduit l'encadré des 10 622 L (107 924 €, 85,5 % justifiés, 14,5 % de résidu) sans y répondre ; p. 74 : « La réponse se base sur un montant en euros. Or, la reconstitution ne s'est basée que des volumes en stocks. »"
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "Proposition p. 36, I- Éléments de bases de la reconstitution : « a) Les stocks de liquides : La première étape de cette méthode a été d'obtenir les inventaires de stocks de la société. Bien qu'ils ne puissent pas être considérés comme respectueux de toutes les règles comptables, ils permettent, néanmoins, au service de se faire une idée assez précise des quantités en stocks du début de la période vérifiée (c-à-d le 01/04/2022) jusqu'à sa fin (le 31/03/2025). b) Les achats : Les annexes n°2, n°3 n°4 et n°5 constituent la deuxième étape de la méthode. A partir des factures d'achat des fournisseurs de boissons (Franche Comté Boissons Service et Intermarché), le service a pu établir pour chaque type de boissons, et chaque facture, les quantités achetées. c) Les quantités Disponibles : Grâce aux deux étapes précédentes, le service a pu établir les quantités disponibles à l'exploitation pour chaque type de boissons. Ce sont les annexes n°6-1 (exercice clos au 31 mars 2023), 6-2 (exercice clos au 31 mars 2024) et 6-3 (exercice clos au 31 mars 2025) qui compilent les données pour établir ces quantités disponibles. d) Les prix : [...] Il a ainsi été possible de déterminer les prix moyens pratiqués pour chacune des boissons vendues. Ces prix figurent en annexes D-1, D-2, D-3. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Le tableau de reconstitution du service, colonne par colonne (proposition p. 39-40)",
+     "minWidth": 620,
+     "colonnes": [
+      {
+       "label": "Colonne"
+      },
+      {
+       "label": "Contenu"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "1"
+       },
+       {
+        "v": "Quantités disponibles (en bouteilles ou BIB), issues de l'annexe n° 6"
+       }
+      ],
+      [
+       {
+        "v": "2 et 3"
+       },
+       {
+        "v": "Désignation de la boisson avec sa contenance ; volume disponible total en centilitres"
+       }
+      ],
+      [
+       {
+        "v": "4 et 5"
+       },
+       {
+        "v": "Type d'article (verre 15 cl, pichet 50 cl, pichet/bouteille 75 cl, vin jaune, macvin, cocktails...) et proportions « prédéterminées par les données de caisse »"
+       }
+      ],
+      [
+       {
+        "v": "6"
+       },
+       {
+        "v": "Volume disponible par type d'article = proportion × volume total"
+       }
+      ],
+      [
+       {
+        "v": "7 à 9"
+       },
+       {
+        "v": "Dose ; nombre d'articles = volume ÷ dose ; nombre arrondi « TOUJOURS à l'inférieur »"
+       }
+      ],
+      [
+       {
+        "v": "10 et 11"
+       },
+       {
+        "v": "Prix de vente moyen de caisse (annexes D) ; CA reconstitué TTC = colonne 9 × colonne 10"
+       }
+      ],
+      [
+       {
+        "v": "12 à 14"
+       },
+       {
+        "v": "Taux de TVA, CA HT, TVA"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Proposition p. 41, II-3) Indication spécifique, les volumes disparus : un repère (3) « met en évidence la proportion d'articles/volumes absents de la caisse par rapport aux achats » par la formule (Quantités disponibles − Quantités vendues) ÷ Quantités disponibles ; les comparaisons sont détaillées en partie XIV « Anomalies sur la comptabilité matière ». Pages 41 à 50 : repères A-1 et A-2 (vin blanc de cuisine et des kirs), B à T (sirops, alcools forts des coupes, calvados, vin jaune, Pontarlier, porto, crèmes, crémant, macvin, Soho, vodka, Passoa, Picon, bière, jus de fruits), chaque repère neutralisant « le volume déjà valorisé ailleurs ». Exemple p. 44, repère D : 512 camemberts rôtis + 222 assiettes du Père Grégoire + 263 menus végétariens × 35,58 % = 94, à 4 cl, soit 3 310 cl de calvados."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse du 04/09/2026, p. 59, partie L : « Maître THIVEND commence par indiquer : À partir des achats de boissons et de doses standard, le service reconstitue un CA « liquides » puis l'extrapole à la cuisine (x coefficient), d'où une minoration alléguée. Recalculé sur les achats et la caisse réels, le manquant retombe à la perte normale d'un bar ; en réinjectant les vraies ventes dans la formule du service, la discordance s'inverse. » Suivent l'encadré « 10 622 L, 85,5 %, 14,5 % » et la phrase : « Et rappeler les éléments généraux de la méthode de reconstitution du service (les volumes disponibles, les doses, les prix moyens, les coefficients). » Page 60 : « Puis, il considère la méthode comme non probante et appuie ces positions en abordant onze points successifs ». Aucune rubrique « Réponse du service » ne figure sur la page 59."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 74, point 9 : « La réponse se base sur un montant en euros. Or, la reconstitution ne s'est basée que des volumes en stocks. » ; p. 74-75, point 10 : « Dans la méthode de reconstitution, les ventes sans achats n'ont pas entraîné de chiffre d'affaires reconstitué », elles « permettent uniquement de montrer des incohérences ». Page 77 (partie M) : « tout au long des parties précédentes, le service s'est attaché à contredire chacun des arguments qui ont été avancés. Le service a même montré qu'il proposait plus de pertes, d'offerts et de consommation du personnel que la réponse le demande. »"
+    }
+   ]
   },
   {
    "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 570 128\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"24\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">1 € de CA liquides</text><text x=\"89\" y=\"78\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">+ 1 € d'écart</text><text x=\"89\" y=\"94\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">(si sur-évalué)</text><line x1=\"164\" y1=\"63\" x2=\"201\" y2=\"63\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 58 L 210 63 L 201 68 Z\" fill=\"#cbb98f\"/><rect x=\"210\" y=\"24\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"285\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">× (1 + coefficient)</text><text x=\"285\" y=\"78\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">coefficient ≈ 3</text><text x=\"285\" y=\"94\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">1 € liquide + ≈ 3 € cuisine</text><line x1=\"360\" y1=\"63\" x2=\"397\" y2=\"63\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 58 L 406 63 L 397 68 Z\" fill=\"#cbb98f\"/><text x=\"383\" y=\"55\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">=</text><rect x=\"406\" y=\"24\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"481\" y=\"46\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">effet sur le total</text><text x=\"481\" y=\"78\" text-anchor=\"middle\" font-size=\"16\" font-weight=\"700\" fill=\"#2a2015\">3,94 / 4,02 / 4,10</text><text x=\"481\" y=\"94\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= 1 + coefficient</text></svg>",
+   "svg": "<svg viewBox=\"0 0 962 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Disponible</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">achats ± stock</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">annexes 6-1 à 6-3</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">÷ dose figée</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">15 / 50 / 75 cl</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">4 cl alcools forts</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">× prix moyen</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">CA liquides</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">512 421 € sur 3 ans</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">− 5 + 5 + 5 %</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">× 0,85</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">435 558 € sur 3 ans</text><line x1=\"752\" y1=\"59.0\" x2=\"789\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 789 54.0 L 798 59.0 L 789 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"798\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"873.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">× (1 + coef.)</text><text x=\"873.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">× 3,94 à 4,10</text><text x=\"873.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">1 750 040 € sur 3 ans</text></svg>",
+   "titre": "La chaîne de calcul du service, en cinq étapes (montants cumulés des trois exercices, proposition p. 52)",
+   "legende": "Disponible (achats ± stock) ÷ dose × prix moyen = 512 421 € de CA liquides avant abattements ; × 0,85 = 435 558 € ; × (1 + coefficient) = 1 750 040 € de total reconstitué, contre 1 278 214 € déclarés. Seuls le prix moyen et le coefficient sont lus dans l'exploitation ; la dose, les 5 + 5 + 5 % et l'extrapolation sont posés de l'extérieur."
+  },
+  {
+   "kind": "liste",
+   "titre": "Nos arguments sur ce point",
+   "items": [
+    "Le disponible du service repose sur les inventaires de la société, qu'il déclare par ailleurs non probants : la variation de stock boissons qu'il porte au compte 310200 (− 800,83 / − 1 029,67 / − 273,41 €) est, pour 2023-2024, exactement la différence de nos deux inventaires datés (3 777,99 − 4 807,66 = − 1 029,67 €, écart 0,00). Le même état ne peut pas valoir pour fixer le disponible et être écarté pour le reste.",
+    "Le stock est plat : variation cumulée − 2 103,91 € pour 141 720,38 € d'achats (1,48 %), consommation 139 616,47 € = 98,52 % des achats. Rien n'est « planqué » en cave ; tout litre acheté est consommé ou perdu dans l'exercice. Le point 9 (variation de stock) est retiré : aucun euro n'est demandé de ce chef.",
+    "Un litre acheté est soit vendu, soit en stock, soit consommé sans vente, soit perdu : la cascade des 10 622 L remplit ces termes poste par poste et laisse le dernier se déduire comme solde. Revendu au verre et en cocktails : 6 455 L = 60,77 % ; attribué à un poste identifié : 8 567 L = 80,7 % ; perte pure (casse, évaporation, fonds de verre, rinçage) : 2 055 L = 19,3 %, qui n'est pas un taux posé mais un résidu. La cascade boucle à 10 622 L (13 contrôles arithmétiques sur 13, pièce R1-cascade-nature-des-chiffres, onglet 4).",
+    "Les « volumes disparus » du repère (3) ne sont pas une matière absente : la propre comptabilité matière du service (p. 34-35) est équilibrée, achats + variation = consommation. Un « disparu » est un litre consommé sans recette au tarif théorique d'une dose, c'est-à-dire l'écart que la méthode fabrique, pas un manquant physique.",
+    "Les « ventes sans achat » qui alimentent la partie XIV sont des confusions de code : « Mouton Cadet » = Château Grand Renom (code 661236), « Hautes Côtes de Nuits » = blanc Lupé-Cholet (code 601416) et non le Hautes Côtes de Beaune rouge, 8 codes-bières jamais paramétrés, Cubis 426,9 L réattribué aux vins maison. Le service le concède p. 74 : elles « n'ont pas entraîné de chiffre d'affaires reconstitué ». Reste assumé : 1 bouteille de Bordeaux (75 cl, ≤ 30 € HT) sortie sans vente en 2022-2023, et 12 produits dont la consommation dépasse les achats pour 708,3 L (Calvados 110,7 L consommés pour 73,0 L achetés), défauts de paramétrage sans recette occulte démontrée.",
+    "Sur les 19 rubriques « Réponse du service » du bloc reconstitution (p. 59 à 92), 18 n'opposent aucun volume mesuré : les seuls litres cités (2 132 L au total : 198 et 500 L au titre du 15 %, 93, 111, 15 et 240 L des repères D, E, G, Q, 796,43 L sur les BIB, 33,28 L sur les crèmes, 83,84 et 61,46 L au titre du 5 %) sont le produit de ses propres taux ou de ses propres colonnes ; 16 fois la conclusion est une formule de non-modification (14 fois p. 60 à 89, 2 fois p. 77 et 82). Le rehaussement est resté identique au centime.",
+    "Droit : la preuve du bien-fondé des rehaussements incombe à l'administration tant que ni le défaut de présentation de la comptabilité ni un avis conforme de la commission ne sont acquis (art. L. 192 LPF, commenté au BOI-CF-IOR-10-20 § 270 et 280 ; CE, 9e ch., 5 janvier 2023, n° 452595, point 2). Le BOFiP range lui-même parmi les comptabilités qui ne peuvent être rejetées globalement celle « dont les résultats sont corroborés par les indications tirées de la reconstitution d'une comptabilité-matières et les explications fournies au sujet de la casse, de la perte ou du vol de certains articles » (§ 110, citant CE 7 novembre 1975 n° 90786). Et le juge qui écarte les critiques du contribuable « sans se prononcer sur la méthode alternative de reconstitution des recettes » qu'il propose commet une erreur de droit (CE, 3e ch., 10 juillet 2024, n° 470817) : la cascade est cette méthode alternative, elle doit être examinée."
+   ]
+  },
+  {
+   "kind": "barreComposition",
+   "titre": "Où passent les 10 622 L d'alcool achetés sur trois exercices (R1-cascade-bilan-matiere.xlsx, onglet 1)",
+   "sousTitre": "Chaque segment est mesuré (caisse, inventaire), calculé (quantité de caisse × dose ou recette) ou estimé (taux publié appliqué à une assiette de caisse) ; le résidu est le solde, sans taux ni hypothèse.",
+   "unite": "L",
+   "total": 10622,
+   "segments": [
+    {
+     "label": "Vendu au verre",
+     "valeur": 5457,
+     "categorie": "mesure"
+    },
+    {
+     "label": "Vendu en cocktails",
+     "valeur": 998,
+     "categorie": "calcul"
+    },
+    {
+     "label": "Stock final",
+     "valeur": 213,
+     "categorie": "mesure"
+    },
+    {
+     "label": "Cuisine et menus",
+     "valeur": 741,
+     "categorie": "calcul"
+    },
+    {
+     "label": "Crémant non vendu",
+     "valeur": 272,
+     "categorie": "calcul"
+    },
+    {
+     "label": "Sur-versement",
+     "valeur": 483,
+     "categorie": "estime"
+    },
+    {
+     "label": "Dégustation",
+     "valeur": 126,
+     "categorie": "mesure"
+    },
+    {
+     "label": "Freinte bière",
+     "valeur": 120,
+     "categorie": "estime"
+    },
+    {
+     "label": "Conso du chef",
+     "valeur": 143,
+     "categorie": "estime"
+    },
+    {
+     "label": "Offerts",
+     "valeur": 14,
+     "categorie": "estime"
+    },
+    {
+     "label": "Perte pure (résidu)",
+     "valeur": 2055,
+     "categorie": "residuel"
+    }
+   ],
+   "legende": true
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le bilan matière des 10 622 L, poste par poste",
+   "minWidth": 960,
+   "colonnes": [
+    {
+     "label": "Poste"
+    },
+    {
+     "label": "Litres",
+     "align": "right"
+    },
+    {
+     "label": "Part des achats",
+     "align": "right"
+    },
+    {
+     "label": "Nature"
+    },
+    {
+     "label": "Ce qui est compté, et par quoi il est converti"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Vendu au verre"
+     },
+     {
+      "v": "5 457",
+      "align": "right"
+     },
+     {
+      "v": "51,4 %",
+      "align": "right"
+     },
+     {
+      "v": "mesuré"
+     },
+     {
+      "v": "19 906 articles sur 85 formats, annexes C-1 à C-3, × contenance de la carte ; articles mixtes (panaché, Monaco, Picon) retirés une seule fois"
+     }
+    ],
+    [
+     {
+      "v": "Vendu en cocktails"
+     },
+     {
+      "v": "998",
+      "align": "right"
+     },
+     {
+      "v": "9,4 %",
+      "align": "right"
+     },
+     {
+      "v": "calculé"
+     },
+     {
+      "v": "10 997 cocktails sur 20 recettes × recette de la carte"
+     }
+    ],
+    [
+     {
+      "v": "Cuisine et alcool des menus"
+     },
+     {
+      "v": "741",
+      "align": "right"
+     },
+     {
+      "v": "7,0 %",
+      "align": "right"
+     },
+     {
+      "v": "calculé"
+     },
+     {
+      "v": "Plats et menus vendus × dose du courriel du 30/03/2026, plafonné aux achats facturés"
+     }
+    ],
+    [
+     {
+      "v": "Crémant non vendu"
+     },
+     {
+      "v": "272",
+      "align": "right"
+     },
+     {
+      "v": "2,6 %",
+      "align": "right"
+     },
+     {
+      "v": "calculé"
+     },
+     {
+      "v": "Disponible du service 666,00 L − servi d'après la caisse 393,98 L, borné par le stock"
+     }
+    ],
+    [
+     {
+      "v": "Sur-versement au verre"
+     },
+     {
+      "v": "483",
+      "align": "right"
+     },
+     {
+      "v": "4,5 %",
+      "align": "right"
+     },
+     {
+      "v": "estimé"
+     },
+     {
+      "v": "Taux publiés sur 1 653,19 L versés à la main ; chiffrage affiné à 460,6 L (fourchette 357,7 à 562,4 L), l'écart de 22,4 L allant au résidu, sans effet sur la part revendue"
+     }
+    ],
+    [
+     {
+      "v": "Dégustation offerte"
+     },
+     {
+      "v": "126",
+      "align": "right"
+     },
+     {
+      "v": "1,2 %",
+      "align": "right"
+     },
+     {
+      "v": "mesuré"
+     },
+     {
+      "v": "6 292 notes avec un vin nommé × 2 cl ; tracé à 0 € en caisse : 1,85 L seulement"
+     }
+    ],
+    [
+     {
+      "v": "Freinte technique de la bière"
+     },
+     {
+      "v": "120",
+      "align": "right"
+     },
+     {
+      "v": "1,1 %",
+      "align": "right"
+     },
+     {
+      "v": "estimé"
+     },
+     {
+      "v": "10 % de 1 205 L réellement sortis du fût ; le service retient lui-même 30 % cumulés sur la bière (p. 83)"
+     }
+    ],
+    [
+     {
+      "v": "Consommation du chef"
+     },
+     {
+      "v": "143",
+      "align": "right"
+     },
+     {
+      "v": "1,3 %",
+      "align": "right"
+     },
+     {
+      "v": "estimé"
+     },
+     {
+      "v": "Base journalière déclarée × 662 jours (macvin 99,3 L, Picon 43,7 L)"
+     }
+    ],
+    [
+     {
+      "v": "Offerts non enregistrés"
+     },
+     {
+      "v": "14",
+      "align": "right"
+     },
+     {
+      "v": "0,1 %",
+      "align": "right"
+     },
+     {
+      "v": "estimé"
+     },
+     {
+      "v": "Un apéritif de 6 cl par jour, moins 25,75 L déjà à 0,00 € dans la caisse"
+     }
+    ],
+    [
+     {
+      "v": "Stock final"
+     },
+     {
+      "v": "213",
+      "align": "right"
+     },
+     {
+      "v": "2,0 %",
+      "align": "right"
+     },
+     {
+      "v": "mesuré"
+     },
+     {
+      "v": "Inventaire de clôture au 31/03/2025, 64 boissons alcoolisées"
+     }
+    ],
+    [
+     {
+      "v": "Total attribué à un poste identifié"
+     },
+     {
+      "v": "8 567",
+      "align": "right"
+     },
+     {
+      "v": "80,7 %",
+      "align": "right"
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": ""
+     }
+    ],
+    [
+     {
+      "v": "Perte pure : casse, évaporation, fonds de verre, rinçage"
+     },
+     {
+      "v": "2 055",
+      "align": "right"
+     },
+     {
+      "v": "19,3 %",
+      "align": "right"
+     },
+     {
+      "v": "résidu",
+      "badge": "ko"
+     },
+     {
+      "v": "Solde du bilan : aucun taux, aucune hypothèse"
+     }
+    ],
+    [
+     {
+      "v": "Total acheté (factures)"
+     },
+     {
+      "v": "10 622",
+      "align": "right"
+     },
+     {
+      "v": "100 %",
+      "align": "right"
+     },
+     {
+      "v": ""
+     },
+     {
+      "v": "Revendu au verre et en cocktails : 6 455 L = 60,77 %"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Les 19 rubriques « Réponse du service » du bloc reconstitution (04/09/2026, p. 59 à 92)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Type de chiffre opposé"
+    },
+    {
+     "label": "Exemple, avec sa page"
+    },
+    {
+     "label": "Mesure-t-il le poste ?"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Aucun chiffre (7 rubriques)"
+     },
+     {
+      "v": "« La réponse se base sur un montant en euros. Or, la reconstitution ne s'est basée que des volumes en stocks. » (p. 74) ; « ce rapport liquides/solides provient directement des données de la caisse » (p. 76)"
+     },
+     {
+      "v": "non",
+      "badge": "ko"
+     }
+    ],
+    [
+     {
+      "v": "Abattement de sa propre méthode (8 rubriques)"
+     },
+     {
+      "v": "« le service a déjà retenu un taux offert/perte/consommation du personnel de 15 % » (p. 64) ; « 5 % de ce volume correspondent donc à 83,84 litres » (p. 71)"
+     },
+     {
+      "v": "non : c'est son forfait, pas un relevé",
+      "badge": "ko"
+     }
+    ],
+    [
+     {
+      "v": "Calcul de cohérence (4 rubriques)"
+     },
+     {
+      "v": "« 93,20 litres sur les 206,25 litres disponibles seraient jetés, soit 45,18 % de pertes » (p. 63) ; tableaux « Volume consommé / Données de la caisse / Volume disponible » (p. 65 à 68)"
+     },
+     {
+      "v": "non : une impossibilité alléguée n'est pas une mesure",
+      "badge": "ko"
+     }
+    ],
+    [
+     {
+      "v": "Concession (1 rubrique)"
+     },
+     {
+      "v": "« Dans la méthode de reconstitution, les ventes sans achats n'ont pas entraîné de chiffre d'affaires reconstitué. » (p. 74)"
+     },
+     {
+      "v": "sans objet : le grief est abandonné",
+      "badge": "ok"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-cascade-bilan-matiere.xlsx",
+     "label": "Bilan matière des 10 622 L : onglet 1. Cascade (postes, litres, part des achats, nature du chiffre, source), 2. Nature des postes, 3. Doubles comptages retirés (321,74 L), 4. Forfait vs itemisation (1 593,3 L = 76 863,18 €)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cascade-nature-des-chiffres.xlsx",
+     "label": "Pour chaque poste : grandeur comptée, nombre compté, coefficient appliqué et son origine, position du service sur ce même coefficient ; 13 contrôles arithmétiques (onglet 4-Contrôles, 13 OK sur 13)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-releve-reponses-service.xlsx",
+     "label": "Relevé des 20 rubriques du bloc reconstitution de la réponse du 04/09/2026 (p. 59 à 92) : nature des chiffres opposés, volume mesuré opposé ou non, 16 formules de non-modification avec leurs pages"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-stock-variation-310200.xlsx",
+     "label": "Compte 310200 du service (− 800,83 / − 1 029,67 / − 273,41 €), achats 601200 (141 720,38 €), poids 1,48 %, consommation 98,52 % ; rapprochement avec les inventaires datés 3 777,99 / 4 807,66 / 4 534,25 € (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
+     "label": "Bilan produit par produit : achats 10 622,0 L, consommation 7 351,1 L, inventaire 213,3 L, 12 produits consommation > achats = 708,3 L, Calvados 110,7 L (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-correspondance-libelles.xlsx",
+     "label": "Correspondance bouton de caisse / facture / inventaire : Mouton Cadet = Château Grand Renom (code 661236), « Hautes Côtes de Nuits » = blanc Lupé-Cholet (code 601416), 8 codes-bières jamais paramétrés, Cubis 426,9 L réattribué"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "« Les offerts, les remises, les gratuits et les pertes » : 5 % + 5 % + 5 % du CA reconstitué et 15 % de la bière",
+   "numero": "3"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 51 du 18/05/2026 ; p. 71-73 et 89 du 04/09/2026",
+   "resume": [
+    "La société « n'a enregistré aucun gratuit/offert dans les données de la caisse » ; les remises (plats « modifiés ») sont « totalement impossible[s] » à identifier.",
+    "Le vérificateur applique « à la fin de la méthode » 5 % du CA reconstitué pour les offerts et remises, 5 % pour les pertes, 5 % pour la consommation du personnel, et retranche 15 % du volume de bière acheté et disponible.",
+    "Réponse du 04/09 : les offerts tracés ne pèsent que 0,28 % ; les 5 % de chaque abattement « minore[nt] le montant du chiffre d'affaires TTC reconstitué à hauteur de 35 133,26 € » sur le premier exercice, « 8,70 % du chiffre d'affaires TTC déclaré », soit 105 399,78 € sur trois exercices ; la loi interdit l'alcool aux salariés ; les DADS ne portent que 3 507 / 3 555 / 3 957 € d'avantages en nature.",
+    "Conclusion : « le service est allé bien au-delà de ce que Maître THIVEND propose » ; reconstitution inchangée."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "Proposition p. 51, IV- Les offerts, les remises, les gratuits et les pertes : « Comme les dirigeants ont pu l'exposer, la société n'a enregistré aucun gratuit/offert dans les données de la caisse informatique. En matière de remises, les dirigeants ont expliqué qu'il pouvait moduler le prix lorsqu'un client souhaitait un plat « modifié » que ce soit en plus ou en moins, par exemple avec/sans une sauce ou tout autre hypothèse. Mais là encore, des données de la caisse, telle qu'elles ont été transmises, il est totalement impossible de pouvoir identifier, avec certitude, les produits qui ont pu fait l'objet de ce type de pratiques commerciales. C'est pour cela que le vérificateur, à la fin de la méthode de reconstitution, a décidé d'appliquer successivement : 5 % du chiffre d'affaires reconstitué pour représenter les offerts/remises qui ont bénéficié à la clientèle ; 5 % du chiffre d'affaires reconstitué pour représenter les pertes qui ont affecté l'exploitation de la société ; 5 % du chiffre d'affaires reconstitué pour tenir compte de la consommation du personnel. Enfin, en plus de toutes ces prises en compte par le vérificateur, il y a également une part de 15 % supplémentaire sur le volume de bière acheté et disponible qui a été retranchée. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Les abattements tels que le service les chiffre (proposition p. 52)",
+     "minWidth": 820,
+     "colonnes": [
+      {
+       "label": "Exercice"
+      },
+      {
+       "label": "CA liquides avant abattements",
+       "align": "right"
+      },
+      {
+       "label": "Remise 5 %",
+       "align": "right"
+      },
+      {
+       "label": "Pertes 5 %",
+       "align": "right"
+      },
+      {
+       "label": "Personnel 5 %",
+       "align": "right"
+      },
+      {
+       "label": "CA liquides après",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "2022-2023"
+       },
+       {
+        "v": "178 341,42 €",
+        "align": "right"
+       },
+       {
+        "v": "8 917,07 €",
+        "align": "right"
+       },
+       {
+        "v": "8 917,07 €",
+        "align": "right"
+       },
+       {
+        "v": "8 917,07 €",
+        "align": "right"
+       },
+       {
+        "v": "151 590,21 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2023-2024"
+       },
+       {
+        "v": "169 014,34 €",
+        "align": "right"
+       },
+       {
+        "v": "8 450,72 €",
+        "align": "right"
+       },
+       {
+        "v": "8 450,72 €",
+        "align": "right"
+       },
+       {
+        "v": "8 450,72 €",
+        "align": "right"
+       },
+       {
+        "v": "143 662,19 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2024-2025"
+       },
+       {
+        "v": "165 065,33 €",
+        "align": "right"
+       },
+       {
+        "v": "8 253,27 €",
+        "align": "right"
+       },
+       {
+        "v": "8 253,27 €",
+        "align": "right"
+       },
+       {
+        "v": "8 253,27 €",
+        "align": "right"
+       },
+       {
+        "v": "140 305,53 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total 3 ans"
+       },
+       {
+        "v": "512 421,09 €",
+        "align": "right"
+       },
+       {
+        "v": "25 621,06 €",
+        "align": "right"
+       },
+       {
+        "v": "25 621,06 €",
+        "align": "right"
+       },
+       {
+        "v": "25 621,06 €",
+        "align": "right"
+       },
+       {
+        "v": "435 557,93 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse du 04/09/2026, p. 71 (point 7) : « L'ensemble du volume de vin disponible représente donc 1676,83 litres. 5 % de ce volume correspondent donc à 83,84 litres. [...] ce qui représente un volume disponible à hauteur de 1 229,23 litres. 5 % de ce volume correspondent donc à 61,46 litres. [...] en retenant une proportion de 5 % pour consommation du personnel, le service minore le montant du chiffres d'affaires TTC reconstitué à hauteur de 35 133,26 €. À titre d'information, ce montant équivaut à 8,70 % du chiffre d'affaires TTC déclaré par la société sur ce premier exercice. Une telle proportion est donc significative. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 72 (point 8) : « La réponse n'apporte aucun élément pertinent susceptible de considérer que les offerts, les pertes et les consommations du personnel pourraient être supérieurs aux 15 % retenus par le service. [...] si le service devait retenir une proportion ressortant des données d'exploitation (c'est-à-dire celles de la caisse informatique), ce n'est pas 5 % qu'il faudrait prendre en compte dans la méthode de reconstitution mais seulement ces 0,28 %. Le service a donc fait preuve d'une très grande générosité en la matière. [...] avec la proportion de 5 % pour l'offert, le service a minoré le montant du chiffre d'affaires TTC reconstitué, sur le premier exercice à hauteur de 35 133,26 € (montants à peu près équivalents sur les 3 exercices). Sur trois exercices, ce montant doit donc être multiplié par 3 (105 399,78 €), ce qui est plus de 13 fois ce que propose Maître THIVEND. » Sur les pertes : « la longue expérience professionnelle des dirigeants ne peut qu'entraîner une minimisation des pertes dans tous les aspects de l'exploitation »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 73 : « le taux de 5 % appliqué pour la consommation du personnel, impacte toutes les boissons, y compris celles alcoolisées. Or, la loi interdit aux salariés des restaurants/bar de consommer de l'alcool lors de leur période de travail. En toute logique, le service ne devrait donc retenir aucune consommation du personnel sur les boissons alcoolisées. » Avantages en nature relevés sur les DADS : « 3 507 € sur l'année 2022 (pour les 8 salariés) », « 3 555 € sur l'année 2023 (pour les 9 salariés) », « 3 957 € sur l'année 2024 (pour les 6 salariés) ». « En conclusion, pour ce point, le service est allé bien au-delà de ce Maître THIVEND propose dans sa réponse. »"
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Nos arguments sur ce point",
+   "items": [
+    "Le forfait est concédé comme un plafond, non contesté comme insuffisant : 15 % du CA liquides = 76 863,18 € TTC sur trois ans, soit l'équivalent de 1 593 L d'alcool ; notre itemisation de la consommation sans vente, hors cuisine et menus, est de 1 158 L = 72,7 % du forfait, et de 697,4 L = 43,8 % une fois retiré le vin sur-versé déjà facturé au client. Aucun dégrèvement n'est demandé au titre des abattements eux-mêmes.",
+    "Ce qui est contesté est l'assiette : un abattement en euros appliqué « à la fin de la méthode » au CA reconstitué ne corrige pas une erreur commise en amont sur le nombre de verres (dose de 15 cl pour 18,28 cl servis) ni sur le volume parti en cuisine (93,21 L comptés comme vendus au verre). Ces litres doivent être retranchés du disponible avant conversion ; nos postes sont des volumes en litres, ses forfaits des pourcentages de chiffre d'affaires : deux grandeurs sur deux assiettes, qui ne s'opposent pas terme à terme (R1-abattements-double-emploi, onglet 1 : le même 15 % est opposé à six postes différents).",
+    "Le service chiffre lui-même son 5 % à 35 133,26 € sur le premier exercice (p. 71 et 72). Or 5 % du CA liquides avant abattements vaut 8 917,07 € (p. 52) : 35 133,26 = 8 917,07 × 3,94, et 105 399,78 = 26 751,21 × 3,94. Pour valoriser son propre abattement, le service multiplie donc par (1 + coefficient), c'est-à-dire par le levier qu'il refuse à la défense à la page 92 (« compte ainsi deux fois »). Et 8,70 % = 35 133,26 ÷ 404 030,87 : c'est le poids d'un abattement amplifié par la cuisine extrapolée, rapporté au CA déclaré total.",
+    "La comparaison « 13 fois » (p. 72) n'est pas homogène : 105 399,78 € est la totalité du 15 % du seul exercice 2022-2023 amplifiée par le coefficient (dont les trois quarts de cuisine extrapolée), comparée aux 8 010 € d'offerts de trois exercices chiffrés hors coefficient.",
+    "Le 0,28 % (272 articles à 0 € sur 97 769 lignes) mesure les offerts sonnés en caisse, pas les remises : le service écrit lui-même p. 51 qu'il est « totalement impossible » d'identifier les remises dans les données de caisse. Un chiffre que le service déclare non mesurable ne peut servir de mesure de la « générosité » de son forfait.",
+    "Bière : le service abat déjà 15 % du disponible (94,8 L en 2024-2025) puis 5 + 5 + 5 % du CA, soit 30 % cumulés qu'il revendique p. 83 ; la freinte technique de 10 % (121,3 L sur une assiette de 1 213,3 L, dont 32,6 L documentés) est couverte : dégrèvement 0 €, assumé.",
+    "L'argument de l'expérience des dirigeants (p. 72, 92) n'est pas une mesure : la perte pure de 19,3 % n'est pas un taux choisi, c'est le solde du bilan matière une fois comptés les litres vendus, en stock et consommés sans vente ; le service n'oppose à ce solde aucun relevé.",
+    "Droit : un pourcentage forfaitaire ne peut que « conforter les résultats obtenus par d'autres méthodes », il ne peut pas les produire (BOI-CF-IOR-10-20 § 200) ; et une réfaction de 5 % au titre des offerts ne sauve pas une méthode qui ignore une donnée propre à l'établissement (CE 3 novembre 2023, n° 460520, point 9 : « la consommation estimée du personnel et une réfaction de 5 % au titre des cafés offerts » étaient déjà déduites, la méthode n'en était pas moins « radicalement viciée »)."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le levier que le service applique à ses propres abattements (réponse p. 71-72, proposition p. 52)",
+   "minWidth": 860,
+   "colonnes": [
+    {
+     "label": "Grandeur"
+    },
+    {
+     "label": "Valeur",
+     "align": "right"
+    },
+    {
+     "label": "Calcul"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "5 % du CA liquides avant abattements, 2022-2023"
+     },
+     {
+      "v": "8 917,07 €",
+      "align": "right"
+     },
+     {
+      "v": "178 341,42 € × 5 % (p. 52)"
+     }
+    ],
+    [
+     {
+      "v": "Effet annoncé par le service sur le CA TTC reconstitué"
+     },
+     {
+      "v": "35 133,26 €",
+      "align": "right"
+     },
+     {
+      "v": "= 8 917,07 € × 3,94 = 8 917,07 € × (1 + 2,94) ; vérification : 35 133,26 ÷ 404 030,87 = 8,70 % (p. 71)"
+     }
+    ],
+    [
+     {
+      "v": "Les trois 5 % de 2022-2023 (15 %)"
+     },
+     {
+      "v": "26 751,21 €",
+      "align": "right"
+     },
+     {
+      "v": "3 × 8 917,07 € (p. 52)"
+     }
+    ],
+    [
+     {
+      "v": "« Sur trois exercices » selon le service"
+     },
+     {
+      "v": "105 399,78 €",
+      "align": "right"
+     },
+     {
+      "v": "= 3 × 35 133,26 € = 26 751,21 € × 3,94 : c'est le 15 % du seul exercice 1, amplifié par le coefficient"
+     }
+    ],
+    [
+     {
+      "v": "Forfait de 15 % sur trois exercices, hors coefficient"
+     },
+     {
+      "v": "76 863,18 €",
+      "align": "right"
+     },
+     {
+      "v": "26 751,21 + 25 352,16 + 24 759,81 € ; équivalent 1 593 L"
+     }
+    ],
+    [
+     {
+      "v": "Itemisation brute hors cuisine et menus"
+     },
+     {
+      "v": "1 158 L = 72,7 %",
+      "align": "right"
+     },
+     {
+      "v": "R2-abattements-net.xlsx ; nette hors sur-versement : 697,4 L = 43,8 %"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "gold",
+   "titre": "Ce que révèle le 35 133,26 €",
+   "texte": "Le service écrit p. 92 que compter « 1 € + 2,94 € = 3,94 € » revient à « compte[r] deux fois le chiffre d'affaires liquides reconstitués ». À la page 71, pour mesurer sa propre « générosité », il valorise 8 917,07 € d'abattement à 35 133,26 €, soit exactement 8 917,07 × 3,94. Le levier de 3,94 est donc la traduction de sa méthode, qu'il applique lorsqu'elle le sert et conteste lorsqu'elle sert la société."
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
+     "label": "Forfait de 15 % (76 863,18 € TTC = 1 593 L), itemisation brute hors cuisine et menus 1 158 L = 72,7 % du forfait, nette hors sur-versement 697,4 L = 43,8 %, net 30 525,83 €, marge 46 337,35 €, consommation du chef 8 109,83 € (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",
+     "label": "Le même abattement de 15 % opposé successivement à six postes de perte ; itemisation par exercice ; forfait en euros de CA contre volumes en litres (assiettes différentes)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-biere-matiere.xlsx",
+     "label": "Bière : assiette 1 213,3 L, abattement de 15 % du disponible déjà retenu par le service (94,8 L en 2024-2025), freinte illustrative 10 % = 121,3 L dont 32,6 L documentés, dégrèvement 0 € (à formules)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "« Rapport liquide/solides pour 1 € » : la cuisine obtenue en multipliant le CA liquides par 2,94, 3,02 et 3,10",
+   "numero": "4"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 52 du 18/05/2026 (annexes D-1 à D-3) ; p. 76 et 92 du 04/09/2026",
+   "resume": [
+    "Le service ne reconstitue pas la cuisine : « CHIFFRE D'AFFAIRES SOLIDES = C-A Liquides × 2,94 » (2022-2023), × 3,02 (2023-2024), × 3,10 (2024-2025), le « RAPPORT LIQUIDE SOLIDES POUR 1 € » étant calculé au bas de ses annexes D sur les ventes enregistrées.",
+    "Réponse p. 76 : le rapport « provient directement des données de la caisse informatique qui reflète des données d'exploitation qui peuvent être considérées comme significatives, en terme de volume d'information. Ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable. »",
+    "Réponse p. 92 : « Il est normal que les rehaussements proposés correspondent à 75 % puisqu'il s'agit d'une conséquence directe du rapport » ; Maître THIVEND « compte ainsi deux fois le chiffre d'affaires liquides reconstitués ».",
+    "Aucun couvert, aucun achat alimentaire, aucune commande de cuisine non enregistrée n'est invoqué à l'appui du CA solides extrapolé."
+   ],
+   "detail": [
+    {
+     "kind": "tableau",
+     "titre": "Récapitulation par exercice, lignes « solides » (proposition p. 52, montants TTC)",
+     "minWidth": 820,
+     "colonnes": [
+      {
+       "label": "Exercice"
+      },
+      {
+       "label": "CA liquides après abattements",
+       "align": "right"
+      },
+      {
+       "label": "Rapport pour 1 €",
+       "align": "right"
+      },
+      {
+       "label": "CA solides = liquides × rapport",
+       "align": "right"
+      },
+      {
+       "label": "Total général",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Clos au 31/03/2023"
+       },
+       {
+        "v": "151 590,21 €",
+        "align": "right"
+       },
+       {
+        "v": "2,94",
+        "align": "right"
+       },
+       {
+        "v": "445 675,21 €",
+        "align": "right"
+       },
+       {
+        "v": "597 265,42 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Clos au 31/03/2024"
+       },
+       {
+        "v": "143 662,19 €",
+        "align": "right"
+       },
+       {
+        "v": "3,02",
+        "align": "right"
+       },
+       {
+        "v": "433 859,81 €",
+        "align": "right"
+       },
+       {
+        "v": "577 522,00 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Clos au 31/03/2025"
+       },
+       {
+        "v": "140 305,53 €",
+        "align": "right"
+       },
+       {
+        "v": "3,10",
+        "align": "right"
+       },
+       {
+        "v": "434 947,14 €",
+        "align": "right"
+       },
+       {
+        "v": "575 252,68 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total 3 ans"
+       },
+       {
+        "v": "435 557,93 €",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "1 314 482,16 €",
+        "align": "right"
+       },
+       {
+        "v": "1 750 040,10 €",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Annexes D-1 à D-3 du service (données de caisse) : après les lignes « TOTAL TTC CA LIQUIDES 10 % », « TOTAL TTC CA LIQUIDES 20 % » et « TOTAL TTC CA SOLIDES 10 % », une dernière ligne « RAPPORT POUR 1 € DE CA LIQUIDE = ... C-A SOLIDE » porte 2,9363, 3,0239 et 3,1047 : ce sont, à 0,01 près, les coefficients appliqués p. 52."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse du 04/09/2026, p. 76, point 11 « Le coefficient liquide solide serait neutre » : « Pour sa méthode de reconstitution, le service a effectivement déterminé un rapport liquides/solides. Maître THIVEND semble contester ce rapport, considérant qu'il permet d'extrapoler le chiffre d'affaires cuisine qui, par cette logique, n'est jamais mesuré. Toutefois, ce rapport liquides/solides provient directement des données de la caisse informatique qui reflète des données d'exploitation qui peuvent être considérées comme significatives, en terme de volume d'information. Ce fait permet, à lui seul de considérer que la méthode employée par le service est parfaitement valable. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 92, partie T « Extrapolation CUISINE » : « Ce rapport liquides/solides provient directement des données de la caisse informatique qui reflète des données d'exploitation qui peuvent être considérées comme significatives, en terme de volume d'informations et surtout exhaustives. Maître THIVEND parle de cuisine fantôme. Il considère qu'il le démontre : en citant un gonflement des liquides de plus de 40 % ; en estimant que le rapport est responsable de plus de 75 % du rehaussement. » Sous « 75 % du rehaussement provient de la reconstitution du chiffre d'affaires cuisine » : « La méthode est basée sur le rapport liquides/solides. Ce rapport directement est issu des données de la caisse sur les trois exercices. Compte tenu du rapport constaté sur le premier exercice, par exemple : 1 € de CA boissons = 2,94 € de CA cuisine. Il est normal que les rehaussements proposés correspondent à 75 % puisqu'il s'agit d'une conséquence directe du rapport. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 92, « Coefficient de la reconstitution » : « Il indique notamment pour le deuxième point qu'1 € de chiffre d'affaires liquides reconstitués, par exemple sur le premier exercice, engendre 1 € + 2,94 € = 3,94 € supplémentaires. Maître THIVEND compte ainsi deux fois le chiffre d'affaires liquides reconstitués. Or tel n'est pas le cas dans la méthode du service. Il y a : d'une part le chiffre d'affaires reconstitué sur les liquides ; d'autre part, le chiffre d'affaires CUISINE (chiffres d'affaires liquide x rapport liquides/solides). »"
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Nos arguments sur ce point",
+   "items": [
+    "Le rapport de 2,94 est mesuré sur un couple de montants réels lus dans la caisse (102 425,38 € de liquides, 300 747,04 € de cuisine, annexe D-1 : 300 747,04 ÷ 102 425,38 = 2,9363). Le service l'applique ensuite à un CA liquides de 151 590,21 €, supérieur de 48,0 % à celui qu'il a lui-même relevé (+ 31,9 % et + 32,2 % les exercices suivants), sans articuler une seule constatation propre à la cuisine. Sous sa propre hypothèse, le rapport cuisine ÷ liquides reconstitués n'est plus 2,94 mais 1,98 (300 747 ÷ 151 590), 2,29 et 2,35.",
+    "La cuisine est enregistrée plat par plat dans les annexes C-1 à C-3 ; les totaux des annexes D (403 370,42 / 438 281,12 / 435 564,96 €) se retrouvent à zéro centime en agrégeant les lignes de ticket (R1-coefficients-et-extrapolation.xlsx). Le service ne conteste ni les couverts, ni les achats alimentaires, ni le volume des plats : la cuisine était mesurable directement, elle n'avait pas à être déduite des boissons.",
+    "Cuisine enregistrée 959 561 € contre cuisine extrapolée 1 314 482 € : 354 921 € de cuisine jamais mesurée, soit 75,2 % du rehaussement de 471 826 € (144 928 / 104 498 / 105 495 € par exercice). Le service l'assume comme « conséquence directe du rapport » (p. 92) : la normalité arithmétique d'un résultat ne lui tient pas lieu de preuve.",
+    "Le total reconstitué s'écrit L + L × r = L × (1 + r). Il n'y a pas de double compte, il y a dérivation : un euro de CA liquides sur-évalué déplace le total de 3,94 / 4,02 / 4,10 €. Le service applique lui-même ce facteur p. 71-72 (8 917,07 € × 3,94 = 35 133,26 €). Chaque correction de liquides admise (doses, cuisine, crémant, dégustation) est donc amplifiée d'environ quatre fois sur le total ; le levier mesure l'enjeu des corrections, il ne les démontre pas.",
+    "Le levier porte sur l'euro de CA liquides après abattements, non sur le litre (dont la valeur va de 32,50 €/L pour le crémant à 172,50 €/L pour le calvados) : depuis le CA liquides avant abattements, le facteur effectif est 0,85 × 3,94 = 3,35, 0,85 × 4,02 = 3,42 et 0,85 × 4,10 = 3,49 (ainsi 3 643 € de sur-versement 2022-2023 deviennent 12 199 € de total).",
+    "Droit : le Conseil d'État censure le transport d'un ratio établi sur une grandeur vers une autre grandeur sans justification : la cour avait écarté la critique d'imprécision « alors que le ratio [...], calculé en pourcentage du nombre de ventes, avait été appliqué à la variation des stocks de l'entreprise sans tenir compte des volumes respectifs d'un verre et d'une bouteille ni de la nature des boissons vendues », et avait ainsi « donné aux faits qu'elle a relevés une qualification juridique inexacte » (CE, 3e ch., 5 octobre 2016, n° 389822, point 3, annulation). Ici le rapport mesuré sur les ventes enregistrées est transporté sur des ventes reconstituées. Et les données de l'exploitation sont opposables dans les deux sens : il est « loisible tant à l'administration fiscale [...] qu'au contribuable pour critiquer la reconstitution ainsi opérée, de se référer aux données de l'activité » (CE, 9e et 10e ch., 22 juillet 2020, n° 424052, point 4, à propos d'autres exercices) ; le service ne peut pas puiser dans la caisse son coefficient et ses prix moyens et refuser à la société la lecture directe de sa cuisine dans les mêmes annexes."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Le socle chiffré : ce que la caisse enregistre, ce que le service reconstitue (annexes D, proposition p. 52)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "CA liquides réel (annexe D)",
+     "align": "right"
+    },
+    {
+     "label": "CA liquides reconstitué",
+     "align": "right"
+    },
+    {
+     "label": "Gonflement",
+     "align": "right"
+    },
+    {
+     "label": "Cuisine réelle (annexe D)",
+     "align": "right"
+    },
+    {
+     "label": "Cuisine extrapolée (p. 52)",
+     "align": "right"
+    },
+    {
+     "label": "Cuisine en trop",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "102 425 €",
+      "align": "right"
+     },
+     {
+      "v": "151 590 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 48,0 %",
+      "align": "right"
+     },
+     {
+      "v": "300 747 €",
+      "align": "right"
+     },
+     {
+      "v": "445 675 €",
+      "align": "right"
+     },
+     {
+      "v": "144 928 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "108 919 €",
+      "align": "right"
+     },
+     {
+      "v": "143 662 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 31,9 %",
+      "align": "right"
+     },
+     {
+      "v": "329 362 €",
+      "align": "right"
+     },
+     {
+      "v": "433 860 €",
+      "align": "right"
+     },
+     {
+      "v": "104 498 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "106 113 €",
+      "align": "right"
+     },
+     {
+      "v": "140 306 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 32,2 %",
+      "align": "right"
+     },
+     {
+      "v": "329 452 €",
+      "align": "right"
+     },
+     {
+      "v": "434 947 €",
+      "align": "right"
+     },
+     {
+      "v": "105 495 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 ans"
+     },
+     {
+      "v": "317 458 €",
+      "align": "right"
+     },
+     {
+      "v": "435 558 €",
+      "align": "right"
+     },
+     {
+      "v": "",
+      "align": "right"
+     },
+     {
+      "v": "959 561 €",
+      "align": "right"
+     },
+     {
+      "v": "1 314 482 €",
+      "align": "right"
+     },
+     {
+      "v": "354 921 €",
+      "align": "right",
+      "badge": "ko"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 720 300\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"46\" y1=\"20\" x2=\"46\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"246\" x2=\"704\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"105.66666666666669\" y=\"116.75627618742473\" width=\"46\" height=\"129.24372381257527\" rx=\"3\" fill=\"#a0740d\"/><text x=\"128.66666666666669\" y=\"111.75627618742473\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">300 747 €</text><rect x=\"159.66666666666669\" y=\"54.474576271186436\" width=\"46\" height=\"191.52542372881356\" rx=\"3\" fill=\"#b4452e\"/><text x=\"182.66666666666669\" y=\"49.474576271186436\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">445 675 €</text><text x=\"155.66666666666669\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2022-2023</text><rect x=\"325.00000000000006\" y=\"104.45919872066082\" width=\"46\" height=\"141.54080127933918\" rx=\"3\" fill=\"#a0740d\"/><text x=\"348.00000000000006\" y=\"99.45919872066082\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">329 362 €</text><rect x=\"379.00000000000006\" y=\"59.55198218660897\" width=\"46\" height=\"186.44801781339103\" rx=\"3\" fill=\"#b4452e\"/><text x=\"402.00000000000006\" y=\"54.55198218660897\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">433 860 €</text><text x=\"375.00000000000006\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2023-2024</text><rect x=\"544.3333333333334\" y=\"104.42052190877862\" width=\"46\" height=\"141.57947809122138\" rx=\"3\" fill=\"#a0740d\"/><text x=\"567.3333333333334\" y=\"99.42052190877862\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">329 452 €</text><rect x=\"598.3333333333334\" y=\"59.08485224754301\" width=\"46\" height=\"186.915147752457\" rx=\"3\" fill=\"#b4452e\"/><text x=\"621.3333333333334\" y=\"54.08485224754301\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">434 947 €</text><text x=\"594.3333333333334\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2024-2025</text><rect x=\"46\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#a0740d\"/><text x=\"64\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Cuisine enregistrée</text><rect x=\"226\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#b4452e\"/><text x=\"244\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Cuisine extrapolée</text><text x=\"12\" y=\"133.0\" transform=\"rotate(-90 12 133.0)\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">€ TTC</text></svg>",
+   "titre": "Cuisine enregistrée plat par plat contre cuisine extrapolée par le coefficient",
+   "legende": "Écart 144 928 / 104 498 / 105 495 € = 354 921 € sur trois ans, sans couvert ni achat alimentaire supplémentaire ; 75,2 % du rehaussement de 471 826 €."
+  },
+  {
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 570 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">1 € de CA liquides</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">+ 1 € d'écart</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">(après abattements)</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">× (1 + coefficient)</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">coefficient ≈ 3</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">1 € liquide + ≈ 3 € cuisine</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">=</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">effet sur le total</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">× 3,94 à 4,10</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= 1 + coefficient</text></svg>",
    "titre": "Un euro de CA liquides sur-évalué pèse 3,94 à 4,10 € sur le total reconstitué",
-   "legende": "Total reconstitué = CA liquides × (1 + coefficient). Le facteur exact est 3,94 / 4,02 / 4,10 selon l'exercice ; le coefficient lui-même vaut environ 3, non 4. Le levier porte sur l'euro de CA liquides, non sur le litre (dont la valeur varie de 32,50 € à 172,50 €/L selon la boisson)."
+   "legende": "Total reconstitué = CA liquides × (1 + coefficient). Le coefficient vaut environ 3, le facteur 1 + coefficient 3,94 / 4,02 / 4,10. Le service l'applique lui-même p. 71-72 : 8 917,07 € × 3,94 = 35 133,26 €."
   },
   {
-   "kind": "titre",
-   "texte": "Le vrai reproche : le coefficient de revente déclaré de 2,30",
-   "numero": "2.3"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le fondement du rejet de comptabilité n'est pas le rapport cuisine/boissons, mais le coefficient de revente déclaré de 2,30 / 2,39 / 2,31, jugé anormalement bas. Il appelle une réponse directe. Ce coefficient est bas parce que, sur les 10 622 litres d'alcool achetés sur trois exercices, **60,77 % seulement (6 455 L) sont revendus au verre et en cocktails** : le reste part en cuisine, en sur-versement, en pertes, en dégustation et en consommation du personnel, sans générer de recette. Rapporté au seul alcool effectivement revendu, le coefficient ressort à **≈ 3,92**, au-dessus du seuil de 3 que le service présente comme la norme. Le coefficient global est par ailleurs tiré vers le bas de façon symétrique par la boisson **et** par la nourriture, qui se situent au même niveau (coefficients déclarés d'alcool rapportés à la totalité des achats : 2,32 / 2,45 / 2,38) : ce n'est donc pas la boisson qui dissimulerait une recette."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Cette réponse a une limite, qui est assumée : elle ne vaut que si la part non revendue (≈ 39 %) est réelle, ce que les pages de volumes établissent poste par poste, et aucun référentiel professionnel externe n'est produit pour démontrer qu'un coefficient global de 2,30 serait, en soi, normal dans la profession. Le grief ne peut donc être renversé par cette seule page ; il est ramené à une question de volumes, et non de recette occulte."
-  },
-  {
-   "kind": "titre",
-   "texte": "Ce que la défense concède : l'arithmétique du repère de 3,2725",
-   "numero": "2.4"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service tire du coefficient sur achat revendu de 3,85 (chiffre de la défense) un repère de 3,85 × (1 − 0,15) = **3,2725**, qu'il oppose à ses coefficients reconstitués de 3,40 / 3,14 / 3,05 pour conclure qu'il « n'a nullement exagéré » (p. 93). L'opération est exacte et la défense la concède : rapporté aux 547 669 € de matières des trois exercices, ce repère appelle 1 792 247 € de chiffre d'affaires, alors que la reconstitution s'arrête à 1 750 040 €, soit **42 207 € en dessous**. Sur son propre terrain, et sur trois ans cumulés, la page 93 n'est pas prise en défaut."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce qui tombe n'est donc pas l'arithmétique, mais la valeur de preuve du repère. Le 3,2725 n'est pas une donnée observée : c'est le coefficient réalisé sur l'alcool revendu (≈ 3,92) multiplié par une part d'achats revendus que le service fixe à **85 %**, alors que la part mesurée poste par poste est de **60,77 %**. Le repère reconduit ainsi, sous forme de coefficient, le taux de perte de 15 % qui est déjà l'un des paramètres de la reconstitution : un repère bâti sur un paramètre de la méthode ne peut servir à valider le résultat de cette méthode. Et en tout état de cause, un coefficient global ne dit rien de la **répartition** entre liquides et cuisine, seul objet des 354 921 €."
+   "kind": "schema",
+   "svg": "<svg viewBox=\"0 0 760 320\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"250\" x2=\"744\" y2=\"250\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"45.33333333333334\" y=\"191.31937502070124\" width=\"70\" height=\"58.680624979298756\" rx=\"3\" fill=\"#a0740d\"/><text x=\"80.33333333333334\" y=\"186.31937502070124\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">178 341 €</text><text x=\"80.33333333333334\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">CA liquides</text><text x=\"80.33333333333334\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">avant</text><text x=\"80.33333333333334\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">abattements</text><rect x=\"166.00000000000003\" y=\"191.31937502070124\" width=\"70\" height=\"2.934014797160529\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"201.00000000000003\" y=\"186.31937502070124\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">8 917 €</text><text x=\"201.00000000000003\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Remise 5 %</text><rect x=\"286.6666666666667\" y=\"194.25338981786177\" width=\"70\" height=\"2.9340147971605575\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"321.6666666666667\" y=\"189.25338981786177\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">8 917 €</text><text x=\"321.6666666666667\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Pertes 5 %</text><rect x=\"407.3333333333333\" y=\"197.18740461502233\" width=\"70\" height=\"2.934014797160529\" rx=\"3\" fill=\"#0f7c6c\"/><text x=\"442.3333333333333\" y=\"192.18740461502233\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">8 917 €</text><text x=\"442.3333333333333\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Personnel 5 %</text><rect x=\"528.0\" y=\"53.47826086956522\" width=\"70\" height=\"146.64315854261764\" rx=\"3\" fill=\"#b4452e\"/><text x=\"563.0\" y=\"48.47826086956522\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+445 675 €</text><text x=\"563.0\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Cuisine</text><text x=\"563.0\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">extrapolée ×</text><text x=\"563.0\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">2,94</text><rect x=\"648.6666666666667\" y=\"53.47826086956522\" width=\"70\" height=\"196.52173913043478\" rx=\"3\" fill=\"#6a4d0f\"/><text x=\"683.6666666666667\" y=\"48.47826086956522\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#2a2015\">597 265 €</text><text x=\"683.6666666666667\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">Total</text><text x=\"683.6666666666667\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">reconstitué</text><text x=\"683.6666666666667\" y=\"290\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">2022-2023</text></svg>",
+   "titre": "Exercice 2022-2023 : du CA liquides avant abattements au total reconstitué (proposition p. 52)",
+   "legende": "178 341 € − 3 × 8 917 € = 151 590 € de liquides ; + 151 590 × 2,94 = 445 675 € de cuisine extrapolée ; total 597 265 € contre 404 031 € déclarés. La cuisine enregistrée dans la même caisse est de 300 747 €."
   },
   {
    "kind": "kpis",
@@ -152,52 +1541,743 @@
      "highlight": true
     },
     {
-     "label": "Part réellement revendue",
-     "valeur": "60,77 %",
-     "sub": "6 455 L sur 10 622 L achetés ; coefficient sur achat revendu ≈ 3,92",
-     "couleur": "teal"
+     "label": "Rapport implicite sous l'hypothèse du service",
+     "valeur": "1,98 / 2,29 / 2,35",
+     "sub": "cuisine enregistrée ÷ CA liquides reconstitué, au lieu de 2,94 / 3,02 / 3,10",
+     "couleur": "gold"
     },
     {
-     "label": "Concession sur 3 ans",
-     "valeur": "− 42 207 €",
-     "sub": "le reconstitué reste sous le repère de 3,2725 du service : arithmétique concédée",
-     "couleur": "gold"
+     "label": "Levier sur le total",
+     "valeur": "3,94 / 4,02 / 4,10",
+     "sub": "= 1 + coefficient ; appliqué par le service lui-même p. 71-72",
+     "couleur": "red"
+    }
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-extrapolation-cuisine.xlsx",
+     "label": "Rapport liquides/solides recalculé sur les annexes D (2,9363 / 3,0239 / 3,1047), cuisine extrapolée 1 314 482 € contre enregistrée 959 561 €, cuisine en trop 354 921 € = 75,2 % du rehaussement, levier 3,94 / 4,02 / 4,10 (onglets Sources, Rapport, Extrapolation, Methode, à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-coefficients-et-extrapolation.xlsx",
+     "label": "Recontrôle ligne à ligne des totaux des annexes D sur les annexes C-1 à C-3 (403 370,42 / 438 281,12 / 435 564,96 €, écart nul) ; bras de levier ; test de la page 93 (onglet 4)"
     }
    ]
   },
   {
    "kind": "titre",
-   "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas"
+   "texte": "« Récapitulation par exercice » : le rapprochement avec le chiffre d'affaires comptabilisé et le repère de 3,2725",
+   "numero": "5"
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« Le rapport provient de la caisse, exhaustive : la méthode est donc valable. »** Le rapport de 2,94 a été mesuré sur un couple de montants réels (102 425 € de liquides, 300 747 € de cuisine). L'appliquer à un CA liquides majoré de 48 % ne le mesure plus : les conditions dans lesquelles il a été constaté ne sont plus réunies. Le Conseil d'État censure précisément le transport d'un ratio établi sur une base vers une autre grandeur sans justification ([CE, 3e ch., 5 octobre 2016, n° 389822](https://juricaf.org/arret/FRANCE-CONSEILDETAT-20161005-389822), point 3)."
+   "kind": "reproche",
+   "page": "p. 34-35 et 52 du 18/05/2026 ; p. 56-59 et 93 du 04/09/2026",
+   "resume": [
+    "Total général reconstitué (liquides + solides) 597 265,42 / 577 522,00 / 575 252,68 € TTC, contre un CA inscrit en comptabilité (y compris compte 706 800) de 404 030,87 / 438 658,43 / 435 524,92 € : « discordance » de 193 234,55 / 138 863,57 / 139 727,76 €, soit 471 825,88 € sur trois ans (base de l'amende 1759, remplacée par la distribution aux associés).",
+    "Le coefficient de revente déclaré de 2,303 / 2,388 / 2,310 est jugé « manifestement très bas et en dehors des usages habituels de la profession » ; après reconstitution il ressort à 3,404 / 3,144 / 3,051, « en conformité avec ceux habituellement observés dans les établissements similaires » (p. 34-35).",
+    "Réponse p. 59 et 93 : en substituant son taux de 15 % aux 36 % de la défense, « 3,85 x (1-0,15) = 3,2725 » ; comme la reconstitution aboutit à 3,40, 3,14 et 3,05, « il apparaît que le service n'a nullement exagéré le chiffre d'affaires reconstitué ».",
+    "Conclusion p. 93 : « la méthode de Maître THIVEND conforte le service dans son opinion de considérer que le rejet de comptabilité est tout à fait légitime que cela l'autorisait à procéder à une reconstitution de chiffre d'affaires à la hauteur de ce qui a été établi »."
+   ],
+   "detail": [
+    {
+     "kind": "tableau",
+     "titre": "Récapitulation par exercice (proposition p. 52, montants TTC)",
+     "minWidth": 900,
+     "colonnes": [
+      {
+       "label": "Ligne"
+      },
+      {
+       "label": "31/03/2023",
+       "align": "right"
+      },
+      {
+       "label": "31/03/2024",
+       "align": "right"
+      },
+      {
+       "label": "31/03/2025",
+       "align": "right"
+      },
+      {
+       "label": "3 ans",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "C-A liquides avant remise, pertes et consommation du personnel"
+       },
+       {
+        "v": "178 341,42 €",
+        "align": "right"
+       },
+       {
+        "v": "169 014,34 €",
+        "align": "right"
+       },
+       {
+        "v": "165 065,33 €",
+        "align": "right"
+       },
+       {
+        "v": "512 421,09 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "C-A liquides après (× 0,85)"
+       },
+       {
+        "v": "151 590,21 €",
+        "align": "right"
+       },
+       {
+        "v": "143 662,19 €",
+        "align": "right"
+       },
+       {
+        "v": "140 305,53 €",
+        "align": "right"
+       },
+       {
+        "v": "435 557,93 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Chiffre d'affaires solides (× 2,94 / 3,02 / 3,10)"
+       },
+       {
+        "v": "445 675,21 €",
+        "align": "right"
+       },
+       {
+        "v": "433 859,81 €",
+        "align": "right"
+       },
+       {
+        "v": "434 947,14 €",
+        "align": "right"
+       },
+       {
+        "v": "1 314 482,16 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total général du chiffre d'affaires"
+       },
+       {
+        "v": "597 265,42 €",
+        "align": "right"
+       },
+       {
+        "v": "577 522,00 €",
+        "align": "right"
+       },
+       {
+        "v": "575 252,68 €",
+        "align": "right"
+       },
+       {
+        "v": "1 750 040,10 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Chiffre d'affaires inscrit en comptabilité (y compris 706 800)"
+       },
+       {
+        "v": "404 030,87 €",
+        "align": "right"
+       },
+       {
+        "v": "438 658,43 €",
+        "align": "right"
+       },
+       {
+        "v": "435 524,92 €",
+        "align": "right"
+       },
+       {
+        "v": "1 278 214,22 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Discordance de chiffre d'affaires"
+       },
+       {
+        "v": "193 234,55 €",
+        "align": "right",
+        "badge": "ko"
+       },
+       {
+        "v": "138 863,57 €",
+        "align": "right",
+        "badge": "ko"
+       },
+       {
+        "v": "139 727,76 €",
+        "align": "right",
+        "badge": "ko"
+       },
+       {
+        "v": "471 825,88 €",
+        "align": "right",
+        "badge": "ko"
+       }
+      ],
+      [
+       {
+        "v": "Minoration HT / TVA"
+       },
+       {
+        "v": "172 813,45 / 20 421,10 €",
+        "align": "right"
+       },
+       {
+        "v": "124 009,56 / 14 854,01 €",
+        "align": "right"
+       },
+       {
+        "v": "125 076,16 / 14 651,59 €",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "tableau",
+     "titre": "Coefficient de revente déclaré et reconstitué (proposition p. 34-35)",
+     "minWidth": 760,
+     "colonnes": [
+      {
+       "label": "Ligne"
+      },
+      {
+       "label": "31/03/2023",
+       "align": "right"
+      },
+      {
+       "label": "31/03/2024",
+       "align": "right"
+      },
+      {
+       "label": "31/03/2025",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Achats denrées 601100"
+       },
+       {
+        "v": "127 473,87 €",
+        "align": "right"
+       },
+       {
+        "v": "137 971,41 €",
+        "align": "right"
+       },
+       {
+        "v": "142 129,11 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Achats boissons 601200"
+       },
+       {
+        "v": "48 237,09 €",
+        "align": "right"
+       },
+       {
+        "v": "46 384,45 €",
+        "align": "right"
+       },
+       {
+        "v": "47 098,84 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Variation stocks denrées / boissons"
+       },
+       {
+        "v": "+ 526,38 / − 800,83 €",
+        "align": "right"
+       },
+       {
+        "v": "− 1 646,54 / − 1 029,67 €",
+        "align": "right"
+       },
+       {
+        "v": "− 430,25 / − 273,41 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Coût d'achat des matières des produits vendus"
+       },
+       {
+        "v": "175 436,51 €",
+        "align": "right"
+       },
+       {
+        "v": "183 679,65 €",
+        "align": "right"
+       },
+       {
+        "v": "188 544,29 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Coefficient de revente déclaré"
+       },
+       {
+        "v": "2,303",
+        "align": "right"
+       },
+       {
+        "v": "2,388",
+        "align": "right"
+       },
+       {
+        "v": "2,310",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Coefficient après reconstitution"
+       },
+       {
+        "v": "3,404",
+        "align": "right"
+       },
+       {
+        "v": "3,144",
+        "align": "right"
+       },
+       {
+        "v": "3,051",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Proposition p. 34 : « Ces coefficients sont manifestement très bas et en dehors des usages habituels de la profession. Ils renforcent le caractère très imparfait des données comptables pour retranscrire la réalité et l'exhaustivité des conditions d'exercice. » Page 35 : les coefficients reconstitués sont « en conformité avec ceux habituellement observés dans les établissements similaires »."
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse du 04/09/2026, p. 59 (partie K) : « dans l'hypothèse où ce taux de perte serait de 15 %, correspondant à celui figurant dans la méthode de reconstitution employée par le service, et en l'utilisant pour la méthode de Maître THIVEND, le coefficient s'établirait ainsi à : Pour rappel, le coefficient sur achat revendu de Maître THIVEND (globalisé sur 3 exercices) s'établit à : 3,85. Ainsi, le coefficient moyen sur ces trois exercices, résultant d'un taux de perte de 15 % serait de : 3,85 x (1-0,15) = 3,2725. Sachant que la méthode de reconstitution du service aboutit à des coefficients reconstitués, suivant les exercices, à 3,40, 3,14 et 3,05, il apparaît que le service n'a nullement exagéré le chiffre d'affaires reconstitué dans sa méthode de reconstitution. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "Réponse p. 93 (fin de la partie T) : « Par ailleurs, le service a montré, par rapport au coefficient de 3,85 sur achat revendu, indiqué par Maître THIVEND lui-même dans sa réponse mais globalisé sur 3 exercices), que grâce aux taux de perte/offerts/consommation du personnel de 15 %, retenu par le service, le coefficient moyen de l'exploitation de la société devrait être de : 3,85 x (1-0,15) = 3,2725. [...] En fait, la méthode de Maître THIVEND conforte le service dans son opinion de considérer que le rejet de comptabilité est tout à fait légitime que cela l'autorisait à procéder à une reconstitution de chiffre d'affaires à la hauteur de ce qui a été établi. »"
+    }
+   ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« 75 % du rehaussement est une conséquence directe du rapport. »** C'est exact, et c'est la difficulté : aucun couvert, aucun achat alimentaire, aucune commande de cuisine non enregistrée n'est produit à l'appui des 354 921 €, alors que la cuisine réelle est portée plat par plat dans les annexes C."
+   "kind": "liste",
+   "titre": "Nos arguments sur ce point",
+   "items": [
+    "Concession : l'opération 3,85 × (1 − 0,15) = 3,2725 est exacte. Rapporté aux 547 669 € de matières des trois exercices, ce repère appelle 1 792 247 € de chiffre d'affaires, et la reconstitution s'arrête à 1 750 040 € : 42 207 € en dessous. Sur son propre terrain et sur trois ans cumulés, la page 93 n'est pas prise en défaut. Mais sur le premier exercice, le même repère donne 574 118 € pour 597 265 € reconstitués : 23 147 € de trop, acquis par le seul raisonnement du service.",
+    "Ce que mesure le repère : 3,2725 n'est pas une donnée observée, c'est le coefficient réalisé sur l'alcool revendu multiplié par une part d'achats revendus que le service fixe à 85 %. La part mesurée poste par poste est de 60,77 % (6 455 L sur 10 622 L). La même identité donne 3,9218 × 0,6077 = 2,383251, qui est exactement 257 209,96 € de CA alcool encaissé (annexes D, TVA 20 % : 81 911,20 + 88 909,01 + 86 389,75) ÷ 107 924 € d'alcool acheté. Avec cette part, le reconstitué dépasse le repère de 444 807 € et le déclaré s'en tient à 27 019 €.",
+    "Le repère reconduit donc, sous forme de coefficient, le taux de perte de 15 % qui est déjà un paramètre de la reconstitution : un repère bâti sur un paramètre de la méthode ne peut valider le résultat de cette méthode. Le seul terme qui sépare les deux repères est la part revendue, 85 % contre 60,77 %, soit un rapport de 1,399 (3,9218 × 0,85 = 3,3335 ; 3,9218 × 0,6077 = 2,3833).",
+    "Le coefficient déclaré de 2,30 / 2,39 / 2,31 s'explique sans recette occulte : sur 10 622 L achetés, 60,77 % seulement sont revendus au verre et en cocktails ; sur le seul alcool revendu (coût 65 585 €), le coefficient ressort à ≈ 3,92, au-dessus du seuil de 3 que le service présente comme la norme. Et le coefficient de l'alcool rapporté à la totalité des achats (2,32 / 2,45 / 2,38 par exercice) se situe au même niveau que le coefficient global : ce n'est pas la boisson qui dissimulerait une recette.",
+    "Deux périmètres sont mis face à face : 3,85 et 3,2725 portent sur l'alcool seul, 3,40 / 3,14 / 3,05 sur la totalité des matières, boisson et nourriture ; les opposer suppose, sans le démontrer, que la nourriture supporte le même coefficient que l'alcool. Et un coefficient triennal (la cascade n'existe qu'en cumul) est comparé à trois coefficients annuels dont l'écart atteint 0,35 point.",
+    "Surtout, un coefficient global ne dit rien de la répartition entre liquides et cuisine, seul objet des 354 921 € : qu'un agrégat se situe 2,4 % sous un repère ne valide pas un rehaussement de 471 826 €, soit 36,9 % du chiffre d'affaires déclaré.",
+    "Droit : l'usage de la profession n'est invoqué par aucune référence (ni monographie, ni statistique citée) ; et même produits, ces pourcentages ne peuvent que « conforter les résultats obtenus par d'autres méthodes » (BOI-CF-IOR-10-20 § 200). Les coefficients de 3,40 / 3,14 / 3,05 sont des produits de la reconstitution, non des observations : ils ne peuvent la confirmer. Le désaccord sur le montant du chiffre d'affaires relève de la commission départementale (art. L. 59 A LPF, BOI-CF-CMSS-20-10 § 200) ; tant qu'elle n'a pas rendu d'avis conforme, la charge de la preuve reste au service (BOI-CF-IOR-10-20 § 270 et 280 ; CE n° 452595)."
+   ]
   },
   {
-   "kind": "paragraphe",
-   "texte": "**« La reconstitution n'est pas exagérée : 3,2725 dépasse deux des trois coefficients reconstitués. »** Le calcul est concédé (le reconstitué reste 42 207 € sous le repère sur trois ans). Mais 3,2725 n'est que le coefficient sur achat revendu multiplié par une part supposée de 85 % ; avec la part mesurée de 60,77 %, le repère tombe à 2,383251 et le reconstitué le dépasse de 444 807 €. Surtout, un coefficient global ne valide pas le partage entre liquides et cuisine."
+   "kind": "tableau",
+   "titre": "Le test de la page 93, avec la part revendue supposée par le service (85 %) puis avec la part mesurée (60,77 %)",
+   "minWidth": 1000,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Coût des matières",
+     "align": "right"
+    },
+    {
+     "label": "CA déclaré",
+     "align": "right"
+    },
+    {
+     "label": "CA reconstitué",
+     "align": "right"
+    },
+    {
+     "label": "CA au repère 3,2725",
+     "align": "right"
+    },
+    {
+     "label": "Écart du reconstitué",
+     "align": "right"
+    },
+    {
+     "label": "CA au repère 2,383251",
+     "align": "right"
+    },
+    {
+     "label": "Écart du reconstitué",
+     "align": "right"
+    },
+    {
+     "label": "Écart du déclaré",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023"
+     },
+     {
+      "v": "175 437 €",
+      "align": "right"
+     },
+     {
+      "v": "404 031 €",
+      "align": "right"
+     },
+     {
+      "v": "597 265 €",
+      "align": "right"
+     },
+     {
+      "v": "574 118 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 23 147 €",
+      "align": "right",
+      "badge": "ko"
+     },
+     {
+      "v": "418 110 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 179 155 €",
+      "align": "right"
+     },
+     {
+      "v": "− 14 079 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024"
+     },
+     {
+      "v": "183 693 €",
+      "align": "right"
+     },
+     {
+      "v": "438 658 €",
+      "align": "right"
+     },
+     {
+      "v": "577 522 €",
+      "align": "right"
+     },
+     {
+      "v": "601 135 €",
+      "align": "right"
+     },
+     {
+      "v": "− 23 613 €",
+      "align": "right"
+     },
+     {
+      "v": "437 786 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 139 736 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 872 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025"
+     },
+     {
+      "v": "188 539 €",
+      "align": "right"
+     },
+     {
+      "v": "435 525 €",
+      "align": "right"
+     },
+     {
+      "v": "575 253 €",
+      "align": "right"
+     },
+     {
+      "v": "616 994 €",
+      "align": "right"
+     },
+     {
+      "v": "− 41 741 €",
+      "align": "right"
+     },
+     {
+      "v": "449 336 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 125 917 €",
+      "align": "right"
+     },
+     {
+      "v": "− 13 811 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total 3 ans"
+     },
+     {
+      "v": "547 669 €",
+      "align": "right"
+     },
+     {
+      "v": "1 278 214 €",
+      "align": "right"
+     },
+     {
+      "v": "1 750 040 €",
+      "align": "right"
+     },
+     {
+      "v": "1 792 247 €",
+      "align": "right"
+     },
+     {
+      "v": "− 42 207 €",
+      "align": "right",
+      "badge": "ok"
+     },
+     {
+      "v": "1 305 233 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 444 807 €",
+      "align": "right",
+      "badge": "ko"
+     },
+     {
+      "v": "− 27 019 €",
+      "align": "right"
+     }
+    ]
+   ]
   },
   {
-   "kind": "note",
-   "texte": "Sources : propositions du 19/10/2026, partie « METHODE DE RECONSTITUTION » ; proposition du 18/05/2026, p. 34-35 (coefficients déclarés), p. 52 (coefficient de reconstitution) ; réponse de la DDFiP du Jura du 04/09/2026, p. 90 à 94. Annexes D1 à D3 (CA liquides et cuisine réels, « RAPPORT POUR 1 € DE CA LIQUIDE »). Bilan matière des 10 622 L : R1-cascade-bilan-matiere.xlsx."
+   "kind": "kpis",
+   "items": [
+    {
+     "label": "Concession sur 3 ans",
+     "valeur": "− 42 207 €",
+     "sub": "le reconstitué reste sous le repère de 3,2725 : arithmétique concédée ; + 23 147 € de trop sur 2022-2023",
+     "couleur": "gold"
+    },
+    {
+     "label": "Part réellement revendue",
+     "valeur": "60,77 %",
+     "sub": "6 455 L sur 10 622 L ; coefficient sur achat revendu ≈ 3,92",
+     "couleur": "teal"
+    },
+    {
+     "label": "Même calcul, part mesurée",
+     "valeur": "2,383251",
+     "sub": "257 209,96 € ÷ 107 924 € ; le reconstitué dépasse ce repère de 444 807 €",
+     "couleur": "teal",
+     "highlight": true
+    },
+    {
+     "label": "Coefficients déclarés",
+     "valeur": "2,30 / 2,39 / 2,31",
+     "sub": "alcool sur la totalité des achats : 2,32 / 2,45 / 2,38 ; même niveau que la nourriture",
+     "couleur": "red"
+    }
+   ]
   },
   {
-   "kind": "piecejointe",
-   "intro": "Recalcul intégral par formules, à partir des annexes D du service et du bilan matière de la cascade (sources, formules et méthode dans chaque classeur) :",
+   "kind": "documents",
    "fichiers": [
     {
+     "fichier": "pieces-reponse-2/R2-coefficient-revente.xlsx",
+     "label": "Part revendue 60,77 % dérivée du bilan matière (6 455 / 10 622 L), coefficient sur la totalité des achats 2,383251 = 257 209,96 / 107 924 €, coefficient sur achat revendu ≈ 3,92, confrontation au repère de 3,2725 exercice par exercice (onglets Sources, Cascade, Coefficient, Confrontation, Methode, à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-exposition-et-scenarios.xlsx",
+     "label": "Exposition réelle 582 796 € = société 213 148 € + associés 369 648 € ; scénarios de réduction de la reconstitution de 25 / 50 / 75 % (base distribuée 176 935 / 117 957 / 58 978 €) (à formules)"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que cela fait tomber"
+  },
+  {
+   "kind": "liste",
+   "titre": "Droits et pénalités concernés",
+   "items": [
+    "La cuisine extrapolée : 354 921 € sur les 471 826 € de rehaussement (75,2 %), soit 144 928 / 104 498 / 105 495 € par exercice, ne reposent sur aucune constatation propre à la cuisine ; leur retrait est conditionné à la sur-évaluation des liquides établie poste par poste.",
+    "Chaque correction de liquides admise est amplifiée : 1 000 € de CA liquides après abattements retirés = 3 940 / 4 020 / 4 100 € de total reconstitué en moins ; depuis le CA liquides avant abattements, 3 349 / 3 417 / 3 485 €. Sur-versement 2022-2023 : 3 643 € de liquides = 12 199 € de total ; trois exercices : 10 973 € de liquides, 37 500 € de total. Alcool de cuisine et des menus non déduits : 93,21 L ≈ 7 850 € de CA liquides avant abattements (5 113 + 2 737 €, prix 2022-2023).",
+    "Le rappel initial était de 684 974 € = société 213 148 € (IS 97 510 + intérêts 4 661 + majoration 1729 sur IS 39 004 + TVA 49 547 + intérêts 2 607 + majoration 1729 sur TVA 19 819) + amende 1759 de 471 826 € ; l'exposition réelle après désignation est de 582 796 € = 213 148 € + 369 648 € notifiés aux associés (PASTEUR 196 945 €, BEHEM 172 703 €). Tout en dépend : si la reconstitution tombe, tout tombe.",
+    "Moyen subsidiaire : si la reconstitution est réduite de 25 / 50 / 75 %, la base distribuée tombe de 471 826 € à 176 935 / 117 957 / 58 978 € par foyer, et les rappels d'IS et de TVA baissent à proportion (la majoration de 40 %, 58 823 € au niveau société, suit le principal).",
+    "Le test de la page 93 ne protège pas le montant : sur 2022-2023, le repère même du service établit 23 147 € de reconstitué en trop ; avec la part revendue mesurée, l'excès est de 444 807 € sur trois ans."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que le service pourrait encore opposer"
+  },
+  {
+   "kind": "liste",
+   "titre": "Objection → réponse chiffrée",
+   "items": [
+    "« Le rapport liquides/solides vient de la caisse, exhaustive, ce qui valide à lui seul la méthode » (p. 76, 92) → le rapport a été mesuré sur 102 425 € de liquides et 300 747 € de cuisine ; appliqué à 151 590 € de liquides il ne mesure plus rien, le rapport implicite tombant à 1,98 ; transport d'un ratio d'une grandeur à une autre censuré par CE n° 389822.",
+    "« Maître THIVEND compte deux fois le CA liquides » (p. 92) → L + L × r = L × (1 + r) ; le service applique lui-même 8 917,07 € × 3,94 = 35 133,26 € pour chiffrer son abattement (p. 71-72).",
+    "« Les 75 % sont une conséquence directe du rapport » (p. 92) → exact, et c'est le vice : 354 921 € sans couvert, sans achat alimentaire, sans commande non enregistrée, alors que la cuisine est lue plat par plat (959 561 €).",
+    "« Les sur-dosages sont fixés arbitrairement, une simple affirmation gratuite » (p. 60) → 18,28 cl = moyenne mesurée de Kerr 2008, centre exact de l'IC 95 % (17,60 à 18,96 cl) ; demande 460,6 L = 50,3 % de la fourchette 357,7 à 562,4 L ; pichets et bouteilles à 0 %.",
+    "« Un verre de 15 cl sur-versé ferait presque un pichet de 25 cl » (p. 92) → 18,28 cl, pas 25 ; et 0 % sur les contenants pré-mesurés (pichet 50 cl, bouteille 75 cl) ; l'objection vise un contenant que nous n'avons jamais produit.",
+    "« Le service a déjà retenu 15 %, 13 fois plus que les 8 010 € d'offerts de la réponse ; les offerts tracés ne font que 0,28 % » (p. 72) → le forfait est concédé comme plafond (itemisation 1 158 L = 72,7 %) ; 105 399,78 € est le 15 % du seul exercice 1 amplifié par le coefficient ; 0,28 % compte les articles sonnés à 0 €, pas les remises que le service dit lui-même impossibles à identifier (p. 51) ; et un abattement sur le CA ne corrige ni une dose ni un litre parti en cuisine.",
+    "« 3,85 × 0,85 = 3,2725 montre que la reconstitution n'est pas exagérée » (p. 59, 93) → concédé sur trois ans (− 42 207 €), mais + 23 147 € sur 2022-2023 ; avec la part revendue mesurée de 60,77 %, le repère est 2,383251 et le reconstitué le dépasse de 444 807 € ; un agrégat ne valide pas le partage liquides/cuisine.",
+    "« Des exploitants expérimentés minimisent les pertes ; 19,3 % de perte pure est invraisemblable » (p. 58, 72, 92) → 19,3 % n'est pas un taux retenu, c'est le solde de 10 622 L une fois comptés 6 455 L vendus, 213 L en stock et 1 899 L consommés sans vente ; le service n'oppose à ce solde aucun relevé, et retient lui-même 30 % cumulés sur la bière (p. 83).",
+    "« La comptabilité a été rejetée : la preuve incombe à la société » → non : la preuve ne passe au contribuable qu'en cas de défaut de présentation ou d'avis conforme de la commission sur une comptabilité gravement irrégulière (L. 192 LPF, BOI-CF-IOR-10-20 § 270 et 280 ; CE n° 452595) ; aucun des deux n'est acquis.",
+    "« Le bilan matière de la défense n'est pas une méthode » → le BOFiP le cite comme élément qui interdit le rejet global (§ 110, CE 7 novembre 1975 n° 90786) ; et la méthode alternative du contribuable doit être examinée, à peine d'erreur de droit (CE n° 470817) ; 13 contrôles arithmétiques sur 13 ; 73,5 % des litres lus ou calculés sur la caisse."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Points de vigilance pour la réunion"
+  },
+  {
+   "kind": "liste",
+   "titre": "Limites réelles et pièces à produire",
+   "items": [
+    "Le levier 3,94 / 4,02 / 4,10 n'est un bénéfice que si des corrections de liquides sont admises ; ne pas le présenter comme une preuve de sur-évaluation. L'argument « la cuisine pouvait être mesurée directement » et l'argument du levier sont deux critiques distinctes : la première est indépendante de la seconde.",
+    "La cascade n'existe qu'en cumul triennal (pas d'inventaire au 31/03/2022, pas de cascade annuelle) ; le coefficient sur achat revendu ≈ 3,92 n'est pas un repère annuel. La part de 60,77 % intègre les postes non revendus que le service conteste.",
+    "Aucune dose mesurée sur place : Kerr 2008 et Wansink 2005 sont des études extérieures. Produire les cartes de boissons des trois exercices et, si possible, un relevé contradictoire de service (verre pesé) pour appuyer les 18,28 cl.",
+    "Concessions à assumer sans détour : point 9 (variation de stock) retiré ; bière 0 € ; forfait de 15 % plafond ; test de la page 93 exact sur trois ans ; 1 bouteille de Bordeaux et 375 cl de blanc sortis sans vente ; 12 produits consommation > achats (708,3 L) assumés comme défauts de paramétrage.",
+    "Demander la communication des annexes 7-1 à 7-3 complètes et des copies de factures FCBS que le service se dit prêt à communiquer (proposition p. 53, art. L. 76 B LPF) : les repères D, E, G et Q ne se recalculent pas sur ses colonnes (écart cumulé 87,5 L) et les lignes vin jaune des exercices 2 et 3 ne sont pas reproductibles.",
+    "Saisir la commission départementale (art. L. 59 A LPF) sur les seules questions de fait de la reconstitution (chiffre d'affaires, résultat), en présentant expressément la cascade comme méthode alternative (CE n° 470817) ; la qualification en revenus distribués, l'IR des associés et les pénalités relèvent de la voie contentieuse.",
+    "Motivation : la réponse du 04/09 maintient le rehaussement au centime avec 16 formules de non-modification ; l'administration doit motiver le rejet des observations (art. L. 57 LPF ; BOI-CF-IOR-10-50-30 § 20 et 40), mais une réponse jugée « sans portée » peut être ignorée : présenter chaque poste avec son volume, sa source et sa pièce.",
+    "L'article L. 192 du LPF est cité d'après le BOFiP et la décision CE n° 452595, Légifrance n'ayant pu être relu : faire vérifier le texte en vigueur avant la réunion."
+   ]
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-1/R1-doses-origines.xlsx",
+     "label": "Les 82 doses retenues par le service avec l'origine qu'il leur donne (71 chiffrées, 7 sans origine indiquée), dose implicite du Calvados p. 65 (3,32 à 3,44 cl pour 4 cl annoncés), reproductibilité des repères E, G et Q (onglets Doses du service, Calvados p.65, Reproductibilite p.66-67, Doses implicites annexes, Sources)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-sur-versement-fourchette-officielle.xlsx",
+     "label": "Fourchette officielle du sur-versement (IC 95 % de Kerr 2008) : 357,7 à 562,4 L, demande de 460,6 L à 50,3 % de la fourchette, verre de vin 18,28 cl (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-sur-versement-chiffrage.xlsx",
+     "label": "Chiffrage du sur-versement en euros sur l'exercice 2022-2023 (annexe B1, 6,72 €/verre) : 81,3 L = 542 verres = 3 643 € de CA liquides, 12 199 € de total reconstitué (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cascade-bilan-matiere.xlsx",
+     "label": "Bilan matière des 10 622 L : onglet 1. Cascade (postes, litres, part des achats, nature du chiffre, source), 2. Nature des postes, 3. Doubles comptages retirés (321,74 L), 4. Forfait vs itemisation (1 593,3 L = 76 863,18 €)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-cascade-nature-des-chiffres.xlsx",
+     "label": "Pour chaque poste : grandeur comptée, nombre compté, coefficient appliqué et son origine, position du service sur ce même coefficient ; 13 contrôles arithmétiques (onglet 4-Contrôles, 13 OK sur 13)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-releve-reponses-service.xlsx",
+     "label": "Relevé des 20 rubriques du bloc reconstitution de la réponse du 04/09/2026 (p. 59 à 92) : nature des chiffres opposés, volume mesuré opposé ou non, 16 formules de non-modification avec leurs pages"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-stock-variation-310200.xlsx",
+     "label": "Compte 310200 du service (− 800,83 / − 1 029,67 / − 273,41 €), achats 601200 (141 720,38 €), poids 1,48 %, consommation 98,52 % ; rapprochement avec les inventaires datés 3 777,99 / 4 807,66 / 4 534,25 € (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
+     "label": "Bilan produit par produit : achats 10 622,0 L, consommation 7 351,1 L, inventaire 213,3 L, 12 produits consommation > achats = 708,3 L, Calvados 110,7 L (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-correspondance-libelles.xlsx",
+     "label": "Correspondance bouton de caisse / facture / inventaire : Mouton Cadet = Château Grand Renom (code 661236), « Hautes Côtes de Nuits » = blanc Lupé-Cholet (code 601416), 8 codes-bières jamais paramétrés, Cubis 426,9 L réattribué"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
+     "label": "Forfait de 15 % (76 863,18 € TTC = 1 593 L), itemisation brute hors cuisine et menus 1 158 L = 72,7 % du forfait, nette hors sur-versement 697,4 L = 43,8 %, net 30 525,83 €, marge 46 337,35 €, consommation du chef 8 109,83 € (à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",
+     "label": "Le même abattement de 15 % opposé successivement à six postes de perte ; itemisation par exercice ; forfait en euros de CA contre volumes en litres (assiettes différentes)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-biere-matiere.xlsx",
+     "label": "Bière : assiette 1 213,3 L, abattement de 15 % du disponible déjà retenu par le service (94,8 L en 2024-2025), freinte illustrative 10 % = 121,3 L dont 32,6 L documentés, dégrèvement 0 € (à formules)"
+    },
+    {
      "fichier": "pieces-reponse-2/R2-extrapolation-cuisine.xlsx",
-     "label": "Rapport liquides/solides mesuré sur la caisse, cuisine extrapolée vs enregistrée, cuisine en trop de 354 921 €, part de 75,2 % du rehaussement et bras de levier 3,94 / 4,02 / 4,10 (onglets Sources, Rapport, Extrapolation, Méthode, à formules vivantes)"
+     "label": "Rapport liquides/solides recalculé sur les annexes D (2,9363 / 3,0239 / 3,1047), cuisine extrapolée 1 314 482 € contre enregistrée 959 561 €, cuisine en trop 354 921 € = 75,2 % du rehaussement, levier 3,94 / 4,02 / 4,10 (onglets Sources, Rapport, Extrapolation, Methode, à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-1/R1-coefficients-et-extrapolation.xlsx",
+     "label": "Recontrôle ligne à ligne des totaux des annexes D sur les annexes C-1 à C-3 (403 370,42 / 438 281,12 / 435 564,96 €, écart nul) ; bras de levier ; test de la page 93 (onglet 4)"
     },
     {
      "fichier": "pieces-reponse-2/R2-coefficient-revente.xlsx",
-     "label": "Part revendue de 60,77 % dérivée du bilan matière des 10 622 L, coefficient sur achat revendu ≈ 3,92 et coefficient sur la totalité des achats 2,383251 = 257 209,96 € / 107 924 €, confrontation au repère de 3,2725 (onglets Sources, Cascade, Coefficient, Confrontation, Méthode)"
+     "label": "Part revendue 60,77 % dérivée du bilan matière (6 455 / 10 622 L), coefficient sur la totalité des achats 2,383251 = 257 209,96 / 107 924 €, coefficient sur achat revendu ≈ 3,92, confrontation au repère de 3,2725 exercice par exercice (onglets Sources, Cascade, Coefficient, Confrontation, Methode, à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-exposition-et-scenarios.xlsx",
+     "label": "Exposition réelle 582 796 € = société 213 148 € + associés 369 648 € ; scénarios de réduction de la reconstitution de 25 / 50 / 75 % (base distribuée 176 935 / 117 957 / 58 978 €) (à formules)"
     }
-   ]
+   ],
+   "titre": "Toutes les pièces de la page"
+  },
+  {
+   "kind": "note",
+   "texte": "Sources : proposition de rectification du 18/05/2026 (p. 34-35, 36-53, annexes D-1 à D-3, 6-1 à 6-3, 7-1 à 7-3) reprise dans les propositions personnelles du 19/10/2026 ; réponse de la DDFiP du Jura du 04/09/2026 (p. 56-60, 71-77, 83, 92-93) ; BOI-CF-IOR-10-20 (12/09/2012) § 110, 200, 270, 280 ; BOI-CF-CMSS-20-10 § 200 ; BOI-CF-IOR-10-50-30 § 20 et 40 ; CE 3e ch. 5 octobre 2016 n° 389822 ; CE 9e et 10e ch. 22 juillet 2020 n° 424052 ; CE 9e ch. 5 janvier 2023 n° 452595 ; CE 3e et 8e ch. 3 novembre 2023 n° 460520 ; CE 3e ch. 10 juillet 2024 n° 470817 ; Kerr et coll. 2008 (PMC2574782) ; Wansink et van Ittersum, BMJ 2005 (PMC1322248)."
   }
  ]
 }

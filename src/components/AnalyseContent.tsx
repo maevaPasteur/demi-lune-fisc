@@ -23,6 +23,7 @@ import {
   Center,
   Divider,
   Group,
+  List,
   Modal,
   Pagination,
   Paper,
@@ -790,7 +791,158 @@ function CasSuppressionsView({ section }: { section: Extract<Section, { kind: 'c
   )
 }
 
+// --- Kinds additionnels (hors de l'union typée Section, cast volontaire) -------
+// liste     : liste à puces / numérotée (lecture rapide pour l'avocat).
+// reproche  : carte rouge = résumé du reproche du fisc + bouton ouvrant une popin
+//             qui rend le reproche détaillé (sections quelconques).
+// documents : liste des documents téléchargeables propres à une section.
+type ListeSection = { kind: 'liste'; style?: 'puces' | 'numeros'; titre?: string; items: string[] }
+type ReprocheSection = {
+  kind: 'reproche'
+  titre?: string
+  page?: string
+  resume: string[] | string
+  detail?: Section[]
+}
+type DocumentsSection = {
+  kind: 'documents'
+  titre?: string
+  intro?: string
+  fichiers: { fichier: string; label: string }[]
+}
+
+function ListeView({ s }: { s: ListeSection }) {
+  return (
+    <Stack gap={6}>
+      {s.titre && (
+        <Text fw={700} fz={{ base: 15, sm: 16 }} c="dark.8">
+          {s.titre}
+        </Text>
+      )}
+      <List type={s.style === 'numeros' ? 'ordered' : 'unordered'} spacing={6} size="md" withPadding>
+        {s.items.map((it, i) => (
+          <List.Item key={i}>{richText(it)}</List.Item>
+        ))}
+      </List>
+    </Stack>
+  )
+}
+
+function ReprocheView({ s }: { s: ReprocheSection }) {
+  const [open, setOpen] = useState(false)
+  const items = Array.isArray(s.resume) ? s.resume : [s.resume]
+  const hasDetail = !!(s.detail && s.detail.length > 0)
+  return (
+    <Paper
+      withBorder
+      radius="lg"
+      p={{ base: 'md', sm: 'lg' }}
+      style={{ borderColor: 'var(--mantine-color-red-4)', backgroundColor: 'var(--mantine-color-red-0)' }}
+    >
+      <Stack gap="sm">
+        <Group justify="space-between" wrap="wrap" gap="xs">
+          <Group gap={8} wrap="nowrap">
+            <IconGavel size={18} color="var(--mantine-color-red-7)" />
+            <Text size="xs" tt="uppercase" c="red.8" fw={800} style={{ letterSpacing: '0.06em' }}>
+              {s.titre ?? 'Ce que reproche le fisc'}
+            </Text>
+          </Group>
+          {s.page && (
+            <Badge color="red" variant="light" radius="sm" size="sm">
+              {s.page}
+            </Badge>
+          )}
+        </Group>
+        <List spacing={4} size="md" withPadding>
+          {items.map((it, i) => (
+            <List.Item key={i}>
+              <Text span c="dark.7">
+                {richText(it)}
+              </Text>
+            </List.Item>
+          ))}
+        </List>
+        {hasDetail && (
+          <>
+            <Button
+              size="xs"
+              variant="light"
+              color="red"
+              radius="md"
+              onClick={() => setOpen(true)}
+              rightSection={<IconArrowRight size={14} />}
+              style={{ alignSelf: 'flex-start' }}
+            >
+              Voir le reproche détaillé du fisc
+            </Button>
+            <Modal
+              opened={open}
+              onClose={() => setOpen(false)}
+              size="xl"
+              radius="lg"
+              title={
+                <Text fw={700}>
+                  Le reproche du fisc, dans le détail{s.page ? ` · ${s.page}` : ''}
+                </Text>
+              }
+            >
+              <Stack gap="md">
+                {s.detail!.map((d, i) => (
+                  <SectionView key={i} section={d} />
+                ))}
+              </Stack>
+            </Modal>
+          </>
+        )}
+      </Stack>
+    </Paper>
+  )
+}
+
+function DocumentsView({ s }: { s: DocumentsSection }) {
+  return (
+    <Paper
+      p={{ base: 'md', sm: 'lg' }}
+      radius="lg"
+      withBorder
+      style={{ borderColor: 'var(--mantine-color-teal-4)', backgroundColor: 'var(--mantine-color-teal-0)' }}
+    >
+      <Stack gap="sm">
+        <Text size="xs" tt="uppercase" c="teal.8" fw={700}>
+          {s.titre ?? 'Documents de cette section (téléchargement)'}
+        </Text>
+        {s.intro && (
+          <Text size="sm" c="dimmed">
+            {s.intro}
+          </Text>
+        )}
+        <Group gap="sm">
+          {(s.fichiers ?? []).map((f) => (
+            <Button
+              key={f.fichier}
+              component="a"
+              href={fileUrl(f.fichier)}
+              download
+              variant="light"
+              color="teal"
+              radius="md"
+              size="sm"
+              leftSection={<IconDownload size={16} />}
+            >
+              {f.label}
+            </Button>
+          ))}
+        </Group>
+      </Stack>
+    </Paper>
+  )
+}
+
 function SectionView({ section }: { section: Section }) {
+  const kindX = (section as { kind: string }).kind
+  if (kindX === 'liste') return <ListeView s={section as unknown as ListeSection} />
+  if (kindX === 'reproche') return <ReprocheView s={section as unknown as ReprocheSection} />
+  if (kindX === 'documents') return <DocumentsView s={section as unknown as DocumentsSection} />
   // Schéma vectoriel (SVG) rédigé dans la donnée. Hors de l'union typée Section
   // (cast volontaire) pour ne pas toucher au type partagé.
   if ((section as { kind: string }).kind === 'schema') {

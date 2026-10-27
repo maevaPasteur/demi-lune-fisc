@@ -1,614 +1,418 @@
 {
   "meta": {
     "slug": "erreurs-de-tva",
-    "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026)",
+    "source": "Proposition personnelle du 19/10/2026 (grief repris du 18/05/2026, p. 22 à 28) ; réponse du service du 04/09/2026, p. 46-47 (grief H)",
     "limites": [
-      "L’origine « bug d’affichage » des valeurs négatives de la colonne VAT_base n’est établie par aucune attestation de l’éditeur de la caisse. La démonstration n’en dépend pas : sur les 29 588 lignes de ventilation des trois journaux de TVA (annexes G1, G2 et G3), la colonne qui porte la taxe (tax_amount) ne comporte aucune valeur négative, et la base déduite de cette taxe rejoint les bases comptabilisées à 23,91 € près sur trois ans. La production d’une attestation de l’éditeur sur le comportement de la colonne VAT_base reste néanmoins souhaitable avant toute instance."
+      "L’origine « colonne d’affichage de l’éditeur » des valeurs négatives de VAT_base n’est établie par aucune attestation du fournisseur de caisse ; elle l’est par l’arithmétique (VAT_base = TTC du palier − taux lu en euros, 16 605 tickets sur 16 605 à 0,00 €) et par l’intégrité de la colonne de la taxe (0 négatif sur 29 588 lignes). Attestation de l’éditeur souhaitable avant toute instance.",
+      "L’attribution de 185,24 € de l’excédent du 445710 à la TVA sur le compte 706800 « Pourboire » est établie par différence (la page 26 ne ventile pas le 445710 par taux) ; reliquat 7,09 € sur trois ans non expliqué."
     ]
   },
   "sections": [
     {
       "kind": "chapitre",
-      "source": "fisc",
+      "source": "neutre",
       "numero": 1,
-      "titre": "Ce que soutient l’administration",
-      "sousTitre": "Les propositions de rectification personnelles du 19/10/2026, notifiées à M. Thierry PASTEUR et à Mme Ghislaine BEHEM, reprennent à l’identique le grief « H - Les incohérences de TVA » de la proposition de rectifications « société » du 18/05/2026 (p. 22 à 28). Le présent développement répond à ce grief et anticipe les précisions que le service y a apportées dans sa réponse aux observations du 04/09/2026."
+      "titre": "Les « incohérences de TVA » (grief H)",
+      "sousTitre": "Le service lit dans un export de la caisse une colonne d’affichage négative (VAT_base) et en déduit que la comptabilité n’est pas probante ; la colonne de la taxe (tax_amount), dans le même fichier, est intacte, boucle avec la comptabilité à 0,01 % près, et l’origine arithmétique des valeurs négatives est établie au centime sur les 16 605 tickets des trois exercices."
     },
     {
-      "kind": "titre",
-      "texte": "1. Le rappel que fait le service de la position de Maître THIVEND"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service commence par résumer la contestation. Maître THIVEND « commence par rappeler les données utilisées par le service en les joignant également sur une clé USB, en précisant que le ggrief ne repose que sur la lecture d’une seule colonne » (p. 46, la coquille « ggrief » figure telle quelle dans le courrier). Il poursuit « en donnant ses explications, considérant que le service a pris pour son analyse la seule colonne buggée des fichiers et qu’il n’a pas utilisé la TVA qui sert réellement à la comptabilité » (p. 46)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service reproduit ensuite l’exemple du 14/04/2022 avancé par la réponse, à savoir le détail du ticket n° 2 lu directement dans le fichier de caisse."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Ticket n° 2 du 14/04/2022, tel que reproduit par le service (p. 46)",
-      "minWidth": 720,
-      "colonnes": [
-        {
-          "label": "Ligne du ticket"
-        },
-        {
-          "label": "Colonne « base HT » du fichier (buggée)",
-          "align": "right"
-        },
-        {
-          "label": "TVA réellement encaissée (juste)",
-          "align": "right"
-        },
-        {
-          "label": "Base correcte = TVA / taux",
-          "align": "right"
-        }
-      ],
-      "lignes": [
-        [
-          {
-            "v": "Ligne à 10 %"
-          },
-          {
-            "v": "5,70 €",
-            "align": "right"
-          },
-          {
-            "v": "1,43 €",
-            "align": "right"
-          },
-          {
-            "v": "14,30 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Ligne à 20 %"
-          },
-          {
-            "v": "-14,80 €",
-            "align": "right"
-          },
-          {
-            "v": "0,87 €",
-            "align": "right"
-          },
-          {
-            "v": "4,35 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Total du ticket",
-            "fw": 700
-          },
-          {
-            "v": "-9,10 €",
-            "align": "right",
-            "fw": 700
-          },
-          {
-            "v": "2,30 €",
-            "align": "right",
-            "fw": 700
-          },
-          {
-            "v": "18,65 €",
-            "align": "right",
-            "fw": 700
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le commentaire de la réponse est repris intégralement par le service : « La colonne “base HT” du fichier donne un total de -9,10 € : impossible pour une vente de 20,90 €. Mais la TVA encaissée (1,43 € + 0,87 € = 2,30 €) est exactement la TVA du ticket, et la base correcte (14,30 € + 4,35 € = 18,65 €) redonne bien le HT réel (20,90 moins 2,30 = 18,60 €, a 5 centimes d’arrondi près). Le bug est dans la colonne d’affichage, pas dans la vente » (p. 46)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service rappelle enfin que la contestation se déroule « en trois étapes » (p. 46) : d’abord les totaux issus de la mauvaise colonne, exercice par exercice ; ensuite les totaux issus de la bonne colonne, celle de la TVA encaissée, exercice par exercice ; enfin le rapprochement avec la comptabilité. Il cite les pièces jointes annoncées sur la clé USB : **37-rf-tva-2-exemple-ticket.csv**, **38-rf-anomalies-tva.xlsx**, **39-rf-tva-3-totaux-mauvaise-colonne.csv**, **40-rf-tva-4-totaux-bonne-colonne.csv** et **41-rf-tva-5-comparaison-et-comptabilite.csv**."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Sur cette troisième étape, le service reprend la conclusion de la réponse (p. 47) : « La TVA encaissée colle à la comptabilité à 205,22 € près sur trois ans, et la base HT à 23,91 € près (moins de 0,01 %). » La réponse ajoutait que l’écart de TVA va « dans le sens d’une sur-déclaration (l’entreprise a reversé un peu plus de TVA qu’elle n’en a encaissé) », et que « Deux chaines totalement indépendantes (la caisse informatique d’un côté, l’agenda manuscrit de l’autre) donnent le même résultat ». Le service conclut ce rappel ainsi : « Il en conclut que du fait d’une mauvaise lecture du fichier par le service, ce grief doit être abandonné » (p. 47)."
-    },
-    {
-      "kind": "kpis",
+      "kind": "liste",
+      "style": "puces",
       "items": [
-        {
-          "label": "Écart de TVA sur trois ans",
-          "valeur": "205,22 €",
-          "sub": "chiffre de la réponse THIVEND, repris p. 47"
-        },
-        {
-          "label": "Écart de base HT sur trois ans",
-          "valeur": "23,91 €",
-          "sub": "soit moins de 0,01 % (p. 47)"
-        },
-        {
-          "label": "Ce que donne la colonne du service sur le ticket n° 2",
-          "valeur": "-9,10 €",
-          "sub": "pour une vente de 20,90 € (p. 46)",
-          "couleur": "red"
-        }
-      ]
+        "**1.** Me THIVEND « se limite à ne retenir que la colonne qui se rapproche des montants qui figurent en comptabilité » ; « même si ces montants sont très voisins, ils ne correspondent pas exactement ».",
+        "**2.** « Toute la problématique repose justement sur cet à peu-près » : le fait que le logiciel « puisse donner des montants différents » conduit le service à rejeter la comptabilité.",
+        "**3.** Me THIVEND « n’apporte aucune démonstration permettant d’expliquer ces écarts ».",
+        "**4.** « Il n’y a [pas] qu’une seule colonne à poser problème » : « les six dernières colonnes » du fichier « peuvent afficher des montants négatifs », « quasiment pour chaque note enregistrée » ; l’origine de ces montants « persiste à être totalement nébuleuse ».",
+        "**5.** « La source pourrait aussi bien provenir d’une manipulation du logiciel, par les dirigeants » ; « cette nébulosité, qui demeure », conduit à maintenir le grief."
+      ],
+      "titre": "Ce que reproche le fisc, en résumé (réponse du service du 04/09/2026, p. 47, dans son ordre)"
     },
     {
       "kind": "titre",
-      "texte": "2. La « Réponse du service » (p. 47)"
+      "texte": "« Maître THIVEND se limite à ne retenir que la colonne qui se rapproche des montants qui figurent en comptabilité »",
+      "numero": "1"
     },
     {
-      "kind": "paragraphe",
-      "texte": "Le service ouvre sa réponse en situant le grief dans la proposition de rectifications : « Dans ses pages 22 à 28 de la proposition de rectifications, le service exposait deux points » (p. 47). Il en énumère pourtant trois : **XI, Le logiciel : La TVA**, **XII, Le logiciel : Le nombre d’articles** et **XIII, Les chiffres d’affaires**. La suite du paragraphe confirme d’ailleurs le décompte de trois, puisqu’elle vise « ces trois parties »."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service précise la portée de ces trois parties : « Dans ces trois parties, le service se contente de montrer que la comptabilité indique des montants différents par rapport à ce qui ressort des fichiers de caisse pour appuyer son rejet de comptabilité » (p. 47)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Premier argument, sur le choix de la colonne. « Sur cette partie XI-Logiciel : La TVA justement, Maître THIVEND se limite à ne retenir que la colonne qui se rapproche des montants qui figurent en comptabilité. Effectivement, même si ces montants sont très voisins, ils ne correspondent pas exactement » (p. 47). Le service ne conteste donc pas la proximité des montants : il la constate, et en fait le cœur de son grief."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Deuxième argument, l’« à peu-près » comme motif de rejet. « Toute la problématique repose justement sur cet à peu-près. En effet, c’est le fait que le logiciel puisse donner des montants différents qui interpellent le service et qui le conduit à rejeter la comptabilité rejetée » (p. 47, la formule « la comptabilité rejetée » figure telle quelle). Autrement dit, ce n’est plus le montant de l’écart qui fonde le grief, mais l’existence même d’un écart entre deux colonnes du logiciel."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Troisième argument, l’absence d’explication de l’écart. « Il est compréhensible que Maître THIVEND cherche à montrer la faiblesse de ces écarts pour la question de la TVA en minimisant cette situation. En revanche, il n’apporte aucune démonstration permettant d’expliquer ces écarts » (p. 47)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Quatrième argument, le nombre de colonnes en cause. « De plus, il se cantonne à affirmer qu’il n’y a qu’une seule colonne à poser problème. Tel n’est pas le cas » (p. 47). Pour l’établir, le service reprend le même exemple, le ticket n° 2 du 14/04/2022 à 11h54, mais en affichant cette fois l’extrait brut du fichier de caisse avec l’ensemble de ses colonnes."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Extrait du fichier de caisse reproduit par le service (p. 47), journée du 14/04/2022",
-      "minWidth": 1180,
-      "colonnes": [
-        {
-          "label": "Ligne du fichier"
-        },
-        {
-          "label": "tot_ttc",
-          "align": "right"
-        },
-        {
-          "label": "tot_tva",
-          "align": "right"
-        },
-        {
-          "label": "tot_sum",
-          "align": "right"
-        },
-        {
-          "label": "tot_tax_sum",
-          "align": "right"
-        },
-        {
-          "label": "taux_tva %",
-          "align": "right"
-        },
-        {
-          "label": "VAT_base",
-          "align": "right"
-        },
-        {
-          "label": "tax_amount",
-          "align": "right"
-        },
-        {
-          "label": "Base TVA 10 %",
-          "align": "right"
-        },
-        {
-          "label": "TVA 10 %",
-          "align": "right"
-        },
-        {
-          "label": "Base TVA 20 %",
-          "align": "right"
-        },
-        {
-          "label": "TVA 20 %",
-          "align": "right"
-        }
+      "kind": "reproche",
+      "page": "p. 47 (réponse du 04/09/2026) ; p. 25 à 27 (proposition du 18/05/2026)",
+      "resume": [
+        "Le grief vise les pages 22 à 28 de la proposition : « XI, Le logiciel : La TVA », « XII, Le nombre d’articles », « XIII, Les chiffres d’affaires », où « le service se contente de montrer que la comptabilité indique des montants différents par rapport à ce qui ressort des fichiers de caisse pour appuyer son rejet de comptabilité ».",
+        "Sur la TVA, Me THIVEND aurait choisi la colonne arrangeante : « même si ces montants sont très voisins, ils ne correspondent pas exactement ».",
+        "Dans la proposition (p. 26), le service totalise le fichier « tva.xls » : bases « totalement incohérentes (chiffres négatifs) », somme des TVA par taux différente de la ligne « Total TVA », et aucun total ne « correspond à aucun des montants qui figurent dans la comptabilité »."
       ],
-      "lignes": [
-        [
-          {
-            "v": "A NOUVEAUX"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "977 739,78 €",
-            "align": "right"
-          },
-          {
-            "v": "102 865,15 €",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "14/04/2022 11:48, ticket n° 1"
-          },
-          {
-            "v": "67,40 €",
-            "align": "right"
-          },
-          {
-            "v": "6,13 €",
-            "align": "right"
-          },
-          {
-            "v": "977 807,18 €",
-            "align": "right"
-          },
-          {
-            "v": "102 871,28 €",
-            "align": "right"
-          },
-          {
-            "v": "10",
-            "align": "right"
-          },
-          {
-            "v": "57,40 €",
-            "align": "right"
-          },
-          {
-            "v": "6,13 €",
-            "align": "right"
-          },
-          {
-            "v": "57,40 €",
-            "align": "right"
-          },
-          {
-            "v": "6,13 €",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "14/04/2022 11:54, ticket n° 2 (ligne 20 %)"
-          },
-          {
-            "v": "20,90 €",
-            "align": "right"
-          },
-          {
-            "v": "2,30 €",
-            "align": "right"
-          },
-          {
-            "v": "977 828,08 €",
-            "align": "right"
-          },
-          {
-            "v": "102 873,58 €",
-            "align": "right"
-          },
-          {
-            "v": "20",
-            "align": "right"
-          },
-          {
-            "v": "-14,80 €",
-            "align": "right",
-            "badge": "ko"
-          },
-          {
-            "v": "0,87 €",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "-14,80 €",
-            "align": "right",
-            "badge": "ko"
-          },
-          {
-            "v": "0,87 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "14/04/2022 11:54, ticket n° 2 (ligne 10 %)"
-          },
-          {
-            "v": "20,90 €",
-            "align": "right"
-          },
-          {
-            "v": "2,30 €",
-            "align": "right"
-          },
-          {
-            "v": "977 828,08 €",
-            "align": "right"
-          },
-          {
-            "v": "102 873,58 €",
-            "align": "right"
-          },
-          {
-            "v": "10",
-            "align": "right"
-          },
-          {
-            "v": "5,70 €",
-            "align": "right"
-          },
-          {
-            "v": "1,43 €",
-            "align": "right"
-          },
-          {
-            "v": "5,70 €",
-            "align": "right"
-          },
-          {
-            "v": "1,43 €",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "",
-            "align": "right"
-          }
-        ]
+      "detail": [
+        {
+          "kind": "paragraphe",
+          "texte": "Réponse du service, p. 47 : « Dans ses pages 22 à 28 de la proposition de rectifications, le service exposait deux points : XI, Le logiciel : La TVA ; XII, Le logiciel : Le nombre d’articles ; XIII, Les chiffres d’affaires. Dans ces trois parties, le service se contente de montrer que la comptabilité indique des montants différents par rapport à ce qui ressort des fichiers de caisse pour appuyer son rejet de comptabilité. »"
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "« Sur cette partie XI-Logiciel : La TVA justement, Maître THIVEND se limite à ne retenir que la colonne qui se rapproche des montants qui figurent en comptabilité. Effectivement, même si ces montants sont très voisins, ils ne correspondent pas exactement. » (p. 47)"
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "Proposition du 18/05/2026, p. 26, « XI - LE LOGICIEL : La TVA, Deuxième Partie (Annexe G-1 à G-3 et H1 à H3) » : l’analyse du vérificateur « s’est bornée à : totaliser le chiffre d’affaires TTC ; totaliser la TVA enregistrée dans ce fichier « 20220401 AND 20250331 tva.xls » ; établir les montants des bases de TVA suivant les taux de TVA ; établir les montants de TVA suivant les taux de TVA »."
+        },
+        {
+          "kind": "tableau",
+          "titre": "Tableau du service, p. 26 de la proposition du 18/05/2026 : totaux tirés du fichier « 20220401 AND 20250331 tva.xls » (annexes G-1 à G-3)",
+          "minWidth": 760,
+          "colonnes": [
+            {
+              "label": "MODES"
+            },
+            {
+              "label": "Exercice clos au 31/03/2023",
+              "align": "right"
+            },
+            {
+              "label": "Exercice clos au 31/03/2024",
+              "align": "right"
+            },
+            {
+              "label": "Exercice clos au 31/03/2025",
+              "align": "right"
+            }
+          ],
+          "lignes": [
+            [
+              {
+                "v": "Total chiffres d’affaires TTC"
+              },
+              {
+                "v": "403 324,72 €",
+                "align": "right"
+              },
+              {
+                "v": "437 881,12 €",
+                "align": "right"
+              },
+              {
+                "v": "434 709,26 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Total TVA"
+              },
+              {
+                "v": "42 548,21 €",
+                "align": "right"
+              },
+              {
+                "v": "46 387,76 €",
+                "align": "right"
+              },
+              {
+                "v": "45 914,28 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Base HT TVA 10 %"
+              },
+              {
+                "v": "269 445,43 €",
+                "align": "right"
+              },
+              {
+                "v": "296 113,00 €",
+                "align": "right"
+              },
+              {
+                "v": "296 625,31 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Base HT TVA 20 %"
+              },
+              {
+                "v": "− 11 645,01 €",
+                "align": "right",
+                "badge": "ko"
+              },
+              {
+                "v": "− 1 680,08 €",
+                "align": "right",
+                "badge": "ko"
+              },
+              {
+                "v": "572,55 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "TVA à 10 %"
+              },
+              {
+                "v": "29 611,10 €",
+                "align": "right"
+              },
+              {
+                "v": "31 917,44 €",
+                "align": "right"
+              },
+              {
+                "v": "31 852,20 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "TVA à 20 %"
+              },
+              {
+                "v": "12 941,66 €",
+                "align": "right"
+              },
+              {
+                "v": "14 482,64 €",
+                "align": "right"
+              },
+              {
+                "v": "14 074,43 €",
+                "align": "right"
+              }
+            ]
+          ]
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "« La simple lecture des données permet de remarquer immédiatement que les bases TVA suivant les taux de TVA sont totalement incohérentes (chiffres négatifs). De plus, la somme des montants de TVA, par taux, ne correspond pas à la ligne « total de TVA ». » (p. 26)"
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "« Lors de l’intervention du lundi 30 mars 2026 [...] la comptable a fait remarquer que le compte 706 800 devait être intégré au chiffre d’affaires. Mais malgré cette modification [...] tous les chiffres mentionnés ci-dessous ne correspondent à aucun des montants qui figurent dans la comptabilité présentée, en matière de produits, à savoir : » (p. 26)"
+        },
+        {
+          "kind": "tableau",
+          "titre": "Tableau du service, p. 26 : « la comptabilité présentée, en matière de produits »",
+          "minWidth": 760,
+          "colonnes": [
+            {
+              "label": "Compte"
+            },
+            {
+              "label": "Exercice clos au 31/03/2023",
+              "align": "right"
+            },
+            {
+              "label": "Exercice clos au 31/03/2024",
+              "align": "right"
+            },
+            {
+              "label": "Exercice clos au 31/03/2025",
+              "align": "right"
+            }
+          ],
+          "lignes": [
+            [
+              {
+                "v": "Compte 706 000 - Restaurant 20 %"
+              },
+              {
+                "v": "64 712,51 €",
+                "align": "right"
+              },
+              {
+                "v": "72 416,55 €",
+                "align": "right"
+              },
+              {
+                "v": "70 517,47 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Compte 706 300 - Restaurant 10 %"
+              },
+              {
+                "v": "296 105,87 €",
+                "align": "right"
+              },
+              {
+                "v": "319 179,31 €",
+                "align": "right"
+              },
+              {
+                "v": "318 345,43 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Compte 706 800 - Pourboire"
+              },
+              {
+                "v": "598,04 €",
+                "align": "right"
+              },
+              {
+                "v": "597,75 €",
+                "align": "right"
+              },
+              {
+                "v": "656,57 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Compte 445710 - TVA COLLECTÉE"
+              },
+              {
+                "v": "42 614,45 €",
+                "align": "right"
+              },
+              {
+                "v": "46 464,79 €",
+                "align": "right"
+              },
+              {
+                "v": "46 005,45 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "TOTAL CHIFFRE D’AFFAIRES TTC",
+                "fw": 700
+              },
+              {
+                "v": "404 030,87 €",
+                "align": "right",
+                "fw": 700
+              },
+              {
+                "v": "438 658,43 €",
+                "align": "right",
+                "fw": 700
+              },
+              {
+                "v": "435 524,92 €",
+                "align": "right",
+                "fw": 700
+              }
+            ]
+          ]
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "« Les annexes H-1 à H-3 se rapportent au fichier transmis « 20220401 AND 20250331 ticket.xls ». Ils indiquent les mêmes montants que ceux des annexes G-1 à G-3. » (p. 27). Conséquence tirée p. 27 : « À l’évidence, les données de caisse transmises au service ne correspondent pas à ce qui a été enregistré dans la comptabilité [...]. Le service relève également que les montants des bases TVA du fichier [...] sont totalement invraisemblables. En tout état de cause, toutes ces anomalies dans les données de la caisse ne peuvent que compromettre la nature probante de la comptabilité présentée. »"
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "Rappel par le service de la position de Me THIVEND (p. 46) : le grief « ne repose que sur la lecture d’une seule colonne » ; le service « a pris pour son analyse la seule colonne buggée des fichiers et [...] n’a pas utilisé la TVA qui sert réellement à la comptabilité ». Exemple reproduit :"
+        },
+        {
+          "kind": "tableau",
+          "titre": "Ticket n° 2 du 14/04/2022, tel que reproduit par le service p. 46 (« lu directement dans le fichier de caisse »)",
+          "minWidth": 720,
+          "colonnes": [
+            {
+              "label": "Ligne du ticket"
+            },
+            {
+              "label": "Colonne « base HT » du fichier (buggée)",
+              "align": "right"
+            },
+            {
+              "label": "TVA réellement encaissée (juste)",
+              "align": "right"
+            },
+            {
+              "label": "Base correcte = TVA / taux",
+              "align": "right"
+            }
+          ],
+          "lignes": [
+            [
+              {
+                "v": "Ligne à 10 %"
+              },
+              {
+                "v": "5,70 €",
+                "align": "right"
+              },
+              {
+                "v": "1,43 €",
+                "align": "right"
+              },
+              {
+                "v": "14,30 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Ligne à 20 %"
+              },
+              {
+                "v": "-14,80 €",
+                "align": "right"
+              },
+              {
+                "v": "0,87 €",
+                "align": "right"
+              },
+              {
+                "v": "4,35 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Total du ticket",
+                "fw": 700
+              },
+              {
+                "v": "-9,10 €",
+                "align": "right",
+                "fw": 700
+              },
+              {
+                "v": "2,30 €",
+                "align": "right",
+                "fw": 700
+              },
+              {
+                "v": "18,65 €",
+                "align": "right",
+                "fw": 700
+              }
+            ]
+          ]
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "Le service reproduit le commentaire : « La colonne « base HT » du fichier donne un total de -9,10 € : impossible pour une vente de 20,90 €. Mais la TVA encaissée (1,43 € + 0,87 € = 2,30 €) est exactement la TVA du ticket, et la base correcte (14,30 € + 4,35 € = 18,65 €) redonne bien le HT réel (20,90 − 2,30 = 18,60 €, a 5 centimes d’arrondi près). Le bug est dans la colonne d’affichage, pas dans la vente. » Puis les trois étapes de la contestation et les pièces jointes citées : 37-rf-tva-2-exemple-ticket.csv, 38-rf-anomalies-tva.xlsx, 39-rf-tva-3-totaux-mauvaise-colonne.csv, 40-rf-tva-4-totaux-bonne-colonne.csv, 41-rf-tva-5-comparaison-et-comptabilite.csv (p. 46-47), et la conclusion rappelée : « La TVA encaissée colle à la comptabilité à 205,22 € près sur trois ans, et la base HT à 23,91 € près (moins de 0,01 %) » (p. 47)."
+        }
       ]
     },
     {
-      "kind": "note",
-      "texte": "L’extrait du courrier comporte aussi les colonnes date Ticket, heure Ticket, no Ticket, dat_z, no_z Report, Chrono Z, caissier et tot_rem Globale (0,00 € sur chacune des lignes de tickets reproduites). Le n° de rapport Z est 2938 et le caissier « LUNA » sur les trois lignes de tickets."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service tire de cet extrait son constat central : « Ce sont les six dernières colonnes qui interpellent le service dans le sens où elles peuvent afficher des montants négatifs. Bien que les deux dernières colonnes proviennent d’un calcul du service, ce constat est fait quasiment pour chaque note enregistrée. L’origine de ces montants négatifs persiste à être totalement nébuleuse, malgré la réponse de Maître THIVEND » (p. 47)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Cinquième et dernier argument, la thèse de la manipulation. « Or, tout logiciel est constitué un programme où chaque élément trouve sa source. Il est trop facile d’affirmer qu’il ne s’agit que d’un bug alors que la source pourrait aussi bien provenir d’une manipulation du logiciel, par les dirigeants, générant des erreurs qui ne peuvent être repérées que par ce biais » (p. 47)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "La conclusion du service est explicite : « Ainsi, cette nébulosité, qui demeure, permet au service de considérer que le grief sur le point TVA doit être maintenu » (p. 47). Le grief est donc maintenu, sans qu’aucun montant de rectification propre à ce point ne soit chiffré dans ces deux pages."
-    },
-    {
-      "kind": "kpis",
+      "kind": "liste",
+      "style": "puces",
       "items": [
-        {
-          "label": "Colonnes visées par le service",
-          "valeur": "6",
-          "sub": "« les six dernières colonnes » (p. 47)"
-        },
-        {
-          "label": "dont colonnes calculées par le service",
-          "valeur": "2",
-          "sub": "« les deux dernières colonnes proviennent d’un calcul du service » (p. 47)"
-        },
-        {
-          "label": "Parties de la proposition visées",
-          "valeur": "XI, XII, XIII",
-          "sub": "annoncées comme « deux points » p. 47, puis citées au nombre de trois"
-        },
-        {
-          "label": "Pages de la proposition de rectifications",
-          "valeur": "22 à 28",
-          "sub": "périmètre rappelé par le service"
-        }
-      ]
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 2,
-      "titre": "La colonne qui porte la taxe figure dans le même fichier, et elle est intacte",
-      "sousTitre": "Sur les 29 588 lignes de ventilation des trois journaux de TVA de la caisse (annexes G1, G2 et G3), la colonne qui porte la taxe ne comporte pas une seule valeur négative ; à périmètre égal, la TVA encaissée et la TVA assise sur les bases comptabilisées concordent à 0,01 % près sur trois ans, chaque exercice recalculé par formule depuis son fichier brut."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.1",
-      "texte": "Le raisonnement est circulaire, et le courrier le formule lui-même"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service écrit p. 47 : « Toute la problématique repose justement sur cet à peu-près. En effet, c’est le fait que le logiciel puisse donner des montants différents qui interpellent le service et qui le conduit à rejeter la comptabilité. » Le cercle est complet : le service retient une colonne, cette colonne produit un écart, l’écart justifie le rejet, et le rejet dispense de vérifier si la colonne retenue était la bonne. La question posée par la réponse du 10/07/2026, celle de savoir **quelle colonne porte la base d’imposition**, n’est à aucun moment examinée."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service admet dans la même page que « même si ces montants sont très voisins, ils ne correspondent pas exactement ». Ce n’est donc plus le montant de la taxe qui est contesté, mais l’existence d’un écart entre deux colonnes d’un export informatique. Suivi jusqu’à son terme, ce raisonnement rendrait rejetable toute comptabilité tenue au moyen d’un logiciel de caisse, puisque tout export comporte des colonnes d’affichage et des colonnes calculées qui ne coïncident pas au centime près."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Il appartient à l’administration d’établir le caractère non probant de la comptabilité, et non à la société d’expliquer le fonctionnement interne du logiciel de son éditeur (LPF, art. L. 192, al. 2 : « la charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière »). Or le courrier ne désigne pas la colonne qui devrait, selon lui, porter la base d’imposition : il se borne à constater que deux colonnes diffèrent."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.2",
-      "texte": "La colonne qui porte la taxe existe dans le fichier, et le rapprochement boucle, périmètre par périmètre"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "L’annexe G comporte deux colonnes issues de la caisse : **VAT_base**, la base HT d’affichage, et **tax_amount**, la TVA de la ligne, figée par la caisse au moment de l’encaissement. La base d’imposition ne se lit pas dans la première, qui est celle que le service a retenue, mais se déduit de la seconde, les taux étant fixés par la loi (10 % pour la restauration sur place, 20 % pour les boissons alcoolisées)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le mécanisme se lit sur un ticket. Reprenons celui que le service a lui-même reproduit (p. 46-47), le ticket n° 2 du 14/04/2022 à 11h54. La colonne retenue par le service y affiche un total de −9,10 €, impossible pour une vente de 20,90 €. La colonne de la taxe, elle, reste positive sur chacune des deux lignes et, divisée par le taux légal, restitue la base correcte. Les deux lignes se lisent telles quelles dans le fichier brut."
-    },
-    {
-      "kind": "tableau",
-      "titre": "Notre lecture du ticket n° 2 (14/04/2022, 11h54) : la colonne de la taxe restitue la base et n’est jamais négative",
-      "minWidth": 880,
-      "colonnes": [
-        {
-          "label": "Ligne du ticket"
-        },
-        {
-          "label": "VAT_base (colonne retenue par le service)",
-          "align": "right"
-        },
-        {
-          "label": "tax_amount (colonne de la taxe)",
-          "align": "right"
-        },
-        {
-          "label": "Taux",
-          "align": "right"
-        },
-        {
-          "label": "Base correcte = tax_amount / taux",
-          "align": "right"
-        }
+        "La base d’imposition est constituée par « toutes les sommes, valeurs, biens ou services reçus ou à recevoir » en contrepartie de l’opération (art. 266, 1-a du CGI ; [BOI-TVA-BASE-10-10, § 1](https://bofip.impots.gouv.fr/bofip/1461-PGP.html/identifiant=BOI-TVA-BASE-10-10-20220511)) : c’est le prix TTC encaissé, dont la taxe se déduit au taux légal, et non une colonne d’affichage.",
+        "Pour les ventes à consommer sur place, prestations de services, la taxe est exigible « lors de l’encaissement des acomptes, du prix, de la rémunération » (art. 269, 2-c du CGI ; [BOI-TVA-BASE-20-20, § 30, § 130 et § 150](https://bofip.impots.gouv.fr/bofip/283-PGP.html/identifiant=BOI-TVA-BASE-20-20-20181107)). La colonne **tax_amount** est précisément la taxe figée par la caisse à l’encaissement de chaque ticket ; sa somme par ticket égale tot_tva au centime sur 16 605 tickets.",
+        "Les taux sont fixés par la loi : 10 % pour les ventes à consommer sur place hors boissons alcooliques (art. 279, m du CGI ; [BOI-TVA-LIQ-30-20-10-20, § 20 et § 50](https://bofip.impots.gouv.fr/bofip/256-PGP.html/identifiant=BOI-TVA-LIQ-30-20-10-20-20201014)), taux normal de 20 % pour les boissons alcooliques (art. 278 du CGI ; [BOI-TVA-LIQ-20, § 1](https://bofip.impots.gouv.fr/bofip/1376-PGP.html)). La base par taux est donc tax_amount / taux, pas VAT_base.",
+        "Le service lui-même pose les bons jalons p. 54 de la proposition (art. 256 et 269 du CGI) : c’est la taxe collectée sur les encaissements qui compte. Sa lecture de la page 26 ne les applique pas."
       ],
-      "lignes": [
-        [
-          {
-            "v": "Ligne à 10 %"
-          },
-          {
-            "v": "5,70 €",
-            "align": "right"
-          },
-          {
-            "v": "1,43 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "10 %",
-            "align": "right"
-          },
-          {
-            "v": "14,30 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Ligne à 20 %"
-          },
-          {
-            "v": "−14,80 €",
-            "align": "right",
-            "badge": "ko"
-          },
-          {
-            "v": "0,87 €",
-            "align": "right",
-            "badge": "ok"
-          },
-          {
-            "v": "20 %",
-            "align": "right"
-          },
-          {
-            "v": "4,35 €",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Total du ticket",
-            "fw": 700
-          },
-          {
-            "v": "−9,10 €",
-            "align": "right",
-            "fw": 700,
-            "badge": "ko"
-          },
-          {
-            "v": "2,30 €",
-            "align": "right",
-            "fw": 700,
-            "badge": "ok"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "18,65 €",
-            "align": "right",
-            "fw": 700
-          }
-        ]
-      ]
-    },
-    {
-      "kind": "note",
-      "texte": "La colonne retenue par le service tombe à −9,10 € ; la colonne de la taxe reste positive sur les deux lignes (1,43 € et 0,87 €) et redonne, taux par taux, la base réelle (14,30 € + 4,35 € = 18,65 €), laquelle recompose le HT (20,90 € − 2,30 € = 18,60 €) à cinq centimes d’arrondi de caisse près. Ces deux lignes sont lisibles telles quelles dans la pièce R2-tva-bouclage.xlsx, onglet « G1-source », lignes 3 et 4. Ce ticket n’a rien d’isolé : le même mécanisme se vérifie en masse ci-dessous, où la colonne de la taxe ne porte aucune valeur négative sur les 29 588 lignes des trois journaux."
+      "titre": "Le choix de la colonne n’est pas une commodité : c’est la loi qui le dicte"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le rapprochement ci-dessous confronte trois grandeurs : la TVA encaissée par la caisse (colonne tax_amount, agrégée par taux), la TVA théorique assise sur les bases effectivement comptabilisées (compte 706300 au taux de 10 %, compte 706000 au taux de 20 %, valeurs de la page 26), et la TVA collectée portée en comptabilité (compte 445710, page 26). Pour chacun des trois exercices, la TVA encaissée par taux est reproduite au centime, par formule, à partir du fichier brut de la caisse : annexe G1 (10 092 lignes de ventilation) pour 2022-2023, annexe G2 (9 927 lignes) pour 2023-2024, annexe G3 (9 569 lignes) pour 2024-2025, soit 29 588 lignes au total. Ce recalcul figure dans la pièce jointe R2-tva-bouclage.xlsx, onglets Calcul-G1, Calcul-G2 et Calcul-G3 (ligne 4, TVA encaissée par taux ; ligne 3, nombre de lignes de ventilation), récapitulé à l’onglet Bouclage-3ex, lignes 8 à 16."
+      "texte": "À périmètre égal (taux 10 % et 20 %), la TVA encaissée par la caisse et la TVA théorique sur les bases effectivement comptabilisées (comptes 706300 et 706000, p. 26) concordent à **12,89 € près sur trois ans**, soit **0,01 %**. Chaque exercice est recalculé par formule depuis son journal brut (G1 : 10 092 lignes ; G2 : 9 927 ; G3 : 9 569 ; total 29 588). Le compte 445710 porte en sus **192,33 €** de TVA hors ventilation 10/20, dont **185,24 €** = compte 706800 « Pourboire » (1 852,36 €) × 10 % ; le reliquat est de 7,09 € sur trois ans. L’écart brut « 205,22 € » cité p. 47 est la somme de ces deux grandeurs (12,89 + 192,33), pas un écart de taxe."
     },
     {
       "kind": "tableau",
-      "titre": "Rapprochement de la TVA, périmètre par périmètre (trois exercices)",
+      "titre": "Rapprochement de la TVA, périmètre par périmètre (trois exercices, recalcul par formule depuis G1, G2, G3)",
       "minWidth": 1020,
       "colonnes": [
         {
@@ -634,7 +438,7 @@
       "lignes": [
         [
           {
-            "v": "TVA encaissée - caisse, 10 % (tax_amount)"
+            "v": "TVA encaissée, caisse, 10 % (tax_amount)"
           },
           {
             "v": "29 611,10",
@@ -655,7 +459,7 @@
         ],
         [
           {
-            "v": "TVA encaissée - caisse, 20 % (tax_amount)"
+            "v": "TVA encaissée, caisse, 20 % (tax_amount)"
           },
           {
             "v": "12 941,66",
@@ -702,7 +506,7 @@
         ],
         [
           {
-            "v": "TVA théorique - base 10 % × 10 % (706300)"
+            "v": "TVA théorique, base 706300 × 10 %"
           },
           {
             "v": "29 610,59",
@@ -723,7 +527,7 @@
         ],
         [
           {
-            "v": "TVA théorique - base 20 % × 20 % (706000)"
+            "v": "TVA théorique, base 706000 × 20 %"
           },
           {
             "v": "12 942,50",
@@ -853,160 +657,88 @@
             "fw": 700,
             "badge": "ko"
           }
-        ]
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le rapprochement se lit à trois niveaux, sans que rien ne soit masqué. **À périmètre égal** (la TVA aux deux taux légaux), la TVA encaissée par la caisse (134 879,47 €) et la TVA théorique sur les bases effectivement comptabilisées (134 892,36 €) concordent à **12,89 € près** sur trois ans, soit **0,01 %**. C’est le résidu réel de concordance, taux par taux. Le compte 445710, qui porte la TVA collectée effectivement comptabilisée (135 084,69 €), excède de **192,33 €** cette TVA théorique : cet excédent est de la TVA collectée hors bases restaurant 10 %/20 %, que la proposition ne ventile pas par taux (le compte 706800 « Pourboire » figure au même tableau p. 26, sans que sa TVA soit isolée). L’écart « brut » parfois opposé entre la caisse et le compte 445710, **205,22 €**, est la **somme** de ces deux grandeurs (12,89 € + 192,33 €) : il additionne un résidu de concordance et un poste de périmètre différent, et ne mesure donc pas, à lui seul, une concordance. Cet excédent de 192,33 € s’attribue pour l’essentiel au compte 706800 « Pourboire » (598,04 € + 597,75 € + 656,57 € = 1 852,36 € sur trois ans), poste étranger aux bases restaurant 10 % et 20 % : la TVA qui en relève, à 10 %, représente 185,24 €, soit la quasi-totalité de l’excédent, le reliquat (7,09 € sur trois ans, moins de 3 € par exercice) tenant à des régularisations que la proposition ne ventile pas. Le compte 445710 étant présenté page 26 en ligne unique, cette décomposition s’établit par différence et non par lecture directe d’une ventilation par taux."
-    },
-    {
-      "kind": "tableau",
-      "titre": "D’où vient exactement le résidu de 205,22 € : décomposition palier par palier (cumul trois exercices)",
-      "minWidth": 940,
-      "colonnes": [
-        {
-          "label": "Palier"
-        },
-        {
-          "label": "Opération"
-        },
-        {
-          "label": "Montant du palier (€)",
-          "align": "right"
-        },
-        {
-          "label": "Niveau atteint (€)",
-          "align": "right"
-        }
-      ],
-      "lignes": [
+        ],
         [
           {
-            "v": "Départ : TVA encaissée par la caisse (10 %+20 %)"
+            "v": "dont TVA sur le compte 706800 « Pourboire » × 10 %"
           },
           {
-            "v": "somme tax_amount, G1 + G2 + G3"
-          },
-          {
-            "v": "",
+            "v": "59,80",
             "align": "right"
           },
           {
-            "v": "134 879,47",
+            "v": "59,78",
+            "align": "right"
+          },
+          {
+            "v": "65,66",
+            "align": "right"
+          },
+          {
+            "v": "185,24",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "dont reliquat (régularisations non ventilées p. 26)"
+          },
+          {
+            "v": "1,56",
+            "align": "right"
+          },
+          {
+            "v": "3,77",
+            "align": "right"
+          },
+          {
+            "v": "1,76",
+            "align": "right"
+          },
+          {
+            "v": "7,09",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Écart brut 445710 − TVA encaissée (= 12,89 + 192,33)",
+            "fw": 700
+          },
+          {
+            "v": "61,69",
             "align": "right",
             "fw": 700
-          }
-        ],
-        [
-          {
-            "v": "+ résidu d’arrondi à périmètre égal"
           },
           {
-            "v": "TVA théorique 10/20 − TVA encaissée"
-          },
-          {
-            "v": "+12,89",
-            "align": "right"
-          },
-          {
-            "v": "134 892,36",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "+ TVA sur pourboires (compte 706800)"
-          },
-          {
-            "v": "1 852,36 € × 10 %"
-          },
-          {
-            "v": "+185,24",
-            "align": "right"
-          },
-          {
-            "v": "135 077,60",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "+ régularisations non ventilées par la proposition"
-          },
-          {
-            "v": "par différence"
-          },
-          {
-            "v": "+7,09",
-            "align": "right"
-          },
-          {
-            "v": "135 084,69",
-            "align": "right"
-          }
-        ],
-        [
-          {
-            "v": "Arrivée : TVA collectée comptabilisée (445710)",
-            "fw": 700
-          },
-          {
-            "v": "p. 26, compte 445710"
-          },
-          {
-            "v": "",
-            "align": "right"
-          },
-          {
-            "v": "135 084,69",
+            "v": "64,71",
             "align": "right",
             "fw": 700
-          }
-        ],
-        [
-          {
-            "v": "Écart brut parcouru (445710 − TVA encaissée)",
-            "fw": 700
           },
           {
-            "v": "somme des trois paliers",
-            "fw": 700
-          },
-          {
-            "v": "+205,22",
+            "v": "78,82",
             "align": "right",
-            "fw": 700,
-            "badge": "ko"
+            "fw": 700
           },
           {
-            "v": "",
-            "align": "right"
+            "v": "205,22",
+            "align": "right",
+            "fw": 700
           }
         ]
       ]
     },
     {
-      "kind": "paragraphe",
-      "texte": "Le résidu de 205,22 € n’est donc pas un écart de taxe : c’est la distance qui sépare la TVA encaissée par la caisse (134 879,47 €) de la TVA collectée portée en comptabilité (445710, 135 084,69 €), et elle se décompose intégralement en trois paliers. **12,89 € d’arrondi à périmètre égal** (0,01 % de la taxe aux deux taux légaux) ; puis **192,33 € de TVA collectée hors bases restaurant 10/20**, dont **185,24 € de TVA sur le compte 706800 « Pourboire »** (1 852,36 € × 10 %) et 7,09 € de régularisations non ventilées sur trois ans, soit moins de 3 € par exercice. Aucun de ces trois paliers ne traduit une recette dissimulée : chacun est soit un arrondi, soit un poste de produit étranger à la ventilation 10/20 que le service a comparée."
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Ce bouclage est entièrement refait par formule dans la pièce R2-tva-bouclage.xlsx. L’onglet « Bouclage-3ex » porte le départ (TVA encaissée, ligne 10), le résidu à périmètre égal (ligne 16), l’excédent du 445710 (ligne 19), son attribution au pourboire (ligne 20), le reliquat (ligne 21), l’écart brut (ligne 23) et sa ligne de contrôle (ligne 24) ; les comptes 706300, 706000, 706800 et 445710 de la page 26 figurent lignes 3 à 6. La TVA encaissée par taux de chaque exercice est tirée des onglets « Calcul-G1 », « Calcul-G2 » et « Calcul-G3 », ligne 4. L’ensemble a été recalculé sous LibreOffice.",
-      "fichiers": [
-        {
-          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
-          "label": "R2-tva-bouclage.xlsx, onglet Bouclage-3ex (lignes 3 à 24) et onglets Calcul-G1/G2/G3 (ligne 4)"
-        }
-      ]
+      "kind": "note",
+      "texte": "Pièce R2-tva-bouclage.xlsx : onglets Calcul-G1, Calcul-G2, Calcul-G3 (ligne 4 : TVA encaissée par taux ; ligne 3 : nombre de lignes) ; onglet Bouclage-3ex, lignes 8 à 24 (TVA encaissée l. 8-10, TVA théorique l. 12-14, écart à périmètre égal l. 16, 445710 l. 18, excédent l. 19, pourboire l. 20, reliquat l. 21, écart brut l. 23, contrôle l. 24). Comptes 706300, 706000, 706800 et 445710 : page 26 de la proposition, repris lignes 3 à 6. Recalcul vérifié sous LibreOffice."
     },
     {
       "kind": "paragraphe",
-      "texte": "Le même rapprochement, conduit cette fois sur la base d’imposition et non sur la taxe, oppose la colonne que le service a retenue (VAT_base) à la base déduite de la TVA encaissée (TVA / taux) et aux bases comptabilisées. La colonne VAT_base et la base déduite sont recalculées par formule depuis les trois journaux (G1, G2, G3) ; les bases comptabilisées sont celles de la page 26 (comptes 706300 et 706000)."
+      "texte": "Même constat sur la base d’imposition. La colonne retenue par le service (VAT_base) manque de **291 845,94 €** la base comptabilisée sur trois ans et donne des bases à 20 % négatives sur deux exercices ; la base déduite de la taxe (tax_amount / taux) la rejoint à **23,91 €** près (0,002 %). Ce cumul est un net : en 2024-2025, +176,57 € à 10 % et −145,32 € à 20 %, soit un déplacement d’environ 160 € entre taux dans la répartition des tickets, sans incidence sur la base totale ni sur la taxe ; sur les quatre autres lignes l’écart par taux reste inférieur à 5,15 €."
     },
     {
       "kind": "tableau",
-      "titre": "Base d’imposition par exercice et par taux : la colonne retenue par le service, celle déduite de la caisse, la comptabilité",
+      "titre": "Base d’imposition par exercice et par taux : colonne retenue par le service (VAT_base), base déduite de la taxe, comptabilité",
       "minWidth": 1020,
       "colonnes": [
         {
@@ -1016,19 +748,19 @@
           "label": "Taux"
         },
         {
-          "label": "Colonne retenue par le service (VAT_base)",
+          "label": "VAT_base (service)",
           "align": "right"
         },
         {
-          "label": "Base déduite de la TVA encaissée",
+          "label": "Base déduite = tax_amount / taux",
           "align": "right"
         },
         {
-          "label": "Base en comptabilité (706300 / 706000)",
+          "label": "Comptabilité (706300 / 706000)",
           "align": "right"
         },
         {
-          "label": "Écart colonne du service",
+          "label": "Écart VAT_base",
           "align": "right"
         },
         {
@@ -1260,16 +992,1735 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le contraste est sans ambiguïté. La colonne retenue par le service donne, pour la base à 20 %, des totaux **négatifs** sur deux exercices (−11 645,01 € et −1 680,08 €), et manque de **291 845,94 €** la base d’imposition comptabilisée sur trois ans. La base déduite de la TVA encaissée, elle, s’en écarte de **23,91 €** au cumul (0,002 %). Ce cumul est un net : sur 2024-2025, la base déduite dépasse la comptabilité de 176,57 € à 10 % et lui est inférieure de 145,32 € à 20 %, soit un déplacement d’environ 160 € entre les deux taux au niveau de la répartition des tickets (net +31,25 €), sans incidence sur la base totale ni sur la taxe. Sur les quatre autres lignes, l’écart par taux reste inférieur à 5,15 €."
+      "texte": "Enfin le chiffre d’affaires. Le service écrit p. 26 qu’aucun total du fichier « ne correspond à aucun des montants qui figurent dans la comptabilité ». La somme des tickets du journal de TVA (tot_ttc, une fois par ticket) donne 403 370,42 / 437 992,92 / 434 827,86 €, soit exactement les montants des annexes B-1 à B-3 du service ; la comptabilité hors pourboire (706300 + 706000 + 445710) les dépasse de **170,63 € sur trois ans (0,013 %)**, soit +205,22 € de TVA (445710 − TVA encaissée, dont 185,24 € de pourboire) et −34,59 € de base (comptabilité − (TTC − taxe) : +0,72 / +3,02 / −38,33 €). Les « montants très voisins » du service sont donc, chiffrés, un écart de 0,01 % dans le sens d’une sur-déclaration."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Chiffre d’affaires TTC : somme des tickets du journal de TVA (G) contre comptabilité (706300 + 706000 + 445710, p. 26)",
+      "minWidth": 960,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Σ TTC des tickets (annexe G)",
+          "align": "right"
+        },
+        {
+          "label": "Comptabilité hors pourboire (706300+706000+445710)",
+          "align": "right"
+        },
+        {
+          "label": "Écart compta − caisse",
+          "align": "right"
+        },
+        {
+          "label": "En %",
+          "align": "right"
+        },
+        {
+          "label": "Pourboire 706800 (hors caisse)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Ex. clos 31/03/2023"
+          },
+          {
+            "v": "403 370,42",
+            "align": "right"
+          },
+          {
+            "v": "403 432,83",
+            "align": "right"
+          },
+          {
+            "v": "+62,41",
+            "align": "right"
+          },
+          {
+            "v": "0,015 %",
+            "align": "right"
+          },
+          {
+            "v": "598,04",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2024"
+          },
+          {
+            "v": "437 992,92",
+            "align": "right"
+          },
+          {
+            "v": "438 060,65",
+            "align": "right"
+          },
+          {
+            "v": "+67,73",
+            "align": "right"
+          },
+          {
+            "v": "0,015 %",
+            "align": "right"
+          },
+          {
+            "v": "597,75",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2025"
+          },
+          {
+            "v": "434 827,86",
+            "align": "right"
+          },
+          {
+            "v": "434 868,35",
+            "align": "right"
+          },
+          {
+            "v": "+40,49",
+            "align": "right"
+          },
+          {
+            "v": "0,009 %",
+            "align": "right"
+          },
+          {
+            "v": "656,57",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul 3 exercices",
+            "fw": 700
+          },
+          {
+            "v": "1 276 191,20",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 276 361,83",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "+170,63",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0,013 %",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 852,36",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Écart à périmètre égal (10 %+20 %), 3 ex.",
+          "valeur": "12,89 €",
+          "sub": "soit 0,01 % ; TVA encaissée vs TVA sur bases comptabilisées",
+          "couleur": "teal",
+          "highlight": true
+        },
+        {
+          "label": "TVA du 445710 hors ventilation 10/20",
+          "valeur": "+192,33 €",
+          "sub": "dont 185,24 € = pourboire 706800 × 10 %",
+          "couleur": "orange"
+        },
+        {
+          "label": "Base déduite de la taxe vs comptabilité",
+          "valeur": "23,91 €",
+          "sub": "sur 1 141 277,14 € (0,002 %)",
+          "couleur": "teal"
+        },
+        {
+          "label": "CA compta hors pourboire − Σ tickets",
+          "valeur": "+170,63 €",
+          "sub": "sur 1 276 191,20 € (0,013 %), sens Trésor",
+          "couleur": "teal"
+        }
+      ]
+    },
+    {
+      "kind": "documents",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+          "label": "R2-tva-bouclage.xlsx, onglet Bouclage-3ex (l. 3 à 24) et Calcul-G1/G2/G3 (l. 3 à 6)"
+        },
+        {
+          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
+          "label": "RF-anomalies-tva.xlsx (réponse du 10/07/2026), onglets 4 « Totaux bonne colonne » et 5 « Comparaison et comptabilité »"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-tva-rapprochement.xlsx",
+          "label": "R1-tva-rapprochement.xlsx, onglets 1 (TVA) et 2 (bases par taux)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
+          "label": "Annexe G1, journal de TVA 2022-2023 (source primaire, XLS)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
+          "label": "Annexe G2, journal de TVA 2023-2024 (source primaire, XLS)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
+          "label": "Annexe G3, journal de TVA 2024-2025 (source primaire, XLS)"
+        }
+      ],
+      "intro": "Les bases, la taxe et le CA sont recalculés par formule depuis les journaux bruts ; les comptes de la page 26 sont repris tels quels."
     },
     {
       "kind": "titre",
-      "numero": "2.3",
-      "texte": "Quatre des six colonnes incriminées sont un calcul du service, et la colonne de la taxe ne porte aucune valeur négative"
+      "texte": "« Toute la problématique repose justement sur cet à peu-près »",
+      "numero": "2"
+    },
+    {
+      "kind": "reproche",
+      "page": "p. 47",
+      "resume": [
+        "« Toute la problématique repose justement sur cet à peu-près. En effet, c’est le fait que le logiciel puisse donner des montants différents qui interpellent le service et qui le conduit à rejeter la comptabilité rejetée. »",
+        "Ce n’est donc plus le montant de l’écart qui fonde le grief, mais l’existence même d’un écart entre deux colonnes du logiciel."
+      ],
+      "detail": [
+        {
+          "kind": "paragraphe",
+          "texte": "« Toute la problématique repose justement sur cet à peu-près. En effet, c’est le fait que le logiciel puisse donner des montants différents qui interpellent le service et qui le conduit à rejeter la comptabilité rejetée. » (p. 47, la formule « la comptabilité rejetée » figure telle quelle dans le courrier)."
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "« Il est compréhensible que Maître THIVEND cherche à montrer la faiblesse de ces écarts pour la question de la TVA en minimisant cette situation. » (p. 47)"
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "Fondements invoqués dans la proposition (p. 25 à 27) : art. L. 13 du LPF (comptabilité tenue au moyen de systèmes informatisés), obligations « d’inaltérabilité, de sécurisation, de conservation et d’archivage » du 3° bis du I de l’art. 286 du CGI (BOI-TVA-DECLA-30-10-30), art. L. 102 B du LPF, art. 922-2 du PCG."
+        }
+      ]
+    },
+    {
+      "kind": "liste",
+      "style": "puces",
+      "items": [
+        "Le cercle : le service retient une colonne (VAT_base) ; cette colonne produit un écart ; l’écart justifie le rejet ; le rejet dispense d’examiner si la colonne retenue était la bonne. La question posée dès le 10/07/2026, **quelle colonne porte la base d’imposition**, n’est jamais examinée.",
+        "L’« à peu-près » est mesuré : 12,89 € sur 134 892,36 € de taxe (0,01 %) à périmètre égal ; 23,91 € sur 1 141 277,14 € de base ; 170,63 € sur 1 276 191,20 € de CA, dans le sens d’une sur-déclaration. Suivi jusqu’au bout, le raisonnement rendrait rejetable toute comptabilité tenue avec un logiciel de caisse, puisque tout export comporte des colonnes d’affichage et des colonnes calculées qui ne coïncident pas au centime.",
+        "Charge de la preuve : « La charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » (art. L. 192, al. 2 du LPF ; [BOI-CTX-DG-20-20-10, § 110 et § 170](https://bofip.impots.gouv.fr/bofip/1972-PGP.html/identifiant=BOI-CTX-DG-20-20-10-20160706)). Ce n’est pas à la société d’expliquer le fonctionnement interne d’une colonne d’affichage de l’éditeur ; c’est au service d’établir que la taxe liquidée est fausse. Il ne le soutient même pas.",
+        "Gravité requise : « une comptabilité ne doit pas être écartée si elle n’est entachée que d’irrégularités insuffisantes pour lui enlever toute valeur probante » ; « le défaut de valeur probante ne peut résulter que d’irrégularités ayant un caractère de gravité indiscutable » ([BOI-CF-IOR-10-20, § 90](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912), opposable sur le fondement de l’art. L. 80 A du LPF). Les exemples donnés au § 90 (balances inexactes, absence de pièces, fausses factures, enregistrement partiel des opérations) sont sans rapport avec une colonne d’affichage.",
+        "Jurisprudence : des irrégularités « sans influence sur le montant de l’imposition » ne privent pas la comptabilité de valeur probante lorsque ses résultats sont « suffisamment corroborés » par ailleurs ([CE, 8e, 7e et 9e sous-sect., 7 novembre 1975, n° 90786, publié au Lebon](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/1975-11-07/90786), affaire de TVA ; cité au § 110 du BOI-CF-IOR-10-20) ; une anomalie circonscrite « n’[est] pas de nature à priver la comptabilité sociale, dans son ensemble, de toute valeur probante » ([CE, 9e et 7e sous-sect., 29 juin 1990, n° 67780](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/1990-06-29/67780)). Ici l’influence sur l’impôt est nulle : aucun rappel n’est chiffré sur ce grief, et la taxe reversée excède la taxe encaissée."
+      ],
+      "titre": "Le raisonnement est circulaire, et le droit du rejet exige une gravité que l’« à peu-près » n’a pas"
+    },
+    {
+      "kind": "documents",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+          "label": "R2-tva-bouclage.xlsx, onglet Bouclage-3ex, l. 16 (écart à périmètre égal) et l. 23 (écart brut)"
+        },
+        {
+          "fichier": "contentieux/Reponse_fisc_aux_observations_04-09-2026.pdf",
+          "label": "Réponse du service du 04/09/2026 (PDF), p. 46-47"
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "« Il n’apporte aucune démonstration permettant d’expliquer ces écarts »",
+      "numero": "3"
+    },
+    {
+      "kind": "reproche",
+      "page": "p. 47 ; p. 26",
+      "resume": [
+        "« Il est compréhensible que Maître THIVEND cherche à montrer la faiblesse de ces écarts [...]. En revanche, il n’apporte aucune démonstration permettant d’expliquer ces écarts. »",
+        "Les écarts dont le service demande l’explication sont ceux de la page 26 : bases par taux négatives (« totalement incohérentes », « totalement invraisemblables ») ; somme des TVA par taux différente de la ligne « Total TVA » ; totaux du fichier différents de la comptabilité."
+      ],
+      "detail": [
+        {
+          "kind": "paragraphe",
+          "texte": "« Il est compréhensible que Maître THIVEND cherche à montrer la faiblesse de ces écarts pour la question de la TVA en minimisant cette situation. En revanche, il n’apporte aucune démonstration permettant d’expliquer ces écarts. » (p. 47)"
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "Écarts visés, p. 26 de la proposition : « les bases TVA suivant les taux de TVA sont totalement incohérentes (chiffres négatifs). De plus, la somme des montants de TVA, par taux, ne correspond pas à la ligne « total de TVA » » ; p. 27 : « les montants des bases TVA du fichier « 20220401 AND 20250331 tva.xls » sont totalement invraisemblables »."
+        },
+        {
+          "kind": "tableau",
+          "titre": "Tableau du service, p. 26 de la proposition du 18/05/2026 : totaux tirés du fichier « 20220401 AND 20250331 tva.xls » (annexes G-1 à G-3)",
+          "minWidth": 760,
+          "colonnes": [
+            {
+              "label": "MODES"
+            },
+            {
+              "label": "Exercice clos au 31/03/2023",
+              "align": "right"
+            },
+            {
+              "label": "Exercice clos au 31/03/2024",
+              "align": "right"
+            },
+            {
+              "label": "Exercice clos au 31/03/2025",
+              "align": "right"
+            }
+          ],
+          "lignes": [
+            [
+              {
+                "v": "Total chiffres d’affaires TTC"
+              },
+              {
+                "v": "403 324,72 €",
+                "align": "right"
+              },
+              {
+                "v": "437 881,12 €",
+                "align": "right"
+              },
+              {
+                "v": "434 709,26 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Total TVA"
+              },
+              {
+                "v": "42 548,21 €",
+                "align": "right"
+              },
+              {
+                "v": "46 387,76 €",
+                "align": "right"
+              },
+              {
+                "v": "45 914,28 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Base HT TVA 10 %"
+              },
+              {
+                "v": "269 445,43 €",
+                "align": "right"
+              },
+              {
+                "v": "296 113,00 €",
+                "align": "right"
+              },
+              {
+                "v": "296 625,31 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "Base HT TVA 20 %"
+              },
+              {
+                "v": "− 11 645,01 €",
+                "align": "right",
+                "badge": "ko"
+              },
+              {
+                "v": "− 1 680,08 €",
+                "align": "right",
+                "badge": "ko"
+              },
+              {
+                "v": "572,55 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "TVA à 10 %"
+              },
+              {
+                "v": "29 611,10 €",
+                "align": "right"
+              },
+              {
+                "v": "31 917,44 €",
+                "align": "right"
+              },
+              {
+                "v": "31 852,20 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "TVA à 20 %"
+              },
+              {
+                "v": "12 941,66 €",
+                "align": "right"
+              },
+              {
+                "v": "14 482,64 €",
+                "align": "right"
+              },
+              {
+                "v": "14 074,43 €",
+                "align": "right"
+              }
+            ]
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Explication 1 : la colonne VAT_base est égale au TTC du palier de taux moins le taux lu comme un montant en euros",
+      "numero": "3.1"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le courrier vise « les six dernières colonnes » du fichier et précise que « les deux dernières colonnes proviennent d’un calcul du service » (p. 47). La vérification du fichier conduit plus loin : **quatre** de ces six colonnes sont une construction du service. Base TVA 10 %, TVA 10 %, Base TVA 20 % et TVA 20 % sont la recopie de VAT_base et de tax_amount, ventilée selon le taux porté par la ligne. Le dénombrement ci-dessous est établi par formule (NB.SI) sur les trois journaux de TVA, soit 29 588 lignes de ventilation (G1 : 10 092 ; G2 : 9 927 ; G3 : 9 569)."
+      "texte": "Sur chacune des 29 588 lignes des trois journaux, la caisse ventile le ticket en un palier à 10 % et un palier à 20 % (parts TTC du ticket soumises à chaque taux). La colonne **VAT_base** vaut, à chaque ligne, **TTC du palier − 10** ou **TTC du palier − 20** : le taux est soustrait comme s’il s’agissait d’un montant en euros, au lieu d’être appliqué en pourcentage. La colonne **tax_amount**, elle, applique bien le taux (palier × 10/110 ou × 20/120). Le ticket n° 2 cité par le service le montre à l’œil nu."
+    },
+    {
+      "kind": "schema",
+      "titre": "Ticket n° 2 du 14/04/2022 : d’où viennent exactement 5,70 €, −14,80 €, 1,43 € et 0,87 €",
+      "svg": "<svg viewBox=\"0 0 900 250\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"10\" y=\"86\" width=\"180\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"100.0\" y=\"108\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Ticket n° 2 du 14/04/2022</text><text x=\"100.0\" y=\"148\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">20,90 € TTC</text><text x=\"100.0\" y=\"158\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">11h54, 3 articles</text><line x1=\"190\" y1=\"125\" x2=\"214\" y2=\"125\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"214\" y1=\"56\" x2=\"214\" y2=\"194\" stroke=\"#cbb98f\" stroke-width=\"2\"/><line x1=\"214\" y1=\"56\" x2=\"236\" y2=\"56\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 236 51 L 245 56 L 236 61 Z\" fill=\"#cbb98f\"/><line x1=\"214\" y1=\"194\" x2=\"236\" y2=\"194\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 236 189 L 245 194 L 236 199 Z\" fill=\"#cbb98f\"/><rect x=\"245\" y=\"20\" width=\"190\" height=\"72\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"340.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Palier 10 % du ticket</text><text x=\"340.0\" y=\"76\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">15,70 €</text><text x=\"340.0\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">Coca 3,90 + 2 salades 11,80</text><rect x=\"245\" y=\"158\" width=\"190\" height=\"72\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"340.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Palier 20 % du ticket</text><text x=\"340.0\" y=\"214\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">5,20 €</text><text x=\"340.0\" y=\"224\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">bière La Vouivre 5,20</text><line x1=\"435\" y1=\"56\" x2=\"461\" y2=\"56\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 461 51 L 470 56 L 461 61 Z\" fill=\"#cbb98f\"/><line x1=\"435\" y1=\"194\" x2=\"461\" y2=\"194\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 461 189 L 470 194 L 461 199 Z\" fill=\"#cbb98f\"/><rect x=\"470\" y=\"20\" width=\"190\" height=\"72\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"565.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">VAT_base = palier − 10</text><text x=\"565.0\" y=\"76\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">5,70 €</text><text x=\"565.0\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">15,70 − 10 (taux lu en euros)</text><rect x=\"470\" y=\"158\" width=\"190\" height=\"72\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"565.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">VAT_base = palier − 20</text><text x=\"565.0\" y=\"214\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">−14,80 €</text><text x=\"565.0\" y=\"224\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">5,20 − 20 (taux lu en euros)</text><line x1=\"660\" y1=\"56\" x2=\"686\" y2=\"56\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 686 51 L 695 56 L 686 61 Z\" fill=\"#cbb98f\"/><line x1=\"660\" y1=\"194\" x2=\"686\" y2=\"194\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 686 189 L 695 194 L 686 199 Z\" fill=\"#cbb98f\"/><rect x=\"695\" y=\"20\" width=\"190\" height=\"72\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"790.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">tax_amount = palier × 10/110</text><text x=\"790.0\" y=\"76\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">1,43 €</text><text x=\"790.0\" y=\"86\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">taxe exacte, positive</text><rect x=\"695\" y=\"158\" width=\"190\" height=\"72\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"790.0\" y=\"180\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">tax_amount = palier × 20/120</text><text x=\"790.0\" y=\"214\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">0,87 €</text><text x=\"790.0\" y=\"224\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">taxe exacte, positive</text><text x=\"450.0\" y=\"244\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#5b5b5b\">Contrôle : 5,70 + 10 + (−14,80) + 20 = 20,90 € = TTC du ticket ; 1,43 + 0,87 = 2,30 € = TVA du ticket (tot_tva)</text></svg>",
+      "legende": "Articles du ticket : annexe C1, lignes 7 à 9 (Coca 3,90 € ; Salade verte aux noix 2 × 5,90 € ; bière La Vouivre 5,20 €). Lignes du journal de TVA : annexe G1, lignes 3 et 4 ; onglet G1-source de R2-tva-bouclage.xlsx, lignes 3 et 4, colonnes H (palier = VAT_base + taux) et I (palier d’après la taxe)."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Ticket n° 2 du 14/04/2022 (11h54) : les trois articles (annexe C1, lignes 7 à 9) et les deux lignes du journal de TVA (annexe G1, lignes 3 et 4)",
+      "minWidth": 1040,
+      "colonnes": [
+        {
+          "label": "Article (annexe C1)"
+        },
+        {
+          "label": "TTC",
+          "align": "right"
+        },
+        {
+          "label": "Taux légal",
+          "align": "right"
+        },
+        {
+          "label": "Palier TTC du ticket",
+          "align": "right"
+        },
+        {
+          "label": "VAT_base (G1) = palier − taux",
+          "align": "right"
+        },
+        {
+          "label": "tax_amount (G1) = palier × taux/(100+taux)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Coca (25 cl), 1 × 3,90 €"
+          },
+          {
+            "v": "3,90",
+            "align": "right"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "15,70 (10 %)",
+            "align": "right"
+          },
+          {
+            "v": "5,70 = 15,70 − 10",
+            "align": "right"
+          },
+          {
+            "v": "1,43 = 15,70 × 10/110",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Salade verte aux noix, 2 × 5,90 €"
+          },
+          {
+            "v": "11,80",
+            "align": "right"
+          },
+          {
+            "v": "10 %",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "La Vouivre (bière), 1 × 5,20 €"
+          },
+          {
+            "v": "5,20",
+            "align": "right"
+          },
+          {
+            "v": "20 %",
+            "align": "right"
+          },
+          {
+            "v": "5,20 (20 %)",
+            "align": "right"
+          },
+          {
+            "v": "−14,80 = 5,20 − 20",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "0,87 = 5,20 × 20/120",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Ticket",
+            "fw": 700
+          },
+          {
+            "v": "20,90",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "",
+            "align": "right"
+          },
+          {
+            "v": "20,90",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "−9,10 = 20,90 − 30",
+            "align": "right",
+            "fw": 700,
+            "badge": "ko"
+          },
+          {
+            "v": "2,30 = tot_tva",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "La même identité se vérifie en masse, par formule, sur les trois journaux : **Σ VAT_base + 10 € × (lignes à 10 %) + 20 € × (lignes à 20 %) = Σ TTC des tickets**, à 0,00 € près sur chaque exercice et sur **16 605 tickets sur 16 605** ; ligne à ligne, VAT_base + taux rejoint le palier déduit de la taxe à ± 0,05 € (VAT_base est arrondie au 5 centimes) sur **29 588 lignes sur 29 588**. Une colonne qui obéit à une formule unique sur 100 % des lignes de trois exercices n’est ni « nébuleuse » ni « invraisemblable » : c’est une colonne d’affichage mal paramétrée (taux soustrait en euros), étrangère au calcul de la taxe."
+    },
+    {
+      "kind": "tableau",
+      "titre": "L’identité VAT_base + taux (lu en euros) = TTC du ticket, vérifiée sur les trois journaux (formules, R2-tva-bouclage.xlsx)",
+      "minWidth": 1000,
+      "colonnes": [
+        {
+          "label": "Grandeur"
+        },
+        {
+          "label": "Ex. 31/03/2023",
+          "align": "right"
+        },
+        {
+          "label": "Ex. 31/03/2024",
+          "align": "right"
+        },
+        {
+          "label": "Ex. 31/03/2025",
+          "align": "right"
+        },
+        {
+          "label": "Cumul 3 ex.",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Σ VAT_base, lignes à 10 % (€)"
+          },
+          {
+            "v": "269 445,43",
+            "align": "right"
+          },
+          {
+            "v": "296 113,00",
+            "align": "right"
+          },
+          {
+            "v": "296 625,31",
+            "align": "right"
+          },
+          {
+            "v": "862 183,74",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Σ VAT_base, lignes à 20 % (€)"
+          },
+          {
+            "v": "−11 645,01",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "−1 680,08",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "572,55",
+            "align": "right"
+          },
+          {
+            "v": "−12 752,54",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Lignes à 10 % × 10 € (nombre de lignes)"
+          },
+          {
+            "v": "56 270 (5 627)",
+            "align": "right"
+          },
+          {
+            "v": "54 980 (5 498)",
+            "align": "right"
+          },
+          {
+            "v": "53 750 (5 375)",
+            "align": "right"
+          },
+          {
+            "v": "165 000 (16 500)",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Lignes à 20 % × 20 € (nombre de lignes)"
+          },
+          {
+            "v": "89 300 (4 465)",
+            "align": "right"
+          },
+          {
+            "v": "88 580 (4 429)",
+            "align": "right"
+          },
+          {
+            "v": "83 880 (4 194)",
+            "align": "right"
+          },
+          {
+            "v": "261 760 (13 088)",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Σ VAT_base + Σ taux en euros (€)",
+            "fw": 700
+          },
+          {
+            "v": "403 370,42",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "437 992,92",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "434 827,86",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 276 191,20",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Σ TTC des tickets, tot_ttc (€)",
+            "fw": 700
+          },
+          {
+            "v": "403 370,42",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "437 992,92",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "434 827,86",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "1 276 191,20",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Écart (€)",
+            "fw": 700
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Tickets où l’identité tient au centime / tickets"
+          },
+          {
+            "v": "5 658 / 5 658",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "5 529 / 5 529",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "5 418 / 5 418",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "16 605 / 16 605",
+            "align": "right",
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Lignes où |VAT_base + taux − TTC du palier d’après la taxe| ≤ 0,05 € / lignes"
+          },
+          {
+            "v": "10 092 / 10 092",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "9 927 / 9 927",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "9 569 / 9 569",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "29 588 / 29 588",
+            "align": "right",
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "Pièce R2-tva-bouclage.xlsx : onglets G1-source, G2-source, G3-source, colonnes F à P (no Z, TTC du ticket, palier = VAT_base + taux, palier d’après la taxe, écart, 1re ligne du ticket, cumul du ticket, écart ticket, compteurs) ; onglets Calcul-G1/G2/G3, lignes 10 à 23 (identité, tickets vérifiés, lignes vérifiées, lignes négatives = palier < taux) ; onglet Bouclage-3ex, lignes 33 à 41. Recalcul vérifié sous LibreOffice."
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Conséquence immédiate : une ligne est négative si et seulement si le palier TTC est inférieur au taux lu en euros. Les **8 526** lignes négatives à 20 % sont les tickets où les boissons alcoolisées font **moins de 20 € TTC** (un verre, une bière, une demi-bouteille), soit 65,1 % des lignes à 20 % ; les **90** lignes négatives à 10 % sont les tickets où la part à 10 % fait moins de 10 €. C’est pourquoi le service voit du négatif « quasiment pour chaque note » : 51,8 % des tickets portent une ligne alcool de moins de 20 €."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les lignes négatives sont exactement celles dont le palier TTC est inférieur au taux lu en euros",
+      "minWidth": 960,
+      "colonnes": [
+        {
+          "label": "Grandeur"
+        },
+        {
+          "label": "Ex. 31/03/2023",
+          "align": "right"
+        },
+        {
+          "label": "Ex. 31/03/2024",
+          "align": "right"
+        },
+        {
+          "label": "Ex. 31/03/2025",
+          "align": "right"
+        },
+        {
+          "label": "Cumul 3 ex.",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Lignes à 20 % dont les boissons alcoolisées du ticket font moins de 20 € TTC"
+          },
+          {
+            "v": "3 098",
+            "align": "right"
+          },
+          {
+            "v": "2 814",
+            "align": "right"
+          },
+          {
+            "v": "2 614",
+            "align": "right"
+          },
+          {
+            "v": "8 526",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "en % des lignes à 20 %"
+          },
+          {
+            "v": "69,4 %",
+            "align": "right"
+          },
+          {
+            "v": "63,5 %",
+            "align": "right"
+          },
+          {
+            "v": "62,3 %",
+            "align": "right"
+          },
+          {
+            "v": "65,1 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Lignes à 10 % dont la part à 10 % du ticket fait moins de 10 € TTC"
+          },
+          {
+            "v": "22",
+            "align": "right"
+          },
+          {
+            "v": "37",
+            "align": "right"
+          },
+          {
+            "v": "31",
+            "align": "right"
+          },
+          {
+            "v": "90",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Total = lignes VAT_base négatives (NB.SI < 0)",
+            "fw": 700
+          },
+          {
+            "v": "3 120",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "2 851",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "2 645",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "8 616",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Tickets portant au moins une ligne négative / tickets"
+          },
+          {
+            "v": "3 119 / 5 658",
+            "align": "right"
+          },
+          {
+            "v": "2 845 / 5 529",
+            "align": "right"
+          },
+          {
+            "v": "2 640 / 5 418",
+            "align": "right"
+          },
+          {
+            "v": "8 604 / 16 605",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "en % des tickets (le « quasiment pour chaque note » du service)"
+          },
+          {
+            "v": "55,1 %",
+            "align": "right"
+          },
+          {
+            "v": "51,5 %",
+            "align": "right"
+          },
+          {
+            "v": "48,7 %",
+            "align": "right"
+          },
+          {
+            "v": "51,8 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Lignes tax_amount négatives",
+            "fw": 700
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Explication 2 : la ligne « Total TVA » de la page 26 est une différence de compteur arrêtée sur la dernière ligne du fichier, pas la somme des tickets",
+      "numero": "3.2"
+    },
+    {
+      "kind": "paragraphe",
+      "texte": "Le service relève p. 26 que « la somme des montants de TVA, par taux, ne correspond pas à la ligne « total de TVA » ». Le pied de chaque fichier G porte, sous l’intitulé « Différence somme entre 01-04 et 31-03 », la différence entre le compteur perpétuel (tot_tax_sum) de la **dernière ligne du fichier** et le compteur « A NOUVEAUX ». Or le fichier n’est pas trié par compteur : la dernière ligne n’est pas le dernier ticket de l’exercice. Le compteur **maximal** du fichier moins « A NOUVEAUX » redonne la somme des tickets au centime, sur les trois exercices, et il coïncide avec le compteur « A NOUVEAUX » du fichier de l’exercice suivant (1 381 110,20 € ; 1 819 103,12 €). L’« incohérence » est de 29,22 € de TVA et 276,10 € de TTC sur trois ans : les tickets omis par cette différence de compteur."
+    },
+    {
+      "kind": "tableau",
+      "titre": "Le « Total TVA » et le « Total chiffre d’affaires TTC » de la page 26 sont des différences de compteur arrêtées sur la dernière ligne du fichier",
+      "minWidth": 1000,
+      "colonnes": [
+        {
+          "label": "Grandeur (€)"
+        },
+        {
+          "label": "Ex. 31/03/2023",
+          "align": "right"
+        },
+        {
+          "label": "Ex. 31/03/2024",
+          "align": "right"
+        },
+        {
+          "label": "Ex. 31/03/2025",
+          "align": "right"
+        },
+        {
+          "label": "Cumul 3 ex.",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "« Total TVA » imprimé p. 26 (compteur de la dernière ligne − « A NOUVEAUX »)"
+          },
+          {
+            "v": "42 548,21",
+            "align": "right"
+          },
+          {
+            "v": "46 387,76",
+            "align": "right"
+          },
+          {
+            "v": "45 914,28",
+            "align": "right"
+          },
+          {
+            "v": "134 850,25",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Σ tax_amount par taux (TVA 10 % + TVA 20 %)"
+          },
+          {
+            "v": "42 552,76",
+            "align": "right"
+          },
+          {
+            "v": "46 400,08",
+            "align": "right"
+          },
+          {
+            "v": "45 926,63",
+            "align": "right"
+          },
+          {
+            "v": "134 879,47",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Écart relevé par le service (« ne correspond pas à la ligne total »)"
+          },
+          {
+            "v": "−4,55",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "−12,32",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "−12,35",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "−29,22",
+            "align": "right",
+            "badge": "ko"
+          }
+        ],
+        [
+          {
+            "v": "Compteur TVA maximal du fichier − « A NOUVEAUX »",
+            "fw": 700
+          },
+          {
+            "v": "42 552,76",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "46 400,08",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "45 926,63",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "134 879,47",
+            "align": "right",
+            "fw": 700
+          }
+        ],
+        [
+          {
+            "v": "Écart compteur maximal − Σ par taux",
+            "fw": 700
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "0,00",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          }
+        ],
+        [
+          {
+            "v": "Compteur TTC maximal du fichier (G1 et G2 : = « A NOUVEAUX » du fichier suivant)"
+          },
+          {
+            "v": "1 381 110,20",
+            "align": "right"
+          },
+          {
+            "v": "1 819 103,12",
+            "align": "right"
+          },
+          {
+            "v": "2 253 930,98",
+            "align": "right"
+          },
+          {
+            "v": "",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "« Total chiffres d’affaires TTC » p. 26 contre Σ TTC des tickets : tickets omis"
+          },
+          {
+            "v": "+45,70",
+            "align": "right"
+          },
+          {
+            "v": "+111,80",
+            "align": "right"
+          },
+          {
+            "v": "+118,60",
+            "align": "right"
+          },
+          {
+            "v": "+276,10",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "Pièce R2-tva-bouclage.xlsx : onglets Calcul-G1/G2/G3, lignes 24 à 39 (compteurs « A NOUVEAUX », dernière ligne, maximal ; « Total TVA » et « Total CA TTC » imprimés p. 26 ; écarts) ; onglet Bouclage-3ex, lignes 43 à 49 ; onglets Gx-source, colonnes N et O (tot_sum, tot_tax_sum). Le « Total TVA » imprimé p. 26 est reproduit exactement par la différence « dernière ligne − A NOUVEAUX » (42 548,21 / 46 387,76 / 45 914,28 €)."
+    },
+    {
+      "kind": "titre",
+      "texte": "Explication 3 : les totaux du fichier « ne correspondent pas » à la comptabilité parce que la comptabilité inclut la TVA sur les pourboires",
+      "numero": "3.3"
+    },
+    {
+      "kind": "liste",
+      "style": "puces",
+      "items": [
+        "TVA : le compte 445710 excède la TVA encaissée de 205,22 € sur trois ans = 12,89 € d’arrondi à périmètre égal + 185,24 € de TVA à 10 % sur le compte 706800 « Pourboire » (1 852,36 €) + 7,09 € de reliquat (tableau du point 1, lignes « excédent », « dont pourboire », « dont reliquat »).",
+        "CA TTC : la comptabilité hors pourboire dépasse la somme des tickets de 170,63 € sur 1 276 191,20 € (0,013 %) ; avec le pourboire, le « TOTAL CHIFFRE D’AFFAIRES TTC » de la page 26 (404 030,87 / 438 658,43 / 435 524,92 €) s’obtient en ajoutant 598,04 / 597,75 / 656,57 € (le total 2023-2024 imprimé p. 26 excède de 0,03 € la somme de ses propres lignes).",
+        "Lecture par la « mauvaise » et la « bonne » colonne (pièces 39 et 40 de la réponse du 10/07/2026, reproduites ci-dessous) : la colonne VAT_base additionnée à la TVA manque le CA de 291 909,75 € sur trois ans ; la base déduite de tax_amount, additionnée à la même taxe, le retrouve à 10,68 € près (arrondis au centime sur 29 588 lignes)."
+      ]
+    },
+    {
+      "kind": "tableau",
+      "titre": "Les deux lectures du même fichier, exercice par exercice : colonne VAT_base contre colonne tax_amount (pièces 39 et 40 de la réponse du 10/07/2026)",
+      "minWidth": 1000,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Σ VAT_base + « Total TVA » (lecture du service)",
+          "align": "right"
+        },
+        {
+          "label": "Écart au Σ TTC des tickets",
+          "align": "right"
+        },
+        {
+          "label": "Base déduite de tax_amount + tax_amount",
+          "align": "right"
+        },
+        {
+          "label": "Écart au Σ TTC des tickets",
+          "align": "right"
+        },
+        {
+          "label": "Σ TTC des tickets (G)",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "Ex. clos 31/03/2023"
+          },
+          {
+            "v": "300 348,63",
+            "align": "right"
+          },
+          {
+            "v": "−103 021,79",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "403 372,06",
+            "align": "right"
+          },
+          {
+            "v": "+1,64",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "403 370,42",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2024"
+          },
+          {
+            "v": "340 820,68",
+            "align": "right"
+          },
+          {
+            "v": "−97 172,24",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "437 987,68",
+            "align": "right"
+          },
+          {
+            "v": "−5,24",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "437 992,92",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Ex. clos 31/03/2025"
+          },
+          {
+            "v": "343 112,14",
+            "align": "right"
+          },
+          {
+            "v": "−91 715,72",
+            "align": "right",
+            "badge": "ko"
+          },
+          {
+            "v": "434 820,78",
+            "align": "right"
+          },
+          {
+            "v": "−7,08",
+            "align": "right",
+            "badge": "ok"
+          },
+          {
+            "v": "434 827,86",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul 3 exercices",
+            "fw": 700
+          },
+          {
+            "v": "984 281,45",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "−291 909,75",
+            "align": "right",
+            "fw": 700,
+            "badge": "ko"
+          },
+          {
+            "v": "1 276 180,52",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "−10,68",
+            "align": "right",
+            "fw": 700,
+            "badge": "ok"
+          },
+          {
+            "v": "1 276 191,20",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "note",
+      "texte": "Le « manque » de 291 909,75 € de la lecture du service est exactement Σ taux en euros (426 760 €) − « Total TVA » p. 26 (134 850,25 €) ; autrement dit Σ VAT_base + Σ taux en euros = 849 431,20 + 426 760 = 1 276 191,20 € = Σ TTC des tickets, au centime (onglet Bouclage-3ex, lignes 34 à 38)."
+    },
+    {
+      "kind": "kpis",
+      "items": [
+        {
+          "label": "Tickets où VAT_base + taux = TTC du ticket",
+          "valeur": "16 605 / 16 605",
+          "sub": "écart 0,00 € sur chaque exercice",
+          "couleur": "teal",
+          "highlight": true
+        },
+        {
+          "label": "Lignes où l’identité tient à ± 0,05 €",
+          "valeur": "29 588 / 29 588",
+          "sub": "G1 10 092 ; G2 9 927 ; G3 9 569",
+          "couleur": "teal"
+        },
+        {
+          "label": "Lignes négatives = palier TTC < taux en euros",
+          "valeur": "8 616 / 8 616",
+          "sub": "8 526 à 20 % (alcool < 20 €), 90 à 10 % (< 10 €)",
+          "couleur": "orange"
+        },
+        {
+          "label": "« Total TVA » p. 26 − Σ par taux",
+          "valeur": "−29,22 €",
+          "sub": "différence de compteur sur la dernière ligne ; compteur max − A NOUVEAUX = Σ exacte",
+          "couleur": "orange"
+        }
+      ]
+    },
+    {
+      "kind": "documents",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+          "label": "R2-tva-bouclage.xlsx : Gx-source (col. F à P), Calcul-Gx (l. 10 à 39), Bouclage-3ex (l. 33 à 49)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C1, détail des tickets 2022-2023 (ticket n° 2 : lignes 7 à 9)"
+        },
+        {
+          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
+          "label": "RF-anomalies-tva.xlsx, onglets 1 à 5 (extrait, ticket n° 2, mauvaise colonne, bonne colonne, comparaison)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
+          "label": "Annexe G1, journal de TVA 2022-2023 (source primaire, XLS)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
+          "label": "Annexe G2, journal de TVA 2023-2024 (source primaire, XLS)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
+          "label": "Annexe G3, journal de TVA 2024-2025 (source primaire, XLS)"
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "« Il n’y a pas qu’une seule colonne à poser problème » : les six dernières colonnes et leur origine « nébuleuse »",
+      "numero": "4"
+    },
+    {
+      "kind": "reproche",
+      "page": "p. 47",
+      "resume": [
+        "« De plus, il se cantonne à affirmer qu’il n’y a qu’une seule colonne à poser problème. Tel n’est pas le cas. » Le service reproduit l’extrait brut du fichier pour le ticket n° 2 du 14/04/2022 à 11h54, avec toutes ses colonnes.",
+        "« Ce sont les six dernières colonnes qui interpellent le service dans le sens où elles peuvent afficher des montants négatifs. Bien que les deux dernières colonnes proviennent d’un calcul du service, ce constat est fait quasiment pour chaque note enregistrée. »",
+        "« L’origine de ces montants négatifs persiste à être totalement nébuleuse, malgré la réponse de Maître THIVEND. »"
+      ],
+      "detail": [
+        {
+          "kind": "paragraphe",
+          "texte": "« De plus, il se cantonne à affirmer qu’il n’y a qu’une seule colonne à poser problème. Tel n’est pas le cas. Pour reprendre l’exemple donner dans sa réponse pour le ticket n°2 du 14/04/2022 à 11h54 : » (p. 47)"
+        },
+        {
+          "kind": "tableau",
+          "titre": "Extrait du fichier de caisse reproduit par le service p. 47, journée du 14/04/2022 (colonnes reproduites telles quelles)",
+          "minWidth": 1180,
+          "colonnes": [
+            {
+              "label": "Ligne du fichier"
+            },
+            {
+              "label": "tot_ttc",
+              "align": "right"
+            },
+            {
+              "label": "tot_tva",
+              "align": "right"
+            },
+            {
+              "label": "tot_sum",
+              "align": "right"
+            },
+            {
+              "label": "tot_tax_sum",
+              "align": "right"
+            },
+            {
+              "label": "taux_tva %",
+              "align": "right"
+            },
+            {
+              "label": "VAT_base",
+              "align": "right"
+            },
+            {
+              "label": "tax_amount",
+              "align": "right"
+            },
+            {
+              "label": "Base TVA 10 %",
+              "align": "right"
+            },
+            {
+              "label": "TVA 10 %",
+              "align": "right"
+            },
+            {
+              "label": "Base TVA 20 %",
+              "align": "right"
+            },
+            {
+              "label": "TVA 20 %",
+              "align": "right"
+            }
+          ],
+          "lignes": [
+            [
+              {
+                "v": "A NOUVEAUX"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "977 739,78 €",
+                "align": "right"
+              },
+              {
+                "v": "102 865,15 €",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "14/04/2022 11:48, ticket n° 1"
+              },
+              {
+                "v": "67,40 €",
+                "align": "right"
+              },
+              {
+                "v": "6,13 €",
+                "align": "right"
+              },
+              {
+                "v": "977 807,18 €",
+                "align": "right"
+              },
+              {
+                "v": "102 871,28 €",
+                "align": "right"
+              },
+              {
+                "v": "10",
+                "align": "right"
+              },
+              {
+                "v": "57,40 €",
+                "align": "right"
+              },
+              {
+                "v": "6,13 €",
+                "align": "right"
+              },
+              {
+                "v": "57,40 €",
+                "align": "right"
+              },
+              {
+                "v": "6,13 €",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "14/04/2022 11:54, ticket n° 2 (ligne 20 %)"
+              },
+              {
+                "v": "20,90 €",
+                "align": "right"
+              },
+              {
+                "v": "2,30 €",
+                "align": "right"
+              },
+              {
+                "v": "977 828,08 €",
+                "align": "right"
+              },
+              {
+                "v": "102 873,58 €",
+                "align": "right"
+              },
+              {
+                "v": "20",
+                "align": "right"
+              },
+              {
+                "v": "-14,80 €",
+                "align": "right",
+                "badge": "ko"
+              },
+              {
+                "v": "0,87 €",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "-14,80 €",
+                "align": "right",
+                "badge": "ko"
+              },
+              {
+                "v": "0,87 €",
+                "align": "right"
+              }
+            ],
+            [
+              {
+                "v": "14/04/2022 11:54, ticket n° 2 (ligne 10 %)"
+              },
+              {
+                "v": "20,90 €",
+                "align": "right"
+              },
+              {
+                "v": "2,30 €",
+                "align": "right"
+              },
+              {
+                "v": "977 828,08 €",
+                "align": "right"
+              },
+              {
+                "v": "102 873,58 €",
+                "align": "right"
+              },
+              {
+                "v": "10",
+                "align": "right"
+              },
+              {
+                "v": "5,70 €",
+                "align": "right"
+              },
+              {
+                "v": "1,43 €",
+                "align": "right"
+              },
+              {
+                "v": "5,70 €",
+                "align": "right"
+              },
+              {
+                "v": "1,43 €",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              },
+              {
+                "v": "",
+                "align": "right"
+              }
+            ]
+          ]
+        },
+        {
+          "kind": "note",
+          "texte": "L’extrait du courrier comporte aussi les colonnes date Ticket, heure Ticket, no Ticket, dat_z, no_z Report, Chrono Z, caissier et tot_rem Globale (0,00 € sur chacune des lignes de tickets reproduites). Le n° de rapport Z est 2938 et le caissier « LUNA » sur les trois lignes de tickets."
+        },
+        {
+          "kind": "paragraphe",
+          "texte": "« Ce sont les six dernières colonnes qui interpellent le service dans le sens où elles peuvent afficher des montants négatifs. Bien que les deux dernières colonnes proviennent d’un calcul du service, ce constat est fait quasiment pour chaque note enregistrée. L’origine de ces montants négatifs persiste à être totalement nébuleuse, malgré la réponse de Maître THIVEND. » (p. 47)"
+        }
+      ]
+    },
+    {
+      "kind": "liste",
+      "style": "puces",
+      "items": [
+        "Le fichier natif de la caisse (annexe G) ne comporte que deux colonnes de ventilation : **VAT_base** (base HT d’affichage) et **tax_amount** (taxe de la ligne). Base TVA 10 %, TVA 10 %, Base TVA 20 % et TVA 20 % sont la recopie de ces deux colonnes selon le taux de la ligne : quatre des six colonnes, et non deux, « proviennent d’un calcul du service ».",
+        "Sur les 29 588 lignes des trois journaux, **tax_amount n’affiche aucune valeur négative** (0 / 29 588) ; par construction, TVA 10 % et TVA 20 % non plus. Les 8 616 lignes négatives sont toutes dans VAT_base, et se répartissent exactement entre les deux colonnes recopiées par le service (90 à 10 %, 8 526 à 20 %).",
+        "« Quasiment pour chaque note » : 8 604 tickets sur 16 605 (51,8 %) portent une ligne négative, parce que 51,8 % des tickets comportent moins de 20 € de boissons alcoolisées (point 3.1). Le constat est exact ; son explication est arithmétique.",
+        "L’origine n’est plus « nébuleuse » : VAT_base = TTC du palier − taux lu en euros, identité vérifiée au centime sur 16 605 tickets et à ± 0,05 € sur 29 588 lignes (point 3.1). Une anomalie relevée sur une colonne retraitée par le vérificateur ne peut, au surplus, être opposée à la société sans que la règle de calcul appliquée pour la produire soit indiquée."
+      ],
+      "titre": "Six colonnes visées : quatre sont un calcul du service, une seule porte des valeurs négatives, et ce n’est pas celle de la taxe"
     },
     {
       "kind": "tableau",
@@ -1471,175 +2922,507 @@
       ]
     },
     {
-      "kind": "paragraphe",
-      "texte": "Il ne reste donc que deux colonnes réellement issues de la caisse, et **une seule porte des valeurs négatives** : VAT_base, la base HT d’affichage, sur 8 616 des 29 588 lignes des trois exercices (ces 8 616 lignes se répartissent exactement entre les deux colonnes recopiées par le service, 90 à 10 % et 8 526 à 20 %). La colonne qui porte la taxe, tax_amount, n’affiche **aucune valeur négative** sur aucune des 29 588 lignes des trois journaux. Le constat « fait quasiment pour chaque note enregistrée » ne concerne que la colonne d’affichage, jamais la TVA encaissée."
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "Ce dénombrement est reproductible par formule. Dans la pièce R2-tva-bouclage.xlsx, chaque onglet « Calcul-G1 », « Calcul-G2 » et « Calcul-G3 » compte les valeurs négatives par NB.SI : ligne 7 pour la colonne de la taxe (tax_amount), ligne 8 pour la base d’affichage (VAT_base), par taux et au total. L’onglet « Bouclage-3ex » récapitule les trois exercices : VAT_base négatif aux lignes 27 à 29 (total 8 616, dont 90 à 10 % et 8 526 à 20 %), tax_amount négatif à la ligne 30 (0), et le contrôle des 29 588 lignes de ventilation à la ligne 31. Les lignes brutes se lisent aux onglets « G1-source », « G2-source » et « G3-source ».",
-      "fichiers": [
-        {
-          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
-          "label": "R2-tva-bouclage.xlsx, onglets Calcul-G1/G2/G3 (lignes 7 et 8) et Bouclage-3ex (lignes 27 à 31)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
-          "label": "Journal de caisse, annexe G1 (source primaire, 2022-2023)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
-          "label": "Journal de caisse, annexe G2 (source primaire, 2023-2024)"
-        },
-        {
-          "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
-          "label": "Journal de caisse, annexe G3 (source primaire, 2024-2025)"
-        }
-      ]
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Une anomalie relevée sur une colonne issue du retraitement opéré par le vérificateur ne peut être opposée à la société sans que le service indique la règle de calcul qu’il a appliquée pour la produire. La colonne qui concentre l’essentiel des valeurs négatives, Base TVA 20 % avec 8 526 lignes sur les trois exercices, est précisément l’une de celles dont le courrier reconnaît qu’elles « proviennent d’un calcul du service »."
-    },
-    {
       "kind": "note",
-      "texte": "L’affirmation selon laquelle ces bases négatives résulteraient d’un simple « bug d’affichage » de l’éditeur n’est, à ce jour, étayée par aucune attestation du fournisseur de caisse. Elle n’est pas nécessaire à la démonstration : il suffit de constater que la colonne de la taxe (tax_amount) est intacte et que la base déduite de cette taxe rejoint les bases comptabilisées. La production d’une attestation de l’éditeur sur la colonne VAT_base reste néanmoins souhaitable avant toute instance."
-    },
-    {
-      "kind": "alerte",
-      "couleur": "orange",
-      "titre": "Sur l’hypothèse d’une « manipulation du logiciel, par les dirigeants »",
-      "texte": "Cette hypothèse (p. 47) est avancée sans commencement de preuve, alors qu’elle sous-tend les pénalités pour manquement délibéré dont la preuve incombe à l’administration (LPF, art. L. 195 A). Elle se heurte au sens de l’écart constaté : la TVA collectée comptabilisée (445710, 135 084,69 €) est supérieure à la TVA encaissée ressortant du journal de caisse (134 879,47 €). On ne dissimule pas des recettes en reversant un peu plus de taxe qu’on n’en a encaissé."
-    },
-    {
-      "kind": "titre",
-      "numero": "2.4",
-      "texte": "Aucun rappel n’est chiffré sur ce point"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Les pages 46 et 47 ne rattachent au grief « TVA » aucun montant de droits. Le service ne soutient pas que la taxe aurait été sous-déclarée : il soutient que l’origine de valeurs négatives figurant dans un export « persiste à être totalement nébuleuse ». Mais l’absence de rappel n’est pas une concession : ce grief est, aux pages 22 à 28, un **motif de rejet** de la comptabilité destiné à fonder la reconstitution extracomptable, et c’est à ce titre qu’il doit être combattu, l’enjeu réel étant l’intégralité du redressement et non un rappel autonome de TVA."
+      "texte": "Pièce R2-tva-bouclage.xlsx : onglets Calcul-G1/G2/G3, ligne 7 (tax_amount négatif, NB.SI) et ligne 8 (VAT_base négatif, par taux et total) ; onglet Bouclage-3ex, lignes 27 à 31 (8 616 = 90 + 8 526 ; tax_amount 0 ; contrôle 29 588 lignes). Lignes brutes : onglets G1-source, G2-source, G3-source."
     },
     {
       "kind": "kpis",
       "items": [
         {
-          "label": "Écart à périmètre égal (10 %+20 %), 3 ex.",
-          "valeur": "12,89 €",
-          "sub": "soit 0,01 % ; TVA encaissée vs TVA sur bases comptabilisées",
-          "couleur": "teal",
-          "highlight": true
+          "label": "Colonnes visées par le service",
+          "valeur": "6",
+          "sub": "dont 4 recopiées par le service, 2 natives",
+          "couleur": "orange"
         },
         {
-          "label": "TVA du 445710 hors ventilation 10/20",
-          "valeur": "+192,33 €",
-          "sub": "décomposition par taux non produite par le service",
+          "label": "Colonnes natives portant du négatif",
+          "valeur": "1 (VAT_base)",
+          "sub": "8 616 lignes sur 29 588",
           "couleur": "orange"
         },
         {
           "label": "Valeurs négatives dans la colonne de la taxe",
           "valeur": "0",
-          "sub": "sur les 29 588 lignes des trois journaux (G1, G2, G3)",
-          "couleur": "teal"
-        },
-        {
-          "label": "Rappel de droits chiffré sur ce grief",
-          "valeur": "0 €",
-          "sub": "grief présenté comme motif de rejet, p. 46-47"
+          "sub": "tax_amount, 29 588 lignes, 3 journaux",
+          "couleur": "teal",
+          "highlight": true
         }
       ]
     },
     {
-      "kind": "titre",
-      "numero": "2.5",
-      "texte": "Une erreur de taux sur des articles ne justifie pas le rejet d’une comptabilité"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le seul écart réellement documenté tient au taux porté par certains articles dans le détail des tickets, que le service a lui-même identifié dans les colonnes E et F de l’annexe C. Ces colonnes corrigent le champ « taux » du fichier remis, non la taxe liquidée : elles mesurent l’écart entre ce champ et les taux que le service tient pour corrects, et non un trop-payé. Le décompte par exercice de ces lignes et l’incidence recalculée taux par taux figurent dans les pièces de la réponse du 10/07/2026 jointes en complément ; le détail des tickets est au dossier pour les trois exercices (annexes C1, C2 et C3)."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Ce recalage ne prétend pas à l’exactitude ticket par ticket, et nous le disons avant que le service ne le relève. La ventilation 10 / 20 reconstituée depuis la colonne « taux » du fichier ne retrouve celle du journal de TVA que dans un ticket sur cinq ; après application des taux corrigés par le service, elle la retrouve dans 76 à 86 % des tickets selon l’exercice. Le résidu porte sur la **répartition interne** d’un ticket entre les deux taux, non sur la taxe elle-même : la reconstitution ticket par ticket aboutit à une TVA totale (135 065,93 € sur trois ans, dans les pièces de complément) qui, comme le compte 445710, se situe environ 180 € au-dessus de la TVA théorique sur les bases comptabilisées. Ces deux grandeurs se rejoignent ainsi non par une concordance fine, mais parce qu’elles partagent ce même décalage ; la concordance de fond reste celle, à périmètre égal, de 12,89 € établie au 2.2."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le rejet d’une comptabilité suppose des irrégularités d’une gravité telle qu’elles la privent de valeur probante. La doctrine que le service s’applique à lui-même est explicite : « une comptabilité ne doit pas être écartée si elle n’est entachée que d’irrégularités insuffisantes pour lui enlever toute valeur probante », et « le défaut de valeur probante ne peut résulter que d’irrégularités ayant un caractère de gravité indiscutable » ([BOI-CF-IOR-10-20, n° 90 et n° 100](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912)), doctrine opposable sur le fondement de l’article L. 80 A du livre des procédures fiscales."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Deux critères se dégagent de la jurisprudence, et aucun n’est rempli ici. Le premier tient à l’incidence sur l’impôt : le Conseil d’État écarte le rejet lorsque les anomalies relevées sont « restées sans influence sur le montant de l’imposition » ([CE, 8e, 7e et 9e sous-sect., 7 novembre 1975, n° 90786](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19751107-90786)) ; l’écart à périmètre égal est ici de 0,01 %. Le second tient au traitement approprié : une anomalie ponctuelle, même réelle, « n’[est] pas de nature à priver la comptabilité sociale, dans son ensemble, de toute valeur probante » et se corrige par une rectification ciblée ([CE, 9e et 7e sous-sect., 29 juin 1990, n° 67780](https://juricaf.org/arret/FRANCE-CONSEILDETAT-19900629-67780)). Une erreur de taux sur des articles se corrige article par article ; elle ne fonde pas le rejet de trois exercices de comptabilité."
-    },
-    {
-      "kind": "chapitre",
-      "source": "nous",
-      "numero": 3,
-      "titre": "Ce que cela fait tomber"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le grief des « incohérences de TVA » repose sur une colonne d’affichage que le service a choisie et sur quatre colonnes qu’il a lui-même construites. La colonne qui porte la taxe est intacte sur les 29 588 lignes des trois journaux de TVA, et, à périmètre égal, la TVA encaissée et la TVA assise sur les bases comptabilisées concordent à 0,01 % près sur les trois exercices. Le compte 445710 porte en sus 192,33 € de TVA hors ventilation 10/20, qui s’attribuent pour l’essentiel (185,24 €) au compte 706800 « Pourboire », poste étranger aux bases restaurant 10/20."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "Le service n’en tire aucun rappel de droits, et n’identifie aucune recette qui aurait échappé à la taxe. Un écart de concordance de 0,01 %, resté sans influence sur le montant de l’impôt, ne peut fonder le rejet de comptabilité prononcé aux pages 22 à 28 de la proposition de rectifications, ni, par voie de conséquence, la reconstitution extracomptable qui en découle."
-    },
-    {
-      "kind": "titre",
-      "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas"
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**« Même si ces montants sont très voisins, ils ne correspondent pas exactement. »** L’écart existe, mais il se mesure et se décompose : à périmètre égal (10 %+20 %), la TVA encaissée et la TVA sur les bases comptabilisées concordent à 12,89 € près sur trois ans (0,01 %) ; le surplus de 192,33 € tient au compte 445710, qui porte de la TVA hors bases restaurant 10/20, dont 185,24 € correspondent à la TVA sur le compte 706800 « Pourboire ». Un écart de concordance de cet ordre, resté sans influence sur le montant de l’impôt, ne prive pas une comptabilité de sa valeur probante : il se corrige, il ne se sanctionne pas par le rejet de trois exercices."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**« L’origine de ces montants négatifs persiste à être totalement nébuleuse. »** Les valeurs négatives se concentrent dans la colonne d’affichage VAT_base et dans les colonnes que le vérificateur a lui-même construites par recopie ; la colonne qui porte la taxe, tax_amount, n’affiche aucune valeur négative sur les 29 588 lignes des trois journaux. Une anomalie relevée sur une colonne retraitée par le service ne peut être opposée à la société sans que la règle de calcul appliquée pour la produire soit indiquée. Nous demandons par ailleurs à l’éditeur une attestation sur le comportement de la colonne VAT_base."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**« La source pourrait aussi bien provenir d’une manipulation du logiciel, par les dirigeants. »** L’hypothèse est avancée sans le moindre commencement de preuve, alors que la preuve du manquement délibéré incombe à l’administration (LPF, art. L. 195 A). Elle se heurte au sens de l’écart : la TVA collectée comptabilisée (135 084,69 €) excède la TVA encaissée ressortant du journal de caisse (134 879,47 €). On ne dissimule pas des recettes en reversant un peu plus de taxe qu’on n’en a encaissé."
-    },
-    {
-      "kind": "paragraphe",
-      "texte": "**« Il n’apporte aucune démonstration permettant d’expliquer ces écarts. »** La démonstration est faite et reproductible par formule pour les trois exercices : la pièce R2 recalcule, depuis les 29 588 lignes des annexes G1, G2 et G3, la TVA par taux, les bases et le dénombrement des valeurs négatives, et établit le bouclage à trois niveaux, exercice par exercice et au cumul (−12,89 € à périmètre égal, +192,33 € sur le 445710 dont 185,24 € de TVA sur pourboire, 205,22 € d’écart brut). Il ne subsiste aucun exercice non vérifié."
-    },
-    {
-      "kind": "piecejointe",
-      "intro": "La pièce principale R2 refait le rapprochement entièrement par formule à partir des fichiers bruts de caisse des trois exercices : onglets « G1-source », « G2-source » et « G3-source » (10 092 + 9 927 + 9 569 = 29 588 lignes de ventilation copiées des annexes G1, G2 et G3), onglets « Calcul-G1 », « Calcul-G2 » et « Calcul-G3 » (TVA et bases par taux via SOMME.SI, dénombrement des valeurs négatives via NB.SI, exercice par exercice), onglet « Bouclage-3ex » (bouclage à trois niveaux par exercice et au cumul : écart à périmètre égal, excédent du 445710 et son attribution au pourboire, dénombrement des négatives) et onglet « Méthode ». La TVA encaissée par taux des trois exercices est reproduite au centime depuis les fichiers bruts ; les comptes 706300, 706000, 706800 et 445710 sont ceux de la page 26. L’ensemble a été recalculé sous LibreOffice. Les pièces de la réponse du 10/07/2026 sont jointes en complément.",
+      "kind": "documents",
       "fichiers": [
         {
           "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
-          "label": "Bouclage de la TVA par formule depuis les annexes G1, G2 et G3 (XLSX à formules, 8 onglets, 3 exercices)"
+          "label": "R2-tva-bouclage.xlsx, Calcul-G1/G2/G3 (l. 7 et 8) et Bouclage-3ex (l. 27 à 31)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
-          "label": "Journal de caisse, annexe G1 (source primaire, 2022-2023)"
+          "label": "Annexe G1, journal de TVA 2022-2023 (source primaire, XLS)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
-          "label": "Journal de caisse, annexe G2 (source primaire, 2023-2024)"
+          "label": "Annexe G2, journal de TVA 2023-2024 (source primaire, XLS)"
         },
         {
           "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
-          "label": "Journal de caisse, annexe G3 (source primaire, 2024-2025)"
+          "label": "Annexe G3, journal de TVA 2024-2025 (source primaire, XLS)"
+        }
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "« La source pourrait aussi bien provenir d’une manipulation du logiciel, par les dirigeants » : la « nébulosité » comme motif de maintien",
+      "numero": "5"
+    },
+    {
+      "kind": "reproche",
+      "page": "p. 47 ; p. 23",
+      "resume": [
+        "« Or, tout logiciel est constitué un programme où chaque élément trouve sa source. Il est trop facile d’affirmer qu’il ne s’agit que d’un bug alors que la source pourrait aussi bien provenir d’une manipulation du logiciel, par les dirigeants, générant des erreurs qui ne peuvent être repérées que par ce biais. »",
+        "« Ainsi, cette nébulosité, qui demeure, permet au service de considérer que le grief sur le point TVA doit être maintenu. » Aucun montant de rappel propre à ce grief n’est chiffré p. 46-47.",
+        "Dans la proposition (p. 23), le service relève aussi des « erreurs d’application de taux de TVA sur les articles (taux de 10 % appliqué, au lieu de 20 %, et inversement) » dans les annexes C-1 à C-3, qu’il attribue à « une autre manipulation non-identifiée »."
+      ],
+      "detail": [
+        {
+          "kind": "paragraphe",
+          "texte": "« Or, tout logiciel est constitué un programme où chaque élément trouve sa source. Il est trop facile d’affirmer qu’il ne s’agit que d’un bug alors que la source pourrait aussi bien provenir d’une manipulation du logiciel, par les dirigeants, générant des erreurs qui ne peuvent être repérées que par ce biais. Ainsi, cette nébulosité, qui demeure, permet au service de considérer que le grief sur le point TVA doit être maintenu. » (p. 47)"
         },
         {
-          "fichier": "pieces-reponse-1/R1-tva-rapprochement.xlsx",
-          "label": "Rapprochement TVA caisse / tickets / comptabilité - complément du 10/07/2026 (XLSX, 6 onglets)"
+          "kind": "paragraphe",
+          "texte": "Proposition du 18/05/2026, p. 23 (sous-partie non numérotée, annexes C-1 à C-3) : « a permis de mettre évidence des erreurs d’application de taux de TVA sur les articles (taux de 10 % appliqué, au lieu de 20 %, et inversement) ». Conséquence : « À la lecture de toutes les erreurs de taux de TVA relevées, le service serait en droit de considérer que les fiches des produits [...] ont été remplies avec un mauvais taux de TVA. Or, les annexes C-1 à C-3 mettent également en évidence des articles pour lesquels l’application du taux de TVA a été correcte. Ces erreurs ne proviendraient donc pas des fiches produits mais d’une autre manipulation non-identifiée. [...] Cette constatation ne peut que rendre la comptabilité présentée impropre à justifier le résultat et ne peut donc pas être considérée comme probante. »"
         },
+        {
+          "kind": "paragraphe",
+          "texte": "Pénalités : la proposition (p. 57-58) applique la majoration de 40 % de l’art. 1729 du CGI en citant, parmi les indices, la « variabilité des données dans les fichiers de la caisse informatique (montant de CA ; montant de TVA en base et taux appliqué [...]) »."
+        }
+      ]
+    },
+    {
+      "kind": "liste",
+      "style": "puces",
+      "items": [
+        "Une « manipulation par les dirigeants » qui laisserait la taxe intacte (0 négatif sur 29 588 lignes), reproduirait TTC du palier − taux au centime sur 16 605 tickets, et aboutirait à reverser **plus** de taxe qu’encaissé (445710 : 135 084,69 € ; caisse : 134 879,47 €) n’a aucun sens économique. On ne dissimule pas des recettes en payant 205,22 € de TVA de trop.",
+        "La preuve du manquement délibéré incombe à l’administration : en cas de contestation des pénalités, elle « doit établir la mauvaise foi ou les manœuvres frauduleuses » (art. L. 195 A du LPF ; [BOI-CTX-DG-20-20-10, § 140](https://bofip.impots.gouv.fr/bofip/1972-PGP.html/identifiant=BOI-CTX-DG-20-20-10-20160706)). « La source pourrait aussi bien provenir » n’est pas une preuve ; c’est une hypothèse formulée sans commencement de preuve, dans un courrier qui admet ne pas connaître l’origine des valeurs.",
+        "Le grief ne porte aucun rappel : les pages 46-47 ne chiffrent aucun droit, et le service ne soutient pas que la taxe aurait été sous-déclarée. Il sert de **motif de rejet** destiné à fonder la reconstitution extracomptable (p. 22 à 28) : l’enjeu réel est l’intégralité du redressement, non un rappel de TVA autonome.",
+        "Sur les « erreurs de taux » de la page 23 (annexes C, colonnes E et F) : ces colonnes, ajoutées par le service, corrigent le champ « taux » de l’export des tickets, pas la taxe liquidée. Avant correction, plus de huit références sur dix apparaissent aux deux taux (82 à 83 %) ; après les corrections du service, 1 % au plus : la colonne « taux » de l’export ne restitue pas le taux de la fiche article, et la correction du service répare l’export. La TVA recalculée avec ses taux corrigés (135 065,93 €) se situe, comme le compte 445710 (135 084,69 €), environ 180 € au-dessus de la TVA théorique sur les bases comptabilisées (134 892,36 €) ; ces deux grandeurs se rejoignent (−18,76 €) parce qu’elles partagent ce décalage, non par une concordance fine. La ventilation 10/20 reconstituée ticket par ticket ne retrouve celle du journal que dans 76 à 86 % des tickets après correction : le résidu porte sur la répartition interne d’un ticket, pas sur la taxe. Une erreur de taux sur des articles se corrige article par article (CE n° 67780 précité) ; elle ne fonde pas le rejet de trois exercices."
+      ],
+      "titre": "Une identité arithmétique vérifiée sur 100 % des tickets est la signature d’une formule, pas d’une manipulation"
+    },
+    {
+      "kind": "tableau",
+      "titre": "Colonnes E et F de l’annexe C (corrections de taux portées par le service) : ce qu’elles mesurent (pièce R1-tva-colonnes-ef.xlsx)",
+      "minWidth": 1080,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Lignes signalées « 10 % / 20 % »",
+          "align": "right"
+        },
+        {
+          "label": "Lignes signalées « 20 % / 10 % »",
+          "align": "right"
+        },
+        {
+          "label": "Total signalé",
+          "align": "right"
+        },
+        {
+          "label": "A. TVA au taux de la colonne « taux » du fichier",
+          "align": "right"
+        },
+        {
+          "label": "B. TVA aux taux corrigés par le service",
+          "align": "right"
+        },
+        {
+          "label": "C. 445710",
+          "align": "right"
+        },
+        {
+          "label": "B − C",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "31/03/2023"
+          },
+          {
+            "v": "4 854",
+            "align": "right"
+          },
+          {
+            "v": "5 610",
+            "align": "right"
+          },
+          {
+            "v": "10 464",
+            "align": "right"
+          },
+          {
+            "v": "45 711,80",
+            "align": "right"
+          },
+          {
+            "v": "42 422,26",
+            "align": "right"
+          },
+          {
+            "v": "42 614,45",
+            "align": "right"
+          },
+          {
+            "v": "−192,19",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "31/03/2024"
+          },
+          {
+            "v": "5 486",
+            "align": "right"
+          },
+          {
+            "v": "5 449",
+            "align": "right"
+          },
+          {
+            "v": "10 935",
+            "align": "right"
+          },
+          {
+            "v": "49 774,68",
+            "align": "right"
+          },
+          {
+            "v": "46 416,20",
+            "align": "right"
+          },
+          {
+            "v": "46 464,79",
+            "align": "right"
+          },
+          {
+            "v": "−48,59",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "31/03/2025"
+          },
+          {
+            "v": "5 484",
+            "align": "right"
+          },
+          {
+            "v": "5 164",
+            "align": "right"
+          },
+          {
+            "v": "10 648",
+            "align": "right"
+          },
+          {
+            "v": "49 003,27",
+            "align": "right"
+          },
+          {
+            "v": "46 227,47",
+            "align": "right"
+          },
+          {
+            "v": "46 005,45",
+            "align": "right"
+          },
+          {
+            "v": "+222,02",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "Cumul",
+            "fw": 700
+          },
+          {
+            "v": "15 824",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "16 223",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "32 047",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "144 489,75",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "135 065,93",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "135 084,69",
+            "align": "right",
+            "fw": 700
+          },
+          {
+            "v": "−18,76",
+            "align": "right",
+            "fw": 700
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "tableau",
+      "titre": "Références vendues apparaissant aux DEUX taux : avant et après les corrections du service (pièce R1-tva-colonnes-ef.xlsx, onglet 5)",
+      "minWidth": 900,
+      "colonnes": [
+        {
+          "label": "Exercice"
+        },
+        {
+          "label": "Références vendues",
+          "align": "right"
+        },
+        {
+          "label": "Aux deux taux avec la colonne « taux » du fichier",
+          "align": "right"
+        },
+        {
+          "label": "En %",
+          "align": "right"
+        },
+        {
+          "label": "Aux deux taux après corrections du service",
+          "align": "right"
+        },
+        {
+          "label": "En %",
+          "align": "right"
+        }
+      ],
+      "lignes": [
+        [
+          {
+            "v": "31/03/2023"
+          },
+          {
+            "v": "291",
+            "align": "right"
+          },
+          {
+            "v": "239",
+            "align": "right"
+          },
+          {
+            "v": "82,1 %",
+            "align": "right"
+          },
+          {
+            "v": "3",
+            "align": "right"
+          },
+          {
+            "v": "1,0 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "31/03/2024"
+          },
+          {
+            "v": "310",
+            "align": "right"
+          },
+          {
+            "v": "256",
+            "align": "right"
+          },
+          {
+            "v": "82,6 %",
+            "align": "right"
+          },
+          {
+            "v": "4",
+            "align": "right"
+          },
+          {
+            "v": "1,3 %",
+            "align": "right"
+          }
+        ],
+        [
+          {
+            "v": "31/03/2025"
+          },
+          {
+            "v": "295",
+            "align": "right"
+          },
+          {
+            "v": "246",
+            "align": "right"
+          },
+          {
+            "v": "83,4 %",
+            "align": "right"
+          },
+          {
+            "v": "1",
+            "align": "right"
+          },
+          {
+            "v": "0,3 %",
+            "align": "right"
+          }
+        ]
+      ]
+    },
+    {
+      "kind": "alerte",
+      "couleur": "orange",
+      "titre": "Sur l’hypothèse d’une « manipulation du logiciel, par les dirigeants »",
+      "texte": "Elle sous-tend la majoration de 40 % (art. 1729 du CGI) appliquée aux rappels d’IS et de TVA, dont la preuve incombe à l’administration (art. L. 195 A du LPF). Elle se heurte à trois faits chiffrés : la colonne de la taxe est intacte (0 négatif sur 29 588 lignes) ; la colonne d’affichage obéit à une formule unique sur 16 605 tickets ; la TVA reversée (135 084,69 €) dépasse la TVA encaissée (134 879,47 €)."
+    },
+    {
+      "kind": "note",
+      "texte": "Limite assumée : l’origine « colonne d’affichage de l’éditeur » n’est établie par aucune attestation du fournisseur de caisse. La démonstration n’en dépend pas (identité arithmétique et taxe intacte) ; une attestation de l’éditeur sur le paramétrage de la colonne VAT_base reste souhaitable avant toute instance."
+    },
+    {
+      "kind": "documents",
+      "fichiers": [
         {
           "fichier": "pieces-reponse-1/R1-tva-colonnes-ef.xlsx",
-          "label": "Colonnes E et F des annexes C : sémantique et incidence des corrections de taux - complément (XLSX, 6 onglets)"
+          "label": "R1-tva-colonnes-ef.xlsx : sémantique des colonnes E et F, somme de F, incidence réelle, contrôle par ticket, taux par article, exemple du 14/04/2022 (6 onglets)"
         },
         {
           "fichier": "pieces-reponse-1/R1-taux-tva-et-encaissements.xlsx",
-          "label": "Taux de TVA article par article et relevé des lignes signalées par le service - complément (XLSX, 9 onglets)"
+          "label": "R1-taux-tva-et-encaissements.xlsx : taux par article et relevé des lignes signalées par le service (9 onglets)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-tva-rapprochement.xlsx",
+          "label": "R1-tva-rapprochement.xlsx, onglet 5 (erreurs de taux, annexe C)"
+        },
+        {
+          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+          "label": "R2-tva-bouclage.xlsx, Bouclage-3ex (l. 18 à 24 : 445710 vs TVA encaissée)"
         }
       ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Ce que cela fait tomber"
+    },
+    {
+      "kind": "liste",
+      "style": "puces",
+      "items": [
+        "Le motif de rejet « XI, Le logiciel : La TVA » (p. 25 à 27) : ses trois constats (bases négatives, « Total TVA » ≠ Σ par taux, totaux ≠ comptabilité) sont chacun expliqués et chiffrés (identité TTC − taux ; différence de compteur sur la dernière ligne, 29,22 € ; TVA sur pourboire, 185,24 €). Aucun n’affecte la taxe liquidée.",
+        "Le motif de rejet « erreurs d’application de taux » (p. 23) : correction d’une colonne de l’export des tickets, sans incidence sur la TVA due (B − C = −18,76 € sur 135 084,69 €).",
+        "Aucun rappel de droits n’est attaché à ce grief : 0 € de TVA, 0 € d’IS. Les rappels de TVA du dossier (49 547 € de droits, 2 607 € d’intérêts, 19 819 € de majoration de 40 %) procèdent exclusivement de la reconstitution extracomptable que ce grief, parmi d’autres, prétend fonder.",
+        "L’indice « montant de TVA en base et taux appliqué » invoqué p. 57-58 pour la majoration de 40 % (art. 1729) : il repose sur la colonne VAT_base et sur la colonne « taux » de l’export, toutes deux expliquées. L’enjeu de la majoration de 40 % au niveau de la société est de 58 823 € (IS 39 004 € + TVA 19 819 €).",
+        "Par voie de conséquence, si le rejet de comptabilité tombe, tombe la reconstitution qu’il fonde : base distribuée de 471 826 € (193 234,55 / 138 863,57 / 139 727,76 €), rappel initial de 684 974 €, exposition réelle de 582 796 € (société 213 148 € + suppléments personnels notifiés 369 648 €)."
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Ce que le service pourrait encore opposer"
+    },
+    {
+      "kind": "liste",
+      "style": "puces",
+      "items": [
+        "**« Les montants ne correspondent pas exactement. »** → Écart à périmètre égal : 12,89 € sur 134 892,36 € (0,01 %) ; base : 23,91 € sur 1 141 277,14 € ; CA : +170,63 € sur 1 276 191,20 € dans le sens du Trésor. Le surplus de 192,33 € du 445710 est la TVA à 10 % du compte 706800 « Pourboire » (185,24 €) à 7,09 € près.",
+        "**« La somme des TVA par taux ne correspond pas au total de TVA. »** → Le « Total TVA » p. 26 est la différence « dernière ligne − A NOUVEAUX » du compteur (reproduite au centime : 42 548,21 / 46 387,76 / 45 914,28 €) ; compteur maximal − A NOUVEAUX = Σ par taux à 0,00 € près sur les trois exercices ; écart total 29,22 €.",
+        "**« L’origine des négatifs est nébuleuse. »** → VAT_base = TTC du palier − taux lu en euros : 16 605 tickets sur 16 605 à 0,00 €, 29 588 lignes sur 29 588 à ± 0,05 €. Une ligne est négative si et seulement si le palier TTC est inférieur à 20 € (ou 10 €).",
+        "**« Il n’y a pas qu’une colonne. »** → Deux colonnes natives seulement ; quatre colonnes recopiées par le service ; 0 négatif dans tax_amount, TVA 10 % et TVA 20 %.",
+        "**« Manipulation par les dirigeants. »** → Formule unique sur 100 % des lignes, taxe intacte, taxe reversée supérieure à la taxe encaissée ; preuve du manquement délibéré à la charge de l’administration (L. 195 A).",
+        "**« Les fichiers Excel ne sont pas une archive inaltérable » (p. 46, grief G).** → Hors périmètre de la TVA : la question de la nature des fichiers remis est traitée avec les fichiers Événement et Règlement. Sur la TVA, le service a lui-même lu ces fichiers et en reproduit les lignes p. 47 ; leur contenu est cohérent avec les annexes B, C et H (Σ TTC des tickets = CA des annexes B-1 à B-3 au centime).",
+        "**« Le 10,68 € de la réponse du 10/07 compare à un CA bas. »** → Le CA de référence (1 276 191,20 €) est la somme des tickets du journal G, égale au centime aux annexes B-1 à B-3 du service ; la comparaison à la comptabilité (+170,63 €) et au compte 445710 (+205,22 €) est donnée séparément, sans compensation."
+      ]
+    },
+    {
+      "kind": "titre",
+      "texte": "Points de vigilance pour la réunion"
+    },
+    {
+      "kind": "liste",
+      "style": "puces",
+      "items": [
+        "Aucune attestation de l’éditeur de la caisse n’est au dossier sur le paramétrage de la colonne VAT_base : la demander (objet : formule de la colonne « VAT_base » de l’export « tva.xls »). La démonstration ne dépend pas de cette pièce.",
+        "L’attribution des 185,24 € au pourboire (706800 × 10 %) est établie par différence : la page 26 présente le 445710 en ligne unique, sans ventilation par taux. Faire produire par le cabinet comptable le détail du 445710 par taux et la nature du compte 706800 (pourboires facturés, soumis à TVA) pour fermer les 7,09 € de reliquat.",
+        "La reconstitution ticket par ticket de la ventilation 10/20 (annexes C, taux corrigés) ne retrouve le journal que dans 76 à 86 % des tickets : ne pas s’engager sur une concordance ticket par ticket des annexes C ; la concordance de fond est celle des journaux G (0,01 %).",
+        "Les pièces 37 à 41 (csv) citées par le service p. 46-47 étaient sur la clé USB du 10/07/2026 ; leur contenu est intégralement repris dans RF-anomalies-tva.xlsx (5 onglets) et refait par formule dans R2-tva-bouclage.xlsx. Les parties XII (nombre d’articles) et XIII (chiffres d’affaires) visées p. 47 sont traitées avec les fichiers Événement et Règlement ; cette page n’y répond que par la concordance Σ TTC des tickets (G) = annexes B au centime.",
+        "Le service a reproduit p. 46 l’argument « deux chaînes totalement indépendantes (caisse / agenda manuscrit) » : ne pas le réemployer, la proposition (p. 9 et p. 27) décrit la comptabilité comme reprise des récapitulatifs journaliers de la caisse. L’argument utile est celui du sens de l’écart (TVA reversée > TVA encaissée)."
+      ]
+    },
+    {
+      "kind": "documents",
+      "fichiers": [
+        {
+          "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
+          "label": "R2-tva-bouclage.xlsx : bouclage par formule depuis G1, G2, G3 (8 onglets : Méthode, G1/G2/G3-source 29 588 lignes, Calcul-G1/G2/G3, Bouclage-3ex)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G1_journal-tva_2022-2023.xls",
+          "label": "Annexe G1, journal de TVA 2022-2023 (XLS)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G2_journal-tva_2023-2024.xls",
+          "label": "Annexe G2, journal de TVA 2023-2024 (XLS)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-G3_journal-tva_2024-2025.xls",
+          "label": "Annexe G3, journal de TVA 2024-2025 (XLS)"
+        },
+        {
+          "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",
+          "label": "Annexe C1, détail des tickets 2022-2023 (XLS)"
+        },
+        {
+          "fichier": "pieces-defense/RF-anomalies-tva.xlsx",
+          "label": "RF-anomalies-tva.xlsx : dossier TVA de la réponse du 10/07/2026 (5 onglets)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-tva-rapprochement.xlsx",
+          "label": "R1-tva-rapprochement.xlsx : TVA caisse / tickets / comptabilité (6 onglets)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-tva-colonnes-ef.xlsx",
+          "label": "R1-tva-colonnes-ef.xlsx : colonnes E et F des annexes C (6 onglets)"
+        },
+        {
+          "fichier": "pieces-reponse-1/R1-taux-tva-et-encaissements.xlsx",
+          "label": "R1-taux-tva-et-encaissements.xlsx : taux par article et lignes signalées (9 onglets)"
+        },
+        {
+          "fichier": "contentieux/Reponse_fisc_aux_observations_04-09-2026.pdf",
+          "label": "Réponse du service du 04/09/2026 (PDF, p. 46-47)"
+        }
+      ],
+      "titre": "Toutes les pièces de la page"
     }
   ],
   "entete": {
-    "reponseCourte": "La colonne qui porte la taxe (tax_amount) est intacte : zéro valeur négative sur les 29 588 lignes de ventilation des trois journaux de TVA (annexes G1, G2 et G3), chaque exercice recalculé par formule depuis son fichier brut. À périmètre égal (10 %+20 %), la TVA encaissée par la caisse et la TVA assise sur les bases effectivement comptabilisées concordent à 12,89 € près sur trois ans, soit 0,01 %. Le compte 445710 porte en sus 192,33 € de TVA hors bases restaurant 10/20, dont 185,24 € s’attribuent au compte 706800 « Pourboire ». Le grief reste un motif de rejet, sans aucun rappel de droits chiffré.",
+    "reponseCourte": "La colonne lue par le service (VAT_base) vaut, sur 16 605 tickets sur 16 605, le TTC du palier de taux moins le taux lu comme un montant en euros : c’est une colonne d’affichage, pas la base d’imposition. La colonne de la taxe (tax_amount) ne porte aucune valeur négative sur les 29 588 lignes des trois journaux et concorde à 12,89 € près (0,01 %) avec la TVA sur les bases comptabilisées ; le surplus de 192,33 € du compte 445710 est la TVA sur les pourboires. Le grief ne porte aucun rappel chiffré.",
     "statut": "demonte"
   }
 }
