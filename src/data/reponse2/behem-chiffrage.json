@@ -1,28 +1,277 @@
 {
  "meta": {
   "slug": "behem-chiffrage",
-  "source": "Proposition personnelle Mme Ghislaine BEHEM du 19/10/2026",
+  "source": "Proposition personnelle de Mme Ghislaine BEHEM du 19/10/2026 (p. 59-65 et avis p. 67-84)",
   "limites": [
-   "Le supplément notifié (172 703 €) est le montant du SERVICE, lu sur une proposition du 19/10/2026 scannée sans couche texte : la défense le reprend, elle ne le recalcule pas.",
-   "La ventilation interne (IR au barème, majoration, intérêts, prélèvements sociaux) n'est pas reconstituable : l'IR au barème dépend du revenu global du foyer et du quotient familial, absents du dossier (pas de déclaration 2042). La ligne « solde » est obtenue par différence et n'égale pas 17,2 % de la base.",
-   "Seuls la cascade base RCM → × 1,25 → assiette IR et les totaux notifiés sont certains ; le taux effectif en découle."
+   "Les montants notifiés (73 859 / 48 124 / 50 720 = 172 703 €) sont ceux des avis du service ; ils ont été recalculés et reproduits à l'euro près, ils ne sont pas réduits par la page elle-même : les économies sont conditionnées à l'issue sur la base (reconstitution, clé 50/50), sur la majoration de 40 % (motivation) ou sur l'option 2OP (droit transitoire incertain).",
+   "La base liquidée (part HT, 210 950 €) est inférieure à la base annoncée (235 913 €) : risque de + 24 664 € si le service aligne la liquidation sur sa motivation.",
+   "Le second total 2024 (50 334 €, p. 77) n'est pas repris dans le total CANON (172 703 €) ; écart constant de 2 210 €.",
+   "Les données propres du foyer (salaires, dividendes antérieurs, pension, crédits) sont lues sur les avis scannés du service ; les déclarations 2042 n'ont pas été produites.",
+   "Le taux effectif hors majoration de 58,8 % retire la seule majoration sur l'IR (33 932 €) ; hors toutes majorations (48 795 €) il est de 52,5 %."
   ]
  },
  "entete": {
-  "reponseCourte": "Le supplément de 172 703 € notifié à Mme BEHEM est le décalque de la reconstitution (base distribuée 235 913 €, soit sa moitié). Taux effectif global 73,2 % ; hors majoration de 40 %, 58,8 %. La ventilation interne du service n'est pas reconstituable (2024 illisible sur le PDF scanné) : son détail doit être réclamé.",
-  "statut": "a-etayer"
+  "reponseCourte": "Le supplément de 172 703 € notifié à Mme BEHEM est recalculé et reproduit à l'euro près (42 lignes, 0 écart) ; il n'a aucune base propre (discordance TTC de la reconstitution ÷ 2), il est liquidé sur la seule part HT (210 950 €) contre 235 913 € annoncés, il porte deux totaux pour 2024 (48 124 / 50 334 €), et sa majoration de 40 % (48 795 €) est motivée par renvoi à l'IS et à la TVA de la société pour des exercices « 2022 et 2023 ».",
+  "statut": "partiel"
  },
  "sections": [
   {
    "kind": "chapitre",
-   "source": "fisc",
-   "numero": 1,
-   "titre": "Ce que le service a chiffré",
-   "sousTitre": "Supplément d'impôt (impôt sur le revenu + prélèvements sociaux + majoration de 40 % + intérêts) notifié à Mme Ghislaine BEHEM, année par année."
+   "source": "neutre",
+   "titre": "Chiffrage du supplément d'impôt notifié à Mme Ghislaine BEHEM : 172 703 €",
+   "sousTitre": "La liquidation du service est recalculée ligne à ligne et reproduite à l'euro près sur 42 lignes (3 années) ; elle repose à 100 % sur la reconstitution du 18/05/2026 répartie par moitié, elle est liquidée sur une base inférieure à celle qu'elle annonce (part HT seule), elle porte deux totaux différents pour 2024, et sa majoration de 40 % (48 795 €) est motivée par renvoi à l'IS et à la TVA de la société."
+  },
+  {
+   "kind": "liste",
+   "titre": "Ce que reproche le fisc, en résumé",
+   "items": [
+    "**1. Distributions du foyer (p. 59-62)** : la moitié des « dissimulations de recettes » de la société, HT puis TVA, soit 96 617 / 69 432 / 69 864 € pour 2023, 2024 et 2025 (235 913 €), imposée en revenus de capitaux mobiliers (art. 109-1-1° et 2° CGI) sur désignation du 16/06/2026 et « conditions d'exploitation ».",
+    "**2. Modalités d'imposition (p. 62-63)** : impôt sur le revenu (taux forfaitaire ou barème sur option), CSG 9,70 % et prélèvement de solidarité 7,50 %, et majoration de 25 % de l'assiette (art. 158-7-2°) : 120 771 / 86 790 / 87 330 €.",
+    "**3. Année 2023 (p. 67-70)** : revenu imposable porté de 18 788 à 126 797 € ; supplément 73 859 € (IR 35 891 + intérêts 1 974 + majoration 14 356 ; PS 14 862 + 832 + 5 944 ; restitution antérieure 636).",
+    "**4. Année 2024 (p. 71-77)** : revenu imposable porté de 24 385 à 101 891 € ; supplément 48 124 € sur l'avis (p. 72) et 50 334 € sur la récapitulation des sommes dues (p. 77).",
+    "**5. Année 2025 (p. 79-84)** : revenu imposable porté de 23 134 à 101 307 € ; supplément 50 720 € (IR 24 390 + 195 + 9 756 ; PS 11 632 + 94 + 4 653).",
+    "**6. Intérêts de retard (p. 63)** : 0,20 % par mois, du 1er jour du mois suivant l'exigibilité au dernier jour du mois de la proposition : 5,60 % / 3,20 % / 0,80 %.",
+    "**7. Majoration de 40 % pour manquement délibéré (p. 64-65)** : appliquée à l'IR et aux prélèvements sociaux des trois années, au motif des « conditions d'exploitation », des anomalies de la comptabilité, de l'« importance des minorations » et de la « répétition de l'infraction »."
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "1",
+   "texte": "« Montants des distributions pour le foyer » : 96 617 / 69 432 / 69 864 €"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 59-62",
+   "resume": [
+    "Par courrier du 16/06/2026, Me THIVEND a désigné M. PASTEUR et Mme BEHEM ; capital 50 / 50, co-gérants, même domicile.",
+    "Dissimulations TTC 193 235 / 138 864 / 139 728 €, soit HT 172 814 / 124 010 / 125 076 € ; chacun reçoit la moitié : 86 407 / 62 005 / 62 538 € (109-1-1°) « en sus » 10 210 / 7 427 / 7 326 € de TVA (109-1-2°).",
+    "Motifs : art. 109-1, « conditions d'exploitation » (gestion de la caisse par Mme BEHEM), désignation du 16/06/2026 ; total par année 96 617 / 69 432 / 69 864 €."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 59.** « Quant aux dissimulations de recettes TTC constatées à l'issue de la méthode de reconstitution utilisée, elles s'établissent respectivement à (montants arrondis) : 193 235 € sur l'exercice clos au 31 mars 2023, 138 864 € sur l'exercice clos au 31 mars 2024, 139 728 € sur l'exercice clos au 31 mars 2025. Correspondant aux montants Hors Taxe ci-dessous : 193 235 € − 20 421 € = 172 814 € […] 138 864 € − 14 854 € = 124 010 € […] 139 728 € − 14 652 € = 125 076 € […] La répartition de ces dissimulations de recettes Hors Taxe entre les deux co-gérants doit donc aboutir à distribuer à chacun les sommes arrondies suivantes : 86 407 € sur l'année 2023, 62 005 € sur l'année 2024, 62 538 € sur l'année 2025. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 60.** « La répartition de ces dissimulations de recettes TVA entre les deux co-gérants doit donc aboutir à distribuer, en sus, à chacun les sommes arrondies suivantes : 10 210 € sur l'année 2023, 7 427 € sur l'année 2024, 7 326 € sur l'année 2025. » Puis « Conditions d'exploitation » : « Madame Ghislaine BEHEM, la gérante, a présenté la totalité des modalités de fonctionnement du logiciel de caisse […] Elle est la seule en charge de la gestion de la caisse pour les opérations d'encaissement des notes/additions » ; « Monsieur Thierry PASTEUR s'occupe de tout ce qui est relatif à la gestion des modes de paiement et notamment des relations bancaires et donc de toutes les remises en banque. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 61-62.** « le service est amené à considérer, qu'en vertu : de l'article 109-I-1°, des conditions d'exploitation, mais aussi du fait que les associés ont été désignés par la lettre du 16 juin 2026 bénéficiaires des dissimulations de recettes constatés et que ces désinvestissements Hors Taxe constatés sont des revenus distribués au bénéfice du foyer fiscal, soit : 86 407 € sur l'année 2023, 62 005 € sur l'année 2024, 62 538 € sur l'année 2025. » Même formule pour l'article 109-1-2° et les sommes 10 210 / 7 427 / 7 326 €. « sachant que vous êtes l'un des co-gérants de la société LA DEMI-LUNE, qu'il a été démontré votre implication et votre participation active et directe à la gestion quotidienne de l'ensemble des tâches relatives à l'activité de la société, vous aviez toute latitude à pouvoir appréhender la partie des désinvestissements pour laquelle vous avez été désigné comme bénéficiaire »."
+    },
+    {
+     "kind": "tableau",
+     "titre": "Tableau du service, p. 62 : « Distributions occultes (arrondies) »",
+     "minWidth": 560,
+     "colonnes": [
+      {
+       "label": "Revenus de l'année"
+      },
+      {
+       "label": "2023",
+       "align": "right"
+      },
+      {
+       "label": "2024",
+       "align": "right"
+      },
+      {
+       "label": "2025",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Part HT (109-1-1°)"
+       },
+       {
+        "v": "86 407 €",
+        "align": "right"
+       },
+       {
+        "v": "62 005 €",
+        "align": "right"
+       },
+       {
+        "v": "62 538 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Part TVA (109-1-2°)"
+       },
+       {
+        "v": "10 210 €",
+        "align": "right"
+       },
+       {
+        "v": "7 427 €",
+        "align": "right"
+       },
+       {
+        "v": "7 326 €",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total",
+        "fw": 700
+       },
+       {
+        "v": "96 617 €",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "69 432 €",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "69 864 €",
+        "align": "right",
+        "fw": 700
+       }
+      ]
+     ]
+    }
+   ]
   },
   {
    "kind": "tableau",
-   "titre": "Ce qui est certain : base, assiette et supplément notifié à Mme Ghislaine BEHEM",
+   "titre": "Dérivation de la base : discordance TTC de la reconstitution ÷ 2 (pièce R2-taxation-chiffrage.xlsx, onglet Calcul B4:B7)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Exercice"
+    },
+    {
+     "label": "Discordance TTC société (18/05, p. 52)",
+     "align": "right"
+    },
+    {
+     "label": "÷ 2 = base par foyer",
+     "align": "right"
+    },
+    {
+     "label": "Base du service p. 62",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2022-2023 (revenus 2023)"
+     },
+     {
+      "v": "193 234,55 €",
+      "align": "right"
+     },
+     {
+      "v": "96 617 €",
+      "align": "right"
+     },
+     {
+      "v": "96 617 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2023-2024 (revenus 2024)"
+     },
+     {
+      "v": "138 863,57 €",
+      "align": "right"
+     },
+     {
+      "v": "69 432 €",
+      "align": "right"
+     },
+     {
+      "v": "69 432 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024-2025 (revenus 2025)"
+     },
+     {
+      "v": "139 727,76 €",
+      "align": "right"
+     },
+     {
+      "v": "69 864 €",
+      "align": "right"
+     },
+     {
+      "v": "69 864 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total",
+      "fw": 700
+     },
+     {
+      "v": "471 825,88 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "235 913 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "235 913 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Ce qu'établit cette dérivation",
+   "items": [
+    "La base personnelle n'a aucune source propre : c'est, à l'euro près, la discordance TTC de la reconstitution société répartie par moitié. Tout euro retiré de la reconstitution retire 0,50 € de la base de chaque foyer ; si la reconstitution tombe, la base tombe à 0 €.",
+    "La part « TVA » (109-1-2°, 24 963 € sur 3 ans) est imposée en sus de la part HT : le service distribue le TTC. Or la TVA rappelée à la société (49 547 €) est une dette de la société envers le Trésor, pas une somme « mise à la disposition » de l'associé ; seule la part HT peut, au mieux, constituer un désinvestissement.",
+    "Le service lui-même ne liquide pas la part TVA : les avis (p. 67, 71, 79) portent des « revenus de capitaux mobiliers déclarés » de 93 907 / 69 505 / 70 038 €, soit 86 407 / 62 005 / 62 538 € de distributions (après déduction des 7 500 € de dividendes antérieurs du foyer). La base liquidée est la part HT seule (210 950 €), inférieure de 24 963 € à la base annoncée p. 62 (voir le point de vigilance).",
+    "Clé 50 / 50 : elle est déduite du capital et du domicile commun, non d'un flux. Pour deux co-dirigeants, la CAA Versailles (1re ch., 23/05/2023, n° 21VE01600) refuse de présumer une appréhension par moitié : il appartient au service d'établir la part réellement appréhendée par chacun (charge de la preuve, art. L. 192 LPF : comptabilité rejetée mais revenus distribués à prouver chez le bénéficiaire). Aucun compte courant d'associé, aucun flux bancaire, aucun enrichissement de Mme BEHEM n'est cité p. 59-62 ; la désignation du 16/06/2026 a été faite « sous toutes réserves » pour éteindre l'amende de l'art. 1759 (471 826 €), elle ne vaut pas aveu d'appréhension."
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Base annoncée (p. 62-63) et base effectivement liquidée (avis p. 67, 71, 79) : pièce R2-chiffrage-behem.xlsx, onglet Sources l. 5-9",
+   "minWidth": 760,
    "colonnes": [
     {
      "label": "Élément"
@@ -40,14 +289,14 @@
      "align": "right"
     },
     {
-     "label": "Total",
+     "label": "3 ans",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "Base RCM distribuée"
+      "v": "Base annoncée (HT + TVA)"
      },
      {
       "v": "96 617 €",
@@ -68,7 +317,7 @@
     ],
     [
      {
-      "v": "Assiette IR ajoutée au revenu (× 1,25)"
+      "v": "Assiette ×1,25 annoncée (p. 63)"
      },
      {
       "v": "120 771 €",
@@ -89,90 +338,142 @@
     ],
     [
      {
-      "v": "Supplément d'impôt NOTIFIÉ par le service"
+      "v": "RCM déclarés sur l'avis − 7 500 € antérieurs = base liquidée"
      },
      {
-      "v": "73 859 €",
+      "v": "86 407 €",
       "align": "right"
      },
      {
-      "v": "48 124 €",
+      "v": "62 005 €",
       "align": "right"
      },
      {
-      "v": "50 720 €",
+      "v": "62 538 €",
       "align": "right"
      },
      {
-      "v": "172 703 €",
+      "v": "210 950 €",
       "align": "right"
      }
     ],
     [
      {
-      "v": "Taux effectif (supplément ÷ base RCM)"
+      "v": "Assiette ×1,25 liquidée (RCM imposables − 4 500 €)"
      },
      {
-      "v": "76,4 %",
+      "v": "108 009 €",
       "align": "right"
      },
      {
-      "v": "69,3 %",
+      "v": "77 506 €",
       "align": "right"
      },
      {
-      "v": "72,6 %",
+      "v": "78 173 €",
       "align": "right"
      },
      {
-      "v": "73,2 %",
+      "v": "263 688 €",
       "align": "right"
      }
+    ],
+    [
+     {
+      "v": "Part TVA annoncée et non liquidée",
+      "fw": 700
+     },
+     {
+      "v": "10 210 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "7 427 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "7 326 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "24 963 €",
+      "align": "right",
+      "fw": 700
+     }
     ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Lecture des avis : « Revenus de capitaux mobiliers déclarés 93 907 » et « imposables 112 509 » (p. 67) = 86 407 × 1,25 + 7 500 × 0,6 (dividendes antérieurs au barème avec abattement de 40 %) = 108 009 + 4 500 ; même construction p. 71 (82 006 = 77 506 + 4 500) et p. 79 (82 673 = 78 173 + 4 500). Le revenu net imposable varie de 108 009 € en 2023 (p. 69 : 126 797 − 18 788), non de 120 771 €."
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 1",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "R2 - Taxation personnelle des deux foyers : base RCM = TTC ÷ 2, ×1,25, suppléments notifiés, taux effectifs 83,5 % / 73,2 % et hors majoration 67,3 % / 58,8 % (XLSX à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "2",
+   "texte": "« Impôt sur le revenu au taux forfaitaire et contributions sociales » et « Majoration de 1,25 sur les années 2023, 2024 et 2025 »"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 62-63",
+   "resume": [
+    "Revenus distribués imposés au taux forfaitaire de 12,80 % (art. 200 A, 1) sauf option pour le barème progressif (art. 200 A, 2), auquel cas « plusieurs corrections » s'appliquent.",
+    "CSG 9,70 % (art. 1600-0 C à E) et prélèvement de solidarité 7,50 % (art. 235 ter) sur les revenus de capitaux mobiliers.",
+    "Majoration de 25 % de l'assiette des distributions irrégulières (art. 158-7-2°, LF 2021 art. 39) : 96 617 × 1,25 = 120 771 € ; 69 432 × 1,25 = 86 790 € ; 69 864 × 1,25 = 87 330 €."
    ],
-   "minWidth": 640
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 62.** « Les revenus distribués doivent, en principe, être soumis à l'impôt sur le revenu pour leur montant brut effectivement perçu (C.G.I., article 200 A, 1-A-1°). […] Le revenu brut ainsi déterminé est soumis à l'impôt sur le revenu au taux forfaitaire de 12,80 % (C.G.I., art. 200 A, 1 ; BOI-RPPM-RCM-20-15 au I § 40 et suivants). Toutefois, lorsque le contribuable a exercé l'option pour l'imposition de l'ensemble de ses revenus mobiliers au barème progressif de l'impôt sur le revenu dans les conditions prévues au 2 de l'article 200 A du C.G.I. […], le montant brut de ces revenus peut faire l'objet de plusieurs corrections avant d'être pris en compte dans le revenu global. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 62-63.** « Conformément aux dispositions des articles 1600-0 C, 1600-0 D et 1600-0 E du Code Général des Impôts, les personnes fiscalement domiciliées en France sont assujetties à la Contribution Sociale Généralisée (CSG) dont le taux est fixé à 9,70 % (depuis l'année 2019) sur les revenus de capitaux mobiliers. Enfin, conformément à l'article 235-ter du Code Général des Impôts, un prélèvement solidarité de 7,50 % est instauré sur les revenus et doit être appliqué. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 63.** « L'article 39 de la loi n° 2020-1721 du 29 décembre 2020 de finances pour 2021 prévoit la majoration de 25 % de l'assiette des distributions occultes ou irrégulières mentionnées à l'article 109 du code général des impôts (CGI), aux c à e de l'article 111 du C.G.I. et à l'article 123 bis du C.G.I., lorsqu'elles sont imposées au prélèvement forfaitaire unique (PFU). Cela est prévu par l'article 158-7-2° du C.G.I. […] En conséquence, les distributions considérées comme perçues par votre foyer fiscal apparaîtront dans vos revenus imposables à hauteur de respectivement (arrondis) : 96 617 € × 1,25 = 120 771 € pour l'année 2023 ; 69 432 € × 1,25 = 86 790 € pour l'année 2024 ; 69 864 € × 1,25 = 87 330 € pour l'année 2025. »"
+    }
+   ]
   },
   {
-   "kind": "schema",
-   "svg": "<svg viewBox=\"0 0 720 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"89\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Base RCM</text><text x=\"89\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">96 617 €</text><text x=\"89\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">2023, par foyer</text><rect x=\"285\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"360\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Assiette IR</text><text x=\"360\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">120 771 €</text><text x=\"360\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">× 1,25</text><rect x=\"556\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"631\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Supplément notifié</text><text x=\"631\" y=\"80\" text-anchor=\"middle\" font-size=\"17\" font-weight=\"700\" fill=\"#2a2015\">73 859 €</text><text x=\"631\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">liquidation du service</text><line x1=\"164\" y1=\"59\" x2=\"201\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54 L 210 59 L 201 64 Z\" fill=\"#cbb98f\"/><text x=\"182\" y=\"51\" text-anchor=\"middle\" font-size=\"10\" fill=\"#cbb98f\" font-weight=\"600\">× 1,25</text><line x1=\"435\" y1=\"59\" x2=\"472\" y2=\"59\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 472 54 L 481 59 L 472 64 Z\" fill=\"#cbb98f\"/><text x=\"453\" y=\"51\" text-anchor=\"middle\" font-size=\"10\" fill=\"#cbb98f\" font-weight=\"600\">barème + PS + 1729</text></svg>",
-   "titre": "Où se situe le supplément dans la cascade (année 2023)",
-   "legende": "La base RCM (discordance TTC ÷ 2) et l'assiette IR (× 1,25) sont recalculées par formule dans la pièce jointe. Le supplément est le montant notifié par le service ; sa liquidation interne reste celle du service (voir ventilation ci-dessous)."
-  },
-  {
-   "kind": "chapitre",
-   "source": "nous",
-   "numero": 2,
-   "titre": "Notre réponse",
-   "sousTitre": ""
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce qui est **certain** : la base distribuée (235 913 €) est la moitié des discordances TTC de la reconstitution, et l'assiette d'impôt en est le produit par 1,25. Le supplément notifié (**172 703 €**) est en revanche le chiffre du **service**, porté sur une proposition scannée : nous le reprenons sans pouvoir le reconstituer, faute du revenu global du foyer et du détail de liquidation. Chacun de ces euros n'existe que parce que la reconstitution « société » existe."
-  },
-  {
-   "kind": "titre",
-   "texte": "Le poids réel : un prélèvement de 73,2 % sur des sommes non établies",
-   "numero": "2.1"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Rapporté à la base distribuée, le prélèvement total atteint **76,4 % en 2023, 69,3 % en 2024 et 72,6 % en 2025**, soit **73,2 %** sur l'ensemble. Ce ratio additionne l'impôt, les prélèvements sociaux, la majoration de 40 % et les intérêts : apprécié **hors la majoration de 40 %** que nous contestons, il revient à **58,8 %**. Appliqué à des sommes dont l'existence même n'est pas établie, il nourrit, à titre subsidiaire, l'argument du caractère confiscatoire."
-  },
-  {
-   "kind": "titre",
-   "texte": "La ventilation du service n'est pas reconstituable",
-   "numero": "2.2"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Le service décompose le supplément en IR au barème, majoration de 40 %, intérêts et prélèvements sociaux. Cette ventilation, reproduite ci-dessous **telle que notifiée**, ne se reconstitue pas : la majoration de 40 % affichée **n'égale pas** 40 % de l'IR indiqué (sa base est le droit éludé net, non fourni), et la ligne « solde » **n'égale pas** 17,2 % de la base RCM (16 618 € attendus en 2023). Ce défaut de ventilation vérifiable est lui-même un **défaut de motivation** : nous en demandons le détail, foyer par foyer et année par année."
+   "kind": "liste",
+   "titre": "Vérification du droit appliqué",
+   "items": [
+    "**Coefficient 1,25 à l'IR** : art. 158-7-2° CGI vise bien les revenus de l'art. 109 résultant d'une rectification des résultats de la société distributrice (BOI-RPPM-RCM-20-10-20-10 § 140) ; au barème ces revenus n'ont pas l'abattement de 40 % (§ 120) ; au PFU le brut est aussi multiplié par 1,25 depuis les revenus 2020 (§ 160, LF 2021 art. 39). Le Conseil constitutionnel a jugé le coefficient conforme pour l'IR (décision n° 2017-643/650 QPC du 07/07/2017). Pas de moyen autonome sur le 1,25 à l'IR : il tombe avec la base. Supplément d'assiette annoncé : + 25 % = 58 978 € par foyer (294 891 − 235 913).",
+    "**Pas de 1,25 pour les prélèvements sociaux** : réserve du § 17 de la même décision, reprise à l'art. L. 136-6, I CSS et au BOI § 130. Vérifié sur les avis : base PS 86 407 € (p. 67 : « Revenus de capitaux mobiliers (44) 86407 »), 66 088 € (p. 71 ; = 62 005 + 4 083 € de base antérieure déjà au rôle, p. 76) et 62 538 € (p. 79). Le service respecte la réserve ; l'ancienne demande de « détail de l'assiette sociale » est sans objet.",
+    "**Taux des prélèvements sociaux** : 9,7 % + 7,5 % = 17,2 % en 2023 et 2024 ; 11,1 % + 7,5 % = 18,6 % en 2025 (p. 79 : « 11,10 % »). Ce taux est exact : la LFSS 2026 (loi n° 2025-1403 du 30/12/2025, art. 12) porte la CSG sur les revenus du patrimoine de 9,2 à 10,6 % dès l'imposition des revenus 2025.",
+    "**Barème et non PFU** : les trois avis imposent les distributions au barème (p. 75 : « Revenus à taux proportionnel : 0 ») parce que le foyer avait coché l'option 2OP pour ses 7 500 € de dividendes (abattement de 40 % visible : 4 500 € imposables). L'option est globale : elle entraîne les distributions rectifiées dans la tranche à 41 % (taux marginal p. 68, 72, 80). Chiffrage de l'alternative au PFU : onglet Scenarios S8.",
+    "**CEHR** : revenus fiscaux de référence 129 797 / 104 891 / 104 307 € (p. 68, 72, 79), sous le seuil de 250 000 € (art. 223 sexies) : aucune contribution exceptionnelle, à juste titre."
+   ]
   },
   {
    "kind": "tableau",
-   "titre": "Ventilation notifiée par le service (non reconstituable en l'état)",
+   "titre": "Ce que coûte l'option pour le barème, à base inchangée (pièce R2-chiffrage-behem.xlsx, onglet Scenarios, S0 et S8)",
+   "minWidth": 760,
    "colonnes": [
     {
-     "label": "Composante"
+     "label": "Convention de l'avis"
     },
     {
      "label": "2023",
@@ -187,98 +488,14 @@
      "align": "right"
     },
     {
-     "label": "Total",
+     "label": "3 ans",
      "align": "right"
     }
    ],
    "lignes": [
     [
      {
-      "v": "IR au barème"
-     },
-     {
-      "v": "36 215 €",
-      "align": "right"
-     },
-     {
-      "v": "non lisible",
-      "align": "right"
-     },
-     {
-      "v": "25 336 €",
-      "align": "right"
-     },
-     {
-      "v": "",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Majoration 40 % (art. 1729)"
-     },
-     {
-      "v": "14 356 €",
-      "align": "right"
-     },
-     {
-      "v": "9 820 €",
-      "align": "right"
-     },
-     {
-      "v": "9 756 €",
-      "align": "right"
-     },
-     {
-      "v": "33 932 €",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Intérêts de retard (art. 1727)"
-     },
-     {
-      "v": "1 974 €",
-      "align": "right"
-     },
-     {
-      "v": "non lisible",
-      "align": "right"
-     },
-     {
-      "v": "195 €",
-      "align": "right"
-     },
-     {
-      "v": "",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Solde : prélèvements sociaux + ajustements"
-     },
-     {
-      "v": "21 314 €",
-      "align": "right"
-     },
-     {
-      "v": "non lisible",
-      "align": "right"
-     },
-     {
-      "v": "15 433 €",
-      "align": "right"
-     },
-     {
-      "v": "",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "= Supplément notifié"
+      "v": "S0 barème (notifié)"
      },
      {
       "v": "73 859 €",
@@ -296,67 +513,2870 @@
       "v": "172 703 €",
       "align": "right"
      }
+    ],
+    [
+     {
+      "v": "S8 PFU 12,8 % sur l'assiette ×1,25, 40 % et intérêts maintenus"
+     },
+     {
+      "v": "41 732 €",
+      "align": "right"
+     },
+     {
+      "v": "27 176 €",
+      "align": "right"
+     },
+     {
+      "v": "30 467 €",
+      "align": "right"
+     },
+     {
+      "v": "99 375 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Écart imputable au seul mode d'imposition",
+      "fw": 700
+     },
+     {
+      "v": "32 127 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "20 948 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "20 253 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "73 328 €",
+      "align": "right",
+      "fw": 700
+     }
     ]
-   ],
-   "minWidth": 640
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "gold",
+   "titre": "L'option 2OP : un levier de 73 328 € dont l'accès dépend du droit transitoire",
+   "texte": "Pour les revenus 2023 à 2025, l'art. 200 A, 2 qualifiait l'option d'« expresse et irrévocable » et le Conseil d'État l'a confirmé (CE 8e-3e ch., 05/04/2024, n° 490411). La loi de finances pour 2026 (n° 2026-103 du 19/02/2026, art. 126) a supprimé les mots « et irrévocable », sans disposition transitoire ; la doctrine administrative range la mesure parmi les nouveautés des revenus 2026. L'avocat doit décider s'il demande, par réclamation, la renonciation à l'option pour 2023-2025 ; la page chiffre l'enjeu, elle ne tient pas le moyen pour acquis."
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 2",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
+    }
+   ]
   },
   {
    "kind": "titre",
-   "texte": "Les leviers propres au foyer",
-   "numero": "2.3"
+   "numero": "3",
+   "texte": "« Revenu imposable, année 2023, 1,00 part » : supplément de 73 859 €"
   },
   {
-   "kind": "paragraphe",
-   "texte": "Ils s'ajoutent à la contestation du principe : **décharge de la majoration de 40 %** faute de motivation individualisée, contestation de la **clé de répartition de 50 %** faute d'appréhension établie, et demande du **détail de l'assiette sociale** pour vérifier l'exclusion du coefficient de 1,25 (réserve QPC n° 2017-643/650)."
+   "kind": "reproche",
+   "page": "p. 65, 67-70",
+   "resume": [
+    "Revenus des associés et gérants 20 851 € (nets 18 766 €), RCM déclarés 93 907 €, imposables 112 509 €, revenu imposable 126 797 € (après pension alimentaire 3 968 € et CSG déductible 510 €).",
+    "IR au barème 36 215 € ; intérêts 5,60 % : 1 974 € ; majoration 40 % : 14 356 € ; prélèvement forfaitaire déjà versé − 960 € ; IR net 51 585 €.",
+    "PS : base 86 407 € ; CSG 9,7 % 8 381 € + solidarité 7,5 % 6 481 € ; intérêts 469 + 363 € ; majorations 3 352 + 2 592 € ; total PS 21 638 €. Supplément = 73 223 + 636 € de restitution antérieure = 73 859 €."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Avis d'imposition rectificatif 2023 (p. 67-68), tel que reproduit.**"
+    },
+    {
+     "kind": "tableau",
+     "titre": "« Détail imposition » 2023",
+     "minWidth": 560,
+     "colonnes": [
+      {
+       "label": "Ligne de l'avis"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Revenus des associés et gérants"
+       },
+       {
+        "v": "20 851",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Déduction 10 % ou frais réels"
+       },
+       {
+        "v": "− 2 085",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Salaires, pensions, rentes nets"
+       },
+       {
+        "v": "18 766",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenus de capitaux mobiliers déclarés"
+       },
+       {
+        "v": "93 907",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenus de capitaux mobiliers imposables (7)"
+       },
+       {
+        "v": "112 509",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu brut global"
+       },
+       {
+        "v": "131 275",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CSG déductible"
+       },
+       {
+        "v": "− 510",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Pension alimentaire versée à enfants majeurs (16)"
+       },
+       {
+        "v": "3 968",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu imposable"
+       },
+       {
+        "v": "126 797",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur les revenus soumis au barème (14)"
+       },
+       {
+        "v": "36 215",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard (21) taux 5,60 % nat. 4"
+       },
+       {
+        "v": "+ 1 974",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration et/ou amende (21) taux 40,00 % nature 4"
+       },
+       {
+        "v": "+ 14 356",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt total avant crédits d'impôt"
+       },
+       {
+        "v": "52 545",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Prélèvement forfaitaire déjà versé sur revenus de capitaux mobiliers"
+       },
+       {
+        "v": "− 960",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total de l'impôt sur le revenu net"
+       },
+       {
+        "v": "51 585",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "PS : revenus de capitaux mobiliers (44), base imposable"
+       },
+       {
+        "v": "86 407",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CSG-CRDS 9,70 % / prélèvement de solidarité 7,50 %"
+       },
+       {
+        "v": "8 381 / 6 481",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard 5,60 %"
+       },
+       {
+        "v": "+ 469 / + 363",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration 40,00 %"
+       },
+       {
+        "v": "+ 3 352 / + 2 592",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total net de l'imposition"
+       },
+       {
+        "v": "12 202 / 9 436",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total des prélèvements sociaux nets"
+       },
+       {
+        "v": "21 638",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu fiscal de référence (25)"
+       },
+       {
+        "v": "129 797",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Montant de votre impôt net"
+       },
+       {
+        "v": "73 223",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Restitution antérieure à ajouter"
+       },
+       {
+        "v": "+ 636",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Supplément d'impôt",
+        "fw": 700
+       },
+       {
+        "v": "73 859",
+        "align": "right",
+        "fw": 700
+       }
+      ],
+      [
+       {
+        "v": "Taux moyen d'imposition / taux marginal"
+       },
+       {
+        "v": "28,56 % / 41,00 %",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**« Conséquences financières » 2023 (p. 69-70).**"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Conséquences financières 2023",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Rubrique"
+      },
+      {
+       "label": "Avant contrôle",
+       "align": "right"
+      },
+      {
+       "label": "Après contrôle",
+       "align": "right"
+      },
+      {
+       "label": "Variation",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Revenu net imposable"
+       },
+       {
+        "v": "18 788",
+        "align": "right"
+       },
+       {
+        "v": "126 797",
+        "align": "right"
+       },
+       {
+        "v": "108 009",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur le revenu"
+       },
+       {
+        "v": "− 636",
+        "align": "right"
+       },
+       {
+        "v": "35 255",
+        "align": "right"
+       },
+       {
+        "v": "35 891",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard IR « 10/2026, (28 × 0,20) = 05,60 % »"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "1 974",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration IR, base 35 891, code (03)"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "14 356",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total IR"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "52 221",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CSG-CRDS 9,7 % / Prél. solidarité"
+       },
+       {
+        "v": "0 / 0",
+        "align": "right"
+       },
+       {
+        "v": "8 381 / 6 481",
+        "align": "right"
+       },
+       {
+        "v": "8 381 / 6 481",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêts CSG / solidarité (28 × 0,20 = 5,60 %)"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "469 / 363",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majorations, bases 8 381 / 6 481, code (03)"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "3 352 / 2 592",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total PS"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "21 638",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "« Montant total des rappels (TOTAL IR + TOTAL PS) » = mis en recouvrement",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "73 859",
+        "align": "right",
+        "fw": 700
+       }
+      ],
+      [
+       {
+        "v": "« (03) MANQUEMENT DELIBERE (40 %) »"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Contrôle ligne à ligne 2023 (pièce R2-chiffrage-behem.xlsx, onglet Controle, bloc 2023, colonnes B-D)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Ligne"
+    },
+    {
+     "label": "Service (avis)",
+     "align": "right"
+    },
+    {
+     "label": "Recalcul par formule",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Revenu imposable = 18 766 + 4 500 − 3 968 − 510 + 108 009"
+     },
+     {
+      "v": "126 797 €",
+      "align": "right"
+     },
+     {
+      "v": "126 797 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR barème 2023 : 11 % de 11 294 à 28 797, 30 % jusqu'à 82 341, 41 % jusqu'à 177 106 (LF 2024)"
+     },
+     {
+      "v": "36 215 €",
+      "align": "right"
+     },
+     {
+      "v": "36 215 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR après contrôle = 36 215 − 960 ; variation = 35 255 − (− 636)"
+     },
+     {
+      "v": "35 255 / 35 891 €",
+      "align": "right"
+     },
+     {
+      "v": "35 255 / 35 891 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts IR = 35 255 × 0,20 % × 28 mois"
+     },
+     {
+      "v": "1 974 €",
+      "align": "right"
+     },
+     {
+      "v": "1 974 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Majoration = 35 891 × 40 %"
+     },
+     {
+      "v": "14 356 €",
+      "align": "right"
+     },
+     {
+      "v": "14 356 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "CSG = 86 407 × 9,7 % ; solidarité = 86 407 × 7,5 %"
+     },
+     {
+      "v": "8 381 / 6 481 €",
+      "align": "right"
+     },
+     {
+      "v": "8 381 / 6 481 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts PS × 5,6 % ; majorations PS × 40 %"
+     },
+     {
+      "v": "469 / 363 ; 3 352 / 2 592 €",
+      "align": "right"
+     },
+     {
+      "v": "469 / 363 ; 3 352 / 2 592 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Supplément = 51 585 + 21 638 + 636",
+      "fw": 700
+     },
+     {
+      "v": "73 859 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "73 859 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "schema",
+   "titre": "Composition du supplément 2023 de 73 859 € (chiffres du service, p. 69-70)",
+   "svg": "<svg viewBox=\"0 0 760 320\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"20\" y1=\"250\" x2=\"744\" y2=\"250\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"40.6857142857143\" y=\"154.50233906320915\" width=\"62.05714285714286\" height=\"95.49766093679085\" rx=\"3\" fill=\"#a0740d\"/><text x=\"71.71428571428572\" y=\"149.50233906320915\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">35 891 €</text><text x=\"71.71428571428572\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">IR barème</text><text x=\"71.71428571428572\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">variation</text><rect x=\"144.1142857142857\" y=\"149.24998101553075\" width=\"62.05714285714286\" height=\"5.252358047678399\" rx=\"3\" fill=\"#b4452e\"/><text x=\"175.14285714285714\" y=\"144.24998101553075\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+1 974 €</text><text x=\"175.14285714285714\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Intérêts IR</text><rect x=\"247.54285714285712\" y=\"111.05198094842285\" width=\"62.05714285714286\" height=\"38.1980000671079\" rx=\"3\" fill=\"#b4452e\"/><text x=\"278.57142857142856\" y=\"106.05198094842285\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+14 356 €</text><text x=\"278.57142857142856\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Majoration 40</text><text x=\"278.57142857142856\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">% IR</text><rect x=\"350.9714285714286\" y=\"71.50763175663144\" width=\"62.05714285714286\" height=\"39.54434919179141\" rx=\"3\" fill=\"#b4452e\"/><text x=\"382.0\" y=\"66.50763175663144\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+14 862 €</text><text x=\"382.0\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">CSG +</text><text x=\"382.0\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">solidarité</text><rect x=\"454.40000000000003\" y=\"69.29387193106487\" width=\"62.05714285714286\" height=\"2.2137598255665694\" rx=\"3\" fill=\"#b4452e\"/><text x=\"485.42857142857144\" y=\"64.29387193106487\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+832 €</text><text x=\"485.42857142857144\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Intérêts PS</text><rect x=\"557.8285714285713\" y=\"53.47826086956519\" width=\"62.05714285714286\" height=\"15.81561106149968\" rx=\"3\" fill=\"#b4452e\"/><text x=\"588.8571428571428\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"10.5\" font-weight=\"700\" fill=\"#2a2015\">+5 944 €</text><text x=\"588.8571428571428\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">Majorations 40</text><text x=\"588.8571428571428\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" fill=\"#5b5b5b\">% PS</text><rect x=\"661.2571428571428\" y=\"53.47826086956519\" width=\"62.05714285714286\" height=\"196.5217391304348\" rx=\"3\" fill=\"#6a4d0f\"/><text x=\"692.2857142857142\" y=\"48.47826086956519\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#2a2015\">73 859 €</text><text x=\"692.2857142857142\" y=\"266\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">Supplément</text><text x=\"692.2857142857142\" y=\"278\" text-anchor=\"middle\" font-size=\"10\" font-weight=\"700\" fill=\"#2a2015\">2023</text></svg>"
+  },
+  {
+   "kind": "liste",
+   "titre": "Ce que montre 2023",
+   "items": [
+    "Aucune erreur arithmétique du service : les 15 lignes sont reproduites à l'euro près par formule à partir des seules données de l'avis et du barème légal.",
+    "Avant contrôle, le foyer était non imposable (IR − 636 €, restitution) avec 18 788 € de revenu ; le contrôle le porte à 126 797 €, dans la tranche à 41 % : 108 009 € d'assiette ajoutée produisent 35 891 € d'IR, soit 41,5 % de la base distribuée de 86 407 €.",
+    "La majoration de 40 % représente 20 300 € (14 356 + 3 352 + 2 592) et les intérêts 2 806 € ; droits seuls : 50 753 € (35 891 + 14 862), soit 58,7 % de la base distribuée de 86 407 €."
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 3",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "4",
+   "texte": "« Revenu imposable, année 2024, 1,00 part » : supplément de 48 124 € sur l'avis, 50 334 € sur la récapitulation"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 65, 71-77",
+   "resume": [
+    "Revenus des associés et gérants 22 094 € (nets 19 885 €), RCM déclarés 69 505 €, imposables 82 006 €, revenu imposable 101 891 €.",
+    "IR au barème 25 720 € ; intérêts 3,20 % : 692 € ; majoration 40 % : 9 820 € ; prélèvement forfaitaire déjà versé − 4 083 € ; IR net 32 149 €.",
+    "PS : base 66 088 € ; CSG 6 411 € + solidarité 4 957 € ; intérêts 192 + 149 € ; majorations 2 406 + 1 860 € ; total PS 15 975 €. « Supplément d'impôt = 48 124 » (p. 72) ; « Récapitulation des sommes dues : Total 50 334 » (p. 77)."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Avis d'imposition rectificatif 2024 (p. 71-72), tel que reproduit.**"
+    },
+    {
+     "kind": "tableau",
+     "titre": "« Détail imposition » 2024",
+     "minWidth": 560,
+     "colonnes": [
+      {
+       "label": "Ligne de l'avis"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Revenus des associés et gérants"
+       },
+       {
+        "v": "22 094",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Déduction 10 %"
+       },
+       {
+        "v": "− 2 209",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Salaires, pensions, rentes nets"
+       },
+       {
+        "v": "19 885",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenus de capitaux mobiliers déclarés"
+       },
+       {
+        "v": "69 505",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenus de capitaux mobiliers imposables (7)"
+       },
+       {
+        "v": "82 006",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu brut global = revenu imposable"
+       },
+       {
+        "v": "101 891",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur les revenus soumis au barème (14)"
+       },
+       {
+        "v": "25 720",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard (21) taux 3,20 %"
+       },
+       {
+        "v": "+ 692",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration et/ou amende (21) taux 40,00 %"
+       },
+       {
+        "v": "+ 9 820",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt total avant crédits d'impôt"
+       },
+       {
+        "v": "36 232",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Prélèvement forfaitaire déjà versé"
+       },
+       {
+        "v": "− 4 083",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total de l'impôt sur le revenu net"
+       },
+       {
+        "v": "32 149",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "PS : revenus de capitaux mobiliers (44), base imposable"
+       },
+       {
+        "v": "66 088",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CSG-CRDS 9,70 % / solidarité 7,50 %"
+       },
+       {
+        "v": "6 411 / 4 957",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard 3,20 %"
+       },
+       {
+        "v": "+ 192 / + 149",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration 40,00 %"
+       },
+       {
+        "v": "+ 2 406 / + 1 860",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total des prélèvements sociaux nets"
+       },
+       {
+        "v": "15 975",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu fiscal de référence"
+       },
+       {
+        "v": "104 891",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Montant de votre impôt net"
+       },
+       {
+        "v": "48 124",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur le revenu antérieur à déduire"
+       },
+       {
+        "v": "− 0",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Supplément d'impôt",
+        "fw": 700
+       },
+       {
+        "v": "48 124",
+        "align": "right",
+        "fw": 700
+       }
+      ],
+      [
+       {
+        "v": "Taux moyen / taux marginal"
+       },
+       {
+        "v": "25,24 % / 41,00 %",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**« Conséquences financières » 2024 (p. 75-77).**"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Conséquences financières 2024",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Rubrique"
+      },
+      {
+       "label": "Avant contrôle",
+       "align": "right"
+      },
+      {
+       "label": "Après contrôle",
+       "align": "right"
+      },
+      {
+       "label": "Variation",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Revenu brut global = revenu net imposable (p. 75)"
+       },
+       {
+        "v": "24 385",
+        "align": "right"
+       },
+       {
+        "v": "101 891",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Avoir fiscal, crédits d'impôt, prélèvement, acompte PAS"
+       },
+       {
+        "v": "4 083",
+        "align": "right"
+       },
+       {
+        "v": "4 083",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Base prélèvement de solidarité / base CSG + CRDS 9,7 % (p. 76)"
+       },
+       {
+        "v": "4 083",
+        "align": "right"
+       },
+       {
+        "v": "66 088",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur le revenu (p. 76, « Droits dus »)"
+       },
+       {
+        "v": "0",
+        "align": "right"
+       },
+       {
+        "v": "21 637",
+        "align": "right"
+       },
+       {
+        "v": "21 637",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt restitué"
+       },
+       {
+        "v": "2 912",
+        "align": "right"
+       },
+       {
+        "v": "0",
+        "align": "right"
+       },
+       {
+        "v": "− 2 912",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Sous-total (1)"
+       },
+       {
+        "v": "− 2 912",
+        "align": "right"
+       },
+       {
+        "v": "21 637",
+        "align": "right"
+       },
+       {
+        "v": "24 549",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Prélèv. de solidarité / CSG + CRDS 9,7 %"
+       },
+       {
+        "v": "306 / 396",
+        "align": "right"
+       },
+       {
+        "v": "4 957 / 6 411",
+        "align": "right"
+       },
+       {
+        "v": "4 651 / 6 015",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Sous-total (2)"
+       },
+       {
+        "v": "702",
+        "align": "right"
+       },
+       {
+        "v": "11 368",
+        "align": "right"
+       },
+       {
+        "v": "10 666",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total (1 + 2)"
+       },
+       {
+        "v": "− 2 210",
+        "align": "right"
+       },
+       {
+        "v": "33 005",
+        "align": "right"
+       },
+       {
+        "v": "35 215",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêts de retard (p. 77) : du 01/07/2025 au 31/10/2026, 16 mois, 3,2 %"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "1 033",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majorations (p. 77) : IR 9 820 ; solidarité 1 860 ; CSG + CRDS 2 406"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "14 086",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "« Récapitulation des sommes dues » : impôt restitué à tort 2 912 + impôt dû 21 637 + solidarité 4 651 + CSG 6 015 + intérêts 1 033 + majorations 14 086",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "50 334",
+        "align": "right",
+        "fw": 700
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Contrôle ligne à ligne 2024 (onglet Controle, bloc 2024)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Ligne"
+    },
+    {
+     "label": "Service (avis)",
+     "align": "right"
+    },
+    {
+     "label": "Recalcul par formule",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Revenu imposable = 19 885 + 4 500 + 77 506"
+     },
+     {
+      "v": "101 891 €",
+      "align": "right"
+     },
+     {
+      "v": "101 891 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR barème 2024 : 11 % de 11 497 à 29 315, 30 % jusqu'à 83 823, 41 % jusqu'à 180 294 (LF 2025)"
+     },
+     {
+      "v": "25 720 €",
+      "align": "right"
+     },
+     {
+      "v": "25 720 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR après contrôle = 25 720 − 4 083 ; variation = 21 637 − (− 2 912)"
+     },
+     {
+      "v": "21 637 / 24 549 €",
+      "align": "right"
+     },
+     {
+      "v": "21 637 / 24 549 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts IR = 21 637 × 0,20 % × 16 mois ; majoration = 24 549 × 40 %"
+     },
+     {
+      "v": "692 / 9 820 €",
+      "align": "right"
+     },
+     {
+      "v": "692 / 9 820 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "CSG = 66 088 × 9,7 % ; solidarité = 66 088 × 7,5 %"
+     },
+     {
+      "v": "6 411 / 4 957 €",
+      "align": "right"
+     },
+     {
+      "v": "6 411 / 4 957 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts et majorations PS sur les variations 6 015 / 4 651"
+     },
+     {
+      "v": "192 / 149 ; 2 406 / 1 860 €",
+      "align": "right"
+     },
+     {
+      "v": "192 / 149 ; 2 406 / 1 860 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Supplément, convention de l'avis = 32 149 + 15 975",
+      "fw": 700
+     },
+     {
+      "v": "48 124 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "48 124 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "Supplément, convention « variation » (p. 77) = 24 549 + 10 666 + 1 033 + 14 086",
+      "fw": 700
+     },
+     {
+      "v": "50 334 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "50 334 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "alerte",
+   "couleur": "orange",
+   "titre": "2024 : deux documents du service, deux totaux, écart 2 210 €",
+   "texte": "L'avis (p. 72) arrête le supplément à 48 124 € : il compte les prélèvements sociaux pour leur montant brut (11 368 €) alors que 702 € étaient déjà au rôle initial (p. 76), et il porte « impôt antérieur à déduire : 0 » alors que l'IR antérieur était une restitution de 2 912 € à reprendre (« impôt restitué à tort », p. 77). La récapitulation des sommes dues (p. 77) corrige les deux et arrête 50 334 €. En 2023, l'avis ajoute bien la restitution antérieure (+ 636 €) ; en 2025 il déduit bien l'impôt antérieur (− 946 €). Le montant notifié retenu par la défense est celui de l'avis, 48 124 € (total 172 703 €) ; le service devra dire lequel des deux il met en recouvrement."
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 4",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "5",
+   "texte": "« Revenu imposable, année 2025, 1,00 part » : supplément de 50 720 €"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 65, 79-84",
+   "resume": [
+    "Revenus des associés et gérants 21 266 € (nets 19 139 €), RCM déclarés 70 038 €, imposables 82 673 €, revenu imposable 101 307 € (CSG déductible 505 €).",
+    "IR au barème 25 336 € ; intérêts 0,80 % : 195 € ; majoration 40 % : 9 756 € ; IR net 35 287 €.",
+    "PS : base 62 538 € ; CSG-CRDS 11,10 % 6 942 € + solidarité 7,50 % 4 690 € ; intérêts 56 + 38 € ; majorations 2 777 + 1 876 € ; total PS 16 379 €. Supplément = 51 666 − 946 € d'impôt antérieur = 50 720 €."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**Avis d'imposition rectificatif 2025 (p. 79-80), tel que reproduit.**"
+    },
+    {
+     "kind": "tableau",
+     "titre": "« Détail imposition » 2025",
+     "minWidth": 560,
+     "colonnes": [
+      {
+       "label": "Ligne de l'avis"
+      },
+      {
+       "label": "Montant",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Revenus des associés et gérants"
+       },
+       {
+        "v": "21 266",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Déduction 10 %"
+       },
+       {
+        "v": "− 2 127",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Salaires, pensions, rentes nets"
+       },
+       {
+        "v": "19 139",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenus de capitaux mobiliers déclarés"
+       },
+       {
+        "v": "70 038",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenus de capitaux mobiliers imposables (7)"
+       },
+       {
+        "v": "82 673",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu brut global"
+       },
+       {
+        "v": "101 812",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CSG déductible"
+       },
+       {
+        "v": "− 505",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu imposable"
+       },
+       {
+        "v": "101 307",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur les revenus soumis au barème (14)"
+       },
+       {
+        "v": "25 336",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard (21) taux 0,80 %"
+       },
+       {
+        "v": "+ 195",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration et/ou amende (21) taux 40,00 %"
+       },
+       {
+        "v": "+ 9 756",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total de l'impôt sur le revenu net"
+       },
+       {
+        "v": "35 287",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "PS : revenus de capitaux mobiliers (44), base imposable"
+       },
+       {
+        "v": "62 538",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Taux de l'imposition"
+       },
+       {
+        "v": "11,10 % / 7,50 %",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Montant de l'imposition"
+       },
+       {
+        "v": "6 942 / 4 690",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard 0,80 %"
+       },
+       {
+        "v": "+ 56 / + 38",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration 40,00 %"
+       },
+       {
+        "v": "+ 2 777 / + 1 876",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total des prélèvements sociaux nets"
+       },
+       {
+        "v": "16 379",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Revenu fiscal de référence"
+       },
+       {
+        "v": "104 307",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Montant de votre impôt net"
+       },
+       {
+        "v": "51 666",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur le revenu antérieur à déduire"
+       },
+       {
+        "v": "− 946",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Supplément d'impôt",
+        "fw": 700
+       },
+       {
+        "v": "50 720",
+        "align": "right",
+        "fw": 700
+       }
+      ],
+      [
+       {
+        "v": "Taux moyen / taux marginal"
+       },
+       {
+        "v": "25,01 % / 41,00 %",
+        "align": "right"
+       }
+      ]
+     ]
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**« Conséquences financières » 2025 (p. 83-84).**"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Conséquences financières 2025",
+     "minWidth": 640,
+     "colonnes": [
+      {
+       "label": "Rubrique"
+      },
+      {
+       "label": "Avant contrôle",
+       "align": "right"
+      },
+      {
+       "label": "Après contrôle",
+       "align": "right"
+      },
+      {
+       "label": "Variation",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "Revenu net imposable"
+       },
+       {
+        "v": "23 134",
+        "align": "right"
+       },
+       {
+        "v": "101 307",
+        "align": "right"
+       },
+       {
+        "v": "78 173",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Impôt sur le revenu"
+       },
+       {
+        "v": "946",
+        "align": "right"
+       },
+       {
+        "v": "25 336",
+        "align": "right"
+       },
+       {
+        "v": "24 390",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêt de retard IR « 10/2026, (4 × 0,20) = 00,80 % »"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "195",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majoration IR, base 24 390, code (03)"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "9 756",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total IR"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "34 341",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "CSG-CRDS 11,1 % / Prél. solidarité"
+       },
+       {
+        "v": "0 / 0",
+        "align": "right"
+       },
+       {
+        "v": "6 942 / 4 690",
+        "align": "right"
+       },
+       {
+        "v": "6 942 / 4 690",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Intérêts CSG / solidarité (4 × 0,20 = 0,80 %)"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "56 / 38",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Majorations, bases 6 942 / 4 690, code (03)"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "2 777 / 1 876",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total PS"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "",
+        "align": "right"
+       },
+       {
+        "v": "16 379",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "« Montant total des rappels (TOTAL IR + TOTAL PS) » = mis en recouvrement",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "50 720",
+        "align": "right",
+        "fw": 700
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Contrôle ligne à ligne 2025 (onglet Controle, bloc 2025)",
+   "minWidth": 760,
+   "colonnes": [
+    {
+     "label": "Ligne"
+    },
+    {
+     "label": "Service (avis)",
+     "align": "right"
+    },
+    {
+     "label": "Recalcul par formule",
+     "align": "right"
+    },
+    {
+     "label": "Écart",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Revenu imposable = 19 139 + 4 500 − 505 + 78 173"
+     },
+     {
+      "v": "101 307 €",
+      "align": "right"
+     },
+     {
+      "v": "101 307 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR barème 2025 : 11 % de 11 600 à 29 579, 30 % jusqu'à 84 577, 41 % jusqu'à 181 917 (LF 2026, + 0,9 %)"
+     },
+     {
+      "v": "25 336 €",
+      "align": "right"
+     },
+     {
+      "v": "25 336 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "IR avant contrôle = barème sur 23 134 € (1 269 €) − décote (897 − 0,4525 × 1 269)"
+     },
+     {
+      "v": "946 €",
+      "align": "right"
+     },
+     {
+      "v": "946 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Variation = 25 336 − 946 ; intérêts = 24 390 × 0,20 % × 4 ; majoration = 24 390 × 40 %"
+     },
+     {
+      "v": "24 390 / 195 / 9 756 €",
+      "align": "right"
+     },
+     {
+      "v": "24 390 / 195 / 9 756 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "CSG-CRDS = 62 538 × 11,1 % ; solidarité = 62 538 × 7,5 %"
+     },
+     {
+      "v": "6 942 / 4 690 €",
+      "align": "right"
+     },
+     {
+      "v": "6 942 / 4 690 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Intérêts PS × 0,8 % ; majorations PS × 40 %"
+     },
+     {
+      "v": "56 / 38 ; 2 777 / 1 876 €",
+      "align": "right"
+     },
+     {
+      "v": "56 / 38 ; 2 777 / 1 876 €",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Supplément = 35 287 + 16 379 − 946",
+      "fw": 700
+     },
+     {
+      "v": "50 720 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "50 720 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Ce que montre 2025",
+   "items": [
+    "Liquidation exacte, y compris la décote de l'impôt avant contrôle (946 €) et le nouveau taux de CSG (10,6 % + 0,5 % CRDS) issu de la LFSS 2026, que le service applique à des distributions réputées perçues en 2025 : la hausse est applicable « à compter de l'imposition des revenus de l'année 2025 », le point n'est pas contestable.",
+    "Les intérêts ne courent que 4 mois (01/07/2026 au 31/10/2026) : l'exercice clos le 31/03/2025 est imposé en revenus 2025, exigibles en 2026.",
+    "Récapitulatif des trois années, convention « variation » (celle des p. 69, 77, 83) : droits 121 990 € (IR 84 830 + PS 37 160), intérêts 4 128 €, majorations 40 % 48 795 € = 174 913 € ; l'avis 2024 retenant 48 124 € au lieu de 50 334 €, le total notifié est de 172 703 €."
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 5",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "6",
+   "texte": "« Intérêts de retard » (art. 1727 CGI) : 4 128 € sur 3 ans"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 63",
+   "resume": [
+    "Taux de 0,20 % par mois depuis le 01/01/2018, sur les sommes mises à la charge du contribuable.",
+    "Point de départ : 1er jour du mois suivant celui où l'impôt devait être acquitté ; point d'arrivée : dernier jour du mois de la proposition.",
+    "Appliqué : 28 mois (5,60 %) pour 2023, 16 mois (3,20 %) pour 2024, 4 mois (0,80 %) pour 2025 (p. 69, 77, 83)."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 63.** « L'article 1727 du Code Général des Impôts prévoit que toute somme, dont l'établissement ou le recouvrement incombe à la direction générale des impôts, qui n'a pas été acquittée dans le délai légal donne lieu au versement d'un intérêt de retard. À cet intérêt s'ajoutent, le cas échéant, les sanctions prévues au présent code. Le taux de l'intérêt de retard est de 0,20 % par mois à compter du 1er janvier 2018. Il s'applique sur le montant des sommes mises à la charge du contribuable ou dont le versement a été différé. Le point de départ des intérêts de retard est le 1er jour du mois suivant celui au cours duquel l'impôt devait être acquitté et le point d'arrivée est le dernier jour du mois au cours duquel la proposition a eu lieu. L'intérêt de retard n'a pas le caractère d'une sanction et vise seulement à réparer le préjudice subi par le trésor du fait de la perception tardive de sa créance. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 69 / 77 / 83.** « INTERET DE RETARD 10/2026 IR (28 × 0.20) = 05.60 % 1974 » ; « Pt de départ 01/07/2025, Pt d'arrivée 31/10/2026, Nombre de mois 16, Taux 3,2 %, Montant 1 033 » ; « 10/2026 IR (4 × 0.20) = 00.80 % 195 »."
+    }
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Vérification du décompte (art. 1727, III et IV ; BOI-CF-INF-10-10-20)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Année"
+    },
+    {
+     "label": "Point de départ (IV-1 : 1er juillet de l'année suivante)",
+     "align": "right"
+    },
+    {
+     "label": "Point d'arrivée (IV-3 : fin du mois de la proposition du 19/10/2026)",
+     "align": "right"
+    },
+    {
+     "label": "Mois",
+     "align": "right"
+    },
+    {
+     "label": "Taux",
+     "align": "right"
+    },
+    {
+     "label": "Base × taux",
+     "align": "right"
+    },
+    {
+     "label": "Service",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "2023"
+     },
+     {
+      "v": "01/07/2024",
+      "align": "right"
+     },
+     {
+      "v": "31/10/2026",
+      "align": "right"
+     },
+     {
+      "v": "28",
+      "align": "right"
+     },
+     {
+      "v": "5,60 %",
+      "align": "right"
+     },
+     {
+      "v": "35 255 × 5,6 % = 1 974 ; 8 381 × 5,6 % = 469 ; 6 481 × 5,6 % = 363",
+      "align": "right"
+     },
+     {
+      "v": "1 974 / 469 / 363",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2024"
+     },
+     {
+      "v": "01/07/2025",
+      "align": "right"
+     },
+     {
+      "v": "31/10/2026",
+      "align": "right"
+     },
+     {
+      "v": "16",
+      "align": "right"
+     },
+     {
+      "v": "3,20 %",
+      "align": "right"
+     },
+     {
+      "v": "21 637 × 3,2 % = 692 ; 6 015 × 3,2 % = 192 ; 4 651 × 3,2 % = 149",
+      "align": "right"
+     },
+     {
+      "v": "692 / 192 / 149",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "2025"
+     },
+     {
+      "v": "01/07/2026",
+      "align": "right"
+     },
+     {
+      "v": "31/10/2026",
+      "align": "right"
+     },
+     {
+      "v": "4",
+      "align": "right"
+     },
+     {
+      "v": "0,80 %",
+      "align": "right"
+     },
+     {
+      "v": "24 390 × 0,8 % = 195 ; 6 942 × 0,8 % = 56 ; 4 690 × 0,8 % = 38",
+      "align": "right"
+     },
+     {
+      "v": "195 / 56 / 38",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Total",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "4 128 €",
+      "align": "right",
+      "fw": 700
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Appréciation",
+   "items": [
+    "Taux, points de départ et d'arrivée conformes à l'art. 1727 (III : 0,20 % par mois ; IV-1 : pour l'impôt sur le revenu, 1er juillet de l'année suivant celle au titre de laquelle l'imposition est établie ; IV-3 : décompte arrêté au dernier jour du mois de la proposition de rectification). Les prélèvements sociaux suivent les règles de l'IR (art. L. 136-6, III CSS).",
+    "Le service calcule les intérêts sur l'impôt supplémentaire effectif (35 255 € en 2023, hors la restitution de 636 € reprise sans intérêt ; 21 637 € en 2024) : c'est la lecture la plus favorable, aucun euro à réclamer.",
+    "Aucun moyen autonome : les intérêts (4 128 €) suivent le sort des droits. Ils tombent avec la base ; une réduction de 25 / 50 / 75 % de la base les ramène à 2 880 / 1 770 / 767 € (onglet Scenarios)."
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Documents du point 6",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
+    }
+   ]
+  },
+  {
+   "kind": "titre",
+   "numero": "7",
+   "texte": "« Manquements délibérés » : majoration de 40 % (art. 1729) sur l'IR et les prélèvements sociaux, 48 795 €"
+  },
+  {
+   "kind": "reproche",
+   "page": "p. 64-65 ; avis p. 67-84 (code 03)",
+   "resume": [
+    "Titre de la section : « Manquements délibérés, Impôt sur les Sociétés et TVA, Exercices clos au 31 mars 2022 et 31 mars 2023 ».",
+    "Motifs : « conditions d'exploitation » (co-gérante : « toute latitude de pouvoir dissimuler »), anomalies de la comptabilité (liste de 9 constats de la partie « REJET DE COMPTABILITE »), « importance des minorations » (« discordances HT […] 96 617 € sur l'année 2023, 69 432 €, 69 864 € »), « répétition de l'infraction », jurisprudence sur la TVA (CE 1979, 1981, 1988).",
+    "Conclusion : la majoration « sera appliquée aux rappels de droits (à l'impôt sur les Sociétés) […] aux rappels de droits (à la TVA) » ; les avis l'appliquent à l'IR (14 356 / 9 820 / 9 756 €) et aux prélèvements sociaux (5 944 / 4 266 / 4 653 €) du foyer."
+   ],
+   "detail": [
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 64, titre.** « II- Manquements délibérés, Impôt sur les Société et TVA. Exercices clos au 31 mars 2022 et 31 mars 2023. Pénalité de l'article 1729 du Code Général des Impôts. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 64.** « Le manquement délibéré d'un professionnel ou d'un particulier est établi lorsqu'il est démontré que celui-ci avait la connaissance exacte des faits ou de la situation qui motivent les rehaussements. Conditions d'exploitation : Comme décrit ci-dessus, en votre qualité de co-gérant et de vos prérogatives dans l'exploitation de la société, vous aviez toute latitude de pouvoir dissimuler une partie du chiffre d'affaires. Anomalies et caractère non probant de la comptabilité : De nombreuses irrégularités relevées au cours de la vérification résultent de manquement délibéré. Le service a relevé, lors du contrôle sur place, de nombreuses anomalies et incohérences significatives et largement décrites en partie “REJET DE COMPTABILITE” […] : Variabilité des données dans les fichiers de la caisse informatique ; En terme de montant de chiffre d'affaires ; En terme de montant de TVA […] ; En terme de quantités d'articles […] ; En terme de fluctuation des prix de vente […] ; Importance des écarts constatés entre les quantités vendues et les quantités disponible ; Absence de trace, dans les données de la caisse, des offerts, des remises ; Absence de l'identification des produits supprimés et suivi de ces suppressions ; Faiblesse du coefficient de revente. »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 64.** « Importance des minorations : Les discordances HT relevée sur ces périodes sont significatives : 96 617 € sur l'année 2023, 69 432 € sur l'année 2024, 69 864 € sur l'année 2025. Répétition de l'infraction : Ces écarts, ces minorations et ces anomalies se répètent tout au long de tous les exercices visés par la vérification […]. Omission de déclaration : Le caractère répétitif et l'intentionnalité des minorations de déclarations de produits et de TVA collectée sont ainsi démontrés. Selon une jurisprudence constante, le Conseil d'État considère que le redevable qui minore volontairement ses déclarations de TVA encourt les pénalités pour manquements délibérés (arrêts n° 13072 du 19 décembre 1979, n° 17 041 du 28 octobre 1981, n° 46 525 du 22 avril 1988 et n° 54 134 du 2 décembre 1988). »"
+    },
+    {
+     "kind": "paragraphe",
+     "texte": "**p. 65.** « En définitive, comme le démontrent les paragraphes susvisés, l'ensemble des constatations faites et en raison du caractère répétitif, intentionnel et impossible à ignorer, de l'infraction précitée, la pénalité pour manquement délibéré sera appliquée : aux rappels de droits (à l'impôt sur les Sociétés) suite à rectifications du chiffre d'affaires sur tous les exercices clos visés par le contrôle ; aux rappels de droits (à la TVA) suite à rectifications du chiffre d'affaires sur tous les exercices clos visés par le contrôle. En conséquence, la majoration de 40 % prévue à l'article 1729 du Code général des Impôts, sera donc appliquée consécutivement aux discordances constatées, l'absence de déclaration des sommes en question ne pouvant que résulter d'une volonté manifeste d'éluder l'impôt. »"
+    },
+    {
+     "kind": "tableau",
+     "titre": "Majorations appliquées sur les avis (code 03 « manquement délibéré 40 % »)",
+     "minWidth": 700,
+     "colonnes": [
+      {
+       "label": "Année"
+      },
+      {
+       "label": "Base IR",
+       "align": "right"
+      },
+      {
+       "label": "Majoration IR",
+       "align": "right"
+      },
+      {
+       "label": "Bases PS",
+       "align": "right"
+      },
+      {
+       "label": "Majorations PS",
+       "align": "right"
+      },
+      {
+       "label": "Total",
+       "align": "right"
+      }
+     ],
+     "lignes": [
+      [
+       {
+        "v": "2023 (p. 69)"
+       },
+       {
+        "v": "35 891",
+        "align": "right"
+       },
+       {
+        "v": "14 356",
+        "align": "right"
+       },
+       {
+        "v": "8 381 / 6 481",
+        "align": "right"
+       },
+       {
+        "v": "3 352 / 2 592",
+        "align": "right"
+       },
+       {
+        "v": "20 300",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2024 (p. 77)"
+       },
+       {
+        "v": "24 549",
+        "align": "right"
+       },
+       {
+        "v": "9 820",
+        "align": "right"
+       },
+       {
+        "v": "6 015 / 4 651",
+        "align": "right"
+       },
+       {
+        "v": "2 406 / 1 860",
+        "align": "right"
+       },
+       {
+        "v": "14 086",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "2025 (p. 83)"
+       },
+       {
+        "v": "24 390",
+        "align": "right"
+       },
+       {
+        "v": "9 756",
+        "align": "right"
+       },
+       {
+        "v": "6 942 / 4 690",
+        "align": "right"
+       },
+       {
+        "v": "2 777 / 1 876",
+        "align": "right"
+       },
+       {
+        "v": "14 409",
+        "align": "right"
+       }
+      ],
+      [
+       {
+        "v": "Total",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "33 932",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "14 863",
+        "align": "right",
+        "fw": 700
+       },
+       {
+        "v": "48 795",
+        "align": "right",
+        "fw": 700
+       }
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Moyens contre la majoration personnelle",
+   "items": [
+    "**Défaut de motivation (art. L. 80 D LPF)** : la motivation doit énoncer, pour chaque impôt et chaque année, les considérations de droit et de fait propres à la sanction (BOI-CF-INF-30-20 § 10 et § 240 : une motivation qui ne précise ni les années ni les infractions est insuffisante, même par renvoi à la proposition). Ici la section vise l'« Impôt sur les Sociétés et TVA » et des « exercices clos au 31 mars 2022 et 31 mars 2023 » (2022 est hors période vérifiée ; 2024 et 2025 n'y figurent pas) ; la conclusion n'applique la majoration qu'aux « rappels de droits (à l'impôt sur les Sociétés) » et « (à la TVA) ». Aucune phrase ne motive une majoration de l'impôt sur le revenu ni des prélèvements sociaux de Mme BEHEM pour 2023, 2024 et 2025 : le texte est celui de la proposition société du 18/05/2026 (p. 64 de cette proposition), recopié sans adaptation.",
+    "**Objet de la sanction** : l'art. 1729 sanctionne l'insuffisance de « la déclaration » du contribuable sanctionné. La déclaration en cause est la 2042 de Mme BEHEM ; le manquement à établir est le fait, pour elle, d'avoir sciemment omis de déclarer un revenu qu'elle aurait appréhendé. La motivation ne vise que des « minorations de déclarations de produits et de TVA collectée » : celles de la société.",
+    "**Charge de la preuve (art. L. 195 A LPF)** : elle pèse sur l'administration pour la mauvaise foi, et ne peut se déduire du seul montant ou de la répétition des omissions (CE 27/12/2019, n° 412536) ni de constats étrangers à la période ou au contribuable (CE 22/06/2020, n° 425965, Sté Sport Player Kart). « Vous aviez toute latitude de pouvoir dissimuler » décrit une possibilité, pas une connaissance exacte des faits.",
+    "**Base de la sanction** : les « discordances HT » citées (96 617 / 69 432 / 69 864 €) sont en réalité TTC (part HT 86 407 € + TVA 10 210 €) et ce sont les chiffres annoncés, non ceux liquidés (86 407 / 62 005 / 62 538 €) : la motivation ne décrit même pas la base sur laquelle la majoration est assise.",
+    "**Enjeu** : 48 795 € (IR 33 932 € + PS 14 863 €), soit 28,3 % du supplément de 172 703 € ; sans la majoration, le supplément tombe à 123 908 € (onglet Scenarios S1). Ce moyen est indépendant du sort de la reconstitution : il subsiste même si la base est maintenue."
+   ]
   },
   {
    "kind": "kpis",
    "items": [
     {
-     "label": "Supplément total notifié",
-     "valeur": "172 703 €",
-     "sub": "sur trois années (Mme Ghislaine BEHEM) - montant du service",
-     "couleur": "red"
+     "label": "Majoration 40 % personnelle",
+     "valeur": "48 795 €",
+     "sub": "IR 14 356 + 9 820 + 9 756 = 33 932 € ; PS 5 944 + 4 266 + 4 653 = 14 863 €",
+     "couleur": "red",
+     "highlight": true
     },
     {
-     "label": "Taux effectif global",
-     "valeur": "73,2 %",
-     "sub": "hors majoration de 40 % : 58,8 %",
-     "couleur": "red"
+     "label": "Impôts et années réellement motivés p. 64-65",
+     "valeur": "IS et TVA, « 2022 et 2023 »",
+     "sub": "jamais l'IR ni les PS du foyer, jamais 2024 et 2025",
+     "couleur": "gold"
     },
     {
-     "label": "Si la reconstitution tombe",
-     "valeur": "0 €",
-     "sub": "plus de distribution, plus d'impôt personnel",
+     "label": "Taux effectif hors majoration sur l'IR",
+     "valeur": "58,8 %",
+     "sub": "(172 703 − 33 932) ÷ 235 913 ; hors toutes majorations : 52,5 %",
      "couleur": "teal"
     }
    ]
   },
   {
-   "kind": "titre",
-   "texte": "Ce que le service pourrait opposer, et pourquoi cela ne tient pas"
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**« Le chiffrage n'est qu'une application des barèmes : il n'est pas discutable. »** L'arithmétique n'est pas le débat ; c'est la **base** qui l'est. Chaque euro imposé est, à l'euro près, le chiffre d'affaires reconstitué réparti par moitié : si la reconstitution tombe, le supplément de **172 703 €** revient à **0 €**. Et puisque le service ne fournit pas le détail de sa liquidation, il ne peut pas davantage opposer que ce chiffrage serait acquis."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "**« La répartition par moitié résulte de la cogérance. »** Aucun flux bancaire, aucun mouvement de compte courant d'associé, aucun enrichissement personnel n'est tracé au foyer de Mme Ghislaine BEHEM. En présence de deux co-maîtres, il appartient au service de prouver la part réellement appréhendée par chaque foyer, non de la déduire du capital."
-  },
-  {
-   "kind": "piecejointe",
-   "intro": "Recalcul par formule de la base RCM (discordance TTC ÷ 2), de l'assiette IR (× 1,25) et du taux effectif de Mme Ghislaine BEHEM (avec et sans la majoration de 40 %). Les montants notifiés par le service sont les entrées ; ils ne sont pas recalculés.",
+   "kind": "documents",
+   "titre": "Documents du point 7",
    "fichiers": [
     {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
      "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
-     "label": "Chiffrage de la taxation personnelle : base, × 1,25, montants notifiés, taux effectif par foyer (XLSX à formules)"
+     "label": "R2 - Taxation personnelle des deux foyers : base RCM = TTC ÷ 2, ×1,25, suppléments notifiés, taux effectifs 83,5 % / 73,2 % et hors majoration 67,3 % / 58,8 % (XLSX à formules)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
     }
    ]
   },
   {
-   "kind": "note",
-   "texte": "Sources : proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026, « CONSEQUENCES FINANCIERES » (années 2023, 2024, 2025). Les montants et la ventilation sont ceux notifiés par le service, sur un document scanné ; la base RCM et l'assiette × 1,25 sont recalculées à partir des discordances TTC de la reconstitution du 18/05/2026."
+   "kind": "titre",
+   "texte": "Ce que cela fait tomber"
+  },
+  {
+   "kind": "tableau",
+   "titre": "Supplément de Mme BEHEM selon l'issue (pièce R2-chiffrage-behem.xlsx, onglet Scenarios ; convention de l'avis, 2024 à 48 124 €)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Scénario"
+    },
+    {
+     "label": "Base distribuée (foyer)",
+     "align": "right"
+    },
+    {
+     "label": "2023",
+     "align": "right"
+    },
+    {
+     "label": "2024",
+     "align": "right"
+    },
+    {
+     "label": "2025",
+     "align": "right"
+    },
+    {
+     "label": "3 ans",
+     "align": "right"
+    },
+    {
+     "label": "Économie",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "S0 notifié"
+     },
+     {
+      "v": "235 913 €",
+      "align": "right"
+     },
+     {
+      "v": "73 859 €",
+      "align": "right"
+     },
+     {
+      "v": "48 124 €",
+      "align": "right"
+     },
+     {
+      "v": "50 720 €",
+      "align": "right"
+     },
+     {
+      "v": "172 703 €",
+      "align": "right"
+     },
+     {
+      "v": "0 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Reconstitution annulée (L. 52, méthode viciée)",
+      "fw": 700
+     },
+     {
+      "v": "0 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "0 €",
+      "align": "right",
+      "fw": 700
+     },
+     {
+      "v": "172 703 €",
+      "align": "right",
+      "fw": 700
+     }
+    ],
+    [
+     {
+      "v": "S1 majoration 40 % déchargée, base maintenue"
+     },
+     {
+      "v": "235 913 €",
+      "align": "right"
+     },
+     {
+      "v": "53 559 €",
+      "align": "right"
+     },
+     {
+      "v": "34 038 €",
+      "align": "right"
+     },
+     {
+      "v": "36 311 €",
+      "align": "right"
+     },
+     {
+      "v": "123 908 €",
+      "align": "right"
+     },
+     {
+      "v": "48 795 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "S2 base − 25 %"
+     },
+     {
+      "v": "176 935 €",
+      "align": "right"
+     },
+     {
+      "v": "52 330 €",
+      "align": "right"
+     },
+     {
+      "v": "33 136 €",
+      "align": "right"
+     },
+     {
+      "v": "35 778 €",
+      "align": "right"
+     },
+     {
+      "v": "121 244 €",
+      "align": "right"
+     },
+     {
+      "v": "51 459 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "S3 base − 50 %"
+     },
+     {
+      "v": "117 957 €",
+      "align": "right"
+     },
+     {
+      "v": "32 332 €",
+      "align": "right"
+     },
+     {
+      "v": "20 992 €",
+      "align": "right"
+     },
+     {
+      "v": "23 430 €",
+      "align": "right"
+     },
+     {
+      "v": "76 754 €",
+      "align": "right"
+     },
+     {
+      "v": "95 949 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "S4 base − 75 %"
+     },
+     {
+      "v": "58 978 €",
+      "align": "right"
+     },
+     {
+      "v": "15 129 €",
+      "align": "right"
+     },
+     {
+      "v": "8 852 €",
+      "align": "right"
+     },
+     {
+      "v": "11 079 €",
+      "align": "right"
+     },
+     {
+      "v": "35 060 €",
+      "align": "right"
+     },
+     {
+      "v": "137 643 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "S5 base − 25 % et sans 40 %"
+     },
+     {
+      "v": "176 935 €",
+      "align": "right"
+     },
+     {
+      "v": "37 944 €",
+      "align": "right"
+     },
+     {
+      "v": "23 237 €",
+      "align": "right"
+     },
+     {
+      "v": "25 614 €",
+      "align": "right"
+     },
+     {
+      "v": "86 795 €",
+      "align": "right"
+     },
+     {
+      "v": "85 908 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "S6 base − 50 % et sans 40 %"
+     },
+     {
+      "v": "117 957 €",
+      "align": "right"
+     },
+     {
+      "v": "23 440 €",
+      "align": "right"
+     },
+     {
+      "v": "14 485 €",
+      "align": "right"
+     },
+     {
+      "v": "16 774 €",
+      "align": "right"
+     },
+     {
+      "v": "54 699 €",
+      "align": "right"
+     },
+     {
+      "v": "118 004 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "S7 base − 75 % et sans 40 %"
+     },
+     {
+      "v": "58 978 €",
+      "align": "right"
+     },
+     {
+      "v": "10 963 €",
+      "align": "right"
+     },
+     {
+      "v": "5 736 €",
+      "align": "right"
+     },
+     {
+      "v": "7 932 €",
+      "align": "right"
+     },
+     {
+      "v": "24 631 €",
+      "align": "right"
+     },
+     {
+      "v": "148 072 €",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "S8 PFU au lieu du barème (si l'option 2OP peut être révoquée)"
+     },
+     {
+      "v": "235 913 €",
+      "align": "right"
+     },
+     {
+      "v": "41 732 €",
+      "align": "right"
+     },
+     {
+      "v": "27 176 €",
+      "align": "right"
+     },
+     {
+      "v": "30 467 €",
+      "align": "right"
+     },
+     {
+      "v": "99 375 €",
+      "align": "right"
+     },
+     {
+      "v": "73 328 €",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "liste",
+   "titre": "Droits et pénalités concernés",
+   "items": [
+    "**Le principal (172 703 €) est entièrement dérivé** : base = discordance TTC ÷ 2 ; si la reconstitution tombe (nullité L. 52 ou méthode radicalement viciée), le supplément est de 0 € ; chaque tranche de 25 % de base en moins vaut 51 459 / 95 949 / 137 643 € d'économie, la progressivité du barème amplifiant l'effet (les premières tranches reviennent à 11 et 30 %).",
+    "**Majoration de 40 % : 48 795 €** (33 932 € IR + 14 863 € PS), déchargeable pour défaut de motivation propre à l'IR et aux PS du foyer (L. 80 D) et défaut de preuve de l'intention personnelle (L. 195 A), quel que soit le sort de la base.",
+    "**Intérêts de retard : 4 128 €**, suivent la base (2 880 / 1 770 / 767 € sous S2 / S3 / S4).",
+    "**Clé de répartition 50 / 50** : non présumée entre co-dirigeants (CAA Versailles 21VE01600) ; toute part non prouvée chez Mme BEHEM sort de sa base.",
+    "**Option barème / PFU : 73 328 €** si la renonciation à l'option 2OP est admise pour 2023-2025 (LF 2026 art. 126 ; état du droit transitoire à expertiser).",
+    "**2024** : le service doit choisir entre 48 124 € (avis) et 50 334 € (récapitulation) ; la défense retient 48 124 €.",
+    "**Exposition d'ensemble (CANON)** : société 213 148 € (dont majoration de 40 % : 58 823 € = IS 39 004 + TVA 19 819) + PASTEUR 196 945 € + BEHEM 172 703 € = 582 796 € ; rappel initial 684 974 € (213 148 + amende 1759 de 471 826 €, éteinte par la désignation). Majorations de 40 % cumulées société + Mme BEHEM : 107 618 €."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Ce que le service pourrait encore opposer"
+  },
+  {
+   "kind": "liste",
+   "titre": "Objection → réponse chiffrée",
+   "items": [
+    "**« Le chiffrage n'est que l'application mécanique des barèmes. »** → Exact, et vérifié : 42 lignes recalculées, 0 écart. C'est précisément pourquoi il n'a aucune autonomie : 100 % de la base est la reconstitution société ÷ 2 (0 € d'écart sur 235 913 €). Il n'y a rien à discuter sur l'arithmétique, tout sur la base.",
+    "**« La répartition par moitié découle du capital 50 / 50 et de la cogérance. »** → Le capital donne droit aux dividendes, pas aux recettes dissimulées ; p. 59-62 ne cite aucun flux, aucun compte courant, aucun enrichissement. La CAA Versailles (21VE01600) refuse la présomption de moitié entre co-dirigeants. Le service décrit d'ailleurs M. PASTEUR comme seul en charge « des relations bancaires et donc de toutes les remises en banque » (p. 60) : sa propre description des rôles contredit une appréhension par moitié par Mme BEHEM.",
+    "**« Le coefficient 1,25 est légal. »** → Oui à l'IR (CC 2017-643/650 QPC) et il n'est pas contesté ; il porte 210 950 € liquidés à 263 688 € d'assiette (+ 52 738 €) et tombe avec la base. Il est bien exclu des PS (bases 86 407 / 66 088 / 62 538 €).",
+    "**« La majoration de 40 % est motivée par les anomalies de la caisse. »** → Ces anomalies motivent (éventuellement) la majoration de l'IS et de la TVA de la société, pour lesquels le texte a été écrit. Pour l'IR du foyer, la motivation doit établir que Mme BEHEM a sciemment omis de déclarer un revenu appréhendé ; le texte ne le dit nulle part et vise des impôts et des années qui ne sont pas ceux de l'avis (L. 80 D ; BOI-CF-INF-30-20 § 240). Enjeu 48 795 €.",
+    "**« L'option pour le barème est irrévocable (CE 490411). »** → Pour l'ancienne rédaction, oui ; la LF 2026 (art. 126) a supprimé l'irrévocabilité sans disposition transitoire. Enjeu 73 328 € : à faire trancher, sans en faire le pivot de la défense.",
+    "**« Le total 2024 est de 50 334 €, non 48 124 €. »** → L'avis p. 72, document liquidatif, dit 48 124 € et « impôt antérieur à déduire : 0 » ; si le service corrige, il doit le faire par un document motivé (L. 80 D pour la part majorée) : + 2 210 € au plus."
+   ]
+  },
+  {
+   "kind": "titre",
+   "texte": "Points de vigilance pour la réunion"
+  },
+  {
+   "kind": "liste",
+   "titre": "Limites réelles et pièces à produire",
+   "items": [
+    "**Ne pas soulever la part TVA non liquidée** : le service annonce une base de 235 913 € (HT + TVA) mais liquide 210 950 € (HT). S'il aligne la liquidation sur sa motivation, le supplément passe de 172 703 à 197 367 € (+ 24 664 €, onglet Scenarios R1). L'argument « la TVA n'est pas un désinvestissement » n'a d'intérêt que si le service tente cet alignement.",
+    "**Le 1,25 à l'IR, les intérêts et les taux de PS (17,2 % puis 18,6 %) sont exacts** : aucun euro à gagner sur l'arithmétique ; la page ne doit pas être présentée comme une contestation du calcul.",
+    "**Option 2OP** : vérifier sur les 2042 de 2023, 2024 et 2025 que la case 2OP a bien été cochée par le foyer (les avis le montrent indirectement : abattement de 40 % sur 7 500 €, « revenus à taux proportionnel : 0 ») ; la révocabilité pour ces années est incertaine (CE 05/04/2024 n° 490411 pour l'ancien texte ; LF 2026 art. 126 sans transitoire).",
+    "**Clé 50 / 50** : l'argument de la CAA Versailles suppose de pouvoir dire qui a appréhendé quoi ; soutenir l'absence totale d'appréhension (aucun flux) plutôt qu'une autre clé, pour ne pas reporter la charge sur M. PASTEUR.",
+    "**Majoration 40 %** : le moyen de forme (L. 80 D) est le plus solide ; le service peut tenter de « régulariser » par une motivation nouvelle dans sa réponse aux observations (BOI-CF-INF-30-20 § 280, visa de l'inspecteur divisionnaire requis) ; exiger dans ce cas un nouveau délai de 30 jours (L. 80 D, al. 2).",
+    "**2024** : deux totaux ; demander au service lequel est mis en recouvrement ; les 2 912 € de restitution 2024 et les 702 € de PS déjà au rôle doivent être retrouvés sur l'avis initial 2024 du foyer (à produire).",
+    "**Données du foyer** : salaires nets 18 766 / 19 885 / 19 139 €, dividendes antérieurs 7 500 €, pension alimentaire 3 968 € (2023), crédits 960 / 4 083 / 0 € sont lus sur les avis du service et vérifiés cohérents ; les 2042 et avis initiaux 2023-2025 restent à produire pour les confirmer.",
+    "**Chiffres hors de cette page** : l'écart de 24 242 € entre les deux foyers (196 945 € PASTEUR, 172 703 € BEHEM) à base identique vient de l'IR au barème propre à chaque foyer ; la page jumelle PASTEUR le détaille."
+   ]
+  },
+  {
+   "kind": "documents",
+   "titre": "Toutes les pièces de la page",
+   "fichiers": [
+    {
+     "fichier": "pieces-reponse-2/R2-chiffrage-behem.xlsx",
+     "label": "R2 - Chiffrage BEHEM recalculé par formule : onglet Sources (données des avis p. 67-84, barèmes 2023-2025, taux), Controle (liquidation ligne à ligne, colonne Service, colonne Écart = 0 sur 42 lignes), Scenarios (S0 à S9, R1, I1), Methode (XLSX, recalculé LibreOffice)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-taxation-chiffrage.xlsx",
+     "label": "R2 - Taxation personnelle des deux foyers : base RCM = TTC ÷ 2, ×1,25, suppléments notifiés, taux effectifs 83,5 % / 73,2 % et hors majoration 67,3 % / 58,8 % (XLSX à formules)"
+    },
+    {
+     "fichier": "pieces-reponse-2/R2-exposition-et-scenarios.xlsx",
+     "label": "R2 - Exposition et scénarios : société 213 148 € + foyers 369 648 € = 582 796 € ; rappel initial 684 974 € (XLSX)"
+    },
+    {
+     "fichier": "contentieux/Proposition_personnelle_BEHEM_19-10-2026.pdf",
+     "label": "Proposition de rectification personnelle de Mme Ghislaine BEHEM du 19/10/2026 (PDF scanné, 254 p.) : distributions p. 59-63, pénalités p. 63-65, avis 2023 p. 67-70, 2024 p. 71-77, 2025 p. 79-84"
+    }
+   ]
   }
  ]
 }
