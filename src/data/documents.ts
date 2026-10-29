@@ -225,7 +225,7 @@ export const rapports: Document[] = [
 ]
 
 /**
- * Courriers du contentieux (procédure contradictoire), au format PDF / Word,
+ * Courriers du contentieux (procédure contradictoire), au format PDF,
  * rangés dans public/documents/contentieux. Ordre chronologique.
  */
 const dossierContentieux = 'contentieux'
@@ -239,10 +239,10 @@ export const contentieux: Document[] = [
     description:
       'Mémoire en réponse à la proposition de rectification (59 annexes) : contestation, ' +
       'point par point, du rejet de comptabilité et de la reconstitution.',
-    niveau: 'Document Word',
+    niveau: 'Document PDF',
     periode: '2022-2025',
-    fichier: `${dossierContentieux}/Contestation_du_contribuable_08-07-2026.docx`,
-    format: 'DOCX',
+    fichier: `${dossierContentieux}/Contestation_du_contribuable_08-07-2026.pdf`,
+    format: 'PDF',
   },
   {
     id: 'CT2',
@@ -265,10 +265,10 @@ export const contentieux: Document[] = [
     description:
       'Courrier de Me Thivend maintenant les observations et demandant la saisine de la ' +
       'Commission départementale (projet).',
-    niveau: 'Document Word',
+    niveau: 'Document PDF',
     periode: '2022-2025',
-    fichier: `${dossierContentieux}/Courrier_avocat_28-09-2026.docx`,
-    format: 'DOCX',
+    fichier: `${dossierContentieux}/Courrier_avocat_28-09-2026.pdf`,
+    format: 'PDF',
   },
   {
     id: 'CT4',
