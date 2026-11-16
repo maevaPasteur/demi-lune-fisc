@@ -327,8 +327,13 @@ def construire():
     sv_regimes = sv["regimes_total"]
 
     # --- degustation --------------------------------------------------------
-    degustation = 125.84
-    degustation_exo = {"2022-2023": 35.36, "2023-2024": 45.14, "2024-2025": 45.34}
+    # Degustation physiquement servie, regle attestee par la gerante (attestation
+    # n. 147) : 2 cl par vin nomme et par note, pour les seuls vins achetes en
+    # bouteille de 75 cl et servis au verre ou au pichet depuis la bouteille
+    # (aucune pour les cubis, aucune pour les bouteilles vendues entieres), verre
+    # de Saint Joseph 1830 compris : 5 169 degustations (R1-degustation-contenants.xlsx).
+    degustation = 103.38
+    degustation_exo = {"2022-2023": 36.12, "2023-2024": 33.66, "2024-2025": 33.60}
     assert abs(sum(degustation_exo.values()) - degustation) < 0.01
 
     # --- freinte biere, dose de Picon alignee sur 4 / 8 cl ------------------
@@ -366,7 +371,7 @@ def construire():
              source="Taux publiés appliqués au seul volume versé à la main, borné par le stock",
              page="Sur-versement", slug="sur-versement-au-verre"),
         dict(cle="degustation", libelle="Dégustation offerte", litres=degustation, nature="mesure",
-             source="Notes relevées une à une dans l’annexe C : 6 292 dégustations de 2 cl",
+             source="Notes relevées une à une dans l’annexe C : 5 169 dégustations de 2 cl (vins en bouteille servis au verre ou au pichet)",
              page="Dégustation", slug="degustation-offerte"),
         dict(cle="biere", libelle="Freinte technique de la bière", litres=freinte, nature="estime",
              source="10 %% de la bière réellement sortie du fût (%s L lus en caisse, "

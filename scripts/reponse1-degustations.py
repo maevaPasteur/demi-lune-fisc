@@ -21,10 +21,14 @@ Ce script :
     bouchee de 75 cl. Les degustations portant sur les deux BIB sont couvertes par
     l'abattement "vins au BIB" du service et sont RETIREES de la demande.
 
-Regle appliquee, identique a celle du memoire du 10/07/2026 :
-  une degustation de 2 cl par VIN NOMME et par NOTE (date + n. ticket),
-  quelle que soit la quantite. Generiques "Verre de vin" / "Pichet vin" (cubis,
-  type non precise) et bouteilles EXCLUS.
+Regle appliquee, attestee par la gerante (attestation n. 147) : tout vin nomme
+  achete en bouteille de 75 cl et servi au verre OU au pichet depuis la bouteille
+  donne lieu a une degustation de 2 cl, une par VIN NOMME et par NOTE (date + n.
+  ticket), quelle que soit la quantite. Aucune degustation pour les vins servis
+  depuis un cubi : Aligote, Chusclan, roses BIB, generiques "Verre de vin",
+  "Pichet vin", "Verre rose", "Pichet rose". Bouteilles vendues entieres EXCLUES.
+  Le verre de Saint Joseph (reference 1830) est integre au decompte ; une note qui
+  porte a la fois 1830 et 2085 (pichet) ne compte qu'une degustation.
 
 Sources : public/documents/caisse-enregistreuse/ANNEXE-C{1,2,3}_detail-tickets_*.xls
   col 0 = date ticket, col 2 = n. ticket, col 10 = libelle, col 11 = quantite ;
@@ -52,7 +56,8 @@ C = {e: CAISSE + f"ANNEXE-C{i}_detail-tickets_{e}.xls" for i, e in enumerate(EXO
 DOSE_DEG = 2.0  # cl offerts par degustation
 
 # Mapping libelle caisse -> vin nomme (verre/pichet), identique a
-# scripts/rendu-final-degustation-notes.py : aucun ajout, aucun retrait.
+# scripts/rendu-final-degustation-notes.py. Seul ajout : le verre de Saint Joseph
+# (reference 1830), vendu au prix de la colonne « Verre 15cl » des cartes.
 TASTE = {
     "Savagnin verre": "Savagnin", "PICHET SAVAGNIN": "Savagnin",
     "Arbois Trousseau Le": "Arbois Trousseau", "PiCHET TROUSSEAU": "Arbois Trousseau",
@@ -69,6 +74,10 @@ TASTE = {
     "PICHET HCB": "HC de Beaune",
     "Beaujolais Moulin à": "Moulin à Vent", "PICHET MOULIN A VENT": "Moulin à Vent",
     "pichet Saint Joseph": "Saint Joseph",
+    # Verre 15 cl de Saint Joseph, reference 1830 (7,20 EUR puis 9,70 EUR, colonne
+    # « Verre 15cl » des cartes). La bouteille (reference 1829, 36,00 puis 48,50 EUR)
+    # porte un libelle different (« C du Rhone St  Josep ») et reste exclue.
+    "C du  Rhone St Josep": "Saint Joseph",
 }
 
 # Vin nomme (libelle de la carte) -> nom canonique dans consoTotaleParBoisson.json,
@@ -345,11 +354,13 @@ def ecrire_xlsx(par_exo_vin, par_exo, par_vin, notes_exo, n_lignes):
     ws.append(["Source du conditionnement",
                "Champ « unite_achat » de src/data/calculsBoissons/consoTotaleParBoisson.json, "
                "renseigné d’après les factures du fournisseur."])
-    ws.append(["Fait de service restant à attester",
-               "Le décompte relève un geste de service et lui applique 2 cl. Que cette larme "
-               "soit versée dans un verre distinct, et s’ajoute donc à la dose vendue au lieu "
-               "de s’imputer sur elle, est un point de pratique que la société doit attester : "
-               "la présente pièce ne l’établit pas."])
+    ws.append(["Fait de service attesté",
+               "Le décompte relève un geste de service et lui applique 2 cl. La pratique est "
+               "attestée par la gérante (attestation n° 147) : une dégustation de 2 cl par vin "
+               "nommé et par note, pour tout vin acheté en bouteille de 75 cl et servi au verre "
+               "ou au pichet, aucune pour les vins servis depuis un cubi. Reste à préciser, pour "
+               "la part au verre, si la larme est versée dans un verre distinct ou dans le verre "
+               "du client : la présente pièce ne l’établit pas."])
     for r in range(ws.max_row - 4, ws.max_row + 1):
         ws.cell(row=r, column=2).alignment = Alignment(vertical="top", wrap_text=True)
     for i, w in enumerate([34, 24] + [13] * 8, 1):

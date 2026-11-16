@@ -132,7 +132,9 @@ CARTE = [
     ("Gewurztraminer", "Pichet 50cl", "27,00 €", "2092", "27,00 €"),
     ("Chablis St Martin", "Verre 15cl", "7,90 €", "2021", "7,90 €"),
     ("Chablis St Martin", "Pichet 50cl", "30,00 €", "2098", "30,00 €"),
+    ("Saint Joseph", "Verre 15cl", "7,20 €", "1830", "7,20 € puis 9,70 €"),
     ("Saint Joseph", "Pichet 50cl", "28,00 €", "2085", "28,00 € puis 32,20 €"),
+    ("Saint Joseph", "Bouteille 75cl", "36,00 €", "1829", "36,00 € puis 48,50 €"),
     ("Arbois Chardonnay", "Bouteille 75cl", "24,90 €", "2019",
      "24,90 € puis 29,00 €"),
     ("Bourgogne Aligoté", "Verre 15cl", "3,90 €", "2112", "3,90 €"),
@@ -142,7 +144,8 @@ CARTE = [
      "2121 et 2114", "9,50 €"),
 ]
 
-# Article au verre present en caisse mais absent du decompte, signale par honnetete.
+# Verre de Saint Joseph, integre au decompte (libelle « C du  Rhone St Josep »,
+# reference 1830). Suivi a part pour la ligne de controle de la feuille 2.
 SJ_VERRE_REF = "1830"
 
 
@@ -382,16 +385,20 @@ def ecrire(deg, notes_totales, lignes, sj_verre, sj_pichet):
                 ws2.cell(row=ws2.max_row, column=c).font = bold
                 ws2.cell(row=ws2.max_row, column=c).fill = sub
     ws2.append([])
-    ws2.append(["Article au verre présent en caisse et absent du décompte",
-                len(sj_verre - sj_pichet), litres(len(sj_verre - sj_pichet)),
-                "Le verre de Saint Joseph, référence 1830, vendu 7,20 € puis 9,70 €, "
-                "soit le prix de la colonne « Verre 15cl » de la carte, figure sur 300 notes. "
-                "Le décompte ne retient pour ce vin que le pichet. Ce volume n’est "
-                "pas réclamé."])
+    sj_tot = len(sj_verre)
+    sj_aussi_pichet = len(sj_verre & sj_pichet)
+    ws2.append(["Intégration du verre de Saint Joseph (référence 1830)",
+                sj_tot - sj_aussi_pichet, litres(sj_tot - sj_aussi_pichet),
+                f"Le verre de Saint Joseph, référence 1830, vendu 7,20 € puis 9,70 €, "
+                f"soit le prix de la colonne « Verre 15cl » de la carte, figure sur "
+                f"{sj_tot} notes. Il est intégré au décompte. {sj_aussi_pichet} de ces "
+                f"notes portent aussi le pichet 2085 : elles ne comptent qu’une "
+                f"dégustation et passent de « pichet seul » à « un verre du vin figure "
+                f"sur la note ». Ajout net : {sj_tot - sj_aussi_pichet} dégustations."])
     for c in range(1, 5):
         cell = ws2.cell(row=ws2.max_row, column=c)
         cell.border = bd
-        cell.fill = warn
+        cell.fill = sub
         if c in (2, 3):
             cell.alignment = right
         if c == 3:
@@ -399,10 +406,12 @@ def ecrire(deg, notes_totales, lignes, sj_verre, sj_pichet):
         if c == 4:
             cell.alignment = haut
     ws2.append([])
-    ws2.append(["Ce que cette pièce n’établit pas", "", "",
-                "Elle n’établit pas dans quel récipient la larme est versée lorsque "
-                "le vin est vendu au verre. Ce point est un fait d’exploitation, que "
-                "le décompte de caisse ne peut pas trancher."])
+    ws2.append(["Le geste de dégustation", "", "",
+                "La pièce établit le contenant vendu, non le geste. Le geste est un fait "
+                "d’exploitation : il est attesté par la gérante (attestation n° 147). "
+                "Tout vin nommé acheté en bouteille de 75 cl et servi au verre ou au "
+                "pichet depuis la bouteille donne lieu à une dégustation de 2 cl, une "
+                "par vin nommé et par note ; aucune pour les vins servis depuis un cubi."])
     ws2.cell(row=ws2.max_row, column=4).alignment = haut
     for i, w in enumerate([64, 14, 14, 62], 1):
         ws2.column_dimensions[get_column_letter(i)].width = w
@@ -518,7 +527,7 @@ def main():
     print(f"Notes du fichier de caisse                     : {fmt_n(r['notes_totales'])}")
     print(f"Notes retenues par le décompte                 : {fmt_n(r['notes_retenues'])} "
           f"({r['notes_retenues'] / r['notes_totales']:.1%})")
-    print(f"Verre de Saint Joseph omis, non réclamé         : {fmt_n(r['sj'])} notes")
+    print(f"Verre de Saint Joseph intégré (ajout net)       : {fmt_n(r['sj'])} dégustations")
     print(f"Pièce écrite : {OUT}")
 
 

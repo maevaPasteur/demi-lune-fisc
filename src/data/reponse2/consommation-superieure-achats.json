@@ -8,7 +8,7 @@
    "La dose réellement mise en cuisine (camembert rôti, assiette du père Grégoire) n'est pas au dossier : elle relève de la recette de l'établissement et sera précisée par déclaration de la gérance, non par un calcul. La défense ne déduit aucune dose d'un bilan matière.",
    "Les 78 factures Intermarché ne sont pas détenues par la société : la colonne « Achats Inter-M » vide pour le Calvados ne peut être tranchée que par le service, qui les a ventilées lui-même (annexe n° 5).",
    "Le stock d'ouverture du Calvados au 31/03/2022 (1 bouteille) est emprunté aux annexes n° 1 et n° 6 du service ; une bouteille de Bordeaux au 31/03/2023 et 4,5 L de Beaune blanc sont assumés comme sorties sans vente ou défauts de paramétrage, non documentés.",
-   "Sur les offerts, pertes et consommation du personnel, le forfait de 15 % du service couvre la consommation sans vente documentée (1 158 L, 697,4 L nets, contre 1 593 L) : ce grief ne réduit pas le redressement par ce biais."
+   "Sur les offerts, pertes et consommation du personnel, le forfait de 15 % du service couvre la consommation sans vente documentée (1 135 L, 675,0 L nets, contre 1 593 L) : ce grief ne réduit pas le redressement par ce biais."
   ]
  },
  "entete": {
@@ -1172,7 +1172,7 @@
     "Un bouton de caisse est un nom d'écran ; un libellé de facture est une référence fournisseur. Le rattachement se fait par le **code article**, pas par le mot imprimé.",
     "**Confusion de code** : un bouton générique frappé sur une référence voisine (« Mouton Cadet » = Bordeaux Supérieur Château Grand Renom, code 661236 ; « Hautes Côtes de Nuits » = Nuits blanc Lupé-Cholet, code 601416, distinct du Beaune rouge Domaine Germain, codes 601667 / 601346 / 630253 / 601199).",
     "**Code fantôme** : une référence achetée mais jamais reliée à un bouton de vente (8 bières, 1 eau, 1 cidre : point 6).",
-    "**Bouton mutualisé** : une même touche encaisse plusieurs références (« Cubis de vin » 426,9 L : point 4). Sur trois ans, 791 L de boissons, soit 10 871 € HT d'achats, sont vendus sous un autre bouton que leur libellé de facture, et 3 134 € HT de ventes passent par des boutons génériques (pièce Boissons-6-correspondance-libelles.xlsx, onglets « Boutons mutualises » l. 29 et « Boutons generiques » l. 14) : ce volume est dans le chiffre d'affaires déclaré, seulement non ventilé par référence."
+    "**Bouton mutualisé** : une même touche encaisse plusieurs références (« Cubis de vin » 426,9 L : point 4). Sur trois ans, 746,5 L de boissons, soit 10 746 € HT d'achats, sont vendus sous un autre bouton que leur libellé de facture, et 3 134 € HT de ventes passent par des boutons génériques (pièce Boissons-6-correspondance-libelles.xlsx, onglets « Boutons mutualises » l. 29 et « Boutons generiques » l. 14) : ce volume est dans le chiffre d'affaires déclaré, seulement non ventilé par référence."
    ],
    "titre": "Pourquoi le libellé trompe : trois mécanismes de paramétrage, établis code article à l'appui"
   },
@@ -1610,7 +1610,7 @@
     },
     {
      "fichier": "pieces-defense/Boissons-6-correspondance-libelles.xlsx",
-     "label": "Boissons-6 - Boutons mutualisés (791 L, 10 871 € HT) et boutons génériques (3 134 € HT) : le volume vendu sous un autre bouton que son libellé de facture"
+     "label": "Boissons-6 - Boutons mutualisés (746,5 L, 10 746 € HT) et boutons génériques (3 134 € HT) : le volume vendu sous un autre bouton que son libellé de facture"
     },
     {
      "fichier": "pieces-reponse-1/R1-conso-achats-bouclage.xlsx",
@@ -5740,7 +5740,7 @@
    "items": [
     "La réduction de 10 622 L à 9 079 L et la décote de 14,50 % du mémoire du 10/07/2026 **ne sont plus employées** : le bilan ci-dessus n'en comporte aucune, et il laisse 3 057,6 L d'excédent.",
     "La « décote totalement incohérente économiquement » valait **14,5 % des achats, soit 1 543 L**. Le service applique lui-même, en fin de méthode, un abattement de **15 % (5 % offerts + 5 % pertes + 5 % consommation du personnel), soit 1 593 L** sur les mêmes 10 622 L. À 50 L près, la décote qu'il juge incohérente est son propre forfait.",
-    "Ce que l'excédent de 3 057,6 L est devenu, poste par poste et non par un taux : **6 455 L** sont revendus (5 457 L au verre + 998 L en cocktails, 60,77 % des achats) ; le reste part en cuisine (72,04 L à la carte + 20,25 L dans les plats des menus), en sur-versement au verre (460,6 L), en fonds de crémant jetés (248,1 L sur 643 journées), en freinte de bière, en offerts et consommation du personnel (point 5) ; la perte pure résiduelle, non affectée à un poste, est de **2 055 L (19,3 %)**. Aucun de ces litres n'est une recette.",
+    "Ce que l'excédent de 3 057,6 L est devenu, poste par poste et non par un taux : **6 455 L** sont revendus (5 457 L au verre + 998 L en cocktails, 60,77 % des achats) ; le reste part en cuisine (72,04 L à la carte + 20,25 L dans les plats des menus), en sur-versement au verre (460,6 L), en fonds de crémant jetés (248,1 L sur 643 journées), en freinte de bière, en offerts et consommation du personnel (point 5) ; la perte pure résiduelle, non affectée à un poste, est de **2 078 L (19,6 %)**. Aucun de ces litres n'est une recette.",
     "**Le stock est plat**, dans les propres comptes du service : variation du compte 310200 de −800,83 / −1 029,67 / −273,41 € = **−2 103,91 €** sur trois exercices, soit **1,48 %** des achats de boissons (601200 : 48 237,09 + 46 384,45 + 47 098,84 = **141 720,38 €**) ; **98,52 %** des achats sont consommés. L'excédent de 3 057,6 L n'est donc pas une cave cachée : il est consommé sans vente ou perdu, c'est-à-dire une **charge**, et le service le compte comme vendu au prix du verre."
    ],
    "titre": "La décote : abandonnée, et remplacée par un décompte sans décote"
@@ -5910,9 +5910,9 @@
   {
    "kind": "liste",
    "items": [
-    "Nous ne soutenons pas que le forfait de 15 % serait insuffisant : ramené à une unité commune, il vaut **1 593 L** sur les 10 622 L achetés. La consommation sans vente que nous documentons hors cuisine et hors menus est de **1 158 L (72,7 % du forfait)** et, une fois retiré le sur-versement au verre (460,6 L, du vin servi dans un verre facturé, déjà compris dans le chiffre d'affaires au verre reconstitué), de **697,4 L (43,8 %)**. Le forfait est un **plafond**, non un plancher ; ce grief ne réduit pas le redressement par ce biais.",
+    "Nous ne soutenons pas que le forfait de 15 % serait insuffisant : ramené à une unité commune, il vaut **1 593 L** sur les 10 622 L achetés. La consommation sans vente que nous documentons hors cuisine et hors menus est de **1 135 L (71,3 % du forfait)** et, une fois retiré le sur-versement au verre (460,6 L, du vin servi dans un verre facturé, déjà compris dans le chiffre d'affaires au verre reconstitué), de **675,0 L (42,4 %)**. Le forfait est un **plafond**, non un plancher ; ce grief ne réduit pas le redressement par ce biais.",
     "Ce qui ne tient pas, c'est l'usage que le service fait de ce forfait : appliqué **une seule fois** en fin de méthode (proposition p. 51-52), il est opposé à **six postes distincts** dans sa réponse : freinte de bière (p. 61 et 83), dégustation au verre (p. 64 et 86), offerts, pertes et consommation du personnel (p. 72, 73 et 89), coefficient de revente (p. 93). S'il couvre les trois postes des pages 72-73 et 89, il ne peut pas couvrir en outre les trois autres.",
-    "La comparaison en euros du service (35 133,26 € par exercice et par poste, « plus de 13 fois » les offerts) n'est pas homogène : les trois quarts de ce montant (26 216,19 € par exercice) sont du chiffre d'affaires **cuisine extrapolé** par le coefficient, non de l'alcool. Sur trois exercices, le forfait ne retire que **76 863,18 €** de chiffre d'affaires boissons ; la consommation sans vente nette, valorisée au prix de revente, vaut 30 525,83 € (indicatif), soit une marge de 46 337,35 € en faveur du forfait."
+    "La comparaison en euros du service (35 133,26 € par exercice et par poste, « plus de 13 fois » les offerts) n'est pas homogène : les trois quarts de ce montant (26 216,19 € par exercice) sont du chiffre d'affaires **cuisine extrapolé** par le coefficient, non de l'alcool. Sur trois exercices, le forfait ne retire que **76 863,18 €** de chiffre d'affaires boissons ; la consommation sans vente nette, valorisée au prix de revente, vaut 29 446,83 € (indicatif), soit une marge de 47 416,35 € en faveur du forfait."
    ],
    "titre": "Honnêtement : le forfait de 15 % est un plafond, mais il est opposé six fois"
   },
@@ -5959,15 +5959,15 @@
       "v": "Consommation sans vente documentée, hors cuisine et menus"
      },
      {
-      "v": "1 158 L",
+      "v": "1 135 L",
       "align": "right"
      },
      {
-      "v": "10,9 %",
+      "v": "10,7 %",
       "align": "right"
      },
      {
-      "v": "72,7 %",
+      "v": "71,3 %",
       "align": "right"
      }
     ],
@@ -5993,7 +5993,7 @@
       "v": "Consommation sans vente nette (hors cuisine, menus et sur-versement)"
      },
      {
-      "v": "697,4 L",
+      "v": "675,0 L",
       "align": "right"
      },
      {
@@ -6001,7 +6001,7 @@
       "align": "right"
      },
      {
-      "v": "43,8 %",
+      "v": "42,4 %",
       "align": "right"
      }
     ]
@@ -6067,7 +6067,7 @@
    "kind": "liste",
    "items": [
     "Le service écrit lui-même que la société « ne les gère pas sur sa caisse » : les lignes à 0 € **ne sont donc pas la trace des offerts**, et un taux calculé sur elles ne mesure rien. Elles sont **272 sur 97 769 lignes de vente (0,28 %)**, pour un montant encaissé de 0,00 € (120 / 120 / 32 par exercice ; 140 lignes d'alcool, 81 sans alcool, 51 de restauration), et le service les qualifie lui-même de « non significatives ».",
-    "La même caisse ne porte, en trois exercices, que **7 lignes de vin nommé à 0 € (1,85 L)**, et ce sont des verres ou pichets entiers : le geste d'offrir une larme de dégustation, ou un café, n'est pas saisi. Un taux d'offert « inférieur à 1 % » lu dans les lignes à 0 € constate l'absence de saisie, pas l'absence d'offerts."
+    "La même caisse ne porte, en trois exercices, que **9 lignes de vin nommé à 0 € (2,15 L)**, et ce sont des verres ou pichets entiers : le geste d'offrir une larme de dégustation, ou un café, n'est pas saisi. Un taux d'offert « inférieur à 1 % » lu dans les lignes à 0 € constate l'absence de saisie, pas l'absence d'offerts."
    ],
    "titre": "Offerts : les articles à 0 € ne peuvent pas servir de base, et le service le dit lui-même"
   },
@@ -6093,7 +6093,7 @@
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
-     "label": "R2 - Abattements (à formules) : itemisation nette 1 158 L / 697,4 L contre forfait 1 593 L ; 76 863,18 € ; 30 525,83 € ; 46 337,35 €"
+     "label": "R2 - Abattements (à formules) : itemisation nette 1 135 L / 675,0 L contre forfait 1 593 L ; 76 863,18 € ; 29 446,83 € ; 47 416,35 €"
     },
     {
      "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",
@@ -6109,7 +6109,7 @@
     },
     {
      "fichier": "pieces-reponse-2/R2-degustation-tracee.xlsx",
-     "label": "R2 - Dégustation tracée en caisse : 7 lignes de vin nommé à 0 €, 1,85 L"
+     "label": "R2 - Dégustation tracée en caisse : 9 lignes de vin nommé à 0 €, 2,15 L"
     },
     {
      "fichier": "pieces-reponse-2/R2-cremant-jour-par-jour.xlsx",
@@ -8354,9 +8354,9 @@
     "**« À 4 cl, la famille eaux-de-vie est déficitaire : le grief est vérifié dans vos chiffres. »** → Déficit de −35,3 L, qui tient au seul Calvados ; hors Calvados la famille est excédentaire de 3,4 L. Et pour le Calvados, 73,0 L achetés = 73,0 L sortis du stock, 36 doses au verre : lire le déficit comme des ventes supposerait 504 verres pour 36 enregistrés.",
     "**« La dose de 4 cl vient des dirigeants, vous ne pouvez pas la contester. »** → La proposition (p. 32) dit « 4 à 5 centilitres suivant le plat », et c'est le vérificateur qui a retenu 5 puis 4 pour le seul Calvados, parce que l'incohérence était trop importante. Nous ne substituons aucune dose ; nous constatons que le service retranche 93 L d'un disponible de 73 L.",
     "**« Vous ne produisez pas les factures Intermarché. »** → La société ne les détient pas ; le service les détient et les a ventilées (annexe n° 5). La colonne « Achats Inter-M » du Calvados est vide sur trois exercices ; la charge de prouver l'exhaustivité du relevé d'achats (§ 140) et le bien-fondé des rectifications (L. 192 LPF, commission non saisie) pèse sur lui. Enjeu : 20,2 L, 339 € HT.",
-    "**« Votre perte résiduelle de 19,3 % (2 055 L) dépasse notre forfait de 15 %. »** → Ce résidu n'est pas un taux revendiqué : c'est ce qui reste après les postes itemisés, sur un disponible que le service surévalue (avoirs 34,6 L, 8 codes-bières fantômes, Cubis et boutons mutualisés). Le service le compte comme vendu au prix du verre, puis le multiplie par un coefficient de 3,94 à 4,10 ; le stock plat (−2 103,91 € sur 141 720,38 € d'achats) établit qu'il n'est ni stocké ni, pour autant, vendu.",
-    "**« Le forfait de 15 % couvre déjà tout ce que vous itemisez. »** → Sur les offerts, pertes et personnel, oui (1 158 L et 697,4 L nets contre 1 593 L) : nous ne demandons rien à ce titre. Mais le même 15 % est opposé six fois (freinte, dégustation, offerts, pertes, personnel, coefficient) : il ne peut pas couvrir en outre les postes qu'il n'a pas vocation à couvrir.",
-    "**« Les articles à 0 € prouvent que les offerts sont inférieurs à 1 %. »** → 272 lignes sur 97 769 (0,28 %), 0,00 € encaissé, et le service écrit lui-même que la société « ne les gère pas sur sa caisse » : les lignes à 0 € mesurent l'absence de saisie, pas l'absence d'offerts (7 lignes de vin nommé à 0 € en trois ans, 1,85 L).",
+    "**« Votre perte résiduelle de 19,6 % (2 078 L) dépasse notre forfait de 15 %. »** → Ce résidu n'est pas un taux revendiqué : c'est ce qui reste après les postes itemisés, sur un disponible que le service surévalue (avoirs 34,6 L, 8 codes-bières fantômes, Cubis et boutons mutualisés). Le service le compte comme vendu au prix du verre, puis le multiplie par un coefficient de 3,94 à 4,10 ; le stock plat (−2 103,91 € sur 141 720,38 € d'achats) établit qu'il n'est ni stocké ni, pour autant, vendu.",
+    "**« Le forfait de 15 % couvre déjà tout ce que vous itemisez. »** → Sur les offerts, pertes et personnel, oui (1 135 L et 675,0 L nets contre 1 593 L) : nous ne demandons rien à ce titre. Mais le même 15 % est opposé six fois (freinte, dégustation, offerts, pertes, personnel, coefficient) : il ne peut pas couvrir en outre les postes qu'il n'a pas vocation à couvrir.",
+    "**« Les articles à 0 € prouvent que les offerts sont inférieurs à 1 %. »** → 272 lignes sur 97 769 (0,28 %), 0,00 € encaissé, et le service écrit lui-même que la société « ne les gère pas sur sa caisse » : les lignes à 0 € mesurent l'absence de saisie, pas l'absence d'offerts (9 lignes de vin nommé à 0 € en trois ans, 2,15 L).",
     "**« La loi interdit l'alcool aux salariés. »** → Art. R. 4228-20 du code du travail : vin, bière, cidre et poiré sont autorisés sur le lieu de travail ; la consommation du chef documentée est du Macvin et du Picon bière. Et une consommation, licite ou non, n'est pas une recette."
    ]
   },
@@ -8375,7 +8375,7 @@
     "**Les achats réels des codes fantômes (pièce Boissons-6 : 1664 24 bt contre 234 disponibles) n'ont pas été rapprochés facture par facture** ; la page les produit comme indice. L'argument principal (absence aux trois inventaires, zéro vente en caisse) ne dépend pas de ce rapprochement.",
     "**Les sodas et la bière achetés non vendus ne sont pas en stock** (Coca 92 / 116 / 118 canettes pour 5 952 achetées) : c'est de la consommation hors vente qui reste à documenter (personnel, famille, offerts). Ne pas soutenir qu'ils dorment en réserve.",
     "**Pièces à produire ou à demander** : communication des 78 factures Intermarché et de la grille de l'annexe n° 5 (le service les détient) ; attestation de la gérance sur les doses de cuisine ; les trois inventaires PDF et les annexes de caisse B1, D2 et D3 (la synthèse produit 2022-2023, « D1 », n'existe pas sur le serveur : l'exercice 1 se lit dans le détail B1).",
-    "**Le chiffrage en euros du point 5 (76 863,18 € ; 30 525,83 €) est indicatif** : il dépend d'une convention de prix de revente ; la démonstration porte sur les volumes."
+    "**Le chiffrage en euros du point 5 (76 863,18 € ; 29 446,83 €) est indicatif** : il dépend d'une convention de prix de revente ; la démonstration porte sur les volumes."
    ]
   },
   {

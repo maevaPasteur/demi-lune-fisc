@@ -102,11 +102,21 @@ def grandeurs(recl=None):
                                       if x.get("categorie") in ALCOOL_COCKTAIL), 2)
 
     # 3. Degustation : notes distinctes relevees une a une dans l'annexe C.
+    #    Regle attestee par la gerante (attestation n. 147) : seules les degustations
+    #    des vins achetes en bouteille et servis au verre ou au pichet sont servies
+    #    (aucune depuis un cubi, aucune sur une bouteille vendue entiere). Le nombre
+    #    retenu est le total « Dégustations demandées » du tableau des contenants de
+    #    la page degustation-offerte (pièce R1-degustation-contenants.xlsx).
     dg = lire(os.path.join(DATA, "renduFinal", "degustation-notes.json"))
-    g["degustation_notes"] = dg["total_degustations"]
+    page = lire(os.path.join(DATA, "reponse1", "degustation-offerte.json"))
+    tab = [s for s in page["sections"] if s.get("kind") == "tableau"
+           and str(s.get("titre", "")).startswith("Le contenant réellement vendu sur la note")]
+    assert len(tab) == 1
+    tot = [l for l in tab[0]["lignes"] if l[0]["v"] == "TOTAL"][0]
+    g["degustation_notes"] = int(tot[5]["v"].replace(" ", "").replace("\u202f", ""))
     g["degustation_lignes"] = dg["lignes_vin"]
     g["degustation_dose_cl"] = dg["dose_cl"]
-    g["degustation_litres"] = round(dg["total_degustations"] * dg["dose_cl"] / 100.0, 2)
+    g["degustation_litres"] = round(g["degustation_notes"] * dg["dose_cl"] / 100.0, 2)
 
     # 4. Cremant : les deux termes sont ceux du service.
     cre = lire(os.path.join(CALC, "cremant-fourchette.json"))["exercices"]
@@ -224,11 +234,11 @@ def lignes_nature(d, g):
         "49-rf-sur-versement-au-verre.xlsx")
     add("degustation",
         "Notes portant au moins un vin nommé, relevées une à une",
-        "%s dégustations sur %s lignes de vin"
+        "%s dégustations demandées (vins en bouteille servis au verre ou au pichet) sur %s lignes de vin"
         % (f"{g['degustation_notes']:,}".replace(",", " "),
            f"{g['degustation_lignes']:,}".replace(",", " ")),
         "%s cl par dégustation" % f"{g['degustation_dose_cl']:.0f}",
-        "Dose déclarée par les dirigeants",
+        "Dose déclarée par les dirigeants et attestée par la gérante (attestation n° 147)",
         "52-rf-degustation-par-note.xlsx")
     add("biere",
         "Bière réellement sortie du fût, lue en caisse",

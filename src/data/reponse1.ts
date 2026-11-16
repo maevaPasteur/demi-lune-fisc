@@ -274,7 +274,7 @@ export const points: Point[] = [
     titre: '4 — Aucune dégustation offerte',
     positionService: '',
     reponseCourte: '',
-    statut: 'a-etayer',
+    statut: 'partiel',
   },
   {
     slug: 'recon-5-alcool-cuisine',
@@ -401,7 +401,7 @@ export const points: Point[] = [
     titre: 'Q — La dégustation offerte (goûter du vin)',
     positionService: '',
     reponseCourte: '',
-    statut: 'a-etayer',
+    statut: 'partiel',
   },
   {
     slug: 'alcool-de-cuisine',

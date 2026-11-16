@@ -2,9 +2,9 @@
  "_source": "scripts/rendu-final-degustation-notes.py (ANNEXE-C, niveau note)",
  "methode": "2 cl offerts une seule fois par vin nommé et par note (date+n° ticket) ; cubis et bouteilles exclus.",
  "dose_cl": 2.0,
- "lignes_vin": 6326,
- "total_degustations": 6292,
- "total_offert_l": 125.8,
+ "lignes_vin": 6626,
+ "total_degustations": 6590,
+ "total_offert_l": 131.8,
  "par_vin": [
   {
    "vin": "Savagnin",
@@ -42,6 +42,11 @@
    "offert_l": 8.9
   },
   {
+   "vin": "Saint Joseph",
+   "degustations": 388,
+   "offert_l": 7.8
+  },
+  {
    "vin": "Mâcon",
    "degustations": 346,
    "offert_l": 6.9
@@ -60,11 +65,6 @@
    "vin": "Chablis",
    "degustations": 151,
    "offert_l": 3.0
-  },
-  {
-   "vin": "Saint Joseph",
-   "degustations": 90,
-   "offert_l": 1.8
   }
  ]
 }

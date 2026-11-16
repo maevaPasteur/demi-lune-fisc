@@ -6,9 +6,9 @@
  },
  "entete": {
   "positionService": "Le service ne conteste ni le décompte note par note (6 292 dégustations), ni la dose de 2 cl, ni la lecture ligne à ligne de l’annexe C. Il oppose trois choses. En page 64, un argument de fait : le client « ne consomme pas la totalité de l’échantillon versé » et « conserve son verre qui est finalement rempli à hauteur du solde de la dose vendue », de sorte que la larme ne sortirait pas de la bouteille en plus de la dose vendue ; il ajoute que le comptage « part du principe que du vin est consommé pour chaque note ». En page 86, deux arguments de méthode : les 125,80 litres seraient « une globalisation sur 3 ans », et sa reconstitution retrancherait déjà, PAR EXERCICE, une fraction de 15 % sur les vins au BIB (198 litres arrondis sur trois exercices) et une fraction de 15 % supplémentaire sur les bouteilles bouchées de 75 cl (500 litres arrondis), soit « près de 4 fois supérieur » aux 125,80 litres demandés. Il en conclut qu’il « ne voit aucune raison de modifier sa reconstitution ».",
-  "reponseCourte": "Le service ne recalcule aucune ligne : il oppose un forfait de 15 % dont il a lui-même affecté l’intégralité aux offerts, aux pertes et à la consommation du personnel, et dont la fraction « vins au BIB » porte sur un périmètre que le décompte ne recoupe qu’à hauteur de 21,84 L. Son reproche de compter toutes les notes tombe sur la caisse même, qui en écarte 11 156 sur 16 613. Nous retirons en outre 6,58 L de bouteilles vendues entières. Sur les 97,42 L demandés, l’affirmation de la page 64 sur le récipient n’atteint pas les 21,46 L vendus au pichet, et les 75,96 L vendus au verre dépendent d’une pratique de service qui reste à attester.",
-  "enjeu": "Poste « dégustation offerte » de la reconstitution du chiffre d’affaires (proposition de rectifications, p. 37 à 44) : 125,84 L comptés, 97,42 L demandés.",
-  "statut": "a-etayer"
+  "reponseCourte": "Le service ne recalcule aucune ligne : il oppose un forfait de 15 % dont il a lui-même affecté l’intégralité aux offerts, aux pertes et à la consommation du personnel, et dont la fraction « vins au BIB » porte sur un périmètre que le décompte ne recoupe qu’à hauteur de 21,84 L. Son reproche de compter toutes les notes tombe sur la caisse même, qui en écarte 10 999 sur 16 613. Nous retirons en outre 6,58 L de bouteilles vendues entières. La pratique est attestée par la gérante (attestation n° 147) : une dégustation de 2 cl par vin nommé et par note, pour tout vin acheté en bouteille de 75 cl et servi au verre ou au pichet, aucune pour les vins servis depuis un cubi. Sur les 103,38 L demandés, l’affirmation de la page 64 sur le récipient n’atteint pas les 21,42 L vendus au pichet ; elle ne porte que sur les 81,96 L vendus au verre.",
+  "enjeu": "Poste « dégustation offerte » de la reconstitution du chiffre d’affaires (proposition de rectifications, p. 37 à 44) : 131,80 L comptés, 103,38 L demandés.",
+  "statut": "partiel"
  },
  "sections": [
   {
@@ -65,7 +65,7 @@
   },
   {
    "kind": "note",
-   "texte": "Précision de méthode : la dose de 2 cl est une dose conventionnelle déclarée par la société, jamais mesurée, appliquée uniformément aux 6 292 dégustations comptées. Ce qui est mesuré ici est le nombre de lignes de vin nommé relevées dans le détail des tickets, pas le volume."
+   "texte": "Précision de méthode : la dose de 2 cl est la dose déclarée par la société et attestée par la gérante (attestation n° 147), appliquée uniformément aux 6 590 dégustations comptées ; elle n’a pas été mesurée. Ce qui est mesuré ici est le nombre de lignes de vin nommé relevées dans le détail des tickets, pas le volume."
   },
   {
    "kind": "tableau",
@@ -357,15 +357,15 @@
       "v": "Exercice 1 (2022-2023)"
      },
      {
-      "v": "1 531",
+      "v": "1 609",
       "align": "right"
      },
      {
-      "v": "1 768",
+      "v": "1 896",
       "align": "right"
      },
      {
-      "v": "35,36 L",
+      "v": "37,92 L",
       "align": "right"
      }
     ],
@@ -374,15 +374,15 @@
       "v": "Exercice 2 (2023-2024)"
      },
      {
-      "v": "1 962",
+      "v": "1 996",
       "align": "right"
      },
      {
-      "v": "2 257",
+      "v": "2 344",
       "align": "right"
      },
      {
-      "v": "45,14 L",
+      "v": "46,88 L",
       "align": "right"
      }
     ],
@@ -391,15 +391,15 @@
       "v": "Exercice 3 (2024-2025)"
      },
      {
-      "v": "1 964",
+      "v": "2 009",
       "align": "right"
      },
      {
-      "v": "2 267",
+      "v": "2 350",
       "align": "right"
      },
      {
-      "v": "45,34 L",
+      "v": "47,00 L",
       "align": "right"
      }
     ],
@@ -409,17 +409,17 @@
       "fw": 700
      },
      {
-      "v": "5 457",
+      "v": "5 614",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "6 292",
+      "v": "6 590",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "125,84 L",
+      "v": "131,80 L",
       "align": "right",
       "fw": 700
      }
@@ -428,7 +428,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le décompte porte sur **6 326 lignes** d’articles rattachés aux douze vins nommés, effectivement enregistrées en caisse, réparties sur **5 457 notes distinctes**. Le service ne reprend en calcul ni ce nombre de lignes, ni la règle de comptage, ni aucune des douze lignes du tableau des vins."
+   "texte": "Le décompte porte sur **6 626 lignes** d’articles rattachés aux douze vins nommés, effectivement enregistrées en caisse, réparties sur **5 614 notes distinctes**. Le service ne reprend en calcul ni ce nombre de lignes, ni la règle de comptage, ni aucune des douze lignes du tableau des vins."
   },
   {
    "kind": "tableau",
@@ -637,6 +637,31 @@
     ],
     [
      {
+      "v": "Saint Joseph"
+     },
+     {
+      "v": "153",
+      "align": "right"
+     },
+     {
+      "v": "122",
+      "align": "right"
+     },
+     {
+      "v": "113",
+      "align": "right"
+     },
+     {
+      "v": "388",
+      "align": "right"
+     },
+     {
+      "v": "7,76 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Mâcon"
      },
      {
@@ -737,56 +762,31 @@
     ],
     [
      {
-      "v": "Saint Joseph"
-     },
-     {
-      "v": "25",
-      "align": "right"
-     },
-     {
-      "v": "35",
-      "align": "right"
-     },
-     {
-      "v": "30",
-      "align": "right"
-     },
-     {
-      "v": "90",
-      "align": "right"
-     },
-     {
-      "v": "1,80 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
       "v": "TOTAL",
       "fw": 700
      },
      {
-      "v": "1 768",
+      "v": "1 896",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "2 257",
+      "v": "2 344",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "2 267",
+      "v": "2 350",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "6 292",
+      "v": "6 590",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "125,84 L",
+      "v": "131,80 L",
       "align": "right",
       "fw": 700
      }
@@ -977,7 +977,7 @@
    "source": "nous",
    "numero": 3,
    "titre": "Du volume compté au volume demandé : deux retraits que nous opérons nous-mêmes",
-   "sousTitre": "Sur les 125,84 L comptés, 28,42 L sortent de la demande : 21,84 L de vins au BIB et 6,58 L de bouteilles vendues entières. Il reste 97,42 L."
+   "sousTitre": "Sur les 131,80 L comptés, 28,42 L sortent de la demande : 21,84 L de vins au BIB et 6,58 L de bouteilles vendues entières. Il reste 103,38 L."
   },
   {
    "kind": "titre",
@@ -990,7 +990,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Or les **198 litres** que le service oppose en premier sont, selon ses propres termes, l’abattement de 15 % appliqué aux « **VINS AU BIB** » (p. 86). Ils portent donc, pour l’essentiel, sur le périmètre que le décompte laisse de côté. Le recouvrement existe cependant, et il est chiffré : **1 092 dégustations portent sur l’Aligoté et le Chusclan, qui sont des BIB, soit 21,84 L des 125,84 L**. Sur ces 21,84 L nous ne demandons rien, l’abattement de 198 L les couvre. Ces 21,84 L restent un volume physiquement sorti du cubi et demeurent, à ce titre, dans le bilan matière des achats ; ils sortent de la demande."
+   "texte": "Or les **198 litres** que le service oppose en premier sont, selon ses propres termes, l’abattement de 15 % appliqué aux « **VINS AU BIB** » (p. 86). Ils portent donc, pour l’essentiel, sur le périmètre que le décompte laisse de côté. Le recouvrement existe cependant, et il est chiffré : **1 092 dégustations portent sur l’Aligoté et le Chusclan, qui sont des BIB, soit 21,84 L des 131,80 L**. Sur ces 21,84 L nous ne demandons rien. La règle attestée par la gérante (attestation n° 147) ne prévoit aucune dégustation pour un vin servi depuis un cubi : ces 21,84 L sortent de la demande comme du bilan matière, et l’abattement de 198 L du service couvre de toute façon ce périmètre."
   },
   {
    "kind": "paragraphe",
@@ -1019,7 +1019,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Par symétrie, il faut dire ce que le décompte omet en sens inverse. Le **verre de Saint Joseph** existe bien en caisse : c’est la référence **1830**, vendue **7,20 €** puis **9,70 €**, soit le prix de la colonne « Verre 15cl » des cartes. Son libellé, « C du  Rhone St Josep », porte un **double espace** que le libellé de la bouteille, « C du Rhone St  Josep », place ailleurs : c’est ce détail qui l’a fait manquer au relevé. Il figure sur **300 notes**, dont **298** n’ont jamais été comptées. Nous ne les réclamons pas et nous n’augmentons pas la demande. Le décompte reste donc, après correction, un décompte par défaut."
+   "texte": "Le décompte intègre désormais le **verre de Saint Joseph** : c’est la référence **1830**, vendue **7,20 €** puis **9,70 €** (une ligne isolée à 8,67 €), soit le prix de la colonne « Verre 15cl » des cartes. Son libellé, « C du  Rhone St Josep », porte un **double espace** que le libellé de la bouteille, « C du Rhone St  Josep » (référence 1829, 36,00 € puis 48,50 €), place ailleurs : c’est ce détail qui l’avait fait manquer au premier relevé. Il figure sur **300 notes**. Deux d’entre elles portent aussi le pichet 2085 : elles ne comptent qu’une dégustation, et passent de « pichet seul » à « un verre du vin figure sur la note ». L’ajout net est de **298 dégustations**, soit **5,96 L** ; le Saint Joseph passe de 90 à 388 dégustations (7,76 L)."
   },
   {
    "kind": "tableau",
@@ -1047,11 +1047,11 @@
       "v": "Dégustations comptées note par note (annexes C1, C2, C3)"
      },
      {
-      "v": "6 292",
+      "v": "6 590",
       "align": "right"
      },
      {
-      "v": "125,84 L",
+      "v": "131,80 L",
       "align": "right"
      },
      {
@@ -1096,12 +1096,12 @@
       "fw": 700
      },
      {
-      "v": "4 871",
+      "v": "5 169",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "97,42 L",
+      "v": "103,38 L",
       "align": "right",
       "fw": 700
      },
@@ -1172,15 +1172,15 @@
       "align": "right"
      },
      {
-      "v": "1 531",
+      "v": "1 609",
       "align": "right"
      },
      {
-      "v": "4 131",
+      "v": "4 053",
       "align": "right"
      },
      {
-      "v": "27,0 %",
+      "v": "28,4 %",
       "align": "right"
      }
     ],
@@ -1193,15 +1193,15 @@
       "align": "right"
      },
      {
-      "v": "1 962",
+      "v": "1 996",
       "align": "right"
      },
      {
-      "v": "3 569",
+      "v": "3 535",
       "align": "right"
      },
      {
-      "v": "35,5 %",
+      "v": "36,1 %",
       "align": "right"
      }
     ],
@@ -1214,15 +1214,15 @@
       "align": "right"
      },
      {
-      "v": "1 964",
+      "v": "2 009",
       "align": "right"
      },
      {
-      "v": "3 456",
+      "v": "3 411",
       "align": "right"
      },
      {
-      "v": "36,2 %",
+      "v": "37,1 %",
       "align": "right"
      }
     ],
@@ -1237,17 +1237,17 @@
       "fw": 700
      },
      {
-      "v": "5 457",
+      "v": "5 614",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "11 156",
+      "v": "10 999",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "32,8 %",
+      "v": "33,8 %",
       "align": "right",
       "fw": 700
      }
@@ -1256,7 +1256,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Sur les **16 613 notes** que comptent les trois annexes C, le décompte n’en retient que **5 457**, soit moins d’une sur trois : **11 156 notes sont écartées**, précisément parce qu’aucun vin nommé n’y figure. Le reproche de « partir du principe que du vin est consommé pour chaque note » ne correspond pas à ce qui a été fait."
+   "texte": "Sur les **16 613 notes** que comptent les trois annexes C, le décompte n’en retient que **5 614**, soit environ une sur trois : **10 999 notes sont écartées**, précisément parce qu’aucun vin nommé n’y figure. Le reproche de « partir du principe que du vin est consommé pour chaque note » ne correspond pas à ce qui a été fait."
   },
   {
    "kind": "titre",
@@ -1272,7 +1272,7 @@
    "source": "nous",
    "numero": 5,
    "titre": "Ce que la caisse et la carte établissent du contenant : le verre, et le pichet",
-   "sousTitre": "L’objection de la page 64 décrit un verre rempli jusqu’à une dose. Sur 1 073 des 4 871 dégustations demandées, il n’y a pas de verre vendu."
+   "sousTitre": "L’objection de la page 64 décrit un verre rempli jusqu’à une dose. Sur 1 071 des 5 169 dégustations demandées, il n’y a pas de verre vendu."
   },
   {
    "kind": "paragraphe",
@@ -1441,6 +1441,34 @@
     ],
     [
      {
+      "v": "Saint Joseph"
+     },
+     {
+      "v": "Bouteille bouchée 75 cl"
+     },
+     {
+      "v": "300",
+      "align": "right"
+     },
+     {
+      "v": "88",
+      "align": "right"
+     },
+     {
+      "v": "0",
+      "align": "right"
+     },
+     {
+      "v": "388",
+      "align": "right"
+     },
+     {
+      "v": "7,76 L",
+      "align": "right"
+     }
+    ],
+    [
+     {
       "v": "Moulin à Vent"
      },
      {
@@ -1553,34 +1581,6 @@
     ],
     [
      {
-      "v": "Saint Joseph"
-     },
-     {
-      "v": "Bouteille bouchée 75 cl"
-     },
-     {
-      "v": "0",
-      "align": "right"
-     },
-     {
-      "v": "90",
-      "align": "right"
-     },
-     {
-      "v": "0",
-      "align": "right"
-     },
-     {
-      "v": "90",
-      "align": "right"
-     },
-     {
-      "v": "1,80 L",
-      "align": "right"
-     }
-    ],
-    [
-     {
       "v": "Arbois Chardonnay"
      },
      {
@@ -1617,12 +1617,12 @@
       "fw": 700
      },
      {
-      "v": "3 798",
+      "v": "4 098",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "1 073",
+      "v": "1 071",
       "align": "right",
       "fw": 700
      },
@@ -1632,12 +1632,12 @@
       "fw": 700
      },
      {
-      "v": "4 871",
+      "v": "5 169",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "97,42 L",
+      "v": "103,38 L",
       "align": "right",
       "fw": 700
      }
@@ -1708,12 +1708,12 @@
       "fw": 700
      },
      {
-      "v": "3 798",
+      "v": "4 098",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "1 073",
+      "v": "1 071",
       "align": "right",
       "fw": 700
      },
@@ -1723,12 +1723,12 @@
       "fw": 700
      },
      {
-      "v": "4 871",
+      "v": "5 169",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "97,42 L",
+      "v": "103,38 L",
       "align": "right",
       "fw": 700
      }
@@ -1737,29 +1737,247 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "**1 073 dégustations** de la demande figurent sur une note où le vin nommé n’a été vendu qu’au pichet, soit **21,46 L**. Le Saint Joseph n’entre dans le décompte que par son pichet, le verre du même vin n’y ayant pas été retenu. L’objection de la page 64 ne les atteint pas. Les **3 798 dégustations** restantes, soit **75,96 L**, portent sur un vin vendu au verre, et c’est sur elles seules que la question du geste se pose."
+   "texte": "**1 071 dégustations** de la demande figurent sur une note où le vin nommé n’a été vendu qu’au pichet, soit **21,42 L**. L’objection de la page 64 ne les atteint pas. Les **4 098 dégustations** restantes, soit **81,96 L**, portent sur un vin vendu au verre, verre de Saint Joseph compris, et c’est sur elles seules que la question du récipient se pose."
   },
   {
    "kind": "kpis",
    "items": [
     {
      "label": "Volume demandé",
-     "valeur": "97,42 L",
+     "valeur": "103,38 L",
      "sub": "après retrait des vins au BIB et des bouteilles vendues entières",
      "highlight": true,
      "couleur": "teal"
     },
     {
      "label": "Vendu au pichet, hors de portée de l’objection de la page 64",
-     "valeur": "21,46 L",
-     "sub": "1 073 dégustations : le volume vendu est la contenance du récipient, Pichet 50 cl",
+     "valeur": "21,42 L",
+     "sub": "1 071 dégustations : le volume vendu est la contenance du récipient, Pichet 50 cl",
      "couleur": "teal"
     },
     {
      "label": "Vendu au verre, exposé à l’objection de la page 64",
-     "valeur": "75,96 L",
-     "sub": "3 798 dégustations : c’est là que se pose la question du geste",
+     "valeur": "81,96 L",
+     "sub": "4 098 dégustations : c’est là que se pose la question du récipient",
      "couleur": "gold"
+    }
+   ]
+  },
+  {
+   "kind": "paragraphe",
+   "texte": "Les pichets de ces vins sont servis depuis la bouteille, et les deux cartes des vins de la société le montrent. Chaque vin nommé y figure sous trois colonnes, « Verre 15cl », « Pichet 50cl » et « Bouteille 75cl », au prix d’un même vin acheté en bouteille de 75 cl ; aucun n’y est présenté comme un vin en cubi, à la différence de l’Aligoté, du Côtes du Rhône de Chusclan et du rosé, portés à la rubrique « Pichets ». Les références de pichet de ces vins sont vendues dès le premier exercice : 2085 à 2092 et 2098 dès avril 2022. Les références 2125 (Mâcon) et 2126 (Hautes Côtes de Beaune) apparaissent avec la carte du 26/04/2023, et sont vendues à partir du 18/05/2023, sur le deuxième exercice. Les références 2088 et 2091 sont réaffectées en mai 2023 au rosé en cubi (« VERRE ROSE », « PICHET ROSE »), qui reste hors du décompte ; seules leurs lignes « PICHET C.DE BEAUNE » y entrent."
+  },
+  {
+   "kind": "tableau",
+   "titre": "Verre, pichet, bouteille : les colonnes des deux cartes des vins, et les références de pichet en caisse",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Vin nommé"
+    },
+    {
+     "label": "Carte du 20/07/2021 : verre 15 cl / pichet 50 cl / bouteille 75 cl",
+     "align": "right"
+    },
+    {
+     "label": "Carte du 26/04/2023 : verre 15 cl / pichet 50 cl / bouteille 75 cl",
+     "align": "right"
+    },
+    {
+     "label": "Référence de pichet en caisse"
+    },
+    {
+     "label": "Première vente du pichet"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "Saint Joseph"
+     },
+     {
+      "v": "7,20 € / 28,00 € / 36,00 €",
+      "align": "right"
+     },
+     {
+      "v": "9,70 € / 32,20 € / 48,50 €",
+      "align": "right"
+     },
+     {
+      "v": "2085 (verre 1830, bouteille 1829)"
+     },
+     {
+      "v": "17/04/2022"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Trousseau"
+     },
+     {
+      "v": "6,40 € / 24,00 € / 32,00 €",
+      "align": "right"
+     },
+     {
+      "v": "7,20 € / 28,00 € / 36,00 €",
+      "align": "right"
+     },
+     {
+      "v": "2086"
+     },
+     {
+      "v": "22/04/2022"
+     }
+    ],
+    [
+     {
+      "v": "Moulin à Vent"
+     },
+     {
+      "v": "5,80 € / 21,00 € / 29,00 €",
+      "align": "right"
+     },
+     {
+      "v": "7,60 € / 26,00 € / 38,00 €",
+      "align": "right"
+     },
+     {
+      "v": "2087"
+     },
+     {
+      "v": "15/04/2022"
+     }
+    ],
+    [
+     {
+      "v": "Hautes Côtes de Beaune"
+     },
+     {
+      "v": "7,90 € / 30,00 € / 39,50 €",
+      "align": "right"
+     },
+     {
+      "v": "9,50 € / 32,00 € / 49,00 €",
+      "align": "right"
+     },
+     {
+      "v": "2088 (rouge) et 2091 (blanc), puis 2126"
+     },
+     {
+      "v": "15/04/2022 ; 2126 le 18/05/2023"
+     }
+    ],
+    [
+     {
+      "v": "Arbois Savagnin"
+     },
+     {
+      "v": "7,20 € / 28,00 € / 36,00 €",
+      "align": "right"
+     },
+     {
+      "v": "8,30 € / 28,00 € / 41,50 €",
+      "align": "right"
+     },
+     {
+      "v": "2089"
+     },
+     {
+      "v": "17/04/2022"
+     }
+    ],
+    [
+     {
+      "v": "Saint Véran"
+     },
+     {
+      "v": "7,90 € / 30,00 € / 39,50 €",
+      "align": "right"
+     },
+     {
+      "v": "7,90 € / 30,00 € / 39,50 €",
+      "align": "right"
+     },
+     {
+      "v": "2090"
+     },
+     {
+      "v": "21/04/2022"
+     }
+    ],
+    [
+     {
+      "v": "Gewurztraminer"
+     },
+     {
+      "v": "7,00 € / 27,00 € / 35,00 €",
+      "align": "right"
+     },
+     {
+      "v": "7,00 € / 27,00 € / 35,00 €",
+      "align": "right"
+     },
+     {
+      "v": "2092"
+     },
+     {
+      "v": "16/04/2022"
+     }
+    ],
+    [
+     {
+      "v": "Chablis St Martin"
+     },
+     {
+      "v": "7,90 € / 30,00 € / 39,50 €",
+      "align": "right"
+     },
+     {
+      "v": "bouteille seule, 47,00 €",
+      "align": "right"
+     },
+     {
+      "v": "2098"
+     },
+     {
+      "v": "15/04/2022"
+     }
+    ],
+    [
+     {
+      "v": "Mâcon Roche blanche"
+     },
+     {
+      "v": "absent de la carte",
+      "align": "right"
+     },
+     {
+      "v": "6,30 € / 21,00 € / 31,00 €",
+      "align": "right"
+     },
+     {
+      "v": "2125"
+     },
+     {
+      "v": "18/05/2023"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "note",
+   "texte": "Prix relevés sur le texte des deux PDF. Les noms des fichiers sont inversés par rapport à leur contenu : carte_vins-boissons_2023-04-26_actuelle.pdf est la carte du 20/07/2021 (date de création du fichier, prix de la caisse 2022-2023), carte_vins-boissons_2021-07-20.pdf celle du 26/04/2023. Sur la carte de 2021, le Hautes Côtes de Beaune blanc ne figure qu’en bouteille, alors que la caisse vend son pichet (2091) à 30,00 €. Premières ventes lues dans les annexes C1 et C2."
+  },
+  {
+   "kind": "documents",
+   "fichiers": [
+    {
+     "fichier": "vins-boissons/carte_vins-boissons_2023-04-26_actuelle.pdf",
+     "label": "Carte des vins du 20/07/2021 (nom de fichier inversé) : colonnes Verre 15cl / Pichet 50cl / Bouteille 75cl"
+    },
+    {
+     "fichier": "vins-boissons/carte_vins-boissons_2021-07-20.pdf",
+     "label": "Carte des vins du 26/04/2023 (nom de fichier inversé) : colonnes Verre 15cl / Pichet 50cl / Bouteille 75cl"
     }
    ]
   },
@@ -1992,8 +2210,8 @@
    "kind": "chapitre",
    "source": "nous",
    "numero": 10,
-   "titre": "Ce qui reste à établir, et ce que cela vaut",
-   "sousTitre": "Une seule question de fait demeure, elle porte sur 75,96 des 97,42 litres demandés."
+   "titre": "Ce qui reste à préciser, et ce que cela vaut",
+   "sousTitre": "La pratique est attestée par la gérante (attestation n° 147) ; une seule question de fait demeure, celle du récipient, et elle porte sur 81,96 des 103,38 litres demandés."
   },
   {
    "kind": "paragraphe",
@@ -2005,7 +2223,7 @@
   },
   {
    "kind": "tableau",
-   "titre": "Ce que chaque réponse vaut, en litres, sur les 97,42 L demandés",
+   "titre": "Ce que chaque réponse vaut, en litres, sur les 103,38 L demandés",
    "minWidth": 800,
    "colonnes": [
     {
@@ -2029,11 +2247,11 @@
       "v": "Vin nommé vendu au pichet"
      },
      {
-      "v": "1 073",
+      "v": "1 071",
       "align": "right"
      },
      {
-      "v": "21,46 L",
+      "v": "21,42 L",
       "align": "right"
      },
      {
@@ -2045,15 +2263,15 @@
       "v": "Vin nommé vendu au verre"
      },
      {
-      "v": "3 798",
+      "v": "4 098",
       "align": "right"
      },
      {
-      "v": "75,96 L",
+      "v": "81,96 L",
       "align": "right"
      },
      {
-      "v": "La description du geste par la salle : verre distinct, ou verre du client ensuite complété"
+      "v": "Le récipient de la larme : verre distinct, ou verre du client ensuite complété ; le geste lui-même est attestée par la gérante (attestation n° 147)"
      }
     ],
     [
@@ -2062,12 +2280,12 @@
       "fw": 700
      },
      {
-      "v": "4 871",
+      "v": "5 169",
       "align": "right",
       "fw": 700
      },
      {
-      "v": "97,42 L",
+      "v": "103,38 L",
       "align": "right",
       "fw": 700
      },
@@ -2080,11 +2298,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La même question commande un second poste, et il faut le dire plutôt que de le laisser découvrir. Les lignes au verre de ces vins totalisent **4 681,5 unités**, soit **702,23 L** à la dose de carte de 15 cl. Au taux de **23,6 %** retenu au titre du [sur-versement au verre](/reponse-1/sur-versement-au-verre), ce service suppose **165,73 L** versés en plus, auxquels s’ajouterait la dégustation servie sur ces mêmes notes, **75,96 L** : la bouteille délivrerait alors **943,91 L** pour **702,23 L** facturés, soit **20,16 centilitres tirés pour 15 centilitres vendus**. Or ces deux demandes ne s’additionnent que dans une seule des deux lectures du geste. La mesure invoquée au titre du sur-versement porte sur le **contenu du verre servi** : si la larme est versée dans ce verre, elle est comprise dans ce contenu et non en plus. Elle ne s’y ajoute que si elle a été versée ailleurs, dans un verre distinct. C’est une raison de plus de faire attester la pratique avant de maintenir les deux postes ensemble sur les mêmes verres."
+   "texte": "La même question commande un second poste, et il faut le dire plutôt que de le laisser découvrir. Les lignes au verre de ces vins totalisent **5 040 unités**, verre de Saint Joseph compris, soit **756,00 L** à la dose de carte de 15 cl. Au taux de **23,6 %** retenu au titre du [sur-versement au verre](/reponse-1/sur-versement-au-verre), ce service suppose **178,42 L** versés en plus, auxquels s’ajouterait la dégustation servie sur ces mêmes notes, **81,96 L** : la bouteille délivrerait alors **1 016,38 L** pour **756,00 L** facturés, soit **20,17 centilitres tirés pour 15 centilitres vendus**. Or ces deux demandes ne s’additionnent que dans une seule des deux lectures du geste. La mesure invoquée au titre du sur-versement porte sur le **contenu du verre servi** : si la larme est versée dans ce verre, elle est comprise dans ce contenu et non en plus. Elle ne s’y ajoute que si elle a été versée ailleurs, dans un verre distinct. Le geste est attestée par la gérante (attestation n° 147) ; le cumul des deux postes sur les mêmes verres suppose en outre que la larme soit versée dans un verre distinct."
   },
   {
    "kind": "paragraphe",
-   "texte": "Tant que cette description n’est pas produite, **75,96 L** reposent sur une pratique déclarée et non sur une mesure, et le statut de la page reste à étayer. Les **21,46 L** servis au pichet ne dépendent pas de cette réponse ; les **21,84 L** de vins au BIB et les **6,58 L** de bouteilles vendues entières sont abandonnés quelle qu’elle soit."
+   "texte": "La pratique de dégustation est attestée par la gérante (attestation n° 147). Sur les **81,96 L** vendus au verre, seule demeure la question du récipient soulevée page 64. Les **21,42 L** servis au pichet ne dépendent pas de cette question ; les **21,84 L** de vins au BIB et les **6,58 L** de bouteilles vendues entières sont abandonnés quelle qu’elle soit."
   },
   {
    "kind": "chapitre",
@@ -2095,15 +2313,15 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le motif tiré de la **globalisation sur 3 ans** tombe : le décompte est refait exercice par exercice, 35,36 L, 45,14 L et 45,34 L, sur les annexes C1, C2 et C3. Le motif tiré du **forfait de 15 %** tombe deux fois : le service en a affecté l’intégralité aux offerts, aux pertes et à la consommation du personnel, et sa première branche, les 198 L, est calculée sur les vins au BIB, un périmètre que le décompte ne recoupe qu’à hauteur de 21,84 L, que nous retirons de la demande. Le motif tiré de ce que **toutes les notes ne consomment pas du vin** tombe sur la caisse elle-même : 11 156 des 16 613 notes sont écartées par le décompte, précisément pour cette raison."
+   "texte": "Le motif tiré de la **globalisation sur 3 ans** tombe : le décompte est refait exercice par exercice, 37,92 L, 46,88 L et 47,00 L, sur les annexes C1, C2 et C3. Le motif tiré du **forfait de 15 %** tombe deux fois : le service en a affecté l’intégralité aux offerts, aux pertes et à la consommation du personnel, et sa première branche, les 198 L, est calculée sur les vins au BIB, un périmètre que le décompte ne recoupe qu’à hauteur de 21,84 L, que nous retirons de la demande. Le motif tiré de ce que **toutes les notes ne consomment pas du vin** tombe sur la caisse elle-même : 10 999 des 16 613 notes sont écartées par le décompte, précisément pour cette raison."
   },
   {
    "kind": "paragraphe",
-   "texte": "Reste l’affirmation de la page 64 sur le récipient. Elle ne concerne pas les **21,46 L** de vin nommé vendu au pichet, où il n’y a ni verre ni dose à compléter, et où le service fixe lui-même le volume vendu à la contenance du récipient. Elle porte sur les **75,96 L** vendus au verre, et elle appelle une description écrite du geste par la salle."
+   "texte": "Reste l’affirmation de la page 64 sur le récipient. Elle ne concerne pas les **21,42 L** de vin nommé vendu au pichet, où il n’y a ni verre ni dose à compléter, et où le service fixe lui-même le volume vendu à la contenance du récipient. Elle porte sur les **81,96 L** vendus au verre, sur lesquels le geste est attestée par la gérante (attestation n° 147)."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le volume de vin nommé offert doit en conséquence être retranché du volume réputé vendable **avant** application du taux forfaitaire de 15 %, et non après lui. Sur les **125,84 L** comptés, **97,42 L font l’objet de la demande**. Les **21,84 L** de vins conditionnés en BIB en sont retirés parce que l’abattement « vins au BIB » du service les couvre déjà, tout en restant, comme volume de matière, dans le bilan des 10 622 L. Les **6,58 L** de bouteilles vendues entières en sortent pour une autre raison : sur ces notes, le geste n’a pas d’objet, et ce volume ne doit être compté nulle part. L’incidence de la demande se propage ensuite à la totalité du chiffre d’affaires reconstitué, le service extrapolant le chiffre d’affaires cuisine à partir des liquides par un coefficient d’environ trois."
+   "texte": "Le volume de vin nommé offert doit en conséquence être retranché du volume réputé vendable **avant** application du taux forfaitaire de 15 %, et non après lui. Sur les **131,80 L** comptés, **103,38 L font l’objet de la demande**. Les **21,84 L** de vins conditionnés en BIB en sont retirés : la règle attestée par la gérante n’y prévoit aucune dégustation, et l’abattement « vins au BIB » du service couvre de toute façon ce périmètre. Les **6,58 L** de bouteilles vendues entières en sortent pour une autre raison : sur ces notes, le geste n’a pas d’objet, et ce volume ne doit être compté nulle part. L’incidence de la demande se propage ensuite à la totalité du chiffre d’affaires reconstitué, le service extrapolant le chiffre d’affaires cuisine à partir des liquides par un coefficient d’environ trois."
   },
   {
    "kind": "kpis",
@@ -2111,19 +2329,19 @@
     {
      "label": "Lignes du décompte recalculées par le service",
      "valeur": "aucune",
-     "sub": "sur 12 lignes de vin nommé, 6 326 lignes de caisse et 6 292 dégustations",
+     "sub": "sur 12 lignes de vin nommé, 6 626 lignes de caisse et 6 590 dégustations",
      "highlight": true,
      "couleur": "teal"
     },
     {
      "label": "Volume demandé, après nos deux retraits de périmètre",
-     "valeur": "97,42 L",
-     "sub": "dont 21,46 L que l’objection de la page 64 n’atteint pas",
+     "valeur": "103,38 L",
+     "sub": "dont 21,42 L que l’objection de la page 64 n’atteint pas",
      "couleur": "teal"
     },
     {
      "label": "Notes écartées par le décompte, faute de vin nommé",
-     "valeur": "11 156",
+     "valeur": "10 999",
      "sub": "sur 16 613 notes des annexes C1, C2 et C3",
      "couleur": "blue"
     },

@@ -45,9 +45,12 @@ DEUX RETRAITS, appliques ici et communs aux deux pages du dossier :
      (29,00 puis 38,00 euros, prix bouteille), la reference 1832 du meme libelle
      etant, elle, le verre (5,80 puis 7,60 euros). 329 degustations, 6,58 L.
 
-Le decompte passe ainsi de 6 292 degustations (125,84 L), chiffre repris tel quel
-par le service, a 5 963 (119,26 L), dont 1 092 au BIB (21,84 L) : la demande
-porte sur 4 871 degustations, soit 97,42 L.
+Le verre de Saint Joseph (reference 1830) integre, le decompte passe de 6 590
+degustations (131,80 L ; 6 292 et 125,84 L avant integration, chiffre repris tel
+quel par le service) a 6 261 (125,22 L), dont 1 092 au BIB (21,84 L) : la demande
+porte sur 5 169 degustations, soit 103,38 L, dont 1 071 au pichet seul (21,42 L).
+Regle attestee par la gerante (attestation n. 147) : aucune degustation pour les
+vins servis depuis un cubi.
 
 Regle de comptage, pour le reste identique a scripts/reponse1-degustations.py :
   une degustation de 2 cl par VIN NOMME et par NOTE (date + n. ticket), quelle que
@@ -101,6 +104,10 @@ TASTE = {
     "PICHET HCB": "HC de Beaune",
     "Beaujolais Moulin à": "Moulin à Vent", "PICHET MOULIN A VENT": "Moulin à Vent",
     "pichet Saint Joseph": "Saint Joseph",
+    # Verre 15 cl de Saint Joseph, reference 1830 (7,20 EUR puis 9,70 EUR, colonne
+    # « Verre 15cl » des cartes). La bouteille (reference 1829, 36,00 puis 48,50 EUR)
+    # porte un libelle different (« C du Rhone St  Josep ») et reste exclue.
+    "C du  Rhone St Josep": "Saint Joseph",
 }
 
 # Lignes de VENTE DE BOUTEILLE ENTIERE a retirer du decompte :
@@ -120,7 +127,6 @@ AUTRE_FORMAT = {
     "MACON bouteille": "Mâcon",
     "Alsace Gewurztramine": "Gewurztraminer",
     "Arbois Trousseau Bou": "Arbois Trousseau",
-    "C du  Rhone St Josep": "Saint Joseph",
     "C du Rhone St  Josep": "Saint Joseph",
     "H.C.B BEAUNE BTL": "HC de Beaune",
     "H.C.BEAUNE BOUTEILLE": "HC de Beaune",

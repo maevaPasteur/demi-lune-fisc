@@ -538,7 +538,7 @@ const autresGriefs: Grief[] = [
     titre: 'Dégustation offerte (goûter du vin)',
     griefFisc: 'Tout le vin acheté est supposé vendu.',
     reponseCourte:
-      'Compté note par note dans le détail des tickets (annexe C) : 2 cl offerts une fois par vin nommé et par note, soit 6 292 dégustations = 126 L de vin offert et jamais vendu sur 3 ans (cubis et bouteilles exclus). Chiffre lu dans la caisse, non estimé.',
+      'Compté note par note dans le détail des tickets (annexe C) : 2 cl offerts une fois par vin nommé et par note, soit 6 590 dégustations = 132 L de vin offert et jamais vendu sur 3 ans, verre de Saint Joseph compris ; 103 L une fois retirés les vins servis en cubi et les bouteilles vendues entières. Chiffre lu dans la caisse, pratique attestée par la gérante (attestation n° 147).',
     statut: 'partiel',
     sections: RFDegustation.sections as unknown as Section[],
   },

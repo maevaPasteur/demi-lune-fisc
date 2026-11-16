@@ -101,6 +101,10 @@ TASTE = {
     "PICHET C.DE BEAUNE R": "HC de Beaune", "PICHET C.DE BEAUNE B": "HC de Beaune",
     "PICHET HCB": "HC de Beaune", "PICHET MOULIN A VENT": "Moulin à Vent",
     "pichet Saint Joseph": "Saint Joseph",
+    # Verre 15 cl de Saint Joseph, reference 1830 (7,20 EUR puis 9,70 EUR, colonne
+    # « Verre 15cl » des cartes). La bouteille (reference 1829, 36,00 puis 48,50 EUR)
+    # porte un libelle different (« C du Rhone St  Josep ») et reste exclue.
+    "C du  Rhone St Josep": "Saint Joseph",
 }
 DOSE_DEG = 2.0
 

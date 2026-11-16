@@ -197,8 +197,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Dégustation', titre: 'La dégustation offerte',
     positionService: '',
     reponseCourte:
-      'Les motifs du service (globalisation sur 3 ans, 198 L au BIB, 500 L en bouteilles, « toutes les notes ») tombent ou ne portent que sur un périmètre que nous retirons nous-mêmes, mais la caisse ne trace que 1,85 L de vin nommé à 0 € : les 97,42 L demandés (dont 75,96 L au verre) restent une hypothèse à 2 cl non mesurée, suspendue à une attestation de salle à produire.',
-    statut: 'a-etayer',
+      'Les motifs du service (globalisation sur 3 ans, 198 L au BIB, 500 L en bouteilles, « toutes les notes ») tombent ou ne portent que sur un périmètre que nous retirons nous-mêmes, et la pratique de dégustation est attestée par la gérante (attestation n° 147) : 103,38 L sont demandés, verre de Saint Joseph intégré (dont 81,96 L au verre, pour lesquels seul le récipient de la larme reste à préciser, et 21,42 L au pichet) ; la caisse ne trace en propre que 2,15 L de vin nommé à 0 €.',
+    statut: 'partiel',
   },
   {
     slug: 'alcool-de-cuisine', bloc: 'reconstitution',
@@ -237,7 +237,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Abattements', titre: 'Les abattements et pertes forfaitaires',
     positionService: '',
     reponseCourte:
-      'Ramené en litres, le forfait de 15 % (1 593 L) couvre et dépasse la consommation sans vente que nous documentons (1 158 L brut, 697,4 L net hors sur-versement déjà facturé), de sorte que ce point ne réduit pas le redressement ; ce qui tombe, c’est l’emploi que le service fait de ce forfait unique, opposé six fois dans huit pages, et ses comparaisons « 13 fois / 3 fois », qui mêlent 26 216,19 € de cuisine extrapolée par exercice à des chiffres de boissons.',
+      'Ramené en litres, le forfait de 15 % (1 593 L) couvre et dépasse la consommation sans vente que nous documentons (1 135,6 L brut, 675,0 L net hors sur-versement déjà facturé), de sorte que ce point ne réduit pas le redressement ; ce qui tombe, c’est l’emploi que le service fait de ce forfait unique, opposé six fois dans huit pages, et ses comparaisons « 13 fois / 3 fois », qui mêlent 26 216,19 € de cuisine extrapolée par exercice à des chiffres de boissons.',
     statut: 'partiel',
   },
   {
