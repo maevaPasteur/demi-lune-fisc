@@ -411,7 +411,8 @@ def ecrire(deg, notes_totales, lignes, sj_verre, sj_pichet):
                 "d’exploitation : il est attesté par la gérante (attestation n° 147). "
                 "Tout vin nommé acheté en bouteille de 75 cl et servi au verre ou au "
                 "pichet depuis la bouteille donne lieu à une dégustation de 2 cl, une "
-                "par vin nommé et par note ; aucune pour les vins servis depuis un cubi."])
+                "par vin nommé et par note ; aucune pour les vins servis depuis un cubi, "
+                "ni pour le crémant et le macvin servis au verre."])
     ws2.cell(row=ws2.max_row, column=4).alignment = haut
     for i, w in enumerate([64, 14, 14, 62], 1):
         ws2.column_dimensions[get_column_letter(i)].width = w

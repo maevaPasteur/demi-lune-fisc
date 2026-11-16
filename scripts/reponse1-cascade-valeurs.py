@@ -371,7 +371,7 @@ def construire():
              source="Taux publiés appliqués au seul volume versé à la main, borné par le stock",
              page="Sur-versement", slug="sur-versement-au-verre"),
         dict(cle="degustation", libelle="Dégustation offerte", litres=degustation, nature="mesure",
-             source="Notes relevées une à une dans l’annexe C : 5 169 dégustations de 2 cl (vins en bouteille servis au verre ou au pichet)",
+             source="Notes relevées une à une dans l’annexe C : 5 169 dégustations de 2 cl (vins nommés en bouteille servis au verre ou au pichet)",
              page="Dégustation", slug="degustation-offerte"),
         dict(cle="biere", libelle="Freinte technique de la bière", litres=freinte, nature="estime",
              source="10 %% de la bière réellement sortie du fût (%s L lus en caisse, "

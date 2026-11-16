@@ -357,8 +357,9 @@ def ecrire_xlsx(par_exo_vin, par_exo, par_vin, notes_exo, n_lignes):
     ws.append(["Fait de service attesté",
                "Le décompte relève un geste de service et lui applique 2 cl. La pratique est "
                "attestée par la gérante (attestation n° 147) : une dégustation de 2 cl par vin "
-               "nommé et par note, pour tout vin acheté en bouteille de 75 cl et servi au verre "
-               "ou au pichet, aucune pour les vins servis depuis un cubi. Reste à préciser, pour "
+               "nommé et par note, pour tout vin nommé de la carte des vins acheté en bouteille de "
+               "75 cl et servi au verre ou au pichet, aucune pour les vins servis depuis un cubi, "
+               "ni pour le crémant et le macvin servis au verre. Reste à préciser, pour "
                "la part au verre, si la larme est versée dans un verre distinct ou dans le verre "
                "du client : la présente pièce ne l’établit pas."])
     for r in range(ws.max_row - 4, ws.max_row + 1):

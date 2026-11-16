@@ -30,8 +30,9 @@ CE QUE LE SCRIPT ETABLIT, en lecture seule et de facon reproductible :
  1. le releve ligne a ligne des deux libelles dans les tickets de caisse
     (ANNEXE-C1 a C3), par reference, par exercice, avec les prix pratiques ;
  2. le decompte des VERRES DE VIN NOMME, avant et apres retrait des ventes de
-    bouteille : 5 557,5 unites annoncees, 307,5 qui sont des bouteilles, donc
-    5 250,0 verres reels ; et 4 681,5 verres dans le perimetre de la degustation
+    bouteille : 5 916,0 unites annoncees (verre de Saint Joseph 1830 compris),
+    307,5 qui sont des bouteilles, donc 5 608,5 verres reels ; et 5 040 verres
+    dans le perimetre de la degustation
     (hors les deux vins achetes en BIB de 10 L) ;
  3. l'effet du reclassement sur l'assiette du sur-versement : les 307,5 unites
     passent de 15 cl a 75 cl, ce qui retire 46,13 L au verre, ajoute 230,63 L a
@@ -80,6 +81,14 @@ SPIRIT = {"aperitif", "liqueur", "eau_de_vie", "spiritueux", "digestif"}
 INSCOPE = VIN | SPIRIT
 TAUX_VIN, TAUX_SPIRIT, TAUX_COCKTAIL = 0.236, 0.20, 0.42
 MAIN, PREMESURE, SCELLE = "verre", "pichet", "bouteille"
+
+
+def fr1(x):
+    """5916.0 -> '5 916' ; 5608.5 -> '5 608,5'."""
+    t = ("%.1f" % x).rstrip("0").rstrip(".")
+    ent, _, dec = t.partition(".")
+    ent = "{:,}".format(int(ent)).replace(",", " ")
+    return ent + ("," + dec if dec else "")
 
 
 def regime(fmt):
@@ -351,7 +360,7 @@ def ecrire(rel, nom, av, bo_av, ap, bo_ap):
 
     # Feuille 2 : les verres de vin nomme
     ws = wb.create_sheet("Verres de vin nomme")
-    titre(ws, "Verres de vin nomme : 5 557,5 annonces, 307,5 bouteilles, 5 250 verres",
+    titre(ws, "Verres de vin nomme : %s annonces, 307,5 bouteilles, %s verres" % (fr1(sum(l["total"] for l in nom)), fr1(sum(l["verres"] for l in nom))),
           "Un vin nomme est un vin identifie sur la note par son appellation, par "
           "opposition aux generiques. Mapping repris a l'identique de "
           "scripts/reponse1-degustation-verre-pichet.py.")

@@ -234,7 +234,7 @@ def lignes_nature(d, g):
         "49-rf-sur-versement-au-verre.xlsx")
     add("degustation",
         "Notes portant au moins un vin nommé, relevées une à une",
-        "%s dégustations demandées (vins en bouteille servis au verre ou au pichet) sur %s lignes de vin"
+        "%s dégustations demandées (vins nommés en bouteille servis au verre ou au pichet) sur %s lignes de vin"
         % (f"{g['degustation_notes']:,}".replace(",", " "),
            f"{g['degustation_lignes']:,}".replace(",", " ")),
         "%s cl par dégustation" % f"{g['degustation_dose_cl']:.0f}",
