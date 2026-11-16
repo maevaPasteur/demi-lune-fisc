@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""TEMPORAIRE - lecture seule. Decompose le residu de 2 228,08 L produit par
+"""Lecture seule. Decompose le residu produit par
 scripts/reponse1-cascade-valeurs.py, boisson par boisson, en reprenant
 exactement la meme arithmetique poste par poste.
 
@@ -59,12 +59,25 @@ DEG_VERS_BASE = {
     "Gewurztraminer": "Gewurztraminer", "Arbois Chardonnay": "Arbois Chardonnay",
     "Chablis": "Chablis", "Saint Joseph": "Saint Joseph Rouge",
 }
+# Volume DEMANDE par vin (tableau « Le contenant réellement vendu sur la note,
+# vin par vin », colonne « Volume demandé ») : la cascade retient 103,38 L,
+# sans les cubis (Aligoté, Chusclan) ni les bouteilles vendues entières.
+sec_deg = [s_ for s_ in DEG_PAGE["sections"]
+           if (s_.get("titre") or "").startswith("Le contenant réellement vendu sur la note")]
+assert len(sec_deg) == 1
 deg = {}
-for lig in DEG_PAGE["sections"][27]["lignes"]:
+for lig in sec_deg[0]["lignes"]:
     v = [c["v"] if isinstance(c, dict) else c for c in lig]
-    if v[0] == "TOTAL":
+    if v[0] in ("TOTAL",) or v[0].startswith("Sous-total"):
         continue
-    deg[DEG_VERS_BASE[v[0]]] = float(v[5].replace(" L", "").replace(",", "."))
+    deg[DEG_VERS_BASE[v[0]]] = float(v[6].replace(" L", "").replace(",", "."))
+
+# Reclassement des 307,5 ventes de bouteille (scripts/reponse1-cascade-valeurs.py,
+# RECLASSEMENT_*) : references 2019 (Arbois Chardonnay, 217,5 unites) et 1831
+# (Moulin a Vent, 90 unites), comptees a 15 cl alors qu'elles valent 75 cl.
+RECLASSEMENT = {"Arbois Chardonnay": 217.5, "Moulin à Vent": 90.0}
+RECL_VERRE = {n: q * 0.60 for n, q in RECLASSEMENT.items()}          # 184,50 L
+RECL_SV = {n: round(q * 0.15 * 0.236, 2) for n, q in RECLASSEMENT.items()}  # 10,89 L
 
 # ----------------------------------------------------------- postes globaux
 P = {p["cle"]: p["litres"] for p in CASCADE["postes"]}
@@ -72,11 +85,12 @@ P = {p["cle"]: p["litres"] for p in CASCADE["postes"]}
 emplois = {n: collections.defaultdict(float) for n in noms}
 for b in alc:
     n = b["nom"]; c = b["conso"]
-    emplois[n]["verre"]      = c["seches_l"] - (double_biere if n == "Fût Affligem" else 0.0)
+    emplois[n]["verre"]      = (c["seches_l"] + RECL_VERRE.get(n, 0.0)
+                                - (double_biere if n == "Fût Affligem" else 0.0))
     emplois[n]["cocktails"]  = c["cocktails_l"]
     emplois[n]["chef"]       = (b.get("conso_staff_l") or {}).get("moyen", 0.0) or 0.0
     emplois[n]["stock"]      = b["stock_final_l"]
-    emplois[n]["surversement"] = sv_par_nom.get(n, 0.0)
+    emplois[n]["surversement"] = sv_par_nom.get(n, 0.0) - RECL_SV.get(n, 0.0)
     emplois[n]["degustation"]  = deg.get(n, 0.0)
 for n, _calc, plaf in CUISINE_PLAFONNE:
     emplois[n]["cuisine"] = plaf
