@@ -205,7 +205,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Alcool de cuisine', titre: 'L’alcool de cuisine',
     positionService: '',
     reponseCourte:
-      'Après plafonnement aux achats facturés et déduction, exercice par exercice, de ce que le service retranche déjà, 72,68 L d’alcool cuit dans les plats de la carte restent comptés comme des verres vendus (porto 52,90, vin jaune 12,90, Grand Marnier 5,96, Bailey’s 0,92), soit environ 5 113 € de CA liquides TTC et, après abattements et coefficient du service, environ 17 466 € de total reconstitué ; ravelin, macvin, Calvados et crème de cassis sont déjà couverts et nous ne demandons rien à leur titre.',
+      'Après plafonnement aux achats facturés et déduction, exercice par exercice, de ce que le service retranche déjà, 72,04 L d’alcool cuit dans les plats de la carte restent comptés comme des verres vendus (porto 52,90, vin jaune 12,90, Grand Marnier 5,96, Bailey’s 0,28), soit environ 5 029 € de CA liquides TTC et, après abattements et coefficient du service, environ 17 182 € de total reconstitué ; ravelin, macvin, Calvados et crème de cassis sont déjà couverts et nous ne demandons rien à leur titre.',
     statut: 'partiel',
   },
   {
@@ -213,7 +213,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Alcool des menus', titre: 'L’alcool cuit dans les plats des menus',
     positionService: '',
     reponseCourte:
-      'Après déduction de ce que le service retranche déjà, l’alcool cuit dans les plats des menus se ramène à 20,53 L de desserts de menu que ses annexes 7 ne déduisent nulle part (Bailey’s 14,36 L, liqueur de poire 4,07 L, marc 2,10 L), soit environ 2 737 € de CA liquides TTC comptés à tort comme des verres vendus au comptoir ; deux des trois volumes « disponibles » qu’il oppose sont démentis par sa propre annexe n° 6, et la valorisation au prix du verre, objet du point 6, n’est pas discutée dans sa réponse.',
+      'Après déduction de ce que le service retranche déjà, l’alcool cuit dans les plats des menus se ramène à 20,25 L de desserts de menu que ses annexes 7 ne déduisent pas (Bailey’s 14,08 L, liqueur de poire 4,07 L, marc 2,10 L), soit environ 2 701 € de CA liquides TTC comptés à tort comme des verres vendus au comptoir ; deux des trois volumes « disponibles » qu’il oppose sont démentis par sa propre annexe n° 6, et la valorisation au prix du verre, objet du point 6, n’est pas discutée dans sa réponse.',
     statut: 'partiel',
   },
   {
