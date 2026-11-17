@@ -43,11 +43,14 @@ OUT = os.path.join(ROOT, "public/documents/pieces-reponse-1/")
 EXOS = ["2022-2023", "2023-2024", "2024-2025"]
 C = {e: CAISSE + f"ANNEXE-C{i}_detail-tickets_{e}.xls" for i, e in enumerate(EXOS, 1)}
 JOURS = ["lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"]
-# Places réelles (plan de salle confirmé, cf. src/data/renduFinal/tables-trop-nombreuses.json).
+# Places réelles, d'après les plans de la gérante (pièces R2 « Plan de la salle » :
+# 14 tables, 46 couverts ; « Plan de la terrasse » : 15 tables, 48 couverts).
+# Les n° 116 et 117 sont des tables de l'intérieur sorties en terrasse les seuls
+# jours exceptionnels : elles n'ajoutent aucune place.
 # Un seul espace est ouvert à chaque service : terrasse de début mai à début
 # septembre, intérieur le reste de l'année.
-PLACES_INTERIEUR = 44
-PLACES_TERRASSE = 43
+PLACES_INTERIEUR = 46
+PLACES_TERRASSE = 48
 
 GRAS = Font(bold=True)
 BLANC_GRAS = Font(bold=True, color="FFFFFF")

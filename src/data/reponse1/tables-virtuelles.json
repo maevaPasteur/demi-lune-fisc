@@ -739,7 +739,7 @@
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Deux tests simples, et ils échouent tous les deux",
-   "texte": "Si le numéro désignait une table, il manquerait des numéros les jours creux (toutes les tables ne sont pas occupées) et les numéros de terrasse 101 à 115 apparaîtraient de mai à septembre, lorsque la terrasse est le seul espace ouvert. Sur les 659 journées vérifiées, il ne manque jamais un numéro et aucun numéro de terrasse n’apparaît jamais."
+   "texte": "Si le numéro désignait une table, il manquerait des numéros les jours creux (toutes les tables ne sont pas occupées) et les numéros de terrasse (102 à 115 et 126) apparaîtraient de mai à septembre, lorsque la terrasse est le seul espace ouvert. Sur les 659 journées vérifiées, il ne manque jamais un numéro et aucun numéro de terrasse n’apparaît jamais."
   },
   {
    "kind": "titre",
@@ -1097,15 +1097,15 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La salle intérieure compte **14 tables** (n° 1 à 12, 14 et 15) et **44 places**. Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros de note ouverts pour un règlement séparé, ou des numéros non attribués. La terrasse compte **14 tables** (n° 101 à 115) et **43 places** ; les numéros **102 et 125 n’existent pas**, et les tables **n° 116 et 117** ne sont montées que les jours exceptionnels, ce qui les exclut du décompte des places. Le point est vérifiable sur place, en comptant les tables."
+   "texte": "La salle intérieure compte **14 tables** (n° 1 à 12, 14 et 15) et **46 places**. Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros de note ouverts pour un règlement séparé, ou des numéros non attribués. La terrasse compte **15 tables** (n° 102 à 115 et n° 126) et **48 places** ; les numéros **101 et 125 ne désignent aucune table**, et les tables **n° 116 et 117** sont des tables de l’intérieur sorties en terrasse les seuls jours exceptionnels, ce qui les exclut du décompte des places. Ces chiffres sont ceux des plans de la salle et de la terrasse dessinés d’après le plan manuscrit de la gérante (pièces R2), vérifiables sur place en comptant les tables."
   },
   {
    "kind": "paragraphe",
-   "texte": "La cuisine ne permet pas de servir simultanément la salle et la terrasse : **un seul espace est ouvert à chaque service**, la terrasse de début mai à début septembre (sauf les jours de pluie), l’intérieur de mi septembre à fin avril. C’est la raison pour laquelle la capacité de référence est de 44 places ou de 43 places selon la saison, et non de 87."
+   "texte": "La cuisine ne permet pas de servir simultanément la salle et la terrasse : **un seul espace est ouvert à chaque service**, la terrasse de début mai à début septembre (sauf les jours de pluie), l’intérieur de mi septembre à fin avril. C’est la raison pour laquelle la capacité de référence est de 46 places ou de 48 places selon la saison, et non de 94."
   },
   {
    "kind": "tableau",
-   "titre": "Plan de salle réel (confirmé par la gérante, vérifiable sur place)",
+   "titre": "Plan de salle réel (plans de la salle et de la terrasse dessinés d’après la gérante, pièces R2, vérifiables sur place)",
    "minWidth": 820,
    "colonnes": [
     {
@@ -1139,7 +1139,7 @@
       "align": "right"
      },
      {
-      "v": "44",
+      "v": "46",
       "align": "right"
      },
      {
@@ -1151,18 +1151,18 @@
       "v": "Terrasse"
      },
      {
-      "v": "n° 101 à 115"
+      "v": "n° 102 à 115 et 126"
      },
      {
-      "v": "14",
+      "v": "15",
       "align": "right"
      },
      {
-      "v": "43",
+      "v": "48",
       "align": "right"
      },
      {
-      "v": "102 et 125 ; n° 116 et 117 réservées aux jours exceptionnels"
+      "v": "101 et 125 ; n° 116 et 117 : tables de l’intérieur sorties les seuls jours exceptionnels"
      }
     ],
     [
@@ -1201,14 +1201,14 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le résultat mesuré est d’ailleurs **supérieur** à ce point de comparaison. Sur les **1 269 services** effectivement servis des trois exercices, l’occupation moyenne s’établit à **67,7 % des places de l’espace ouvert**, soit près de dix points au-dessus de la moyenne nationale invoquée. Et **89 services (7,0 %) dépassent 100 % des places** : ce sont précisément les services où une table a tourné, et ils figurent déjà dans nos chiffres, jusqu’à **163 %** un midi de juillet."
+   "texte": "Le résultat mesuré est d’ailleurs **supérieur** à ce point de comparaison. Sur les **1 269 services** effectivement servis des trois exercices, l’occupation moyenne s’établit à **62,7 % des places de l’espace ouvert**, soit près de cinq points au-dessus de la moyenne nationale invoquée. Et **42 services (3,3 %) dépassent 100 % des places** : ce sont précisément les services où une table a tourné, et ils figurent déjà dans nos chiffres, jusqu’à **146 %** un midi de juillet."
   },
   {
    "kind": "kpis",
    "items": [
     {
      "label": "Occupation moyenne mesurée",
-     "valeur": "67,7 %",
+     "valeur": "62,7 %",
      "sub": "couverts comptés / places de l’espace ouvert",
      "highlight": true,
      "couleur": "teal"
@@ -1225,8 +1225,8 @@
     },
     {
      "label": "Services au-delà de 100 % des places",
-     "valeur": "89",
-     "sub": "7,0 % : la rotation de table, déjà comptée"
+     "valeur": "42",
+     "sub": "3,3 % : la rotation de table, déjà comptée"
     }
    ]
   },
@@ -1243,51 +1243,51 @@
    "data": [
     {
      "nom": "Mars",
-     "Occupation (%)": 49
+     "Occupation (%)": 47
     },
     {
      "nom": "Avril",
-     "Occupation (%)": 61
+     "Occupation (%)": 58
     },
     {
      "nom": "Mai",
-     "Occupation (%)": 71
+     "Occupation (%)": 64
     },
     {
      "nom": "Juin",
-     "Occupation (%)": 73
-    },
-    {
-     "nom": "Juillet",
-     "Occupation (%)": 90
-    },
-    {
-     "nom": "Août",
-     "Occupation (%)": 89
-    },
-    {
-     "nom": "Sept.",
-     "Occupation (%)": 71
-    },
-    {
-     "nom": "Oct.",
      "Occupation (%)": 65
     },
     {
+     "nom": "Juillet",
+     "Occupation (%)": 81
+    },
+    {
+     "nom": "Août",
+     "Occupation (%)": 80
+    },
+    {
+     "nom": "Sept.",
+     "Occupation (%)": 68
+    },
+    {
+     "nom": "Oct.",
+     "Occupation (%)": 62
+    },
+    {
      "nom": "Nov.",
-     "Occupation (%)": 51
+     "Occupation (%)": 49
     },
     {
      "nom": "Déc.",
-     "Occupation (%)": 51
+     "Occupation (%)": 49
     },
     {
      "nom": "Janv.",
-     "Occupation (%)": 55
+     "Occupation (%)": 53
     },
     {
      "nom": "Févr.",
-     "Occupation (%)": 42
+     "Occupation (%)": 40
     }
    ]
   },
@@ -1333,7 +1333,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "L’unique argument nouveau du service, le double service, ne l’atteint pas : les couverts sont comptés et non plafonnés, la rotation y est déjà incluse (89 services au-delà de 100 % des places), et l’occupation mesurée de 67,7 % dépasse déjà la moyenne nationale que le service ne conteste pas. Le service concède par ailleurs la logique des suppressions et ne chiffre rien."
+   "texte": "L’unique argument nouveau du service, le double service, ne l’atteint pas : les couverts sont comptés et non plafonnés, la rotation y est déjà incluse (42 services au-delà de 100 % des places), et l’occupation mesurée de 62,7 % dépasse déjà la moyenne nationale que le service ne conteste pas. Le service concède par ailleurs la logique des suppressions et ne chiffre rien."
   },
   {
    "kind": "paragraphe",

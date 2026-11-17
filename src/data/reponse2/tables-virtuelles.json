@@ -3,7 +3,7 @@
   "slug": "tables-virtuelles",
   "source": "Proposition personnelle du 19/10/2026 (grief F repris de la proposition société du 18/05/2026, p. 11, 18-19, et de la réponse du service du 04/09/2026, p. 35 à 38)",
   "limites": [
-   "Le plan de salle (14 tables et 44 places à l’intérieur, 14 tables et 43 places en terrasse, n° 13, 16, 17, 18 inexistants, un seul espace ouvert à la fois) repose sur la description de la gérante, vérifiable sur place mais non encore étayée par une pièce : une attestation de la gérante et un plan de salle coté doivent être produits. Le taux d’occupation de 67,7 % en dépend par son dénominateur ; les 37 373 couverts, eux, sont comptés sur les annexes C du service, et la démonstration de la numérotation (659 journées sur 659) ne dépend d’aucun plan de salle.",
+   "Le plan de salle (14 tables et 46 places à l’intérieur, 15 tables et 48 places en terrasse, n° 13, 16, 17, 18 sans table à l’intérieur, n° 101 et 125 sans table en terrasse, n° 116 et 117 hors décompte, un seul espace ouvert à la fois) repose sur les plans de la salle et de la terrasse dessinés d’après le plan manuscrit de la gérante (pièces R2), vérifiables sur place mais non cotés ; une attestation de la gérante doit les accompagner. Le taux d’occupation de 62,7 % en dépend par son dénominateur ; les 37 373 couverts, eux, sont comptés sur les annexes C du service, et la démonstration de la numérotation (659 journées sur 659) ne dépend d’aucun plan de salle.",
    "Les couverts sont une estimation homogène (un couvert = un plat ou un menu encaissé, quantités fractionnaires comprises), pas un registre de couverts servis : elle vaut comme ordre de grandeur comparable d’un exercice à l’autre.",
    "Le repère de 58 % (Observatoire FIDUCIAL 2025) est un point de comparaison externe au dossier, non une norme opposable, et il n’est employé que comme tel.",
    "L’appariement des tickets à 0,00 € à un ticket encaissé se fait par date et numéro, non article par article, et les tickets à 0,00 € sont numérotés dans leur propre suite : il écarte l’hypothèse d’un ticket-zéro orphelin, il ne prouve pas à lui seul le ré-enregistrement du contenu. L’élément probant est le 0,00 € encaissé et la coïncidence à la minute avec une suppression « DEL » (2 449 sur 3 281).",
@@ -13,7 +13,7 @@
  },
  "entete": {
   "statut": "demonte",
-  "reponseCourte": "Le numéro porté par l’export de caisse est un rang d’addition quotidien et non un numéro de table (659 journées sur 659, 16 624 additions, numéros de terrasse 101-125 jamais présents), la table « virtuelle » est une note de règlement séparé dont le service admet la logique, la suppression de la table d’origine laisse une ligne « DEL » datée et un ticket à 0,00 €, et le double service n’est pas ignoré mais compté : 37 373 couverts sur 1 269 services, soit 67,7 % des places de l’espace ouvert, 9,7 points au-dessus du repère de 58 % de la profession, dont 89 services au-delà de 100 % des places."
+  "reponseCourte": "Le numéro porté par l’export de caisse est un rang d’addition quotidien et non un numéro de table (659 journées sur 659, 16 624 additions, numéros de terrasse 101-125 jamais présents), la table « virtuelle » est une note de règlement séparé dont le service admet la logique, la suppression de la table d’origine laisse une ligne « DEL » datée et un ticket à 0,00 €, et le double service n’est pas ignoré mais compté : 37 373 couverts sur 1 269 services, soit 62,7 % des places de l’espace ouvert, 4,7 points au-dessus du repère de 58 % de la profession, dont 42 services au-delà de 100 % des places."
  },
  "sections": [
   {
@@ -783,10 +783,10 @@
       "align": "right"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
-      "v": "60 % midi / 105 % soir",
+      "v": "54 % midi / 94 % soir",
       "align": "right"
      }
     ],
@@ -806,10 +806,10 @@
       "align": "right"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
-      "v": "163 % midi / 149 % soir",
+      "v": "146 % midi / 133 % soir",
       "align": "right"
      }
     ],
@@ -829,10 +829,10 @@
       "align": "right"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
-      "v": "86 % midi / 88 % soir",
+      "v": "77 % midi / 79 % soir",
       "align": "right"
      }
     ]
@@ -1620,8 +1620,8 @@
    "items": [
     "**L’objection ne porterait que si nos couverts étaient déduits d’un plafond de places. Ils ne le sont pas : ils sont comptés**, addition par addition, dans le détail des tickets (annexes C) : **37 373 couverts** sur **1 269 services** (pièce R2, onglet « Occupation (calcul) », cellules B19 et B20).",
     "**Une table qui tourne deux fois produit deux additions**, donc deux séries de plats, donc deux fois des couverts dans ce décompte. La rotation n’est pas une hypothèse écartée : elle est **mesurée**. Exemple : 12/04/2024, rang n° 4 encaissé à 12h00 (identifiant 61077) puis à 18h55 (identifiant 61095).",
-    "**L’occupation mesurée dépasse déjà le repère que le service invoque** : **67,7 %** des places de l’espace ouvert, contre **58 %** de taux de remplissage moyen de la restauration traditionnelle (Observatoire FIDUCIAL 2025), soit **+ 9,7 points** (pièce R2, « Occupation (calcul) », B22 et B23).",
-    "**89 services (7,0 %) dépassent 100 % des places** : ce sont exactement les services où une table a tourné, et ils sont déjà dans nos chiffres, jusqu’à **163 %** le midi du samedi 09 juillet 2022 (B24 à B26).",
+    "**L’occupation mesurée dépasse déjà le repère que le service invoque** : **62,7 %** des places de l’espace ouvert, contre **58 %** de taux de remplissage moyen de la restauration traditionnelle (Observatoire FIDUCIAL 2025), soit **+ 4,7 points** (pièce R2, « Occupation (calcul) », B22 et B23).",
+    "**42 services (3,3 %) dépassent 100 % des places** : ce sont exactement les services où une table a tourné, et ils sont déjà dans nos chiffres, jusqu’à **146 %** le midi du samedi 09 juillet 2022 (B24 à B26).",
     "**Le taux de 58 % n’a jamais été un plafond** dans cette démonstration, et ne l’est pas davantage ici : c’est un **point de comparaison** avec la profession. Rien dans la défense ne suppose que l’activité s’arrête à 58 %, et les chiffres mesurés le dépassent.",
     "**Le service ne tire de son objection aucun chiffre** : ni nombre de tables concernées, ni nombre de journées, ni relèvement du taux, ni couvert supplémentaire. Il ne rattache aucun euro à la partie F."
    ],
@@ -1635,16 +1635,16 @@
   },
   {
    "kind": "titre",
-   "texte": "Le plan de salle : 14 tables et 44 places à l’intérieur, 14 tables et 43 places en terrasse, un seul espace ouvert à la fois",
+   "texte": "Le plan de salle : 14 tables et 46 places à l’intérieur, 15 tables et 48 places en terrasse, un seul espace ouvert à la fois",
    "numero": "2.1"
   },
   {
    "kind": "liste",
    "items": [
-    "**Salle intérieure : 14 tables et 44 places.** Les numéros qui désignent une table sont les n° 1 à 12, 14 et 15. Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont les emplacements de règlement séparé, ou des numéros non attribués.",
-    "**Terrasse : 14 tables et 43 places** (n° 101 à 115). Les n° 102 et 125 n’existent pas ; les n° 116 et 117 ne sont montées que les jours exceptionnels et sont **exclues** du décompte des places.",
-    "**Un seul espace est ouvert à chaque service** : la cuisine ne permet pas de servir la salle et la terrasse en même temps. Terrasse de début mai à début septembre sauf les jours de pluie, intérieur de mi-septembre à fin avril. La capacité de référence est donc de **44 places** ou de **43 places** selon la saison, jamais 87.",
-    "**D’où vient ce plan de salle, et ce qu’il faut produire.** Il repose sur la description de la gérante, vérifiable sur place en comptant les tables. Il n’est pas tiré des fichiers : les annexes de caisse ne mentionnent jamais les tables. À produire pour la réunion : **une attestation de la gérante et un plan de salle coté** (nombre de tables, places par table, périodes d’ouverture de chaque espace).",
+    "**Salle intérieure : 14 tables et 46 places.** Les numéros qui désignent une table sont les n° 1 à 12, 14 et 15. Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont les emplacements de règlement séparé, ou des numéros non attribués.",
+    "**Terrasse : 15 tables et 48 places** (n° 102 à 115 et n° 126). Les n° 101 et 125 ne désignent aucune table. Les n° 116 et 117 sont des **tables de l’intérieur sorties en terrasse les seuls jours exceptionnels** (14 juillet, week-end du Chat Gourmand) : elles n’ajoutent aucune place et sont **exclues** du décompte.",
+    "**Un seul espace est ouvert à chaque service** : la cuisine ne permet pas de servir la salle et la terrasse en même temps. Terrasse de début mai à début septembre sauf les jours de pluie, intérieur de mi-septembre à fin avril. La capacité de référence est donc de **46 places** ou de **48 places** selon la saison, jamais 94.",
+    "**D’où vient ce plan de salle, et ce qu’il corrige.** Les deux plans ci-dessous sont redessinés d’après le plan manuscrit de la gérante, qui a précisé le numéro de caisse de chaque table ; ils se vérifient sur place en comptant les tables et les chaises. Ils ne sont pas tirés des fichiers : les annexes de caisse ne mentionnent jamais les tables. Ils corrigent la description reprise dans la réponse du 08/07/2026 (44 et 43 places) : la table n° 1 compte 4 places et non 2 ; en terrasse, la table n° 102 existe et la n° 101 non, la n° 126 s’ajoute, et les tables n° 107 et 110 comptent 4 places. La correction **abaisse** le taux d’occupation mesuré de 67,7 % à 62,7 % : elle est retenue parce qu’elle est exacte, et le taux corrigé reste au-dessus du repère de 58 %. À joindre pour la réunion : **une attestation de la gérante** accompagnant les plans (places par table, périodes d’ouverture de chaque espace, usage des n° 116 et 117).",
     "**Ce qui ne dépend pas de l’attestation.** Les **couverts** sont comptés sur les annexes C du service, addition par addition : c’est le **dénominateur** (les places) qui dépend du plan de salle, pas le numérateur. Et la démonstration du point 1, entièrement tirée des annexes, tient sans aucun plan de salle."
    ]
   },
@@ -1674,7 +1674,7 @@
     {
      "numero": "n°1",
      "type": "reelle",
-     "couverts": 2
+     "couverts": 4
     },
     {
      "numero": "n°2",
@@ -1764,24 +1764,24 @@
    ],
    "resume": {
     "tables": 14,
-    "couverts": 44
+    "couverts": 46
    }
   },
   {
    "kind": "grilleTables",
    "variante": "plan",
    "titre": "Plan de salle réel à l’extérieur (terrasse)",
-   "sousTitre": "La terrasse porte les numéros 101 à 117 (les n° 102 et 125 n’existent pas). Les n° 116 et 117 ne sont montées que les jours de forte affluence : elles sont donc exclues du décompte des places. Aucun de ces numéros de terrasse n’apparaît dans l’export de caisse.",
+   "sousTitre": "La terrasse compte 15 tables, n° 102 à 115 et n° 126 (les n° 101 et 125 ne désignent aucune table). Les n° 116 et 117 sont des tables de l’intérieur sorties les seuls jours exceptionnels : elles sont donc exclues du décompte des places. Aucun de ces numéros de terrasse n’apparaît dans l’export de caisse.",
    "tables": [
     {
      "numero": "n°101",
-     "type": "reelle",
-     "couverts": 2
+     "type": "inexistante",
+     "note": "N’existe pas"
     },
     {
      "numero": "n°102",
-     "type": "inexistante",
-     "note": "N’existe pas"
+     "type": "reelle",
+     "couverts": 2
     },
     {
      "numero": "n°103",
@@ -1806,7 +1806,7 @@
     {
      "numero": "n°107",
      "type": "reelle",
-     "couverts": 2
+     "couverts": 4
     },
     {
      "numero": "n°108",
@@ -1821,7 +1821,7 @@
     {
      "numero": "n°110",
      "type": "reelle",
-     "couverts": 3
+     "couverts": 4
     },
     {
      "numero": "n°111",
@@ -1852,28 +1852,33 @@
      "numero": "n°116",
      "type": "rare",
      "couverts": 2,
-     "note": "Unique pour jours exceptionnels comme 14 juillet et week-end du Chat Gourmand"
+     "note": "Table de l’intérieur sortie les seuls jours exceptionnels (14 juillet, week-end du Chat Gourmand)"
     },
     {
      "numero": "n°117",
      "type": "rare",
      "couverts": 2,
-     "note": "Unique pour jours exceptionnels comme 14 juillet et week-end du Chat Gourmand"
+     "note": "Table de l’intérieur sortie les seuls jours exceptionnels (14 juillet, week-end du Chat Gourmand)"
     },
     {
      "numero": "n°125",
      "type": "inexistante",
      "note": "N’existe pas"
+    },
+    {
+     "numero": "n°126",
+     "type": "reelle",
+     "couverts": 2
     }
    ],
    "resume": {
-    "tables": 14,
-    "couverts": 43
+    "tables": 15,
+    "couverts": 48
    }
   },
   {
    "kind": "note",
-   "texte": "Deux grilles reprises de la réponse du 08/07/2026. Lecture : 14 tables réelles et 44 places à l’intérieur, 14 tables réelles et 43 places en terrasse, les numéros barrés ne correspondant à aucune table. Les n° 116 et 117, montées les seuls jours exceptionnels, sont comptées « occasionnelles » et retirées des 43 places. Aucun de ces numéros de terrasse n’apparaît une seule fois dans les annexes C et H des trois exercices."
+   "texte": "Deux grilles établies d’après les plans de la gérante reproduits ci-dessus. Lecture : 14 tables réelles et 46 places à l’intérieur, 15 tables réelles et 48 places en terrasse, les numéros barrés ne correspondant à aucune table. Les n° 116 et 117, tables de l’intérieur sorties les seuls jours exceptionnels, sont comptées « occasionnelles » et retirées des 48 places. Aucun de ces numéros de terrasse n’apparaît une seule fois dans les annexes C et H des trois exercices."
   },
   {
    "kind": "titre",
@@ -1886,8 +1891,8 @@
     "**Étape 1, la donnée source.** Les annexes C1 à C3 donnent chaque ligne d’article de chaque addition, avec son libellé, sa quantité et son heure.",
     "**Étape 2, la règle de comptage.** Un couvert = un plat ou un menu réellement encaissé. L’heure de l’addition classe la note au **midi** (avant 18 h) ou au **soir** (18 h à minuit). Un service est un midi ou un soir d’une journée d’ouverture.",
     "**Étape 3, le résultat.** **1 269 services** servis sur les trois exercices, **37 373 couverts**, soit **29,5 couverts par service** en moyenne (pièce R2, onglet « Occupation (calcul) », B19 à B21 ; détail des 1 269 services dans l’onglet « Services (source) », lignes 2 à 1270).",
-    "**Étape 4, le rapprochement à la capacité.** Chaque service est rapporté aux places de l’espace ouvert ce jour-là (44 à l’intérieur, 43 en terrasse) : occupation moyenne **67,7 %** (B22), contre le repère de **58 %** (B13), soit **+ 9,7 points** (B23).",
-    "**Étape 5, le contrôle de cohérence.** Le repère de 58 % vaut **26 couverts** sur 44 places et **25 couverts** sur 43 places (B14 et B15). Les moyennes mesurées sont de **25,5 couverts** à l’intérieur et **34,9 couverts** en terrasse (B31 et C31) : l’intérieur se tient au niveau du repère, la terrasse le dépasse largement."
+    "**Étape 4, le rapprochement à la capacité.** Chaque service est rapporté aux places de l’espace ouvert ce jour-là (46 à l’intérieur, 48 en terrasse) : occupation moyenne **62,7 %** (B22), contre le repère de **58 %** (B13), soit **+ 4,7 points** (B23).",
+    "**Étape 5, le contrôle de cohérence.** Le repère de 58 % vaut **27 couverts** sur 46 places et **28 couverts** sur 48 places (B14 et B15). Les moyennes mesurées sont de **25,5 couverts** à l’intérieur et **34,9 couverts** en terrasse (B31 et C31) : l’intérieur se tient un peu sous le repère (55,4 %, B32), la terrasse le dépasse nettement (72,8 %, C32)."
    ]
   },
   {
@@ -1895,7 +1900,7 @@
    "items": [
     {
      "label": "Occupation moyenne mesurée",
-     "valeur": "67,7 %",
+     "valeur": "62,7 %",
      "sub": "couverts comptés / places de l’espace ouvert",
      "couleur": "teal",
      "highlight": true
@@ -1917,8 +1922,8 @@
     },
     {
      "label": "Services au-delà de 100 % des places",
-     "valeur": "89",
-     "sub": "7,0 % : la rotation de table, déjà comptée"
+     "valeur": "42",
+     "sub": "3,3 % : la rotation de table, déjà comptée"
     }
    ]
   },
@@ -1931,11 +1936,11 @@
      "label": "Indicateur"
     },
     {
-     "label": "Intérieur (44 places)",
+     "label": "Intérieur (46 places)",
      "align": "right"
     },
     {
-     "label": "Terrasse (43 places)",
+     "label": "Terrasse (48 places)",
      "align": "right"
     },
     {
@@ -1983,15 +1988,15 @@
       "v": "Occupation moyenne mesurée"
      },
      {
-      "v": "57,9 %",
+      "v": "55,4 %",
       "align": "right"
      },
      {
-      "v": "81,2 %",
+      "v": "72,8 %",
       "align": "right"
      },
      {
-      "v": "67,7 %",
+      "v": "62,7 %",
       "align": "right"
      }
     ],
@@ -2000,11 +2005,11 @@
       "v": "Repère de 58 % appliqué à l’espace"
      },
      {
-      "v": "26 couverts",
+      "v": "27 couverts",
       "align": "right"
      },
      {
-      "v": "25 couverts",
+      "v": "28 couverts",
       "align": "right"
      },
      {
@@ -2017,15 +2022,15 @@
       "v": "Services au-delà de 100 % des places"
      },
      {
-      "v": "11",
+      "v": "10",
       "align": "right"
      },
      {
-      "v": "78",
+      "v": "32",
       "align": "right"
      },
      {
-      "v": "89",
+      "v": "42",
       "align": "right"
      }
     ]
@@ -2062,11 +2067,11 @@
       "align": "right"
      },
      {
-      "v": "68,4 %",
+      "v": "63,2 %",
       "align": "right"
      },
      {
-      "v": "+ 10,4 points",
+      "v": "+ 5,2 points",
       "align": "right"
      }
     ],
@@ -2079,11 +2084,11 @@
       "align": "right"
      },
      {
-      "v": "66,8 %",
+      "v": "62,0 %",
       "align": "right"
      },
      {
-      "v": "+ 8,8 points",
+      "v": "+ 4,0 points",
       "align": "right"
      }
     ],
@@ -2096,11 +2101,11 @@
       "align": "right"
      },
      {
-      "v": "67,8 %",
+      "v": "63,0 %",
       "align": "right"
      },
      {
-      "v": "+ 9,8 points",
+      "v": "+ 5,0 points",
       "align": "right"
      }
     ],
@@ -2113,11 +2118,11 @@
       "align": "right"
      },
      {
-      "v": "**67,7 %**",
+      "v": "**62,7 %**",
       "align": "right"
      },
      {
-      "v": "**+ 9,7 points**",
+      "v": "**+ 4,7 points**",
       "align": "right"
      }
     ]
@@ -2131,7 +2136,7 @@
   {
    "kind": "couvertsCapacite",
    "titre": "Couverts moyens par service et taux d’occupation de 58 %",
-   "sousTitre": "Moyenne des couverts par service, par semaine (cycle mars à février), une ligne par exercice ; les services sans couvert sont exclus de la moyenne. La ligne pointillée marque le repère de 58 % de remplissage de la restauration traditionnelle (Observatoire FIDUCIAL 2025) appliqué à l’espace ouvert : 26 couverts sur les 44 places de l’intérieur (mi-septembre à fin avril), 25 couverts sur les 43 places de la terrasse (début mai à début septembre), un seul espace ouvert à la fois. Cette ligne est un point de comparaison, jamais un plafond : les courbes la dépassent la moitié de l’année.",
+   "sousTitre": "Moyenne des couverts par service, par semaine (cycle mars à février), une ligne par exercice ; les services sans couvert sont exclus de la moyenne. La ligne pointillée marque le repère de 58 % de remplissage de la restauration traditionnelle (Observatoire FIDUCIAL 2025) appliqué à l’espace ouvert : 27 couverts sur les 46 places de l’intérieur (mi-septembre à fin avril), 28 couverts sur les 48 places de la terrasse (début mai à début septembre), un seul espace ouvert à la fois. Cette ligne est un point de comparaison, jamais un plafond : les courbes la dépassent la moitié de l’année.",
    "dataKey": "semaine",
    "series": [
     {
@@ -2785,125 +2790,125 @@
     {
      "x1": 1,
      "x2": 9,
-     "seuil": 26,
+     "seuil": 27,
      "espace": "interieur"
     },
     {
      "x1": 9,
      "x2": 28,
-     "seuil": 25,
+     "seuil": 28,
      "espace": "terrasse"
     },
     {
      "x1": 28,
      "x2": 52,
-     "seuil": 26,
+     "seuil": 27,
      "espace": "interieur"
     }
    ],
-   "seuilInterieur": 26,
-   "seuilTerrasse": 25,
-   "capaciteInterieur": 44,
-   "capaciteTerrasse": 43,
+   "seuilInterieur": 27,
+   "seuilTerrasse": 28,
+   "capaciteInterieur": 46,
+   "capaciteTerrasse": 48,
    "occupationMois": [
     {
      "mois": "Mars",
      "espace": "intérieur",
-     "pct": 49,
-     "pctMidi": 46,
-     "pctSoir": 53
+     "pct": 47,
+     "pctMidi": 44,
+     "pctSoir": 50
     },
     {
      "mois": "Avril",
      "espace": "intérieur",
-     "pct": 61,
-     "pctMidi": 56,
-     "pctSoir": 67
+     "pct": 58,
+     "pctMidi": 53,
+     "pctSoir": 64
     },
     {
      "mois": "Mai",
      "espace": "terrasse",
-     "pct": 71,
-     "pctMidi": 68,
-     "pctSoir": 75
+     "pct": 64,
+     "pctMidi": 61,
+     "pctSoir": 67
     },
     {
      "mois": "Juin",
      "espace": "terrasse",
-     "pct": 73,
-     "pctMidi": 67,
-     "pctSoir": 78
+     "pct": 65,
+     "pctMidi": 60,
+     "pctSoir": 70
     },
     {
      "mois": "Juillet",
      "espace": "terrasse",
-     "pct": 90,
-     "pctMidi": 85,
-     "pctSoir": 96
+     "pct": 81,
+     "pctMidi": 76,
+     "pctSoir": 86
     },
     {
      "mois": "Août",
      "espace": "terrasse",
-     "pct": 89,
-     "pctMidi": 86,
-     "pctSoir": 92
+     "pct": 80,
+     "pctMidi": 77,
+     "pctSoir": 82
     },
     {
      "mois": "Sept.",
      "espace": "intérieur",
-     "pct": 71,
-     "pctMidi": 69,
-     "pctSoir": 73
+     "pct": 68,
+     "pctMidi": 66,
+     "pctSoir": 70
     },
     {
      "mois": "Oct.",
      "espace": "intérieur",
-     "pct": 65,
-     "pctMidi": 61,
-     "pctSoir": 69
+     "pct": 62,
+     "pctMidi": 58,
+     "pctSoir": 66
     },
     {
      "mois": "Nov.",
      "espace": "intérieur",
-     "pct": 51,
-     "pctMidi": 49,
-     "pctSoir": 53
+     "pct": 49,
+     "pctMidi": 46,
+     "pctSoir": 51
     },
     {
      "mois": "Déc.",
      "espace": "intérieur",
-     "pct": 51,
-     "pctMidi": 47,
-     "pctSoir": 56
+     "pct": 49,
+     "pctMidi": 45,
+     "pctSoir": 53
     },
     {
      "mois": "Janv.",
      "espace": "intérieur",
-     "pct": 55,
-     "pctMidi": 54,
-     "pctSoir": 57
+     "pct": 53,
+     "pctMidi": 52,
+     "pctSoir": 54
     },
     {
      "mois": "Févr.",
      "espace": "intérieur",
-     "pct": 42,
-     "pctMidi": 35,
-     "pctSoir": 49
+     "pct": 40,
+     "pctMidi": 34,
+     "pctSoir": 47
     }
    ],
-   "occupationMoyenne": 68,
+   "occupationMoyenne": 63,
    "moyenneFrance": 58,
-   "ecartMoyenneFrancePct": 17
+   "ecartMoyenneFrancePct": 8
   },
   {
    "kind": "note",
-   "texte": "Le « graphique de la réponse » visé p. 36 est celui-ci. Il ne pose aucun plafond : il superpose les couverts réellement comptés en caisse, semaine par semaine, et la ligne du repère de 58 %. Les courbes passent au-dessus de cette ligne de la semaine 13 à la semaine 30 environ, c’est-à-dire tout l’été, et le taux d’occupation moyen des trois exercices ressort à 67,7 %. Le double service est donc déjà inclus dans ce qui est tracé (pièce R2, onglets « Services (source) » et « Occupation (calcul) »)."
+   "texte": "Le « graphique de la réponse » visé p. 36 est celui-ci. Il ne pose aucun plafond : il superpose les couverts réellement comptés en caisse, semaine par semaine, et la ligne du repère de 58 %. Les courbes passent au-dessus de cette ligne de mai à septembre, et les trois exercices le font ensemble de juillet à début septembre (semaines 18 à 28 du graphique) ; le taux d’occupation moyen des trois exercices ressort à 62,7 %. Le double service est donc déjà inclus dans ce qui est tracé (pièce R2, onglets « Services (source) » et « Occupation (calcul) »)."
   },
   {
    "kind": "alerte",
    "couleur": "teal",
    "titre": "Le repère de 58 % est un point de comparaison, jamais un plafond",
-   "texte": "L’objection du service suppose que la défense aurait borné les couverts à 58 % des places et que le double service ferait éclater ce plafond. C’est l’inverse : les couverts sont comptés en caisse, le taux mesuré est de 67,7 %, il dépasse le repère de 9,7 points, et 89 services dépassent 100 % des places. Un taux de remplissage plus élevé que la moyenne nationale ne révèle aucune recette dissimulée : il montre seulement que le restaurant tourne bien, ce que la caisse enregistre."
+   "texte": "L’objection du service suppose que la défense aurait borné les couverts à 58 % des places et que le double service ferait éclater ce plafond. C’est l’inverse : les couverts sont comptés en caisse, le taux mesuré est de 62,7 %, il dépasse le repère de 4,7 points, et 42 services dépassent 100 % des places. Un taux de remplissage plus élevé que la moyenne nationale ne révèle aucune recette dissimulée : il montre seulement que le restaurant tourne bien, ce que la caisse enregistre."
   },
   {
    "kind": "note",
@@ -2911,21 +2916,21 @@
   },
   {
    "kind": "titre",
-   "texte": "La rotation de table est déjà dans les chiffres : 89 services au-delà de 100 % des places",
+   "texte": "La rotation de table est déjà dans les chiffres : 42 services au-delà de 100 % des places",
    "numero": "2.4"
   },
   {
    "kind": "liste",
    "items": [
-    "Un service au-delà de 100 % des places **est** un double service : il n’y a pas d’autre façon de servir 70 couverts sur 43 places. Ces services sont au nombre de **89** sur 1 269 (**7,0 %**), dont **78 en terrasse** et **11 à l’intérieur** (pièce R2, « Occupation (calcul) », lignes 24, 25 et 34).",
-    "Ils se concentrent là où la rotation se produit : **36 en juillet**, **25 en août**, 9 en juin, 8 en mai, 5 en avril, 4 en septembre, 1 en octobre, 1 en décembre (onglet « Services (source) », filtre colonne G > 100).",
-    "Le plus fort est le **midi du samedi 09 juillet 2022** : **34 additions**, **70 couverts** sur 43 places de terrasse, soit **163 %**. Le soir du même jour : **23 additions**, **64 couverts**, **149 %**. La journée totalise **57 additions** et **134 couverts** : c’est la journée la plus chargée des trois exercices, et chaque couvert y est encaissé.",
+    "Un service au-delà de 100 % des places **est** un double service : il n’y a pas d’autre façon de servir 70 couverts sur 48 places. Ces services sont au nombre de **42** sur 1 269 (**3,3 %**), dont **32 en terrasse** et **10 à l’intérieur** (pièce R2, « Occupation (calcul) », lignes 24, 25 et 34).",
+    "Ils se concentrent là où la rotation se produit : **17 en juillet**, **9 en août**, 5 en avril, 4 en juin, 4 en septembre, 2 en mai, 1 en décembre (onglet « Services (source) », filtre colonne G > 100).",
+    "Le plus fort est le **midi du samedi 09 juillet 2022** : **34 additions**, **70 couverts** sur 48 places de terrasse, soit **146 %**. Le soir du même jour : **23 additions**, **64 couverts**, **133 %**. La journée totalise **57 additions** et **134 couverts** : c’est la journée la plus chargée des trois exercices, et chaque couvert y est encaissé.",
     "Autrement dit, les services que le service invoque comme une lacune de la démonstration sont précisément ceux que la démonstration **nomme et chiffre**."
    ]
   },
   {
    "kind": "tableau",
-   "titre": "Les dix services les plus chargés des trois exercices : tous des doubles services, tous comptés (pièce R2, onglet « Services (source) », tri décroissant colonne G)",
+   "titre": "Les douze services les plus chargés des trois exercices (les trois derniers à égalité, 115 %) : tous des doubles services, tous comptés (pièce R2, onglet « Services (source) », tri décroissant colonne G)",
    "minWidth": 940,
    "colonnes": [
     {
@@ -2959,7 +2964,7 @@
       "v": "midi"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
       "v": "34",
@@ -2970,7 +2975,7 @@
       "align": "right"
      },
      {
-      "v": "163 %",
+      "v": "146 %",
       "align": "right"
      }
     ],
@@ -2982,7 +2987,7 @@
       "v": "soir"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
       "v": "23",
@@ -2993,53 +2998,7 @@
       "align": "right"
      },
      {
-      "v": "149 %",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Jeudi 13/07/2023"
-     },
-     {
-      "v": "soir"
-     },
-     {
-      "v": "terrasse (43 places)"
-     },
-     {
-      "v": "39 (journée)",
-      "align": "right"
-     },
-     {
-      "v": "61",
-      "align": "right"
-     },
-     {
-      "v": "142 %",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Mercredi 26/07/2023"
-     },
-     {
-      "v": "soir"
-     },
-     {
-      "v": "terrasse (43 places)"
-     },
-     {
-      "v": "46 (journée)",
-      "align": "right"
-     },
-     {
-      "v": "61",
-      "align": "right"
-     },
-     {
-      "v": "142 %",
+      "v": "133 %",
       "align": "right"
      }
     ],
@@ -3051,7 +3010,7 @@
       "v": "soir"
      },
      {
-      "v": "intérieur (44 places)"
+      "v": "intérieur (46 places)"
      },
      {
       "v": "37 (journée)",
@@ -3062,7 +3021,53 @@
       "align": "right"
      },
      {
-      "v": "136 %",
+      "v": "130 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Jeudi 13/07/2023"
+     },
+     {
+      "v": "soir"
+     },
+     {
+      "v": "terrasse (48 places)"
+     },
+     {
+      "v": "39 (journée)",
+      "align": "right"
+     },
+     {
+      "v": "61",
+      "align": "right"
+     },
+     {
+      "v": "127 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Mercredi 26/07/2023"
+     },
+     {
+      "v": "soir"
+     },
+     {
+      "v": "terrasse (48 places)"
+     },
+     {
+      "v": "46 (journée)",
+      "align": "right"
+     },
+     {
+      "v": "61",
+      "align": "right"
+     },
+     {
+      "v": "127 %",
       "align": "right"
      }
     ],
@@ -3074,7 +3079,7 @@
       "v": "soir"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
       "v": "42 (journée)",
@@ -3085,7 +3090,30 @@
       "align": "right"
      },
      {
-      "v": "135 %",
+      "v": "121 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Dimanche 17/04/2022"
+     },
+     {
+      "v": "soir"
+     },
+     {
+      "v": "intérieur (46 places)"
+     },
+     {
+      "v": "40 (journée)",
+      "align": "right"
+     },
+     {
+      "v": "55",
+      "align": "right"
+     },
+     {
+      "v": "120 %",
       "align": "right"
      }
     ],
@@ -3097,7 +3125,7 @@
       "v": "soir"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
       "v": "38 (journée)",
@@ -3108,7 +3136,7 @@
       "align": "right"
      },
      {
-      "v": "130 %",
+      "v": "117 %",
       "align": "right"
      }
     ],
@@ -3120,7 +3148,7 @@
       "v": "soir"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
       "v": "42 (journée)",
@@ -3131,7 +3159,30 @@
       "align": "right"
      },
      {
-      "v": "130 %",
+      "v": "117 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "Samedi 03/09/2022"
+     },
+     {
+      "v": "soir"
+     },
+     {
+      "v": "intérieur (46 places)"
+     },
+     {
+      "v": "38 (journée)",
+      "align": "right"
+     },
+     {
+      "v": "53",
+      "align": "right"
+     },
+     {
+      "v": "115 %",
       "align": "right"
      }
     ],
@@ -3143,7 +3194,7 @@
       "v": "soir"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
       "v": "36 (journée)",
@@ -3154,7 +3205,7 @@
       "align": "right"
      },
      {
-      "v": "128 %",
+      "v": "115 %",
       "align": "right"
      }
     ],
@@ -3166,7 +3217,7 @@
       "v": "soir"
      },
      {
-      "v": "terrasse (43 places)"
+      "v": "terrasse (48 places)"
      },
      {
       "v": "35 (journée)",
@@ -3177,7 +3228,7 @@
       "align": "right"
      },
      {
-      "v": "128 %",
+      "v": "115 %",
       "align": "right"
      }
     ]
@@ -7533,7 +7584,7 @@
     "**Charge de la preuve.** « La charge de la preuve des graves irrégularités invoquées par l’administration incombe, en tout état de cause, à cette dernière lorsque le litige ou la rectification est soumis au juge » (art. L. 192 du LPF ; BOI-CTX-DG-20-20-10, § 110 et § 170). Dire qu’« il peut y avoir des mêmes tables utilisées deux fois » et que « le taux de remplissage peut largement être augmenté » n’établit rien : aucune journée, aucune table, aucun couvert n’est nommé.",
     "**Gravité requise.** « Le défaut de valeur probante ne peut résulter que d’irrégularités ayant un caractère de gravité indiscutable » (BOI-CF-IOR-10-20, § 90) et le rejet suppose « des présomptions précises et concordantes » (§ 120). Une hypothèse de rotation de table, que la caisse enregistre déjà, n’est ni précise ni concordante.",
     "**Aucun euro n’est rattaché.** Le service ne chiffre, au titre de la partie F, ni couvert ni recette : sa reconstitution part des volumes de liquides puis extrapole la cuisine par un coefficient, sans jamais passer par un décompte de tables ou de couverts. L’observation sur le double service ne soutient donc aucun montant.",
-    "**Ce que la défense ne prétend pas.** Elle ne soutient pas que l’activité serait bornée à 58 % des places, ni que le plan de salle interdirait de servir plus. Elle soutient que les couverts servis sont **comptés en caisse**, qu’ils ressortent à 67,7 % des places, et qu’il appartient au service, s’il conteste ce décompte, de produire le couvert qui y manque."
+    "**Ce que la défense ne prétend pas.** Elle ne soutient pas que l’activité serait bornée à 58 % des places, ni que le plan de salle interdirait de servir plus. Elle soutient que les couverts servis sont **comptés en caisse**, qu’ils ressortent à 62,7 % des places, et qu’il appartient au service, s’il conteste ce décompte, de produire le couvert qui y manque."
    ]
   },
   {
@@ -16401,7 +16452,7 @@
     "Le test du service est **impossible par construction** : une ligne supprimée est, par définition, absente du fichier des lignes de tickets encaissés. C’est précisément ce que prescrit l’inaltérabilité (BOI-TVA-DECLA-30-10-30, § 90) : la correction est enregistrée **à part**, comme évènement daté, et non en réécrivant la note. Chercher la ligne « DEL » dans ticketligne.xls revient à reprocher au logiciel de respecter la règle.",
     "La seule « correspondance » qu’une suppression peut laisser est **monétaire** : son montant est un prix de la carte (99,6 à 99,7 % des 430 763,15 €), ou la somme d’une rafale égale une note re-saisie au centime (61 conversions sur trois exercices : 6 728,50 € supprimés = 6 728,49 € encaissés), ou le prix réapparaît divisé sur plusieurs notes (34 partages). Sur le 09/09/2022 même, le service a sous les yeux 76,90 € et 207,00 € qu’il n’additionne pas.",
     "« À la marge » n’est **pas chiffré**. Le service ne nomme, sur trois exercices, **aucune** suppression dont il établirait qu’elle a soustrait une recette encaissée ; or c’est à lui d’apporter cette preuve (L. 192 du LPF ; BOI-CF-IOR-10-20, § 90 : gravité « indiscutable »).",
-    "Le grief F, lui, est **tranché** sur trois terrains : la numérotation (659 journées sur 659), les tickets à 0,00 € (0,00 € encaissé, 74,6 % à la minute d’un « DEL ») et les couverts (37 373 couverts comptés, 67,7 % d’occupation, 89 services au-delà de 100 % des places). Aucun couvert et aucune recette non déclarés n’en ressortent, et le service n’y rattache aucun montant."
+    "Le grief F, lui, est **tranché** sur trois terrains : la numérotation (659 journées sur 659), les tickets à 0,00 € (0,00 € encaissé, 74,6 % à la minute d’un « DEL ») et les couverts (37 373 couverts comptés, 62,7 % d’occupation, 42 services au-delà de 100 % des places). Aucun couvert et aucune recette non déclarés n’en ressortent, et le service n’y rattache aucun montant."
    ],
    "titre": "Notre réponse"
   },
@@ -16426,7 +16477,7 @@
    "kind": "liste",
    "items": [
     "**Le motif F du rejet de comptabilité** : le numéro de l’export est un rang d’addition (659 journées sur 659), les tables « virtuelles » sont une fonction de règlement que le service juge lui-même « logique », et la suppression de la table d’origine laisse une trace datée (annexe E) et un ticket à 0,00 € (annexe H). Aucune recette n’en sort.",
-    "**L’unique argument nouveau du service, le double service, ne l’atteint pas** : les couverts sont comptés et non plafonnés (37 373 couverts, 1 269 services), la rotation est déjà incluse (89 services au-delà de 100 % des places), et l’occupation mesurée de 67,7 % dépasse de 9,7 points le repère de 58 % que le service invoque sans le contester.",
+    "**L’unique argument nouveau du service, le double service, ne l’atteint pas** : les couverts sont comptés et non plafonnés (37 373 couverts, 1 269 services), la rotation est déjà incluse (42 services au-delà de 100 % des places), et l’occupation mesurée de 62,7 % dépasse de 4,7 points le repère de 58 % que le service invoque sans le contester.",
     "**Aucun euro n’est rattaché à ce grief** : ni couvert, ni recette, ni journée ; le service ne chiffre rien en partie F. Le grief ne sert qu’à alimenter le rejet de comptabilité.",
     "**Ce que le rejet porte** : la reconstitution n’existe que par le rejet. Si le rejet tombe, tombent la base distribuée de **471 826 €** (193 234,55 / 138 863,57 / 139 727,76 €), les rappels société maintenus de **213 148 €** (IS 97 510 + intérêts 4 661 + majoration 39 004 + TVA 49 547 + intérêts 2 607 + majoration 19 819) et les suppléments notifiés aux foyers, **369 648 €** (PASTEUR 196 945 €, BEHEM 172 703 €), soit une exposition de **582 796 €**. Le grief F est l’un des motifs du rejet ; il ne fait pas tomber seul la reconstitution, mais il n’y contribue plus.",
     "**Le terrain des « DEL »** reste celui de la partie A : il est traité ici en euros (430 763,15 € ventilés, 99,6 à 99,7 % au prix de la carte, 32,0 % en quatre fautes de frappe, totalisateur sans rupture, espèces à environ 1 %)."
@@ -16439,9 +16490,9 @@
   {
    "kind": "liste",
    "items": [
-    "**« Le double service augmente le taux de remplissage. »** → Il l’augmente, et il est déjà compté : 89 services sur 1 269 dépassent 100 % des places, jusqu’à 163 % le midi du 09/07/2022 (70 couverts sur 43), et le taux mesuré de 67,7 % dépasse de 9,7 points le repère de 58 %. Le service ne chiffre ni table, ni journée, ni couvert supplémentaire.",
+    "**« Le double service augmente le taux de remplissage. »** → Il l’augmente, et il est déjà compté : 42 services sur 1 269 dépassent 100 % des places, jusqu’à 146 % le midi du 09/07/2022 (70 couverts sur 48), et le taux mesuré de 62,7 % dépasse de 4,7 points le repère de 58 %. Le service ne chiffre ni table, ni journée, ni couvert supplémentaire.",
     "**« Votre taux de 58 % est un plafond arbitraire. »** → Ce n’est pas un plafond mais un point de comparaison avec la profession (Observatoire FIDUCIAL 2025). Il ne borne aucun calcul : le numérateur est compté en caisse, et il passe au-dessus de la ligne tout l’été.",
-    "**« Votre plan de salle n’est pas prouvé. »** → Il repose sur la description de la gérante, vérifiable sur place, et une attestation avec plan coté sera produite. Il n’affecte que le dénominateur : les 37 373 couverts sont comptés sur les annexes C du service, et la démonstration de la numérotation (point 1) ne dépend d’aucun plan de salle.",
+    "**« Votre plan de salle n’est pas prouvé. »** → Les plans de la salle et de la terrasse, dessinés d’après le plan manuscrit de la gérante, sont produits (pièces R2) et se vérifient sur place ; une attestation de la gérante les accompagnera. Il n’affecte que le dénominateur : les 37 373 couverts sont comptés sur les annexes C du service, et la démonstration de la numérotation (point 1) ne dépend d’aucun plan de salle.",
     "**« Les n° 15 à 18 sont des tables virtuelles, et le n° 13 est actif le 14/04/2022. »** → Exact et sans portée : le 14/04/2022 compte 31 additions numérotées 1 à 31 (somme 496 = 31·32/2) ; le n° 13 est la treizième addition, 12h43, 26,45 €, et la n° 14 porte les mêmes articles pour le même montant.",
     "**« Vos 16 624 additions ne collent ni avec 16 607 numéros ni avec 19 903 tickets. »** → 19 903 = 16 624 notes détaillées + 3 279 tickets sans article à 0,00 € ; 16 624 = 16 607 numéros + 17 rangs partagés sur 14 journées nommées. Aucun ticket non nul n’est absent des annexes C.",
     "**« Un ticket à 0,00 € peut cacher une note encaissée en espèces puis vidée. »** → Les 3 281 tickets à 0,00 € encaissent 0,00 € ; 2 449 (74,6 %) se ferment à la minute exacte d’une suppression tracée ; les espèces représentent 0,94 / 1,86 / 1,23 % des règlements ; 3 278 ont une note encaissée de même rang le même jour et les 3 autres sont nommés. Le totalisateur perpétuel de l’annexe H ne présente aucune rupture sur 16 605 tickets.",
@@ -16456,9 +16507,9 @@
   {
    "kind": "liste",
    "items": [
-    "**Plan de salle : pièce à produire.** Le nombre de tables (14 + 14) et de places (44 + 43), l’inexistence des n° 13, 16, 17, 18, le fait qu’un seul espace est ouvert à la fois et l’exclusion des n° 116 et 117 reposent sur la description de la gérante. À apporter : **attestation de la gérante et plan de salle coté**, photos, et le cas échéant la licence ou la déclaration de terrasse. Sans cette pièce, le taux d’occupation reste une mesure dont le dénominateur est déclaratif ; le dire avant que le service ne le relève.",
+    "**Plan de salle : plans produits, attestation à joindre.** Le nombre de tables (14 + 15) et de places (46 + 48), l’absence de table aux n° 13, 16, 17, 18 (intérieur) et 101, 125 (terrasse), le fait qu’un seul espace est ouvert à la fois et l’exclusion des n° 116 et 117 (tables de l’intérieur) reposent sur les plans dessinés d’après la gérante (pièces R2), non cotés. À apporter : **attestation de la gérante**, photos, et le cas échéant la licence ou la déclaration de terrasse. Les plans corrigent la réponse du 08/07/2026 (44 et 43 places) : le dire avant que le service ne le relève.",
     "**Couverts : une estimation, assumée comme telle.** Un couvert = un plat ou un menu encaissé. Les quantités fractionnaires (plats partagés, 0,5) sont comptées comme telles, ce qui donne des couverts non entiers à l’échelle d’un service (exemple : 05/03/2023, 12 notes, 31 couverts dont deux notes à 3,5). Le décompte vaut comme ordre de grandeur homogène sur les trois exercices, pas comme un registre de réservations.",
-    "**Ne pas transformer le repère de 58 % en plafond.** C’est le service qui le lit comme un plafond. Répondre : point de comparaison, taux mesuré 67,7 %, 89 services au-delà de 100 %.",
+    "**Ne pas transformer le repère de 58 % en plafond.** C’est le service qui le lit comme un plafond. Répondre : point de comparaison, taux mesuré 62,7 %, 42 services au-delà de 100 %.",
     "**Jumeau de même numéro** : les tickets à 0,00 € sont numérotés dans leur propre suite 1 … k (annexe H : le 09/09/2022, n° 1 à 9 pour les tickets à zéro, n° 1 à 25 pour les encaissés). La coïncidence « même numéro le même jour » est donc largement mécanique ; l’argument qui porte est le **0,00 € encaissé**, la **minute « DEL »** (74,6 %) et l’absence de tout ticket non nul hors annexe C.",
     "**Rattachement suppression vers note** : reconstruit par date, minute et montant, jamais par pointeur ; sur le jour-test, 2 rafales sur 14 (283,90 € sur 933,80 €) se rattachent à une note-forfait, les 12 autres sont des corrections sans note en regard. Ne pas affirmer que « toutes » les suppressions sont ré-enregistrées.",
     "**Rangs partagés** : 14 journées (3 + 11) où deux additions portent le même rang ; expliquées (compteur relancé), nommées, sans trou. Les citer avant que le service ne les relève. Elles servent aussi d’illustration du double service.",

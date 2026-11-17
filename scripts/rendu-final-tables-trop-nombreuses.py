@@ -61,7 +61,7 @@ EXOS = ["2022-2023", "2023-2024", "2024-2025"]
 C = {e: CAISSE + f"ANNEXE-C{i}_detail-tickets_{e}.xls" for i, e in enumerate(EXOS, 1)}
 F = {e: CAISSE + f"ANNEXE-F{i}_reglements_{e}.xls" for i, e in enumerate(EXOS, 1)}
 
-# Plan de salle RÉEL (confirmé par la gérante) : 14 tables intérieures seulement.
+# Plan de salle RÉEL (plan de la salle dessiné d'après la gérante) : 14 tables intérieures, 46 places.
 # Les numéros 13, 16, 17, 18 ne désignent AUCUNE table physique.
 INT_REELLES = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15]
 INT_INEXISTANTES = [13, 16, 17, 18]
@@ -433,7 +433,7 @@ def construire_xlsx(par_note, matrice, totaux_ys, total_global):
 
     # --- Onglet 3 : Plan de salle reel -----------------------------------
     ws3 = wb.create_sheet("Plan de salle reel")
-    ws3.append(["Plan de salle RÉEL (confirmé par la gérante) contre numérotation de la caisse"])
+    ws3.append(["Plan de salle RÉEL (plans de la salle et de la terrasse dessinés d'après la gérante) contre numérotation de la caisse"])
     ws3["A1"].font = GRAS
     ws3.append([])
     h3 = ws3.max_row + 1
@@ -446,10 +446,12 @@ def construire_xlsx(par_note, matrice, totaux_ys, total_global):
         else:
             note = "Numéro de note (règlement séparé) / non attribué"
             lignes3.append([f"n°{n}", "NON, aucune table", note])
-    lignes3.append(["n°101 à 117 (sauf 102)", "Oui (terrasse)", ""])
-    lignes3.append(["n°102", "NON, aucune table", "N'existe pas"])
+    lignes3.append(["n°101", "NON, aucune table", "N'existe pas"])
+    lignes3.append(["n°102 à 115", "Oui (terrasse)", ""])
+    lignes3.append(["n°116 et 117", "Terrasse, occasionnelle",
+                    "Tables de l'intérieur sorties les seuls jours exceptionnels, hors décompte des places"])
     lignes3.append(["n°125", "NON, aucune table", "N'existe pas"])
-    lignes3.append(["n°116 et 117", "Terrasse, occasionnelle", "Jours de forte affluence"])
+    lignes3.append(["n°126", "Oui (terrasse)", ""])
     for row in lignes3:
         r = ws3.max_row + 1
         ws3.append(row)
@@ -587,14 +589,15 @@ def construire_json(par_note, matrice, totaux_ys, total_global, graph_enc):
 
     # Section graphique capacité (couverts/jour vs 58 %) + valeurs dérivées.
     _cap_section = charge_section_capacite()
-    _cap_int = _cap_section["capaciteInterieur"] if _cap_section else 44
-    _cap_ext = _cap_section["capaciteTerrasse"] if _cap_section else 43
-    _cap_int_58 = _cap_section["seuilInterieur"] if _cap_section else 26
-    _cap_ext_58 = _cap_section["seuilTerrasse"] if _cap_section else 25
+    _cap_int = _cap_section["capaciteInterieur"] if _cap_section else 46
+    _cap_ext = _cap_section["capaciteTerrasse"] if _cap_section else 48
+    _cap_int_58 = _cap_section["seuilInterieur"] if _cap_section else 27
+    _cap_ext_58 = _cap_section["seuilTerrasse"] if _cap_section else 28
 
     # --- Card A : plan de salle réel INTÉRIEUR (numéro != place) ----------
-    # Couverts par table (places assises), confirmés par la gérante.
-    COUV_INT = {1: 2, 2: 4, 3: 2, 4: 4, 5: 4, 6: 4, 7: 2, 8: 2, 9: 4,
+    # Couverts par table (places assises), d'après le plan de la salle dessiné
+    # par la gérante (pièce R2 « Plan de la salle » : 14 tables, 46 couverts).
+    COUV_INT = {1: 4, 2: 4, 3: 2, 4: 4, 5: 4, 6: 4, 7: 2, 8: 2, 9: 4,
                 10: 2, 11: 2, 12: 4, 14: 2, 15: 6}
     tables_int = []
     for n in range(1, 19):
@@ -614,31 +617,33 @@ def construire_json(par_note, matrice, totaux_ys, total_global, graph_enc):
     }
 
     # --- Card A bis : plan de salle réel EXTÉRIEUR (terrasse) ------------
-    # Terrasse réelle = n° 101 à 117 (la n° 102 n'existe pas). Les n° 116 et 117
-    # ne sont montées que les jours de forte affluence -> "rare", exclues du
-    # décompte des places (météo). Aucun de ces numéros n'apparaît dans l'export.
-    COUV_EXT = {101: 2, 103: 2, 104: 4, 105: 4, 106: 4, 107: 2, 108: 4,
-                109: 2, 110: 3, 111: 2, 112: 4, 113: 2, 114: 4, 115: 4}
+    # Terrasse réelle (pièce R2 « Plan de la terrasse », numéros précisés par la
+    # gérante) = n° 102 à 115 et n° 126 : 15 tables, 48 couverts. Les n° 101 et
+    # 125 ne désignent aucune table. Les n° 116 et 117 sont des tables de
+    # l'intérieur sorties les seuls jours exceptionnels -> "rare", exclues du
+    # décompte des places. Aucun de ces numéros n'apparaît dans l'export.
+    COUV_EXT = {102: 2, 103: 2, 104: 4, 105: 4, 106: 4, 107: 4, 108: 4,
+                109: 2, 110: 4, 111: 2, 112: 4, 113: 2, 114: 4, 115: 4, 126: 2}
     METEO_EXT = {116: 2, 117: 2}
     tables_ext = []
-    for n in range(101, 118):  # 101 à 117
-        if n == 102:
-            tables_ext.append({"numero": "n°102", "type": "inexistante", "note": "N'existe pas"})
+    for n in list(range(101, 118)) + [125, 126]:
+        if n in (101, 125):
+            tables_ext.append({"numero": f"n°{n}", "type": "inexistante", "note": "N'existe pas"})
         elif n in METEO_EXT:
             tables_ext.append({"numero": f"n°{n}", "type": "rare", "couverts": METEO_EXT[n],
-                               "note": "Unique pour jours exceptionnels comme 14 juillet et week-end du Chat Gourmand"})
+                               "note": ("Table de l'intérieur sortie les seuls jours exceptionnels "
+                                        "(14 juillet, week-end du Chat Gourmand)")})
         else:
             tables_ext.append({"numero": f"n°{n}", "type": "reelle", "couverts": COUV_EXT[n]})
-    # La n° 125 est citée par le service mais n'existe pas davantage que la 102.
-    tables_ext.append({"numero": "n°125", "type": "inexistante", "note": "N'existe pas"})
     grille_ext = {
         "kind": "grilleTables",
         "variante": "plan",
         "titre": "Plan de salle réel à l'extérieur (terrasse)",
-        "sousTitre": ("La terrasse porte les numéros 101 à 117 (les n° 102 et 125 n'existent pas). "
-                      "Les n° 116 et 117 ne sont montées que les jours de forte affluence : elles "
-                      "sont donc exclues du décompte des places. Aucun de ces numéros de terrasse "
-                      "n'apparaît dans l'export de caisse."),
+        "sousTitre": ("La terrasse compte 15 tables, n° 102 à 115 et n° 126 (les n° 101 et 125 ne "
+                      "désignent aucune table). Les n° 116 et 117 sont des tables de l'intérieur "
+                      "sorties les seuls jours exceptionnels : elles sont donc exclues du décompte "
+                      "des places. Aucun de ces numéros de terrasse n'apparaît dans l'export de "
+                      "caisse."),
         "tables": tables_ext,
         "resume": {"tables": len(COUV_EXT), "couverts": sum(COUV_EXT.values())},
     }
@@ -727,16 +732,18 @@ def construire_json(par_note, matrice, totaux_ys, total_global, graph_enc):
                    "tables.")},
         {"kind": "paragraphe",
          "texte": ("La salle compte en réalité "
-                   f"**{NB_INT_REELLES} tables à l'intérieur** (n° 1 à 12, 14 et 15). Les numéros "
+                   f"**{NB_INT_REELLES} tables à l'intérieur** (n° 1 à 12, 14 et 15) et "
+                   f"**{sum(COUV_INT.values())} places**. Les numéros "
                    "**13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros "
                    "de note (règlement séparé) ou des numéros non attribués. C'est vérifiable sur "
                    "place : il suffit de compter les tables de la salle.")},
         grille_int,
         {"kind": "paragraphe",
-         "texte": ("Même constat à l'extérieur. La terrasse porte les numéros **101 à 117** (les "
-                   "**tables n° 102 et 125 n'existent pas**). Les **tables n° 116 et 117** ne sont "
-                   "montées que les **jours de forte affluence** ; le reste de l'année, elles ne "
-                   "servent pas, et elles sont exclues du décompte des places. **Preuve décisive "
+         "texte": ("Même constat à l'extérieur. La terrasse compte **15 tables**, n° **102 à 115** "
+                   "et n° **126** (les **n° 101 et 125 ne désignent aucune table**). Les **tables "
+                   "n° 116 et 117** sont des tables de l'intérieur sorties les seuls **jours "
+                   "exceptionnels** ; elles n'ajoutent aucune place et sont exclues du décompte "
+                   "des places. **Preuve décisive "
                    "dans les fichiers** : si le numéro de la caisse était un numéro de table, on "
                    "verrait apparaître les numéros "
                    f"de terrasse (101 à 125). Or le numéro de note de l'export ne va **jamais "
@@ -791,8 +798,10 @@ def construire_json(par_note, matrice, totaux_ys, total_global, graph_enc):
         {"kind": "titre", "numero": "2.3",
          "texte": "Troisième fait : la suppression de la table d'origine est nécessaire et protège le CA"},
         {"kind": "paragraphe",
-         "texte": ("Le logiciel n'accepte **qu'un seul règlement par note**. Pour "
-                   "un paiement séparé, le serveur ressaisit les articles d'un convive sur une "
+         "texte": ("La caisse permet bien le règlement d'une note **en plusieurs fois** "
+                   "(plusieurs moyens ou plusieurs paiements). En revanche, lorsque des convives "
+                   "veulent des **notes (ou factures) séparées ne portant que leur propre détail**, "
+                   "le serveur doit ressaisir les articles de chaque convive sur une "
                    "**deuxième note** (la table « virtuelle ») et l'encaisse. Les articles existent "
                    "alors **en double** : sur la table d'origine et sur la note ressaisie. "
                    "Supprimer la table d'origine est donc **arithmétiquement obligatoire pour ne "
@@ -864,7 +873,9 @@ def construire_json(par_note, matrice, totaux_ys, total_global, graph_enc):
             "fichiers_caisse": [os.path.relpath(F[e], ROOT) for e in EXOS],
             "calculs": "src/data/renduFinalCalculs.json (paiements_fractionnes, bancarisation)",
             "cas": "src/data/renduFinalCasSuppressions.json (cas partage)",
-            "plan_salle_reel": "confirmé par la gérante (mémoire tables-physiques-reelles)",
+            "plan_salle_reel": ("plans de la salle et de la terrasse dessinés d'après le plan "
+                                "manuscrit de la gérante (pieces-reponse-2/R2-plan-de-la-salle.png, "
+                                "R2-plan-de-la-terrasse.png)"),
             "script": "scripts/rendu-final-tables-trop-nombreuses.py",
         },
     }

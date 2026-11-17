@@ -25,7 +25,7 @@
       ],
       "calculs": "src/data/renduFinalCalculs.json (paiements_fractionnes, bancarisation)",
       "cas": "src/data/renduFinalCasSuppressions.json (cas partage)",
-      "plan_salle_reel": "confirmé par la gérante (mémoire tables-physiques-reelles)",
+      "plan_salle_reel": "plans de la salle et de la terrasse dessinés d'après le plan manuscrit de la gérante (pieces-reponse-2/R2-plan-de-la-salle.png, R2-plan-de-la-terrasse.png)",
       "script": "scripts/rendu-final-tables-trop-nombreuses.py"
     }
   },
@@ -63,7 +63,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "La salle compte en réalité **14 tables à l'intérieur** (n° 1 à 12, 14 et 15). Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros de note (règlement séparé) ou des numéros non attribués. C'est vérifiable sur place : il suffit de compter les tables de la salle."
+      "texte": "La salle compte en réalité **14 tables à l'intérieur** (n° 1 à 12, 14 et 15) et **46 places**. Les numéros **13, 16, 17 et 18 ne désignent aucune table physique** : ce sont des numéros de note (règlement séparé) ou des numéros non attribués. C'est vérifiable sur place : il suffit de compter les tables de la salle."
     },
     {
       "kind": "grilleTables",
@@ -74,7 +74,7 @@
         {
           "numero": "n°1",
           "type": "reelle",
-          "couverts": 2
+          "couverts": 4
         },
         {
           "numero": "n°2",
@@ -164,28 +164,28 @@
       ],
       "resume": {
         "tables": 14,
-        "couverts": 44
+        "couverts": 46
       }
     },
     {
       "kind": "paragraphe",
-      "texte": "Même constat à l'extérieur. La terrasse porte les numéros **101 à 117** (les **tables n° 102 et 125 n'existent pas**). Les **tables n° 116 et 117** ne sont montées que les **jours de forte affluence** ; le reste de l'année, elles ne servent pas, et elles sont exclues du décompte des places. **Preuve décisive dans les fichiers** : si le numéro de la caisse était un numéro de table, on verrait apparaître les numéros de terrasse (101 à 125). Or le numéro de note de l'export ne va **jamais au-delà de 57** : c'est un **rang de note quotidien** (1ʳᵉ note encaissée, 2ᵉ, etc.), réattribué chaque jour, et non un numéro de table. On ne peut donc rien déduire de « couverts » à partir d'un numéro."
+      "texte": "Même constat à l'extérieur. La terrasse compte **15 tables**, n° **102 à 115** et n° **126** (les **n° 101 et 125 ne désignent aucune table**). Les **tables n° 116 et 117** sont des tables de l'intérieur sorties les seuls **jours exceptionnels** ; elles n'ajoutent aucune place et sont exclues du décompte des places. **Preuve décisive dans les fichiers** : si le numéro de la caisse était un numéro de table, on verrait apparaître les numéros de terrasse (101 à 125). Or le numéro de note de l'export ne va **jamais au-delà de 57** : c'est un **rang de note quotidien** (1ʳᵉ note encaissée, 2ᵉ, etc.), réattribué chaque jour, et non un numéro de table. On ne peut donc rien déduire de « couverts » à partir d'un numéro."
     },
     {
       "kind": "grilleTables",
       "variante": "plan",
       "titre": "Plan de salle réel à l'extérieur (terrasse)",
-      "sousTitre": "La terrasse porte les numéros 101 à 117 (les n° 102 et 125 n'existent pas). Les n° 116 et 117 ne sont montées que les jours de forte affluence : elles sont donc exclues du décompte des places. Aucun de ces numéros de terrasse n'apparaît dans l'export de caisse.",
+      "sousTitre": "La terrasse compte 15 tables, n° 102 à 115 et n° 126 (les n° 101 et 125 ne désignent aucune table). Les n° 116 et 117 sont des tables de l'intérieur sorties les seuls jours exceptionnels : elles sont donc exclues du décompte des places. Aucun de ces numéros de terrasse n'apparaît dans l'export de caisse.",
       "tables": [
         {
           "numero": "n°101",
-          "type": "reelle",
-          "couverts": 2
+          "type": "inexistante",
+          "note": "N'existe pas"
         },
         {
           "numero": "n°102",
-          "type": "inexistante",
-          "note": "N'existe pas"
+          "type": "reelle",
+          "couverts": 2
         },
         {
           "numero": "n°103",
@@ -210,7 +210,7 @@
         {
           "numero": "n°107",
           "type": "reelle",
-          "couverts": 2
+          "couverts": 4
         },
         {
           "numero": "n°108",
@@ -225,7 +225,7 @@
         {
           "numero": "n°110",
           "type": "reelle",
-          "couverts": 3
+          "couverts": 4
         },
         {
           "numero": "n°111",
@@ -256,23 +256,28 @@
           "numero": "n°116",
           "type": "rare",
           "couverts": 2,
-          "note": "Unique pour jours exceptionnels comme 14 juillet et week-end du Chat Gourmand"
+          "note": "Table de l'intérieur sortie les seuls jours exceptionnels (14 juillet, week-end du Chat Gourmand)"
         },
         {
           "numero": "n°117",
           "type": "rare",
           "couverts": 2,
-          "note": "Unique pour jours exceptionnels comme 14 juillet et week-end du Chat Gourmand"
+          "note": "Table de l'intérieur sortie les seuls jours exceptionnels (14 juillet, week-end du Chat Gourmand)"
         },
         {
           "numero": "n°125",
           "type": "inexistante",
           "note": "N'existe pas"
+        },
+        {
+          "numero": "n°126",
+          "type": "reelle",
+          "couverts": 2
         }
       ],
       "resume": {
-        "tables": 14,
-        "couverts": 43
+        "tables": 15,
+        "couverts": 48
       }
     },
     {
@@ -282,7 +287,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Le taux de remplissage moyen d'un restaurant traditionnel en France est de **58 %** (Observatoire FIDUCIAL 2025). Appliqué aux places réelles, cela représente **26 couverts par service à l'intérieur** (44 places) et **25 couverts en terrasse** (43 places). Surtout, **la cuisine est trop petite pour servir à la fois en salle et en terrasse** : un seul espace est ouvert à chaque service. **Du début mai au début septembre**, seule la **terrasse** est utilisée, sauf les jours de pluie où le service se fait à l'intérieur ; **de mi-septembre à fin avril**, seul l'**intérieur** est utilisé."
+      "texte": "Le taux de remplissage moyen d'un restaurant traditionnel en France est de **58 %** (Observatoire FIDUCIAL 2025). Appliqué aux places réelles, cela représente **27 couverts par service à l'intérieur** (46 places) et **28 couverts en terrasse** (48 places). Surtout, **la cuisine est trop petite pour servir à la fois en salle et en terrasse** : un seul espace est ouvert à chaque service. **Du début mai au début septembre**, seule la **terrasse** est utilisée, sauf les jours de pluie où le service se fait à l'intérieur ; **de mi-septembre à fin avril**, seul l'**intérieur** est utilisé."
     },
     {
       "kind": "paragraphe",
@@ -971,115 +976,115 @@
         {
           "x1": 1,
           "x2": 9,
-          "seuil": 26,
+          "seuil": 27,
           "espace": "interieur"
         },
         {
           "x1": 9,
           "x2": 28,
-          "seuil": 25,
+          "seuil": 28,
           "espace": "terrasse"
         },
         {
           "x1": 28,
           "x2": 52,
-          "seuil": 26,
+          "seuil": 27,
           "espace": "interieur"
         }
       ],
-      "seuilInterieur": 26,
-      "seuilTerrasse": 25,
-      "capaciteInterieur": 44,
-      "capaciteTerrasse": 43,
+      "seuilInterieur": 27,
+      "seuilTerrasse": 28,
+      "capaciteInterieur": 46,
+      "capaciteTerrasse": 48,
       "occupationMois": [
         {
           "mois": "Mars",
           "espace": "intérieur",
-          "pct": 49,
-          "pctMidi": 46,
-          "pctSoir": 53
+          "pct": 47,
+          "pctMidi": 44,
+          "pctSoir": 50
         },
         {
           "mois": "Avril",
           "espace": "intérieur",
-          "pct": 61,
-          "pctMidi": 56,
-          "pctSoir": 67
+          "pct": 58,
+          "pctMidi": 53,
+          "pctSoir": 64
         },
         {
           "mois": "Mai",
           "espace": "terrasse",
-          "pct": 71,
-          "pctMidi": 68,
-          "pctSoir": 75
+          "pct": 64,
+          "pctMidi": 61,
+          "pctSoir": 67
         },
         {
           "mois": "Juin",
           "espace": "terrasse",
-          "pct": 73,
-          "pctMidi": 67,
-          "pctSoir": 78
+          "pct": 65,
+          "pctMidi": 60,
+          "pctSoir": 70
         },
         {
           "mois": "Juillet",
           "espace": "terrasse",
-          "pct": 90,
-          "pctMidi": 85,
-          "pctSoir": 96
+          "pct": 81,
+          "pctMidi": 76,
+          "pctSoir": 86
         },
         {
           "mois": "Août",
           "espace": "terrasse",
-          "pct": 89,
-          "pctMidi": 86,
-          "pctSoir": 92
+          "pct": 80,
+          "pctMidi": 77,
+          "pctSoir": 82
         },
         {
           "mois": "Sept.",
           "espace": "intérieur",
-          "pct": 71,
-          "pctMidi": 69,
-          "pctSoir": 73
+          "pct": 68,
+          "pctMidi": 66,
+          "pctSoir": 70
         },
         {
           "mois": "Oct.",
           "espace": "intérieur",
-          "pct": 65,
-          "pctMidi": 61,
-          "pctSoir": 69
+          "pct": 62,
+          "pctMidi": 58,
+          "pctSoir": 66
         },
         {
           "mois": "Nov.",
           "espace": "intérieur",
-          "pct": 51,
-          "pctMidi": 49,
-          "pctSoir": 53
+          "pct": 49,
+          "pctMidi": 46,
+          "pctSoir": 51
         },
         {
           "mois": "Déc.",
           "espace": "intérieur",
-          "pct": 51,
-          "pctMidi": 47,
-          "pctSoir": 56
+          "pct": 49,
+          "pctMidi": 45,
+          "pctSoir": 53
         },
         {
           "mois": "Janv.",
           "espace": "intérieur",
-          "pct": 55,
-          "pctMidi": 54,
-          "pctSoir": 57
+          "pct": 53,
+          "pctMidi": 52,
+          "pctSoir": 54
         },
         {
           "mois": "Févr.",
           "espace": "intérieur",
-          "pct": 42,
-          "pctMidi": 35,
-          "pctSoir": 49
+          "pct": 40,
+          "pctMidi": 34,
+          "pctSoir": 47
         }
       ],
-      "occupationMoyenne": 68,
+      "occupationMoyenne": 63,
       "moyenneFrance": 58,
-      "ecartMoyenneFrancePct": 17
+      "ecartMoyenneFrancePct": 8
     },
     {
       "kind": "titre",

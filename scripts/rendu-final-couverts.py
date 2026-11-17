@@ -561,11 +561,12 @@ def fichier_saisons(encs):
 # 1 ligne par exercice, + bandes de capacite a 58 % (taux d'occupation FIDUCIAL) :
 # zone TERRASSE (debut mai -> 1re semaine de septembre) et zone INTERIEUR (reste).
 # ---------------------------------------------------------------------------
-CAP_INT = 44          # places assises en salle interieure (somme des couverts/table)
-CAP_EXT = 43          # places en terrasse (hors 116/117 occasionnelles)
+CAP_INT = 46          # places assises en salle interieure (plan de la salle : 14 tables, 46 couverts)
+CAP_EXT = 48          # places en terrasse (plan de la terrasse : 15 tables, 48 couverts ;
+                      # 116/117 = tables de l'interieur sorties les jours exceptionnels, non comptees)
 TAUX_OCC = 0.58       # taux de remplissage moyen restauration traditionnelle (FIDUCIAL 2025)
-SEUIL_INT = round(CAP_INT * TAUX_OCC)   # 26
-SEUIL_EXT = round(CAP_EXT * TAUX_OCC)   # 25
+SEUIL_INT = round(CAP_INT * TAUX_OCC)   # 27
+SEUIL_EXT = round(CAP_EXT * TAUX_OCC)   # 28
 MOIS_CYCLE = [(3, "Mars"), (4, "Avr"), (5, "Mai"), (6, "Juin"), (7, "Juil"), (8, "Août"),
               (9, "Sep"), (10, "Oct"), (11, "Nov"), (12, "Déc"), (1, "Jan"), (2, "Fév")]
 
@@ -612,7 +613,7 @@ def fichier_capacite(encs):
         return out
 
     # --- Taux d'occupation par mois (couverts moyens/service / places ouvertes) ---
-    # Espace ouvert : terrasse de mai a aout (43 places), interieur le reste (44).
+    # Espace ouvert : terrasse de mai a aout (48 places), interieur le reste (46).
     def _cap_mois(m):
         return (CAP_EXT, "terrasse") if m in (5, 6, 7, 8) else (CAP_INT, "intérieur")
 
