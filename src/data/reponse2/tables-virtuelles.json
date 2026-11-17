@@ -13,7 +13,7 @@
  },
  "entete": {
   "statut": "demonte",
-  "reponseCourte": "Le numéro porté par l’export de caisse est un rang d’addition quotidien et non un numéro de table (659 journées sur 659, 16 624 additions, numéros de terrasse 101-125 jamais présents), la table « virtuelle » est une note de règlement séparé dont le service admet la logique, la suppression de la table d’origine laisse une ligne « DEL » datée et un ticket à 0,00 €, et le double service n’est pas ignoré mais compté : 37 373 couverts sur 1 269 services, soit 62,7 % des places de l’espace ouvert, 4,7 points au-dessus du repère de 58 % de la profession, dont 42 services au-delà de 100 % des places."
+  "reponseCourte": "Le numéro porté par l’export de caisse est un rang d’addition quotidien et non un numéro de table (659 journées sur 659, 16 624 additions, numéros de terrasse 101 à 126 jamais présents), la table « virtuelle » est une note de règlement séparé dont le service admet la logique, la suppression de la table d’origine laisse une ligne « DEL » datée et un ticket à 0,00 €, et le double service n’est pas ignoré mais compté : 37 373 couverts sur 1 269 services, soit 62,7 % des places de l’espace ouvert, 4,7 points au-dessus du repère de 58 % de la profession, dont 42 services au-delà de 100 % des places."
  },
  "sections": [
   {
@@ -120,7 +120,7 @@
     "**Le grief décrit une fonction de règlement, pas une irrégularité.** Deux convives veulent chacun leur note : les articles sont ressaisis sur une seconde note, donc ils existent en double, donc vider la note d’origine est arithmétiquement obligatoire. Sans cette suppression, le chiffre d’affaires serait compté **deux fois**.",
     "**Le service l’admet** : « La suppression des articles paraît logique pour créer une nouvelle note. » (réponse p. 36). Le motif « trop de tables » perd son objet par l’effet de la réponse elle-même.",
     "**La manipulation laisse deux traces dans les annexes du service** : les lignes « DEL » de l’annexe E (date, heure, montant, identifiant, Z) et un ticket refermé à **0,00 €** dans l’annexe H. Sur trois exercices : **3 281** tickets à 0,00 €, **0,00 €** encaissé, dont **2 449 (74,6 %)** clôturés à la minute exacte d’une suppression « DEL » (pièce R2, onglet « Synthèse 3 ex », lignes 13, 16 et 17).",
-    "**Le numéro de l’export n’est pas un numéro de table** : sur les **659** journées des trois exercices, les numéros forment la suite **1, 2, 3 … n** des additions du jour (659 sur 659, aucun trou), jusqu’à **57**, et les numéros de terrasse **101 à 125 n’apparaissent jamais** (pièce R2, « Synthèse 3 ex », lignes 4 à 12).",
+    "**Le numéro de l’export n’est pas un numéro de table** : sur les **659** journées des trois exercices, les numéros forment la suite **1, 2, 3 … n** des additions du jour (659 sur 659, aucun trou), jusqu’à **57**, et les numéros de terrasse **101 à 126 n’apparaissent jamais** (pièce R2, « Synthèse 3 ex », lignes 4 à 12).",
     "**Aucun couvert et aucune recette n’en ressortent** : le service ne chiffre, au titre de la partie F, ni un couvert, ni un euro, ni une journée."
    ],
    "titre": "Notre réponse, en cinq points"
@@ -142,7 +142,7 @@
     "**Étape 1, la donnée source.** Les annexes C1 à C3 (détail des tickets) donnent, pour chaque addition, la date, l’heure, le numéro affiché et les articles. Périmètre : **659 journées d’ouverture** (221 / 220 / 218) et **16 624 additions**.",
     "**Étape 2, l’opération.** Pour une journée, si les numéros utilisés sont exactement l’ensemble {1, 2, … n}, alors (a) le plus petit vaut **1**, (b) le plus grand vaut **n**, le nombre de numéros attribués, et (c) leur somme vaut **n·(n+1)/2**. Les trois égalités réunies interdisent tout numéro manquant et tout numéro au-delà de n.",
     "**Étape 3, le calcul.** Le test est recalculé par formule pour chacune des 659 journées (pièce R2, onglets « Jours 1/2/3 (calcul) », colonnes B à G, lignes 13 et suivantes : COUNTIFS, MAXIFS, MINIFS, SUMIFS, verdict en colonne G).",
-    "**Étape 4, le résultat.** **659 journées sur 659** vérifient les trois égalités. Corrélation entre le n° le plus élevé et le nombre d’additions : **1,0000 / 0,9997 / 0,9995**. N° le plus élevé observé : **57 / 47 / 42**. Journées où le n° le plus élevé dépasse 18, dernier numéro intérieur de l’écran : **507 sur 659 (76,9 %)**. Numéros 101 à 125 apparus : **0**."
+    "**Étape 4, le résultat.** **659 journées sur 659** vérifient les trois égalités. Corrélation entre le n° le plus élevé et le nombre d’additions : **1,0000 / 0,9997 / 0,9995**. N° le plus élevé observé : **57 / 47 / 42**. Journées où le n° le plus élevé dépasse 18, dernier numéro intérieur de l’écran : **507 sur 659 (76,9 %)**. Numéros 101 à 126 apparus : **0**."
    ]
   },
   {
@@ -290,7 +290,7 @@
      "sub": "76,9 % ; l’écran s’arrête au n° 18"
     },
     {
-     "label": "Numéros de terrasse 101-125 dans l’export",
+     "label": "Numéros de terrasse 101-126 dans l’export",
      "valeur": "0",
      "sub": "sur 16 624 additions, été compris"
     }
@@ -471,7 +471,7 @@
     ],
     [
      {
-      "v": "Numéros de terrasse 101-125 apparus"
+      "v": "Numéros de terrasse 101-126 apparus"
      },
      {
       "v": "0",
@@ -1878,7 +1878,7 @@
   },
   {
    "kind": "note",
-   "texte": "Deux grilles établies d’après les plans de la gérante reproduits ci-dessus. Lecture : 14 tables réelles et 46 places à l’intérieur, 15 tables réelles et 48 places en terrasse, les numéros barrés ne correspondant à aucune table. Les n° 116 et 117, tables de l’intérieur sorties les seuls jours exceptionnels, sont comptées « occasionnelles » et retirées des 48 places. Aucun de ces numéros de terrasse n’apparaît une seule fois dans les annexes C et H des trois exercices."
+   "texte": "Deux grilles établies d’après les plans de la gérante reproduits ci-dessus. Lecture : 14 tables réelles et 46 places à l’intérieur, 15 tables réelles et 48 places en terrasse, les numéros barrés ne correspondant à aucune table. Les n° 116 et 117, tables de l’intérieur sorties les seuls jours exceptionnels, sont comptées « occasionnelles » et ne font pas partie des 48 places. Aucun de ces numéros de terrasse n’apparaît une seule fois dans les annexes C et H des trois exercices."
   },
   {
    "kind": "titre",

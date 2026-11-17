@@ -13,7 +13,7 @@ Réponse construite, fichiers à l'appui :
   (A) LE NUMÉRO N'EST PAS UNE PLACE. La salle réelle compte 14 tables intérieures
       (n° 1 à 12, 14, 15) ; les n° 13, 16, 17, 18 ne désignent AUCUNE table physique.
       Le numéro de note de la caisse va de 1 à 57 : c'est un rang de note quotidien,
-      jamais un numéro de table (les numéros de terrasse 101-125 n'apparaissent JAMAIS
+      jamais un numéro de table (les numéros de terrasse 101-126 n'apparaissent JAMAIS
       dans l'export). On ne peut donc pas déduire des couverts d'un numéro.
   (B) ENCAISSEMENTS PAR NUMÉRO DE NOTE. Pour chaque rang de note (1 à 57), nombre
       d'encaissements, par saison et par exercice. La queue (rangs élevés) ne survient
@@ -746,7 +746,7 @@ def construire_json(par_note, matrice, totaux_ys, total_global, graph_enc):
                    "des places. **Preuve décisive "
                    "dans les fichiers** : si le numéro de la caisse était un numéro de table, on "
                    "verrait apparaître les numéros "
-                   f"de terrasse (101 à 125). Or le numéro de note de l'export ne va **jamais "
+                   f"de terrasse (101 à 126). Or le numéro de note de l'export ne va **jamais "
                    f"au-delà de {max_note}** : c'est un **rang de note quotidien** (1ʳᵉ note "
                    "encaissée, 2ᵉ, etc.), réattribué chaque jour, et non un numéro de table. On ne "
                    "peut donc rien déduire de « couverts » à partir d'un numéro.")},
