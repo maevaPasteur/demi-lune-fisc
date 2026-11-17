@@ -15,7 +15,7 @@ export interface Document {
   niveau: string
   periode: string // "2022-2023"
   fichier: string // chemin relatif sous public/documents (sous-dossier autorisé)
-  format: 'ODS' | 'XLS' | 'PDF' | 'DOCX'
+  format: 'ODS' | 'XLS' | 'PDF' | 'DOCX' | 'PNG'
 }
 
 interface MetaAnnexe {
@@ -367,6 +367,32 @@ export const piecesReponse2: Document[] = [
     periode: '2022-2025',
     fichier: 'pieces-reponse-2/R2-exposition-et-scenarios.xlsx',
     format: 'XLS',
+  },
+  {
+    id: 'PR2-5',
+    annexe: 'REPONSE2',
+    numero: 5,
+    titre: 'Plan de la salle',
+    description:
+      'Salle intérieure : 14 tables, 46 couverts, numéros de caisse 1 à 15 (pas de n° 13). ' +
+      'Schéma redessiné d’après le plan manuscrit de la gérante, non coté.',
+    niveau: 'Plan de salle',
+    periode: '2022-2025',
+    fichier: 'pieces-reponse-2/R2-plan-de-la-salle.png',
+    format: 'PNG',
+  },
+  {
+    id: 'PR2-6',
+    annexe: 'REPONSE2',
+    numero: 6,
+    titre: 'Plan de la terrasse',
+    description:
+      'Terrasse au bord du canal : 15 tables, 48 couverts, numéros de caisse 102 à 115 et 126. ' +
+      'Schéma redessiné d’après le plan manuscrit de la gérante, numéros précisés par elle, non coté.',
+    niveau: 'Plan de salle',
+    periode: '2022-2025',
+    fichier: 'pieces-reponse-2/R2-plan-de-la-terrasse.png',
+    format: 'PNG',
   },
 ]
 

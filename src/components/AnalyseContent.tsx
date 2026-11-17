@@ -943,6 +943,47 @@ function SectionView({ section }: { section: Section }) {
   if (kindX === 'liste') return <ListeView s={section as unknown as ListeSection} />
   if (kindX === 'reproche') return <ReprocheView s={section as unknown as ReprocheSection} />
   if (kindX === 'documents') return <DocumentsView s={section as unknown as DocumentsSection} />
+  // Image(s) de public/documents (plans de salle…), cliquables en plein format.
+  if (kindX === 'images') {
+    const s = section as unknown as {
+      titre?: string
+      images: { fichier: string; alt: string; legende?: string }[]
+      legende?: string
+    }
+    return (
+      <Paper withBorder radius="lg" p={{ base: 'md', sm: 'lg' }} bg="white">
+        {s.titre && (
+          <Text fw={700} mb="sm" ff="heading" fz={{ base: 16, sm: 18 }} c="dark.8">
+            {s.titre}
+          </Text>
+        )}
+        <Stack gap="lg">
+          {s.images.map((im) => (
+            <Stack key={im.fichier} gap={6}>
+              <a href={fileUrl(im.fichier)} target="_blank" rel="noopener noreferrer">
+                <img
+                  src={fileUrl(im.fichier)}
+                  alt={im.alt}
+                  loading="lazy"
+                  style={{ width: '100%', height: 'auto', display: 'block' }}
+                />
+              </a>
+              {im.legende && (
+                <Text size="xs" c="dimmed">
+                  {im.legende}
+                </Text>
+              )}
+            </Stack>
+          ))}
+        </Stack>
+        {s.legende && (
+          <Text size="xs" c="dimmed" mt="sm">
+            {s.legende}
+          </Text>
+        )}
+      </Paper>
+    )
+  }
   // Schéma vectoriel (SVG) rédigé dans la donnée. Hors de l'union typée Section
   // (cast volontaire) pour ne pas toucher au type partagé.
   if ((section as { kind: string }).kind === 'schema') {

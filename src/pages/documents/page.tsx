@@ -428,6 +428,16 @@ function SectionPiecesDefense() {
                   <Text size="sm" c="dimmed">
                     {d.description}
                   </Text>
+                  {d.format === 'PNG' && (
+                    <a href={fileUrl(d.fichier)} target="_blank" rel="noopener noreferrer">
+                      <img
+                        src={fileUrl(d.fichier)}
+                        alt={d.titre}
+                        loading="lazy"
+                        style={{ width: '100%', height: 'auto', borderRadius: 8, border: '1px solid var(--mantine-color-gray-3)', background: 'white', marginTop: 6 }}
+                      />
+                    </a>
+                  )}
                 </Stack>
                 <Button
                   component="a"
@@ -439,7 +449,7 @@ function SectionPiecesDefense() {
                   size="sm"
                   leftSection={<IconDownload size={16} />}
                 >
-                  Télécharger le classeur
+                  {d.format === 'PNG' ? 'Télécharger le plan' : 'Télécharger le classeur'}
                 </Button>
               </Stack>
             </Paper>
@@ -499,7 +509,8 @@ function SectionReponse2() {
         </Group>
         <Text c="dimmed" maw={760}>
           Recalculs de la taxation personnelle des associés, repris des propositions du
-          19/10/2026. Chaque chiffre est sourcé et reproductible.
+          19/10/2026. Chaque chiffre est sourcé et reproductible. Les plans de la salle et de
+          la terrasse appuient le grief des tables « virtuelles ».
         </Text>
         <NiveauBadge niveau="Analyse chiffrée" color="teal" />
         <SimpleGrid cols={{ base: 1, md: 2 }} spacing="md">
