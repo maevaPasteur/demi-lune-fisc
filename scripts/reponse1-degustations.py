@@ -359,9 +359,10 @@ def ecrire_xlsx(par_exo_vin, par_exo, par_vin, notes_exo, n_lignes):
                "attestée par la gérante (attestation n° 147) : une dégustation de 2 cl par vin "
                "nommé et par note, pour tout vin nommé de la carte des vins acheté en bouteille de "
                "75 cl et servi au verre ou au pichet, aucune pour les vins servis depuis un cubi, "
-               "ni pour le crémant et le macvin servis au verre. Reste à préciser, pour "
-               "la part au verre, si la larme est versée dans un verre distinct ou dans le verre "
-               "du client : la présente pièce ne l’établit pas."])
+               "ni pour le crémant et le macvin servis au verre. Pour la part au verre, la "
+               "gérante atteste (point 7) que la larme est versée dans le verre du client, qui "
+               "la goûte, puis que le verre commandé est servi en entier (15 cl) : la larme "
+               "s’ajoute au verre servi."])
     for r in range(ws.max_row - 4, ws.max_row + 1):
         ws.cell(row=r, column=2).alignment = Alignment(vertical="top", wrap_text=True)
     for i, w in enumerate([34, 24] + [13] * 8, 1):

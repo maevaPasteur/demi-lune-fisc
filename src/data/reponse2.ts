@@ -197,7 +197,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Dégustation', titre: 'La dégustation offerte',
     positionService: '',
     reponseCourte:
-      'Les motifs du service (globalisation sur 3 ans, 198 L au BIB, 500 L en bouteilles, « toutes les notes ») tombent ou ne portent que sur un périmètre que nous retirons nous-mêmes, et la pratique de dégustation est attestée par la gérante (attestation n° 147) : 103,38 L sont demandés, verre de Saint Joseph intégré (dont 81,96 L au verre, pour lesquels seul le récipient de la larme reste à préciser, et 21,42 L au pichet) ; la caisse ne trace en propre que 2,15 L de vin nommé à 0 €.',
+      'Les motifs du service (globalisation sur 3 ans, 198 L au BIB, 500 L en bouteilles, « toutes les notes ») tombent ou ne portent que sur un périmètre que nous retirons nous-mêmes, et la pratique de dégustation est attestée par la gérante (attestation n° 147) : 103,38 L sont demandés, verre de Saint Joseph intégré (dont 81,96 L au verre, la larme étant versée dans le verre du client, servi ensuite en entier à 15 cl, et 21,42 L au pichet) ; la caisse ne trace en propre que 2,15 L de vin nommé à 0 €.',
     statut: 'partiel',
   },
   {
