@@ -84,7 +84,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Inventaire de stocks', titre: 'Inventaire de stocks jugé non conforme',
     positionService: '',
     reponseCourte:
-      'La contenance qu’on reproche n’est exigée par aucun texte (R. 123-177 demande l’existence et la valeur, présentes sur chaque ligne), les états photographiés par le vérificateur se vérifient au centime (6 rapprochements nuls sur 6, variation 2023-2024 identique à son compte 310200), aucun euro n’est rattaché au grief et la gravité n’est ni démontrée ni mesurée ; reste non établie par pièce tierce la date du relevé des boissons pour 2025 et 2023.',
+      'La contenance qu’on reproche n’est exigée par aucun texte : l’inventaire doit porter la quantité et la valeur de chaque élément (plan comptable général, art. 912-3), et les états de la société les portent, à quelques lignes près où la quantité est implicite ou coupée au scan. La contenance absente se lit, pour la quasi-totalité des lignes, sur les factures du fournisseur, et le service a attribué une contenance à chaque article de ses annexes 6 et 7. Les états existaient avant la proposition ; les imperfections qu’on y relève, en valeur comme en quantité, représentent en net, en valeur absolue, de 0,2 % à 2,2 % du stock inventorié selon la clôture et la lecture retenue (au plus 4,5 % en valeur brute au 31 mars 2023) et sont sans lien avec les achats ni avec les ventes : elles sont vénielles au sens de la doctrine administrative, et la gravité exigée pour écarter une comptabilité fait défaut.',
     statut: 'partiel',
   },
   {

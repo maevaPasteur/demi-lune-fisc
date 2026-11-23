@@ -7,23 +7,23 @@
    "La concordance SI − SF n'est établie que pour un exercice (2023-2024) et pour les seules boissons ; 2022-2023 est invérifiable de notre côté faute d'inventaire au 31/03/2022 (détenu par le service) ; les variations denrées (+ 526,38 / − 1 646,54 / − 430,25 €) ne sont rapprochées d'aucun état alimentaire détaillé.",
    "La concordance prouve que le service a utilisé les chiffres de nos inventaires ; elle ne prouve pas leur régularité formelle (états datés, signés, exhaustifs, arrêtés à la clôture, non reconstitués a posteriori).",
    "Le récapitulatif du 31/03/2024 imprime « Total : 4 807,60 € » pour une somme de sous-lignes de 4 807,66 € (coquille de 0,06 €) ; la concordance au centime vaut contre la somme des sous-lignes, que le service a reprise.",
-   "Sur 2024-2025 le service a porté −273,41 € là où la convention donne +273,41 € : anomalie favorable au restaurant (546,82 €), non revendiquée.",
-   "Un stock plat exclut une réserve de marchandise non vendue ; il ne tranche pas, à lui seul, le canal des consommations sans vente (service, pertes, cuisine, offerts, sur-versement, ou vente non enregistrée).",
+   "Sur 2024-2025 le tableau de la page 34 porte −273,41 € là où les inventaires datés donnent +273,41 € : signe contraire, dont l'origine (écriture ou report) n'est pas déterminée ; la société tient ses comptes de stock à la disposition du service.",
+   "Un stock stable exclut une réserve de marchandise non vendue ; il ne tranche pas, à lui seul, le canal des consommations sans vente (service, pertes, cuisine, offerts, sur-versement, ou vente non enregistrée).",
    "Les écarts du tableau p. 34 (+ 2 000,00 € en 2023-2024, + 20,00 € en 2024-2025) sont sans incidence sur le chiffre d'affaires reconstitué ; leur portée est probatoire.",
    "Les avoirs non déduits (204,65 € HT / 34,6 L) sont tirés du relevé FCBS de la société ; leur non-imputation au compte 601200 reste à confirmer sur le FEC.",
    "Toute conversion du stock en litres est indéterminée (contenances non imprimées pour plusieurs lignes) et écartée de la démonstration."
   ]
  },
  "entete": {
-  "reponseCourte": "Le point 9 est retiré (gain 0 € : la variation 2023-2024 de −1 029,67 € du service est exactement la différence de nos inventaires datés, et les « environ 2 162 € » du mémoire reposaient sur une convention de signe inversée), mais les propres comptes du service établissent un stock de boissons plat sur trois exercices (variation cumulée −2 103,91 € = 1,48 % de 141 720,38 € d'achats, 98,52 % consommés), bâti sur les inventaires mêmes qu'il déclare non conformes, au moyen d'un tableau de coefficients qui ne s'additionne pas (+ 2 000,00 € et + 20,00 €).",
+  "reponseCourte": "Le point 9 est retiré (gain 0 € : la variation 2023-2024 de −1 029,67 € du service est exactement la différence de nos inventaires datés, et les « environ 2 162 € » du mémoire reposaient sur une convention de signe inversée), mais les propres comptes du service établissent un stock de boissons stable sur trois exercices (variation cumulée −2 103,91 € = 1,48 % de 141 720,38 € d'achats, 98,52 % consommés ; −1 557,09 €, soit 1,10 %, au signe des inventaires pour 2024-2025), bâti sur les inventaires mêmes qu'il déclare non conformes, au moyen d'un tableau de coefficients dont deux entrées diffèrent des annexes 7-2 et 7-3 de la même proposition (2 000,00 € et 20,00 €).",
   "statut": "partiel"
  },
  "sections": [
   {
    "kind": "chapitre",
    "source": "neutre",
-   "titre": "Point 9 : le « volume disponible » et la variation de stock (compte 310200)",
-   "sousTitre": "Le grief d'inversion de signe du mémoire de juillet n'est pas maintenu (gain 0 € sur ce point) ; ce que les comptes du service établissent en revanche, c'est un stock de boissons plat sur trois exercices, bâti sur les inventaires mêmes qu'il déclare non conformes."
+   "titre": "Point 9 : le « volume disponible » et la variation du stock boissons",
+   "sousTitre": "Le grief d'inversion de signe du mémoire de juillet n'est pas maintenu (gain 0 € sur ce point) ; ce que les comptes du service établissent en revanche, c'est un stock de boissons stable sur trois exercices, bâti sur les inventaires mêmes qu'il déclare non conformes."
   },
   {
    "kind": "liste",
@@ -43,7 +43,7 @@
    "kind": "reproche",
    "page": "p. 74 ; proposition p. 14-15, 34-36, 39",
    "resume": [
-    "Le « volume disponible » servant de base à la reconstitution des boissons est obtenu en ajoutant aux achats la variation de stock ; le compte visé dans l'encadré du 04/09/2026 est le 310200 (stock boissons).",
+    "Le « volume disponible » servant de base à la reconstitution des boissons est obtenu en ajoutant aux achats la variation de stock ; l'encadré du 04/09/2026 vise un « compte 310200 » ; les annexes 7 de la proposition rattachent le stock de boissons au compte 312000.",
     "Dans la proposition, les « quantités ou volumes disponibles » sont « les achats de la période amendés des stocks initiaux et finaux » (p. 15), calculés article par article aux annexes 6-1 à 6-3 à partir des inventaires de la société (annexe 1, stocks aux 4 dates).",
     "Les variations de stock boissons retenues sont −800,83 € (2022-2023), −1 029,67 € (2023-2024) et −273,41 € (2024-2025), tableau des coefficients p. 34 et p. 35.",
     "Ces mêmes inventaires sont jugés « incomplets » p. 14 et constituent l'un des motifs de rejet de la comptabilité (« irrégularité grave »), tout en permettant au service « de se faire une idée assez précise des quantités en stocks » (p. 36)."
@@ -344,7 +344,7 @@
    "items": [
     "**Convention de signe (plan comptable, compte 603 « Variations des stocks », règlement ANC n° 2014-03)** : la variation additionnée aux achats est le stock initial diminué du stock final (SI − SF). Un stock qui **augmente** donne une variation **négative** et réduit la consommation ; un stock qui **baisse** donne une variation **positive**. Le mémoire de juillet avait comparé une hausse de stock exprimée positivement à une variation comptable exprimée négativement : l'« inversion » n'existe pas.",
     "**2023-2024, seul exercice dont la société détient les deux termes** : 3 777,99 − 4 807,66 = **−1 029,67 €**, exactement la variation du service (écart 0,00 €) ; pièce R2-variation-stock.xlsx, onglet Calcul, ligne 12.",
-    "**2024-2025** : 4 807,66 − 4 534,25 = **+273,41 €** ; le service a porté **−273,41 €**. Même montant, signe inversé, écart 546,82 €. L'anomalie **minore** le disponible et joue **pour** le restaurant ; la société ne la revendique pas et le dit.",
+    "**2024-2025** : 4 807,66 − 4 534,25 = **+273,41 €** ; le tableau de la page 34 porte **−273,41 €** : même montant, signe contraire, dont l'origine (écriture ou report) n'est pas déterminée ; la société tient ses comptes de stock à la disposition du service.",
     "**2022-2023** : l'inventaire d'ouverture au 31/03/2022 n'est pas dans nos pièces (le service le détient, annexe 1, colonne 31/03/2022) ; le −800,83 € reste invérifié de notre côté.",
     "**Conséquence** : le chiffrage « environ 2 162 € » du mémoire n'est pas maintenu, aucune réduction du volume disponible n'est demandée de ce chef. **Gain sur le point 9 lui-même : 0 €.**"
    ]
@@ -370,7 +370,7 @@
      "align": "right"
     },
     {
-     "label": "Variation du service (310200)",
+     "label": "Variation retenue par le service (p. 34)",
      "align": "right"
     },
     {
@@ -451,7 +451,7 @@
       "align": "right"
      },
      {
-      "v": "même montant, signe inversé par le service ; 546,82 € en faveur du restaurant, non revendiqué",
+      "v": "même montant, signe contraire ; origine non déterminée",
       "align": "right",
       "badge": "ko"
      }
@@ -460,7 +460,7 @@
   },
   {
    "kind": "note",
-   "texte": "* 31/03/2023 : aucun sous-total « boissons » n'est imprimé ; 3 777,99 € = « Boissons sans alcool » 727,70 € + « Alcools et Vins » 3 050,29 € (seul total imprimé : 7 030,61 €, toutes familles). ** 31/03/2024 : le récapitulatif imprime « Total : 4 807,60 € » alors que 870,59 + 3 937,07 = 4 807,66 € ; coquille de 0,06 €. Le service a repris la somme des sous-lignes (4 807,66 €), ce qui montre qu'il a travaillé sur le détail de l'état. La ventilation du mémoire de juillet (3 674,17 / 4 536,41 / 4 533,22 €) est écartée : les pages datées font foi (pièce R2-inventaire-3-exercices.xlsx)."
+   "texte": "* 31/03/2023 : aucun sous-total « boissons » n'est imprimé ; 3 777,99 € = « Boissons sans alcool » 727,70 € + « Alcools et Vins » 3 050,29 € (seul total imprimé : 7 030,61 €, toutes familles). ** 31/03/2024 : le récapitulatif imprime « Total : 4 807,60 € » alors que 870,59 + 3 937,07 = 4 807,66 € ; coquille de 0,06 €. Le service a repris la somme des sous-lignes (4 807,66 €), ce qui montre qu'il a travaillé sur le détail de l'état. La ventilation du mémoire de juillet (3 674,17 / 4 536,41 / 4 533,22 €) est écartée : les pages datées font foi (annexe n° 70)."
   },
   {
    "kind": "alerte",
@@ -500,23 +500,23 @@
   },
   {
    "kind": "liste",
-   "titre": "1.b Sur les propres comptes du service, le stock de boissons est plat : rien n'est mis en réserve, rien n'a été sorti d'une réserve",
+   "titre": "1.b Sur les propres comptes du service, le stock de boissons est stable",
    "items": [
-    "Comptes du service (p. 34-35) : achats boissons 601200 = 48 237,09 + 46 384,45 + 47 098,84 = **141 720,38 €** ; variation 310200 = −800,83 − 1 029,67 − 273,41 = **−2 103,91 €** ; |variation| / achats = **1,48 %** (pièce R2-stock-variation-310200.xlsx, onglet Calcul, ligne 9).",
+    "Comptes du service (p. 34-35) : achats boissons 601200 = 48 237,09 + 46 384,45 + 47 098,84 = **141 720,38 €** ; variation du stock boissons (p. 34) = −800,83 − 1 029,67 − 273,41 = **−2 103,91 €** ; |variation| / achats = **1,48 %** ; au signe des inventaires pour 2024-2025, **−1 557,09 €**, soit **1,10 %** (annexe n° 71, onglet Calcul, ligne 9).",
     "Identité comptable (compte 603, règlement ANC 2014-03) : consommation = achats + variation = **139 616,47 €**, soit **98,52 %** des achats consommés sur trois ans. Aucune année ne dépasse 2,22 % de variation.",
-    "Un exploitant qui accumulerait des bouteilles non vendues verrait son stock **gonfler** ; un exploitant qui en sortirait « au noir » le verrait **chuter**. Ici il est stable aux trois clôtures (3 777,99 / 4 807,66 / 4 534,25 €) : la marchandise achetée a été consommée, elle n'a été ni stockée ni détournée d'une réserve. **Aucune « cave cachée » n'est possible.**",
+    "Un exploitant qui accumulerait des bouteilles non vendues verrait son stock **gonfler** ; un exploitant qui en sortirait « au noir » le verrait **chuter**. Ici il est stable aux trois clôtures (3 777,99 / 4 807,66 / 4 534,25 €) : la quasi-totalité de la marchandise achetée passe en consommation.",
     "Conséquence pour la suite du courrier : les « volumes disparus » que le service calcule aux annexes 7 ne sont pas un manquant physique de stock (sa propre comptabilité matière n'en laisse aucun) ; ils mesurent l'écart entre volume consommé et volume facturé en caisse au tarif par dose, c'est-à-dire des consommations sans vente (service, pertes, cuisine, offerts, sur-versement), poste par poste discutées aux autres points de la même partie du courrier."
    ]
   },
   {
    "kind": "schema",
    "titre": "L'identité achats + variation = consommation, sur les comptes du service (3 exercices)",
-   "svg": "<svg viewBox=\"0 0 766 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Achats boissons 601200</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">141 720,38 €</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">3 exercices, p. 34-35</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><text x=\"187.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">+</text><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Variation stock 310200</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">−2 103,91 €</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= 1,48 % des achats</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">=</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Consommation</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">139 616,47 €</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= 98,52 % des achats</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">donc</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Stock mis en réserve</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">0 €</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stock plat aux 3 clôtures</text></svg>",
-   "legende": "Sources : compte 601200 et compte 310200, proposition p. 34-35 ; calcul par formule dans R2-stock-variation-310200.xlsx, onglet Calcul."
+   "svg": "<svg viewBox=\"0 0 766 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Achats boissons 601200</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">141 720,38 €</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">3 exercices, p. 34-35</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><text x=\"187.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">+</text><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Variation stock boissons</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">−2 103,91 €</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= 1,48 % des achats</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">=</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Consommation</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">139 616,47 €</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">= 98,52 % des achats</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">donc</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Stock mis en réserve</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">0 €</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stock stable aux 3 clôtures</text></svg>",
+   "legende": "Sources : compte 601200 et variation du stock boissons (312000 selon les annexes 7), proposition p. 34-35 ; calcul par formule dans l'annexe n° 71, onglet Calcul."
   },
   {
    "kind": "tableau",
-   "titre": "Le stock boissons rapporté aux achats, lu sur les comptes du service (pièce R2-stock-variation-310200.xlsx, onglet Calcul, lignes 6 à 9)",
+   "titre": "Le stock boissons rapporté aux achats, lu sur les comptes du service (annexe n° 71, onglet Calcul, lignes 6 à 9)",
    "minWidth": 920,
    "colonnes": [
     {
@@ -527,7 +527,7 @@
      "align": "right"
     },
     {
-     "label": "Variation stock 310200",
+     "label": "Variation stock boissons (p. 34)",
      "align": "right"
     },
     {
@@ -651,8 +651,8 @@
   {
    "kind": "schema",
    "titre": "Achats et consommation de boissons par exercice : les deux barres se confondent",
-   "svg": "<svg viewBox=\"0 0 720 300\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"46\" y1=\"20\" x2=\"46\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"246\" x2=\"704\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"105.66666666666669\" y=\"64.30696100000003\" width=\"46\" height=\"181.69303899999997\" rx=\"3\" fill=\"#a0740d\"/><text x=\"128.66666666666669\" y=\"59.30696100000003\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">48,2 k€</text><rect x=\"159.66666666666669\" y=\"67.32342066666666\" width=\"46\" height=\"178.67657933333334\" rx=\"3\" fill=\"#b4452e\"/><text x=\"182.66666666666669\" y=\"62.323420666666664\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">47,4 k€</text><text x=\"155.66666666666669\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2022-2023</text><rect x=\"325.00000000000006\" y=\"71.28523833333335\" width=\"46\" height=\"174.71476166666665\" rx=\"3\" fill=\"#a0740d\"/><text x=\"348.00000000000006\" y=\"66.28523833333335\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">46,4 k€</text><rect x=\"379.00000000000006\" y=\"75.16366200000002\" width=\"46\" height=\"170.83633799999998\" rx=\"3\" fill=\"#b4452e\"/><text x=\"402.00000000000006\" y=\"70.16366200000002\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">45,4 k€</text><text x=\"375.00000000000006\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2023-2024</text><rect x=\"544.3333333333334\" y=\"68.59436933333333\" width=\"46\" height=\"177.40563066666667\" rx=\"3\" fill=\"#a0740d\"/><text x=\"567.3333333333334\" y=\"63.59436933333333\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">47,1 k€</text><rect x=\"598.3333333333334\" y=\"69.62421366666666\" width=\"46\" height=\"176.37578633333334\" rx=\"3\" fill=\"#b4452e\"/><text x=\"621.3333333333334\" y=\"64.62421366666666\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">46,8 k€</text><text x=\"594.3333333333334\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2024-2025</text><rect x=\"46\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#a0740d\"/><text x=\"64\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Achats boissons (601200)</text><rect x=\"226\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#b4452e\"/><text x=\"244\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Consommation = achats + variation (310200)</text><text x=\"12\" y=\"133.0\" transform=\"rotate(-90 12 133.0)\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">euros</text></svg>",
-   "legende": "Consommation = achats 601200 + variation 310200, chiffres du service (p. 34-35), en milliers d'euros ; valeurs exactes dans le tableau ci-dessus. L'écart entre les barres est la variation de stock : 800,83 € / 1 029,67 € / 273,41 €."
+   "svg": "<svg viewBox=\"0 0 720 300\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><line x1=\"46\" y1=\"20\" x2=\"46\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><line x1=\"46\" y1=\"246\" x2=\"704\" y2=\"246\" stroke=\"#cbb98f\" stroke-width=\"1\"/><rect x=\"105.66666666666669\" y=\"64.30696100000003\" width=\"46\" height=\"181.69303899999997\" rx=\"3\" fill=\"#a0740d\"/><text x=\"128.66666666666669\" y=\"59.30696100000003\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">48,2 k€</text><rect x=\"159.66666666666669\" y=\"67.32342066666666\" width=\"46\" height=\"178.67657933333334\" rx=\"3\" fill=\"#b4452e\"/><text x=\"182.66666666666669\" y=\"62.323420666666664\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">47,4 k€</text><text x=\"155.66666666666669\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2022-2023</text><rect x=\"325.00000000000006\" y=\"71.28523833333335\" width=\"46\" height=\"174.71476166666665\" rx=\"3\" fill=\"#a0740d\"/><text x=\"348.00000000000006\" y=\"66.28523833333335\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">46,4 k€</text><rect x=\"379.00000000000006\" y=\"75.16366200000002\" width=\"46\" height=\"170.83633799999998\" rx=\"3\" fill=\"#b4452e\"/><text x=\"402.00000000000006\" y=\"70.16366200000002\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">45,4 k€</text><text x=\"375.00000000000006\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2023-2024</text><rect x=\"544.3333333333334\" y=\"68.59436933333333\" width=\"46\" height=\"177.40563066666667\" rx=\"3\" fill=\"#a0740d\"/><text x=\"567.3333333333334\" y=\"63.59436933333333\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">47,1 k€</text><rect x=\"598.3333333333334\" y=\"69.62421366666666\" width=\"46\" height=\"176.37578633333334\" rx=\"3\" fill=\"#b4452e\"/><text x=\"621.3333333333334\" y=\"64.62421366666666\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#2a2015\">46,8 k€</text><text x=\"594.3333333333334\" y=\"264\" text-anchor=\"middle\" font-size=\"12\" fill=\"#5b5b5b\">2024-2025</text><rect x=\"46\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#a0740d\"/><text x=\"64\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Achats boissons (601200)</text><rect x=\"226\" y=\"273\" width=\"12\" height=\"12\" rx=\"2\" fill=\"#b4452e\"/><text x=\"244\" y=\"283\" font-size=\"11.5\" fill=\"#5b5b5b\">Consommation = achats + variation (stock boissons)</text><text x=\"12\" y=\"133.0\" transform=\"rotate(-90 12 133.0)\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">euros</text></svg>",
+   "legende": "Consommation = achats 601200 + variation du stock boissons, chiffres du service (p. 34-35), en milliers d'euros ; valeurs exactes dans le tableau ci-dessus. L'écart entre les barres est la variation de stock : 800,83 € / 1 029,67 € / 273,41 €."
   },
   {
    "kind": "kpis",
@@ -660,7 +660,7 @@
     {
      "label": "Variation de stock boissons cumulée (3 ans)",
      "valeur": "− 2 103,91 €",
-     "sub": "1,48 % des achats de boissons (141 720,38 €), comptes 310200 et 601200 du service",
+     "sub": "1,48 % des achats de boissons (141 720,38 €), variation du stock boissons et achats 601200, chiffres du service",
      "highlight": true,
      "couleur": "teal"
     },
@@ -677,9 +677,9 @@
      "couleur": "blue"
     },
     {
-     "label": "Stock caché établi par le service",
+     "label": "Réserve de marchandise établie par le service",
      "valeur": "Aucun",
-     "sub": "stock plat aux trois clôtures, comptabilité matière équilibrée",
+     "sub": "stock stable aux trois clôtures",
      "couleur": "blue"
     }
    ]
@@ -688,7 +688,7 @@
    "kind": "liste",
    "titre": "1.c Le service bâtit son « disponible » sur les inventaires qu'il déclare non conformes",
    "items": [
-    "**En euros** : la variation −1 029,67 € portée au compte 310200 est, au centime, la différence des postes boissons de nos récapitulatifs datés du 31/03/2023 et du 31/03/2024. Le service a donc lu et exploité ces états jusqu'au détail de leurs sous-lignes (il reprend 4 807,66 €, somme des sous-lignes, et non le total imprimé 4 807,60 €).",
+    "**En euros** : la variation −1 029,67 € retenue par le service (p. 34) est, au centime, la différence des postes boissons de nos récapitulatifs datés du 31/03/2023 et du 31/03/2024. Le service a donc lu et exploité ces états jusqu'au détail de leurs sous-lignes (il reprend 4 807,66 €, somme des sous-lignes, et non le total imprimé 4 807,60 €).",
     "**En unités** : l'annexe 1 reprend les stocks par article aux quatre dates (31/03/2022 à 31/03/2025) et les annexes 6-1 à 6-3 en déduisent les « disponibles » article par article (ex. La Rouget Blanche 2022-2023 : 184 + 25 − 41 = 168). Toute la reconstitution des volumes part de là (p. 36 : « idée assez précise des quantités en stocks »).",
     "**Et pourtant** (p. 14) : ces mêmes états sont « incomplets », leur « absence » est une « irrégularité grave » et un motif de rejet de la comptabilité.",
     "Portée exacte, à ne pas dépasser : la concordance prouve que le service a **utilisé** les chiffres de ces états ; elle ne prouve pas, à elle seule, leur régularité **formelle** (états datés, signés, exhaustifs, arrêtés à la clôture). La société n'oppose donc pas « les inventaires sont réguliers », elle oppose une **contradiction** : on ne fonde pas un redressement sur des états que l'on déclare dépourvus de valeur. Cette contradiction est établie pour les boissons et pour l'exercice 2023-2024 ; elle ne tranche ni les denrées ni la forme des états."
@@ -697,18 +697,18 @@
   {
    "kind": "schema",
    "titre": "Le circuit des inventaires de la société dans le dossier du service",
-   "svg": "<svg viewBox=\"0 0 766 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Inventaires société</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">3 clôtures</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">31/03/2023, 2024, 2025</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><text x=\"187.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">lus</text><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Repris en euros</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">−1 029,67 €</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">compte 310200, p. 34-35</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">lus</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Repris en unités</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">annexes 1 et 6</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stocks par article</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">et pourtant</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Mêmes états, p. 14</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">rejetés</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">« irrégularité grave »</text></svg>",
-   "legende": "Proposition p. 14 (irrégularité grave), p. 34-35 (compte 310200), p. 36 et 39 (annexes 1 et 6) ; récapitulatifs datés des trois inventaires (PDF joints)."
+   "svg": "<svg viewBox=\"0 0 766 122\" width=\"100%\" style=\"width:100%;height:auto;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\"><rect x=\"14\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7efd9\" stroke=\"#e1c168\" stroke-width=\"1.5\"/><text x=\"89.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Inventaires société</text><text x=\"89.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">3 clôtures</text><text x=\"89.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">31/03/2023, 2024, 2025</text><line x1=\"164\" y1=\"59.0\" x2=\"201\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 201 54.0 L 210 59.0 L 201 64.0 Z\" fill=\"#cbb98f\"/><text x=\"187.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">lus</text><rect x=\"210\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"285.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Repris en euros</text><text x=\"285.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">−1 029,67 €</text><text x=\"285.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">variation, p. 34-35</text><line x1=\"360\" y1=\"59.0\" x2=\"397\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 397 54.0 L 406 59.0 L 397 64.0 Z\" fill=\"#cbb98f\"/><text x=\"383.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">lus</text><rect x=\"406\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#e3f1ee\" stroke=\"#9bccc3\" stroke-width=\"1.5\"/><text x=\"481.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Repris en unités</text><text x=\"481.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">annexes 1 et 6</text><text x=\"481.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">stocks par article</text><line x1=\"556\" y1=\"59.0\" x2=\"593\" y2=\"59.0\" stroke=\"#cbb98f\" stroke-width=\"2\"/><path d=\"M 593 54.0 L 602 59.0 L 593 64.0 Z\" fill=\"#cbb98f\"/><text x=\"579.0\" y=\"51.0\" text-anchor=\"middle\" font-size=\"11\" fill=\"#cbb98f\" font-weight=\"600\">et pourtant</text><rect x=\"602\" y=\"20\" width=\"150\" height=\"78\" rx=\"10\" fill=\"#f7e7e2\" stroke=\"#e3b3a6\" stroke-width=\"1.5\"/><text x=\"677.0\" y=\"42\" text-anchor=\"middle\" font-size=\"12.5\" fill=\"#5b5b5b\">Mêmes états, p. 14</text><text x=\"677.0\" y=\"82\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"700\" fill=\"#2a2015\">rejetés</text><text x=\"677.0\" y=\"92\" text-anchor=\"middle\" font-size=\"10.5\" fill=\"#5b5b5b\">« irrégularité grave »</text></svg>",
+   "legende": "Proposition p. 14 (irrégularité grave), p. 34-35 (variation du stock boissons), p. 36 et 39 (annexes 1 et 6) ; récapitulatifs datés des trois inventaires (PDF joints)."
   },
   {
    "kind": "liste",
-   "titre": "1.d Le tableau des coefficients (p. 34-35), d'où sortent ces variations, n'est pas arithmétiquement vérifié par son auteur",
+   "titre": "1.d Le tableau des coefficients (p. 34-35), d'où sortent ces variations, diffère sur deux entrées des annexes 7 de la même proposition",
    "items": [
-    "La ligne « Coût d'achats des matières des produits vendus » doit être la somme des quatre lignes qui la précèdent (achats denrées + achats boissons + variation denrées + variation boissons). Recalcul par formule (R2-stock-variation-310200.xlsx, onglet « Controle p34 ») :",
+    "La ligne « Coût d'achats des matières des produits vendus » doit être la somme des quatre lignes qui la précèdent (achats denrées + achats boissons + variation denrées + variation boissons). Recalcul par formule (annexe n° 71, onglet « Controle p34 ») :",
     "2022-2023 : 127 473,87 + 48 237,09 + 526,38 − 800,83 = **175 436,51 €** = ligne imprimée (écart 0,00 €).",
-    "2023-2024 : 137 971,41 + 46 384,45 − 1 646,54 − 1 029,67 = **181 679,65 €** ; ligne imprimée **183 679,65 €** : **+ 2 000,00 €** non expliqués. Le coefficient imprimé 2,388 est bien 438 658,43 / 183 679,65 ; avec les lignes imprimées il serait de 2,414.",
-    "2024-2025 : 142 129,11 + 47 098,84 − 430,25 − 273,41 = **188 524,29 €** ; ligne imprimée **188 544,29 €** : **+ 20,00 €**. Coefficient 2,310 inchangé à l'arrondi.",
-    "Sans incidence sur le chiffre d'affaires reconstitué (il n'est pas bâti sur ce tableau), mais le tableau qui sert à qualifier les coefficients de « manifestement très bas » contient deux écarts d'addition, ou une ligne composante erronée : le service ne l'a pas contrôlé."
+    "2023-2024 : 137 971,41 + 46 384,45 − 1 646,54 − 1 029,67 = **181 679,65 €** ; ligne imprimée **183 679,65 €** : **+ 2 000,00 €**, soit exactement l'écart entre les achats de denrées de la page 34 (137 971,41 €) et ceux de l'annexe 7-2 (139 971,41 €). Le coefficient imprimé 2,388 est 438 658,43 / 183 679,65 ; avec les entrées de la page 34 il serait de 2,414.",
+    "2024-2025 : 142 129,11 + 47 098,84 − 430,25 − 273,41 = **188 524,29 €** ; ligne imprimée **188 544,29 €** : **+ 20,00 €**, soit l'écart entre la variation des denrées de la page 34 (− 430,25 €) et celle de l'annexe 7-3 (− 410,25 €). Coefficient 2,310 inchangé à l'arrondi.",
+    "Sans incidence sur le chiffre d'affaires reconstitué (il n'est pas bâti sur ce tableau), mais le tableau qui sert à qualifier les coefficients de « manifestement très bas » ne reprend pas, sur deux entrées, les montants des annexes 7-2 et 7-3 de la même proposition ; avec ces montants, il s'additionne. Il appartient au service de préciser laquelle de ses deux versions il retient."
    ]
   },
   {
@@ -838,7 +838,7 @@
     "**Art. L. 123-12 c. com.** : « Elle doit contrôler par inventaire, au moins une fois tous les douze mois, l'existence et la valeur des éléments actifs et passifs du patrimoine de l'entreprise. » Les trois récapitulatifs datés (31/03/2023, 2024, 2025) sont des inventaires de clôture en valeur ; **art. R. 123-177 c. com.** (cité par le service p. 14) : l'inventaire mentionne la quantité et la valeur de chaque élément à la date d'inventaire.",
     "**BOI-CF-IOR-10-20** (12/09/2012) : § 60, le rejet doit intervenir « à bon escient et avec la plus grande circonspection » ; § 90, « le défaut de valeur probante ne peut résulter que d'irrégularités ayant un caractère de gravité indiscutable » ; § 110, une comptabilité n'est pas rejetée globalement si elle « comporte des inventaires régulièrement établis » ; § 200, « les reconstitutions opérées doivent demeurer dans des limites réalistes au regard des conditions effectives d'exploitation » ([bofip.impots.gouv.fr](https://bofip.impots.gouv.fr/doctrine/BOI-CF-IOR-10-20)).",
     "**Art. L. 192 LPF** (BOI-CTX-DG-20-20-10, § 100 à 170) : l'administration supporte la charge de la preuve, et « la charge de la preuve des graves irrégularités invoquées par l'administration incombe » à celle-ci devant le juge ; la charge ne bascule sur le contribuable que si l'imposition est établie conformément à l'avis de la commission et que la comptabilité comporte de graves irrégularités ([bofip.impots.gouv.fr](https://bofip.impots.gouv.fr/doctrine/BOI-CTX-DG-20-20-10)). Un inventaire que le service exploite au centime est difficilement une « grave irrégularité » au sens de ce texte.",
-    "**CE, 3e ch., 10 juillet 2024, n° 470817** (restaurant) : lorsque le chiffre d'affaires est reconstitué, il appartient à l'entreprise « soit d'établir que la méthode de reconstitution [...] est excessivement sommaire ou radicalement viciée dans son principe », soit de proposer une méthode plus précise ; le juge commet une erreur de droit en écartant les critiques « sans se prononcer sur la méthode alternative de reconstitution des recettes » fondée sur les achats ([conseil-etat.fr](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-07-10/470817)). Le bilan matière en valeur (stock plat, 98,52 % consommés) est une telle méthode alternative, que le service devra examiner.",
+    "**CE, 3e ch., 10 juillet 2024, n° 470817** (restaurant) : lorsque le chiffre d'affaires est reconstitué, il appartient à l'entreprise « soit d'établir que la méthode de reconstitution [...] est excessivement sommaire ou radicalement viciée dans son principe », soit de proposer une méthode plus précise ; le juge commet une erreur de droit en écartant les critiques « sans se prononcer sur la méthode alternative de reconstitution des recettes » fondée sur les achats ([conseil-etat.fr](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2024-07-10/470817)). Le bilan matière en valeur (stock stable, 98,52 % à 98,90 % des achats consommés) est une telle méthode alternative, que le service devra examiner.",
     "**CE, 9e-10e ch., 18 janvier 2017, n° 386458** (restaurant, mentionné aux tables) : méthode « radicalement viciée » lorsque le vérificateur compare les recettes boissons déclarées à des recettes rebâties sur la totalité des achats de vin sans en retrancher la part servie dans les menus « vins compris » ([conseil-etat.fr](https://www.conseil-etat.fr/fr/arianeweb/CE/decision/2017-01-18/386458)). Même logique ici : un « disponible » n'est une base de recettes qu'après déduction de ce qui n'est pas vendu comme boisson."
    ]
   },
@@ -851,12 +851,12 @@
      "label": "R2 - Variation de stock boissons : SI − SF par exercice recalculés par formule depuis les récapitulatifs datés (onglets Sources, Calcul, Méthode) (XLSX)"
     },
     {
-     "fichier": "pieces-reponse-2/R2-stock-variation-310200.xlsx",
-     "label": "R2 - Stock boissons plat : achats 601200 et variation 310200 sur 3 exercices, ratio 1,48 % et part consommée 98,52 % par formule ; onglet « Controle p34 » : recalcul du tableau des coefficients (XLSX)"
+     "fichier": "pieces-lot1/71-R3-variation-de-stock-boissons.xlsx",
+     "label": "Annexe n° 71 : achats et variation du stock de boissons selon les inventaires datés et selon le tableau de la page 34 (1,10 % et 1,48 % des achats), consommation 98,90 % et 98,52 % des achats ; contrôle du tableau de la page 34 au regard des annexes 7-2 et 7-3 (XLSX)"
     },
     {
-     "fichier": "pieces-reponse-2/R2-inventaire-3-exercices.xlsx",
-     "label": "R2 - Inventaire boissons des 3 exercices : stock opposable par clôture recalculé par formule, écart avec la ventilation du mémoire du 10/07/2026 (XLSX)"
+     "fichier": "pieces-lot1/70-R3-inventaire-boissons-valeur-des-pages-datees.xlsx",
+     "label": "Annexe n° 70 : valeur du stock « boissons » des pages datées à chaque clôture, coquille de 0,06 € de la page 2024 (XLSX)"
     },
     {
      "fichier": "pieces-reponse-2/R2-avoirs-fournisseur.xlsx",
@@ -907,9 +907,9 @@
    "kind": "liste",
    "titre": "Notre réponse au point 2",
    "items": [
-    "**Le service tient deux comptabilités matière, et les mélange lui-même.** En euros : compte 310200 (variation −800,83 / −1 029,67 / −273,41 €) au tableau des coefficients p. 34-35 et ligne « 312000 STOCK BOISSONS » du tableau de synthèse des annexes finales. En unités : annexe 1 (stocks par article aux 4 dates) et annexes 6 (« disponibles » par article). L'encadré même du point 9, que le service reproduit sans correction, définit le volume disponible par le compte 310200, compte en euros.",
+    "**Le service tient deux comptabilités matière, et les mélange lui-même.** En euros : variation du stock boissons (−800,83 / −1 029,67 / −273,41 €) au tableau des coefficients p. 34-35, ligne « 312000 STOCK BOISSONS » des annexes 7. En unités : annexe 1 (stocks par article aux 4 dates) et annexes 6 (« disponibles » par article). L'encadré même du point 9, que le service reproduit sans correction, définit le volume disponible par un « compte 310200 », compte en euros.",
     "**L'objection ne répond pas à l'argument, elle le déplace** : dire « vous raisonnez en euros » ne dit ni que le signe retenu est le bon, ni que l'inventaire invoqué est inexact. C'est la société qui a refait la vérification, et c'est elle qui conclut que le signe 2023-2024 est le bon (point 1.a).",
-    "**Elle est en outre sans objet** : le chiffrage en euros du mémoire est retiré. Reste la question utile, qui est en euros chez le service comme chez nous : le stock est-il plat ? Oui, à 1,48 % près (point 1.b).",
+    "**Elle est en outre sans objet** : le chiffrage en euros du mémoire est retiré. Reste la question utile, qui est en euros chez le service comme chez nous : le stock est-il stable ? Oui : sa variation cumulée représente 1,10 % à 1,48 % des achats (point 1.b).",
     "**La société ne produit volontairement aucune reconstitution du stock en litres.** Plusieurs lignes des inventaires (fûts Affligem notamment) ne portent pas de contenance imprimée ; l'unité devrait être déduite du prix unitaire, convention non prouvée par l'état et qui fait varier le résultat de plus d'une centaine de litres selon la lecture (pièce R1 conservée à titre de complément, non revendiquée). C'est précisément pourquoi un stock qui mêle fûts, bouteilles de 75 cl et canettes de 33 cl est **valorisé**, et le compte de stock tenu en euros.",
     "**En unités, le constat est le même qu'en euros** : l'annexe 1 du service reprend nos quantités par article aux quatre dates ; la question de l'unité ne change rien à la source des chiffres, qui sont nos inventaires."
    ]
@@ -936,7 +936,7 @@
    "lignes": [
     [
      {
-      "v": "Euros (compte 310200 / 312000)"
+      "v": "Euros (stock boissons, 312000 selon les annexes 7)"
      },
      {
       "v": "Tableau des coefficients p. 34-35 ; tableau de synthèse des annexes finales ; encadré du point 9 p. 74"
@@ -1013,7 +1013,7 @@
    "items": [
     "**Sur le montant, le maintien est accepté** : la société ne demande aucune correction du volume disponible au titre du point 9 (gain 0 €). Elle le dit avant que le service ne le lui oppose.",
     "**Sur la méthode, le maintien n'est appuyé sur aucune vérification** : la pièce produite n'est pas examinée, le montant n'est pas recalculé, le compte 310200 que l'encadré cite n'est plus mentionné ; le résultat chiffré se trouve être le bon pour 2023-2024, mais le service ne l'a pas établi, il l'a affirmé.",
-    "**Ce que le maintien laisse sans réponse** : (1) un stock plat à 1,48 % près, qui exclut toute réserve de marchandise non vendue (point 1.b) ; (2) l'usage, en euros et en unités, des inventaires déclarés non conformes (point 1.c) ; (3) deux écarts d'addition dans le tableau des coefficients (point 1.d) ; (4) trois avoirs non déduits, 204,65 € HT / 34,6 L (point 1.e).",
+    "**Ce que le maintien laisse sans réponse** : (1) un stock stable, à 1,10 % à 1,48 % des achats près (point 1.b) ; (2) l'usage, en euros et en unités, des inventaires déclarés non conformes (point 1.c) ; (3) deux entrées du tableau des coefficients qui diffèrent des annexes 7-2 et 7-3 (point 1.d) ; (4) trois avoirs non déduits, 204,65 € HT / 34,6 L (point 1.e).",
     "**Charge de la preuve** (art. L. 192 LPF ; BOI-CTX-DG-20-20-10 § 170) : c'est à l'administration d'établir les graves irrégularités qu'elle invoque ; un état d'inventaire dont elle reprend les chiffres au centime et dont elle dit qu'il lui donne « une idée assez précise des quantités en stocks » (p. 36) ne peut pas être, dans le même acte, une « irrégularité grave ».",
     "**Méthode alternative** (CE 10/07/2024 n° 470817) : le bilan matière en valeur, achats + variation = consommation, est une méthode fondée sur les achats que le service doit examiner au lieu de l'écarter par une objection d'unité."
    ]
@@ -1031,8 +1031,8 @@
      "label": "Observations du contribuable (mémoire de Me THIVEND, juillet 2026) : point 9 et chiffrage d'environ 2 162 € non maintenu (PDF)"
     },
     {
-     "fichier": "pieces-reponse-2/R2-stock-variation-310200.xlsx",
-     "label": "R2 - Stock boissons plat : achats 601200 et variation 310200 sur 3 exercices, ratio 1,48 % et part consommée 98,52 % par formule ; onglet « Controle p34 » : recalcul du tableau des coefficients (XLSX)"
+     "fichier": "pieces-lot1/71-R3-variation-de-stock-boissons.xlsx",
+     "label": "Annexe n° 71 : achats et variation du stock de boissons selon les inventaires datés et selon le tableau de la page 34 (1,10 % et 1,48 % des achats), consommation 98,90 % et 98,52 % des achats ; contrôle du tableau de la page 34 au regard des annexes 7-2 et 7-3 (XLSX)"
     }
    ]
   },
@@ -1043,8 +1043,8 @@
   {
    "kind": "liste",
    "items": [
-    "**Sur le point 9 lui-même : rien, 0 €.** Le volume disponible du service n'est pas réduit ; le chiffrage d'environ 2 162 € est retiré ; la variation 2023-2024 (−1 029,67 €) est concordante, celle de 2024-2025 (−273,41 €) est inversée en faveur du restaurant et non revendiquée, celle de 2022-2023 (−800,83 €) n'est pas vérifiable sans l'inventaire au 31/03/2022.",
-    "**Ce qui tombe ailleurs, par ricochet** : (1) l'hypothèse d'une réserve de marchandise non vendue (« cave cachée ») est exclue par les comptes du service, 98,52 % des achats de boissons étant consommés ; (2) le motif de rejet tiré de la non-conformité des inventaires (p. 14) ne peut coexister sans réserve avec leur exploitation au centime et article par article ; (3) le tableau des coefficients qui qualifie la comptabilité de « non sincère » contient deux écarts d'addition (+ 2 000,00 € et + 20,00 €) ; (4) le disponible 2024-2025 est surévalué de 204,65 € HT / 34,6 L d'avoirs non déduits.",
+    "**Sur le point 9 lui-même : rien, 0 €.** Le volume disponible du service n'est pas réduit ; le chiffrage d'environ 2 162 € est retiré ; la variation 2023-2024 (−1 029,67 €) est concordante, celle de 2024-2025 (−273,41 €) est de signe contraire à celui des inventaires, sans que l'origine de ce signe soit déterminée, celle de 2022-2023 (−800,83 €) n'est pas vérifiable sans l'inventaire au 31/03/2022.",
+    "**Ce qui tombe ailleurs, par ricochet** : (1) le stock de boissons est stable selon les comptes du service, 98,52 % à 98,90 % des achats de boissons étant consommés ; (2) le motif de rejet tiré de la non-conformité des inventaires (p. 14) ne peut coexister sans réserve avec leur exploitation article par article ; (3) le tableau des coefficients qui qualifie la comptabilité de « non sincère » diffère sur deux entrées des annexes 7-2 et 7-3 de la même proposition (2 000,00 € et 20,00 €) ; (4) le disponible 2024-2025 est surévalué de 204,65 € HT / 34,6 L d'avoirs non déduits.",
     "**Chiffrable en euros de redressement** : aucun de ces quatre effets ne se convertit directement en droits ou pénalités sur cette page ; leur valeur est probatoire (gravité du rejet, réalisme de la reconstitution, charge de la preuve) et sert les points qui, eux, sont chiffrés."
    ]
   },
@@ -1055,11 +1055,11 @@
   {
    "kind": "liste",
    "items": [
-    "**« Votre démonstration est en euros, notre reconstitution en volumes. »** → Le compte 310200 est en euros et c'est lui que l'encadré du point 9 cite ; le tableau p. 34-35 et les annexes finales sont en euros ; l'annexe 1 en unités reprend les mêmes inventaires. Et le chiffrage en euros est retiré : l'objection n'a plus d'objet.",
+    "**« Votre démonstration est en euros, notre reconstitution en volumes. »** → Le compte de stock que cite l'encadré du point 9 est tenu en euros ; le tableau p. 34-35 et les annexes finales sont en euros ; l'annexe 1 en unités reprend les mêmes inventaires. Et le chiffrage en euros est retiré : l'objection n'a plus d'objet.",
     "**« La concordance au centime prouve que les inventaires sont réguliers, donc la partie E tombe : vous allez trop loin. »** → La société ne le soutient pas. Elle oppose une contradiction (exploiter un état et le déclarer sans valeur), établie pour les boissons et l'exercice 2023-2024 ; la régularité formelle (date, signature, exhaustivité) et les inventaires de denrées (+ 526,38 / − 1 646,54 / − 430,25 €) restent à justifier séparément.",
     "**« Le récapitulatif 2024 imprime 4 807,60 €, pas 4 807,66 € : vos états sont faux de 0,06 €. »** → Exact et dit par la société : coquille de 0,06 € entre total imprimé et somme des sous-lignes. Le service a repris la somme des sous-lignes (4 807,66 €) : c'est la preuve qu'il a travaillé sur le détail de l'état.",
-    "**« Appliquée à 2024-2025, votre propre convention augmenterait la base. »** → Exact : + 273,41 € au lieu de − 273,41 €, soit 546,82 € de disponible en plus sur cet exercice. La société le signale elle-même et n'en tire aucune demande ; l'asymétrie est à l'avantage du restaurant.",
-    "**« Un stock plat n'exclut pas des ventes non enregistrées : la marchandise consommée a pu être vendue sans ticket. »** → Exact, et la page ne dit pas le contraire : le stock plat exclut le stockage et le détournement d'une réserve, pas la question du canal de consommation. Mais il impose que tout « volume disparu » soit expliqué comme consommation (service, pertes, cuisine, offerts, sur-versement) ou comme vente, jamais comme stock ; et c'est au service d'établir la vente (L. 192 LPF), poste par poste, avec une méthode qui ne soit pas « radicalement viciée » (CE 386458) et après examen de la méthode alternative (CE 470817).",
+    "**« Appliquée à 2024-2025, votre propre convention augmenterait la base. »** → Exact : au signe des inventaires (+ 273,41 €), le disponible de 2024-2025 augmente de 546,82 € ; sur l'ensemble de la période, la prise en compte des stocks le réduit. La méthode du service (« achats + stock initial - stock final = disponibles ») impose cette prise en compte ; la société tient ses comptes de stock à la disposition du service pour établir l'origine du signe.",
+    "**« Un stock stable n'exclut pas des ventes non enregistrées : la marchandise consommée a pu être vendue sans ticket. »** → Exact, et la page ne dit pas le contraire : le stock stable exclut le stockage et le détournement d'une réserve, pas la question du canal de consommation. Mais il impose que tout « volume disparu » soit expliqué comme consommation (service, pertes, cuisine, offerts, sur-versement) ou comme vente, jamais comme stock ; et c'est au service d'établir la vente (L. 192 LPF), poste par poste, avec une méthode qui ne soit pas « radicalement viciée » (CE 386458) et après examen de la méthode alternative (CE 470817).",
     "**« Les 2 000 € et 20 € du tableau p. 34 sont des coquilles sans effet sur le redressement. »** → Sans effet sur le chiffre d'affaires reconstitué, c'est exact ; mais le tableau sert à qualifier la comptabilité de « non sincère » et son coefficient 2023-2024 passe de 2,388 à 2,414 une fois ses propres lignes additionnées. Un tableau non vérifié ne qualifie pas la sincérité d'un autre."
    ]
   },
@@ -1073,8 +1073,8 @@
     "Ne pas rouvrir le chiffrage de 2 162 € : il est faux (convention de signe inversée, ventilation p. 31 écartée) et le service pourrait s'en servir pour discréditer le reste. Le dire en premier.",
     "Ne pas dire « les inventaires sont exacts au centime » : dire « le service a repris nos inventaires au centime ». La régularité formelle des états n'est pas démontrée par cette page.",
     "Pièce à obtenir du cabinet comptable : l'inventaire au 31/03/2022 (le service le détient, annexe 1, colonne 31/03/2022), seul moyen de vérifier le −800,83 € de 2022-2023 ; et les états détaillés de denrées, sans quoi les variations denrées restent non rapprochées.",
-    "Le −273,41 € de 2024-2025 joue pour le restaurant : ne pas le contester, ne pas le passer sous silence non plus (le signaler coupe l'objection d'asymétrie).",
-    "Les 2 000,00 € et 20,00 € du tableau p. 34 sont des écarts d'addition dans un document imprimé : à présenter comme un défaut de contrôle du tableau, pas comme une manipulation.",
+    "Le −273,41 € de 2024-2025 est de signe contraire à celui des inventaires et son origine n'est pas déterminée : s'en tenir à ce constat.",
+    "Les 2 000,00 € et 20,00 € du tableau p. 34 sont les écarts entre ce tableau et les annexes 7-2 et 7-3 : demander au service la version qu'il retient.",
     "Les avoirs (204,65 € HT / 34,6 L) reposent sur le relevé FCBS de la société ; vérifier avant la réunion que ces trois avoirs n'ont pas été passés au crédit du compte 601200 dans le FEC, sinon l'argument tombe.",
     "Toute conversion du stock en litres est à écarter si le service la demande : les contenances ne sont pas toutes imprimées sur les états (fûts Affligem), et une convention déduite du prix n'est pas une pièce."
    ]
@@ -1088,12 +1088,12 @@
      "label": "R2 - Variation de stock boissons : SI − SF par exercice recalculés par formule depuis les récapitulatifs datés (onglets Sources, Calcul, Méthode) (XLSX)"
     },
     {
-     "fichier": "pieces-reponse-2/R2-stock-variation-310200.xlsx",
-     "label": "R2 - Stock boissons plat : achats 601200 et variation 310200 sur 3 exercices, ratio 1,48 % et part consommée 98,52 % par formule ; onglet « Controle p34 » : recalcul du tableau des coefficients (XLSX)"
+     "fichier": "pieces-lot1/71-R3-variation-de-stock-boissons.xlsx",
+     "label": "Annexe n° 71 : achats et variation du stock de boissons selon les inventaires datés et selon le tableau de la page 34 (1,10 % et 1,48 % des achats), consommation 98,90 % et 98,52 % des achats ; contrôle du tableau de la page 34 au regard des annexes 7-2 et 7-3 (XLSX)"
     },
     {
-     "fichier": "pieces-reponse-2/R2-inventaire-3-exercices.xlsx",
-     "label": "R2 - Inventaire boissons des 3 exercices : stock opposable par clôture recalculé par formule, écart avec la ventilation du mémoire du 10/07/2026 (XLSX)"
+     "fichier": "pieces-lot1/70-R3-inventaire-boissons-valeur-des-pages-datees.xlsx",
+     "label": "Annexe n° 70 : valeur du stock « boissons » des pages datées à chaque clôture, coquille de 0,06 € de la page 2024 (XLSX)"
     },
     {
      "fichier": "pieces-reponse-2/R2-avoirs-fournisseur.xlsx",
