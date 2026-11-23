@@ -649,9 +649,9 @@
    "kind": "kpis",
    "items": [
     {
-     "label": "Mentions exigées (Code de commerce, plan comptable général)",
+     "label": "Mentions exigées par les textes",
      "valeur": "Quantité et valeur",
-     "sub": "portées sur les lignes des trois états",
+     "sub": "Code de commerce et plan comptable général ; portées sur les lignes des trois états",
      "couleur": "teal",
      "highlight": true
     },
@@ -1547,7 +1547,7 @@
     {
      "label": "Variation cumulée de stock / achats (3 exercices)",
      "valeur": "1,10 % à 1,48 %",
-     "sub": "inventaires datés (- 1 557,09 €) ou tableau p. 34 (- 2 103,91 €), sur 141 720,38 € d’achats",
+     "sub": "en valeur absolue : 1 557,09 € (inventaires datés) ou 2 103,91 € (tableau p. 34), sur 141 720,38 € d’achats",
      "couleur": "teal",
      "highlight": true
     },
@@ -1725,8 +1725,8 @@
     },
     {
      "label": "Différence de CA entre les deux exports, 3 exercices",
-     "valeur": "0,00 / 288,20 / 737,10 €",
-     "sub": "sur 403 370 / 437 993 / 434 828 € : au plus 0,17 %",
+     "valeur": "0,00 / 288,20 / 737,10",
+     "sub": "euros, sur 403 370 / 437 993 / 434 828 € de chiffre d’affaires : au plus 0,17 %",
      "couleur": "teal",
      "highlight": true
     },
@@ -1843,9 +1843,203 @@
    "items": [
     "Aucune impossibilité de contrôle n’est alléguée : la reconstitution a été menée à son terme sur les quantités de ces inventaires. **Aucun montant de rectification n’est rattaché à ce grief**, ni dans la proposition ni dans la réponse.",
     "Les erreurs d’addition et de valorisation relevées sur les états d’origine sont recensées au tableau des erreurs : nettes, elles représentent, en valeur absolue, de 0,2 % à 2,2 % du stock inventorié selon la clôture et la lecture retenue, et jouent dans les deux sens. Aucune ne porte sur un achat ou sur une vente.",
-    "La valeur du stock « boissons » de chaque clôture est celle des pages récapitulatives : 3 777,99 € au 31 mars 2023 ; 4 807,66 € au 31 mars 2024 (somme des deux lignes de la page, qui imprime 4 807,60 €) ; 4 534,25 € au 31 mars 2025 (4 544,25 € après correction du pied du folio 2/5) (annexe n° 70, onglet « Calcul », lignes 4 à 6). Les totaux de la transcription jointe au mémoire du 10 juillet 2026 sont écartés."
+    "La valeur du stock « boissons » de chaque clôture est celle des pages récapitulatives (tableau ci-dessous). Les totaux de la transcription jointe au mémoire du 10 juillet 2026 sont écartés."
    ],
    "titre": "Ce que le service n’a pas fait, et la mesure des erreurs relevées"
+  },
+  {
+   "kind": "tableau",
+   "titre": "Erreurs relevées sur les états d’origine, rapportées au stock inventorié (annexe n° 154, onglets « Erreurs » et « Synthese »)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Clôture"
+    },
+    {
+     "label": "Stock inventorié (page 1)",
+     "align": "right"
+    },
+    {
+     "label": "Effet net, selon la lecture",
+     "align": "right"
+    },
+    {
+     "label": "Net en % du stock",
+     "align": "right"
+    },
+    {
+     "label": "Brut (lecture maximale)",
+     "align": "right"
+    },
+    {
+     "label": "Brut en % du stock",
+     "align": "right"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "31/03/2023"
+     },
+     {
+      "v": "7 030,61 €",
+      "align": "right"
+     },
+     {
+      "v": "- 152,69 € à + 13,19 €",
+      "align": "right"
+     },
+     {
+      "v": "0,19 % à 2,17 %",
+      "align": "right"
+     },
+     {
+      "v": "318,57 €",
+      "align": "right"
+     },
+     {
+      "v": "4,53 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "31/03/2024"
+     },
+     {
+      "v": "9 873,07 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 54,14 € à + 62,92 €",
+      "align": "right"
+     },
+     {
+      "v": "0,55 % à 0,64 %",
+      "align": "right"
+     },
+     {
+      "v": "94,42 €",
+      "align": "right"
+     },
+     {
+      "v": "0,96 %",
+      "align": "right"
+     }
+    ],
+    [
+     {
+      "v": "31/03/2025"
+     },
+     {
+      "v": "9 774,17 €",
+      "align": "right"
+     },
+     {
+      "v": "+ 59,24 € à + 60,12 €",
+      "align": "right"
+     },
+     {
+      "v": "0,61 % à 0,62 %",
+      "align": "right"
+     },
+     {
+      "v": "80,78 €",
+      "align": "right"
+     },
+     {
+      "v": "0,83 %",
+      "align": "right"
+     }
+    ]
+   ]
+  },
+  {
+   "kind": "tableau",
+   "titre": "Valeur du stock « boissons » des pages datées (annexe n° 70, onglet « Calcul », lignes 4 à 6)",
+   "minWidth": 900,
+   "colonnes": [
+    {
+     "label": "Clôture"
+    },
+    {
+     "label": "Boissons sans alcool",
+     "align": "right"
+    },
+    {
+     "label": "Alcools et vins",
+     "align": "right"
+    },
+    {
+     "label": "Stock boissons",
+     "align": "right"
+    },
+    {
+     "label": "Observation"
+    }
+   ],
+   "lignes": [
+    [
+     {
+      "v": "31/03/2023"
+     },
+     {
+      "v": "727,70 €",
+      "align": "right"
+     },
+     {
+      "v": "3 050,29 €",
+      "align": "right"
+     },
+     {
+      "v": "3 777,99 €",
+      "align": "right"
+     },
+     {
+      "v": "la page n’imprime que le total toutes familles (7 030,61 €)"
+     }
+    ],
+    [
+     {
+      "v": "31/03/2024"
+     },
+     {
+      "v": "870,59 €",
+      "align": "right"
+     },
+     {
+      "v": "3 937,07 €",
+      "align": "right"
+     },
+     {
+      "v": "4 807,66 €",
+      "align": "right"
+     },
+     {
+      "v": "la page imprime « Total : 4 807.60 € », coquille de 0,06 €"
+     }
+    ],
+    [
+     {
+      "v": "31/03/2025"
+     },
+     {
+      "v": "765,74 €",
+      "align": "right"
+     },
+     {
+      "v": "3 768,51 €",
+      "align": "right"
+     },
+     {
+      "v": "4 534,25 €",
+      "align": "right"
+     },
+     {
+      "v": "lignes comptées : 4 544,25 € ; le pied du folio 2/5 est inférieur de 10,00 € à la somme de ses lignes (annexe n° 154)"
+     }
+    ]
+   ]
   },
   {
    "kind": "kpis",
