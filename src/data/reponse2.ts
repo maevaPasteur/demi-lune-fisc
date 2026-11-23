@@ -221,7 +221,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Variation de stock', titre: 'La variation de stock',
     positionService: '',
     reponseCourte:
-      'Le point 9 est retiré (gain 0 € : la variation 2023-2024 de −1 029,67 € du service est exactement la différence de nos inventaires datés, et les « environ 2 162 € » du mémoire reposaient sur une convention de signe inversée), mais les propres comptes du service établissent un stock de boissons plat sur trois exercices (variation cumulée −2 103,91 € = 1,48 % de 141 720,38 € d\'achats, 98,52 % consommés), bâti sur les inventaires mêmes qu\'il déclare non conformes, au moyen d\'un tableau de coefficients qui ne s\'additionne pas (+ 2 000,00 € et + 20,00 €).',
+      'Le point 9 est retiré (gain 0 € : la variation 2023-2024 de −1 029,67 € du service est exactement la différence de nos inventaires datés, et les « environ 2 162 € » du mémoire reposaient sur une convention de signe inversée), mais les propres comptes du service établissent un stock de boissons stable sur trois exercices (variation cumulée −2 103,91 € = 1,48 % de 141 720,38 € d\'achats, 98,52 % consommés ; −1 557,09 €, soit 1,10 %, au signe des inventaires pour 2024-2025), bâti sur les inventaires mêmes qu\'il déclare non conformes, au moyen d\'un tableau de coefficients dont deux entrées diffèrent des annexes 7-2 et 7-3 de la même proposition (2 000,00 € et 20,00 €).',
     statut: 'partiel',
   },
   {
