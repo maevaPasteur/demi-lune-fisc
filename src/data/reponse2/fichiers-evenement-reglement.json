@@ -262,7 +262,7 @@
           "label": "Annexe E-1 : journal des événements 2022-2023 (structure du fichier : date, heure, caissier, ticket Z, montant, id)"
         }
       ],
-      "intro": "Le certificat ou l'attestation du 01/12/2018 n'est pas au dossier numérique communiqué : il est à obtenir du cabinet comptable ou de l'éditeur AKEAD avant la réunion (voir points de vigilance). Sources de droit : [BOI-TVA-DECLA-30-10-30, version du 19/05/2021](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) ; [actualité BOFiP du 16/04/2025, LF 2025 art. 43](https://bofip.impots.gouv.fr/bofip/14667-PGP.html/ACTU-2025-00075) ; [actualité BOFiP du 25/03/2026, LF 2026 art. 125](https://bofip.impots.gouv.fr/bofip/15035-PGP.html/ACTU-2026-00073) ; [BOI-CF-INF-20-10-20 (art. 1770 duodecies)](https://bofip.impots.gouv.fr/doctrine/BOI-CF-INF-20-10-20) ; [BOI-CF-COM-20-60 (art. L. 80 O)](https://bofip.impots.gouv.fr/bofip/11316-PGP.html/identifiant=BOI-CF-COM-20-60-20250416) ; [BOI-CF-IOR-10-20 (gravité requise)](https://bofip.impots.gouv.fr/doctrine/BOI-CF-IOR-10-20) ; [BOI-CTX-DG-20-20-10 (charge de la preuve)](https://bofip.impots.gouv.fr/bofip/1972-PGP.html/identifiant=BOI-CTX-DG-20-20-10-20190802)."
+      "intro": "Le certificat ou l'attestation du 01/12/2018 n'est pas au dossier numérique communiqué : il est à obtenir du cabinet comptable ou de l'éditeur AKEAD avant la réunion. Sources de droit : [BOI-TVA-DECLA-30-10-30, version du 19/05/2021](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20210519) ; [actualité BOFiP du 16/04/2025, LF 2025 art. 43](https://bofip.impots.gouv.fr/bofip/14667-PGP.html/ACTU-2025-00075) ; [actualité BOFiP du 25/03/2026, LF 2026 art. 125](https://bofip.impots.gouv.fr/bofip/15035-PGP.html/ACTU-2026-00073) ; [BOI-CF-INF-20-10-20 (art. 1770 duodecies)](https://bofip.impots.gouv.fr/doctrine/BOI-CF-INF-20-10-20) ; [BOI-CF-COM-20-60 (art. L. 80 O)](https://bofip.impots.gouv.fr/bofip/11316-PGP.html/identifiant=BOI-CF-COM-20-60-20250416) ; [BOI-CF-IOR-10-20 (gravité requise)](https://bofip.impots.gouv.fr/doctrine/BOI-CF-IOR-10-20) ; [BOI-CTX-DG-20-20-10 (charge de la preuve)](https://bofip.impots.gouv.fr/bofip/1972-PGP.html/identifiant=BOI-CTX-DG-20-20-10-20190802)."
     },
     {
       "kind": "titre",
@@ -493,12 +493,11 @@
       "kind": "liste",
       "style": "puces",
       "items": [
-        "Chaque montant « DEL » est rapproché par formule du catalogue des prix unitaires TTC de l'annexe C du même exercice (pièce R2 suppressions, onglets « DEL_1 » à « DEL_3 », colonnes flag_carte et categorie ; synthèse à l'onglet « Synthèse ») : 18 841 lignes sur 21 302 sont exactement un prix de la carte et 2 107 un multiple entier d'un prix de la carte.",
-        "En montant, les lignes « carte ou multiple » représentent 192 478,75 / 140 226,75 / 96 662,35 € sur 193 005,09 / 140 686,55 / 97 071,51 €, soit **99,7 % / 99,7 % / 99,6 %** ; les lignes sans correspondance pèsent **1 395,30 € sur trois ans** (354 lignes).",
+        "Hors les quatre lignes aberrantes, 88,2 % / 89,6 % / 89,5 % des lignes positives valent exactement un prix unitaire de la carte de l’exercice, contre 10,2 % à 12,7 % des totaux de notes encaissées (pièce R2 suppressions, onglet « prix exact » ; [Les suppressions de notes](/reponse-2/suppressions-de-notes), point 2.2.2 b).",
         "Quatre lignes « aberrantes » (≥ 1 000 €) pèsent 138 003,10 € = 32,0 % du total : 68 993,10 €, 44 955 € (45 € × 999, 21/06/2023, Z 3216), 19 600 € (100 € × 196), 4 455 € (55 € × 81, 15/08/2024, Z 3474) : des fautes de frappe sur la quantité, corrigées par suppression.",
-        "Une suppression tracée n'est pas une recette effacée : le totalisateur perpétuel de la caisse (annexe G, colonne tot_sum) progresse de 977 739,78 € à 2 253 930,98 € sans une seule rupture sur 16 605 tickets (pièce R2 suppressions, onglets « Chainage_1 » à « Chainage_3 » : 0 incrément négatif, 0 incrément différent du TTC du ticket)."
+        "Le totalisateur perpétuel de la première série (annexes G et H, colonne tot_sum) progresse de 977 739,78 € à 2 253 930,98 € sans rupture sur ses 16 605 tickets non nuls (pièce lot 2 n° 155, onglet « Serie_1 »). Il ne mesure pas les tables vidées, qui sont refermées dans la seconde série ([Les suppressions de notes](/reponse-2/suppressions-de-notes), point 2.2.3 d)."
       ],
-      "titre": "Le montant des « DEL » suffit, à lui seul, à les identifier"
+      "titre": "Les lignes « DEL » sont des lignes d’articles"
     },
     {
       "kind": "documents",
@@ -1522,8 +1521,7 @@
       "style": "puces",
       "items": [
         "Le service n'a formé aucun grief sur les annexes F ; leurs totaux (403 402,87 / 439 600,30 / 435 146,29 €) sont ceux de la proposition p. 24 et sont recalculés par formule (SOMME.SI par mode) dans la pièce R2, onglet « Calcul », lignes 10 à 15.",
-        "Règlements F contre tickets C/H : 32,45 € / 1 319,18 € / −418,67 €, cumul 932,96 € sur 1 277 216,50 € = **0,07 %** (le mémoire du 10/07 écrivait 0,01 % : la valeur exacte est 0,07 %). Un ticket peut être réglé en plusieurs lignes et encaissé à une autre date que sa clôture ; aucune recette ne manque.",
-        "Espèces : 0,94 % / 1,86 % / 1,23 % des encaissements, 1,36 % sur trois ans ; part bancarisée (CB, chèques, chèques vacances, titres restaurant) **98,64 %** = 1 260 816,28 € sur 1 278 149,46 €."
+        "Règlements F contre tickets de la première série (annexes B) : 32,45 € / 1 607,38 € / 318,43 €, soit 1 958,26 € sur trois exercices (0,15 %). Cet écart est exactement le montant des règlements portés sur 37 tickets à 0,00 € de la seconde série (1 958,26 € ; 32,45 / 1 607,38 / 318,43 €) ; hors ces 37 tickets, les règlements égalent la première série au centime ([Les suppressions de notes](/reponse-2/suppressions-de-notes), point 2.2.5)."
       ],
       "titre": "Les règlements (annexes F) : aucun reproche, et une preuve de bancarisation"
     },
@@ -1858,7 +1856,7 @@
       "style": "puces",
       "items": [
         "Il n'y a pas de fluctuation : il y a quatre grandeurs distinctes (ventes de la première série, ventes totales, encaissements, compteur à la dernière ligne), chacune lue dans une colonne nommée du fichier, et qui se déduisent l'une de l'autre au centime.",
-        "Un compteur cumulé qui court sans rupture sur 1,28 million d'euros et 19 903 tickets est le contraire d'une donnée « de nature changeante » (proposition, p. 28) ou « instable » (p. 29) ; il est la preuve interne de la « séquentialité des enregistrements » et de la « cohérence interne » que le service dit vouloir contrôler (PCG, art. 121-1 et 121-3, cités p. 28).",
+        "La caisse tient deux compteurs cumulés distincts. Celui de la première série progresse de 977 739,78 € à 2 253 930,98 € sur ses 16 605 tickets non nuls, sans rupture ; celui de la seconde série progresse de 51,40 € à 1 076,70 €, soit la somme de ses 17 tickets non nuls (1 025,30 €), sur 3 296 tickets. Ni l’un ni l’autre n’est une donnée « de nature changeante » (proposition, p. 28) ou « instable » (p. 29) : chacun atteste la séquentialité des enregistrements de sa série (PCG, art. 121-1 et 121-3, cités p. 28). Ils ne disent rien, à eux seuls, des tables vidées ([Les suppressions de notes](/reponse-2/suppressions-de-notes)).",
         "Le récapitulatif A (409 020,76 / 429 204,51 / 437 753,60 €) est un état de synthèse par famille remis le 13/01/2026, d'un périmètre distinct (avoirs, remboursements) ; l'annexe A-1 (2022-2023) ne figure pas au dossier numérique, A-2 et A-3 y sont. Nous n'en tirons aucun argument : la preuve interne est F = tickets = comptabilité."
       ],
       "titre": "Ce que cela établit"
@@ -3898,7 +3896,7 @@
       "items": [
         "Le 06/03/2026, le service a engagé la procédure de l'article L. 47 A, II et remis le document d'option (proposition, p. 5 et 9) ; la société a retourné le 13/03/2026 la lettre d'option en choisissant l'option c : le contribuable « met alors à la disposition de l'administration, dans les quinze jours [...], les copies des documents, données et traitements soumis à contrôle », « sur tous supports informatiques, répondant à des normes fixées par arrêté du ministre chargé du budget » (LPF, art. A. 47 A-2).",
         "Ces normes « concernent des modalités de remise de fichiers à l'administration et non de conservation, cette dernière restant libre » (BOI-CF-IOR-60-40-30, § 180) ; « en accord avec le service vérificateur, d'autres supports pourront être utilisés (clé USB par exemple) » (§ 300). Un texte qui ne régit pas la conservation ne peut pas servir à juger si ce qui a été remis est ou non une archive.",
-        "Les caisses dotées d'un logiciel qui concourt à l'établissement de la comptabilité sont des « systèmes informatisés de tenue de comptabilité » au sens de l'article L. 47 A (CE, 9e et 10e ch., 23/11/2020, n° 427689, Belart ; CE, 8e et 3e ch., 04/05/2018, n° 410950) : la remise de copies de leurs fichiers est précisément le régime légal du contrôle, et la loi y attache ses propres conséquences."
+        "Les caisses dotées d'un logiciel qui concourt à l'établissement de la comptabilité sont des « systèmes informatisés de tenue de comptabilité » au sens de l'article L. 47 A (CE, 9e et 10e ch., 23/11/2020, n° 427689, Belart) : la remise de copies de leurs fichiers est précisément le régime légal du contrôle, et la loi y attache ses propres conséquences."
       ],
       "titre": "3. Ce que le service a demandé et reçu est la copie de contrôle de l'article L. 47 A, II, c du LPF, un objet distinct de l'archive"
     },
@@ -4048,40 +4046,6 @@
         "**Les sous-griefs de forme.** La « clé d'identification unique » (p. 39) et le format du journal E sont des spécifications de l'éditeur (§ 240), non des manquements de l'exploitant ; le certificat du 01/12/2018 est détenu par le service et jamais contesté ; l'amende de 1770 duodecies n'a pas été appliquée.",
         "**Les pénalités.** L'hypothèse de « manipulation » (p. 44), seule mise en cause personnelle des dirigeants de la partie G, est écrite au conditionnel par celui qui dit ne pas connaître la source de l'anomalie ; elle ne peut pas contribuer à la preuve du manquement délibéré qui incombe à l'administration (L. 195 A). Enjeu de la majoration de 40 % au niveau société : 58 823 € (IS 39 004 € + TVA 19 819 €) ; au niveau des foyers, la majoration de 40 % est incluse dans les 196 945 € (PASTEUR) et 172 703 € (BEHEM) notifiés.",
         "**En chaîne.** Si le rejet de comptabilité n'est pas fondé, la reconstitution (471 826 € de discordances TTC, base distribuée de 235 913 € par foyer) perd son support procédural : exposition totale 582 796 € (société 213 148 € + foyers 369 648 €)."
-      ]
-    },
-    {
-      "kind": "titre",
-      "texte": "Ce que le service pourrait encore opposer"
-    },
-    {
-      "kind": "liste",
-      "style": "puces",
-      "items": [
-        "**« Des fichiers Excel ne sont pas une archive inaltérable, donc la comptabilité est non probante. »** → Aucun texte applicable aux exercices clos en 2023-2025 n'impose un format aux données archivées ; le seul (art. 286, I, 3° bis, alinéa ajouté par l'article 87 de la loi n° 2026-534) date du 25/06/2026 et renvoie à des normes non publiées. Ce qui a été remis est la copie de l'option c, dont le format relève de l'article A. 47 A-2 et de l'amende 1729 H (non appliquée), jamais du rejet. Et le service a écrit « ses archives fiscales » (p. 5).",
-        "**« Le certificat est une auto-certification. »** → Le service l'a reçu le 13/01/2026, l'a nommé « certificat de conformité » (p. 3) et n'en a jamais contesté la validité. La loi admettait pour toute la période le certificat d'organisme accrédité **ou** l'attestation individuelle de l'éditeur (§ 270), et seul l'éditeur peut l'établir (§ 290, § 375) : un restaurant ne peut pas s'auto-certifier. À défaut d'irrégularité démontrée, la sanction du défaut de justification serait l'amende de 7 500 € (1770 duodecies), pas le rejet.",
-        "**« Les quantités des annexes C sont minorées. »** → Le contrôle « prix × quantité » du service redonne le chiffre d'affaires de l'annexe C à 0,04 / 44,58 / 131,08 € près, et le résidu est nommé ligne par ligne (0 / 4 / 10 lignes à remise) ; l'annexe B s'en écarte de 17 561,00 / 20 011,12 / 20 115,28 €. Une minoration creuserait l'écart dans l'autre sens. Aucun chiffre n'est produit p. 42.",
-        "**« Pas de clé unique, donc pas de traçabilité. »** → Deux compteurs pour deux objets (événements, notes) ; le lien est date + ticket Z + heure, avec lequel le service a lui même compté 21 302 DEL pour 430 763,15 € ; 99,7 / 99,7 / 99,6 % de ces montants sont des prix de la carte ou des multiples ; le totalisateur perpétuel ne présente aucune rupture sur 16 605 tickets. La traçabilité exigée par le § 240 pèse sur le logiciel.",
-        "**« Les taux de TVA sont faux, le fichier est altéré. »** → Les colonnes E et F sont celles du service ; leur total (−9 424,74 €) réduirait la TVA due ; appliquées, elles ramènent la TVA ligne à ligne à 19,68 € de la TVA reversée ; 82 % des références changent de taux dans l'export et 1 % après correction : défaut d'affichage de l'extraction, paramétrage juste (le service le constate lui même sur les fiches produit).",
-        "**« Les montants diffèrent entre fichiers du même logiciel. »** → Quatre colonnes nommées, deux lectures d'un même compteur (« Différence sommeEntre01-04 et 31-03 » est le libellé du fichier), 1, 2 et 1 tickets identifiés qui séparent ces lectures, et une seconde série de compteurs (0 / 288,20 / 737,10 €) qui explique C − B au centime. Amplitude totale : 0,02 % à 0,39 %.",
-        "**« La réponse du 10/07 affirmait que l'export USB était l'archive NF525. »** → Concédé et retiré (voir point 6). La concession porte sur une qualification, pas sur un fait : les données remises sont complètes, cohérentes et exploitées par le service."
-      ]
-    },
-    {
-      "kind": "titre",
-      "texte": "Points de vigilance pour la réunion"
-    },
-    {
-      "kind": "liste",
-      "style": "puces",
-      "items": [
-        "**Le certificat ou l'attestation du 01/12/2018 n'est pas au dossier numérique.** Le service le détient (p. 3), mais nous ne pouvons pas dire s'il s'agit d'un certificat NF 525 d'organisme accrédité ou d'une attestation individuelle d'AKEAD. À obtenir avant la réunion (cabinet comptable, éditeur) ; ne pas affirmer « NF 525 » sans la pièce. Demander au service, s'il maintient « auto-certification », laquelle des deux voies de l'article 286 il tient pour non remplie.",
-        "**Deux chiffres du mémoire du 10/07 ne tiennent pas** : « F = H à 0,01 % près » (la valeur exacte est 932,96 € = 0,07 %) et « 33 222 lignes » (les annexes B-1 et C-1 portent 33 220 lignes de vente, plus deux lignes de total). Ne pas les reprendre.",
-        "**L'écart règlements / tickets de 2023-2024 (1 319,18 €, 0,30 %)** est le plus élevé des trois ; il tient aux tickets réglés en plusieurs lignes et aux dates d'encaissement (pièce R1 réconciliation, onglet « 1 CA par annexe », 640 tickets réglés en plusieurs lignes). Il reste non ventilé ligne à ligne.",
-        "**Les onglets 4 et 5 de la pièce R1 TVA** (ventilation par ticket 20,4 % / 82,1 %, références à deux taux) sont des tableaux de résultats sans formule, issus d'un script ; les totaux de colonne F, la TVA ligne à ligne et l'écart de 19,68 € sont, eux, recalculés par formule dans R2.",
-        "**L'annexe A-1 (synthèse 2022-2023, 409 020,76 €) n'est pas au dossier** ; A-2 et A-3 y sont. La triangulation A / F / H du mémoire est reproduite dans le reproche mais nous n'en tirons aucun argument.",
-        "**La nature des suppressions « DEL »** (430 763,15 € sur trois ans) relève du grief A ; sur cette page, ne défendre que leur traçabilité et le totalisateur sans rupture. La ligne du service p. 38 (« de nombreuses opérations de suppression ne trouvent aucune correspondance dans les notes du fichier ticketligne.xls ») doit recevoir sa réponse au grief A.",
-        "**Entrée en vigueur de l'article 87 de la loi n° 2026-534** : nous retenons le lendemain de la publication (27/06/2026) faute de disposition particulière dans l'article ; vérifier sur le texte complet de la loi qu'aucune disposition générale d'entrée en vigueur n'y déroge. Dans tous les cas, le texte est postérieur aux exercices et au contrôle, et les normes qu'il annonce ne sont pas publiées."
       ]
     },
     {

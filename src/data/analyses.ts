@@ -9,13 +9,13 @@
 // données), pas dans les composants. Emphase: encadrer un fragment de **gras**.
 // =============================================================================
 
-import { analyseDel as A } from './analyseDel'
+
 import { integrite as I } from './analyseIntegrite'
 import { complements as K } from './analyseComplements'
 import { reconstitution as R } from './analyseReconstitution'
-import { refacturation as Ref } from './analyseRefacturation'
+
 import {
-  delComplements as DC,
+
   boissonsComplements as BC,
   synthesePerteReelle as SPR,
 } from './complementsDefense'
@@ -387,30 +387,30 @@ const reconstitution: Analyse = {
   eyebrow: 'Preuve maîtresse',
   titre: 'Reconstitution intégrale du chiffre d’affaires',
   resume:
-    'Recalculé depuis la caisse certifiée par cinq chemins indépendants, le chiffre d’affaires retombe sur le montant déclaré. Aucune recette ne manque.',
+    'Recalculé depuis la caisse par cinq chemins indépendants, le chiffre d’affaires retombe sur le montant déclaré.',
   force: 'forte',
   controleurDit:
     'Le chiffre d’affaires déclaré serait minoré : reconstitution alléguée de +471 826 € de recettes.',
   demonstration:
-    'Cinq exports certifiés et indépendants reconstituent le CA déclaré à 0,1 % près. Aucune recette ne manque.',
+    'Cinq exports indépendants de la caisse reconstituent le CA déclaré à 0,1 % près.',
   faitTomber: 'La reconstitution du fisc - 471 826 €',
   pieces: piecesLiees('B', 'C', 'H', 'G', 'A'),
   apercu: [
-    { label: 'Exports certifiés qui convergent', valeur: String(R.sourcesCount) },
+    { label: 'Exports de caisse qui convergent', valeur: String(R.sourcesCount) },
     { label: 'Écart max au CA déclaré (3 ans)', valeur: formatPct(ecartMaxRecon, 2) },
   ],
   sections: [
     enClair(
-      'Plutôt que d’estimer le chiffre d’affaires, on l’a recalculé depuis la caisse certifiée par **cinq chemins indépendants** : chaque plat, chaque ticket, chaque en-tête, le journal de TVA, et la synthèse déclarée. Les cinq tombent sur le même montant. Conclusion simple : il ne manque aucune recette.',
+      'Plutôt que d’estimer le chiffre d’affaires, on l’a recalculé depuis la caisse par **cinq chemins indépendants** : chaque plat, chaque ticket, chaque en-tête, le journal de TVA, et la synthèse déclarée. Les cinq tombent sur le même montant. Conclusion simple : il ne manque aucune recette.',
     ),
     {
       kind: 'paragraphe',
-      texte: `**Cinq exports certifiés et indépendants** de la caisse reconstituent le même chiffre d’affaires sur trois exercices : le détail des plats (${formatInt(R.lignesTotal)} lignes), le détail des tickets, les en-têtes de tickets, le journal de TVA et la synthèse déclarée. Tous tiennent dans une fourchette de **${formatPct(ecartMaxRecon, 2)}** autour du CA déclaré de **${formatEuro(R.cumul.caDeclare)}**.`,
+      texte: `**Cinq exports indépendants** de la caisse reconstituent le même chiffre d’affaires sur trois exercices : le détail des plats (${formatInt(R.lignesTotal)} lignes), le détail des tickets, les en-têtes de tickets, le journal de TVA et la synthèse déclarée. Tous tiennent dans une fourchette de **${formatPct(ecartMaxRecon, 2)}** autour du CA déclaré de **${formatEuro(R.cumul.caDeclare)}**.`,
     },
     {
       kind: 'kpis',
       items: [
-        { label: 'CA déclaré (A)', valeur: formatEuro(R.cumul.caDeclare), sub: 'synthèse certifiée' },
+        { label: 'CA déclaré (A)', valeur: formatEuro(R.cumul.caDeclare), sub: 'synthèse de caisse' },
         { label: 'Détail des plats (B)', valeur: formatEuro(R.cumul.reconstitutionB), sub: ecPct(R.cumul.ecartBPct) },
         { label: 'Tickets, détail = en-têtes (C = H)', valeur: formatEuro(R.cumul.reconstitutionC), sub: ecPct(R.cumul.ecartCPct) },
         { label: 'Journal de TVA (G)', valeur: formatEuro(R.cumul.reconstitutionG), sub: ecPct(R.cumul.ecartGPct), highlight: true, couleur: 'teal' },
@@ -475,346 +475,13 @@ const reconstitution: Analyse = {
       ],
     },
     retenir(
-      `Le chiffre d’affaires déclaré n’est pas une estimation : **cinq exports certifiés et indépendants** le reconstituent, tous à moins de ${formatPct(ecartMaxRecon, 2)} près sur trois ans. Toute reconstitution extrapolée (coefficients, ratios de marge) est démentie par les données réelles.`,
+      `Le chiffre d’affaires déclaré n’est pas une estimation : **cinq exports indépendants de la caisse** le reconstituent, tous à moins de ${formatPct(ecartMaxRecon, 2)} près sur trois ans. Toute reconstitution extrapolée (coefficients, ratios de marge) est démentie par les données réelles.`,
     ),
     sources('B', 'C', 'H', 'G', 'A'),
   ],
 }
 
 // ======================= ANALYSE 1 - SUPPRESSIONS (DEL) ======================
-const del: Analyse = {
-  slug: 'suppressions-del',
-  eyebrow: 'Argument central',
-  titre: 'Suppressions de caisse (DEL)',
-  resume:
-    'Les lignes supprimées de la caisse certifiée ne sont pas du chiffre d’affaires dissimulé : corrections, transferts ou refacturations déjà incluses dans le CA déclaré.',
-  force: 'forte',
-  controleurDit:
-    '21 302 suppressions « DEL » de la caisse = 430 763 € de recettes occultées.',
-  demonstration: `Trois preuves l’excluent : sur ${DC.sessionsImpossiblesNb} journées, les suppressions dépassent le CA encaissé du jour (le 26/07/2022 : 69 557 € supprimés pour 2 563 € encaissés) ; les plus grosses sont des fautes de frappe sur la quantité (menu Bambin 6,90 € × 9999) ; et trois exports certifiés reconstituent le même CA. Les espèces ne pèsent que 1,3 % : aucun canal pour encaisser au noir.`,
-  faitTomber: 'Le motif central du rejet - 430 763 €',
-  pieces: piecesLiees('E', 'A', 'B'),
-  apercu: [
-    { label: 'Suppressions (thèse du fisc)', valeur: formatEuro(A.delSomme) },
-    { label: 'Sessions où suppr. > CA du jour', valeur: String(DC.sessionsImpossiblesNb) },
-  ],
-  sections: [
-    enClair(
-      'Une « DEL » est une ligne - un plat - retirée d’un ticket en cours de saisie. Ce n’est jamais de l’argent qui sort de la caisse : soit l’erreur est corrigée, soit le plat est re-facturé ailleurs. Additionner ces suppressions, comme le fait l’administration, revient à compter deux fois la même recette.',
-    ),
-    {
-      kind: 'alerte',
-      couleur: 'red',
-      titre: 'La thèse de l’administration',
-      texte: `L’administration additionne les ${formatInt(A.delCount)} suppressions de lignes (DEL) du journal de caisse et présente leur somme, **${formatEuro(A.delSomme)}**, comme des recettes occultées - soit ${formatPct(A.delPctCA)} du chiffre d’affaires déclaré sur trois exercices.`,
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'Suppressions (DEL)', valeur: formatInt(A.delCount), sub: 'sur 3 exercices' },
-        { label: 'Montant retenu par le fisc', valeur: formatEuro(A.delSomme), sub: `${formatPct(A.delPctCA)} du CA`, highlight: true, couleur: 'red' },
-        { label: 'Valeur médiane d’une ligne', valeur: formatEuroPrecis(A.mediane), sub: 'le prix d’un plat' },
-        { label: 'Moyenne par ligne', valeur: formatEuroPrecis(A.moyenneLigne), sub: `${A.delParJour} DEL / jour de service` },
-      ],
-    },
-    {
-      kind: 'tableau',
-      titre: 'Pourquoi une ligne est-elle supprimée ?',
-      minWidth: 540,
-      colonnes: [
-        { label: 'Motif' },
-        { label: 'En pratique' },
-        { label: 'Effet sur le CA déclaré', align: 'center' },
-      ],
-      lignes: [
-        [cg('Erreur de saisie'), cg('La ligne fautive est retirée, puis re-saisie correctement.'), { v: 'Aucun', align: 'center', badge: 'ok' }],
-        [cg('Table qui paie séparément'), cg('Les plats sont déplacés vers un autre ticket.'), { v: 'Aucun', align: 'center', badge: 'ok' }],
-        [cg('Facture sans détail'), cg('Les plats sont remplacés par un menu au même prix.'), { v: 'Aucun', align: 'center', badge: 'ok' }],
-      ],
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Ce dernier mécanisme est **mesurable dans la caisse**. Quand une table demande une facture sans détail, ses plats sont supprimés puis re-facturés sous un article à **prix forcé**. En comparant chaque vente au prix officiel de l’article - détecté comme le prix le plus fréquent du mois, par exemple ${formatEuro(Ref.demiLunePrixOfficiel)} pour le Menu Demi Lune - on isole précisément ces prix forcés (les ventes normales du menu fixe sont exclues) : **${formatEuro(Ref.total)}** sur trois ans, ${formatInt(Ref.lignes)} lignes, un montant **entièrement présent dans le CA déclaré**. Il représente **${formatPct(Ref.pctDuDelTotal)}** du volume de DEL invoqué par l’administration : autant de « suppressions » qui sont en réalité des recettes re-facturées et déclarées.`,
-    },
-    {
-      kind: 'tableau',
-      titre: 'Re-facturation à prix forcé (hors ventes au prix officiel)',
-      minWidth: 460,
-      colonnes: [
-        { label: 'Article' },
-        { label: 'Lignes à prix forcé', align: 'right' },
-        { label: 'Total forcé (3 ans)', align: 'right' },
-      ],
-      lignes: [
-        ...Ref.parArticle.map((a) => [
-          cg(a.article),
-          cd(`${formatInt(a.lignesForcees)} / ${formatInt(a.lignesTotal)}`),
-          cd(formatEuro(a.total)),
-        ]),
-        [
-          { v: 'Total', fw: 700 },
-          { v: formatInt(Ref.lignes), align: 'right', fw: 700 },
-          { v: formatEuro(Ref.total), align: 'right', badge: 'ok' },
-        ],
-      ],
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'Re-facturé à prix forcé', valeur: formatEuro(Ref.total), sub: 'déjà dans le CA déclaré', highlight: true, couleur: 'teal' },
-        { label: 'Part du volume DEL du fisc', valeur: formatPct(Ref.pctDuDelTotal), sub: 'des « recettes occultées » alléguées' },
-        { label: 'Lignes à prix forcé', valeur: formatInt(Ref.lignes), sub: 'prix ≠ prix officiel' },
-      ],
-    },
-    {
-      kind: 'paragraphe',
-      texte:
-        'Une ligne supprimée a, par définition, **d’abord été enregistrée** dans la caisse certifiée : horodatée, montant connu, rattachée à un ticket Z, dans un registre inviolable. Le chiffre d’affaires dissimulé, lui, n’entre jamais dans le système. Le journal des DEL est donc une preuve de transparence, pas de dissimulation.',
-    },
-    {
-      kind: 'note',
-      texte:
-        'Contrôle de fiabilité : pour chaque exercice, notre total de DEL est identique au total déclaré par le fichier lui-même.',
-    },
-    {
-      kind: 'tableau',
-      minWidth: 460,
-      colonnes: [
-        { label: 'Exercice' },
-        { label: 'DEL (calcul)', align: 'right' },
-        { label: 'DEL (fichier)', align: 'right' },
-        { label: 'Σ (fichier)', align: 'right' },
-        { label: 'Réconcilié', align: 'center' },
-      ],
-      lignes: A.reconciliation.map((rec, i) => [
-        cg(rec.exercice),
-        cd(formatInt(A.parExercice[i].delCount)),
-        cd(formatInt(rec.footCount)),
-        cd(formatEuro(rec.footSomme)),
-        { v: rec.ok ? 'OK' : 'écart', align: 'center', badge: rec.ok ? 'ok' : 'ko' },
-      ]),
-    },
-    {
-      kind: 'paragraphe',
-      texte: `**${A.aberrCount} lignes** seulement - manifestement non assimilables à un plat - représentent **${formatEuro(A.aberrSomme)}**, soit **${formatPct(A.aberrPctTotal)}** du total brandi par l’administration. Aucune table d’un restaurant ne génère ${formatEuro(A.aberrations[0].montant)} sur une seule ligne : ce sont des erreurs de saisie immédiatement corrigées.`,
-    },
-    {
-      kind: 'tableau',
-      minWidth: 420,
-      colonnes: [
-        { label: 'Date' },
-        { label: 'Heure' },
-        { label: 'Montant supprimé', align: 'right' },
-        { label: 'Part du total', align: 'right' },
-      ],
-      lignes: A.aberrations.map((a) => [cg(a.date), cg(a.heure), cd(formatEuro(a.montant)), cd(formatPct(a.pctDuTotal))]),
-    },
-    {
-      kind: 'graphique',
-      variante: 'horizontal',
-      hauteur: 200,
-      dataKey: 'libelle',
-      serie: { name: 'Montant', couleur: 'gold.6' },
-      format: 'euro',
-      data: [
-        { libelle: 'Total retenu par le fisc', Montant: A.delSomme },
-        { libelle: 'Hors 4 lignes aberrantes', Montant: A.delSommeHorsAberr },
-      ],
-    },
-    {
-      kind: 'note',
-      texte: `Hors ces ${A.aberrCount} aberrations, les ${formatInt(A.delCountHorsAberr)} autres suppressions totalisent ${formatEuro(A.delSommeHorsAberr)}, soit ${formatEuroPrecis(A.moyenneHorsAberr)} par ligne - un niveau de plat.`,
-    },
-    {
-      kind: 'paragraphe',
-      texte: `La distribution des montants supprimés épouse celle d’une carte de restaurant : **${formatPct(A.partCentimes * 100)}** des montants comportent des centimes (prix de carte), et la valeur médiane est de **${formatEuroPrecis(A.mediane)}**. Une dissimulation fabriquerait des sommes rondes et élevées ; on observe l’inverse.`,
-    },
-    {
-      kind: 'graphique',
-      variante: 'vertical',
-      hauteur: 300,
-      dataKey: 'tranche',
-      serie: { name: 'Suppressions', couleur: 'blue.6' },
-      format: 'int',
-      data: A.distribution.map((d) => ({ tranche: d.tranche, Suppressions: d.n })),
-    },
-    {
-      kind: 'paragraphe',
-      texte: `**${formatPct(A.partServices)}** des suppressions surviennent pendant les services (midi et soir). Si elles servaient à effacer des recettes, elles se concentreraient à l’heure de clôture du Z : ce sont au contraire des corrections **en temps réel**.`,
-    },
-    {
-      kind: 'graphique',
-      variante: 'vertical',
-      hauteur: 300,
-      dataKey: 'heure',
-      serie: { name: 'Suppressions', couleur: 'blue.6' },
-      format: 'int',
-      data: A.parHeure.filter((h) => h.heure >= 8 && h.heure <= 23).map((h) => ({ heure: `${h.heure} h`, Suppressions: h.n })),
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Le profil de ces suppressions est celui de corrections d’exploitation : **${formatPct(K.del.partRafales * 100)}** surviennent en rafale (au moins deux à la même minute sur le même ticket), **${formatInt(K.del.delNuit)}** la nuit, et **${formatPct(K.del.partInf10 * 100)}** portent sur 10 € ou moins - l’ordre de grandeur d’un plat ou d’une boisson.`,
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'Suppressions en rafale', valeur: formatPct(K.del.partRafales * 100), sub: '≥ 2 à la même minute' },
-        { label: 'Suppressions la nuit', valeur: formatInt(K.del.delNuit), sub: 'hors service', highlight: true, couleur: 'teal' },
-        { label: 'Suppressions ≤ 10 €', valeur: formatPct(K.del.partInf10 * 100), sub: 'le prix d’un plat' },
-      ],
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Le montant supprimé **diminue** chaque année (${formatEuro(A.parExercice[0].delSomme)} → ${formatEuro(A.parExercice[A.parExercice.length - 1].delSomme)}). Une dissimulation croissante produirait la tendance inverse.`,
-    },
-    {
-      kind: 'graphique',
-      variante: 'vertical',
-      hauteur: 260,
-      dataKey: 'exercice',
-      serie: { name: 'Montant supprimé', couleur: 'gold.6' },
-      format: 'euro',
-      data: A.parExercice.map((e) => ({ exercice: e.exercice, 'Montant supprimé': e.delSomme })),
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Des recettes occultées seraient encaissées en espèces. Or, sur trois exercices, le restaurant n’a encaissé que **${formatEuro(A.especes)}** en espèces (${formatPct(A.especesPctCA)} du CA). Le montant prétendu dissimulé est **${A.ratioDelSurEspeces.toLocaleString('fr-FR')} fois** supérieur au total des espèces réellement encaissées : matériellement impossible.`,
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'Espèces encaissées (3 ans)', valeur: formatEuro(A.especes), sub: `${formatPct(A.especesPctCA)} du CA` },
-        { label: '« Recettes occultées » alléguées', valeur: formatEuro(A.delSomme), sub: 'thèse du fisc' },
-        { label: 'Rapport', valeur: `× ${A.ratioDelSurEspeces.toLocaleString('fr-FR')}`, sub: 'DEL / espèces', highlight: true, couleur: 'gold' },
-      ],
-    },
-    {
-      kind: 'tableau',
-      titre: 'Récapitulatif par exercice',
-      minWidth: 680,
-      colonnes: [
-        { label: 'Exercice' },
-        { label: 'Jours', align: 'right' },
-        { label: 'DEL', align: 'right' },
-        { label: 'Σ DEL', align: 'right' },
-        { label: 'DEL/jour', align: 'right' },
-        { label: 'CA TTC', align: 'right' },
-        { label: 'Espèces', align: 'right' },
-        { label: 'Σ DEL / CA', align: 'right' },
-      ],
-      lignes: A.parExercice.map((e) => [
-        cg(e.exercice),
-        cd(String(e.joursService)),
-        cd(formatInt(e.delCount)),
-        cd(formatEuro(e.delSomme)),
-        cd(String(e.delParJour)),
-        cd(formatEuro(e.caTTC)),
-        cd(formatEuro(e.especes)),
-        cd(formatPct(e.delPctCA)),
-      ]),
-    },
-    retenir(
-      `Le volume de ${formatEuro(A.delSomme)} se décompose : ${formatEuro(A.aberrSomme)} pour ${A.aberrCount} fautes de frappe (${formatPct(A.aberrPctTotal)}), ${formatEuro(Ref.total)} re-facturés à prix forcé et déjà déclarés (${formatPct(Ref.pctDuDelTotal)}), le reste n’étant que des micro-corrections de plats (médiane ${formatEuroPrecis(A.mediane)}). Rapporté au CA déclaré et aux ${formatEuro(A.especes)} d’espèces encaissées en trois ans, ce volume ne peut pas correspondre à des recettes dissimulées.`,
-    ),
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'Trois preuves supplémentaires (annexes certifiées E, A, H)',
-      sousTitre: 'Reproductibles - pièce téléchargeable « Défense - Suppressions de caisse »',
-    },
-    {
-      kind: 'alerte',
-      couleur: 'teal',
-      titre: 'Preuve par session : on ne supprime pas plus qu’on n’encaisse',
-      texte: `Sur ${DC.sessionsImpossiblesNb} journées de caisse, le montant supprimé dépasse le chiffre d’affaires réellement encaissé ce jour-là. Le 26/07/2022, la caisse a encaissé ${formatEuro(2563)} mais « supprimé » ${formatEuro(69557)} : il est matériellement impossible de supprimer des ventes qui n’ont pas eu lieu. Ces lignes sont nécessairement fictives.`,
-    },
-    {
-      kind: 'tableau',
-      titre: 'Sessions où les suppressions dépassent le CA encaissé du jour',
-      minWidth: 560,
-      colonnes: [
-        { label: 'Session' },
-        { label: 'Exercice' },
-        { label: 'CA encaissé', align: 'right' },
-        { label: 'Suppressions', align: 'right' },
-        { label: 'Lignes', align: 'right' },
-      ],
-      lignes: DC.sessionsImpossibles.map((z) => [
-        cg(z.z),
-        cg(z.exercice),
-        cd(formatEuro(z.caTickets)),
-        cd(formatEuro(z.suppressions)),
-        cd(String(z.nbLignes)),
-      ]),
-    },
-    {
-      kind: 'piecejointe',
-      intro: 'Télécharger ce tableau :',
-      fichiers: [{ fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Sessions, réconciliation, triangulation (XLSX)' }],
-    },
-    {
-      kind: 'tableau',
-      titre: `Les grosses suppressions = fautes de frappe sur la quantité (${formatEuro(DC.erreursQuantiteSomme)}, ${formatPct(DC.erreursQuantitePctDel)})`,
-      minWidth: 560,
-      colonnes: [
-        { label: 'Date' },
-        { label: 'Montant supprimé', align: 'right' },
-        { label: 'Décomposition (prix × quantité)' },
-      ],
-      lignes: DC.erreursQuantite.map((e) => [
-        cg(e.date),
-        cd(formatEuro(e.montant)),
-        cg(e.decomposition),
-      ]),
-    },
-    {
-      kind: 'note',
-      texte:
-        'Le journal n’a pas de colonne quantité : la décomposition prix × quantité est inférée (plusieurs lectures exactes existent), mais la quantité absurde - jusqu’à 9999, valeur maximale du champ - est certaine. La preuve réellement irréfutable reste la session : on ne supprime pas plus qu’on n’encaisse.',
-    },
-    {
-      kind: 'piecejointe',
-      intro: 'Télécharger ce tableau :',
-      fichiers: [{ fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Erreurs de quantité + distribution des prix (XLSX)' }],
-    },
-    {
-      kind: 'tableau',
-      titre: 'Triangulation : trois exports certifiés donnent le même CA',
-      minWidth: 460,
-      colonnes: [{ label: 'Source certifiée' }, { label: 'CA 3 exercices', align: 'right' }],
-      lignes: [
-        [cg('Synthèse du CA (annexe A)'), cd(formatEuro(DC.triangulation.syntheseA))],
-        [cg('Liste des tickets (annexe H)'), cd(formatEuro(DC.triangulation.listeTicketsH))],
-        [cg('Encaissements (annexe A)'), cd(formatEuro(DC.triangulation.encaissements))],
-        [cg('Suppressions (annexe E) - hors des trois'), cd(formatEuro(DC.triangulation.suppressionsE))],
-      ],
-    },
-    {
-      kind: 'piecejointe',
-      intro: 'Télécharger ce tableau :',
-      fichiers: [{ fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Triangulation + réconciliation (XLSX)' }],
-    },
-    enClair(
-      'Les encaissements par carte bancaire correspondent aux relevés bancaires : le chiffre d’affaires déclaré est justifié par trois exports indépendants, et les espèces ne pèsent que 1,3 %. Il n’existe aucun canal pour encaisser au noir des ventes supprimées, ni aucun achat caché pour les alimenter.',
-    ),
-    {
-      kind: 'chapitre',
-      source: 'neutre',
-      titre: 'Annexes : la démonstration chiffrée complète',
-      sousTitre: 'Classeurs téléchargeables - reproductibles à partir des annexes certifiées E, A, H',
-    },
-    {
-      kind: 'piecejointe',
-      intro: 'Données et méthode :',
-      fichiers: [
-        { fichier: 'pieces-defense/Defense-Suppressions-de-caisse-DEL.xlsx', label: 'Défense - Suppressions de caisse (synthèse, 6 onglets)' },
-        { fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Réconciliation des suppressions' },
-        { fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Erreurs de quantité (DEL)' },
-      ],
-    },
-    sources('E', 'A', 'B'),
-  ],
-}
 
 // ======================= ANALYSE 2 - CONTINUITÉ NF525 ========================
 const C = I.continuite
@@ -823,13 +490,13 @@ const continuite: Analyse = {
   eyebrow: 'Intégrité',
   titre: 'Continuité NF525 (aucune occultation possible)',
   resume:
-    'La numérotation séquentielle et ininterrompue des tickets-Z et des événements prouve qu’aucune journée, aucun ticket et aucun événement n’a été effacé.',
+    'La numérotation séquentielle et ininterrompue des tickets Z et des événements établit qu’aucune journée et aucun événement ne manquent dans les fichiers ; elle ne dit rien, à elle seule, des tables vidées, refermées dans une seconde série de tickets.',
   force: 'forte',
   controleurDit:
     'Les suppressions prouveraient une caisse manipulable, des recettes effaçables.',
   demonstration:
     '659 tickets-Z et 23 339 événements numérotés sans aucun trou. Aucune journée, aucun ticket, aucun événement n’a pu être effacé.',
-  faitTomber: 'L’intégrité de la caisse certifiée (NF525)',
+  faitTomber: 'La continuité des numérotations de la caisse',
   pieces: piecesLiees('E', 'H'),
   apercu: [
     { label: 'Tickets-Z sans trou', valeur: formatInt(C.zTotal) },
@@ -837,7 +504,7 @@ const continuite: Analyse = {
   ],
   sections: [
     enClair(
-      'Chaque journée de service se clôture par un « ticket Z » numéroté qui fige les recettes du jour. La caisse certifiée NF525 interdit de sauter un numéro ou d’effacer un ticket. Il suffit donc de vérifier que la numérotation ne comporte aucun trou - et c’est le cas, du premier au dernier jour.',
+      'Chaque journée de service se clôture par un « ticket Z » numéroté qui fige les recettes du jour. Les rapports Z sont numérotés à la suite. Il suffit donc de vérifier que la numérotation ne comporte aucun trou - et c’est le cas, du premier au dernier jour.',
     ),
     {
       kind: 'paragraphe',
@@ -914,11 +581,11 @@ const bancarisation: Analyse = {
   eyebrow: 'Impossibilité matérielle',
   titre: 'Un chiffre d’affaires bancarisé',
   resume:
-    'Le CA est encaissé quasi intégralement par moyens traçables. La part d’espèces - seul canal dissimulable - est marginale, rendant toute occultation massive matériellement impossible.',
+    'Le CA est encaissé quasi intégralement par moyens traçables. La part d’espèces est marginale.',
   force: 'forte',
   controleurDit: 'Les recettes auraient été occultées en espèces.',
   demonstration:
-    '98,7 % du chiffre d’affaires est encaissé par des moyens traçables ; les espèces ne pèsent que 1,3 %. Une occultation massive est matériellement impossible.',
+    '98,7 % du chiffre d’affaires est encaissé par des moyens traçables ; les espèces ne pèsent que 1,3 %.',
   faitTomber: 'L’impossibilité matérielle de l’occultation',
   pieces: piecesLiees('A', 'F'),
   apercu: [
@@ -931,14 +598,14 @@ const bancarisation: Analyse = {
     ),
     {
       kind: 'paragraphe',
-      texte: `Le restaurant n’encaisse quasiment qu’en monnaie traçable : **${formatPct(B.tracablePct)}** du chiffre d’affaires passe par des moyens traçables (carte, titres-restaurant, chèques), et les espèces ne pèsent que **${formatPct(B.especesPct)}** du CA, soit ${formatEuro(B.especesTotal)} sur trois ans. Ces flux, rapprochables des relevés bancaires, ne laissent aucune place à une occultation massive.`,
+      texte: `Le restaurant n’encaisse quasiment qu’en monnaie traçable : **${formatPct(B.tracablePct)}** du chiffre d’affaires passe par des moyens traçables (carte, titres-restaurant, chèques), et les espèces ne pèsent que **${formatPct(B.especesPct)}** du CA, soit ${formatEuro(B.especesTotal)} sur trois ans.`,
     },
     {
       kind: 'kpis',
       items: [
         { label: 'CA encaissé traçable', valeur: formatPct(B.tracablePct), sub: 'carte, titres, chèques', highlight: true, couleur: 'teal' },
         { label: 'Part des espèces', valeur: formatPct(B.especesPct), sub: `${formatEuro(B.especesTotal)} sur 3 ans` },
-        { label: 'CA total (3 ans)', valeur: formatEuro(B.caTotal), sub: 'encaissements certifiés' },
+        { label: 'CA total (3 ans)', valeur: formatEuro(B.caTotal), sub: 'encaissements de caisse' },
       ],
     },
     {
@@ -971,7 +638,7 @@ const bancarisation: Analyse = {
     },
     {
       kind: 'paragraphe',
-      texte: `Le détail le confirme : sur les **${formatInt(K.especes.nb)} règlements en espèces** des trois exercices, le plus élevé atteint **${formatEuro(K.especes.max)}** et la moitié sont inférieurs à **${formatEuroPrecis(K.especes.mediane)}**. Dissimuler des centaines de milliers d’euros avec de tels montants est matériellement impossible.`,
+      texte: `Le détail le confirme : sur les **${formatInt(K.especes.nb)} règlements en espèces** des trois exercices, le plus élevé atteint **${formatEuro(K.especes.max)}** et la moitié sont inférieurs à **${formatEuroPrecis(K.especes.mediane)}**.`,
     },
     {
       kind: 'kpis',
@@ -1568,7 +1235,7 @@ const consoEmpileData = (['2022-2023', '2023-2024', '2024-2025'] as const).map((
   Menus: Pp[ex].menu_l,
   Personnel: Pp[ex].personnel_l,
 }))
-// Stock physique boissons aux 3 inventaires (HT) - depuis l'inventaire certifié.
+// Stock physique boissons aux 3 inventaires (HT) - depuis les inventaires datés.
 const stockInventaireData = inventairePhysique.stocks.map((s) => ({
   exercice: s.exercice,
   'Stock boissons (HT)': Math.round(s.ht),
@@ -1624,7 +1291,7 @@ const boissonsV2: Analyse = {
     {
       kind: 'kpis',
       items: [
-        { label: 'CA bancarisé (carte, titres-restaurant, chèques)', valeur: '98,7 %', sub: 'aucun canal espèces pour des ventes cachées', highlight: true, couleur: 'teal' },
+        { label: 'CA bancarisé (carte, titres-restaurant, chèques)', valeur: '98,7 %', sub: 'carte, titres-restaurant, chèques', highlight: true, couleur: 'teal' },
         { label: 'Part des espèces dans le CA', valeur: '1,3 %', sub: 'plafond matériel de toute vente en liquide' },
         { label: 'Achats boissons consommés (compta matière du fisc)', valeur: formatPct(comptaMatiere.pctConsomme), sub: 'le stock ne grossit pas : rien ne disparaît' },
       ],
@@ -1632,7 +1299,7 @@ const boissonsV2: Analyse = {
     {
       kind: 'alerte',
       couleur: 'teal',
-      titre: 'Fait 1 : il n’existe aucun canal pour encaisser ce « manquant »',
+      titre: 'Fait 1 : la part des espèces dans les règlements enregistrés',
       texte: `Même en supposant tout le manquant **vendu**, encore faudrait-il l’**encaisser**. Or **98,7 % du chiffre d’affaires est bancarisé** (carte, titres-restaurant, chèques) et les **espèces ne pèsent que 1,3 %**. Écouler ${formatEuro(BPD.synthese.disparu_brut_ca)} d’alcool au comptant supposerait un canal espèces qui **n’existe pas** dans les encaissements. Voir l’analyse **bancarisation**.`,
     },
     {
@@ -1663,11 +1330,11 @@ const boissonsV2: Analyse = {
     },
     {
       kind: 'note',
-      texte: 'Stock physique boissons aux 3 fins d’exercice (inventaire certifié) : stable, jamais en baisse. Un exploitant qui détournerait des bouteilles verrait son stock chuter.',
+      texte: 'Stock physique boissons aux 3 fins d’exercice (inventaires datés) : stable, jamais en baisse. Un exploitant qui détournerait des bouteilles verrait son stock chuter.',
     },
     {
       kind: 'note',
-      texte: 'Ces deux faits ne dépendent d’aucune estimation : ils reposent sur les relevés bancaires et l’inventaire physique certifié. Le détail qui suit explique, litre par litre, la consommation sans recette qui compose l’écart.',
+      texte: 'Ces deux faits ne dépendent d’aucune estimation : ils reposent sur les fichiers de règlement de la caisse et sur les inventaires datés. Le détail qui suit explique, litre par litre, la consommation sans recette qui compose l’écart.',
     },
     // ---------------- PARTIE 3 : NOTRE ANALYSE ----------------
     {
@@ -2006,7 +1673,7 @@ const boissonsV2: Analyse = {
 }
 
 // Analyses affichées dans la liste /analyses.
-export const analyses: Analyse[] = [reconstitution, del, continuite, bancarisation, boissonsV2]
+export const analyses: Analyse[] = [reconstitution, continuite, bancarisation, boissonsV2]
 
 // Versions archivées : routables par URL mais masquées de la liste (ex. ancienne page boissons).
 const analysesArchivees: Analyse[] = [boissons]

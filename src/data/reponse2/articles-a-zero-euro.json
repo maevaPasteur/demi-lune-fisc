@@ -11861,97 +11861,8 @@
    "titre": "Nos réponses"
   },
   {
-   "kind": "tableau",
-   "titre": "Les tickets clôturés à 0,00 € des annexes H ne sont pas des notes offertes : ce sont des transferts de note (R2, onglet Tickets_0, lignes 4 à 14)",
-   "minWidth": 700,
-   "colonnes": [
-    {
-     "label": "Exercice"
-    },
-    {
-     "label": "Tickets clôturés à 0,00 €"
-    },
-    {
-     "label": "Dont jumeau encaissé le même jour (même numéro)"
-    },
-    {
-     "label": "Orphelins"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "2022-2023"
-     },
-     {
-      "v": "1 190",
-      "align": "right"
-     },
-     {
-      "v": "1 187",
-      "align": "right"
-     },
-     {
-      "v": "3",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "2023-2024"
-     },
-     {
-      "v": "1 096",
-      "align": "right"
-     },
-     {
-      "v": "1 096",
-      "align": "right"
-     },
-     {
-      "v": "0",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "2024-2025"
-     },
-     {
-      "v": "995",
-      "align": "right"
-     },
-     {
-      "v": "995",
-      "align": "right"
-     },
-     {
-      "v": "0",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "Total"
-     },
-     {
-      "v": "3 281",
-      "align": "right"
-     },
-     {
-      "v": "3 278 (99,9 %)",
-      "align": "right"
-     },
-     {
-      "v": "3",
-      "align": "right"
-     }
-    ]
-   ]
-  },
-  {
    "kind": "paragraphe",
-   "texte": "Les 3 orphelins sont les deux repas offerts ci-dessus (13 lignes) et un ticket du 23/03/2023 (n° 5, Z 3152) sans aucune ligne au détail (table ouverte puis refermée sans commande). Aucun des 3 281 tickets ne porte de montant encaissable ; le sujet est traité ici par anticipation, le service ne l'ayant pas soulevé sur la partie C."
+   "texte": "Parmi les tickets clôturés à 0,00 € des annexes H, 2 449 le sont à la minute d’une suppression « DEL » du même ticket Z : ce sont des tables vidées, traitées à la page [Les suppressions de notes](/reponse-2/suppressions-de-notes). Deux seulement portent un détail d’articles : les deux repas offerts mentionnés ci-dessus (13 lignes)."
   },
   {
    "kind": "documents",
@@ -11959,10 +11870,6 @@
     {
      "fichier": "pieces-reponse-2/R2-articles-zero-euro.xlsx",
      "label": "R2 : onglets Decompte_exercices (colonnes D à F, ligne 9) et Tickets_0 (XLSX à formules)"
-    },
-    {
-     "fichier": "pieces-reponse-1/R1-tickets-a-zero.xlsx",
-     "label": "R1 : les 3 281 tickets à 0,00 € et leurs jumeaux (XLSX, valeurs)"
     },
     {
      "fichier": "caisse-enregistreuse/ANNEXE-H1_liste-tickets_2022-2023.xls",
@@ -12000,44 +11907,6 @@
    ]
   },
   {
-   "kind": "titre",
-   "texte": "Ce que le service pourrait encore opposer"
-  },
-  {
-   "kind": "liste",
-   "style": "puces",
-   "items": [
-    "**« Les dirigeants ont constamment soutenu ne pas gérer les offerts sur la caisse »** → la seule déclaration écrite produite (p. 20) nie une touche remise, une carte de fidélité et un suivi dédié, et décrit une modulation du prix à la ligne ; le taux de remise est nul sur les 272 lignes (R2, « Controle_remise ») ; la paraphrase d'un entretien ne prime pas un fichier que le service a lui-même extrait.",
-    "**« Le courriel du 16/03/2026 n'explique pas un prix à 0 € »** → il décrit réduire, augmenter et diviser le prix ; 0 € est la borne de la réduction ; le service admet p. 20 que cette réponse « permet d'expliquer la présence de 1/2 article » : il ne peut pas la juger explicative pour 0,5 et « inexplicable » pour 0.",
-    "**« Même non significatif, cela conforte le rejet »** → 272 lignes sur 97 769 (0,28 %), 0,00 € porté, 259 lignes dans des notes encaissées ; BOI-CF-IOR-10-20 § 60, 90 et 290 ; CE 20/02/2023 n° 461284 (le rejet validé reposait sur des pièces non présentées, ici toutes produites).",
-    "**« La réponse occulte la variabilité et les quantités »** → 140 / 81 / 51 par famille officielle de la caisse ; 188 lignes à quantité 1, 66 entières supérieures à 1, 18 fractionnées ; 8 groupes sur 9 refermés ; 11 008 lignes payantes fractionnées contre 18 offertes.",
-    "**« Le Café Viennois à 0,50 ne se referme pas »** → six articles payants de la même table ne se referment pas non plus (R2, « Table_3224 ») : découpage de la table en quarts, 1 table parmi 8 à résidu sur 866 (R2-quantites-recomposition), montant 0,00 €.",
-    "**« Le 0,00 € est lu dans un fichier contesté »** → exact ; il établit l'absence d'incidence sur la recette enregistrée ; la preuve d'une occultation incombe au service (LPF, L. 192, al. 2 ; BOI-CF-IOR-10-20, § 280), qui ne produit ni rapprochement bancaire, ni écart de stock, ni montant.",
-    "**« Les offerts alimentaires consomment du stock sans recette »** → 51 lignes de restauration sur trois ans, dont 2 repas entiers ; le service n'en tire aucune quantité, aucune valeur, aucun rappel sur la partie C ; sa reconstitution porte déjà un forfait de 15 % pour offerts, remises et pertes.",
-    "**« Pourquoi si peu ? »** → 138 notes sur 16 607, 106 journées sur 659 : la rareté est la signature d'un geste ponctuel ; un argument vrai « beaucoup » comme « peu » ne prouve rien."
-   ]
-  },
-  {
-   "kind": "titre",
-   "texte": "Points de vigilance pour la réunion"
-  },
-  {
-   "kind": "liste",
-   "style": "puces",
-   "items": [
-    "Le « 0,00 € » est lu dans la caisse dont la fiabilité est contestée : ne pas le présenter comme une preuve d'absence d'encaissement, mais comme l'absence d'incidence sur la recette enregistrée, la charge de la preuve de l'occultation pesant sur le service.",
-    "La nature exacte de chaque ligne (offert, élément retiré, solde de partage) n'est pas prouvée pièce à pièce ; aucun bon d'offert ni politique commerciale écrite n'est au dossier. Les deux repas intégralement à 0 € (29/04/2022, 28/12/2022) ne sont pas documentés : préparer une explication (qui, pourquoi).",
-    "La gérante a déclaré que les consommations du personnel n'étaient pas saisies : les 272 lignes ne les couvrent pas ; le service peut revenir sur ce point au titre du § IV (reconstitution), distinct de la partie C.",
-    "Le chapeau du mémoire du 08/07/2026 porte « 272 / 97 694 » et attribue 97 694 à l'administration ; ce nombre ne figure pas dans la proposition du 18/05. Le dénominateur retenu est 97 769, recompté sur les trois annexes C (33 220 + 32 758 + 31 791). Dire simplement que 97 694 était une approximation du mémoire.",
-    "La pièce « 07-rf-articles-a-zero-euro.xlsx » et le chiffre « 8 010,00 € de CA équivalent d'offerts » (pièce « Offerts », annexe 56 du mémoire) ne sont pas dans le corpus de cette page : ne pas les réinvoquer sans les produire.",
-    "Le troisième extrait du service est bien l'annexe C-3 (32 lignes) et non « C-2 (36 lignes) » : signaler l'erreur sans en faire un argument de fond.",
-    "Le BOI-CF-IOR-10-20 n'est pas opposable sur le fondement de l'article L. 80 A (instruction de procédure, BOI-SJ-RES-10-10-10 § 50) ; l'invoquer comme norme interne du service et jurisprudence constante.",
-    "Deux arrêts de cours administratives d'appel cités dans les versions antérieures (CAA Marseille, 29/01/2015, n° 13MA00369 ; CAA Bordeaux, 25/05/1999, n° 96BX00774) n'ont pas pu être revérifiés en ligne pour cette version : à contrôler sur Légifrance avant tout emploi.",
-    "Le service vise le 3° bis du I de l'article 286 du CGI : produire l'attestation de l'éditeur ou le certificat du logiciel de caisse, qui n'est pas au dossier, pour fermer ce terrain.",
-    "Le troisième ticket orphelin (23/03/2023, n° 5, Z 3152, sans ligne au détail) et les 3 281 tickets à 0,00 € des annexes H sont traités par anticipation : le service ne les a pas soulevés sur la partie C."
-   ]
-  },
-  {
    "kind": "documents",
    "fichiers": [
     {
@@ -12055,10 +11924,6 @@
     {
      "fichier": "pieces-reponse-1/R1-quantites-fractionnaires.xlsx",
      "label": "R1-quantites-fractionnaires.xlsx : notes partagées, 3 exercices (XLSX, valeurs)"
-    },
-    {
-     "fichier": "pieces-reponse-1/R1-tickets-a-zero.xlsx",
-     "label": "R1-tickets-a-zero.xlsx : 3 281 tickets à 0,00 €, 3 orphelins (XLSX, valeurs)"
     },
     {
      "fichier": "caisse-enregistreuse/ANNEXE-C1_detail-tickets_2022-2023.xls",

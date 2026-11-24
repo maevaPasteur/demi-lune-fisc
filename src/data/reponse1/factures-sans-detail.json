@@ -6,8 +6,8 @@
   "titreCourrier": "B- LES FACTURES SANS DETAIL (Menus à Prix personnalisé)"
  },
  "entete": {
-  "positionService": "Le service admet qu’il « soit possible que la société puisse proposer des menus à prix personnalisé », mais juge l’argument « tardif » : il n’a jamais été évoqué lors des nombreux échanges intervenus sur place avec les dirigeants, notamment sur les prix. Il oppose ensuite les obligations d’archivage du BOI-TVA-DECLA-30-10-30, qu’il cite in extenso (périodicité au maximum annuelle, date certaine, intégrité, format ouvert, notice en français, traçabilité de la purge). Il constate enfin qu’un numéro d’identification unique existe bien dans les fichiers reglement.xls, ticket ligne.xls, ticket.xls et tva.xls, mais qu’il est différent dans tpvevenement.xls, ce qui le prive d’une traçabilité certaine des suppressions. Il en conclut que le motif de rejet de comptabilité « apparait comme parfaitement valable ».",
-  "reponseCourte": "Le service concède le principe des menus à prix personnalisé, puis répond sur l’archivage et sur un identifiant qui existe : il ne discute aucun des cinq tableaux de prix par période, qui établissent 594 menus facturés au forfait sur 10 098, tous encaissés et déclarés.",
+  "positionService": "Le service écrit qu’il « soit possible que la société puisse proposer des menus à prix personnalisé », mais juge l’argument « tardif » : il n’a jamais été évoqué lors des nombreux échanges intervenus sur place avec les dirigeants, notamment sur les prix. Il oppose ensuite les obligations d’archivage du BOI-TVA-DECLA-30-10-30, qu’il cite in extenso (périodicité au maximum annuelle, date certaine, intégrité, format ouvert, notice en français, traçabilité de la purge). Il constate enfin qu’un numéro d’identification unique existe bien dans les fichiers reglement.xls, ticket ligne.xls, ticket.xls et tva.xls, mais qu’il est différent dans tpvevenement.xls, ce qui le prive d’une traçabilité certaine des suppressions. Il en conclut que le motif de rejet de comptabilité « apparait comme parfaitement valable ».",
+  "reponseCourte": "Le service écrit qu’il « soit possible que la société puisse proposer des menus à prix personnalisé », puis répond sur l’archivage et sur un identifiant qui existe : il ne discute aucun des cinq tableaux de prix par période, qui établissent 594 menus facturés au forfait sur 10 098, tous encaissés et déclarés.",
   "enjeu": "Motif n° 2 du rejet de comptabilité : les factures sans détail",
   "statut": "demonte"
  },
@@ -239,7 +239,7 @@
    "source": "nous",
    "numero": 2,
    "titre": "Notre réponse : la question posée n’a pas reçu de réponse",
-   "sousTitre": "Le service admet le principe des menus à prix personnalisé, puis traite de l’archivage et d’un identifiant qui existe. Les cinq tableaux de prix par période ne sont discutés nulle part."
+   "sousTitre": "Le service écrit qu’il « soit possible que la société puisse proposer des menus à prix personnalisé », puis traite de l’archivage et d’un identifiant qui existe. Les cinq tableaux de prix par période ne sont discutés nulle part."
   },
   {
    "kind": "titre",
@@ -572,7 +572,7 @@
   },
   {
    "kind": "note",
-   "texte": "Les recettes sont arrondies à l’euro par période : leur cumul (21 432 €) diffère de 1 € du total consolidé de 21 433 € cité p. 19. Source : caisse certifiée, annexes B et C, recalcul par scripts/reponse1-menus-prix-personnalises.py."
+   "texte": "Les recettes sont arrondies à l’euro par période : leur cumul (21 432 €) diffère de 1 € du total consolidé de 21 433 € cité p. 19. Source : caisse, annexes B et C, recalcul par scripts/reponse1-menus-prix-personnalises.py."
   },
   {
    "kind": "paragraphe",
@@ -585,7 +585,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Les six blocs reproduits pages 19 et 20 sont extraits de la section du [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html) consacrée à l’archivage (§ 220 et suivants). Ils énoncent les conditions auxquelles doit satisfaire « le logiciel ou le système de caisse » : périodicité d’archivage, date certaine, format ouvert, notice, traçabilité de la purge. Ces obligations pèsent sur le produit et sur son éditeur, qui les atteste par la certification. Aucune ne porte sur le prix de vente d’un menu. Opposer ce texte à des tableaux de prix revient à répondre à côté de la question. Le service en tire, page 46, la conclusion que la société n’aurait transmis aucune archive fiscale inaltérable et que la comptabilité serait non probante dans sa totalité. Ce moyen est traité à la page [Fichiers Événement et Règlement](/reponse-1/fichiers-evenement-reglement)."
+   "texte": "Les six blocs reproduits pages 19 et 20 sont extraits de la section du [BOI-TVA-DECLA-30-10-30](https://bofip.impots.gouv.fr/bofip/10691-PGP.html) consacrée à l’archivage (§ 220 et suivants). Ils énoncent les conditions auxquelles doit satisfaire « le logiciel ou le système de caisse » : périodicité d’archivage, date certaine, format ouvert, notice, traçabilité de la purge. Ces obligations pèsent sur le produit et sur son éditeur, qui les atteste par un certificat ou par une attestation (CGI, art. 286, I, 3° bis). Aucune ne porte sur le prix de vente d’un menu. Opposer ce texte à des tableaux de prix revient à répondre à côté de la question. Le service en tire, page 46, la conclusion que la société n’aurait transmis aucune archive fiscale inaltérable et que la comptabilité serait non probante dans sa totalité. Ce moyen est traité à la page [Fichiers Événement et Règlement](/reponse-1/fichiers-evenement-reglement)."
   },
   {
    "kind": "paragraphe",
@@ -655,11 +655,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le rapprochement que le service dit impossible a été fait. Sur les trois exercices, les 21 302 suppressions du fichier événement se rattachent toutes, sans exception, à une journée et à un numéro de ticket Z présents dans le fichier des tickets. Pour 15 991 d’entre elles (75,1 %), le montant supprimé se retrouve au centime près sur une ligne de note du même Z. Le solde correspond aux lignes qui ont précisément été déplacées ou refacturées au forfait, c’est-à-dire à l’objet du présent motif."
+   "texte": "Le rapprochement que le service dit impossible a été fait. Sur les trois exercices, les 21 302 suppressions du fichier événement se rattachent toutes, sans exception, à une journée et à un numéro de ticket Z présents dans le fichier des tickets. Pour les conversions au forfait, objet du présent motif, 76 suites de suppressions égalent, au centime pour 75 d’entre elles, le total d’une note composée de menus ou de formules ([Les suppressions de notes](/reponse-2/suppressions-de-notes), point 2.2.4 d)."
   },
   {
    "kind": "paragraphe",
-   "texte": "Le fichier des événements porte d’ailleurs sa propre preuve d’intégrité : son compteur court de 36 681 à 60 019 sur les trois exercices, soit 23 339 identifiants attendus et 23 339 présents, sans un seul trou. Un journal auquel il ne manque aucun numéro n’est pas un journal dépourvu de traçabilité. Les deux constats sont récapitulés, exercice par exercice, dans la pièce jointe, onglet « Rapprochement DEL-tickets » : 21 302 suppressions, toutes rattachées à une journée et à un ticket Z du fichier des tickets, et un compteur d’événements continu de 36 681 à 60 019, soit 23 339 identifiants présents sur 23 339 attendus, sans un seul manquant."
+   "texte": "Le journal des événements ne présente aucun trou : identifiants continus de 36 681 à 60 019 sur les trois exercices, 23 339 attendus, 23 339 présents, dont les 21 302 suppressions, toutes rattachées à une journée et à un ticket Z du fichier des tickets (pièce R2-tables-virtuelles-numeros, onglet « Évènements (calcul) »)."
   },
   {
    "kind": "alerte",
@@ -676,7 +676,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le service admet le principe des menus à prix personnalisé et ne conteste aucun des chiffres produits : 9 504 menus vendus au prix catalogue, 594 facturés au forfait pour 21 433 €, la totalité encaissée et déclarée. Le motif B ne repose donc plus que sur un texte relatif à l’archivage, qui ne concerne ni les prix ni le contribuable, et sur un identifiant qui existe et permet le rapprochement. Faute de démonstration au fond, ce deuxième motif ne peut fonder ni le rejet de la comptabilité, ni la reconstitution qui en découle."
+   "texte": "Le service écrit qu’il « soit possible que la société puisse proposer des menus à prix personnalisé » et ne conteste aucun des chiffres produits : 9 504 menus vendus au prix catalogue, 594 facturés au forfait pour 21 433 €, la totalité encaissée et déclarée. Le motif B ne repose donc plus que sur un texte relatif à l’archivage, qui ne concerne ni les prix ni le contribuable, et sur un identifiant qui existe et permet le rapprochement. Faute de démonstration au fond, ce deuxième motif ne peut fonder ni le rejet de la comptabilité, ni la reconstitution qui en découle."
   },
   {
    "kind": "piecejointe",
@@ -684,7 +684,7 @@
    "fichiers": [
     {
      "fichier": "pieces-reponse-1/R1-menus-prix-personnalises.xlsx",
-     "label": "Menus à prix personnalisé et rapprochement DEL / tickets (XLSX, 9 onglets)"
+     "label": "Menus à prix personnalisé : 594 menus au forfait sur 10 098, par période de carte et par menu (XLSX, 8 onglets)"
     }
    ]
   }

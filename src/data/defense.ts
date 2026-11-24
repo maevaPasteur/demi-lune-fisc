@@ -112,7 +112,7 @@ const penalites: Analyse = {
       'Majoration 1729 - manquement délibéré',
       'p. 57-58',
       'Majoration de 40 % (58 823 € sur IS + TVA) pour manquement délibéré.',
-      'La motivation **reprend les motifs du rejet sans démontrer l’intention** (CE 11/02/2021 : double preuve exigée). S’y ajoutent la **coopération constante** des dirigeants, l’**impossibilité arithmétique**, le **logiciel certifié**, et une **erreur d’intitulé** (exercice 2022 hors période). Décharge probable, indépendante du sort du principal.',
+      'La motivation **reprend les motifs du rejet sans démontrer l’intention** (CE 11/02/2021 : double preuve exigée). S’y ajoutent la **coopération constante** des dirigeants, l’**impossibilité arithmétique**, le **logiciel couvert par les attestations transmises au service**, et une **erreur d’intitulé** (exercice 2022 hors période). Décharge probable, indépendante du sort du principal.',
       'forte',
       [preuve('bancarisation')],
     ),
@@ -148,7 +148,7 @@ const procedure: Analyse = {
       'Le service invoque l’extension à 6 mois (L. 52 II 4°) au motif du rejet de comptabilité.',
       'Le contrôle a duré **4 mois** (12/01 → 12/05/2026), au-delà du plafond de **3 mois** (L. 52 I). L’extension à 6 mois est **entièrement conditionnée à la validité du rejet**. Si le rejet est invalidé, la durée excède le délai légal → **nullité de l’imposition** (L. 52), **non réparable** (L. 51).',
       'Conditionnel - effet maximal',
-      [preuve('reconstitution-ca'), preuve('suppressions-del')],
+      [preuve('reconstitution-ca')],
     ),
     retenir(
       `Si le rejet de comptabilité est invalidé, c’est **toute l’imposition (${formatEuro(ENJEU)})** qui tombe pour vice de procédure, sans que l’administration puisse recommencer (L. 51).`,
@@ -192,7 +192,7 @@ const rejet: Analyse = {
       'Motif 3 - Documentation de la caisse',
       'p. 17',
       'Absence de documentation / manuel de la caisse.',
-      'Un guide a été remis ; son inadéquation aux écrans relève de **l’éditeur** (AKEAD), pas du restaurant. La caisse est **certifiée NF525** (certificat du 01/12/2018), valable sur toute la période.',
+      'Un guide a été remis ; son inadéquation aux écrans relève de **l’éditeur** (AKEAD), pas du restaurant. Le logiciel « figure sur les attestations transmises au service » (proposition, p. 9).',
       'forte',
     ),
     argument(
@@ -205,10 +205,10 @@ const rejet: Analyse = {
     argument(
       'Motif 5 - Suppressions DEL',
       'p. 18-19, 23',
-      '21 302 suppressions « DEL » = 430 763 € de recettes occultées.',
-      'Trois preuves chiffrées l’excluent. (1) Sur **9 journées, les suppressions dépassent le CA encaissé du jour** (le 26/07/2022 : 69 557 € supprimés pour 2 563 € encaissés) - on ne supprime pas des ventes qui n’ont pas eu lieu. (2) Les plus grosses (138 003 €) sont des **fautes de frappe sur la quantité** (ex. menu Bambin 6,90 € × 9999). (3) **Trois exports certifiés** (synthèse, tickets, encaissements) reconstituent le même CA, suppressions hors des trois. Espèces = 1,3 %, encaissements CB = relevés bancaires : **aucun canal d’occultation**.',
+      '21 302 suppressions « DEL » pour 430 763,15 € (proposition, p. 23), dont le logiciel ne permettrait pas de confirmer la légitimité (p. 19).',
+      'Les plus grosses lignes (138 003,10 €, 32,0 % du total) sont des **quantités aberrantes** (ex. 6,90 € × 9 999), impossibles comme recettes ; les autres sont des articles retirés un par un. La population des tables vidées est exposée, avec ce que les annexes du service en rattachent et ce qu’elles laissent indéterminé ; au titre de ce motif, les courriers ne désignent ni vente encaissée et non déclarée, ni canal, ni montant.',
       'forte',
-      [preuve('suppressions-del'), preuve('bancarisation')],
+      [preuve('bancarisation')],
       [piece('E'), piece('F'), { to: '/documents', label: 'Pièce - Défense Suppressions (téléchargeable)' }],
     ),
     argument(
@@ -249,7 +249,7 @@ const methode: Analyse = {
   ],
   sections: [
     enClair(
-      'Une reconstitution n’est admise qu’**après un rejet régulier** de la comptabilité, et doit reposer sur des données fiables. Or les **cinq exports certifiés reconstituent déjà le CA déclaré** : il n’y a aucun trou de 471 826 € à « reconstituer ».',
+      'Une reconstitution n’est admise qu’**après un rejet régulier** de la comptabilité, et doit reposer sur des données fiables. Or les **cinq exports de caisse reconstituent déjà le CA déclaré** : il n’y a aucun trou de 471 826 € à « reconstituer ».',
     ),
     argument(
       'Le coefficient repose sur des données… rejetées',
@@ -294,7 +294,7 @@ const methode: Analyse = {
       [piece('F')],
     ),
     retenir(
-      'Le CA déclaré est déjà adossé, au centime près, à cinq exports certifiés (voir « Reconstitution intégrale du CA »). Toute reconstitution extrapolée du fisc est démentie par les données réelles.',
+      'Le CA déclaré est déjà adossé, au centime près, à cinq exports de caisse (voir « Reconstitution intégrale du CA »). Toute reconstitution extrapolée du fisc est démentie par les données réelles.',
     ),
   ],
 }

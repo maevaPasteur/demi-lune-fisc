@@ -92,8 +92,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Suppressions « DEL »', titre: 'Les suppressions de notes (« DEL »)',
     positionService: '',
     reponseCourte:
-      'Le grief est un montant, 430 763,15 € de lignes « DEL » sur trois exercices, et il se défait en euros : 99,6 à 99,7 % de chaque exercice a la forme d’un prix de la carte ou de son multiple, 32,0 % tient dans quatre fautes de frappe sur la quantité impossibles à encaisser, le totalisateur perpétuel inaltérable progresse sans une seule rupture sur 16 605 tickets, les 89 exemples datés sont vérifiés 89 sur 89, et 98 à 99 % des encaissements sont bancarisés ; les lignes « DEL » sont les traces de correction que le BOFiP invoqué impose, et le service ne désigne aucune vente encaissée non déclarée.',
-    enjeu: 'Pilier n° 1 du rejet', statut: 'demonte',
+      'Le chiffre de 430 763,15 € n’est pas une mesure de recettes : ce sont 21 302 lignes d’articles retirés un par un, dont 32,0 % tiennent dans quatre lignes à quantité aberrante. La société assume le procédé montré au vérificateur (ressaisie sur une autre note, puis table d’origine vidée) et expose la population entière des tables vidées (2 359 tables, 180 003,94 €), ce que les annexes du service en rattachent à des notes encaissées et ce qu’elles laissent indéterminé. Au titre de ce motif, les courriers ne désignent ni vente encaissée et non déclarée, ni canal, ni montant.',
+    enjeu: 'Pilier n° 1 du rejet', statut: 'partiel',
   },
   {
     slug: 'quantites-inferieures-a-un', bloc: 'rejet',
@@ -132,7 +132,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Tables virtuelles', titre: 'Les tables « virtuelles »',
     positionService: '',
     reponseCourte:
-      'Le numéro porté par l’export de caisse est un rang d’addition quotidien (1, 2, 3 … n), pas un numéro de table : vérifié par formule sur les 659 journées des trois exercices (16 624 additions, 16 607 numéros, 659 journées sur 659 sans trou, numéros de terrasse 101 à 126 jamais présents), et lisible jusque dans l’extrait du 09/09/2022 produit par le service (25 notes numérotées 1 à 25 pour 18 numéros à l’écran) ; la table « virtuelle » est une note de règlement séparé dont le service admet la logique, et la suppression de la table d’origine laisse une trace datée dans l’annexe E et un ticket à 0,00 € dans l’annexe H (3 281 tickets, 0,00 € encaissé, 2 449 clôturés à la minute exacte d’un « DEL »), de sorte que le grief F ne révèle aucun couvert ni aucune recette et que le service ne lui rattache aucun euro.',
+      'Le numéro porté par l’export de caisse est un rang d’addition quotidien (1, 2, 3 … n), pas un numéro de table : vérifié par formule sur les 659 journées des trois exercices (16 624 additions, 16 607 numéros, 659 journées sur 659 sans trou, numéros de terrasse 101 à 126 jamais présents), et lisible jusque dans l’extrait du 09/09/2022 produit par le service (25 notes numérotées 1 à 25 pour 18 numéros à l’écran) ; la table « virtuelle » est une note de règlement séparé, dont le service écrit que la suppression des articles « paraît logique pour créer une nouvelle note » ; la suppression de la table d’origine laisse des lignes « DEL » datées dans l’annexe E et un ticket refermé à 0,00 € dans une seconde série de l’annexe H (2 449 tickets clôturés à la minute d’un « DEL ») ; le service ne rattache aucun euro à ce grief.',
     statut: 'demonte',
   },
   {

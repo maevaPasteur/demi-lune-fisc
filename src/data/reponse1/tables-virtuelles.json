@@ -11,7 +11,7 @@
  },
  "entete": {
   "positionService": "Le service ne conteste pas la description de la fonction « table virtuelle », mais il reproche à la démonstration de ne pas envisager le double service : si une même table est utilisée deux fois pendant un service, « le taux de remplissage peut largement être augmenté ». Il maintient surtout que la justification de toutes les opérations « DEL » n’est pas apportée et que, comme en partie A, « seule une infime partie de ces suppressions est expliquée ». Le fichier « tpévenement.xls » ne permettant selon lui « aucune traçabilité effective comme prévu par la législation », il juge « totalement impossible » de vérifier que chaque suppression a bien donné lieu à un ré-enregistrement dans une autre note, et renvoie à l’extrait de la journée du 09 septembre 2022.",
-  "reponseCourte": "Sur les 659 journées des trois exercices, sans exception, les numéros portés par les annexes C forment la suite 1, 2, 3 … n des additions du jour : ce sont des rangs de note et non des tables. Les 3 281 tickets clôturés à 0,00 € de l’annexe H sont, à 99,9 %, l’enveloppe vide d’une note encaissée le même jour sous le même numéro, et le double service, loin d’être ignoré, est déjà compté dans les couverts.",
+  "reponseCourte": "Sur les 659 journées des trois exercices, sans exception, les numéros portés par les annexes C forment la suite 1, 2, 3 … n des additions du jour : ce sont des rangs de note et non des tables. Parmi les 3 281 tickets clôturés à 0,00 € de l’annexe H, 2 449 le sont à la minute d’une suppression « DEL » : ce sont des tables vidées ([Les suppressions de notes](/reponse-2/suppressions-de-notes)) ; et le double service, loin d’être ignoré, est déjà compté dans les couverts.",
   "enjeu": "Motif « trop de tables » du rejet de comptabilité (renvoi aux pages 11, 18 et 19 de la proposition de rectifications)",
   "statut": "demonte"
  },
@@ -38,7 +38,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Il rappelle ensuite le grief d’origine : le vérificateur relève que la caisse comporte des tables « virtuelles » et qu’elle autorise la suppression d’une table et de tous ses articles, et il en conclut qu’« il n’est pas possible de confirmer que ces modifications soient légitimes », la comptabilité étant de ce fait tenue pour non probante, comme vecteur supposé de couverts ou de recettes non déclarés (p. 35). La réponse oppose la description faite par le vérificateur lui même en page 11 de la proposition : « quatre tables virtuelles figurent à l’écran (n° 15 à n° 18, par exemple). Cette modalité permet le traitement des notes multiples pour une table, au moment du règlement. » (p. 35)."
+   "texte": "Il rappelle ensuite le grief d’origine : le vérificateur relève que la caisse comporte des tables « virtuelles » et qu’elle autorise la suppression d’une table et de tous ses articles, et il en conclut qu’« il n’est pas possible de confirmer que ces modifications soient légitimes », la comptabilité étant de ce fait tenue pour non probante (p. 35). La réponse oppose la description faite par le vérificateur lui même en page 11 de la proposition : « quatre tables virtuelles figurent à l’écran (n° 15 à n° 18, par exemple). Cette modalité permet le traitement des notes multiples pour une table, au moment du règlement. » (p. 35)."
   },
   {
    "kind": "paragraphe",
@@ -164,7 +164,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "Le second argument déplace le débat des tables « virtuelles » vers les **suppressions**. Le service admet la mécanique décrite : « Sur l’aspect des tables supprimées, le service s’est limité à décrire ce procédé. La suppression des articles paraît logique pour créer une nouvelle note. » (p. 36). Mais il maintient le grief : « Toutefois, contrairement à ce que la réponse de Maître THIVEND prétend, aucune explication pertinente n’est apporté sur la justification de toutes les opérations “DEL”. Et comme la réponse du service en “partie A-Les suppressions de notes”, seule une infime partie de ces suppressions est expliquée. » (p. 36)."
+   "texte": "Le second argument déplace le débat des tables « virtuelles » vers les **suppressions**. Le service écrit : « Sur l’aspect des tables supprimées, le service s’est limité à décrire ce procédé. La suppression des articles paraît logique pour créer une nouvelle note. » (p. 36). Mais il maintient le grief : « Toutefois, contrairement à ce que la réponse de Maître THIVEND prétend, aucune explication pertinente n’est apporté sur la justification de toutes les opérations “DEL”. Et comme la réponse du service en “partie A-Les suppressions de notes”, seule une infime partie de ces suppressions est expliquée. » (p. 36)."
   },
   {
    "kind": "paragraphe",
@@ -755,97 +755,11 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "La réponse est dans les données, et elle est sans ambiguïté : **3 278 de ces 3 281 tickets, soit 99,9 %, portent un numéro que porte aussi, le même jour, un ticket encaissé**. Ce ne sont pas des notes effacées : ce sont les enveloppes vides laissées par le transfert ou le partage d’une addition. La table est ouverte sous le numéro N, son contenu est déplacé ou réparti entre plusieurs convives, la note d’origine se referme à zéro et la note réellement encaissée porte le même numéro N."
-  },
-  {
-   "kind": "kpis",
-   "items": [
-    {
-     "label": "Tickets clôturés à 0,00 €",
-     "valeur": "3 281",
-     "sub": "annexe H, trois exercices"
-    },
-    {
-     "label": "Appariés à un ticket encaissé",
-     "valeur": "3 278",
-     "sub": "99,9 %, même jour, même numéro",
-     "highlight": true,
-     "couleur": "teal"
-    },
-    {
-     "label": "Sans jumeau encaissé",
-     "valeur": "3",
-     "sub": "sur 3 281 et sur trois exercices"
-    },
-    {
-     "label": "Montant de ces tickets",
-     "valeur": "0,00 €",
-     "sub": "aucune ligne d’article, aucun encaissement"
-    }
-   ]
-  },
-  {
-   "kind": "tableau",
-   "titre": "Les trois seuls tickets à 0,00 € sans jumeau encaissé, sur les trois exercices",
-   "minWidth": 480,
-   "colonnes": [
-    {
-     "label": "Date"
-    },
-    {
-     "label": "Heure"
-    },
-    {
-     "label": "N° de ticket",
-     "align": "right"
-    }
-   ],
-   "lignes": [
-    [
-     {
-      "v": "2022-04-29"
-     },
-     {
-      "v": "13:15"
-     },
-     {
-      "v": "n° 15",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "2022-12-28"
-     },
-     {
-      "v": "20:05"
-     },
-     {
-      "v": "n° 17",
-      "align": "right"
-     }
-    ],
-    [
-     {
-      "v": "2023-03-23"
-     },
-     {
-      "v": "20:18"
-     },
-     {
-      "v": "n° 5",
-      "align": "right"
-     }
-    ]
-   ]
+   "texte": "2 449 des 3 279 tickets sans article sont clôturés à la minute d’une suppression « DEL » du même ticket Z : ce sont des tables vidées article par article puis refermées dans une seconde série, comme à la « 4ème étape potentielle » décrite par le vérificateur. 37 de ces tickets portent néanmoins 1 958,26 € de règlements sur trois exercices. Ces tables sont exposées à la page [Les suppressions de notes](/reponse-2/suppressions-de-notes) (points 2.2.3 et 2.2.5)."
   },
   {
    "kind": "paragraphe",
-   "texte": "Trois tickets sur 3 281 et sur trois exercices, tous au premier exercice. Deux d’entre eux tombent sur des journées que la page consacrée aux [articles à prix 0 €](/reponse-1/articles-a-zero-euro) documente déjà : ce sont les deux seuls repas intégralement offerts des trois exercices, le 29 avril 2022 à 13h15 (ticket n° 15, Z n° 2950, 7 lignes) et le 28 décembre 2022 à 20h05 (ticket n° 17, Z n° 3123, 6 lignes), dont le détail est reproduit ligne à ligne. Le troisième, le 23 mars 2023 à 20h18, ne porte **aucune ligne dans le détail des tickets** : c’est une table ouverte puis refermée sans commande. Il ne subsiste donc, au terme de ce contrôle, aucun ticket clôturé à zéro dont la contrepartie ne soit pas identifiée."
-  },
-  {
-   "kind": "paragraphe",
-   "texte": "Ce constat ferme la variante du ticket clôturé à zéro, celle que le service ouvrirait en découvrant l’annexe H. Si des recettes y avaient été logées, ces tickets seraient orphelins : une note encaissée en espèces puis vidée ne laisserait pas, le même jour et sous le même numéro, une seconde note régulièrement encaissée et déclarée. C’est pourtant ce que montrent 99,9 % des cas, et les trois exceptions sont nommées une à une."
+   "texte": "Deux des tickets à 0,00 € tombent sur des journées que la page consacrée aux [articles à prix 0 €](/reponse-1/articles-a-zero-euro) documente déjà : ce sont les deux seuls repas intégralement offerts des trois exercices, le 29 avril 2022 à 13h15 (ticket n° 15, Z n° 2950, 7 lignes) et le 28 décembre 2022 à 20h05 (ticket n° 17, Z n° 3123, 6 lignes), dont le détail est reproduit ligne à ligne. Le troisième, le 23 mars 2023 à 20h18, ne porte **aucune ligne dans le détail des tickets** : c’est une table ouverte puis refermée sans commande."
   },
   {
    "kind": "paragraphe",
@@ -1305,7 +1219,7 @@
   },
   {
    "kind": "titre",
-   "texte": "Le service concède l’essentiel, puis change de terrain",
+   "texte": "La réponse du service, et le changement de terrain",
    "numero": "2.5"
   },
   {
@@ -1337,7 +1251,7 @@
   },
   {
    "kind": "paragraphe",
-   "texte": "L’unique argument nouveau du service, le double service, ne l’atteint pas : les couverts sont comptés et non plafonnés, la rotation y est déjà incluse (42 services au-delà de 100 % des places), et l’occupation mesurée de 62,7 % dépasse déjà la moyenne nationale que le service ne conteste pas. Le service concède par ailleurs la logique des suppressions et ne chiffre rien."
+   "texte": "L’unique argument nouveau du service, le double service, ne l’atteint pas : les couverts sont comptés et non plafonnés, la rotation y est déjà incluse (42 services au-delà de 100 % des places), et l’occupation mesurée de 62,7 % dépasse déjà la moyenne nationale que le service ne conteste pas. Le service écrit par ailleurs que la suppression des articles « paraît logique pour créer une nouvelle note », et ne chiffre rien."
   },
   {
    "kind": "paragraphe",
@@ -1350,10 +1264,6 @@
     {
      "fichier": "pieces-reponse-1/R1-numeros-de-note-par-jour.xlsx",
      "label": "R1 : numéros de note, additions, couverts et services, jour par jour (3 exercices)"
-    },
-    {
-     "fichier": "pieces-reponse-1/R1-tickets-a-zero.xlsx",
-     "label": "Les tickets clôturés à 0,00 € et leur jumeau encaissé (XLSX)"
     }
    ]
   }
