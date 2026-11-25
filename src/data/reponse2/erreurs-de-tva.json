@@ -3343,38 +3343,6 @@
       ]
     },
     {
-      "kind": "titre",
-      "texte": "Ce que le service pourrait encore opposer"
-    },
-    {
-      "kind": "liste",
-      "style": "puces",
-      "items": [
-        "**« Les montants ne correspondent pas exactement. »** → Écart à périmètre égal : 12,89 € sur 134 892,36 € (0,01 %) ; base : 23,91 € sur 1 141 277,14 € ; CA : +170,63 € sur 1 276 191,20 € dans le sens du Trésor. Le surplus de 192,33 € du 445710 est la TVA à 10 % du compte 706800 « Pourboire » (185,24 €) à 7,09 € près.",
-        "**« La somme des TVA par taux ne correspond pas au total de TVA. »** → Le « Total TVA » p. 26 est la différence « dernière ligne − A NOUVEAUX » du compteur (reproduite au centime : 42 548,21 / 46 387,76 / 45 914,28 €) ; compteur maximal − A NOUVEAUX = Σ par taux à 0,00 € près sur les trois exercices ; écart total 29,22 €.",
-        "**« L’origine des négatifs est nébuleuse. »** → VAT_base = TTC du palier − taux lu en euros : 16 605 tickets sur 16 605 à 0,00 €, 29 588 lignes sur 29 588 à ± 0,05 €. Une ligne est négative si et seulement si le palier TTC est inférieur à 20 € (ou 10 €).",
-        "**« Il n’y a pas qu’une colonne. »** → Deux colonnes natives seulement ; quatre colonnes recopiées par le service ; 0 négatif dans tax_amount, TVA 10 % et TVA 20 %.",
-        "**« Manipulation par les dirigeants. »** → Formule unique sur 100 % des lignes, taxe intacte, taxe reversée supérieure à la taxe encaissée ; preuve du manquement délibéré à la charge de l’administration (L. 195 A).",
-        "**« Les fichiers Excel ne sont pas une archive inaltérable » (p. 46, grief G).** → Hors périmètre de la TVA : la question de la nature des fichiers remis est traitée avec les fichiers Événement et Règlement. Sur la TVA, le service a lui-même lu ces fichiers et en reproduit les lignes p. 47 ; leur contenu est cohérent avec les annexes B, C et H (Σ TTC des tickets = CA des annexes B-1 à B-3 au centime).",
-        "**« Le 10,68 € de la réponse du 10/07 compare à un CA bas. »** → Le CA de référence (1 276 191,20 €) est la somme des tickets du journal G, égale au centime aux annexes B-1 à B-3 du service ; la comparaison à la comptabilité (+170,63 €) et au compte 445710 (+205,22 €) est donnée séparément, sans compensation."
-      ]
-    },
-    {
-      "kind": "titre",
-      "texte": "Points de vigilance pour la réunion"
-    },
-    {
-      "kind": "liste",
-      "style": "puces",
-      "items": [
-        "Aucune attestation de l’éditeur de la caisse n’est au dossier sur le paramétrage de la colonne VAT_base : la demander (objet : formule de la colonne « VAT_base » de l’export « tva.xls »). La démonstration ne dépend pas de cette pièce.",
-        "L’attribution des 185,24 € au pourboire (706800 × 10 %) est établie par différence : la page 26 présente le 445710 en ligne unique, sans ventilation par taux. Faire produire par le cabinet comptable le détail du 445710 par taux et la nature du compte 706800 (pourboires facturés, soumis à TVA) pour fermer les 7,09 € de reliquat.",
-        "La reconstitution ticket par ticket de la ventilation 10/20 (annexes C, taux corrigés) ne retrouve le journal que dans 76 à 86 % des tickets : ne pas s’engager sur une concordance ticket par ticket des annexes C ; la concordance de fond est celle des journaux G (0,01 %).",
-        "Les pièces 37 à 41 (csv) citées par le service p. 46-47 étaient sur la clé USB du 10/07/2026 ; leur contenu est intégralement repris dans RF-anomalies-tva.xlsx (5 onglets) et refait par formule dans R2-tva-bouclage.xlsx. Les parties XII (nombre d’articles) et XIII (chiffres d’affaires) visées p. 47 sont traitées avec les fichiers Événement et Règlement ; cette page n’y répond que par la concordance Σ TTC des tickets (G) = annexes B au centime.",
-        "Le service a reproduit p. 46 l’argument « deux chaînes totalement indépendantes (caisse / agenda manuscrit) » : ne pas le réemployer, la proposition (p. 9 et p. 27) décrit la comptabilité comme reprise des récapitulatifs journaliers de la caisse. L’argument utile est celui du sens de l’écart (TVA reversée > TVA encaissée)."
-      ]
-    },
-    {
       "kind": "documents",
       "fichiers": [
         {
