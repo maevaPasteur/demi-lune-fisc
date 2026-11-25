@@ -100,7 +100,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Quantités < 1', titre: 'Les quantités inférieures à 1',
     positionService: '',
     reponseCourte:
-      'Sur les fichiers du service, 5 012 des 5 062 articles fractionnés (99,0 %) se referment sur un entier, 1 849 notes sur 1 849 sont encaissées, la note de clôture de l’annexe B relie les parts pour 4 949 articles, « l’autre moitié » de la table 13 est imprimée p. 21 de la proposition, et le chiffrage de 62 487,87 € est une formule qui compte le prix entier d’articles payés une fois (95,7 % sur des lignes refermées) ; le résidu concédé est de 50 articles sur 8 tables, 264,98 € au maximum.',
+      'Sur les fichiers du service, 5 012 des 5 062 articles fractionnés (99,0 %) se referment sur un entier, contre 67,9 % au plus pour des notes regroupées au hasard ; les 1 913 notes à fraction concordent au centime dans les annexes C, H, G et F ; pour 7 146 lignes sur 7 146, la note d’origine conserve dans l’annexe B la quantité commandée pour toute la table ; « l’autre moitié » de la table 13 est imprimée p. 21 de la proposition ; le chiffrage de 62 487,87 € compte le prix entier d’articles payés une fois. Seul subsiste un résidu que la société expose elle-même : 63 partages non aboutis, annulés et tracés, au plus 2 944,71 € HT sur trois exercices, soit 0,26 % du chiffre d’affaires HT.',
     statut: 'demonte',
   },
   {
