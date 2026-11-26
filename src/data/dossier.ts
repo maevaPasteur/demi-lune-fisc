@@ -128,7 +128,7 @@ export const delai: Delai = {
 /** Étapes de la cascade procédurale (de la cause à la conséquence). */
 export const cascade: string[] = [
   'Proposition société (18/05/2026)',
-  'Observations (08/07/2026)',
+  'Observations (10/07/2026)',
   'Réponse du fisc (04/09/2026)',
   'Désignation des bénéficiaires (16/06/2026)',
   'Propositions personnelles (19/10/2026)',

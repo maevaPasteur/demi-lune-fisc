@@ -14,11 +14,11 @@
 // =============================================================================
 
 import type { Section } from './analyses'
-import { analyseDel as A } from './analyseDel'
-import { complements as K } from './analyseComplements'
-import RF from './renduFinalCalculs.json'
-import CAS from './renduFinalCasSuppressions.json'
-import { formatEuro, formatInt, formatPct } from '../utils/format'
+
+
+
+
+
 // Contenu rédigé des sous-pages (généré par scripts/rendu-final-<slug>.py,
 // chiffres reproductibles ; consommé tel quel comme Section[]).
 import RFZeroEuro from './renduFinal/articles-a-zero-euro.json'
@@ -39,9 +39,9 @@ import RFCuisine from './renduFinal/alcool-cuisine-doses-plats.json'
 import RFOfferts from './renduFinal/offerts-remises-pertes.json'
 import RFCoefficient from './renduFinal/coefficient-liquide-solide.json'
 
-// --- Cellules de tableau (mêmes helpers que analyses.ts, locaux) -------------
-const cg = (v: string) => ({ v })
-const cd = (v: string) => ({ v, align: 'right' as const })
+
+
+
 
 // --- Blocs du rapport (4 chapitres de la proposition de rectification) -------
 export type BlocId = 'rejet' | 'reconstitution' | 'rappels' | 'sanctions'
@@ -95,270 +95,9 @@ export interface Grief {
   sections: Section[]
 }
 
-// Lien de traçabilité vers la synthèse OCR du rapport (fichier public/).
-const SYNTH = 'rapports-des-finances-publiques/synthese'
 
-// =============================================================================
-// GRIEF — Suppressions de notes (DEL). Motif phare du rejet de comptabilité.
-// Réfutation sur 4 axes positifs (ce que SONT les suppressions) + le canal cash.
-// Chiffres : renduFinalCalculs.json (RF, recalcul caisse), analyseDel (A),
-// complements (K). Tout est reproductible par scripts/rendu-final-calculs.py.
-// =============================================================================
-const ABER = RF.aberrations.top
-const ABCOUNT = RF.aberrations.compte
-const MCUST = RF.menus_custom
-const MPP = RF.menus_par_periode
-// Prix au centime (pour que prix × quantité reste cohérent à l'affichage).
-const euroPrecis = (v: number): string => `${v.toFixed(2).replace('.', ',')} €`
-const dl = (ab: (typeof ABER)[number]): string => {
-  const d = ab.decomposition[0]
-  return d ? `${euroPrecis(d.prix)} × ${formatInt(d.quantite)}` : '—'
-}
-// Une table de prix de menus par période (catalogue vs hors catalogue).
-const MENU_TABLES: Section[] = MPP.map((p) => ({
-  kind: 'tableau',
-  titre: `Période ${p.periode} — carte ${p.carte} (${p.exercice}, ${p.dates}) : prix de chaque menu et nombre de ventes`,
-  minWidth: 720,
-  colonnes: [
-    { label: 'Menu' },
-    { label: 'Prix catalogue', align: 'right' as const },
-    { label: 'Vendus AU prix catalogue', align: 'right' as const },
-    { label: 'Vendus HORS catalogue', align: 'right' as const },
-    { label: '€ hors catalogue', align: 'right' as const },
-  ],
-  lignes: p.menus.map((r) => [
-    cg(r.menu),
-    cd(r.prix_catalogue != null ? formatEuro(r.prix_catalogue) : '—'),
-    cd(formatInt(r.qte_catalogue)),
-    cd(r.qte_hors_catalogue > 0 ? formatInt(r.qte_hors_catalogue) : '—'),
-    cd(r.eur_hors_catalogue > 0 ? formatEuro(r.eur_hors_catalogue) : '—'),
-  ]),
-}))
-// Suppressions présentées PAR CAS (et non par jour) : chaque type légitime,
-// illustré par des fiches datées (suppressions -> encaissement correspondant,
-// contenu détaillé de la note). Source : renduFinalCasSuppressions.json.
-const CAS_SECTION: Section = { kind: 'casSuppressions', cas: CAS.cas as never }
-const suppressions: Grief = {
-  slug: 'suppressions-de-caisse',
-  bloc: 'rejet',
-  refRapport: 'Proposition p. 16-19 (rejet 1/3) — annexe E (fichier Événement)',
-  titre: 'Les suppressions de notes (lignes « DEL »)',
-  griefFisc:
-    'À partir de la démonstration faite à l’écran par la gérante, l’administration décrit le mécanisme de séparation des notes (tables « virtuelles ») suivi de la suppression, article par article, de la table d’origine pour qu’elle ne figure plus en chiffre d’affaires ni sur le ticket Z. Elle en conclut que le logiciel autorise des suppressions sans qu’il soit possible de confirmer que ces modifications aient pu être légitimes, et que la comptabilité n’est donc pas probante.',
-  reponseCourte:
-    'Chaque famille de suppressions s’explique positivement et se vérifie sur les fichiers : fautes de frappe sur la quantité, paiements fractionnés, factures sans détail à la demande des clients, et corrections de service. Aucune ne correspond à une vente encaissée et non déclarée.',
-  enjeu: 'Fondement du rejet de comptabilité (et donc de toute la reconstitution)',
-  statut: 'demonte',
-  sections: [
-    // ---------------- CE QUE DIT LE FISC ----------------
-    {
-      kind: 'chapitre',
-      source: 'fisc',
-      numero: 1,
-      titre: 'Ce que soutient l’administration',
-      sousTitre: 'Rejet de comptabilité (1/3), section V « Le logiciel : suppression de note » (p. 18-19). La fonction de suppression d’une note rendrait la légitimité des modifications invérifiable.',
-    },
-    {
-      kind: 'paragraphe',
-      texte: `À partir de la démonstration faite à l’écran, le vérificateur décrit le **cheminement d’une note** : pour une table dont les convives veulent payer séparément, la gérante recrée chaque part sur une **table « virtuelle » (n° 15 à 18)**, l’encaisse, puis **supprime la table d’origine, article par article**, à l’aide de la fonction de suppression à l’écran. Après cette manipulation, cette table « ne figure plus en chiffre d’affaires » et « n’apparaît pas sur le ticket Z servant à la comptabilité ». Le vérificateur en conclut (p. 19) que « **le logiciel autorise des suppressions sans qu’il soit possible de confirmer que ces modifications aient pu être légitimes** », d’où une comptabilité jugée non probante. C’est l’un des piliers du rejet. Nous ne nous contentons pas de dire « le CA égale les encaissements » : nous **expliquons positivement, fichier à l’appui, ce que sont réellement ces suppressions**, famille par famille.`,
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'Lignes supprimées (DEL)', valeur: formatInt(A.delCount), sub: '3 exercices', highlight: true, couleur: 'red' },
-        { label: 'Montant brandi', valeur: formatEuro(A.delSomme), sub: 'TTC, présenté comme recettes effacées', couleur: 'red' },
-        { label: 'Médiane d’une suppression', valeur: formatEuro(A.mediane), sub: 'l’ordre de grandeur d’un seul article' },
-      ],
-    },
-    // ---------------- AXE 1 — FAUTES DE FRAPPE QUANTITÉ ----------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      numero: 2,
-      titre: 'Axe 1 — Les grosses suppressions sont des fautes de frappe sur la quantité',
-      sousTitre: 'Les 4 plus gros montants pèsent à eux seuls 32 % du total brandi et se décomposent en prix catalogue × quantité aberrante.',
-    },
-    {
-      kind: 'tableau',
-      titre: 'Décomposition des 4 plus grosses suppressions (montant = prix unitaire × quantité saisie)',
-      minWidth: 680,
-      colonnes: [
-        { label: 'Date' },
-        { label: 'Heure' },
-        { label: 'Montant supprimé', align: 'right' },
-        { label: 'Se décompose en', align: 'right' },
-        { label: 'Part du total', align: 'right' },
-      ],
-      lignes: ABER.map((ab) => [
-        cg(ab.date),
-        cg(ab.heure),
-        cd(formatEuro(ab.montant)),
-        cd(dl(ab)),
-        cd(formatPct((ab.montant / A.delSomme) * 100)),
-      ]),
-    },
-    {
-      kind: 'note',
-      texte: `**Combien y a-t-il de suppressions aberrantes ? Exactement 4.** Sur les **${formatInt(ABCOUNT.total)} suppressions**, seules **${formatInt(ABCOUNT.sup_1000)} dépassent 1 000 €** (ce sont les 4 ci-dessus, **${formatPct(A.aberrPctTotal)} du montant brandi**). Au-delà : **${formatInt(ABCOUNT.sup_500)}** dépassent 500 € et **${formatInt(ABCOUNT.sup_200)}** dépassent 200 € (tables nombreuses, déplacements de groupe — légitimes). La suppression **médiane vaut ${formatEuro(ABCOUNT.mediane)}** : l’ordre de grandeur d’un article. Le plus gros montant, **${formatEuro(ABER[0].montant)}**, impliquerait une **quantité de ${ABER[0].decomposition[0] ? formatInt(ABER[0].decomposition[0].quantite) : 'plusieurs milliers d’'} unités** sur une seule note — matériellement impossible (on ne sert pas des milliers de couverts sur une addition). Ce sont des **fautes de frappe sur la quantité**, corrigées immédiatement.`,
-    },
-    {
-      kind: 'interne',
-      audience: 'avocat',
-      titre: 'Le nom du plat n’est pas dans les données fournies',
-      texte:
-        'Le fichier Événement (annexe E) ne stocke, pour chaque suppression, que la date, l’heure et le montant — JAMAIS le libellé du produit ni la table. La colonne « se décompose en » est donc une reconstitution (un prix catalogue qui divise le montant en quantité entière) : on ne peut pas nommer le produit exact avec certitude. C’est un argument à retourner : l’administration ne peut pas davantage affirmer que ces lignes seraient des ventes précises. Pour obtenir le produit de chaque suppression, réclamer le journal détaillé des opérations du logiciel (NF525), qui l’enregistre.',
-    },
-    // ---------------- AXE 2 — LES TYPES DE SUPPRESSIONS, ILLUSTRÉS ----------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      numero: 3,
-      titre: 'Axe 2 — Les types de suppressions légitimes, illustrés par des exemples datés',
-      sousTitre: 'Plutôt qu’un audit jour par jour, on montre à quoi correspondent les suppressions : pour chaque cas, un exemple par mois sur les trois exercices, suppressions et encaissement mis face à face.',
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Une suppression n’est jamais une « vente effacée » : c’est une opération d’exploitation, et le logiciel certifié **NF525 oblige à la tracer**. On distingue **trois cas**, chacun illustré ci-dessous par un exemple daté par mois (les suppressions à gauche, l’encaissement correspondant à droite) : la **conversion au forfait** (la somme des suppressions = le total d’une note ne contenant que des menus), le **paiement séparé / partage** de table (notes de même total, articles divisés), et les **articles déplacés** vers la bonne table (rafale d’au moins 4 suppressions = le total d’une note détaillée).`,
-    },
-    CAS_SECTION,
-    {
-      kind: 'piecejointe',
-      intro: 'D’autres exemples datés (3 onglets : forfait, partage, déplacement) :',
-      fichiers: [
-        { fichier: 'pieces-defense/Cas-suppressions.xlsx', label: 'Cas de suppressions, exemples datés (XLSX)' },
-      ],
-    },
-    {
-      kind: 'interne',
-      audience: 'avocat',
-      titre: 'Cadre de présentation (à ne pas franchir)',
-      texte:
-        'Ne PAS prétendre justifier les 21 302 suppressions une par une : le fichier Événement ne contient ni produit ni table, et un audit jour par jour exposerait un résidu non rattachable que le fisc lirait comme un aveu. La bonne ligne : (1) ces exemples prouvent la NATURE des suppressions (forfait au centime, partages à l’article, déplacements) ; (2) l’impossibilité matérielle d’une vente cachée repose sur l’inventaire (consommation ≈ achats) et la bancarisation, pas sur la justification ligne à ligne ; (3) la fonction « suppression tracée » est exigée par NF525, donc normale.',
-    },
-    // ---------------- AXE 3 — FACTURES SANS DÉTAIL ----------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      numero: 4,
-      titre: 'Axe 3 — Les factures sans détail (menus à prix personnalisé)',
-      sousTitre: 'À la demande de groupes/comités, le détail des plats est supprimé pour facturer un menu au forfait — d’où des prix « hors catalogue » et des suppressions légitimes.',
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Certains clients (groupes, comités d’entreprise, événements) demandent une **facture au forfait, sans le détail des plats**. Le serveur **supprime alors les lignes de plats** et enregistre le menu à un **prix négocié, hors catalogue**. Ces opérations expliquent une partie des suppressions **et** le grief distinct d’« instabilité des prix du Menu Demi Lune » : ce menu haut de gamme est précisément celui qui est le plus souvent facturé au forfait.`,
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'Menus à prix hors catalogue', valeur: formatInt(MCUST.custom_q), sub: `sur ${formatInt(MCUST.total_q)} menus (${formatPct(MCUST.pct)})`, couleur: 'teal' },
-        { label: 'Dont valorisés', valeur: formatEuro(MCUST.custom_eur), sub: 'TTC, factures forfaitaires sans détail' },
-        { label: 'Menu Demi Lune au forfait', valeur: formatPct(MCUST.par_menu['Demi Lune'].pct), sub: `${formatEuro(MCUST.par_menu['Demi Lune'].custom_eur)} — explique l’« instabilité des prix »` },
-      ],
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Les tableaux ci-dessous donnent, **période de carte par période de carte**, le **prix catalogue** de chaque menu, le **nombre de fois vendu à ce prix** et le **nombre de fois vendu à un prix hors catalogue** (facture au forfait, sans détail). On voit que la quasi-totalité des menus sont vendus au prix catalogue, et que les écarts se concentrent sur le **Menu Demi Lune** (haut de gamme, souvent négocié en groupe) — ce qui répond directement au grief « instabilité des prix ». Le détail de chaque prix personnalisé (prix × quantité) figure dans la pièce jointe.`,
-    },
-    ...MENU_TABLES,
-    {
-      kind: 'piecejointe',
-      intro: 'Prix de chaque menu par période, ventes au prix catalogue vs hors catalogue, et liste de tous les prix personnalisés :',
-      fichiers: [
-        { fichier: 'pieces-defense/Menus-prix-par-periode.xlsx', label: 'Prix des menus par période (XLSX, 5 onglets)' },
-      ],
-    },
-    // ---------------- AXE 4 — CORRECTIONS DE SERVICE ----------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      numero: 5,
-      titre: 'Axe 4 — La masse des petites suppressions : des corrections d’exploitation exigées par la loi',
-      sousTitre: 'La traçabilité des corrections est une obligation légale (caisse certifiée NF525). Leur présence est attendue, pas suspecte.',
-    },
-    {
-      kind: 'alerte',
-      couleur: 'teal',
-      titre: 'La loi impose de tracer les corrections (donc d’enregistrer des lignes d’annulation)',
-      texte: `Depuis 2018, la loi anti-fraude TVA ([art. 286-I-3° bis du CGI](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897)) impose un logiciel de caisse **inaltérable, sécurisé, conservé, archivé**. La doctrine fiscale officielle ([BOFiP, BOI-TVA-DECLA-30-10-30 § 90](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20251001), à jour au 01/10/2025) précise que **« les corrections (modifications ou annulations) s’effectuent par des opérations de "plus" et de "moins" et non par modification directe des données d’origine »**, et que **« ces opérations de correction donnent également lieu à un enregistrement »** dont l’inaltérabilité est garantie. Autrement dit : un logiciel conforme **doit** produire des lignes d’annulation tracées. Leur présence prouve que **le système fonctionne comme la loi l’exige** : un effacement **sans** trace serait illégal ; une suppression **tracée** est conforme.`,
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Concrètement, **corriger une erreur de saisie ne consiste jamais à effacer une ligne** : sur une caisse certifiée NF525, une ligne validée ne peut pas disparaître sans trace. Pour corriger une faute de saisie (mauvais article, mauvaise quantité, plat renvoyé), le logiciel **crée une écriture de sens inverse** (opération « en moins » ou note de rectification) et **conserve l’originale**. La « suppression » que le fisc pointe est donc précisément la **fonction de correction exigée par la certification** : la voir à l’œuvre prouve que la caisse est conforme, pas qu’elle dissimule. C’est aussi la fonction que documentent les éditeurs eux-mêmes (transfert d’article entre tables, partage d’addition, départ anticipé, division d’un produit).`,
-    },
-    {
-      kind: 'note',
-      texte: `Sources (lien complet) : [https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20251001](https://bofip.impots.gouv.fr/bofip/10691-PGP.html/identifiant=BOI-TVA-DECLA-30-10-30-20251001) (BOFiP BOI-TVA-DECLA-30-10-30 § 90, à jour au 01/10/2025) ; [https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051764897) (art. 286-I-3° bis du CGI, Légifrance) ; [https://resto-support.lightspeedhq.com/hc/en-us/articles/226306387-Transferring-order-items](https://resto-support.lightspeedhq.com/hc/en-us/articles/226306387-Transferring-order-items) (Lightspeed : transfert d’un article vers un autre couvert ou une autre table) ; [https://www.laddition.com/fr/fonctionnalites-caisse-enregistreuse](https://www.laddition.com/fr/fonctionnalites-caisse-enregistreuse) (L’Addition : partage de note, départ anticipé, division d’un produit).`,
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Le **profil** de ces corrections est celui d’un service normal, pas d’un effacement organisé : **${formatPct(K.del.partRafales * 100)}** surviennent en **rafale** (≥ 2 à la même minute : changement de table, transfert, répartition d’addition), **${formatPct(K.del.partInf10 * 100)}** portent sur **10 € ou moins** (un plat ou une boisson modifié), **${formatInt(K.del.delNuit)}** ont lieu **la nuit** (hors service) et **${formatPct(A.partServices)}** tombent **pendant le service**. La suppression **médiane vaut ${formatEuro(A.mediane)}**, l’ordre de grandeur d’un seul article. Les causes sont celles que documentent les éditeurs de caisse eux-mêmes : erreur de saisie, plat renvoyé, geste commercial, **transfert d’article vers une autre table** (Lightspeed), **partage de note / encaissement séparé** (L’Addition).`,
-    },
-    {
-      kind: 'paragraphe',
-      texte: `**Distribution des suppressions par montant** : l’immense majorité sont de petites corrections (un plat, une boisson). La distribution épouse celle d’une carte de restaurant ; une dissimulation fabriquerait au contraire des montants ronds et élevés.`,
-    },
-    {
-      kind: 'graphique',
-      variante: 'vertical',
-      hauteur: 300,
-      dataKey: 'tranche',
-      serie: { name: 'Suppressions', couleur: 'blue.6' },
-      format: 'int',
-      data: A.distribution.map((d) => ({ tranche: d.tranche, Suppressions: d.n })),
-    },
-    {
-      kind: 'paragraphe',
-      texte: `**${formatPct(A.partServices)}** des suppressions surviennent **pendant les services** (midi et soir), pas à l’heure de clôture du Z. Si elles servaient à effacer des recettes, elles se concentreraient en fin de journée : ce sont au contraire des corrections **en temps réel**.`,
-    },
-    {
-      kind: 'graphique',
-      variante: 'vertical',
-      hauteur: 300,
-      dataKey: 'heure',
-      serie: { name: 'Suppressions', couleur: 'blue.6' },
-      format: 'int',
-      data: A.parHeure.filter((h) => h.heure >= 8 && h.heure <= 23).map((h) => ({ heure: `${h.heure} h`, Suppressions: h.n })),
-    },
-    {
-      kind: 'alerte',
-      couleur: 'blue',
-      titre: 'En droit, la seule présence d’annulations ne prouve pas une dissimulation',
-      texte: `Le rejet d’une comptabilité suppose des irrégularités d’une **gravité indiscutable** (soldes inexacts, absence de pièces justificatives, enregistrement partiel des recettes…) ; des corrections d’exploitation tracées, de faible montant, n’en font pas partie. Et **c’est à l’administration** d’établir, opération par opération, qu’une suppression donnée correspond à une **vente réelle encaissée puis effacée**. Elle ne le peut pas ici : le fichier Événement ne contient **ni le produit ni la table**. Transformer le respect d’une obligation légale (tracer les corrections) en présomption de fraude reviendrait à **renverser la charge de la preuve**. À l’inverse, aucun « taux de void » sectoriel chiffré ne fait autorité : le contrôle des annulations s’apprécie au cas par cas et par opérateur, jamais sur un volume global.`,
-    },
-    {
-      kind: 'note',
-      texte: `Sources (lien complet) : [https://www.village-justice.com/articles/point-sur-arret-460520-rendu-par-conseil-etat-2023,47896.html](https://www.village-justice.com/articles/point-sur-arret-460520-rendu-par-conseil-etat-2023,47896.html) (analyse de l’arrêt Conseil d’État, 3 nov. 2023, n° 460520 : gravité requise pour le rejet) ; [https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912](https://bofip.impots.gouv.fr/bofip/4298-PGP.html/identifiant=BOI-CF-IOR-10-20-20120912) (BOFiP BOI-CF-IOR-10-20 : conditions du rejet de comptabilité).`,
-    },
-    // ---------------- LES FICHIERS ----------------
-    {
-      kind: 'piecejointe',
-      intro: 'Pièces justificatives (recalcul intégral depuis la caisse certifiée, reproductible par script) :',
-      fichiers: [
-        { fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Décomposition des grosses suppressions (XLSX)' },
-        { fichier: 'pieces-defense/Defense-Suppressions-de-caisse-DEL.xlsx', label: 'Synthèse complète des suppressions (XLSX, 6 onglets)' },
-        { fichier: `${SYNTH}/02-rejet-comptabilite-1.md`, label: 'Rapport du fisc — rejet 1/3 (synthèse OCR)' },
-      ],
-    },
-    // ---------------- CONCLUSION ----------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      numero: 6,
-      titre: 'Conclusion',
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Chaque suppression a sa cause, aucune n’est une vente effacée. Les suppressions sont **identifiées et justifiées** : les 4 grosses (${formatPct(A.aberrPctTotal)} du montant) sont des **fautes de frappe sur la quantité** ; les **factures sans détail** correspondent à ${formatInt(MCUST.custom_q)} menus au forfait (${formatEuro(MCUST.custom_eur)}, dont le Menu Demi Lune) ; les **paiements séparés** (re-saisie sur une note jumelle) et les **corrections de saisie** (petites, en service, tracées comme la loi l’exige) couvrent le reste. Pour chaque ligne supprimée, le détail caisse montre **soit une re-saisie sur la même note, soit une ré-affectation sur une autre note** : rien n’est retiré sans contrepartie. Le motif ne peut donc fonder ni le rejet de comptabilité, ni la reconstitution qui en découle.`,
-    },
-    {
-      kind: 'interne',
-      audience: 'avocat',
-      titre: 'Pour le rendez-vous',
-      texte:
-        'Centrer le débat sur la CAUSE des suppressions, pas sur le total encaissé. Ordre conseillé : (1) décomposition des 4 grosses fautes de frappe (32 % du montant en 4 lignes aux quantités impossibles) ; (2) ouvrir une journée-type via l’œil et faire défiler les suppressions — chacune est une petite correction ou une ré-affectation visible ; (3) menus au forfait (Menu Demi Lune 39,5 % hors catalogue) qui explique AUSSI le grief « instabilité des prix » ; (4) rappeler que la loi (NF525/BOFiP) impose de TRACER ces corrections. Demander l’export détaillé par table et mettre le fisc au défi de désigner une seule suppression qui serait une vente effacée.',
-    },
-  ],
-}
+
+
 
 // =============================================================================
 // CATALOGUE DES AUTRES GRIEFS (structure validée d'abord, rédaction ensuite)
@@ -641,7 +380,7 @@ const autresGriefs: Grief[] = [
   },
 ]
 
-export const griefs: Grief[] = [suppressions, ...autresGriefs]
+export const griefs: Grief[] = [...autresGriefs]
 
 export function griefParSlug(slug: string): Grief | undefined {
   return griefs.find((g) => g.slug === slug)

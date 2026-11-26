@@ -235,7 +235,7 @@ export const contentieux: Document[] = [
     id: 'CT1',
     annexe: 'CONTENTIEUX',
     numero: 1,
-    titre: 'Observations du contribuable — 08/07/2026',
+    titre: 'Observations du contribuable : document daté du 08/07/2026, courrier du 10/07/2026 selon le service',
     description:
       'Mémoire en réponse à la proposition de rectification (59 annexes) : contestation, ' +
       'point par point, du rejet de comptabilité et de la reconstitution.',
@@ -399,7 +399,7 @@ export const piecesReponse2: Document[] = [
 /**
  * Pièces de défense - analyses chiffrées produites pour l'avocat et le fisc.
  * Classeurs XLSX data-lourds, chaque chiffre sourcé et reproductible (scripts
- * src/data/incertitudeDisparu, à partir des annexes certifiées A/B/E/H).
+ * src/data/incertitudeDisparu, à partir des annexes A/B/E/H).
  */
 interface PieceManifest {
   id: string

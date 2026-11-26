@@ -92,7 +92,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Suppressions « DEL »', titre: 'Les suppressions de notes (« DEL »)',
     positionService: '',
     reponseCourte:
-      'Le chiffre de 430 763,15 € n’est pas une mesure de recettes : ce sont 21 302 lignes d’articles retirés un par un, dont 32,0 % tiennent dans quatre lignes à quantité aberrante. La société assume le procédé montré au vérificateur (ressaisie sur une autre note, puis table d’origine vidée) et expose la population entière des tables vidées (2 359 tables, 180 003,94 €), ce que les annexes du service en rattachent à des notes encaissées et ce qu’elles laissent indéterminé. Au titre de ce motif, les courriers ne désignent ni vente encaissée et non déclarée, ni canal, ni montant.',
+      'Le chiffre de 430 763,15 € n’est pas une mesure de recettes : ce sont 21 302 lignes d’articles retirés un par un, dont 32,0 % tiennent dans quatre lignes à quantité aberrante. La société assume le procédé montré au vérificateur (ressaisie sur une autre note, puis table d’origine vidée) et expose la population entière des tables vidées (2 359 tables, 180 003,94 €), ce que les annexes du service en rattachent à des notes encaissées et ce qu’elles laissent indéterminé. Au titre de ce motif, les courriers ne désignent ni vente encaissée et non déclarée, ni canal, ni montant ; les 37 tickets à 0,00 € porteurs de règlements sont exposés par la société elle-même (réponse, point 2.2.5 c).',
     enjeu: 'Pilier n° 1 du rejet', statut: 'partiel',
   },
   {

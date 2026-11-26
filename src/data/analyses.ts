@@ -368,21 +368,21 @@ const reconstitution: Analyse = {
   eyebrow: 'Preuve maîtresse',
   titre: 'Reconstitution intégrale du chiffre d’affaires',
   resume:
-    'Recalculé depuis la caisse par cinq chemins indépendants, le chiffre d’affaires retombe sur le montant déclaré.',
+    'Recalculé depuis la caisse par cinq chemins indépendants, le chiffre d’affaires retombe sur le montant déclaré. Les cinq exports concordent avec le montant déclaré ; les règlements portés sur 37 tickets à 0,00 € sont exposés à part (réponse, point 2.2.5 c).',
   force: 'forte',
   controleurDit:
     'Le chiffre d’affaires déclaré serait minoré : reconstitution alléguée de +471 826 € de recettes.',
   demonstration:
-    'Cinq exports indépendants de la caisse reconstituent le CA déclaré à 0,1 % près.',
+    'Cinq exports indépendants reconstituent le CA déclaré à 0,1 % près. Les cinq exports concordent avec le montant déclaré ; les règlements portés sur 37 tickets à 0,00 € sont exposés à part (réponse, point 2.2.5 c).',
   faitTomber: 'La reconstitution du fisc - 471 826 €',
   pieces: piecesLiees('B', 'C', 'H', 'G', 'A'),
   apercu: [
-    { label: 'Exports de caisse qui convergent', valeur: String(R.sourcesCount) },
+    { label: 'Exports qui convergent', valeur: String(R.sourcesCount) },
     { label: 'Écart max au CA déclaré (3 ans)', valeur: formatPct(ecartMaxRecon, 2) },
   ],
   sections: [
     enClair(
-      'Plutôt que d’estimer le chiffre d’affaires, on l’a recalculé depuis la caisse par **cinq chemins indépendants** : chaque plat, chaque ticket, chaque en-tête, le journal de TVA, et la synthèse déclarée. Les cinq tombent sur le même montant. Conclusion simple : il ne manque aucune recette.',
+      'Plutôt que d’estimer le chiffre d’affaires, on l’a recalculé depuis la caisse par **cinq chemins indépendants** : chaque plat, chaque ticket, chaque en-tête, le journal de TVA, et la synthèse déclarée. Les cinq tombent sur le même montant. Les règlements portés sur 37 tickets à 0,00 € sont exposés à part (réponse, point 2.2.5 c).',
     ),
     {
       kind: 'paragraphe',
@@ -391,7 +391,7 @@ const reconstitution: Analyse = {
     {
       kind: 'kpis',
       items: [
-        { label: 'CA déclaré (A)', valeur: formatEuro(R.cumul.caDeclare), sub: 'synthèse de caisse' },
+        { label: 'CA déclaré (A)', valeur: formatEuro(R.cumul.caDeclare), sub: 'synthèse déclarée' },
         { label: 'Détail des plats (B)', valeur: formatEuro(R.cumul.reconstitutionB), sub: ecPct(R.cumul.ecartBPct) },
         { label: 'Tickets, détail = en-têtes (C = H)', valeur: formatEuro(R.cumul.reconstitutionC), sub: ecPct(R.cumul.ecartCPct) },
         { label: 'Journal de TVA (G)', valeur: formatEuro(R.cumul.reconstitutionG), sub: ecPct(R.cumul.ecartGPct), highlight: true, couleur: 'teal' },
@@ -456,7 +456,7 @@ const reconstitution: Analyse = {
       ],
     },
     retenir(
-      `Le chiffre d’affaires déclaré n’est pas une estimation : **cinq exports indépendants de la caisse** le reconstituent, tous à moins de ${formatPct(ecartMaxRecon, 2)} près sur trois ans. Toute reconstitution extrapolée (coefficients, ratios de marge) est démentie par les données réelles.`,
+      `Le chiffre d’affaires déclaré n’est pas une estimation : **cinq exports indépendants** le reconstituent, tous à moins de ${formatPct(ecartMaxRecon, 2)} près sur trois ans. Toute reconstitution extrapolée (coefficients, ratios de marge) est démentie par les données réelles.`,
     ),
     sources('B', 'C', 'H', 'G', 'A'),
   ],
@@ -469,7 +469,7 @@ const C = I.continuite
 const continuite: Analyse = {
   slug: 'continuite-nf525',
   eyebrow: 'Intégrité',
-  titre: 'Continuité NF525 (aucune occultation possible)',
+  titre: 'Continuité des tickets de la caisse',
   resume:
     'La numérotation séquentielle et ininterrompue des tickets Z et des événements établit qu’aucune journée et aucun événement ne manquent dans les fichiers ; elle ne dit rien, à elle seule, des tables vidées, refermées dans une seconde série de tickets.',
   force: 'forte',
@@ -477,7 +477,7 @@ const continuite: Analyse = {
     'Les suppressions prouveraient une caisse manipulable, des recettes effaçables.',
   demonstration:
     '659 tickets-Z et 23 339 événements numérotés sans aucun trou. Aucune journée, aucun ticket, aucun événement n’a pu être effacé.',
-  faitTomber: 'La continuité des numérotations de la caisse',
+  faitTomber: 'La continuité des tickets de la caisse',
   pieces: piecesLiees('E', 'H'),
   apercu: [
     { label: 'Tickets-Z sans trou', valeur: formatInt(C.zTotal) },
@@ -586,7 +586,7 @@ const bancarisation: Analyse = {
       items: [
         { label: 'CA encaissé traçable', valeur: formatPct(B.tracablePct), sub: 'carte, titres, chèques', highlight: true, couleur: 'teal' },
         { label: 'Part des espèces', valeur: formatPct(B.especesPct), sub: `${formatEuro(B.especesTotal)} sur 3 ans` },
-        { label: 'CA total (3 ans)', valeur: formatEuro(B.caTotal), sub: 'encaissements de caisse' },
+        { label: 'CA total (3 ans)', valeur: formatEuro(B.caTotal), sub: 'règlements enregistrés' },
       ],
     },
     {
@@ -828,7 +828,7 @@ const boissonsV2: Analyse = {
     {
       kind: 'barreComposition',
       titre: 'Comment le chiffre d’affaires est encaissé',
-      sousTitre: 'Aucun canal espèces ne peut absorber des ventes dissimulées de cette ampleur.',
+      sousTitre: 'Part de chaque mode dans les règlements enregistrés.',
       unite: '%',
       total: 100,
       segments: [

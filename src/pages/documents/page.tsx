@@ -400,7 +400,7 @@ function SectionPiecesDefense() {
         </Group>
         <Text c="dimmed" maw={760}>
           Analyses produites pour l'avocat et le fisc. Chaque chiffre est sourcé
-          et reproductible à partir des annexes certifiées (A, B, E, H).
+          et reproductible à partir des annexes A, B, E et H du service.
           Classeurs au format tableur.
         </Text>
         <NiveauBadge niveau="Analyse chiffrée" color="teal" />
@@ -474,7 +474,7 @@ function SectionContentieux() {
           </Title>
         </Group>
         <Text c="dimmed" maw={760}>
-          Les échanges de la procédure contradictoire, du mémoire du 08/07/2026 aux propositions
+          Les échanges de la procédure contradictoire, du mémoire du 10/07/2026 aux propositions
           de rectification personnelles du 19/10/2026.
         </Text>
         <NiveauBadge niveau="PDF / Word" />

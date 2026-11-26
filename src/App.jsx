@@ -5,8 +5,8 @@ import Documents from './pages/documents/page'
 import DocumentDetail from './pages/documents/[slug]/page'
 import Analyses from './pages/analyses/page'
 import AnalyseDetail from './pages/analyses/[slug]/page'
-import Defense from './pages/defense/page'
-import FrontDetail from './pages/defense/[slug]/page'
+
+
 import RenduFinal from './pages/rendu-final/page'
 import GriefDetail from './pages/rendu-final/[slug]/page'
 import Reponse1 from './pages/reponse-1/page'
@@ -26,8 +26,8 @@ export default function App() {
         <Route path="documents/:slug" element={<DocumentDetail />} />
         <Route path="analyses" element={<Analyses />} />
         <Route path="analyses/:slug" element={<AnalyseDetail />} />
-        <Route path="defense" element={<Defense />} />
-        <Route path="defense/:slug" element={<FrontDetail />} />
+
+
         <Route path="rendu-final" element={<RenduFinal />} />
         <Route path="rendu-final/:slug" element={<GriefDetail />} />
         <Route path="reponse-1" element={<Reponse1 />} />

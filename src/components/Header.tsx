@@ -5,7 +5,7 @@ import { IconChevronRight } from '@tabler/icons-react'
 import { navLinks } from './navLinks'
 import { titreParSlug } from '../data/documents'
 import { analyseParSlug } from '../data/analyses'
-import { frontParSlug } from '../data/defense'
+
 import Brand from './Brand'
 
 type HeaderProps = {
@@ -27,7 +27,7 @@ function useBreadcrumb(): Crumb[] {
     navLinks[0]
 
   // Page détail : /documents|analyses|defense/<slug>
-  const detail = pathname.match(/^\/(documents|analyses|defense)\/(.+)$/)
+  const detail = pathname.match(/^\/(documents|analyses)\/(.+)$/)
 
   if (section) {
     trail.push({
@@ -42,9 +42,9 @@ function useBreadcrumb(): Crumb[] {
     const titre =
       detail[1] === 'analyses'
         ? analyseParSlug(slug)?.titre
-        : detail[1] === 'defense'
-          ? frontParSlug(slug)?.titre
-          : titreParSlug(slug)
+
+
+        : titreParSlug(slug)
     trail.push({ label: titre ?? 'Détail' })
   }
 

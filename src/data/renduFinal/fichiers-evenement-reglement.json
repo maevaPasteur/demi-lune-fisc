@@ -11,7 +11,7 @@
       "public/documents/caisse-enregistreuse/ANNEXE-H{1,2,3}_liste-tickets_*.xls"
     ],
     "chiffres": {
-      "del_cumul": 21305,
+      "del_cumul": 21302,
       "regl_total_cumul": 1278149.46,
       "bancarise_cumul": 1260816.28,
       "especes_cumul": 17333.18,
@@ -29,6 +29,12 @@
       "numero": 1,
       "titre": "Ce que dit l'administration",
       "sousTitre": "Proposition p. 23-24 et 27-29 (rejet de comptabilité 1/3 et 2/3). Fichier Événement (annexes E-1 à E-3, section IX), Fichier Règlement (annexes F-1 à F-3, section X) et inaltérabilité des fichiers de caisse (sections XII et XIII)."
+    },
+    {
+      "kind": "alerte",
+      "couleur": "orange",
+      "titre": "Réponse du 10 juillet 2026, remplacée sur ces motifs",
+      "texte": "Cette page reprend, corrigée depuis, l’analyse de la réponse du 10 juillet 2026 ; seul fait foi le courrier remis au service à cette date. Sur les suppressions de notes, elle est remplacée par la page [Les suppressions de notes](/reponse-2/suppressions-de-notes) ; sur les fichiers Événement et Règlement, par la page [Les fichiers Événement et Règlement](/reponse-2/fichiers-evenement-reglement)."
     },
     {
       "kind": "titre",
@@ -79,7 +85,7 @@
       "source": "nous",
       "numero": 2,
       "titre": "Notre réponse : chaque point réfuté",
-      "sousTitre": "À chaque grief (1.1 à 1.4) répond la réfutation correspondante (2.1 à 2.4), pièces de caisse à l'appui : E est la trace légale des corrections, F prouve la bancarisation, et les « fluctuations » sont des écarts d'export, pas des altérations."
+      "sousTitre": "À chaque grief (1.1 à 1.4) répond la réfutation correspondante (2.1 à 2.4), pièces de caisse à l'appui : E est le journal des corrections, F celui des règlements, et les « fluctuations » sont des écarts d'export, pas des altérations."
     },
     {
       "kind": "titre",
@@ -100,11 +106,11 @@
     },
     {
       "kind": "titre",
-      "texte": "La caisse est certifiée, et l'administration le reconnaît"
+      "texte": "Le certificat de conformité de la caisse a été remis au vérificateur"
     },
     {
       "kind": "paragraphe",
-      "texte": "Le restaurant utilise le logiciel **SERVILOG de l'éditeur AKEAD (version POS 5.03-Eb)**, **certifié NF525** ; son **certificat de conformité est daté du 01/12/2018**. Le vérificateur l'a expressément demandé puis reçu : la proposition de rectification indique, **page 3**, qu'il « demande le nom du logiciel de caisse : SERVILOG d'AKEAD et le certificat correspondant », et que « le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 ». **Le restaurant a donc rempli ses deux obligations** : utiliser un système certifié et produire le certificat. La certification **NF525** est précisément le « certificat délivré par un organisme accrédité » exigé par la loi."
+      "texte": "Le restaurant utilise le logiciel **SERVILOG de l'éditeur AKEAD (version POS 5.03-Eb)**, dont le **certificat de conformité est daté du 01/12/2018**. Le vérificateur l'a expressément demandé puis reçu : la proposition de rectification indique, **page 3**, qu'il « demande le nom du logiciel de caisse : SERVILOG d'AKEAD et le certificat correspondant », et que « le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 ». Le restaurant a produit le document qu’il détenait ; le service le qualifie d’« auto-certification » (réponse du 4 septembre 2026, p. 39)."
     },
     {
       "kind": "titre",
@@ -112,7 +118,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "C'est exact : le Fichier Événement (E) ne comporte **aucune colonne « libellé »**. Il enregistre, pour chaque suppression « DEL », la **date, l'heure, le caissier, le numéro de ticket Z, le montant et un identifiant unique**, mais pas le nom du plat. Cette structure est **celle du logiciel certifié SERVILOG/AKEAD** : elle relève de la **conception de l'éditeur**, couverte par la certification, et non d'un choix ou d'une manipulation du restaurant. Reprocher au restaurant le format du journal d'une caisse certifiée revient à lui imputer une obligation qui pèse sur l'éditeur."
+      "texte": "C'est exact : le Fichier Événement (E) ne comporte **aucune colonne « libellé »**. Il enregistre, pour chaque suppression « DEL », la **date, l'heure, le caissier, le numéro de ticket Z, le montant et un identifiant unique**, mais pas le nom du plat. Cette structure est **celle du logiciel SERVILOG/AKEAD** : elle relève de la **conception de l'éditeur**, et non d'un choix ou d'une manipulation du restaurant."
     },
     {
       "kind": "tableau",
@@ -403,7 +409,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les lignes « DEL » ne sont **pas du chiffre d'affaires disparu** : elles correspondent à des **erreurs de saisie**, des **paiements séparés**, des **créations de facture sans détail** et des **erreurs de table**. La démonstration complète, cas par cas et réconciliée au centime, est faite dans la page dédiée : [/rendu-final/suppressions-de-caisse](/rendu-final/suppressions-de-caisse). Le fichier E ne contient d'ailleurs que des **corrections tracées** (DEL, CON, RPR, TIR), récapitulées ci-dessous :"
+      "texte": "Le fichier E contient les lignes « DEL » et d'autres événements sans montant (CON, RPR, TIR), récapitulés ci-dessous. Sur les suppressions, la réponse du 10 juillet 2026 est remplacée par la page [Les suppressions de notes](/reponse-2/suppressions-de-notes)."
     },
     {
       "kind": "tableau",
@@ -427,10 +433,10 @@
             "v": "DEL"
           },
           {
-            "v": "Suppression d'une ligne d'article (correction de saisie)"
+            "v": "Suppression d'une ligne d'article"
           },
           {
-            "v": "21 305",
+            "v": "21 302",
             "align": "right"
           }
         ],
@@ -439,10 +445,10 @@
             "v": "RPR"
           },
           {
-            "v": "Reprise / reouverture d'une note"
+            "v": "Événement sans montant, de sens non documenté"
           },
           {
-            "v": "1 310",
+            "v": "1 307",
             "align": "right"
           }
         ],
@@ -451,10 +457,10 @@
             "v": "CON"
           },
           {
-            "v": "Consultation / controle (ouverture du tiroir, etc.)"
+            "v": "Événement sans montant, de sens non documenté"
           },
           {
-            "v": "732",
+            "v": "729",
             "align": "right"
           }
         ],
@@ -463,10 +469,10 @@
             "v": "TIR"
           },
           {
-            "v": "Ouverture de tiroir-caisse"
+            "v": "Événement sans montant, de sens non documenté"
           },
           {
-            "v": "4",
+            "v": "1",
             "align": "right"
           }
         ]
@@ -748,11 +754,11 @@
     },
     {
       "kind": "titre",
-      "texte": "Une caisse certifiée ne peut pas modifier les montants : c'est la loi"
+      "texte": "Le chiffre d'affaires est identique d'un export à l'autre"
     },
     {
       "kind": "paragraphe",
-      "texte": "La caisse de La Demi-Lune est **certifiée NF525** (logiciel SERVILOG de l'éditeur AKEAD, certificat du 01/12/2018), et l'administration **détient ce certificat** : elle le reconnaît page 3 de la proposition (« le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 »). Or l'**article 286, I, 3° bis du CGI** impose que le logiciel enregistre les données de règlement **sans qu'elles puissent être altérées** (condition d'**inaltérabilité** définie par la doctrine BOI-TVA-DECLA-30-10-30). Modifier après coup le montant d'une recette est donc **techniquement impossible** sur une caisse certifiée, et c'est bien ce que l'on constate : le chiffre d'affaires est identique d'un export à l'autre. Un écart de **comptage des quantités** entre deux états relève du **fonctionnement du logiciel** (la responsabilité de l'éditeur, couverte par la certification), pas d'une manipulation du restaurant. Le restaurant ne saurait être tenu pour responsable de la manière dont un rapport de caisse certifié additionne les parts d'articles partagés."
+      "texte": "Le logiciel de caisse SERVILOG de l'éditeur AKEAD fait l'objet d'un certificat du 01/12/2018, que l'administration **détient** : elle le reconnaît page 3 de la proposition (« le 13 janvier 2026, le cabinet transmet par courriels le certificat de conformité de la caisse daté du 01/12/2018 »). Or l'**article 286, I, 3° bis du CGI** impose que le logiciel enregistre les données de règlement **sans qu'elles puissent être altérées** (condition d'**inaltérabilité** définie par la doctrine BOI-TVA-DECLA-30-10-30). Le chiffre d'affaires est identique d'un export à l'autre. Un écart de **comptage des quantités** entre deux états relève du **fonctionnement du logiciel**, pas d'une manipulation du restaurant."
     },
     {
       "kind": "paragraphe",
@@ -944,7 +950,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les fichiers Excel transmis les 13 février et 13 mars 2026 étaient des **extraits de travail**, modifiables par nature (ce sont des classeurs Excel). L'archive **inaltérable** au sens de la norme NF525, c'est l'**export certifié remis sur clé USB** le 16/30 mars 2026. Comparer un brouillon Excel à l'archive sécurisée pour conclure à une « altération » revient à confondre l'outil de travail et la pièce légale. La donnée sous-jacente (tickets Z, récapitulatifs journaliers) est stable ; c'est elle qui fait foi."
+      "texte": "Les fichiers Excel transmis les 13 février et 13 mars 2026 étaient des **extraits de travail**, modifiables par nature (ce sont des classeurs Excel). Les fichiers de caisse remis sur clé USB en mars 2026 sont la donnée que le service a exploitée. Comparer un brouillon Excel à l'archive sécurisée pour conclure à une « altération » revient à confondre l'outil de travail et la pièce légale. La donnée sous-jacente (tickets Z, récapitulatifs journaliers) est stable ; c'est elle qui fait foi."
     },
     {
       "kind": "piecejointe",
@@ -1012,7 +1018,7 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Les journaux Événement (E) et Règlement (F) ne révèlent aucune anomalie : E est la trace légale des corrections (NF525), F prouve la ventilation des encaissements. La triangulation A = F = H verrouille l'égalité CA = encaissements, et la bancarisation atteint 98,64 % (espèces 1,36 % seulement). Ces fichiers, loin de fonder le rejet, démontrent la sincérité de la comptabilité."
+      "texte": "Sur les suppressions, la réponse du 10 juillet 2026 est remplacée par la page [Les suppressions de notes](/reponse-2/suppressions-de-notes) ; sur les fichiers Événement et Règlement, par la page [Les fichiers Événement et Règlement](/reponse-2/fichiers-evenement-reglement)."
     }
   ]
 }
