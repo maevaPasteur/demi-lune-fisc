@@ -112,7 +112,7 @@ def parse_table(i, titre):
         cells = [c.strip() for c in L[i].strip().strip('|').split('|')]
         rows.append(cells)
         i += 1
-    rows = [r for r in rows if not all(re.fullmatch(r':?-{2,}:?', c) or c == '' for c in r) or all(c == '' for c in r)]
+    rows = [r for r in rows if not all(re.fullmatch(r':?-+:?', c) or c == '' for c in r) or all(c == '' for c in r)]
     if rows and all(c == '' for c in rows[0]):
         rows = rows[1:]
     head, body = rows[0], rows[1:]
