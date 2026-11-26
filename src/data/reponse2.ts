@@ -108,8 +108,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Articles à 0 €', titre: 'Les articles à prix 0 €',
     positionService: '',
     reponseCourte:
-      'Le grief est qualitatif et sans montant : 272 lignes à 0 € sur 97 769 (0,28 %), 138 notes sur 16 607, 0,00 € porté, que la réponse écrite de la gérante invoquée par le service explique (prix modulé à la ligne, 0 € en étant la borne), dont les extraits du service confirment le décompte au demi-article près, et que le service reconnaît lui-même « non significatives ».',
-    statut: 'demonte',
+      'Le grief n’est assorti d’aucun montant : 272 lignes de vente à prix nul sur 97 769 (0,28 %), dont 259 dans 136 notes réglées pour leur montant exact, valant 2 100,05 € sur trois exercices au prix le plus proche (0,165 % du chiffre d’affaires). Le service écrit que « le nombre d’articles à 0 € n’est pas significatif », tout en le jugeant « de nature à conforter le motif de rejet ». La non-saisie de l’offert n’affecte pas l’enregistrement des recettes, et le service l’a prise en compte par son forfait.',
+    statut: 'partiel',
   },
   {
     slug: 'erreurs-de-tva', bloc: 'rejet',
@@ -237,7 +237,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Abattements', titre: 'Les abattements et pertes forfaitaires',
     positionService: '',
     reponseCourte:
-      'Ramené en litres, le forfait de 15 % (1 593 L) couvre et dépasse la consommation sans vente que nous documentons (1 135,6 L brut, 675,0 L net hors sur-versement déjà facturé), de sorte que ce point ne réduit pas le redressement ; ce qui tombe, c’est l’emploi que le service fait de ce forfait unique, opposé six fois dans huit pages, et ses comparaisons « 13 fois / 3 fois », qui mêlent 26 216,19 € de cuisine extrapolée par exercice à des chiffres de boissons.',
+      'Ramené en litres, le forfait de 15 % (1 593 L) couvre et dépasse la consommation sans vente que nous documentons (1 134,6 L brut, 674,0 L net hors sur-versement déjà facturé), de sorte que ce point ne réduit pas le redressement ; ce qui tombe, c’est l’emploi que le service fait de ce forfait unique, opposé six fois dans huit pages, et ses comparaisons « 13 fois / 3 fois », qui mêlent 26 216,19 € de cuisine extrapolée par exercice à des chiffres de boissons.',
     statut: 'partiel',
   },
   {

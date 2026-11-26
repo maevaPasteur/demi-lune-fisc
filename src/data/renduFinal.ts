@@ -335,7 +335,6 @@ const suppressions: Grief = {
       intro: 'Pièces justificatives (recalcul intégral depuis la caisse certifiée, reproductible par script) :',
       fichiers: [
         { fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Décomposition des grosses suppressions (XLSX)' },
-        { fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Réconciliation suppressions & encaissements (XLSX)' },
         { fichier: 'pieces-defense/Defense-Suppressions-de-caisse-DEL.xlsx', label: 'Synthèse complète des suppressions (XLSX, 6 onglets)' },
         { fichier: `${SYNTH}/02-rejet-comptabilite-1.md`, label: 'Rapport du fisc — rejet 1/3 (synthèse OCR)' },
       ],
@@ -373,13 +372,6 @@ const enChantier = (angle: string): Section[] => [
     titre: 'Angle de réponse retenu',
     texte: angle,
   },
-  {
-    kind: 'interne',
-    audience: 'avocat',
-    titre: 'Rédaction en cours',
-    texte:
-      'Cette sous-page sera rédigée au standard de l’exemple « Suppressions de notes » (citation du rapport + calcul exact + fichiers téléchargeables + résultat) une fois le format validé.',
-  },
 ]
 
 const autresGriefs: Grief[] = [
@@ -391,7 +383,7 @@ const autresGriefs: Grief[] = [
     titre: 'Articles à prix 0 € (offerts / gratuits)',
     griefFisc: 'Des lignes vendues à 0 € seraient le signe de ventes sorties du chiffre d’affaires.',
     reponseCourte:
-      'Les lignes à 0 € sont 0,28 % des ventes (272 / 97 694), pour l’essentiel des cafés et de la consommation du personnel : aucune recette n’y est cachée.',
+      'Page historique. Les formules de juillet 2026 sur les lignes à 0 € (« consommation du personnel », « offerts purs ou essais », 8 010 €) sont rectifiées dans la réponse actuelle, point 2.4.2 c).',
     statut: 'partiel',
     sections: RFZeroEuro.sections as unknown as Section[],
   },

@@ -7,7 +7,7 @@
    "Le bilan matière des 10 622 L n'existe qu'en cumul triennal (pas d'inventaire d'ouverture au 31/03/2022, pas de cascade annuelle) ; la part revendue de 60,77 % ne vaut que si les postes non revendus sont admis.",
    "Aucune dose n'a été mesurée sur place : le verre de 18,28 cl vient de la littérature (Kerr 2008, IC 95 % 17,60 à 18,96 cl), non d'un relevé à La Demi-Lune.",
    "Aucun référentiel professionnel externe n'est produit pour un coefficient de revente global de 2,30 ; le grief est ramené à une question de volumes, non renversé par un usage opposable.",
-   "Le forfait de 15 % est concédé comme un plafond (itemisation 1 135 L = 71,3 % de 1 593 L) : aucun dégrèvement n'est demandé au titre des abattements eux-mêmes, ni au titre de la bière (0 €), ni de la variation de stock (point 9 retiré).",
+   "Le forfait de 15 % est concédé comme un plafond (itemisation 1 134 L = 71,2 % de 1 593 L) : aucun dégrèvement n'est demandé au titre des abattements eux-mêmes, ni au titre de la bière (0 €), ni de la variation de stock (point 9 retiré).",
    "L'article L. 192 du LPF n'a pu être relu sur Légifrance (site inaccessible depuis l'environnement de travail) : il est cité par l'intermédiaire du BOI-CF-IOR-10-20 § 270 et 280 et de la décision CE n° 452595, tous deux relus."
   ]
  },
@@ -468,7 +468,7 @@
    "items": [
     "Le disponible du service repose sur les inventaires de la société, qu'il déclare par ailleurs non probants : la variation du stock de boissons qu'il retient au tableau p. 34 (− 800,83 / − 1 029,67 / − 273,41 €) est, pour 2023-2024, exactement la différence de nos deux inventaires datés (3 777,99 − 4 807,66 = − 1 029,67 €, écart 0,00). Le même état ne peut pas valoir pour fixer le disponible et être écarté pour le reste.",
     "Le stock est plat : variation cumulée − 2 103,91 € pour 141 720,38 € d'achats (1,48 %), consommation 139 616,47 € = 98,52 % des achats. Rien n'est « planqué » en cave ; tout litre acheté est consommé ou perdu dans l'exercice. Le point 9 (variation de stock) est retiré : aucun euro n'est demandé de ce chef.",
-    "Un litre acheté est soit vendu, soit en stock, soit consommé sans vente, soit perdu : la cascade des 10 622 L remplit ces termes poste par poste et laisse le dernier se déduire comme solde. Revendu au verre et en cocktails : 6 455 L = 60,77 % ; attribué à un poste identifié : 8 544 L = 80,4 % ; perte pure (casse, évaporation, fonds de verre, rinçage) : 2 078 L = 19,6 %, qui n'est pas un taux posé mais un résidu. La cascade boucle à 10 622 L (13 contrôles arithmétiques sur 13, pièce R1-cascade-nature-des-chiffres, onglet 4).",
+    "Un litre acheté est soit vendu, soit en stock, soit consommé sans vente, soit perdu : la cascade des 10 622 L remplit ces termes poste par poste et laisse le dernier se déduire comme solde. Revendu au verre et en cocktails : 6 455 L = 60,77 % ; attribué à un poste identifié : 8 543 L = 80,4 % ; perte pure (casse, évaporation, fonds de verre, rinçage) : 2 079 L = 19,6 %, qui n'est pas un taux posé mais un résidu. La cascade boucle à 10 622 L (13 contrôles arithmétiques sur 13, pièce R1-cascade-nature-des-chiffres, onglet 4).",
     "Les « volumes disparus » du repère (3) ne sont pas une matière absente : la propre comptabilité matière du service (p. 34-35) est équilibrée, achats + variation = consommation. Un « disparu » est un litre consommé sans recette au tarif théorique d'une dose, c'est-à-dire l'écart que la méthode fabrique, pas un manquant physique.",
     "Les « ventes sans achat » qui alimentent la partie XIV sont des confusions de code : « Mouton Cadet » = Château Grand Renom (code 661236), « Hautes Côtes de Nuits » = blanc Lupé-Cholet (code 601416) et non le Hautes Côtes de Beaune rouge, 8 codes-bières jamais paramétrés, Cubis 426,9 L réattribué aux vins maison. Le service le concède p. 74 : elles « n'ont pas entraîné de chiffre d'affaires reconstitué ». Reste assumé : 1 bouteille de Bordeaux (75 cl, ≤ 30 € HT) sortie sans vente en 2022-2023, et 12 produits dont la consommation dépasse les achats pour 708,3 L (Calvados 110,7 L consommés pour 73,0 L achetés), défauts de paramétrage sans recette occulte démontrée.",
     "Sur les 19 rubriques « Réponse du service » du bloc reconstitution (p. 59 à 92), 18 n'opposent aucun volume mesuré : les seuls litres cités (2 132 L au total : 198 et 500 L au titre du 15 %, 93, 111, 15 et 240 L des repères D, E, G, Q, 796,43 L sur les BIB, 33,28 L sur les crèmes, 83,84 et 61,46 L au titre du 5 %) sont le produit de ses propres taux ou de ses propres colonnes ; 16 fois la conclusion est une formule de non-modification (14 fois p. 60 à 89, 2 fois p. 77 et 82). Le rehaussement est resté identique au centime.",
@@ -515,7 +515,7 @@
     {
      "label": "Dégustation",
      "valeur": 103,
-     "categorie": "mesure"
+     "categorie": "calcul"
     },
     {
      "label": "Freinte bière",
@@ -528,13 +528,13 @@
      "categorie": "estime"
     },
     {
-     "label": "Offerts",
-     "valeur": 14,
+     "label": "Boissons servies sans recette, hors dégustation et personnel, non saisies",
+     "valeur": 13,
      "categorie": "estime"
     },
     {
      "label": "Perte pure (résidu)",
-     "valeur": 2078,
+     "valeur": 2079,
      "categorie": "residuel"
     }
    ],
@@ -672,10 +672,10 @@
       "align": "right"
      },
      {
-      "v": "mesuré"
+      "v": "dénombré, dose attestée"
      },
      {
-      "v": "5 169 couples vin nommé × note × 2 cl (vins nommés de la carte achetés en bouteille de 75 cl, servis au verre ou au pichet ; ni crémant ni macvin), pratique attestée par la gérante (attestation n° 147) ; tracé à 0 € en caisse : 2,15 L seulement"
+      "v": "5 169 couples vin nommé × note × 2 cl (vins nommés de la carte achetés en bouteille de 75 cl, servis au verre ou au pichet ; ni crémant ni macvin), pratique attestée par la gérante (attestation n° 147) ; la caisse ne porte pas la larme (ses 9 lignes de verres ou de pichets à 0 €, 8 de vin nommé et un pichet d’Aligoté, 2,15 L, sont des contenants entiers, hors de la demande)"
      }
     ],
     [
@@ -718,10 +718,10 @@
     ],
     [
      {
-      "v": "Offerts non enregistrés"
+      "v": "Boissons servies sans recette, hors dégustation et personnel, non saisies"
      },
      {
-      "v": "14",
+      "v": "13",
       "align": "right"
      },
      {
@@ -732,7 +732,7 @@
       "v": "estimé"
      },
      {
-      "v": "Un apéritif de 6 cl par jour, moins 25,75 L déjà à 0,00 € dans la caisse"
+      "v": "L’équivalent en volume d’un apéritif de 6 cl par jour servi sans recette (hors dégustation et personnel), moins 26,75 L portés à 0,00 € en caisse, sorties sans recette déjà comptées dans les quantités vendues"
      }
     ],
     [
@@ -759,7 +759,7 @@
       "v": "Total attribué à un poste identifié"
      },
      {
-      "v": "8 544",
+      "v": "8 543",
       "align": "right"
      },
      {
@@ -778,7 +778,7 @@
       "v": "Perte pure : casse, évaporation, fonds de verre, rinçage"
      },
      {
-      "v": "2 078",
+      "v": "2 079",
       "align": "right"
      },
      {
@@ -920,7 +920,7 @@
    "resume": [
     "La société « n'a enregistré aucun gratuit/offert dans les données de la caisse » ; les remises (plats « modifiés ») sont « totalement impossible[s] » à identifier.",
     "Le vérificateur applique « à la fin de la méthode » 5 % du CA reconstitué pour les offerts et remises, 5 % pour les pertes, 5 % pour la consommation du personnel, et retranche 15 % du volume de bière acheté et disponible.",
-    "Réponse du 04/09 : les offerts tracés ne pèsent que 0,28 % ; les 5 % de chaque abattement « minore[nt] le montant du chiffre d'affaires TTC reconstitué à hauteur de 35 133,26 € » sur le premier exercice, « 8,70 % du chiffre d'affaires TTC déclaré », soit 105 399,78 € sur trois exercices ; la loi interdit l'alcool aux salariés ; les DADS ne portent que 3 507 / 3 555 / 3 957 € d'avantages en nature.",
+    "Réponse du 04/09 : la proportion ressortant des données de la caisse ne serait que de 0,28 % ; les 5 % de chaque abattement « minore[nt] le montant du chiffre d'affaires TTC reconstitué à hauteur de 35 133,26 € » sur le premier exercice, « 8,70 % du chiffre d'affaires TTC déclaré », soit 105 399,78 € sur trois exercices ; la loi interdit l'alcool aux salariés ; les DADS ne portent que 3 507 / 3 555 / 3 957 € d'avantages en nature.",
     "Conclusion : « le service est allé bien au-delà de ce que Maître THIVEND propose » ; reconstitution inchangée."
    ],
    "detail": [
@@ -1078,11 +1078,11 @@
    "kind": "liste",
    "titre": "Nos arguments sur ce point",
    "items": [
-    "Le forfait est concédé comme un plafond, non contesté comme insuffisant : 15 % du CA liquides = 76 863,18 € TTC sur trois ans, soit l'équivalent de 1 593 L d'alcool ; notre itemisation de la consommation sans vente, hors cuisine et menus, est de 1 135 L = 71,3 % du forfait, et de 675,0 L = 42,4 % une fois retiré le vin sur-versé déjà facturé au client. Aucun dégrèvement n'est demandé au titre des abattements eux-mêmes.",
+    "Le forfait est concédé comme un plafond, non contesté comme insuffisant : 15 % du CA liquides = 76 863,18 € TTC sur trois ans, soit l'équivalent de 1 593 L d'alcool ; notre itemisation de la consommation sans vente, hors cuisine et menus, est de 1 134 L = 71,2 % du forfait, et de 674,0 L = 42,3 % une fois retiré le vin sur-versé déjà facturé au client. Aucun dégrèvement n'est demandé au titre des abattements eux-mêmes.",
     "Ce qui est contesté est l'assiette : un abattement en euros appliqué « à la fin de la méthode » au CA reconstitué ne corrige pas une erreur commise en amont sur le nombre de verres (dose de 15 cl pour 18,28 cl servis) ni sur le volume parti en cuisine (92,29 L comptés comme vendus au verre). Ces litres doivent être retranchés du disponible avant conversion ; nos postes sont des volumes en litres, ses forfaits des pourcentages de chiffre d'affaires : deux grandeurs sur deux assiettes, qui ne s'opposent pas terme à terme (R1-abattements-double-emploi, onglet 1 : le même 15 % est opposé à six postes différents).",
     "Le service chiffre lui-même son 5 % à 35 133,26 € sur le premier exercice (p. 71 et 72). Or 5 % du CA liquides avant abattements vaut 8 917,07 € (p. 52) : 35 133,26 = 8 917,07 × 3,94, et 105 399,78 = 26 751,21 × 3,94. Pour valoriser son propre abattement, le service multiplie donc par (1 + coefficient), c'est-à-dire par le levier qu'il refuse à la défense à la page 92 (« compte ainsi deux fois »). Et 8,70 % = 35 133,26 ÷ 404 030,87 : c'est le poids d'un abattement amplifié par la cuisine extrapolée, rapporté au CA déclaré total.",
     "La comparaison « 13 fois » (p. 72) n'est pas homogène : 105 399,78 € est la totalité du 15 % du seul exercice 2022-2023 amplifiée par le coefficient (dont les trois quarts de cuisine extrapolée), comparée aux 8 010 € d'offerts de trois exercices chiffrés hors coefficient.",
-    "Le 0,28 % (272 articles à 0 € sur 97 769 lignes) mesure les offerts sonnés en caisse, pas les remises : le service écrit lui-même p. 51 qu'il est « totalement impossible » d'identifier les remises dans les données de caisse. Un chiffre que le service déclare non mesurable ne peut servir de mesure de la « générosité » de son forfait.",
+    "Le 0,28 % ne mesure pas les remises : 272 lignes à 0 € sur 97 769 lignes de vente ne disent rien des prix réduits, alors que le service écrit lui-même p. 51 qu'il est « totalement impossible » d'identifier les remises dans les données de caisse ; seules 14 lignes y portent un taux de remise. Un chiffre que le service déclare non mesurable ne peut servir de mesure de la « générosité » de son forfait.",
     "Bière : le service abat déjà 15 % du disponible (94,8 L en 2024-2025) puis 5 + 5 + 5 % du CA, soit 30 % cumulés qu'il revendique p. 83 ; la freinte technique de 10 % (121,3 L sur une assiette de 1 213,3 L, dont 32,6 L documentés) est couverte : dégrèvement 0 €, assumé.",
     "L'argument de l'expérience des dirigeants (p. 72, 92) n'est pas une mesure : la perte pure de 19,6 % n'est pas un taux choisi, c'est le solde du bilan matière une fois comptés les litres vendus, en stock et consommés sans vente ; le service n'oppose à ce solde aucun relevé.",
     "Droit : un pourcentage forfaitaire ne peut que « conforter les résultats obtenus par d'autres méthodes », il ne peut pas les produire (BOI-CF-IOR-10-20 § 200) ; et une réfaction de 5 % au titre des offerts ne sauve pas une méthode qui ignore une donnée propre à l'établissement (CE 3 novembre 2023, n° 460520, point 9 : « la consommation estimée du personnel et une réfaction de 5 % au titre des cafés offerts » étaient déjà déduites, la méthode n'en était pas moins « radicalement viciée »)."
@@ -1170,11 +1170,11 @@
       "v": "Itemisation brute hors cuisine et menus"
      },
      {
-      "v": "1 135 L = 71,3 %",
+      "v": "1 134 L = 71,2 %",
       "align": "right"
      },
      {
-      "v": "R2-abattements-net.xlsx ; nette hors sur-versement : 675,0 L = 42,4 %"
+      "v": "R2-abattements-net.xlsx ; nette hors sur-versement : 674,0 L = 42,3 %"
      }
     ]
    ]
@@ -1190,7 +1190,7 @@
    "fichiers": [
     {
      "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
-     "label": "Forfait de 15 % (76 863,18 € TTC = 1 593 L), itemisation brute hors cuisine et menus 1 135 L = 71,3 % du forfait, nette hors sur-versement 675,0 L = 42,4 %, net 29 446,83 €, marge 47 416,35 €, consommation du chef 8 109,83 € (à formules)"
+     "label": "Forfait de 15 % (76 863,18 € TTC = 1 593 L), itemisation brute hors cuisine et menus 1 134 L = 71,2 % du forfait, nette hors sur-versement 674,0 L = 42,3 %, net 29 355,83 €, marge 47 507,35 €, consommation du chef 8 109,83 € (à formules)"
     },
     {
      "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",
@@ -2208,7 +2208,7 @@
     },
     {
      "fichier": "pieces-reponse-2/R2-abattements-net.xlsx",
-     "label": "Forfait de 15 % (76 863,18 € TTC = 1 593 L), itemisation brute hors cuisine et menus 1 135 L = 71,3 % du forfait, nette hors sur-versement 675,0 L = 42,4 %, net 29 446,83 €, marge 47 416,35 €, consommation du chef 8 109,83 € (à formules)"
+     "label": "Forfait de 15 % (76 863,18 € TTC = 1 593 L), itemisation brute hors cuisine et menus 1 134 L = 71,2 % du forfait, nette hors sur-versement 674,0 L = 42,3 %, net 29 355,83 €, marge 47 507,35 €, consommation du chef 8 109,83 € (à formules)"
     },
     {
      "fichier": "pieces-reponse-1/R1-abattements-double-emploi.xlsx",

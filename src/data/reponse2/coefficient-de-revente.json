@@ -1220,7 +1220,7 @@
       "kind": "liste",
       "items": [
         "Le service ne discute aucun des neuf postes du tableau p. 57 ni aucun coefficient produit par produit : il conteste un total et son mode d’établissement. Le bilan matière ci-dessous répond au mode d’établissement : chaque litre acheté est vendu, en stock, consommé sans vente ou perdu, et le résidu est le solde de l’égalité, pas un taux posé.",
-        "Les 36 % étaient le chiffrage du mémoire du 10/07/2026. Six corrections ont depuis été portées contre nous-mêmes (crémant borné par le stock, sur-versement séparé par assiette, alcool de cuisine plafonné aux factures, freinte ramenée à la bière réellement sortie du fût, retrait de la contenance des articles mixtes comptée deux fois, déduction des offerts déjà enregistrés à 0,00 €). Résultat : revendu 6 455 L au lieu de 6 567 L ; non revendu **4 167 L (39,2 %)**, dont stock final 213 L ; perte pure **2 078 L (19,6 %)** au lieu de 1 543 L (14,5 %). Le coefficient sur l’alcool revendu passe de 3,85 à ≈ 3,92."
+        "Les 36 % étaient le chiffrage du mémoire du 10/07/2026. Six corrections ont depuis été portées contre nous-mêmes (crémant borné par le stock, sur-versement séparé par assiette, alcool de cuisine plafonné aux factures, freinte ramenée à la bière réellement sortie du fût, retrait de la contenance des articles mixtes comptée deux fois, déduction des boissons portées à 0,00 € en caisse, déjà comptées dans les ventes). Résultat : revendu 6 455 L au lieu de 6 567 L ; non revendu **4 167 L (39,2 %)**, dont stock final 213 L ; perte pure **2 079 L (19,6 %)** au lieu de 1 543 L (14,5 %). Le coefficient sur l’alcool revendu passe de 3,85 à ≈ 3,92."
       ],
       "titre": "Ce que le service conteste, et ce qu’il ne conteste pas"
     },
@@ -1260,7 +1260,7 @@
         {
           "label": "Dégustation offerte (5 169 dégustations de 2 cl relevées note par note, vins nommés en bouteille servis au verre ou au pichet)",
           "valeur": 103,
-          "categorie": "mesure"
+          "categorie": "calcul"
         },
         {
           "label": "Freinte technique de la bière (10 % du fût réellement sorti)",
@@ -1273,8 +1273,8 @@
           "categorie": "estime"
         },
         {
-          "label": "Offerts non enregistrés en caisse (net des 25,75 L déjà à 0,00 €)",
-          "valeur": 14,
+          "label": "Boissons servies sans recette, hors dégustation et personnel, non saisies (nettes des 26,75 L portés à 0,00 €, sorties sans recette déjà comptées dans les ventes)",
+          "valeur": 13,
           "categorie": "estime"
         },
         {
@@ -1284,7 +1284,7 @@
         },
         {
           "label": "Perte pure : casse, évaporation, fonds de verre, rinçage (résidu, aucun taux posé)",
-          "valeur": 2078,
+          "valeur": 2079,
           "categorie": "residuel"
         }
       ]
@@ -1428,15 +1428,15 @@
             "v": "Mesuré"
           },
           {
-            "v": "5 773 L",
+            "v": "5 670 L",
             "align": "right"
           },
           {
-            "v": "54,4 %",
+            "v": "53,4 %",
             "align": "right"
           },
           {
-            "v": "lu dans le détail des tickets ou l’inventaire (5 457 + 103 + 213)"
+            "v": "lu dans le détail des tickets ou l’inventaire (vendu au verre 5 457, stock 213)"
           }
         ],
         [
@@ -1444,15 +1444,15 @@
             "v": "Calculé"
           },
           {
-            "v": "2 011 L",
+            "v": "2 114 L",
             "align": "right"
           },
           {
-            "v": "18,9 %",
+            "v": "19,9 %",
             "align": "right"
           },
           {
-            "v": "quantité de caisse × dose ou recette (998 + 741 + 272)"
+            "v": "nombre lu × dose (cocktails 998, cuisine et menus 741, crémant 272, dégustation 103 : couples note × vin nommé relevés dans les tickets, dose de 2 cl attestée)"
           }
         ],
         [
@@ -1460,15 +1460,15 @@
             "v": "Estimé"
           },
           {
-            "v": "760 L",
+            "v": "759 L",
             "align": "right"
           },
           {
-            "v": "7,2 %",
+            "v": "7,1 %",
             "align": "right"
           },
           {
-            "v": "taux publié appliqué à une base de caisse (483 + 120 + 143 + 14)"
+            "v": "taux publié appliqué à une base de caisse (483 + 120 + 143 + 13)"
           }
         ],
         [
@@ -1476,7 +1476,7 @@
             "v": "Résidu"
           },
           {
-            "v": "2 078 L",
+            "v": "2 079 L",
             "align": "right"
           },
           {
@@ -1509,7 +1509,7 @@
       "kind": "liste",
       "items": [
         "**L’expérience ne change pas la physique des postes** (argument répété p. 92 : « professionnels grandement expérimentés »). 741 L partent en cuisine et dans les menus : ce n’est pas une perte mais un emploi lu sur la carte (fondues, sauces, babas, flambage), plafonné aux factures. 213 L sont en stock à la clôture (inventaire). 103 L de dégustation sont comptés note par note. 483 L de sur-versement résultent de taux publiés (Kerr 2008, Wansink 2005) appliqués au seul volume versé à la main.",
-        "**Le service retient lui-même 15 % de pertes, offerts et consommation du personnel**, soit 1 593,3 L sur 10 622 L. Nos postes itemisés hors cuisine, menus et stock (sur-versement 483 + crémant 272 + dégustation 103 + freinte 120 + chef 143 + offerts 14 = 1 135 L) en représentent **71,3 %** : les postes nommés sont en dessous de son propre forfait. Ce qui le dépasse n’est pas un taux choisi : c’est le résidu (2 078 L), la cuisine (741 L) et le stock (213 L), que le forfait n’a jamais eu vocation à couvrir.",
+        "**Le service retient lui-même 15 % de pertes, offerts et consommation du personnel**, soit 1 593,3 L sur 10 622 L. Nos postes itemisés hors cuisine, menus et stock (sur-versement 483 + crémant 272 + dégustation 103 + freinte 120 + chef 143 + boissons servies sans recette, hors dégustation et personnel, non saisies 13 = 1 134 L) en représentent **71,2 %** : les postes nommés sont en dessous de son propre forfait. Ce qui le dépasse n’est pas un taux choisi : c’est le résidu (2 079 L), la cuisine (741 L) et le stock (213 L), que le forfait n’a jamais eu vocation à couvrir.",
         "**« Arbitraire » est une qualification, pas une démonstration.** Le service dispose du détail poste par poste depuis le 10/07/2026 et n’y oppose aucune mesure contraire (relevé de casse, inventaire, comptage). Son 15 %, en revanche, est « prédéterminé » au sens de BOI-CF-IOR-10-20 § 200 : les reconstitutions doivent partir « des conditions concrètes de fonctionnement de l’entreprise », les pourcentages prédéterminés ne pouvant que « conforter les résultats obtenus par d’autres méthodes ».",
         "**Charge de la preuve.** Hors imposition établie conformément à l’avis d’une commission, l’administration supporte la charge de la preuve du bien-fondé de la rectification (LPF, art. L. 192, al. 1 et 3 ; BOI-CTX-DG-20-20-10, § 160-170). En l’absence de saisine de la commission, la charge de prouver l’absence d’exagération de l’imposition incombe à l’administration, qui doit l’établir sur pièces (CAA Paris, 5e ch., 4 octobre 2024, n° 23PA02153, pts 6-7).",
         "**Jurisprudence sur la précision exigée.** Le Conseil d’État censure une cour qui avait validé un ratio « calculé en pourcentage du nombre de ventes […] appliqué à la variation des stocks de l’entreprise sans tenir compte des volumes respectifs d’un verre et d’une bouteille ni de la nature des boissons vendues » : qualification juridique inexacte, cassation (CE, 3e ch., 5 octobre 2016, n° 389822, pt 3). Un taux unique de 15 % appliqué à toutes les boissons est exactement ce défaut de précision. Et « en l’absence de données fiables permettant de déterminer les conditions d’exploitation d’exercices vérifiés », l’administration comme le contribuable peuvent se référer à d’autres données pourvu que les conditions d’exploitation n’aient pas varié (CE, 9e-10e ch., 22 juillet 2020, n° 424052, pt 4) : la société est recevable à opposer une méthode assise sur ses propres données."

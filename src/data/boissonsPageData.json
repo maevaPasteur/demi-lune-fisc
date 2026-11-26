@@ -1,5 +1,5 @@
 {
- "description": "Donnees exactes de la page boissons-disparues (script 15, reproductible).",
+ "description": "Donnees de la page boissons-disparues (script 15, non publie ; chiffres sources).",
  "disparuParBoisson": [
   {
    "nom": "Macvin",
@@ -1945,17 +1945,17 @@
   "total_ca_eur": 39319
  },
  "offerts": {
-  "avertissement": "Estimations bornees (offerts non enregistres en caisse, par nature). A confirmer par l'exploitante.",
+  "avertissement": "Estimations forfaitaires du memoire du 10 juillet 2026 (fichier 56), brutes : la reponse actuelle en retire les 26,75 L de boissons portees a 0,00 EUR en caisse (point 2.4.8 b).",
   "lignes": [
    {
-    "poste": "Aperitifs offerts (~1/jour)",
+    "poste": "Aperitifs servis sans recette (~1/jour)",
     "litres": 39.7,
     "cout_achat_eur": 596,
     "ca_equivalent_eur": 3641,
     "base": "1 aperitif 6cl/jour x 662 j"
    },
    {
-    "poste": "Cafes offerts (~3/jour)",
+    "poste": "Cafes servis sans recette (~3/jour)",
     "litres": null,
     "cout_achat_eur": 496,
     "ca_equivalent_eur": 4369,
@@ -2037,7 +2037,7 @@
     "litres": 143
    },
    {
-    "poste": "Aperitifs offerts aux clients",
+    "poste": "Aperitifs servis sans recette",
     "litres": 40
    },
    {

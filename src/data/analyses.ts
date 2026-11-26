@@ -14,31 +14,12 @@ import { integrite as I } from './analyseIntegrite'
 import { complements as K } from './analyseComplements'
 import { reconstitution as R } from './analyseReconstitution'
 
-import {
-
-  boissonsComplements as BC,
-  synthesePerteReelle as SPR,
-} from './complementsDefense'
 import { boissonsPageData as BPD } from './boissonsPageData'
 import {
-  boissonsDisparues as Bo,
-  resultatsIndep as Res,
-  decomposition as Decomp,
-  partVerifieePct,
-  auditFisc,
-  auditFiscDetail,
   comptaMatiere,
-  comptaMatiereDetail,
-  detailCuisine,
-  detailSubstitution,
-  pistesComplementaires as Pistes,
-  pistesComplMin,
-  pistesComplMax,
   inventairePhysique,
-  inventaireDetail,
-  bilanBouteilles,
 } from './analyseBoissons'
-import { groupes, CARTES_SLUG, FACTURES_SLUG, MANUSCRIT_SLUG, INVENTAIRES_SLUG } from './documents'
+import { groupes, CARTES_SLUG, FACTURES_SLUG, INVENTAIRES_SLUG } from './documents'
 import {
   formatEuro,
   formatEuroPrecis,
@@ -659,464 +640,6 @@ const bancarisation: Analyse = {
   ],
 }
 
-// ==================== ANALYSE 4 - BOISSONS « DISPARUES » =====================
-// Page en 5 temps, séparation stricte FISC (rouge) / NOUS (teal). Chiffres :
-// Bo (méthode du fisc), Res (nos résultats exacts), Decomp (décomposition vérifiée),
-// auditFisc. Aucune valeur en dur dans la page.
-const nf = (n: number): string => n.toLocaleString('fr-FR')
-const catLabel: Record<string, string> = {
-  vin: 'Vins',
-  macvin: 'Macvin',
-  spiritueux_digestif: 'Spiritueux & digestifs',
-  cremant_petillant: 'Crémants & pétillants',
-  biere: 'Bières',
-  soft: 'Sodas',
-  jus: 'Jus',
-  eau: 'Eaux',
-  sirop: 'Sirops',
-}
-// Cuisine + abattements (les deux postes « chiffrés par le fisc »), pour la carte argument.
-const cuisineHT =
-  (Decomp.find((d) => d.cle === 'cuisine')?.montantHT ?? 0) +
-  (Decomp.find((d) => d.cle === 'abattements')?.montantHT ?? 0)
-// Volumes cumulés (litres) - l'écart se mesure d'abord en VOLUME, avant tout chiffrage.
-const totAchatL = Math.round(Res.parCategorie.reduce((a, c) => a + c.achatL, 0))
-const totVenduL = Math.round(Res.parCategorie.reduce((a, c) => a + c.venduL, 0))
-const totEcartL = totAchatL - totVenduL
-const coef = Bo.methode.coefLiquideSolide
-// Le manquant valorisé au PRIX DE VENTE, ramené à l'année (terrain du fisc).
-const reventeAnMin = Math.round(Res.reventeCarteTTC / 3)
-const reventeAnMax = Math.round(Res.reventeCaisseTTC / 3)
-const boissons: Analyse = {
-  slug: 'boissons-disparues',
-  eyebrow: 'Réfutation de la méthode',
-  titre: 'Les « volumes de boissons disparus » (version précédente)',
-  resume:
-    'Le fisc reconstitue le chiffre d’affaires à partir des boissons « disparues » et y voit des recettes cachées. Recalculé sur les factures et la caisse réelles, ce manquant - chiffré au prix de vente, sur le terrain même du fisc - est entièrement explicable, et sa méthode s’effondre sur ses propres chiffres.',
-  force: 'forte',
-  controleurDit: `Des boissons achetées ne se retrouveraient pas dans les ventes : le CA est reconstitué par les volumes de liquides (× ${nf(Bo.methode.coefLiquideSolide)} pour les solides), d’où une discordance de +${formatEuro(Bo.methode.discordanceTTC)} sur le seul exercice 2024-2025.`,
-  demonstration: `La comptabilité matière du fisc montre un stock stable : les boissons ont été consommées, pas dissimulées. ${partVerifieePct} % de l’écart sont déjà chiffrés aux taux minimaux du fisc (cuisine, pertes, non-livré), le reste étant de la consommation hors-vente (offerts, sur-versement), à rapprocher du taux admis en CHR (cf. CAA Paris 17/03/2021, 22-25 %). Et en remettant les vraies ventes dans sa propre formule, la discordance du fisc s’inverse.`,
-  faitTomber: `La reconstitution par les volumes de boissons`,
-  pieces: [
-    ...piecesLiees('D', 'B', 'E'),
-    { to: `/documents/${FACTURES_SLUG}`, label: 'Factures FCBS' },
-    { to: `/documents/${INVENTAIRES_SLUG}`, label: 'Inventaires physiques' },
-    { to: `/documents/${MANUSCRIT_SLUG}`, label: 'Carnet manuscrit' },
-  ],
-  apercu: [
-    { label: 'Sur-évaluation des ventes par le fisc', valeur: `+${auditFisc.surevaluationPct} %` },
-    { label: 'Part de l’écart déjà expliquée', valeur: `${partVerifieePct} %` },
-  ],
-  sections: [
-    enClair(
-      `Le fisc constate que des boissons achetées ne ressortent pas toutes en caisse et en déduit des **recettes cachées** (qu’il chiffre au prix de vente). Mais une boisson achetée n’est pas forcément **vendue en espèces** : elle peut être **consommée hors-vente** (cuisine, offerts, pertes, sur-versement au verre) ou n’avoir **jamais été livrée**. Et la **comptabilité matière du fisc le confirme** : le stock est stable, donc tout a été consommé, pas dissimulé. Nous l’avons vérifié sur les pièces réelles : ce manquant s’explique **sans une seule vente en liquide**.`,
-    ),
-
-    // ----------------------------- TEMPS 2 : LE FISC -----------------------------
-    {
-      kind: 'chapitre',
-      source: 'fisc',
-      titre: 'Ce que le fisc a calculé',
-      sousTitre: 'Reconstitution du chiffre d’affaires à partir des volumes de boissons',
-    },
-    {
-      kind: 'paragraphe',
-      texte: `À partir des **achats** de boissons, le vérificateur déduit un volume « disponible », le convertit en nombre de verres via des **doses**, en tire un **CA liquides**, puis le **multiplie par ${nf(Bo.methode.coefLiquideSolide)}** pour estimer le CA « solides » (la cuisine). Le total reconstitué est comparé au CA déclaré, et l’écart est présenté comme une dissimulation.`,
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'CA reconstitué par le fisc', valeur: formatEuro(Bo.methode.caReconstitueTTC), sub: 'exercice 2024-2025', highlight: true, couleur: 'red' },
-        { label: 'CA comptabilisé', valeur: formatEuro(Bo.methode.caComptaTTC), sub: 'TTC déclaré' },
-        { label: 'Discordance', valeur: formatEuro(Bo.methode.discordanceTTC), sub: 'base de l’amende' },
-        { label: 'Coefficient liquide → solide', valeur: `× ${nf(Bo.methode.coefLiquideSolide)}`, sub: 'le CA cuisine est extrapolé' },
-      ],
-    },
-    {
-      kind: 'alerte',
-      couleur: 'red',
-      titre: 'La conséquence',
-      texte: `Cette discordance fonde une **amende pour distribution occulte (article 1759)** de **100 %** des sommes prétendument distribuées - l’essentiel des **684 974 €** réclamés.`,
-    },
-
-    // ------------------------------ TEMPS 3 : NOUS -------------------------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'Notre recalcul indépendant',
-      sousTitre: `À partir des ${formatInt(Res.nbFactures)} factures fournisseur, de la caisse et de la carte - réconcilié au centime`,
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Plutôt que de reconstituer, nous avons **mesuré**. Chaque facture FCBS donne les quantités et le coût réels ; la caisse donne les ventes réelles (nos totaux sont **identiques au centime** à ceux des fichiers de caisse) ; la carte donne les doses. On compare ce qui a été **acheté** à ce qui a été **vendu** - d’abord en **volume** (litres), pas en euros.`,
-    },
-    {
-      kind: 'kpis',
-      items: [
-        { label: 'Boissons achetées (3 ans)', valeur: formatEuro(Res.achatsHT.total), sub: 'HT - ce que le restaurant a payé' },
-        { label: 'Boissons vendues (3 ans)', valeur: formatEuro(Res.caVenduTTC.total), sub: 'TTC - encaissé en caisse' },
-        { label: 'Ventes recalculées', valeur: 'au centime', sub: 'identiques aux fichiers de caisse', highlight: true, couleur: 'teal' },
-      ],
-    },
-    {
-      kind: 'tableau',
-      titre: 'Ce qui a été acheté vs vendu, par famille (en volume, 3 ans)',
-      minWidth: 480,
-      colonnes: [
-        { label: 'Famille' },
-        { label: 'Acheté', align: 'right' },
-        { label: 'Vendu', align: 'right' },
-        { label: 'Écart', align: 'right' },
-      ],
-      lignes: [
-        ...Res.parCategorie.map((c) => [
-          cg(catLabel[c.categorie] ?? c.categorie),
-          cd(`${nf(Math.round(c.achatL))} L`),
-          cd(`${nf(Math.round(c.venduL))} L`),
-          cd(formatPct(c.ecartPct)),
-        ]),
-        [
-          { v: 'Total', fw: 700 },
-          { v: `${nf(totAchatL)} L`, align: 'right', fw: 700 },
-          { v: `${nf(totVenduL)} L`, align: 'right', fw: 700 },
-          { v: formatPct(Math.round((100 * totEcartL) / totAchatL)), align: 'right', fw: 700 },
-        ],
-      ],
-    },
-    {
-      kind: 'paragraphe',
-      texte: `Il reste donc **${nf(totEcartL)} litres** de boisson achetée mais non retrouvée en vente directe. **Ce même volume se chiffre de deux façons - à ne jamais confondre :**`,
-    },
-    {
-      kind: 'tableau',
-      titre: `L’écart de ${nf(totEcartL)} L, chiffré de deux manières`,
-      minWidth: 520,
-      colonnes: [
-        { label: 'Manière de le chiffrer' },
-        { label: 'Montant (3 ans)', align: 'right' },
-        { label: 'Ce que ça représente' },
-      ],
-      lignes: [
-        [
-          cg('① À son COÛT D’ACHAT'),
-          { v: `${formatEuro(Res.ecartCoutHT.total)} HT`, align: 'right', fw: 700 },
-          cg('Ce que la marchandise a coûté (pour mémoire)'),
-        ],
-        [
-          { v: '② À son PRIX DE VENTE', fw: 700 },
-          { v: `${formatEuro(Res.reventeCarteTTC)} - ${formatEuro(Res.reventeCaisseTTC)} TTC`, align: 'right', fw: 700 },
-          { v: 'Ce qu’elle aurait rapporté vendue - le terrain du fisc', fw: 700 },
-        ],
-      ],
-    },
-    {
-      kind: 'note',
-      texte: `Le fisc raisonne au **prix de vente ②** (puis × ${nf(coef)} et 100 % d’amende). Pour le réfuter, c’est donc le chiffrage ② qu’il faut expliquer - et non le coût ①, qui n’est là que pour mémoire. C’est ce que fait la suite.`,
-    },
-    retenir(
-      `**Comparons sur le même terrain - le prix de vente.** Le fisc retient **${formatEuro(Bo.methode.discordanceTTC)}** de discordance pour 2024-2025. Or le manquant réel de boissons ne vaut, au prix de vente, qu’environ **${formatEuro(reventeAnMin)} à ${formatEuro(reventeAnMax)} par an** : le fisc retient ~2 fois plus en l’**extrapolant × ${nf(coef)}** sur une cuisine jamais mesurée. Et ce manquant lui-même n’est pas du chiffre d’affaires caché - voici où il va.`,
-    ),
-
-    // ------------------------ TEMPS 4 : LA DÉCOMPOSITION -------------------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'Où va, physiquement, ce volume manquant ?',
-      sousTitre: `La part de chaque cause vaut quel que soit le chiffrage (coût ① ou prix de vente ②). Chaque poste est vérifié - aucune vente en espèces.`,
-    },
-    { kind: 'decomposition', total: Res.ecartCoutHT.total, items: Decomp },
-    {
-      kind: 'paragraphe',
-      texte: `**Chaque bouteille est comptée - l’inventaire le ferme.** En partant du stock réel de début d’exercice, en ajoutant les achats et en retirant les ventes, on retombe sur le stock réel de fin d’exercice : la différence est la **consommation hors-vente** (cuisine, offerts, personnel, sur-versement), jamais une bouteille évaporée.`,
-    },
-    {
-      kind: 'tableau',
-      titre: 'Bilan matière des alcools en bouteille (vérifié sur les 3 inventaires)',
-      minWidth: 560,
-      colonnes: [
-        { label: 'Exercice' },
-        { label: 'Stock début', align: 'right' },
-        { label: '+ Achats', align: 'right' },
-        { label: '− Ventes', align: 'right' },
-        { label: 'Stock fin (réel)', align: 'right' },
-        { label: '= Conso hors-vente', align: 'right' },
-      ],
-      lignes: bilanBouteilles.exercices.map((e) => [
-        cg(e.exercice),
-        cd(`${nf(e.stockInitial)} bt`),
-        cd(`${nf(e.achats)} bt`),
-        cd(`${nf(e.vendu)} bt`),
-        cd(`${nf(e.stockFinal)} bt`),
-        cd(`${nf(e.consoHorsVente)} bt`),
-      ]),
-    },
-    {
-      kind: 'note',
-      texte: `Le stock de fin est **mesuré** (inventaire), pas supposé : l’équation est donc fermée. La « consommation hors-vente » se répartit dans les postes ci-dessus (cuisine concentrée sur le crémant et le vin jaune, offerts, personnel, sur-versement). Elle est **physiquement consommée** - le stock ne grossit pas - et non vendue en espèces (98,7 % du CA est bancarisé).`,
-    },
-    {
-      kind: 'alerte',
-      couleur: 'teal',
-      titre: 'Le point essentiel',
-      texte: `**Aucun de ces postes n’est une vente en liquide.** Et la comptabilité matière du fisc le confirme : le stock est **stable**, donc les boissons ont été **consommées, pas dissimulées**. L’écart est de la **consommation sans recette** - cuisine, offerts, pertes, sur-versement - dont ${partVerifieePct} % sont déjà chiffrés aux taux **minimaux** du fisc ; le taux admis en CHR est plus élevé (cf. CAA Paris 17/03/2021, 22 à 25 %).`,
-    },
-
-    // -------------- TEMPS 4 bis : DEUX VÉRIFICATIONS PAR LA CAISSE --------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'Deux vérifications directes dans la caisse',
-      sousTitre: 'Les offerts, et la cuisine jurassienne - comptés un par un',
-    },
-    {
-      kind: 'paragraphe',
-      texte: `**Les ventes sous bouton « cocktail » sont déjà comptées.** Notre recalcul attribue chaque cocktail à sa **recette de carte** (La Vouivre → crémant + macvin + cassis ; Mambo → jus + limonade ; Picon Bière → Picon + bière) : l’écart acheté − vendu est donc **déjà net** de ces ventes. Il ne reste à expliquer que la consommation **sans recette** - cuisine et personnel - plus le sur-versement et les pertes.`,
-    },
-    {
-      kind: 'alerte',
-      couleur: 'teal',
-      titre: 'Vérification 1 : les offerts aux clients sont négligeables',
-      texte: `On a cherché toutes les lignes de vente à **0 €** dans la caisse : **272 sur 97 694** (**0,28 %**), pour l’essentiel des **cafés**. Le restaurant n’offre quasiment pas de boisson : l’écart n’est donc pas constitué d’offerts, mais de consommation du personnel et de cuisine.`,
-    },
-    {
-      kind: 'paragraphe',
-      texte: `**Vérification 2 : la cuisine jurassienne, comptée plat par plat.** Beaucoup de plats de la carte cuisinent au vin de garde du Jura. On a compté en caisse chaque plat concerné (annexe D) - ces nombres sont **exacts** :`,
-    },
-    {
-      kind: 'tableau',
-      titre: 'Plats cuisinés à l’alcool (comptés en caisse, 3 ans)',
-      minWidth: 520,
-      colonnes: [
-        { label: 'Plat' },
-        { label: 'Quantité (3 ans)', align: 'right' },
-        { label: 'Alcool de cuisine' },
-      ],
-      lignes: [
-        [cg('Poulet à la Jurassienne'), cd('2 746'), cg('Vin jaune / savagnin')],
-        [cg('Truite à la Jurassienne'), cd('1 610'), cg('Vin jaune / savagnin')],
-        [cg('Camembert rôti'), cd('1 452'), cg('Calvados')],
-        [cg('Baba'), cd('1 330'), cg('Macvin')],
-        [cg('Fondue Jurassienne'), cd('1 150'), cg('Vin blanc')],
-        [cg('Poulet / Truite aux morilles'), cd('1 418'), cg('Vin jaune / savagnin')],
-        [cg('Fondue au vin jaune + des Gourmets'), cd('659'), cg('Vin jaune')],
-        [cg('Assiette du Père Grégoire'), cd('648'), cg('Calvados')],
-        [cg('Dessert Normandine'), cd('126'), cg('Calvados')],
-        [{ v: 'Total', fw: 700 }, { v: '11 139 plats', align: 'right', fw: 700 }, { v: '', align: 'left' }],
-      ],
-    },
-    {
-      kind: 'note',
-      texte: `Honnêteté : le **volume** d’alcool de cuisine n’est pas chiffrable à la goutte près (la dose par plat n’est pas mesurée). Il est **borné par l’achat** : le vin jaune et le savagnin « manquants » totalisent **~270 L** (écart acheté − vendu), entièrement absorbables par ces 6 400 plats jurassiens ; le calvados de cuisine (~40 L) reste sous l’écart calvados, comme l’admet déjà le fisc. Ces volumes sont **consommés, pas vendus** - et l’inventaire confirme qu’ils ne sont pas en stock.`,
-    },
-
-    {
-      kind: 'paragraphe',
-      texte: `**Et ce ne sont que les postes déjà vérifiés.** D’autres pertes, réelles mais à confirmer par l’exploitant, réduisent encore le résiduel : pertes techniques de la bière (fond de fût, nettoyage des lignes), **sur-versement** au verre et bouteilles ouvertes peu écoulées - soit **~${Math.round((100 * pistesComplMin) / Res.ecartCoutHT.total)} % à ~${Math.round((100 * pistesComplMax) / Res.ecartCoutHT.total)} %** de l’écart en plus.`,
-    },
-    {
-      kind: 'tableau',
-      titre: 'Pistes complémentaires (estimations bornées, à confirmer)',
-      minWidth: 480,
-      colonnes: [{ label: 'Piste' }, { label: 'Fourchette (coût HT)', align: 'right' }],
-      lignes: Pistes.map((p) => [cg(p.label), cd(`${formatEuro(p.min)} - ${formatEuro(p.max)}`)]),
-    },
-
-    // ----------------------- TEMPS 5 : LES FAILLES DU FISC -----------------------
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'Les failles du calcul du fisc',
-      sousTitre: 'Audité sur ses propres chiffres',
-    },
-    {
-      kind: 'argument',
-      titre: 'L’inventaire physique exclut toute disparition de stock',
-      page: '3 inventaires',
-      accusation: `Des volumes de boissons auraient « disparu » (achetés mais non vendus).`,
-      faille: `L’**inventaire physique des 3 fins d’exercice**, compté ligne par ligne, montre un stock boissons **stable** : **${formatEuro(Math.round(inventairePhysique.stocks[0].ht))} → ${formatEuro(Math.round(inventairePhysique.stocks[1].ht))} → ${formatEuro(Math.round(inventairePhysique.stocks[2].ht))}** HT, **jamais en baisse** (+${formatEuro(inventairePhysique.cumulVariation)} sur 2 ans). Un exploitant qui détournerait des bouteilles verrait son stock chuter : ici il est plat, donc **les boissons ont été consommées, pas planquées**. À noter aussi une **incohérence à éclaircir** : la variation de stock inscrite en comptabilité (compte 310200, ${formatEuro(inventairePhysique.ecartLivre[0].livre)} en 2023-2024) diffère du stock physique (qui **augmente de ${formatEuro(inventairePhysique.ecartLivre[0].physique)}**) ; si le vérificateur a retenu un stock final sous-estimé, sa formule « disponible = achats + stock initial − stock final » a pu **majorer les volumes disparus** (à recouper avec le comptable). Enfin, son motif de rejet (« inventaire incomplet ») tombe : l’inventaire est désormais détaillé.`,
-      cote: 'Attaquable - très forte',
-      preuves: [],
-      pieces: [{ to: `/documents/${INVENTAIRES_SLUG}`, label: 'Inventaires physiques' }],
-      detail: inventaireDetail,
-    },
-    {
-      kind: 'argument',
-      titre: 'Sa comptabilité matière le confirme : 98,5 % des achats consommés',
-      page: 'Compte 310200',
-      accusation: `Le manquant serait du stock dissimulé ou des bouteilles évaporées.`,
-      faille: `Indépendamment de l’inventaire, la **propre comptabilité du fisc** le dit : la variation de stock boissons (compte 310200) est de **- 2 104 € sur 3 ans**, soit 1,5 % des achats. Par l’identité comptable (achats + variation de stock = consommation), **98,5 % des achats ont été consommés**. L’écart ne porte donc que sur la part de cette consommation **sans recette** (cuisine, offerts, pertes, sur-versement), que le fisc gonfle ensuite × ${nf(auditFisc.coefSolide)}.`,
-      cote: 'Attaquable - forte',
-      preuves: [],
-      pieces: [],
-      detail: comptaMatiereDetail,
-    },
-    {
-      kind: 'argument',
-      titre: 'Une reconstitution qui sur-estime les ventes',
-      page: 'Annexes finales',
-      accusation: `Le fisc reconstitue **${formatEuro(auditFisc.caLiquideReconstitue)}** de ventes de boissons pour 2024-2025.`,
-      faille: `La caisse n’a réellement encaissé que **${formatEuro(auditFisc.caLiquideReelCaisse)}** de boissons cette année-là : le fisc **sur-évalue les ventes de ${auditFisc.surevaluationPct} %**. Cet écart est ensuite **amplifié × ${nf(auditFisc.coefSolide)}** sur la cuisine, jamais mesurée mais extrapolée. En réinjectant le **vrai** chiffre des boissons dans sa **propre formule**, la discordance de ${formatEuro(auditFisc.discordanceOfficielle)} **s’inverse à ${formatEuro(auditFisc.discordanceAvecLiquideReel)}** - c’est-à-dire **aucune occultation**.`,
-      cote: 'Attaquable - forte',
-      preuves: [],
-      pieces: [],
-      detail: auditFiscDetail,
-    },
-    {
-      kind: 'argument',
-      titre: 'La cuisine, déduite par le fisc… puis oubliée',
-      accusation: `Le manquant serait du chiffre d’affaires dissimulé.`,
-      faille: `Le vérificateur **chiffre lui-même** les usages cuisine (Macvin 7 406 cl, Calvados = 103 % de l’achat, Absinthe 100 %, Vin Jaune 61 %…) mais conclut tout de même à l’occultation. Ces seuls usages, avec ses propres abattements, expliquent déjà **${formatEuro(cuisineHT)}** de l’écart.`,
-      cote: 'Attaquable - forte',
-      preuves: [],
-      pieces: piecesLiees('D'),
-      detail: detailCuisine,
-    },
-    {
-      kind: 'argument',
-      titre: 'Le « disparu » par produit est un artefact d’étiquetage de la caisse',
-      accusation: `Le fisc liste des produits précis comme « disparus » (achetés mais non vendus), dont des bouteilles « vendues sans achat » (Mouton Cadet, Hautes Côtes de Nuits).`,
-      faille: `La caisse ne vend pas par référence d’achat : des dizaines de produits sont **mutualisés sous des boutons partagés** (un seul « Verre de vin », un bouton par cépage pour tous les millésimes…). Un produit précis paraît donc « disparu » alors qu’il a été vendu sous le bouton commun - **et sa recette est bien dans le CA déclaré** (vérifié sur les fichiers de caisse). L’**inventaire le prouve** : « Mouton Cadet » (que le fisc dit vendu sans achat) **n’existe nulle part** - le vrai bordeaux est le Château Grand Renom, bien en stock ; et les **7 bières « 100 % disparues »** (1664, Heineken, Grimbergen, Mort Subite…) sont **absentes des 3 inventaires ET jamais vendues** : ce sont des **codes jamais paramétrés**, pas des bouteilles évaporées. Ce n’est pas un volume manquant, c’est un problème d’**étiquetage** - sans effet sur le chiffre d’affaires.`,
-      cote: 'Attaquable - forte',
-      preuves: [],
-      pieces: piecesLiees('B'),
-      detail: detailSubstitution,
-    },
-    {
-      kind: 'alerte',
-      couleur: 'teal',
-      titre: 'L’impossibilité matérielle',
-      texte: `Même en supposant tout le manquant vendu, il faudrait un canal d’encaissement. Or **98,7 % du chiffre d’affaires est bancarisé** (carte, titres-restaurant, chèques) : il n’existe pas de canal espèces pour de telles sommes. Voir l’analyse **bancarisation**.`,
-    },
-    {
-      kind: 'note',
-      texte: `Honnêteté du dossier : le fisc n’a pas commis d’erreur de volume sur les fûts de bière (il retient ~632 L, proches de nos 672 L) - ce point n’est donc pas plaidé. Et l’inventaire physique, désormais disponible, **confirme** le stock stable (il ne dissimule donc aucune réserve). La consommation hors-vente restante est **documentée** : pour les sodas, la caisse montre **~6 canettes de Coca manquantes par jour d’ouverture** (5,5/jour sur les 2 derniers exercices), exactement la consommation **attestée** du personnel (deux serveurs avant et pendant chaque service) ; côté gérant, **72 L de Picon achetés ne sont jamais sonnés** - bus en service. Aucune de ces boissons n’a été vendue en espèces.`,
-    },
-
-    retenir(
-      `La comptabilité matière du fisc le prouve : le stock est stable, donc **aucune disparition physique** - les boissons ont été consommées. **${partVerifieePct} %** de l’écart sont déjà chiffrés aux taux minimaux du fisc (cuisine, pertes, non-livré), le reste étant de la consommation hors-vente (offerts, sur-versement), à rapprocher du taux admis en CHR (cf. CAA Paris 17/03/2021, 22-25 %). **Rien ne correspond à des recettes encaissées en espèces.** La reconstitution du fisc (× ${nf(coef)} puis amende 100 %) transforme un écart de gestion en une dissimulation qui n’existe pas.`,
-    ),
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'Recalcul par modèle d’incertitude et réconciliation',
-      sousTitre: 'Pièce téléchargeable « Défense - Boissons prétendument disparues »',
-    },
-    {
-      kind: 'alerte',
-      couleur: 'teal',
-      titre: 'Au prix de revente : une perte d’exploitation normale',
-      texte: `Un modèle d’incertitude (20 000 simulations) situe le « disparu » alcool à ${formatEuro(BC.disparuRevenuMedian)} au prix de revente (intervalle ${formatEuro(BC.disparuRevenuIc[0])} à ${formatEuro(BC.disparuRevenuIc[1])}), soit ${formatPct(BC.disparuPctAchats)} des achats - le haut de la fourchette de perte normale d’un bar (15-25 %). Les causes de consommation sont documentées : sur-versement au verre, consommation du chef (Picon, Macvin), offerts, cuisine jurassienne.`,
-    },
-    {
-      kind: 'alerte',
-      couleur: 'blue',
-      titre: 'Ce disparu et les suppressions de caisse ne s’additionnent pas',
-      texte: `Le disparu boissons (${formatEuro(BC.disparuRevenuMedian)}) est un écart achats − ventes : toute boisson vendue au noir puis supprimée y figure déjà. Le fisc ne peut donc pas le compter une seconde fois dans les ${formatEuro(BC.delTotal)} de suppressions. Et ces suppressions valent ${(BC.delTotal / BC.caBoissonsDeclare).toFixed(1)} fois le CA boissons déclaré (${formatEuro(BC.caBoissonsDeclare)}) : elles ne peuvent pas être des ventes de boissons cachées, faute d’achats correspondants.`,
-    },
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'La consommation réelle, poste par poste',
-      sousTitre: 'Ce que la caisse n’enregistre pas, chiffré au coût d’achat et au CA équivalent',
-    },
-    {
-      kind: 'paragraphe',
-      texte:
-        'Une partie des boissons achetées est **consommée sans passer en vente** : par le personnel, par le chef, et en offerts aux clients. Voici ce que cela représente, en litres, en **coût d’achat** (ce que ça a coûté au restaurant) et en **CA équivalent** (ce que ça aurait rapporté si vendu - pour mémoire, car ce n’est précisément pas vendu).',
-    },
-    {
-      kind: 'tableau',
-      titre: 'Consommation du personnel et du chef (3 exercices)',
-      minWidth: 620,
-      colonnes: [
-        { label: 'Poste' },
-        { label: 'Litres', align: 'right' },
-        { label: 'Coût d’achat', align: 'right' },
-        { label: 'CA équivalent', align: 'right' },
-      ],
-      lignes: [
-        ...SPR.personnel.lignes.map((l) => [
-          cg(l.poste),
-          cd(l.litres != null ? `${formatInt(l.litres)} L` : '-'),
-          cd(formatEuro(l.coutAchat)),
-          cd(formatEuro(l.caEquivalent)),
-        ]),
-        [
-          cg('TOTAL personnel'),
-          cd(`${formatInt(SPR.personnel.totalLitres)} L`),
-          cd(formatEuro(SPR.personnel.totalCout)),
-          cd(formatEuro(SPR.personnel.totalCa)),
-        ],
-      ],
-    },
-    {
-      kind: 'tableau',
-      titre: 'Offerts aux clients (apéritifs et cafés, non enregistrés en caisse)',
-      minWidth: 620,
-      colonnes: [
-        { label: 'Poste' },
-        { label: 'Litres', align: 'right' },
-        { label: 'Coût d’achat', align: 'right' },
-        { label: 'CA équivalent', align: 'right' },
-      ],
-      lignes: [
-        ...SPR.offerts.lignes.map((l) => [
-          cg(l.poste),
-          cd(l.litres != null ? `${formatInt(l.litres)} L` : '-'),
-          cd(formatEuro(l.coutAchat)),
-          cd(formatEuro(l.caEquivalent)),
-        ]),
-        [cg('TOTAL offerts'), cd('-'), cd(formatEuro(SPR.offerts.totalCout)), cd(formatEuro(SPR.offerts.totalCa))],
-      ],
-    },
-    { kind: 'note', texte: SPR.offerts.avertissement },
-    {
-      kind: 'chapitre',
-      source: 'nous',
-      titre: 'Synthèse : où va, litre par litre, l’alcool acheté',
-      sousTitre: 'La perte réelle après TOUS les calculs',
-    },
-    {
-      kind: 'tableau',
-      titre: 'Cascade complète de l’alcool acheté (litres, 3 exercices)',
-      minWidth: 520,
-      colonnes: [{ label: 'Poste' }, { label: 'Litres', align: 'right' }],
-      lignes: [
-        [cg('ACHATS D’ALCOOL (factures fournisseur)'), cd(`${formatInt(SPR.cascade.achatsAlcool)} L`)],
-        ...SPR.cascade.postes.map((p) => [cg('—  ' + p.poste), cd(`${formatInt(p.litres)} L`)]),
-        [
-          cg(`=  PERTE RÉELLE RÉSIDUELLE (${SPR.cascade.perteReellePct} % des achats)`),
-          cd(`${formatInt(SPR.cascade.perteReelle)} L`),
-        ],
-      ],
-    },
-    retenir(
-      `Après avoir déduit tout ce qui est consommé sans vente - ventes sonnées, cuisine, alcool des menus, consommation du chef (${formatInt(143)} L), offerts, sur-versement, dégustation, crémant jeté et freinte de la bière - le résiduel **strictement irréductible** (casse, évaporation, fonds de verre) tombe à **${formatInt(SPR.cascade.perteReelle)} L**, soit **${SPR.cascade.perteReellePct} % des achats d’alcool**. La **perte d’exploitation totale** atteint **${SPR.cascade.perteExploitationPct} % des achats** - **au-dessus** des **22 %** admis en CHR et validés par la **CAA Paris (17/03/2021)**. Ce n’est ni une vente, ni une disparition : le CA est bancarisé et les espèces ne pèsent que 1,3 %.`,
-    ),
-    {
-      kind: 'piecejointe',
-      intro: 'Chaque chiffre de cette page est sourcé et reproductible. Classeurs de données à l’appui :',
-      fichiers: [
-        { fichier: 'pieces-defense/Consommation-personnel-et-offerts.xlsx', label: 'Conso personnel & offerts + perte réelle' },
-        { fichier: 'pieces-defense/Defense-Boissons-disparues.xlsx', label: 'Défense - Boissons disparues' },
-      ],
-    },
-    {
-      kind: 'sources',
-      items: [
-        ...(['D', 'B', 'E'] as const)
-          .map((l) => groupes.find((g) => g.lettre === l))
-          .filter((g): g is (typeof groupes)[number] => Boolean(g))
-          .map((g) => ({ slug: g.slug, label: `Annexe ${g.lettre} - ${g.titre}` })),
-        { slug: FACTURES_SLUG, label: 'Factures fournisseur (FCBS) - achats réels' },
-        { slug: CARTES_SLUG, label: 'Carte des vins & boissons' },
-        { slug: INVENTAIRES_SLUG, label: 'Inventaires physiques (3 fins d’exercice)' },
-        { slug: MANUSCRIT_SLUG, label: 'Carnet manuscrit - anomalies fournisseur' },
-      ],
-    },
-  ],
-}
-
 // --- Catalogue + accès --------------------------------------------------------
 // ===================================================================
 // ANALYSE BOISSONS DISPARUES - refondue (data-analyst, tout chiffré)
@@ -1215,7 +738,7 @@ const consoPeriodeSection: Section = {
 // --- Données des graphiques (mêmes chiffres que les tableaux, rien de saisi) ---
 // Catégorie d'un poste de la cascade : transparence mesuré / calculé / estimé.
 const cascadeCat = (poste: string): 'mesure' | 'calcul' | 'estime' => {
-  if (/chef|offert|sur-versement|dégustation|degustation|crémant|cremant|freinte/i.test(poste)) return 'estime'
+  if (/chef|offert|sans recette|sur-versement|dégustation|degustation|crémant|cremant|freinte/i.test(poste)) return 'estime'
   if (/cuisine|menus/i.test(poste)) return 'calcul'
   return 'mesure' // vendu au verre, cocktails, stock final (inventaire)
 }
@@ -1250,10 +773,10 @@ const boissonsV2: Analyse = {
   force: 'forte',
   apercu: [
     { label: 'Boissons passées au crible', valeur: String(BPD.disparuParBoisson.length) },
-    { label: 'Perte d’exploitation', valeur: `${BPD.synthese.perte_exploitation_pct} %`, sub: 'des achats > 22 % validés CAA Paris' },
+    { label: 'Perte d’exploitation', valeur: `${BPD.synthese.perte_exploitation_pct} %`, sub: 'des achats (estimation du mémoire de juillet 2026, non revendiquée)' },
   ],
   controleurDit: `Des boissons achetées ne se retrouveraient pas dans les ventes : le CA est reconstitué par les volumes, d’où ${formatEuro(BPD.synthese.fisc_ca_reconstitue)} reconstitués (× ${BPD.synthese.fisc_coef}).`,
-  demonstration: `On ne reconstitue pas, on mesure : chaque litre est rattaché à un usage (caisse, cuisine, menus, personnel, sur-versement, dégustation, crémant, freinte). La perte d’exploitation totale (${BPD.synthese.perte_exploitation_pct} %) dépasse les 22 % validés par la jurisprudence ; le résiduel irréductible (casse, évaporation) n’est que ${BPD.synthese.perte_reelle_pct} %.`,
+  demonstration: `On ne reconstitue pas, on mesure : chaque litre est rattaché à un usage (caisse, cuisine, menus, personnel, sur-versement, dégustation, crémant, freinte). La perte d’exploitation totale estimée en juillet 2026 (${BPD.synthese.perte_exploitation_pct} %) n’est plus revendiquée (point 3.10.2) ; le résiduel irréductible (casse, évaporation) n’est que ${BPD.synthese.perte_reelle_pct} %.`,
   faitTomber: 'La reconstitution par les volumes de boissons',
   pieces: [
     ...piecesLiees('D', 'B', 'E'),
@@ -1420,12 +943,6 @@ const boissonsV2: Analyse = {
       fichiers: [{ fichier: 'pieces-defense/Factures-avoirs-et-retours.xlsx', label: 'Factures : avoirs et retours (XLSX)' }],
     },
     {
-      kind: 'interne',
-      audience: 'comptable',
-      titre: 'Pour mémoire : origine des lignes à manquant négatif (deux cas distincts)',
-      texte: `Vérifié de notre côté : les lignes à manquant négatif ne viennent **pas** des avoirs (contrôlés ci-dessus) et recouvrent **deux cas**. **(1) Côté caisse** (ex. « Cubis de vin » : 427 L consommés, 0 acheté sous ce nom) : libellé caisse générique sans achat homonyme ; le vin existe sous son appellation précise et le **bilan matière global** (total acheté − total consommé − stock = ${formatInt(BPD.synthese.disparu_net_l)} L) les neutralise par construction. **(2) Côté achats** (ex. « Arbois Béthanie » : achat 214,5 L < conso 309,9 L) : il s’agit d’**achats réels non encore rattachés** faute de correspondance de format, ici 169 L de Béthanie 37,5 cl alors que seuls les 75 cl ont été mappés (achat réel complet 383,3 L ⇒ manquant +73 L, normal). La **table de correspondance libellés caisse ↔ factures** est déjà jointe au dossier (pièce « Correspondance libellés factures ↔ caisse ») et documente ces deux cas, dont le rattachement Béthanie 37,5 cl ⇒ 75 cl. Reste, côté pipeline, à y réintégrer les **~253 L de vin** encore en achats non rattachés, ce qui lèvera les négatifs et alignera litres et valeurs (le coût/CA affichés portent encore sur les seules lignes positives, soit ${formatInt(BPD.synthese.disparu_brut_l)} L). Le chiffre de référence (perte réelle) repose sur le bilan matière global et reste robuste.`,
-    },
-    {
       kind: 'tableau',
       titre: '2. Les cocktails : composition exacte et alcool consommé',
       minWidth: 720,
@@ -1515,20 +1032,8 @@ const boissonsV2: Analyse = {
         'Les colonnes « coût d’achat » et « CA équivalent » sont indicatives : ces volumes sont consommés, donc précisément **non vendus**. Pour l’alcool, seuls les 143 L du chef (Macvin + Picon) entrent dans la cascade. Les softs (Coca, jus, sirop, 1 913 L) ne sont **pas** un manquant d’alcool : ils sont **bouclés indépendamment** par le bilan des softs (achats − ventes au ticket − stock = consommation du personnel par différence, à partir des seules pièces dures).',
     },
     {
-      kind: 'interne',
-      audience: 'restaurant',
-      titre: 'Pièces à réunir pour étayer la consommation du personnel',
-      texte: `Cette consommation est aujourd’hui établie par estimation. Pour la rendre opposable : réunir une **attestation sur l’honneur (art. 202 CPC)** de chaque salarié concerné (identité, poste, période, description de la consommation quotidienne de softs en service) et, pour le chef, une attestation décrivant sa consommation servie en cuisine. Idéalement, **planning de service** et **fiches de poste** datés des 3 exercices pour corroborer la présence et le nombre de personnes en service.`,
-    },
-    {
-      kind: 'interne',
-      audience: 'avocat',
-      titre: 'Risque d’avantage en nature à arbitrer avant de plaider ce poste',
-      texte: `Attention à l’**effet boomerang** : l’alcool et les boissons consommés par le personnel et le dirigeant peuvent être requalifiés en **avantage en nature** (réintégration en salaires/charges et au revenu du dirigeant). Expliquer le manquant par cette consommation peut donc **ouvrir un autre chef de redressement**. Arbitrer l’opportunité de chiffrer ce poste, ou de le borner au strict nécessaire, et préparer la réponse AEN le cas échéant.`,
-    },
-    {
       kind: 'tableau',
-      titre: '6. Les offerts aux clients (apéritifs et cafés, non enregistrés)',
+      titre: '6. Boissons et cafés servis sans recette, non saisis (estimation du mémoire de juillet 2026)',
       minWidth: 660,
       colonnes: [
         { label: 'Poste' },
@@ -1538,20 +1043,14 @@ const boissonsV2: Analyse = {
       ],
       lignes: [
         ...BPD.offerts.lignes.map((l) => [cg(l.poste), cd(litresB(l.litres)), cd(eurB(l.cout_achat_eur)), cd(eurB(l.ca_equivalent_eur))]),
-        [cg('TOTAL offerts'), cd('-'), cd(eurB(BPD.offerts.total_cout_eur)), cd(eurB(BPD.offerts.total_ca_eur))],
+        [cg('TOTAL'), cd('-'), cd(eurB(BPD.offerts.total_cout_eur)), cd(eurB(BPD.offerts.total_ca_eur))],
       ],
     },
     { kind: 'note', texte: BPD.offerts.avertissement },
     {
       kind: 'note',
       texte:
-        'Ce poste n’est pas porté au chiffrage comme un montant acquis : il est volontairement borné et modeste (les apéritifs offerts ne pèsent que 40 L d’alcool dans la cascade). La preuve la plus solide reste la caisse elle-même, qui ne recense quasiment aucune vente à 0 € : les offerts sont donc **négligeables**, et ne servent ici qu’à montrer qu’ils ne peuvent en aucun cas constituer des ventes dissimulées.',
-    },
-    {
-      kind: 'interne',
-      audience: 'restaurant',
-      titre: 'Trancher le poste « offerts » (cohérence du dossier)',
-      texte: `À décider : soit on s’appuie sur la caisse pour dire que les **offerts sont négligeables** (position la plus solide, et cohérente avec le relevé des lignes à 0 €), soit on documente des offerts réguliers, mais il faut alors une **trace** (registre, consignes écrites au personnel). On ne peut pas tenir les deux. Recommandation : retenir « offerts négligeables » et **retirer la colonne CA équivalent des offerts** de toute version transmise, qui se retourne en « sorties non contrôlées ». Les **cafés offerts** sont par ailleurs hors sujet pour l’alcool : à sortir de l’argumentaire fiscal.`,
+        'Ce poste n’est pas porté au chiffrage comme un montant acquis. Les boissons alcoolisées portées à 0,00 € en caisse (26,75 L), sorties sans recette déjà comptées dans les quantités vendues, sont retirées, quelle qu’en soit la cause, de l’estimation forfaitaire des boissons servies sans recette, hors dégustation et personnel, pour qu’aucun litre ne soit compté deux fois ; la caisse ne mesure pas les offerts, que l’usage est de ne pas saisir (point 2.4.8).',
     },
     {
       kind: 'piecejointe',
@@ -1617,25 +1116,10 @@ const boissonsV2: Analyse = {
         'Ce résiduel n’est plus un « trou » : les pertes identifiables ont été **sorties en postes chiffrés** (sur-versement, dégustation, crémant jeté, freinte de la bière). Ce qu’il reste est la perte **strictement irréductible** d’un bar : **casse**, **évaporation** et **oxydation** des bouteilles ouvertes peu écoulées, **fonds de verre**. Ces pertes sont consommées ou détruites, jamais encaissées.',
     },
     {
-      kind: 'interne',
-      audience: 'restaurant',
-      titre: 'Transformer le sur-versement et la freinte bière en preuves mesurées',
-      texte: `Deux pièces feraient passer le résiduel d’« estimation » à « mesure » : **(1)** un **constat d’huissier** d’un test de versement (faire servir plusieurs « verres de vin » et « pressions », mesurer le volume réel au mL, établir le ratio dose carte / dose réelle) qui objective le sur-versement ; **(2)** une **attestation du brasseur/distributeur** (Affligem) sur le taux de freinte réel d’un fût (fond de fût, mousse, purge et nettoyage des lignes). Photographier aussi le bar servant **sans doseur** (cause technique du sur-versement). Ces deux pièces sont tierces et difficilement contestables.`,
-    },
-    retenir(
-      `Après avoir mesuré **tout** ce qui est consommé sans vente, chaque litre est rattaché à un usage précis : cuisine, alcool des menus, consommation du chef et du personnel (${formatInt(BPD.personnel.total_litres)} L), apéritifs offerts, **sur-versement aux taux mesurés (1 058 L), dégustation offerte comptée note par note (126 L), crémant sur-versé et jeté en fin de service (347 L) et freinte technique de la bière (129 L)**. Une fois ces pertes documentées sorties, le résiduel **strictement irréductible** (casse, évaporation, fonds de verre, rinçage) tombe à **${formatInt(BPD.synthese.perte_reelle_l)} L**, soit **${BPD.synthese.perte_reelle_pct} % des achats**. La **perte d’exploitation totale** (tout ce qui n’est pas vendu comme boisson : conso personnel, offerts, sur-versement, dégustation, crémant, freinte et casse) atteint **${BPD.synthese.perte_exploitation_pct} % des achats** — **au-dessus** des **22 %** que l’**administration elle-même** a validés en reconstitution de bar (**CAA Paris, 17 mars 2021** : 22 % pour personnel, offerts, pertes et vol, méthode confirmée). Ce n’est ni une vente, ni une disparition. Le CA est bancarisé, les espèces ne pèsent que 1,3 %. La reconstitution du fisc (× ${BPD.synthese.fisc_coef}) transforme une perte de gestion en une dissimulation qui n’existe pas.`,
-    ),
-    {
-      kind: 'interne',
-      audience: 'avocat',
-      titre: 'Architecture recommandée et pièces à obtenir avant transmission',
-      texte: `Pour viser l’indéfendable côté fisc, faire reposer la défense sur les **preuves dures** (en tête de page) plutôt que sur les estimations : **(1)** impossibilité d’encaissement (bancarisation 98,7 % / espèces 1,3 %) ; **(2)** clôture du bilan matière par l’**inventaire physique** + comptabilité matière du fisc (98,5 % consommés) ; **(3)** coefficients de cuisine **admis par le fisc lui-même**. À obtenir pour solidifier : **constat d’huissier** (sur-versement), **attestation brasseur** (freinte bière), **attestations 202 CPC** du personnel, et idéalement un **rapport d’expert-comptable indépendant** validant la méthode. À neutraliser : poste « offerts » et risque d’**avantage en nature**. **Jurisprudence** : l’arrêt CAA Paris du 17 mars 2021 (abattement de 22 % validé) est confirmé sur le fond ; **le numéro de requête reste à fiabiliser** (Légifrance / Doctrine) avant citation formelle. Ces encarts internes (pointillés) doivent être **retirés de toute version remise à l’administration**.`,
-    },
-    {
       kind: 'chapitre',
       source: 'neutre',
       titre: 'Annexes : toutes les données et la méthode',
-      sousTitre: 'Classeurs téléchargeables - chaque chiffre est sourcé et reproductible',
+      sousTitre: 'Classeurs téléchargeables - chaque chiffre est sourcé',
     },
     {
       kind: 'piecejointe',
@@ -1649,11 +1133,9 @@ const boissonsV2: Analyse = {
       kind: 'piecejointe',
       intro: 'Méthode et preuve de process (modèle, corrections, réconciliations) :',
       fichiers: [
-        { fichier: 'pieces-defense/Methode-1-modele-Monte-Carlo.xlsx', label: 'Modèle d’incertitude (Monte Carlo)' },
         { fichier: 'pieces-defense/Methode-2-correction-mapping-Cubis.xlsx', label: 'Correction d’attribution (Cubis)' },
         { fichier: 'pieces-defense/Methode-3-bilan-softs.xlsx', label: 'Bilan des softs' },
         { fichier: 'pieces-defense/Methode-4-conso-personnel-detail.xlsx', label: 'Conso personnel détaillée' },
-        { fichier: 'pieces-defense/Methode-5-reconciliation-suppressions.xlsx', label: 'Réconciliation des suppressions' },
         { fichier: 'pieces-defense/Methode-6-erreurs-quantite-DEL.xlsx', label: 'Erreurs de quantité (DEL)' },
       ],
     },
@@ -1676,7 +1158,7 @@ const boissonsV2: Analyse = {
 export const analyses: Analyse[] = [reconstitution, continuite, bancarisation, boissonsV2]
 
 // Versions archivées : routables par URL mais masquées de la liste (ex. ancienne page boissons).
-const analysesArchivees: Analyse[] = [boissons]
+const analysesArchivees: Analyse[] = []
 
 export function analyseParSlug(slug: string): Analyse | undefined {
   return [...analyses, ...analysesArchivees].find((a) => a.slug === slug)
