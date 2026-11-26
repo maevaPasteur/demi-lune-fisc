@@ -20,8 +20,9 @@ LIB = {
 }
 
 
-def clean(t, keep_bold=True):
-    t = t.replace('\\[', '[').replace('\\]', ']').replace('\\_', '_').replace('\\+', '+')
+def _clean(t, keep_bold=True):
+    t = t.replace('\\\\+', '+').replace('\\+', '+').replace('\\*\\*', '**').replace('\\*', '\u2217')
+    t = t.replace('\\[', '[').replace('\\]', ']').replace('\\_', '_')
     t = t.replace('\\*\\*', '**')
     if not keep_bold:
         t = t.replace('*', '')
@@ -32,6 +33,10 @@ def clean(t, keep_bold=True):
     for a, b in LIB.items():
         t = t.replace(a, b)
     return t.strip()
+
+
+def clean(t, keep_bold=True):
+    return _clean(t, keep_bold).replace('\u2217', '*')
 
 
 def indent(line):
