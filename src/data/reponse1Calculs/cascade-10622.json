@@ -85,11 +85,11 @@
   },
   {
    "cle": "offerts",
-   "libelle": "Offerts non enregistrés en caisse",
-   "litres": 13.97,
-   "litres_arrondi": 14,
+   "libelle": "Boissons servies sans recette, hors dégustation et personnel, non saisies",
+   "litres": 12.97,
+   "litres_arrondi": 13,
    "nature": "estime",
-   "source": "Un apéritif de 6 cl par jour de service, déduction faite des 25,75 L d’alcool déjà enregistrés à 0,00 € dans la caisse",
+   "source": "L’équivalent en volume d’un apéritif de 6 cl par jour de service servi sans recette, moins les 26,75 L d’alcool portés à 0,00 € en caisse, déjà comptés dans les ventes",
    "page": "Abattements",
    "slug": "recon-8-abattements"
   },
@@ -104,12 +104,12 @@
    "slug": "recon-9-variation-de-stock"
   }
  ],
- "attribue_l": 8545.07,
- "attribue_arrondi_l": 8544,
- "attribue_pct": 80.45,
- "residu_l": 2076.93,
- "residu_arrondi_l": 2078,
- "residu_pct": 19.55,
+ "attribue_l": 8544.07,
+ "attribue_arrondi_l": 8543,
+ "attribue_pct": 80.44,
+ "residu_l": 2077.93,
+ "residu_arrondi_l": 2079,
+ "residu_pct": 19.56,
  "nature": {
   "mesure": {
    "litres": 5773.81,
@@ -120,12 +120,12 @@
    "litres_arrondi": 2011
   },
   "estime": {
-   "litres": 760.5,
-   "litres_arrondi": 760
+   "litres": 759.5,
+   "litres_arrondi": 759
   },
   "residu": {
-   "litres": 2076.93,
-   "litres_arrondi": 2078
+   "litres": 2077.93,
+   "litres_arrondi": 2079
   }
  },
  "part_caisse_l": 7784.57,
@@ -160,13 +160,13 @@
    "biere_pression_et_pintes_l": 996.88
   },
   "offerts": {
-   "litres_bruts": 27.25,
+   "litres_bruts": 28.25,
    "dont_articles_mixtes": 1.5,
-   "litres_nets": 25.75,
+   "litres_nets": 26.75,
    "lignes_annexe_d": 114,
    "articles": 251.0,
    "poste_avant": 39.72,
-   "poste_apres": 13.97
+   "poste_apres": 12.97
   }
  },
  "cuisine": {
@@ -230,23 +230,23 @@
    }
   },
   {
-   "poste": "Offerts non enregistrés en caisse",
-   "litres": 13.97,
-   "euros": 1281.23,
+   "poste": "Boissons servies sans recette, hors dégustation et personnel, non saisies",
+   "litres": 12.97,
+   "euros": 1189.52,
    "base": "91.71 €/L (prix de revente d’un apéritif)",
    "litres_par_exercice": {
-    "2022-2023": 4.69,
-    "2023-2024": 4.69,
-    "2024-2025": 4.59
+    "2022-2023": 4.35,
+    "2023-2024": 4.35,
+    "2024-2025": 4.26
    },
    "euros_par_exercice": {
-    "2022-2023": 430.06,
-    "2023-2024": 430.06,
-    "2024-2025": 421.1
+    "2022-2023": 399.28,
+    "2023-2024": 399.28,
+    "2024-2025": 390.96
    }
   },
   {
-   "poste": "Cafés offerts (sans volume d’alcool)",
+   "poste": "Cafés servis sans recette (sans volume d’alcool)",
    "litres": 0.0,
    "euros": 4369,
    "base": "3 cafés par jour x 662 jours, fichier 56",
@@ -392,24 +392,24 @@
   {
    "cle": "A",
    "libelle": "Postes itemisés, hors cuisine et menus",
-   "litres": 1135.9,
-   "litres_arrondi": 1135,
-   "pct_achats": 10.69,
-   "euros": 78095.88,
-   "pct_du_forfait_en_volume": 71.3,
-   "pct_du_forfait_en_euros": 101.6,
-   "ecart_euros_au_forfait": 1232.7
+   "litres": 1134.9,
+   "litres_arrondi": 1134,
+   "pct_achats": 10.68,
+   "euros": 78004.17,
+   "pct_du_forfait_en_volume": 71.2,
+   "pct_du_forfait_en_euros": 101.5,
+   "ecart_euros_au_forfait": 1140.99
   },
   {
    "cle": "B",
    "libelle": "Postes itemisés, cuisine et alcool des menus compris",
-   "litres": 1877.04,
-   "litres_arrondi": 1876,
-   "pct_achats": 17.67,
-   "euros": 140224.29,
-   "pct_du_forfait_en_volume": 117.8,
-   "pct_du_forfait_en_euros": 182.4,
-   "ecart_euros_au_forfait": 63361.11
+   "litres": 1876.04,
+   "litres_arrondi": 1875,
+   "pct_achats": 17.66,
+   "euros": 140132.58,
+   "pct_du_forfait_en_volume": 117.7,
+   "pct_du_forfait_en_euros": 182.3,
+   "ecart_euros_au_forfait": 63269.4
   },
   {
    "cle": "C",
@@ -417,10 +417,10 @@
    "litres": 3212.83,
    "litres_arrondi": 3213,
    "pct_achats": 30.25,
-   "euros": 159198.9,
+   "euros": 159146.23,
    "pct_du_forfait_en_volume": 201.6,
    "pct_du_forfait_en_euros": 207.1,
-   "ecart_euros_au_forfait": 82335.72
+   "ecart_euros_au_forfait": 82283.05
   },
   {
    "cle": "D",
@@ -428,10 +428,10 @@
    "litres": 3953.97,
    "litres_arrondi": 3954,
    "pct_achats": 37.22,
-   "euros": 221327.3,
+   "euros": 221274.64,
    "pct_du_forfait_en_volume": 248.2,
    "pct_du_forfait_en_euros": 287.9,
-   "ecart_euros_au_forfait": 144464.12
+   "ecart_euros_au_forfait": 144411.46
   }
  ]
 }
