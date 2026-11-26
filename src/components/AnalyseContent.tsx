@@ -796,7 +796,9 @@ function CasSuppressionsView({ section }: { section: Extract<Section, { kind: 'c
 // reproche  : carte rouge = résumé du reproche du fisc + bouton ouvrant une popin
 //             qui rend le reproche détaillé (sections quelconques).
 // documents : liste des documents téléchargeables propres à une section.
-type ListeSection = { kind: 'liste'; style?: 'puces' | 'numeros'; titre?: string; items: string[] }
+// Un élément de liste peut porter des sous-puces (`sous`) et une phrase de suite après elles (`suite`).
+type ListeItem = string | { texte: string; sous?: ListeItem[]; suite?: string }
+type ListeSection = { kind: 'liste'; style?: 'puces' | 'numeros'; titre?: string; items: ListeItem[] }
 type ReprocheSection = {
   kind: 'reproche'
   titre?: string
@@ -811,6 +813,27 @@ type DocumentsSection = {
   fichiers: { fichier: string; label: string }[]
 }
 
+function ListeItemView({ it }: { it: ListeItem }) {
+  if (typeof it === 'string') return <List.Item>{richText(it)}</List.Item>
+  return (
+    <List.Item>
+      {richText(it.texte)}
+      {it.sous && it.sous.length > 0 && (
+        <List spacing={4} size="md" withPadding mt={4}>
+          {it.sous.map((x, i) => (
+            <ListeItemView key={i} it={x} />
+          ))}
+        </List>
+      )}
+      {it.suite && (
+        <Text size="md" mt={4}>
+          {richText(it.suite)}
+        </Text>
+      )}
+    </List.Item>
+  )
+}
+
 function ListeView({ s }: { s: ListeSection }) {
   return (
     <Stack gap={6}>
@@ -821,7 +844,7 @@ function ListeView({ s }: { s: ListeSection }) {
       )}
       <List type={s.style === 'numeros' ? 'ordered' : 'unordered'} spacing={6} size="md" withPadding>
         {s.items.map((it, i) => (
-          <List.Item key={i}>{richText(it)}</List.Item>
+          <ListeItemView key={i} it={it} />
         ))}
       </List>
     </Stack>
