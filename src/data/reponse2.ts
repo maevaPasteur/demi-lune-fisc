@@ -116,7 +116,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - TVA', titre: 'Les erreurs de TVA',
     positionService: '',
     reponseCourte:
-      'La colonne lue par le service (VAT_base) vaut, sur 16 605 tickets sur 16 605, le TTC du palier de taux moins le taux lu comme un montant en euros : c’est une colonne d’affichage, pas la base d’imposition. La colonne de la taxe (tax_amount) ne porte aucune valeur négative sur les 29 588 lignes des trois journaux et concorde à 12,89 € près (0,01 %) avec la TVA sur les bases comptabilisées ; le surplus de 192,33 € du compte 445710 est la TVA sur les pourboires. Le grief ne porte aucun rappel chiffré.',
+      'La colonne lue par le service (VAT_base) vaut, sur 29 588 lignes sur 29 588, le TTC du palier de taux moins le taux lu comme un montant en euros : c’est une colonne d’affichage, pas la base d’imposition. La colonne de la taxe (tax_amount) ne porte aucune valeur négative et concorde à 12,89 € près (0,01 %) avec la TVA théorique sur les bases comptabilisées. Les « erreurs de taux » des annexes C viennent d’un champ décalé d’une ligne dans les fichiers du service : restitué à sa place, il reproduit le journal de TVA au centime sur 16 605 tickets sur 16 605. La seule erreur réelle, le taux de cinq articles paramétrés dans la caisse, vaut 647,21 € sur trois ans (0,48 % de la TVA liquidée) ; contre la TVA comptabilisée, elle représente un rappel de 444,41 €, déjà compris dans le rappel notifié. Aucun des fondements invoqués au soutien du grief n’est caractérisé.',
     statut: 'demonte',
   },
   {
@@ -124,7 +124,7 @@ export const points: Point[] = [
     refCourrier: C19 + ' - Fichiers E et F', titre: 'Les fichiers Événement et Règlement',
     positionService: '',
     reponseCourte:
-      'Les quatre montants que le service oppose sont quatre lectures des compteurs de la caisse qui se déduisent l\'un de l\'autre au centime sur les trois exercices, aucune ligne n\'a disparu entre les deux remises, les quantités de l\'annexe C restituent son chiffre d\'affaires à 0,04 / 44,58 / 131,08 € près contre 17 561 / 20 011 / 20 115 € pour l\'annexe B, les colonnes de TVA invoquées sont celles du service et ramènent la taxe à 19,68 € de la TVA reversée, et le motif du format Excel (p. 46) ne repose sur aucun texte applicable aux exercices vérifiés, la loi n\'attachant au format d\'une copie de contrôle que l\'amende de l\'article 1729 H, non appliquée.',
+      'Les quatre montants que le service oppose sont quatre lectures des compteurs de la caisse qui se déduisent l\'un de l\'autre au centime sur les trois exercices, aucune ligne n\'a disparu entre les deux remises, les quantités de l\'annexe C restituent son chiffre d\'affaires à 0,04 / 44,58 / 131,08 € près contre 17 561 / 20 011 / 20 115 € pour l\'annexe B, les colonnes de TVA invoquées sont celles du service et procèdent, pour 94,75 % des lignes signalées, d\'un champ des annexes C décalé d\'une ligne (point 2.5.6 b), et le motif du format Excel (p. 46) ne repose sur aucun texte applicable aux exercices vérifiés, la loi n\'attachant au format d\'une copie de contrôle que l\'amende de l\'article 1729 H, non appliquée.',
     statut: 'demonte',
   },
   {

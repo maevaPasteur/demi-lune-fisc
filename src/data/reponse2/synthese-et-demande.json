@@ -100,13 +100,13 @@
     "**Articles à 0 €** : 272 lignes sur 97 769 (0,28 %), 0,00 € encaissé, reconnues « non significatives » par le service. Démonté.",
     "**Quantités inférieures à 1** : 5 012 des 5 062 articles fractionnés (99,0 %) se referment sur un entier, 1 849 notes sur 1 849 encaissées ; le chiffrage de 62 487,87 € compte le prix entier d'articles payés une fois ; seul résidu : 63 partages non aboutis, annulés et tracés, au plus 2 944,71 € HT (0,26 % du CA HT). Démonté.",
     "**Inventaires de stocks** : aucun texte n'exige la contenance (Code de commerce : existence et valeur ; plan comptable général, art. 912-3 : quantité et valeur, portées sur les états) ; les totaux des feuilles de boissons sont reportés sans écart sur les pages datées, et la variation 2023-2024 retenue par le service (−1 029,67 €) est la différence des inventaires datés ; les erreurs d'addition et de valorisation relevées sur les états d'origine sont vénielles (annexe n° 154). Partiel.",
-    "**Fichiers Événement et Règlement** : les quatre montants « fluctuants » sont quatre lectures des mêmes compteurs ; l'annexe C retombe sur son propre CA à −0,04 / 44,58 / 131,08 € ; TVA 135 065,01 € contre 135 084,69 € (19,68 €). Démonté.",
+    "**Fichiers Événement et Règlement** : les quatre montants « fluctuants » sont quatre lectures des mêmes compteurs ; l'annexe C retombe sur son propre CA à −0,04 / 44,58 / 131,08 € ; colonnes de TVA du service procédant, pour 94,75 % des lignes signalées, d'un champ décalé d'une ligne. Démonté.",
     "**Tables « virtuelles »** : le numéro est un rang d'addition quotidien (659 journées sur 659, suite 1..n), 0 numéro de terrasse 101 à 126 ; aucun couvert ni recette rattaché. Démonté.",
-    "**TVA** : 0 montant de taxe négatif sur 29 588 lignes ; écart −12,89 € à périmètre égal ; excédent 192,33 € du 445710 = TVA sur pourboires (185,24 €). Démonté.",
+    "**TVA** : 0 montant de taxe négatif sur 29 588 lignes ; écart −12,89 € à périmètre égal ; « erreurs de taux » issues d'un champ décalé d'une ligne ; seule erreur réelle, cinq fiches articles : rappel autonome de 444,41 €, déjà compris dans le rappel notifié. Démonté.",
     "**Consommation supérieure aux achats** : 4 écarts mineurs sur 203 pourcentages, 12 produits sur 65 (708,3 L) expliqués par regroupements de libellés ; bilan global +3 057,6 L achetés non servis (28,8 %) ; Calvados : dose de cuisine, pas une recette. Partiel.",
     "**Prix des menus** : prix de carte unique 45,00 € stable (B1/B2/B3) ; 61 conversions au forfait : 6 728,50 € supprimés = 6 728,49 € encaissés ; prix libre (art. L. 410-2 c. com.) ; grief jamais chiffré par le service. Démonté.",
     "**Coefficient de revente** : le repère 3,85 × (1 − 0,15) = 3,2725 suppose 85 % d'alcool revendu ; la part mesurée est 60,77 % (6 455 L sur 10 622 L) et donne 2,383251, le niveau des coefficients déclarés ; le tableau p. 34 ne s'additionne pas (+2 000,00 € et +20,00 €). Partiel.",
-    "**Motifs « absents » (04/09 p. 93)** : le certificat de conformité de la caisse (01/12/2018) a été transmis le 13/01/2026 (18/05 p. 3) ; les écarts de TVA par article sont sans incidence sur la taxe due (−18,76 € sur 135 084,69 €) ; les encaissements par mode de règlement se reconstituent au centime (annexes F et G), le service lui-même les juge « pas significatifs »."
+    "**Motifs « absents » (04/09 p. 93)** : le certificat de conformité de la caisse (01/12/2018) a été transmis le 13/01/2026 (18/05 p. 3) ; les écarts de TVA par article procèdent pour 94,75 % d'un champ des annexes C décalé d'une ligne, la seule erreur réelle (cinq fiches articles) valant 647,21 € sur trois ans ; les encaissements par mode de règlement se reconstituent au centime (annexes F et G), le service lui-même les juge « pas significatifs »."
    ],
    "titre": "Ce que la réponse établit, motif par motif"
   },
@@ -228,7 +228,7 @@
       "align": "right"
      },
      {
-      "v": "0 taxe négative / 29 588 lignes ; 192,33 € = pourboires"
+      "v": "0 taxe négative / 29 588 lignes ; rappel autonome 444,41 €, compris dans le rappel notifié"
      },
      {
       "v": "démonté"
@@ -320,8 +320,8 @@
      "label": "R2 : rang d'addition 1..n sur 659 journées"
     },
     {
-     "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
-     "label": "R2 : bouclage TVA par formule depuis G1, G2, G3 (29 588 lignes)"
+     "fichier": "pieces-lot5/85-R3-tva-bouclage-journaux-G-29588-lignes-identite-VAT-base-erratum.xlsx",
+     "label": "Annexe n° 85 : bouclage de la TVA depuis les journaux G-1 à G-3, avec un onglet « Erratum R2 » (XLSX)"
     },
     {
      "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
@@ -1303,7 +1303,7 @@
       "v": "bases négatives, taux"
      },
      {
-      "v": "0 taxe négative ; 192,33 € = pourboires"
+      "v": "0 taxe négative ; rappel autonome 444,41 €, compris dans le rappel notifié"
      },
      {
       "v": "motif tombe (démonté)"
@@ -1885,8 +1885,8 @@
      "label": "R2 : tables « virtuelles »"
     },
     {
-     "fichier": "pieces-reponse-2/R2-tva-bouclage.xlsx",
-     "label": "R2 : TVA"
+     "fichier": "pieces-lot5/85-R3-tva-bouclage-journaux-G-29588-lignes-identite-VAT-base-erratum.xlsx",
+     "label": "Annexe n° 85 : bouclage de la TVA depuis les journaux G-1 à G-3, avec un onglet « Erratum R2 » (XLSX)"
     },
     {
      "fichier": "pieces-reponse-2/R2-conso-achats-bilan.xlsx",
