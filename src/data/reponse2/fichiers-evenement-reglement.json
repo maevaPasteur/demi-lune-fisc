@@ -2661,7 +2661,7 @@
         "**Un calcul du service.** La première ligne de l’annexe C-1 numérote de « 1 Date Ticket » à « 17 Tot_rem Ttc » les colonnes issues de la caisse, puis désigne par les lettres A à G les sept colonnes ajoutées dans le tableur du service (procédé décrit p. 15 de la proposition pour l’annexe B). Les colonnes E et F sont donc un calcul du service, présenté comme une anomalie du fichier.",
         "**La colonne F mesure le décalage, non une incidence fiscale.** À la ligne TOTAL des annexes C-1 à C-3, elle vaut **−3 289,55 / −3 358,48 / −2 776,71 €**, soit **−9 424,74 €** (**annexe n° 89**, onglet « Calcul », ligne 29). Sur ce total, −9 701,34 € proviennent de lignes où la caisse a appliqué le bon taux et où le fichier porte celui de la ligne précédente (point 2.5.6 b).",
         "**Deux sens à parts presque égales.** Les lignes signalées se répartissent presque également dans les deux sens : 15 824 « 10 % / 20 % » et 16 223 « 20 % / 10 % ». Ce partage reflète l’alternance des articles à 10 % et à 20 % dans l’ordre du fichier (point 2.5.6 b).",
-        "**La TVA.** La TVA liquidée par la caisse est de 134 879,47 €. Calculée article par article au taux légal, elle serait de 135 529,10 €, soit 444,41 € de plus que la TVA comptabilisée (compte 445710, proposition p. 26 : 135 084,69 €). C’est l’erreur de paramétrage de cinq fiches articles, exposée et chiffrée au point 2.5.6 c, et déjà comprise dans le rappel notifié."
+        "**La TVA.** La TVA liquidée par la caisse est de 134 879,47 €. Calculée article par article au taux légal, elle serait de 135 529,10 €, soit 444,41 € de plus que la TVA comptabilisée (compte 445710, proposition p. 26 : 135 084,69 €). Cet écart tient aux cinq fiches liquidées à un taux inexact et constant, exposées et chiffrées au point 2.5.6 c ; il est englobé par la minoration de TVA retenue p. 53."
       ]
     },
     {
@@ -2838,13 +2838,13 @@
     },
     {
       "kind": "paragraphe",
-      "texte": "Au taux réellement appliqué, qui reproduit le journal de TVA au centime sur 16 605 tickets sur 16 605, aucune référence n’a deux taux."
+      "texte": "Au taux appliqué par la caisse, qui retrouve les paliers du journal de TVA sur tous les tickets de la première série, aucune référence n’a deux taux."
     },
     {
       "kind": "liste",
       "items": [
         {
-          "texte": "**La seule erreur réelle.** C’est le paramétrage de cinq fiches articles (647,21 € sur trois ans), traité au point 2.5.6 c.",
+          "texte": "**Cinq fiches mal paramétrées.** Cinq articles ont été liquidés à un taux inexact et constant : 649,63 € de TVA sur trois exercices (0,48 %), exposés au point 2.5.6 c.",
           "sous": [
             "Le taux erroné de ces cinq articles est constant de la première à la dernière vente des données, et la caisse a liquidé la taxe à ce taux.",
             "Les fichiers remis en 2026 restituent encore ce taux : la donnée enregistrée n’a pas été modifiée après coup.",
@@ -2862,7 +2862,7 @@
       "kind": "liste",
       "items": [
         "Le service écrit dans la même page qu’il lui est « difficile de mettre en évidence la source » de l’anomalie et qu’« il n’est pas exclu de pouvoir penser » à une manipulation « par les dirigeants ».",
-        "C’est la seule mise en cause personnelle de la partie G. Elle est formulée au conditionnel, sur une colonne que le service a lui-même créée.",
+        "C’est la seule mise en cause personnelle de la partie G. Elle est formulée au conditionnel, sur des colonnes E et F que le service a ajoutées à une colonne 16 décalée d’une ligne (point 2.5.6 b).",
         "En cas de contestation des pénalités, la preuve de la mauvaise foi incombe à l’administration (LPF, art. L. 195 A ; BOI-CTX-DG-20-20-10, § 140).",
         "La société demande le retrait de ce passage ou, s’il est maintenu, l’indication de ce qui aurait été manipulé, quand, par quel moyen et pour quel montant."
       ]
@@ -2879,8 +2879,8 @@
           "label": "Annexe n° 87 : colonnes E et F et taux par article, avec un onglet « Erratum R2 » (XLSX)"
         },
         {
-          "fichier": "pieces-lot5/163-R2-etalons-rappel-autonome-reconstitution.xlsx",
-          "label": "Annexe n° 163 : rapprochements caisse, comptabilité et TVA légale ; bases HT ; rappel autonome et variantes ; décomposition de la TVA reconstituée ; errata des pièces 36, 37, 39, 40 et 41 (XLSX)"
+          "fichier": "pieces-lot5/163-R2-etalons-tva-minoration-p53-et-scenarios.xlsx",
+          "label": "Annexe n° 163 : rapprochements caisse, comptabilité et TVA légale ; bases HT ; minoration retenue p. 53 et scénarios ; décomposition de la TVA reconstituée ; errata des pièces 36, 37, 39, 40 et 41 (XLSX)"
         }
       ]
     },
@@ -3132,7 +3132,7 @@
         "17 tickets non encaissés (1 025,30 €, dont 451,30 € non repris selon la règle stricte) ;",
         "55 règlements portés sur des tables vidées (1 958,26 €) ;",
         "l’écart de trésorerie de la partie X ;",
-        "cinq fiches de taux, dont le rappel (444,41 €) est déjà compris dans le rappel notifié."
+        "cinq fiches à un taux inexact et constant (649,63 €, 0,48 %), dont l’écart avec le compte 445710 (444,41 €) est englobé par la minoration de TVA retenue p. 53."
       ]
     },
     {
@@ -3183,7 +3183,7 @@
         "« 33 222 lignes » : il y en a 33 220, la ligne vide et la ligne de total ayant été comptées ; « les mêmes tickets » : l’annexe C en porte 17 de plus ;",
         "les écarts F − C attribués aux « avoirs, arrondis de ventilation par mode » : ils tiennent aux 17 tickets et aux 55 règlements ;",
         "« ce que la caisse a facturé est exactement ce qu’elle a encaissé » : c’est vrai pour la première série, hors les 55 règlements « etat = 9 » ;",
-        "la « sur-déclaration » de TVA : la TVA légale excède le compte 445710 de 444,41 € ;",
+        "l’affirmation que la société aurait déclaré plus de TVA que due : la TVA due au taux légal excède le compte 445710 de 444,41 € ;",
         "le paiement séparé présenté comme une suppression suivie d’une réinscription divisée : généralisation retirée (point 2.6.5 d)."
       ]
     },
@@ -3250,7 +3250,7 @@
         {
           "texte": "**Classeurs de la société, avec onglet « Erratum R2 » :**",
           "sous": [
-            "**annexe n° 89** (89-R3-fichiers-E-F-C-reconciliation-DEL-reglements-CA-quantites-TVA-3-exercices-erratum.xlsx) : réconciliation des fichiers E, F et C sur trois exercices (événements « DEL », règlements, chiffre d’affaires, contrôle prix × quantité, remises, colonnes E et F), classeur à formules ; l’erratum retire la « TVA corrigée », la « TVA reversée » et l’écart de 19,68 € ;",
+            "**annexe n° 89** (89-R3-fichiers-E-F-C-reconciliation-DEL-reglements-CA-quantites-TVA-3-exercices-erratum.xlsx) : réconciliation des fichiers E, F et C sur trois exercices (événements « DEL », règlements, chiffre d’affaires, contrôle prix × quantité, remises, colonnes E et F), classeur à formules ; l’erratum retire la « TVA corrigée » et l’écart calculé avec le compte 445710 ;",
             "**annexe n° 90** (90-R3-compteur-perpetuel-deux-series-quatre-montants-B-dans-C-erratum.xlsx) : les compteurs perpétuels de la caisse (onglets 1 à 7 : compteur, deux séries, quatre montants, écart des deux lectures, annexe B dans l’annexe C, lignes de C absentes de B, colonne de contrôle) ; l’erratum porte sur l’onglet 7 ;",
             "**annexe n° 91** (91-R3-reconciliation-annexes-A-B-C-F-G-H-quantites-exemple-14-04-2022-erratum.xlsx) : réconciliation des annexes (chiffre d’affaires par annexe, quantités B contre C, exemple du 14 avril 2022, lignes de C absentes de B) ; l’erratum porte sur les onglets 1 et 6 ;",
             "**annexe n° 72** (72-R3-suppressions-DEL-rapprochement-ventilation-en-euros-3-exercices-erratum.xlsx) : ventilation en euros des 21 302 lignes « DEL », quatre lignes aberrantes et test du prix exact ; l’erratum porte sur la catégorie « multiple » et sur le témoin ;",
@@ -3331,8 +3331,8 @@
           "label": "Annexe n° 165 : export natif des règlements, colonne « etat » (XLSX)"
         },
         {
-          "fichier": "pieces-lot5/163-R2-etalons-rappel-autonome-reconstitution.xlsx",
-          "label": "Annexe n° 163 : rapprochements caisse, comptabilité et TVA légale ; bases HT ; rappel autonome et variantes ; décomposition de la TVA reconstituée ; errata des pièces 36, 37, 39, 40 et 41 (XLSX)"
+          "fichier": "pieces-lot5/163-R2-etalons-tva-minoration-p53-et-scenarios.xlsx",
+          "label": "Annexe n° 163 : rapprochements caisse, comptabilité et TVA légale ; bases HT ; minoration retenue p. 53 et scénarios ; décomposition de la TVA reconstituée ; errata des pièces 36, 37, 39, 40 et 41 (XLSX)"
         },
         {
           "fichier": "pieces-lot2/155-R3-tables-videes-traces-egalites-paiements-separes.xlsx",

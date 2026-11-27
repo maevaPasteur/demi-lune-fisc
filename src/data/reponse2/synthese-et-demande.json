@@ -102,11 +102,11 @@
     "**Inventaires de stocks** : aucun texte n'exige la contenance (Code de commerce : existence et valeur ; plan comptable général, art. 912-3 : quantité et valeur, portées sur les états) ; les totaux des feuilles de boissons sont reportés sans écart sur les pages datées, et la variation 2023-2024 retenue par le service (−1 029,67 €) est la différence des inventaires datés ; les erreurs d'addition et de valorisation relevées sur les états d'origine sont vénielles (annexe n° 154). Partiel.",
     "**Fichiers Événement et Règlement** : les quatre montants « fluctuants » sont quatre lectures des mêmes compteurs ; l'annexe C retombe sur son propre CA à −0,04 / 44,58 / 131,08 € ; colonnes de TVA du service procédant, pour 94,75 % des lignes signalées, d'un champ décalé d'une ligne. Démonté.",
     "**Tables « virtuelles »** : le numéro est un rang d'addition quotidien (659 journées sur 659, suite 1..n), 0 numéro de terrasse 101 à 126 ; aucun couvert ni recette rattaché. Démonté.",
-    "**TVA** : 0 montant de taxe négatif sur 29 588 lignes ; écart −12,89 € à périmètre égal ; « erreurs de taux » issues d'un champ décalé d'une ligne ; seule erreur réelle, cinq fiches articles : rappel autonome de 444,41 €, déjà compris dans le rappel notifié. Démonté.",
+    "**TVA** : 0 montant de taxe négatif sur 29 588 lignes ; écart −12,89 € à périmètre égal ; colonne « taux » des annexes C décalée d’une ligne (30 364 des 32 047 lignes signalées) ; cinq fiches à un taux inexact et constant (649,63 €, 0,48 %), dont l’écart avec le compte 445710 est englobé par la minoration retenue. Partiel.",
     "**Consommation supérieure aux achats** : 4 écarts mineurs sur 203 pourcentages, 12 produits sur 65 (708,3 L) expliqués par regroupements de libellés ; bilan global +3 057,6 L achetés non servis (28,8 %) ; Calvados : dose de cuisine, pas une recette. Partiel.",
     "**Prix des menus** : prix de carte unique 45,00 € stable (B1/B2/B3) ; 61 conversions au forfait : 6 728,50 € supprimés = 6 728,49 € encaissés ; prix libre (art. L. 410-2 c. com.) ; grief jamais chiffré par le service. Démonté.",
     "**Coefficient de revente** : le repère 3,85 × (1 − 0,15) = 3,2725 suppose 85 % d'alcool revendu ; la part mesurée est 60,77 % (6 455 L sur 10 622 L) et donne 2,383251, le niveau des coefficients déclarés ; le tableau p. 34 ne s'additionne pas (+2 000,00 € et +20,00 €). Partiel.",
-    "**Motifs « absents » (04/09 p. 93)** : le certificat de conformité de la caisse (01/12/2018) a été transmis le 13/01/2026 (18/05 p. 3) ; les écarts de TVA par article procèdent pour 94,75 % d'un champ des annexes C décalé d'une ligne, la seule erreur réelle (cinq fiches articles) valant 647,21 € sur trois ans ; les encaissements par mode de règlement se reconstituent au centime (annexes F et G), le service lui-même les juge « pas significatifs »."
+    "**Motifs « absents » (04/09 p. 93)** : le certificat de conformité de la caisse (01/12/2018) a été transmis le 13/01/2026 (18/05 p. 3) ; les écarts de TVA par article tiennent au décalage d’une ligne de la colonne « taux » des annexes C et à cinq fiches mal paramétrées (649,63 €, 0,48 %) ; les encaissements par mode de règlement se reconstituent au centime (annexes F et G), le service lui-même les juge « pas significatifs »."
    ],
    "titre": "Ce que la réponse établit, motif par motif"
   },
@@ -228,10 +228,10 @@
       "align": "right"
      },
      {
-      "v": "0 taxe négative / 29 588 lignes ; rappel autonome 444,41 €, compris dans le rappel notifié"
+      "v": "0 taxe négative / 29 588 lignes ; colonne « taux » décalée ; 5 fiches : 649,63 €"
      },
      {
-      "v": "démonté"
+      "v": "partiel"
      }
     ],
     [
@@ -1303,10 +1303,10 @@
       "v": "bases négatives, taux"
      },
      {
-      "v": "0 taxe négative ; rappel autonome 444,41 €, compris dans le rappel notifié"
+      "v": "0 taxe négative ; colonne « taux » décalée ; 5 fiches : 649,63 €"
      },
      {
-      "v": "motif tombe (démonté)"
+      "v": "motif tombe (partiel)"
      }
     ],
     [

@@ -116,8 +116,8 @@ export const points: Point[] = [
     refCourrier: C19 + ' - TVA', titre: 'Les erreurs de TVA',
     positionService: '',
     reponseCourte:
-      'La colonne lue par le service (VAT_base) vaut, sur 29 588 lignes sur 29 588, le TTC du palier de taux moins le taux lu comme un montant en euros : c’est une colonne d’affichage, pas la base d’imposition. La colonne de la taxe (tax_amount) ne porte aucune valeur négative et concorde à 12,89 € près (0,01 %) avec la TVA théorique sur les bases comptabilisées. Les « erreurs de taux » des annexes C viennent d’un champ décalé d’une ligne dans les fichiers du service : restitué à sa place, il reproduit le journal de TVA au centime sur 16 605 tickets sur 16 605. La seule erreur réelle, le taux de cinq articles paramétrés dans la caisse, vaut 647,21 € sur trois ans (0,48 % de la TVA liquidée) ; contre la TVA comptabilisée, elle représente un rappel de 444,41 €, déjà compris dans le rappel notifié. Aucun des fondements invoqués au soutien du grief n’est caractérisé.',
-    statut: 'demonte',
+      'Les bases négatives de la page 26 viennent de la colonne VAT_base, qui vaut sur chaque ligne le TTC du palier de taux moins le taux lu comme un montant en euros ; le « Total TVA » est un compteur lu sur la dernière ligne du fichier. La colonne « taux » des annexes C porte, sur chaque ligne, le taux de l’article de la ligne précédente : ce décalage explique 30 364 des 32 047 lignes que le service signale et l’hypothèse d’une « manipulation ». Il n’explique pas cinq articles liquidés, sur la période, à un taux inexact et constant, ce qui désigne le paramétrage de leur fiche ; la société les expose elle-même : 649,63 € de TVA sur trois ans (0,48 %), dont l’écart avec le compte 445710 est englobé par la minoration de TVA retenue. Le grief ne porte aucun rappel chiffré.',
+    statut: 'partiel',
   },
   {
     slug: 'fichiers-evenement-reglement', bloc: 'rejet',
