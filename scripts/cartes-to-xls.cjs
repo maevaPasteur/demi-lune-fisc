@@ -348,8 +348,8 @@ const carte_26 = [
 // ============================================================================
 const fichiers = [
   { nom: 'carte_vins-boissons_08:02:21.xls', rows: carte_08 },
-  { nom: 'carte_vins-boissons_20:07:21.xls', rows: carte_20 },
-  { nom: 'carte_vins-boissons_26:04:23_aujourdhui.xls', rows: carte_26 },
+  { nom: 'carte_vins-boissons_26:04:23_aujourdhui.xls', rows: carte_20 }, // carte_20 : transcrite du PDF de la carte du 26/04/2023 (noms rétablis le 27/11/2026)
+  { nom: 'carte_vins-boissons_20:07:21.xls', rows: carte_26 }, // carte_26 : transcrite du PDF de la carte du 20/07/2021
 ]
 
 for (const f of fichiers) {

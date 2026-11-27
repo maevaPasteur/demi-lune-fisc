@@ -22,13 +22,13 @@ M=['162. Classification légale des 323 références vendues et incidence de l\'
 check_dash(M); methode(w,M)
 S=w.create_sheet('Synthèse')
 # ---------- Sources
-src=[('Carte « vins et boissons » du 20/07/2021, PDF (carte_vins-boissons_2021-07-20.pdf, 4 pages), page 2, rubrique « Bières »','Pression Affligem, Bière blonde d\'abbaye Belge : 25cl 4,20 € ; 50cl 8,00 €'),
+src=[('Carte « vins et boissons » du 26/04/2023, PDF (carte_vins-boissons_2023-04-26_actuelle.pdf, 4 pages), page 2, rubrique « Bières »','Pression Affligem, Bière blonde d\'abbaye Belge : 25cl 4,20 € ; 50cl 8,00 €'),
  ('idem, page 2, rubrique « Bières »','Panaché Bière + Limonade : 25cl 4,20 € ; 50cl 8,00 €'),('idem, page 2, rubrique « Bières »','Picon Bière : 4,80 € ; 9,00 €'),
  ('idem, page 2, rubrique « Apéritifs Maison »','La Vouivre 12 cl 5,90 € : Crémant du Jura, Macvin et Crème de Cassis'),
  ('idem, page 2, rubrique « Apéritifs Maison »','Apéritif du Père Grégoire 6 cl 5,90 € : Crémant du Jura, Macvin et Liqueur cerise'),
  ('idem, page 2, rubrique « Apéritifs Maison »','Chat Perché 12 cl 5,90 € : Macvin, Jus de Poire et Sirop de Châtaigne'),
- ('Carte du 20/07/2021, classeur (carte_vins-boissons_20:07:21.xls), onglet « Vins & boissons », ligne 12','Spritz jurassien : 4 cl Aperol, Crémant du Jura et Perrier, 9,00 €'),
- ('Carte « vins et boissons » du 26/04/2023, PDF (carte_vins-boissons_2023-04-26_actuelle.pdf, 4 pages), page 2, rubrique « Bières »','Pression Affligem : 25cl 3,90 € ; 50cl 7,80 €'),
+ ('Carte du 26/04/2023, classeur (carte_vins-boissons_26:04:23_aujourdhui.xls), onglet « Vins & boissons », ligne 12','Spritz jurassien : 4 cl Aperol, Crémant du Jura et Perrier, 9,00 €'),
+ ('Carte « vins et boissons » du 20/07/2021, PDF (carte_vins-boissons_2021-07-20.pdf, 4 pages), page 2, rubrique « Bières »','Pression Affligem : 25cl 3,90 € ; 50cl 7,80 €'),
  ('idem, page 2, rubrique « Bières »','Panaché Bière + Limonade : 25cl 3,90 € ; 50cl 7,80 €'),('idem, page 2, rubrique « Bières »','Picon Bière : 4,50 € ; 8,90 €'),
  ('idem, page 2, rubrique « Apéritifs Maison »','La Vouivre 12 cl 5,20 € ; Apéritif du Père Grégoire 6 cl 4,90 € ; Chat Perché 12 cl 5,20 € (mêmes compositions qu\'en 2021)'),
  ('Pages 3 et 4 des deux PDF','Vins : colonnes « Verre 15cl », « Pichet 50cl », « Bouteille 75cl » ; aucune bière ni aucun apéritif maison'),

@@ -16,7 +16,7 @@
 # Réattribution par les recettes (cocktails) et les plats (cuisine) - vérifié en caisse
 
 > Round d'approfondissement : on ne suppose plus, on DÉCOMPOSE. Recettes de cocktails
-> tirées de la carte (`vins-boissons/carte_..._26:04:23.xls`), plats comptés un par un
+> tirées de la carte (`vins-boissons/carte_..._20:07:21.xls (carte du 20/07/2021)`), plats comptés un par un
 > dans la caisse (annexe D), doses d'alcool bornées (standards bar/cuisine).
 > Offerts clients = quasi nuls (vérifié). Stock stable (inventaire).
 
